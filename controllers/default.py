@@ -14,8 +14,8 @@ def index():
     example action using the internationalization operator T and flash
     rendered by views/default/index.html or views/generic.html
     """
-    response.flash = "Welcome to web2py!"
-    return dict(message=T('Hello World'))
+    docrows = db(db.docs.id > 0).select()
+    return dict(docrows = docrows)
 
 def user():
     """

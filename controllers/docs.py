@@ -1,7 +1,7 @@
-#from lxml import etree
+# coding: utf8
+from lxml import etree
 from parse import BookParser
 
-# coding: utf8
 def index():
     filename = request.args[0]
     return dict(filename = filename)
@@ -12,13 +12,11 @@ def text():
 
 def test():
     filename = request.args[0]
-    book_file = 'static/docs/%s.xml' % filename
+    book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
     p = BookParser(book_file)
     info = p.book_info()
 
-    print 'title =', info['title']
-    print 'structure =', info['structure']
-
+    title = info['title']
     for version in info['versions']:
         for key, value in version.items():
             if key != 'text_structure':
@@ -32,4 +30,4 @@ def test():
     print
     print
 
-    return dict()
+    return dict(title = title, info = info)
