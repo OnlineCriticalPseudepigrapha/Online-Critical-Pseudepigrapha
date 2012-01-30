@@ -1,5 +1,4 @@
 from collections import OrderedDict
-
 from lxml import etree
 import gluon
 
@@ -62,7 +61,7 @@ class BookParser(object):
         parent = OrderedDict()
         for div in text.xpath('div'):
             parent_key = div.xpath('@number')[0]
-            
+
             children = OrderedDict()
             for child_div in div.xpath('div'):
                 child_key = child_div.xpath('@number')[0]

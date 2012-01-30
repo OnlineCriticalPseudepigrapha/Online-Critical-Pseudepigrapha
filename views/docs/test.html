@@ -1,0 +1,19 @@
+{{extend 'layout.html'}}
+{{=H2(title)}}
+{{for version in info['versions']:}}
+<ul>
+    {{for key, value in version.items():}}
+    {{if key != 'text_structure':}}
+    <li><span>Version: {{=key}} --> {{value}}</span></li>
+    {{else:}}
+    <li><span>'Version text_structure'</span></li>
+    <ul>
+        {{for k, v in value.items():}}
+        <li>{{=k}} --> {{=v}}</li>
+        {{pass}}
+    </ul>
+    {{pass}}
+    {{pass}}
+</ul>
+{{pass}}
+{{=info.items()}}
