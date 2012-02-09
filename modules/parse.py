@@ -40,7 +40,7 @@ class BookParser(object):
         info['versions'] = []
 
         for version in self.book.xpath('/book/version'):
-            version_dict = {}
+            version_dict = OrderedDict()
             version_dict.update((attr, version.xpath('@%s' % attr)[0]) for attr in ('title', 'author', 'language'))
 
             version_dict['organisation_levels'] = len(version.xpath('divisions/division'))
@@ -52,7 +52,7 @@ class BookParser(object):
         return info
 
 
-    def text_structure(self, text, delimiter=':'):
+    def text_structure(self, text, delimiter='.'):
         '''
         Extract the div structure from a given text tag.
         '''
@@ -61,7 +61,7 @@ class BookParser(object):
         for div in text.xpath('div'):
             parent_key = div.xpath('@number')[0]
 
-            children = OrderedDict()
+#            children = OrderedDict()
             for child_div in div.xpath('div'):
                 child_structure = self.text_structure(child_div)
 
@@ -75,17 +75,21 @@ class BookParser(object):
 
                 else:
                     # Child div has no children so extract the unit data
-                    readings = {}
+                    readings = OrderedDict()
                     for unit in child_div.xpath('unit'):
-                        unit_dict = {}
+#                        unit_dict = OrderedDict()
 
                         unit_number = unit.xpath('@id')[0]
 
-                        reading_dict = {}
+                        reading_dict = OrderedDict()
                         for reading in unit.xpath('reading'):
                             mss = reading.xpath('@mss')[0]
                             for m in mss.strip().split():
-                                reading_dict[m] = reading.text
+                                txt = reading.text
+                                if txt:
+                                    reading_dict[m] = txt#.encode(self.encoding)
+                                else:
+                                    reading_dict[m] = txt
 
                         readings[unit_number] = reading_dict
 

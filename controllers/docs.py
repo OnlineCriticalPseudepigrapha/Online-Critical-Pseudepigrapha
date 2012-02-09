@@ -24,8 +24,10 @@ def test():
 
             else:
                 print 'Version textstructure'
-                for k, v in value.items():
-                    print '\t', k, '-->', v
+                for ref, ref_val in value.items():
+                    for unit, unit_val in ref_val.items():
+                        for mss, mss_val in unit_val.items():
+                            print '\t', ref, '-->', unit, '-->', mss, '-->', mss_val
         print '************'
     print
     print

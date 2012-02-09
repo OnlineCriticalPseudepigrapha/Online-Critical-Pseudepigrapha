@@ -4,12 +4,16 @@
 <ul>
     {{for key, value in version.items():}}
     {{if key != 'text_structure':}}
-    <li><span>Version: {{=key}} --> {{value}}</span></li>
+    <li><span>Version: {{=key}} --> {{=value}}</span></li>
     {{else:}}
     <li><span>'Version text_structure'</span></li>
     <ul>
-        {{for k, v in value.items():}}
-        <li>{{=k}} --> {{=v}}</li>
+        {{for ref, ref_val in value.items():}}
+            {{for unit, unit_val in ref_val.items():}}
+                {{for mss, mss_val in unit_val.items():}}
+                <li>{{=ref}} --> {{=unit}} --> {{=mss}} --> {{=mss_val}}</li>
+                {{pass}}
+            {{pass}}
         {{pass}}
     </ul>
     {{pass}}
