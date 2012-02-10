@@ -22,6 +22,8 @@ class BookParser(object):
 
         self.book = self.tree.getroot()
 
+        self.default_delimiter = '.'
+
 
     def book_info(self):
         '''
@@ -40,19 +42,43 @@ class BookParser(object):
         info['versions'] = []
 
         for version in self.book.xpath('/book/version'):
-            version_dict = {}
+            version_dict = OrderedDict()
             version_dict.update((attr, version.xpath('@%s' % attr)[0]) for attr in ('title', 'author', 'language'))
 
-            version_dict['organisation_levels'] = len(version.xpath('divisions/division'))
+            divisions = version.xpath('divisions/division')
+            version_dict['organisation_levels'] = len(divisions)
 
-            version_dict['text_structure'] = self.text_structure(version.xpath('text')[0])
+            # Extract division delimiters.
+            # If there are none, use the default.
+            delimiters = []
+            for d in divisions[:-1]:
+                delimiter = d.xpath('@delimiter')
+                if delimiter:
+                    delimiters.append(delimiter[0])
+            if not delimiters:
+                delimiters = [self.default_delimiter] * (len(divisions) - 1)
+
+            version_dict['delimiters'] = delimiters
+            
+            mss = OrderedDict()
+            for ms in version.xpath('manuscripts/ms'):
+                ms_dict = OrderedDict()
+                ms_dict= OrderedDict((attr, ms.xpath('@%s' % attr)[0]) for attr in ('abbrev', 'language'))
+                ms_dict['name'] = ms.xpath('name')[0].text
+                ms_dict['bibliography'] = ms.xpath('bibliography')[0].text
+
+                mss[ms_dict['abbrev']] = ms_dict
+
+            version_dict['manuscript'] = mss
+
+            version_dict['text_structure'] = self.text_structure(version.xpath('text')[0], delimiters)
 
             info['versions'].append(version_dict)
 
         return info
 
 
-    def text_structure(self, text, delimiter=':'):
+    def text_structure(self, text, delimiters):
         '''
         Extract the div structure from a given text tag.
         '''
@@ -61,9 +87,8 @@ class BookParser(object):
         for div in text.xpath('div'):
             parent_key = div.xpath('@number')[0]
 
-            children = OrderedDict()
             for child_div in div.xpath('div'):
-                child_structure = self.text_structure(child_div)
+                child_structure = self.text_structure(child_div, delimiters[1:])
 
                 if child_structure:
                     for k, v in child_structure:
@@ -75,13 +100,11 @@ class BookParser(object):
 
                 else:
                     # Child div has no children so extract the unit data
-                    readings = {}
+                    readings = OrderedDict()
                     for unit in child_div.xpath('unit'):
-                        unit_dict = {}
-
                         unit_number = unit.xpath('@id')[0]
 
-                        reading_dict = {}
+                        reading_dict = OrderedDict()
                         for reading in unit.xpath('reading'):
                             mss = reading.xpath('@mss')[0]
                             for m in mss.strip().split():
@@ -90,7 +113,7 @@ class BookParser(object):
                         readings[unit_number] = reading_dict
 
                     child_key = child_div.xpath('@number')[0]
-                    key = '%s%s%s' % (parent_key, delimiter, child_key)
+                    key = '%s%s%s' % (parent_key, delimiters[0], child_key)
                     parent[key] = readings
 
         return parent
@@ -102,4 +125,3 @@ class BookParser(object):
         '''
 
         pass
-
