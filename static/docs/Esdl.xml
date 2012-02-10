@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="Esdl" title="Vision of Ezra">
+  <version title="" author="">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Bogaert" language="Latin" show="yes">
+        <name>Bogaert Concordance</name>
+        <bibliography>P.-M. Bogaert, "Une vision longue inédite de la 'Visio Beati Esdrae' dans la légendier de Teano (Barberini lat. 2318)," Revue Bénédictine 94 (1984): 50-70.</bibliography>
+        <bibliography>Albert-Marie Denis, ed., Concordance latine des pseudépigraphes d'Ancien Testament.  Concordance, corpus des textes, indices (Corpus christianorum. Thesaurus patrum latinorum. Supplementum; Turnhout: Brepols, 1993), 617-619.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Title">
+        <div number="0">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">LEGENDA BEATI EXDRAE PROPHETAE</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="Document Body">
+        <div number="1">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Cum orasset Exdra ad dominum Ihesum Christum dixit: Domine, dona mihi fiduciam ut non timeam dum uideo iudicia peccatorum.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dati sunt mihi septem angeli *tartar[uci]* et eleuauerunt me deorsum sex milia septingentos gradus in infemum.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et uidi ibi portam igneam et egrediebatur per eam flamma fortissima septingentos et duos pedes et foras portas iacebant dragones et leones et canes nigri quorum de ore et aure ac oculis egrediebatur flamma fortissima.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Veniebant uiri iusti et transiebant cum gaudio.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et interrogaui angelum qui me ducebat: Qui sunt isti, domine, qui cum tanto gaudio procedunt?</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Dixit mihi: Isti sunt uiri sancti et timorati, quorum elemosina eleuata est in caelis,</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">isti sunt qui elemosinas multas fecerunt, nudos uestierunt, esurientes saciauerunt, sitientibus dederunt bibere.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et ueniebant peccatores ut ingrederentur per ipsam portam. Dragones et canes percuciebant eos et ignis incendebat eos. Dicebant: Domine, miserere, et non miserebatur .</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et interrogaui angelum qui me ducebat: Domine, qui sunt isti qui in tanta poena instituti sunt? Et dixit mihi:</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Isti sunt qui negauerunt dominum et in die dominico manserunt cum mulieribus, et ideo sunt in tormenta.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Domine, parce peccatoribus.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et tulerunt me deorsum et demerserunt me septingentos gradus in infernum. Et uidi ibi homines manus ligatos deorsum.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Alii dyaboli ignem ministrabant, alii cum fuste de igne percutiebant eos.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et interpellabat terra dicens: Caedite et nolite parcere eis, quia super me multa mala fecerunt.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et interrogaui angelum: Domine, qui sunt isti qui in tanta poena sunt instituti?</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit mihi: Isti sunt qui cum mulieribus maritatis fornicauerunt.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Domine, parce peccatoribus.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et tulerunt me deorsum et posuerunt me ad meridianum. Et uidi ibi homines per palpebras de oculis super ignem *pendentes* mulieres et barones, et quatuor dyaboli *tartaruci* cum ignea fuste percuciebant eos.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixi ad angelum: Qui sunt isti qui in tanta mala constituti sunt?</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Dixit mihi: Isti sunt qui mala ad patrem et matrem fecerunt et malum desiderium semper optauerunt.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Domine, parce peccatoribus.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et assumpserunt me deorsum duo milia quingentos gradus in infemum. Et uidi ibi lebetem quae interpretatur caccabus non magnus, latitudo eius cubitis duodecim. Ibi uidebant sulphur picis et resinae et uidebatur duodecim cubita altior uelud unda maris.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et uenerunt iusti et ingressi sunt per medium eius ambulantes super undas ignis collaudantes dominum, tamquam si ambularent super rorem et aquam frigidam.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et interrogaui angelum et dixi: Domine, qui sunt isti qui cum tanto gaudio procedunt?</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Isti sunt qui elemosinas multas fecerunt, nudos uestierunt et calciauerunt.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et uenerunt peccatores, et deponebant eos in igne angeli satanae et igneas *furcas* in ceruices eorum premebant.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et clamabant: Domine, miserere mei, et non miserebatur. </reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Mox autem audiebatur, caro eorum non uidebatur per ignem et tormenta.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixi ad angelum: Qui sunt isti?</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Qui fuerunt cupidi, raptores, auari omnibus diebus uitae suae, qui pauperes et ospites non receperunt in domum suam,</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">et perierunt ipsi et totae diuitiae ipsorum.</reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Domine, parce peccatoribus.</reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et ambulaui in oscuro loco et uidi ibi uermes *inexstinguibiles* longitudo et altitudo extimari non potest, longitudo eorum fertur habere septingentos *cubitos.*</reading>
+          </unit>
+        </div>
+        <div number="35">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et ante orem eius stabant multae animae peccatorum, et cum recipiebant flatum ingrediebantur in eo duodecim milia animae, sicut muscas, et dum respirarent exiebant omnes *distincti* *coloris.*</reading>
+          </unit>
+        </div>
+        <div number="36">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixi ad angelum: Domine, qui sunt isti? Et dixit mihi: Isti sunt qui fuerunt repleti ex omni malo. Et ambulaui in antea et uidi ibi flumen igneum et erat pons mangnus super eum. Latitudo eius *quam* unde possint transire quatraginta paria boum. Et cum uenissent iusti transiebant cum gaudio et laetitia. Et iterum ueniebant peccatores et transiebant usque ad medium, et tantum *reuertebatur* in eo subtilitas quod usque ad filum staminis erat. Et demergebant in flumine et multi serpentes et scorpiones qui iacebant recipiebant animas mulierum uiduarum et hominum. Et petebant misericordiam, et nemo eis miserebatur.</reading>
+          </unit>
+        </div>
+        <div number="37">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et ambulaui in antea et uidi uirum sedentem in cathedra ignea, et angeli satanae ignem ministrabant ex omni parte et consiliatores eius circa eum stabant.</reading>
+          </unit>
+        </div>
+        <div number="38">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixi ad angelum: Domine, quis est iste? Et dixit mihi: Iste est rex Herodes qui multos pueros propter dominum interfecit.</reading>
+          </unit>
+        </div>
+        <div number="39">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Dixit que ego: Domine, qui rectum iudicium iudicasti.</reading>
+          </unit>
+        </div>
+        <div number="40">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et ambulaui in antea, et uidi ibi homines alligatos et angeli *tartaruci* cum spinis oculos suos pungebant.</reading>
+          </unit>
+        </div>
+        <div number="41">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et interrogaui angelum qui essent isti. Et dixit: Isti sunt qui uias alienas monstrauerunt *itinerantibus.*</reading>
+          </unit>
+        </div>
+        <div number="43">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et uidi ibi uirgines cum bogias igneas libras quingentas *clamando* uenire ad *occidianum.* Et dixi ad angelum: Domine, quae sunt istae?</reading>
+          </unit>
+        </div>
+        <div number="44">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit mihi: Istae sunt quae ante nupcias uirginitatem corruperunt.</reading>
+          </unit>
+        </div>
+        <div number="45">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et ambulaui in antea et uidi ibi multos homines et multa milia ferri et plumbi ardentes super eos. Et interrogaui angelum quid hoc esset.</reading>
+          </unit>
+        </div>
+        <div number="46">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit mihi: Isti sunt derisores et *corruptores* legis et ideo iudicantur.</reading>
+          </unit>
+        </div>
+        <div number="47">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Domine, parce peccatoribus.</reading>
+          </unit>
+        </div>
+        <div number="48">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et ambulaui in antea ad occasum solis. Et uidi ibi reges et principes,</reading>
+          </unit>
+        </div>
+        <div number="49">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">et pauperes ibi stantes et interpellantes: Domine, isti sunt qui potestatem nostram totam abstulerunt.</reading>
+          </unit>
+        </div>
+        <div number="50">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et uidi ibi aliam fornacem et ardebat ibi sulphur picis et alia ligna quae tracte sum de die dominico. Et mittebantur ibi filii qui patribus suis manum miserunt et qui dominum suum negauerunt, et qui mercennario suo de iusta mercede fraudem fecerunt similiter mittebantur.</reading>
+          </unit>
+        </div>
+        <div number="51">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et uidi in oscuro loco aliam fornacem, et ibi mittebantur mulieres quae ibidem erant. Et dixi ad angelum: Domine, quae sunt?</reading>
+          </unit>
+        </div>
+        <div number="52">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Istae sunt quae *filios* *suos* de adulterio abuerunt et *necauerunt* eos.</reading>
+          </unit>
+        </div>
+        <div number="53">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et paruuli ipsi interpellabant dicentes: Domine, animam quam tu dedisti nobis, istae tulerunt nobis. Et ibidem uidi alias mulieres pendentes per *crines* capitum earum et serpentes circa colla bibebant mammillas earum.</reading>
+          </unit>
+        </div>
+        <div number="54">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Dixi: Domine quae sum? - Istae sunt quae paruulis et orphanis mammillas earum non praestauerunt.</reading>
+          </unit>
+        </div>
+        <div number="55">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Domine, parce peccatoribus.</reading>
+          </unit>
+        </div>
+        <div number="56">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Tunc uenerum Michael et Gabriel et dixerunt mihi: Exdra, ueni in caelo ut faciamus pasca.</reading>
+          </unit>
+        </div>
+        <div number="57">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixi: Viuit dominus, nisi dum uideo iudicia peccatorum non uenio. Et ambulaui in antea et uidi homines *quos bestiae disrumpebant,* et dixi: Qui sum isti? Et dixit angelus: Isti sunt qui terminum mutauerum et falsum testimonium dixerunt.</reading>
+          </unit>
+        </div>
+        <div number="58">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et deposuerum me deorsum quatuor milia nonaginta gradus in infernum.</reading>
+          </unit>
+        </div>
+        <div number="59">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et uidi ibi multos, et habitacio eorum erat splendida. Et omni tempore ibi lux erat Gaudium et laeticiam habebant quia super terram multa bona fecerunt, et tristitia in eis non erat. In caeleste *manna* gaudebant, quia multam caritatem et multas elemosinas fecerunt. Sunt autem qui non bene fecerunt eo quod non habuerunt unde facerent. Apparuerunt et ipsis tribulantes uerbum consolationis dixerunt: Firmetur in lucem sicut et illi qui multa bona fecerunt et iustitiam dilexerunt. Et ambulaui in antea et uidi foueam altam mille quingentos pedes et mulutudo +modia uictuali+ ibi ardebat sicut cera, et peccatores ibi incendebantur. Et dixi: Domine, qui sunt isu? Et dixit angelus: Isti sunt qui usuram receperunt et nullam pietatem super ipsos homines habuerunt.</reading>
+          </unit>
+        </div>
+        <div number="60">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et cum omnia iudicia inferni quae circa se erant uiderunt, uenerunt angeli Michahel, Gabriel, Raphahel et posuerunt me in nubem flammeam et eleuauerunt me super caelum unum, non super septimum. Et uenerunt congregationes angelorum et interrogantes me quae essent iudicia peccatorum. Et dixi: Flectite et *orate* pro peccatoribus. Et eleuauerunt me in aliud caelo. Et uenerunt prophetae ecclesiarum interrogantes me similiter, et dixi: Flectite et orate pro peccatoribus. Et eleuauerunt me in sepumo caelo ad dorsum domini, unde aliud uidere non merui.</reading>
+          </unit>
+        </div>
+        <div number="61">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit: Exdra, ego reddam tibi secundum opera tua. Et dixi:</reading>
+          </unit>
+        </div>
+        <div number="62">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Domine, animalia quae herbam pascunt meliora fecisti quam homines, quoniam laudes tibi non referunt, moriuntur et peccatum non habent, nos autem miseri uiui et mortui cruciati sumus.</reading>
+          </unit>
+        </div>
+        <div number="63">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et respondit dominus: Exdra, ad imaginem meam feci hominem et feminam et mandaui ut non peccarent, et peccauerunt, et ideo sunt in tormenta.</reading>
+          </unit>
+        </div>
+        <div number="64">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et alii sunt qui rogauerunt me et non fecerunt praecepta mea, et similiter non sunt electi in regno meo.</reading>
+          </unit>
+        </div>
+        <div number="67">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Quoniam tu iustus, quoniam tu omnipotens, quoniam tu misericors decore.</reading>
+          </unit>
+        </div>
+        <div number="68">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Exdra, sunt qui malis operibus corripuit eos in extremum diem.</reading>
+          </unit>
+        </div>
+        <div number="69">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et sol in sanguinem eius corruet, conuertetur et recumbet, et tenebrae fient et stellae cadent in terra, et septuaginta cubitis ardebit.</reading>
+          </unit>
+        </div>
+        <div number="70">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Caelum quid peccauit? Et dixit dominus: Caelum istum malicias hominum aspicit.</reading>
+          </unit>
+        </div>
+        <div number="71">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Ante paruum soluitur Antechristum cum maerore ac temptacionem populi et dicet se praedicare in nomine meo.</reading>
+          </unit>
+        </div>
+        <div number="72">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et exiet unus christianus et dicit se certare pro genere humano, et dicit: Si tu es Christus filius dei, transfer hunc montem. Et facere habet et reuocare non potest.</reading>
+          </unit>
+        </div>
+        <div number="73">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et iterum dicit: Fac tempestatem ut ueniant pluuia. Et non uenit. De serpente facit piscem, de petra panem, de arena aquam.</reading>
+          </unit>
+        </div>
+        <div number="74">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et qui in inum crediderit semper *esuriet* et siuet et numquam fuerit satiatus.</reading>
+          </unit>
+        </div>
+        <div number="75">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Quam similitudinem habet ipse Antechristus ut annuntiem filiis hominim?</reading>
+          </unit>
+        </div>
+        <div number="76">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit dominus: Frons illius alta est multum, caput longum habet, super cilia pilos habebit in unum, oculi eius sicut lucifer, nasus illius baratrum erit, laber eius desuper subtilior, genuculum non habebit.</reading>
+          </unit>
+        </div>
+        <div number="77">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dicet unus christianus: Si tu es Christus filius dei, flecte genua tua et *ora.* Et ipse inclinare non potest.</reading>
+          </unit>
+        </div>
+        <div number="78">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Cum autem uenit ad diem iudicii, ibit unus christianus qui in illum crediderit ad montem Synay et dicet: Coniuro te per preciosum nomen domini, mons et petra, cadite super me et coperite me.</reading>
+          </unit>
+        </div>
+        <div number="79">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Mons autem ut audierit nomen domini liquabitur et eruet super eum et remanebit in campo duro.</reading>
+          </unit>
+        </div>
+        <div number="80">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dicet: Domine, ubi fugiam? Si uado ad infernum, ubi inuenio requiem? Si descendo ad oceanum maris, tu ibi es. Fugire te non possum, quia peccata mea me tradent ante faciem tuam.</reading>
+          </unit>
+        </div>
+        <div number="81">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Set te deprecor, dominator domine, leua te de sede tua, et dicamus iudicium.</reading>
+          </unit>
+        </div>
+        <div number="82">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit dominus: Qui nos audiet?</reading>
+          </unit>
+        </div>
+        <div number="83">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Respondit Exdra: Audit nos filius tuus.</reading>
+          </unit>
+        </div>
+        <div number="84">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Filius meus qui de uoce mea natus est quomodo non audiet? dixit dominus.</reading>
+          </unit>
+        </div>
+        <div number="85">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Audiat nos sacerdos tuus.</reading>
+          </unit>
+        </div>
+        <div number="86">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit dominus: Vade et interroga sacerdotem meum, me cum potest dicere iudicium.</reading>
+          </unit>
+        </div>
+        <div number="87">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Viuit dominus quia iudico contra te iudicium propter omnes homines qui locum non habent.</reading>
+          </unit>
+        </div>
+        <div number="88">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Tu cum prophetis meis electus eris.</reading>
+          </unit>
+        </div>
+        <div number="89">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Peccatores qui plasmauit? Et respondit dominus: Ego. Et dixit Exdra: Si peccatores et me tu creasti, melius est perdere me quam totum mundum.</reading>
+          </unit>
+        </div>
+        <div number="90">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et respondit dominus: Peccatores ab ora nona sabbati usque ad secundam feriam sunt in requiem, aliis uero diebus de peccatis suis paeniteant.</reading>
+          </unit>
+        </div>
+        <div number="91">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Sit quod tibi placet.</reading>
+          </unit>
+        </div>
+        <div number="92">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit dominus: Exdra, uade in pace et ambula cum prophetis meis. Ubi iusti sunt, et tu ibi eris.</reading>
+          </unit>
+        </div>
+        <div number="93">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit dominus ad Michahelem: Vade et reuoca animam Exdrae dilecti mei.</reading>
+          </unit>
+        </div>
+        <div number="94">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et Michahel dixit: Exdra, da animam tuam.</reading>
+          </unit>
+        </div>
+        <div number="95">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et respondit Exdra: Deprecor te ut qualiscumque homo librum meum comparauerit aut scribere fecerit, quantos denario dederit et comparauerit librum meum, tantas libras aureas habeat ualutas adiutores et consolacionem ac uitam aeternam.</reading>
+          </unit>
+        </div>
+        <div number="96">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et uenit spiritus et dixit: Exdra, ex audita est oratio tua sicut petisti, et omnia data sunt tibi.</reading>
+          </unit>
+        </div>
+        <div number="97">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Venit angelus ad Ex dram et dixit: Da animam tuam.</reading>
+          </unit>
+        </div>
+        <div number="98">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Vnde egredietur anima mea?</reading>
+          </unit>
+        </div>
+        <div number="99">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit angelus: Per os tuum. Respondit Exdra: Os meum laudem domini annunciauit, non reddo animam meam per os meum.</reading>
+          </unit>
+        </div>
+        <div number="100">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit angelus: Per oculum tuum. - Oculi mei dorsum domini uiderunt, non reddo animam meam per oculos meos.</reading>
+          </unit>
+        </div>
+        <div number="101">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Per nares tuos. - Nares mei aromatum domini *oluerunt,* non reddo animam meam per nares meos.</reading>
+          </unit>
+        </div>
+        <div number="102">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Per uerticem capitis tui. - Verticem capitis mei uncxit Aaron sanctus domini de oleo sanctificato, non egredietur anima mea per uerticem capitis mei.</reading>
+          </unit>
+        </div>
+        <div number="103">
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Per manus tuas. - Manus meae psalterium domini tenuerunt, non egredietur anima mea per manus meas.</reading>
+          </unit>
+        </div>
+        <div number="104">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">- Per pedes tuos. - Pedes mei ante dominum steterunt, non reddo animam meam per pedes meos.</reading>
+          </unit>
+        </div>
+        <div number="105">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Venit Michahel ad dominum et annunciauit ei omnia quae uiderat.</reading>
+          </unit>
+        </div>
+        <div number="106">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit dominus: Ego descendam cum angelis meis et adducam animam eius.</reading>
+          </unit>
+        </div>
+        <div number="107">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Descendit que dominus et dixit: Exdra, da animam tuam. </reading>
+          </unit>
+        </div>
+        <div number="108">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Domine, exaudi orationem meam et clamor meus ad te perueniat. Domine deus omnipotens, te deprecor ut qui librum passionis meae memoriam fecerit nullum peccatum eum incuruat set omnia dimittantur.</reading>
+          </unit>
+        </div>
+        <div number="109">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit dominus: Ego omnia concedo ut petisti, set tantum da animam tuam.</reading>
+          </unit>
+        </div>
+        <div number="110">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit Exdra: Domine, timeo mortem. Et respondit dominus: Ego mortuus fui et crucifixus et resurrexi et modo sedeo ad dexteram et mortem non timeo.</reading>
+          </unit>
+        </div>
+        <div number="111">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Respondit Exdra: Si tu mortem non timuisti, cur dissisti: Tristis est anima mea usque ad mortem?</reading>
+          </unit>
+        </div>
+        <div number="112">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Respondit dominus: lam multum loqueris, da animam tuam quia non morieris. Corpus uadit unde uenit, anima reddit ad patrem qui eam dedit.</reading>
+          </unit>
+        </div>
+        <div number="113">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Dixit que iterum Exdra post angelos: Plangite me, boni angeli et archangeli, prophetae, apostoli, martires, confexores et uirgines, et postea sepellite me.</reading>
+          </unit>
+        </div>
+        <div number="114">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Et dixit iterum Exdra: Domine Ihesu Christe, non me derelinquere quando anima mea de corpore meo exibit, non occurant mihi angeli satanae et nullam laesionem mihi faciant.</reading>
+          </unit>
+        </div>
+        <div number="115">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Dixit que angelus Michahel: Quod tibi commendauit pater meus.</reading>
+          </unit>
+        </div>
+        <div number="116">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Mons contremuit, et *reddidit* spiritum nono die intrante mense iulio.</reading>
+          </unit>
+        </div>
+        <div number="117">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">Quicumque uero celebrauerit festiuitatem et memoriam beati Exdrae prophetae habeat partem cum domino meo Ihesu Christo et cum beata dei genitrice Maria et cum beato Michahel archangelo tuo. Amen.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="Explicit">
+        <div number="0">
+          <unit id="115" group="0" parallel="">
+            <reading option="0" mss="Bogaert ">EXPLICIT LEGENDA BEATI EXDRAE PROPHETAE</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

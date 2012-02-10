@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="LivPro" title="Lives of the Prophets">
+  <version title="" author="">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Torrey" language="Greek" show="no">
+        <name>Torrey</name>
+        <bibliography>C. C. Torrey, The Lives of the Prophets: Greek Text and Translation (JBLMS 1; Philadelphia: SBL, 1946).</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Title">
+        <div number="0">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Torrey "> Ὀνόματα προφητῶν καὶ πόθεν εἰσὶ καὶ ποῦ ἀπέθανον καὶ πῶς καὶ ποῦ κεῖνται.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="1">
+        <div number="0">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ἡσαΐας</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἀπὸ Ἱερουσαλήμ. θνήσκει ὑπὸ Μανασσῆ πρισθεὶς εἰς δύο καὶ ἐτέθη ὑποκάτω δρυὸς Ῥωγὴλ ἐχόμενα τῆς διαβάσεως τῶν ὑδάτων ὧν ἀπώλεσεν Ἐζεκίας χῶσας αὐτά.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ὁ θεὸς τὸ σημεῖον τοῦ Σιλωὰμ διὰ τὸν προφήτην ἐποίησεν· ὅτι πρὸ τοῦ θανεῖν ὀλιγωρήσας ηὔξατο πιεῖν ὕδωρ καὶ εὐθέως ἀπεστάλη αὐτῷ ἐξ αὐτοῦ· διὰ τοῦτο ἐκλήθη Σιλωάμ, ὃ ἑρμηνεύεται ἀπεσταλμένος. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Καὶ ἐπὶ τοῦ Ἐζεκία, πρὸ τοῦ ποιῆσαι τοὺς λάκκους καὶ τὰς κολυμβήθρας, ἐπὶ εὐχῇ τοῦ Ἡσαΐου μικρὸν ὕδωρ ἐξελήλυθεν, ὅτι ἦν ὁ λαὸς ἐν συγκλεισμῷ ἀλλοφύλων καὶ ἵνα μὴ διαφθαρῇ ἡ πόλις ὡς μὴ ἔχουσα ὕδωρ.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἠρώτων γὰρ οἱ πολέμιοι, πόθεν πίνουσιν, καὶ ἔχοντες τὴν πόλιν παρεκαθέζοντο τῷ Σιλωάμ. ἐὰν οὖν οἱ Ἰουδαῖοι ἤρχοντο, ἐξήρχετο ὕδωρ· ἐὰν δὲ ἀλλόφυλοι, οὔ. διὸ ἕως σήμερον αἰφνιδίως ἐξέρχεται, ἵνα δειχθῇ τὸ μυστήριον.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐπειδὴ διὰ τοῦ Ἡσαΐου τοῦτο γέγονεν, μνήμης χάριν καὶ ὁ λαὸς πλησίον αὐτὸν ἐπιμελῶς ἔθαψεν καὶ ἐνδόξως, ἵνα διὰ εὐχῶν αὐτοῦ καὶ μετὰ θάνατον αὐτοῦ ὡσαύτως ἔχωσι τὴν ἀπόλαυσιν τοῦ ὕδατος, ὅτι καὶ χρησμὸς ἐδόθη αὐτοῖς περὶ αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ἔστι δὲ ὁ τάφος ἐχόμενα τοῦ τάφου τῶν βασιλέων ὄπισθεν τοῦ τάφου τῶν ἱερέων ἐπὶ τὸ μέρος τὸ πρὸς νότον.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Σαλωμὼν γὰρ ἐποίησε τοὺς τάφους, τοῦ Δαυὶδ διαγράψαντος, κατ᾽ ἀνατολὰς τῆς Σιών, ἥτις ἔχει εἴσοδον ἀπὸ Γαβαὼν μήκοθεν τῆς πόλεως σταδίοις εἴκοσι, καὶ ἐποίησε σκολιὰν σύνθεσιν ἀνυπονόητον· καὶ ἔστιν ἕως τῆς σήμερον τοῖς πολλοῖς τῶν ἱερέων ἀγνοουμένη, ὅλου δὲ τοῦ λαοῦ.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἐκεῖ εἶχεν ὁ βασιλεὺς τὸ χρυσίον τὸ ἐξ Αἰθιοπίας καὶ τὰ ἀρώματα.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐπειδὴ ὁ Ἐζεκίας ἔδειξεν τοῖς ἔθνεσι τὸ μυστήριον Δαυὶδ καὶ Σαλωμῶνος καὶ ἐμίανεν ὀστᾶ πατέρων αὐτοῦ, διὰ τοῦτο ὁ θεὸς ἐπηράσατο εἰς δουλείαν ἔσεσθαι τὸ σπέρμα αὐτοῦ τοῖς ἐχθροῖς αὐτοῦ, καὶ ἄκαρπον αὐτὸν ἐποίησεν ὁ θεὸς ἀπὸ τῆς ἡμέρας ἐκείνης.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="0">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἱερεμίας</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἐξ Ἀναθὼθ καὶ ἐν Τάφναις Αἰγύπτου λίθοις βληθεὶς ὑπὸ τοῦ λαοῦ ἀποθνήσκει.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Torrey ">κεῖται δὲ ἐν τῷ τόπῳ τῆς οἰκήσεως Φαραώ, ὅτι οἱ Αἰγύπτιοι ἐδόξασαν αὐτὸν εὐεργετηθέντες δι᾽ αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ηὔξατο γὰρ καὶ αἱ ἀσπίδες αὐτοὺς ἔασαν, (ἅς) καλοῦσιν οἱ Αἰγύπτιοι ἐφώθ.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ὅσοι εἰσὶ πιστοὶ θεοῦ ἕως σήμερον εὔχονται ἐν τῷ τόπῳ καὶ λαμβάνοντες τοῦ χοὸς τοῦ τόπου δήγματα ἀσπίδων θεραπεύουσι.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἡμεῖς δὲ ἠκούσαμεν ἐκ τῶν παίδων Ἀντιγόνου καὶ Ρτολεμαίου γερόντων ἀνδρῶν, ὅτι Ἀλέξάνδρος ὁ Μακεδὼν ἐπιστὰς τῷ τόπῳ τοῦ προφήτου καὶ ἐπιγνοὺς αὐτοῦ τὰ μυστήρια εἰς Ἀλεξάνδρειαν μετέστησεν αὐτοῦ τὰ λείψανα, περιθεὶς αὐτὰ ἐνδόξως κύκλῳ·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐκωλύθη ἐκ τῆς γῆς τὸ γένος τῶν ἀσπίδων, καὶ οὕτως ἐνέβαλεν τοὺς ὄφεις τοὺς λεγομένους ἀργόλας, ὅ ἐστίν ὀφιομάχους.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος ὁ Ἱερεμίας σημεῖον δέδωκε τοῖς ἱερεῦσιν Αἰγύπτου, ὅτι δεῖ σεισθῆναι τὰ εἴδωλα αὐτῶν καὶ συμπεσεῖν τὰ χειροποίητα πάντα ὅταν ἐπιβῇ ἐν Αἰγύπτῳ παρθένος λοχεύουσα σὺν βρέφει θεοειδεῖ.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">δι᾽ ὃ καὶ ἕως νῦν τιμῶσι παρθένον λοχὸν καὶ βρέφος ἐν φάτνῃ τιθέντες προσκυνοῦσι, καὶ Πτολεμαίῳ τῷ βασιλεῖ τὴν αἰτίαν πυνθανομένῳ ἔλεγον, ὅτι πατροπαράδοτόν ἐστι μυστήριον ὑπὸ ὁσίου προφήτου, τοῖς πατρᾶσιν ἡμῶν παραδοθέν, καὶ ἐκδεχόμεθα τὸ πέρας, φησίν, τοῦ μυστηρίου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος ὁ προφήτης πρὸ τῆς ἁλώσεως τοῦ ναοῦ ἥρπαξε τὴν κιβωτὸν τοῦ νόμου καὶ τὰ ἐν αὐτῇ καὶ ἐποίησεν αὐτὰ καταποθῆναι ἐν πέτρᾳ, καὶ εἶπε τοῖς παρεστῶσιν·</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ἀπεδήμησεν κύριος ἐκ Σινᾶ εἰς οὐρανὸν καὶ πάλιν ἐλεύσεται ἐν δυνάμει, καὶ σημεῖον ὑμῖν ἔσται τῆς παρουσίας αὐτοῦ, ὅτε ξύλον πάντα τὰ ἔθνη προσκυνοῦσιν.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Torrey ">εἶπεν δὲ ὅτι τὴν κιβωτὸν ταύτην οὐδεὶς ἐκβάλλει εἰ μὴ Ἀαρών, καὶ τὰς ἐν αὐτῷ πλάκας οὐδεὶς ἀναπτύξει οὐκέτι ἱερέων ἢ προφητῶν εἰ μὴ Μωϋσὴς ὁ ἐκλεκτὸς τοῦ Θεοῦ.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐν τῇ ἀναστάσει πρώτη ἡ κιβωτὸς ἀναστήσεται καὶ ἐξελεύσεται ἐκ τῆς πέτρας καὶ τεθήσεται ἐν ὄρει Σινᾶ, καὶ πάντες οἱ ἅγιοι πρὸς αὐτὴν συναχθήσονται ἐκεῖ ἐκδεχόμενοι κύριον καὶ τὸν ἐχθρὸν φεύγοντες ἀνελεῖν αὐτοὺς θέλοντα. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ἐν τῇ πέτρᾳ ἐσφράγισε τῷ δακτύλῳ τὸ ὄνομα τοῦ Θεοῦ καὶ γέγονεν ὁ τύπος ὡς γλυφὴ σιδήρου, καὶ νεφέλη ἐσκέπασε τὸ ὄνομα καὶ οὐδεὶς νοεῖ τὸν τόπον οὔτε ἀναγνῶναι αὐτὸν ἕως σήμερον καὶ ἕως συντελείας.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἔστιν ἡ πέτρα ἐν τῇ ἐρήμῳ, ὅπου πρώτως ἡ κιβωτὸς γέγονε μεταξὺ τῶν δύο ὀρέων, ἐν οἷς κεῖνται Μωϋσὴς καὶ Ἀαρών, καὶ ἐν νυκτὶ νεφέλη ὡς πῦρ γίνεται κατὰ τὸν τύπον τὸν ἀρχαῖον, ὅτι οὐ μὴ παύσηται ἡ δόξα τοῦ θεοῦ ἐκ τοῦ νόμου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἔδωκεν ὁ θεὸς τῷ Ἱερεμίᾳ χάριν, ἵνα τὸ τέλος τοῦ μυστηρίου αὐτοῦ αὐτὸς ποιήσειεν, ἵνα γένηται συνκοινωνὸς Μωϋσέως, καὶ ὁμοῦ εἰσὶν ἕως σήμερον.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="0">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἰεζεκιήλ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτός ἐστίν ἐκ γῆς Σαρίρα, ἐκ τῶν ἱερέων, καὶ ἀπέθανεν ἐν τῇ γῇ τῶν Χαλδαίων ἐπὶ τῆς αἰχμαλωσίας, πολλὰ προφητεύσας τοῖς ἐν τῇ Ἰουδαίᾳ.   </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἀπέκτεινε δὲ αὐτὸν ὁ ἡγούμενος τοῦ λαοῦ Ἰσραὴλ ἐκεῖ, ἐλεγχόμενος ὑπ᾽ αὐτοῦ ἐπὶ εἰδώλων σεβάσμασι.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἔθαψαν αὐτὸν ἐν ἀγρῷ Μαοὺρ ἐν τάφῳ Σὴμ καὶ Ἀρφάξαδ πατέρων  Ἀβραάμ.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἔστιν ὁ τάφος σπήλαιον διπλοῦν, ὅτι καὶ Ἀβραὰμ ἐν Χεβρῶν πρὸς τὴν ὁμοιότητα αὐτοῦ ἐποίησε τὸν τάφον Σάῤῥας.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">διπλοῦν δὲ λέγεται, ὅτι εἰλικτόν ἐστι, καὶ ἀπόκρυφον ἐξ ἐπιπέδου ὑπερῷόν ἐστι ἐπὶ γῆς ἐν πέτρᾳ κρεμάμενον. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος ὁ προφήτης τέρας ἔδωκε τῷ λαῷ, ὤστε προσέχειν τῷ ποταμῷ Χοβάρ·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ὅτε ἐκλείποι, ἐπελπίζειν τὸ δρέπανον τῆς ἐρημώσεως εἰς πέρας τῆς γῆς, καὶ ὅτε πλημμυρήσῃ, τὴν εἰς Ἱερουσαλὴμ ἐπάνοδον.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ γὰρ ἐκεῖ κατῴκει ὁ ὅσιος καὶ πολλοὶ πρὸς αὐτὸν συνεστρέφοντο.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ποτὲ πλήθους συνόντος αὐτῷ ἔδεισαν οἱ Χαλδαῖοι, μὴ ἀντάρωσι, καὶ ἐπῆλθον αὐτοῖς εἰς ἀναίρεσιν.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐποίησεν στῆναι τὸ ὕδωρ, ἵνα ἐκφύγωσιν εἰς τὸ πέραν γενόμενοι· καὶ οἱ τολμήσαντες τῶν ἐχθρῶν ἐπιδιῶξαι κατεποντίσθησαν.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Οὗτος διὰ προσευχῆς αὐτομάτως αὐτοῖς δαψιλῆ τροφὴν ἰχθύων παρέσχετο καὶ πολλοῖς ἐκλείπουσι ζωὴν ἐλθεῖν ἐκ θεοῦ παρεκάλεσεν. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος ἀπολλυμένου τοῦ λαοῦ ὑπὸ τῶν ἐχθρῶν προσῆλθε τοῖς ἡγουμένοις καὶ διὰ τεραστίων φοβηθέντες ἐπαύσαντο.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">τοῦτό τε ἔλεγεν αὐτοῖς, ὅτι Διαπεφωνήκαμεν; ἀπώλετο ἡ ἐλπὶς ἡμῶν; καὶ ἐν τέρατι τῶν ὀστέων τῶν νεκρῶν αὐτοὺς ἔπεισεν, ὅτι ἔσται ἐλπὶς τῷ Ἰσραὴλ καὶ ὧδε καὶ ἐπὶ τοῦ μέλλοντος. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος ἐκεῖ ὢν ἐδείκνυ τῷ λαῷ Ἰσραὴλ τὰ ἐν Ἱερουσαλὴμ καὶ ἐν τῷ ναῷ γινόμενα.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">οὗτος ἡρπάγη ἐκεῖθεν καὶ ἦλθεν εἰς Ἱερουσαλὴμ εἰς ἔλεγχον τῶν ἀπίστων.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Οὗτος κατὰ τὸν Μωϋσὴν εἶδεν τὸν τύπον τοῦ ναοῦ, καὶ τὸ τεῖχος καὶ περίτειχος πλατύ, καθὼς εἶπεν καὶ ὁ Δανιήλ, ὅτι κτισθήσεται. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος ἔκρινεν ἐν Βαβυλῶνι τὴν φυλὴν Δὰν καὶ τοῦ Γάδ, ὅτι ἠσέβουν εἰς τὸν κύριον διώκοντες τοὺς τὸν νόμον φυλάσσοντας,</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἐποίησεν αὐτοῖς τέρας μέγα, ὅτι οἱ ὄφεις ἀνήλισκον τὰ βρέφη αὐτῶν καὶ πάντα τὰ κτήνη αὐτῶν,</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ προείρηκεν, ὅτι δι᾽ αὐτοὺς οὐκ ἐπιστρέψει ὁ λαὸς εἰς τὴν γῆν αὐτοῦ, ἀλλ᾽ ἐν Μηδίᾳ ἔσονται ἕως συντελείας πλάνης αὐτῶν.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐξ αὐτῶν ἦν ὁ ἀνελὼν αὐτόν· ἀντέκειντο γὰρ αὐτῷ πάσας τὰς ἡμέρας τῆς ζωῆς αὐτοῦ. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="0">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Δανιήλ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος μὲν ἦν ἐκ φυλῆς Ἰουδά, γένους τῶν ἐξεχόντων τῆς βασιλικῆς ὑπηρεσίας, ἀλλ᾽ ἔτι νήπιος ἤχθη ἐκ τῆς Ἰουδαίας εἰς γῆν Χαλδαίων· ἐγεννήθη δὲ ἐν Βεθωρὼν τῇ ἀνωτέρᾳ·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἦν ἀνὴρ σώφρων, ὥστε δοκεῖν τοὺς Ἰουδαίους εἶναι αὐτὸν σπάδοντα. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Πολλὰ ἐπένθησεν οὗτος ἐπὶ τὴν πόλιν, καὶ ἐν νηστείαις ἤσκησεν ἀπὸ πάσης τροφῆς ἐπιθυμητῆς, καὶ ἦν ἀνὴρ ξηρὸς τὴν ἰδέαν, ἀλλὰ ὡραῖος ἐν χάριτι ὑψίστου. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος πολλὰ ηὔξατο ὑπὲρ τοῦ Ναβουχοδονόσορ, παρακαλοῦντος αὐτὸν Βαλτάσαρ τοῦ υἱοῦ αὐτοῦ, ὅτε ἐγένετο θηρίον καὶ κτῆνος, ἵνα μὴ ἀπόληται.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν τὰ ἐμπρόσθια ὡς βοῦς σὺν τῇ κεφαλῇ, καὶ οἱ πόδες σὺν τοῖς ὀπισθίοις ὡς λέων.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἀπεκαλύφθη τῷ ὁσίῳ περὶ τοῦ μυστηρίου τούτου, ὅτι κτῆνος γέγονε διὰ τὴν φιληδονίαν καὶ τὸ σκληροτράχηλον.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ταῦτα ἔξουσιν οἱ δυνάσται ἐν νεότητι, ὅτι ὡς βοῦς ὑπὸ ζυγὸν γίνονται τοῦ Βελίαρ, ἐπὶ τέλει δὲ θῆρες γίνονται, ἁρπάζοντες, ὀλεθρεύοντες, ἀναιροῦντες καὶ πατάσσοντες. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ἔγνω διὰ θεοῦ ὁ ἅγιος, ὅτι ὡς βοῦς ἤσθιε χόρτον καὶ ἐγίνετο αὐτῷ ἀνθρωπίνης φύσεως τροφή.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Torrey ">διὰ τοῦτο καὶ ὁ Ναβουχοδονόσορ  μετὰ τὴν πέψιν ἐν καρδίᾳ ἀνθρωπίνῃ γενόμενος ἔκλαιεν καὶ ἠξίου κύριον πᾶσαν ἡμέραν καὶ νύκτα τεσσαρακοντάκις δεόμενος.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καρδία κτηνῶν ἐπεγίνετο αὐτῷ καὶ ἐλάνθανεν αὐτὸν ὅτι γέγονεν ἄνθρωπος·</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἤρθη ἡ γλῶσσα αὐτοῦ τοῦ μὴ λαλεῖν· καὶ νοῶν εὐθέως ἐδάκρυε, καὶ οἱ ὀφθαλμοὶ αὐτοῦ ἦσαν ὡς κρέας ἐκ τοῦ κλαίειν.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Torrey ">πολλοὶ γὰρ ἐξιόντες ἐκ τῆς πόλεως ἑώρων αὐτόν· ὁ Δανιὴλ μόνος οὐκ ἠθέλησεν αὐτὸν ἰδεῖν, ὅτι πάντα τὸν χρόνον τῆς ἀλλοιώσεως αὐτοῦ ἐν προσευχῇ ἦν περὶ αὐτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">ἔλεγεν ὅτι πάλιν ἄνθρωπος γενήσεται· καὶ ἠπίστουν αὐτῷ. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ὁ Δανιὴλ τὰ ἑπτὰ ἔτη, ἃ εἶπεν ἑπτὰ καιρούς, ἐποίησεν γενέσθαι ἑπτὰ μῆνας.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Torrey ">τὸ μυστήριον τῶν ἑπτὰ καιρῶν ἐτελέσθη ἐπ᾽ αὐτόν, ὅτι ἀπεκατέστησεν ἐν ἑπτὰ μησί, τὰ ἓξ ἔτη καὶ ἓξ μῆνας ὑπέπιπτε κυρίῳ καὶ ὡμολόγει τὴν ἀσέβειαν αὐτοῦ· καὶ μετὰ ἄφεσιν τῆς ἀνομίας αὐτοῦ ἀπέδωκεν αὐτῷ τὴν βασιλείαν.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Torrey ">οὔτε ἄρτον ἢ κρέα ἔφαγεν οὔτε οἶνον ἔπιεν ἐξομολογούμενος, ὅτι ὁ Δανιὴλ αὐτῷ προσέταξεν ἐν ὀσπρίοις βρεκτοῖς καὶ χλόαις ἐξιλεοῦσθαι κύριον.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Torrey ">διὰ τοῦτο ἐκάλεσεν αὐτὸν Βαλτάσαρ, ὅτι ἠθέλησεν αὐτὸν συνκληρόνομον καταστῆσαι τῶν τέκνων αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἀλλ᾽ ὁ ὅσιος εἶπεν, ἵλεώς μοι ἀφεῖναι κληρονομίαν πατέρων μου καὶ κολληθῆναι κληρονομίαις ἀπεριτμήτων.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ τοῖς ἄλλοις βασιλεῦσι Περσῶν πολλὰ ἐποίησεν τεράστια, ὅσα οὐκ ἔγραψαν.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">ἐκεῖ ἀπέθανε καὶ ἐτάφη ἐν τῷ σπηλαίῳ τῷ βασιλικῷ μόνος ἐνδόξως. </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Καὶ αὐτὸς ἔδωκε τέρας ἐν ὄρεσι τοῖς ὑπεράνω Βαβυλῶνος, ὅτι, ὅτε καπνισθήσεται τὸ ἐκ βορρᾶ, ἥξει τὸ τὲλος Βαβυλῶνος· ὅτε δὲ ὡς ἐν πυρὶ καίεται, τὸ τέλος πάσης τῆς γῆς· ἐὰν δὲ τὸ ἐν τῷ νότῳ ῥεύσῃ ὕδατα, ἐπιστρέψει ὁ λαὸς εἰς γῆν αὐτοῦ, καὶ ἐὰν αἷμα ῥεύσει, φόνος ἔσται τοῦ Βελίαρ ἐν πάσῃ τῇ γῇ.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐκοιμήθη ἐν εἰρήνῃ ὁ ὅσιος.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="0">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ὡσηέ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος ἦν ἐκ Βελεμὼθ τῆς φυλῆς Ἰσσάχαρ, καὶ ἐτάφη ἐν τῇ γῇ αὐτοῦ ἐν εἰρήνῃ.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἔδωκε τέρας, ἥξειν κύριος ἐπὶ τῆς γῆς, ἐὰν ἡ δρῦς ἡ ἐν Σηλὼμ μερισθῇ ἀφ᾽ ἑαυτῆς καὶ γένωνται δρύες δώδεκα. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="0">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Μιχαίας ὁ Μωραθὶ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἐκ φυλῆς Ἐφραίμ. πολλὰ ποιήσας τῷ Ἀχαὰβ ὑπὸ Ἰωρὰμ τοῦ υἱοῦ αὐτοῦ ἀνῃρέθη κρημνωθείς, ὅτι ἤλεγχεν αὐτὸν ἐπὶ ταῖς ἀσεβείαις τῶν πατέρων αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐτάφη ἐν τῇ γῇ αὐτοῦ μόνος σύνεγγυς πολυανδρίου Ἐνακείμ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="0">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἀμὼς</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἐκ Θεκουέ. καὶ Ἀμασίας πυκνῶς αὐτὸν τυμπανίσας, τέλος καὶ ἀνεῖλεν αὐτὸν ὁ υἱὸς αὐτοῦ ἐν ῥοπάλῳ πλήξας αὐτοῦ τὸν κρόταφον·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἔτι ἐμπνέων ἦλθεν εἰς τὴν γῆν αὐτοῦ καὶ μεθ᾽ ἡμέρας ἀπέθανε καὶ ἐτάφη ἐκεῖ. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="0">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἰωὴλ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">ἦν ἐκ τῆς γῆς τοῦ Ῥουβὴν ἐν ἀγρῷ Βεθμαών. ἐν εἰρήνῃ ἀπέθανε καὶ ἐτάφη ἐκεῖ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="0">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἀβδιοῦ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἐκ γῆς Συχὲμ ἀγροῦ Βηθαχαράμ.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Torrey ">οὗτος ἦν μαθητὴς Ἠλία καὶ πολλὰ ὑπομείνας δι᾽ αὐτὸν περιεσώζετο.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Torrey ">οὗτος ἦν ὁ τρίτος πεντηκόνταρχος, οὗ ἐφείσατο Ἠλίας καὶ κατέβη πρὸς Ὀχοζίαν.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">μετὰ ταῦτα ἀπολιπὼν τὴν λειτουργίαν τοῦ βασιλέως προεφήτευσε καὶ ἀπέθανε ταφεὶς μετὰ τῶν πατέρων αὐτοῦ.  </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="0">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἰωνᾶς</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἐκ γῆς Καριαθμαοῦς πλησίον πόλεως Ἑλλήνων Ἀζώτου κατὰ θάλασσαν.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἐκβρασθεὶς ἐκ τοῦ κήτους καὶ ἀπελθὼν ἐν Νινευῇ ἀνακάμψας οὐκ ἔμεινεν εἰς τὴν γῆν αὐτοῦ, ἀλλὰ παραλαβὼν τὴν μητέρα αὐτοῦ παρῴκησε τὴν Σοὺρ χώραν ἀλλοφύλων·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">ἔλεγε γὰρ, ὅτι οὕτως ἀφελῶ ὄνειδός μου, ὅτι ἐψευσάμην προφητεύσας κατὰ Νινευὴ τῆς μεγάλης πόλεως.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ἦν τότε Ἠλίας ἐλέγχων τὸν οἶκον Ἀχαάβ, καὶ καλέσας λιμὸν ἐπὶ τὴν γῆν ἔφυγεν καὶ ἐλθὼν εὗρε τὴν χήραν μετὰ τοῦ υἱοῦ αὐτῆς, οὐ γὰρ ἐδύνατο μένειν μετὰ ἀπεριτμήτων.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ εὐλόγησεν αὐτήν· καὶ θανόντα τὸν υἱὸν αὐτῆς πάλιν ἤγειρεν ἐκ νεκρῶν ὁ θεὸς διὰ τοῦ Ἠλία, ἠθέλησε γὰρ δεῖξαι αὐτῷ, ὅτι οὐ δύναται ἀποδράσαι θεόν.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Καὶ ἀναστὰς μετὰ τὸν λιμὸν ἦλθεν ἐν γῇ Ἰούδα. καὶ ἀποθανοῦσαν τὴν μητέρα αὐτοῦ κατὰ τὴν ὁδὸν ἔθαψεν αὐτὴν ἐχόμενα τῆς βαλάνου Δεββώρας.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ κατοικήσας ἐν γῇ Σαραὰρ ἀπέθανε καὶ ἐτάφη ἐν σπηλαίῳ τοῦ Κενεζαίου κριτοῦ γενομένου μιᾶς φυλῆς ἐν ἡμέραις τῆς ἀναρχίας.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἔδωκε τέρας ἐπὶ Ἱερουσαλὴμ καὶ ὅλην τὴν γῆν, ὅτε ἴδωσι λίθον βοῶντα οἰκτρῶς, ἐγγίζειν τὸ τέλος· καὶ ὅτε ἴδωσιν ἐν Ἱερουσαλὴμ πάντα τὰ ἔθνη, ὅτι ἡ πόλις ἕως ἐδάφους ἀφανισθήσεται.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="0">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ναοὺμ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἀπὸ Ἐλκεσὶ πέραν τοῦ [ὄρους] εἰς Βηθγαβρὶν φυλῆς Συμεών.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="Torrey ">οὗτος μετὰ τὸν Ἰωνᾶν τῇ Νινευῇ τέρας ἔδωκεν, ὅτι ὑπὸ ὑδάτων γλυκίων καὶ πυρὸς ὑπογείου ἀπολεῖται, ὃ καὶ γέγονεν.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἡ γὰρ περιέχουσα αὐτὴν λίμνη κατέκλυσεν αὐτὴν ἐν σεισμῷ, καὶ πῦρ ἐκ τῆς ἐρήμου ἐπελθὸν τὸ  ὑψηλότερον αὐτῆς μέρος ἐνέπρησεν.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">ἀπέθανε δὲ ἐν εἰρήνῃ καὶ ἐτάφη ἐν τῇ γῇ αὐτοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="0">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἀμβακοὺμ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">ἐκ φυλῆς ἦν Συμεὼν ἐξ ἀγροῦ Βηθζουχάρ.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="Torrey ">οὗτος εἶδε πρὸ τῆς αἰχμαλωσίας περὶ τῆς ἁλώσεως Ἱερουσαλὴμ καὶ ἐπένθησε σφόδρα.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ὅτε ἦλθε Ναβουχοδονόσορ ἐν Ἱερουσαλήμ, ἔφυγεν εἰς Ὀστρακίνην καὶ παροίκησεν ἐν γῇ Ἰσμαήλ.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">ὡς δὲ ἐπέστρεψαν οἱ Χαλδαῖοι, καὶ οἱ κατάλοιποι οἱ ὄντες ἐν Ἱερουσαλὴμ κατέβησαν εἰς Αἴγυπτον, ἦν παροικῶν τὴν γῆν αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Καὶ ἐλειτούργει θερισταῖς τοῦ ἀγροῦ αὐτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ὡς δὲ ἔλαβε τὸ ἔδεσμα, προεφήτευσε τοῖς ἰδίοις εἰπών· πορεύομαι εἰς γῆν μακρὰν καὶ ταχέως ἐλεύσομαι· εἰ δὲ βραδύνω, ἀπενέγκατε τοῖς θερισταῖς.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ γενόμενος ἐν Βαβυλῶνι καὶ δοὺς τὸ ἄριστον τῷ Δανιὴλ ἐπέστη τοῖς θερισταῖς ἐσθίουσι καὶ οὐδενὶ εἶπεν τὸ γενόμενον.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Συνῆκεν δὲ ὅτι τάχειον ἐπιστρέψει ὁ λαὸς ἀπὸ Βαβυλῶνος.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ πρὸ δύο ἐτῶν ἀποθνήσκει τῆς ἐπιστροφῆς. καὶ ἐτάφη ἐν ἀγρῷ ἰδίῳ μόνος.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ἔδωκε δὲ τέρας τοῖς ἐν τῇ Ἰουδαίᾳ, ὅτι ὄψονται ἐν τῷ ναῷ φῶς, καὶ οὕτως ἴδωσι τὴν δόξαν τοῦ ναοῦ.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ περὶ συντελείας τοῦ ναοῦ προεῖπεν, ὅτι ὑπὸ ἔθνους δυτικοῦ γενήσεται.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="Torrey ">τότε τὸ ἅπλωμα, φησί, τοῦ δαβεὶρ εἰς μικρὰ ῥαγήσεται, καὶ τὰ ἐπίκρανα τῶν δύο στύλων ἀφαιρεθήσονται καὶ οὐδεὶς  γνώσεται, ποῦ ἔσονται·</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="115" group="0" parallel="">
+            <reading option="0" mss="Torrey ">αὐτὰ δὲ ἐν τῇ ἐρήμῳ ἀπενεχθήσονται ὑπὸ ἀγγέλων, ὅπου ἐν ἀρχῇ ἐπάγη ἡ σκηνὴ τοῦ μαρτυρίου.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="116" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐν αὐτοῖς γνωσθήσεται ἐπὶ τέλει κύριος, ὅτι φωτίσουσι τοὺς διωκομένους ὑπὸ τοῦ ὄφεως ἐν σκότει ὡς ἐξ ἀρχῆς.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="0">
+          <unit id="117" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Σοφονίας</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="118" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἐκ φυλῆς ἦν Συμεὼν ἀγροῦ Σαβαραθά·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="119" group="0" parallel="">
+            <reading option="0" mss="Torrey ">προεφήτευσε περὶ τῆς πόλεως καὶ περὶ τέλους ἐθνῶν καὶ αἰσχύνης ἀσεβῶν·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="120" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ θανὼν ἐτάφη ἐν ἀγρῷ αὐτοῦ. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="0">
+          <unit id="121" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἀγγαῖος</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="122" group="0" parallel="">
+            <reading option="0" mss="Torrey ">τάχα νεός ἦλθεν ἐκ Βαβυλῶνος εἰς Ἱερουσαλὴμ καὶ φανερῶς περὶ τῆς ἐπιστροφῆς τοῦ λαοῦ προεφήτευσε καὶ εἶδεν ἐκ μέρους τὴν οἰκοδομὴν τοῦ ναοῦ·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="123" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ θανὼν ἐτάφη πλησίον τοῦ τάφου τῶν ἱερέων ἐνδόξως ὡς αὐτοί.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="0">
+          <unit id="124" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ζαχαρίας</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="125" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦλθεν ἀπὸ Χαλδαίων ἤδη προβεβηκὼς καὶ ἐκεῖ πολλὰ τῷ λαῷ προεφήτευσε· καὶ τέρατα ἔδωκεν εἰς ἀπόδειξιν.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="126" group="0" parallel="">
+            <reading option="0" mss="Torrey ">οὗτος εἶπε τῷ Ἰωσεδέκ, ὅτι γεννήσει υἱὸν καὶ ἐν Ἱερουσαλὴμ ἱερατεύσει·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="127" group="0" parallel="">
+            <reading option="0" mss="Torrey ">οὗτος καὶ τὸν Σαλαθιὴλ ἐφ᾽ υἱῷ εὐλόγησε καὶ ὄνομα Ζοροβάβελ ἐπέθηκε.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="128" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἐπὶ Κύρου τέρας ἔδωκεν εἰς νῖκος καὶ περὶ τῆς λειτουργίας αὐτοῦ προηγόρευσεν, ἣν ποιήσει ἐπὶ Ἱερουσαλὴμ, καὶ ηὐλόγησεν αὐτὸν σφόδρα. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="129" group="0" parallel="">
+            <reading option="0" mss="Torrey ">τὰ δὲ τῆς προφητείας ἐν Ἱερουσαλὴμ καὶ περὶ τέλους ἐθνῶν καὶ Ἰσραὴλ καὶ τοῦ ναοῦ καὶ ἀργίας προφητῶν καὶ ἱερέων καὶ περὶ διπλῆς κρίσεως ἐξέθετο.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="130" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἀπέθανεν ἐν γήρει μακρῷ καὶ ἐκλιπὼν ἐτάφη σύνεγγυς Ἀγγαίου.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="0">
+          <unit id="131" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Μαλαχίας</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="132" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Οὗτος μετὰ τὴν ἐπιστροφὴν τίκτεται ἐν Σωφᾶ, καὶ πάνυ νέος καλὸν βίον ἔσχηκε.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="133" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἐπειδὴ πᾶς ὁ λαὸς ἐτίμα αὐτὸν ὡς ὅσιον καὶ πρᾳῦν, ἐκάλεσαν αὐτὸν Μαλαχί, ὃ ἑρμηνεύεται ἄγγελος· ἦν γὰρ καὶ τῷ ἰδεῖν εὐπρεπής.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="134" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἀλλὰ καὶ ὅσα εἶπεν αὐτὸς ἐν προφητείᾳ, αὐτῇ τῇ ἡμέρᾳ ὀφθεὶς ἄγγελος θεοῦ ἐπεδευτέρωσεν, ὡς ἐγένετο ἐν ἡμέραις ἀναρχίας, ὡς γέγραπται ἐν Σφαρφωτίμ, τουτέστιν ἐν βίβλῳ Κριτῶν.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="135" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἔτι νέος προσετὲθη πρός τοὺς πατέρας αὐτοῦ ἐν ἀγρῷ αὐτοῦ. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="0">
+          <unit id="136" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ναθὰν</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="137" group="0" parallel="">
+            <reading option="0" mss="Torrey ">προφήτης Δαυὶδ ἦν ἐκ Γαβαών, ἐκ φυλῆς Ἐωή. καὶ αὐτὸς ἦν ὁ διδάξας αὐτὸν νόμον κυρίου.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="138" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ εἶδεν ὅτι Δαυὶδ ἐν τῇ Βηρσαβεὲ παραβήσεται, καὶ σπεύδοντα ἐλθεῖν ἀγγεῖλαι αὐτῷ ἐνεπόδισεν ὁ Βελίαρ, ὅτι κατὰ τὴν ὁδὸν εὗρεν νεκρὸν κείμενον γυμνὸν ἐσφαγμένον·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="139" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἐπέμεινεν ἐκεῖ καὶ τῇ νυκτὶ ἐκείνῃ ἔγνω, ὅτι ἐποίησε τὴν ἁμαρτίαν· καὶ ὑπέστρεψε πενθῶν.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="140" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ὡς ἀνεῖλε τὸν ἄνδρα αὐτῆς, ἔπεμψε κύριος ἐλέγξαι αὐτόν.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="141" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ αὐτὸς πάνυ γηράσας ἀπέθανεν καὶ ἐτάφη εἰς τὴν γῆν αὐτοῦ. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="0">
+          <unit id="142" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἀχία</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="143" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἀπὸ Σηλώμ, ὅπου ἦν ἡ σκηνὴ τὸ παλαιόν, ἐκ πόλεως Ἡλί.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="144" group="0" parallel="">
+            <reading option="0" mss="Torrey ">οὗτος εἶπε περὶ Σαλωμών, ὅτι προσκρούσει κυρίῳ·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="145" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἤλεγξε τὸν Ἱεροβοάμ, ὅτι δόλῳ ἐπορεύετο μετὰ κυρίου· εἶδεν ζεῦγος βοῶν πατοῦντα τὸν λαὸν καὶ κατὰ τῶν ἱερέων ἐπιτρέχοντα·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="146" group="0" parallel="">
+            <reading option="0" mss="Torrey ">προεἶπε καὶ τῷ Σαλωμών, ὅτι αἱ γυναῖκες αὐτὸν ἐκστήσουσι καὶ πᾶν τὸ γένος αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="147" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἀπέθανε καὶ ἐτάφη σύνεγγυς τῆς δρυὸς Σηλώμ. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="0">
+          <unit id="148" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἰωὴδ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="149" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἐκ γῆς Σαμαρείμ. οὗτος ἐστίν, ὃν ἐπάταξεν ὁ λέων καὶ ἀπέθανεν, ὅτε ἤλεγξεν τὸν Ἱεροβοὰμ ἐπὶ ταῖς δαμάλεσι·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="150" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐτάφη ἐν Βεθὴλ σύνεγγυς τοῦ ψευδοπροφήτου τοῦ πλανήσαντος αὐτόν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="0">
+          <unit id="151" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἀζαρίας</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="152" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἦν ἐκ γῆς Συβαθά, ὃς ἐπέστρεψεν ἐξ Ἰσραὴλ τὴν αἰχμαλωσίαν Ἰούδα.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="153" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ θανὼν ἐτάφη ἐν ἀγρῷ αὐτοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="21">
+        <div number="0">
+          <unit id="154" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ζαχαρίας</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="155" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ἐξ Ἱερουσαλὴμ, υἱὸς Ἰωδαὲ τοῦ ἱερέως, ὃν ἀπέκτεινεν Ἰωὰς ὁ βασιλεὺς Ἰούδα ἐχόμενα τοῦ θυσιαστηρίου, καὶ ἐξέχεεν τὸ αἷμα αὐτοῦ ὁ οἶκος Δαυὶδ ἀνὰ μέσον ἐπὶ τοῦ αἰλάμ· καὶ λαβόντες αὐτὸν οἱ ἱερεῖς ἔθαψαν αὐτὸν μετὰ τοῦ πατρὸς αὐτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="156" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">ἔκτοτε ἐγένοντο τέρατα ἐν τῷ ναῷ φαντασίας καὶ οὐκ ἴσχυον οἱ ἱερεῖς ἰδεῖν ὀπτασίαν ἀγγέλων θεοῦ οὔτε δοῦναι χρησμοὺς ἐκ τοῦ δαβεὶρ οὔτε ἐρωτῆσαι ἐν τῷ ἐφοὺδ οὔτε διὰ δήλων ἀποκριθῆναι τῷ λαῷ ὡς τὸ πρίν. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="0">
+          <unit id="157" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἠλίας</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="158" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Θεσβίτης ἦν ἐκ γῆς Ἀράβων, φυλῆς Ἀαρών, οἰκῶν ἐν Γαλαάδ, ὅτι ἡ Θεσβεὶ δόμα ἦν τοῖς ἱεροῦσιν.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="159" group="0" parallel="">
+            <reading option="0" mss="Torrey ">ὅτε εἶχεν τεχθῆναι, εἶδεν Σοβαχὰ ὁ πατὴρ αὐτοῦ, ὅτι ἄνδρες λευκοφανεῖς αὐτὸν προσηγόρευον, καὶ ὅτι ἐν πυρὶ αὐτὸν ἐσπαργάνουν καὶ φλόγα πυρὸς ἐδίδουν αὐτῷ φαγεῖν·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="160" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">καὶ ἐλθὼν ἀνήγγειλεν ἐν Ἱερουσαλήμ, καὶ εἶπεν αὐτῷ ὁ χρησμός· μὴ δειλιάσῃς· ἔσται γὰρ ἡ οἴκησις αὐτοῦ φῶς καὶ ὁ λόγος αὐτοῦ ἀπόφασις, καὶ κρινεῖ τὸν Ἰσραὴλ ἐν ῥομφαίᾳ καὶ ἐν πυρί.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="23">
+        <div number="0">
+          <unit id="161" group="0" parallel="">
+            <reading option="0" mss="Torrey " linebreak="doubleFollowing">Ἐλισαῖος</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="162" group="0" parallel="">
+            <reading option="0" mss="Torrey ">Ἐλισαῖος ἦν ἐξ Ἀβελμαοὺλ γῆς τοῦ Ῥουβήν·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="163" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ ἐπὶ τούτου γέγονε τέρας, ὅτι, ἡνίκα ἐτέχθη ἐν Γαλγάλοις ἡ δάμαλις ἡ χρυσῆ ὀξὺν ἐβόησεν, ὥστε ἀκουσθῆναι εἰς Ἱερουσαλήμ·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="164" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ εἶπεν ὁ ἱερεὺς διὰ τῶν δήλων, ὅτι προφήτης ἐτέχθη Ἰσραήλ, ὃς καθελεῖ τὰ γλυπτὰ αὐτῶν καὶ τὰ χωνευτὰ.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="165" group="0" parallel="">
+            <reading option="0" mss="Torrey ">καὶ θανὼν ἐτάφη ἐν Σαμαρείᾳ.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>
