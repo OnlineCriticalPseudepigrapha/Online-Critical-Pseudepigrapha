@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+<!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+<!ELEMENT divisions (division)+>
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+<!ELEMENT resources (resource)+>
+<!ELEMENT resource (info+ , URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT manuscripts (ms)+>
+<!ELEMENT ms (name , bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA | sup)*>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+<!ELEMENT booktitle (#PCDATA)>
+<!ELEMENT text (div)+>
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+<!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book filename="Mois" title="Assumption of Moses">
+  <version title="Latin" author="" language="Latin">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Ceriani" language="Latin" show="yes">
+        <name>Ceriani</name>
+        <bibliography>A.M. Ceriani, "Fragmenta Assumptionis Mosis," in Fragmenta latina evangelii S. Lucae, Parvae Genesis et Assumptionis Mosis, Baruch, Threni et Epistolae Jeremiae versionis syriaque Pauli Telensis (Monumenta sacra et profana 1; Milano: 1861), 55-64.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">..........................................</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">qui est bis millesimus et quingentesimus annus a creatura orbis terrae</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">nam secus qui in oriente sunt numerus ... mus et .. mus et .... mus profectionis fynicis</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">cum exiuit plebs post profectionem quae fiebat per mosysen usque amman trans iordanem</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">profetiae quae facta est a moysen in libro deuteronomio</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">qui uocauit ad se iesum filium naue hominem probatum domino</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">ut sit successor plebi et scene testimonii cum omnibus sanctis illius</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">ut et inducat plebem in terram datam extribus eorum</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">ut detur illis per testamentum et per iusiurandum quod locutus est in scenae dare de iesum dicendo ad iesum uerbum hoc</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et promitte secus industriam tuam omnia quae mandata sunt ut facias quemadmodum sine quaerellam est</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">ideo haec dicit dominus orbis terrarum</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Creauit enim orbem terrarum propter plebem suam</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et non coepit eam inceptionem creaturae et ab initio orbis terrarum palam facere ut in eam gentes arguantur et humiliter inter se disputationibus arguant se</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">itaque excogitauit et inuenit me qui ab initio orbis terrarum praeparatus sum ut sim arbiter testamenti illius</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et tunc palam facio tibi quia consummatum est tempus annorum uitae meae et transio in dormitionem patrum meorum et palam omnem plebem      </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">autem percipe scribturam hanc ad recognoscendam tutationem librorum quos tibi tradam</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">quos ordinabis et chedriabis et reponis in uasis fictilibus in loco quem fecit ab initio creaturae orbis terrarum</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">ut inuocetur nomen illius usque in diem paenitentiae in respectu quo respicit illos dominus in consummatione exitus dierum</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">          intrabunt per te in terram quam decreuit et promisit dare patribus eorum</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">in qua tu benedicis et dabis unicuique et stabilibis eis sortem in me et constabilibis eis regnum et magisteria locorum dimittes illis secus quod placebit domino eorum in iudicio et iustitia</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">     autem postquam intrabunt in terram suam annos        et postea dominabitur a principibus et tyrannis per annos xuiii et xuiiii annos abrumpens tib x nam descendent tribus duae et transferunt scenae testimonium</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">tunc deus caelestis fecit palam scenae suae et ferrum sanctuarii sui et ponentur duae tribus sanctitatis</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">nam x tribus stabilient sibi secus ordinationes suas regna</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et adferent uictimas per annos xx</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et uii circumuallabunt muros Et circumibo uiiii et adcedent ad testamentum domini et finem polluent quem fecit dominus cum eis</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et immolabunt natos suos diis alienis et ponent idola scenae seruientes illis</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et in domo domini facient sceleste et sculpent omnem animalium idola multa</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">   illis temporibus ueniet illis ab oriente rex et teget equitatus terram eorum et</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">incendet colonia eorum igne cum aede sancta domini et sancta uasa omnia tollet</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et omnem plebem eiciet et ducet illos in terram patriae suae et duas tribus ducit secum</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc inuocabunt duae tribus x tribus et ducent se ut liena in campis puluerati esurientes et sitientes cum infantibus nostris</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et clamabunt iustus et sanctus dominus quia enim uos peccastis et nos pariter adducti sumus uobiscum  </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">tunc plorabunt x tribus audientes inproperia uerborum tribum duarum</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et dicent quid faciemus uobis fratres nonne in omnem domum istrahel aduenit clibsis haec</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et omnes tribus plorabunt clamantes in caelum et dicentes</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">deus abraham et deus isaac et deus iacob reminiscere testamentum tuum quod factasti cum eis et iusiurandum quod iurasti eis per te ne umquam deficiat semen eorum a terra quam dedisti illis</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc reminiscentur me die illo dicentes tribus ad tribum et homo de proximo suo</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">nonne hoc est quod testabatur nobis cum moyses in profetis qui multa passus est in aegypto et in mari rubro et in heremo annis xl</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">testatus et inuocabat nobis testes caelum et terram ne praeteriremus mandata illius in quibus arbiter fuit nobis</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">quae aduenerunt nobis de isto secus uerba ipsius et secus adfirmationem ipsius quomodo testatus est nobis temporibus illis et quae conuenerunt usque nos duci captiuos in partem orientis</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">qui et seruient circa annos lxxvii</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc intrauit unus qui supra eos est et expandit manus et ponit genua sua et orauit pro eis dicens   </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Domine omnis rex in alta sede qui dominaris saeculo qui uoluisti plebem hanc esse tibi plebem hanc exceptam tunc uoluisti inuocari eorum deus secus testamentum quod fecisti cum patribus eorum</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et ierunt captiui in terram alienam cum uxoribus et natis suis et circa ostium allofilorum et ubi est maiestas magna</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">respice et miserere eorum domine caelestis  </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc reminiscitur deus eorum propter testamentum quod fecit cum patribus illorum et palam faciet misericordiam suam et temporibus illis</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et mittit in animam regis ut misereator eorum et dimittit illos in terram eorum et regionem</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">tunc ascendent aliquae partes tribuum et uenient in locum constitutum suum et circumuallabunt locum renouantes</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">duae autem tribus permanebunt in praeposita fide sua tristes et gementes quia non poterint referre immolationes domino patruum suorum</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et x tribus crescent et deuenient apud natos in tempore tribum</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et cum adpropiabunt tempora arguendi et uindicta surgit de reges participes scelerum</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et punientes eos et ipsi diuidentur ad ueritatem propter quod factum fuit</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">deuitabunt iustitiam et accedent ad iniquitatem et contaminabunt in genationibus domum seruitutis suae et quia fornicabunt post deos alienos</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">non enim sequentur ueritatem dei sed quidam altarium inquinabunt de       muneribus quae inponent domino qui non sunt sacerdotes sed serui de seruis nati</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">qui enim magistri sunt doctores eorum illis temporibus erunt mirantes personas cupiditatum et acceptiones munerum et peruendent iustitias accipiendo poenas</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et ideo implebitur colonia et fines habitationis eorum sceleribus et iniquitatibus a deo ut qui facit erunt impii iudices erunt in eam post fines habitationis sceleribus et iniquitatibus a domino qui faciunt erunt impii iudices inerunt in campo iudicare quomodo quisquae uolet</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">tunc exurgent illis reges imperantes et in sacerdotes summi dei uocabuntur facient facientes impietatem ab sancto sanctitatis</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et succedit illis rex petulans qui non erit de genere sacerdotum homo temerarius et improbus et iudicabit illis quomodo digni erunt</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">qui elidit principales eorum gladio et locis ignotis singuli et corpora illorum ut nemo sciat ubi sint corpora illorum</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">occidit maiores natu et iuuenes et non parcet</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">tunc timor erit illius aceruus in eis in terram eorum</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et faciet in eis iudicia quomodo fecerunt in illis aegypti per xxx et iiii annos et puniunt eos</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et .. rodincit natos ... ecedentes sibi breuiora tempora donarent</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">in pares eorum mortis uenient et occidentes rex potens quia expugnabit eos</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et ducent captiuos et partem aedis ipsorum igni incendit aliquos crucifigit circa coloniam eorum</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">ex quo facto finientur tempora momento .... etur cursus a .... horae iiii ueniant</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">coguntur secun ..... ae .... pos .... initiis tribus ad exitus viiii propter initium tres septimae secunda tria in tertia duae h .. ra .. tae</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et regnarunt de his homines pestilentiosi et impii docentes se esse iustos</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et hi suscitabunt iram animorum suorum qui erunt homines dolosi sibi placentes ficti in omnibus suis et omni hora diei amantes conuiuia deuoratores gulae</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">s ... n ... ca ......... nus diis ........ omnis ....................... u .... o .... rue ..... elentes</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">..... rum bonorum comestores dicentes se haec facere propter misericordiam qu ...</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">se et exterminatores quaeru ... fallaces celantes se ne possent cognosci impii in scelere pleni et iniquitate ab oriente usque ad occidentem</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">dicentes habebimus discubitiones et luxuriam edentes et bibentes         Et putauimus nos tamquam principes erimus</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et manus eorum et mentes inmunda tractantes et os eorum loquetur ingentia et super dicent </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">noli .... tange ne inquines me loco in quo ... s ...... is d ........ su ..... us ..... in ......... re .... raui .... in plebem quae s .. a .. illis</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et .. ta .. ueniet in eos ultio et ira quae talis non fuit in illis a saeculo usque ad illum tempus in quo suscitauit illis regem regum terrae et potestatem a potentia magna qui confitentes circumcisionem in cruce suspendit</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Nam necantes torquebit et tradidit duci uinctos in custodiam</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et uxores eorum diis donabuntur gentibus      Et filii eorum pueri secabantur a medicis pueri inducere acrosisam illis </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">nam illi in eis punientur in tormentis et igne et ferro et cogentur palam baiulare idola eorum inquinata quomodo sunt pariter continentibus ea</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et a torquentibus illos pariter cogentur intrare in abditum locum eorum et cogentur stimulis blasfemare uerbum contumeliose nouissime post haec et leges quod haberent supra altarium suum</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">tunc illo dicente hom  de tribu leuui cuius nomen erit taxo qui habens vii filios dicens ad eos rogans</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">uidete filii ecce ultio facta est in plebe altera crudelis inmunda et traductio sine misericordia et eminent principatum</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">quae enim gens aut quae regio aut quis populus impiorum in domum qui multa scelesta fecerunt tanta mala passi sunt quanta nobis contegerunt</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Nunc ergo filii audite me uidete enim et scite quia numquam temptans deum nec parentes nec proaui eorum ut praetereant mandata illius</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">scitis enim quia haec sunt uires nobis     et hoc faciemus</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">ieiunemus triduo et quarto die intremus in spelunca quae in agro est et moriamur potius quam praetereamus mandata domini dominorum dei parentum nostrorum</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">hoc enim si faciemus et moriemur sanguis noster uindicauitur coram domino</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tunc parebit regnum illius in omni creatura illius Et tunc zabulus finem habebit et tristitiam cum eo adducetur</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc implebuntur manus nuntii qui est in summo constitutus qui protinus uindicauit illos ab inimicis eorum</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">.....get enim caelestis a sede regni sui et exiet de habitatione sancta sua cum indignationem et iram propter filios suos</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et tremebit terra usque ad fines suas concutietur et alti montes humiliabuntur et concutientur et conualles cadent</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">sol non dabit lumen et in tenebris conuertent se cornua lunae et confringentur et tota conuertit se in sanguine et orbis stellarum conturuauitur</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et mare usque ad abyssum decedit ad fontes aquarum deficient et flumina expauescent</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">quia exurgit summus deus aeternus solus et palam ueniet ut uindicet gentes et perdet omnia idola eorum</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc felix eris tu istrahel et ascendes supra ceruices et alas aquilae et inplebuntur</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et altauit te deus et faciet te herere caelo stellarum loco habitationis eorum</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et conspiges a summo et uides inimicos tuos in terram et cognosces illos et gaudebis et agis gratias et confiteberis creatori tuo</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">nam tu iesu naue custodi uerba haec et hunc librum</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">erunt enim a morte receptionem usque ad aduentum illius tempora ccl quae fiunt</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et hic cursus ... horum quem conueniunt donec consummentur</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Ego autem ad dormitionem patrum meorum eram</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">itaque tu iesu naue forma te elegit deus esse mihi successorem eiusdem testamenti</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et cum audisset iesus uerba moysi tam scripta in sua scriptura omnia quae praedixerant scidit sibi uestimenta et procidit ad pedes meos</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et hortatus est cum monse et plorauit cum eo</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et respondit illi et dixit iesus</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">quid me celares domine monse et quo genere celabor de qua locutus est uoce acerua que exiuit de ore tuo quae est plena lacrimis et gemitibus quia tu discedis de plebe ist ......</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">quis locus recipit .... te</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">aut quod erit monumentum sepulturae</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">aut quis audeuit corpus tuum transferre in eut homo de loco in locum</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Omnibus enim morientibus secus aetatem sepulturae suae sunt in terris nam tua sepultura ab oriente sole usque ad occidentem et ab austro usque ad fines aquilonis omnis orbis terrarum sepulcrum est tuum</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">domine abhis     Et quis nutrit plebem istam</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">aut quis est qui miserebitur illis et quis eis dux erit in uia</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">aut quis orabit pro eis nec patiens ne uno quidem diem ut inducam illos in terram araborum</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">quomodo ergo potero plebem hanc tamquam pater unicum filium aut tamquam filiam dominam uirginem quae paratur tali uiro quae timebat corpus custodiens eius a sole et ne scalciati pedes eius ad currendum supra terram</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="115" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">..... de uoluntatem eorum praestabo illis ciborum et potui secus uoluntatem uoluntatis eorum</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="116" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">..... enim illorum erant c milia nam isti in tantum qui creuerunt in tuis orationibus domine monse</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="117" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et quae est mihi sapientia aut intellectus in domo .... uerbis aut iudicare aut respondere   </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="118" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">sed et reges amorreorum cum audierint expugnare nos credentes iam non esse semet sacrum spiritum dignum domino multiplicem et inconpraehensibilem dominum uerbi fidelem in omnia diuinum per orbem terrarum profetem consummatum in saeculo doctorem iam non esse in eis dicens  Eamus ad eos</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="119" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">si inimici impie fecerunt semel adhuc in dominum suum non est defensor illis qui ferat pro eis praeces domino quomodo monse erat magnus nuntius qui singulis horis diebus et noctibus habebat genua sua infixa in terra orans et intuens hominipotentem orbem terrarum cum misericordia et iustitia reminiscens testamentum parentum et iureiurando placando dominum</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="120" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">dicent enim non est ille cum eis eamus itaque et confundamus eos a faciae terrae</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="121" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">quod ergo fiet plebi isti domine monse</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1">
+          <unit id="122" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et postquam finiuit uerba iesus iterum procidit ad pedes monsi</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="123" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et monse prendit manum ipsius et erexit illum in cathedra ante se  Et respondit et dixit illi</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="124" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">iesus et ne contemnas sed praebe te securum et adtende uerbis meis</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="125" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">omnes gentes quae sunt in ore terrarum deus creauit et nos praeuidit illos et nos ab initio creaturae orbis terrarum ut ad exitum saeculi Et nihil est ab eo neglectum usque ad pusillum sed omnia praeuidit et prououit cum eis ..</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="126" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">dns omnia quae futura essent in hoc orbe terrarum prouidit et ecce aufertur</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="127" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">......... s me constituit pro eis et pro peccatis eorum .. .... et in .. ccare .. pro eis</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="128" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">non enim propter meam uirtutem aut infirmitatem sed temperantius misericordiae ipsius et patientia contegerunt mihi</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="129" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">dico enim tibi iesu non propter pietatem plebis huius exterminabis gentes</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="130" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">omnia caeli firmamenta orbis facta ut prouata a deo et sub nullo dexterae illius sunt</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="131" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Facientes itaque et consummantes mandata dei crescunt et bonam uiam exigunt</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="132" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">nam peccantibus et neglegentibus mandata carere bonam quae praedicta sunt Et punientur a gentibus multis tormentis</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="133" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">nam in totum exterminet et relinquat eos fieri non potest</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="134" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">exiuit enim deus qui praeuidit omnia in saecula et stabilitum est testamentum illius et iureiu ando quod</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ title CDATA #REQUIRED
+ language CDATA #REQUIRED 
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="ArisEx" title="Aristeas the Exegete" textStructure="fragmentary">
+ <version title="Praep. Evang." author="Eusebius" fragment="1" language="Greek">
+  <divisions>
+   <division label="Book" delimiter="." />
+   <division label="Chapter" delimiter="." />
+   <division label="Line" />
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Evans" language="Greek" show="yes">
+      <name>Evans</name>
+      <bibliography>Eusebius, Praep. Evang. 9.24.1-9.25.4</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="9">
+     <div number="24">
+      <div number="1">
+        <unit id="0" group="0" parallel="">
+          <reading option="0" mss="Evans " linebreak="following">. . . Ἄκουε δὲ οἷα καὶ περὶ τοῦ Ἰὼβ ὁ αὐτὸς ἱστορεῖ·</reading>
+        </unit>
+      </div>
+     </div>
+     <div number="25">
+      <div number="heading">
+        <unit id="1" group="0" parallel="">
+          <reading option="0" mss="Evans " linebreak="following">κεʹ. ΑΡΙΣΤΕΟΥ ΠΕΡΙ ΤΟΥ ΙΩΒ ΟΜΟΙΩΣ </reading>
+        </unit>
+      </div>
+      <div number="1">
+        <unit id="2" group="0" parallel="">
+          <reading option="0" mss="Evans ">“Ἀριστέας δέ φησιν ἐν τῷ Περὶ Ἰουδαίων τὸν Ἠσαῦ γήμαντα Βασσάραν υἱὸν ἐν Ἐδὼμ γεννῆσαι Ἰώβ· κατοικεῖν δὲ τοῦτον ἐν τῇ Αὐσίτιδι χώρᾳ ἐπὶ τοῖς ὅροις τῆς Ἰδουμαίας καὶ Ἀραβίας. </reading>
+        </unit>
+      </div>
+      <div number="2">
+        <unit id="3" group="0" parallel="">
+          <reading option="0" mss="Evans ">γενέσθαι δ᾽ αὐτὸν δίκαιον καὶ πολύκτηνον· κτήσασθαι γὰρ αὐτὸν πρόβατα μὲν ἑπτακισχίλια, καμήλους δὲ τρισχιλίας, ζεύγη βοῶν πεντακόσια, ὄνους θηλείας νομάδας πεντακοσίας· εἶχε δὲ καὶ γεωργίας ἱκανάς. </reading>
+        </unit>
+      </div>
+      <div number="3">
+        <unit id="4" group="0" parallel="">
+          <reading option="0" mss="Evans ">τοῦτον δὲ τὸν Ἰὼβ πρότερον Ἰωβὰβ ὀνομάζεσθαι. πειράζοντα δ᾽ αὐτὸν τὸν θεὸν ἐμμεῖναι, μεγάλαις δὲ περιβαλεῖν αὐτὸν ἀτυχίαις. πρῶτον μὲν γὰρ αὐτοῦ τούς τε ὄνους καὶ τοὺς βοῦς ὑπὸ λῃστῶν ἀπολέσθαι, εἶτα τὰ πρόβατα ὑπὸ πυρὸς ἐκ τοῦ οὐρανοῦ πεσόντος κατακαῆναι σὺν τοῖς ποιμέσι· μετ᾽ οὐ πολὺ δὲ καὶ τὰς καμήλους ὑπὸ λῃστῶν ἀπελαθῆναι· εἶτα τὰ τέκνα αὐτοῦ ἀποθανεῖν, πεσούσης τῆς οἰκίας· αὐθημερὸν δὲ αὐτοῦ καὶ τὸ σῶμα ἑλκῶσαι. </reading>
+        </unit>
+      </div>
+      <div number="4">
+        <unit id="5" group="0" parallel="">
+          <reading option="0" mss="Evans ">φαύλως δὲ αὐτοῦ διακειμένου ἐλθεῖν εἰς ἐπίσκεψιν Ἐλίφαν τὸν Θαιμανιτῶν βασιλέα καὶ Βαλδὰδ τὸν Σαυχαίων τύραννον καὶ Σωφὰρ τὸν Μινναίων βασιλέα, ἐλθεῖν δὲ καὶ Ἐλιοῦν τὸν Βαραχιὴλ τὸν Ζωβίτην· παρακαλούμενον δὲ φάναι καὶ χωρὶς παρακλήσεως ἐμμενεῖν αὑτὸν ἔν τε τῇ εὐσεβείᾳ καὶ τοῖς δεινοῖς. τὸν δὲ θεὸν ἀγασθέντα τὴν εὐψυχίαν αὐτοῦ τῆς τε νόσου αὐτὸν ἀπολῦσαι καὶ πολλῶν κύριον ὑπάρξεων ποιῆσαι.”
+ Τοσαῦτα καὶ περὶ τούτων ὁ Πολυΐστωρ. . . .</reading>
+        </unit>
+      </div>
+     </div>
+    </div>
+  </text>
+ </version>
+</book>

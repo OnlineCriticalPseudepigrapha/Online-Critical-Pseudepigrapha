@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+ language CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+ language CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+
+<book filename="Amram" title="Visions of Amram">
+  <version title="Aramaic" author="" language="Aramaic">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Duke" language="Aramaic" show="yes">
+        <name>Robert Duke's composite text</name>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Duke ">פרשגן כתב מלי חזות עמרם בר קהׄתׄ בׄרׄ לׄוׄיׄ כו[ל] דיׄ אחוי לבנוהי ודי פקדׄ אׄנון ביום [מותה ב]שנת מאה ותלתין ושת היא שנתא די מותהׄ [בשנ]ת מא[ה] וחמשין ותרתין לגל[ו]תׄ [י]שׄראל למצרין</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…] עׄבר עלוהי ושלחׄ וׄקרא לעוזיאל אחוהי זעירא</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Duke ">[… ואס]ב לה למרים ברת[ה] לאנתה ברת תלתין שנין</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Duke ">ועבד משתותה שבׄעׄהׄ [יומ]יׄן</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואכל ואשתי במשתותה וחדי</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Duke ">אדין כדי אשתציו [י]ומי משתותא שלח קרא לאהרון לברה כׄ[מ]אׄ בר שנין [עשרין … </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואמר] לה קרי ל[י] בׄרי למלאכיה אחוׄכׄהׄ מן בית [פרעה</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Duke ">… גבו]רׄתה לעלוהי [ו]קרׄא לה</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Duke ">[… מפ]קׄדׄ אנה</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Duke ">[… פקו]דׄ אבוהי</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Duke ">[… ] מן [בית פרעה …]</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…] ממרך</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Duke ">ונתן לך [</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] דׄרׄיׄ</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Duke ">ונתן לך חכמה [</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] הוסףׄ לׄךׄ</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Duke ">[… ידיד] אל תהוה</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Duke ">ומלאך אל תתקרה</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…] תעבד בארעא דא</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Duke ">ודין [ח]סין ת[…]</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Duke ">והן לה שמך לכל מ[…</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Duke ">כ]ל דרי עלמ[ין …]</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Duke ">בה תעבדׄ […</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Duke ">ית]חׄשב</reading>
+          </unit>
+        </div>
+        <div number="fragment1">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…] מצרין בכל ב[…] ומפתין […]והי מ[…]המ[…]ם […]</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Duke ">וצ[…] מׄתׄ[…] בארעאׄ דא </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Duke ">וסלקת למׄ[…] למקבר אבהתנא  </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Duke ">וסלקתׄ […] קהת תמן למקם ולעמרה ולמבנא ק[בריא </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] שגיאיׄן מן בני דדי כחד[א…] גבר</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Duke ">ומן עבידתנא שגיא לחדא עד [יתקב]רון מאתי[ן…</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Duke ">ב]שׄנת רישי ברשו[תי …] שמועת קרב מׄבהלה תאבׄ[ה חבור]תנא לארע מ[צרין</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] וסלקת למקבׄ[ר …] לעובע ולא בנו קבריא די אבהתהון </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Duke ">ושבקוני אבי קה[ת …] ולמבנה ולמסב להון כל צרכיהון מן ארע כנעׄן ל[מ]צׄר[ין</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] עד אנחנה בנין</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Duke ">וקרבא הוא בין פלׄשת למצרין</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Duke ">ונצחׄ […]</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואחידו ג[בולי] מצרין</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Duke ">ולא איתי אפשר[…] תאתא […] שנין ארבעין וחדא</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Duke ">ולא הוינה יכלין לׄמתב למצרין[ </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] על כן[</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] בין מצרין לכנען ולפלשת</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Duke ">ובכל דן יוכבד[</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] מטרתי [</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] לא הות אנתתי</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Duke ">[ו]אנה אנתה אחרי[…] נסבת</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Duke ">וׄנׄש[</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] כלא די אתוב למצרין בשלם</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואחזה אנפי</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Duke ">[ח]זית בׄחזוי חזוא די חלמא […]</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Duke ">והא תרין דאנין עלי ואמרין [</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] דׄיׄלׄוׄהׄיׄ</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואחדין עלי תגר רב</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Duke ">ושאלת אנון אנתון מן די כדן מש[…</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואמרין] ליׄ אנחנא [… ש]לׄ[י]טין ושליטין על כׄל בני אדם</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואמרו לי במן מננהׄ אׄנׄתׄ[ה </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] נׄטלת עיני וחזית</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Duke ">וחד מנהון חזוה […]ל […]תן כל לבושה צבענין וחשיך חשוך […]</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואחרנא חזית וה[א] ל[…] בחזוה ואנפוהי חעכן ומכסה ב[…] לחדאׄ […]ל עינוהי [</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Duke ">…] ל […]</reading>
+          </unit>
+        </div>
+        <div number="fragment1">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Duke ">ואמרת בדן אנה רבׄ[…] למרגז עלי ולדחלות[י…] </reading>
+          </unit>
+        </div>
+        <div number="fragment2">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…]שׄלׄט עליך […] דן מן הוא ואמר לי הא דן מׄ[…] וׄמלכי רשע ואמרת מראי מא ש[…]יׄכה וכל עבדה ח[שי]ך ובחשוכה הוא דׄ[…]ה חזה והוא משלט על כל חשוכה ואנה [… מ]עליא עד ארעיא אנה שליט על כל נהורא וכ[ל …]מׄנׄהׄ וש[…]</reading>
+          </unit>
+        </div>
+        <div number="fragment3">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…]רא אשלטת ושאלתה [… ו]אמר ליׄ תלתה שמה […]הׄ וׄאנה שליט לאׄ[…] ושאלתה […]אמרת להׄ מא א[…] ל[…]</reading>
+          </unit>
+        </div>
+        <div number="fragment4">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…]ע ואחוה לכה שמׄ[…]כתבׄ בארעׄא לה מושה ואף על […]חׄוה לכה רז עובדהׄ כׄהׄןׄ קדיש הוא […] קדׄ[י]ש להוה לה כל זרעה בכול דרי עׄ[למין …] שביעי באנוש רעותׄ[א … ית]קרה ויתאמׄ[ר …] יתבחר לכהן עלמין […]</reading>
+          </unit>
+        </div>
+        <div number="fragment5">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…] ורבנה […]קרב כדן […]תרה נוח […]א</reading>
+          </unit>
+        </div>
+        <div number="fragment6">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…]ל די קרב לוי ברה ע[ל … א]מרת לכה על מדב[חא] די אבניׄ[א …]ל קורבנ[א …]הוא</reading>
+          </unit>
+        </div>
+        <div number="fragment7">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…]הוא […] אקטרון […]ם אל […]אין י[…] עלמא […] עד ע[…]לם ונגד ש[…]</reading>
+          </unit>
+        </div>
+        <div number="fragment8">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Duke ">בׄרקתה שמׄהׄ […] אהרון ארו אנ[…]דה יתו[…] לׄ[…] תקרא לה […]רי א[…]</reading>
+          </unit>
+        </div>
+        <div number="fragment9">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Duke ">פצית […] בנה […] בהר סיני יצ[… ב]רכה רבא על מדבח נחש[א …]ה יתרם כהן מן כול בני עלמא באח[…]יח ובנוהי בתרה לכול דרי עלמין בקו[…] ואנה אתעירת מן שנת עיני וחזוא כת[בת …]מן ארעכנען והוא לי כדי אמ[ר …]מׄרים ומן באת[…] לקחת עש[…]נין בע[…] הויתה […]ה[…]</reading>
+          </unit>
+        </div>
+        <div number="fragment10">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Duke ">תתוב לעמך […] לכלהון ולהוא […]ן ותטבע[ן …] בכל שנאין […]ןׄ [… ת]שתעא לכ[ל …]</reading>
+          </unit>
+        </div>
+        <div number="fragment11">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Duke ">[…] שד תדבר וכדי תופ[ע …] ולא תהוה […]ןׄ קדמיתא לתניאניתא […]וׄעׄםׄ קׄדׄמיתא תהא […] על נפשה תכמון בין תרתיהון […]הי להן בחשבוניה ואׄ[…] החילה חברא וׄרברׄ[…]ו חברא להׄןׄ</reading>
+          </unit>
+        </div>
+        <div number="fragment12">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Duke ">לדכר […] תעבד לעמך וחדוה […] אדין כאלין […] עדבך […] ברי […] מלכא […]ל[…]</reading>
+          </unit>
+        </div>
+        <div number="fragment13">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Duke ">וכען ברי […] לעמך […] תנד[ע …] פתח ביׄתׄכ ע׃׃׃הׄו[…] וכען בני שמעו די […] חזית</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

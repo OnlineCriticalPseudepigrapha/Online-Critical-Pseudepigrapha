@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="TAbB" title="Testament of Abraham Recension B">
+  <version title="" author="">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Evans" language="Greek" show="no">
+        <name>Craig A. Evans</name>
+        <bibliography> M. R. James, The Testament of Abraham (Texts and Studies 2.1; Cambridge: Cambridge University Press, 1892); repr. in M. E. Stone (ed.), The Testament of Abraham: The Greek Recensions (SBLTT 2: Pseudepigrapha Series 2; Missoula: Scholars Press, 1972) 2-84.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Evans ">Ἐγένετο ἡνίκα ἤγγισαν αἱ ἡμέραι τοῦ θανάτου τοῦ Ἁβραάμ, εἶπεν κύριος πρὸς Μιχαήλ·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Evans ">Ἀνάστηθι καὶ πορεύθητι πρὸς Ἁβραὰμ τὸν δοῦλόν μου, καὶ εἰπὲ αὐτῷ ὅπως ἐξελεύσῃ τοῦ βίου,</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὅτι ἰδοὺ ἐπληρώθησαν αἱ ἡμέραι τῆς προσκαίρου ζωῆς σου· ὅπως διοικήσῃ τὰ τοῦ οἴκου αὐτοῦ πρὶν ἀποθανεῖν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Evans ">Καὶ ἐπορεύθη Μιχαὴλ καὶ ἦλθεν πρὸς Ἁβραὰμ, καὶ εὗρεν αὐτὸν καθιζόμενον ἔμπροσθεν τῶν βοῶν αὐτοῦ εἰς ἀροτριασμόν· ὑπῆρχεν δὲ γηραλέος πάνυ τῇ ἰδέᾳ· εἶχεν δὲ ἐνηγκαλισμένον τὸν υἱὸν αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἰδὼν οὖν Ἁβραὰμ τὸν ἀρχάγγελον Μιχαήλ, ἀναστὰς ἐκ τῆς γῆς ἠσπάσατο αὐτόν, μὴ εἰδὼς τίς ἐστιν, καὶ εἶπεν πρὸς αὐτόν·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Evans ">Σῶσόν σε ὁ θεός· ἄναστα καλῶς πορευόμενος τὴν ὁδόν σου.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη αὐτῷ Μιχαήλ· Φιλάνθρωπος εἶ σύ, καλὲ πάτερ.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη Ἁβραὰμ καὶ εἶπεν αὐτῷ· Ἐλθέ, ἔγγισόν μοι, ἀδελφὲ, καὶ ὀλίγην ὥραν ἵνα προστάξω ἐνεχθῆναι ζῶον,</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἵνα ἀπέλθωμεν ἐν τῷ οἴκῳ μου καὶ ἀναπαύῃς μετ᾽ ἐμοῦ, ὅτι πρὸς ἑσπέρᾳ ἐστὶν, καὶ τῷ πρωῒ ἀναστὰς πορεύου ὅπου ἂν βούλῃ, μήπως συναντήσῃ σοι θηρίον πονηρὸν καὶ καταικίσῃ σε.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἠρώτησεν δὲ Μιχαὴλ τὸν Ἁβραὰμ λέγων· Εἰπέ μοι τὸ ὄνομά σου, πρὶν εἰσελθεῖν ἐν τῷ οἴκῳ σου, μὴ ἐπιβαρὴς γένωμαί σοι.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη Ἁβραὰμ καὶ εἶπεν· Οἱ γονεῖς μου ὠνόμασάν με Ἁβράμ, καὶ ὁ κύριος ἐπωνόμασέν Ἁβραάμ, λέγων· Ἀνάστηθι καὶ πορεύου ἐκ τοῦ οἴκου σου καὶ ἐκ τῆς συγγενείας σου, καὶ δεῦρο εἰς γῆν ἣν ἄν σοι δείξω·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπελθόντος μου εἰς τὴν γῆν ἣν ὑπέδειξέ μοι ὁ κύριος, εἴρηκέν μοι· Οὐκέτι κληθήσεται τὸ ὄνομά σου Ἁβράμ, ἀλλ᾽ ἔσται τὸ ὄνομά σου Ἁβραάμ.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀπεκρίθη Μιχαὴλ καὶ εἶπεν αὐτῷ· Συγχώρησόν μοι, πάτερ μου, ἄνθρωπε τοῦ θεοῦ μεμελετημένε, ὅτι ξένος εἰμί, καὶ ἤκουσα περί σου ὅτε ἀπῆλθες σταδίους τεσσαράκοντα καὶ ἤνεγκας μόσχον, καὶ ἔθυσας αὐτόν, ξενιζόμενος ἀγγέλους ἐν τῷ οἴκῳ σου, ἵνα ἀναπαυθῶσιν.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Evans ">ταῦτα ἀμφότεροι λαλήσαντες, ἀναστάντες ἐν τῷ οἴκῳ ἐπορεύοντο.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἐκάλεσεν δὲ Ἁβραὰμ ἕνα τῶν παίδων αὐτοῦ καὶ εἶπεν αὐτῷ· Πορεύθητι, ἄγαγέ μοι κτῆνος ὅπως καθίσῃ ἐπ᾽ αὐτὸν ὁ ξένος, ὅτι ἐκοπιάθη ἐκ τῆς ὁδοιπορίας.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Μιχαήλ· Μὴ σκύλλε τὸ παιδάριον, ἀλλὰ ἀπέλθωμεν μετεωριζόμενοι ἕως οὗ φθάσωμεν ἐν τῷ οἴκῳ σου, διότι ἠγάπησά σου τὴν ὁμιλίαν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Evans ">Καὶ ἀναστάντες ἐπορεύοντο·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ὡς ἤγγισαν τῇ πόλει, ὡς ἀπὸ σταδίων τριῶν, εὗρον δένδρον μέγα ἔχον κλάδους τριακοσίους, ὅμοιον ἐρηκινοῦ·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἤκουον φωνὴν ἐκ τῶν κλάδων αὐτοῦ ᾀδομένην· Ἅγιος ὅτι τὴν πρόφασιν ἤνεγκας περὶ ὧν ἀπεστάλης·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἤκουσεν Ἁβραὰμ τῆς φωνῆς, καὶ ἔκρυψεν τὸ μυστήριον ἐν τῇ καρδίᾳ αὐτοῦ, λέγων ἐν ἑαυτῷ· Ἄρα τί ἐστιν τὸ μυστήριον ὅπερ ἀκήκοα;</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὡς δὲ ἦλθεν ἐν τῷ οἴκῳ, λέγει Ἁβραὰμ τοῖς παισὶν αὐτοῦ· Ἀναστάντες ἐξέλθατε εἰς τὰ πρόβατα, καὶ ἐνέγκατε τρία θρέμματα καὶ σφάξατε ταχέως καὶ ὑπηρετήσατε ἵνα φάγωμεν καὶ πίωμεν· ὅτι εὐφρασία ἐστὶν ὡς ἡ ἡμέρα αὕτη.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἤνεγκαν οἱ παῖδες τὰ θρέμματα, καὶ ἐκάλεσεν Ἁβραὰμ τὸν υἱὸν αὐτοῦ τὸν Ἰσαὰκ καὶ εἶπεν αὐτῷ· Τέκνον Ἰσαὰκ, ἀνάστηθι καὶ βάλε ὕδωρ ἐπὶ τῆς λεκάνης, ἵνα νίψωμεν τοὺς πόδας τοῦ ξένου τούτου.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἤνεγκεν ὡς προσετάχθη·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Ἁβραάμ· Κατανόησιν ἔχω ὅπερ καὶ γενήσεται, ὅτι ἐν τῷ τρυβλίῳ τούτῳ οὐ μὴ νίψω ἔτι τοὺς πόδας ἀνθρώπου ξενιζομένου πρὸς ἡμᾶς.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀκούσας δὲ Ἰσαὰκ τοῦ πατρὸς αὐτοῦ λαλοῦντος ταῦτα, ἐδάκρυσεν, καὶ λέγει πρὸς αὐτὸν· Πάτερ μου, τί ἐστιν τοῦτο ὅτι εἶπας Ἔσχατόν μου ἐστὶν νίψαι πόδας ἀνθρώπου ξένου;</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἰδὼν Ἁβραὰμ τὸν υἱὸν αὐτοῦ κλαίοντα, ἔκλαυσεν καὶ αὐτὸς σφόδρα· καὶ Μιχαὴλ ἰδὼν αὐτοὺς κλαίοντας, ἔκλαυσεν καὶ αὐτός· καὶ ἔπεσαν τὰ δάκρυα Μιχαὴλ ἐπὶ τῆς λεκάνης, καὶ ἐγένετο λίθος πολύτιμος.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Evans ">Ὡς δὲ ἤκουσεν ἡ Σάρρα τοῦ κλαυθμοῦ αὐτῶν ἔσω οὖσα ἐν τῇ οἰκίᾳ αὐτῆς, ἐξελθοῦσα εἶπεν τῷ Ἁβραάμ· Κύριε, τί ἐστιν ὅτι οὕτως κλαίετε;</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη Ἁβραὰμ καὶ εἶπεν αὐτῇ· Οὐδὲν κακόν ἐστιν· εἴσελθε ἐν τῇ οἰκίᾳ σου, καὶ ἐργάζου τὰ ἴδιά σου, μὴ ἐπιβαρεῖς γενώμεθα τῷ ἀνθρώπῳ.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀνεχώρησεν ἡ Σάρρα, ὅτι ἔμελλεν ἑτοιμάζειν τὸν δεῖπνον.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἤγγισεν ὁ ἥλιος τοῦ δῦναι· καὶ ἐξῆλθεν Μιχαὴλ ἔξω τοῦ οἴκου, καὶ ἀνελήφθη εἰς τοὺς οὐρανοὺς προσκυνῆσαι ἐνώπιον τοῦ θεοῦ·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Evans ">τοῦ γὰρ ἡλίου δύνοντος πάντες προσκυνοῦσιν ἄγγελοι τὸν θεόν· πρῶτος δέ ἐστιν ὁ αὐτὸς Μιχαὴλ τῶν ἀγγέλων.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ προσεκύνησαν πάντες καὶ ἀπῆλθον, ἕκαστος εἰς τὸν τόπον αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀποκριθεὶς δὲ Μιχαὴλ ἐνώπιον τοῦ θεοῦ εἶπεν· Κύριε, κέλευσόν με ἐρωτηθῆναι ἐνώπιον τῆς ἁγίας δόξης σου.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ λέγει κύριος πρὸς Μιχαήλ· Ἀνάγγειλον ὅπερ βούλῃ.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀποκριθεὶς δὲ ὁ ἀρχάγγελος εἶπε· Κύριε, σύ με ἀπέστειλας πρὸς Ἁβραάμ, εἰπεῖν αὐτῷ· Ὑποχώρησον ἐκ τοῦ σώματός σου, καὶ ἔξελθε ἐκ τοῦ κόσμου· καλεῖ σε ὁ κύριος·</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Evans ">κἀγὼ οὐ τολμῶ, κύριε, ἐμφανισθῆναι αὐτῷ, ὅτι φίλος σου ἐστὶν καὶ δίκαιος ἄνθρωπος, ξένους ὑποδεχόμενος·</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀλλὰ παρακαλῶ σε, κύριε, κέλευσον τὴν μνήμην τοῦ θανάτου τοῦ Ἁβραὰμ εἰς τὴν καρδίαν αὐτοῦ εἰσελθεῖν,</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ μὴ αὐτῷ ἐγὼ εἴπω· μεγάλη γὰρ συντομία τοῦτό ἐστιν, εἰπεῖν ὅτι Τὸν κόσμον ἔξελθε, μάλιστα δὲ καὶ ἀπὸ τοῦ ἰδίου σώματος·</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Evans ">σὺ γὰρ ἐξ ἀρχῆς ἐποίησας αὐτὸν ἐλεεῖν ψυχὰς πάντων ἀνθρώπων.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Evans ">τότε κύριος πρὸς Μιχαὴλ εἶπεν· Ἀνάστηθι καὶ πορεύου πρὸς Ἁβραὰμ, καὶ ξενίζου πρὸς αὐτόν·</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ὅτι ἂν ἴδῃς ἐσθίοντα, φάγε καὶ σύ, καὶ ὅπου ἂν κοιμηθῇ, κοίμησαι καὶ σὺ ἐκεῖ·</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἐγὼ γὰρ ῥίψω τὴν μνήμην τοῦ θανάτου τοῦ Ἁβραὰμ εἰς τὴν καρδίαν Ἰσαὰκ τοῦ υἱοῦ αὐτοῦ κατ᾽ ὄναρ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Evans ">Τότε Μιχαὴλ ἀπῆλθεν εἰς τὸν οἶκον Ἁβραὰμ ἐν τῇ ἑσπέρᾳ ἐκείνῃ, καὶ εὗρεν αὐτοὺς ἑτοιμάζοντας τὸν δεῖπνον· καὶ ἔφαγον καὶ ἔπιον καὶ εὐφράνθησαν.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Ἁβραὰμ τῷ υἱῷ αὐτοῦ Ἰσαάκ· Ἀνάστηθι, τέκνον, στρῶσον τὴν κλίνην τοῦ ἀνθρώπου ἵνα ἀναπαύῃ, καὶ θὲς τὸν λύχνον ἐπὶ τὴν λυχνίαν.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἐποίησεν Ἰσαὰκ καθὰ συνέταξεν ὁ πατὴρ αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Ἰσαὰκ τῷ πατρὶ αὐτοῦ· Πάτερ, ἔρχομαι κἀγὼ ἔγγιστα ὑμῶν κοιμηθῆναι.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη Ἁβραὰμ πρὸς αὐτόν· Οὐχί, τέκνον μου, μήποτε ἐπιβαρεῖς γενώμεθα τῷ ἀνθρώπῳ τούτῳ, ἀλλὰ ἄπελθε ἐν τῷ ταμείῳ σου καὶ ἀναπαύου.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Evans ">μὴ θέλων δὲ Ἰσαὰκ παρακοῦσαι {τὸ} τοῦ πατρὸς αὐτοῦ πρόσταγμα, ἀπελθὼν ἀνεπαύσατο ἐν τῷ ταμείῳ αὐτοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Evans ">Καὶ ἐγένετο περὶ ὥραν ἑβδόμην τῆς νυκτὸς, ἐξυπνισθεὶς ὁ Ἰσαὰκ ἦλθεν εἰς τὴν θύραν τοῦ οἴκου τοῦ πατρὸς αὐτοῦ κράζων καὶ λέγων· Πάτερ, ἄνοιξον, ἵνα σε ἀπολαύσω πρίν σε ἀροῦσιν ἀπ᾽ ἐμοῦ.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀνέστη δὲ Ἁβραὰμ καὶ ἤνοιξεν, καὶ εἰσῆλθεν Ἰσαὰκ καὶ ἐκρεμάσθη ἐπὶ τοῦ τραχήλου τοῦ πατρὸς αὐτοῦ κλαίων, καὶ θρηνῶν κατεφίλει αὐτόν·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἔκλαυσεν δὲ Ἁβραὰμ σὺν τῷ υἱῷ αὐτοῦ· εἶδεν δὲ αὐτοὺς ὁ Μιχαὴλ κλαίοντας καὶ ἔκλαυσεν καὶ αὐτός.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀκούσασα ἡ Σάρρα τὸν κλαυθμὸν ἐκ τοῦ κοιτῶνος αὐτῆς ἔκραξε λέγουσα·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Evans ">Κύριέ μου Ἁβραάμ, τί ἐστιν ὁ κλαυθμός; μή σοι εἶπεν ὁ ξένος περὶ τοῦ ἀδελφιδοῦ σου Λὼτ ὅτι ἀπέθανεν; ἢ ἄλλο τι συνέβη εἰς ἡμᾶς;</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀποκριθεὶς δὲ Μιχαὴλ εἶπεν πρὸς τὴν Σάρραν· Οὐχὶ, Σάρρα, οὐκ ἤνεγκα φάσιν περὶ Λώτ· ἀλλὰ περὶ πάσης φιλανθρωπίας ὑμῶν ἔγνων ὅτι διαφέρετε πάντων ἀνθρώπων τῶν ἐπὶ τῆς γῆς, καὶ ἐμνήσθη ὑμῶν ὁ θεός.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Evans ">τότε λέγει Σάρρα τῷ Ἁβραάμ· Πῶς ἐτόλμησας κλαῦσαι εἰσελθόντος τοῦ ἀνθρώπου τοῦ θεοῦ ἐν σοί;</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ πῶς ἐδάκρυσάν σου οἱ ὀφθαλμοὶ τῶν ζευμάτων τοῦ φωτός; ὅτι σήμερον εὐφροσύνη γίνεται.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Evans ">λέγει οὖν πρὸς αὐτὴν Ἁβραάμ· Πόθεν γινώσκεις ὅτι ἄνθρωπος τοῦ θεοῦ ἐστίν;</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀποκριθεὶς δὲ ἡ Σάρρα εἶπεν· Ὅτι παραφέρω καὶ λέγω ὅτι οὗτός ἐστιν τῶν τριῶν ἀνδρῶν εἷς, τῶν ἐν τῇ δρυῒ τῇ Μαμβρῇ ἐπιξενισθέντων ἡμῖν, ὅτε ἀπῆλθεν ἓν τῶν παιδίων καὶ ἤνεγκε μόσχον καὶ ἔθυσας·</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπες μοι, Ἄναστα, ποίησον ἵνα φάγωμεν μετὰ τῶν ἀνθρώπων τούτων εἰς τὸν οἶκον ἡμῶν.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη Ἁβραὰμ καὶ εἶπεν· Καλῶς ἐνόησας, ὦ γύναι·</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὅτι κἀγὼ ὅτε τοὺς πόδας αὐτοῦ ἔπλυνα, ἔγνων ἐν τῇ καρδίᾳ μου ὅτι οὗτοί εἰσιν οἱ πόδες οὓς ἔπλυνα ἐν τῇ δρυῒ τῇ Μαμβρῇ, καὶ καθὼς ἠρξάμην ἐρωτᾷν τὴν πορείαν, εἶπέ μοι ὅτι ὑπάγω τηρῆσαι τὸν ἀδελφὸν Λὼτ ἀπὸ Σοδόμων· καὶ τότε ἐγνώρισα τὸ μυστήριον.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Evans ">Ὁ δὲ Ἁβραὰμ εἶπεν πρὸς Μιχαήλ· Εἰπέ μοι, ἄνθρωπε τοῦ θεοῦ, καὶ φανέρωσόν μοι τί ἦλθες ὧδε.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Μιχαήλ· Ὁ υἱός σου Ἰσαὰκ δηλώσει σοι.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ λέγει Ἁβραὰμ τῷ υἱῷ αὐτοῦ· Υἱέ μου ἀγαπητέ, εἰπέ μοι τί εἶδες κατ᾽ ὄναρ σήμερον καὶ ἐθροήθης· ἀνάγγειλόν μοι.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη Ἰσαὰκ τῷ πατρὶ αὐτοῦ· Εἶδον κατ᾽ ὄναρ *ἐμαυτὸν* τὸν ἥλιον καὶ τὴν σελήνην·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ στέφανος ἐπὶ τῆς κεφαλῆς μου ἐγένετο· καὶ ἦν ἀνὴρ παμμεγεθὴς λίαν λάμπων ἐκ τοῦ οὐρανοῦ, ὡς φῶς καλούμενον πατὴρ τοῦ φωτός·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἔλαβεν τὸν ἥλιον ἐκ τῆς κεφαλῆς μου· καὶ λοιπὸν ἀφῆκεν τὰς ἀκτῖνας ἐν μέσῳ μου·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἔκλαυσα ἐγὼ καὶ εἶπον· Παρακαλῶ σε, κύριέ μου, μὴ ἐπάρῃς τὴν δόξαν τῆς κεφαλῆς μου καὶ τὸ φῶς τοῦ οἴκου μου καὶ πᾶσαν τὴν δόξαν τὴν ἐμήν.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἐπένθησε δὲ ὁ ἥλιος καὶ ἡ σελήνη καὶ οἱ ἀστέρες λέγοντες· Μὴ ἐπάρῃς τὴν δόξαν τῆς δυνάμεως ἡμῶν.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀποκριθεὶς ὁ φωτεινὸς ἐκεῖνος ἀνὴρ εἶπέ μοι· Μὴ κλαύσῃς ὅτι ἔλαβον τὸ φῶς τοῦ οἴκου σου· ἀνελήφθη γὰρ ἀπὸ καμάτων εἰς ἀνάπαυσιν, καὶ ἀπὸ ταπεινώσεως εἰς ὕψος,</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Evans ">αἴρουσιν αὐτὸν ἀπὸ στενοχωρίας εἰς εὐρυχωρίαν, αἴρουσιν αὐτὸν ἀπὸ σκότους εἰς φῶς.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἐγὼ δὲ εἶπον αὐτῷ· Παρακαλῶ σε, κύριε, λάβε καὶ τὰς ἀκτῖνας μετ᾽ αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὁ δὲ εἶπέν μοι· Δώδεκα ὧραι τῆς ἡμέρας εἰσὶν, καὶ τότε ὅλας τὰς ἀκτῖνας λαμβάνω.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Evans ">ταῦτα λέγοντος τοῦ φωτεινοῦ ἀνδρὸς, εἶδον τὸν ἥλιον τοῦ οἴκου μου ἀναβαίνοντα εἰς τὸν οὐρανὸν, τὸ δὲ στέφος ἐκεῖνον πλεῖον οὐκ εἶδον·</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἦν δὲ ὁ ἥλιος ἐκεῖνος ὅμοιός σου τοῦ πατρός μου.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Μιχαὴλ τῷ Ἁβραάμ· Ἀλήθειαν εἴρηκεν ὁ υἱός σου Ἰσαάκ· σὺ γὰρ εἶ· καὶ ἀναλαμβανέσαι εἰς τοὺς οὐρανοὺς,</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Evans ">τὸ δὲ σῶμά σου μένει ἐπὶ τῆς γῆς ἕως ἂν πληρωθῶσιν ἑπτακισχίλιοι αἰῶνες· τότε γὰρ ἐγερθήσεται πᾶσα σάρξ.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Evans ">νῦν οὖν, Ἁβραὰμ, διάθες τὰ τοῦ οἴκου σου, καὶ περὶ τῶν τέκνων σου, τελείως γὰρ ἤκουσας τὴν οἰκονομίαν σου.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀποκριθεὶς Ἁβραὰμ εἶπεν πρὸς Μιχαήλ· Παρακαλῶ σε, κύριε, ἐὰν ἐξέρχωμαι ἐκ τοῦ σώματός μου, σωματικῶς ἤθελον ἀναληφθῆναι, ἵνα θεάσομαι τὰ κτίσματα ἃ ἐκτίσατο κύριος ὁ θεός μου ἐν οὐρανῷ καὶ ἐπὶ γῆς.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη Μιχαὴλ καὶ εἶπεν· Τοῦτο οὐκ ἔστιν ἐμὸν ποίημα· ἀλλὰ ἀπελθὼν ἐγὼ ἀπαγγελῶ τῷ κυρίῳ περὶ τούτου, καὶ ἐὰν κελεύωμαι, ὑποδείξω σοι ταῦτα πάντα.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Evans ">Καὶ ἀνῆλθεν Μιχαὴλ ἐν τοῖς οὐρανοῖς καὶ ἐλάλησεν ἐνώπιον κυρίου περὶ Ἁβραάμ·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη κύριος πρὸς Μιχαήλ· Ἄπελθε καὶ ἀναλαβοῦ ἐν σώματι τὸν Ἁβραὰμ καὶ ὑποδεῖξον αὐτῷ πάντα, καὶ ὃ ἐὰν εἴπῃ σοι ποίησον ὡς αὐτῷ ὄντι φίλῳ μου.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἐξελθὼν οὖν ὁ Μιχαὴλ ἀνέλαβεν τὸν Ἁβραὰμ ἐπὶ νεφέλης ἐν σώματι, καὶ ἀνήνεγκεν αὐτὸν ἐπὶ τὸν Ὠκεανὸν ποταμόν·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀτενίσας Ἁβραὰμ εἶδεν δύο πύλας, μίαν μὲν μικρὰν, τὴν δὲ ἑτέραν μεγάλην·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀνάμεσον τῶν δύο πυλῶν ἐκάθητο ἀνὴρ ἐπὶ θρόνου δόξης μεγάλης· καὶ πλῆθος ἀγγέλων κύκλῳ αὐτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἦν κλαίων, καὶ πάλιν γελῶν, καὶ ὁ κλαυθμὸς ὑπερέβαινεν τὸ γέλος αὐτοῦ ἑπταπλασίονα.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Ἁβραὰμ πρὸς τὸν Μιχαήλ· Τίς ἐστιν οὗτος ὁ καθήμενος ἀνάμεσον τῶν δύο πυλῶν μετὰ δόξης πολλῆς· ποτὲ μὲν γελᾷ, ποτὲ μὲν κλαίει, καὶ ὁ κλαυθμὸς ὑπερβαίνει τὸ γέλος ἑπταπλασίως;</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Μιχαὴλ πρὸς Ἁβραάμ· Οὐκ ἔγνως αὐτὸν τίς ἐστιν;</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν· Οὐχὶ, κύριε.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Μιχαὴλ πρὸς Ἁβραάμ· Θεωρεῖς τὰς δύο πύλας ταύτας, τὴν μικρὰν καὶ τὴν μεγάλην;</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Evans ">αὗταί εἰσιν αἱ ἀπάγουσαι εἰς τὴν ζωὴν καὶ εἰς τὴν ἀπώλειαν.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὁ ἀνὴρ δὲ οὗτος ὁ καθήμενος ἐν μέσῳ αὐτῶν, οὗτός ἐστιν ὁ Ἀδάμ, ὁ πρῶτος ἄνθρωπος ὃν ἔπλασεν ὁ κύριος·</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἔθηκεν αὐτὸν εἰς τὸν τόπον τοῦτον θεωρῆσαι πᾶσαν ψυχὴν ἐξερχομένην ἐκ τοῦ σώματος, ἐπειδὴ ἐξ αὐτοῦ εἰσὶν πάντες.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὅταν οὖν θεωρῇς αὐτὸν κλαίοντα, γνῶθι ὅτι ἐθεάσατο ψυχὰς πολλὰς ἀπαγομένας εἰς τὴν ἀπώλειαν·</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὅταν δὲ ἴδῃς αὐτὸν γελῶντα, ἐθεάσατο ψυχὰς ὀλίγας ἀπαγομένας εἰς τὴν ζωήν.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Evans ">θεωρεῖς αὐτὸν πῶς ὑπερβαίνει ὁ κλαυθμὸς τὸ γέλος; ἐπεὶ θεωρεῖ τὸ περισσότερον τοῦ κόσμου ἀπαγομένους διὰ τῆς πλατείας εἰς τὴν ἀπώλειαν, διὰ τοῦτο ὑπερβαίνει ὁ κλαυθμὸς τὸ γέλος ἑπταπλασίως.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Evans ">Καὶ εἶπεν Ἁβραάμ· Καὶ ὁ μὴ δυνάμενος εἰσελθεῖν διὰ τῆς στενῆς πύλης, οὐ δύναται εἰσελθεῖν εἰς τὴν ζωὴν;</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="Evans ">τότε ἔκλαυσεν Ἁβραὰμ, λέγων· Οὐαί μοι, τί ποιήσω ἐγὼ;</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὅτι εἰμὶ ἄνθρωπος εὐρὺς τῷ σώματι, καὶ  πῶς δυνήσομαι εἰσελθεῖν εἰς τὴν στενὴν πύλην, εἰς ἣν οὐ δύναται ἐλθεῖν παιδίον πέντε καὶ δέκα ἐτῶν;</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀποκριθεὶς Μιχαὴλ εἶπεν πρὸς Ἁβραάμ· Σὺ μὴ φοβοῦ, πάτερ, μηδὲ λυποῦ, ἀκωλύτως γὰρ εἰσερχέσαι δι᾽ αὐτῆς, καὶ πάντες οἱ συνόμοιοί σου.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἑστῶτος τοῦ Ἁβραὰμ καὶ θαυμάζοντος, ἰδοὺ ἄγγελος κυρίου ἐλαύνων ἓξ μυριάδας ψυχὰς ἁμαρτωλῶν εἰς τὴν ἀπώλειαν·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ λέγει Ἁβραὰμ πρὸς Μιχαήλ· Οὗτοι πάντες εἰς τὴν ἀπώλειαν ἀπέρχονται;</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ λέγει αὐτῷ Μιχαήλ· Ναὶ, ἀλλὰ ἀπέλθωμεν καὶ ἀναζητήσωμεν ἐν ταῖς ψυχαῖς ταύταις, εἰ ἐστὶν ἐξ αὐτῶν κἂν μία δικαία.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀπελθόντων δὲ αὐτῶν, εὗρον ἄγγελον κατέχοντα ἐν τῇ χειρὶ αὐτοῦ μίαν ψυχὴν γυναικὸς ἐξ αὐτῶν τῶν ἓξ μυριάδων, ὅτι εὗρεν τὰς ἁμαρτίας ἰσοζυγούσας μετὰ τὰ ἔργα αὐτῆς ἅπαντα, καὶ οὐκ ἦσαν ἐν μόχθῳ οὐδὲ ἐν ἀναπαύσει, ἀλλ᾽ ἐν τόπῳ μεσότητος.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="Evans ">τὰς δὲ ψυχὰς ἐκείνας ἦρεν εἰς τὴν ἀπώλειαν.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Ἁβραὰμ πρὸς Μιχαήλ· Κύριε, οὗτός ἐστιν ὁ ἄγγελος ὁ ἐκφέρων τὰς ψυχὰς ἐκ τοῦ σώματος, ἢ οὐ;</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀπεκρίθη Μιχαὴλ καὶ εἶπεν· Οὗτός ἐστιν ὁ θάνατος, καὶ ἀπάγει αὐτὰς εἰς τὸν τόπον τοῦ κριτηρίου, ἵνα ὁ κριτὴς κρίνῃ αὐτάς.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="Evans ">Καὶ λέγει Ἁβραάμ· Κύριέ μου, παρακαλῶ σε ἵνα ἀναγάγῃς με εἰς τὸν τόπον τοῦ κριτηρίου ὅπως κἀγὼ θεάσωμαι αὐτὰς πῶς κρίνονται.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="Evans ">τότε Μιχαὴλ ἔλαβεν τὸν Ἁβραὰμ ἐπὶ νεφέλης, καὶ ἤγαγεν αὐτὸν εἰς τὸν παράδεισον·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ὡς ἔφθασεν εἰς τὸν τόπον ὅπου ἦν ὁ κριτής, ἦλθεν ὁ ἄγγελος καὶ ἔδωκεν τὴν ψυχὴν ἐκείνην εἰς τὸν κριτήν·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἔλεγεν δὲ ἡ ψυχή· Ἐλέησόν με, κύριε.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν ὁ κριτής· Πῶς ἐλεήσω σε, ὅτι σὺ οὐκ ἠλέησας τὴν θυγατέρα σου ἥνπερ εἶχες, τὸν καρπὸν τῆς κοιλίας σου; διὰ τί ἐφόνευσας αὐτήν;</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀπεκρίθη· Οὐχὶ, κύριε· φόνος ἐξ ἐμοῦ οὐ γέγονεν, ἀλλ᾽ αὐτὴ ἡ θυγάτηρ μου κατεψεύσατό μου.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὁ δὲ κριτὴς ἐκέλευσεν ἐλθεῖν τὸν τὰ ὑπομνήματα γράφοντα.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="115" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἰδοὺ χερουβὶμ βαστάζοντα βιβλία δύο, καὶ ἦν μετ᾽ αὐτῶν ἀνὴρ παμμεγέθης σφόδρα· καὶ εἶχεν ἐπὶ τὴν κεφαλὴν αὐτοῦ τρεῖς στεφάνους,</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="116" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ὁ εἷς στέφανος ὑψηλότερος ὑπῆρχεν τῶν ἑτέρων δύο στεφάνων· οἱ δὲ στέφανοι ἐκαλοῦντο στέφανοι μαρτυρίας.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="117" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶχεν ὁ ἀνὴρ ἐν τῇ χειρὶ αὐτοῦ κάλαμον χρυσοῦν· καὶ λέγει ὁ κριτὴς πρὸς αὐτόν· Σύστησον τὴν ἁμαρτίαν τῆς ψυχῆς ταύτης.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="118" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἀναπτύξας ὁ ἀνὴρ ἐκεῖνος μίαν τῶν βιβλίων τῶν ὄντων ἐκ τῶν χερουβὶμ ἀνεζήτησεν τὴν ἁμαρτίαν τῆς ψυχῆς τῆς γυναικὸς, καὶ εὗρεν.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="119" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν ὁ κριτής· Ὦ ταλαίπωρε ψυχὴ, πῶς λέγεις ὅτι φόνον οὐκ ἐποίησας;</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="120" group="0" parallel="">
+            <reading option="0" mss="Evans ">οὐχὶ σὺ ἀπελθοῦσα μετὰ τὴν τελευτὴν τοῦ ἀνδρός σου, ἐμοίχευσας τὸν ἄνδρα τῆς θυγατρός σου, καὶ ἀπέκτεινας αὐτήν;</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="121" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἤλεγχε δὲ καὶ τὰς ἄλλας ἁμαρτίας αὐτῆς, καὶ εἴ τι ἔπραξεν ἐκ νεότητος αὐτῆς.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="122" group="0" parallel="">
+            <reading option="0" mss="Evans ">ταῦτα ἀκούσασα ἡ γυνὴ ἐβόησεν λέγουσα· Οἴμοι, οἴμοι, ὅτι πάσας τὰς ἁμαρτίας μου ἃς ἐποίησα ἐν τῷ κόσμῳ ἐληθάργησα· ἐνταῦθα δὲ οὐκ ἐληθαργήθησαν.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="123" group="0" parallel="">
+            <reading option="0" mss="Evans ">τότε ᾖραν καὶ αὐτὴν καὶ παρέδωκαν τοῖς βασανισταῖς.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1">
+          <unit id="124" group="0" parallel="">
+            <reading option="0" mss="Evans ">Καὶ εἶπεν Ἁβραὰμ πρὸς Μιχαήλ· Κύριε, τίς ἐστιν οὗτος ὁ κριτής, καὶ τίς ἐστιν ὁ ἄλλος, ὁ ἐλέγχων τὰς ἁμαρτίας;</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="125" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ λέγει Μιχαὴλ πρὸς Ἁβραάμ· Θεωρεῖς τὸν κριτήν; οὗτός ἐστιν ὁ Ἄβελ, ὁ ἐν πρώτοις μαρτυρήσας· καὶ ἤνεγκεν αὐτὸν ὧδε ὁ θεὸς κρίνειν·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="126" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ὁ ἀποδεικνύμενος οὗτός ἐστιν ὁ διδάσκαλος τοῦ οὐρανοῦ καὶ τῆς γῆς καὶ γραμματεὺς τῆς δικαιοσύνης Ἐνώχ·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="127" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀπέστειλεν γὰρ κύριος αὐτοὺς ἐνταῦθα, ἵνα ἀπογράφωσιν τὰς ἁμαρτίας καὶ τὰς δικαιοσύνας ἑκάστου.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="128" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ λέγει ὁ Ἁβραάμ· Καὶ πῶς δύναται Ἐνὼχ βαστάσαι τὸ βάρος τῶν ψυχῶν, μὴ ἰδὼν θάνατον; ἢ πῶς δύναται δοῦναι πασῶν τῶν ψυχῶν ἀπόφασιν;</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="129" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Μιχαήλ· Ἐὰν δώσῃ ἀπόφασιν περὶ αὐτῶν, οὐ συγχωρεῖται· ἀλλ᾽ οὐ τὰ τοῦ Ἐνὼχ αὐτοῦ ἀποφαίνεται,</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="130" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀλλ᾽ ὁ κύριός ἐστιν ὁ ἀποφαινόμενος, καὶ τούτου οὐκ ἐστὶν εἰ μὴ μόνον τὸ γράψαι.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="131" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἐπειδὴ ηὔξατο Ἐνὼχ πρὸς κύριον λέγων· Οὐ θέλω, κύριε, ἀποδοῦναι τῶν ψυχῶν ἀπόφασιν, ὅπως μὴ τινὸς ἐπιβαρὴς γένωμαι·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="132" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν κύριος πρὸς Ἐνώχ· Ἐγὼ κελεύσω σε ἵνα γράφῃς τὰς ἁμαρτίας ψυχῆς ἐξιλεουμένης, καὶ εἰσελεύσεται εἰς τὴν ζωήν·</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="133" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἡ ψυχὴ ἐὰν μὴ ἐξιλεωθῇ καὶ μετανοήσῃ, εὑρήσεις τὰς ἁμαρτίας αὐτῆς γεγραμμένας, καὶ βληθήσεται εἰς τὴν κόλασιν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1">
+          <unit id="134" group="0" parallel="">
+            <reading option="0" mss="Evans ">Καὶ μετὰ τὸ θεωρῆσαι Ἁβραὰμ τὸν τόπον τοῦ κριτηρίου, κατήγαγεν αὐτὸν ἡ νεφέλη ἐν τῷ στερεώματι κάτω.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="135" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ κατανοήσας Ἁβραὰμ ἐπὶ τὴν γῆν, εἶδεν ἄνθρωπον μοιχεύοντα γυναῖκα ὕπανδρον.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="136" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ στραφεὶς λέγει Ἁβραὰμ πρὸς Μιχαήλ· Θεωρεῖς τὴν ἁμαρτίαν ταύτην; ἀλλὰ, κύριε, πέμψον πῦρ ἐξ οὐρανοῦ, ἵνα καταφάγῃ αὐτούς.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="137" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εὐθὺς κατῆλθεν πῦρ καὶ κατέφαγεν αὐτούς·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="138" group="0" parallel="">
+            <reading option="0" mss="Evans ">διότι εἶπεν κύριος τῷ Μιχαὴλ ὅτι Ὅσα αἰτήσεταί σε ὁ Ἁβραὰμ ποιῆσαι αὐτῷ, ποίησον.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="139" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ πάλιν ἀναβλέψας Ἁβραάμ, εἶδεν ἄλλους ἀνθρώπους καταλαλοῦντας ἑταίρους,</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="140" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν· Ἀνοιχθήτω ἡ γῆ καὶ καταπιέτω αὐτούς.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="141" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἐν τῷ εἰπεῖν αὐτῷ, κατέπιεν αὐτοὺς ἡ γῆ ζῶντας.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="142" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ πάλιν ἀνήγαγεν αὐτὸν ἡ νεφέλη ἐν ἑτέρῳ τόπῳ· καὶ εἶδεν Ἁβραάμ τινας ἀπερχομένους εἰς ἔρημον τόπον τοῦ ποιῆσαι φόνον.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="143" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν πρὸς Μιχαήλ· Θεωρεῖς τὴν ἁμαρτίαν ταύτην; ἀλλ᾽ ἐλθέτωσαν θηρία ἐκ τῆς ἐρήμου καὶ διαμερίσονται αὐτούς.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="144" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ αὐτῇ τῇ ὥρᾳ ἐξῆλθον θηρία ἐκ τῆς ἐρήμου καὶ κατέφαγον αὐτούς.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="145" group="0" parallel="">
+            <reading option="0" mss="Evans ">τότε ἐλάλησεν κύριος ὁ θεὸς πρὸς τὸν Μιχαὴλ λέγων· Ἀπόστρεψον τὸν Ἁβραὰμ εἰς τὸν οἶκον αὐτοῦ καὶ μὴ ἀφήσεις αὐτὸν κυκλῶσαι πᾶσαν τὴν κτίσιν ἣν ἐποίησα, ὅτι οὐ σπλαγχνίζεται ἐπὶ τοὺς ἁμαρτωλοὺς,</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="146" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀλλ᾽ ἐγὼ σπλαγχνίζομαι ἐπὶ τοὺς ἁμαρτωλοὺς ὥστε ἐπιστρέψουσιν καὶ ζήσωσιν καὶ μετανοήσωσιν ἐκ τῶν ἁμαρτιῶν αὐτῶν, καὶ σωθήσονται.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="147" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ κατὰ τὴν ἐνάτην ὥραν ὑπέστρεψεν Μιχαὴλ τὸν Ἁβραὰμ εἰς τὸν οἶκον αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="148" group="0" parallel="">
+            <reading option="0" mss="Evans ">Σάρρα δὲ ἡ γυνὴ αὐτοῦ, μὴ θεωρήσασα τὸν Ἁβραὰμ τί γέγονεν, κατεπόθη τῇ λυπῇ παρέδωκε τὴν ψυχήν·</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="149" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ μετὰ τὸ ὑποστρέψαι τὸν Ἁβραὰμ, εὗρεν αὐτὴν νεκρὰν, καὶ ἔθαψεν αὐτήν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="1">
+          <unit id="150" group="0" parallel="">
+            <reading option="0" mss="Evans ">Ὅτε δὲ ἤγγισαν αἱ ἡμέραι τοῦ θανάτου τοῦ Ἁβραάμ, εἶπεν κύριος ὁ θεὸς πρὸς Μιχαήλ· Οὐ μὴ τολμήσῃ θάνατος ἐγγίσαι τοῦ ἐξενεγκεῖν τὴν ψυχὴν τοῦ δούλου μου, ὅτι φίλος μου ἐστίν·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="151" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀλλὰ ἄπελθε καὶ κόσμησον τὸν θάνατον ἐν πολλῇ ὡραιότητι, καὶ οὕτως ἀπόστειλον αὐτὸν πρὸς Ἁβραὰμ ὅπως θεάσηται αὐτὸν τοῖς ὀφθαλμοῖς αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="152" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ὁ Μιχαὴλ εὐθὺς καθὼς προσετάχθη ἐκόσμησεν τὸν θάνατον ἐν πολλῇ ὡραιότητι, καὶ οὕτως ἀπέστειλεν αὐτὸν πρὸς Ἁβραάμ, ὅπως θεάσηται αὐτόν. καὶ ἐκάθισεν πλησίον τοῦ Ἁβραάμ·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="153" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἰδὼν δὲ ὁ Ἁβραὰμ τὸν θάνατον πλησίον αὐτοῦ καθήμενον ἐφοβήθη φόβον μέγαν.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="154" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν ὁ θάνατος πρὸς Ἁβραάμ· Χαίροις, ἁγία ψυχή· χαῖρε, φίλος κυρίου τοῦ θεοῦ· χαῖρε, τὸ παραμύθιον τοῦ ξενισμοῦ τῶν ὁδοιπόρων.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="155" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Ἁβραάμ· Καλῶς ἐλήλυθας, δοῦλε θεοῦ ὑψίστου· παρακαλῶ σε, εἰπέ μοι τίς εἶ σὺ, καὶ εἰσελθὼν ἐν τῷ οἴκῳ μετάλαβε βρώσεως καὶ πόσεως, καὶ ἀπόστηθι ἀπ᾽ ἐμοῦ· ἀφ᾽ οὗ γὰρ ἐθεασάμην σε καθήμενον ἔγγιστά μου, ἐταράχθη ἡ ψυχή μου.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="156" group="0" parallel="">
+            <reading option="0" mss="Evans ">πάντως γὰρ οὐκ εἰμὶ ἄξιος μετά σου πλησιάζειν, σὺ γὰρ εἶ ὑψηλὸν πνεῦμα, ἐγὼ δὲ σὰρξ καὶ αἷμα, καὶ διὰ τοῦτο οὐ δύναμαι βαστάσαι τὴν δόξαν σου.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="157" group="0" parallel="">
+            <reading option="0" mss="Evans ">θεωρῶ γὰρ τὴν ὡραιότητά σου, ὅτι οὐκ ἔστιν ἐκ τοῦ κόσμου τούτου.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="158" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν ὁ θάνατος πρὸς Ἁβραάμ· Λέγω σοι, ἐν ὅλῳ τῷ κτίσματι ὃ ἔκτισεν ὁ θεὸς, οὐχ εὑρέθη ὅμοιός σου·</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="159" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ αὐτὸς γὰρ ὁ θεὸς ζητήσας οὐχ εὗρεν τοιοῦτον ἐπὶ πάσης τῆς γῆς.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="160" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν Ἁβραὰμ πρὸς τὸν θάνατον· Πῶς ἐτόλμησας ψεύσασθαι; ὅτι ὁρῶ τὴν ὡραιότητά σου ὅτι οὐκ ἔστιν ἐκ τοῦ κόσμου τούτου.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="161" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ εἶπεν ὁ θάνατος πρὸς Ἁβραάμ· Μὴ νομίσῃς, Ἁβραὰμ, ὅτι ἡ ὡραιότης αὕτη ἐμή ἐστιν, ἢ καὶ οὕτως πορεύομαι εἰς πάντα ἄνθρωπον·</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="162" group="0" parallel="">
+            <reading option="0" mss="Evans ">οὐχὶ, ἀλλ᾽ ἐάν τις δίκαιος ὡς σὺ, οὕτως λαμβάνω στεφάνους καὶ ἀπέρχομαι πρὸς αὐτόν· ἐὰν δὲ ἁμαρτωλός ἐστιν, ἀπέρχομαι ἐν μεγάλῃ σαπρότητι καὶ ἐκ τῆς ἁμαρτίας αὐτῶν ποιῶ στέφανον τῇ κεφαλῇ μου, καὶ ταράσσω αὐτοὺς ἐν μεγάλῳ φόβῳ, ἵνα ἐκθαμβῆται.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="163" group="0" parallel="">
+            <reading option="0" mss="Evans ">λέγει οὖν Ἁβραὰμ πρὸς αὐτόν· Καὶ πόθεν ἔστιν ἡ ὡραιότης αὕτη;</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="164" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ λέγει ὁ θάνατος· Οὐκ ἐστὶν ἄλλος σαπρότερός μου.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="165" group="0" parallel="">
+            <reading option="0" mss="Evans ">λέγει αὐτῷ ὁ Ἁβραάμ· Καὶ μὴ σὺ εἶ ὁ λεγόμενος θάνατος;</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="166" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἀπεκρίθη αὐτῷ καὶ εἶπεν· Ἐγώ εἰμι τὸ πικρὸν ὄνομα· ἐγώ εἰμι κλαυθμός . . . . </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="1">
+          <unit id="167" group="0" parallel="">
+            <reading option="0" mss="Evans ">Εἶπεν δὲ Ἁβραὰμ πρὸς τὸν θάνατον· Δεῖξον ἡμῖν τὴν σαπρότητά σου.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="168" group="0" parallel="">
+            <reading option="0" mss="Evans ">καὶ ἐφανέρωσεν ὁ θάνατος τὴν σαπρότητα αὐτοῦ· καὶ εἶχεν δύο κεφαλάς·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="169" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἡ μία εἶχεν πρόσωπον δράκοντος, καὶ δι᾽ αὐτοῦ τινὲς ὑπὸ ἀσπίδων τελευτῶσιν ἄφνω·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="170" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἡ δὲ ἑτέρα κεφαλὴ ὁμοία ῥομφαίας· διὰ τοῦτο τινες ἐν ῥομφαιᾷ τελευτῶσιν ὡς ἐπὶ τόξοις.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="171" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἐν ἐκείνῃ τῇ ἡμέρᾳ ἐτελεύτησαν οἱ παῖδες τοῦ Ἁβραὰμ διὰ τὸν φόβον τοῦ θανάτου·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="172" group="0" parallel="">
+            <reading option="0" mss="Evans ">οὓς ἰδὼν Ἁβραὰμ ηὔξατο πρὸς κύριον, καὶ ἀνέστησεν αὐτούς.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="173" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἐπέστρεψεν δὲ ὁ θεὸς καὶ ἐξέτεινεν τὴν ψυχὴν τοῦ Ἁβραὰμ ὡς ἐν ὀνείροις, καὶ ὁ ἀρχιστρατηγὸς Μιχαὴλ ἦρεν αὐτὴν εἰς τοὺς οὐρανούς.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="174" group="0" parallel="">
+            <reading option="0" mss="Evans ">ἔθαψεν δὲ Ἰσαὰκ τὸν πατέρα αὐτοῦ πλησίον τῆς μητρὸς αὐτοῦ τῆς Σάρρας, δοξάζων καὶ αἰνῶν τὸν θεόν·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="175" group="0" parallel="">
+            <reading option="0" mss="Evans ">ὅτι αὐτῷ πρέπει δόξα, τιμὴ καὶ προσκύνησις, τοῦ πατρὸς καὶ τοῦ υἱοῦ καὶ τοῦ ἁγίου πνεύματος νῦν καὶ ἀεὶ καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων. Ἀμήν.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

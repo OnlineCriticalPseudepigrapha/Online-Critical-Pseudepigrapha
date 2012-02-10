@@ -1,0 +1,2956 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+<!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+<!ELEMENT divisions (division)+>
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+<!ELEMENT resources (resource)+>
+<!ELEMENT resource (info+ , URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT manuscripts (ms)+>
+<!ELEMENT ms (name , bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA | sup)*>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+<!ELEMENT booktitle (#PCDATA)>
+<!ELEMENT text (div)+>
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+<!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book title="Jubilees" filename="Jub">
+  <version title="Greek" author="" language="Greek">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="VanderKam" language="Greek" show="yes">
+        <name>VanderKam</name>
+        <bibliography>Text: R. H. Charles, The Ethiopic Book of Jubilees (Oxford: Clarendon Press, 1895); A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 70-102.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ τῶν περὶ τὸν πρῶτον ἄνθρωπον, καὶ τῶν μέχρις αὐτοῦ χρόνων, καὶ περὶ τῆς νομοθεσίας τῆς μελλούσης παρ᾽ αὐτοῦ δίδοσθαι τῷ Ἰουδαίων ἔθνει.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">διδασκόμενος παρὰ τοῦ ἀρχαγγέλου Γαβριὴλ τὰ περὶ τῆς γενέσεως τοῦ κόσμου . . . </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῇ μὲν γὰρ πρώτῃ ἡμέρᾳ ἐποίησε τοὺς ἀνωτέρους οὐρανούς, τὴν γῆν, τὰ ὕδατα, ἐξ ὧν ἐστι χιὼν καὶ κρύσταλλος καὶ χάλαζα καὶ παγετοὶ καὶ δρόσος, τὰ πνεύματα τὰ λειτουργοῦντα ἐνώπιον αὐτοῦ, ἅτινά ἐστι τάδε· ἄγγελοι πρὸ προσώπου, καὶ ἄγγελοι τῆς δόξης, καὶ ἄγγελοι πνευμάτων πνεόντων, ἄγγελοι νεφελῶν καὶ γνόφων, χιόνος καὶ χαλάζης καὶ πάγου, ἄγγελοι φωνῶν, βροντῶν, ἀστραπῶν, ψύχους, καύματος, χειμῶνος, φθινοπώρου, ἔαρος καὶ θέρους, καὶ πάντων τῶν πνευμάτων τῶν κτισμάτων αὐτοῦ τῶν ἐν οὐρανοῖς καὶ ἐν τῇ γῇ, τὰς ἀβύσσους, τήν τε ὑποκάτω τῆς γῆς, καὶ τοῦ χάους, καὶ σκότος, ἑσπέρα καὶ νύξ, τὸ φῶς ἡμέρας τε καὶ ὄρθρου. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ταῦτα τὰ ἑπτὰ μέγιστα ἔργα ἐποίησεν ὁ θεὸς ἐν τῇ πρώτῃ ἡμέρᾳ. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐν δὲ τῇ δευτέρᾳ τὸ στερέωμα τὸ ἐν μέσῳ τῶν ὑδάτων, καὶ τὴν διαμέρισιν τῶν ἐπάνω τοῦ στερεώματος ὑδάτων, καὶ τῶν ὑποκάτω τοῦ στερεώματος ἐπὶ πρόσωπον πάσης τῆς γῆς. τοῦτο μόνον τὸ ἔργον ἐποίησεν ὁ θεὸς ἐν τῇ δευτέρᾳ ἡμέρᾳ. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τρίτῃ δὲ ἡμέρᾳ . . . </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τὰς θαλάσσας, τοὺς ποταμούς, τὰς πηγὰς καὶ λίμνας, τὰ σπέρματα τοῦ σπόρου, τὰ βλαστήματα, τὰ ξύλα τὰ κάρπιμά τε καὶ ἄκαρπα, τοὺς δρυμούς, καὶ πάντα τὰ φυτὰ κατὰ γένος. ταῦτα τὰ τέσσαρα ἔργα τὰ μέγιστα ἐποίησεν ὁ θεὸς ἐν τῇ τρίτῃ ἡμέρᾳ. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῇ δὲ τετάρτῃ τὸν ἥλιον, τὴν σελήνην, τοὺς ἀστέρας καὶ τὰς τῶν ἄστρων θέσεις καὶ τὰ στοιχεῖα . . . </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">. . . ταῦτα τὰ τρία ἔργα τὰ μεγάλα ἐποίησεν ὁ θεὸς ἐν τῇ τετάρτῃ ἡμέρᾳ. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῇ δὲ πέμπτῃ τὰ κήτη τὰ μεγάλα, τοὺς ἰχθύας καὶ τὰ ἄλλα ἑρπετὰ τὰ ἐν τοῖς ὕδασι, τὰ πετεινά, τὰ πτερωτά. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">. . . ταῦτα τὰ τρία ἔργα τὰ μεγάλα ἐποίησεν ὁ θεὸς ἐν τῇ πέμπτῃ ἡμέρᾳ. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῇ δὲ ἕκτῃ ἡμέρᾳ τὰ θηρίᾳ, τὰ κτήνη, τὰ ἑρπετὰ τῆς γῆς, </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τὸν ἄνθρωπον καὶ τοῦ πρώτου ἀνθρώπου καὶ τῶν μετ᾽ ἐκεῖνον. ταῦτα τὰ τέσσαρα μεγάλα ἔργα ἐποίησεν ὁ θεὸς ἐν τῇ ἕκτῃ ἡμέρᾳ. </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ ἐγένετο πάντα τὰ ἐν ταῖς ἓξ ἡμέραις παρὰ τοῦ θεοῦ ποιηθέντα ἔργα κβʹ. </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ συνετέλεσεν ὁ θεὸς πάντα ἐν τῇ ἕκτῃ ἡμέρᾳ, ὅσα ἐν τοῖς οὐρανοῖς καὶ ἐν τῇ γῇ, ἐν ταῖς θαλάσσαις καὶ ἐν ταῖς ἀβύσσοις, ἐν τῷ φωτὶ καὶ ἐν τῷ σκότει καὶ ἐν πᾶσι. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ ἀνεπαύσατο ὁ θεὸς ἐκ πάντων ἔργων αὐτοῦ ἐν τῇ ἑβδόμῃ ἡμέρα, . . . </reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">. . . καὶ ηὐλόγησεν αὐτὴν καὶ ἡγίασεν αὐτὴν καὶ ἐδήλωσεν δι᾽ ἀγγέλου τῷ Μωυσῇ ὅτι . . . </reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ ἐκλέξομαι ἐμαυτῷ ἐκ τοῦ σπέρματος αὐτοῦ λαὸν περιούσιον ἀπὸ πάντων τῶν ἐθνῶν . . . </reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">. . . καὶ εἰκοσιδύο κεφάλαια ἀπὸ Ἀδὰμ ἄχρι τοῦ Ἰακώβ. </reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">. . . ηὐλογήθη καὶ αὕτη ὑπὸ τοῦ θεοῦ καὶ ἡγιάσθη, καὶ σάββατον ὡς καταπαύσιμος προσηγορεύθη, καὶ ὡς τύπος τῆς ἑβδόμης χιλιοετηρίδος καὶ τῆς τῶν ἁμαρτωλῶν συντελείας . . . </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῇ πρώτῃ ἡμέρᾳ ἑβδομάδος, ἥτις ἦν τρίτη μὲν ἡμέρα τῆς πλάσεως τοῦ Ἀδάμ, ὀγδόῃ δὲ τοῦ πρώτου μηνὸς Νισάν, πρώτῃ δὲ τοῦ Ἀπριλλίου μηνός, καὶ ἕκτῃ τοῦ παρ᾽ Αἰγυπτίοις Φαρμουθί, ὠνόμασεν Ἀδὰμ τὰ ἄγρια θηρία θείῳ τινὶ χαρίσματι. τῇ δευτέρᾳ ἡμέρᾳ τῆς δευτέρας ἑβδομάδος ὠνόμασε τὰ κτήνη. τῇ τρίτῃ ἡμέρᾳ τῆς δευτέρας ἑβδομάδος ὠνόμασε τὰ πετεινά. τῇ τετάρτῃ ἡμέρᾳ τῆς δευτέρας ἑβδομάδος ὠνόμασε τὰ ἑρπετά. τῇ πέμπτῃ ἡμέρᾳ τῆς δευτέρας ἑβδομάδος ὠνόμασε τὰ νηκτά. . . . </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῇ ἕκτῃ ἡμέρᾳ τῆς δευτέρας ἑβδομάδος, ἥτις ἦν κατὰ μὲν Ῥωμαίους Ἀπριλλίου ἕκτη, κατὰ δὲ Αἰγυπτίους Φαρμουθὶ ἑνδεκάτη. λαβὼν ὁ θεὸς μέρος τι τῆς πλευρᾶς τοῦ Ἀδὰμ ἔπλασε τὴν γυναῖκα. . . . </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῇ τεσσαρακοστῇ ἕκτῃ ἡμέρᾳ τῆς κοσμοποιίας, τετάρτῃ ἡμέρᾳ τῆς ἑβδόμης ἑβδομάδος, Παχὼν τεσσαρεσκαιδεκάτῃ, Μαΐου ἐνάτῃ, ἡλίου ὄντος Ταύρῳ καὶ σελήνης Σκορπίῳ κατὰ διάμετρον, ἐν τῇ τῶν Πλειάδων ἐπιτολῇ, εἰσήγαγεν ὁ θεὸς τὸν Ἀδὰμ ἐν τῷ παραδείσῳ κατὰ τὴν τεσσαρακοστὴν ἡμέραν τῆς πλάσεως αὐτοῦ. τῇ ὀγδόῃ ἡμέρᾳ τῆς κοσμοποιίας, τεσσαρακοστῇ τετάρτῃ δὲ τῆς πλάσεως τοῦ Ἀδάμ, ἡμέρᾳ κυριακῇ, Παχὼν ὀκτωκαιδεκάτῃ, Μαΐου τρισκαιδεκάτῃ, μετὰ τρεῖς ἡμέρας τῆς ἐν τῷ παραδείσῳ αὐτοῦ εἰσόδου, ἡλίου ὄντος Ταύρῳ καὶ σελήνης Αἰγοκέρωτι, ἐνετείλατο ὁ θεὸς τῷ Ἀδὰμ ἀπέχεσθαι τῆς βρώσεως τοῦ ξύλου τῆς γνώσεως.
+Τῇ ἐνενηκοστῇ τρίτῃ ἡμέρᾳ τῆς κτίσεως, τῇ δευτέρᾳ ἡμέρᾳ τῆς τεσσαρεσκαιδεκάτης ἑβδομάδος, κατὰ τὴν θερινὴν τροπήν, ἡλίου ὄντος καὶ σελήνης Καρκίνῳ, τῇ εἰκοστῇ πέμπτῃ τοῦ Ἰουνίου μηνός, Ἐπιφὶ πρώτῃ, εἰσήχθη ὑπὸ τοῦ θεοῦ ἐν τῷ παραδείσῳ ἡ τοῦ Ἀδὰμ βοηθὸς Εὔα, ἐν τῇ ὀγδοηκοστῇ ἡμέρᾳ τῆς πλάσεως αὐτῆς. </reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἣν ὁ Ἀδὰμ λαβὼν ὠνόμασεν Εὔα, ὃ ἑρμηνεύεται ζωή. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">διὰ τοῦτο προσέταξεν ὁ θεὸς διὰ Μωϋσέως ἐν τῷ Λευιτικῷ, ἤτοι διὰ τὰς μετὰ τὴν πλάσιν τοῦ χωρισμοῦ αὐτῶν ἡμέρας ἐκ τοῦ παραδείσου, ἐπὶ μὲν ἀρρενογονίας ἀκάθαρτον αὐτὴν εἶναι ἐπὶ τεσσαράκοντα ἡμέρας, </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐπὶ δὲ θηλυτοκίας ἕως ἡμερῶν πʹ. ἐπειδὴ καὶ Ἀδὰμ τῇ μʹ ἡμέρᾳ τῆς πλάσεως αὐτοῦ εἰσήχθη ἐν τῷ παραδείσῳ, οὗ χάριν καὶ τὰ γεννώμενα τῇ τεσσαρακοστῇ ἡμέρᾳ εἰσφέρουσιν ἐν τῷ ἱερῷ κατὰ τὸν νόμον. ἐπὶ δὲ θήλεος ἀκάθαρτον εἶναι αὐτὴν ἐπὶ ἡμέρας ὀγδοήκοντα, διά τε τὴν ἐν τῷ παραδείσῳ αὐτῆς εἴσοδον τῇ ὀγδοηκοστῇ ἡμέρᾳ καὶ διὰ τὸ ἀκάθαρτον τοῦ θήλεος πρὸς τὸ ἄρσεν. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἄφεδρος γὰρ πάλιν οὖσα οὐκ εἰσέρχεται ἕως ἑπτὰ ἡμέρας ἐν τῷ ἱερῷ κατὰ τὸν θεῖον νόμον.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ὁ Ἀδὰμ ἀπεσόβει τὰ πετεινὰ καὶ ἑρπετά, συνῆγε τὸν καρπὸν ἐν παραδείσῳ, καὶ σὺν τῇ γυναικὶ αὐτοῦ ἤσθιεν αὐτόν.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">. . . τὸν Ἀδὰμ ἀπροόπτως ἀπὸ τοῦ ξύλου λαβεῖν καὶ φαγεῖν, καὶ μὴ προσχεῖν ὅλως τῷ λόγῳ τῆς Εὔας, ὅτι λειποθυμῶν ἦν ἀπό τε μόχθου καὶ πείνης.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ὁ ὄφις ἀπὸ κτήνους ἑρπετὸν ἐγένετο, χεῖράς τε καὶ πόδας ἐκέκτητο. ἀφῃρέθη δὲ ταῦτα διὰ τὸ τολμηρῶς εἰς τὸν παράδεισον εἰσελθεῖν, καὶ διὰ τὸ πρῶτος ἀπὸ τοῦ ξύλου λαβεῖν καὶ φαγεῖν.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τὰ θηρία καὶ τὰ τετράποδα καὶ τὰ ἑρπετὰ . . . ὁμόφωνα εἶναι πρὸ τῆς παραβάσεως τοῖς πρωτοπλάστοις· διότι . . . ὁ ὄφις ἀνθρωπίνῃ φωνῇ ἐλάλησε τῇ Εὔᾳ . . . </reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ ἑβδόμῳ ἔτει παρέβη καὶ τῷ ὀγδόῳ ἐξερρίφησαν τοῦ παραδείσου . . . μετὰ τεσσαράκοντα πέντε ἡμέρας τῆς παραβάσεως, ἐν τῇ ἐπιτολῇ τῶν Πλειάδων. ἐποίησε δὲ ὁ Ἀδὰμ ἐν τῷ παραδείσῳ ἑβδομάδα ἡμερῶν τριακοσίων ἑξήκοντα πέντε. καὶ ἐξεβλήθη σὺν τῇ γυναικὶ Εὔᾳ διὰ τὴν παράβασιν τῇ δεκάτῃ τοῦ Μαΐου μηνός.</reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ ὀγδόῳ ἔτει . . . ἔγνω ὁ Ἀδὰμ Εὔαν τὴν γυναῖκα αὐτοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ ἑβδομηκοστῷ ἔτει ἐγεννήθη αὐτοῖς πρωτότοκος υἱὸς ὁ Κάϊν. τῷ ἑβδομηκοστῷ ἑβδόμῳ ἔτει . . . γεγενῆσθαι τὸν δίκαιον Ἄβελ. τῷ ὀγδοηκοστῷ πέμπτῳ ἔτει ἐγεννήθη αὐτοῖς θυγάτηρ, καὶ ὠνόμασαν αὐτὴν Ἀσουάμ. τῷ ἐνενηκοστῷ ἑβδόμῳ ἔτει προσήνεγκε Κάϊν. τῷ ἐνενηκοστῷ ἑνάτῳ ἔτει Ἄβελ ἀνήνεγκε θυσίαν τῷ θεῷ εἰκοστὸν δεύτερον ἔτος ἄγων, κατὰ τὴν πανσέληνον τοῦ ἑβδόμου μηνὸς παρ᾽ Ἑβραίοις, ἤγουν ἐν τῇ σκηνοπηγίᾳ. . . . τὴν Κάϊν καρποφορίαν θυσίαν . . . </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ αὐτῷ ἐνενηκοστῷ ἐνάτῳ ἔτει ἀνεῖλεν ὁ Κάϊν τὸν Ἄβελ, καὶ ἐπένθησαν αὐτὸν οἱ πρωτόπλαστοι ἑβδομαδικοὺς τέσσαρας, ἤγουν ἔτη εἴκοσι ὀκτώ.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ ἑκατοστῷ εἰκοστῷ ἑβδόμῳ ἔτει ὁ Ἀδὰμ καὶ ἡ Εὔα ἀπέθεντο τὸ πένθος.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ ἑκατοστῷ τριακοστῷ πέμπτῳ ἔτει ἔλαβεν ὁ Κάϊν τὴν ἰδίαν ἀδελφὴν Ἀσουνᾶν οὖσαν ἐτῶν νʹ. αὐτὸς δὲ ἦν ἐτῶν ἐξήκοντα πέντε. ὁ μὲν Κάϊν τῇ ἀδελφῇ τῇ μείζονι Σαυὴ οὕτω καλουμένῃ. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ὁ δὲ Σὴθ τρίτος υἱὸς μετὰ τὸν Ἄβελ γεννηθεὶς τῇ λεγομένῃ αὐτοῦ ἀδελφῇ Ἀζουρᾷ. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γεγόνασι δὲ τῷ Ἀδὰμ καὶ ἄλλοι υἱοί . . . ἐννέα μετὰ τοὺς τρεῖς τούτους, ὡς εἶναι αὐτῷ δύο μὲν θυγατέρας, ἄρρενας δὲ δώδεκα, ἕνα μὲν ἀποκτανθέντα, ἕνδεκα δὲ περιλειφθέντας τῷ βίῳ.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Ἐνὼς Νωὰ ἡ ἀδελφὴ αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Καϊὰν Μαωλιθ ἀδελφὴ αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Μαλελεὴλ Δίνα θυγάτηρ Βαραχιὴλ πατραδέλφου αὐτοῦ. ἐντεῦθεν ἤρξατο ἡ κακομηχανία ἐν κόσμῳ γίνεσθαι, καὶ ἀπ᾽ ἀρχῆς μὲν διὰ τῆς τοῦ Ἀδὰμ παρακοῆς, ἔπειτα δὲ διὰ τῆς τοῦ Κάϊν ἀδελφοκτονίας, νῦν δὲ ἐν χρόνοις τοῦ Ἰάρεδ καὶ ἐπέκεινα φαρμακεία καὶ μαγεία, ἀσέλγεια, μοιχεία τε καὶ ἀδικία.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">οὗτος (Ἐνώχ) πρῶτος γράμματα μανθάνει καὶ διδάσκει, καὶ θείων μυστηρίων ἀποκαλύψεως ἀξιοῦται.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Ἰάρεδ Βαραχὰ θυγάτηρ Ἀσουὴλ πατραδέλφου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ ἀριθμητικὴν καὶ γεωμετρίαν καὶ πᾶσαν σοφίαν . . . </reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Ἐνὼχ Ἐᾶνι θυγάτηρ Δανιὴλ πατραδέλφου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">(Ἐνώχ) εἰς τὸν παράδεισον ἠρπᾶσθαι.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Μαθουσάλα Ἐδνὰ θυγάτηρ Ἐζριὴλ πατραδέλφου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Λάμεχ Βεθένως θυγάτηρ Βαραχιὴλ πατραδέλφου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ αὐτῷ ϡλʹ ἔτει καὶ Κάϊν ἀπέθανεν ἐμπεσόντος ἐπ᾽ αὐτὸν τοῦ οἴκου. λίθοις γὰρ καὶ αὐτὸς τὸν Ἄβελ ἀνεῖλε. πληρωθέντος οὖν ἐνιαυτοῦ μετὰ θάνατον τοῦ Ἀδὰμ τέθνηκεν.</reading>
+          </unit>
+        </div>
+        <div number="31b">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ὑπὸ τοῦ Λάμεχ τὸν Κάϊν ἀνῃρῆσθαι ἀκουσίως τοῖχον γὰρ οἰκοδομῶν προσανέτρεψεν αὐτὸν ὄπιθεν ὄντος τοῦ Κάϊν ὃς καὶ ἀνῃρέθη ἀκουσίως.</reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Νῶε Ἐμζάρα θυγάτηρ Βαραχιὴλ πατραδέλφου αὐτοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="22">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">εἰσῆλθεν πρὸς ἡμᾶς ἡ κιβωτὸς τοῦ θεοῦ . . . τῇ πέμπτῃ τοῦ μηνὸς τοῦ πέμπτου.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τούτῳ τῷ ͵βσναʹ ἔτει . . . Νῶε ἐφύτευσεν ἀμελῶνα ἐν ὄρει Λουβὰρ τῆς Ἀρμενίας.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="2">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ ͵βφπεʹ ἔτει Καϊνᾶν διοδεύων ἐν τῷ πεδίῳ, </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">εὗρε τὴν γραφὴν τῶν γιγάντων καὶ ἔκρυψε παρ᾽ ἑαυτῷ.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Καϊνᾶν Μελχα θυγάτηρ Μαδαι υἱοῦ Ἰάφεθ.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Σαλα Μωαχα θυγάτηρ Χεεδαμ πατραδέλφου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Ἐβερ Ἀζουρα θυγάτηρ Νεβρώδ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">μετὰ τὸν κατακλυσμὸν τῷ  ͵βφπβʹ ἔτει τοῦ κόσμου, φθόνῳ κινούμενοι (οἱ ἐγρήγοροι) μετὰ θάνατον ἐπλάνησαν τοὺς υἱοὺς Νῶε· </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ εὐξαμένου τοῦ Νῶε ἵνα ἀποστῶσιν ἀπ᾽ αὐτῶν </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ὁ κύριος ἐκέλευσε τῷ ἀρχαγγέλῳ Μιχαὴλ βαλεῖν αὐτοὺς εἰς τὴν ἄβυσσον ἄχρι ἡμέρας τῆς κρίσεως· </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ὁ δὲ διάβολος ᾑτήσατο λαβεῖν μοῖραν ἀπ᾽ αὐτῶν πρὸς πειρασμὸν τῶν ἀνθρώπων </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ ἐδόθη αὐτῷ τὸ δέκατον αὐτῶν κατὰ πρόσταξιν θείαν, ὥστε πειράζειν τοὺς ἀνθρώπους πρὸς δοκιμὴν τῆς ἑκάστου πρὸς θεὸν προαιρέσεως, τὰ δὲ λοιπὰ ἐννέα μέρη ἐβλήθη εἰς τὴν ἄβυσσον.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Φαλεχ Δυμνα θυγάτηρ Σεννααρ.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐπὶ μγʹ ἔτη ἔμειναν οἰκοδομοῦντες. τὸ ὕψος ͵ευλγʹ πήχεις, καὶ δύω παλαισταί. τὸ πλάτος ἐπὶ σγʹ πλίνθους. τῆς πλίνθου τὸ ὕψος, τρίτον μιᾶς πλίνθου. {τὸ ἔκταμα τοῦ ἑνὸς τοίχου} στάδιοι ιγʹ {καὶ τοῦ ἄλλου} λʹ. </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐπὶ γὰρ ἔτη τεσσαράκοντα οἰκοδομήσαντες, ἐκείνου (Νεβρὼδ) μάλιστα παρορμῶντος αὐτοὺς εἰς ἀποστασίαν, </reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">συνεχύθησαν διαιρεθέντες εἰς πολυγλωσσίαν ὑπὸ τοῦ θεοῦ. ἐκεῖνος (Νεβρὼδ) δὲ ἔμεινεν ἐκεῖ κατοικῶν καὶ μὴ ἀφιστάμενος τοῦ πύργου, βασιλεύων μερικοῦ τινος πλήθους, </reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐφ᾽ ὃν πύργος ἀνέμῳ βιαίῳ . . . καταπεσὼν θείᾳ κρίσει τοῦτον ἐπάταξε.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">Ῥαγὰβ γενόμενος ἑκατὸν τριακονταδύο ἐτῶν ἐγέννησε τὸν Σερούχ. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐπὶ τούτου οἱ ἄνθρωποι τὸν κατ᾽ ἀλλήλων αὐξήσαντες τῦφον στρατηγούς τε ἑαυτοῖς κατεστήσαντο καὶ βασιλεῖς. καὶ τότε πρώτως πολεμικὰ κατασκευάσαντες ὄργανα πολεμεῖν ἀλλήλοις ἐνήρξαντο.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Σερουχ Μελχα θυγάτηρ Χαβερ πατραδέλφου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">αὐξηθέντα δὲ τὸν Ναχὼρ ἐδίδαξεν ὁ πατὴρ πάντων ἐπίλυσιν οἰωνῶν, τῶν τε ἐν οὐρανῷ σημείων διακρίσεις καὶ τῶν ἐπὶ γῆς ἁπάντων, καὶ πᾶσαν Χαλδαϊκὴν μαντείαν.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">γυνὴ Ναχὼρ Ἰεσθα θυγάτηρ Νεσθα τοῦ Χαλδαίου.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">Ναχὼρ δὲ γενόμενος οθʹ ἐτῶν ἐγέννησε τὸν Θάρρα. Νίνου δὲ τοῦ πρώτου βασιλέως τῶν Ἀσσυρίων τεσσαρακοντὸν τρίτον ἄγοντος ἔτος τῆς βασιλείας γεννᾶται Ἀβραάμ . . . Θάρρα δὲ γενόμενος ἐτῶν οʹ ἐγέννησεν ἐκ γυναικὸς Ἔδνας, θυγατρὸς Ἀβραὰμ πατραδέλφου αὐτοῦ, τὸν Ἀβραάμ, ὅντινα ἡ μήτηρ ἐκάλεσεν ἐπ᾽ ὀνόματι τοῦ ἑαυτῆς πατρός· ἔφθη γὰρ ἐκεῖνος πρὸ τῆς τούτου γεννήσεως τετελευτηκέναι.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">θεοφιλὴς δὲ ὢν καὶ τοῖς κτίσμασι τὸν νοῦν ἑαυτοῦ μὴ καταδεξάμενος ἐᾶσαι ἐνδιατρίβειν, </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἀλλ᾽ ἐπὶ τὸν γενεσιουργὸν ἐκ τῆς τῶν κτισμάτων ἀναχθεὶς καλλονῆς θείας ἐλλάμψεως ἠξιώθη, ἔτι διατρίβων ἐν τῇ πατρίδι . . .</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="9">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">Σάρα θυγάτηρ ἦν τοῦ Ἀρρὰν ἀδελφὴ τῆς Μέλχας καὶ τοῦ Λώτ . . .</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ ͵γτογʹ ἔτει τοῦ κόσμου, Ἀβραὰμ δὲ ξαʹ, ἐνεπύρισεν Ἀβραὰμ τὰ εἴδωλα τοῦ πατρὸς αὐτοῦ, </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ συγκατεκαύθη αὐτοῖς Ἀρρὰν θέλων σβέσαι τὸ πῦρ ἐν νυκτί. καὶ ἐξῆλθε Θαρὰ σὺν Ἀβραὰμ τοῦ ἐλθεῖν εἰς γῆν Χαναάν, καὶ μεταγνοὺς ᾤκησεν ἐν Χαρρὰν εἰδωλομανῶν ἕως θανάτου αὐτοῦ.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ὁ ἄγγελος ὁ λαλῶν τῷ Μωϋσῇ εἶπεν αὐτῷ, ὅτι τὸν Ἀβραὰμ ἐγὼ ἐδίδαξα τὴν Ἑβραΐδα γλῶσσαν κατὰ τὴν ἀπ᾽ ἀρχῆς κτίσεως λαλεῖν τὰ πάτρια πάντα . . . </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="17">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">οὗτος ὁ Ἀβραὰμ ἐτῶν ρʹ ἐγέννησεν τὸν Ἰσαάκ. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="9">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐκ τοῦ Λὼτ Μωαβήται καὶ Ἀμανίται σπέρμα κατάρατον ἐκ παρανόμου μίξεως.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">μετὰ ταῦτα τῆς κατὰ Μαβρῆ δρυὸς ἀπαναστὰς ὁ Ἀβραὰμ ἐπὶ τὸ φρέαρ κατασκηνοῖ τοῦ ὅρκου.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἑαυτῷ δὲ ἰδίᾳ καὶ τοῖς οἰκέταις αὐτοῦ κατὰ συγγενείας πηξάμενος σκηνάς, τότε πρῶτον Ἀβραὰμ τῆς σκηνοπηγίας ἐπὶ ἑπτὰ ἡμέρας ἐπιτελεῖ τὴν ἑορτήν . . . </reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">πρῶτος Ἀβραὰμ ἐκύκλου τὸ θυσιαστήριον κλάδοις φοινίκων καὶ ἐλαιῶν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="15">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τὸν Ἰσαὰκ ἐτῶν κεʹ . . . εἶναι ὅτε πρὸς θυσίαν ἀνήχθη.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">Μαστιφὰμ ὁ ἄρχων τῶν δαιμονίων . . . προσελθὼν τῷ θεῷ εἶπεν, εἰ ἀγαπᾷ σε Ἀβραάμ, θυσάτω σοι τὸν υἱὸν αὐτοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="13">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">εἰς ἐκεῖνον δὲ τὸν τόπον . . . τὸν Ἀβραὰμ οἰκοδομῆσαι ἔνθα Δαβὶδ ὕστερον ἱδρύσατο τὸ ἱερόν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="11">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐγέννησεν πάλιν Ἀβραὰμ ἐκ τῆς ἐσχάτης αὐτοῦ γυναικὸς Χετούρας υἱοὺς πέντε.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐτῶν δὲ ξʹ ὃν ὁ Ἰσαὰκ ἐγέννησεν τὸν Ἰακώβ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="4">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">Κολλυρίαδας ποιήσασα Ῥεβέκκα . . . ἔδωκε τῷ Ἰακὼβ καὶ εἰσήγαγε μεθ᾽ ἑτέρων δώρων πρὸς Ἰσαάκ. καὶ εὐλόγησεν αὐτὸν Ἰσαὰκ καὶ εὐλογῶν αὐτὸν πολυτρόπως καὶ κατέχων αὐτὸν ἐν τοῖς κόλποις αὐτοῦ ἐτελεύτησεν, ἀφυπνώσαντος τοῦ Ἀβραὰμ τῷ ιεʹ ἔτει τῆς ζωῆς Ἰακώβ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="26">
+        <div number="34">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ Ἡσαῦ ἔφη ἐν ταῖς εὐλογίαις ὁ Ἰσαάκ, ἔσται δὲ ἡνίκα ἂν καθέλῃς καὶ ἐκλύσῃς τὸν ζυγὸν αὐτοῦ ἀπὸ τοῦ τραχήλου σου.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="29">
+        <div number="12">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τῷ ρνγʹ ἔτει τοῦ Ἰσαὰκ ἐπανῆλθεν Ἰακὼβ πρὸς αὐτὸν ἀπὸ Μεσοποταμίας.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="31">
+        <div number="9">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ ἀναβλέψας Ἰσαὰκ καὶ ἰδὼν τοὺς υἱοὺς Ἰακὼβ </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ηὐλόγησε τὸν Λευὶ ὡς ἀρχιερέα </reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ τὸν Ἰούδαν ὡς βασιλέα καὶ ἄρχοντα.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="35">
+        <div number="9">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἡ Ῥεβέκκα ᾔτησε τὸν Ἰσαὰκ ἐν τῷ γήρᾳ παραινέσαι τῷ Ἡσαῦ καὶ τῷ Ἰακὼβ ἀγαπᾶν ἀλλήλους.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="36">
+        <div number="1">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ παραινέσας αὐτοῖς προεῖπεν ὅτι </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐὰν ἐπαναστῇ τῷ Ἰακὼβ ὁ Ἡσαῦ, εἰς χεῖρας αὐτοῦ πεσεῖται.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="37">
+        <div number="1">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">μετὰ οὖν τὸ τελευτῆσαι τὸν Ἰσαὰκ κινηθεὶς ὑπὸ τῶν υἱῶν ὁ Ἡσαῦ </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καὶ ἀθροίσας ἔθνη ἦλθε κατὰ τοῦ Ἰακὼβ καὶ τῶν υἱῶν αὐτοῦ εἰς πόλεμον. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">Ἰακὼβ δὲ ἀποκλείσας τὰς πύλας τῆς βάρεως παρεκάλει τὸν Ἡσαῦ μνησθῆναι τῶν γονικῶν ἐντολῶν. </reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τοῦ δὲ μὴ ἀνεχομένου, ἀλλ᾽ ὑβρίζοντος καὶ ὀνειδίζοντος, </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="38">
+        <div number="1">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">βιασθεὶς Ἰακὼβ ὑπὸ τοῦ Ἰούδα </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐνέτεινε τόξον καὶ πλήξας κατὰ τοῦ δεξιοῦ μαζοῦ τὸν Ἡσαῦ κατέβαλε. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τοῦ δὲ θανόντος ἀνοίξαντες τὰς πύλας οἱ υἱοὶ Ἰακὼβ ἀνεῖλον τοὺς πλείστους.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="46">
+        <div number="3">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">Ἰωσὴφ ιζʹ ἐτῶν ἐπράθη καὶ τριὰ ἔτη ἐποίησεν δοῦλος καὶ γʹ ἔτη ἐν τῇ φυλακῇ καὶ πʹ πάσης γῆς Ἐγύπτου ἄρχων.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">τόν τε γὰρ ποταμὸν εἰς διώρυχας πλείστας κατατεμεῖν αὐτοῖς ἐπέταξαν, καὶ οἰκοδομῆσαι τείχη ταῖς πόλεσι καὶ χώματα ἀνεγεῖραι, ἵνα δι᾽ αὐτῶν ὁ ποταμὸς λιμνάζειν ἀνείργοιτο, καὶ ἀνιστᾶν πυραμίδας, καὶ τούτοις τοὺς Ἑβραίους ἐξέτρυχον.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="47">
+        <div number="3">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">μόνους δέκα μῆνας ῥιφῆναι τὰ βρέφη τῶν Ἰσραηλιτῶν ἐν τῷ ποταμῷ, ἕως οὗ ἀνελήφθη Μωϋσῆς ὑπὸ τῆς βασιλίσσης.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ὁ δ᾽ αὐτὸς υἱὸς τῇ θυγατρὶ Φαραῷ Θερμούθιδι, τῇ καὶ Φαρίῃ, βασιλίδι οὔσῃ εἰσποιηθείς, καὶ πᾶσαν Αἰγυπτίων ἀσκηθεὶς παίδευσιν, ὡς βασιλίδος υἱός, δικαίως ἂν κληθείη κατὰ κόσμον βασιλεὺς ἐξ ὕδατος . . . </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="48">
+        <div number="1">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">καταλιπὼν δὲ Μωϋσῆς τὰς κατ᾽ Αἴγυπτον διατριβὰς εἰς τὴν ἔρημον ἐφιλοσόφει, διδασκόμενος παρὰ τοῦ ἀρχαγγέλου Γαβριὴλ τὰ περὶ τῆς γενέσεως τοῦ κόσμου . . . </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐν ρμδʹ ἔτει τῆς ἐν Αἰγύπτῳ δουλείας ἤρξαντο Αἰγύπτοι δέχεσθαι τὴν δεκάπληγον. ἐν μηνὶ Ἰουνίῳ τὰ ὕδατα εἰς αἷμα μετεβλήθη, Ἰουλίῳ βάτραχοι, Αὐγούστῳ σκνῖπες, Σεπτεμβρίῳ κυνόμυια, Ὀκτωβρίῳ κτηνῶν πτῶσις, Νοεμβρίῳ φλυκτίδες καὶ ἕλκη, Δεκεμβρίῳ χάλαζα, Ἰανουαρίῳ ἀκρίς, Φεβρουαρίῳ σκότος ἡμέρας τρεῖς, Μαρτίῳ τὰ πρωτότοκα. τῇ ιδʹ τούτου τοῦ μηνὸς σκυλεύσαντες τοὺς Αἰγυπτίους ἐξῆλθον, προστάξει θεοῦ τοῦτο πεποιηκότες.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="VanderKam ">ἐν τῇ θαλάσσῃ κατεστράφησαν ὃν τρόπον τὰ βρέφη τῶν Ἑβραίων ἐν τῷ ποταμῷ ἀπέπνιγον, χιλίων ἀνδρῶν ἀποπνιγέντων ἰσχυρῶν Αἰγυπτίων ἀνθ᾽ ἑνὸς βρέφους Ἰσραηλιτικοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Latin" author="" language="Latin">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Ceriani" language="Latin" show="yes">
+        <name>Ceriani Concordance</name>
+        <bibliography>A.M. Ceriani, "Fragmenta Parvae Genesis," in Fragmenta latina evangelii S. Lucae, Parvae Genesis et Assumptionis Mosis, Baruch, Threni et Epistolae Jeremiae versionis syriaque Pauli Telensis (Monumenta sacra et profana 1; Milano: 1861), 15-54. </bibliography>
+        <bibliography>Albert-Marie Denis, ed., Concordance latine des pseudépigraphes d'Ancien Testament.  Concordance, corpus des textes, indices (Corpus christianorum. Thesaurus patrum latinorum. Supplementum; Turnhout: Brepols, 1993), 552-565.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="13">
+        <div number="10">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- Et inhabitauit illic annis duobus. Et promouit inde in austrum usque bahalot et facta est famis super terram.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abiit abram in aegyptum anno tertio septimani et inhabitauit in terram aegypti quinque annis priusquam raperetur uxor ipsius ab eo.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et taneos ciuitas aegypti tunc aedificata est annis septem post cebron.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et factum est cum rapuisset farao saram uxorem abram quaestionauit dominus faraonem et domum eius quaestionibus magnis propter saram uxorem abram.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tunc abram glorificauit diuitiis ualde omnibus ouibus et bubus et asinis et camelis et equis et seruis et ancillis argento et a&lt;u&gt;ro ualde. Etenim et loth filio fratris sui erant diuitiae.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et reddidit farao saram uxorem abram uiro suo et eiecit eum de terra aegypti et peruenit in locum ubi fixerat tabernaculum suum inprimis in locum altarii agge ad orientis partem et betel a mare et benedixit dominum deum suum qui reuocauit eum in pace.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et factum est in quadragesimo et primo iubeleo anno tertio ebdomadarum primi reuersus est in locum hunc et obtulit olocaustomata et inuocauit in nomine domini: tu es deus excelsus deus meus in saecula saeculorum.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in &lt;an&gt;no quarto septimanarum huius separatus est loth ab ipso et inhabitauit sodomis. Et homines sodomitae peccatores erant ualde et iniqui in cordibus suis.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- propter quod separatus est loth filius fratris sui ab eo eo quod non erant illi filii.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Captiuatus est loth ab ipso. In quarto autem anno septimani huius iubelei ipsius dixit deus ad abram: eleua oculos tuos de loco ubi sedes tu ad occasum et africum et orientem et septentrionem.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam omnem terram quam tu uides tibi et semini tuo dabo eam in saecula. Et ponam semen tuum sicut harena maris etenim semen tuum non enumerabitur .</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu exsurgens perambula latitudinem eius et uide uniuersa quia semini tuo dabo eam. Et abiit abram in cebron et inhabitauit. ---</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="20">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- illum et multiplicabo eum et adaugam eum ualde Nam duodecim principes generauit et ponam eum in gentem magnam.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et testamentum meum,statuam cum isac quem pariet tibi sarra secundum tempus hoc in anno ueniente.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et consummauit loquens cum ipso et ascendit deus ab abraham.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et fecit abraham quemammodum dixit illi deus et accepit ismael filium suum et omnes dominatos suos et empticios omnem ergo masculum in domo sua circumcidit carnem praeputii ipsorum in illo tempore.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et circumcidit se abraham in illa die et dominatos suos et domesticos suos et empticios etiam de filiis alienis circumcidit omneis.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Haec lex in omnibus generationibus saeculi et non est praeterire diem unum ex diebus qui*a* praeceptum est aeternum mandatum et scriptum est in tabulis caeli.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Ut omnis natus cuiuscumque non fuerit circumcisa caro praeputii eius usque in diem octauam non est de testamento quod testatus est deus ad abraham quia de filiis extermination*i*s est et amplius non est super eum signum ut sit deo sed exterminii et perditionis a terra quoniam testamentum domini dei nostri dissipauit.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam omn*e*s angeli uultuus et omnes archangeli benedictionis a diebus  creaturae ipsorum coram angelorum uultuum et angelorum sanctificationis sanctificauit istrahel ut esset simul cum ipso et cum angelis sanctorum ipsius.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu demanda filiis istrahel ut custodiant testamentum signi huius in generationibus suis in testamentum aeternum et non exterminabuntur a terra.</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam decreuit in decreto testamenti ut custodiatur in aeternum super omnes filios istrahel.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam ismael et filios eius et fratres eius et esau non adplicabit ad se deus et non elegit ex ipsis quoniam et ipsi ex filiis sunt abraham sicut cognouit eos sed in istrahel elegit ut sint ei in populum.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et sanctificauit eum et prae---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="5 ">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- uniuersa opera ipsorum quemammodum erant iniqui et peccatores ualde et inmundi spurcitias exercentes in carnibus suis et facientes abominationes super terram.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Ita enim faciet deus iudicium in locis ubicumque fecerint abominationis sodom&lt;or&gt;um sic iudicabit illos.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et loth liberabimus inde propter quod memor fuit deus abrahae ut (e)liberaret eum de medio euersionis.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Etenim fecit ipse et fili*ae* eius iniquitatem super terram qualis non est facta in tota terra a diebus a*d*am usque ipsum ut dormiret homo cum filiabus suis.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Etenim ecce demandatum est et scriptum in omne semen in tabulis caeli ut auferantur et exterminentur tal*e*s et ut fiat iudicium ipsorum secundum iudicium sodom&lt;or&gt;um ut non derelinquatur in ipsis omne semen hominis in terra in die iudicii.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in mense hoc exiuit abraham a cebron et abiit et inhabitauit inter medium cades et sur in finibus gerar&lt;or&gt;um.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in medio mensis quinti transtulit se inde et habitauit secus puteum iurationis.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in medio mensis sexti uisitauit deus sarram et fecit illi sicut dixit.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et concepit et peperit filium in mense septimo et in dimidio mensis secundum tempus quod dixit deus ad abraham in diem festum primitiuorum natus est isac.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et circumcidit abraham filium suum octauo die hic primus circumcisus est secundum testamentum dispositum in saecula.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno sexto septimanarum quarti adfuimus ad abraham secus puteum iurationis et uisi sumus illi sicut dixeramus sarrae quoniam reuerti haberemus ad eam et ipsa (in) conceptum haberet filium suum.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et reuersi sumus in mense septimo et inuenimus sarram conceptum habentem in conspectu nostro. Et benediximus eum et indicauimus illi quaecumque decreta sunt ei et quomodo esset moriturus et quod generaret adhuc sex filios et uidebit eos omnes priusquam moriatur. Sed in isac multiplicabitur et uocabitur nomen.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et omne semen filiorum eius gentes erunt et cum gentibus deputabuntur et ex filiis isac unus erit in semen sanctum qui cum gentibus non conputabitur</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam in sorte excelsi erit quoniam in possesionem dei cecidit omne semen eius esse deo in populum sanctificatum ex omnibus gentibus eius et ut sit regnum sacerdotale et populus sanctus.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abibimus uiam nostram et indicauimus sarrae quaecumque indicauimus ei et gauisi sunt utrique gaudio magno.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et aedificauit illic altarium domino qui liberauit eum et gratiae eius in terram commorationis suae. Et fecit diem festum laetitiae in mense hoc septem dies secus altarium</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et aedificauit tabemacula sibi et seruis suis in die festo hoc. Et hic primus fecit diem festum tabernaculorum super terram.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in diebus erat offerens per singulos dies super altare fructum domino uitulos duos et arietes duos oues septem et hircum caprarum unum pro peccatis propitiari in ipso pro se et pro semine suo.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in sacrificium salutare arietes septem hedos septem oues septem et hircos septem et sacrificia ipsorum et uinum ipsorum et uniuersam adipem eorum erat incendens super altari --- ostiam in odorem suauitatis.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et mane et uesperam erat incendens incensum compositionis libanum et galbanum et stacten et nardum et myrram et spicam et costum septem has species mundas erat incendens concisas et aequaliter mixtas.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et fecit diem festum hunc per septem dies aepulans in toto corde suo et in omni anima sua ipse et uniuersi domestici sui et omnis alienus non erat cum ipsis et omnis in&gt;circumcisus.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et benedixit creatorem suum qui creauit illum quia cognouit et sciuit quia ex ipso erit plantatio ueritatis in generationibus aeternis et ex ipso semen sanctum ut sit secundum h*un*c qui creauit uniuersa.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et benedixit et gauisus est et uocauit nomen diei festi huius dies festus dies iucunditatis acceptabilis deo excelso.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et benediximus eum in saeculo et semen eius cum ipso in omnes generationes totius terrae quia fecit diem festum hunc in tempore suo secundum testimonium tabularum caeli.</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter quod decretum est in tabulis caeli super istrahel ut sit dies festus tabernaculorum septem dies toti in laetitia in mense septimo acceptabiles in conspectu domini legitimum sempiternum in generationibus ipsorum per singulos annos.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non erit finis temporum quoniam in sempiternum est praeceptum istrahel facere eum et sedere in tabernaculis et ut ponant coronas super capita sua accipere ramos den&lt;s&gt;os et *s*alicem de torrentem.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et accepit abraham de decore palmarum et fructus ligni speciosi et omnibus diebus erat circumiens altarium meum in ramis septies mane laudans et confitens deo suo secundum omnia in laetitia.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="1">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno primo ebdomadarum quinti ablactatus est isac iubeleo hoc et fecit abraham conuiuium magnum-(et) in mense tertio in die qua ablactatus est filius eius isac.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ismael filius agar ancillae aegyptiae loco erat in conspectu abraham patris sui. Et gauisus est abraham et benedixit deum quia uidit sibi filios et non est defunctus sine filiis.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et memor fuit sermones quos locutus est ei in die qua segregauit se loth ab ipso. Et gauisus est quia dedit deus illi semen super terram ut hereditet eam et benedixit toto ore suo qui creauit uniuersa.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uidit sarra ismael ludentem cum isac et abraham gaudentem gaudio magno et zelauit ismael et dixit ad abraham: eice ancillam istam et filium eius quia non hereditabit filius ancillae huius cum filio meo isac.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et pessimus uisus est sermo in oculis abraham propter ancillam et propter filium eius ut eiciat illos ab se.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit deus ad abraham: ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="10">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et conturbatus est et dixit: ecce ego.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixi ad eum: noli inicere manum tuam super puerum et non facias ei quidquam quo&lt;d&gt; nunc manifestaui quia times deum tuum et non pepercisti filio tuo primogenito a me.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et confusus est princeps mastima. Et eleuans abraham oculos suos uidit et ecce aries unus tenebatur cornibus suis. Et abiit abraham et accepit arietem et obtulit eum pro isac filio suo.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uocauit abraham nomen loci illius dominus uidit ut dicatur in monte dominus uisus est: hic est mons sion.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uocauit abraham nomine suo secundo de caelo quia +fuimus+ ut loquamur illi nomine domini.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit per me ipsum iuraui dicit dominus propter quod fecisti sermonem istum et non pepercisti filio tuo unigenito propter me quem dilexisti quoniam benedicens benedicam te et multiplicans multiplicabo semen tuum stellas caeli et sicut harena quae est circa litora maris. Et hereditauit semen tuum ciuitates aduersariorum eius.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et benedicentur in semine tuo omnes gentes terrae propter quod obaudisti uoci meae et ego manifestaui omnibus quoniam fidelis es mihi in omnibus quae dixi tibi ambulare in pace.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abiit abraham ad pueros suos et exurgentes abierunt in bersabe et habitabit abraham secus puteum iurationis.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et faciebat diem festum ter per singulos annos. Nam et istos septem dies in laetitia faciebat et uocauit eum in diem festum domini secundum septem dies quibus abiit et reuersus est.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erat decretum et scriptum in tabulis caeli super istrahel et super semen eius ut faciant diem festum septem diebus in laetitia gaudentes.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="1">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno septimanarum primi secundo et quadragesimo iubeleo conuertit abraham et inabitauit contra faciem chebron haec est cariatharbee duo septimanarum annorum.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno septimanarum huius tertii iubelei huius conpleti sunt dies uitae sarrae et mortua est in chebron.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et aduenit abraham ut plangeret eam. Et temptauimus eum si patiens esset spiritus eius et non pusillianimus in uerbis oris sui. Et inuentus est et in hoc patientissimus et non est conturbatus.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam in longanimitate spiritus locutus est cum filiis geth ut dent illi locum ubi sepelliat mortuum suum in eum.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dedit deus gratiam ei in conspectu omnium uidentium eum et depraecatus est in mansuetudine a filiis geth et dederunt ei agrum spelei duplicem quod est contra faciem mambre haec est chebron quadringentis denariis.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et hoc postulauerunt ab eo dicentes: damus tibi gratis. Et non accepit de manibus eorum gratis quoniam dedit praetium loci pecuniam conplens et adorauit eos bis et post haec sepelliuit mortuum suum in speleo duplici.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et facti sunt dies omnes uitae sarrae septem et uiginti et centum anni id est duos iubeleos septimanas quattuor minus unum annum: hii sunt dies uitae sarrae.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Haec temptatio decima in qua inuentus est et in ipsa abraham fidelis et (et) longanimus spiritu.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et &lt;non&gt; dixit sermonem pro sermone terrae sicut dixit illi dare deus dare illi eam et semini eius post eum et locum petit ab eis ut sepelliret mortuum suum. Quoniam inuentus est fidelis et scriptum est amicus dei in tabulis caeli.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno quarto ipsius accepit abraham isac filio suo mulierem. Et nomen eius rebecca filia bathuel filii nachor fratris abraham sororem labae filiam bathuel et bathuel filius erat malce mulieris nachor fratris abraham.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abraham accepit sibi mulierem tertiam et nomen ei cetturra de filiabus domesticorum suorum eo quod murtua esset agar priusquam sarra.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et peperit illi sex filios iebram et iectam et madan et madiam et sobec et oe in duos septimanarum annorum.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in sexto septimanarum anni ipsius secundi peperit rebecca isac duos filios esau et iacob. Et erat iacob lenis et rectus et esau erat durus et uir rusticanus et pilosus et iacob habitans in tabernaculis.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et creuerunt et iubenes facti sunt ambo. Et didicit iacob litteras et esau non didicit quoniam homo erat agrestis et benator sed didicit bellum et uniuersa opera eius erant dura.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et diligebat abraham iacobum et isac diligebat esau.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uidebat abraham opera esau et sciebat quoniam in iacob uocabitur illi semen et nomen et uocabit rebeccam et mandauit illi pro iacob quoniam ipsa diligebat iacob plus quam esau.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit illi: filia custodi in nomine filii mei iacob quoniam hic mihi erit &lt;praese&gt;n(i)tatio super terram et in benedictione super filios hominum et uniuersi seminis mei gloria.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quia scio quod hunc elegit deus sibi in populum sanctum ex omnibus populis qui sunt super faciem totius terrae.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ecce isac diligit esau super iacob et ego uideo te diligentem in ueritate iacob.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Adice adhuc amplius ut parcas illi et sint oculi tui super eum in dilectione quoniam ipse erit nobis in benedictione super terram et ex hoc et usque in omni generatione terrae.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Conualescant ergo manus tuae et gaudeat cor tuum in filio tuo iacob quoniam ipsum dilexi super omnes filios meos. Propter quod in aeternum benedicetur et semen eius et erit conplens omnem terram.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Si poterit ergo homo numerare harenam terrae et numerabile erit semen eius.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uniuersae benedictiones quas benedixit me deus et semen meum iacob et semini eius erunt omnibus diebus.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in semine eius benedicetur nomen meum et nomen patrum meorum sem noe enoch malalee henos et adam.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ipsi erunt fundamenta ponentes caeli et confirmantes terram ut agnoscantur uniuersa luminaria firmamenti.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uocauit abraham --.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="5 ">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- quemammodum iudicati sunt propter malitiam ipsorum propter quod conmisscebant se cum fornicariis et inmunditiam exercebant et omnem abominationem faciebant et praecepta neglegebant.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ideo ne forte et uos detis nomen uestrum in maledictionem et omnem uitam uestram in sibilationem et omnes filios uestros in exterminium et in gladium et eritis maledicti sicut sodoma et omnia derelicta uestra sicut filii gomorre.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ideo ego testor super uos filii diligite deum caeli et adherete omnibus mandatis eius et nolite ire post omnes abominationes ipsorum et post omnes inmunditias.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et deos conflatiles non facietis uobis et sculptilia quia uana sunt et omnes spiritus non erit in eis quoniam opera manuum sunt et omnes qui confidunt in ea in nihilo confidunt Et ideo nolite seruire illis et nolite adorare eam.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Seruite autem deo excelso et adorate eum adorando et sustinendo uultum eius in omni tempore et facite ueritatem et iustitiam in conspectu eius ut dirigat uos et det uobis misericordiam et deponat uobis plubias matutinas et serotinas et benedicat omnia opera uestra quaecumque operati super terram et benedicat panem tuum et aquam tuam et benedicet fructum uteri tui et fructum terrae tuae ut armenta bouum tuorum et (e)greges ouium tuarum.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et eritis in benedictione super terra et desiderabunt uos omnes gentes terrae et benedicent in nomine meo filios uestros ut sint in benedictionem quemammodum et ego.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dedit ismael filiis eius et filiis cetturae munera et emisit eos ab isac filio suo ---. </reading>
+          </unit>
+        </div>
+        <div number="12 ">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- et filii eius et filii cetturae et filii sui et inhabitauerunt a faramon usque ad introitum babyloniae in omni terra orientali super faciem deserti.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et conmixti sunt isti illis et adhesit nomen ipsorum arabiis et ismaelite usque in diem hanc.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="21">
+        <div number="1">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno sexto septimanarum septimi iubelei huius uocabit habraham isac filium suum et demandauit illi dicens: ego senui et nescio diem mortis meae et repletus sum diebus meis.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ecce ego filii quinque et septuaginta et centum annorum sum in diebus uitae meae deum nostrum in memoria habens semper et exquirens eum in omni uirtute mea ut facerem omnem uolumtatem eius et ut dirigerem in omnibus uiis eius.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ideo simulacra odiuit anima mea et seruientes eis eram spernens. Et dedi cor meum et spiritum ut custodiam et faciam uolumtatem eius qui me creauit.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quia deus uiuens est et sanctus et fidelis et iustus et ex omnibus non est apud eum accipere personam ut accipiat munera quoniam deus iustus est et iudicium ex omnibus qui transgrediuntur sermones eius et qui contemnunt testimonium eius.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu filii custodi praecepta eius et mandata eius et iudicia eius et noli abire post abominationes et post fusiles.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et nolite manducare omnem sanguinem omnis carnis siue de his quae in terris sunt siue quae uolant in aere.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et si occidas ostiam fructuum pacis occiditis eum sanguinem autem eius effundetis super altarium. Et omnem sanguinem olocausti super altarium cum similagine et confectum in oleo cum uino ipsius offeres omnia ea super altarium fructuum: odor suauitatis est in conspectu dei.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et adip*e*m sacrificii salutaris offeres super ignem super altare et adipem quae est super uentrem et omnem adipem quae est super interanea et duos renes et omnem adipem quae est super illos et quae est super femus et iecur quod est super pulmonem cum renibus separa.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et sic offers uniuersa in odorem suauitatis acceptabile in conspectu domini cum sacrificiis ipsorum et cum uino eius in odorem suauitatis Panem fructuum domino.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et carnem manducabitis in illa die et in crastino et non occidet ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="2 ">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- erant multae diuitiae isac in bersabee et erat isac abiens et considerans adhuc quae possidebat et reuersus est ad patrem suum.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">In tempore hoc aduenit ismael uidere patrem suum et conuenerunt utrique simul. Et immolauit isac hostiam fructuum et optulit super altarium patris sui quod fecit in cebron.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="115" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et fecit sacrificium salutare et fecit conuiuium laetitiae in conspectu ismael fratris sui. Et fecit rebecca collyridam nouam de frumento nouo et dedit eam iacob filio suo ut inferret abrahae patri suo de primos fructus terrae ut manducaret et benediceret creatorem omnium priusquam moreretur.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="116" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et isac et transmisit per manus iacob optima sacrificiorum salutarium ipsius et uinum patri suo abraham ut manducet et bibat.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="117" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et manducauit et bibit abraham et benedixit dominum excelsum qui creauit caelum et terram qui fecit uniuersa pinguedinis terrae et dedit ea filiis hominum ut manducent et bibant et benedicant creatorem ipsorum.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="118" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et nunc confiteor ego deus meus quoniam ostendisti mihi diem hunc et ecce ego sum filius quinque et septuaginta et centum annorum senior et plenus dierum et omnes dies mei fuerunt mihi pacis.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="119" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et gladius inimihi non do&gt;minatus est mei in omnibus diebus quibus dedisti mihi hos in filios istos meos omnibus diebus uitae meae usque in hunc diem.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="120" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">&lt;Sit&gt; nunc misericordia tua et pax tua super puerum istum domine et super semen eius ut sint tibi in populum acceptabilem et hereditas ex omnibus filiis terrae ex hoc nunc et usque in omnibus diebus generationum terrae in uniuersa saecula.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="121" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uocauit abraham filium suum et iacob et dixit: nate iacob benedicat te deus omnium et confortabit te facere ueritatem et uoluntatem suam in conspectu eius et eligere in te et in semine tuo esse illi populum et in uolumtatem eius in omnibus diebus. Et tu nate iacob adproxima te ad me et osculare me.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="122" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et adproximans iacob osculatus est eum. Et dixit: benedictus filius meus iacob et omnes filii eius deo excelso in omnibus. Deus det tibi semen ueritatis et de filiis tuis sanctificabis in medio totius terrae. Seruient tibi gentes et adorabunt in conspectu nominis tui omnes populi.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="123" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Efficere fortis in conspectu hominum et potestatem exerce in omne semen &lt;s&gt;et. Tunc iustificabuntur uiae tuae et uiae filiorum tuorum ut sint in populum sanctum.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="124" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Det tibi deus excelsus omnes benedictiones quas benedixit me et benedixit noe et adam et requiescant in uerticem sanctificationis seminis tui in omni generatione et generatione usque in saeculum.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="125" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et mundabit te ab omni inquinamento et iniustitia ut propitius sit omnibus iniustitiis tuis et neglegentiae tuae et confortabit te et benedicet te et hereditabis omnem terram.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="126" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et renouauis testamentum eius cum ipso ut sis illi in plebem hereditatis in omnia saecula et ipse erit tibi et semini tuo in deum in ueritate et iustitia omnibus diebus terrae.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="127" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu nate iacob memento sermonum meorum et custodi praecepta patris tui abraham. Separare a gentibus et noli manducare cum ipsis nec facies secundum operas eorum et non sis illis in sodalem. Quoniam opera ipsorum pollutio et omnis uia ipsorum inmunditia et abominatio et spurcitia.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="128" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Sacrificant enim mortuis et daemonia adorant et super tumulos manducant et uniuersa opera ipsorum uana et nullius momenti.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="129" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non est illis cor ut recogitent et oculi eorum no*n* uidentes qualia sunt opera ipsorum et quomodo ipsi errent dicentes ligno: tu es deus meus et lapidi: tu es dominus meus et tu liberator et non est illis cor.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="130" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu nate iacob deus excelsus adiubabit te et deus adae confortabit te et separabit te ab omnibus abominationibus ipsorum et ab om&lt;ni errore&gt; ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="23">
+        <div number="8 ">
+          <unit id="131" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- quinto et centesimo et septuagensimo anno conpleuit dies uitae suae senior et plenus dierum.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="132" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter quod dies antiquorum erant uitae ipsius (Et) nonodecimo iubeleo post dilubium coeperunt dies minui iubeleorum horum et senescere celerius et minui dies uitae ipsorum a facie tribulationis multorum et malignari in uiis suis excepto abram.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="133" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quia abraham erat perfectus in omnibus operibus suis cum deo. Et beneplacens in ueritate omnibus diebus uitae suae. Et ecce non conpleuit quattuor iubeleos in uita sua quousque senuit a facie malignorum. Et satiatus est diebus suis.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="134" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et generationes quae surrexerunt ex hoc et usque in diem iudicii magni sed senescent cito priusquam conpleant duos iubeleos et erunt transeuntes ab ipsis spiritus intellectus ipsorum.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="135" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in diebus illis si uixerit homo iubeleos et dimidium annorum dicent de ipso: abundauit uita sua et plurimum dierum ipsius ---r et angustiae et non est pax.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="136" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter quod uulnus super uulnus et dolor super dolorem et tribulatio super tribulationem et auditus malus super auditum malum et infirmitas super infirmitatem et uniuersa iudicia eius --- maligna secundum hoc ipsud cum corruptione et clades et niues et pruinae et glacies et febris et frigora et pr*aef*ocatio et famis et mors et gladius et captiuitas et uniuersae plaga planctus.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="137" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et omnia haec (superuenit) superuenient super generationem quae est iniqua quae iniquitatem facit in terra et inmunditia et fomicationes et pollutiones abominationes operum ipsorum.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="138" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc dicent: antiqui dies multi usque ad mille annos et dies boni. Nam ecce dies uitae nostrae si multum uixerit homo annis septuaginta et si ual&lt;i&gt;de octoginta Et isti maligni et non est omnis pax in diebus generationis illius pessimi.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="139" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in ipsa generatione erit ut pueri arguant patres suos et seniores suos propter iniquitatem et iniustitias et propter sermonem oris ipsorum et propter malitias magnas quas ipsi faciunt propter quod derelinquunt testamentum quod testatus est deus inter manum sui et ipsorum custodire et facere uniuersa mandata eius et praecepta eius et omnia legitima eius et non est qui praetereat ex dextra siue sinistra.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="140" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter quod uniuersi malignati sunt et omne os loquitur maligna et omnes operationes eorum inmunditia et odium et uniuersae uiae eorum pollution&lt;es&gt; et abominatio et exterminium.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="141" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ecce terra &lt;p&gt;erit propter omnia opera ipsorum et non est semen et uinum et oleum propter quod uniuersa m&lt;align&gt;ata sunt opera ipsorum et uniuersi &lt;pe&gt;reunt bestiae et animalia et aues et omnes pisces maris a malitia filiorum hominum.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="142" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et litigabunt isti cum illis. Nam iubenes cum senioribus et seniores cum iunioribus pauper cum diuite infimus cum magno et egenus cum eo qui potestatem exercet in lege pro testamentom quoniam obliti sunt praeceptum et testamentum et diem festum et mensem et sabbatum et iubeleum et omnia iudicia.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="143" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et stabunt in arcu et in gladiis et in bello ut conuertant eos in uiam et non conuertentur usquequo effundatur sanguis multus in terra isti in illis.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="144" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et qui seruati sunt in uia ueritatis non abibunt a malitia sua non conuertentur. Quoniam uniuersi ad fraudem et ad diuitias se extollent ut accipiant singuli uniuersa quae sunt proximi sui et nomen magnum nominabunt non in ueritate et non in iustitia. Et sanctificationem sanctam polluent in abominationibus ׀prauitatis׀ et inmunditiis.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="145" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erit ira magna super opera generationis illius a domino. Et dabit illis gladium et iudicium in captiuitatem et in direptionem et in deuorationem.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="146" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ob(d)or*i*r*i* faciet super eos peccatores peccatores gentium quibus non ---</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="24">
+        <div number="13 ">
+          <unit id="147" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- annorum. Et mandabit abimelech de illo dicens: omnis homo quicumque molestauerit eum aut aliquid eius morte morietur.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="148" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et creuit isac in terra filistin et facta est illi substantia magna et boues et oues cameli et asini et ministerium magnum.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="149" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et seminauit in terra filistin et collegit centuplum et magnus factus est isac ualde et zelauerunt eum filistin.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="150" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et omnes puteos quos foderunt pueri abraham in uita abraham ob*t*urauerunt eos filistin post mortem abraham et inpleuerunt eos terra.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="151" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit abimelech ad isac: discede a nobis quoniam magnus factus es super nos ualde. Et abiit isac anni primi septimanae septimi inde cum suis.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="152" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et conuertentes inde foderunt puteos aquarum quos foderunt pueri patris sui abraham et inpleuerunt illos filistin post mortem abraham patris eius et uocauit eos nomina secundum nomina quae uocauerat eos pater ipsius.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="153" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et foderunt pueri isac puteos in torrente et inuenerunt in aquam uiuam et litigauerunt pastores gerar&lt;or&gt;um cum pastoribus isac dicentes: nostra est aqua. Et uocauit isac nomen putei difficcultatem propter quod difficiles fuerunt nobis cum.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="154" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et foderunt puteum alterum et litigauerunt etiam et pro ipso et uocauit nomen eius inimicitias. Et foderunt puteum tertium et non litigauerunt pro eo et uocauit nomen eius capacitas. Et dixit isac: quoniam nunc amplificauit nos dominus deus et multiplicauit nos super terram.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="155" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et --- et --- in anno primo septimanarum primi.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="156" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Uisus est dominus ad illum in nocte ipsa in prima die mensis primi et dixit ei: ego sum deus abraham patris tui. Noli timere quoniam te cum sum ego et benedicam te et multiplicabo semen tuum sicut harenam terrae propter abraham puerum meum.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="157" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et aedificauit --- quem aedificauit pater eius et inuocauit in nomine domini et mactauit hostias deo abraham patris sui.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="158" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et foderunt puteum et inuenerunt aquam uiuam.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="159" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et foderunt iterum puteum alium pueri isac et non inuenerunt aquam et aduenerunt et nuntiauerunt isac eo quod non inuenissent aquam. Et dixit isac: propter quod iuraui in die ista filistin factus est nobis sermo hic.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="160" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uocauit nomen loci illius: puteus iurationis quoniam illic iurauit abimelec et ocozia sodalis illius et ficol princeps exercitus ipsius.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="161" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et cognouit isac in die illa quoniam --- n --- iurauit ille facere cum ipso pacem.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="162" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et maledixit isac in die illa filistin et dixit: maledictus filistin in die irae et indignationis a medio omnium gentium. Det illum deus in obprobrium et in maledictum et in indignatione ir&lt;a&gt;e in manum peccatoris populi et in manu cettin.</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="163" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et eradicet eum populus iustus in iudicio de sub caelo. Quoniam inimici et contrari sunt filiis meis in generationibus suis super terram.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="164" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non derelinquentur eis reliquiae et sal&lt;u&gt;us (s)euadens in die irae iudicii sed in perditionem et exterminium ut auferatur a facie terrae totum semen filistinorum et non erit illis omne nomen relictum super terram.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="165" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et si ascendat usque ad caelum inde deponetur. Et ubi fugiens erit inde auferetur. Et si occultauerit se in medio gentium eradicabitur. Et si descendat in infernum ibi abundabit iudicium eius et non erit ei illic omnis pax.</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="166" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et si uadens abierit in captiuitatem in manu omnium quaerentium eum anima eius et in medio inferni interiet et non erit ipsi semen et nomen in omni terra quoniam in maledictum aeternum abibit.</reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="167" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quia sic scriptum est et consignatum aduersus illum in tabulis caeli ut fiat illi in die iudicii ut eradicetur a facie terrae. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="25">
+        <div number="1">
+          <unit id="168" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno secundo septimanarum huius iubelei uocabit rebecca filium suum iacob et locuta est ad eum dicens: nate noli sumere tibi ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="26">
+        <div number="8 ">
+          <unit id="169" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- consilii eius et indignabitur (et indignabitur) aduersus me et inducam ego super me maledictum et non benedictionem.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="170" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit illi rebecca mater sua: in me maledictum tuum nate tantum obaudi uocem meam.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="171" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et obaudiuit iacob uocem matris suae rebeccae et abiit et accepit duos hedos caprarum teneros et bonos et adtulit eos matri suae et fecit illos mater eius cibos sicut desiderabat.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="172" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et accepit rebecca uestes esau filii sui senior*i*s optimas quae erant cum ipsa in domo et induit eas iacob filium suum iuniorem et pelles hedorum circumdedit super brachia eius et humeros et super nudas ceruices ei.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="173" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Obtendidit cibos quos fecit et panes in manibus iacob filii sui.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="174" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et introiuit iacob ad patrem suum et dixit: ego sum filius tuus feci quemammodum dixisti mihi. Exurge et sede et manduca de uenatione mea pater ut benedicat me anima tua.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="175" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit isac ad filium suum: quid est hoc quod adcelerasti inuenire nate.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="176" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit iacob: quod direxit dominus deus tuus in conspectu meo.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="177" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit ad illum isac: adproxima mihi et palpabo te nate si tu es filius meus esau.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="178" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et adproximauit iacob ad isac patrem suum et palpauit eum et dixit: uox quidem uox iacob manus autem manus esau.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="179" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non cognouit eum quoniam auersio erat de caelo transferre spiritum eius. Et non cognouit quoniam erant manus eius sicut manus esau fratris sui pilosa. Et benedixit eum.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="180" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et dixit: tu es filius meus esau. Et dixit iacob: ego filius tuus sum. Et dixit isac: offers mihi et manducabo de uenatione tua nate ut benedicat te anima mea.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="181" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et obtulit ei et manducauit et intulit illi uinum et bibit. </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="182" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit ad eum isac pater ipsius: adproxima te mihi et osculare me nate. Et adproximauit et osculatus est eum.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="183" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et odoratus est odorem uestimentorum eius et benedixit eum et dixit: Ecce odor filii mei sicut odor agri pleni quem benedixit deus.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="184" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et det tibi ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="27">
+        <div number="11 ">
+          <unit id="185" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- et semini tuo post te ut hereditate possideas terram peregrinationis tuae et omnem terram quam dedit deus abrahae. Uade nate in pace.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="186" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et emisit isac iacob et abiit in mesopotamiam ad laban filium bathuel syri fratrem rebeccae matris iacob.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="187" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et factum est quando abiit in mesopotamiam contristatus est spiritus rebecce post iacob filium suum et fleuit.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="188" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit isac ad rebeccam: soror noli flere iacob filium meum quoniam in pace ibit et in pace rediet.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="189" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et deus excelsus custodiet eum ab omni malo et erit cum ipso et non derelinquet eum omnibus diebus.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="190" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam scio ego quod dirigentur omn*e*s uiae eius in omnibus in quibus iter faciet quousque reuertatur ad nos in pace et uidebimus eum cum pace.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="191" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Noli ergo timere de illo soror mea quoniam in uia recta est et erit perfectus uir uerax et non derelinquetur: noli flere.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="192" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et consolabatur isac rebeccam pro iacob filio suo et benedixit eum.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="193" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quadragesimo et quarto iubeleo in anno septimanarum secundo exiuit iacob a puteo iurationis ut iret in charran. Et aduenit in lydiam quae est in monte haec est bethel in primo die mensis primi septimanarum huius et aduenit in locum uespera et deuertit a uia ad occansum itineris in hac nocte dormiuit ibi deciderat enim sol.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="194" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et accipiens de lapidibus loci illius supposuit ad caput sibi sub arbore et ipse erat singularis iter faciens.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="195" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dormiens sibi somniauit in nocte illa. Et ecce scala erecta erat super terram et caput eius perueniebat in caelum. Et ecce angeli dei ascendebant et descendebant per ipsam et dominus incumbebat in ea.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="196" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et locutus est cum iacob et dixit: ego sum dominus deus abraham patris tui et deus isac terram autem in qua tu o*b*do&lt;r&gt;mis ipsam tibi dabo et semini tuo post te.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="197" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erit semen tuum sicut harena terrae et abundabit super mare et orientem et septentrionem et austrum et benedicentur in te omnes tribus terrae et in semine tuo.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="198" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ecce ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="28">
+        <div number="16 ">
+          <unit id="199" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- uentris tui aut dereliqui te.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="200" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quoniam uidit rachel quia peperit lia iacob quattuor filios rubem symeon leui iudas dixit rachel ad iacob: intra ad ballam ancillam meam et (con)concipiet et pariet mihi filium.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="201" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dedit ballam ancillam suam in uxorem et concepit et peperit filium et uocauit nomen eius dan nono mense huius sexti anni septimanarum.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="202" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et adiecit iacob et introiuit ad ballam et concepit et peperit filium secundum iacob et uocauit rachel nomen eius neptalim in quinto mense septimi anni secunda septimanarum quarta.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="203" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uidens lia quoniam detenta est et non est pariens et dedit aliam ancillam suam iacob in mulierem et concepit et peperit filium et uocauit lia nomen eius gad. Et in duodecimo mense octaui anni tertio die septimanarum quinti.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="204" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Introiuit ad eam et peperit illi filium et uocauit nomen eius aser. In secundo mense decimi diei in quinto anno septimanarum quarto.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="205" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Introiuit ad ׀liam׀ et concepit et peperit filium et uocauit nomen eius isacahar et in quarto anno mense quinti anni die septimanarum quarto dedit illum nutrici.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="206" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et introiuit adhuc iacob ad liam et concepit et peperit duos masculum et feminam et uocauit nomen masculi zabylon et nomen faeminae dinam et in septimi mensis septimi anni sexti septimanarum quarti.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="207" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Misertus est deus rachel et aperuit matricem eius et concepit et peperit filium et uocauit nomen eius ioseph. In primo die mensis quarti in sexto septimanarum quarto huius.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="208" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">In tempore quo natus est ioseph dixit iacob ad laban: da mihi mulieres meas et filios meos et abibo ad patrem meum isac et faciam mihi domum quoniam conplebi annos quibus seruiui tibi pro duabus filiabus tuis et ibo in domum patris mei.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="209" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit laban ad iacob: expecta me in mercede et pasce iterum oues meas et dabo tibi mercedem.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="210" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et placuerunt de mercede ut det illi ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="29">
+        <div number="8 ">
+          <unit id="211" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- quod uocatum est nomen loci illius congeries testis secundum collem istum.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="212" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Antea enim uocabatur terra galaad ter&lt;ra&gt;rafain quoniam terra rafain est. Et illic nati sunt rafain id est gigantes decem cubitorum et nouem et octo cubitis etiam et septem cubitorum erat altitudo ipsorum.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="213" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erat habitatio ipsorum a terra filiorum ammon usque in montem heremoth et domus regni ipsorum carnain et mastaroth et draa et &lt;sa&gt;msum --- et seo.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="214" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et perdidit illos dominus de malitia studiorum quoniam maligni erant ualde et habitare fecit pro illis amorreos malignos et peccatores sicut non est gens odi(o) quia conpleuerunt omnia peccata sua et non est illis amplius longitudo uitae super terram.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="215" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et emisit iacob laban et abiit in mesopotamiam in terram orientis et iacob conuertit se a terram galaad.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="216" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in mense nono transiuit iacob undecim filii ipsius et in die aduenit ad illum esau frater(s) suus et propitiatus et abiit ab ipso in terram seir et iacob inhabitauit in taberna(cu)culis.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="217" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno primo iubelei huius septimanarum quinti transibit iordanem et inhabitauit trans iordanem. Et erat pascens oues suas a mare salso usque aggruum acrabin.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="218" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tradidit patri suo isac ex omnibus substantiis suis uestes et escas et carnes et potum lac boty(te)rum et caseum et dactilos de conuallae.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="219" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et matris suae rebeccae per singulos annos quater in medio temporum mensuum et in medio area usque ad messem autumnum et in medio autumni pluuias et in medio pluuiarum *ueris* barin huius abrahae.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="220" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam reuersus est isac a puteo iurationis et ascendit in barin patris sui abraham et inhabitauit ibi in terra sua et filii sui.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="221" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter quod in tempore quo abiit iacob in mesopotamiam accepit sibi esau mulierem maellet filiam ismael et uxor eius uniuersos greges patris sui et ascendens inhabitauit in monte seir et dereliquid isac patrem suum ad puteum iurationis.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="222" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Ascendit ergo isac de puteo iurationis in barin abraham patris sui in monte cebron.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="223" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Illic erat iacob transmittens quaecumque erant patri suo siue matri suae per singula tempora uniuersa quae erant illis necessaria in omni usu suo et erant benedicentes iacob in omni corde ipsorum et in tota anima sua.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="30">
+        <div number="1">
+          <unit id="224" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno primo septimanarum sexti ascendit in salem secundum orientem sicimam in pace quarto mense.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="225" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et illic rapuerunt dinam filiam iacob in dom&lt;um&gt; sychem fili emmor euuei principis terrae et polluit eam quia dormiuit cum ea et ipsa adulescens erat filia duodecim annorum.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="226" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et petierat illam postea a patre suo et omnibus fratribus suis in mulierem. Et indignatus est iacob et filii sui ad uiros sychemorum quia polluerant dinam sororem suam et locuti sunt ad eos in simulationem et in dolo deriserunt eos.</reading>
+          </unit>
+        </div>
+        <div number="4 ">
+          <unit id="227" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- symeon et leuui et posuerunt in corde suo symeon et leuui exterminare eos et fecerunt iudicium in uiros sychemorum --- quem inuenerunt in ea et non reliquerunt in ea usque unum uniuersos enim occiderunt in iudicio propter quod polluerant dinam sororem suam.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="228" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- non erit amplius ut polluantur filiae istrahel propter quod in caelo sit iudic&lt;at&gt;um super ipsos ut pugnent in gladio aduersus sychem &lt;uniuers&gt;um propter quod fecerunt ignominiam in istrahel.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="229" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tradidit eos dominus in manibus filiorum iacob ut eradicent eos in gladio et fiat in ipsis iudicium et non amplius erit in --- istrahel ut polluatur uirgo istrahel.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="230" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et homo quicumque est ex filiis istrahel et placuerit ei dare filiam suam aut sororem suam omni uiro ex semine gentium periet et lapidabitur lapidibus propter quod fecerit ignominiam in istrahel et mulier conburetur igni propter quod contaminauerit domum patris sui eradicabitur ex istrahel.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="231" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non erit fornicaria et abominatio in istrahel omnibus diebus generationis terrae propter quod sanctus est istrahel domino et omnis homo quicumque polluerit eum morietur in lapidibus.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="232" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter quod sic scriptum est et decretum est in tabulis caeli de omni semine istrahel quoniam qui polluerit mortem morietur et lapidibus lapidabitur.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="233" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non erit huic legi finis temporis et non erit illi remissio et omnis propitiatio. Sed ut exterminetur homo quicumque polluerit filiam ipsius in medio hominis istrahel quoniam ab omni semine eius dedit alienigena et inpie egerunt intaminare illud.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="234" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu monses manda filiis istrahel et testificare super eos ut non dent ex filiabus suis gentibus et ut non accipiant filiis suis de filiabus eorum quoniam abominatio est coram domino.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="235" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter hoc scripsi tibi in sermonibus legis omnis sermones operum sychimorum quae fecerunt dine et quemadmodum locuti sunt filii iacob dicentes: non dabimus filiam nostram homini qui habet praeputium obprobrium enim est nobis.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="236" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et obprobrium istrahel qui dant siue accipiunt a filiabus gentium propter quod abominatio est et inmunditia in omni istrahel.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="237" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non mundabitur istrahel ab abominatione ista si fuerit illi mulier de gentibus et non munda&lt;bitur si da&gt;bimus de filiabus nostris omnibus gentibus.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="238" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam plaga super plagam est et maledictum super maledictum et omnia iudicia plagarum et maledictio maledictionum aduenient super illum faciet sermonem istum et si praeterierit et despexerit faciens abominationis et polluerit sanctificationem dei et qui polluunt nomen sanctum eius iudicabitur tota plebs simul de omnibus abominationibus huius.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="239" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non erit ut accipiat personam et non accipiet sacrificium et olocaustomata neque odorauitur odore suauitatis suscipere ipsud. Et erit in istrahel omnis homo siue mulier polluens sanctificationes.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="240" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter quod mandaui tibi dicens: testare testificatione ista in istrahel et uide quid factum sit sychimis et filiis ipsius quomodo traditi sunt in manu hominum filiorum iacob et occiderunt illos in iudicio et conputatum est illis in ueritate et conscriptum est illis in iustitia.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="241" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et adscriptum est semen leuui sacerdotium et leuuitas ut deseruiant in conspectu domini sicuti et nos omnibus diebus et benedicitur leuui et filii eius in saecula quoniam aemulatus est ueritatem ut faceret iudicium et defensionem ab omnibus qui positi sunt super istrahel.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="242" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et sic refertur illi in testimonium in tabulis caeli benedictio et iustitia in conspectu dei omnium.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="243" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et memorabitur iustitia quam faciet homo in uita sua in omnibus temporibus anni usque ad mille annos offeretur et ueniet illi et semini eius post eum et scriptus est amicus iustus in tabulis caeli.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="244" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Scribsi tibi omnes sermones istos et mandaui ut adnunties filiis istrahel ut non faciant malignum et non praetereant praecepta et non dissipabunt testamentum dispositum super ipsos et faciant ea. Et adscribentur amici dei.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="245" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Si autem transgressi fuerint testamentum et fecerint ex omnibus uiis abominationem quaecumque scripta sunt in tabulis caeli inimici dei erunt et delebuntur de libro uitae et scribentur in libro perditionum inter eos qui eradicantur a terra.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="246" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in die qua percusserunt filii iacob sycimam ascendit illis scriptura in caelis facientes ueritatem et iudicium et uindictam in ipsis et scripti sunt in benedictione.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="247" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et eiecerunt dinam sororem suam de domo sycem et captiuauerunt uniuersa quae erant in sycimis oues et boues ipsorum et asinos et omnem substantiam eorum et omnem ׀armentam׀ eorum et adtulerunt uniuersa ad iacob patrem suum.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="248" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et locutus est ad illos quare exterminauerunt ciuitatem timuit enim ab his qui inhabitant terram a cananeis et ferezeis.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="249" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et factus est timor domini super omnes ciuitates quae erant in circuitu sycimorum et non persecuti sunt post iacob ut nocerent eum quoniam timor cecidit super ipsos. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="31">
+        <div number="1">
+          <unit id="250" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in prima die mensis ---.</reading>
+          </unit>
+        </div>
+        <div number="9 ">
+          <unit id="251" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- nate quoniam similis sunt tibi.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="252" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et indicauit illi dicens: quoniam in ueritate sunt filii mei et uerum uidisti pater quoniam filii mei sunt.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="253" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et proximauerunt illi et conuersus osculatus eos et amplexus est utrosque simul.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="254" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et spiritus profetiae aduenit in os isac et tenuit leuui in manu dextera sua et iudam in sinistra.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="255" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et conuersus est ad leuui in primis et coepit benedicere eum *in* primis et benedixit leuui dicens: Benedicat te deus cunctorum et ipse dominus saeculorum et filios tuos in omnia saecula.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="256" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et det dominus tibi et semini tuo magno intellegere gloriam eius et semen tuum adplicabit ad se ex omni carne ut seruiatis illi in sanctificationibus ipsius secundum angelos uultus et secundum sanctos et secundum ipsos erit et semen filiorum tuorum in gloriam et magnitudinem et sanctificationem et sanctificauit illos in omnia saecula.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="257" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et principes et iudices erunt omni semini iacob. Sermonis dei in ueritatem indicabunt et omnia iudicia eius in iustitia examinabunt et indicabunt uias meas huic iacob et semitas meas huic istrael. Benedictio dei dabitur semini eius ut benedicant omne semen dilectum.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="258" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Uocauit mater tua nomen tuum leuui et in ueritate uocauit nomen tuum. Ad decorem dei eris et socius omnium filiorum iacob. Mensa tua tibi erit et tu et filii tui manducabitis eam et in omnia saecula mensa tua erit plena et non deficiet esca tua in omnia saecula.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="259" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et omnes odientes te in conspectu tuo cadent et omnes inimi&lt;ci&gt; tui exterminabuntur et perient. Quia ut ille benedicit te erit benedictus et si gens erit aliqua quae maledixerit te maledicta erit.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="260" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et iudae dixit: dabit tibi deus fortitudinem et uirtutem ut tu conculces omnes odientes te. Princeps eris tu et unus filiorum tuorum --- erit abiens et optinens uniuersam terram et regiones. Tunc timebunt populi a facie tua et conturbabuntur uniuersae gentes et omnes ---.</reading>
+          </unit>
+        </div>
+        <div number="29 ">
+          <unit id="261" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- creans cuncta cui orasti orationem.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="262" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit rebeccae: uade cum filio tuo. Et ibit rebecca cum filio suo iacob et debborra nutrix sua cum ea et aduenerunt in bethel.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="263" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et memor fuit benedictionis qua benedixit eum pater suus et duos filios eius leuui et iudam et gauisus est et benedixit deum patrum suorum abraham et isac:</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="264" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">nunc cognoui quoniam spes mihi est aeterna et filiis meis in conspectu dei omnipotentis et sic erat deputatum super duos et portio ipsorum in testimoniis saeculi in tabulis caeli quemadmodum benedixit eos isac.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="32">
+        <div number="1">
+          <unit id="265" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dormierunt in nocte illa in bethel et somniauit leuui quasi ordinatus sit in sacerdotem dei excelsi usque in saecula et expergefactus a somno suo benedixit deum.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="266" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et exurgens iacob diluculo in quartadecima die mensis huius decimauit uniuersa quaecumque uenerunt cum eo ab homine usque ad omnem animam et ab auro et usque ad omne uas et uestimentum decimauit uniuersa.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="267" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in illo tempore rachel in utero habentem beniamin filium suum enumerauit iacob ab ipso filios suos et ascendit et cecidit leuui in sortem dei et induit eum pater suus uestimenta sacerdotalia et inpleuit manus eius.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="268" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">In die quintodecima mensis huius et obtulit in ipso ad altare uitulos de bubus quattuordecim et arietis uiginti et octo et oues quadraginta et nouem et hedos septem hircos caprarum uiginti et unum haec olocaustomata in altarium fructuum acceptabile in odorem suauitatis in conspectu dei.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="269" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Hoc erat munus eius a uoto quo uouerat decimare cum sacrificiis et cum uino ipsorum.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="270" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quando consumpsit ignis libanum super ignem desuper et sacrificium salutare uitulos duos arietes quattuor agnos anniculos duos hircos caprarum duos. Et semel haec faciebat cottidie in septem diebus.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="271" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et benedicebat et hymnum dicebat deo qui liberauit eum de omnibus tribulationibus eius et quoniam reddidit uotum suum.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="272" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et decimauit uniuer&lt;sa&gt; ---</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="273" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">ubicumque fecerint uestigium pedum suorum aduersus filios hominum.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="274" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dabo semini tuo uniuersas benedictiones quaecumque sunt sub caelo et dominabuntur et potestatem exercent in omnibus gentibus secundum uolumtatem suam et post haec optinebunt uniuersam terram et hereditabunt eam in saecula.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="275" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ut consummauit loquens cum eo ascendit ab eo et erat iacob considerans usquequo ascendit ab eo in caelo.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="276" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uidit in uisione noctis et ecce angelus dei descendebat de caelo et septem tabulae buxeae in manu eius et dedit illas iacob et legit et cognouit quae scripta sunt in eis et quae erunt super ipsum et filios eius in omnia saecula.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="277" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et monstrauit illi quaecumque erant scripta in tabulis (bulis) buxeis et dixit illi: non aedificabis hunc locum et non facias eum in sanctificationem aeternam et nol*i* habitari in hunc locum quia sic &lt;non&gt; erit locus iste. Sed uade in locum barin abraham patris tui et inhabita ad isac patrem tuum usque ad diem mortis patris tui.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="278" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam in aegyptum morieris in pace et in terra hac sepellieris in gloria et in monumento patrum tuorum poneris cum abraham et isac.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="279" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Noli timere quoniam quemadmodum uidisti et legisti sic erunt uniuersa quae scripta sunt omnia.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="280" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit iacob: domine quomodo memor ero uniuersa quae legi et uidi. Et dixit illi: ego commemorabo te uniuersa.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="281" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ascendit ab eo et expergefactus a somno suo memor fuit omnium quaecumque legit et uidit et celauit uniuersos sermones quoscumque legit et uidit.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="282" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et fecit ibi diem unam et sacrificauit in ea quanta erat sacrificans in diebus prioribus et uocauit nomen eius retentatio quoniam retentus est ibi una die et priores dies uocauit dies festos.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="283" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et sic manifestum erat ut fierent et erat scriptum in tabulis caeli propter quod reuelatum est illi facere ipsam diem et adicere super septem dies festos.</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="284" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uocatum est nomen eius retentatio propter quod addita est in dies dierum festorum secundum numerum dierum anni.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="285" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uigensimo die mensis huius in nocte tertia mortua est. Deborra nutrix rebeccae. Et sepellierunt eam inferius ciuitate sub glande in torrentem et uocauerunt nomen loci illius torrens debborae.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="286" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abiit iacob et reuersus est in barin ad patrem suum isac et misit iacob in manu eius arietes et oues et hircos facere patri suo cibos secundum uolumtatem eius.</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="287" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abiit post matrem suam quousque aduenit in dabrata et remansit ibi.</reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="288" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et peperit rachel in nocte illa puerum et uocauit nomen eius beniamin et iubeleo huius in decimo die mensis octaui primo anno septimanarum sexti.</reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="289" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc mortua est illic rachel et sepulta est in terra eufrata haec est bethlem et aedificauit iacob super sepulcrum rachel titulum *in uia* sepulcri eius.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="33">
+        <div number="1">
+          <unit id="290" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abiit iacob et requieuit ad austrum magdale efratam et abiit ad patrem suum isac ipse et uxor sua lia in prima die mensis decimi.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="291" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uidit ruben ballam ancillam rachel concubinam patris sui labantem se in aqua in loco occulto et dilexit eam.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="292" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et introiuit nocte occultae ad ballan et inuenit eam dormientem in lectulum suum solam in tabernaculo suo.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="293" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dormiuit cum ea et expergefacta est. Et ecce erat ruben cum ipsa super lectum et leuans sagum tenuit illum et uociferata est et cognouit quoniam ruben est</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="294" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et confusus est ab ea et dimisit illa manus sua&lt;s&gt; ab illo et fugit</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="295" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et lugebat pro hoc ualde et omni homini indicauit quemadmodum ueniret.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="296" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et cum uenit iacob indicauit illi et dixit ad iacob: non sum tibi munda quoniam polluta sum abs te quoniam polluit me ruben et dormiuit me cum nocte et ego eram obdormiens et nesciui quousque decooperuit coopertorium meum et dormiuit me cum.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="297" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et iratus est iacob aduersus ruben ualde quoniam dormiuit cum balla.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="298" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non cognouit ---.</reading>
+          </unit>
+        </div>
+        <div number="18 ">
+          <unit id="299" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- &lt;perso&gt;nam accipere et munera.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="300" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et indica illis sermones testamenti huius ut audiant et adtendant ab ipsis ut non pereant et non eradicabuntur de terra propter quod inmunditia et abominatio et odium et pollutio omni qui faciunt ea super terra in conspectu dei nostri.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="301" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et est peccatum magnum super terram quoniam populus sanctus est istrahel domino deo suo et plebs sortis est et populus sacerdotalis est et regalis et sanctificationis et non est inmunditia in medio populi sancti.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="302" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno tertio septimanarum huius sexti erat iens iacob et omnes filii sui et inhabitauerunt in barin abraham iuxta isac patrem suum et rebeccam matrem suam.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="303" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Haec sunt autem nomina filiorum iacob: primogenitus ruben symeon leuui iudas isachar zabylon filii liae. Et filii rachel ioseph et beniamin. Et filii ballae dan et neptalim. Et filii zelfae gad et aser. Et dina filia liae singularis filia iacob.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="304" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et aduenientes hii adorauerunt isac et rebeccam. Et uidentes eos benedixerunt iacob et omnes filios eius. Et gauisus est isac ualde quoniam uidit filios iacob filii sui iunioris et benedixit eos.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="34">
+        <div number="1">
+          <unit id="305" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quadragesimo quarto iubeleo in anno sexto septimanarum huius misit iacob filios suos ut pascerent oues suas et pueros suos cum ipsis campum sycimae.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="306" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et conuenerunt eos septem reges amorreorum et sederunt in lucum ut interficerent eos et ut praedarentur oues ipsorum ---.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="307" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Iacob autem et leuui et iudas et ioseph erant in bari secus isac patrem suum quoniam pusillanimis erat spiritus eius et non poterant eum derelinquere. Et beniamin erat iunior propter hoc remanserat cum patre suo.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="308" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et aduenerunt reges saffo et rex arco et rex saragan et rex silo et rex gaas et rex b*e*t&lt;or&gt;on et rex manesacer et uniuersi qui inhabitant montana et qui inhabitant in locis in terra canaan.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="309" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et indicatum est iacob quoniam ecce reges amor&lt;reorum&gt; ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="35">
+        <div number="3 ">
+          <unit id="310" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- usque in diem hunc et uniuersa opera mea et omnia quae sunt in corde meo quoniam omnibus diebus ego --- bona facere --- omnibus.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="311" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quomodo non faciam sermonem hunc quae tu mandas mihi ut faciam patri meo et fratribus meis.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="312" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Sed rogo indica mihi mater quod uidisti in me peruersum ut auertar ab eo et sit super me misericordia domini.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="313" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit illi rebecca: nate omnibus &lt;diebus&gt; meis non uidi in te omne opus peruersum sed rectum. Et tamen omnem ueritatem indicabo tibi nate ego in anno isto morior et non transeam annum istum adhuc in uita mea. Ego moriar et non uiuam amplius --- quinquaginta annorum sum conplens in uita mea.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="314" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et risit iacob de sermonibus matris suae qu&lt;ia&gt; --- &lt;mo&gt;ri&lt;tu&gt;ram. Et ipsa sedebat in conspectu eius et erat ualida et non infirmis uiribus suis erat enim exiens et intrans et dentes sui fortes et infirmitas non contristauit eam omnibus diebus suis.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="315" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit ad eam iacob: beatus sum si adproximauerunt dies mei in diebus uitae tuae ---. --- in me --- simil&lt;iter&gt; --- est locuta es me cum de morte tua.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="316" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et introiuit --- ad isac et dixit illi: petitionem unam peto a te ut adiures esau ut non adfligat iacob fratrem suum et non persequatur eum et non inimicitias exerceat aduersus eum. Tu enim noscis sensum esau quia malignus est a pueritia sua et non est cum eo quicquam rectum. Nequa et ---m meo --- fratrem suum.</reading>
+          </unit>
+        </div>
+        <div number="10 ">
+          <unit id="317" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- omnia quaecumque fecit --- die --- u --- in diem hunc quo --- rapuit ---.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="318" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Petentes eramus --- eo de nostris --- quasi misericordiam faciebat nobis cum.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="319" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et amaricabatur tibi propter quod benedixeras iacob filium tuum perfectum et ueracem quia non est cum illo malignitas ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="36">
+        <div number="20">
+          <unit id="320" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et seruiuit deo in toto corde suo et in tota anima sua et secundum praecepta uisibilia secundum diuisionem temporum generationum eius.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="321" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quadragesimo quinto iubeleo in anno quarto septimanarum secundi mortua est lia uxor iacob et sepellierunt eam in spelunca duplici secus rebeccam matrem eius.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="322" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et adfuerunt omnes filii eius et pueri eius ut flerent cum eo liam mulierem eius et ut consolarentur eum de illa quia erat lugens eum.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="323" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam diligebat eam ualde ex die qua mortua est rachel soror eius quia perfecta et recta erat in omnibus uiis suis et honorificans iacob omnibus diebus quibus uixit cum ea et non audiuit omnem sermonem nequam ex ore eius quoniam quieta et pacifica erat et --- hono&lt;rabilis&gt; ---. </reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="324" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erat memor omnium operum eius quae fecit in uita sua et ideo diligebat eam ualde in toto corde suo et in anima sua.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="37">
+        <div number="1">
+          <unit id="325" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in die qua mortuus est isac pater iacob et esau audierunt filii esau quoniam dedit isaac maiorem --- honorif--- portionem iacob filio suo iuniori et indignati sunt ualde.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="326" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et litigabant cum esau dicentes: quare praepositus est tibi iacob cum sit iunior et dedit illi pater tuus maiorem portionem et te inferiorem fecit.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="327" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit ad illos esau: quia ego dederam iacob primitiua propter modicam cocturam lentis et in die in qua misit me pater meus uenare illi uenationem ut manducans benediceret me ueniens ille cum dolo intulit patri meo escam et potum et benedixit eum pater meus et me dedit sub manu eius.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="328" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et nunc adiurauit nos pater noster me et illum ut non exquirarnus nobis mala singuli fratri suo et ut simus in dilectionem et in pace homo cum fratre suo ut non malitiam exerceamus ad inuicem.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="329" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixerunt ad eum: non audiemus te ut faciamus cum illo pacem quoniam uirtus nostra potens super uirtutem eius et nos uiri fortes super illum. Ibimus aduersus eum et occidemus eum et perdimus illum et filios ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="38">
+        <div number="1 ">
+          <unit id="330" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- ut demus illi gloriam.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="331" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc iacob extendit arcum suum et transmisit sagittam et percussit esau fratrem suum contra mammillam dextram ipsius et deiecit illum.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="332" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et emisit sagittam secundam (et per) et percussit adoram ar*amaeum* iuxta mammillam sinistram ipsius et deiecit illum et occidit eum.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="333" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et post haec exierunt filii iacob ipsi et pueri ipsorum diuisi in quattuor spiritus bareos.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="334" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et exiuit iudas primus et neptalim et gad cum eo et quinquaginta pueri cum ipso secundum meridianum barin et interfecerunt quodquod inuenerunt in conspectu suo et non effugiit ex illis neque unus.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="335" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et leuui et dan et aser exierunt secundum orientem bari et quinquaginta cum ipsis et interfecerunt bellatores moab et ammon.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="336" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Exierunt ruben et issacar et zabulon et quinquaginta ipsorum cum ipsis et interfecerunt et ipsi bellatores filistin.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="337" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et exiuit symeon et beniamin et enoch filius ruben secundum occasum barin et quinquaginta ipsorum cum ipsis et interfecerunt ex edom et ex correo quadringentos uiros bellatores et sescenti et quattuor filii esau fugerunt cum ipsis et dereliquerunt corpus patris sui proiectum in excelso quod in adurin.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="338" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et persecuti sunt filii iacob post eos usque ad montem seir. Et iacob seppelliuit esau fratrem suum in excelso quod est adurin et conuersus est in barin.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="339" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et &lt;cir&gt;cumsederunt filii iacob filios esau in monte seir et subiugauerunt illos ut sint seruientes filiis iacob.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="340" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et miserunt ad iacob patrem suum si facient pacem cum ipsis.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="341" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et posuerunt iugum timoris super ipsis ut dent honorem iacob et filiis eius in omnibus diebus.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="342" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erant dantes honorem iacob usque in diem de*sc*ensionis eius in aegyptum.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="343" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non cessauerunt filii edom de iugo timoris quem inposuerunt illis filii iacob usque in diem istum.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="344" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et hii reges qui regnauerunt in edom priusquam regnaret regnum in filiis istrahel usque in diem hunc in terra edom.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="345" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Barad filius beor et nomen ciuitatis eius ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="39">
+        <div number="9">
+          <unit id="346" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et adgressa est eum et tenuit eum intra domum ut faceret ei uim et dormiret cum ea et clusit ostia domus et detinuit eum. Et demisit ioseph uestimenta sua et aperiens ostium fugit foris a facie eius.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="347" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uidit mulier quoniam contemsit eam mentita est uiro suo aduersus eum in conspectum domini eius dicens: seruus tuus hebreus iste uim mihi molitus est facere quem diligebas ut dormiret me cum. Et factum est cum exaltassem uocem meam fugiens foras dereliquid uestimenta sua in manibus meis qui&lt;bus&gt; &lt;tenue&gt;ram ex imo ei uestimenta sua ---.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="348" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uidit aegyptius uestimenta ioseph et ostium fractum et audiuit sermonem mulieris suae et posuit ioseph in domum uinculatorum in locum in quo diuincti reges detinebantur.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="349" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erat illic in uincula et dedit illi dominus gratiam in conspectu principis carceris et misericordiam in conspectu eius quia uidit quod dominus erat cum eo et omnia quae faciebat ioseph deus dirigebat.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="350" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ideo dedit uniuersa in manus eius. Et non erat sciens princeps carceris quidquam eorum quae fieban&lt;t&gt; in carcere. Quia uniuersa ea faciens erat ioseph et dominus dirigebat ea.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="351" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erat illic annis duobus. Et in tempore illo iratus est farao rex aegypti super duos eunuchos suos id est super uinifusores et super principem pistorum et posuit eos in carcerem in domum principis cocorum in uinculatorio in quo et ioseph tenebatur.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="352" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et posuit princeps uinculorum ioseph ut ministraret eis et ministrabat in conspectu eorum.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="353" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et somniauerunt uiri somnia princeps uinifusorum et princeps pistorum et indicauerunt ea ioseph.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="354" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quemadmodum interpraetatus est illis ioseph sic est eis et factum. Principem uinifusorum farao restituit in locum suum et principem pistorum suspendit sicut ei dixit ioseph.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="355" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non fuit memor princeps uinifusorum ioseph in uinculatorio cum indicasset illi quaecumque uenissent ei et non fuit memor ut interueniret rex farao et solueret ioseph quoniam oblitus est.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="40">
+        <div number="1">
+          <unit id="356" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in illo tempore somniauit farao somnia duo in nocte una propter famem quae futura erat super --- terram. Et expergefactus de somno uocauit uniuersos interpraetes somniorum qui erant in regno suo et praecantatores et indicauit illis somnia sua et non potuerunt illi interpraetare somnia eius.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="357" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Tunc memoratus est princeps uinifusorum ioseph et indicauit de illo regi faraoni et eiecit eum de uinculatorio et narrauit in conspectu eius duo somnia ---.</reading>
+          </unit>
+        </div>
+        <div number="3 ">
+          <unit id="358" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- interpraetatus est ---: duo somnia unum sunt Septem autem anni continui erunt in omnem terram aegypti ubertatis et septem anni famis sic erit in omnem terram.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="359" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et nunc ordinet farao speculatores in omnem terram aegypti qui congregent escas per singulas ciuitates et reponant eas annis septem ubertatis in escam quae futura est septem annis famis et non periet terra a facie famis quoniam uehemens erit ualde super omnem terram.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="360" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dedit deus gratiam ioseph et misericordiam in conspectu faraonis et dixit farao pueris suis: numquid poterimus inuenire hominem prudentiorem et sapientiorem quam hic est quoniam spiritus dei cum ipso est.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="361" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et posuit eum secundum se in omni regno suo et potestatem habentem in omni terra aegypti et inposuit eum super currum secundum qui erat faraonis.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="362" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et induit eum beste bissina et posuit torquem aureum in collo eius et praeconauerunt in conspectu eius elel et habirel et posuit anulum in manu eius. Et praeposuit eum super omnem domum suam et magnificauit eum et dixit: non te praecedam ego nisi throno meo tantummodo.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="363" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et accepit potestatem ioseph in totam terram aegypti. Et dilexerunt eum omnes principes faraonis et serui eius et omnes facientes opera regis quoniam in ueritate ambulabat et non erat in illum superbia et extol&lt;lentia&gt; ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="41">
+        <div number="6 ">
+          <unit id="364" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- &lt;ta&gt;mar nurrum suam: sede in domo patris tui uidua quousque crescat selon filius meus et dabo te illi in uxorem.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="365" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et creuit et non permisit batsuae uxori iuda selon filium suum accipere illam. Et mortua es&lt;t&gt; bethsuae uxor iuda in anno quinto septimanarum huius.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="366" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in anno sexto huius ascendit iudas ut tonderet oues suas in tamnasar et indicatum est tamar: quia ecce socer tuus ascendit ut tondeat oues suas in tamnata.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="367" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abstulit a se uestimenta uiduitatis suae et induit se uestes optimas et ornauit se et sedit secus portam iuxta uiam tamnatae.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="368" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et cum aduenisse(n)t iudas inuenit eam et aestimauit eam fornicariam et dixit ad illam: introibo ad te. Illa dixit: intra et introiuit ad eam.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="369" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit illi: da mihi mercedem meam. Et dixit ille: non est in manu mea nisi anulus quem habeo in digito meo et munile et baculum qui est in manu mea.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="370" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit ad illum: da mihi ea quousque transmittas mercedem meam. Et dixit iudas: transmitto tibi edum. Et dedit ea illi et fuit cum ea et concepit ex eo.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="371" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abiit iudas ad oues</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="372" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et transmisit illi hedum de manu pastoris sui adollam et non inuenit eam. Et interrogauit uiros loci illius dicens: ubi est fornicaria illa quae erat hic. Et dixerunt illi: non est hic fornicaria nobis cum.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="373" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ille reuertens indicauit iudae dicens: non inueni illam sed et interrogaui uiros loci illius et dixerunt non esse in illo loco fornicariam. Et dixit iudas: habeat illa sed ne forte deridat nos.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="374" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et cum facti fuissent illi menses tres apparuit quod haberet in utero et indicauerunt iudae dicentes: ecce thamar nurus tua in utero habet.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="375" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et aduenit iudas in domum patris eius et dixit patri suo et fratribus eius: producite illarn foras et conburatur igne quoniam fecit inmunditiam in istrahel.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="376" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et factum est cum produceretur ut arderet transmisit socero suo anulum et munilem et uirgam et dixit: cognosce cuius sunt haec ex ipso ego in utero habeo.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="377" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ---. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="42">
+        <div number="2">
+          <unit id="378" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">In terra autem aegypti erant panes quoniarn congregauerat ioseph frumentum terrae septem annorum ubertatis et erat custodiens illud.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="379" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et aduenerunt aegyptii ad ioseph ut daret illis escas et aperiens horrea in quibus erant frumenta dedit illis ut manducarent in primo anno quia uendebat illis.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="380" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Conualuit autem famis in terra canaam ualde et audiuit iacob quod esset frumentum in aegyptum et misit decem filios suos ut acciperent sibi escam et beniamin non transmisit cum eis. Et aduenerunt in aegypto decem filii iacob.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="381" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et cognouit eos ioseph. Et ipsi non cognouerunt eum et appellauit eos ioseph dure et dixit eis: explorare terram uenistis et inclusit eos.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="382" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et mittens arcessiuit illos et accipiens symeonem ab ipsis ligauit eum et nouem fratres suos demisit.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="383" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et impleuit uasa eorum et pecuniam ipsorum reddidit illis.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="384" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et mandauit illis de fratre suo iuniore ut adducerent illum.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="385" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ascenderunt filii iacob de terra aegypti et uenerunt in terram canaam et enarrauerunt patri suo quaecumque euenerant eis et quomodo dure locutus est cum eis princeps terrae et detenuit symeonem quousque exhibeamus illi fratrem nostrum beniamin.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="386" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit iacob: sine filiis me fecistis. Ioseph non est et symeon non est. Beniamin si acceperitis in me et impletis malitiam uestram.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="387" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit: non ibit filius meus uobis cum ne quando infirmetur in uia. Quoniam hos duos peperit mater ipsorum unus periit et hunc si acceperitis et fuerit illi infirmitas aliqua in uia deducetis canos meos cum tristitia in infernum.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="388" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Dixerunt enim ei quod et pecunia ipsorum reddita esset illis cum uasis ipsorum et timuit cum eis transmittere eum iacob.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="389" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Famis autem ibat et conualescebat in terra quoniam multi de filiis aegyptiorum custodierunt semina sua in custodia ex quo tamen uiderunt ioseph congregare frumenta et reponere in horrea ut custodirentur in annis famis.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="390" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et manducauerunt ea aegyp&lt;tii&gt; ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="45">
+        <div number="8 ">
+          <unit id="391" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- &lt;labora&gt;uit terra aegypti a facie famis. Et possedit ioseph totam terram aegypti faraoni in esca nam homines et iumenta et uniuersa adquisiuit pharaoni.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="392" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et consummati sunt septem anni famis et dedit ioseph populo terrae semina et escas ut seminarent terram anno octauo propter quod fluuius ascenderat in omnem terram aegypti.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="393" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">In septem enim annis famis non ascenderat et non adaquauerat nisi modica loca secus litus fluminis et seminauerunt in anno octauo aegyptii terram suam et collegerunt fructus bonos in anno illo.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="394" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Hic annus primus septimanarum quinti quinto et quadragesimo iubeleo.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="395" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et accepit ioseph quintam partem de omnibus quidquid natum est in terra aegypti portionem regalem et quattuor partes dedit illis in esca et in semine et proposuit ioseph omnibus aegyptiis hoc in praecepto in tota terra aegypti usque in diem hunc.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="396" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et uixit istrahel in terra aegypti annis decem et septem et facti sunt omnes anni uitae eius quos uixit in tertio iubeleo centum quadraginta septem annis et deficiens mortuus est (.ET) quadragesimo quinto iubeleo in anno quarto septimanarum quinti.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="397" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Benedixit istrahel filios suos priusquam moreretur et indicauit (quaecum) quaecumque uentura essent eis in terra aegypti in nouissimis diebus. Et benedixit eos et ioseph benedixit dupliciter in terra.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="398" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dormiuit cum patribus suis et sepultus est in spelunca duplici in terra canaan secus abraham patrem suum in sepulcro quem fodit sibi in chebron.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="399" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dedit uniuersos libros suos et libros patris sui leuui filio suo ut custodiret eos et ut renouet eos filiis suis usque in hunc diem.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="46">
+        <div number="1">
+          <unit id="400" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et factum est post mortem iacob multiplicati sunt filii istrahel in terra aegypti et facti sunt in gentem magnam et facti sunt unianimes cordibus suis ut diligerent singuli fratres suos et adiungebat se frater cum proximo suo ---.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="401" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et cogitauit rex chanaam cogitationem pessimam ut adfligeret eos.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="402" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in illo tempore dixerunt aegyptii: ecce populus filiorum istrahel multiplicatus est ualde et plurimi facti sunt quam nos. Uenite ergo adfligamus eos priusquam multiplicentur et humiliemus eos in operibus ipsorum ne forte occurrat nobis bellum et tunc belligerabunt et ipsi nos super inimicos nostros exeuntes de terra nostra propter quod cor ipsorum et uultus eorum in ter&lt;r&gt;a canaan est.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="403" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et inposuit super eos rex executores operum ut adfligant eos in operibus ipsorum. Et aedificauerunt ciuitates munitas faraoni phytoni et rammasse et oon et aedificauerunt omnem murum qui erat dirutus in ciuitatibus aegypti.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="404" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et redigerunt eos in seruitutem cum ui et quantum eos humiliabant multo plus multiplicabantur.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="405" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et abominabantur aegyptii filios istrahel.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="47">
+        <div number="1">
+          <unit id="406" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quadragesimo septimo iubeleo in septimanarum septimi anni septimo eius aduenit pater suus de terra canaan. Et genuit in septimanarum quarto in anno sexto ipsius quadragesimo octauo iubeleo. Hoc est tempus tribulationis super filios istrahel.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="407" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et decreuit farao rex aegypti decretum super eos ut proicerent filios ipsorum omnes masculos qui nascebantur illis in flumine.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="408" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erant pro(sp)icientes mensibus septem usque in tempus quo tu natus es. Et celauit te mater tua mensibus tribus et indicauerunt de ea.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="409" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et ilia timens fecit tibin et liniuit eam uitumine et pice et posuit eam secus litus fluminis et posuit te in eam septem dies et mater tua ueniebat per noctem et porrigebat tibi lactem per diem soror tua maria custodiebat te ab auibus.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="410" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in tempore illo exiuit termot filia faraonis lauari in flumine et audiuit uocem tuam flentis et dixit puellae suae ut adferret sibi infantem et adtulerunt te.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="411" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tollens te de tibin pepercit super te.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="412" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et dixit illi soror tua: ibo et uocauo tibi si uis mulierem hebream quae nutriat ilium tibi. Et dixit ei: uade</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="413" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">et ilia uocauit matrem suam et tuam iocabet et dedit illi mulieri mercedem l--- ar ---.</reading>
+          </unit>
+        </div>
+        <div number="9 ">
+          <unit id="414" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- et docuit --- et quando comple&lt;uisti&gt; --- septimana &lt;introdux&gt;erunt te in atrium regale. Et eras ex --- trium septimanarum annorum usque in tempus quo existi de atrio regali et uidisti aegyptium ferientem fratrem tuum et percussisti eum et fodisti in terram et cooperuisti eum in harenam.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="415" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et secunda die inuenisti duos litigantes ex filiis istrahel et dixisti ad eum qui percutiebat proximum suum: quare percutis fratrem tuum.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="416" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et iratus est in indignatione --- dixit: quis te constituit principem aut iudicem super nos. Numquid occidere me uis quemadmodum occidisti hesterna die aegyptium. --- u --- tia propter --- o --- huius ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="48">
+        <div number="1">
+          <unit id="417" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quadragesimo nono iubeleo in anno sexto septimanarum tertii abisti et inhabitasti in terram mad&lt;ian&gt; --- septimanarum quinque et annum unum. Et quinquagensimo iubeleo in septimanarum secundo in anno secundo ipsius conuersus es in aegyptum.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="418" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu scis ipse qui locutus est te cum sub monte sina et quid uoluit facere te cum princeps mastima cum reuertereris in aegyptum in uia in qua praeteristi eum in refectione.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="419" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Nonne in omni uirtute sua quaesiuit interficere te ut eruerent aegyptios de manu tua quia uidit quoniam missus es facere iudicium et uindicare uindictam in aegyptiis.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="420" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erui te de manu eius et fecisti signa et prodigia quaecumque missus es facere in aegyptum et in faraonem et in omnem domum eius et in omni populo eius.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="421" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et fecit deus in pa&lt;lam&gt; defensionem magnam super israhel et percus&lt;sit&gt; eos in sanguinem et in ranis et scynifis et muscas caninas et in uulnere pessimo quod erant --- a --- fe --- uento et in morte animalium ipsorum et lapidibus grandinis perdidit uniuersa nascentia eorum et lucusta comedit quae derelicta erant de grandine et in tenebris primitiuorum ipsorum hominum et animalium et in omnibus diis aegyptiorum fecit dominus uindictam ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="49">
+        <div number="7 ">
+          <unit id="422" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">--- diebus uitae tuae ut facias per singulos annos semel in anno in diebus suis secundum legem ipsius et non praeteribit. Et erit illud a diebus suis et de mense in mensem.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="423" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Quoniam praeceptum aeternum est et scriptum in tabulis caeli super omnes filios istrahel ut faciant ea per singulos annos in die eius semel in anno in generationibus ipsorum et non est illi finis temporum quoniam in saecula est decretum.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="424" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et homo qui fuerit mundus et non sciet facere illud in die temporis eius ut adferat oblationem acceptabilem in conspectu domini ut manducet et ut bibat in conspectu domini in die festo eius exterminauitur et homo (in)mundus et qui proximus est quoniam oblationem domino non optulit in tempore ipsius peccatum suum sumet homo ille.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="425" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et erunt uenientes filii istrahel et facientes pascha in tempore suo in quartadecima die mensis primi ad uesperam a tertia autem eius usque in tertiam noctis quoniam duas paries diei in lumine et &lt;ter&gt;tiam partem in uespere.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="426" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Hoc est quod mandauit dominus tibi ut facias illud in uespertino.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="427" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non est ut quis sacrificet in omni hora luminis nisi in uespertina et ut manducet illud horis uespertinis tertia noctis et quod derelictum fuerit ex omnibus carnibus a tertia noctis hoc in igne comburetur .</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="428" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non coqoitur in aqua aut manducauitur crudum sed in igne assum comedetis illud diligenter. Caput ipsius cum interaneis et cum pedibus ipsius assauitis igni et non erit quod frangatur ex omnibus ossibus eius et non erit tribulatio in filiis istrahel in die hac.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="429" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Propter quod mandauit dominus filiis istrahel facere pascha in die temporis eius et non erit confringere in ea omne os illius quoniam dies festus est et dies praecepti. Non est ut praetereatur de die in diem de mense et mense sed in tempore suo.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="430" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu manda filiis istrahel ut faciant pascha in generationibus suis per singulos annos semel in anno in die temporis sui et erit in testimonium in conspectu dei acceptabile et non eueniet ab illo plaga ut perdat et ut exterminet eos in anno illo in quo facient pascha in tempore suo secundum uniuersa praecepta eius.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="431" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non manducauitur foris a sanctificatione domini sed secus tabernaculum domini et omnis multitudo filiorum istrahel facient illud in tempore suo.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="432" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et omnis homo quicumque praetermiserit in uisitatione manducare illud in sanctificatione dei nostri in conspectu domini a uicensimo anno et supra quoniam sic praeceptum est et scribtum ut manducetur in sanctificatione eius.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="433" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et quemadmodum uenient filii istrahel in terra possessionis ipsorum in terra chanaam et inhabitabunt in tabernaculo dei in medio terrae in una tribu ipsorum usque in diem qua aedificabitur sanctificatio dei in terra et erunt uenientes et facientes pascha in conspectu tabernaculi dei per singulos annos.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="434" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et in tempore quo aedificabitur domus in nomine domini in terra possessionis ipsorum illic offerentes et mactabunt pascha ad uespera circa occasum solis in tertia die.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="435" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et offerent sanguinem eius super basem altaris et adipem offerent super ignem altaris et carnes manducabunt assas igne in atrium domus sanctificatae in nomine domini.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="436" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et non poterunt facere pascha in ciuitatibus ipsorum in omni loco nisi in conspectum tabernaculi domini et in conspectu domus ubi habitauit nomen eius super ipsam et non exerrabunt de post dominum.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="437" group="0" parallel="">
+            <reading option="0" mss="Ceriani ">Et tu monse manda filiis istrahel ut custodiant praeceptum paschae et quemadmodum mandatum est tibi indica illis per singulos enim annos in tempore dierum suorum et per diem festum azymorum ut manducent azyma septem dies et ut faciant diem festum eius et ut offerant oblationem per singulos dies in septem diebus laetitiae in cons&lt;pectu&gt; ---.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>
