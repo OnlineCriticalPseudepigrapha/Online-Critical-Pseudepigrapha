@@ -59,13 +59,17 @@ class BookParser(object):
                 delimiters = [self.default_delimiter] * (len(divisions) - 1)
 
             version_dict['delimiters'] = delimiters
-            
+
             mss = OrderedDict()
             for ms in version.xpath('manuscripts/ms'):
-                ms_dict = OrderedDict()
-                ms_dict= OrderedDict((attr, ms.xpath('@%s' % attr)[0]) for attr in ('abbrev', 'language'))
+                ms_dict = OrderedDict((attr, ms.xpath('@%s' % attr)[0]) for attr in ('abbrev', 'language'))
+
                 ms_dict['name'] = ms.xpath('name')[0].text
-                ms_dict['bibliography'] = ms.xpath('bibliography')[0].text
+
+                ms_dict['bibliography'] = []
+                bibliography = ms.xpath('bibliography')
+                if bibliography:
+                    ms_dict['bibliography'] = [b.text for b in bibliography]
 
                 mss[ms_dict['abbrev']] = ms_dict
 
@@ -91,8 +95,8 @@ class BookParser(object):
                 child_structure = self.text_structure(child_div, delimiters[1:])
 
                 if child_structure:
-                    for k, v in child_structure:
-                        key = '%s%s%s' % (parent_key, delimiter, k)
+                    for k, v in child_structure.items():
+                        key = '%s%s%s' % (parent_key, delimiters[0], k)
                         parent[key] = v
 
                         # Remove child keys
@@ -114,6 +118,7 @@ class BookParser(object):
 
                     child_key = child_div.xpath('@number')[0]
                     key = '%s%s%s' % (parent_key, delimiters[0], child_key)
+
                     parent[key] = readings
 
         return parent
