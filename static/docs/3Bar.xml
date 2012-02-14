@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ language CDATA #REQUIRED	
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit | elipsis)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT elipsis (#PCDATA)>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+
+<book filename="3Bar" title="3 (Greek Apocalypse of) Baruch">
+  <version title="Greek" author="Anonymous" language="Greek">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Picard" language="Greek" show="yes">
+        <name>Picard</name>
+        <bibliography>Text: J.-C. Picard (ed.), Apocalypsis Baruchi Graece (PVTG 2; Leiden: Brill, 1967) 81-96.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Prologue">
+        <div number="Title">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">ΑΠΟΚΑΛΥΨΙΣ ΒΑΡΟΥΧ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Διήγησις καὶ ἀποκάλυψις Βαροὺχ περὶ ὧν κελεύματι θεοῦ ἀρρήτων εἶδεν. Εὐλόγησον δέσποτα. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Ἀποκάλυψις Βαροὺχ, ὃς ἔστιν ἐπὶ ποταμοῦ Γέλ., κλαίων ὑπὲρ τῆς αἰχμαλωσίας Ἱερουσαλήμ, ὅτε καὶ Ἀβιμελὲχ ἐπὶ Ἀγροίππα τὸ χωρίον τῇ χειρὶ θεοῦ διεφυλάχθη· καὶ οὗτος ἐκάθητο ἐπὶ τὰς ὡραίας πύλας, ὅπου ἔκειτο τὰ τῶν ἁγίων ἅγια. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="1">
+        <div number="1">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Picard ">Οἷ νῦν ἐγώ, Βαρούχ, κλαίων ἐν τῇ συνέσει μου καὶ ἔχων περὶ τοῦ λαοῦ, καὶ ὅπως συνεχωρήθη Ναβουχοδονόσωρ ὁ βασιλεὺς ὑπὸ θεοῦ πορθῆσαι τὴν πόλιν αὐτοῦ, λέγων· </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Κύριε, ἵνα τί ἐξέκαυσας τὸν ἀμπελῶνά σου καὶ ἠρήμωσας αὐτόν; τί ἐποίησας τοῦτο; καὶ ἵνα τί, Κύριε, οὐκ ἀπέδωκας ἡμᾶς ἐν ἄλλῃ παιδείᾳ, ἀλλὰ παρέδωκας ἡμᾶς εἰς ἔθνη τοιαῦτα, ὅπως ὀνειδίζοντες λέγουσιν· Ποῦ ἐστιν ὁ θεὸς αὐτῶν;</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἰδοὺ ἐν τῷ κλαίειν με καὶ λέγειν τοιαῦτα, ὁρῶ ἄγγελον Κυρίου ἐλθόντα καὶ λέγοντά μοι· Σύνες, ὦ ἄνθρωπε, ἄνερ ἐπιθυμιῶν, καὶ μὴ τοσοῦτόν σε μέλῃ περὶ τῆς σωτηρίας Ἱερουσαλήμ, ὅτι τάδε λέγει Κύριος ὁ θεὸς ὁ παντοκράτωρ. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Picard ">Ἀπέστειλε γάρ με πρὸ προσώπου σου ὅπως ἀναγγείλω καὶ ὑποδείξω σοι πάντα τοῦ θεοῦ. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Ἡ γὰρ δέησίς σου ἠκούσθη ἐνώπιον αὐτοῦ καὶ εἰσῆλθεν εἰς τὰ ὦτα Κυρίου τοῦ θεοῦ.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ταῦτα εἰπών μοι, ἡσύχασα. Καὶ λέγει μοι ὁ ἄγγελος· Παῦσον τὸν θεὸν παροξύνειν, καὶ ὑποδείξω σοι ἄλλα μυστήρια τούτων μείζονα. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον ἐγὼ Βαρούχ· Ζῇ Κύριος ὁ θεὸς ὅτι ἐὰν ὑποδείξῃς μοι καὶ ἀκούσω παρά σου λόγον, οὐ μὴ προσθήσω ἔτι λαλῆσαι· προσθήσει ὁ θεὸς ἐν τῇ ἡμέρᾳ τῆς κρίσεως κρίσιν ἐμοί, ἐὰν λαλήσω τοῦ λοιποῦ. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπέν μοι ὁ ἄγγελος τῶν δυνάμεων· Δεῦρο καὶ ὑποδείξω σοι τὰ μυστήρια τοῦ θεοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ λαβών με ἤγαγέν με ὅπου ἐστήρικται ὁ οὐρανός, καὶ ὅπου ἦν ποταμὸς ὃν οὐδεὶς δύναται περᾶσαι αὐτόν, οὐδὲ ξένη πνοὴ ἐκ πασῶν ὧν ἔθετο ὁ θεός.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ λαβών με ἤγαγέν με ἐπὶ τὸν πρῶτον οὐρανόν, καὶ ἔδειξέ μοι θύραν παμμεγέθη. Καὶ εἶπέν μοι· Εἰσέλθωμεν δι᾽ αὐτῆς. Καὶ εἰσήλθομεν ὡς ἐν πτέρυξιν ὡσεὶ πορείας ὁδοῦ ἡμερῶν τριάκοντα. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ὑπέδειξέν μοι ἔνδον τοῦ οὐρανοῦ πεδίον. Καὶ ἦσαν ἄνθρωποι κατοικοῦντες ἐν αὐτῷ, ὧν τὰ πρόσωπα βοῶν, τὰ δὲ κέρατα ἐλάφων, οἱ δὲ πόδες αἰγῶν, αἱ δὲ ὁσφύες ἀρνῶν. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ ἠρώτησα ἐγὼ Βαροὺχ τὸν ἄγγελον· Ἀνάγγειλόν μοι, δέομαί σου, τί ἐστιν τὸ πάχος τοῦ οὐρανοῦ ἐν ᾧ ὡδεύσαμεν, ἢ τί τὸ διάστημα αὐτοῦ, ἢ τί τὸ πεδίον; ἵνα κἀγὼ ἀπαγγείλω τοῖς υἱοῖς τῶν ἀνθρώπων. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπέν μοι ὁ ἄγγελος, οὗ τὸ ὄνομα αὐτοῦ Φαμαήλ· Ἡ θύρα αὕτη ἣν ὁρᾷς ἐστὶν τοῦ οὐρανοῦ, καὶ ὅσον διαφέρει ἀπὸ τῆς γῆς ἕως τοῦ οὐρανοῦ, τοσοῦτόν ἐστιν καὶ τὸ πάχος αὐτοῦ· καὶ ὅσον πάλιν ἐστὶ καὶ τὸ τοῦ πεδίου μῆκος οὗ εἶδας. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ πάλιν λέγει μοι ὁ ἄγγελος τῶν δυνάμεων· Δεῦρο καὶ ὑποδείξω σοι μείζονα μυστήρια. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Εἶπον δὲ ἐγώ· Δέομαί σου, δεῖξόν μοι τί εἰσιν οἱ ἄνθρωποι οὗτοι; Καὶ εἶπέν μοι· Οὗτοί εἰσιν οἱ τὸν πύργον τῆς θεομαχίας οἰκοδομήσαντες· καὶ ἐξετόπησεν αὐτοὺς ὁ Κύριος.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ λαβών με ὁ ἄγγελος Κυρίου ἤγαγέν με εἰς δεύτερον οὐρανόν. Καὶ ὑπέδειξέν μοι [ἐν] κἀκεῖ θύραν ὁμοίαν τῆς πρώτης. Καὶ εἶπεν· Εἰσέλθωμεν δι᾽ αὐτῆς. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἰσήλθομεν ἀναπτερωμένοι ὡσεὶ πορείας ὁδοῦ ἡμερῶν ἑξήκοντα. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἔδειξέν μοι κἀκεῖ πεδίον, καὶ ἦν πλῆρες ἀνθρώπων· ἡ δὲ θεωρία αὐτῶν ὁμοία κυνῶν, οἱ δὲ πόδες ἐλάφων. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ ἠρώτησα τὸν ἄγγελον· Δέομαί σου, Κύριε, εἰπέ μοι τίνες εἰσὶν οὗτοι; </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν· Οὗτοι εἰσιν οἱ τὴν συμβούλην δόντες τοῦ ποιῆσαι τὸν πύργον. Αὐτοὶ γὰρ οὓς ὁρᾷς ἐξέβαλλον πλήθη ἀνδρῶν τε καὶ γυναικῶν εἰς τὸ πλινθεύειν. Ἐν οἷς μία γυνὴ πλινθεύουσα ἐν τῇ ὥρᾳ τοῦ τεκεῖν αὐτὴν οὐ συνεχωρήθη ἀπολυθῆναι, ἀλλὰ πλινθεύουσα ἔτεκεν· καὶ τὸ τέκνον αὐτῆς ἐν τῷ λεντίῳ ἐβάσταζεν, καὶ ἐπλίνθευεν. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ὀφθεὶς αὐτοῖς ὁ Κύριος ἐνήλλαξεν αὐτῶν τὰς γλώσσας, ἀφ᾽ οὗ τὸν πύργον [ὡς] ᾠκοδόμησαν ἐπὶ πήχεις τετρακοσίας ἑξήκοντα τρεῖς. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ λαβόντες τρύπανον ἔσπευδον τρυπῆσαι τὸν οὐρανόν, λέγοντες· Ἴδωμεν ὀστράκινός ἐστιν ὁ οὐρανὸς ἢ χαλκοῦς ἢ σιδηροῦς. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Ταῦτα ἰδὼν ὁ θεὸς οὐ συνεχώρησεν αὐτούς, ἀλλ᾽ ἐπάταξεν αὐτοὺς ἐν ἀορασίᾳ καὶ ἐν γλωσσαλλαγῇ, καὶ κατέστησεν αὐτοὺς ὡς ὁρᾷς.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον ἐγὼ Βαρούχ· Ἰδού, Κύριε, μεγάλα καὶ θαυμαστὰ ἔδειξάς μοι· καὶ νῦν δεῖξόν μοι πάντα διὰ τὸν Κύριον. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπέν μοι ἄγγελος· Δεῦρο διέλθωμεν &lt;. . .&gt; μετὰ τοῦ ἀγγέλου ἀπὸ τοῦ τόπου ἐκείνου ὡσεὶ πορείας ἡμερῶν ἑκατὸν ὀγδοήκοντα πέντε. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἔδειξέν μοι τὸν Ἅͺδην, καὶ ἦν ἡ εἰδέα αὐτοῦ ζοφώδης καὶ βέβηλος. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον· Τίς ἐστιν ὁ δράκων οὗτος; καὶ τίς ὁ περὶ αὐτὸν ἀπηνής; </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν ὁ ἄγγελος· Ὁ μὲν δράκων ἐστὶν ὁ τὰ σώματα τῶν κακῶς τὸν βίον μετερχομένων ἐσθίων· καὶ ὑπ᾽ αὐτῶν τρέφεται· </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Picard ">καὶ οὗτός ἐστιν ὁ Ἅͺδης, ὅστις καὶ αὐτὸς παρόμοιός ἐστιν αὐτοῦ, ἐν ᾧ καὶ πίνει ἀπὸ τῆς θαλάσσης ὡσεὶ πῆχυν μίαν· καὶ οὐκ ἐκλείπει ἀπ᾽ αὐτῆς τι. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Ὁ βαροὺχ εἶπεν· Καὶ πῶς; Καὶ εἶπεν ὁ ἄγγελος· Ἄκουσον· Κύριος ὁ θεὸς ἐποίησεν τριακοσίους ἑξήκοντα ποταμούς, ὧν οἱ πρῶτοι πάντων Ἀλφίας καὶ Ἄβυρος καὶ ὁ Γηρικός· καὶ ἀπὸ τούτων οὐκ ἐκλείπει ἡ θάλασσα.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπον ἐγώ· Δέομαί σου, δεῖξόν μοι τί τὸ ξύλον τὸ πλανῆσαν τὸν Ἀδάμ; </reading>
+          </unit>
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν ὁ ἄγγελος· Ἠ ἄμπελός ἐστιν, ἣν ἐφύτευσεν ὁ ἄγγελος Σαμαὴλ ὅτινα ὠργίσθη Κύριος ὁ θεὸς· καὶ ἐκατηράσατο αὐτὸν καὶ τὴν φυτείαν αὐτοῦ. Ἐν ᾧ καὶ διὰ τοῦτο οὐ συνεχώρησεν τὸν Ἀδὰμ ἅψασθαι αὐτοῦ. Καὶ διὰ τοῦτο φθονήσας ὁ διάβολος ἠπάτησεν αὐτὸν διὰ τῆς ἀμπέλου αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπον ἐγὼ Βαρούχ· Καὶ ἐπεὶ τοσούτου κακοῦ αἰτία γέγονεν ἡ ἄμπελος, καὶ κατάρας ὑπόδικος παρὰ θεοῦ καὶ τοῦ πρωτοπλάστου ἀναίρεσις, πῶς ἄρτι εἰς τοσαύτην χρείαν ἐστίν; </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν ὁ ἄγγελος· Ὀρθῶς ἐρωτᾷς· ὅτε ἐποίησεν ὁ θεὸς τὸν κατακλυσμὸν ἐπὶ τῆς γῆς, καὶ ἀπώλεσε πᾶσαν σάρκα καὶ τὰς τετρακοσίας ἐννέα χιλιάδας τῶν γιγάντων, καὶ ἀνῆλθεν τὸ ὕδωρ ἐπάνω τῶν ὑψηλῶν ἐπὶ πήχεις δεκάπεντε, εἰσῆλθε τὸ ὕδωρ εἰς παράδεισον, καὶ ᾖρεν πᾶν ἄνθος· τὸ δὲ κλῆμα τῆς ἀμπέλου ἐξώρισεν εἰς τὸ παντελὲς καὶ ἐξέβαλεν ἐξω. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ὅταν ἐφάνη ἡ γῆ ἀπὸ τοῦ ὕδατος καὶ ἐξῆλθε Νῶε τῆς κιβωτοῦ, ἤρξατο φυτεύειν ἐκ τῶν εὑρισκομένων φυτῶν. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Picard ">Εὗρε δὲ καὶ τὸ κλῆμα, καὶ λαβὼν ἐλογίζετο ἐν ἑαυτῷ τί ἄρα ἐστίν. Καὶ ἐλθὼν ἐγὼ εἶπον αὐτῷ τὰ περὶ ἐκείνου. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν· Ἆρα φυτεύσω αὐτὸ ἢ τί; ἐπεὶ Ἀδὰμ δι᾽ αὐτοῦ ἀπώλετο· μὴ καὶ αὐτὸς ὀργῆς θεοῦ ἐπιτύχω δι᾽ αὐτοῦ. Καὶ ταῦτα λέγων προσηύξατο ὅπως ἀποκαλύψῃ αὐτῷ ὁ θεὸς περὶ αὐτοῦ τί ποιήσει. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ τεσσαράκοντα ἡμέρας τὴν εὐχὴν ἐκτελέσαντος, καὶ πολλὰ δεηθεὶς καὶ κλαύσας εἶπεν· Κύριε, παρακαλῶ ὅπως ἀποκαλύψῃς μοι τί ποιήσω περὶ τοῦ φυτοῦ τούτου.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Ἀπέστειλε δὲ ὁ θεὸς τὸν ἄγγελον τὸν Σαρασαήλ, καὶ εἶπεν αὐτῷ· Ἀναστάς, Νῶε, φύτευσον τὸ κλῆμα, ὅτι τάδε λέγει Κύριος· Τὸ πικρὸν τούτου μεταβληθήσεται εἰς γλυκύ, καὶ ἡ κατάρα αὐτοῦ γενήσεται εἰς εὐλογίαν, καὶ τὸ παρ᾽ αὐτοῦ γεννώμενον γενήσεται αἷμα θεοῦ, καὶ ὥσπερ ὑπ᾽ αὐτοῦ τὴν καταδίκην ἔλαβεν τὸ γένος τῶν ἀνθρώπων, πάλιν διὰ Ἰησοῦ Χριστοῦ τοῦ Ἐμμανουὴλ ἐν αὐτῷ μέλλουσιν τὴν ἀνάκλησιν προσλαβεῖν, καὶ τὴν εἰς παράδεισον εἴσοδον.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Picard ">Γίνωσκε τοιγαροῦν, ὦ Βαρούχ, ὅτι ὥσπερ ὁ Ἀδὰμ δι᾽ αὐτοῦ τοῦ ξύλου τὴν καταδίκην ἔλαβεν καὶ τῆς δόξης θεοῦ ἐγυμνώθη, οὕτως καὶ οἱ νῦν ἄνθρωποι τὸν ἐξ αὐτοῦ γεννώμενον οἶνον ἀπλήστως δρῶντες χεῖρον τοῦ Ἀδὰμ τὴν παράβασιν ἀπεργάζονται, καὶ τῆς τοῦ θεοῦ δόξης μακρὰν γίνονται, καὶ τῷ αἰωνίῳ πυρὶ ἑαυτοὺς προξενοῦσιν. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Πᾶν γὰρ ἀγαθὸν δι᾽ αὐτοῦ γίνεται. Ταῦτα γὰρ ποιοῦσιν οἱ τοῦτον εἰς κόρον πίνοντες· οὔτε ἀδελφὸς ἀδελφὸν ἐλεεῖ, οὔτε πατὴρ υἱόν, οὔ&lt;τε&gt; τέκνα γονεῖς, ἀλλὰ διὰ τῆς πτώσεως τοῦ οἴνου πάντα γίνονται οἷον φόνοι, μοιχεῖαι, πορνεῖαι, ἐπιορκεῖαι, κλοπαί, καὶ τὰ τούτων ὅμοια. Καὶ οὐδὲν ἀγαθὸν δι᾽ αὐτοῦ κατορθοῦται.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον ἐγὼ Βαροὺχ πρὸς τὸν ἄγγελον· Ἐπερωτῶ σε ἕνα λόγον, Κύριε· </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Picard ">ἐπειδὴ εἶπές μοι ὅτι πίνει ὁ δράκων ἐκ τῆς θαλάσσης πῆχυν μίαν, εἰπέ μοι καὶ πόση ἐστὶν ἡ κοιλία αὐτοῦ; </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπεν ὁ ἄγγελος· Ἡ κοιλία τούτου ὁ Ἅͺδης ἐστίν. Καὶ ὅσον ἀνδρῶν τριακοσίων μόλιβδος ἀκοντίζεται, τοσαύτη ἐστὶν ἡ κοιλία αὐτοῦ. Ἐλθὲ οὖν ὅπως δείξω σοι καὶ μείζονα τούτων ἔργα.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ λαβών με ἤγαγέν με ὅπου ὁ ἥλιος ἐκπορεύεται. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἔδειξέ μοι ἅρμα τετραέλαστον ὃ ἦν ὑπόπυρον. Καὶ ἐπὶ τοῦ ἅρματος ἄνθρωπος καθήμενος φορῶν στέφανον πυρός, ἐλαυνόμενον τὸ ἅρμα ὑπ᾽ ἀγγέλων τεσσαράκοντα. Καὶ ἰδοὺ ὄρνεον περιτρέχον ἔμπροσθεν τοῦ ἡλίου, ὡς ὄρη ἐννέα. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον τὸν ἄγγελον· Τί ἐστι τὸ ὄρνεον τοῦτο; Καὶ λέγει μοι· Τοῦτο ἔστιν ὁ φύλαξ τῆς οἰκουμένης. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον· Κύριε, πῶς ἐστὶν φύλαξ τῆς οἰκουμένης; δίδαξόν με. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπέν μοι ὁ ἄγγελος· Τοῦτο τὸ ὄρνεον παρατρέχει τῷ ἡλίῳ, καὶ τὰς πτέρυγας ἐφαπλῶν δέχεται τὰς πυριμόρφους ἀκτῖνας αὐτοῦ· </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">εἰ μὴ γὰρ ταύτας ἐδέχετο, οὐκ ἂν τῶν ἀνθρώπων γένος ἐσώζετο, οὔτε ἕτερόν τι ζῷον· ἀλλὰ προσέταξεν ὁ θεὸς τοῦτο τὸ ὄρνεον.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἥπλωσε τὰς πτέρυγας αὐτοῦ, καὶ εἶδον εἰς τὸ δεξιὸν πτερὸν αὐτοῦ γράμματα παμμεγέθη ὡς ἅλωνος τόπον ἔχων μέτρον ὡσεὶ μοδίων τετρακισχιλίων· καὶ ἦσαν γράμματα χρυσᾶ. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπέν μοι ὁ ἄγγελος· Ἀνάγνωθι ταῦτα. Καὶ ἀνέγνων. Καὶ ἔλεγον οὕτως· Οὔτε γῆ με τίκτει οὔτε οὐρανός, ἀλλὰ τίκτουσί με πτέρυγες πυρός. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον· Κύριε, τί ἐστι τὸ ὄρνεον τοῦτο, καὶ τί τὸ ὄνομα αὐτοῦ; </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπέν μοι ὁ ἄγγελος· Φοῖνιξ καλεῖται τὸ ὄνομα αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ τί ἐσθίει; Καὶ εἶπέν μοι· Τὸ μάννα τοῦ οὐρανοῦ καὶ τὴν δρόσον τῆς γῆς. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπον· Ἀφοδεύει τὸ ὄρνεον; Καὶ εἶπέν μοι· Ἀφοδεύει σκώληκα, καὶ τὸ τοῦ σκώληκος ἀφόδευμα γίνεται κινάμωμον, ᾧπερ χρῶνται βασιλεῖς καὶ ἄρχοντες. Μεῖνον δέ, καὶ ὄψει δόξαν θεοῦ.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἐν τῷ ὁμιλεῖν αὐτὸν ἐγένετο βροντὴ ὡς ἦχος βροντῆς, καὶ ἐσαλεύθη ὁ τόπος ἐν ᾧ ἱστάμεθα. Καὶ ἠρώτησα τὸν ἄγγελον· Κύριέ μου τί ἐστιν ἡ φωνὴ αὕτη; Καὶ εἶπέν μοι ὁ ἄγγελος· Ἄρτι ἀνοίγουσιν οἱ ἄγγελοι τὰς τριακοσίας ἑξήκοντα πέντε πύλας τοῦ οὐρανοῦ, καὶ διαχωρίζεται τὸ φῶς ἀπὸ τοῦ σκότους. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἦλθεν φωνὴ λέγουσα· Φωτόδοτα, δὸς τῷ κόσμῳ τὸ φέγγος. </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἀκούσας τὸν κτύπον τοῦ ὀρνέου, εἶπον· Κύριε, τί ἐστιν ὁ κτύπος οὗτος; </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπεν· Τοῦτο ἔστι τὸ ἐξυπνίζον τοὺς ἐπὶ γῆς ἀλέκτορας· ὡς γὰρ τὰ δίστομα, οὕτως καὶ ὁ ἀλέκτωρ μηνύει τοῖς ἐν τῷ κόσμῳ κατὰ τὴν ἰδίαν λαλίαν. Ὁ ἥλιος γὰρ ἑτοιμάζεται ὑπὸ τῶν ἀγγέλων, καὶ φωνεῖ ὁ ἀλέκτωρ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον ἐγώ· Καὶ ποῦ ἀποσχολεῖται ὁ ἥλιος ἀφ᾽ οὗ ὁ ἀλέκτωρ φωνεῖ; </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπέν μοι ὁ ἄγγελος· Ἄκουσον, Βαρούχ· πάντα ὅσα ἔδειξά σοι ἐν τῷ πρώτῳ καὶ δευτέρῳ οὐρανῷ εἰσίν· καὶ ἐν τῷ τρίτῳ οὐρανῷ διέρχεται ὁ ἥλιος καὶ διδοῖ τῷ κόσμῳ τὸ φέγγος. Ἀλλ᾽ ἔκδεξαι καὶ ὄψει δόξαν θεοῦ.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἐν τῷ ὁμιλεῖν με αὐτῷ, ὁρῶ τὸ ὄρνεον καὶ ἀνεφάνη ἔμπροσθεν, καὶ πρὸς μικρὸν μικρὸν ηὔξανε, καὶ ἀνεπληροῦτο. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ὄπισθεν τούτου τὸν ἥλιον ἐξαστράπτοντα καὶ τοὺς ἀγγέλους μετ᾽ αὐτοῦ φέροντας καὶ στέφανον ἐπὶ τὴν κεφαλὴν αὐτοῦ, οὗ τὴν θέαν οὐκ ἠδυνήθημεν ἀντοφθαλμῆσαι καὶ ἰδεῖν. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἅμα τῷ λάμψαι τὸν ἥλιον ἐξέτεινε καὶ ὁ φοῖνιξ τὰς αὐτοῦ πτέρυγας. Ἐγὼ δὲ ἰδὼν τὴν τοιαύτην δόξαν ἐταπεινώθην φόβῳ μεγάλῳ, καὶ ἐξέφυγον καὶ ὑπεκρύβην ἐν ταῖς πτέρυξι τοῦ ἀγγέλου. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπέν μοι ὁ ἄγγελος· Μὴ φοβοῦ, Βαρούχ, ἀλλ᾽ ἔκδεξαι, καὶ ὄψει καὶ τὴν δύσιν αὐτῶν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ λαβών με ἤγαγέν με ἐπὶ δυσμάς. Καὶ ὅταν ἦλθεν ὁ καιρὸς τοῦ δῦσαι, ὁρῶ πάλιν ἔμπροσθεν τὸ ὄρνεον ἐρχόμενον καὶ τὸν ἥλιον μετὰ τῶν ἀγγέλων ἐρχόμενον. Καὶ ἅμα τῷ ἐλθεῖν αὐτόν, ὁρῶ τοὺς ἀγγέλους, καὶ ᾖραν τὸν στέφανον ἀπὸ τῆς κορυφῆς αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Picard ">Τὸ δὲ ὄρνεον ἔστη τεταπεινωμένον καὶ συστέλλον τὰς πτέρυγας αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ταῦτα ἰδῶν ἐγὼ εἶπον· Κύριε, διὰ τί ᾖραν τὸν στέφανον ἀπὸ τῆς κεφαλῆς τοῦ ἡλίου, καὶ διὰ τί ἐστι τὸ ὄρνεον τοσοῦτον τεταπεινωμένον; </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπέν μοι ὁ ἄγγελος· Ὁ στέφανος τοῦ ἡλίου, ὅταν τὴν ἡμέραν διαδράμῃ, λαμβάνουσι τέσσαρες ἄγγελοι τοῦτον καὶ ἀναφέρουσιν εἰς τὸν οὐρανὸν καὶ ἀνακαινίζουσιν αὐτόν, διὰ τὸ μεμολύνθαι αὐτὸν καὶ τὰς ἀκτῖνας αὐτοῦ ἐπὶ τῆς γῆς. Καὶ λοιπὸν καθ᾽ ἑκάστην ἡμέραν οὕτως ἀνακαινίζεται.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον ἐγὼ Βαρούχ· Κύριε, καὶ διὰ τί μολύνονται αἱ ἀκτῖνες αὐτοῦ ἐπὶ τῆς γῆς; Καὶ εἶπέν μοι ὁ ἄγγελος· θεωρῶν τὰς ἀνομίας καὶ τὰς ἀδικίας τῶν ἀνθρώπων, ἤγουν πορνείας, μοιχείας, κλοπάς, ἁρπαγάς, εἰδωλολατρείας, μέθας, φόνους, ἔρεις, ζήλη, καταλαλίας, γογγυσμούς, ψιθυρισμούς, μαντείας, καὶ τὰ τούτων ὅμοια, ἅτινα οὔκ εἰσι τῷ θεῷ ἀρεστά· διὰ ταῦτα μολύνεται καὶ διὰ τοῦτο ἀνακαινίζεται. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Picard ">Περὶ δὲ τοῦ ὀρνέου, τὸ πῶς ἐταπεινώθη· ἐπεὶ διὰ τὸ κατέχειν τὰς τοῦ ἡλίου ἀκτῖνας, διὰ τοῦ πυρὸς καὶ τῆς ὁλοημέρου καύσεως, ὡς δι᾽ αὐτοῦ ταπεινοῦται. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Εἰ μὴ γὰρ αἱ τούτου πτέρυγες, ὡς προείπομεν, περιέσκεπον τὰς τοῦ ἡλίου ἀκτῖνας οὐκ ἂν ἐσώθη πνοή.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ τούτων συσταλέντων καὶ ἡ νὺξ κατέλαβεν καὶ ἅμα ταύτῃ μετὰ καὶ τῆς σελήνης καὶ μετὰ τῶν ἀστέρων. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον ἐγὼ Βαρούχ· Κύριε, δεἶξόν μοι καὶ ταύτην, παρακαλῶ· πῶς ἐξέρχεται; καὶ ποῦ ἀπέρχεται; καὶ ἐν ποίῳ σχήματι περιπατεῖ; </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν ὁ ἄγγελος· Ἀνάμεινον, καὶ ὄψει καὶ ταύτην ὡς μετ᾽ ὀλίγον. καὶ τῇ ἐπαύριον ὁρῶ καὶ ταύτην ἐν σχήματι γυναικὸς καὶ καθημένην ἐπὶ ἅρματος τροχοῦ. Καὶ ἦσαν ἔμπροσθεν αὐτῆς βόες, καὶ ἀμνοὶ ἐν τῷ ἅρματι, καὶ πλῆθος ἀγγέλων ὁμοίως. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον· Κύριε, τί εἰσιν οἱ βόες καὶ οἱ ἀμνοί; Καὶ εἶπέν μοι· Ἄγγελοί εἰσι καὶ αὐτοί. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ πάλιν ἠρώτησα· Καὶ τί ἐστιν ὅτι ποτὲ μὲν αὔξει, ποτὲ δὲ λήγει; </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Picard ">Ἄκουσον, ὦ Βαρούχ· ταύτην ἣν βλέπεις ὡραία ἦν γεγραμμένη ὑπὸ θεοῦ ὡς οὐκ ἄλλη. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ ἐν τῇ παραβάσει τοῦ πρώτου Ἀδὰμ παρῆψε τῷ Σαμαὴλ ὅτε τὸν ὄφιν ἔλαβεν ἔνδυμα· οὐκ ἀπεκρύβη ἀλλὰ παρηύξησε. Καὶ ὠργίσθη αὐτῇ ὁ θεός, καὶ ἔθλιψεν αὐτήν, καὶ ἐκολόβωσεν τὰς ἡμέρας αὐτῆς.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπον· Καὶ πῶς οὐ λάμπει καὶ ἐν παντί, ἀλλ᾽ ἐν τῇ νυκτὶ μόνον; Καὶ εἶπεν ὁ ἄγγελος· Ἄκουσον· ὥσπερ ἐνώπιον βασιλέως οὐ δύνανται οἰκέται παρρησιασθῆναι, οὕτως οὐδὲ ἐνώπιον τοῦ ἡλίου δύνανται ἡ σελήνη καὶ ἀστέρες αὐγάσαι. Ἀεὶ γὰρ οἱ ἀστέρες κρέμανται, ἀλλ᾽ ὑπὸ τοῦ ἡλίου σκεδάζονται. Καὶ ἡ σελήνη σῴα οὖσα ὑπὸ τῆς τοῦ ἡλίου θερμῆς ἐκδαπανᾶται.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ταῦτα πάντα μαθὼν παρὰ τοῦ ἀρχαγγέλου, λαβὼν ἤγαγέν με εἰς τρίτον οὐρανόν. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶδον πεδίον ἁπλοῦν, καὶ ἐν μέσῳ αὐτοῦ λίμνην ὑδάτων. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἦσαν ἐν αὐτῷ πλήθη ὀρνέων ἐκ πασῶν γενεῶν· ἀλλ᾽ οὐχ ὅμοια τῶν ἐνταῦθα. Ἀλλ᾽ ἴδον τὸν γέρανον ὡς βόας μεγάλους. Καὶ πάντα μεγάλα ὑπερέχοντα τῶν ἐν κόσμῳ. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἠρώτησα τὸν ἄγγελον· Τί ἐστι τὸ πεδίον, καὶ τίς ἡ λίμνη, καὶ τί τὸ περὶ αὐτὴν πλῆθος τῶν ὀρνέων; </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν ὁ ἄγγελος· Ἄκουσον, Βαρούχ· τὸ μὲν πεδίον ἐστι τὸ περιέχον τὴν λίμνην καὶ ἀλλὰ θαυμαστὰ ἐν αὐτῷ, οὗπερ ἔρχονται αἱ ψυχαὶ τῶν δικαίων ὅταν ὁμιλῶσι συνδιάγοντες χοροὶ χοροί. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Τὸ δὲ ὕδωρ ἐστὶν ὅπερ τὰ νέφη λαμβάνοντα βρέχουσιν ἐπὶ τῆς γῆς, καὶ αὐξάνουσιν οἱ καρποί.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον πάλιν τὸν ἄγγελον Κυρίου· Τὰ δὲ ὄρνεα; Καὶ εἶπέν μοι· Αὐτά εἰσιν ἃ διαπαντὸς ἀνυμνοῦσι τὸν Κυρίον. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον ἐγὼ Βαρούχ· Κύριε, καὶ πῶς λέγουσιν οἱ ἄνθρωποι ὅτι ἀπὸ τῆς θαλάσσης ἐστὶ τὸ ὕδωρ ὅπερ βρέχει; </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν ὁ ἄγγελος· Τὸ μὲν βρέχον ἀπὸ τῆς θαλάσσης καὶ τῶν ἐπὶ γῆς ὑδάτων καὶ τοῦτο ἔστιν· τὸ δὲ τὸ τοὺς καρποὺς ἐνεργοῦν ἐκ τούτου ἐστίν. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Ἴσθι οὖν τοῦ λοιποῦ ὅτι ἐκ τούτου ἐστὶν ὃ λέγεται δρόσος τοῦ οὐρανοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἀπὸ τούτου λαβών με ὁ ἄγγελος ἤγαγέν με εἰς πέμπτον οὐρανόν. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ ἦν ἡ πύλη κεκλεισμένη. Καὶ εἶπον· Κύριε, οὐκ ἀνοίγεται ὁ πυλὼν οὗτος ὅπως εἰσέλθωμεν; Καὶ εἶπέν μοι ὁ ἄγγελος· Οὐ δυνάμεθα εἰσελθεῖν ἕως ἔλθῃ Μιχαὴλ ὁ κλειδοῦχος τῆς βασιλείας τῶν οὐρανῶν. Ἀλλ᾽ ἀνάμεινον καὶ ὄψει τὴν δόξαν τοῦ θεοῦ.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἐγένετο φωνὴ μεγάλη ὡς βροντή. Καὶ εἶπον· Κύριε, τί ἐστιν ἡ φωνὴ αὕτη; </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπέν μοι· Ἄρτι κατέρχεται ὁ ἀρχιστράτηγος Μιχαὴλ ἵνα δέξηται τὰς δεήσεις τῶν ἀνθρώπων. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ ἰδοὺ ἦλθεν φωνή· Ἀνοιγήτωσαν αἱ πύλαι. </reading>
+          </unit>
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ ἤνοιξαν· καὶ ἐγένετο τρισμὸς ὡς βροντῆς. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="Picard ">Kαὶ ἦλθεν Μιχαήλ, καὶ συνήντησεν αὐτῷ ὁ ἄγγελος ὁ ὢν μετ᾽ ἐμοῦ, καὶ προσεκύνησεν αὐτόν, καὶ εἶπεν· Χαίροις, ὁ ἐμὸς ἀρχιστράτηγος καὶ παντὸς τοῦ ἡμετέρου τάγματος. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπεν ὁ ἀρχιστράτηγος Μιχαήλ· Χαίροις καὶ σύ, ὁ ἡμέτερος ἀδελφὸς καὶ ὁ τὰς ἀποκαλύψεις διερμηνεύων τοῖς καλῶς τὸν βίον διερχομένοις.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ οὕτως ἀλλήλους κατασπασάμενοι ἔστησαν. Καὶ ἴδον τὸν ἀρχιστράτηγον Μιχαὴλ κρατοῦντα φιάλην μεγάλην σφόδρα· τὸ βάθος αὐτῆς ὅσον ἀπὸ οὐρανοῦ ἕως τῆς γῆς, καὶ τὸ πλάτος ὅσον ἀπὸ βορρᾶ ἕως νότου. Καὶ εἶπον· Κύριε, τί ἐστιν ὃ κρατεῖ Μιχαὴλ ὁ ἀρχιστράτηγος; </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπέν μοι· Τοῦτο ἔστιν ἔνθα προσέρχονται αἱ ἀρεταὶ τῶν δικαίων καὶ ὅσα ἐργάζονται ἀγαθά, ἅτινα δι᾽ αὐτοῦ ἀποκομίζονται ἔμπροσθεν τοῦ ἐπουρανίου θεοῦ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἐν τῷ ὁμιλεῖν με αὐτοῖς, ἰδοὺ ἦλθον ἄγγελοι φέροντες κανίσκια γέμοντα ἀνθῶν· καὶ ἔδωκαν αὐτὰ πρὸς τὸν Μιχαήλ. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἠρώτησα τὸν ἄγγελον· Κύριε, τίνες εἰσὶν οὗτοι, καὶ τί τὰ προσκομιζόμενα παρ᾽ αὐτῶν;  </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπέν μοι· Οὗτοι εἰσὶν ἄγγελοι ἐπὶ τῶν ἐξουσιῶν. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ λαβὼν ὁ ἀρχάγγελος τοὺς κανίσκους ἔβαλεν αὐτοὺς εἰς τὴν φιάλην. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ λέγει μοι ὁ ἄγγελος· Ταῦτα τὰ ἄνωθέν εἰσιν αἱ ἀρεταὶ τῶν δικαίων.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶδον ἑτέρους ἀγγέλους φέροντας κανίσκια κενὰ οὐ γέμοντα. Καὶ ἤρχοντο λυπούμενοι, καὶ οὐκ ἐτόλμησαν ἐγγίσαι, διότι οὐκ εἶχον τέλεια τὰ βραβεῖα. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἐβόησε Μιχαὴλ λέγων· Δεῦτε καὶ ὑμεῖς, ἄγγελοι, φέρετε ὃ ἠνέγκατε. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ ἐλυπήθη Μιχαὴλ σφόδρα, καὶ ὁ μετ᾽ ἐμοῦ ἄγγελος, διό οὐκ ἐγέμισαν τὴν φιάλην.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="1">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶθ᾽ οὕτως ἦλθον ἕτεροι ἄγγελοι κλαίοντες καὶ ὀδυρόμενοι καὶ μετὰ φόβου λέγοντες· Ἴδε ἡμᾶς μεμελανωμένοις, Κύριε, ὅτι πονηροῖς ἀνθρώποις παρεδόθημεν, καὶ θέλομεν ὑποχωρῆσαι ὑπ᾽ αὐτῶν. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπεν Μιχαήλ· Οὐ δύνασθε ὑποχωρεῖν ὑπ᾽ αὐτῶν, ἵνα μὴ εἰς τέλος κυριεύσῃ ὁ Ἐχθρός· ἀλλ᾽ εἴπατέ μοι τί αἰτεῖσθε. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="115" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ εἶπον· Δεόμεθά σου, Μιχαήλ, ὁ ἀρχιστράτηγος ἡμῶν, μεταθὲς ἡμᾶς ἀπ᾽ αὐτῶν, ὅτι οὐ δυνάμεθα ἀνθρώποις πονηροῖς καὶ ἄφροσι προσμένειν, ὅτι οὐκ ἔστιν ἐν αὐτοῖς οὐδὲν ἀγαθόν, ἀλλὰ πᾶσα ἀδικία καὶ πλεονεξία. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="116" group="0" parallel="">
+            <reading option="0" mss="Picard ">Οὐ γὰρ εἴδομεν αὐτοὺς εἰσελθεῖν ἐν ἐκκλησίᾳ ποτέ, οὐδὲ εἰς πνευματικοὺς πατέρας, οὐδὲ εἰς ἀγαθὸν ἕν. Ἀλλ᾽ ὅπου φόνος, καὶ αὐτοὶ ἐν μέσῳ ἐκεῖ, καὶ ὅπου πορνεῖαι, μοιχεῖαι, κλεψίαι, καταλαλίαι, ἐπιορκίαι, φθόνοι, μέθαι, ἔρεις, ζῆλος, γογγυσμός, ψιθυρισμός, εἰδωλολατρισμός, μαντεία, καὶ τὰ τούτοις ὅμοια, ἐκεῖ εἰσιν ἐργάται τῶν τοιούτων καὶ ἑτέρων χειρόνων. Διὸ δεόμεθα ἐξελθεῖν ἡμᾶς ἀπ᾽ αὐτῶν. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="117" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἶπεν Μιχαὴλ τοὺς ἀγγέλους· Ἐκδέξασθε ἕως οὗ μάθω παρὰ Κυρίου τὸ τί γένηται.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="1">
+          <unit id="118" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ αὐτῇ τῇ ὥρᾳ ἀπῆλθεν ὁ Μιχαήλ, καὶ ἐκλείσθησαν αἱ θύραι. Kαὶ ἐγένετο φωνὴ ὡς βροντή. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="119" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Kαὶ ἠρώτησα τὸν ἄγγελον· Τί ἐστιν ἡ φωνή; Kαὶ εἶπέν μοι· Ἄρτι προσφέρει Μιχαὴλ τὰς τῶν ἀνθρώπων ἀρετὰς τῷ θεῷ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="1">
+          <unit id="120" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ αὐτῇ τῇ ὥρᾳ κατῆλθεν ὁ Μιχαήλ, καὶ ἠνοίγη ἡ πύλη· καὶ ἤνεγκεν ἔλαιον. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="121" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ τοὺς ἀγγέλους τοὺς ἐνεγκόντες τὰ κανίσκια πλήρη ἐπλήρωσεν αὐτὰ ἐλαίῳ λέγων· Ἀπενέγκατε, δότε ἑκατονταπλασίονα τὸν μισθὸν τοῖς φίλοις ἡμῶν καὶ τοῖς ἐμπόνως ἐργασαμένοις τὰ καλὰ ἔργα. Οἱ γὰρ καλῶς σπείραντες καὶ καλῶς ἐπισυνάγουσιν. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="122" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ λέγει καὶ τοὺς ἀποκένους φέροντας τοὺς κανίσκους· Δεῦτε καὶ ὑμεῖς, ἀπολάβετε τὸν μισθὸν καθὼς ἠνέγκατε, καὶ ἀπόδοτε τοῖς υἱοῖς τῶν ἀνθρώπων. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="123" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Εἶτα λέγει καὶ τοῖς τὰ γέμοντα ἐνεγκοῦσι καὶ τοῖς τὰ ἀπόκενα· Πορευθέντες εὐλογήσατε τοὺς φίλους ἡμῶν, καὶ εἴπατε αὐτοῖς ὅτι τάδε λέγει Κύριος· Ἐπὶ ὀλίγῃ ἐστὲ πιστοί, ἐπὶ πολλῶν ὑμᾶς καταστήσει· εἰσέλθατε εἰς τὴν χαρὰν τοῦ Κυρίου ἡμῶν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="1">
+          <unit id="124" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ στραφεὶς λέγει καὶ τοῖς μηδὲν ἐνεγκοῦσιν· Τάδε λέγει Κύριος· Μή ἐστε σκυθρωποί, καὶ μὴ κλαίετε, μηδὲ ἐάσατε τοὺς υἱοὺς τῶν ἀνθρώπων. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="125" group="0" parallel="">
+            <reading option="0" mss="Picard ">Ἀλλ᾽ ἐπειδὴ παρώργισάν με ἐν τοῖς ἔργοις αὐτῶν, πορευθέντες, παραζηλώσατε αὐτοὺς καὶ παροργίσατε, καὶ παραπικράνατε ἐπ᾽ οὐκ ἔθνει, ἐπὶ ἔθνει ἀσυνέτῳ. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="126" group="0" parallel="">
+            <reading option="0" mss="Picard ">Ἔτι σὺν τούτοις ἐξαποστείλατε κάμπην καὶ βροῦχον, ἐρυσίβην καὶ ἀκρίδα, χάλαζαν μετ᾽ ἀστραπῶν καὶ ὀργῆς. Καὶ διχοτομήσατε αὐτοὺς ἐν μαχαίρᾳ καὶ ἐν θανάτῳ, καὶ τὰ τέκνα αὐτῶν ἐν δαιμονίοις. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="127" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Ὅτι οὐκ εἰσήκουσαν τῆς φωνῆς μου, οὐδὲ ἐσυνετήρησαν τῶν ἐντολῶν μου, οὐδὲ ἐποίησαν, ἀλλ᾽ ἐγένοντο καταφρονηταὶ τῶν ἐντολῶν μου καὶ τῶν ἐκκλησιῶν μου, καὶ ὑβρισταὶ τῶν ἱερέων τῶν τοὺς λόγους μου κηρυττόντων αὐτοῖς.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="1">
+          <unit id="128" group="0" parallel="">
+            <reading option="0" mss="Picard ">Καὶ ἅμα τῷ λόγῳ ἐκλείσθη ἡ θύρα, καὶ ἡμεῖς ἀνεχωρήσαμεν. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="129" group="0" parallel="">
+            <reading option="0" mss="Picard ">καὶ λαβών με ὁ ἄγγελος ἀπεκατέστησέν με εἰς τὸ ἀπ᾽ ἀρχῆς. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="130" group="0" parallel="">
+            <reading option="0" mss="Picard " linebreak="doubleFollowing">Καὶ εἰς ἑαυτὸν ἐλθὼν δόξαν ἔφερον τῷ θεῷ τῷ ἀξιώσαντί με τοιούτου ἀξιώματος.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="131" group="0" parallel="">
+            <reading option="0" mss="Picard ">Ὦ καὶ ὑμεῖς, ἀδελφοί, οἱ τυχόντες τῆς τοιαύτης ἀποκαλύψεως, δοξάσατε καὶ αὐτοὶ τὸν θεόν, ὅπως καὶ αὐτὸς δοξάσῃ ἡμᾶς νῦν, καὶ ἀεί, καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων. Ἀμήν. </reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

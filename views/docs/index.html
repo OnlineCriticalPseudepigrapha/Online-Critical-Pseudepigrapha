@@ -1,0 +1,3 @@
+{{extend 'layout.html'}}
+<h1>{{=filename}}</h1>
+{{=LOAD('docs','text.load', args=[filename], ajax=True)}}

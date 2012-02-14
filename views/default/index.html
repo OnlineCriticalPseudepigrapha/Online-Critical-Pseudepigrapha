@@ -1,0 +1,16 @@
+{{left_sidebar_enabled,right_sidebar_enabled=False,True}}
+{{extend 'layout.html'}}
+
+{{if 'message' in globals():}}
+<h3>{{#=message}}</h3>
+{{pass}}
+<ul>
+{{for doc in docrows:}}
+{{=LI(A(doc.name, _href=URL('docs', 'text', args=doc.filename)))}}
+{{pass}}
+</ul>
+
+{{block right_sidebar}}
+{{=A(T("Administrative Interface"), _href=URL('admin','default','index'), _class='button', _style='margin-top: 1em;')}}
+{{end}}
+

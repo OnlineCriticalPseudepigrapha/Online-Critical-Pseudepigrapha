@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+    <!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+    <!ELEMENT version (divisions,resources*,manuscripts+,text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+    <!ELEMENT divisions (division)+>
+    <!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+    <!ELEMENT resources (resource)+>
+    <!ELEMENT resource (info+,URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+    <!ELEMENT info (#PCDATA)>
+    <!ELEMENT URL (#PCDATA)>
+    <!ELEMENT manuscripts (ms)+>
+    <!ELEMENT ms (name,bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA|sup)*>
+    <!ELEMENT sup (#PCDATA)>
+    <!ELEMENT bibliography (#PCDATA|booktitle)*>
+    <!ELEMENT booktitle (#PCDATA)>
+    <!ELEMENT text (div)+>
+    <!ELEMENT div (div|unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+    <!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+    <!ELEMENT reading (#PCDATA|w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+    <!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book filename="ElMod" title="Eldad and Modad" textStructure="fragmentary">
+    <version title="Shepherd of Hermas" author="Anonymous" language="Greek" fragment="1">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Verse"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Whittaker" language="Greek" show="yes">
+                <name>
+                    Whittaker
+                </name>
+                <bibliography>
+                    text: Molly Whittaker, Der Hirt des Hermas (2d ed.; vol 1 of Die Apostolischen Väter; GCS 48; Berlin: Akademie, 1967 [1st ed. 1956]), 7, line 3. [Shepherd of Hermas, Visions 2.3.4] (cf. Num 11:26).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="Visions 2">
+                <div number="3">
+                    <div number="4">
+                        <unit id="1" group="0" parallel="">
+                            <reading option="0" mss="Whittaker ">
+                                “Ἐγγὺς κύριος τοῖς ἐπιστρεφομένοις,” ὡς γέγραπται ἐν τῷ Ἐλδὰδ καὶ Μωδάτ, τοῖς προφητεύσασιν ἐν τῇ ἐρήμῳ τῷ λαῷ.
+                            </reading>
+                        </unit>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+</book>

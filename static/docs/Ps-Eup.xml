@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+    <!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+    <!ELEMENT version (divisions,resources*,manuscripts+,text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+    <!ELEMENT divisions (division)+>
+    <!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+    <!ELEMENT resources (resource)+>
+    <!ELEMENT resource (info+,URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+    <!ELEMENT info (#PCDATA)>
+    <!ELEMENT URL (#PCDATA)>
+    <!ELEMENT manuscripts (ms)+>
+    <!ELEMENT ms (name,bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA|sup)*>
+    <!ELEMENT sup (#PCDATA)>
+    <!ELEMENT bibliography (#PCDATA|booktitle)*>
+    <!ELEMENT booktitle (#PCDATA)>
+    <!ELEMENT text (div)+>
+    <!ELEMENT div (div|unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+    <!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+    <!ELEMENT reading (#PCDATA|w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+    <!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book filename="Ps-Eup" title="Pseudo-Eupolemus" textStructure="fragmentary">
+    <version title="Praep. Evang. (Frag. 1)" author="Eusebius" language="Greek" fragment="1">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragment §1: Eusebius, Praep. Evang. 9.17.2-9; Fragment §2: Eusebius, Praep. Evang. 9.18.2
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="17">
+                    <div number="2">
+                        <unit id="1" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                Εὐπόλεμος δὲ ἐν τῷ περὶ Ἰουδαίων τῆς Ἀσσυρίας φησὶ πόλιν Βαβυλῶνα πρῶτον μὲν κτισθῆναι ὑπὸ τῶν διασωθέντων ἐκ τοῦ κατακλυσμοῦ· εἶναι δὲ αὐτοὺς γίγαντας, οἰκοδομεῖν δὲ τὸν ἱστορούμενον πύργον.
+                            </reading>
+                        </unit>
+                    </div>
+                    <div number="3">
+                        <unit id="2" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                πεσόντος δὲ τούτου ὑπὸ τῆς τοῦ θεοῦ ἐνεργείας τοὺς γίγαντας διασπαρῆναι καθ᾽ ὅλην τὴν γῆν. δεκάτῃ δὲ γενεᾷ, φησίν, ἐν πόλει τῆς Βαβυλωνίας Καμαρίνῃ, ἥν τινας λέγειν πόλιν Οὐρίην (εἶναι δὲ μεθερμηνευομένην Χαλδαίων πόλιν), {ἢ}ἐν τρισκαιδεκάτῃ γενέσθαι Ἁβραὰμ γενεᾷ, εὐγενείᾳ καὶ σοφίᾳ πάντας ὑπερβεβηκότα, ὃν δὴ καὶ τὴν ἀστρολογίαν καὶ Χαλδαϊκὴν εὑρεῖν ἐπί τε τὴν εὐσέβειαν ὁρμήσαντα εὐαρεστῆσαι τῷ θεῷ.
+                            </reading>
+                        </unit>
+                    </div>
+                    <div number="4">
+                        <unit id="3" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                τοῦτον δὲ διὰ τὰ προστάγματα τοῦ θεοῦ εἰς Φοινίκην ἐλθόντα κατοικῆσαι, καὶ τροπὰς ἡλίου καὶ σελήνης καὶ τὰ ἄλλα πάντα διδάξαντα τοὺς Φοίνικας εὐαρεστῆσαι τῷ βασιλεῖ αὐτῶν. ὕστερον δὲ Ἀρμενίους ἐπιστρατεῦσαι τοῖς Φοίνιξι· νικησάντων δὲ καὶ αἰχμαλωτισαμένων τὸν ἀδελφιδοῦν αὐτοῦ τὸν Ἁβραὰμ μετὰ οἰκετῶν βοηθήσαντα ἐγκρατῆ γενέσθαι τῶν αἰχμαλωτισαμένων καὶ τῶν πολεμίων αἰχμαλωτίσαι τέκνα καὶ γυναῖκας.
+                            </reading>
+                        </unit>
+                    </div>
+                    <div number="5">
+                        <unit id="4" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                πρέσβεων δὲ παραγενομένων πρὸς αὐτὸν ὅπως χρήματα λαβὼν ἀπολυτρώσῃ ταῦτα, μὴ προελέσθαι τοῖς δυστυχοῦσιν ἐπεμβαίνειν, ἀλλὰ τὰς τροφὰς λαβόντα τῶν νεανίσκων ἀποδοῦναι τὰ αἰχμάλωτα ξενισθῆναί τε αὐτὸν ὑπὸ πόλεως ἱερὸν Ἀργαριζίν, ὃ εἶναι μεθερμηνευόμενον ὄρος ὑψίστου·
+                            </reading>
+                        </unit>
+                    </div>
+                    <div number="6">
+                        <unit id="5" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                παρὰ δὲ τοῦ Μελχισεδὲκ ἱερέως ὄντος τοῦ θεοῦ καὶ βασιλεύοντος λαβεῖν δῶρα. λιμοῦ δὲ γενομένου τὸν Ἁβραὰμ ἀπαλλαγῆναι εἰς Αἴγυπτον πανοικίᾳ κἀκεῖ κατοικεῖν τήν τε γυναῖκα αὐτοῦ τὸν βασιλέα τῶν Αἰγυπτίων γῆμαι, φάντος αὐτοῦ ἀδελφὴν εἶναι.
+                            </reading>
+                        </unit>
+                    </div>
+                    <div number="7">
+                        <unit id="6" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                περισσότερον δ᾽ ἱστόρησεν ὅτι οὐκ ἠδύνατο αὐτῇ συγγενέσθαι καὶ ὅτι συνέβη φθείρεσθαι αὐτοῦ τὸν λαὸν καὶ τὸν οἶκον, μάντεις δὲ αὐτοῦ καλέσαντος τούτους φάναι μὴ εἶναι χήραν τὴν γυναῖκα· τὸν δὲ βασιλέα τῶν Αἰγυπτίων οὕτως ἐπιγνῶναι ὅτι γυνὴ ἦν τοῦ Ἁβραὰμ καὶ ἀποδοῦναι αὐτὴν τῷ ἀνδρί.
+                            </reading>
+                        </unit>
+                    </div>
+                    <div number="8">
+                        <unit id="7" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                συζήσαντα δὲ τὸν Ἁβραὰμ ἐν Ἡλιουπόλει τοῖς Αἰγυπτίων ἱερεῦσι πολλὰ μεταδιδάξαι αὐτοὺς καὶ τὴν ἀστρολογίαν καὶ τὰ λοιπὰ τοῦτον αὐτοῖς εἰσηγήσασθαι, φάμενον Βαβυλωνίους ταῦτα καὶ αὑτὸν εὑρηκέναι, τὴν δὲ εὕρεσιν αὐτῶν εἰς Ἐνὼχ ἀναπέμπειν, καὶ τοῦτον εὑρηκέναι πρῶτον τὴν ἀστρολογίαν, οὐκ Αἰγυπτίους.
+                            </reading>
+                        </unit>
+                    </div>
+                    <div number="9">
+                        <unit id="8" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                Βαβυλωνίους γὰρ λέγειν πρῶτον γενέσθαι Βῆλον, ὃν εἶναι Κρόνον· ἐκ τούτου δὲ γενέσθαι Βῆλον καὶ Χαναάν, τοῦτον δὲ τὸν Χαναὰν γεννῆσαι τὸν πατέρα τῶν Φοινίκων, τούτου δὲ Χοὺμ υἱὸν γενέσθαι, ὃν ὑπὸ τῶν Ἑλλήνων λέγεσθαι Ἄσβολον, πατέρα δὲ Αἰθιόπων, ἀδελφὸν δὲ τοῦ Μεστραείμ, πατρὸς Αἰγυπτίων· Ἕλληνας δὲ λέγειν τὸν Ἄτλαντα εὑρηκέναι ἀστρολογίαν, εἶναι δὲ τὸν Ἄτλαντα τὸν αὐτὸν καὶ Ἐνώχ· τοῦ δὲ Ἐνὼχ γενέσθαι υἱὸν Μαθουσάλαν, ὃν πάντα δι᾽ ἀγγέλων θεοῦ γνῶναι καὶ ἡμᾶς οὕτως ἐπιγνῶναι.
+                            </reading>
+                        </unit>
+                    </div>
+                </div>
+              </div>
+            </text>
+            </version>
+<version title="Praep. Evang. (Frag. 2)" author="Eusebius" language="Greek" fragment="2">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragment §1: Eusebius, Praep. Evang. 9.17.2-9; Fragment §2: Eusebius, Praep. Evang. 9.18.2
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+          <div number="9">
+                <div number="18">
+                    <div number="2">
+                        <unit id="9" group="0" parallel="">
+                            <reading option="0" mss="Mras ">
+                                ἐν δὲ ἀδεσπότοις εὕρομεν τὸν Ἁβραὰμ ἀναφέροντα εἰς τοὺς γίγαντας, τούτους δὲ οἰκοῦντας ἐν τῇ Βαβυλωνίᾳ διὰ τὴν ἀσέβειαν ὑπὸ τῶν θεῶν ἀναιρεθῆναι, ὧν ἕνα Βῆλον ἐκφεύγοντα τὸν θάνατον ἐν Βαβυλῶνι κατοικῆσαι πύργον τε κατασκευάσαντα ἐν αὐτῷ διαιτᾶσθαι, ὃν δὴ ἀπὸ τοῦ κατασκευάσαντος Βήλου Βῆλον ὀνομασθῆναι. τὸν δὲ Ἅβραμον τὴν ἀστρολογικὴν ἐπιστήμην παιδευθέντα πρῶτον μὲν ἐλθεῖν εἰς Φοινίκην καὶ τοὺς Φοίνικας ἀστρολογίαν διδάξαι, ὕστερον δὲ εἰς Αἴγυπτον παραγενέσθαι.
+                            </reading>
+                        </unit>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+</book>

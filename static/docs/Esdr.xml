@@ -1,0 +1,3727 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="TextApparatus.xsl.xml"?>
+<!DOCTYPE book [
+<!ELEMENT book (resources?, manuscripts,text)>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book language CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+<!ELEMENT resources (resource*)>
+<!ELEMENT resource (info,URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT manuscripts (ms+)>
+<!ELEMENT ms (name,bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA|sup)*>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT bibliography (#PCDATA|booktitle)*>
+<!ELEMENT booktitle (#PCDATA)>
+<!ELEMENT text (chapter+)>
+<!ELEMENT chapter (verse+)>
+<!ATTLIST chapter number CDATA #REQUIRED>
+<!ATTLIST chapter fragment CDATA #IMPLIED>
+<!ELEMENT verse (unit+)>
+<!ATTLIST verse reference CDATA #REQUIRED>
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit id CDATA #REQUIRED
+				linebreak CDATA #IMPLIED>
+<!ELEMENT reading (#PCDATA)>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+]>
+<book title="4 Ezra" language='Latin' filename="Esdr">
+	<manuscripts>
+		<ms abbrev="Weber" language="Latin" show="yes">
+			<name>Weber Concordance</name>
+			<bibliography>R. Weber, Biblia sacra : iuxta Vulgatam versionem (Stuttgart : Württembergische Bibelanstalt, 1969), 2.1934-1967.</bibliography>
+			<bibliography>Albert-Marie Denis, ed., Concordance latine des pseudépigraphes d'Ancien Testament.  Concordance, corpus des textes, indices (Corpus christianorum. Thesaurus patrum latinorum. Supplementum; Turnhout: Brepols, 1993), 601-617.</bibliography>
+		</ms>
+		<ms abbrev="Klijn" language="Latin" show="yes">
+			<name>Klijn Concordance</name>
+			<bibliography>A.F.J. Klijn, Der lateinische Text der Apokalypse des Esra (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur 131; Berlin: 1983), 57-60.</bibliography>
+			<bibliography>Albert-Marie Denis, ed., Concordance latine des pseudépigraphes d'Ancien Testament.  Concordance, corpus des textes, indices (Corpus christianorum. Thesaurus patrum latinorum. Supplementum; Turnhout: Brepols, 1993), 609-610.</bibliography>
+		</ms>
+	</manuscripts>
+	<text>
+		<chapter number="3">
+			<verse reference="1">
+				<unit id="1">
+					<reading option="0" mss="Weber ">Anno tricesimo ruinae civitatis eram in Babylone, ego Salathihel qui et Ezras, et conturbatus sum super cubili meo recumbens, et cogitationes meae ascendebant super cor meum,</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="2">
+					<reading option="0" mss="Weber ">quoniam vidi desertionem Sion et abundantiam eorum qui habitabant in Babylone.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="3">
+					<reading option="0" mss="Weber ">Et ventilatus est spiritus meus valde, et coepi loqui ad Altissimum verba timorata,</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="4">
+					<reading option="0" mss="Weber ">et dixi: O Domine Dominator, tu dixisti ab initio, quando plantasti terram, et hoc solus, et imperasti pulveri,</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="5">
+					<reading option="0" mss="Weber ">et dedit Adam corpus mortuum. Sed et ipsum figmentum manuum tuarum erat, et insuflasti in eum spiritum vitae, et factus est vivens coram te.</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="6">
+					<reading option="0" mss="Weber ">Et induxisti eum in paradisum, quem plantavit dextera tua antequam terra adventaret.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="7">
+					<reading option="0" mss="Weber ">Et huic mandasti diligentiam unam tuam, et praeterivit eam, et statim instituisti in eum mortem et in nationibus eius. Et natae sunt ex eo gentes et tribus, populi et cognationes, quorum non est numerus.</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="8">
+					<reading option="0" mss="Weber ">Et ambulavit unaquaque gens in voluntate sua, et impie agebant coram te et spernebant praecepta tua, et tu non prohibuisti eos.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="9">
+					<reading option="0" mss="Weber ">Iterum autem in tempore induxisti diluvium super habitantes saeculum et perdidisti eos.</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="10">
+					<reading option="0" mss="Weber ">Et factum est in uno casui eorum, sicut Adae mors sic et his diluvium.</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="11">
+					<reading option="0" mss="Weber ">Dereliquisti autem ex his unum Noe cum domo sua; ex eo iustos omnes.</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="12">
+					<reading option="0" mss="Weber ">Et factum est cum coepissent multiplicari qui habitabant super terram, et multiplicaverunt filios et populos et gentes multas, et coeperunt iterato impietatem facere plus quam priores.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="13">
+					<reading option="0" mss="Weber ">Et factum est cum iniquitatem facerent coram te, elegisti tibi ex his unum, cui nomen erat Abraham.</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="14">
+					<reading option="0" mss="Weber ">Et dilexisti eum et demonstrasti ei temporum finem solo secrete noctu.</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="15">
+					<reading option="0" mss="Weber ">Et disposuisti ei testamentum aeternum et dixisti ei, ut non umquam derelinquas semen eius. Et dedisti ei Isaac, et Isaac dedisti Iacob et Esau.</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="16">
+					<reading option="0" mss="Weber ">Et segregasti tibi Iacob, Esau autem separasti, et factus est Iacob in multitudine magna.</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="17">
+					<reading option="0" mss="Weber ">Et factum est cum educeres semen eius ex Aegypto, et adduxisti eos super montem Sina.</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="18">
+					<reading option="0" mss="Weber ">Et inclinasti caelos et statuisti terram et commovisti orbem et tremere fecisti abyssos et conturbasti saeculum.</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="19">
+					<reading option="0" mss="Weber ">Et transiit gloria tua portas quattuor, ignis et terraemotus et spiritus et gelu, ut dares semini Iacob legem et generationi Israhel diligentiam.</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="20">
+					<reading option="0" mss="Weber ">Et non abstulisti ab eis cor malignum, ut faceret lex tua in eis fructum.</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="21">
+					<reading option="0" mss="Weber ">Cor enim malignum baiulans primus Adam transgressus et victus est, sed et omnes qui ex eo nati sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="22">
+					<reading option="0" mss="Weber ">Et facta est permanens infirmitas et lex cum corde populi cum malignitate radicis, et discessit quod bonum est et mansit malignum.</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="23">
+					<reading option="0" mss="Weber ">Et transierunt tempora et finiti sunt anni, et suscitasti tibi servum nomine David.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="24">
+					<reading option="0" mss="Weber ">Et dixisti ei aedificare civitatem nominis tui et offerre tibi in ea de tuis oblationes.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="25">
+					<reading option="0" mss="Weber ">Et factum est hoc annis multis. Et dereliquerunt qui habitabant civitatem,</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="26">
+					<reading option="0" mss="Weber ">in omnibus facientes sicut fecit Adam et omnes generationes eius; utebantur enim et ipsi cor malignum.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="27">
+					<reading option="0" mss="Weber ">Et tradidisti civitatem tuam in manus inimicorum tuorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="28">
+					<reading option="0" mss="Weber ">Et dixi ego tunc in corde meo: Numquid meliora faciunt qui habitant in Babylone, et propter hoc dominabit Sion?</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="29">
+					<reading option="0" mss="Weber ">Factum est autem cum venissem huc, et vidi impietates quorum non est numerus, et delinquentes multos vidit anima mea hoc tricesimo anno. Et excessit cor meum,</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="30">
+					<reading option="0" mss="Weber ">quoniam vidi quomodo sustines eos peccantes et pepercisti impie agentibus, et perdidisti populum tuum et conservasti inimicos tuos, et non significasti</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="31">
+					<reading option="0" mss="Weber ">nihil nemini quomodo debeat derelinqui via haec. Numquid meliora facit Babylon quam Sion,</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="32">
+					<reading option="0" mss="Weber ">aut alia gens cognovit te praeter Israhel? Aut quae tribus crediderunt testamentis sicut haec Iacob,</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="33">
+					<reading option="0" mss="Weber ">quarum merces non conparuit neque labor fructificavit? Pertransiens enim pertransivi in gentibus, et vidi abundantes eas et non memorantes mandatorum tuorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="34">
+					<reading option="0" mss="Weber ">Nunc ergo pondera in statera nostras iniquitates et eorum qui habitant in saeculo, et invenietur momentum puncti ubi declinet.</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="35">
+					<reading option="0" mss="Weber ">Aut quando non peccaverunt in conspectu tuo qui habitant terram, aut quae gens sic observavit mandata tua?</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="36">
+					<reading option="0" mss="Weber ">Homines quidem per nomina invenies servasse mandata tua, gentes autem non invenies.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="4">
+			<verse reference="1">
+				<unit id="37">
+					<reading option="0" mss="Weber ">Et respondit ad me angelus qui missus est ad me, cui nomen Urihel,</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="38">
+					<reading option="0" mss="Weber ">et dixit mihi: Excedens excessit cor tuum in saeculo hoc, et conprehendere cogitas viam Altissimi?</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="39">
+					<reading option="0" mss="Weber ">Et dixi: Ita, domine meus. Et respondit mihi et dixit: Tres vias missus sum ostendere tibi et tres similitudines proponere coram te.</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="40">
+					<reading option="0" mss="Weber ">De quibus si mihi renuntiaveris unam ex his, et ego tibi demonstrabo viam quam desideras videre, et doceam te quare cor malignum.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="41">
+					<reading option="0" mss="Weber ">Et dixi: Loquere, domine meus. Et dixit ad me: Vade, pondera mihi ignis pondus, aut mensura mihi flatum venti, aut revoca mihi diem quae praeteriit.</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="42">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Quis natorum poterit facere, ut me interroges de his?</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="43">
+					<reading option="0" mss="Weber ">Et dixit ad me: Si eram interrogans te dicens: Quantae habitationes sunt in corde maris, aut quantae venae sunt in principio abyssi, aut quantae venae sunt super firmamentum, aut qui sint exitus paradisi,</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="44">
+					<reading option="0" mss="Weber ">dicebas fortassis mihi: In abyssum non descendi neque in infernum adhuc, neque in caelis umquam ascendi.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="45">
+					<reading option="0" mss="Weber ">Nunc autem non interrogavi te nisi de igne et vento et diem per quem transisti, et sine quibus separari non potes, et non respondisti mihi de eis.</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="46">
+					<reading option="0" mss="Weber ">Et dixit mihi: Tu quae tua sunt te cum coadulescentia non potes cognoscere,</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="47">
+					<reading option="0" mss="Weber ">et quomodo poterit vas tuum capere Altissimi viam? ... Et iam exterritus corrupto saeculo intellegere incorruptionem? Et cum haec audissem, cecidi in faciem meam</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="48">
+					<reading option="0" mss="Weber ">et dixi illi: Melius erat nos non adesse, quam advenientes vivere in impietatibus et pati et non intellegere de qua re.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="49">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Proficiscens profectus sum ad silvam lignorum campi, et cogitaverunt cogitationem</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="50">
+					<reading option="0" mss="Weber ">et dixerunt: Venite et eamus et faciamus ad mare bellum, ut recedat coram nos, et faciamus nobis alias silvas.</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="51">
+					<reading option="0" mss="Weber ">Et similiter fluctus maris et ipsi cogitaverunt cogitationem et dixerunt Venite ascendentes debellemus silvam campi, ut et ibi consummemus nobismet ipsis aliam regionem.</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="52">
+					<reading option="0" mss="Weber ">Et factus est cogitatus silvae in vano, venit enim ignis et consumpsit eam.</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="53">
+					<reading option="0" mss="Weber ">Similiter et cogitatus fluctuum maris, stetit enim harena et prohibuit eam.</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="54">
+					<reading option="0" mss="Weber ">Si enim eras iudex horum, quem incipiebas iustificare aut quem condemnare?</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="55">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Utrique vanam cogitationem cogitaverunt, terra enim data est silvae, et maris locus portare fluctus suos.</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="56">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Bene tu iudicasti, et quare non iudicasti tibimet ipso?</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="57">
+					<reading option="0" mss="Weber ">Quemadmodum enim terra silvae data est et mare fluctibus suis, et qui super terram inhabitant quae sunt super terram intellegere solummodo possunt, et qui super caelos super altitudinem caelorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="58">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Deprecor te, domine, ut mihi datus est sensus intellegendi.</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="59">
+					<reading option="0" mss="Weber ">Non enim volui interrogare de superioribus viis, sed de his quae pertranseunt per nos cotidie, propter quod Israhel datus est in obprobrium gentibus, quem dilexisti populum datus est tribubus impiis, et lex patrum nostrorum in interitum deducta est, et dispositiones scriptae nusquam sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="60">
+					<reading option="0" mss="Weber ">Et pertransivimus de saeculo ut lucustae, et vita nostra ut vapor, et nec digni sumus misericordiam consequi.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="61">
+					<reading option="0" mss="Weber ">Sed quid faciet nomini suo quod invocatum est super nos? Et his interrogavi.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="62">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Si fueris videbis, et si vixeris frequenter miraberis, quoniam festinans festinat saeculum pertransire.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="63">
+					<reading option="0" mss="Weber ">Non capiet portare quae in temporibus iustis repromissa sunt, quoniam plenum maestitia est saeculum hoc et infirmitatibus.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="64">
+					<reading option="0" mss="Weber ">Seminatum est enim malum, de quibus me interrogas de ea, et necdum venit destrictio ipsius.</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="65">
+					<reading option="0" mss="Weber ">Si ergo non messum fuerit quod seminatum est, et discesserit locus ubi seminatum est malum, non veniet ager ubi seminatum est bonum.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="66">
+					<reading option="0" mss="Weber ">Quoniam granum seminis mali seminatum est in corde Adam ab initio, et quantum impietatis generavit usque nunc et generabit usque cum veniat area.</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="67">
+					<reading option="0" mss="Weber ">Aestima autem apud te, granum mali seminis quantum fructum impietatis generaverit.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="68">
+					<reading option="0" mss="Weber ">Quando seminatae fuerint spicae quarum non est numerus, quam magnam aream incipient facere.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="69">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Quo et quando haec? Quare modici et mali anni nostri?</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="70">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Non festina spiritu super Altissimum; tu enim festinas propter temet ipsum spiritum, nam Excelsus pro multis.</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="71">
+					<reading option="0" mss="Weber ">Nonne de his interrogaverunt animae iustorum in promptuariis suis dicentes: Usquequo spero sic? Et quando venit fructus areae mercedis nostrae?</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="72">
+					<reading option="0" mss="Weber ">Et respondit ad ea Hieremihel archangelus et dixit: Quando impletus fuerit numerus similium vobis, quoniam in statera ponderavit saeculum</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="73">
+					<reading option="0" mss="Weber ">et mensura mensuravit tempora et numero numeravit tempora, et non commovet nec excitabit usque dum impleatur praedicta mensura.</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="74">
+					<reading option="0" mss="Weber ">Et respondi et dixi: O dominator domine, sed et nos omnes pleni sumus impietate.</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="75">
+					<reading option="0" mss="Weber ">Et ne forte propter nos inpediatur iustorum area, propter peccata inhabitantium super terram.</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="76">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Vade et interroga praegnantem, si quando impleverit novem menses suos, adhuc poterit matrix eius retinere fetus in semet ipsa.</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="77">
+					<reading option="0" mss="Weber ">Et dixi: Non potest, domine. Et dixit ad me: In inferno promptuaria animarum matrici adsimilata sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="78">
+					<reading option="0" mss="Weber ">Quemadmodum enim festinavit quae parit effugere necessitatem partus, sic et haec festinat reddere ea quae commendata sunt</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="79">
+					<reading option="0" mss="Weber ">ab initio. Tunc tibi demonstrabitur de his quae concupiscis videre.</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="80">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Si inveni gratiam ante oculos tuos, et si possibile est, et si idoneus sum,</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="81">
+					<reading option="0" mss="Weber ">demonstra mihi et hoc, si plus quam praeteriti habet venire aut plura pertransierunt super nos,</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="82">
+					<reading option="0" mss="Weber ">quoniam quod pertransivit scio, quid autem futuri sit ignoro.</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="83">
+					<reading option="0" mss="Weber ">Et dixit ad me: Sta super dexteram partem et demonstrabo tibi interpretationem similitudinis.</reading>
+				</unit>
+			</verse>
+			<verse reference="48">
+				<unit id="84">
+					<reading option="0" mss="Weber ">Et steti et vidi, et ecce fornax ardens transiit coram me; et factum est cum transiret flamma, et vidi et ecce superavit fumus.</reading>
+				</unit>
+			</verse>
+			<verse reference="49">
+				<unit id="85">
+					<reading option="0" mss="Weber ">Et post hoc transiit coram me nubes plena aquae et inmisit pluviam impetu multam; et cum transisset impetus pluviae, et superaverunt in ea guttae.</reading>
+				</unit>
+			</verse>
+			<verse reference="50">
+				<unit id="86">
+					<reading option="0" mss="Weber ">Et dixit ad me: Cogita tibi. Sicut enim crescit pluvia amplius quam guttae, et ignis amplius quam fumus, sic superabundavit quae transivit mensura, superaverunt autem guttae et fumus.</reading>
+				</unit>
+			</verse>
+			<verse reference="51">
+				<unit id="87">
+					<reading option="0" mss="Weber ">Et oravi et dixi: Putas vivo usque in diebus illis, vel quis erit in diebus, illis?</reading>
+				</unit>
+			</verse>
+			<verse reference="52">
+				<unit id="88">
+					<reading option="0" mss="Weber ">Respondit ad me et dixit: De signis de quibus me perrogas, ex parte possum tibi dicere, de vita autem tua non sum missus dicere tibi, sed nescio.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="5">
+			<verse reference="1">
+				<unit id="89">
+					<reading option="0" mss="Weber ">De signis autem: Ecce dies venient, et adprehendentur qui inhabitant super terram in excessu multo, et abscondetur veritatis via, et sterilis erit a fide regio.</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="90">
+					<reading option="0" mss="Weber ">Et multiplicabitur iniustitia super hanc quam ipse tu vides et super quam audisti olim.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="91">
+					<reading option="0" mss="Weber ">Et erit inconposita vestigio quam nunc vides regnare regionem, et videbunt eam desertam.</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="92">
+					<reading option="0" mss="Weber ">Si autem tibi dederit Altissimus vivere, et videbis post tertiam turbatam, et relucescet subito sol noctu et luna interdie.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="93">
+					<reading option="0" mss="Weber ">Et de ligno sanguis stillabit, et lapis dabit vocem suam; et populi commovebuntur,</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="94">
+					<reading option="0" mss="Weber ">et gressus commutabuntur. Et regnabit quem non sperant qui inhabitant super terram; et volatilia conmigrationem facient.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="95">
+					<reading option="0" mss="Weber ">Et mare Sodomitum pisces reiciet. Et dabit vocem noctu quem non noverant multi, omnes autem audient vocem eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="96">
+					<reading option="0" mss="Weber ">Et chaus fiet per loca multa, et ignis frequenter emittetur, et bestiae agrestes transmigrabunt regionem suam, et mulieres parient menstruatae monstra,</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="97">
+					<reading option="0" mss="Weber ">et in dulcibus aquis salsae invenientur. Et amici omnes semet ipsos expugnabunt; et abscondetur tunc sensus, et intellectus separabitur in promptuarium suum.</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="98">
+					<reading option="0" mss="Weber ">Et quaeretur a multis et non invenietur, et multiplicabitur iniustitia et incontinentia super terram.</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="99">
+					<reading option="0" mss="Weber ">Et interrogabit regio proximam suam et dicet: Numquid per te pertransiit iustitia iustum faciens? Et haec negabit.</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="100">
+					<reading option="0" mss="Weber ">Et erit in illo tempore, et sperabunt homines et non inpetrabunt, laborabunt et non dirigentur viae eorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="101">
+					<reading option="0" mss="Weber ">Haec signa dicere tibi permissum est mihi. Et si oraveris iterum et ploraveris sicut et nunc et ieiunaveris septem diebus, audies iterato horum maiora.</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="102">
+					<reading option="0" mss="Weber ">Et evigilavi, et corpus meum horruit valde, et anima mea laboravit ut deficeret.</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="103">
+					<reading option="0" mss="Weber ">Et tenuit me qui venit angelus, qui loquebatur in me, et confortavit me et statuit me super pedes.</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="104">
+					<reading option="0" mss="Weber ">Et factum est in nocte secunda, et venit ad me Phalthihel dux populi et dixit mihi: Ubi eras et quare vultus tuus tristis?</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="105">
+					<reading option="0" mss="Weber ">Aut nescis quoniam tibi creditus est Israhel in regione transmigrationis eorum?</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="106">
+					<reading option="0" mss="Weber ">Exsurge ergo et gusta panem alicuius, et non derelinquas nos sicut pastor gregem suum in manibus luporum malignorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="107">
+					<reading option="0" mss="Weber ">Et dixi ei: Vade a me et non ad me accedas usque diebus septem, et tunc venies ad me. Et audivit ut dixi et recessit a me.</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="108">
+					<reading option="0" mss="Weber ">Et ego ieiunavi diebus septem ululans et plorans, sicut mihi mandavit Urihel angelus.</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="109">
+					<reading option="0" mss="Weber ">Et factum est post dies septem, et iterum cogitationes cordis mei molestae erant mihi valde.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="110">
+					<reading option="0" mss="Weber ">Et resumpsit anima mea spiritum intellectus, et iterum coepi loqui coram Altissimo sermones</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="111">
+					<reading option="0" mss="Weber ">et dixi: Dominator Domine, ex omni silva terrae et ex omnium arborum eius elegisti vineam unam,</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="112">
+					<reading option="0" mss="Weber ">et ex omnium terrarum orbis elegisti tibi foveam unam, et ex omnibus floribus orbis elegisti tibi lilium unum,</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="113">
+					<reading option="0" mss="Weber ">et ex omnibus abyssis maris replesti tibi rivum unum, et ex omnibus aedificatis civitatibus sanctificasti tibimet ipsi Sion,</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="114">
+					<reading option="0" mss="Weber ">et ex omnibus creatis volatilibus nominasti tibi columbam unam, et ex omnibus plasmatis pecoribus providisti tibi ovem unam,</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="115">
+					<reading option="0" mss="Weber ">et ex omnibus multiplicatis populis adquisisti tibi populum unum, et ab omnibus probatam legem donasti huic quem desiderasti populo.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="116">
+					<reading option="0" mss="Weber ">Et nunc Domine, ut quid tradidisti unum plurimis et praeparasti unam radicem super alias et dispersisti unicum tuum in multis?</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="117">
+					<reading option="0" mss="Weber ">Et conculcaverunt qui contradicebant sponsionibus tuis qui que tuis testamentis credebant.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="118">
+					<reading option="0" mss="Weber ">Et si odiens odisti populum tuum, tuis manibus debet castigari.</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="119">
+					<reading option="0" mss="Weber ">Et factum est, cum locutus essem sermones istos, et missus est angelus ad me qui ante venerat ad me praeterita nocte,</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="120">
+					<reading option="0" mss="Weber ">et dixit mihi: Audi me et instruam te, et intende mihi et adiciam coram te.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="121">
+					<reading option="0" mss="Weber ">Et dixi: Loquere, dominus meus. Et dixit ad me: Valde in excessu mentis factus es in Israhel; aut plus dilexisti eum super eum qui fecit eum?</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="122">
+					<reading option="0" mss="Weber ">Et dixi: Non, domine, sed dolens locutus sum, torquent enim me renes mei per omnem horam quaerentem adprehendere semitam Altissimi et investigare partem iudicii eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="123">
+					<reading option="0" mss="Weber ">Et dixit ad me: Non potes. Et dixi: Quare, domine, aut quid nascebar, aut quare non fiebat matrix matris meae mihi sepulchrum, ut non viderem laborem Iacob et defatigationem generis Israhel?</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="124">
+					<reading option="0" mss="Weber ">Et dixit ad me: Numera mihi qui necdum venerunt, et collige mihi dispersas guttas, et revirida mihi aridos flores,</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="125">
+					<reading option="0" mss="Weber ">et aperi mihi clausa promptuaria et produc mihi inclusos in eis flatus, aut monstra mihi vocis imaginem, et tunc ostendam tibi eum laborem quem rogas videre.</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="126">
+					<reading option="0" mss="Weber ">Et dixi: Dominator domine, quis enim est qui potest haec scire, nisi qui cum hominibus habitationem non habet?</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="127">
+					<reading option="0" mss="Weber ">Ego autem insipiens, et quomodo potero dicere de his quibus me interrogasti?</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="128">
+					<reading option="0" mss="Weber ">Et dixit ad me: Quomodo non potes facere unum de his quae dicta sunt, sic non poteris invenire iudicium meum aut finem caritatis quem pro populo meo promisi.</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="129">
+					<reading option="0" mss="Weber ">Et dixi: Sed ecce, domine, tu praees his qui in fine sunt, et quid facient qui ante me sunt aut nos aut hii qui post nos?</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="130">
+					<reading option="0" mss="Weber ">Et dixit ad me: Coronae adsimilabo iudicium meum. Sicut non novissimorum tarditas, sic nec priorum velocitas.</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="131">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Nec enim poteras facere qui facti sunt et qui sunt et qui futuri sunt in unum, ut celerius iudicium tuum ostendas?</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="132">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Non potest festinare creatura super creatorem, nec sustinere saeculum qui in eo creati sunt in unum.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="133">
+					<reading option="0" mss="Weber ">Et dixi: Quomodo dixisti servo tuo, quoniam vivificans vivificabis a te creatam creaturam in unum? Si ergo viventes vivent in unum et sustinebit creatura, poterit et nunc portare praesentes in unum.</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="134">
+					<reading option="0" mss="Weber ">Et dixit ad me: Interroga matricem mulieris et dices ad eam: Decem si paris, quare per tempus? Roga ergo eam, ut det decem in unum.</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="135">
+					<reading option="0" mss="Weber ">Et dixi: Non utique poterit, sed secundum tempus.</reading>
+				</unit>
+			</verse>
+			<verse reference="48">
+				<unit id="136">
+					<reading option="0" mss="Weber ">Et dixit ad me: Et ego dedi matricem terrae his qui seminati sunt super eam per tempus.</reading>
+				</unit>
+			</verse>
+			<verse reference="49">
+				<unit id="137">
+					<reading option="0" mss="Weber ">Quemadmodum enim infans non parit nec ea quae senuit adhuc, sic ego disposui a me creatum saeculum.</reading>
+				</unit>
+			</verse>
+			<verse reference="50">
+				<unit id="138">
+					<reading option="0" mss="Weber ">Et interrogavi et dixi: Cum iam dederis mihi viam, loquar coram te; nam mater nostra, de qua dixisti mihi, adhuc iuvenis est, iam ad senectutem adpropinquat?</reading>
+				</unit>
+			</verse>
+			<verse reference="51">
+				<unit id="139">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Interroga quae parit, et dicet tibi.</reading>
+				</unit>
+			</verse>
+			<verse reference="52">
+				<unit id="140">
+					<reading option="0" mss="Weber ">Dices enim ei: Quare quos peperisti nunc non sunt similes his qui ante, sed minores statu?</reading>
+				</unit>
+			</verse>
+			<verse reference="53">
+				<unit id="141">
+					<reading option="0" mss="Weber ">Et dicet tibi et ipsa: Alii sunt qui in iuventute virtutis nati sunt, et alii qui sub tempus senectutis deficiente matrice sunt nati.</reading>
+				</unit>
+			</verse>
+			<verse reference="54">
+				<unit id="142">
+					<reading option="0" mss="Weber ">Considera ergo et tu, quoniam minores statu estis prae his qui ante vos,</reading>
+				</unit>
+			</verse>
+			<verse reference="55">
+				<unit id="143">
+					<reading option="0" mss="Weber ">et qui post vos quam ut vos, quasi iam senescentis creaturae et fortitudinem iuventutis praeterientis. Et dixi: Rogo domine, si inveni gratiam ante oculos tuos, demonstra servo tuo per quem visitas creaturam tuam.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="6">
+			<verse reference="1">
+				<unit id="144">
+					<reading option="0" mss="Weber ">Et dixit ad me: Initium terreni orbis, et antequam starent exitus saeculi, et antequam spirarent conventiones ventorum,</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="145">
+					<reading option="0" mss="Weber ">et antequam sonarent voces tonitruum, et antequam splenderent nitores coruscuum, et antequam confirmarentur fundamenta paradisi,</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="146">
+					<reading option="0" mss="Weber ">et antequam viderentur decores flores, et antequam confirmarentur motuum virtutes, et antequam colligerentur innumerabiles militiae angelorum,</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="147">
+					<reading option="0" mss="Weber ">et antequam extollerentur altitudines aerum, et antequam nominarentur mensurae firmamentorum, et antequam aestimaretur scabillum Sion,</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="148">
+					<reading option="0" mss="Weber ">et antequam investigarentur praesentes anni, et antequam abalienarentur eorum qui nunc peccant adinventiones et consignarentur qui fidem thesaurizaverunt,</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="149">
+					<reading option="0" mss="Weber ">tunc cogitavi, et facta sunt haec per me solum et non per alium, ut et finis per me et non per alium.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="150">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Quae erit separatio temporum, aut quando prioris finis aut sequentis initium?</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="151">
+					<reading option="0" mss="Weber ">Et dixit ad me: Ab Abraham usque ad Abraham, quoniam ab eo natus est Iacob et Esau, manus enim Iacob tenebat ab initio calcaneum Esau.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="152">
+					<reading option="0" mss="Weber ">Finis enim huius saeculi Esau, et principium sequentis Iacob.</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="153">
+					<reading option="0" mss="Weber ">Finis enim hominis calcaneum et principium hominis manus, inter calcaneum et manum aliud noli quaerere, Ezra.</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="154">
+					<reading option="0" mss="Weber ">Et respondi et dixi: O dominator domine, si inveni gratiam ante oculos tuos,</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="155">
+					<reading option="0" mss="Weber ">ut demonstres servo tuo finem signorum tuorum, quorum ex parte mihi demonstrasti nocte praecedente.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="156">
+					<reading option="0" mss="Weber ">Et respondit et dixit ad me: Surge super pedes tuos et audies vocem plenissimam sonus.</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="157">
+					<reading option="0" mss="Weber ">Et erit, si commotione commovebitur locus, in quo stas super eum,</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="158">
+					<reading option="0" mss="Weber ">in eo cum loqueretur, tu non expaveas, quoniam de fine verbum. Et fundamenta terrae intellegetur,</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="159">
+					<reading option="0" mss="Weber ">quoniam de ipsis sermo, tremescet et commovebitur; scit enim, quoniam finem eorum oportet commutari.</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="160">
+					<reading option="0" mss="Weber ">Et factum est cum audissem, et surrexi super pedes meos et audivi, et ecce vox loquens, et sonus eius sicut sonus aquarum multarum.</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="161">
+					<reading option="0" mss="Weber ">Et dixit: Ecce dies veniunt, et erit quando adpropinquare incipio, ut visitem habitantes in terram,</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="162">
+					<reading option="0" mss="Weber ">et quando inquirere incipiam ab eis qui iniuste nocuerunt iniustitia sua, et quando suppleta fuerit humilitas Sion,</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="163">
+					<reading option="0" mss="Weber ">et cum supersignabitur saeculum quod incipiet pertransire, haec signa faciam: Libri aperientur ante faciem firmamenti et omnes videbunt simul,</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="164">
+					<reading option="0" mss="Weber ">et anniculi infantes loquentur vocibus suis, et praegnantes inmaturos parient infantes trium et quattuor mensuum et vivent et scirtabuntur,</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="165">
+					<reading option="0" mss="Weber ">et subito apparebunt seminata loca non seminata, et plena promptuaria subito invenientur vacua,</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="166">
+					<reading option="0" mss="Weber ">et tuba canet cum sono, quam cum omnes audierint subito expavescent.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="167">
+					<reading option="0" mss="Weber ">Et erit in illo tempore, debellabunt amici amicos ut inimici, et expavescet terra cum his qui inhabitant in eam, et venae fontium stabunt ut non decurrant in horis tribus.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="168">
+					<reading option="0" mss="Weber ">Et erit, omnis qui derelictus fuerit ex omnibus istis quibus praedixi tibi, ipse salvabitur et videbit salutare meum et finem saeculi mei.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="169">
+					<reading option="0" mss="Weber ">Et videbunt qui recepti sunt homines, qui mortem non gustaverunt a nativitate sua, et mutabitur cor inhabitantium et convertetur in sensum alium.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="170">
+					<reading option="0" mss="Weber ">Delebitur enim malum et extinguetur dolus.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="171">
+					<reading option="0" mss="Weber ">Florebit autem fides et vincetur corruptela, et ostendebitur veritas quae sine fructu fuit tantis temporibus.</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="172">
+					<reading option="0" mss="Weber ">Et factum est cum loqueretur mihi, et ecce paulatim movebatur locus super quem stabam super eum.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="173">
+					<reading option="0" mss="Weber ">Et dixit ad me: Haec veni tibi ostendere et venturae nocti. </reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="174">
+					<reading option="0" mss="Weber ">Si ergo iterum rogaveris et iterum ieiunaveris septem diebus, iterum tibi renuntiabo horum maiora per diem.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="175">
+					<reading option="0" mss="Weber ">quoniam auditu audita est vox tua apud Altissimum. Vidit enim Fortis directionem tuam et providit pudicitiam quam a iuventute tua habuisti.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="176">
+					<reading option="0" mss="Weber ">Et propter hoc misit me demonstrare tibi haec omnia et dicere tibi: Confide et noli timere,</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="177">
+					<reading option="0" mss="Weber ">et noli festinare in prioribus temporibus cogitare vana, ut non properes a novissimis temporibus.</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="178">
+					<reading option="0" mss="Weber ">Et factum est post haec, et flevi iterum et similiter ieiunavi septem diebus, ut suppleam tres ebdomadas quae dictae sunt mihi.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="179">
+					<reading option="0" mss="Weber ">Et factum est in octava nocte, et cor meum iterato turbabatur in me et coepi loqui coram Altissimo.</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="180">
+					<reading option="0" mss="Weber ">Inflammabatur enim spiritus meus valde et anima mea anxiabatur.</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="181">
+					<reading option="0" mss="Weber ">Et dixi: O Domine, loquens locutus es ab initio creaturae in primo die dicens: Fiat caelum et terra, et tuum verbum opus perfecit.</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="182">
+					<reading option="0" mss="Weber ">Et erat tunc spiritus volans, et tenebrae circumferebantur et silentium, sonus vocis hominis nondum erat abs te.</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="183">
+					<reading option="0" mss="Weber ">Tunc dixisti de thesauris tuis proferri lumen quod luminis, ut apparerent tunc opera tua.</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="184">
+					<reading option="0" mss="Weber ">Et in die secundo iterum creasti spiritum firmamenti et imperasti ei, ut divideret et divisionem faceret inter aquas, ut pars quidem sursum recederet, pars vero deorsum maneret.</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="185">
+					<reading option="0" mss="Weber ">Et tertio die imperasti aquis congregari in septima parte terrae, sex vero partes siccasti et conservasti, ut ex his sint coram te ministrantia seminata adeo et culta.</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="186">
+					<reading option="0" mss="Weber ">Verbum enim tuum processit, et opus statim fiebat.</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="187">
+					<reading option="0" mss="Weber ">Processit enim subito fructus multitudinis inmensus et concupiscentia gustus multiformis et flores colore inimitabili et odores odoramentis investigabiles. Et die tertio haec facta sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="188">
+					<reading option="0" mss="Weber ">Quarta autem die imperasti fieri solis splendorem, lunae lumen, stellarum dispositionem,</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="189">
+					<reading option="0" mss="Weber ">et imperasti eis, ut deservirent futuro plasmato homini.</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="190">
+					<reading option="0" mss="Weber ">Quinto autem die dixisti septimae parti ubi erat aqua congregata, ut procrearet animalia, volatilia et pisces, et ita fiebat</reading>
+				</unit>
+			</verse>
+			<verse reference="48">
+				<unit id="191">
+					<reading option="0" mss="Weber ">aqua muta et sine anima, quod ei iubebatur, animalia faciens, ut ex hoc mirabilia tua nationes enarrent.</reading>
+				</unit>
+			</verse>
+			<verse reference="49">
+				<unit id="192">
+					<reading option="0" mss="Weber ">Et tunc conservasti duas animas, nomen uni vocasti (Enoch) Behemoth et nomen secundi vocasti Leviathan.</reading>
+				</unit>
+			</verse>
+			<verse reference="50">
+				<unit id="193">
+					<reading option="0" mss="Weber ">Et separasti ea ab alterutro; non enim poterat septima pars ubi erat aqua congregata capere ea.</reading>
+				</unit>
+			</verse>
+			<verse reference="51">
+				<unit id="194">
+					<reading option="0" mss="Weber ">Et dedisti (Enoch) Behemoth unam partem quae siccata est tertio die, ut inhabitet in ea, ubi sunt montes mille.</reading>
+				</unit>
+			</verse>
+			<verse reference="52">
+				<unit id="195">
+					<reading option="0" mss="Weber ">Leviatae autem dedisti septimam partem humidam. Et servasti ea, ut fiant in devorationem quibus vis et quando vis.</reading>
+				</unit>
+			</verse>
+			<verse reference="53">
+				<unit id="196">
+					<reading option="0" mss="Weber ">Sexto autem die imperasti terrae, ut crearet coram te iumenta et bestias et reptilia,</reading>
+				</unit>
+			</verse>
+			<verse reference="54">
+				<unit id="197">
+					<reading option="0" mss="Weber ">et super his Adam, quem constituisti ducem super omnibus factis quae fecisti, et ex eo educimur nos omnes quem elegisti populum.</reading>
+				</unit>
+			</verse>
+			<verse reference="55">
+				<unit id="198">
+					<reading option="0" mss="Weber ">Haec autem omnia dixi coram te, Domine, quoniam dixisti quia propter nos creasti primogenitum saeculum.</reading>
+				</unit>
+			</verse>
+			<verse reference="56">
+				<unit id="199">
+					<reading option="0" mss="Weber ">Residuas autem gentes ab Adam natas dixisti eas nihil esse, et quoniam salivae adsimilatae sunt, et sicut stillicidium de vaso similasti abundantiam eorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="57">
+				<unit id="200">
+					<reading option="0" mss="Weber ">Et nunc, Domine, ecce istae gentes quae in nihilum deputatae sunt dominari nostri et devorare nos.</reading>
+				</unit>
+			</verse>
+			<verse reference="58">
+				<unit id="201">
+					<reading option="0" mss="Weber ">Nos autem populus tuus quem vocasti primogenitum, unigenitum, aemulatorem, carissimum, traditi sumus in manibus eorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="59">
+				<unit id="202">
+					<reading option="0" mss="Weber ">Et si propter nos creatum est saeculum, quare non hereditatem possidemus nostrum saeculum? Usquequo haec? </reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="7">
+			<verse reference="1">
+				<unit id="203">
+					<reading option="0" mss="Weber ">Et factum est cum finissem loqui verba haec, et missus est ad me angelus, qui missus fuerat ad me primis noctibus,</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="204">
+					<reading option="0" mss="Weber ">et dixit ad me: Surge, Ezra, et audi sermones quos veni loqui ad te.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="205">
+					<reading option="0" mss="Weber ">Et dixi: Loquere, dominus meus. Et dixit ad me: Mare positum est in spatioso loco, ut esset altum et inmensum.</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="206">
+					<reading option="0" mss="Weber ">Erit autem ei introitus in angusto loco positus, ut esset similis fluminis.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="207">
+					<reading option="0" mss="Weber ">Si quis enim volens voluerit ingredi mare videre eum vel dominari eius, si non transierit angustum, in latitudinem venire quomodo poterit?</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="208">
+					<reading option="0" mss="Weber ">Item aliud: Civitas est aedificata et posita in loco campestri, est autem plena omnium bonorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="209">
+					<reading option="0" mss="Weber ">Introitus autem eius angustus et in praecipiti positus, ut esset a dextris quidem ignis, a sinistris vero aqua alta.</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="210">
+					<reading option="0" mss="Weber ">Semita autem est una sola inter eos posita, hoc est ignis et aqua, ut non capiat semita nisi solummodo vestigium hominis.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="211">
+					<reading option="0" mss="Weber ">Si autem data dabitur civitas homini in hereditatem, si non heres antepositum periculum pertransierit, quomodo accipiet hereditatem suam?</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="212">
+					<reading option="0" mss="Weber ">Et dixi: Sic domine. Et dixit ad me: Sic est et Israhel pars.</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="213">
+					<reading option="0" mss="Weber ">Propter eos enim feci saeculum, et quando transgressus est Adam constitutiones meas, iudicatum est quod factum est.</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="214">
+					<reading option="0" mss="Weber ">Et facti sunt introitus huius saeculi angusti et dolentes et laboriosi, paucae autem et malae et periculorum plenae et laborum magnorum fultae.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="215">
+					<reading option="0" mss="Weber ">Nam maioris saeculi introitus spatiosi et securi et facientes inmortalitatis fructum.</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="216">
+					<reading option="0" mss="Weber ">Si ergo non ingredientes ingressi fuerint qui vivunt angusta et vana haec, non poterunt recipere quae sunt reposita.</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="217">
+					<reading option="0" mss="Weber ">Nunc ergo tu quare conturbaris, corruptibilis cum sis? Et quid moveris tu, cum sis mortalis?</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="218">
+					<reading option="0" mss="Weber ">Et quare non accepisti in corde tuo quod futurum, sed quod in praesenti?</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="219">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Dominator domine, ecce disposuisti in lege tua, quoniam iusti hereditabunt haec, impii autem peribunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="220">
+					<reading option="0" mss="Weber ">Iusti autem ferent angusta sperantes spatiosa; qui enim impie gesserunt, et angustiam passi sunt et spatiosa non viderunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="221">
+					<reading option="0" mss="Weber ">Et dixit ad me: Non es iudex super Dominum neque intellegens super Altissimum.</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="222">
+					<reading option="0" mss="Weber ">Pereant enim multi praesentes, quam neglegatur quae anteposita est Dei lex.</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="223">
+					<reading option="0" mss="Weber ">Mandans enim mandavit Dominus venientibus quando venerunt, quid facientes viverent, et quid observantes non punirentur.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="224">
+					<reading option="0" mss="Weber ">Hii autem non sunt persuasi et contradixerunt ei. Et constituerunt sibi cogitamenta vanitatis</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="225">
+					<reading option="0" mss="Weber ">et proposuerunt sibi circumventiones delictorum. Et superdixerunt Altissimum non esse, et vias eius non cognoverunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="226">
+					<reading option="0" mss="Weber ">Et legem eius spreverunt et sponsiones eius abnegaverunt et legitimis eius fidem non habuerunt et opera eius non perfecerunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="227">
+					<reading option="0" mss="Weber ">Propter hoc, Ezra, vacua vacuis et plena plenis.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="228">
+					<reading option="0" mss="Weber ">Ecce enim tempus veniet, et erit quando venient signa quae praedixi tibi, et apparebit sponsa et apparescens civitas et ostendetur quae nunc subducitur terra.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="229">
+					<reading option="0" mss="Weber ">Et omnis qui liberatus est de praedictis malis, ipse videbit mirabilia mea.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="230">
+					<reading option="0" mss="Weber ">Revelabitur enim Filius meus Iesus cum his qui cum eo, et iucundabit qui relicti sunt annis quadringentis.</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="231">
+					<reading option="0" mss="Weber ">Et erit post annos hos, et morietur Filius meus Christus et omnes qui spiramentum habent hominis.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="232">
+					<reading option="0" mss="Weber ">Et convertetur saeculum in antiquum silentium diebus septem sicut in prioribus initiis, ita ut nemo derelinquatur.</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="233">
+					<reading option="0" mss="Weber ">Et erit post dies septem, et excitabitur qui nondum vigilat saeculum et morietur corruptum.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="234">
+					<reading option="0" mss="Weber ">Et terra reddet qui in eam dormiunt, et pulvis qui in eo silentio habitant, et promptuaria reddent quae eis commendatae sunt animae.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="235">
+					<reading option="0" mss="Weber ">Et revelabitur Altissimus super sedem iudicii, et pertransibunt misericordiae, et longanimitas congregabitur,</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="236">
+					<reading option="0" mss="Weber ">iudicium autem solum remanebit. Et veritas stabit et fides convalescet,</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="237">
+					<reading option="0" mss="Weber ">et opus subsequetur et merces ostendetur, et iustitiae vigilabunt et iniustitiae non dormibunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="238">
+					<reading option="0" mss="Weber ">Et apparebit lacus tormenti et contra illum erit locus requietionis, et clibanus gehennae ostendetur et contra eam iucunditatis paradisus.</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="239">
+					<reading option="0" mss="Weber ">Et dicet tunc Altissimus ad excitatas gentes: Videte et intellegite quem negastis vel cui non servistis vel cuius diligentias sprevistis.</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="240">
+					<reading option="0" mss="Weber ">Videte contra et in contra, hic iucunditas et requies, et ibi ignis et tormenta. Haec autem loquetur ad eos in die iudicii.</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="241">
+					<reading option="0" mss="Weber ">Haec talis quae neque solem habet neque lunam neque stellas,</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="242">
+					<reading option="0" mss="Weber ">neque nubem neque tonitruum neque coruscationem, neque ventum neque aquam neque aerem, neque tenebras neque sero neque mane,</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="243">
+					<reading option="0" mss="Weber ">neque aestatem neque ver neque aestum, neque hiemem neque gelum neque frigus, neque grandinem neque pluviam neque ros,</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="244">
+					<reading option="0" mss="Weber ">neque meridiem neque noctem neque ante lucem, neque nitorem neque claritatem neque lucem, nisi solummodo splendorem claritatis Altissimi, unde omnes incipiant videre quae anteposita sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="245">
+					<reading option="0" mss="Weber ">Spatium enim habebit sicut ebdomada annorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="246">
+					<reading option="0" mss="Weber ">Hoc est iudicium meum et constitutio eius, tibi autem soli ostendi haec.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="247">
+					<reading option="0" mss="Weber ">Et respondi: Tunc et dixi, domine, et nunc dico: Beati praesentes et observantes quae a te constituta sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="248">
+					<reading option="0" mss="Weber ">Sed de quibus erat oratio mea, quis enim est de praesentibus qui non peccavit, vel quis natorum qui non praeterivit sponsionem tuam?</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="249">
+					<reading option="0" mss="Weber ">Et nunc video, quoniam ad paucos pertinebit futurum saeculum iucunditatem facere, multis autem tormenta.</reading>
+				</unit>
+			</verse>
+			<verse reference="48">
+				<unit id="250">
+					<reading option="0" mss="Weber ">Increvit enim in nos cor malum, quod nos abalienavit ab his et deduxit nos in corruptionem, et itinera mortis ostendit nobis, semitas perditionis, et longe fecit nos a vita; et hoc non paucos, sed paene omnes qui creati sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="49">
+				<unit id="251">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Audi me et instruam te et de sequenti corripiam te.</reading>
+				</unit>
+			</verse>
+			<verse reference="50">
+				<unit id="252">
+					<reading option="0" mss="Weber ">Propter hoc non fecit Altissimus unum saeculum sed duo.</reading>
+				</unit>
+			</verse>
+			<verse reference="51">
+				<unit id="253">
+					<reading option="0" mss="Weber ">Tu enim quia dixisti non esse multos iustos sed paucos, impios vero multiplicari, audi ad haec.</reading>
+				</unit>
+			</verse>
+			<verse reference="52">
+				<unit id="254">
+					<reading option="0" mss="Weber ">Lapides electos si habueris paucos valde, ad numerum eorum conpones eos tibi, plumbum autem et fictile abundat.</reading>
+				</unit>
+			</verse>
+			<verse reference="53">
+				<unit id="255">
+					<reading option="0" mss="Weber ">Et dixi: Domine, quomodo poterit?</reading>
+				</unit>
+			</verse>
+			<verse reference="54">
+				<unit id="256">
+					<reading option="0" mss="Weber ">Et dixit ad me: Non hoc solummodo, sed interroga terram et dicet tibi, adulare ei et narrabit tibi.</reading>
+				</unit>
+			</verse>
+			<verse reference="55">
+				<unit id="257">
+					<reading option="0" mss="Weber ">Dices enim ei: Aurum creas et argentum et aeramentum et ferrum quoque et plumbum et fictile.</reading>
+				</unit>
+			</verse>
+			<verse reference="56">
+				<unit id="258">
+					<reading option="0" mss="Weber ">Multiplicatur autem argentum super aurum, et aeramentum super argentum, et ferrum super aeramentum, plumbum super ferrum, et fictile super plumbum.</reading>
+				</unit>
+			</verse>
+			<verse reference="57">
+				<unit id="259">
+					<reading option="0" mss="Weber ">Aestima ergo tu quae haec sint pretiosa et desiderabilia, quod multiplicatur aut quod rarum nascitur.</reading>
+				</unit>
+			</verse>
+			<verse reference="58">
+				<unit id="260">
+					<reading option="0" mss="Weber ">Et dixi: Dominator domine, quod abundat vilius, quod enim rarius pretiosius est.</reading>
+				</unit>
+			</verse>
+			<verse reference="59">
+				<unit id="261">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: In te ista pondera quae cogitasti, quoniam qui habet quod difficile est, gaudet super eum qui habet abundantia.</reading>
+				</unit>
+			</verse>
+			<verse reference="60">
+				<unit id="262">
+					<reading option="0" mss="Weber ">Sic et a me repromissa creatura. Iucundabor enim super paucis qui salvabuntur, propterea quod ipsi sunt qui gloriam meam nunc dominationem fecerunt et per quos nunc nomen meum nominatum est.</reading>
+				</unit>
+			</verse>
+			<verse reference="61">
+				<unit id="263">
+					<reading option="0" mss="Weber ">Et non contristabor super multitudinem eorum qui perierunt, ipsi enim sunt qui vapori nunc adsimilati sunt et flammae ac fumo adaequati sunt et exarserunt et ferverunt et extincti sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="62">
+				<unit id="264">
+					<reading option="0" mss="Weber ">Et respondi et dixi: O tu terra, quid peperisti? Si sensus factus est de pulvere sicut et cetera creatura,</reading>
+				</unit>
+			</verse>
+			<verse reference="63">
+				<unit id="265">
+					<reading option="0" mss="Weber ">melius enim erat et ipsum pulverem non esse natum, ut non sensus inde fieret.</reading>
+				</unit>
+			</verse>
+			<verse reference="64">
+				<unit id="266">
+					<reading option="0" mss="Weber ">Nunc autem nobis cum crescit sensus, et propter hoc torquemur, quoniam scientes perimus.</reading>
+				</unit>
+			</verse>
+			<verse reference="65">
+				<unit id="267">
+					<reading option="0" mss="Weber ">Lugeat hominum genus et agrestes bestiae laetentur; lugeant omnes qui nati sunt, quadrupedia vero et pecora iucundentur.</reading>
+				</unit>
+			</verse>
+			<verse reference="66">
+				<unit id="268">
+					<reading option="0" mss="Weber ">Multum enim melius est illis quam nobis. Non enim sperant iudicium, nec enim sciunt cruciamenta nec salutem post mortem repromissam sibi.</reading>
+				</unit>
+			</verse>
+			<verse reference="67">
+				<unit id="269">
+					<reading option="0" mss="Weber ">Nobis autem quid prodest, quoniam salvati salvabimur sed tormento tormentabimur?</reading>
+				</unit>
+			</verse>
+			<verse reference="68">
+				<unit id="270">
+					<reading option="0" mss="Weber ">Omnes enim qui nati sunt commixti sunt iniquitatibus et pleni sunt peccatis et gravati delictis.</reading>
+				</unit>
+			</verse>
+			<verse reference="69">
+				<unit id="271">
+					<reading option="0" mss="Weber ">Et si non essemus post mortem in iudicio venientes, melius fortassis nobis venisset.</reading>
+				</unit>
+			</verse>
+			<verse reference="70">
+				<unit id="272">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Et quando Altissimus faciens faciebat saeculum et Adam et omnes qui ex eo venerunt, primum praeparavit iudicium et quae sunt iudicii.</reading>
+				</unit>
+			</verse>
+			<verse reference="71">
+				<unit id="273">
+					<reading option="0" mss="Weber ">Et nunc de sermonibus tuis intellege, quoniam dixisti quia sensus nobis cum crescit.</reading>
+				</unit>
+			</verse>
+			<verse reference="72">
+				<unit id="274">
+					<reading option="0" mss="Weber ">Qui ergo commorantes sunt in terra hinc cruciabuntur, quoniam sensum habentes iniquitatem fecerunt, et mandata accipientes non servaverunt ea, et legem consecuti fraudaverunt eam quam acceperunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="73">
+				<unit id="275">
+					<reading option="0" mss="Weber ">Et quid habebunt dicere in iudicio vel quomodo respondebunt in novissimis temporibus?</reading>
+				</unit>
+			</verse>
+			<verse reference="74">
+				<unit id="276">
+					<reading option="0" mss="Weber ">Quantum enim tempus, ex quo longanimitatem habuit Altissimus his qui inhabitant saeculum, et non propter eos, sed propter ea quae providit tempora.</reading>
+				</unit>
+			</verse>
+			<verse reference="75">
+				<unit id="277">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Si inveni gratiam coram te, domine, demonstra et hoc servo tuo, si post mortem vel nunc quando reddemus unusquisque animam suam, si conservati conservabimur in requie, donec veniant tempora illa in quibus incipies creaturam renovare, aut amodo cruciabimur?</reading>
+				</unit>
+			</verse>
+			<verse reference="76">
+				<unit id="278">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Ostendam tibi et hoc. Tu autem noli commisceri cum eis qui spreverunt, neque connumeres te cum his qui cruciantur.</reading>
+				</unit>
+			</verse>
+			<verse reference="77">
+				<unit id="279">
+					<reading option="0" mss="Weber ">Etenim est tibi thesaurus operum repositus apud Altissimum, sed non tibi demonstrabitur usque in novissimis temporibus.</reading>
+				</unit>
+			</verse>
+			<verse reference="78">
+				<unit id="280">
+					<reading option="0" mss="Weber ">Nam de morte sermo: Quando profectus fuerit terminus sententiae ab Altissimo ut homo moriatur, recedente inspiratione de corpore ut dimittatur iterum ad eum qui dedit, adorare gloriam Altissimi primum.</reading>
+				</unit>
+			</verse>
+			<verse reference="79">
+				<unit id="281">
+					<reading option="0" mss="Weber ">Et si quidem esset eorum qui spreverunt et non servaverunt viam Altissimi et eorum qui contempserunt legem eius et eorum qui oderunt eos qui timent Deum,</reading>
+				</unit>
+			</verse>
+			<verse reference="80">
+				<unit id="282">
+					<reading option="0" mss="Weber ">haec inspirationes inhabitationes non ingredientur, sed vagantes erunt amodo in cruciamentis, dolentes semper et tristes, per septem vias.</reading>
+				</unit>
+			</verse>
+			<verse reference="81">
+				<unit id="283">
+					<reading option="0" mss="Weber ">Via prima, quia spreverunt legem Altissimi.</reading>
+				</unit>
+			</verse>
+			<verse reference="82">
+				<unit id="284">
+					<reading option="0" mss="Weber ">Secunda via, quia iam non possunt reversionem bonam facere, ut vivant.</reading>
+				</unit>
+			</verse>
+			<verse reference="83">
+				<unit id="285">
+					<reading option="0" mss="Weber ">Tertia via, vident repositam mercedem his qui testamentis Altissimi crediderunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="84">
+				<unit id="286">
+					<reading option="0" mss="Weber ">Quarta via, considerabunt sibi in novissimis repositum cruciamentum.</reading>
+				</unit>
+			</verse>
+			<verse reference="85">
+				<unit id="287">
+					<reading option="0" mss="Weber ">Quinta via, videntes aliorum habitacula ab angelis conservari cum silentio magno.</reading>
+				</unit>
+			</verse>
+			<verse reference="86">
+				<unit id="288">
+					<reading option="0" mss="Weber ">Sexta via, videntes quemadmodum de eis pertransientem cruciamentum.</reading>
+				</unit>
+			</verse>
+			<verse reference="87">
+				<unit id="289">
+					<reading option="0" mss="Weber ">Septima via, quae omnium supradictarum viarum maior est, quoniam detabescent in confusione et consumentur inhonoribus et marcescent in timoribus, videntes gloriam Altissimi coram quem viventes peccaverunt et coram quem incipient in novissimis temporibus iudicari.</reading>
+				</unit>
+			</verse>
+			<verse reference="88">
+				<unit id="290">
+					<reading option="0" mss="Weber ">Nam eorum qui servaverunt vias Altissimi ordo hic est, quando separari incipient a vaso corruptibili.</reading>
+				</unit>
+			</verse>
+			<verse reference="89">
+				<unit id="291">
+					<reading option="0" mss="Weber ">In eo tempore commoratae servierunt cum labore Altissimo et omni hora sustinuerunt periculum, uti perfecte custodirent legislatoris legem.</reading>
+				</unit>
+			</verse>
+			<verse reference="90">
+				<unit id="292">
+					<reading option="0" mss="Weber ">Propter quod hic de his sermo:</reading>
+				</unit>
+			</verse>
+			<verse reference="91">
+				<unit id="293">
+					<reading option="0" mss="Weber ">Inprimis vident cum exultatione multa gloriam eius qui suscipit eas, requiescent enim per septem ordines.</reading>
+				</unit>
+			</verse>
+			<verse reference="92">
+				<unit id="294">
+					<reading option="0" mss="Weber ">Ordo primus, quoniam cum labore multo certati sunt, ut vincerent cum eis plasmatum cogitamentum malum, ut non eas seducat a vita ad mortem.</reading>
+				</unit>
+			</verse>
+			<verse reference="93">
+				<unit id="295">
+					<reading option="0" mss="Weber ">Secundus ordo, quoniam vident conplicationem in qua vagantur impiorum animae et quae in eis manet punitio.</reading>
+				</unit>
+			</verse>
+			<verse reference="94">
+				<unit id="296">
+					<reading option="0" mss="Weber ">Tertius ordo, videntes testimonium quod testificatus est eis qui plasmavit eas, quoniam viventes servaverunt quae per fidem data est lex.</reading>
+				</unit>
+			</verse>
+			<verse reference="95">
+				<unit id="297">
+					<reading option="0" mss="Weber ">Quartus ordo, intellegentes requiem quam nunc in promptuariis eorum congregati requiescent cum silentio multo ab angelis conservati, et quae in novissimis eorum manet gloriam.</reading>
+				</unit>
+			</verse>
+			<verse reference="96">
+				<unit id="298">
+					<reading option="0" mss="Weber ">Quintus ordo, exultantes quomodo corruptibile effugerunt nunc, et futurum quomodo hereditatem possidebunt, adhuc autem videntes angustum et labore plenum quo iam liberati sunt et spatiosum incipiunt recipere, frunescentes et inmortales.</reading>
+				</unit>
+			</verse>
+			<verse reference="97">
+				<unit id="299">
+					<reading option="0" mss="Weber ">Sextus ordo, quando eis ostendetur quomodo incipiet vultus eorum fulgere sicut sol, et quomodo incipient stellis adsimilari lumini, amodo non corrupti.</reading>
+				</unit>
+			</verse>
+			<verse reference="98">
+				<unit id="300">
+					<reading option="0" mss="Weber ">Septimus ordo, qui est omnibus supradictis maior, quoniam exultabunt cum fiducia et quoniam confidebunt non confusi et gaudebunt non reverentes; festinant enim videre vultum eius cui serviunt viventes et a quo incipiunt gloriosi mercedem recipere.</reading>
+				</unit>
+			</verse>
+			<verse reference="99">
+				<unit id="301">
+					<reading option="0" mss="Weber ">Hic ordo animarum iustorum, ut amodo adnuntiatur; praedictae viae cruciatus quas patiuntur amodo qui neglexerint.</reading>
+				</unit>
+			</verse>
+			<verse reference="100">
+				<unit id="302">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Ergo dabitur tempus animabus, postquam separatae fuerint de corporibus, ut videant de quo mihi dixisti?</reading>
+				</unit>
+			</verse>
+			<verse reference="101">
+				<unit id="303">
+					<reading option="0" mss="Weber ">Et dixit mihi: Septem diebus erit libertas earum, ut videant in septem diebus qui praedicti sunt sermones, et postea congregabuntur in habitaculis suis.</reading>
+				</unit>
+			</verse>
+			<verse reference="102">
+				<unit id="304">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Si inveni gratiam ante oculos tuos, demonstra mihi adhuc servo tuo, si in die iudicii iusti impios excusare poterint vel deprecari pro eis Altissimum,</reading>
+				</unit>
+			</verse>
+			<verse reference="103">
+				<unit id="305">
+					<reading option="0" mss="Weber ">si patres pro filiis vel filii pro parentibus, si fratres pro fratribus, si adfines pro proximis si fidentes pro carissimis.</reading>
+				</unit>
+			</verse>
+			<verse reference="104">
+				<unit id="306">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Quoniam invenisti gratiam coram oculis meis, et hoc tibi demonstrabo. Dies iudicii audax est et omnibus signaculum veritatis demonstrans. Quemadmodum nunc non mittit pater filium vel filius patrem aut dominus servum vel fidus carissimum, ut pro eo intellegat aut dormiat aut manducet aut curetur,</reading>
+				</unit>
+			</verse>
+			<verse reference="105">
+				<unit id="307">
+					<reading option="0" mss="Weber ">sic numquam nemo pro aliquo rogabit; omnes enim portabunt unusquisque tunc iniustitias suas aut iustitias.</reading>
+				</unit>
+			</verse>
+			<verse reference="106">
+				<unit id="308">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Et quomodo invenimus modo, quoniam rogavit primus Abraham propter Sodomitas, et Moyses pro patribus qui in deserto peccaverunt,</reading>
+				</unit>
+			</verse>
+			<verse reference="107">
+				<unit id="309">
+					<reading option="0" mss="Weber ">et Iesus qui post eum pro Israhel in diebus Achar, et Samuhel in diebus Saul,</reading>
+				</unit>
+			</verse>
+			<verse reference="108">
+				<unit id="310">
+					<reading option="0" mss="Weber ">et David pro confractione, et Salomon pro eis qui in sanctificationem,</reading>
+				</unit>
+			</verse>
+			<verse reference="109">
+				<unit id="311">
+					<reading option="0" mss="Weber ">et Helias pro his qui pluviam acceperunt et pro mortuo ut viveret,</reading>
+				</unit>
+			</verse>
+			<verse reference="110">
+				<unit id="312">
+					<reading option="0" mss="Weber ">et Ezechias pro populo in diebus Sennacherib, et multi pro multis?</reading>
+				</unit>
+			</verse>
+			<verse reference="111">
+				<unit id="313">
+					<reading option="0" mss="Weber ">Si ergo modo, quando corruptibile increvit et iniustitia multiplicata est, exoraverunt iusti pro impiis, quare et tunc sic non erit?</reading>
+				</unit>
+			</verse>
+			<verse reference="112">
+				<unit id="314">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Praesens saeculum non est finis, gloria in eo non frequens manet, propter hoc oraverunt qui potuerunt pro invalidis.</reading>
+				</unit>
+			</verse>
+			<verse reference="113">
+				<unit id="315">
+					<reading option="0" mss="Weber ">Dies enim iudicii erit finis temporis huius et initium futuri inmortalis temporis, in quo pertransivit corruptela,</reading>
+				</unit>
+			</verse>
+			<verse reference="114">
+				<unit id="316">
+					<reading option="0" mss="Weber ">soluta est intemperantia, abscisa est incredulitas, crevit autem iustitia, orta est veritas.</reading>
+				</unit>
+			</verse>
+			<verse reference="115">
+				<unit id="317">
+					<reading option="0" mss="Weber ">Tunc ergo nemo poterit misereri eius qui in iudicio victus fuerit, neque demergere eum qui vicerit.</reading>
+				</unit>
+			</verse>
+			<verse reference="116">
+				<unit id="318">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Hic sermo meus primus et novissimus, quoniam melius erat non dare terram Adam vel, cum iam dedisset, coercere eum ut non peccaret.</reading>
+				</unit>
+			</verse>
+			<verse reference="117">
+				<unit id="319">
+					<reading option="0" mss="Weber ">Quid enim prodest omnibus in praesenti vivere in tristitia et mortuos sperare punitionem?</reading>
+				</unit>
+			</verse>
+			<verse reference="118">
+				<unit id="320">
+					<reading option="0" mss="Weber ">O tu quid fecisti, Adam? Si enim tu peccasti, non est factum solius tuus casus sed et nostrum qui ex te advenimus.</reading>
+				</unit>
+			</verse>
+			<verse reference="119">
+				<unit id="321">
+					<reading option="0" mss="Weber ">Quid enim nobis prodest, si promissum est nobis inmortale tempus, nos vero mortalia opera egimus?</reading>
+				</unit>
+			</verse>
+			<verse reference="120">
+				<unit id="322">
+					<reading option="0" mss="Weber ">Et quoniam praedicta est nobis perennis spes, nos vero pessime vani facti sumus?</reading>
+				</unit>
+			</verse>
+			<verse reference="121">
+				<unit id="323">
+					<reading option="0" mss="Weber ">Et quoniam reposita sunt habitacula sanitatis et securitatis, nos vero male conversati sumus?</reading>
+				</unit>
+			</verse>
+			<verse reference="122">
+				<unit id="324">
+					<reading option="0" mss="Weber ">Et quoniam incipiet gloria Altissimi protegere eos qui caste conversati sunt, nos autem pessimis viis ambulavimus?</reading>
+				</unit>
+			</verse>
+			<verse reference="123">
+				<unit id="325">
+					<reading option="0" mss="Weber ">Et quoniam ostendetur paradisus, cuius fructus incorruptus perseverat, in quo est saturitas et medella,</reading>
+				</unit>
+			</verse>
+			<verse reference="124">
+				<unit id="326">
+					<reading option="0" mss="Weber ">nos vero non ingrediemur, ingratis enim locis conversati sumus?</reading>
+				</unit>
+			</verse>
+			<verse reference="125">
+				<unit id="327">
+					<reading option="0" mss="Weber ">Et quoniam super stellas fulgebunt facies eorum qui abstinentiam habuerunt, nostrae vero facies super tenebras nigrae?</reading>
+				</unit>
+			</verse>
+			<verse reference="126">
+				<unit id="328">
+					<reading option="0" mss="Weber ">Non enim cogitavimus viventes quando iniquitatem faciebamus, quid incipientes post mortem pati.</reading>
+				</unit>
+			</verse>
+			<verse reference="127">
+				<unit id="329">
+					<reading option="0" mss="Weber ">Et respondit et dixit: Hoc est cogitamentum certaminis, quem certavit qui super terram natus est homo,</reading>
+				</unit>
+			</verse>
+			<verse reference="128">
+				<unit id="330">
+					<reading option="0" mss="Weber ">ut si victus fuerit patiatur quod dixisti, si autem vicerit recipiet quod dico,</reading>
+				</unit>
+			</verse>
+			<verse reference="129">
+				<unit id="331">
+					<reading option="0" mss="Weber ">quoniam haec est via, quam Moyses dixit cum viveret ad populum dicens: Elige tibi vitam ut vivas.</reading>
+				</unit>
+			</verse>
+			<verse reference="130">
+				<unit id="332">
+					<reading option="0" mss="Weber ">Non crediderunt autem ei, sed nec post eum prophetis, sed nec mihi qui locutus sum ad eos,</reading>
+				</unit>
+			</verse>
+			<verse reference="131">
+				<unit id="333">
+					<reading option="0" mss="Weber ">quoniam non esset tristitia in perditione eorum, sicut et futurum est gaudium super eos quibus persuasa est salus.</reading>
+				</unit>
+			</verse>
+			<verse reference="132">
+				<unit id="334">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Scio, domine, quoniam nunc vocatus est Altissimus misericors, in eo quod misereatur qui nondum in saeculo advenerunt,</reading>
+				</unit>
+			</verse>
+			<verse reference="133">
+				<unit id="335">
+					<reading option="0" mss="Weber ">et miserator, in eo quod miseretur illis qui conversionem faciunt in lege eius,</reading>
+				</unit>
+			</verse>
+			<verse reference="134">
+				<unit id="336">
+					<reading option="0" mss="Weber ">et longanimis, quoniam longanimitatem praestat his qui peccaverunt quasi suis operibus,</reading>
+				</unit>
+			</verse>
+			<verse reference="135">
+				<unit id="337">
+					<reading option="0" mss="Weber ">et munificus, quoniam quidem donare vult pro exigere,</reading>
+				</unit>
+			</verse>
+			<verse reference="136">
+				<unit id="338">
+					<reading option="0" mss="Weber ">et multae misericordiae, quoniam multiplicat magis misericordias his qui praesentes sunt et qui praeterierunt et qui futuri sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="137">
+				<unit id="339">
+					<reading option="0" mss="Weber ">Si enim non multiplicaverit, non vivificabitur saeculum cum his qui habitant in eo.</reading>
+				</unit>
+			</verse>
+			<verse reference="138">
+				<unit id="340">
+					<reading option="0" mss="Weber ">Et donator, quoniam si non donaverit de bonitate sua, ut adleventur hii qui iniquitates fecerunt de suis iniquitatibus, non poterit decies millesima pars hominum vivificari,</reading>
+				</unit>
+			</verse>
+			<verse reference="139">
+				<unit id="341">
+					<reading option="0" mss="Weber ">et iudex, si non ignoverit his qui creati sunt verbo eius et deleverit multitudinem contemptionum, non fortassis derelinquentur innumerabilem multitudinem nisi pauci valde.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="8">
+			<verse reference="1">
+				<unit id="342">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Hoc saeculum fecit Altissimus propter multos, futurum autem propter paucos.</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="343">
+					<reading option="0" mss="Weber ">Dicam autem coram te similitudinem, Ezra. Quomodo autem interrogabis terram et dicet tibi, quoniam dabit terram multam magis unde fiat fictile, parvum autem pulverem unde aurum fit, sic et actus praesentis saeculi.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="344">
+					<reading option="0" mss="Weber ">Multi quidem creati sunt, pauci autem salvabuntur.</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="345">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Absolve ergo anima sensum et devoret quod sapit.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="346">
+					<reading option="0" mss="Weber ">Convenisti inobaudire et profecta es nolens, nec enim tibi est datum spatium nisi solum modicum vivere.</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="347">
+					<reading option="0" mss="Weber ">O Domine super nos, si permittes servo tuo, ut oremus coram te et des nobis semen cordis et sensui culturam unde fructum fiat, unde vivere possit omnis corruptus qui portabit locum hominis.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="348">
+					<reading option="0" mss="Weber ">Solus enim es, et una plasmatio nos sumus manuum tuarum, sicut locutus es.</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="349">
+					<reading option="0" mss="Weber ">Et quoniam vivificas nunc in matrice plasmatum corpus et praestas membra, conservatur in igne et aqua tua creatio et novem mensibus patitur tua plasmatio tuae creaturae quae in eo creata est.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="350">
+					<reading option="0" mss="Weber ">Ipsum autem quod servat et quod servatur utraque servabuntur servatione tua. Et quando iterum reddit matrix quae in ea creverint,</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="351">
+					<reading option="0" mss="Weber ">imperasti ut ex ipsis membris, hoc est mammillis, praebere lac, fructum mammillarum,</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="352">
+					<reading option="0" mss="Weber ">ut nutriatur id quod plasmatum est usque in tempus aliquem. Et postea dispones eum tuae misericordiae,</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="353">
+					<reading option="0" mss="Weber ">enutristi eum tuae iustitiae, et erudisti eum in lege tua et corripuisti eum tuo intellectu,</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="354">
+					<reading option="0" mss="Weber ">et mortificabis eum ut tuam creaturam et vivificabis eum ut tuum opus.</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="355">
+					<reading option="0" mss="Weber ">Si ergo perdideris qui tantis laboribus plasmatus est tuo iussu, facili ordine, et ut quid fiebat?</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="356">
+					<reading option="0" mss="Weber ">Et nunc dicens dicam: De omni homine tu magis scis, de populo autem tuo quod mihi dolet,</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="357">
+					<reading option="0" mss="Weber ">et de hereditate tua propter quam lugeo, et de Israhel propter quem tristis sum, et de semine Iacob propter quod conturbor.</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="358">
+					<reading option="0" mss="Weber ">Ideo incipiam orare coram te pro me et pro eis, quoniam video lapsos nostros qui inhabitamus terram,</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="359">
+					<reading option="0" mss="Weber ">sed audivi celeritatem iudicii quod futurum est.</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="360">
+					<reading option="0" mss="Weber ">Ideo audi meam vocem et intellege sermonum meorum, et loquar coram te.</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="361">
+					<reading option="0" mss="Weber ">Initium verborum Ezrae priusquam adsumeretur, et dixit: Domine qui habitas in saeculum, cuius oculi elati et superna in aerem,</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="362">
+					<reading option="0" mss="Weber ">et cuius thronus inaestimabilis et gloria inconprehensibilis, cui adstat exercitus angelorum cum tremore,</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="363">
+					<reading option="0" mss="Weber ">quorum servatio in vento et igni convertitur, cuius verbum verum et dicta perseverantia,</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="364">
+					<reading option="0" mss="Weber ">cuius iussio fortis et dispositio terribilis, cuius aspectus arefecit abyssos et indignatio tabescere facit montes et veritas testificatur.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="365">
+					<reading option="0" mss="Weber ">Exaudi, Domine, orationem servi tui et auribus percipe precationem figmenti tui, intende verba mea.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="366">
+					<reading option="0" mss="Weber ">Dum enim vivo loquar et dum sapio respondeam.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="367">
+					<reading option="0" mss="Weber ">Ne aspicias populi tui delicta, sed qui tibi in veritate serviunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="368">
+					<reading option="0" mss="Weber ">Nec adtendas impie agentium studia, sed qui tua testimonia cum doloribus custodierunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="369">
+					<reading option="0" mss="Weber ">Neque cogites qui in conspectu tuo false conversati sunt, sed memorare qui ex voluntate tuum timorem cognoverunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="370">
+					<reading option="0" mss="Weber ">Neque volueris perdere qui pecorum mores habuerunt, sed respicias eos qui legem tuam splendide docuerunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="371">
+					<reading option="0" mss="Weber ">Neque indigneris eis qui bestiis peius sunt iudicati, sed diligas eos qui semper in tua gloria confiderunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="372">
+					<reading option="0" mss="Weber ">Quoniam nos et patres nostri mortalibus moribus egimus, tu autem propter nos peccatores misericors vocaberis.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="373">
+					<reading option="0" mss="Weber ">Si enim desideraveris ut nostri miserearis, tunc misericors vocaberis, nobis enim non habentibus opera iustitiae.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="374">
+					<reading option="0" mss="Weber ">Iusti enim, quibus sunt operae multae repositae apud te, ex propriis operibus recipient mercedem.</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="375">
+					<reading option="0" mss="Weber ">Quid est enim homo, ut ei indigneris, aut genus corruptibile, ut ita amariceris de ipso?</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="376">
+					<reading option="0" mss="Weber ">In veritate enim nemo de genitis est qui non impie gessit, et de confitentibus qui non deliquit.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="377">
+					<reading option="0" mss="Weber ">In hoc enim adnuntiabitur iustitia tua et bonitas tua, Domine, cum misertus fueris eis qui non habent substantiam operum bonorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="378">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Recte locutus es aliqua, et iuxta sermones tuos sic et fiet,</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="379">
+					<reading option="0" mss="Weber ">quoniam vere non cogitabo super plasma eorum qui peccaverunt aut mortem aut iudicium aut perditionem,</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="380">
+					<reading option="0" mss="Weber ">sed iucundabor super iustorum figmentum, peregrinationes quoque et salvationes et mercedis receptiones.</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="381">
+					<reading option="0" mss="Weber ">Quomodo ergo locutus sum, sic et est.</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="382">
+					<reading option="0" mss="Weber ">Sicut enim agricola serit super terram semina multa et plantationis multitudinem plantat, sed non in tempore non omnia quae seminata sunt salvabuntur, sed nec omnia quae plantata sunt radicabunt, sic et qui in saeculo seminati sunt non omnes salvabuntur.</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="383">
+					<reading option="0" mss="Weber ">Et respondi et dixi: Si inveni gratiam loquar,</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="384">
+					<reading option="0" mss="Weber ">quoniam semen agricolae, si non ascenderit-non enim accepit pluviam tuam in tempore-et si corruptum fuerit multitudine pluviae,</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="385">
+					<reading option="0" mss="Weber ">hoc perit; sed homo qui manibus tuis plasmatus est et tuae imagini nominatus, quoniam similatus est per quem omnia plasmasti, et similasti eum semini agricolae.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="386">
+					<reading option="0" mss="Weber ">Non super nos, sed parce populo tuo et miserere hereditati tuae, tuae enim creaturae misereris.</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="387">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Quae sunt praesentia praesentibus et quae futura futuris.</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="388">
+					<reading option="0" mss="Weber ">Multum enim tibi restat, ut possis diligere meam creaturam super me. Tu autem frequenter te et ipsum proximasti iniustis numquam.</reading>
+				</unit>
+			</verse>
+			<verse reference="48">
+				<unit id="389">
+					<reading option="0" mss="Weber ">Sed et in hoc mirabilis eris coram Altissimo,</reading>
+				</unit>
+			</verse>
+			<verse reference="49">
+				<unit id="390">
+					<reading option="0" mss="Weber ">quoniam humiliasti te, sicut decet te, et non iudicasti te inter iustos. Plurimum glorificeris,</reading>
+				</unit>
+			</verse>
+			<verse reference="50">
+				<unit id="391">
+					<reading option="0" mss="Weber ">propter quod miseriae multae miserabiles efficientur qui inhabitant saeculum in novissimis, quia in multa superbia ambulaverunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="51">
+				<unit id="392">
+					<reading option="0" mss="Weber ">Tu autem pro te intellege et de similibus tuis inquire gloriam.</reading>
+				</unit>
+			</verse>
+			<verse reference="52">
+				<unit id="393">
+					<reading option="0" mss="Weber ">Vobis enim apertus est paradisus, plantata est arbor vitae, praeparatum est futurum tempus, praeparata est abundantia, aedificata est civitas, probata est requies, perfecta est bonitas, ante perfecta sapientia.</reading>
+				</unit>
+			</verse>
+			<verse reference="53">
+				<unit id="394">
+					<reading option="0" mss="Weber ">Radix signata est a vobis, infirmitas extincta est a vobis et mors absconsa est, infernum fugit et corruptio in oblivionem.</reading>
+				</unit>
+			</verse>
+			<verse reference="54">
+				<unit id="395">
+					<reading option="0" mss="Weber ">Transierunt dolores et ostensus est in finem thesaurus inmortalitatis.</reading>
+				</unit>
+			</verse>
+			<verse reference="55">
+				<unit id="396">
+					<reading option="0" mss="Weber ">Noli ergo adicere inquirendo de multitudine eorum qui pereunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="56">
+				<unit id="397">
+					<reading option="0" mss="Weber ">Nam et ipsi accipientes libertatem spreverunt Altissimum et legem eius contempserunt et vias eius dereliquerunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="57">
+				<unit id="398">
+					<reading option="0" mss="Weber ">Adhuc autem et iustos eius conculcaverunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="58">
+				<unit id="399">
+					<reading option="0" mss="Weber ">Et dixerunt in corde suo non esse Deum, et quidem scientes quoniam moriuntur.</reading>
+				</unit>
+			</verse>
+			<verse reference="59">
+				<unit id="400">
+					<reading option="0" mss="Weber ">Sicut enim vos suscipient quae praedicta sunt, sic eos sitis et cruciatus quae praeparata sunt. Non enim Altissimus voluit hominem disperdi,</reading>
+				</unit>
+			</verse>
+			<verse reference="60">
+				<unit id="401">
+					<reading option="0" mss="Weber ">sed ipsi qui creati sunt coinquinaverunt nomen eius qui fecit eos, et ingrati fuerunt ei qui praeparavit eis nunc vitam.</reading>
+				</unit>
+			</verse>
+			<verse reference="61">
+				<unit id="402">
+					<reading option="0" mss="Weber ">Quapropter iudicium meum modo adpropinquat,</reading>
+				</unit>
+			</verse>
+			<verse reference="62">
+				<unit id="403">
+					<reading option="0" mss="Weber ">quod non omnibus demonstravi nisi tibi et tibi similibus paucis. Et respondi et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="63">
+				<unit id="404">
+					<reading option="0" mss="Weber ">Ecce nunc, Domine, demonstrasti mihi multitudinem signorum quae incipies facere in novissimis, sed non demonstrasti mihi quo tempore.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="8b">
+			<verse reference="20">
+				<unit id="405">
+					<reading option="0" mss="Klijn ">Initium verbi orationis Esdrae priusquam adsumeretur, dixit: Domine qui habitas seculum, cuius altissimi celi sunt et superna in aera,</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="406">
+					<reading option="0" mss="Klijn ">cuius thronus inextimabilis et gloria inconprehensibilis cui adsunt milicie cum pavore</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="407">
+					<reading option="0" mss="Klijn ">et dicto tuo in ventum et ignem convertitur, cuius verbum verum et dictio permanens,</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="408">
+					<reading option="0" mss="Klijn ">cuius mandatum validissimum et praeceptum timidum, cuius aspectus exustat abyssos et conminatio tabescere facit montes et veritas testificata est.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="409">
+					<reading option="0" mss="Klijn ">Exaudi vocem servi tui et intende deprecacioni meae tui plasmati et intende ad sermones meos.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="410">
+					<reading option="0" mss="Klijn ">Me enim adhuc vivo loquor et dum adhuc sapio respondeo.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="411">
+					<reading option="0" mss="Klijn ">Ne adtendas ad populi tui delicta, sed ad eos qui tibi servierunt in veritate.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="412">
+					<reading option="0" mss="Klijn ">Neque respicias super eos qui inique faciunt in delictis, sed super eos qui tua testamenta cum cruciatibus servaverunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="413">
+					<reading option="0" mss="Klijn ">Neque cogites de his qui coram te perverse conservati sunt, sed de his qui voluntate sua timorem tuam cognoscere in mente habuerunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="414">
+					<reading option="0" mss="Klijn ">Neque volueris perdere eos qui iumentorum mores habuerunt, sed respicias super eos qui claram legem tuam demonstraverunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="415">
+					<reading option="0" mss="Klijn ">Neque irasceris his qui bestiis adiudicati sunt peiores, sed diligas eos qui sine intermissione in tua claritate sperantes fuerunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="416">
+					<reading option="0" mss="Klijn ">Quia nos et qui ante nos corruptum locum egimus, tu enim propter nos, qui peccavimus misericors vocatus es.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="417">
+					<reading option="0" mss="Klijn ">Nostri enim qui non habemus facta bona, si desideraveris misereri, tunc miserator vocaberis,</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="418">
+					<reading option="0" mss="Klijn ">quia iusti, quibus sunt opera multa reposita apud te, de suis operibus habent mercedem recipere.</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="419">
+					<reading option="0" mss="Klijn ">Aut quid est homo, ut ei irasceris vel genus corruptum, ut indigneris eis?</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="420">
+					<reading option="0" mss="Klijn ">Enimvero nemo est eorum qui nati sunt qui non iniquitatem fecerit, neque horum qui increverunt qui non peccaverit.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="421">
+					<reading option="0" mss="Klijn ">In hoc enim ostendetur bonitas tua, Domine, quando misertus fueris illorum qui non habent substantiam operum. </reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="9">
+			<verse reference="1">
+				<unit id="422">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Metiens metire in temet ipso, et erit cum videris, quoniam transivit pars quaedam signorum quae praedicta sunt,</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="423">
+					<reading option="0" mss="Weber ">tunc intelleges, quoniam ipsud est tempus, in quo incipiet Altissimus visitare saeculum qui ab eo factus est.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="424">
+					<reading option="0" mss="Weber ">Et quando videbitur in saeculo motio locorum, populorum turbatio, gentium cogitationes, ducum inconstantia, principum turbatio,</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="425">
+					<reading option="0" mss="Weber ">et tunc intelleges, quoniam de his erat Altissimus locutus a diebus qui fuerunt ante ab initio.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="426">
+					<reading option="0" mss="Weber ">Sicut enim omne quod factum est in saeculo, initium per consummationem et consummatio manifesta,</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="427">
+					<reading option="0" mss="Weber ">sic et Altissimi tempora, initia manifesta in prodigiis et virtutibus, et consummatio in actu et in signis. </reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="428">
+					<reading option="0" mss="Weber ">Et erit, omnis qui salvus factus fuerit et qui poterit effugere per opera sua vel per fidem in qua credidit, is</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="429">
+					<reading option="0" mss="Weber ">relinquetur de praedictis periculis et videbit salutare meum in terra mea et in finibus meis, quae sanctificavi mihi a saeculo.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="430">
+					<reading option="0" mss="Weber ">Et tunc mirabuntur qui nunc abusi sunt vias meas, et in cruciamentis commorabuntur hii qui eos proiecerunt in contemptu.</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="431">
+					<reading option="0" mss="Weber ">Quotquot enim non cognoverunt me viventes beneficia consecuti,</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="432">
+					<reading option="0" mss="Weber ">et quotquot fastidierunt legem meam, cum adhuc erant habentes libertatem,</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="433">
+					<reading option="0" mss="Weber ">et cum adhuc esset eis apertum paenitentiae locus non intellexerunt sed spreverunt, hos oportet post mortem in cruciamento cognoscere.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="434">
+					<reading option="0" mss="Weber ">Tu ergo adhuc noli curiosus esse quomodo impii cruciabuntur, sed inquire quomodo iusti salvabuntur, et quorum saeculum et propter quos saeculum et quando.</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="435">
+					<reading option="0" mss="Weber ">Respondi et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="436">
+					<reading option="0" mss="Weber ">Olim locutus sum et nunc dico et postea dicam, quoniam plures sunt qui pereunt quam qui salvabuntur,</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="437">
+					<reading option="0" mss="Weber ">sicut multiplicat fluctus super guttam. Et respondit ad me et dixit:</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="438">
+					<reading option="0" mss="Weber ">Qualis ager, talia et semina, et quales flores, tales et tincturae, et qualis opera, talis et creatio, et qualis agricola, talis et area. Quoniam tempus erat saeculi,</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="439">
+					<reading option="0" mss="Weber ">et tunc cum essem parans eis, his qui nunc, antequam fieret illis saeculum in quo inhabitarent, et nemo contradixit mihi</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="440">
+					<reading option="0" mss="Weber ">tunc, nec enim erat quisquam, et nunc creati in hoc mundo parato et mensa indeficienti et lege investigabili, corrupti sunt moribus eorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="441">
+					<reading option="0" mss="Weber ">Et consideravi saeculum meum, et ecce erat perditum, et orbem meum, et ecce erat periculi propter cogitationes quae in eo advenerunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="442">
+					<reading option="0" mss="Weber ">Et vidi et peperci eis vix valde, et salvavi mihi acinum de botru et plantationem de tribu multa.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="443">
+					<reading option="0" mss="Weber ">Pereat ergo multitudo quae sine causa nata est, et servetur acinus meus et plantatio mea, quia cum multo labore perfeci haec.</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="444">
+					<reading option="0" mss="Weber ">Tu autem si adhuc intermittas septem dies alios, sed non ieiunabis in eis,</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="445">
+					<reading option="0" mss="Weber ">ibis autem in campum florum, ubi domus non est aedificata, et manduca solummodo de floribus campi, et carnem non gustabis et vinum non bibes sed solummodo flores,</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="446">
+					<reading option="0" mss="Weber ">et deprecare Altissimum sine intermissione, et veniam et loquar te cum.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="447">
+					<reading option="0" mss="Weber ">Et profectus sum, sicut dixit mihi, in campum quod vocatur Ardat, et sedi ibi in floribus et de herbis agri manducavi et facta est esca earum mihi in saturitatem.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="448">
+					<reading option="0" mss="Weber ">Et factum est post dies septem, et ego discumbebam supra faenum et cor meum iterum turbabatur sicut et ante.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="449">
+					<reading option="0" mss="Weber ">Et apertum est os meum et inchoavi dicere coram Altissimo et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="450">
+					<reading option="0" mss="Weber ">O Domine, in nobis ostendens ostensus es patribus nostris in deserto, quando erant exientes de Aegypto et quando veniebant in deserto quod non calcatur et infructuoso, et dicens dixisti:</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="451">
+					<reading option="0" mss="Weber ">Tu Israhel audi me, et semen Iacob intendite sermonibus meis.</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="452">
+					<reading option="0" mss="Weber ">Ecce enim ego semino in vobis legem meam, et faciet in vobis fructum, et glorificamini in eo per saeculum.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="453">
+					<reading option="0" mss="Weber ">Nam patres nostri accipientes legem non servaverunt et legitima mea non custodierunt. Et factum est fructum legis non periens; nec enim poterat, quoniam tuus erat.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="454">
+					<reading option="0" mss="Weber ">Nam qui acceperunt perierunt, non custodientes quod in eis seminatum fuerat.</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="455">
+					<reading option="0" mss="Weber ">Et ecce consuetudo est ut, cum acceperit terra semen vel navem mare vel vas aliud escas vel potus, et cum fuerit ut exterminetur</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="456">
+					<reading option="0" mss="Weber ">quod seminatum est vel quod missum est vel quae suscepta sunt, exterminentur haec, susceptoria vero manent. Apud nos si enim non sic factum est.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="457">
+					<reading option="0" mss="Weber ">Nos quidem qui legem accepimus peccantes peribimus et cor nostrum quod suscepit eam,</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="458">
+					<reading option="0" mss="Weber ">nam lex non perit sed permanet in suo honore.</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="459">
+					<reading option="0" mss="Weber ">Et cum loquor haec in corde meo, et respexi oculis meis et vidi mulierem in dextera parte, et ecce haec lugebat et plorabat cum voce magna, et animo dolebat valde, et vestimenta eius discisa, et cinis super caput eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="460">
+					<reading option="0" mss="Weber ">Et dimisi cogitatus in quibus eram cogitans et conversus sum ad eam et dixi ei:</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="461">
+					<reading option="0" mss="Weber ">Ut quid fles et quid doles animo? Et dixit ad me:</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="462">
+					<reading option="0" mss="Weber ">Dimitte me, dominus meus, ut defleam me et adiciam dolorem, quoniam valde amara sum animo et humiliata sum valde.</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="463">
+					<reading option="0" mss="Weber ">Et dixi ei: Quid passa es, dic mihi. Et dixit ad me:</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="464">
+					<reading option="0" mss="Weber ">Sterilis fui ego famula tua et non peperi habens maritum annis triginta.</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="465">
+					<reading option="0" mss="Weber ">Ego enim per singulas horas et per singulos dies in annis triginta his deprecabar Altissimum nocte ac die.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="466">
+					<reading option="0" mss="Weber ">Et factum est post triginta annos, exaudivit me Deus ancillae tuae et pervidit humilitatem meam et adtendit tribulationi meae et dedit mihi filium. Et iucundata sum super eum valde ego et vir meus et omnes cives mei, et honorificabamus valde Fortem.</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="467">
+					<reading option="0" mss="Weber ">Et nutrivi eum cum labore multo.</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="468">
+					<reading option="0" mss="Weber ">Et factum est cum crevisset et venissem accipere illi uxorem, et feci diem epuli.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="10">
+			<verse reference="1">
+				<unit id="469">
+					<reading option="0" mss="Weber ">Et factum est cum introisset filius meus in thalamo suo, cecidit et mortuus est.</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="470">
+					<reading option="0" mss="Weber ">Et evertimus omnes lumina, et surrexerunt omnes cives mei ad consolandam me, et quievi usque in alium diem usque noctem.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="471">
+					<reading option="0" mss="Weber ">Et factum est cum omnes quievissent ut me consolarentur ut quiescerem, et surrexi nocte et fugi et veni, sicut vides, in hoc campo.</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="472">
+					<reading option="0" mss="Weber ">Et cogito iam non reverti in civitatem sed hic consistere, et neque manducabo neque bibam, sed sine intermissione lugere et ieiunare, usque dum moriar.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="473">
+					<reading option="0" mss="Weber ">Et dereliqui adhuc sermones in quibus eram et respondi cum iracundia ad eam et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="474">
+					<reading option="0" mss="Weber ">Stulta super omnes mulieres, non vides luctum nostrum et quae nobis contigerunt?</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="475">
+					<reading option="0" mss="Weber ">Quoniam Sion mater nostra omnium in tristitia contristatur et humilitate humiliata est. Lugete validissime</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="476">
+					<reading option="0" mss="Weber ">et nunc quoniam omnes lugemus, et tristes este quoniam omnes contristati sumus. Tu autem contristaris in uno filio.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="477">
+					<reading option="0" mss="Weber ">Interroga enim terram et dicet tibi, quoniam haec est quae debeat lugere tantorum superstes germinantium.</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="478">
+					<reading option="0" mss="Weber ">Et ex ipsa initio omnes nati et alii venient, et ecce paene omnes in perditionem ambulant et in exterminium fit multitudo eorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="479">
+					<reading option="0" mss="Weber ">Et quis ergo debet lugere magis nisi haec quae tam magnam multitudinem perdidit, quam tu quae pro uno doles? Si autem dices mihi</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="480">
+					<reading option="0" mss="Weber ">quoniam non est similis planctus meus terrae, quoniam fructum ventris mei perdidi, quem cum maeroribus peperi et cum doloribus genui,</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="481">
+					<reading option="0" mss="Weber ">terra autem secundum viam terrae, abiit quae in ea multitudo praesens quomodo et venit, et ego tibi dico:</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="482">
+					<reading option="0" mss="Weber ">Sicut tu cum dolore peperisti, sic et terra dedit fructum suum hominem ab initio ei qui fecit eam.</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="483">
+					<reading option="0" mss="Weber ">Nunc ergo retine apud temet ipsam dolorem tuum et fortiter fer quae tibi contigerunt casus.</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="484">
+					<reading option="0" mss="Weber ">Si enim iustificaveris terminum Dei, et filium tuum recipies in tempore et in mulieribus conlaudaberis.</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="485">
+					<reading option="0" mss="Weber ">Ingredere ergo in civitatem ad virum tuum. Et dixit ad me:</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="486">
+					<reading option="0" mss="Weber ">Non faciam neque ingrediar civitatem, sed hic moriar. </reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="487">
+					<reading option="0" mss="Weber ">Et adposui adhuc loqui ad eam et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="488">
+					<reading option="0" mss="Weber ">Noli facere sermonem hunc, sed consenti persuaderi-quid enim casus Sion-et consolare propter dolorem Hierusalem.</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="489">
+					<reading option="0" mss="Weber ">Vides enim, quoniam sanctificatio nostra deserta effecta est et altare nostrum demolitum est et templum nostrum destructum est,</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="490">
+					<reading option="0" mss="Weber ">et psalterium nostrum humiliatum est et hymnus noster conticuit et exultatio nostra dissoluta est, et lumen candelabri nostri extinctum est et arca testamenti nostri direpta est et sancta nostra contaminata sunt, et nomen quod nominatum est super nos paene profanatum est, et liberi nostri contumeliam passi sunt, et sacerdotes nostri succensi sunt et Levitae nostri in captivitate abierunt, et virgines nostrae coinquinatae sunt et mulieres nostrae vim passae sunt, et iusti nostri rapti sunt et parvuli nostri proditi sunt, et iuvenes nostri servierunt et fortes nostri invalidi facti sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="491">
+					<reading option="0" mss="Weber ">Et quod omnium maius, signaculum Sion, quoniam resignata est de gloria sua nunc et tradita est in manibus eorum qui nos oderunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="492">
+					<reading option="0" mss="Weber ">Tu ergo excute tuam multam tristitiam et depone abs te multitudinem dolorum, ut tibi repropitietur Fortis et requiem faciat tibi Altissimus, requietionem laborum.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="493">
+					<reading option="0" mss="Weber ">Et factum est cum loquebar ad eam, et ecce facies eius fulgebat valde subito, et species coruscus fiebat visus eius, ut etiam paverem valde ad eam et cogitarem, quid esset hoc.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="494">
+					<reading option="0" mss="Weber ">Et ecce subito emisit sonum vocis magnum timore plenum, ut commoveretur terra a sono. Et vidi,</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="495">
+					<reading option="0" mss="Weber ">et ecce amplius mulier non conparebat mihi, sed civitas aedificabatur et locus demonstrabatur de fundamentis magnis. Et timui et clamavi voce magna et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="496">
+					<reading option="0" mss="Weber ">Ubi est Urihel angelus, qui a principio venit ad me? Quoniam ipse me fecit venire in multitudinem excessus mentis huius, et factus est finis meus in corruptionem et oratio mea in inproperium.</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="497">
+					<reading option="0" mss="Weber ">Et cum essem loquens ego haec, et ecce venit ad me angelus qui in principio venerat ad me et vidit me,</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="498">
+					<reading option="0" mss="Weber ">et ecce eram positus ut mortuus et intellectus meus alienatus erat, et tenuit dexteram meam et confortavit me et statuit me super pedes meos et dixit mihi:</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="499">
+					<reading option="0" mss="Weber ">Quid tibi est et quare conturbaris et quid conturbatum est intellectum tuum et sensus cordis tui? Et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="500">
+					<reading option="0" mss="Weber ">Quoniam derelinquens dereliquisti me. Ego quidem feci secundum sermones tuos et exivi in campum, et ecce vidi et video quod non possum enarrare. Et dixit ad me:</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="501">
+					<reading option="0" mss="Weber ">Sta ut vir, et commonebo te. Et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="502">
+					<reading option="0" mss="Weber ">Loquere, dominus meus, tantum me noli derelinquere, ut non frustra moriar,</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="503">
+					<reading option="0" mss="Weber ">quoniam vidi quae non sciebam, et audio quae non scio.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="504">
+					<reading option="0" mss="Weber ">Aut numquid sensus meus fallitur et anima mea somniat?</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="505">
+					<reading option="0" mss="Weber ">Nunc ergo deprecor te, ut demonstres servo tuo de excessu hoc. Et respondit ad me et dixit:</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="506">
+					<reading option="0" mss="Weber ">Audi me, et doceam te et dicam tibi de quibus times, quoniam Altissimus revelavit tibi mysteria multa.</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="507">
+					<reading option="0" mss="Weber ">Vidit rectam viam tuam, quoniam sine intermissione contristabaris pro populo tuo et valde lugebas propter Sion.</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="508">
+					<reading option="0" mss="Weber ">Hic ergo intellectus visionis: Mulier quae tibi apparuit ante paululum,</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="509">
+					<reading option="0" mss="Weber ">quam vidisti lugentem et inchoasti consolare eam,</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="510">
+					<reading option="0" mss="Weber ">nunc autem iam non speciem mulieris vides, sed apparuit tibi civitas aedificari.</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="511">
+					<reading option="0" mss="Weber ">Et quoniam enarrabat tibi de casu filii sui, haec absolutio est:</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="512">
+					<reading option="0" mss="Weber ">Haec mulier quam vidisti haec est Sion, quam nunc conspicis ut civitatem aedificatam.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="513">
+					<reading option="0" mss="Weber ">Et quoniam dixit tibi, quia sterilis fuit annis triginta, propter quod erant anni saeculo tria milia, quando non erat in ea adhuc oblatio oblata.</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="514">
+					<reading option="0" mss="Weber ">Et factum est post annos tres, et aedificavit Salomon civitatem et obtulit oblationes. Tunc fuit quando peperit sterilis filium.</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="515">
+					<reading option="0" mss="Weber ">Et quod tibi dixit quoniam nutrivi eum cum labore, haec erat habitatio Hierusalem.</reading>
+				</unit>
+			</verse>
+			<verse reference="48">
+				<unit id="516">
+					<reading option="0" mss="Weber ">Et quoniam dixit tibi quod filius meus veniens in suo thalamo mortuus esset et contigisset ei casus, haec erat quae facta est ruina Hierusalem.</reading>
+				</unit>
+			</verse>
+			<verse reference="49">
+				<unit id="517">
+					<reading option="0" mss="Weber ">Et ecce vidisti similitudinem eius, quomodo filium luget, et tu inchoasti consolare eam de his quae contigerunt. Haec erant tibi aperienda.</reading>
+				</unit>
+			</verse>
+			<verse reference="50">
+				<unit id="518">
+					<reading option="0" mss="Weber ">Et nunc videns Altissimus, quoniam ex animo contristatus es et quoniam ex toto corde pateris pro ea, ostendit tibi claritatem gloriae eius et pulchritudinem decoris eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="51">
+				<unit id="519">
+					<reading option="0" mss="Weber ">Propterea enim dixi tibi, ut maneres in campo, ubi domus non est aedificata.</reading>
+				</unit>
+			</verse>
+			<verse reference="52">
+				<unit id="520">
+					<reading option="0" mss="Weber ">Sciebam enim ego, quoniam Altissimus incipiebat tibi ostendere haec.</reading>
+				</unit>
+			</verse>
+			<verse reference="53">
+				<unit id="521">
+					<reading option="0" mss="Weber ">Propterea dixi tibi, ut venires in agrum, ubi non est fundamentum aedificii.</reading>
+				</unit>
+			</verse>
+			<verse reference="54">
+				<unit id="522">
+					<reading option="0" mss="Weber ">Nec enim poterat opus aedificii hominis sustinere in loco, ubi incipiebat Altissimi civitas ostendi.</reading>
+				</unit>
+			</verse>
+			<verse reference="55">
+				<unit id="523">
+					<reading option="0" mss="Weber ">Tu ergo noli timere neque expavescat cor tuum, sed ingredere et vide splendorem vel magnitudinem aedificii, quantum capax est tibi visu oculorum videre.</reading>
+				</unit>
+			</verse>
+			<verse reference="56">
+				<unit id="524">
+					<reading option="0" mss="Weber ">Et post haec audies, quantum capit auditus aurium tuarum audire.</reading>
+				</unit>
+			</verse>
+			<verse reference="57">
+				<unit id="525">
+					<reading option="0" mss="Weber ">Tu enim beatus es prae multis et vocatus es apud Altissimum sicut et pauci.</reading>
+				</unit>
+			</verse>
+			<verse reference="58">
+				<unit id="526">
+					<reading option="0" mss="Weber ">Nocte autem quae in crastinum futura est manebis hic,</reading>
+				</unit>
+			</verse>
+			<verse reference="59">
+				<unit id="527">
+					<reading option="0" mss="Weber ">et ostendet tibi Altissimus eas visiones somniorum, quae faciet Altissimus his qui inhabitant super terram a novissimis diebus.</reading>
+				</unit>
+			</verse>
+			<verse reference="60">
+				<unit id="528">
+					<reading option="0" mss="Weber ">Et dormivi illam noctem et aliam sicut dixerat mihi.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="11">
+			<verse reference="1">
+				<unit id="529">
+					<reading option="0" mss="Weber ">Et factum est secunda nocte, et vidi somnium, et ecce ascendebat de mari aquila, cui erant duodecim alae pennarum et capita tria.</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="530">
+					<reading option="0" mss="Weber ">Et vidi, et ecce expandebat alas suas in omnem terram, et omnes venti caeli insuflabant ad eam et nubes ad eam colligebantur.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="531">
+					<reading option="0" mss="Weber ">Et vidi, et de pennis eius nascebantur contrariae pennae, et ipsae fiebant in pennaculis minutis et modicis.</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="532">
+					<reading option="0" mss="Weber ">Nam capita eius erant quiescentia, et de medium caput erat maius aliorum capitum, sed et ipsa quiescebat cum eis.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="533">
+					<reading option="0" mss="Weber ">Et vidi, et ecce aquila volavit in pennis suis et regnavit super terram et super eos qui inhabitant in ea.</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="534">
+					<reading option="0" mss="Weber ">Et vidi, quomodo subiecta erant ei omnia quae sub caelo, et nemo illi contradicebat, neque unus de creatura quae est super terram.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="535">
+					<reading option="0" mss="Weber ">Et vidi, et ecce surrexit aquila super ungues suos et emisit vocem pennis suis dicens:</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="536">
+					<reading option="0" mss="Weber ">Nolite omnes simul vigilare, dormite unusquisque in loco suo et per tempus vigilate,</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="537">
+					<reading option="0" mss="Weber ">capita autem in novissimo serventur.</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="538">
+					<reading option="0" mss="Weber ">Et vidi, et ecce vox non exiebat de capitibus eius, sed de medietate corporis eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="539">
+					<reading option="0" mss="Weber ">Et numeravi contrarias pennas eius, et ecce ipsae erant octo.</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="540">
+					<reading option="0" mss="Weber ">Et vidi, et ecce a dextera parte surrexit una penna et regnavit super omnem terram.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="541">
+					<reading option="0" mss="Weber ">Et factum est cum regnaret, et venit ei finis et non apparuit, ita ut non appareret locus eius. Et sequens exsurrexit et regnabat et ipsa multum tenuit tempus.</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="542">
+					<reading option="0" mss="Weber ">Et factum est cum regnaret, et veniebat finis eius, ut non appareret sicut prior.</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="543">
+					<reading option="0" mss="Weber ">Et ecce vox emissa est illi dicens:</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="544">
+					<reading option="0" mss="Weber ">Audi, tu quae toto tempore tenuisti terram, hoc adnuntii antequam incipias non parere:</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="545">
+					<reading option="0" mss="Weber ">Nemo post te tenebit tempus tuum, sed nec dimidium eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="546">
+					<reading option="0" mss="Weber ">Et levavit se tertia et tenuit principatum sicut priores, et non apparuit et ipsa.</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="547">
+					<reading option="0" mss="Weber ">Et sic contingebat omnibus alis singulatim principatum gerere et iterum nusquam conparere.</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="548">
+					<reading option="0" mss="Weber ">Et vidi, et ecce in tempore sequentes pennae erigebantur et ipsae a dextera parte, ut tenerent et ipsae principatum; et ex his erant quae tenebant, sed tamen statim non conparescebant.</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="549">
+					<reading option="0" mss="Weber ">Nam et aliquae ex eis erigebantur, sed non tenebant principatum.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="550">
+					<reading option="0" mss="Weber ">Et vidi post haec, et ecce non conparuerunt duodecim pennae et duo pennacula.</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="551">
+					<reading option="0" mss="Weber ">Et nihil superavit in corpore aquilae nisi tria capita quiescentia et sex pennacula.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="552">
+					<reading option="0" mss="Weber ">Et vidi, et ecce de sex pennaculis divisa sunt duo et manserunt sub capite quod est ad dexteram partem; nam quattuor manserunt in loco suo.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="553">
+					<reading option="0" mss="Weber ">Et vidi, et ecce hae subalares cogitabant se erigere et tenere principatus.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="554">
+					<reading option="0" mss="Weber ">Et vidi, et ecce una erecta est, sed statim non conparuit. </reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="555">
+					<reading option="0" mss="Weber ">Et secunda, et haec velocius quam prior non conparuit.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="556">
+					<reading option="0" mss="Weber ">Et vidi, et ecce duae quae superaverunt apud semet ipsa cogitabant et ipsae regnare.</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="557">
+					<reading option="0" mss="Weber ">Et in eo cum cogitarent, et ecce unum de quiescentium capitum, quod erat medium, evigilabat, hoc enim erat duorum capitum maior.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="558">
+					<reading option="0" mss="Weber ">Et vidi, quomodo conplexa est duo capita se cum</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="559">
+					<reading option="0" mss="Weber ">et ecce conversum est caput cum his qui cum ea erant et comedit duas subalares quae cogitabant regnare.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="560">
+					<reading option="0" mss="Weber ">Hoc autem caput percontinuit omnem terram et dominavit qui inhabitant in ea cum labore multo, et potentatum tenuit orbem terrarum super omnes alas quae fuerunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="561">
+					<reading option="0" mss="Weber ">Et vidi post haec, et ecce medium caput subito non conparuit, et hoc sicut alae.</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="562">
+					<reading option="0" mss="Weber ">Superaverunt autem duo capita, quae et ipsa similiter regnaverunt super terram et super eos qui habitant in ea.</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="563">
+					<reading option="0" mss="Weber ">Et vidi, et ecce devoravit caput a dextera parte illud quod est a leva.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="564">
+					<reading option="0" mss="Weber ">Et audivi vocem dicentem mihi: Conspice contra te et considera quod vides.</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="565">
+					<reading option="0" mss="Weber ">Et vidi, et ecce sicut leo suscitatus de silva mugiens, et audivi quomodo emisit vocem hominis ad aquilam et dixit dicens:</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="566">
+					<reading option="0" mss="Weber ">Audi tu, et loquar ad te, et dicit Altissimus tibi:</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="567">
+					<reading option="0" mss="Weber ">Nonne tu es, quae superasti de quattuor animalibus quae feceram regnare saeculi mei, et ut per eos veniret finis temporum meorum?</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="568">
+					<reading option="0" mss="Weber ">Et quartus veniens devicit omnia animalia quae transierunt, et potentatum tenens saeculum cum tremore multo et omnem orbem cum labore pessimo, et inhabitabant tot temporibus orbem terrarum cum dolo.</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="569">
+					<reading option="0" mss="Weber ">Et iudicasti terram non cum veritate.</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="570">
+					<reading option="0" mss="Weber ">Tribulasti enim mansuetos et laesisti quiescentes, odisti verum dicentes et dilexisti mendaces, et destruxisti habitationes eorum qui fructificabant, et humiliasti muros eorum qui te non nocuerunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="571">
+					<reading option="0" mss="Weber ">Et ascendit contumelia ad Altissimum et superbia tua ad Fortem.</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="572">
+					<reading option="0" mss="Weber ">Et respexit Altissimus super sua tempora, et ecce finita sunt et saecula eius conpleta sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="573">
+					<reading option="0" mss="Weber ">Propterea non apparens non appareas, tu aquila et alae tuae horribiles et pennacula tua pessima et capita tua maligna et ungues tui pessimi et omne corpus tuum vanum,</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="574">
+					<reading option="0" mss="Weber ">uti refrigeret omnis terra et relevetur liberata de tua vi et speret iudicium et misericordiam eius qui fecit eam.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="12">
+			<verse reference="1">
+				<unit id="575">
+					<reading option="0" mss="Weber ">Et factum est dum loqueretur leo verba haec ad aquilam, et vidi,</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="576">
+					<reading option="0" mss="Weber ">et ecce quod superaverat caput et non conparuit, et alae duae quae ad eum transierunt et erectae sunt ut regnarent, et erat regnum eorum exile et tumultu plenum.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="577">
+					<reading option="0" mss="Weber ">Et vidi, et ecce ipsa non apparescebant, et omne corpus aquilae incendebatur, et expavescebat terra valde. Et ego a multo excessu mentis et a magno timore vigilavi, et dixi spiritui meo:</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="578">
+					<reading option="0" mss="Weber ">Ecce tu mihi praestitisti haec, in eo quod scrutas vias Altissimi.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="579">
+					<reading option="0" mss="Weber ">Ecce adhuc fatigatus sum animo et spiritu meo invalidus sum valde, et nec modica est in me virtus a multo timore quem expavi nocte hac.</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="580">
+					<reading option="0" mss="Weber ">Nunc ergo orabo Altissimum, ut me confortet usque in finem.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="581">
+					<reading option="0" mss="Weber ">Et dixi: Dominator Domine, si inveni gratiam ante oculos tuos, et si iustificatus sum apud te prae multis, et si certum ascendit deprecatio mea ante faciem tuam,</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="582">
+					<reading option="0" mss="Weber ">conforta me et ostende servo tuo mihi interpretationem et distinctionem visus horribilis huius, ut pienissime consoles animam meam.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="583">
+					<reading option="0" mss="Weber ">Dignum enim me habuisti, ostendere mihi temporum finem et temporum novissima. Et dixit ad me:</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="584">
+					<reading option="0" mss="Weber ">Haec est interpretatio visionis huius quam vidisti:</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="585">
+					<reading option="0" mss="Weber ">Aquilam quam vidisti ascendentem de mari, hoc est regnum quartum, quod visum est in visu Danihelo fratri tuo,</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="586">
+					<reading option="0" mss="Weber ">sed non est illi interpretatum, quomodo ego nunc tibi interpretor vel interpretavi.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="587">
+					<reading option="0" mss="Weber ">Ecce dies veniunt, et exsurget regnum super terram et erit timoratior omnium regnorum quae fuerunt ante eam.</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="588">
+					<reading option="0" mss="Weber ">Regnabunt autem in ea duodecim reges, unus post unum. </reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="589">
+					<reading option="0" mss="Weber ">Nam secundus qui incipiet regnare, ipse tenebit amplius tempus prae duodecim.</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="590">
+					<reading option="0" mss="Weber ">Haec est interpretatio duodecim alarum quas vidisti.</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="591">
+					<reading option="0" mss="Weber ">Et quoniam audisti vocem quae locuta est non de capitibus eius exientem, sed de medio corpore eius,</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="592">
+					<reading option="0" mss="Weber ">haec est interpretatio, quoniam post tempus regni illius nascentur contentiones non modicae, et periclitabitur ut cadat, et non cadet tunc, sed iterum constituetur in suum initium.</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="593">
+					<reading option="0" mss="Weber ">Et quoniam vidisti subalares octo coherentes alis eius,</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="594">
+					<reading option="0" mss="Weber ">haec est interpretatio: Exsurgent enim in ipso octo reges, quorum erunt tempora levia et anni citati, et duo quidem ex ipsis perient</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="595">
+					<reading option="0" mss="Weber ">adpropinquante tempore medio, quattuor autem servabuntur in tempore, cum incipiet adpropinquare tempus eius ut finiatur, duo vero in finem servabuntur.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="596">
+					<reading option="0" mss="Weber ">Et quoniam vidisti tria capita quiescentia,</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="597">
+					<reading option="0" mss="Weber ">haec est interpretatio: In novissimis eius suscitabit Altissimus tria regna et renovabit in ea multa, et dominabunt terram</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="598">
+					<reading option="0" mss="Weber ">et qui inhabitant in ea cum labore multo super omnes qui fuerunt ante hos. Propter hoc ipsi vocati sunt capita aquilae.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="599">
+					<reading option="0" mss="Weber ">Isti enim erunt qui recapitulabunt impietates eius et qui perficient novissima eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="600">
+					<reading option="0" mss="Weber ">Et quoniam vidisti caput maius non apparescentem, quoniam unus ex eis super lectum suum morietur, et tamen cum tormentis.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="601">
+					<reading option="0" mss="Weber ">Nam duo qui perseveraverunt, gladius eos comedet.</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="602">
+					<reading option="0" mss="Weber ">Unius enim gladius comedet qui cum eo, sed tamen et hic gladio in novissimis cadet.</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="603">
+					<reading option="0" mss="Weber ">Et quoniam vidisti duas subalares treicientes super caput quod est a dextera parte,</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="604">
+					<reading option="0" mss="Weber ">haec est interpretatio: Hii sunt quos conservavit Altissimus in finem suam, hoc erat regnum exile et turbationis plenum,</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="605">
+					<reading option="0" mss="Weber ">sicut vidisti. Et leonem quem vidisti de silva evigilantem mugientem et loquentem ad aquilam et arguentem eam iniustitias ipsius per omnes sermones eius, sicut audisti,</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="606">
+					<reading option="0" mss="Weber ">hic est unctus, quem reservavit Altissimus in finem ad eos et impietates ipsorum. Arguet illos de iniustitiis ipsorum et infulciet coram ipsis spretiones eorum.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="607">
+					<reading option="0" mss="Weber ">Statuet enim eos primum in iudicium vivos, et erit cum arguerit eos, tunc corrumpet eos.</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="608">
+					<reading option="0" mss="Weber ">Nam residuum populum meum liberabit cum misericordia, qui salvati sunt super fines meos, et iucundabit eos, quoadusque veniat finis, dies iudicii, de quo locutus sum tibi ab initio.</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="609">
+					<reading option="0" mss="Weber ">Hoc somnium quod vidisti, et haec interpretatio eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="610">
+					<reading option="0" mss="Weber ">Tu ergo solus dignus fuisti scire Altissimi secretum hoc. </reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="611">
+					<reading option="0" mss="Weber ">Scribe ergo omnia ista in libro quae vidisti, et pones ea in loco abscondito.</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="612">
+					<reading option="0" mss="Weber ">Et docebis ea sapientes de populo tuo, quorum scis corda posse capere et servare secreta haec.</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="613">
+					<reading option="0" mss="Weber ">Tu autem adhuc sustine hic alios dies septem, ut tibi ostendatur quicquid visum fuerit Altissimo ostendere tibi.</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="614">
+					<reading option="0" mss="Weber ">Et profectus est a me. Et factum est cum audisset omnis populus, quoniam pertransierunt septem dies, et ego non fuissem reversus in civitatem, et congregavit se omnis a minimo usque ad maximum et venit ad me, et dixerunt mihi dicentes:</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="615">
+					<reading option="0" mss="Weber ">Quid peccavimus tibi et quid iniuste egimus in te, quoniam derelinquens nos sedisti in loco hoc?</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="616">
+					<reading option="0" mss="Weber ">Tu enim nobis superasti ex omnibus prophetis, sicut botrus de vindemia, et sicut lucerna in loco obscuro, et sicut portus navi salvatae a tempestate.</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="617">
+					<reading option="0" mss="Weber ">Aut non sufficiunt nobis mala quae contigerunt?</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="618">
+					<reading option="0" mss="Weber ">Si ergo tu nos dereliqueris, quanto erat nobis melius, si essemus succensi et nos incendio Sion.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="619">
+					<reading option="0" mss="Weber ">Nec enim nos meliores sumus eorum, qui ibi mortui sunt. Et ploraverunt voce magna. Et respondi ad eos et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="620">
+					<reading option="0" mss="Weber ">Confide, Israhel, et noli tristari, tu domus Iacob.</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="621">
+					<reading option="0" mss="Weber ">Est enim memoria vestri coram Altissimo, et Fortis non est oblitus vestri in contentione.</reading>
+				</unit>
+			</verse>
+			<verse reference="48">
+				<unit id="622">
+					<reading option="0" mss="Weber ">Ego enim non dereliqui vos neque excessi a vobis, sed veni in hunc locum, ut deprecarer pro desolatione Sion, et ut quaererem misericordiam pro humilitate sanctificationis vestrae.</reading>
+				</unit>
+			</verse>
+			<verse reference="49">
+				<unit id="623">
+					<reading option="0" mss="Weber ">Et nunc ite unusquisque vestrum in domum suam, et ego veniam ad vos post dies istos.</reading>
+				</unit>
+			</verse>
+			<verse reference="50">
+				<unit id="624">
+					<reading option="0" mss="Weber ">Et profectus est populus, sicut dixi ei, in civitatem.</reading>
+				</unit>
+			</verse>
+			<verse reference="51">
+				<unit id="625">
+					<reading option="0" mss="Weber ">Ego autem sedi in campo septem diebus, sicut mihi mandavit, et manducabam de floribus solummodo agri, de herbis facta est mihi esca in diebus illis.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="13">
+			<verse reference="1">
+				<unit id="626">
+					<reading option="0" mss="Weber ">Et factum est post dies septem, et somniavi somnium nocte.</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="627">
+					<reading option="0" mss="Weber ">Et ecce de mari ventus exsurgebat, ut conturbaret omnes fluctus eius.</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="628">
+					<reading option="0" mss="Weber ">Et vidi, et ecce convolabat ipse homo cum nubibus caeli. Et ubi vultum suum convertebat ut consideraret, tremebant omnia quae sub eo videbantur.</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="629">
+					<reading option="0" mss="Weber ">Et ubicumque exiebat vox de ore eius, ardescebant omnes qui audiebant voces eius, sicut liquescit quando senserit ignem.</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="630">
+					<reading option="0" mss="Weber ">Et vidi post haec, et ecce congregabatur multitudo hominum, quorum non erat numerus, de quattuor ventis caeli, ut debellarent hominem qui ascenderat de mari.</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="631">
+					<reading option="0" mss="Weber ">Et vidi, et ecce sibimet ipso sculpsit montem magnum et volavit super eum.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="632">
+					<reading option="0" mss="Weber ">Ego autem quaesivi videre regionem vel locum, unde sculptus esset mons, et non potui.</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="633">
+					<reading option="0" mss="Weber ">Et post haec vidi, et ecce omnes qui congregati sunt ad eum ut expugnarent eum, timebant valde, tamen audebant pugnare.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="634">
+					<reading option="0" mss="Weber ">Et ecce ut vidit impetum multitudinis venientis, non levavit manum suam neque frameam tenebat neque aliquod vas bellicosum, nisi solummodo vidi,</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="635">
+					<reading option="0" mss="Weber ">quomodo emittit de ore suo sicut fluctum ignis, et de labiis eius spiritum flammae, et de lingua eius emittebat scintillas tempestatis. Et commixta sunt simul omnia haec, fluctus ignis et spiritus flammae et multitudo tempestatis.</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="636">
+					<reading option="0" mss="Weber ">Et concidit super multitudinis impetum quod paratum erat pugnare, et succendit omnes, ut subito nihil videretur de innumerabili multitudine nisi solummodo pulvis cineris et fumi odor. Et vidi et extiti.</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="637">
+					<reading option="0" mss="Weber ">Et post haec vidi ipsum hominem descendentem de monte et advocantem ad se multitudinem aliam pacificam.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="638">
+					<reading option="0" mss="Weber ">Et accedebant ad eum vultus hominum multorum, quorumdam gaudentium, quorumdam tristantium, aliqui vero alligati, aliqui adducentes ex eis qui offerebantur. Et ego a multitudine pavoris expergefactus sum et deprecatus sum Altissimum et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="639">
+					<reading option="0" mss="Weber ">Tu ab initio demonstrasti servo tuo mirabilia haec et dignum me habuisti, ut susciperes deprecationem meam. </reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="640">
+					<reading option="0" mss="Weber ">Et nunc demonstra mihi adhuc et interpretationem somnii huius.</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="641">
+					<reading option="0" mss="Weber ">Sicut enim existimo in sensu meo, vae qui derelicti fuerint in diebus illis, et multo plus vae his qui non sunt derelicti.</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="642">
+					<reading option="0" mss="Weber ">Qui enim non sunt derelicti, tristes erunt</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="643">
+					<reading option="0" mss="Weber ">intellegentes quae sunt reposita in novissimis diebus, et non occurrentes eis. Sed et qui derelicti sunt</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="644">
+					<reading option="0" mss="Weber ">propter hoc vae, viderunt enim pericula magna et necessitates multas, sicut ostendunt somnia haec.</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="645">
+					<reading option="0" mss="Weber ">Attamen facilius est periclitantem venire in haec, quam pertransire sicut nubem a saeculo et non videre quae contigerunt in novissimo. Et respondit ad me et dixit:</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="646">
+					<reading option="0" mss="Weber ">Et visionis interpretationem dicam tibi, sed et de quibus locutus es adaperiam tibi.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="647">
+					<reading option="0" mss="Weber ">Quoniam dixisti de his qui derelicti sunt et de his qui non derelicti sunt, haec interpretatio:</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="648">
+					<reading option="0" mss="Weber ">Qui adferet periculum in illo tempore, ipse custodibit qui in periculo inciderint, qui habent operas et fidem ad Fortissimum.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="649">
+					<reading option="0" mss="Weber ">Scito ergo, quoniam magis beatificati sunt qui derelicti super eos qui mortui sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="650">
+					<reading option="0" mss="Weber ">Interpretatio enim visionis haec: Quia vidisti virum ascendentem de corde maris,</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="651">
+					<reading option="0" mss="Weber ">ipse est quem conservat Altissimus multis temporibus, qui per semet ipsum liberabit creaturam suam, et ipse disponet qui derelicti sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="652">
+					<reading option="0" mss="Weber ">Et quoniam vidisti de ore eius exire ut spiritum et ignem et tempestatem,</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="653">
+					<reading option="0" mss="Weber ">et quoniam non tenebat frameam neque vas bellicosum, corrumpit enim impetum eius multitudinis quae venerat ad expugnare eum, haec interpretatio:</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="654">
+					<reading option="0" mss="Weber ">Ecce dies veniunt, quando incipiet Altissimus liberare eos qui super terram sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="655">
+					<reading option="0" mss="Weber ">Et veniet excessus mentis super eos qui inhabitant terram.</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="656">
+					<reading option="0" mss="Weber ">Et in alisalio cogitabunt bellare, civitates civitatem et locus locum et gens ad gentem et regnum adversus regnum.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="657">
+					<reading option="0" mss="Weber ">Et erit cum fient haec et contingent signa quae ante ostendi tibi, et tunc revelabitur Filius meus quem vidisti virum ascendentem.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="658">
+					<reading option="0" mss="Weber ">Et erit quando audierint omnes gentes vocem eius, et derelinquet unusquisque regionem suam et bellum quod habent in alterutro,</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="659">
+					<reading option="0" mss="Weber ">et colligetur in unum multitudo innumerabilis, sicut vidisti volentes venire et expugnare eum.</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="660">
+					<reading option="0" mss="Weber ">Ipse autem stabit super cacumen montis Sion.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="661">
+					<reading option="0" mss="Weber ">Sion autem veniet et ostendetur omnibus parata et aedificata, sicut vidisti montem sculpi sine manibus.</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="662">
+					<reading option="0" mss="Weber ">Ipse autem Filius meus arguet quae advenerunt gentes impietates eorum, has quae tempestati adpropiaverunt, et inproperabit coram eis mala cogitamenta eorum et cruciamenta quibus incipient cruciari,</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="663">
+					<reading option="0" mss="Weber ">quae adsimilatae sunt flammae, et perdet eos sine labore et legem quae igni adsimilata est.</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="664">
+					<reading option="0" mss="Weber ">Et quoniam vidisti eum colligentem ad se aliam multitudinem pacificam,</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="665">
+					<reading option="0" mss="Weber ">haec sunt novem tribus, quae captivae factae sunt de terra sua in diebus Iosiae regis, quem captivum duxit Salmanassar rex Assyriorum, et transtulit eos trans Flumen, et translati sunt in terram aliam.</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="666">
+					<reading option="0" mss="Weber ">Ipsi autem sibi dederunt consilium hoc, ut derelinquerent multitudinem gentium, et proficiscerentur in ulteriorem regionem, ubi numquam quisquam inhabitavit ibi genus humanum,</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="667">
+					<reading option="0" mss="Weber ">ut vel ibi observarent legitima sua, quae non fuerant servantes in regione sua.</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="668">
+					<reading option="0" mss="Weber ">Per introitus autem angustos fluminis Eufraten introierunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="669">
+					<reading option="0" mss="Weber ">Fecit enim eis tunc Altissimus signa, et statuit venas Fluminis usquequo transirent.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="670">
+					<reading option="0" mss="Weber ">Per eam enim regionem erat via multa itineris anni unius et dimidii, nam regio illa vocatur Arzar, et </reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="671">
+					<reading option="0" mss="Weber ">tunc inhabitaverunt ibi usque in novissimo tempore. Et nunc iterum coeperunt venire,</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="672">
+					<reading option="0" mss="Weber ">iterum Altissimus statuit venas Fluminis, ut possint transire, propter hoc vidisti multitudinem collectam cum pace,</reading>
+				</unit>
+			</verse>
+			<verse reference="48">
+				<unit id="673">
+					<reading option="0" mss="Weber ">sed et qui derelicti sunt de populo tuo, qui invenientur intra terminum meum</reading>
+				</unit>
+			</verse>
+			<verse reference="49">
+				<unit id="674">
+					<reading option="0" mss="Weber ">sanctum. Erit ergo quando incipiet perdere multitudinem earum quae collectae sunt gentes, proteget qui superaverit populum.</reading>
+				</unit>
+			</verse>
+			<verse reference="50">
+				<unit id="675">
+					<reading option="0" mss="Weber ">Et tunc ostendet eis multa plurima portenta.</reading>
+				</unit>
+			</verse>
+			<verse reference="51">
+				<unit id="676">
+					<reading option="0" mss="Weber ">Et dixi ego: Dominator Domine, hoc mihi ostende, propter quod vidi virum ascendentem de corde maris. Et dixit mihi:</reading>
+				</unit>
+			</verse>
+			<verse reference="52">
+				<unit id="677">
+					<reading option="0" mss="Weber ">Sicut non potest hoc vel scrutinare vel scire quis, quid sit in profundo maris, sic non poterit quisquam super terram videre Filium meum vel eos qui cum eo sunt nisi in tempore diei.</reading>
+				</unit>
+			</verse>
+			<verse reference="53">
+				<unit id="678">
+					<reading option="0" mss="Weber ">Haec est interpretatio somnii quem vidisti, et propter quod inluminatus es haec solus.</reading>
+				</unit>
+			</verse>
+			<verse reference="54">
+				<unit id="679">
+					<reading option="0" mss="Weber ">Dereliquisti enim tua et circa mea vacasti et legem meam exquisisti.</reading>
+				</unit>
+			</verse>
+			<verse reference="55">
+				<unit id="680">
+					<reading option="0" mss="Weber ">Vitam enim tuam disposuisti in sapientiam, et sensum tuum vocasti matrem.</reading>
+				</unit>
+			</verse>
+			<verse reference="56">
+				<unit id="681">
+					<reading option="0" mss="Weber ">Et propter hoc ostendi tibi haec, merces apud Altissimum. Erit enim post alios tres dies, ad te alia loquar et exponam tibi gràvia et mirabilia.</reading>
+				</unit>
+			</verse>
+			<verse reference="57">
+				<unit id="682">
+					<reading option="0" mss="Weber ">Et profectus sum et transii in campum, multum glorificans et laudans Altissimum de mirabilibus, quae per tempus faciebat,</reading>
+				</unit>
+			</verse>
+			<verse reference="58">
+				<unit id="683">
+					<reading option="0" mss="Weber ">et quoniam gubernat tempora et quae sunt in temporibus inlata. Et sedi ibi tribus diebus.</reading>
+				</unit>
+			</verse>
+		</chapter>
+		<chapter number="14">
+			<verse reference="1">
+				<unit id="684">
+					<reading option="0" mss="Weber ">Et factum est tertio die, et ego sedebam sub quercu,</reading>
+				</unit>
+			</verse>
+			<verse reference="2">
+				<unit id="685">
+					<reading option="0" mss="Weber ">et ecce vox exivit contra me de rubo et dixit: Ezra, Ezra. Et dixi: Ecce ego, Domine. Et surrexi super pedes meos. Et dixit ad me:</reading>
+				</unit>
+			</verse>
+			<verse reference="3">
+				<unit id="686">
+					<reading option="0" mss="Weber ">Revelans revelatus sum super rubum et locutus sum Moysi, quando populus meus serviebat in Aegypto.</reading>
+				</unit>
+			</verse>
+			<verse reference="4">
+				<unit id="687">
+					<reading option="0" mss="Weber ">Et misi eum et eduxi populum meum de Aegypto, et adduxi eum super montem Sina et detinebam eum apud me diebus multis,</reading>
+				</unit>
+			</verse>
+			<verse reference="5">
+				<unit id="688">
+					<reading option="0" mss="Weber ">et enarravi ei mirabilia multa, et ostendi ei temporum secreta et temporum finem. Et praecepi ei dicens:</reading>
+				</unit>
+			</verse>
+			<verse reference="6">
+				<unit id="689">
+					<reading option="0" mss="Weber ">Haec in palam facies verba et haec abscondes.</reading>
+				</unit>
+			</verse>
+			<verse reference="7">
+				<unit id="690">
+					<reading option="0" mss="Weber ">Et nunc tibi dico:</reading>
+				</unit>
+			</verse>
+			<verse reference="8">
+				<unit id="691">
+					<reading option="0" mss="Weber ">Signa quae demonstravi et somnia quae vidisti et interpretationes quas tu audisti, in corde tuo repone ea.</reading>
+				</unit>
+			</verse>
+			<verse reference="9">
+				<unit id="692">
+					<reading option="0" mss="Weber ">Tu enim recipieris ab hominibus, et converteris residuum cum Filio meo et cum similibus tuis, usquequo finiantur tempora,</reading>
+				</unit>
+			</verse>
+			<verse reference="10">
+				<unit id="693">
+					<reading option="0" mss="Weber ">quoniam saeculum perdidit iuventutem suam et tempora adpropinquant senescere.</reading>
+				</unit>
+			</verse>
+			<verse reference="11">
+				<unit id="694">
+					<reading option="0" mss="Weber ">Duodecim enim partibus divisum est saeculum, et transierunt eius decem iam et dimidium decimae partis,</reading>
+				</unit>
+			</verse>
+			<verse reference="12">
+				<unit id="695">
+					<reading option="0" mss="Weber ">superant autem eius duae prae medium decimae partis.</reading>
+				</unit>
+			</verse>
+			<verse reference="13">
+				<unit id="696">
+					<reading option="0" mss="Weber ">Nunc ergo dispone domum tuam, et corripe populum tuum, et consolare humiles eorum, et renuntia iam corruptae vitae,</reading>
+				</unit>
+			</verse>
+			<verse reference="14">
+				<unit id="697">
+					<reading option="0" mss="Weber ">et dimitte abs te mortales cogitationes, et proice abs te pondera humana, et exue te iam infirmam naturam, et repone in unam partem molestissima tibi cogitamenta, et festina transmigrare a temporibus his.</reading>
+				</unit>
+			</verse>
+			<verse reference="15">
+				<unit id="698">
+					<reading option="0" mss="Weber ">Quae enim vidisti nunc contigisse mala, iterum horum deteriora facientur,</reading>
+				</unit>
+			</verse>
+			<verse reference="16">
+				<unit id="699">
+					<reading option="0" mss="Weber ">quantum enim invalidum fieri saeculum a senectute, tantum multiplicabunt super inhabitantes mala.</reading>
+				</unit>
+			</verse>
+			<verse reference="17">
+				<unit id="700">
+					<reading option="0" mss="Weber ">Prolongavit enim magis veritas et adpropinquavit mendacium. Iam enim festinat aquila venire, quam vidisti in visionem.</reading>
+				</unit>
+			</verse>
+			<verse reference="18">
+				<unit id="701">
+					<reading option="0" mss="Weber ">Et respondi: Dixi coram te, Domine.</reading>
+				</unit>
+			</verse>
+			<verse reference="19">
+				<unit id="702">
+					<reading option="0" mss="Weber ">Ecce enim ego abibo sicut praecepisti mihi, et corripiam praesentem populum. Qui autem iterum nati fuerint, quis commonebit?</reading>
+				</unit>
+			</verse>
+			<verse reference="20">
+				<unit id="703">
+					<reading option="0" mss="Weber ">Positum est ergo saeculum in tenebris, et qui inhabitant in eo sine lumine,</reading>
+				</unit>
+			</verse>
+			<verse reference="21">
+				<unit id="704">
+					<reading option="0" mss="Weber ">quoniam lex tua incensa est, propter quod nemo scit quae a te facta sunt vel quae incipient operae.</reading>
+				</unit>
+			</verse>
+			<verse reference="22">
+				<unit id="705">
+					<reading option="0" mss="Weber ">Si enim inveni gratiam coram te, inmitte in me spiritum sanctum, et scribam omne quod factum est in saeculo ab initio, quae erant in lege tua scripta, ut possint homines invenire semitam, et qui voluerint vivere in novissimis vivant.</reading>
+				</unit>
+			</verse>
+			<verse reference="23">
+				<unit id="706">
+					<reading option="0" mss="Weber ">Et respondit ad me et dixit: Vadens congrega populum et dices ad eos, ut non te quaerant diebus quadraginta.</reading>
+				</unit>
+			</verse>
+			<verse reference="24">
+				<unit id="707">
+					<reading option="0" mss="Weber ">Tu autem praepara tibi buxos multos et accipe te cum Saream, Dabriam, Selemiam, Ethanum et Asihel, quinque hos qui parati sunt ad scribendum velociter.</reading>
+				</unit>
+			</verse>
+			<verse reference="25">
+				<unit id="708">
+					<reading option="0" mss="Weber ">Et venies hic, et ego accendam in corde tuo lucernam intellectus, quae non extinguetur quoadusque finiantur quae incipies scribere.</reading>
+				</unit>
+			</verse>
+			<verse reference="26">
+				<unit id="709">
+					<reading option="0" mss="Weber ">Et cum perfeceris, quaedam palam facies, quaedam sapientibus absconse trades. In crastinum enim hac hora incipies scribere.</reading>
+				</unit>
+			</verse>
+			<verse reference="27">
+				<unit id="710">
+					<reading option="0" mss="Weber ">Et profectus sum, sicut mihi praecepit, et congregavi omnem populum et dixi:</reading>
+				</unit>
+			</verse>
+			<verse reference="28">
+				<unit id="711">
+					<reading option="0" mss="Weber ">Audi, Israhel, verba haec:</reading>
+				</unit>
+			</verse>
+			<verse reference="29">
+				<unit id="712">
+					<reading option="0" mss="Weber ">Peregrinantes peregrinati sunt patres nostri ab initio in Aegypto, et liberati sunt inde.</reading>
+				</unit>
+			</verse>
+			<verse reference="30">
+				<unit id="713">
+					<reading option="0" mss="Weber ">Et acceperunt legem vitae, quem non custodierunt, quem et vos post eos transgressi estis.</reading>
+				</unit>
+			</verse>
+			<verse reference="31">
+				<unit id="714">
+					<reading option="0" mss="Weber ">Et data est vobis terra in sortem in terra Sion, et vos et patres vestri iniquitatem fecistis et non servastis vias, quas vobis praecepit Altissimus.</reading>
+				</unit>
+			</verse>
+			<verse reference="32">
+				<unit id="715">
+					<reading option="0" mss="Weber ">Iustus iudex cum sit, abstulit a vobis in tempore quod donaverat.</reading>
+				</unit>
+			</verse>
+			<verse reference="33">
+				<unit id="716">
+					<reading option="0" mss="Weber ">Et nunc vos hic estis, et fratres vestri introrsus vestrum sunt.</reading>
+				</unit>
+			</verse>
+			<verse reference="34">
+				<unit id="717">
+					<reading option="0" mss="Weber ">Si ergo imperaveritis sensui vestro et erudieritis cor vestrum, vivi conservati eritis et post mortem misericordiam consequemini.</reading>
+				</unit>
+			</verse>
+			<verse reference="35">
+				<unit id="718">
+					<reading option="0" mss="Weber ">Iudicium enim post mortem veniet, quando iterum reviviscemus, et tunc iustorum nomina parebunt et impiorum facta ostendentur.</reading>
+				</unit>
+			</verse>
+			<verse reference="36">
+				<unit id="719">
+					<reading option="0" mss="Weber ">Ad me autem nemo accedat nunc, neque requirent me usque diebus quadraginta.</reading>
+				</unit>
+			</verse>
+			<verse reference="37">
+				<unit id="720">
+					<reading option="0" mss="Weber ">Et accepi quinque viros, sicut mandavit mihi, et profecti sumus in campo et mansimus ibi.</reading>
+				</unit>
+			</verse>
+			<verse reference="38">
+				<unit id="721">
+					<reading option="0" mss="Weber ">Et factus sum in crastinum, et ecce vox vocavit me dicens: Ezra, aperi os tuum et bibe quod te potiono.</reading>
+				</unit>
+			</verse>
+			<verse reference="39">
+				<unit id="722">
+					<reading option="0" mss="Weber ">Et aperui os meum, et ecce calix plenus porrigebatur mihi; hoc erat plenum sicut aqua, color autem eius ut ignis similis.</reading>
+				</unit>
+			</verse>
+			<verse reference="40">
+				<unit id="723">
+					<reading option="0" mss="Weber ">Et accepi et bibi, et in eo cum bibissem cor meum eructabatur intellectum et in pectus meum increscebat sapientia. Nam spiritus meus conservabat memoriam,</reading>
+				</unit>
+			</verse>
+			<verse reference="41">
+				<unit id="724">
+					<reading option="0" mss="Weber ">et apertum est os meum et non est clausum amplius.</reading>
+				</unit>
+			</verse>
+			<verse reference="42">
+				<unit id="725">
+					<reading option="0" mss="Weber ">Altissimus autem dedit intellectum quinque viris, et scripserunt quae dicebantur ex successione notis quas non sciebant, et sederunt quadraginta diebus. Ipsi autem per diem scribebant,</reading>
+				</unit>
+			</verse>
+			<verse reference="43">
+				<unit id="726">
+					<reading option="0" mss="Weber ">nocte autem manducabant panem; ego autem per diem loquebar et nocte non tacebam.</reading>
+				</unit>
+			</verse>
+			<verse reference="44">
+				<unit id="727">
+					<reading option="0" mss="Weber ">Scripti sunt autem in quadraginta diebus libri nongenti quattuor.</reading>
+				</unit>
+			</verse>
+			<verse reference="45">
+				<unit id="728">
+					<reading option="0" mss="Weber ">Et factum est cum conpleti essent quadraginta dies, et locutus est Altissimus dicens: Priora quae scripsisti in palam pone, et legant digni et indigni.</reading>
+				</unit>
+			</verse>
+			<verse reference="46">
+				<unit id="729">
+					<reading option="0" mss="Weber ">Novissimos autem septuaginta conservabis, ut tradas eos sapientibus de populo tuo.</reading>
+				</unit>
+			</verse>
+			<verse reference="47">
+				<unit id="730">
+					<reading option="0" mss="Weber ">In his enim est vena intellectus et sapientiae fons et scientiae flumen. Et feci sic. </reading>
+				</unit>	
+			</verse>
+		</chapter>
+	</text>
+</book>

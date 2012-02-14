@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+<!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+<!ELEMENT divisions (division)+>
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+<!ELEMENT resources (resource)+>
+<!ELEMENT resource (info+ , URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT manuscripts (ms)+>
+<!ELEMENT ms (name , bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA | sup)*>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+<!ELEMENT booktitle (#PCDATA)>
+<!ELEMENT text (div)+>
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+<!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book filename="Artap" title="Artapanus" textStructure="fragmentary">
+  <version title="Praep. Evang. (frag. 1)" author="Eusebius" language="Greek" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Fragment §1 (on Abraham): Eusebius, Praep. Evang. 9.18.1; Fragment §2 (on Joseph): Eusebius, Praep. Evang. 9.23.1-4; Fragment §3 (on Moses): Eusebius, Praep. Evang. 9.27.1-37.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    <div number="9">
+      <div number="18">
+        <div number="{heading}">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">ιηʹ. ΑΡΤΑΠΑΝΟΥ ΠΕΡΙ ΤΟΥ ΑΥΤΟΥ• ΑΠΟ ΤΗΣ ΑΥΤΗΣ ΤΟΥ ΠΟΛΥΙΣΤΟΡΟΣ ΓΡΑΦΗΣ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Mras ">“Ἀρτάπανος δέ φησιν ἐν τοῖς Ἰουδαϊκοῖς τοὺς μὲν Ἰουδαίους ὀνομάζεσθαι Ἑρμιούθ, ὃ εἶναι μεθερμηνευθὲν κατὰ τὴν Ἑλληνίδα φωνὴν Ἰουδαῖοι· καλεῖσθαι δὲ αὐτοὺς Ἑβραίους ἀπὸ Ἁβραάμου. τοῦτον δέ φησι πανοικίᾳ ἐλθεῖν εἰς Αἴγυπτον πρὸς τὸν τῶν Αἰγυπτίων βασιλέα Φαρεθώθην καὶ τὴν ἀστρολογίαν αὐτὸν διδάξαι· μείναντα δὲ ἔτη ἐκεῖ εἴκοσι πάλιν εἰς τοὺς κατὰ Συρίαν ἀπαλλαγῆναι τόπους· τῶν δὲ τούτῳ συνελθόντων πόλλους ἐν Αἰγύπτῳ καταμεῖναι διὰ τὴν εὐδαιμονίαν τῆς χώρας.”</reading>
+          </unit>
+        </div>
+      </div>
+      </div>
+  </text>
+</version>
+  <version title="Praep. Evang. (frag. 2)" author="Eusebius" language="Greek" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Fragment §1 (on Abraham): Eusebius, Praep. Evang. 9.18.1; Fragment §2 (on Joseph): Eusebius, Praep. Evang. 9.23.1-4; Fragment §3 (on Moses): Eusebius, Praep. Evang. 9.27.1-37.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    <div number="9">
+      <div number="23">
+        <div number="{heading}">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing"> κγʹ. ΑΡΤΑΠΑΝΟΥ ΠΕΡΙ ΤΟΥ ΙΩΣΗΦ• ΑΠΟ ΤΗΣ ΑΥΤΗΣ ΤΟΥ ΠΟΛΥΙΣΤΟΡΟΣ ΓΡΑΦΗΣ</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Mras ">“Ἀρτάπανος δέ φησιν ἐν τῷ Περὶ Ἰουδαίων τῷ Ἁβραὰμ Ἰωσὴφ ἀπόγονον γενέσθαι, υἱὸν δὲ Ἰακώβου· συνέσει δὲ καὶ φρονήσει παρὰ τοὺς ἄλλους διενεγκόντα ὑπὸ τῶν ἀδελφῶν ἐπιβουλευθῆναι· προϊδόμενον δὲ τὴν ἐπισύστασιν δεηθῆναι τῶν ἀστυγειτόνων Ἀράβων εἰς τὴν Αἴγυπτον αὐτὸν διακομίσαι· τοὺς δὲ τὸ ἐντυγχανόμενον ποιῆσαι· εἶναι γὰρ τοὺς τῶν Ἀράβων βασιλεῖς ἀπογόνους Ἰσραήλ, υἱοὺς τοῦ Ἁβραάμ, Ἰσαὰκ δὲ ἀδελφούς. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Mras ">ἐλθόντα δὲ αὐτὸν εἰς τὴν Αἴγυπτον καὶ συσταθέντα τῷ βασιλεῖ διοικητὴν τῆς ὅλης γενέσθαι χώρας. καὶ πρότερον ἀτάκτως τῶν Αἰγυπτίων γεωμορούντων, διὰ τὸ τὴν χώραν ἀδιαίρετον εἶναι καὶ τῶν ἐλασσόνων ὑπὸ τῶν κρεισσόνων ἀδικουμένων, τοῦτον πρῶτον τήν τε γῆν διελεῖν καὶ ὅροις διασημήνασθαι καὶ πολλὴν χερσευομένην γεωργήσιμον ἀποτελέσαι καί τινας τῶν ἀρουρῶν τοῖς ἱερεῦσιν ἀποκληρῶσαι. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Mras ">τοῦτον δὲ καὶ μέτρα εὑρεῖν καὶ μεγάλως αὐτὸν ὑπὸ τῶν Αἰγυπτίων διὰ ταῦτα ἀγαπηθῆναι. γῆμαι δ᾽ αὐτὸν Ἡλιουπολίτου ἱερέως Ἀσενὲθ θυγατέρα, ἐξ ἧς γεννῆσαι παῖδας. μετὰ δὲ ταῦτα παραγενέσθαι πρὸς αὐτὸν τόν τε πατέρα καὶ τοὺς ἀδελφοὺς κομίζοντας πολλὴν ὕπαρξιν καὶ κατοικισθῆναι ἐν τῇ Ἡλίου πόλει καὶ Σάει καὶ τοὺς Σύρους πλεονάσαι ἐν τῇ Αἰγύπτῳ. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Mras ">τούτους δέ φησι καὶ τὸ ἐν Ἀθὼς καὶ τὸ ἐν Ἡλιουπόλει ἱερὸν κατασκευάσαι τοὺς Ἑρμιοὺθ ὀνομαζομένους. μετὰ δὲ ταῦτα τελευτῆσαι τόν τε Ἰωσὴφ καὶ τὸν βασιλέα τῶν Αἰγυπτίων. τὸν οὖν Ἰωσὴφ κρατοῦντα τῆς Αἰγύπτου τὸν τῶν ἑπτὰ ἐτῶν σῖτον, γενόμενον κατὰ τὴν φορὰν ἄπλετον, παραθέσθαι καὶ τῆς Αἰγύπτου δεσπότην γενέσθαι.” 
+</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+    </text>
+  </version>  
+  <version title="Praep. Evang. (frag. 3)" author="Eusebius" language="Greek" fragment="3">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Fragment §1 (on Abraham): Eusebius, Praep. Evang. 9.18.1; Fragment §2 (on Joseph): Eusebius, Praep. Evang. 9.23.1-4; Fragment §3 (on Moses): Eusebius, Praep. Evang. 9.27.1-37.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    <div number="9">
+      <div number="27">
+        <div number="{heading}">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">κζʹ. ΑΡΤΑΠΑΝΟΥ ΠΕΡΙ ΜΩΣΕΩΣ ΟΜΟΙΩΣ </reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Mras ">“Ἀρτάπανος δέ φησιν ἐν τῇ Περὶ Ἰουδαίων, Ἁβραὰμ τελευτήσαντος καὶ τοῦ υἱοῦ αὐτοῦ Μεμψασθενώθ, ὁμοίως δὲ καὶ τοῦ βασιλέως τῶν Αἰγυπτίων, τὴν δυναστείαν παραλαβεῖν τὸν υἱὸν αὐτοῦ Παλμανώθην. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Mras ">τοῦτον δὲ τοῖς Ἰουδαίοις φαύλως προσφέρεσθαι· καὶ πρῶτον μὲν τήν τε Σάιν οἰκοδομῆσαι τό τε ἐπ᾽ αὐτῇ ἱερὸν καθιδρύσασθαι, εἶτα τὸν ἐν Ἡλιουπόλει ναὸν κατασκευάσαι. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Mras ">τοῦτον δὲ γεννῆσαι θυγατέρα Μέρριν, ἣν Χενεφρῇ τινι κατεγγυῆσαι, τῶν ὑπὲρ Μέμφιν τόπων βασιλεύοντι· πολλοὺς γὰρ τότε τῆς Αἰγύπτου βασιλεύειν· ταύτην δὲ στεῖραν ὑπάρχουσαν ὑποβαλέσθαι τινὸς τῶν Ἰουδαίων παιδίον, τοῦτο δὲ Μώϋσον ὀνομάσαι· ὑπὸ δὲ τῶν Ἑλλήνων αὐτὸν ἀνδρωθέντα Μουσαῖον προσαγορευθῆναι. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Mras ">γενέσθαι δὲ τὸν Μώϋσον τοῦτον Ὀρφέως διδάσκαλον. ἀνδρωθέντα δ᾽ αὐτὸν πολλὰ τοῖς ἀνθρώποις εὔχρηστα παραδοῦναι· καὶ γὰρ πλοῖα καὶ μηχανὰς πρὸς τὰς λιθοθεσίας καὶ τὰ Αἰγύπτια ὅπλα καὶ τὰ ὄργανα τὰ ὑδρευτικὰ καὶ πολεμικὰ καὶ τὴν φιλοσοφίαν ἐξευρεῖν· ἔτι δὲ τὴν πόλιν εἰς λςʹ νομοὺς διελεῖν καὶ ἑκάστῳ τῶν νομῶν ἀποτάξαι τὸν θεὸν σεφθήσεσθαι τά τε ἱερὰ γράμματα τοῖς ἱερεῦσιν, εἶναι δὲ καὶ αἰλούρους καὶ κύνας καὶ ἴβεις· ἀπονεῖμαι δὲ καὶ τοῖς ἱερεῦσιν ἐξαίρετον χώραν. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Mras ">ταῦτα δὲ πάντα ποιῆσαι χάριν τοῦ τὴν μοναρχίαν βεβαίαν τῷ Χενεφρῇ διαφυλάξαι. πρότερον γὰρ ἀδιατάκτους ὄντας τοὺς ὄχλους ποτὲ μὲν ἐκβάλλειν, ποτὲ δὲ καθιστάνειν βασιλεῖς, καὶ πολλάκις μὲν τοὺς αὐτούς, ἐνιάκις δὲ ἄλλους. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Mras ">διὰ ταῦτα οὖν τὸν Μώϋσον ὑπὸ τῶν ὄχλων ἀγαπηθῆναι καὶ ὑπὸ τῶν ἱερέων ἰσοθέου τιμῆς καταξιωθέντα προσαγορευθῆναι Ἑρμῆν, διὰ τὴν τῶν ἱερῶν γραμμάτων ἑρμηνείαν. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ Χενεφρῆν ὁρῶντα τὴν ἀρετὴν τοῦ Μωΰσου φθονῆσαι αὐτῷ καὶ ζητεῖν αὐτὸν ἐπ᾽ εὐλόγῳ αἰτίᾳ τινὶ ἀνελεῖν. καὶ δή ποτε τῶν Αἰθιόπων ἐπιστρατευσαμένων τῇ Αἰγύπτῳ τὸν Χενεφρῆν ὑπολαβόντα εὑρηκέναι καιρὸν εὔθετον πέμψαι τὸν Μώϋσον ἐπ᾽ αὐτοὺς στρατηγὸν μετὰ δυνάμεως· τὸ δὲ τῶν γεωργῶν αὐτῷ συστῆσαι πλῆθος, ὑπολαβόντα ῥᾳδίως αὐτὸν διὰ τὴν τῶν στρατιωτῶν ἀσθένειαν ὑπὸ τῶν πολεμίων ἀναιρεθήσεσθαι. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ Μώϋσον ἐλθόντα ἐπὶ τὸν Ἑρμοπολίτην ὀνομαζόμενον νομόν, ἔχοντα περὶ δέκα μυριάδας γεωργῶν, αὐτοῦ καταστρατοπεδεῦσαι· πέμψαι δὲ στρατηγοὺς τοὺς προκαθεδουμένους τῆς χώρας, οὓς δὴ πλεονεκτεῖν ἐπιφανῶς κατὰ τὰς μάχας· λέγειν δέ φησιν Ἡλιουπολίτας γενέσθαι τὸν πόλεμον τοῦτον ἔτη δέκα. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Mras ">τοὺς οὖν περὶ τὸν Μώϋσον διὰ τὸ μέγεθος τῆς στρατιᾶς πόλιν ἐν τούτῳ κτίσαι τῷ τόπῳ καὶ τὴν ἶβιν ἐν αὐτῇ καθιερῶσαι, διὰ τὸ ταύτην τὰ βλάπτοντα ζῷα τοὺς ἀνθρώπους ἀναιρεῖν· προσαγορεῦσαι δὲ αὐτὴν Ἑρμοῦ πόλιν. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Mras ">οὕτω δὴ τοὺς Αἰθίοπας, καίπερ ὄντας πολεμίους, στέρξαι τὸν Μώϋσον ὥστε καὶ τὴν περιτομὴν τῶν αἰδοίων παρ᾽ ἐκείνου μαθεῖν· οὐ μόνον δὲ τούτους, ἀλλὰ καὶ τοὺς ἱερεῖς ἅπαντας. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ Χενεφρῆν λυθέντος τοῦ πολέμου λόγῳ μὲν αὐτὸν ἀποδέξασθαι, ἔργῳ δὲ ἐπιβουλεύειν. παρελόμενον γοῦν αὐτοῦ τοὺς ὄχλους τοὺς μὲν ἐπὶ τὰ ὅρια τῆς Αἰθιοπίας πέμψαι προφυλακῆς χάριν, τοῖς δὲ προστάξαι τὸν ἐν Διὸς πόλει ναὸν ἐξ ὀπτῆς πλίνθου κατεσκευασμένον καθαιρεῖν, ἕτερον δὲ λίθινον κατασκευάσαι τὸ πλησίον ὄρος λατομήσαντας· τάξαι δὲ ἐπὶ τῆς οἰκοδομίας ἐπιστάτην Ναχέρωτα. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ ἐλθόντα μετὰ Μωΰσου εἰς Μέμφιν πυθέσθαι παρ᾽ αὐτοῦ εἴ τι ἄλλο ἐστὶν εὔχρηστον τοῖς ἀνθρώποις· τὸν δὲ φάναι γένος τῶν βοῶν, διὰ τὸ τὴν γῆν ἀπὸ τούτων ἀροῦσθαι· τὸν δὲ Χενεφρῆν, προσαγορεύσαντα ταῦρον Ἆπιν, κελεῦσαι ἱερὸν αὐτοῦ τοὺς ὄχλους καθιδρύσασθαι καὶ τὰ ζῷα τὰ καθιερωθέντα ὑπὸ τοῦ Μωΰσου κελεύειν ἐκεῖ φέροντας θάπτειν, κατακρύπτειν θέλοντα τὰ τοῦ Μωΰσου ἐπινοήματα. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Mras ">ἀποξενωσάντων δὲ αὐτὸν τῶν Αἰγυπτίων ὁρκωμοτῆσαι τοὺς φίλους μὴ ἐξαγγεῖλαι τῷ Μωΰσῳ τὴν ἐπισυνισταμένην αὐτῷ ἐπιβουλὴν καὶ προβαλέσθαι τοὺς ἀναιρήσοντας αὐτὸν. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Mras ">μηδενὸς δ᾽ ὑπακούσαντος ὀνειδίσαι τὸν Χενεφρῆν Χανεθώθην, τὸν μάλιστα προσαγορευόμενον ὑπ᾽ αὐτοῦ· τὸν δὲ ὀνειδισθέντα ὑποσχέσθαι τὴν ἐπίθεσιν, λαβόντα καιρόν. </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Mras ">ὑπὸ δὲ τοῦτον τὸν καιρὸν τῆς Μέρριδος τελευτησάσης ὑποσχέσθαι τὸν Χενεφρῆν τῷ τε Μωΰσῳ καὶ τῷ Χανεθώθῃ τὸ σῶμα διακομίσαντας εἰς τοὺς ὑπὲρ Αἴγυπτον τόπους θάψαι, ὑπολαβόντα τὸν Μώϋσον ὑπὸ τοῦ Χανεθώθου ἀναιρεθήσεσθαι. </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Mras ">πορευομένων δὲ αὐτῶν τὴν ἐπιβουλὴν τῷ Μωΰσῳ τῶν συνειδότων ἐξαγγεῖλαί τινα· τὸν δὲ φυλάσσοντα αὑτὸν τὴν μὲν Μέρριν θάψαι, τὸν δὲ ποταμὸν καὶ τὴν ἐν ἐκείνῳ πόλιν Μερόην προσαγορεῦσαι· τιμᾶσθαι δὲ τὴν Μέρριν ταύτην ὑπὸ τῶν ἐγχωρίων οὐκ ἐλαχίστως ἢ τὴν Ἶσιν. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Mras ">Ἀάρωνα δὲ τὸν τοῦ Μωΰσου ἀδελφὸν τὰ περὶ τὴν ἐπιβουλὴν ἐπιγνόντα συμβουλεῦσαι τῷ ἀδελφῷ φυγεῖν εἰς τὴν Ἀραβίαν· τὸν δὲ πεισθέντα, ἀπὸ Μέμφεως τὸν Νεῖλον διαπλεύσαντα ἀπαλλάσσεσθαι εἰς τὴν Ἀραβίαν. </reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ Χανεθώθην πυθόμενον τοῦ Μωΰσου τὴν φυγὴν ἐνεδρεύειν ὡς ἀναιρήσοντα· ἰδόντα δὲ ἐρχόμενον σπάσασθαι τὴν μάχαιραν ἐπ᾽ αὐτόν, τὸν δὲ Μώϋσον προκαταταχήσαντα τήν τε χεῖρα κατασχεῖν αὐτοῦ καὶ σπασάμενον τὸ ξίφος φονεῦσαι τὸν Χανεθώθην· </reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Mras ">διεκδρᾶναι δὲ εἰς τὴν Ἀραβίαν καὶ Ῥαγουήλῳ τῷ τῶν τόπων ἄρχοντι συμβιοῦν, λαβόντα τὴν ἐκείνου θυγατέρα· τὸν δὲ Ῥαγουῆλον βούλεσθαι στρατεύειν ἐπὶ τοὺς Αἰγυπτίους, κατάγειν βουλόμενον τὸν Μώϋσον καὶ τὴν δυναστείαν τῇ τε θυγατρὶ καὶ τῷ γαμβρῷ κατασκευάσαι· τὸν δὲ Μώϋσον ἀποκωλῦσαι, στοχαζόμενον τῶν ὁμοφύλων· τὸν δὲ Ῥαγουῆλον διακωλύοντα στρατεύειν τοῖς Ἄραψι προστάξαι λῃστεύειν τὴν Αἴγυπτον. </reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Mras ">ὑπὸ δὲ τὸν αὐτὸν χρόνον καὶ τὸν Χενεφρῆν πρῶτον ἁπάντων ἀνθρώπων ἐλεφαντιάσαντα μεταλλάξαι· τούτῳ δὲ τῷ πάθει περιπεσεῖν διὰ τὸ τοὺς Ἰουδαίους προστάξαι σινδόνας ἀμφιέννυσθαι, ἐρεᾶν δὲ ἐσθῆτα μὴ ἀμπέχεσθαι, ὅπως ὄντες ἐπίσημοι κολάζωνται ὑπ᾽ αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ Μώϋσον εὔχεσθαι τῷ θεῷ, ἤδη ποτὲ τοὺς λαοὺς παῦσαι τῶν κακοπαθειῶν. ἱλασκομένου δ᾽ αὐτοῦ αἰφνιδίως φησὶν ἐκ τῆς γῆς πῦρ ἀναφθῆναι καὶ τοῦτο κάεσθαι, μήτε ὕλης μήτε ἄλλης τινὸς ξυλείας οὔσης ἐν τῷ τόπῳ. τὸν δὲ Μώϋσον δείσαντα τὸ γεγονὸς φεύγειν· φωνὴν δ᾽ αὐτῷ θείαν εἰπεῖν στρατεύειν ἐπ᾽ Αἴγυπτον καὶ τοὺς Ἰουδαίους διασώσαντα εἰς τὴν ἀρχαίαν ἀγαγεῖν πατρίδα. </reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ θαρρήσαντα δύναμιν πολεμίαν ἐπάγειν διαγνῶναι τοῖς Αἰγυπτίοις· πρῶτον δὲ πρὸς Ἀάρωνα τὸν ἀδελφὸν ἐλθεῖν. τὸν δὲ βασιλέα τῶν Αἰγυπτίων πυθόμενον τὴν τοῦ Μωΰσου παρουσίαν καλέσαι πρὸς αὑτὸν καὶ πυνθάνεσθαι ἐφ᾽ ὅ τι ἥκοι· τὸν δὲ φάναι, διότι προστάσσειν αὐτῷ τὸν τῆς οἰκουμένης δεσπότην ἀπολῦσαι τοὺς Ἰουδαίους. </reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ πυθόμενον εἰς φυλακὴν αὐτὸν καθεῖρξαι· νυκτὸς δὲ ἐπιγενομένης τάς τε θύρας πάσας αὐτομάτως ἀνοιχθῆναι τοῦ δεσμωτηρίου καὶ τῶν φυλάκων οὓς μὲν τελευτῆσαι, τινὰς δὲ ὑπὸ τοῦ ὕπνου παρεθῆναι τά τε ὅπλα κατεαγῆναι. </reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Mras ">ἐξελθόντα δὲ τὸν Μώϋσον ἐπὶ τὰ βασίλεια ἐλθεῖν· εὑρόντα δὲ ἀνεῳγμένας τὰς θύρας εἰσελθεῖν καὶ ἐνθάδε τῶν φυλάκων παρειμένων τὸν βασιλέα ἐξεγεῖραι. τὸν δὲ ἐκπλαγέντα ἐπὶ τῷ γεγονότι κελεῦσαι τῷ Μωΰσῳ τὸ τοῦ πέμψαντος αὐτὸν θεοῦ εἰπεῖν ὄνομα, διαχλευάσαντα αὐτόν· </reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ προσκύψαντα πρὸς τὸ οὖς εἰπεῖν, ἀκούσαντα δὲ τὸν βασιλέα πεσεῖν ἄφωνον, διακρατηθέντα δὲ ὑπὸ τοῦ Μωΰσου πάλιν ἀναβιῶσαι· </reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Mras ">γράψαντα δὲ τοὔνομα εἰς δέλτον κατασφραγίσασθαι τῶν τε ἱερέων τὸν φαυλίσαντα ἐν τῇ πινακίδι τὰ γεγραμμένα μετὰ σπασμοῦ τὸν βίον ἐκλιμπάνειν· </reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Mras ">εἰπεῖν τε τὸν βασιλέα σημεῖόν τι αὐτῷ ποιῆσαι· τὸν δὲ Μώϋσον ἣν εἶχε ῥάβδον ἐκβαλόντα ὄφιν ποιῆσαι· πτοηθέντων δὲ πάντων ἐπιλαβόμενον τῆς οὐρᾶς ἀνελέσθαι καὶ πάλιν ῥάβδον ποιῆσαι· </reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Mras ">προελθόντα δὲ μικρὸν τὸν Νεῖλον τῇ ῥάβδῳ πατάξαι, τὸν δὲ ποταμὸν πολύχουν γενόμενον κατακλύζειν ὅλην τὴν Αἴγυπτον· ἀπὸ τότε δὲ καὶ τὴν κατάβασιν αὐτοῦ γίνεσθαι· συναγαγὸν δὲ τὸ ὕδωρ ἐποζέσαι καὶ τὰ ποτάμια διαφθεῖραι ζῷα τούς τε λαοὺς διὰ τὴν δίψαν φθείρεσθαι. </reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ βασιλέα τούτων γενομένων τῶν τεράτων φάναι μετὰ μῆνα τοὺς λαοὺς ἀπολύσειν, ἐὰν ἀποκαταστήσῃ τὸν ποταμόν· τὸν δὲ Μώϋσον πάλιν τῇ ῥάβδῳ πατάξαντα τὸ ὕδωρ συστεῖλαι τὸ ῥεῦμα. </reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Mras ">τούτου δὲ γενομένου τὸν βασιλέα τοὺς ἱερεῖς τοὺς ὑπὲρ Μέμφιν καλέσαι καὶ φάναι αὐτοὺς ἀναιρήσειν καὶ τὰ ἱερὰ κατασκάψειν, ἐὰν μὴ καὶ αὐτοὶ τερατουργήσωσί τι. τοὺς δὲ τότε διά τινων μαγγάνων καὶ ἐπαοιδῶν δράκοντα ποιῆσαι καὶ τὸν ποταμὸν μεταχρῶσαι. </reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Mras ">τὸν δὲ βασιλέα φρονηματισθέντα ἐπὶ τῷ γεγονότι, πάσῃ τιμωρίᾳ καὶ κολάσει καταικίζειν τοὺς Ἰουδαίους. τὸν δὲ Μώϋσον ταῦτα ὁρῶντα ἄλλα τε σημεῖα ποιῆσαι καὶ πατάξαντα τὴν γῆν τῇ ῥάβδῳ ζῷόν τι πτηνὸν ἀνεῖναι λυμαίνεσθαι τοὺς Αἰγυπτίους, πάντας τε ἐξελκωθῆναι τὰ σώματα. τῶν δὲ ἰατρῶν μὴ δυναμένων ἰᾶσθαι τοὺς κάμνοντας, οὕτως πάλιν ἀνέσεως τυχεῖν τοὺς Ἰουδαίους. </reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Mras ">πάλιν τε τὸν Μώϋσον βάτραχον διὰ τῆς ῥάβδου ἀνεῖναι, πρὸς δὲ τούτοις ἀκρίδας καὶ σκνίφας. διὰ τοῦτο δὲ καὶ τοὺς Αἰγυπτίους τὴν ῥάβδον ἀνατιθέναι εἰς πᾶν ἱερόν, ὁμοίως δὲ καὶ τῇ Ἴσιδι, διὰ τὸ τὴν γῆν εἶναι Ἶσιν, παιομένην δὲ τῇ ῥάβδῳ τὰ τέρατα ἀνεῖναι. </reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Mras ">τοῦ δὲ βασιλέως ἔτι ἀφρονουμένου τὸν Μώϋσον χάλαζάν τε καὶ σεισμοὺς διὰ νυκτὸς ἀποτελέσαι, ὥστε τοὺς τὸν σεισμὸν φεύγοντας ἀπὸ τῆς χαλάζης ἀναιρεῖσθαι τούς τε τὴν χάλαζαν ἐκκλίνοντας ὑπὸ τῶν σεισμῶν διαφθείρεσθαι. συμπεσεῖν δὲ τότε τὰς μὲν οἰκίας πάσας τῶν τε ναῶν τοὺς πλείστους. </reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Mras ">τελευταῖον τοιαύταις συμφοραῖς περιπεσόντα τὸν βασιλέα τοὺς Ἰουδαίους ἀπολῦσαι· τοὺς δὲ χρησαμένους παρὰ τῶν Αἰγυπτίων πολλὰ μὲν ἐκπώματα, οὐκ ὀλίγον δὲ ἱματισμὸν ἄλλην τε παμπληθῆ γάζαν, διαβάντας τοὺς κατὰ τὴν Ἀραβίαν ποταμοὺς καὶ διαβάντας ἱκανὸν τόπον ἐπὶ τὴν Ἐρυθρὰν τριταίους ἐλθεῖν Θάλασσαν. </reading>
+          </unit>
+        </div>
+        <div number="35">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras ">Μεμφίτας μὲν οὖν λέγειν ἔμπειρον ὄντα τὸν Μώϋσον τῆς χώρας τὴν ἄμπωτιν τηρήσαντα διὰ ξηρᾶς τῆς θαλάσσης τὸ πλῆθος περαιῶσαι. Ἡλιουπολίτας δὲ λέγειν ἐπικαταδραμεῖν τὸν βασιλέα μετὰ πολλῆς δυνάμεως, &lt;ἅμα&gt; καὶ τοῖς καθιερωμένοις ζῴοις, διὰ τὸ τὴν ὕπαρξιν τοὺς Ἰουδαίους τῶν Αἰγυπτίων χρησαμένους διακομίζειν. </reading>
+          </unit>
+        </div>
+        <div number="36">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Mras ">τῷ δὲ Μωΰσῳ φωνὴν θείαν γενέσθαι πατάξαι τὴν θάλασσαν τῇ ῥάβδῳ καὶ διαστῆσαι. τὸν δὲ Μώϋσον ἀκούσαντα ἐπιθιγεῖν τῇ ῥάβδῳ τοῦ ὕδατος, καὶ οὕτως τὸ μὲν νᾶμα διαστῆναι, τὴν δὲ δύναμιν διὰ ξηρᾶς ὁδοῦ πορεύεσθαι. </reading>
+          </unit>
+        </div>
+        <div number="37">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Mras ">συνεμβάντων δὲ τῶν Αἰγυπτίων καὶ διωκόντων φησὶ πῦρ αὐτοῖς ἐκ τῶν ἔμπροσθεν ἐκλάμψαι, τὴν δὲ θάλασσαν πάλιν τὴν ὁδὸν ἐπικλύσαι· τοὺς δὲ Αἰγυπτίους ὑπό τε τοῦ πυρὸς καὶ τῆς πλημμυρίδος πάντας διαφθαρῆναι· τοὺς δὲ Ἰουδαίους διαφυγόντας τὸν κίνδυνον τεσσαράκοντα ἔτη ἐν τῇ ἐρήμῳ διατρῖψαι, βρέχοντος αὐτοῖς τοῦ θεοῦ κρίμνον ὅμοιον ἐλύμῳ, χιόνι παραπλήσιον τὴν χρόαν. γεγονέναι δέ φησι τὸν Μώϋσον μακρόν, πυρρακῆ, πολιόν, κομήτην, ἀξιωματικόν. ταῦτα δὲ πρᾶξαι περὶ ἔτη ὄντα ὀγδοήκοντα ἐννέα.”</reading>
+          </unit>
+        </div>
+      </div>
+     </div>
+     </text>
+  </version>
+  <version title="Stromata (frag. 3b)" author="Clem. Alex." language="Greek" fragment="3">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>      
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+        <name>Stählin, Früchtel, and Treu</name>
+        <bibliography>Fragment §1 (on Abraham): Eusebius, Praep. Evang. 9.18.1; Fragment §2 (on Joseph): Eusebius, Praep. Evang. 9.23.1-4; Fragment §3 (on Moses): Eusebius, Praep. Evang. 9.27.1-37.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>  
+    <div number="1">    
+    <div number="23">
+      <div number="154">
+        <div number="2">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">Ἀρτάπανος γοῦν ἐν τῷ περὶ Ἰουδαίων συγγράμματι ἱστορεῖ κατακλεισθέντα εἰς φυλακὴν Μωυσέα ὑπὸ Χενεφρέους τοῦ Αἰγυπτίων βασιλέως ἐπὶ τῷ παραιτεῖσθαι τὸν λαὸν ἐξ Αἰγύπτου ἀπολυθῆναι, νύκτωρ ἀνοιχθέντος τοῦ δεσμυτηρίου κατὰ βούλησιν τοῦ θεοῦ ἐξελθόντα καὶ εἰς τὰ βασίλεια παρελθόντα ἐπιστῆναι κοιμωμένῳ τῷ βασιλεῖ καὶ ἐξεγεῖραι αὐτόν,</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">τὸν δὲ καταπλαγέντα τῷ γεγονότι κελεῦσαι τῷ Μωυσεῖ τὸ τοῦ πέμψαντος εἰπεῖν ὄνομα θεοῦ καὶ τὸν μὲν προσκύψαντα πρὸς τὸ οὖς εἰπεῖν, ἀκούσαντα δὲ τὸν βασιλέα ἄφωνον πεσεῖν, διακρατηθέντα δὲ ὑπὸ τοῦ Μωυσέως πάλιν ἀναβιῶναι.</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+    </div>
+    </text>
+  </version>
+</book>

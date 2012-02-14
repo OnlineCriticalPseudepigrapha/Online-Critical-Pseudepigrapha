@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ language CDATA #REQUIRED
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="TAdam" title="Testament of Adam" textStructure="criticalApparatus">
+  <version title="Greek" author="Anonymous" language="Greek">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="PCod.Gr.2419" language="Greek" show="yes">
+        <name>Paris Codex Gr. 2419, folio 247b</name>
+        <bibliography>M. R. James, “A Fragment of the Apocalypse of Adam in Greek,” in Apocrypha Anecdota II (Texts and Studies 2.3; Cambridge: Cambridge University Press, 1893), 138-145.</bibliography>
+      </ms>
+      <ms abbrev="Cedrenus" language="Greek" show="yes">
+        <name>Cedrenus </name>
+        <bibliography>M. R. James, “A Fragment of the Apocalypse of Adam in Greek,” in Apocrypha Anecdota II (Texts and Studies 2.3; Cambridge: Cambridge University Press, 1893), 138-145.</bibliography>
+        <bibliography>G. J. Reinink, “Das Problem des Ursprung des Testamentes Adams,” Orientalia Christiana Analecta 197 (1972) 387-99</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα α´ καλεῖται איאהכ ἐν ᾗ ἀγαθόν ἐστιν προσεύχεσθαι. </reading>
+            <reading option="1" mss="Cedrenus ">ὥρᾳ πρώτῃ ἡμερινῇ πρώτη εὐχὴ ἐπιτελεῖται ἐν τῷ οὐρανῷ.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 "> ὥρα β´ καλεῖται נַכוּת ἐν ᾗ εὐχαὶ τῶν ἀγγέλων καὶ ὕμνοι. </reading>
+            <reading option="1" mss="Cedrenus ">δευτέρᾳ εὐχὴ ἀγγέλων.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα γ´ καλεῖται ףַרַש ἐν ᾗ εὐχαριστοῦσι τὰ πετεινὰ τῷ θεῷ· ἐν αὐτῇ τῇ ὥρᾳ ἀποτελεῖται πᾶν στοιχεῖον. </reading>
+            <reading option="1" mss="Cedrenus ">τρίτῃ εὐχὴ πτηνῶν.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα δ´ καλεῖται . . . ἐν ᾗ εὐχαριστοῦσιν πάντα τὰ ποιήματα τοῦ θεοῦ, ἐν ᾗ στοιχειοῦνται . . . καὶ πάντα τὰ ἰοβόλα.</reading>
+            <reading option="1" mss="Cedrenus ">τετάρτῃ εὐχὴ κτηνῶν.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα ε´ καλεῖται . . . ἐν ᾗ αἰνεῖ πᾶν ζῶον τὸν θεόν· ἐν ᾗ ἀποτελεῖται πᾶν . . . .</reading>
+            <reading option="1" mss="Cedrenus ">πεμπτῇ εὐχὴ θηρίων.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα ϛ´ καλεῖται . . . {ἐν}ᾗ δυσωποῦσιν τὰ χερουβὶμ τὸν θεόν ὑπὲρ ἀνθρώπων.</reading>
+            <reading option="1" mss="Cedrenus ">ἕκτῃ ἀγγέλων παράστασις καὶ διάκρισις πάσης κτίσεως.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα ζ´ καλεῖται . . . ἐν ᾗ αἰνοῦσιν ἀγγέλων τάγματα καὶ παριστάμενα τῷ θεῷ.</reading>
+            <reading option="1" mss="Cedrenus ">ἑβδόμῃ ἀγγέλων εἴσοδος πρὸς θεὸν καὶ ἔξοδος ἀγγέλων.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα η´ καλεῖται ן׳כַנ.</reading>
+            <reading option="1" mss="Cedrenus ">ὀγδόῃ αἴνεσις καὶ θυσίαι ἀγγέλων.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα θ´ καλεῖται . . . {ἐν} ᾗ εὐχὴ ἀνθρώπων· ἤ χα παυρουν ἐν ᾗ οὐδὲν τελεῖται.</reading>
+            <reading option="1" mss="Cedrenus ">ἐννάτῃ δέησις καῖ λατρεία ἀνθρώπου.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα ι´ . . . ἐν ᾗ αἰνοῦσιν τὰ ὕδατα, καὶ πνεῦμα θεοῦ καταβαῖνον ἐπιπολάζει αὐτοῖς καὶ ἁγιάζει αὐτά· εἰ γὰρ μὴ οὕτως ἦν, ἔβλαπτον ἂν οἱ πονηροὶ δαίμονες ἀνθρώπους· ἐν ᾗ ἐ{ὰν} ἄνθρωπος ἄρῃ נֵרונ ( νέρον ) καὶ μίξῃ μετὰ ἁγίου ἐλαίου, πᾶν נושׂמַ ( νόσημα ) ἰᾶται· καὶ δαιμονῶντας καθαίρει καὶ δαίμονας ἀπελαύνει.</reading>
+            <reading option="1" mss="Cedrenus ">δεκάτῃ ἐπισκοπαὶ ὑδάτων καὶ δεήσεις οὐρανίων καὶ ἐπιγείων.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα ια´ . . . ἐν ᾗ εὐφραίνονται οἱ ἐκλεκτοὶ τοῦ θεοῦ.</reading>
+            <reading option="1" mss="Cedrenus ">ἑνδεκάτῃ ἀνθομολόγησις καὶ ἀγαλλίασις πάντων.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα ιβ´ . . . ἐν ᾗ εὐπρόσδεκτοι αἱ τῶν ἀνθρώπων εὐχαί.</reading>
+            <reading option="1" mss="Cedrenus ">δωδεκάτῃ ἔντευξις ἀνθρώπων εἰς εὐδοκίας.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα α´ . . . ἐν ᾗ οἱ δαίμονες αἰνοῦντες τὸν θεὸν οὔτε ἀδικοῦσιν οὔτε κολάζουσιν. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα β´ . . . ἐν ᾗ ὑμνοῦσιν οἱ ἰχθύες τὸν θεόν, καὶ τὸ τοῦ πυρὸς βάθος· ἐν ᾗ ὀφείλει στοιχειοῦσθαι ἀποτελέσματα εἰς δράκοντας καὶ . . . καὶ πῦρ. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα γ´ . . . ἐν ᾗ αἰνοῦσιν ὄφεις καὶ κύνεις καὶ πῦρ. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα δ´ . . . ἐν ᾗ διέρχονται δαίμονες ἐν τοῖς μνήμασιν, καὶ ἐρχόμενος ἐκεῖσε βλαβήσεται καὶ φόβον καὶ φρίκην ἐκ τῆς τῶν δαιμόνων λήψεται φαντασίας· ἐν ᾗ ὀφείλει στοιχειοῦσθαι ἀποτελέσματα . . . καὶ παντὸς γοητικοῦ πράγματος. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα ε´ . . . ἐν ᾗ αἰνοῦσιν τὰ ὕδατα τὸν θεὸν τοῦ οὐρανοῦ. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα  ϛ´ . . . ὅτε δέον ἡσυχάζειν καὶ ἀναπαῦσαι, διότι ἔχει φόβον. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 "> ὥρα ζ´ . . . ἐν ᾗ ἀναπαύει πάντα {τὰ} ζῶα ταῦτα. ἐάν τις ἄνθρωπος καθαρὸς ἁρπάσῃ נַרונ ( νέρον ) καὶ βάλλει αὐτὸ ὁ ἱερεὺς καὶ μίξῃ μετ᾽ ἐλαίου καὶ ἁγιάσῃ αὐτὸ καὶ ἀλείψῃ ἀπ᾽ αὐτὸ ἀσθενῆ ἀγρυπνοῦντα παρευθὺ τῆς νόσου ἀπαλλαγήσεται.
+</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα η´ . . . ἐν ᾗ δὲ ἀποτελοῦμεν στοιχεῖον περὶ . . . καὶ παντοίων φυτῶν.
+</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 "> ὥρα θ´ . . . ἐν ᾗ τελεῖται οὐδέν.
+</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">----
+</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 ">ὥρα ια´ . . . ἐν ᾗ ἀνοίγονται αἱ πύλαι τοῦ οὐρανοῦ καὶ ἄνθρωπος ἐν κατανύξει γενόμενος εὐήκοος γενήσεται· ἐν ταύτῃ πέτονται ταῖς πτέρυξιν σὺν ἤχῳ οἱ ἄγγελοι καὶ χερουμβὶμ καὶ σεραφίμ· καί ἐστιν χαρὰ ἐν οὐρανῷ καὶ γῇ· ἀνατέλλει δὲ καὶ ὁ ἥλιος ἐξ Ἐδέμ.
+</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="PCod.Gr.2419 "> ὥρα ιβ´ . . . ἐν ᾗ ἀναπαύονται τὰ πύρινα τάγματα. αὗταί εἰσιν αἱ ὀνομασίαι τῶν ὡρῶν· τῷ οὖν καλῶς ταῦτα νοήσαντι οὐδὲν . . . τοιούτων ἀποκρυβήσεται ἀλλὰ πάντα ὑποταγήσονται.
+</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

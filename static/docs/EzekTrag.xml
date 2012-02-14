@@ -1,0 +1,2389 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+    <!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+    <!ELEMENT version (divisions,resources*,manuscripts+,text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+    <!ELEMENT divisions (division)+>
+    <!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+    <!ELEMENT resources (resource)+>
+    <!ELEMENT resource (info+,URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+    <!ELEMENT info (#PCDATA)>
+    <!ELEMENT URL (#PCDATA)>
+    <!ELEMENT manuscripts (ms)+>
+    <!ELEMENT ms (name,bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA|sup)*>
+    <!ELEMENT sup (#PCDATA)>
+    <!ELEMENT bibliography (#PCDATA|booktitle)*>
+    <!ELEMENT booktitle (#PCDATA)>
+    <!ELEMENT text (div)+>
+    <!ELEMENT div (div|unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+    <!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+    <!ELEMENT reading (#PCDATA|w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+    <!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book filename="EzekTrag" title="Ezekiel the Tragedian" textStructure="fragmentary">
+    <version title="Praep. Evang. (Frag. 1b)" author="Eusebius" fragment="1" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="28">
+                    <div number="2">
+                        <div number="Heading">
+                            <unit id="1" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΜΩΣΗΣ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="1">
+                            <unit id="1" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἀφ᾽ οὗ δ᾽ Ἰακὼβ γῆν λιπὼν Χαναναίαν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="2">
+                            <unit id="2" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κατῆλθ᾽ ἔχων Αἴγυπτον ἑπτάκις δέκα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="3">
+                            <unit id="3" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ψυχὰς σὺν αὑτῷ καὶ ἐπεγέννησεν πολύν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="4">
+                            <unit id="4" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    λαὸν κακῶς πράσσοντα καὶ τεθλιμμένον,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="5">
+                            <unit id="5" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐς ἄχρι τούτων τῶν χρόνων κακούμενον
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="6">
+                            <unit id="6" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κακῶν ὑπ᾽ ἀνδρῶν καὶ δυναστείας χερός.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="7">
+                            <unit id="7" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἰδὼν γὰρ ἡμῶν γένναν ἅλις ηὐξημένην
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="8">
+                            <unit id="8" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    δόλον καθ᾽ ἡμῶν πολὺν ἐμηχανήσατο
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="9">
+                            <unit id="9" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    βασιλεὺς Φαραώ, τοὺς μὲν ἐν πλινθεύμασιν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="10">
+                            <unit id="10" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    οἰκοδομίαις τε βαρέσιν αἰκίζων βροτούς
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="11">
+                            <unit id="11" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πόλεις τ᾽ ἐπύργου σφῶν ἕκατι δυσμόρων.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="12">
+                            <unit id="12" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔπειτα κηρύσσει μὲν Ἑβραίων γένει
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="13">
+                            <unit id="13" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τἀρσενικὰ ῥίπτειν ποταμὸν ἐς βαθύρροον.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="14">
+                            <unit id="14" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐνταῦθα μήτηρ ἡ τεκοῦσ᾽ ἔκρυπτέ με
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="15">
+                            <unit id="15" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τρεῖς μῆνας, ὡς ἔφασκεν. οὐ λαθοῦσα δέ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="16">
+                            <unit id="16" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὑπεξέθηκε, κόσμον ἀμφιθεῖσά μοι,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="17">
+                            <unit id="17" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    παρ᾽ ἄκρα ποταμοῦ λάσιον εἰς ἕλος δασύ·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="18">
+                            <unit id="18" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Μαριὰμ δ᾽ ἀδελφή μου κατώπτευεν πέλας.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="19">
+                            <unit id="19" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κἄπειτα θυγάτηρ βασιλέως ἅβραις ὁμοῦ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="20">
+                            <unit id="20" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κατῆλθε λουτροῖς χρῶτα φαιδρῦναι νέον·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="21">
+                            <unit id="21" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἰδοῦσα δ᾽ εὐθὺς καὶ λαβοῦσ᾽ ἀνείλετο,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="22">
+                            <unit id="22" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔγνω δ᾽ Ἑβραῖον ὄντα· καὶ λέγει τάδε
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="23">
+                            <unit id="23" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Μαριὰμ ἀδελφὴ προσδραμοῦσα βασιλίδι·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="24">
+                            <unit id="24" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    "θέλεις τροφόν σοι παιδὶ τῷδ᾽ εὕρω ταχύ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="25">
+                            <unit id="25" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐκ τῶν Ἑβραίων;" ἡ δ᾽ ἐπέσπευσεν κόρην.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="26">
+                            <unit id="26" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    μολοῦσα δ᾽ εἶπε μητρὶ καὶ παρῆν ταχύ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="27">
+                            <unit id="27" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    αὐτή τε μήτηρ καὶ ἔλαβέν μ᾽ ἐς ἀγκάλας.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="28">
+                            <unit id="28" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    εἶπεν δὲ θυγάτηρ βασιλέως· "τοῦτον, γύναι,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="29">
+                            <unit id="29" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τρόφευε, κἀγὼ μισθὸν ἀποδώσω σέθεν."
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="30">
+                            <unit id="30" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὄνομα δὲ Μωσῆν ὠνόμαζε, τοῦ χάριν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="31">
+                            <unit id="31" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὑγρᾶς ἀνεῖλε ποταμίας ἀπ᾽ ᾐόνος.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 2b)" author="Eusebius" fragment="2" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="28">
+                    <div number="3">
+                        <div number="32">
+                            <unit id="32" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐπεὶ δὲ καιρὸς νηπίων παρῆλθέ μοι,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="33">
+                            <unit id="33" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἦγέν με μήτηρ βασιλίδος πρὸς δώματα,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="34">
+                            <unit id="34" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἅπαντα μυθεύσασα καὶ λέξασά μοι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="35">
+                            <unit id="35" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    γένος πατρῷον καὶ θεοῦ δωρήματα.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="36">
+                            <unit id="36" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἕως μὲν οὖν τὸν παιδὸς εἴχομεν χρόνον,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="37">
+                            <unit id="37" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τροφαῖσι βασιλικαῖσι καὶ παιδεύμασιν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="38">
+                            <unit id="38" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἅπανθ᾽ ὑπισχνεῖθ᾽, ὡς ἀπὸ σπλάγχνων ἑῶν·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="39">
+                            <unit id="39" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐπεὶ δὲ πλήρης κόλπος ἡμερῶν παρῆν,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="40">
+                            <unit id="40" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐξῆλθον οἴκων βασιλικῶν (πρὸς ἔργα γάρ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="41">
+                            <unit id="41" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    θυμός μ᾽ ἄνωγε καὶ τέχνασμα βασιλέωσ).
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="42">
+                            <unit id="42" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὁρῶ δὲ πρῶτον ἄνδρας ἐν χειρῶν νόμῳ,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="43">
+                            <unit id="43" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τὸν μὲν {τὸ} γένος Ἑβραῖον, ὃν δ᾽ Αἰγύπτιον.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="44">
+                            <unit id="44" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἰδὼν δ᾽ ἐρήμους καὶ παρόντα μηδένα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="45">
+                            <unit id="45" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐρρυσάμην ἀδελφόν, ὃν δ᾽ ἔκτειν᾽ ἐγώ,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="46">
+                            <unit id="46" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔκρυψα δ᾽ ἄμμῳ τοῦτον, ὥστε μὴ εἰσιδεῖν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="47">
+                            <unit id="47" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἕτερόν τιν᾽ ἡμᾶς κἀπογυμνῶσαι φόνον.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="48">
+                            <unit id="48" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τῇ ᾽παύριον δὲ πάλιν ἰδὼν ἄνδρας δύο,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="49">
+                            <unit id="49" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    μάλιστα δ᾽ αὐτοὺς συγγενεῖς, πατουμένους
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="50">
+                            <unit id="50" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    λέγω· "τί τύπτεις ἀσθενέστερον σέθεν;"
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="51">
+                            <unit id="51" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὁ δ᾽ εἶπεν· "ἡμῖν τίς σ᾽ ἀπέστειλεν κριτήν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="52">
+                            <unit id="52" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἢ ᾽πιστάτην ἐνταῦθα; μὴ κτενεῖς σύ με,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="53">
+                            <unit id="53" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὥσπερ τὸν ἐχθὲς ἄνδρα;" καὶ δείσας ἐγώ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="54">
+                            <unit id="54" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔλεξα· "πῶς ἐγένετο συμφανὲς τόδε;"
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="55">
+                            <unit id="55" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ πάντα βασιλεῖ ταῦτ᾽ ἀπήγγειλεν ταχύ·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="56">
+                            <unit id="56" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ζητεῖ δὲ Φαραὼ τὴν ἐμὴν ψυχὴν λαβεῖν·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="57">
+                            <unit id="57" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐγὼ δ᾽ ἀκούσας ἐκποδὼν μεθίσταμαι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="58">
+                            <unit id="58" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ νῦν πλανῶμαι γῆν ἐπ᾽ ἀλλοτέρμονα.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 3)" author="Eusebius" fragment="3" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="28">
+                    <div number="4a">
+                        <div number="59">
+                            <unit id="59" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὁρῶ δὲ ταύτας ἑπτὰ παρθένους τινάς.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 4)" author="Eusebius" fragment="4" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="28">
+                    <div number="4b">
+                        <div number="Heading">
+                            <unit id="60" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΣΕΠΦΩΡΑ·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="60">
+                            <unit id="60" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Λιβύη μὲν ἡ γῆ πᾶσα κλήͺζεται, ξένε,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="61">
+                            <unit id="61" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    οἰκοῦσι δ᾽ αὐτὴν φῦλα παντοίων γενῶν,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="62">
+                            <unit id="62" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Αἰθίοπες ἄνδρες μέλανες· ἄρχων δ᾽ ἐστὶ γῆς
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="63">
+                            <unit id="63" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    εἷς καὶ τύραννος καὶ στρατηλάτης μόνος.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="64">
+                            <unit id="64" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἄρχει δὲ πόλεως τῆσδε καὶ κρίνει βροτούς
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="65">
+                            <unit id="65" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἱερεύς, ὅς ἐστ᾽ ἐμοῦ τε καὶ τούτων πατήρ.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 5)" author="Eusebius" fragment="5" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="28">
+                    <div number="4c">
+                        <div number="66">
+                            <unit id="66" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΧΟΥΣ· ὅμως κατειπεῖν χρή σε, Σεπφώρα, τάδε.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="67">
+                            <unit id="67" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΣΕΠΦ.· ξένῳ πατήρ με τῷδ᾽ ἔδωκεν εὐνέτιν.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 6)" author="Eusebius" fragment="6" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="5">
+                        <div number="68">
+                            <unit id="68" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΜΩΣΗΣ· ἔ{δο}ξ᾽ ὄρους κατ᾽ ἄκρα Σιν{αί}ου θρόνον
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="69">
+                            <unit id="69" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    μέγαν τιν᾽ εἶναι μέχρις οὐρανοῦ πτύχας,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="70">
+                            <unit id="70" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐν τῷ καθῆσθαι φῶτα γενναῖόν τινα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="71">
+                            <unit id="71" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    διάδημ᾽ ἔχοντα καὶ μέγα σκῆπτρον χερί
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="72">
+                            <unit id="72" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    εὐωνύμῳ μάλιστα. δεξιᾷ δέ μοι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="73">
+                            <unit id="73" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔνευσε, κἀγὼ πρόσθεν ἐστάθην θρόνου.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="74">
+                            <unit id="74" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σκῆπτρον δέ μοι πάρδωκε καὶ εἰς θρόνον μέγαν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="75">
+                            <unit id="75" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    εἶπεν καθῆσθαι· βασιλικὸν δ᾽ ἔδωκέ μοι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="76">
+                            <unit id="76" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    διάδημα καὶ αὐτὸς ἐκ θρόνων χωρίζεται.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="77">
+                            <unit id="77" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐγὼ δ᾽ ἐσεῖδον γῆν ἅπασαν ἔγκυκλον
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="78">
+                            <unit id="78" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ ἔνερθε γαίας καὶ ἐξύπερθεν οὐρανοῦ,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="79">
+                            <unit id="79" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καί μοί τι πλῆθος ἀστέρων πρὸς γούνατα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="80">
+                            <unit id="80" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔπιπτ᾽, ἐγὼ δὲ πάντας ἠριθμησάμην,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="81">
+                            <unit id="81" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κἀμοῦ παρῆγεν ὡς παρεμβολὴ βροτῶν.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="82">
+                            <unit id="82" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    εἶτ᾽ ἐμφοβηθεὶς ἐξανίσταμ᾽ ἐξ ὕπνου.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 7)" author="Eusebius" fragment="7" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="6">
+                        <div number="83">
+                            <unit id="83" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {ΡΑΓΟΥΗΛ·} ὦ ξένε, καλόν σοι τοῦτ᾽ ἐσήμηνε{ν} θεός·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="84">
+                            <unit id="84" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ζῴην δ᾽, ὅταν σοι ταῦτα συμβαί{ν}ῃ ποτέ.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="85">
+                            <unit id="85" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἆρά γε μέγαν τιν᾽ ἐξαναστήσεις θρόνου
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="86">
+                            <unit id="86" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ αὐτὸς βραβεύσεις καὶ καθηγήσῃ βροτῶν;
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="87">
+                            <unit id="87" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τὸ δ᾽ εἰσθεᾶσθαι γῆν ὅλην τ᾽ οἰκουμένην
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="88">
+                            <unit id="88" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ τὰ ὑπένερθε καὶ ὑπὲρ οὐρανὸν θεοῦ·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="89">
+                            <unit id="89" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὄψει τά τ᾽ ὄντα τά τε πρὸ τοῦ τά θ᾽ ὕστερον.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 8)" author="Eusebius" fragment="8" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="7">
+                        <div number="90">
+                            <unit id="90" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΜΩΣ. ἔα· τί μοι σημεῖον ἐκ βάτου τόδε,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="91">
+                            <unit id="91" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τεράστιόν τε καὶ βροτοῖς ἀπιστία;
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="92">
+                            <unit id="92" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἄφνω βάτος μὲν καίεται πολλῷ πυρί,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="93">
+                            <unit id="93" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    αὐτοῦ δὲ χλωρὸν πᾶν μένει τὸ βλαστάνον.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="94">
+                            <unit id="94" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τί δή; προελθὼν ὄψομαι τεράστιον
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="95">
+                            <unit id="95" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    μέγιστον· οὐ γὰρ πίστιν ἀνθρώποις φέρει.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 9)" author="Eusebius" fragment="9" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="8">
+                        <div number="96">
+                            <unit id="96" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΘΕΟΣ· ἐπίσχες, ὦ φέριστε, μὴ προσεγγίσῃς,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="97">
+                            <unit id="97" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Μωσῆ, πρὶν ἢ τῶν σῶν ποδῶν λῦσαι δέσιν·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="98">
+                            <unit id="98" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἁγία γὰρ ἧς σὺ γῆς ἐφέστηκας πέλει,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="99">
+                            <unit id="99" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὁ δ᾽ ἐκ βάτου σοι θεῖος ἐκλάμπει λόγος.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="100">
+                            <unit id="100" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    θάρσησον, ὦ παῖ, καὶ λόγων ἄκου᾽ ἐμῶν·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="101">
+                            <unit id="101" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἰδεῖν γὰρ ὄψιν τὴν ἐμὴν ἀμήχανον
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="102">
+                            <unit id="102" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    θνητὸν γεγῶτα, τῶν λόγων δ᾽ ἔξεστί σοι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="103">
+                            <unit id="103" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐμῶν ἀκούειν, τῶν ἕκατ᾽ ἐλήλυθα.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="104">
+                            <unit id="104" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐγὼ θεὸς σῶν, ὧν λέγεις, γεννητόρων,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="105">
+                            <unit id="105" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Ἀβραάμ τε καὶ Ἰσαὰκ καὶ Ἰακώβου τρίτου.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="106">
+                            <unit id="106" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    μνησθεὶς δ᾽ ἐκείνων καὶ ἔτ᾽ ἐμῶν δωρημάτων
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="107">
+                            <unit id="107" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πάρειμι σῶσαι λαὸν Ἑβραίων ἐμόν,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="108">
+                            <unit id="108" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἰδὼν κάκωσιν καὶ πόνον δούλων ἐμῶν.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="109">
+                            <unit id="109" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἀλλ᾽ ἕρπε καὶ σήμαινε τοῖς ἐμοῖς λόγοις
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="110">
+                            <unit id="110" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πρῶτον μὲν αὐτοῖς πᾶσιν Ἑβραίοις ὁμοῦ,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="111">
+                            <unit id="111" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔπειτα βασιλεῖ τὰ ὑπ᾽ ἐμοῦ τεταγμένα,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="112">
+                            <unit id="112" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὅπως σὺ λαὸν τὸν ἐμὸν ἐξάγοις χθονός.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 10)" author="Eusebius" fragment="10" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="9">
+                        <div number="113">
+                            <unit id="113" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΜΩΣ. οὐκ εὔλογος πέφυκα, γλῶσσα δ᾽ ἐστί μοι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="114">
+                            <unit id="114" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    δύσφραστος, ἰσχνόφωνος, ὥστε μὴ λόγους
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="115">
+                            <unit id="115" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐμοὺς γενέσθαι βασιλέως ἐναντίον.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 11)" author="Eusebius" fragment="11" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="10">
+                        <div number="116">
+                            <unit id="116" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΘΕΟΣ· Ἀάρωνα πέμψω σὸν κασίγνητον ταχύ,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="117">
+                            <unit id="117" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὧͺ πάντα λέξεις τἀξ ἐμοῦ λελεγμένα,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="118">
+                            <unit id="118" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ αὐτὸς λαλήσει βασιλέως ἐναντίον,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="119">
+                            <unit id="119" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σὺ μὲν πρὸς ἡμᾶς, ὁ δὲ λαβὼν σέθεν πάρα.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 12)" author="Eusebius" fragment="12" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="11">
+                        <div number="120">
+                            <unit id="120" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {Θ.} τί δ᾽ ἐν χεροῖν σοῖν τοῦτ᾽ ἔχεις; λέξον τάχος.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="121">
+                            <unit id="121" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {Μ.} ῥάβδον τετραπόδων καὶ βροτῶν κολάστριαν.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="122">
+                            <unit id="122" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {Θ.} ῥῖψον πρὸς οὖδας καὶ ἀποχώρησον ταχύ.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="123">
+                            <unit id="123" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    δράκων γὰρ ἔσται φοβερός, ὥστε θαυμάσαι.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="124">
+                            <unit id="124" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {Μ.} ἰδοὺ βέβληται· δέσποθ᾽, ἵλεως γενοῦ·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="125">
+                            <unit id="125" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὡς φοβερός, ὡς πέλωρος· οἴκτειρον σύ με·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="126">
+                            <unit id="126" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πέφρικ᾽ ἰδών, μέλη δὲ σώματος τρέμει.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="127">
+                            <unit id="127" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {Θ.} μηδὲν φοβηθῇς, χεῖρα δ᾽ ἐκτείνας λαβέ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="128">
+                            <unit id="128" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    οὐράν, πάλιν δὲ ῥάβδος ἔσσεθ᾽ ὥσπερ ἦν.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="129">
+                            <unit id="129" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔνθες δὲ χεῖρ᾽ εἰς κόλπον ἐξένεγκέ τε.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="130">
+                            <unit id="130" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {Μ.} ἰδοὺ τὸ ταχθέν, γέγονεν ὡσπερεὶ χιών.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="131">
+                            <unit id="131" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {Θ.} ἔνθες πάλιν δ᾽ εἰς κόλπον, ἔσται δ᾽ ὥσπερ ἦν.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 13)" author="Eusebius" fragment="13" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="12">
+                        <div number="132">
+                            <unit id="132" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΘΕΟΣ· ἐν τῇδε ῥάβδῳ πάντα ποιήσεις κακά·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="133">
+                            <unit id="133" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πρῶτον μὲν αἷμα ποτάμιον ῥυήσεται
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="134">
+                            <unit id="134" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πηγαί τε πᾶσαι καὶ ὑδάτων συστήματα·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="135">
+                            <unit id="135" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    βατράχων τε πλῆθος καὶ σκνῖπας ἐμβαλῶ χθονί.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="136">
+                            <unit id="136" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔπειτα τέφραν οἷς καμιναίαν πάσω,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="137">
+                            <unit id="137" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἀναβρυήσει δ᾽ ἐν βροτοῖς ἕλκη πικρά.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="138">
+                            <unit id="138" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κυνόμυια δ᾽ ἥξει καὶ βροτοὺς Αἰγυπτίων
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="139">
+                            <unit id="139" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πολλοὺς κακώσει. μετὰ δὲ ταῦτ᾽ ἔσται πάλιν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="140">
+                            <unit id="140" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    λοιμός, θανοῦνται δ᾽ οἷς ἔνεστι καρδία
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="141">
+                            <unit id="141" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σκληρά. πικράνω δ᾽ οὐρανόν· χάλαζα νῦν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="142">
+                            <unit id="142" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σὺν πυρὶ πεσεῖται καὶ νεκροὺς θήσει βροτούς.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="143">
+                            <unit id="143" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καρποί τ᾽ ὀλοῦνται τετραπόδων τε σώματα·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="144">
+                            <unit id="144" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σκότος τε θήσω τρεῖς ἐφ᾽ ἡμέρας ὅλας
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="145">
+                            <unit id="145" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἀκρίδας τε πέμψω, καὶ περισσὰ βρώματα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="146">
+                            <unit id="146" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἅπαντ᾽ ἀναλώσουσι καὶ καρποῦ χλόην.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="147">
+                            <unit id="147" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐπὶ πᾶσι τούτοις τέκν᾽ ἀποκτενῶ βροτῶν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="148">
+                            <unit id="148" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πρωτόγονα. παύσω δ᾽ ὕβριν ἀνθρώπων κακῶν.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="149">
+                            <unit id="149" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Φαραὼ δὲ βασιλεὺς πείσετ᾽ οὐδὲν ὧν λέγω,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="150">
+                            <unit id="150" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πλὴν τέκνον αὐτοῦ πρωτόγονον ἕξει νεκρόν·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="151">
+                            <unit id="151" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ τότε φοβηθεὶς λαὸν ἐκπέμψει ταχύ·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="152">
+                            <unit id="152" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πρὸς τοῖσδε λέξεις πᾶσιν Ἑβραίοις ὁμοῦ·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="153">
+                            <unit id="153" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    "ὁ μεὶς ὅδ᾽ ὑμῖν πρῶτος ἐνιαυτῶν πέλει·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="154">
+                            <unit id="154" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐν τῷδ᾽ ἀπάξω λαὸν εἰς ἄλλην χθόνα,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="155">
+                            <unit id="155" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    εἰς ἣν ὑπέστην πατράσιν Ἑβραίων γένους."
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="156">
+                            <unit id="156" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    λέξεις δὲ λαῷ παντί, μηνὸς οὗ λέγω
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="157">
+                            <unit id="157" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    διχομηνίᾳ τὸ πάσχα θύσαντας θεῷ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="158">
+                            <unit id="158" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τῆς πρόσθε νυκτὸς αἵματι ψαῦσαι θύρας,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="159">
+                            <unit id="159" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὅπως παρέλθῃ σῆμα δεινὸς ἄγγελος.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="160">
+                            <unit id="160" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὑμεῖς δὲ νυκτὸς ὀπτὰ δαίσεσθε κρέα.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="161">
+                            <unit id="161" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σπουδῇ δὲ βασιλεὺς ἐκβαλεῖ πρόπαντ᾽ ὄχλον.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="162">
+                            <unit id="162" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὅταν δὲ μέλλητ᾽ ἀποτρέχειν, δώσω χάριν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="163">
+                            <unit id="163" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    λαῷ, γυνή τε παρὰ γυναικὸς λήψεται
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="164">
+                            <unit id="164" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σκεύη κόσμον τε πάνθ᾽, ὃν ἄνθρωπος φέρει,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="165">
+                            <unit id="165" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    χρυσόν τε καὶ ἄργυρόν τε καὶ στολάς, ἵνα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="166">
+                            <unit id="166" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {ἀνθ᾽} ὧν ἔπραξαν μισθὸν ἀποδῶσιν βροτοῖς.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="167">
+                            <unit id="167" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὅταν δ᾽ ἐς ἴδιον χῶρον εἰσέλθηθ᾽, ὅπως
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="168">
+                            <unit id="168" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἀφ᾽ ἧσπερ ἠοῦς ἐφύγετ᾽, Αἰγύπτου δ᾽ ἄπο
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="169">
+                            <unit id="169" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἕπτ᾽ {ἦτ᾽} ὁδοιποροῦντες ἡμέρας ὁδόν,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="170">
+                            <unit id="170" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πάντες τοσαύτας ἡμέρας ἔτος κάτα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="171">
+                            <unit id="171" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἄζυμ᾽ ἔδεσθε καὶ θεῷ λατρεύσετε,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="172">
+                            <unit id="172" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τὰ πρωτότευκτα ζῷα θύοντες θεῷ,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="173">
+                            <unit id="173" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὅσ᾽ ἂν τέκωσι παρθένοι πρώτως τέκνα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="174">
+                            <unit id="174" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τἀρσενικὰ διανοίγοντα μήτρας μητέρων.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 14)" author="Eusebius" fragment="14" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="13">
+                        <div number="175">
+                            <unit id="175" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἀνδρῶν Ἑβραίων τοῦδε τοῦ μηνὸς λαβών
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="176">
+                            <unit id="176" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κατὰ συγγενείας πρόβατα καὶ μόσχους βοῶν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="177">
+                            <unit id="177" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἄμωμα δεκάτῃ· καὶ φυλαχθήτω μέχρι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="178">
+                            <unit id="178" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τετρὰς ἐπιλάμψει δεκάδι, καὶ πρὸς ἑσπέραν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="179">
+                            <unit id="179" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    θύσαντες ὀπτὰ πάντα σὺν τοῖς ἔνδοθεν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="180">
+                            <unit id="180" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    οὕτως φάγεσθε ταῦτα· περιεζωσμένοι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="181">
+                            <unit id="181" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ κοῖλα ποσσὶν ὑποδέδεσθε καὶ χερί
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="182">
+                            <unit id="182" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    βακτηρίαν ἔχοντες. ἐν σπουδῇ τε γάρ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="183">
+                            <unit id="183" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    βασιλεὺς κελεύσει πάντας ἐκβαλεῖν χθονός·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="184">
+                            <unit id="184" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κεκλήσεται δὲ πάσχ᾽, ὅταν θύσητε δέ,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="185">
+                            <unit id="185" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    δέσμην λαβόντες χερσὶν ὑσσώπου κόμης
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="186">
+                            <unit id="186" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    εἰς αἷμα βάψαι καὶ θιγεῖν σταθμῶν δυοῖν,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="187">
+                            <unit id="187" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὅπως παρέλθῃ θάνατος Ἑβραίων ἄπο.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="188">
+                            <unit id="188" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ταύτην δ᾽ ἑορτὴν δεσπότῃ τηρήσετε,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="189">
+                            <unit id="189" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἕφθ᾽ ἡμέρας ἄζυμα· καὶ οὐ βρωθήσεται
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="190">
+                            <unit id="190" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ζύμη. κακῶν γὰρ τῶνδ᾽ ἀπαλλαγήσεται,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="191">
+                            <unit id="191" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ τοῦδε μηνὸς ἔξοδον διδοῖ θεός·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="192">
+                            <unit id="192" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἀρχὴ δὲ μηνῶν καὶ χρόνων οὗτος πέλει.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 15)" author="Eusebius" fragment="15" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="14">
+                        <div number="193">
+                            <unit id="193" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΑΓΓΕΛ. ὡς γὰρ σὺν ὄχλῳ τῷδ᾽ ἀφώρμησεν δόμων
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="194">
+                            <unit id="194" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ΑΙΓΥΠΤ. βασιλεὺς Φαραὼ μυρίων ὅπλων μέτα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="195">
+                            <unit id="195" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἵππου τε πάσης καὶ ἁρμάτων τετραόρων
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="196">
+                            <unit id="196" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ προστάταισι καὶ παραστάταις ὁμοῦ,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="197">
+                            <unit id="197" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἦν φρικτὸς ἀνδρῶν ἐκτεταγμένων ὄχλος.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="198">
+                            <unit id="198" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πεζοὶ μὲν ἐν μέσοισι καὶ φαλαγγικοί
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="199">
+                            <unit id="199" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    διεκδρομὰς ἔχοντες ἅρμασιν τόπους·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="200">
+                            <unit id="200" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἱππεῖς δ᾽ ἔταξε τοὺς μὲν ἐξ εὐωνύμων,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="201">
+                            <unit id="201" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐκ δεξιῶν δὲ πάντας Αἰγυπτίου στρατοῦ.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="202">
+                            <unit id="202" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τὸν πάντα δ᾽ αὐτῶν ἀριθμὸν ἠρόμην ἐγώ [στρατοῦ]·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="203">
+                            <unit id="203" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    μυριάδες {ἦσαν} ἑκατὸν εὐάνδρου λεώ[ς].
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="204">
+                            <unit id="204" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐπεὶ δ᾽ Ἑβραίων οὑμὸς ἤντησε στρατός,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="205">
+                            <unit id="205" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    οἱ μὲν παρ᾽ ἀκτὴν πλησίον βεβλημένοι
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="206">
+                            <unit id="206" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Ἐρυθρᾶς Θαλάσσης ἦσαν ἠθροϊσμένοι·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="207">
+                            <unit id="207" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    οἱ μὲν τέκνοισι νηπίοις δίδουν βοράν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="208">
+                            <unit id="208" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὁμοῦ τε καὶ δάμαρσιν, ἔμπονοι κόπῳ·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="209">
+                            <unit id="209" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κτήνη τε πολλὰ καὶ δόμων ἀποσκευή·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="210">
+                            <unit id="210" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    αὐτοὶ δ᾽ ἄνοπλοι πάντες εἰς μάχην χέρας
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="211">
+                            <unit id="211" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἰδόντες ἡμᾶς ἠλάλαξαν ἔνδακρυν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="212">
+                            <unit id="212" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    φωνὴν πρὸς αἰθέρα τ᾽ ἐστάθησαν ἀθρόοι,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="213">
+                            <unit id="213" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    θεὸν πατρῷον. ἦν πολὺς δ᾽ ἀνδρῶν ὄχλος.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="214">
+                            <unit id="214" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἡμᾶς δὲ χάρμα πάντας εἶχεν ἐν μέρει.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="215">
+                            <unit id="215" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔπειθ᾽ ὑπ᾽ αὐτοὺς θήκαμεν παρεμβολήν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="216">
+                            <unit id="216" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    (Βεελζεφών τις κλήͺζεται πόλις βροτοῖσ).
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="217">
+                            <unit id="217" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐπεὶ δὲ Τιτὰν ἥλιος δυσμαῖς προσῆν,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="218">
+                            <unit id="218" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐπέσχομεν, θέλοντες ὄρθριον μάχην,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="219">
+                            <unit id="219" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πεποιθότες λαοῖσι καὶ φρικτοῖς ὅπλοις.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="220">
+                            <unit id="220" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔπειτα θείων ἄρχεται τεραστίων
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="221">
+                            <unit id="221" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    θαυμάστ᾽ ἰδέσθαι. καί τις ἐξαίφνης μέγας
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="222">
+                            <unit id="222" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    στῦλος νεφώδης ἐστάθη πρὸ γῆς, μέγας,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="223">
+                            <unit id="223" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    παρεμβολῆς ἡμῶν τε καὶ Ἑβραίων μέσος.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="224">
+                            <unit id="224" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κἄπειθ᾽ ὁ κείνων ἡγεμὼν Μωσῆς, λαβών
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="225">
+                            <unit id="225" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ῥάβδον θεοῦ, τῇ δὴ πρὶν Αἰγύπτῳ κακά
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="226">
+                            <unit id="226" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σημεῖα καὶ τερ{ά}ατ᾽ ἐξεμήσατο,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="227">
+                            <unit id="227" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔτυψ᾽ Ἐρυθρᾶς νῶτα καὶ ἔσχισεν μέσον
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="228">
+                            <unit id="228" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    βάθος Θαλάσσης· οἱ δὲ σύμπαντες σθένει
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="229">
+                            <unit id="229" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὤρουσαν ὠκεῖς ἁλμυρᾶς δι᾽ ἀτραποῦ.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="230">
+                            <unit id="230" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἡμεῖς δ᾽ ἐπ᾽ αὐτῆς ᾠχόμεσθα συντόμως
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="231">
+                            <unit id="231" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κατ᾽ ἴχνος αὐτῶν· νυκτὸς εἰσεκύρσαμεν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="232">
+                            <unit id="232" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    βοηδρομοῦντες· ἁρμάτων δ᾽ ἄφνω τροχοί
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="233">
+                            <unit id="233" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    οὐκ ἐστρέφοντο, δέσμιοι δ᾽ ὣς ἥρμοσαν.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="234">
+                            <unit id="234" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἀπ᾽ οὐρανοῦ δὲ φέγγος ὡς πυρὸς μέγα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="235">
+                            <unit id="235" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὤφθη τι ἡμῖν· ὡς μὲν εἰκάζειν, παρῆν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="236">
+                            <unit id="236" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    αὐτοῖς ἀρωγὸς ὁ θεός. ὡς δ᾽ ἤδη πέραν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="237">
+                            <unit id="237" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἦσαν θαλάσσης, κῦμα δ᾽ ἐρροίβδει μέγα
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="238">
+                            <unit id="238" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σύνεγγυς ἡμῶν. καί τις ἠλάλαξ᾽ ἰδών·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="239">
+                            <unit id="239" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    "φεύγωμεν οἴκοι πρόσθεν Ὑψίστου χέρας·
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="240">
+                            <unit id="240" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    οἷς μὲν γάρ ἐστ᾽ ἀρωγός, ἡμῖν δ᾽ ἀθλίοις
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="241">
+                            <unit id="241" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὄλεθρον ἕρδει." καὶ συνεκλύσθη πόρος
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="242">
+                            <unit id="242" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    Ἐρυθρᾶς Θαλάσσης καὶ στρατὸν διώλεσε.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 16)" author="Eusebius" fragment="16" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="16a">
+                        <div number="243">
+                            <unit id="243" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    {ΣΚΟΠΟΣ} κράτιστε Μωσῆ, πρό{σ}σχες, οἷον εὕρομεν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="244">
+                            <unit id="244" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    τόπον πρὸς αὐτῇ τῇδέ γ᾽ εὐαεῖ νάπῃ.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="245">
+                            <unit id="245" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔστιν γάρ, ὥς που καὶ σὺ τυγχάνεις ὁρῶν,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="246">
+                            <unit id="246" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐκεῖ· τόθεν δὲ φέγγος ἐξέλαμψέ νυν
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="247">
+                            <unit id="247" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κατ᾽ εὐφρόνης σημεῖον ὡς στῦλος πυρός.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="248">
+                            <unit id="248" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἐνταῦθα λειμῶν᾽ εὕρομεν κατάσκιον
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="249">
+                            <unit id="249" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὑγράς τε λιβάδας· δαψιλὴς χῶρος βαθύς,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="250">
+                            <unit id="250" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πηγὰς ἀφύσσων δώδεκ᾽ ἐκ μιᾶς πέτρας,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="251">
+                            <unit id="251" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    στελέχη δ᾽ ἐρυμνὰ πολλὰ φοινίκων πέλει
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="252">
+                            <unit id="252" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔγκαρπα, δεκάκις ἑπτά, καὶ περίρρυτος
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="253">
+                            <unit id="253" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πέφυκε χλο{ί}η θρέμμασιν χορτάσματα.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang. (Frag. 17)" author="Eusebius" fragment="17" language="Greek">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" language="Greek" show="yes">
+                <name>
+                    Mras
+                </name>
+                <bibliography>
+                    Fragments from Eusebius and Epiphanius; Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG ; Leiden: Brill).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="9">
+                <div number="29">
+                    <div number="16b">
+                        <div number="254">
+                            <unit id="254" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἕτερον δὲ πρὸς τοῖσδ᾽ εἴδομεν ζῷον ξένον,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="255">
+                            <unit id="255" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    θαυμαστόν, οἷον οὐδέπω ὥρακέ τις.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="256">
+                            <unit id="256" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    διπλοῦν γὰρ ἦν τὸ μῆκος ἀετοῦ σχεδόν,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="257">
+                            <unit id="257" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    πτεροῖσι ποικίλοισιν ἠδὲ χρώμασι.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="258">
+                            <unit id="258" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    στῆθος μὲν αὐτοῦ πορφυροῦν ἐφαίνετο,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="259">
+                            <unit id="259" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    σκέλη δὲ μιλτόχρωτα, καὶ κατ᾽ αὐχένων
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="260">
+                            <unit id="260" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κροκωτίνοις μαλλοῖσιν εὐτρεπίζετο.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="261">
+                            <unit id="261" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κάρα δὲ κοττοῖς ἡμέροις παρεμφερές,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="262">
+                            <unit id="262" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    καὶ μηλίνῃ μὲν τῇ κόρῃ προσέβλεπε
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="263">
+                            <unit id="263" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    κύκλῳ· κόρη δὲ κόκκος ὣς ἐφαίνετο.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="264">
+                            <unit id="264" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    φωνὴν δὲ πάντων εἶχεν ἐκπρεπεστάτην.
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="265">
+                            <unit id="265" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    βασιλεὺς δὲ πάντων ὀρνέων ἐφαίνετο,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="266">
+                            <unit id="266" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὡς ἦν νοῆσαι· πάντα γὰρ τὰ πτήν᾽ ὁμοῦ
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="267">
+                            <unit id="267" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ὄπισθεν αὐτοῦ δειλιῶντ᾽ ἐπέσσυτο,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="268">
+                            <unit id="268" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    αὐτὸς δὲ πρόσθεν, ταῦρος ὣς γαυρούμενος,
+                                </reading>
+                            </unit>
+                        </div>
+                        <div number="269">
+                            <unit id="269" group="0" parallel="">
+                                <reading option="0" mss="Mras " linebreak="following">
+                                    ἔβαινε κραιπνὸν βῆμα βαστάζων ποδός.
+                                </reading>
+                            </unit>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
+</book>
