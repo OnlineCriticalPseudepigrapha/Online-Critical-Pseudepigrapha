@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+    <!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+    <!ELEMENT version (divisions,resources*,manuscripts+,text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+    <!ELEMENT divisions (division)+>
+    <!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+    <!ELEMENT resources (resource)+>
+    <!ELEMENT resource (info+,URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+    <!ELEMENT info (#PCDATA)>
+    <!ELEMENT URL (#PCDATA)>
+    <!ELEMENT manuscripts (ms)+>
+    <!ELEMENT ms (name,bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA|sup)*>
+    <!ELEMENT sup (#PCDATA)>
+    <!ELEMENT bibliography (#PCDATA|booktitle)*>
+    <!ELEMENT booktitle (#PCDATA)>
+    <!ELEMENT text (div)+>
+    <!ELEMENT div (div|unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+    <!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+    <!ELEMENT reading (#PCDATA|w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+    <!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book filename="PhEPoet" title="Philo the Epic Poet" textStructure="fragmentary">
+  <version title="Praep. Evang. (Frag. 1)" author="Eusebius" fragment="1" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Carl R. Mras, Poets: The Epic Poets Theodotus and Philo and Ezekiel the Tragedian (vol 2 of Fragments from Hellenistic Jewish Authors; TT 30; PS 12; Atlanta: Scholars Press, 1989), 234-245. Fragments 1–2: Eusebius, Praeparatio Evangelica 9.20.1-2; Fragment 3: Eusebius, Praeparatio Evangelica 9.24.1; Fragments 4–6: Eusebius, Praeparatio Evangelica 9.37.1-3.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+      <div number="20">
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">"Φησὶ δὲ περὶ τούτου καὶ Φίλων ἐν τῷ πρώτῳ τῶν Περὶ Ἱεροσόλυμα·
+</reading>
+          </unit>
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΟΥ ΑΥΤΟΥ
+</reading>
+          </unit>
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+	'Ἔκλυον ἀρχεγόνοισι τὸ μηρίον ὥς ποτε θεσμοῖς, 
+      Ἁβραὰμ κλυτοηχὲς ὑπερτέρῳ ἅμματι δεσμῶν, 
+      παμφαές, πλήμμυρε μεγαυχήτοισι λογισμοῖς, 
+      θειοφιλῆ θέλγητρα. λιπόντι γὰρ ἀγλαὸν ἕρκος 
+      αἰνοφύτων ἔκκαυμα βριήπυος αἰνετὸς ἴσχων 
+      ἀθάνατον ποίησεν ἑὴν φάτιν, ἐξότε κείνου 
+      ἔκγονος αἰνογόνοιο πολύμνιον ἔλλαχε κῦδος,'
+</reading>
+          </unit>
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς·"
+</reading>
+          </unit>
+          </div>
+          </div>
+          </div>
+          </text>
+          </version>
+<version title="Praep. Evang. (Frag. 2)" author="Eusebius" fragment="2" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Carl R. Mras, Poets: The Epic Poets Theodotus and Philo and Ezekiel the Tragedian (vol 2 of Fragments from Hellenistic Jewish Authors; TT 30; PS 12; Atlanta: Scholars Press, 1989), 234-245. Fragments 1–2: Eusebius, Praeparatio Evangelica 9.20.1-2; Fragment 3: Eusebius, Praeparatio Evangelica 9.24.1; Fragments 4–6: Eusebius, Praeparatio Evangelica 9.37.1-3.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="20">
+          <div number="1">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">"οἷς μετ᾽ ὀλίγα ἐπιφέρει·
+</reading>
+          </unit>
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+	'Ἀρτίχερος θηκτοῖο ξιφηφόρον ἐντύνοντος 
+      λήματι καὶ σφαράγοιο παρακλιδὸν ἀθροισθέντος· 
+      | ἀλλ᾽ ὁ μὲν ἐν χείρεσσι κερασφόρον ὤπασε κριόν,' 
+</reading>
+          </unit>
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ τούτοις ἑπόμενα." 
+</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">Ταῦτα μὲν δὴ ἀπὸ τῆς προειρημένης τοῦ Πολυΐστορος γραφῆς.
+</reading>
+          </unit>
+        </div>
+      </div>
+      </div>
+</text>
+</version>
+<version title="Praep. Evang. (Frag. 3)" author="Eusebius" fragment="3" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Carl R. Mras, Poets: The Epic Poets Theodotus and Philo and Ezekiel the Tragedian (vol 2 of Fragments from Hellenistic Jewish Authors; TT 30; PS 12; Atlanta: Scholars Press, 1989), 234-245. Fragments 1–2: Eusebius, Praeparatio Evangelica 9.20.1-2; Fragment 3: Eusebius, Praeparatio Evangelica 9.24.1; Fragments 4–6: Eusebius, Praeparatio Evangelica 9.37.1-3.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+      <div number="24">
+        <div number="Heading">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΟΥ ΙΩΣΗΦ· ΑΠΟ ΤΗΣ ΑΥΤΗΣ ΓΡΑΦΗΣ
+</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">"Μαρτυρεῖ δὲ ταῖς ἱεραῖς βίβλοις καὶ Φίλων ἐν τῇ ιδ᾽ τῶν Περὶ Ἱεροσόλυμα, 
+λέγων οὕτως·
+</reading>
+          </unit>
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+      'Τοῖσιν ἕδος μακαριστὸν ὅλης μέγας ἔκτισεν 
+	ἄκτωρ 
+      ὕψιστος καὶ πρόσθεν ἀφ᾽ Ἁβραάμοιο καὶ Ἰσὰκ 
+      Ἰακὼβ εὐτέκνοιό θ᾽ ὅθεν Ἰωσήφ, ὃς ὀνείρων
+      θεσπιστὴς σκηπτοῦχος ἐν Αἰγύπτοιο θρόνοισι, 
+      δινεύσας λαθραῖα χρόνου πλημμυρίδι μοίρης', 
+</reading>
+          </unit>
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς.  ταῦτα καὶ περὶ τοῦ Ἰωσήφ." 
+</reading>
+          </unit>
+        </div>
+      </div>
+      </div>
+      </text>
+      </version>
+<version title="Praep. Evang. (Frag. 4)" author="Eusebius" fragment="4" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Carl R. Mras, Poets: The Epic Poets Theodotus and Philo and Ezekiel the Tragedian (vol 2 of Fragments from Hellenistic Jewish Authors; TT 30; PS 12; Atlanta: Scholars Press, 1989), 234-245. Fragments 1–2: Eusebius, Praeparatio Evangelica 9.20.1-2; Fragment 3: Eusebius, Praeparatio Evangelica 9.24.1; Fragments 4–6: Eusebius, Praeparatio Evangelica 9.37.1-3.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">      
+      <div number="37">
+        <div number="Heading">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΩΝ ΕΝ ΙΕΡΟΣΟΛΥΜΟΙΣ ΨΔΑΤΩΝ
+</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">"Φησὶ δὲ ὁ Φίλων ἐν τοῖς Περὶ Ἱεροσολύμων κρήνην εἶναι, ταύτην δὲ ἐν | μὲν τῷ χειμῶνι ξηραίνεσθαι, ἐν δὲ τῷ θέρει πληροῦσθαι. λέγει δὲ ἐν τῇ πρώτῃ οὕτως· 
+</reading>
+          </unit>
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+	'Νηχόμενος δ᾽ ἐφύπερθε τὸ θαμβηέστατον ἄλλο 
+      δέρκηθρον· συναοιδὰ μεγιστούχοιο λοετροῖς 
+      ῥεύματος ἐμπίπλησι βαθὺν ῥόον ἐξανιείσης,'
+</reading>
+          </unit>
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς." 
+</reading>
+          </unit>
+        </div>
+        </div>
+        </div>
+        </text>
+        </version>
+<version title="Praep. Evang. (Frag. 5)" author="Eusebius" fragment="5" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Carl R. Mras, Poets: The Epic Poets Theodotus and Philo and Ezekiel the Tragedian (vol 2 of Fragments from Hellenistic Jewish Authors; TT 30; PS 12; Atlanta: Scholars Press, 1989), 234-245. Fragments 1–2: Eusebius, Praeparatio Evangelica 9.20.1-2; Fragment 3: Eusebius, Praeparatio Evangelica 9.24.1; Fragments 4–6: Eusebius, Praeparatio Evangelica 9.37.1-3.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">        
+        <div number="37">
+        <div number="2">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">"οἷς πάλιν ὑποβὰς περὶ τῆς πληρώσεως ἐπιλέγει·
+</reading>
+          </unit>
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+      'Ῥεῦμα γὰρ ὑψιφάεννον, ἐν ὑετίοις νιφετοῖσιν 
+      ἱέμενον, πολυγηθές, ὑπαὶ πύργοις συνόροισιν 
+      στρωφᾶται, καὶ ξηρὰ πέδῳ κεκονιμένα κρήνης 
+      τηλεφαῆ δείκνυσιν ὑπέρτατα θάμβεα λαῶν,'
+</reading>
+          </unit>
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ τούτοις ἀκόλουθα."
+</reading>
+          </unit>
+        </div>
+        </div>
+        </div>
+        </text>
+        </version>
+<version title="Praep. Evang. (Frag. 6)" author="Eusebius" fragment="6" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Carl R. Mras, Poets: The Epic Poets Theodotus and Philo and Ezekiel the Tragedian (vol 2 of Fragments from Hellenistic Jewish Authors; TT 30; PS 12; Atlanta: Scholars Press, 1989), 234-245. Fragments 1–2: Eusebius, Praeparatio Evangelica 9.20.1-2; Fragment 3: Eusebius, Praeparatio Evangelica 9.24.1; Fragments 4–6: Eusebius, Praeparatio Evangelica 9.37.1-3.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">        
+        <div number="37">        
+        <div number="3">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">"εἶτα πάλιν περὶ τῆς τοῦ ἀρχιερέως κρήνης καὶ τῆς ἀποχετεύσεως διέξεισιν οὕτως· 
+</reading>
+          </unit>
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+	'Αἰπὺ δ᾽ ἄρ᾽ ἐκπτύουσι διὰ χθονὸς ὑδροχόοισι σωλῆνες,'
+ </reading>
+          </unit>
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ ὅσα ἄλλα τούτοις ἕπεται." 
+</reading>
+          </unit>
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Mras ">
+	Τοσαῦτα μὲν δὴ τὰ ἀπὸ τῶν Ἀλεξάνδρου τοῦ Πολυΐστοπος.
+</reading>
+          </unit>
+        </div>
+      </div>
+      </div>
+    </text>
+  </version>
+</book>

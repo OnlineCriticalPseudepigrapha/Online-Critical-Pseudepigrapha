@@ -1,0 +1,33 @@
+{{extend 'layout.html'}}
+{{=H2(title)}}
+{{for version in info['versions']:}}
+    <ul>
+        {{for key, value in version.items():}}
+            {{if key == 'text_structure':}}
+                <li><span>'Version text_structure'</span></li>
+                <ul>
+                    {{for ref, ref_val in value.items():}}
+                        {{for unit, unit_val in ref_val.items():}}
+                            {{for mss, mss_val in unit_val.items():}}
+                            <li>{{=ref}} --> {{=unit}} --> {{=mss}} --> {{=mss_val}}</li>
+                            {{pass}}
+                        {{pass}}
+                    {{pass}}
+                </ul>
+            {{ elif key == 'manuscript': }} 
+                <li><span>Version: Manuscripts</span></li>
+                <ul>
+                    {{for ms in value:}}
+                        {{=value[ms]['name']}} ({{=value[ms]['abbrev']}})
+                        {{for bib in value[ms]['bibliography']:}}
+                            <li>Bibliography: {{=bib}}</li>
+                        {{pass}}
+                    {{pass}}
+                </ul>
+            {{else:}}
+                <li><span>Version: {{=key}} --> {{=value}}</span></li>
+            {{pass}}
+        {{pass}}
+    </ul>
+{{pass}}
+{{=info.items()}}

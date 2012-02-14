@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+ language CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="4Bar" title="Paraleipomena Ieremiou (4 Baruch)">
+  <version title="Greek" author="" language="Greek">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Harris" language="Greek" show="yes">
+        <name>Harris</name>
+        <bibliography>Text from J. R. Harris, The Rest of the Words of Baruch (Haverford College Studies 2; London: C. J. Clay, 1889); R. A. Kraft and A.-E. Purintun (eds.), Paraleipomena Jeremiou (TT 1; PS 1; Missoula: Scholars Press, 1972) 12-48.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Title">
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Harris ">ΤΑ ΠΑΡΑΛΕΙΠΟΜΕΝΑ ΙΕΡΕΜΙΟΥ ΤΟΥ ΠΡΟΦΗΤΟΥ</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="1">
+        <div number="1">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ἐγένετο, ἡνίκα ᾐχμαλωτεύθησαν οἱ υἱοὶ Ἰσραὴλ ἀπὸ τοῦ βασιλέως τῶν Χαλδαίων, ἐλάλησεν ὁ θεὸς πρὸς Ἱερεμίαν λέγων· Ἱερεμία, ὁ ἐκλεκτός μου, ἀνάστα, καὶ ἔξελθε ἐκ τῆς πόλεως ταύτης, σὺ καὶ Βαρούχ· ἐπειδὴ ἀπολῶ αὐτὴν διὰ τὸ πλῆθος τῶν ἁμαρτιῶν τῶν κατοικούντων ἐν αὐτῇ. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Harris ">αἱ γὰρ προσευχαὶ ὑμῶν ὡς στῦλος ἑδραῖός ἐστιν ἐν μέσῳ αὐτῆς, καὶ ὡς τεῖχος ἀδαμάντινον περικυκλοῦν αὐτήν. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Harris ">νῦν οὖν ἀναστάντες ἐξέλθατε πρὸ τοῦ ἡ δύναμις τῶν Χαλδαίων κυκλώσει αὐτή. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀπεκρίθη Ἰερεμίας, λέγων· Παρακαλῶ σε, κύριε, ἐπίστρεψέν μοι τῷ δούλῳ σου λαλῆσαι ἐνώπιόν σου. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Harris ">εἶπεν δὲ αὐτῷ ὁ κύριος· Λάλει, ὁ ἐκλεκτός μου Ἰερεμίας. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἐλάλησεν Ἰερεμίας, λέγων· Κύριε παντοκράτωρ, παραδίδως τὴν πάλιν τὴν ἐκλεκτὴν εἰς χεῖρας τῶν Χαλδαίων, ἵνα καυχήσηται ὁ βασιλεὺς μετὰ τοῦ πλήθους τοῦ λαοῦ αὐτοῦ, καὶ εἴπῃ ὅτι, Ἴσχυσα ἐπὶ τὴν ἱερὰν πόλιν τοῦ θεοῦ; </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Harris ">μή, κύριέ μου· ἀλλ᾽ εἰ θέλημά σού ἐστιν, ἐκ τῶν χειρῶν σου ἀφανισθήτω. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπε κύριος τῷ Ἰερεμίᾳ· Ἐπειδὴ σὺ ἐκλεκτός μου εἶ, ἀνάστα καὶ ἔξελθε ἐκ τῆς πόλεως ταύτης, σὺ καὶ Βαρούχ· ἐπειδὴ ἀπολῶ αὐτὴν διὰ τὸ πλῆθος τῶν ἁμαρτιῶν τῶν κατοικούντων ἐν αὐτῇ. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Harris ">οὔτε γὰρ ὁ βασιλεύς, οὔτε ἡ δύναμις αὐτοῦ, δυνήσεται εἰσελθεῖν εἰς αὐτήν, εἰ μὴ ἐγὼ πρῶτος ἀνοίξω τὰς πύλας αὐτῆς. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀνάστηθι οὖν, καὶ ἄπελθε πρὸς Βαρούχ, καὶ ἀπάγγειλον αὐτῷ τὰ ῥήματα ταῦτα. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀναστάντες ἕκτην ὥραν τῆς νυκτός, ἔλθετε ἐπὶ τὰ τείχη τῆς πόλεως, καὶ δείξω ὑμῖν ὅτι ἐὰν μή τι ἐγὼ πρῶτος ἀφανίσω τὴν πόλιν, οὐ δύνανται εἰσελθεῖν εἰς αὐτήν. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Harris ">ταῦτα εἰπὼν ὁ κύριος, ἀπῆλθεν ἀπὸ τοῦ Ἰερεμίου.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Harris ">Δραμὼν δὲ Ἰερεμίας ἀνήγγειλε ταῦτα τῷ Βαρούχ, καὶ ἐλθόντες εἰς τὸν ναὸν τοῦ θεοῦ διέρρηξεν ὁ Ἰερεμίας τὰ ἱμάτια αὐτοῦ καὶ ἐπέθηκεν χοῦν ἐπὶ τὴν κεφαλὴν αὐτοῦ καὶ εἰσῆλθεν εἰς τὸ ἁγιαστήριον τοῦ θεοῦ. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἰδὼν δὲ αὐτὸν Βαροὺχ χοῦν πεπασμένον ἐπὶ τὴν κεφαλὴν αὐτοῦ, καὶ τὰ ἱμάτια αὐτοῦ διερρωγότα, ἔκραξε φωνῇ μεγάλας, λέγων· Πάτερ Ἰερεμία, τί ἐστί σοι, ἢ ποῖον ἁμάρτημα ἐποίησεν ὁ λαός; </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐπειδὴ ὅταν ἡμάρτανεν ὁ λαός, χοῦν ἔπασσεν ἐπὶ τὴν κεφαλὴν αὐτοῦ ὁ Ἰερεμίας, καὶ ηὔχετο ὑπὲρ τοῦ λαοῦ, ἕως ἂν ἀφεθῇ ἡ ἁμαρτία. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἠρώτησε δὲ αὐτὸν ὁ Βαρούχ, λέγων· Πάτερ, τί ἐστι τοῦτο; </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Harris ">εἶπεν δὲ αὐτῷ Ἰερεμίας· Ψύλαξαι τοῦ σχίσαι τὰ ἱμάτιά σου, ἀλλὰ μᾶλλον σχίσωμεν τὰς καρδίας ἡμῶν· καὶ μὴ ἀντλήσωμεν ὕδωρ ἐπὶ τὰς ποτίστρας, ἀλλὰ κλαύσωμεν καὶ γεμίσωμεν αὐτὰς δακρύων· ὅτι οὐ μὴ ἐλεήσῃ κύριος τὸν λαὸν τοῦτον. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπε Βαρούχ· Πάτερ Ἰερεμία, τί γέγονε; </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπε Ἰερεμίας ὅτι· Ὁ θεὸς παραδίδωσι τὴν πόλιν εἰς χεῖρας τοο῀ βασιλέως τῶν Χαλδαίων, τοῦ αἰχμαλωτεῦσαι τὸν λαὸν εἰς Βαβυλῶνα. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀκούσας δὲ ταῦτα Βαρούχ, διέρρηξε καὶ αὐτὸς τὰ ἱμάτια αὐτοῦ, καὶ εἶπε· Πάτερ Ἰερεμία, τίς σοι ἐδήλωσε τοῦτο; </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν αὐτῷ Ἰερεμίας· Ἔκδεξαι μικρὸν μετ᾽ ἐμοῦ ἕως ὥρας ἕκτης τῆς νυκτός, ἵνα γνῷς ὅτι ἀληθές ἐστι τὸ ῥῆμα τοῦτο. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἔμειναν οὖν ἀμφότεροι ἐν τῷ θυσιαστηρίῳ κλαίοντες, καὶ ἦσαν διερρωγότα τὰ ἱμάτια αὐτῶν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ὡς δὲ ἐγένετο ἡ ὥρα τῆς νυκτός, καθὼς εἶπεν ὁ κύριος τῷ Ἰερεμίᾳ, ἦλθεν ὁμοῦ ἐπὶ τὰ τείχη τῆς πόλεως Ἰερεμίας καὶ Βαρούχ. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἰδοὺ ἐγένετο φωνὴ σαλπίγγων, καὶ ἐξῆλθον ἄγγελοι ἐκ τοῦ οὐρανοῦ, κατέχοντες λαμπάδας ἐν ταῖς χερσὶν αὐτῶν, καὶ ἔστησαν ἐπὶ τὰ τείχη τῆς πόλεως. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἰδόντες δὲ αὐτοὺς Ἰερεμίας καὶ Βαρούχ, ἔκλαυσαν, λέγοντες· Νῦν ἐγνώκαμεν ὅτι ἀληθές ἐστι τὸ ῥῆμα. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Harris ">παρακάλεσε δὲ Ἰερεμίας τοὺς ἀγγέλους, λέγων· Παρακαλῶ ὑμᾶς μὴ ἀπολέσθαι τὴν πόλιν ἄρτι, ἕως ἂν λαλήσω πρὸς κύριον ῥῆμα. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐλάλησεν δὲ κύριος τοῖς ἀγγέλοις, λέγων· Μὴ ἀπολέσητε τὴν πόλιν ἕως ἂν λαλήσω πρὸς τὸν ἐκλεκτόν μου Ἰερεμίαν. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Harris ">τότε Ἰερεμίας ἐλάλησεν, λέγων· Δέομαι, κύριε, κέλευσόν με λαλῆσαι ἐνώπιόν σου. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπε κύριος· Λάλει, ὁ ἐκλεκτός μου Ἰερεμίας. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν Ἰερεμίας· Ἰδοὺ νῦν, κύριε, ἐγνώκαμεν ὅτι παραδίδως τὴν πόλιν εἰς χεῖρας τῶν ἐχθρῶν αὐτῆς, καὶ ἀπαροῦσι τὸν λαὸν εἰς Βαβυλῶνα. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Harris ">Τί θέλεις ποιήσω τὰ ἅγια σκεύη τῆς λειτουργίας. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν αὐτῷ ὁ κύριος· Ἆρον αὐτά, καὶ παράδος αὐτὰ τῇ γῇ λέγων· Ἄκουε, γῆ, τῆς φωνῆς τοῦ κτίσαντός σε, ὁ πλάσας σε ἐν τῇ περιουσίᾳ τῶν ὑδάτων, ὁ σφραγίσας σε ἐν ἑπτὰ σφραγῖσιν ἐν ἑπτὰ καιροῖς, καὶ μετὰ ταῦτα λήψῃ τὴν ὡραιότητά σου· </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Harris ">φύλαξον τὰ σκεύη τῆς λειτουργίας ἕως τῆς συνελεύσεως τοῦ ἡγαπημένου. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐλάλησεν δὲ Ἰερεμίας λέγων· Παρακαλῶ σε, κύριε, δεῖξόν μοι τὶ ποιήσω Ἀβιμέλεχ τῷ Αἰθίοπι, ὅτι πολλὰς εὐεργεσίας ἐποίησε τῷ δούλῳ σου Ἰερεμίᾳ. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ὅτι αὐτὸς ἀνέσπασέ με ἐκ τοῦ λάκκου τοῦ βορβόρου· καὶ οὐ θέλω αὐτὸν ἵνα ἴδῃ τὸν ἀφανισμὸν τῆς πόλεως ταύτης καὶ τὴν ἐρήμωσιν, ἀλλ᾽ ἵνα ἐλεήσῃς αὐτὸν καὶ μὴ λυπηθῇ. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Harris ">Καὶ εἶπε κύριος τῷ Ἰερεμίᾳ· Ἀπόστειλον αὐτὸν εἰς τὸν ἀμπελῶνα τοῦ Ἀγρίππα, καὶ ἐν τῇ σκιᾷ τοῦ ὄρους ἐγὼ σκεπάσω αὐτόν, ἕως οὗ ἐπιστρέψω τὸν λαὸν εἰς τὴν πόλιν. </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Harris ">σὺ δὲ Ἰερεμίας, ἀπολῦε μετὰ τοῦ λαοῦ σου εἰς Βαβυλῶνα, καὶ μεῖνον μετ᾽ αὐτῶν εὐαγγελιζόμενος αὐτοῖς ἕως οὗ ἐπιστρέψω αὐτοῖς εἰς τὴν πόλιν. </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Harris ">κατάλειψον δὲ τὸν Βαροὺχ ὧδε, ἕως οὗ λαλήσω αὐτῷ. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Harris ">ταῦτα εἰπὼν ὁ κύριος ἀνέβη ἀπὸ Ἰερεμίου εἰς τὸν οὐρανόν. </reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ἰερεμίας δὲ καὶ Βαροὺχ εἰσῆλθον εἰς τὸ ἀγιαστήριον, καὶ ἐπάραντες τὰ σκεύη τῆς λειτουργίας παρέδωκαν αὐτὰ τῇ γῇ, καθὼς ἐλάλησεν αὐτοῖς ὁ κύριος. </reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εὐθέως κατέπιεν αὐτὰ ἡ γῆ. </reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐκάθισαν δὲ οἱ δύο, καὶ ἔκλαυσαν. </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Harris ">πρωΐας δὲ γενομένης, ἀπέστειλεν Ἰερεμίας τὸν Ἀβιμέλεχ, λέγων· Ἆρον τὸν κόφινον, καὶ ἄπελθε εἰς τὸ χωρίον τοῦ Ἀγρίππα διὰ τῆς ὁδοῦ τοῦ ὄρους, καὶ ἐνεγκὼν ὀλίγα σῦκα, δίδου τοῖς νοσοῦσι τοῦ λαοῦ· ὅτι ἐπὶ σὲ ἡ εὐφρασία τοῦ κυρίου, καὶ ἐπὶ τὴν κεφαλήν σου ἡ δόξα. </reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ταῦτα εἰπὼν Ἰερεμίας ἀπέλυσεν αὐτόν· Ἀβιμέλεχ δὲ ἐπορεύθη καθὰ εἶπεν αὐτῷ. </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Harris ">Πρωΐας δὲ γενομένης, ἰδοὺ ἡ δύναμις τῶν Χαλδαίων ἐκύκλωσε τὴν πόλιν. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐσάλπισεν δὲ ὁ μέγας ἄγγελος, λέγων· Εἰσέλθατε εἰς τὴν πόλιν ἡ δύναμις τῶν Χαλδαίων· ἰδοὺ γὰρ ἠνεῴχθη ὑμῖν ἡ πύλη. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Harris ">εἰσελθέτω οὖν ὁ βασιλεὺς μετὰ τοῦ πλήθους αὐτοῦ, καὶ αἰχμαλωτευσάτω πάντα τὸν λαόν. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ἰερεμίας δὲ ἄρας τὰς κλεῖδας τοῦ ναοῦ, ἐξῆλθεν ἔξω τῆς πόλεως, καὶ ἔρριψεν αὐτὰς ἐνώπιον τοῦ ἡλίου, λέγων· Σοὶ λέγω, ἥλιε, λάβε τὰς κλεῖδας τοῦ ναοῦ τοῦ θεοῦ, καὶ φύλαξον αὐτὰς ἕως ἡμέρας, ἐν ᾗ ἐξετάσει σε κύριος περὶ αὐτῶν. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Harris ">διότι ἡμεῖς οὐχ εὐρέθημεν ἄξιοι τοῦ φυλάξαι αὐτάς, ὅτι ἐπίτροποι τοῦ ψεύδους ἐγενήθημεν. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἔτι κλαίοντος Ἰερεμίου τὸν λαόν, ἐξένεγκαν αὐτὸν μετὰ τοῦ λαοῦ ἕλκοντες εἰς Βαβυλῶνα. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὁ δὲ Βαροὺχ ἐπέθηκε χοῦν ἐπὶ τὴν κεφαλὴν αὐτοῦ, καὶ ἐκάθισε, καὶ ἔκλαυσε τὸν θρῆνον τοῦτον, λέγων· Διὰ τί ἠρημώθη Ἰερουσαλήμ; Διὰ τὰς ἁμαρτίας τοῦ ἡγαπημένου λαοῦ παρεδόθη εἰς χεῖρας ἐχθρῶν, διὰ τὰς ἁμαρτίας ἡμῶν καὶ τοῦ λαοῦ. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀλλὰ μὴ καυχάσθωσαν οἱ παράνομοι, καὶ εἴπωσιν ὅτι, Ἰσχύσαμεν λαβεῖν τὴν πόλιν τοῦ θεοῦ ἐν τῇ δυνάμει ἡμῶν· ἀλλὰ διὰ τὰς ἁμαρτίας ἡμῶν παρεδόθη ὑμῖν. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὁ δὲ θεὸς ἡμῶν οἰκτειρήσει ἡμᾶς, καὶ ἐπιστρέψει ἡμᾶς εἰς τὴν πόλιν ἡμῶν· ὑμεῖς δὲ ζωὴ οὐχ ἕξετε. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Harris ">μακάριοι εἰσιν οἱ πατέρες ἡμῶν, Ἀβραάμ, Ἰσαὰκ καὶ Ἰακώβ, ὅτι ἐξῆλθον ἐκ τοῦ κόσμου τούτου, καὶ οὐκ εἶδον τὸν ἀφανισμὸν τῆς πόλεως ταύτης. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Harris ">ταῦτα εἰπὼν Βαροὺχ ἐξῆλθεν ἔξω τῆς πόλεως κλαίων καὶ λέγων ὅτι Λυπούμενος διὰ σέ, Ἰερουσαλήμ, ἐξῆλθον ἀπὸ σοῦ. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἔμεινεν ἐν μνημείῳ καθεζόμενος, τῶν ἀγγέλων ἐρχομένων πρὸς αὐτόν, καὶ ἐκδιηγουμένων αὐτῷ περὶ πάντων ὧν ὁ κύριος ἔμηνυεν αὐτῷ δι᾽ αὐτῶν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ὁ δὲ Ἀβιμέλεχ ἤνεγκε τὰ σῦκα τῷ καύματι, καὶ καταλαβὼν δένδρον, ἐκάθισεν ὑπὸ τὴν σκιὰν αὐτοῦ τοῦ ἀναπαῆναι ὀλίγον. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ κλίνας τὴν κεφαλὴν αὐτοῦ ἐπὶ τὸν κόφινον τῶν σύκων ὕπνωσεν κοιμώμενος ἔτη ἑξηκονταέξ· καὶ οὐκ ἐξυπνίσθη ἐκ τοῦ ὕπνου αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ μετὰ ταῦτα ἐγερθεὶς ἀπὸ τοῦ ὕπνου αὐτοῦ, εἶπεν ὅτι, Ἡδέως ἐκοιμήθην ὀλίγον, ἀλλὰ βεβαρημένη ἐστὶν ἡ κεφαλή μου, ὅτι οὐκ ἐκορέσθην τοῦ ὕπνου μου. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Harris ">εἶτα ἀνακαλύψας τὸν κόφινον τῶν σύκων, εὗρεν αὐτὰ στάζοντα γάλα. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν· Ἤθελον κοιμηθῆναι ἔτι ὀλίγον, ὅτι βεβαρημένη ἐστὶν ἡ κεφαλή μου· ἀλλὰ φοβοῦμαι, μήπως κοιμηθῶ καὶ βραδυνῶ τοῦ ἐξυπνισθῆναι, καὶ ὀλιγωρήσῃ Ἰερεμίας ὁ πατήρ μου· εἰ μὴ γὰρ ἐσπούδαζεν, οὐκ ἂν ἀπέστειλέ με ὄρθρου σήμερον. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀναστὰς οὖν πορεύσομαι τῷ καύματι· οὐ γὰρ καῦμα οὐ κόπος ἐστὶ καθ᾽ ἡμέραν; </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐγερθεὶς οὖν ἦρε τὸν κόφινον τῶν σύκων, καὶ ἐπέθηκεν ἐπὶ τῶν ὤμων αὐτοῦ· καὶ εἰσῆλθεν εἰς Ἰερουσαλήμ, καὶ οὐκ ἐπέγνω αὐτήν, οὔτε τὴν οἰκίαν οὔτε τὸν τόπον ἑαυτοῦ, οὔτε τὸ γένος ἑαυτοῦ οὔτέ τινα τῶν γνωρίμων εὗρεν. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν· Εὐλογητὸς κύριος, ὅτι μεγάλη ἔκστασις ἐπέπεσεν ἐπ᾽ ἐμὲ σήμερον. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Harris ">οὐκ ἔστιν αὕτη ἡ πόλις Ἰερουσαλήμ· πεπλάνημαι τὴν ὁδόν, ὅτι διὰ τῆς ὁδοῦ τοῦ ὄρους ἦλθον, ἐγερθεὶς ἀπὸ τοῦ ὕπνου μου· καὶ βαρείας οὔσης τῆς κεφαλῆς μου διὰ τὸ μὴ κορεσθῆναί με τοῦ ὕπνου πεπλάνημαι τὴν ὁδόν. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Harris ">θαυμαστὸν εἰπεῖν τοῦτο ἐναντίον Ἰερεμίου, ὅτι πεπλάνημαι τὴν ὁδόν. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐξῆλθε δὲ ἀπὸ τῆς πόλεως· καὶ κατανοήσας εἶδε τὰ σημεῖα τῆς πόλεως, καὶ εἶπεν· Αὕτη μὲν ἔστιν ἡ πόλις, πεπλάνημαι δὲ τὴν ὁδόν. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ πάλιν ὑπέστρεψεν εἰς τὴν πόλιν, καὶ ἐζήτησε, καὶ οὐδένα εὗρε τῶν ἰδίων, καὶ εἶπεν· Εὐλογητὸς κύριος, ὅτι μεγάλη ἔκστασις ἐπέπεσεν ἐπ᾽ ἐμέ. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ πάλιν ἐξῆλθεν ἔξω τῆς πόλεως, καὶ ἔμεινε λυπούμενος, μὴ εἰδὼς ποῦ ἀπέλθῃ. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀπέθηκε τὸν κόφινον, λέγων· Καθέζομαι ὧδε ἕως ὁ κύριος ἄρῃ τὴν ἔκστασιν ταύτην ἀπ᾽ ἐμοῦ. </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Harris ">καθημένου δὲ αὐτοὺ, εἶδέ τινα γηραιὸν ἐρχόμενον ἐξ ἀγροῦ, καὶ λέγει αὐτῷ Ἀβιμέλεχ· Σοὶ λέγω, πρεσβῦτα, ποία ἐστὶν ἡ πόλις αὕτη; </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν αὐτῷ· Ἰερουσαλήμ ἐστι. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ λέγει αὐτῷ Ἀβιμέλεχ· Ποῦ ἔστιν ὁ Ἰερεμίας ὁ ἱερεύς, καὶ Βαροὺχ ὁ ἀναγνώστης, καὶ πᾶς ὁ λαὸς τῆς πόλεως ταύτης, ὅτι οὐκ εὗρον αὐτούς; </reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν αὐτῷ ὁ πρεσβύτης· Οὐκ εἶ ἐκ τῆς πόλεως ταύτης, σήμερον μνησθεὶς τοῦ Ἰερεμίου, ὅτι ἐπερωτᾷς περὶ αὐτοῦ μετὰ τοσοῦτον χρόνον; </reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ἰερεμίας γὰρ ἐν Βαβυλῶνί ἐστι μετὰ τοῦ λαοῦ· ᾐχμαλωτεύθησαν γὰρ ὑπὸ Ναβουχοδονόσορ τοῦ βασιλέως, καὶ μετ᾽ αὐτῶν ἐστιν Ἰερεμίας εὐαγγελίσασθαι αὐτοῖς καὶ κατηχῆσαι αὐτοὺς τὸν λόγον. </reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Harris ">εὐθὺς δὲ ἀκούσας Ἀβιμέλεχ παρὰ τοῦ γηραιοῦ ἀνθρώπου, εἶπεν· Εἰ μὴ ἦς πρεσβύτης, καὶ ὅτι οὐκ ἐξὸν ἀνθρώπῳ ὑβρίσαι τὸν μείζονα αὐτοῦ, ἐπικατεγέλων ἄν σοι καὶ ἔλεγον ὅτι μαίνῃ· ὅτι εἶπας, Ἠͺχμαλωτεύθη ὁ λαὸς εἰς Βαβυλῶνα. </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Harris ">εἰ ἦσαν οἱ καταρράκται τοῦ οὐρανοῦ κατελθόντες ἐπ᾽ αὐτούς, οὔπω ἐστὶ καιρὸς ἀπελθεῖν εἰς Βαβυλῶνα. </reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Harris ">πόση γὰρ ὥρα ἐστίν, ἀφ᾽ οὗ ἀπέστειλέ με ὁ πατήρ μου Ἰερεμίας εἰς τὸ χωρίον τοῦ Ἀγρίππα ἐνέγκαι ὀλίγα σῦκα, ἵνα δίδωμεν τοῖς νοσοῦσι τοῦ λαοῦ; </reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀπελθὼν ἤνεγκον αὐτά, καὶ ἐλθὼν ἐπί τι δένδρον τῷ καύματι, ἐκάθισα τοῦ ἀναπαῆναι ὀλίγον, καὶ ἔκλινα τὴν κεφαλήν μου ἐπὶ τὸν κόφινον, καὶ ἐκοιμήθην. </reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἐξυπνισθεὶς ἀπεκάλυψα τὸν κόφινον τῶν σύκων, νομίζων ὅτι ἐβράδυνα, καὶ εὗρον τὰ σῦκα στάζοντα γάλα, καθὼς συνέλεξα αὐτά. </reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Harris ">σὺ δὲ λέγεις, ὅτι ᾐχμαλωτεύθη ὁ λαὸς εἰς Βαβυλῶνα. </reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἵνα δὲ γνῷς, λάβε, ἴδε τὰ σῦκα. </reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀνεκάλυψε τὸν κόφινον τῶν σύκων τῷ γέροντι, καὶ εἶδεν αὐτὰ στάζοντα γάλα. </reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἰδὼν δὲ αὐτὰ ὁ γηραιὸς ἄνθρωπος, εἶπεν· Ὦ υἱέ μου, δίκαιος ἄνθρωπος εἶ σύ, καὶ οὐκ ἠθέλησεν ὁ θεὸς ἰδεῖν σε τὴν ἐρήμωσιν τῆς πόλεως· ἤνεγκε γὰρ ταύτην τὴν ἔκστασιν ἐπὶ σέ. </reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἰδοὺ γὰρ ἑξήκοντα καὶ ἓξ ἔτη σήμερόν εἰσιν ἀφ᾽ οὗ ᾐχμαλωτεύθη ὁ λαός εἰς Βαβυλῶνα. </reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἵνα μάθῃς, τέκνον, ὅτι ἀληθές ἐστιν ἅπερ λέγω σοι ἀνάβλεψον εἰς τὸν ἀγρὸν καὶ ἴδε, ὅτι οὐκ ἐστι ἐφάνη ἡ αὔξησις τῶν γενημάτων. </reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἴδε καὶ τὰ σῦκα, ὅτι καιρὸς αὐτῶν οὐκ ἔστι, καὶ γνῶθι. </reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Harris ">τότε ἔκραξε μεγάλῃ φωνῇ Ἀβιμέλεχ, λέγων· Εὐλογήσω σε, ὁ θεὸς τοῦ οὐρανοῦ καὶ τῆς γῆς, ἡ ἀνάπαυσις τῶν ψυχῶν τῶν δικαίων ἐν παντὶ τόπῳ. </reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Harris ">εἶτα λέγει τῷ γηραιῷ ἀνθρώπῳ· Ποῖός ἐστιν ὁ μὴν οὗτος; </reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὁ δὲ εἶπε· Νισσάν, ὁ ἐστιν Ἀβίβ. </reading>
+          </unit>
+        </div>
+        <div number="35">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἐπάρας ἐκ τῶν σύκων, ἔδωκε τῷ γηραιῷ ἀνθρώπῳ, καὶ λέγει αὐτῷ· Ὁ θεὸς φωταγωγήσει σε εἰς τὴν ἄνω πόλιν Ἰερουσαλήμ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Harris ">Μετὰ ταῦτα ἐξῆλθεν Ἀβιμέλεχ ἔξω τῆς πόλεως, καὶ προσηύξατο πρὸς κύριον. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἰδοὺ ἄγγελος κυρίου ἦλθε, καὶ κράτησας αὐτὸν τῆς δεξιᾶς χειρὸς ἀπεκατέστησεν αὐτὸν εἰς τὸν τόπον ὅπου ἦν Βαροὺχ καθεζόμενος· εὗρε δὲ αὐτὸν ἐν μνημείῳ. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἐν τῷ θεωρῆσαι ἀλλήλους, ἔκλαυσαν ἀμφότεροι καὶ κατεφίλησαν ἀλλήλους. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀναβλέψας δὲ Βαροὺχ τοῖς ὀφθαλμοῖς αὐτοῦ εἶδε τὰ σῦκα ἐσκεπασμένα ἐν τῷ κοφίνῳ τοῦ Ἀβιμέλεχ. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἄρας τοὺς ὀφθαλμοὺς αὐτοῦ εἰς τὸν οὐρανόν, προσηύξατο, λέγων· </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="Harris ">Σὺ ὁ θεὸς ὁ παρέχων μισθαποδοσίαν τοῖς ἀγαπῶσί σε. ἑτοίμασον σεαυτήν, ἡ καρδία μου, καὶ εὐφραίνου, καὶ ἀγάλλου ἐν τῷ σκηνώματί σου λέγων τῷ σαρκικῷ οἴκῳ σου τὸ πένθος σου μετεστράφη εἰς χαράν· ἔρχεται γὰρ ὁ ἱκανός, καὶ ἀρεῖ σε ἐν τῷ σκηνώματι σου, οὐ γὰρ γέγονέ σοι ἁμαρτία. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀνάψυξον ἐν τῷ σκηνώματί σου ἐν τῇ παρθενικῇ σου πίστει καὶ πίστευσον ὅτι ζήσεις. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐπίβλεψον ἐπὶ τὸν κόφινον τοῦτον τῶν σύκων· ἰδοὺ γὰρ ἐξηκονταὲξ ἔτη ἐποίησαν, καὶ οὐκ ἐμαράνθησαν, οὐδὲ ὤζεσαν, ἀλλὰ στάζουσι τοῦ γάλακτος. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="Harris ">οὕτως γίνεταί σοι ἡ σάρξ μου, ἐὰν ποιήσῃς τὰ προσταχθέντα σου ὑπὸ τοῦ ἀγγέλου τῆς δικαιοσύνης. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὁ φυλάξας τὸν κόφινον τῶν σύκων, αὐτὸς πάλιν φυλάξει σε ἐν τῇ δυνάμει αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="Harris ">ταῦτα εἰπὼν ὁ Βαρούχ, λέγει τῷ Ἀβιμέλεχ· Ἀνάστηθι, καὶ εὐξώμεθα, ἵνα γνωρίσῃ ἡμῖν ὁ κύριος πῶς δυνησώμεθα ἀποστεῖλαι τὴν φάσιν τῷ Ἰερεμίᾳ εἰς Βαβυλῶνα διὰ τὴν σκέπην τὴν γενομένην σοι ἐν τῇ ὁδῷ. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εὔξατο Βαρούχ, λέγων· Ἡ δύναμις ἡμῶν, ὁ θεὸς κύριε, τὸ ἐκλεκτὸν φῶς, τὸ ἐξελθὸν ἐκ στόματός σου. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="Harris ">παρακαλοῦμεν καὶ δεόμεθά σου τῆς ἀγαθότητος, τὸ μέγα ὄνομα, ὃ οὐδεὶς δύναται γνῶναι, ἄκουσον τῆς φωνῆς τῶν δούλων σου, καὶ γενοῦ γνῶσις ἐν τῇ καρδίᾳ ἡμῶν. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="Harris ">τί ποιήσωμεν, καὶ πῶς ἀποστείλωμεν πρὸς Ἰερεμίαν εἰς Βαβυλῶνα τὴν φάσιν ταύτην; </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἔτι δὲ προσευχομένου τοῦ Βαρούχ, ἰδοὺ ἄγγελος κυρίου ἤλθε, καὶ λέγει τῷ Βαρούχ ἁπάντας τοὺς λόγους τούτους· Ὁ σύμβουλος τοῦ φωτός, μὴ μεριμνήσῃς τὸ πῶς ἀποστείλῃς πρὸς Ἰερεμίαν· ἔρχεται γὰρ πρός σε ὥρᾳ τοῦ φωτὸς αὔριον ἀετός, καὶ σὺ ἐπισκέψῃ πρὸς Ἰερεμίαν. </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="Harris ">γράψον οὖν ἐν τῇ ἐπιστολῇ ὅτι· Λάλησον τοῖς υἱοῖς Ἰσραήλ· Ὁ γενόμενος ἐν ὑμῖν ξένος, ἀφορισθήτω, καὶ ποιήσωσι ιέ ἡμέρας· καὶ μετὰ ταῦτα εἰσάξω ὑμᾶς εἰς τὴν πόλιν ὑμῶν, λέγει κύριος. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὁ μὴ ἀφοριζόμενος ἐκ τῆς Βαβυλῶνος. οὐ μὴ εἰσέλθῃ εἰς τὴν πόλιν· καὶ ἐπιτιμῶ αὐτοῖς, τοῦ μὴ ἀποδεχθῆναι αὐτοὺς αὖθις ὑπὸ τῶν Βαβυλωνιτῶν, λέγει κύριος. </reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ταῦτα εἰπὼν ὁ ἄγγελος, ἀπῆλθεν ἀπὸ τοῦ Βαρούχ. </reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὁ δὲ Βαροὺχ ἀπέστειλεν εἰς τὴν ἀγορὰν τῶν ἐθνῶν καὶ ἤνεγκε χάρτην καὶ μέλανα, καὶ ἔγραψεν ἐπιστολὴν περιέχουσαν οὕτως· Βαροὺχ ὁ δοῦλος τοῦ θεοῦ γράφει τῷ Ἰερεμίᾳ ἐν τῇ αἰχμαλωσίᾳ τῆς Βαβυλῶνος· </reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="Harris ">Χαῖρε καὶ ἀγαλλιῶ, ὅτι ὁ θεὸς οὐκ ἀφῆκεν ἡμᾶς ἐξελθεῖν ἐκ τοῦ σώματος τούτου λυπουμένους διὰ τὴν πόλιν τὴν ἐρημωθεῖσαν καὶ ὑβρισθεῖσαν. </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="Harris ">διὰ τοῦτο ἐσπλαγχνίσθη ὁ κύριος ἐπὶ τῶν δακρύων ἡμῶν, καὶ ἐμνήσθη τῆς διαθήκης, ἧς ἔστησε μετὰ πατέρων ἡμῶν Ἀβραάμ, Ἰσαάκ, καὶ Ἰακώβ. </reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀπέστειλε πρός με τὸν ἄγγελον αὐτοῦ, καὶ εἶπέ μοι τοὺς λόγους τούτους, οὓς ἀπέστειλα πρός σε. </reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="115" group="0" parallel="">
+            <reading option="0" mss="Harris ">οὗτοι οὖν εἰσὶν οἱ λόγοι, οὓς εἶπε κύριος ὁ θεὸς Ἰσραήλ, ὁ ἐξαγαγὼν ἡμᾶς ἐκ γῆς Αἰγύπτου, ἐκ τῆς μεγάλης καμίνου· Ὅτι οὐκ ἐφυλάξατε τὰ δικαιώματά μου, ἀλλὰ ὑψώθη ἡ καρδία ὑμῶν, καὶ ἐτραχηλιάσατε ἐνώπιόν μου, ἐν ὀργῇ καὶ θυμῷ παρέδωκα ὑμᾶς τῇ καμίνῳ εἰς Βαβυλῶνα. </reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="116" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐὰν οὖν ἀκούσητε τῆς φωνῆς μου, λέγει κύριος, ἐκ στόματος Ἰερεμίου τοῦ παιδός μου, ὁ ἀκούων, ἀναφέρω αὐτὸν ἐκ τῆς Βαβυλῶνος· ὁ δὲ μὴ ἀκούων, ξένος γενήσεται τῆς Ἰερουσαλὴμ καὶ τῆς Βαβυλῶνος. </reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="117" group="0" parallel="">
+            <reading option="0" mss="Harris ">δοκιμάσεις δὲ αὐτοὺς ἐκ τοῦ ὕδατος τοῦ Ἰορδάνου· ὁ μὴ ἀκούων φανερὸς γενήσεται· τοῦτο τὸ σημεῖόν ἐστι τῆς μεγάλης σφραγῖδος.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="118" group="0" parallel="">
+            <reading option="0" mss="Harris ">Καὶ ἀνέστη Βαρούχ, καὶ ἐξῆλθεν ἐκ τοῦ μνημείου καὶ εὗρεν τὸν ἀετὸν καθεζόμενον ἐκτὸς τοῦ μνημείου. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="119" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀποκριθεὶς ἀνθρωπίνῃ φωνῇ εἶπεν αὐτῷ ὁ ἀετός· Χαῖρε, Βαρούχ, ὁ οἰκονόμος τῆς πίστεως. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="120" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν αὐτῷ Βαροὺχ ὅτι, Ἐκλεκτὸς εἶ σὺ ὁ λαλῶν ἐκ πάντων τῶν πετεινῶν τοῦ οὐρανοῦ, ἐκ τῆς γὰρ αὐγῆς τῶν ὀφθαλμῶν σου δῆλόν ἐστι· δεῖξόν μοι οὖν, τί ποιεῖς ἐνταῦθα; </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="121" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν αὐτῷ ὁ ἀετός· Ἀπεστάλην ὧδε, ὅπως πᾶσαν φάσιν ἣν θέλεις, ἀποστείλῃς δι᾽ ἐμοῦ. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="122" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν αὐτῷ Βαρούχ· Εἰ δύνασαι συ ἐπᾶραι τὴν φάσιν ταύτην τῷ Ἰερεμίᾳ εἰς Βαβυλῶνα; </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="123" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν αὐτῷ ὁ ἀετός· Εἰς τοῦτο γὰρ καὶ ἀπεστάλην. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="124" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἄρας Βαροὺχ τὴν ἐπιστολήν, καὶ δεκαπέντε σῦκα ἐκ τοῦ κοφίνου τοῦ Ἀβιμέλεχ, ἔδησεν αὐτὰ εἰς τὸν τράχηλον τοῦ ἀετοῦ, καὶ εἶπεν αὐτῷ· Σοὶ λέγω, βασιλεῦ τῶν πετεινῶν, ἄπελθε ἐν εἰρήνῃ μεθ᾽ ὑγείας, καὶ τὴν φάσιν ἔνεγκόν μοι. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="125" group="0" parallel="">
+            <reading option="0" mss="Harris ">μὴ ὁμοιωθῇς τῷ κόρακι, ὃν ἐξαπέστειλε Νῶε καὶ οὐκ ἀπεστράφη ἔτι πρὸς αὐτὸν εἰς τὴν κιβωτόν· ἀλλὰ ὁμοιώθητι τῇ περιστερᾷ, ἥτις ἐκ τρίτου φάσιν ἤνεγκε τῷ δικαίῳ. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="126" group="0" parallel="">
+            <reading option="0" mss="Harris ">οὕτως καὶ σύ, ἆρον τὴν καλὴν φάσιν ταύτην τῷ Ἰερεμίᾳ καὶ τοῖς σὺν αὐτῷ δεσμίοις ἵνα εὖ σοι γένηται, ἆρον τὸν χάρτην τοῦτον τῷ λαῷ καὶ τῷ ἐκλεκτῷ τοῦ θεοῦ. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="127" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐὰν κυκλώσωσί σε πάντα τὰ πετεινὰ τοῦ οὐρανοῦ, καὶ βούλωνται πολεμῆσαι μετὰ σοῦ, ἀγώνισαι· ὁ κύριος δώῃ σοι δύναμιν. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="128" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ μὴ ἐκκλίνῃς εἰς τὰ δεξιά, μήτε εἰς τὰ ἀριστερά, ἀλλ᾽ ὡς βέλος ὕπαγον ὀρθῶς, ἀπέλθε ἐν τῇ δυνάμει τοῦ θεοῦ, καὶ ἔσται ἡ δόξα κυρίου μετὰ σοῦ ἐν πάσῃ τῇ ὁδῷ ᾗ πορεύσῃ. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="129" group="0" parallel="">
+            <reading option="0" mss="Harris ">τότε ὁ ἀετὸς ἐπετάσθη, ἔχων τὴν ἐπιστολὴν ἐν τῷ τραχήλῳ αὐτοῦ, καὶ ἀπῆλθεν εἰς Βαβυλῶνα καὶ ἐλθὼν ἀνεπαύσατο ἐπί τι ξύλον ἔξω τῆς πόλεως εἰς τόπον ἔρημον. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="130" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐσιώπησε δὲ ἕως οὗ διῆλθεν Ἰερεμίας, αὐτὸς γὰρ καὶ ἄλλοι τινὲς τοῦ λαοῦ ἐξήρχοντο θάψαι νεκρὸν ἔξω τῆς πόλεως. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="131" group="0" parallel="">
+            <reading option="0" mss="Harris ">ᾐτήσατο γὰρ Ἰερεμίας παρὰ τοῦ βασιλέως Ναβουχοδονόσορ, λέγων· Δός μοι τόπον ποῦ θάψω τοὺς νεκροὺς τοῦ λαοῦ μου· καὶ ἔδωκεν αὐτῷ ὁ βασιλεύς. </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="132" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀπερχομένων δὲ αὐτῶν καὶ κλαιόντων μετὰ τοῦ νεκροῦ, ἦλθον κατέναντι τοῦ ἀετοῦ. </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="133" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἔκραξεν ὁ ἀετὸς μεγάλῃ φωνῇ, λέγων· Σοὶ λέγω, Ἰερεμία ὁ ἐκλεκτὸς τοῦ θεοῦ, ἀπέλθε, σύναξον τὸν λαὸν καὶ ἔλθε ἐνταῦθα ἵνα ἀκούσωσι ἐπιστολῆς ἣς ἤνεγκά σοι ἀπὸ τοῦ Βαροὺχ καὶ τοῦ Ἀβιμέλεχ. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="134" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀκούσας δὲ ὁ Ἰερεμίας, ἐδόξασε τὸν θεόν· καὶ ἀπελθὼν συνῆξε τὸν λαὸν σὺν γυναιξὶ καὶ τέκνοις, καὶ ἦλθεν ὅπου ἦν ὁ ἀετός. </reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="135" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ κατῆλθεν ὁ ἀετὸς ἐπὶ τὸν τεθνηκότα, καὶ ἀνέζησε. </reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="136" group="0" parallel="">
+            <reading option="0" mss="Harris ">γέγονε δὲ τοῦτο, ἵνα πιστεύσωσιν. </reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="137" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐθαύμασε δὲ πᾶς ὁ λαὸς ἐπὶ τῷ γεγονότι, λέγοντες ὅτι, Μὴ οὗτος ὁ θεὸς ὁ ὀφθεὶς τοῖς πατράσιν ἡμῶν ἐν τῇ ἐρήμῳ διὰ Μωϋσέως, καὶ νῦν ἐφάνη ἡμῖν διὰ τοῦ ἀετοῦ τοῦτου; </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="138" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν ὁ ἀετός· Σοι λέγω Ἰερεμία, δεῦρο λῦσον τὴν ἐπιστολὴν ταῦτην, καὶ ἀνάγνωθι αὐτὴν τῷ λαῷ· λύσας οὖν τὴν ἐπιστολήν, ἀνέγνω αὐτὴν τῷ λαῷ. </reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="139" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀκούσας ὁ λαὸς ἔκλαυσαν καὶ ἐπέθηκαν χοῦν ἐπὶ τὰς κεφαλὰς αὐτῶν, καὶ ἔλεγον τῷ Ἰερεμίᾳ· Σῶσον ἡμᾶς καὶ ἀπάγγειλον ἡμῖν τί ποιήσωμεν ἵνα εἰσέλθωμεν πάλιν εἰς τὴν πόλιν ἡμῶν. </reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="140" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀποκριθεὶς δὲ Ἰερεμίας εἶπεν αὐτοῖς· Πάντα ὅσα ἐκ τῆς ἐπιστολῆς ἠκούσατε, φυλάξατε καὶ εἰσάξει ἡμᾶς κύριος εἰς τὴν πόλιν ἡμῶν. </reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="141" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἔγραψε δὲ καὶ ἐπιστολὴν ὁ Ἰερεμίας τῷ Βαοὺχ λέγων οὕτως· Υἱέ μου ἀγαπητέ, μὴ ἀμελήσῃς ἐν ταῖς προσευχαῖς σου δεόμενος τοῦ θεοῦ ὑπὲρ ἡμῶν ὅπως κατευοδόσῃ τὴν ὁδὸν ἡμῶν ἄχρις ἂν ἐξέλθωμεν ἐκ τῶν προσταγμάτων τοῦ ἀνόμου βασιλέως τούτου. </reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="142" group="0" parallel="">
+            <reading option="0" mss="Harris ">δίκαιος γὰρ εὑρέθης ἐναντίον τοῦ θεοῦ, καὶ οὐκ ἔασέν σε εἰσελθεῖν ἐνταῦθα ὅπως μὴ ἴδῃς τὴν κάκωσιν τὴν γενομένην τῷ λαῷ ὑπὸ τῶν Βαβυλωνίων. </reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="143" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὥσπερ γὰρ πατήρ, υἱὸν μονογενῆ ἔχων, τούτου δὲ παραδοθέντος εἰς τιμωρίαν· οἱ ἰδόντες τὸν πατέρα αὐτοῦ καὶ παραμυθούμενοι αὐτόν, σκέπουσιν τὸ πρόσωπον αὐτοῦ, ἵνα μὴ ἴδῃ πῶς τιμωρεῖται αὐτὸς ὁ υἱὸς καὶ πλείονα φθαρῇ ἀπὸ τῆς λύπης. </reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="144" group="0" parallel="">
+            <reading option="0" mss="Harris ">οὕτως γάρ σε ἐλέησεν ὁ θεὸς καὶ οὐκ ἔασέν σε ἐλθεῖν εἰς Βαβυλῶνα ἵνα μὴ ἴδῃς τὴν κάκωσιν τοῦ λαοῦ. </reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="145" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀφ᾽ ἧς γὰρ εἰσήλθομεν ἐνταῦθα οὐκ ἐπαύσατο ἡ λύπη ἀφ᾽ ἡμῶν, ἐξήκοντα καὶ ἓξ ἔτη σήμερον. </reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="146" group="0" parallel="">
+            <reading option="0" mss="Harris ">πολλάκις γὰρ ἐξερχόμενος ηὕρισκον ἐκ τοῦ λαοῦ κρεμαμένους ὑπὸ Ναβουχοδονόσορ βασιλέως, κλαίοντας καὶ λέγοντας· Ἐλέησον ἡμᾶς, ὁ θεὸς Ζάρ. </reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="147" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀκούων ταῦτα, ἐλυπούμην καὶ ἔκλαιον δισσὸν κλαυθμόν, οὐ μόνον ὅτι ἐκρέμαντο, ἀλλ᾽ ὅτι ἐπεκαλοῦντο θεὸν ἀλλότριον λέγοντες· Ἐλέησον ἡμᾶς. </reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="148" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐμνημόνευον δὲ ἡμέρας ἑορτῆς ἃς ἐποιοῦμεν ἐν Ἰερουσαλὴμ πρὸ τοῦ ἡμᾶς αἰχμαλωτευθῆναι· καὶ μνησκόμενος ἐστέναζον, καὶ ἐπέστρεφον εἰς τὸν οἶκόν μου ὀδυνώμενος καὶ κλαίων. </reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="149" group="0" parallel="">
+            <reading option="0" mss="Harris ">νῦν οὖν δεήθητι εἰς τὸν τόπον ὅπου εἶ, σὺ καὶ Ἀβιμέλεχ, ὑπὲρ τοῦ λαοῦ τούτου, ὅπως εἰσακούσωσιν τῆς φωνῆς μου καὶ τῶν κριμάτων τοῦ στόματός μου καὶ ἐξέλθωμεν ἐντεῦθεν. </reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="150" group="0" parallel="">
+            <reading option="0" mss="Harris ">λέγω γάρ σοι ὅτι ὅλον τὸν χρόνον ὃν ἐποιήσαμεν ἐνταῦθα, κατέχουσιν ἡμᾶς λέγοντες ὅτι· Εἴπατε ἡμῖν ᾠδὴν ἐκ τῶν ᾠδῶν Σιών, τὴν ᾠδὴν τοῦ θεοῦ ὑμῶν. </reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="151" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ λέγομεν αὐτοῖς· Πῶς ᾄσωμεν ὑμῖν ἐπὶ γῆς ἀλλοτρίας ὄντες; </reading>
+          </unit>
+        </div>
+        <div number="35">
+          <unit id="152" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ μετὰ ταῦτα ἔδησε τὴν ἐπιστολὴν εἰς τὸν τράχηλον τοῦ ἀετοῦ Ἰερεμίας, λέγων· Ἀπέλθε ἐν εἰρήνῃ καὶ ἐπισκέψηται ἡμᾶς ἀμφοτέρους ὁ κύριος. </reading>
+          </unit>
+        </div>
+        <div number="36">
+          <unit id="153" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἐπετάσθη ὁ ἀετός, καὶ ἦλθεν εἰς Ἰερουσαλὴμ καὶ ἔδωκε τὴν ἐπιστολὴν τῷ Βαρούχ, καὶ λύσας ἀνέγνω καὶ κατεφίλησεν αὐτὴν καὶ ἔκλαυσε ἀκούσας διὰ τὰς λύπας καὶ τὰς κακώσεις τοῦ λαοῦ. </reading>
+          </unit>
+        </div>
+        <div number="37">
+          <unit id="154" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ἰερεμίας δὲ ἄρας τὰ σῦκα διέδωκε τοῖς νοσοῦσι τοῦ λαοῦ, καὶ ἔμεινε διδάσκων αὐτοὺς τοῦ ἀπέχεσθαι ἐκ τῶν ἀλισγημάτων τῶν ἐθνῶν τῆς Βαβυλῶνος.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1">
+          <unit id="155" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ἐγένετο δὲ ἡ ἡμέρα, ἐν ᾗ ἐξέφερε κύριος τὸν λαὸν ἐκ Βαβυλῶνος. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="156" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπεν ὁ κύριος πρὸς Ἰερεμίαν· Ἀνάστηθι, σὺ καὶ ὁ λαός, καὶ δεῦτε ἐπὶ τὸν Ἰορδάνην, καὶ ἐρεῖς τῷ λαῷ· Ὁ θέλων τὸν κύριον καταλειψάτω τὰ ἔργα τῆς Βαβυλῶνος. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="157" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ τοὺς ἄρρενας τοὺς λαβόντας ἐξ αὐτῶν γυναῖκας, καὶ τὰς γυναῖκας τὰς λαβούσας ἐξ αὐτῶν ἄνδρας, διαπεράσωσιν οἱ ἀκούοντές σου, καὶ ἆρον αὐτοὺς εἰς Ἰερουσαλήμ· τοὺς δὲ μὴ ἀκούοντάς σου, μὴ εἰσαγάγῃς αὐτοὺς ἐκεῖ. </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="158" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ἰερεμίας δὲ ἐλάλησεν πρὸς τὸν λαὸν τὰ ῥήματα ταῦτα· καὶ ἀναστάντες ἦλθον ἐπὶ τὸν Ἰορδάνην τοῦ περᾶσαι. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="159" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ λέγων αὐτοῖς τὰ ῥήματα ἃ εἶπε κύριος πρὸς αὐτόν, τὸ ἥμισυ τῶν γαμησάντων ἐξ αὐτῶν οὐκ ἠθέλησαν ἀκοῦσαι τοῦ Ἰερεμίου, ἀλλ᾽ εἶπον πρὸς αὐτόν· Οὐ μὴ καταλείψωμεν τὰς γυναῖκας ἡμῶν εἰς τὸν αἰῶνα ἀλλ᾽ ὑποστρέφωμεν αὐτὰς μεθ᾽ ἡμῶν εἰς τὴν πόλιν ἡμῶν. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="160" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐπέρασαν οὖν τὸν Ἰορδάνην καὶ ἦλθον εἰς Ἰερουσαλήμ. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="161" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἔστη Ἰερεμίας καὶ Βαροὺχ καὶ Ἀβιμέλεχ λέγοντες ὅτι, Πᾶς ἄνθρωπος κοινωνῶν Βαβυλωνίταις οὐ μὴ εἰσέλθῃ εἰς τὴν πόλιν ταύτην. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="162" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εἶπον πρὸς ἑαυτούς· Ἀναστάντες ὑποστρέψωμεν εἰς Βαβυλῶνα εἰς τὸν τόπον ἡμῶν· καὶ ἐπορεύθησαν. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="163" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐλθόντων δὲ αὐτῶν εἰς Βαβυλῶνα, ἐξῆλθον οἱ Βαβυλωνῖται εἰς συνάντησιν αὐτῶν, λέγοντες· Οὐ μὴ εἰσέλθητε εἰς τὴν πόλιν ἡμῶν, ὅτι ἐμισήσατε ἡμᾶς, καὶ κρυφῆ ἐξήλθετε ἀφ᾽ ἡμῶν διὰ τοῦτο οὐκ εἰσελεύσεσθε πρὸς ἡμᾶς. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="164" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὅρκῳ γὰρ ὡρκίσαμεν ἀλλήλους κατὰ τοῦ ὀνόματος τοῦ θεοῦ ἡμῶν, μήτε ὑμᾶς μήτε τέκνα ὑμῶν δέξασθαι, ἐπειδὴ κρυφῆ ἐξήλθετε ἀφ᾽ ἡμῶν. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="165" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἐπιγνόντες ὑπέστρεψαν καὶ ἦλθον εἰς τόπον ἔρημον μακρόθεν τῆς Ἰερουσαλήμ, καὶ ᾠκοδόμησαν ἑαυτοῖς πόλιν, καὶ ἐπωνόμασαν τὸ ὄνομα αὐτῆς Σαμάρειαν. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="166" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἀπέστειλε δὲ πρὸς αὐτοὺς Ἰερεμίας, λέγων· Μετανοήσατε· ἔρχεται γὰρ ἄγγελος τῆς δικαιοσύνης, καὶ εἰσάξει ὑμᾶς εἰς τὸν τόπον ὑμῶν τὸν ὑψηλόν.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1">
+          <unit id="167" group="0" parallel="">
+            <reading option="0" mss="Harris ">Ἔμειναν δὲ οἱ τοῦ Ἰερεμίου χαίροντες καὶ ἀναφέροντες θυσίας ὑπὲρ τοῦ λαοῦ ἐννέα ἡμέρας. </reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="168" group="0" parallel="">
+            <reading option="0" mss="Harris ">τῇ δὲ δεκάτῃ ἀνήνεγκεν Ἰερεμίας μόνος θυσίαν. </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="169" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ηὔξατο εὐχήν, λέγων· Ἅγιος, ἅγιος, ἅγιος, τὸ θυμίαμα τῶν δένδρων τῶν ζώντων, τὸ φῶς τὸ ἀληθινὸν τὸ φωτίζον με ἕως οὗ ἀναληφθῶ πρός σε· </reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="170" group="0" parallel="">
+            <reading option="0" mss="Harris ">περὶ τοῦ ἔλεώς σου, παρακαλῶ, περὶ τῆς φωνῆς τῆς γλυκείας τῶν δύο Σεραφίμ, παρακαλῶ, περὶ ἄλλης εὐωδίας θυμιάματος. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="171" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἡ μελέτη μου Μιχαὴλ ὁ ἀρχάγγελος τῆς δικαιοσύνης, ὁ ἀνοίγων τὰς πύλας τοῖς δικαίους, ἕως ἂν εἰσενέγκῃ τοὺς δικαίους. </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="172" group="0" parallel="">
+            <reading option="0" mss="Harris ">παρακαλῶ σε, κύριε παντοκράτωρ πάσης κτίσεως, ὁ ἀγέννητος καὶ ἀπερινόητος, ᾧ πᾶσα κρίσις κέκρυπται ἐν αὐτῷ πρὸ τοῦ ταῦτα γενέσθαι. </reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="173" group="0" parallel="">
+            <reading option="0" mss="Harris ">ταῦτα λέγοντος τοῦ Ἰερεμίου, καὶ ἱσταμένου ἐν τῷ θυσιαστηρίῳ μετὰ Βαροὺχ καὶ Ἀβιμέλεχ, ἐγένετο ὡς εἷς τῶν παραδιδόντων τὴν ψυχὴν αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="174" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἔμειναν Βαροὺχ καὶ Ἀβιμέλεχ κλαίοντες καὶ κράζοντες μεγάλῃ τῇ φωνῇ· Οὐαὶ ἡμῶν ὅτι ὁ πατὴρ ἡμῶν Ἰερεμίας κατέλιπεν ἡμᾶς, ὁ ἱερεὺς τοῦ θεοῦ καὶ ἀπῆλθεν. </reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="175" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἤκουσε δὲ πᾶς ὁ λαὸς τοῦ κλαυθμοῦ αὐτῶν, καὶ ἔδραμον ἐπ᾽ αὐτοὺς πάντες, καὶ εἶδον Ἰερεμίαν ἀνακείμενον χαμαὶ ὥσπερ τεθνηκότα. </reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="176" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ διέρρηξαν τὰ ἱμάτια αὐτῶν, καὶ ἐπέθηκαν χοῦν ἐπὶ τὰς κεφαλὰς αὐτῶν, καὶ ἔκλαυσαν κλαυθμὸν πικρόν. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="177" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ μετὰ ταῦτα ἡτοίμασαν ἑαυτοὺς ἵνα κηδεύσωσιν αὐτόν. </reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="178" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἰδοὺ φωνὴ ἦλθε, λέγουσα· Μὴ κηδεύετε τὸν ἔτι ζῶντα, ὅτι ἡ ψυχὴ αὐτοῦ εἰσέρχεται εἰς τὸ σῶμα αὐτοῦ πάλιν. </reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="179" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἀκούσαντες τῆς φωνῆς, οὐκ ἐκήδευσαν αὐτόν, ἀλλ᾽ ἔμειναν περικύκλῳ τοῦ σκηνώματος αὐτοῦ ἡμέρας τρεῖς, λέγοντες ποιᾳ` ὥρᾳ μέλλει ἀναστῆναι. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="180" group="0" parallel="">
+            <reading option="0" mss="Harris ">μετὰ δὲ τρεῖς ἡμέρας εἰσῆλθεν ἡ ψυχὴ αὐτοῦ εἰς τὸ σῶμα αὐτοῦ καὶ ἐπῆρε τὴν φωνὴν αὐτοῦ ἐν μέσῳ πάντων καὶ εἶπε· Δοξάσατε τὸν θεὸν ἐν μίᾳ φωνῇ, πάντες δοξάσατε τὸν θεόν, καὶ τὸν υἱὸν τοῦ θεοῦ τὸν ἐξυπνίζοντα ἡμᾶς, Ἰησοῦν Χριστόν, τὸ φῶς τῶν αἰώνων πάντων, ὁ ἄσβεστος λύχνος, ἡ ζωὴ τῆς πίστεως. </reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="181" group="0" parallel="">
+            <reading option="0" mss="Harris ">γίνεται δὲ μετὰ τοὺς καιροὺς τούτους ἄλλα ἔτη τετρακόσια ἑβδομηκονταεπτὰ, καὶ ἔρχεται εἰς τὴν γῆν. </reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="182" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ τὸ δένδρον τῆς ζωῆς τὸ ἐν μέσῳ τοῦ παραδείσου φυτευθὲν ποιήσει πάντα τὰ δένδρα τὰ ἄκαρπα ποιῆσαι καρπόν, καὶ αὐξηθήσονται, καὶ βλαστήσουσι. </reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="183" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ τὰ δένδρα τὰ βεβλαστηκότα, καὶ μεγαλαυχοῦντα, καὶ λέγοντα· Ἐδώκαμεν τὸ τέλος ἡμῶν τῷ ἀέρι· ποιήσει αὐτὰ ξηρανθῆναι μετὰ τοῦ ὕψους τῶν κλάδων αὐτῶν, καὶ ποήσει αὐτὰ κριθῆναι, τὸ δένδρον τὸ στηριχθέν. </reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="184" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ τὸ κόκκινον ὡς ἔριον λευκὸν γενήσεται· ἡ χιὼν μελανθήσεται, τὰ γλυκέα ὕδατα ἀλμυρὰ γενήσονται καὶ τὰ ἀλμυρὰ γλυκέα ἐν τῷ μεγάλῳ φωτὶ τῆς εὐφροσύνης τοῦ θεοῦ. </reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="185" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ εὐλογήσει τὰς νήσους τοῦ ποιῆσαι καρπὸν ἐν τῷ λόγῳ τοῦ στόματος τοῦ χριστοῦ αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="186" group="0" parallel="">
+            <reading option="0" mss="Harris ">αὐτὸς γὰρ ἐλεύσεται, καὶ ἐξελεύσεται καὶ ἐπιλέξεται ἑαυτῷ δώδεκα ἀποστόλους, ἵνα εὐαγγελίζωνται ἐν τοῖς ἔθνεσιν· ὃν ἐγὼ ἑώρακα κεκοσμημένον ὑπὸ τοῦ πατρὸς αὐτοῦ, καὶ ἐρχόμενον εἰς τὸν κόσμον ἐπὶ τὸ ὄρος τῶν ἐλαιῶν· καὶ ἐμπλήσει τὰς πεινώσας ψυχάς. </reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="187" group="0" parallel="">
+            <reading option="0" mss="Harris ">ταῦτα λέγοντος τοῦ Ἰερεμίου περὶ τοῦ υἱοῦ τοῦ θεοῦ, ὅτι ἔρχεται εἰς τὸν κόσμον, ὠργίσθη ὁ λαὸς καὶ εἶπε· Ταῦτα πάλιν ἐστι τὰ ῥήματα τὰ ὑπὸ Ἠσαΐου τοῦ υἱοῦ Ἀμὼς εἰρημένα, λέγοντος ὅτι, Εἶδον τὸν θεόν, καὶ τὸν υἱὸν τοῦ θεοῦ. </reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="188" group="0" parallel="">
+            <reading option="0" mss="Harris ">δεῦτε οὖν, καὶ μὴ ἀποκτείνωμεν αὐτὸν τῷ ἐκείνου θανάτῳ, ἀλλὰ λίθοις λιθοβολήσωμεν αὐτόν. </reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="189" group="0" parallel="">
+            <reading option="0" mss="Harris ">ἐλυπήθησαν οὖν σφόδρα Βαροὺχ καὶ Ἀβιμέλεχ ὅτι ἤθελον ἀκοῦσαι πλήρης τὰ μυστήρια ἃ εἶδε. </reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="190" group="0" parallel="">
+            <reading option="0" mss="Harris ">λέγει δὲ αὐτοῖς Ἰερεμίας· Σιωπήσατε καὶ μὴ κλαίετε, οὐ μὴ γὰρ με ἀποκτείνωσιν ἕως οὗ πάντα ὅσα εἶδον διηγήσωμαι ὑμῖν. </reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="191" group="0" parallel="">
+            <reading option="0" mss="Harris ">εἶπε δὲ αὐτοῖς· Ἐνέγκατέ μοι λίθον ὧδε· </reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="192" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἔστησεν αὐτὸν καὶ εἶπεν· Τὸ φῶς τῶν αἰώνων, ποίησον τὸν λίθον τοῦτον καθ᾽ ὁμοιότητά μου γενέσθαι ἕως οὗ πάντα ὅσα εἶδον διηγήσωμαι τῷ Βαροὺχ καὶ τῷ Ἀβιμέλεχ. </reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="193" group="0" parallel="">
+            <reading option="0" mss="Harris ">τότε ὁ λίθος διὰ προστάγματος θεοῦ ἀνέλαβεν ὁμοιότητα τοῦ Ἰερεμίου. </reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="194" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἐλιθοβόλουν τὸν λίθον, νομίζοντες ὅτι Ἰερεμίας ἐστίν. </reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="195" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὁ δὲ Ἰερεμίας πάντα παρέδωκε τὰ μυστήρια, ἃ εἶδε, τῷ Βαροὺχ καὶ τῷ Ἀβιμέλεχ, καὶ εἰθ᾽ οὕτως ἔστη ἐν μέσῳ τοῦ λαοῦ, ἐκτελέσαι βουλόμενος τὴν οἰκονομίαν αὐτοῦ. </reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="196" group="0" parallel="">
+            <reading option="0" mss="Harris ">τότε ἐβόησε ὁ λίθος, λέγων· Ὦ μωροὶ υἱοὶ Ἰσραήλ, διὰ τί λιθοβολεῖτέ με, νομίζοντες ὅτι ἐγὼ Ἰερεμίας; ἰδοὺ Ἰερεμίας ἐν μέσῳ ὑμῶν ἵσταται. </reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="197" group="0" parallel="">
+            <reading option="0" mss="Harris ">ὡς δὲ εἶδον αὐτόν, εὐθέως ἔδραμον πρὸς αὐτὸν μετὰ πολλῶν λίθων, καὶ ἐπληρώθη αὐτοῦ οἰκονομία. </reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="198" group="0" parallel="">
+            <reading option="0" mss="Harris ">καὶ ἐλθόντες Βαροὺχ καὶ Ἀβιμέλεχ, ἔθαψαν αὐτόν, καὶ λαβόντες τὸν λίθον ἔθηκαν ἐπὶ τὸ μνῆμα αὐτοῦ, ἐπιγράψαντες ἐν αὐτῷ οὕτως· οὗτός ἐστιν ὁ λίθος ὁ βοηθὸς τοῦ Ἰερεμίου.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

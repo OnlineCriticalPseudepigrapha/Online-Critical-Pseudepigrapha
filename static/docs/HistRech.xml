@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+<!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+<!ELEMENT divisions (division)+>
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+<!ELEMENT resources (resource)+>
+<!ELEMENT resource (info+ , URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT manuscripts (ms)+>
+<!ELEMENT ms (name , bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA | sup)*>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+<!ELEMENT booktitle (#PCDATA)>
+<!ELEMENT text (div)+>
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+<!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book filename="HistRech" title="The History of the Rechabites">
+  <version title="Greek" author="Anonymous" language="Greek">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Charlesworth" language="Greek" show="yes">
+        <name>James H. Charlesworth</name>
+        <bibliography> James H. Charlesworth, The History of the Rechabites, vol. 1: The Greek Recension (SBLTT 17; Chico, Calif.: Scholars Press, 1982), 14-107.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Title">
+        <div number="0">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Charlesworth "> διήγησις ζωσίμου εἰς τὸν βίον τῶν μακάρων κύριε εὐλόγησον</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="1">
+        <div number="1 ">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">κατ᾽ ἐκεῖνον τὸν καιρὸν ἐκ τῆς ἐρήμου ὑπῆρχεν ἀνήρ τις ὀνόματι ζώσιμος ὅς οὐκ ἔφαγεν ἄρτον ἔτη τεσσαράκοντα καὶ οἶνον οὐκ ἔπιεν· καὶ πρόσωπον ἀνθρώπου οὐχ ἑόρακεν·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">οὗτος ἦν παρακαλῶν τὸν θεὸν ἵνα ἴδῃ τὴν διοίκησιν τῶν μακάρων·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἰδοὺ ἄγγελος κυρίου ἀπεστάλη λέγων αὐτῷ· ζώσιμε ἄνθρωπε τοῦ θεοῦ· ἰδοὺ ἀπεστάλην ἀπὸ τοῦ ὑψίστου τοῦ τῶν ὅλων θεοῦ εἰπεῖν σοι ὅτι πεπορεύσῃ εἰς τοὺς μάκαρας· οὐ κατοικήσεις δὲ μετ᾽ αὐτῶν·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀλλὰ μὴ ὑψώσῃς τὴν καρδίαν σου εἰπών· ἔτη τεσσαράκοντα ἄρτον οὐκ ἔφαγον· ὁ γὰρ λόγος τοῦ θεοῦ ὑπὲρ ἄρτον ἐστιν, καὶ τὸ πνεῦμα τοῦ θεοῦ ὑπὲρ οἶνόν ἐστιν·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τὸ γὰρ &lt;εἰπεῖν σε&gt; πρόσωπον ἀνθρώπου οὐκ εἶδον· ἰδοὺ τὸ πρόσωπον τοῦ μεγάλου βασιλέως, ἐγγύς σου·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὁ δὲ ζώσιμος ἔφη· οἶδα ὅτι ὅσα ἂν θέλῃ ὁ κύριος δύναται·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὁ δὲ ἄγγελος εἶπεν πρὸς αὐτόν· γνῶθι καὶ τοῦτο· ὅτι πρὸς ἓν τῶν γευμάτων αὐτῶν οὐκ εἶ ἄξιος· πλὴν ἀναστὰς πορεύου·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1 ">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐγὼ δὲ ζώσιμος ἐξελθὼν ἐκ τοῦ σπηλαίου μου τοῦ θεοῦ με προάγοντος ἐπορευόμην μὴ ἐπιστάμενος τὴν ὁδὸν ποῦ ἀπέρχομαι·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ὁδεύσας ἡμέρας &lt;τεσσαράκοντα ὠλιγοψύχησεν&gt; τὸ πνεῦμά μου καὶ ἐξελύθη τὸ σῶμά μου· καὶ ἀκηδιάσας ἐκαθέσθην καὶ ἤμην προσευχόμενος ἐν τῷ τόπῳ ἐκείνῳ ἐπὶ ἡμέρας τρεῖς·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἰδοὺ ἦλθεν ζῶον ἐκ τῆς ἐρήμου ὄνομα αὐτῷ κάμηλος· καὶ θήσας τὰ γόνατα εἰς τὴν γῆν· ἔλαβέν με εἰς τὸν τράχηλον αὐτοῦ· καὶ ἐπορεύθη τὴν ἔρημον καὶ ἀπέθετό με·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἦν ἀλαλαγμὸς τῶν θηρίων ἐκεῖ πολύς· καὶ βρυγμὸς καὶ ἰὸς θανατηφόρος·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἔμφοβος δὲ γενόμενος, προσηυξάμην πρὸς κύριον· καὶ ἐγένετο σεισμὸς ἐν τῷ τόπῳ ἐκείνῳ πολὺς μετ᾽ ἠχοῦς·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ &lt;ἐφύσησεν λαῖλαψ&gt; ἀνέμου· καὶ ἐκίνησέν με ἀπὸ τῆς γῆς καὶ ὕψωσέν με εἰς τὸ πτερύγιον αὐτοῦ· καὶ ἤμην προσευχόμενος καὶ ποευόμενος· καὶ ἔστησέν με ἐπὶ τόπου ποταμώδους· καὶ ὄνομα τῷ ποταμῷ εὐμελής·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἰδοὺ βουλομένου μου· διέρχεσθαι τὸν ποταμόν· ἐβόησέν τις ὡς ἀπὸ τοῦ ὕδατος λέγων· ζώσιμε ἄνθρωπε τοῦ θεοῦ· οὐ δύνασαι διελθεῖν δι᾽ ἐμοῦ· οὐ γὰρ δύναται ὁ ἄνθρωπος τὰ ὕδατά μου διακόψαι· ἀλλ᾽ ἢ κατανόησον ἀπὸ τῶν ὑδάτων ἕως τοῦ οὐρανοῦ·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ κατανόησας· &lt;εἶδον τεῖχος&gt; νεφέλης κρατοῦν ἀπὸ τῶν ὑδάτων ἕως τοῦ οὐρανοῦ·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ εἶπεν ἡ νεφέλη· ζώσιμε ἄνθρωπε τοῦ θεοῦ· δι᾽ ἐμοῦ οὐ διέρχεται πετεινὸν ἐκ τοῦ κόσμου τούτου· οὐδὲ πνοὴ ἀνέμου· οὐδὲ αὐτὸς ὁ ἥλιος· οὐδὲ ὁ πειράζων ἐν τῷ κόσμῳ τούτῳ δύναται διελθεῖν δι᾽ ἐμοῦ·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1 ">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐγὼ δὲ ἐξέστην ἐπὶ τοῖς ῥήμασιν τούτοις καὶ ἐπὶ τῇ φωνῇ τῇ λεγούσῃ μοι ταῦτα·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐμοῦ προσευχομένου ἰδοὺ δύο δένδρα ἀνεφάνησαν ἀπὸ τῆς γῆς καλοείδη καὶ εὐπρεπέστατα· γέμοντα καρπῶν εὐωδίας·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ κλιθὲν τὸ δένδρον ἐντεῦθεν· ἔλαβεν με ἐπὶ τὴν κορυφὴν αὐτοῦ καὶ ὑψώθη σφόδρα ἀνάμεσον τοῦ ποταμοῦ· καὶ ὑπήντησεν τὸ ἄλλο δένδρον καὶ ἐδέξατό με ἐν τοῖς κλάδοις αὐτοῦ· καὶ κλιθέν· ἔστησέν με ἐπὶ τὴν γῆν</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἀνυψώθησαν τὰ &lt;ἀμφότερα δένδρα·&gt; καὶ ἔστησάν με ἀπὸ τοῦ ποταμοῦ πέραν·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἀνεπαυσάμην ἡμέρας τρεῖς ἐν τῷ τόπῳ ἐκείνῳ· καὶ πάλιν ἀναστὰς ἐπορευόμην· ὅπου δ᾽ ἂν οὐκ ἐγίνωσκον·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἦν ὁ τόπος ἐκεῖνος πλήρης εὐωδίας πολλῆς· καὶ οὐκ ἦν ὄρος ἔνθα· ἀλλ᾽ ἦν ὁ τόπος ἐκεῖνος πεδινὸς ἄφθορος· ὅλος ἐστεφανωμένος· καὶ πᾶσα ἡ γῆ εὐπρεπής·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1 ">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ εἶδον ἐκεῖ ἄνθρωπον γυμνὸν καθήμενον· καὶ εἶπον ἐν ἑαυτῷ· ἆρα μὴ οὕτως ἐστὶν ὁ πειράζων;</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐμνήσθην τῆς φωνῆς τῆς νεφέλης ὅτι εἶπέν μοι· ὅτι οὐ διέρχεται δι᾽ ἐμοῦ οὔτε αὐτὸς ὁ πειράζων ἐν τῷ κόσμῳ·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οὕτως θαρρήσας· εἶπον πρὸς αὐτόν· χαίροις ἀδελφέ·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ αὐτὸς ἀποκριθεὶς εἶπέν μοι· ἡ χάρις μετά σου·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ πάλιν εἶπον πρὸς αὐτόν· εἰπέ μοι ἄνθρωπε τοῦ θεοῦ, τίς εἶ;</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἀποκριθεὶς εἶπέν μοι· σὺ γὰρ εἶ; τίς εἶ;</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἀποκριθεὶς ἐγὼ εἶπον πάντα τὰ περὶ ἐμοῦ· καὶ ὅτι ηὐξάμην πρὸς κύριον, καὶ ἤνεγκέν με ἐν τῷ τόπῳ τούτῳ·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἀποκριθεὶς εἶπέν μοι· κἀγὼ γινώσκω ὅτι ἄνθρωπος τοῦ θεοῦ εἶ σύ· εἶ &lt;δὲ μή&gt; γε· οὐκ ἂν διῆλθες τὴν νεφέλην καὶ τὸν ποταμὸν καὶ &lt;τὸν ἀέρα.&gt;</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τὸ γὰρ πλάτος τοῦ ποταμοῦ· ὡς ἀπὸ μιλίων τριάκοντα· ἡ δὲ νεφέλη ἕως τοῦ οὐρανοῦ· τὸ δὲ βάθος τοῦ ποταμοῦ ἕως τῶν ἀβύσων·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1 ">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ πληρώσας τὸν λόγον τοῦτον ὁ ἄνθρωπος· εἶπεν πάλιν· σὺ ἐκ τῆς ματαιότητος τοῦ κόσμου ἦλθες ὧδε;</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐγὼ δὲ εἶπον αὐτῷ· διατί γυμνὸς ὑπάρχεις;</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ εἶπεν· πόθεν ἔγνως ὅτι γυμνὸς ὑπάρχω; σὺ γὰρ φορῶν δέρματα εκ τῶν προβάτων τῆς γῆς ὑπάρχεις· καὶ αὐτὰ φθειρόμενα σὺν τῷ σώματί σου· ἀλλὰ κατανόησον τῷ ὑψώματι τοῦ οὐρανοῦ καὶ θέασαι τὸ ἔνδυμά μου ποῖόν ἐστιν·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ θεασάμενος ἐν τῷ οὐρανῷ εἶδον τὸ πρόσωπον αὐτοῦ ὡσεὶ πρόσωπον ἀγγέλου· καὶ τὸ ἔνδυμα αὐτοῦ ὡς ἀστραπὴν ἡ ἐξ ἀνατολῶν εἰς δυσμὰς πορευομένη· καὶ ἐφοβήθην ὅτι υἱὸς θεοῦ ἦν· καὶ ἐγενήθην ἔντρομος πεσὼν ἐπὶ τὴν γῆν·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1 ">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">Καὶ &lt;δεδωκὼς χεῖρα&gt; ἀνέστησέν με λέγων· κἀγὼ εἷς εἰμὶ τῶν μακάρων·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">δεῦρο ὅπως ἄξω σε πρὸς τοὺς πρεσβυτέρους·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ κρατήσας τῆς χειρός μου· συμπεριεπάτησέν μοι· καὶ ἤγαγέν με ἐπί τινα ὄχλον καὶ ἦσαν ἐν τῷ ὄχλῳ ἐκείνῳ πρεσβῦται ὅμοιοι υἱοὶ θεοῦ· καὶ ἦσαν παριστάμενοι νεανίσκοι τοῖς πρεσβυτέροις·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀπελθόντος δὲ ἐμοῦ ἔγγιστα αὐτῶν εἶπαν· οὗτος ἐκ τῆς ματαιότητος τοῦ κόσμου ἐλήλυθεν δεῦτε δεηθῶμεν τοῦ κυρίου καὶ φανερώσει ἡμῖν τὸ μυστήριον τοῦτο·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">μὴ ἄρα τὸ τέλος ἔφθασεν· ὅτι ἄνθρωπος τῆς ματαιότητος ἦλθεν ὧδε·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἀναστάντες, ἐδεήθησαν τοῦ κυρίου ὁμοθυμαδόν· καὶ ἰδοὺ ἄγγελοι δύο κατέβησαν ἐκ τῶν οὐρανῶν, καὶ εἶπαν· μὴ φοβήθητε τὸν ἄνδρα· ὅτι ἀπέσταλκεν αὐτὸν ὁ θεὸς ἵνα ποιήσῃ ἑπτὰ ἡμέρας· καὶ λάβῃ τὰς διοικήσεις ὑμῶν· καὶ τότε ἐκπορεύεται· καὶ ἀπελεύσεται ἐν τῷ τόπῳ αὐτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">οἱ δὲ ἄγγελοι τοῦ θεοῦ εἰπόντες ταῦτα· ἀνέβησαν εἰς τὸν οὐρανὸν ἐνώπιον τῶν ὀφθαλμῶν ἡμῶν· </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1 ">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε παρέδωκάν με οἱ πρεσβύτεροι τῶν μακάρων ἕνα τῶν ὑπηρετῶν λέγοντες· φύλαξον αὐτὸν ἕως ἡμερῶν ἑπτά·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">παραλαβών με οὖν ὁ ὑπηρέτης· ἀπήγαγέν με εἰς τὸ σπήλαιον αὐτοῦ· καὶ ἤμεθα ὑποκάτω δένδρου διοικούμενοι·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀπὸ γὰρ ἕκτης ὥρας ἕως ἕκτης τότε ἠσθίομεν· καὶ τὸ ὕδωρ ἐξήρχετο ἀπὸ τοῦ δένδρου γλυκὺ ὑπὲρ τὸ μέλι· καὶ ἐπίνομεν πρὸς τὸν κόρον ἡμῶν, καὶ πάλιν τὸ ὕδωρ ἐδίδυσκεν εἰς τὸν τόπον αὐτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἤκουσεν δὲ πᾶσα ἡ πατριὰ τῶν ἐκεῖσε περὶ ἐμοῦ· ὅτι ἦλθεν ἄνθρωπος ἐκ τῆς ματαιότητος τοῦ κόσμου ὧδε·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐσαλεύθη πᾶσα ἡ πατριά· καὶ &lt;ἦλθον ἰδεῖν με&gt; ὅτι ξένον αὐτοῖς ἐφάνη·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἦσαν οὖν &lt;ἐπερωτῶντές με&gt; πάντα· κἀγὼ ἤμην ἀναγγέλων αὐτοῖς·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ὠλιγοψύχησα τῷ πνεύματι καὶ τῷ σώματί μου· καὶ παρεκάλεσα τὸν ἄνθρωπον τοῦ θεοῦ τὸν ὑπηρετοῦντά μοι καὶ εἶπον· παρακαλῶ σε ἀδελφέ· ἐὰν ἔλθωσίν τινες ἰδεῖν με ἀνάγγειλον αὐτοῖς ὅτι οὐκ ἔστιν ὧδε ἵνα ἀναπαύσωμαι μικρόν·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐβόησεν ὁ ἄνθρωπος τοῦ θεοῦ λέγων· οἴμοι ὅτι ἱστορία τοῦ ἀδὰμ ἐμοὶ ἀνεκεφαλαιώθη· ἐκεῖνον γὰρ διὰ τῆς εὔας ἠπάτησεν ὁ σατανᾶς καὶ ἐμὲ ὁ ἄνθρωπος οὗτος· διὰ τῆς κολακείας, ψεύστην θέλει ἀποκαταστῆσαι· ὄντος αὐτοῦ ὧδε· εἶπέν μοι· ὅτι ψεύσῃ καὶ εἶπε ὅτι οὐκ &lt;ἔστιν ὧδε&gt;·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">&lt;ἀπαγάγετέ με&gt; ἐντεῦθεν, ἐπεί· φεύξομαι &lt;ἀπὸ τῆς κώμης·&gt; ἰδοὺ γὰρ βούλεται κατασπείρειν ἐμοὶ σπέρματα τοῦ κόσμου τῆς ματαιότητος·</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ κατεπανέστησάν μου πᾶς ὁ ὄχλος· καὶ οἱ πρεσβύτεροι καὶ εἶπον· ἄπελθε ἀφ᾽ ἡμῶν ἄνθρωπε οὐκ οἴδαμεν πόθεν ἐλήλυθας πρὸς ἡμᾶς·</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐγὼ δὲ ἔκλαυσα κλαυθμῷ μεγάλῳ· καὶ ἀπέστη ἀπ᾽ ἐμοῦ ἡ φρόνησις· καὶ ἐβόησα πρὸς τοὺς πρεσβυτέρους λέγων· συγχωρήσατέ μοι κύριοί μου· καὶ οἱ πρεσβύτεροι καταπαύσαντες· ἡσυχίαν παρέσχον·</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε ἐξηγησάμην αὐτοῖς τὰ ἀπ᾽ ἀρχῆς ἕως δεῦρο· καὶ ὅτι ἐδεήθην τοῦ θεοῦ ἐλθεῖν πρὸς ὑμᾶς· καὶ κατηξίωσέν με·</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οἱ πρεσβύτεροι εἶπον· καὶ νῦν τί &lt;θέλεις ἵνα&gt; ποιήσωμέν σοι·</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐγὼ δὲ εἶπον αὐτοῖς· θέλω λαβεῖν ἐξ ὑμῶν τὰς διοικήσεις ὑμῶν·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1 ">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Charlesworth "> οἱ δὲ ἐχάρησαν χαρὰν μεγάλην, καὶ ἄραντες πλάκας λιθινάς· κατέγραψαν τοῖς ὄνυξιν αὐτῶν αὐτῶν οὕτως· ἀκούσατε ἀκούσατε υἱοὶ τῶν ἀνθρώπων ἡμῶν τῶν γενομένων μακάρων· ὅτι καὶ ἡμεῖς ἐξ ὑμῶν ἐσμέν·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὅτε γὰρ ἐκήρυξεν ἰερεμίας ὁ προφήτης· ὅτι ἡ πόλις ἰερουσαλὴμ παραδοθήσεται εἰς χεῖρας τῶν ὀλοθρευόντων· διέρρηξεν τὰ ἱμάτια αὐτοῦ· καὶ περιεζώσατο σάκκον περὶ τὴν ὀσφὺν αὐτοῦ· καὶ &lt;κατεπάσατο σποδὸν&gt; ἐπὶ τὴν κεφαλὴν αὐτοῦ· καὶ χοῦν ἔλαβεν ἐπὶ τῆς κοίτης αὐτοῦ· καὶ εἶπεν παντὶ τῷ λαῷ ἀποστραφῆναι ἀπὸ τῆς ὁδοῦ αὐτοῦ τῆς πονηρᾶς·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἤκουσεν δὲ καὶ ὁ πατὴρ ἡμῶν ῥηχὰβ υἱὸς ἀμιναδὰβ καὶ εἶπεν· πρὸς ἡμᾶς· ἀκούσατε υἱοὶ ῥηχὰβ καὶ θυγατέρες τοῦ πατρὸς ὑμῶν· καὶ ἀποδύσασθε τὰ ἱμάτια ὑμῶν ἐκ τοῦ σώματος ὑμῶν καὶ κεράμιον οἴνου οὐ πίεσθε· καὶ ἄρτον ἐκ τοῦ πυρὸς οὐ φάγεσθε· καὶ σίκερα καὶ μέλι οὐ πίεσθε· ἕως τοῦ εἰσακοῦσαι κύριον τῆς δεήσεως ὑμῶν·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἡμεῖς δὲ εἶπαμεν· ὅτι ἃ ἐνετείλατο ἡμῖν ποιήσωμεν καὶ ἀκουσώμεθα·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἀπερρίψαμεν ἐκ τοῦ σώματος ἡμῶν τὴν περιβολὴν ἡμῶν· καὶ οὐκ ἐφάγομεν ἄρτον ἐκ πυρός· καὶ οὐκ ἐπίομεν κεράμιον οἴνου· οὔτε μέλι οὔτε σίκερα· καὶ ἐκλαύσαμεν κλαυθμῷ μεγάλῳ· καὶ ἐδεήθημεν τοῦ κυρίου</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἤκουσεν τῆς προσευχῆς ἡμῶν· καὶ ἀπέστρεψεν τὴν ὀργὴν αὐτοῦ ἀπὸ τῆς πόλεως ἰερουσαλήμ· καὶ ἐγενήθη τῇ πόλει ἰερουσαλὴμ ἔλεος παρὰ κυρίου καὶ ἠλέησεν τὸν λαὸν αὐτοῦ· καὶ ἀπέστρεψεν τὴν ὀργὴν αὐτοῦ τὴν θανατηφόρον·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1 ">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ μετὰ ταῦτα ἀπέθανεν ὁ βασιλεὺς τῆς πόλεως ἰερουσαλήμ· καὶ ἀνέστη βασιλεὺς ἕτερος·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ συνηθροίσθη πᾶς ὁ λαὸς πρὸς αὐτόν· καὶ κατάδηλον ἐποίησαν πρὸς αὐτὸν περὶ ἡμῶν καὶ εἶπαν· εἰσίν τινες ἐκ τοῦ λαοῦ σου· οἵτινες ἤλλαξαν τὴν ὁδὸν αὐτῶν ἀφ᾽ ἡμῶν·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καλέσας οὖν αὐτοὺς ὁ βασιλεὺς ἐπηρώτησεν αὐτοὺς ἕνεκεν τίνος πεποιήκασιν τοῦτο·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ μετεκαλέσατο ἡμᾶς καὶ ἐπηρώτησεν· &lt;τίνες ἐστὲ&gt; καὶ ποίας θρησκείας ἢ ἐκ ποίας πατρίδος;</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ εἴπαμεν αὐτῷ ἡμεῖς· ἐκ τοῦ λαοῦ σού ἐσμεν τῆς πόλεως ἰερουσαλήμ· καὶ εἶπεν ὁ βασιλεύς· τίνος υἱοί ἐστε· καὶ εἴπαμεν αὐτῷ· υἱοί ἐσμεν παιδός σου· πατρὸς δὲ ἡμῶν ῥηχὰβ υἱοῖ ἰωναδάβ</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ὅτε ἐκήρυξεν ἰερεμίας ὁ προφήτης ζῶντος τοῦ πατρός σου τοῦ βασιλέως, ἐκήρυξεν θάνατον τῇ πόλει ἰερουσαλὴμ ὅτι ἔτι τριῶν ἡμερῶν καὶ πᾶσα ἡ πόλις θανατωθήσεται·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀκούσας δὲ ὁ βασιλεὺς ὁ πατήρ σου μετέγνω ἐπὶ ταῖς ἁμαρτίαις αὐτοῦ· καὶ ἐξέθετο δόγμα πᾶσιν τοῦ ἀποστρέψαι ἐκ τῆς ὁδοῦ αὐτῶν τῆς πονηρᾶς·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀκούσας δὲ ὁ πατὴρ ἡμῶν ὁ παῖς σου· ἐνετείλατο ἡμῖν λέγων· κεράμιον οἴνου οὐ πίεσθε· καὶ ἄρτον ἐκ πυρὸς οὐ φάγεσθε· ἕως τοῦ εἰσακοῦσαι κύριον τῆς δεήσεως ὑμῶν·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἡμεῖς δὲ ἐπηκούσαμεν τῆς ἐντολῆς τοῦ πατρὸς ἡμῶν· καὶ ἐγυμνώσαμεν τὰ σώματα ἡμῶν· καὶ οἶνον οὐκ ἐπίομεν· καὶ ἄρτον ἐκ πυρὸς οὐκ ἐφάγομεν· καὶ προσηυξάμεθα πρὸς κύριον περὶ τῆς πόλεως ἰερουσαλήμ·</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἠλέησεν κύριος τὸν λαὸν αὐτοῦ· καὶ ἀπέσρεψεν τὴν ὀργὴν αὐτοῦ· καὶ εἴδομεν καὶ ὀνήθη ἡ ψυχὴ ἡμῶν καὶ εἶπαμεν· καλὸν εἶναι ἡμᾶς οὕτως·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1 ">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ εἶπεν πρὸς ἡμᾶς ὁ βασιλεύς· καλῶς πεποιήκατε·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">νῦν οὖν καταμίχθητε μετὰ τοῦ λαοῦ μου· καὶ φάγεσθε ἄρτον· καὶ πίεσθε οἶνον· καὶ δοξάσατε τὸν κύριον ὑμῶν· καὶ ἔσεσθε ὑπακούοντες, θεῷ καὶ βασιλεῖ·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἡμεῖς δὲ εἴπαμεν ὅτι οὐ παρακούομεν τὸν θεόν·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε ὀργισθεὶς ὁ βασιλεύς· ἔθετο ἡμᾶς ἐν φυλακῇ· καὶ ἤμεθα διανυκτερεύοντες τὴν νύκταν ἐκείνην·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἰδοὺ φῶς ἔλαμψεν ἐν τῷ οἰκήματι· καὶ ἄγγελος ἀπεστέγασεν τὴν φυλακήν· καὶ ἐκράτησεν τῆς κορυφῆς ἡμῶν καὶ ἐξήγαγεν ἡμᾶς ἀπὸ τῆς φυλακῆς· καὶ ἔθετο ἡμᾶς εἰς ἀέρα· καὶ ἤνεγκεν ἡμᾶς πρὸς τὸ ὕδωρ τοῦ ποταμοῦ· καὶ εἶπεν πρὸς ἡμᾶς· ὅπου πορεύεται τὸ ὕδωρ πορεύεσθε καὶ ὑμεῖς·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐβαδίσαμεν σὺν τῷ ὕδατι καὶ σὺν τῷ ἀγγέλῳ·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὅτε οὖν ἤνεγκεν ἡμᾶς πρὸς τὸν τόπον τοῦτον· ἐψύγη ὁ ποταμὸς καὶ ἀπώλετο τὸ ὕδωρ· καὶ διερράγη ὁ τόπος· καὶ ἀνῆλθεν ὕδωρ ἀπὸ τῆς ἀβύσσου·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ περιετείχισεν τὴν πατρίδα ταύτην· καὶ ἦλθεν τεῖχος νεφέλης καὶ ἐπεσκίασεν ἐπάνω τοῦ ὕδατος·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οὐ διέστησεν ἡμᾶς ἐπὶ πᾶσαν τὴν γῆν· ἀλλ᾽ ἔδωκεν ἡμῖν τὴν πατρίδα ταύτην·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1 ">
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀκούσατε ἀκούσατε, υἱοὶ τῶν ἀνθρώπων τὴν διοίκησιν τῶν μακάρων·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἔθετο γὰρ ἡμᾶς ὁ θεὸς ἐπὶ τῆς γῆς ταύτης· καὶ γάρ ἐσμεν εὐσεβεῖς· ἀλλ᾽ οὐκ ἀθάνατοι·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀνέτειλεν γὰρ ἡ γῆ καρπὸν εὐωδέστατον· καὶ ἐξέρχεται ἐκ τῶν κορμῶν τῶν δένδρων ὕδωρ γλυκὺ ὑπὲρ τὸ μέλι· καὶ ταῦτα ἡμῖν βρῶσις καί πόσις·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐσμὲν δὲ καὶ προσευχόμενοι νυκτὸς καὶ ἡμέρας· πᾶσα δὲ ἡ σπουδὴ ἡμῶν τοῦτό ἐστιν·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀκούσατε υἱοὶ τῶν ἀνθρώπων· ὅτι παρ᾽ ἡμῖν ἄμπελος οὐκ ἔστιν· οὔτε ἄρουρα· οὔτε ἔργα ἐκ ξύλου οὔτε σιδήρου· οὔτε οἶκός ἐστιν ἡμῖν· οὔτε οἰκοδομή οὔτε πῦρ οὔτε ξίφος· οὔτε ἀργὸς σίδηρος οὔτε ἐργάσιμος· οὔτε ἀργύριον οὔτε χρυσίον· οὔτε &lt;ἀὴρ βαρύτατος&gt; οὔτε πικρότατος·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">οὔτε εἰσὶν ἐξ ἡμῶν λαμβάνοντες ἑαυτοῖς γυναῖκας ἕως οὗ ποιήσωσιν δύο τέκνα·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ μετὰ τὸ δύο τέκνα ποιῆσαι· ἀφίστανται ἀπ᾽ ἀλλήλων καί εἰσιν ἐν ἁγνείᾳ μὴ γινώσκοντες &lt;ὅτι ἦσάν ποτε ἐν&gt; συνηθείᾳ τοῦ γάμου· ἀλλ᾽ ὡς ὅτι ἀπ᾽ ἀρχῆς ἐν τῇ παρθενίᾳ ὑπάρχοντες·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">μένει τὸ ἓν τέκνον εἰς τὸν γάμον· καὶ τὸ ἓν εἰς τὴν παρθενίαν· </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1 ">
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οὐκ ἔστιν &lt;ἀριθμὸς χρόνου&gt;· οὔτε ἑβδομάδες οὔτε μῆνες· οὔτε ἐνιαυτός· πᾶσα γὰρ ἡ ἡμέρα ἡμῶν μία ἡμέρα ἐστίν·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐπὶ δὲ τῶν σπηλαίων ἡμῶν· &lt;ἀπόκειται φύλλα&gt; τῶν δένδρων· καὶ  αὕτη ἐστὶν ἡ κοίτη ἡμῶν ὑποκάτω τῶν δένδρων·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">οὐκ ἐσμὲν δὲ γυμνοὶ τῷ σώματι ὡς δὴ ἀλογίζεσθε ὑμεῖς· ἔχομεν γὰρ τὸ ἔνδυμα τῆς ἀθανασίας καὶ οὐκ αἰσχυνόμεθα ἀλλήλους·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐν δὲ τῇ ἕκτῃ ὥρᾳ ἐσθίομεν κατὰ πᾶσαν ἡμέραν· κατέρχεται γὰρ ὁ καρπὸς τοῦ δένδρου ἀφ᾽ ἑαυτοῦ ἐν τῇ ἕκτῃ ὥρᾳ καὶ ἐσθίομεν πρὸς τὸν κόρον ἡμῶν καὶ πίνομεν</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ πάλιν τὸ ὕδωρ διδύσκει εἰς τὸν τόπον αὐτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">οἴδαμεν δὲ καὶ ὑμᾶς τοὺς ἐν τῷ κόσμῳ &lt;τῷ αὐτόθι&gt; καὶ τοὺς ἐν ἁμαρτίαις ὄντας καὶ τὰ ἔργα ὑμῶν· ὅτι καθ᾽ ἑκάστην ἡμέραν οἱ ἄγγελοι τοῦ θεοῦ ἔρχονται καὶ ἀπαγγέλλουσιν ἡμῖν καὶ τὸν ἀριθμὸν τῶν ἐτῶν ὑμῶν·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἡμεῖς δὲ εὐχόμεθα ὑπὲρ ὑμῶν πρὸς τὸν κύριον· ὅτι καὶ ἡμεῖς ἐξ ὑμῶν ἐσμὲν καὶ ἐκ τοῦ γένους ὑμῶν ἀλλ᾽ ὅτι καὶ ἐξελέξατο ἡμᾶς ὁ θεός· καὶ ἔθετο ἡμᾶς ὁ θεὸς ἐν τῷ τόπῳ τούτῳ ἀναμαρτήτους·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="98" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οἱ ἄγγελοι τοῦ θεοῦ οἰκοῦσιν μεθ᾽ ἡμῶν κατὰ πᾶσαν ἡμέραν καὶ λέγουσιν ἡμῖν πάντα τὰ περὶ ὑμῶν· καὶ χαίρομεν μετὰ τῶν ἀγγέλων ἕνεκεν τῶν ἔργων τῶν δικαίων·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="99" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐπὶ δὲ τὰ ἔργα τῶν ἁμαρτωλῶν λυπούμεθα· καὶ κλαίοντες προσευχόμεθα πρὸς κύριον· ἵνα παύσηται ἀπὸ τῆς ὀργῆς καὶ φείσηται τῶν ἁμαρτημάτων ὑμῶν·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="1 ">
+          <unit id="100" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὅταν δὲ ἔλθῃ ὁ χρόνος &lt;τῆς τεσσαρακοστῆς&gt; πάντα παύονται τὰ δένδρα ἀπὸ τῶν καρπῶν·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="101" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ βρέχει τὸ μάννα ἐκ τοῦ οὐρανοῦ ὅπερ ἔδωκεν τοῖς πατράσιν ἡμῶν· ἔστιν δὲ τὸ μάννα ὑπὲρ τὸ μέλι γλυκύ·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="102" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οὕτως γινώσκομεν ὅτι ἐνήλλακται ὁ καιρὸς τοῦ ἐνιαυτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="103" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὅταν δὲ ἔλθῃ ὁ καιρὸς τοῦ ἁγίου πάσχα· τότε πάλιν ἀνατέλλει τὰ δένδρα τὸν καρπὸν τῆς εὐωδίας· καὶ οὕτως γινώσκομεν ὅτι ἀρχὴ ἐνιαυτοῦ ἐστίν·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="104" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἡ δὲ ἑορτὴ τῆς ἀναστάσεως τοῦ κυρίου· ἐν πολλῇ ἀγρυπνίᾳ ἐκτελεῖται· ἐσόμεθα γὰρ ἀγρυπνοῦντες ἡμέρας τρεῖς καὶ νύκτας τρεῖς·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="1 ">
+          <unit id="105" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">οἴδαμεν δὲ καὶ τὸν χρόνον ἡμῶν, τῆς τελειώσεως· οὐ γὰρ ἔστιν αἰκισμὸς καὶ βάσανος· οὐδὲ κόπος τῷ σώματι ἡμῶν· οὔτε ἀκηδία· οὔτε ἀρρώστημα· ἀλλ᾽ ἔστιν εἰρήνη καὶ ἀνεκτότης πολλὴ καὶ ἀγάπη·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="106" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">οὔτε γὰρ ὀχλεῖται ἡ ψυχὴ ἡμῶν ὑπὸ τῶν ἀγγέλων τοῦ ἐξελθεῖν· χαίρουσιν γὰρ οἱ ἄγγελοι ὅταν παραλαμβάνωσιν ἡμῶν τὰς ψυχάς· χαίρουσιν δὲ καὶ αἱ ψυχαὶ ἡμῶν σὺν τοῖς ἀγγέλοις ὅταν βλέπωσιν αὐτούς·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="107" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὥσπερ ἐκδέχεται νύμφη τὸν νυμφίον· οὕτως ἐκδέχεται ἡ ψυχὴ ἡμῶν τὸν εὐαγγελισμὸν τῶν ἁγίων ἀγγέλων· οὐδὲν περισσὸν λέγοντες· ἀλλ᾽ ἢ μόνον τοῦτο, καλεῖ σε ὁ κύριος·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="108" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε ἡ ψυχὴ ἐξέρχεται ἐκ τοῦ σώματος, καὶ προσέρχεται τοῖς ἀγγέλοις· καὶ ἰδόντες τὴν ψυχὴν ἄσπιλον ἐξερχομένην, χαίρουσιν οἱ ἄγγελοι καὶ ἁπλώσαντες τὰς στολὰς αὐτῶν δέχονται αὐτήν·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="109" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε μακαριοῦσιν αὐτὴν οἱ ἄγγελοι λέγοντες· μακαρία σὺ ψυχὴ ὅτι ἐπληρώθη τὸ θέλημα τοῦ θεοῦ ἐν σοί·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="1 ">
+          <unit id="110" group="0" parallel="">
+            <reading option="0" mss="Charlesworth "> ὁ δὲ χρόνος τῆς ζωῆς ἡμῶν οὗτός ἐστιν·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="111" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">εἰ ἐν νεότητι ἐξερχόμενος ἐκ τοῦ σώματος· αἱ ἡμέραι τῆς ζωῆς αὐτοῦ αἱ ἐντεῦθεν ἔτη τριακόσια ἑξήκοντα·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="112" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὁ δὲ ἐν τῷ γήρει ἐξερχόμενος ἐκ τοῦ σώματος, αἱ ἡμέραι τῆς ζωῆς αὐτοῦ αἱ ἐντεῦθεν· ἔτη ἑπτακόσια ὀγδοήκοντα ὀκτώ·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="113" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">δεδήλωται δὲ ἡμῖν ἀπὸ τῶν ἀγγέλων· ἡ ἡμέρα τῆς συμπληρώσεως ἡμῶν·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="114" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὅτε δὲ ἔλθωσιν οἱ ἄγγελοι τοῦ θεοῦ λαβεῖν ἡμᾶς πορευόμεθα μετ᾽ αὐτῶν·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="115" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οἱ πρεσβύτεροι ἰδόντες τοὺς ἀγγέλους συνάγουσιν πάντα τὸν λαόν· καὶ ἀπερχόμεθα μετὰ τῶν ἀγγέλων ψάλλοντες· ἕως ἀπέλθωσιν οἱ ἄγγελοι ἐπὶ τὸν τόπον τῆς κατοικίας ἡμῶν·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="116" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">διὰ δὲ τὸ μὴ ἔχειν ἡμᾶς σκεῦος οἱ ἄγγελοι τοῦ θεοῦ δι᾽ ἑαυτῶν ποιοῦσιν τὴν θήκην τοῦ σώματος ἡμῶν·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="117" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οὕτως κατέρχεται ὁ καλούμενος ὑπὸ τοῦ θεοῦ· πάντες δὲ ἀσπαζόμεθα αὐτὸν ἀπὸ μικροῦ ἕως μεγάλου προπέμποντες καὶ συντασσόμενοι·</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="118" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ τότε ἡ ψυχὴ ἐξέρχεται ἀπὸ τοῦ σώματος· καὶ ἀσπάζονται αὐτὴν οἱ ἄγγελοι·</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="119" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἡμεῖς δὲ θεωροῦμεν τὸ εἶδος τῆς ψυχῆς, ὡς εἶδος φωτὸς πεπληρωμένην καθ᾽ ὅλου τοῦ σώματος χωρὶς τοῦ ἄρσενος καὶ τῆς θηλείας·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="1 ">
+          <unit id="120" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε οἱ ἄγγελοι ἀναλαμβάνοντες· ᾄδουσιν ᾆσμα καὶ ὕμνον ψάλλοντες τῷ θεῷ· καὶ πάλιν ἄλλα τάγματα τῶν ἀγγέλων μετὰ σπουδῆς ὑπαντῶσιν ἀσπαζόμενοι τὴν ψυχὴν τὴν προσερχομένην καὶ εἰσερχομένην εἰς τὰ στερεώματα·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="121" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ὅτε ἀπέλθῃ εἰς τὸν τόπον ἐν ᾧ δεῖ προσκυνεῖν τὸν θεόν· αὐτὸς ὁ υἱὸς τοῦ θεοῦ μετὰ τῶν ἀγγέλων δέχεται τὴν ψυχὴν τοῦ μάκαρος· καὶ προσφέρει πρὸς τὸν ἄχραντον πατέρα τῶν αἰώνων·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="122" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ πάλιν ὅταν ψάλλωσιν οἱ ἄγγελοι ἄνω· ἡμεῖς ὄντες κάτω ὑπακούομεν αὐτῶν· καὶ πάλιν ἡμεῖς ψάλλομεν, καὶ αὐτοὶ ὑπακούουσιν ἐν τῷ οὐρανῷ ἄνω·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="123" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ οὕτως ἀνάμεσον ἡμῶν καὶ τῶν ἀγγέλων· ἀνέρχεται ἡ δοξολογία τῆς ὑμνολογίας·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="124" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὅτε δὲ ἡ ψυχὴ τοῦ μάκαρος πεσοῦσα ἐπὶ πρόσωπον προσκυνεῖ τὸν κύριον· τότε καὶ ἡμεῖς πεσόντες προσκυνοῦμεν τῇ αὐτῇ ὥρᾳ τὸν κύριον·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="125" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ὅτε δὲ ἀναστήσει αὐτὴν ὁ κύριος τότε καὶ ἡμεῖς ἀνιστάμεθα·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="126" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ὅτε ἀπέρχεται εἰς τὸν ὡρισμένον τόπον· καὶ ἡμεῖς ἀπερχόμεθα ἐν τῇ ἐκκλησίᾳ· πληροῦντες τὴν εὐχαριστίαν τοῦ κυρίου·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="127" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ταῦτα γράψαντες· καὶ πᾶσαν τὴν διοίκησιν τῶν μακάρων· ἐδώκαμεν τῷ ἀδελθῷ Ζωσίμῳ· καὶ προεπέμψαμεν αὐτὸν ἕως τοῦ τόπου τῶν δένδρων πρὸς τῷ ποταμῷ τῷ εὐμέλῃ·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="1 ">
+          <unit id="128" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐγὼ δὲ ζώσιμος ἐδεήθην πάλιν τῶν μακάρων· ἵνα δεηθῶσιν ὑπὲρ ἐμοῦ πρὸς τὸν κύριον· ἵνα δέξωνταί με τὰ δένδρα τοῦ περάσαι με·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="129" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ κράξαντες πάντες πρὸς κύριον εἶπαν· ὁ θεὸς ὁ &lt;δείξας ἡμῖν&gt; τὰ θαυμάσιά σου καὶ ποιήσας ἐλθεῖν τὸν δοῦλόν σου ζώσιμον πρὸς ἡμᾶς ἐκ τοῦ κόσμου τῆς ματαιότητος· πάλιν ἀποκατάστησον αὐτὸν εἰς τὸν τόπον αὐτοῦ μετ᾽ εἰρήνης·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="130" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ κέλευσον κλιθῆναι τὰ δένδρα ταῦτα καὶ ἀναλαβεῖν τὸν δοῦλόν σου, καὶ στῆσαι αὐτὸν εἰς τὸ πέραν·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="131" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ πληρωσάντων αὐτῶν τὴν εὐχήν· εὐθέως ἐκλίθησαν τὰ δένδρα ἐνώπιον αὐτῶν καὶ ἐδέξαντό με καθὰ καὶ τὸ πρώην·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="132" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ σταθεὶς πέραν τοῦ ποταμοῦ, ἔκραξα φωνῇ μεγάλῃ καὶ εἶπον· ἄνθρωποι τῆς δικαιοσύνης· οἱ ὄντες ἀδελφοὶ τῶν ἁγίων ἀγγέλων· δότε μοι ευχὴν μετ᾽ εἰρήνης· ἰδοὺ γὰρ πορεύομαι ἀφ᾽ ὑμῶν·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="133" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ποιήσαντες εὐχὴν, ἔκραξαν πάντες λέγοντες· εἰρήνη εἰρήνη σοι ἀδελφέ·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="1 ">
+          <unit id="134" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε ηὐξάμην πρὸς κύριον καὶ ἦλθέν μοι λαῖλαψ τοῦ ἀνέμου· καὶ ἔλαβέν με ἐπὶ τῶν πτερύγων αὐτοῦ· καὶ εἵλκυσέν με ἕως τοῦ τόπου οὗ ηὗρέν με καθήμενον· καὶ ἀνέλυσέν μετ᾽ εἰρήνης·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="135" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἄρας φωνήν· εἶπεν πρός με ὁ ἄνεμος· μακάριος εἶ ζώσιμε· ὅτι κατηριθμήθης μετὰ τῶν μακάρων·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="136" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἦλθεν τὸ ζῶον ἐκ τῆς ἐρήμου ᾧ ὄνομα κάμηλος· καὶ ἔλαβέν με ἐπὶ τὸν τράχηλον αὐτοῦ· καὶ ἤνεγκέν με ὀγδοήκοντα πέντε μονάς·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="137" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἔθηκέν με εἰς τὸν τόπον οὗ ηὗρέν με προσευχόμενον·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="138" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἀνέλυσεν ἐν εἰρήνῃ κράζων καὶ λέγων· &lt;μακάριος εἶ&gt; ζώσιμε, ὅτι μετὰ τῶν μακάρων κατηριθμήθης·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="1 ">
+          <unit id="139" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἰδὼν δέ με ἐγκωμιαζόμενον ὁ σατανᾶς· ἠθέλησεν πειράσαι με καὶ ἀκοντίσαι ἀπὸ τῆς μονῆς·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="140" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἦλθεν δὲ ἄγγελος τοῦ θεοῦ καὶ εἶπέν μοι· ζώσιμε· ἰδοὺ ἔρχεται ὁ σατανᾶς πειράσαι σε· ἀλλ᾽ ἔσται πολεμῶν ὑπέρ σου ὁ κύριος· ἡ γὰρ δόξα τῆς πίστεώς σου δεῖ σε ἔχειν τὸν σατανᾶν·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="141" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐφάνη ἄγγελος τοῦ θεοῦ κράζων καὶ λέγων· καλῶς ἐλήλυθας μάκαρ τοῦ χριστοῦ·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="142" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">δεῦρο ἀπάξω σε ἐπὶ τὸ σπήλαιον τὸ γινόμενον κατοικητήριον τοῦ σώματός σου·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="143" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἔσται γὰρ τὸ σπήλαιόν σου μαρτύριον τῆς ἐρήμου· ἴασις τῶν προσερχομένων· ἀσθενῶν· πειρατήριον καὶ βάσανος τῶν δαιμόνων·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="144" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ κρατήσας τῆς χειρός μου· ἐνίσχυσέν με· καὶ διήγαγέν με δι᾽ ἡμερῶν τεσσαράκοντα εἰς τὸ σπήλαιον· ἐν ᾧ ἤμην κατοικῶν·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="145" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐγενήθη τράπεζα δικαιοσύνης· καὶ ἤμην αὐλιζόμενος· μετὰ τῶν ἀγγέλων τοῦ θεοῦ·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="146" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἔθηκα δὲ τὰς πλάκας τὰς δοθείσας μοι ἀπὸ τῶν ἁγίων μακάρων ἐπὶ τοῦ βήματος τοῦ θυσιαστηρίου τοῦ ἐν τῷ σπηλαίῳ μου·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="1 ">
+          <unit id="147" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἰδοὺ ἀναβάντων τῶν ἀγγέλων τοῦ θεοῦ· παρεγένετο ὁ διάβολος σχῆμα ἔχων ἄγριον· καὶ θυμοῦ ἀγόμενος καὶ χολῆς·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="148" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">εἶπεν πρός με· ἐγὼ ᾔδειν ὅτι οὕτως ποιῆσαί σε εἶχεν ὁ θεὸς ὡς καὶ τοὺς μάκαρας· καὶ ἔχουσιν εἶναι ἀναμάρτητοι· καὶ εἶναι αὐτοὺς ὑπὲρ τοὺς ἀγγέλους·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="149" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ διὰ τοῦτο εἰσήνεγκα διάνοιαν πονηράν· καὶ εἰσῆλθον εἰς τὸ σκεῦος τοῦ ὄφεως πανούργως πρὸς πανοῦργον·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="150" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ διὰ τοῦτο ἐποίησα παραβῆναι τὸν ἀδὰμ τὸν πρῶτον ἄνθρωπον· γεύσασθαι αὐτὸν ἀπὸ τοῦ ξύλου τῆς ζωῆς· ἐπειδὴ δὲ παρήγγειλεν αὐτὸν ὁ θεὸς μὴ φαγεῖν ἀπ᾽ αὐτοῦ· ἵνα ἔμεινεν ἴσος τῆς δόξης τοῦ θεοῦ καὶ τῶν ἁγίων ἀγγέλων·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="151" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ σὺ πάλιν ἀπελθὼν ἤνεγκας τὴν ἐντολὴν ταύτην</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="152" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἵνα μὴ ὦσιν ἀναμάρτητοι, ἐγώ σοι δείξω πῶς ἀπολέσω σε· καὶ πάντας τοὺς δεχομένους τὴν ἐντολὴν ταύτην ἵνα μὴ ὦσιν ἀναμάρτητοι καὶ τὴν βίβλον ἣν ἤνεγκας·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="21">
+        <div number="1 ">
+          <unit id="153" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ταῦτα εἰπὼν ὁ διάβολος, ἐπορεύθη ἀπ᾽ ἐμοῦ·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="154" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ μεθ᾽ ἡμέρας ὀκτώ· συνήγαγεν μεθ᾽ ἑαυτοῦ· χιλίους τριακοσίους ἑξήκοντα δαίμονας· καὶ ἥρπασέν με ἀπὸ τοῦ σπηλαίου προσευχόμενον·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="155" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἔτυπτόν με σφαιρίζοντες ἐν ἑαυτοῖς ἡμέρας τεσσαράκοντα·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="156" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ &lt;μετὰ τὰς τεσσαράκονα&gt; ἡμέρας ἔκλαυσεν ὁ διάβολος ἔμπροσθέν μου καὶ εἶπεν· οὐαί μοι· ὅτι δι᾽ ἕνα ἄνθρωπον τὸν κόσμον ἀπώλεσα· ἐνίκησέν με γὰρ διὰ τῆς προσευχῆς αὐτοῦ·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="157" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἤρξατο τρέχειν ἀπ᾽ ἐμοῦ· ἐγὼ δὲ κρατήσας αὐτὸν ἔστησα καὶ εἶπον· οὐ μὴ ἀποδράσῃς καὶ φύγῃς ἀπ᾽ ἐμοῦ· ἕως &lt;οὗ ὀμόσῃς&gt; μοι τοῦ μηκέτι ἄνθρωπον πειράσαι:</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="158" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ κλαύσας κλαυθμῷ μεγάλῳ καὶ βιαίῳ· ὤμοσέν μοι ἐπὶ τῷ στερεώματι τοῦ οὐρανοῦ ἕως οὗ ἡ κατοικία σού ἐστιν καὶ μετά σε οὐ μὴ ἀπέλθω ἐπὶ τὸν τόπον ἐκεῖνον·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="159" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε ἀπέλυσα αὐτὸν ἐκπέμψας εἰς τὸ αἰώνιον πῦρ καὶ τοὺς μετ᾽ αὐτοῦ δαίμονας·</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="160" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">τότε ἦλθεν ὁ ἄγγελος ὁ συνευδοκήσας μοι ἐπὶ τῆς τραπέζης· καὶ ἤγαγέν με ἐν τῷ σπηλαίῳ μου, μετὰ δόξης πολλῆς·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="1 ">
+          <unit id="161" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἔζησα δὲ μετὰ τοῦτο ἔτη τριάκοντα ἕξ· καὶ διέδωκα τὴν διοίκησιν τῶν μακάρων, τοῖς πατράσιν τοῖς ἐν τῇ ἐρήμῳ·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="162" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἔκλαυσεν δὲ ὁ διάβολος διὰ τὰς πλάκας τῆς διοικήσεως τῶν μακάρων· ὅτι ἐὰν περιέλθῃ τοῦτο ἐν τῷ κόσμῳ γέγονα κατάγελως· καὶ οὗτοι μένουσιν ἀναμάρτητοι· κἀγὼ μόνος ἐν τῇ μωρίᾳ·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="163" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ μετὰ τὴν συμπλήρωσιν τῶν τριάκοντα ἓξ ἔτῶν· παρεγένοντο οἱ ἄγγελοι τοῦ θεοῦ πρός με καθάπερ καὶ πρὸς τοὺς μάκαρας·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="164" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">συνήχθησαν δὲ πάντες οἱ μοναχοὶ καὶ πᾶς ὁ ἀκούσας· καὶ ἀνεγνώσθη ἐπὶ πάντων ἡ διαθήκη αὕτη·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="165" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐν τῇ τοιαύτῃ πολιτείᾳ παρέδωκεν τὴν ψυχὴν τῷ θεῷ·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="23">
+        <div number="1 ">
+          <unit id="166" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἐγὼ δὲ κρύσεως εἷς ὣν τῶν ἐν τῇ ἐρήμῳ· ἐκβαλὼν ἔδωκα πᾶσιν τοῖς θέλουσιν μανθάνειν καὶ ὠφελεῖσθαι·</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="167" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">οἱ οὖν ἄγγελοι τοῦ θεοῦ συνεκόμισαν τὸ σῶμα τοῦ ἁγίου ζωσίμου ὡς πολύτιμον δῶρον·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="168" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">καὶ ἐθεασάμεθα τὴν ψυχὴν τοῦ μακαρίου, ὑπὲρ τὸν ἥλιον πεφωτισμένην ἑπταπλασίως·</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="169" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀνέβησαν δὲ ἐπὶ τὸν τόπον παραχρῆμα φοίνικες ἑπτὰ, καὶ ἐπεσκίασαν τὸ σπήλαιον·</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="170" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἀνέβη δὲ καὶ πηγὴ ὕδατος ἐπὶ τοῦ τόπου ἐκείνου ὕδωρ ἅγιον· καὶ ἕως τῆς ἡμέρας ταύτης· ἴασις καὶ σωτηρία πάντων τῶν προσερχομένων ἀσθενῶν·</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="171" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">εἰρήνη πᾶσιν τοῖς ἀκούουσιν τὴν μνήμην τοῦ ἁγίου ζωσίμου·</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="172" group="0" parallel="">
+            <reading option="0" mss="Charlesworth ">ἔστιν δὲ ὁ κύριος συνήγορος καὶ ὄφελος πάντων εἰς τοὺς ἀτελευτήτους αἰῶνας τῶν αἰώνων ἀμήν·
+</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

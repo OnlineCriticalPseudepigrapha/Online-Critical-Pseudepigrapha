@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ language CDATA #REQUIRED	
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit | elipsis)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT elipsis (#PCDATA)>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="Aristob" title="Aristobulus" textStructure="fragmentary">
+  <version title="Hist. Eccl." author="Eusebius" language="Greek" fragment="1">
+    <divisions>
+      <division label="Book" delimiter="." />
+      <division label="Chapter" delimiter="." />
+      <division label="Paragraph" />    
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Schwartz" language="Greek" show="yes">
+        <name>E. Schwartz</name>
+        <bibliography>E. Schwartz, ed., Eusebius Kirchengeschichte (3 parts; vol. 2 of Eusebius Werke; GCS 9; Leipzig: J. C. Hinrichs, 1903-09).</bibliography>
+        <bibliography>A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28.</bibliography>
+        <bibliography>Cf. K. Lake's LCL edition which employs Schwartz's text.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    <div number="7">	
+      <div number="32">
+        <div number="13" fragment="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Schwartz ">. . . Ἐκ τῶν περὶ τοῦ πάσχα Ἀνατολίου κανόνων</reading>
+          </unit>
+        </div>
+        <div number="14" fragment="1">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Schwartz ">“Ἔχει τοίνυν ἐν τῷ πρώτῳ ἔτει τὴν νουμηνίαν τοῦ πρώτου μηνός, ἥτις ἁπάσης ἐστὶν ἀρξὴ τῆς ἐννεακαιδεκαετηρίδος, τὴν κατ’ Αἰγυπτίους μὲν Φαμενὼθ κςʹ, κατὰ δὲ τοὺς Μακεδόνων μῆνας Δύστρου κβʹ, ὡς δ’ ἂν εἴποιεν Ῥωμαῖοι, πρὸ ιαʹ Καλενδῶν Ἀπριλίων.</reading>
+          </unit>
+        </div>
+        <div number="15" fragment="1">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Schwartz ">εὑρίσκεται δὲ ὁ ἥλιος ἐν τῇ προκειμένῃ Φαμενὼθ κςʹ οὐ μόνον ἐπιβὰς τοῦ πρότου τμήματος, ἀλλ’ ἤδη καὶ τετάρτην ἡμέραν ἐν αὐτῷ διαπορευόμενος. τοῦτο δὲ τὸ τμῆμα πρῶτον δωδεκατημόριον καὶ ἰσημερινὸν καὶ μηνῶν ἀρχὴν καὶ κεφαλὴν τοῦ κύκλου καὶ ἄφεσιν τοῦ τῶν πλανητῶν φρόμου καλεῖν εἰώθασιν, τὸ δὲ πρὸ τούτου μηνῶν ἔσχατον καὶ τμῆμα δωδέκατον καὶ τελευταῖον δωδεκατημόριον καὶ τέλος τῆς τῶν πλανητῶν περιόδου· δι’ ὃ καὶ τοὺς ἐν αὐτῷ τιθεμένους τὸν πρῶτον μῆνα καὶ τὴν τεσσαρεσκαιδεκάτην τοῦ πάσχα κατ’ αὐτὴν λαμβάνοντας οὐ μικρῶς οὐδ’ ὡς ἔτυχεν ἁμαρτάνειν φαμέν.</reading>
+          </unit>
+        </div>
+        <div number="16" fragment="1">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Schwartz ">ἔστιν δ᾽ οὐχ ἡμέτερος οὗτος ὁ λόγος, Ἰουδαίοις δὲ ἐγινώσκετο τοῖς πάλαι καὶ πρὸ Χριστοῦ ἐφυλάττετό τε πρὸς αὐτῶν μάλιστα· μαθεῖν δ᾽ ἔστιν ἐκ τῶν ὑπὸ Φίλωνος Ἰωσήπου Μουσαίου λεγομένων, καὶ οὐ μόνων τούτων, ἀλλὰ καὶ τῶν ἔτι παλαιοτέρων ἀμφοτέρων Ἀγαθοβούλων, τῶν ἐπίκλην διδασκάλων Ἀριστοβούλου τοῦ πάνυ, ὃς ἐν τοῖς οʹ κατειλεγμένος τοῖς τὰς ἱερὰς καὶ θείας Ἑβραίων ἑρμηνεύσασι γραφὰς Πτολεμαίῳ τῷ Φιλαδέλφῳ καὶ τῷ τούτου πατρί, καὶ βίβλους ἐξηγητικὰς τοῦ Μωυσέως νόμου τοῖς αὐτοῖς προσεφώνησεν βασιλεῦσιν. </reading>
+          </unit>
+        </div>
+        <div number="17" fragment="1">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Schwartz ">οὗτοι τὰ ζητούμενα κατὰ τὴν Ἔξοδον ἐπιλύοντες, φασὶ δεῖν τὰ διαβατήρια θύειν ἐπ᾽ ἴσης ἅπαντας μετὰ ἰσημερίαν ἐαρινήν, μεσοῦντος τοῦ πρώτου μηνός· τοῦτο δὲ εὑρίσκεσθαι, τὸ πρῶτον τμῆμα τοῦ ἡλιακοῦ, ἢ ὥς τινες αὐτῶν ὠνόμασαν, ζῳοφόρου κύκλου διεξιόντος ἡλίου. ὁ δὲ Ἀριστόβουλος προστίθησιν ὡς εἴη ἐξ ἀνάγκης τῇ τῶν διαβατηρίων ἑορτῇ μὴ μόνον τὸν ἥλιον ἰσημερινὸν διαπορεύεσθαι τμῆμα, καὶ τὴν σελήνην δέ. </reading>
+          </unit>
+        </div>
+        <div number="18" fragment="1">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Schwartz ">τῶν γὰρ ἰσημερινῶν τμημάτων ὄντων δύο, τοῦ μὲν ἐαρινοῦ, τοῦ δὲ μετοπωρινοῦ, καὶ διαμετρούντων ἄλληλα δοθείσης τε τῆς τῶν διαβατηρίων ἡμέρας τῇ τεσσαρεσκαιδεκάτῃ τοῦ μηνὸς μεθ᾽ ἑσπέραν, ἐνστήξεται μὲν ἡ σελήνη τὴν ἐναντίαν καὶ διάμετρον τῷ ἡλίῳ στάσιν, ὥσπερ οὖν ἔξεστιν ἐν ταῖς πανσελήνοις ὁρᾶν, ἔσονται δὲ ὃ μὲν κατὰ τὸ ἐαρινὸν ἰσημερινόν, ὁ ἥλιος, τμῆμα, ἣ δὲ ἐξ ἀνάγκης κατὰ τὸ φθινοπωρινὸν ἰσημερινόν, ἡ σελήνη.</reading>
+          </unit>
+        </div>
+        <div number="19" fragment="1">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Schwartz ">οἷδα πλεῖστα καὶ ἄλλα πρὸς αὐτῶν λεγόμενα, τοῦτο μὲν πιθανά, τοῦτο δὲ κατὰ τὰς κυριακὰς ἀποκείξεις προϊόντα, δι’ ὧν περιστάνειν πειρῶνται τὴν τοῦ πάσχα καὶ τῶν ἀξύμων ἑορτὴν δεῖν πάντως μετ’ ἱσημερίαν ἄγεσθαι· παρίημι δὲ τὰς τοιαύτας τῶν ἀποδείξεων ὕλας ἀπαιτῶν ὧν περιῄρηται μὲν τὸ ἐπὶ τῷ Μωυσέως νόμῳ κάλυμμα. . . .”</reading>
+          </unit>
+        </div>
+      </div>
+    </div> 
+  </text>
+ </version>
+   
+<version title="Praeparatio Evangelica (frag. 2)" author="Eusebius" language="Greek" fragment="2">
+  <divisions>
+    <division label="Book" delimiter="." />
+    <division label="Chapter" delimiter="." />
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Mras" language="Greek" show="yes">
+      <name>Karl Mras</name>
+      <bibliography>Karl Mras, Die Praeparatio Evangelica (2 parts; vol. 8 of Eusebius Werke; 2d ed.; ed. édouard des Places; GCS 43; Berlin: Akademie-Verlag, 1982-83), p. 1.451-54 (frag. 2), 1.493 (frag. 3a1), 2.190-97 (frag. 3-5), 2.204 (frag. 4a), 2.206 (frag. 4c), 2.210-11 (frag. 5d).</bibliography>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28.</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="8">
+      <div number="9">
+        <div number="38" fragment="2">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">Ταῦτα μὲν ὁ ἀρχιερεὺς τοῖς ἥκουσιν ὡς αὐτὸν Ἕλλησι περὶ τῆς ἀλληγορουμένης ἐν τοῖς ἱεροῖς νόμοις ἰδέας διεστείλατο, ὡς ἂν μέλλουσι ταῖς ἐκδοθησομέναις περιτεύξεσθαι τῶν γραφῶν ἑρμηνείαις. ὁ δὲ Ἀριστόβουλος καὶ τῆς κατ᾽ Ἀριστοτέλην φιλοσοφίας πρὸς τῇ πατρίῳ μετειληχώς, ὁποῖα περὶ τῶν ἐν ταῖς ἱεραῖς βίβλοις φερομένων ὡς περὶ θεοῦ μελῶν διῆλθεν ἐπακοῦσαι καιρός· οὗτος δ᾽ (αὐτὸς ἐκεῖνος, οὗ καὶ ἡ δευτέρα τῶν Μακκαβαίων ἐν ἀρχῇ τῆς βίβλου μνημονεύει) ἐν τῷ πρὸς Πτολεμαῖον τὸν βασιλέα συγγράμματι τοῦτον καὶ αὐτὸς διασαφεῖ τὸν τρόπον· </reading>
+          </unit>
+        </div>
+        <div number="{heading}" fragment="2">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">ΑΡΙΣΤΟΒΟΥΛΟΥ ΠΕΡΙ ΤΩΝ ΟΝΟΜΑΖΟΜΕΝΩΝ ΩΣ ΘΕΟΥ ΜΕΛΩΝ </reading>
+          </unit>
+        </div>
+       </div>
+       <div number="10">
+        <div number="1" fragment="2">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Mras ">“Πλὴν ἱκανῶς εἰρημένων πρὸς τὰ προκείμενα ζητήματα ἐπεφώνησας καὶ σύ, βασιλεῦ, διότι σημαίνεται διὰ τοῦ νόμου τοῦ παρ᾽ ἡμῖν καὶ χεῖρες καὶ βραχίων καὶ πρόσωπον καὶ πόδες καὶ περίπατος ἐπὶ τῆς θείας δυνάμεως· ἃ τεύξεται λόγου καθήκοντος καὶ οὐκ ἀντιδοξήσει τοῖς προειρημένοις ὑφ᾽ ἡμῶν οὐδέν. </reading>
+          </unit>
+        </div>
+        <div number="2" fragment="2">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Mras ">παρακαλέσαι δέ σε βούλομαι πρὸς τὸ φυσικῶς λαμβάνειν τὰς ἐκδοχὰς καὶ τὴν ἁρμόζουσαν ἔννοιαν περὶ θεοῦ κρατεῖν, καὶ μὴ ἐκπίπτειν εἰς τὸ μυθῶδες καὶ ἀνθρώπινον κατάστημα. </reading>
+          </unit>
+        </div>
+        <div number="3" fragment="2">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Mras ">πολλαχῶς γὰρ ὃ βούλεται λέγειν ὁ νομοθέτης ἡμῶν Μωσῆς ἐφ᾽ ἑτέρων πραγμάτων λόγους ποιούμενος (λέγω δὲ τῶν κατὰ τὴν ἐπιφάνειαν), φυσικὰς διαθέσεις ἀπαγγέλλει καὶ μεγάλων πραγμάτων κατασκευάς. </reading>
+          </unit>
+        </div>
+        <div number="4" fragment="2">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Mras ">οἷς μὲν οὖν πάρεστι τὸ καλῶς νοεῖν, θαυμάζουσι τὴν περὶ αὐτὸν σοφίαν καὶ τὸ θεῖον πνεῦμα, καθ᾽ ὃ καὶ προφήτης ἀνακεκήρυκται· ὧν εἰσιν οἱ προειρημένοι φιλόσοφοι καὶ πλείονες ἕτεροι καὶ ποιηταὶ παρ᾽ αὐτοῦ μεγάλας ἀφορμὰς εἰληφότες, καθὸ καὶ θαυμάζονται. </reading>
+          </unit>
+        </div>
+        <div number="5" fragment="2">
+          <unit id="13" group="0" parallel="">
+            <reading option="0" mss="Mras ">τοῖς δὲ μὴ μετέχουσι δυνάμεως καὶ συνέσεως, ἀλλὰ τῷ γραπτῷ μόνον προσκειμένοις οὐ φαίνεται μεγαλεῖόν τι διασαφῶν. </reading>
+          </unit>
+        </div>
+        <div number="6" fragment="2">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Mras ">ἄρξομαι δὲ λαμβάνειν καθ᾽ ἕκαστον σημαινόμενον, καθ᾽ ὅσον ἂν ὦ δυνατός. εἰ δὲ μὴ τεύξομαι τοῦ πράγματος μηδὲ πείσω, μὴ τῷ νομοθέτῃ προσάψῃς τὴν ἀλογίαν, ἀλλ᾽ ἐμοὶ τῷ μὴ δυναμένῳ διαιρεῖσθαι τὰ ἐκείνῳ νενοημένα. </reading>
+          </unit>
+        </div>
+        <div number="7" fragment="2">
+          <unit id="15" group="0" parallel="">
+            <reading option="0" mss="Mras ">χεῖρες μὲν οὖν νοοῦνται προδήλως καὶ ἐφ᾽ ἡμῶν κοινότερον. ὅταν γὰρ δυνάμεις ἐξαποστέλλῃς σὺ βασιλεὺς ὤν, βουλόμενός τι κατεργάσασθαι, λέγομεν· μεγάλην χεῖρα ἔχει ὁ βασιλεύς, φερομένων τῶν ἀκουόντων ἐπὶ τὴν δύναμιν ἣν ἔχεις. </reading>
+          </unit>
+        </div>
+        <div number="8" fragment="2">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Mras ">ἐπισημαίνεται δὲ τοῦτο καὶ διὰ τῆς νομοθεσίας ἡμῶν λέγων ὁ Μωσῆς οὕτως· ‘Ἐν χειρὶ κραταιᾷ ἐξήγαγεν ὁ θεός σε ἐξ Αἰγύπτου.’ καὶ πάλιν εἰρηκέναι αὐτῷ φησι τὸν θεόν· ‘Ἀποστελῶ τὴν χεῖρά μου καὶ πατάξω τοὺς Αἰγυπτίους.’ καὶ ἐπὶ τοῦ γεγονότος θανάτου τῶν κτηνῶν καὶ τῶν ἄλλων φησὶ τῷ βασιλεῖ τῶν Αἰγυπτίων λέγων· ‘Ἰδοὺ χεὶρ κυρίου ἐπέσται ἐν τοῖς κτήνεσί σου καὶ ἐν πᾶσι τοῖς ἐν τοῖς πεδίοις θάνατος μέγας,’ ὥστε δηλοῦσθαι τὰς χεῖρας ἐπὶ δυνάμεως εἶναι θεοῦ· καὶ γὰρ ἔστι μεταφέροντας νοῆσαι τὴν πᾶσαν ἰσχὺν τῶν ἀνθρώπων καὶ τὰς ἐνεργείας ἐν ταῖς χερσὶν εἶναι. </reading>
+          </unit>
+        </div>
+        <div number="9" fragment="2">
+          <unit id="17" group="0" parallel="">
+            <reading option="0" mss="Mras ">διόπερ καλῶς ὁ νομοθέτης ἐπὶ τὸ μεγαλεῖον μετενήνοχε, λέγων τὰς συντελείας χεῖρας εἶναι θεοῦ. στάσις δὲ θεία καλῶς ἂν λέγοιτο κατὰ τὸ μεγαλεῖον ἡ τοῦ κόσμου κατασκευή. </reading>
+          </unit>
+        </div>
+        <div number="10" fragment="2">
+          <unit id="18" group="0" parallel="">
+            <reading option="0" mss="Mras ">καὶ γὰρ ἐπὶ πάντων ὁ θεός, καὶ πάνθ᾽ ὑποτέτακται καὶ στάσιν εἴληφεν· ὥστε τοὺς ἀνθρώπους καταλαμβάνειν ἀκίνητα εἶναι ταῦτα. λέγω δὲ τὸ τοιοῦτον, ὡς οὐδέποτε γέγονεν οὐρανὸς γῆ, γῆ δ᾽ οὐρανός, οὐδ᾽ ἥλιος σελήνη λάμπουσα, οὐδὲ σελήνη πάλιν ἥλιος, οὐδὲ ποταμοὶ θάλασσα, οὐδὲ θάλασσα ποταμοί. </reading>
+          </unit>
+        </div>
+        <div number="11" fragment="2">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Mras ">καὶ πάλιν ἐπὶ τῶν ζῴων ὁ αὐτός ἐστι λόγος. οὐ γὰρ ἄνθρωπος ἔσται θηρίον οὐδὲ θηρίον ἄνθρωπος. καὶ ἐπὶ τῶν λοιπῶν δὲ ταὐτὸν ὑπάρχει φυτῶν τε καὶ ἐπὶ τῶν ἄλλων· ἀμετάβλητα μέν ἐστι, τὰς αὐτὰς δ᾽ ἐν αὑτοῖς τροπὰς λαμβάνει καὶ φθοράς. </reading>
+          </unit>
+        </div>
+        <div number="12" fragment="2">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Mras ">ἡ στάσις οὖν ἡ θεία κατὰ ταῦτα ἂν λέγοιτο, πάντων ὑποκειμένων τῷ θεῷ. λέγεται δὲ καὶ κατάβασις ἐπὶ τὸ ὄρος θεία γεγονέναι διὰ τῆς γραφῆς τοῦ νόμου, καθ᾽ ὃν ἐνομοθέτει καιρόν, ἵνα πάντες θεωρήσωσι τὴν ἐνέργειαν τοῦ θεοῦ. κατάβασις γὰρ αὕτη σαφής ἐστι· καὶ περὶ τούτων οὖν οὕτως ἄν τις ἐξηγήσαιτο, βουλόμενος συντηρεῖν τὸν περὶ θεοῦ λόγον. </reading>
+          </unit>
+        </div>
+        <div number="13" fragment="2">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Mras ">δηλοῦται γὰρ ὡς ‘τὸ ὄρος ἐκαίετο πυρί,’ καθώς φησιν ἡ νομοθεσία, διὰ τὸ τὸν θεὸν καταβεβηκέναι σαλπίγγων τε φωνὰς καὶ τὸ πῦρ φλεγόμενον ἀνυποστάτως εἶναι. </reading>
+          </unit>
+        </div>
+        <div number="14" fragment="2">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Mras ">τοῦ γὰρ παντὸς πλήθους μυριάδων οὐκ ἔλαττον ἑκατόν, χωρὶς τῶν ἀφηλίκων, ἐκκλησιαζομένων κυκλόθεν τοῦ ὄρους, οὐκ ἔλασσον ἡμερῶν πέντε οὔσης τῆς περιόδου περὶ αὐτό, κατὰ πάντα τόπον τῆς ὁράσεως πᾶσιν αὐτοῖς κυκλόθεν, ὡς ἦσαν παρεμβεβληκότες, τὸ πῦρ φλεγόμενον ἐθεωρεῖτο· </reading>
+          </unit>
+        </div>
+        <div number="15" fragment="2">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Mras ">ὥστε τὴν κατάβασιν μὴ τοπικὴν εἶναι· πάντη γὰρ ὁ θεός ἐστιν. ἀλλὰ τὴν τοῦ πυρὸς δύναμιν, παρὰ πάντα θαυμάσιον ὑπάρχουσαν διὰ τὸ πάντ᾽ ἀναλίσκειν, ἔδειξε φλεγομένην ἀνυποστάτως, μηδὲν δ᾽ ἐξαναλίσκουσαν, εἰ μὴ τὸ παρὰ τοῦ θεοῦ δυναμικὸν αὐτῇ προσείη. </reading>
+          </unit>
+        </div>
+        <div number="16" fragment="2">
+          <unit id="24" group="0" parallel="">
+            <reading option="0" mss="Mras ">τῶν γὰρ φυομένων κατὰ τὸ ὄρος, τόπων φλεγομένων σφοδρῶς, οὐδὲν ἐξανάλωσεν, ἀλλ᾽ ἔμεινε τῶν ἁπάντων ἡ χλόη πυρὸς ἄθικτος, σαλπίγγων τε φωναὶ σφοδρότερον συνηκούοντο σὺν τῇ τοῦ πυρὸς ἀστραπηδὸν ἐκφάνσει, μὴ προκειμένων ὀργάνων τοιούτων μηδὲ τοῦ φωνήσοντος, ἀλλὰ θείᾳ κατασκευῇ γινομένων ἁπάντων· </reading>
+          </unit>
+        </div>
+        <div number="17" fragment="2">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Mras ">ὥστε σαφὲς εἶναι διὰ ταῦτα τὴν κατάβασιν τὴν θείαν γεγονέναι, διὰ τὸ τοὺς συνορῶντας ἐκφαντικῶς ἕκαστα καταλαμβάνειν, μήτε τὸ πῦρ κεκαυκός, ὡς προείρηται, μηδὲν μήτε τὰς τῶν σαλπίγγων φωνὰς δι᾽ ἀνθρωπίνης ἐνεργείας ἢ κατασκευῆς ὀργάνων γίνεσθαι, τὸν δὲ θεὸν ἄνευ τινὸς δεικνύναι τὴν ἑαυτοῦ διὰ πάντων μεγαλειότητα.”</reading>
+          </unit>
+        </div>
+        <div number="18" fragment="2">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Mras ">Ταῦτα καὶ ὁ Ἀριστόβουλος.</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </text>
+</version>
+
+<version title="Stromata (frag. 2a)" author="Clement of Alexandria" language="Greek" fragment="2">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>O. Stählin, L. Früchtel, and U. Treu, Clemens Alexandrinus (vol. 2; 4th ed.; GCS 52(15); Berlin: Akademie Verlag, 1985), 92-3 (frag. 3a, b), 392 (frag. 4a), 394 (frag. 4c), 397-8 (frag. 5d), 447 (frag. 2a), 501-5 (frag. 5a-c).</bibliography>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28.</bibliography>
+    </ms>
+  </manuscripts>
+  <text>    
+  <div number="6">
+    <div number="3">
+      <div number="32">
+        <div number="3" fragment="2">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">Πῶς δὲ ἔτι ἀπιστήσουσιν Ἕλληνες τῇ θείᾳ ἐπιφανείᾳ περὶ τὸ ὄρος τὸ Σινᾶ, ὁπηνίκα πῦρ μὲν ἐφλέγετο, μηδὲν καταναλίσκον τῶν φυομένων κατὰ τὸ ὄρος, σαλπίγγων τε ἦχος ἐφέρετο ἄνευ ὀργάνων ἐμπνεόμενος;</reading>
+          </unit>
+        </div>
+        <div number="4" fragment="2">
+          <unit id="28" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">ἐκείνη γὰρ ἡ λεγομένη κατάβασις ἐπὶ τὸ ὄρος θεοῦ ἐπίφασίς ἐστι θείας δυνάμεως ἐπὶ πάντα τὸν κόσμον διηκούσης καὶ κηρυττούσης τὸ φῶς τὸ ἀπρόσιτον. τοιαύτη γὰρ ἡ κατὰ τὴν γραφὴν ἀλληγορία.</reading>
+          </unit>
+        </div>
+        <div number="5" fragment="2">
+          <unit id="29" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">πλὴν “ἑωράθη τὸ πῦρ,” ὥς φησιν Ἀριστόβουλος, “παντὸς τοῦ πλήθους μυριάδων οὐκ ἔλασσον ἑκατόν, χωρὶς τῶν ἀφηλίκων, ἐκκλησιαζόντων κύκλῳ τοῦ ὄρους, οὐχ ἧττον ἡμερῶν πέντε τῆς περιόδου τυγχανούσης περὶ τὸ ὄρος.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="33">
+        <div number="1" fragment="2">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">κατὰ πάντα τοίνυν τόπον τῆς ὁράσεως πᾶσιν αὐτοῖς κυκλόθεν, ὡς ἂν παρεμβεβληκόσι, τὸ πῦρ φλεγόμενον ἐθεωρεῖτο, ὥστε τὴν κατάβασιν μὴ τοπικὴν γεγονέναι· πάντῃ γὰρ ὁ θεός ἐστιν.”</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+ </text>
+</version>
+    
+    
+<version title="Praeparatio Evangelica (frag. 3)" author="Eusebius" language="Greek" fragment="3">
+  <divisions>
+    <division label="Book" delimiter="." />
+    <division label="Chapter" delimiter="." />
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Mras" language="Greek" show="yes">
+      <name>Karl Mras</name>
+      <bibliography>Karl Mras, Die Praeparatio Evangelica (2 parts; vol. 8 of Eusebius Werke; 2d ed.; ed. édouard des Places; GCS 43; Berlin: Akademie-Verlag, 1982-83), p. 1.451-54 (frag. 2), 1.493 (frag. 3a1), 2.190-97 (frag. 3-5), 2.204 (frag. 4a), 2.206 (frag. 4c), 2.210-11 (frag. 5d).</bibliography>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="13">
+      <div number="11">
+        <div number="3" fragment="3">
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">. . . παραθήσω δὲ πρώτου Ἀριστοβούλου, τοῦ ἐξ Ἑβραίων φιλοσόφου, τὰς οὕτως ἐχούσας φωνάς·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="{heading}" fragment="3">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="doubleFollowing">ιβʹ. ΟΠΩΣ ΚΑΙ Ο ΠΡΟ ΗΜΩΝ ΕΞ ΕΒΡΑΙΩΝ ΑΡΙΣΤΟΒΟΥΛΟΣ Ο ΠΕΡΙΠΑΤΗΤΙΚΟΣ ΕΚ ΤΗΣ ΠΑΡ’ ΕΒΡΑΙΟΙΣ ΦΙΛΟΣΟΦΙΑΣ ΩΜΟΛΟΓΕΙ ΤΟΥΣ ΕΛΛΗΝΑΣ ΩΡΜΗΣΘΑΙ· ΕΚ ΤΩΝ ΑΡΙΣΤΟΒΟΥΛΟΥ ΒΑΣΙΛΕΙ ΠΤΟΛΕΜΑΙΩΙ ΠΡΟΣΠΕΦΩΝΗΜΕΝΩΝ·</reading>
+          </unit>
+        </div>
+        <div number="1" fragment="3">
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Mras ">“Φανερὸν ὅτι κατηκολούθησεν ὁ Πλάτων τῇ καθ᾽ ἡμᾶς νομοθεσίᾳ καὶ φανερός ἐστι περιειργασμένος ἕκαστα τῶν ἐν αὐτῇ. διηρμήνευται γὰρ πρὸ Δημητρίου τοῦ Φαληρέως δι᾽ ἑτέρων, πρὸ τῆς Ἀλεξάνδρου καὶ Περσῶν ἐπικρατήσεως, τά τε κατὰ τὴν ἐξαγωγὴν τὴν ἐξ Αἰγύπτου τῶν Ἑβραίων, ἡμετέρων δὲ πολιτῶν, καὶ ἡ τῶν γεγονότων ἁπάντων αὐτοῖς ἐπιφάνεια καὶ κράτησις τῆς χώρας καὶ τῆς ὅλης νομοθεσίας ἐπεξήγησις, ὡς εὔδηλον εἶναι τὸν προειρημένον φιλόσοφον εἰληφέναι πολλά· γέγονε γὰρ πολυμαθής, καθὼς καὶ Πυθαγόρας πολλὰ τῶν παρ᾽ ἡμῖν μετενέγκας εἰς τὴν ἑαυτοῦ δογματοποιίαν κατεχώρισεν. </reading>
+          </unit>
+        </div>
+        <div number="2" fragment="3">
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Mras ">ἡ δ᾽ ὅλη ἑρμηνεία τῶν διὰ τοῦ νόμου πάντων ἐπὶ τοῦ προσαγορευθέντος Φιλαδέλφου βασιλέως, σοῦ δὲ προγόνου, προσενεγκαμένου μείζονα φιλοτιμίαν, Δημητρίου τοῦ Φαληρέως πραγματευσαμένου τὰ περὶ τούτων.”</reading>
+          </unit>
+        </div>
+      </div>
+     </div>
+  </text>
+</version>
+<version title="Stromata (frag. 3b)" author="Clement of Alexandria" language="Greek" fragment="3">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>O. Stählin, L. Früchtel, and U. Treu, Clemens Alexandrinus (vol. 2; 4th ed.; GCS 52(15); Berlin: Akademie Verlag, 1985), 92-3 (frag. 3a, b), 392 (frag. 4a), 394 (frag. 4c), 397-8 (frag. 5d), 447 (frag. 2a), 501-5 (frag. 5a-c).</bibliography>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+  <div number="1">    
+    <div number="22">  
+      <div number="148">
+        <div number="1">
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">Καὶ τὰ μὲν περὶ τῶν χρόνων διαφόρως πολλοῖς ἱστορηθέντα καὶ πρὸς ἡμῶν ἐκτεθέντα ὧδε ἐχέτω, ἑρμηνευθῆναι δὲ τὰς γραφὰς τάς τε τοῦ νόμου καὶ τὰς προφητικὰς ἐκ τῆς τῶν Ἑβραίων διαλέκτου εἰς τὴν Ἑλλάδα γλῶττάν φασιν ἐπὶ βασιλέως Πτολεμαίου τοῦ Λάγου ἢ ὥς τινες ἐπὶ τοῦ Φιλαδέλφου ἐπικληθέντος, τὴν μεγίστην φιλοτιμίαν εἰς τοῦτο προσενεγκαμένου, Δημητρίου τοῦ Φαληρέως {καὶ} τὰ περὶ τὴν ἑρμηνείαν ἀκριβῶς πραγματευσαμένου.</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+</text>
+</version>
+<version title="Stromata (frag. 3a)" author="Clement of Alexandria" language="Greek" fragment="3">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>O. Stählin, L. Früchtel, and U. Treu, Clemens Alexandrinus (vol. 2; 4th ed.; GCS 52(15); Berlin: Akademie Verlag, 1985), 92-3 (frag. 3a, b), 392 (frag. 4a), 394 (frag. 4c), 397-8 (frag. 5d), 447 (frag. 2a), 501-5 (frag. 5a-c).</bibliography>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16</bibliography>
+    </ms>
+  </manuscripts>
+  <text> 
+  <div number="1">
+    <div number="22">    
+      <div number="150 ">
+        <div number="1">
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">Ἀριστόβουλος δὲ ἐν τῷ πρώτῳ τῶν πρὸς τὸν Φιλομήτορα κατὰ λέξιν γράφει· “κατηκολούθηκε δὲ καὶ ὁ Πλάτων τῇ καθ’ ἡμᾶς νομοθεσίᾳ, καὶ φανερός ἐστι περιειργασμένος ἕκαστα τῶν ἐν αὐτῇ λεγομένων.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">διηρμήνευται δὲ πρὸ Δημητρίου ὑφ’ ἑτέρων, πρὸ τῆς Ἀλεξάνδρου {καὶ} Περσῶν ἐπικρατήσεως, τά τε κατὰ τὴν ἐξ Αἰγύπτου ἐξαγωγὴν τῶν Ἑβραίων τῶν ἡμετέρων πολιτῶν καὶ ἡ τῶν γεγονότων ἁπάντων αὐτοῖς ἐπιφάνεια καὶ κράτησις τῆς χώρας καὶ τῆς ὅλης νομοθεσίας ἐπεξήγησις·</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">ὥστε εὔδηλον εἶναι τὸν προειρημένον φιλόσοφον εἰληφέναι πολλά (γέγονε γὰρ πολυμαθής), καθὼς καὶ Πυθαγόρας πολλὰ τῶν παρ’ ἡμῖν μετενέγκας εἰς τὴν ἑαυτοῦ δογματοποιίαν.”
+					</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+</text>
+</version>
+<version title="Praeparatio Evangelica (frag. 3a1)" author="Eusebius" language="Greek" fragment="3">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Mras" language="Greek" show="yes">
+      <name>Karl Mras</name>
+      <bibliography>Karl Mras, Die Praeparatio Evangelica (2 parts; vol. 8 of Eusebius Werke; 2d ed.; ed. édouard des Places; GCS 43; Berlin: Akademie-Verlag, 1982-83), p. 1.451-54 (frag. 2), 1.493 (frag. 3a1), 2.190-97 (frag. 3-5), 2.204 (frag. 4a), 2.206 (frag. 4c), 2.210-11 (frag. 5d).</bibliography>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="9">
+      <div number="6">
+        <div number="6" fragment="3">
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Mras ">Ἔτι πρὸς τούτοις ὁ Κλήμης Ἀριστοβούλου τοῦ Περιπατητικοῦ καὶ Νουμηνίου τοῦ Πυθαγορείου μνημονεύει λέγων· “Ἀριστόβουλος δὲ ἐν τῷ πρώτῳ τῶν πρὸς τὸν Φιλομήτορα κατὰ λέξιν γράφει· ‘Κατηκολούθηκε δὲ ὁ Πλάτων τῇ καθ’ ἡμᾶς νομοθεσίᾳ καὶ φανερός ἐστι περιειργασμένος ἕκαστα τῶν ἐν αὐτῇ λεγομένων.</reading>
+          </unit>
+        </div>
+        <div number="7" fragment="3">
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Mras ">διηρμήνευται δὲ πρὸ Δημητρίου ὑφ’ ἑτέρων, πρὸ τῆς Ἀλεξάνδρου καὶ Περσῶν ἐπικρατήσεως, τά τε κατὰ τὴν ἐξ Αἰγύπτου ἐξαγωγὴν τῶν Ἑβραίων τῶν ἡμετέρων πολιτῶν καὶ ἡ τῶν γεγονότων ἁπάντων αὐτοῖς ἐπιφάνεια καὶ κράτησις τῆς χώρας καὶ τῆς ὅλης νομοθεσίας ἐπεξήγησις.</reading>
+          </unit>
+        </div>
+        <div number="8" fragment="3">
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Mras ">ὥστε εὔδηλον εἶναι τὸν προειρημένον φιλόσοφον εἰληφέναι πολλά· γέγονε γὰρ πολυμαθὴς καθὼς καὶ Πυθαγόρας, πολλὰ τῶν παρ’ ἡμῖν μετενέγκας εἰς τὴν ἑαυτοῦ δογματοποιίαν.’”</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </text>
+</version>
+
+<version title="Praeparatio Evangelica (frag. 4)" author="Eusebius" language="Greek" fragment="4">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />        
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Mras" language="Greek" show="yes">
+      <name>Karl Mras</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="13"> 
+      <div number="12">
+        <div number="3" fragment="4">
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Mras ">Εἶτα μεταξύ τινα εἰπὼν ἐπιφέρει λέγων· 
+ “Δεῖ γὰρ λαμβάνειν τὴν θείαν φωνὴν οὐ ῥητὸν λόγον, ἀλλ᾽ ἔργων κατασκευάς, καθὼς καὶ διὰ τῆς νομοθεσίας ἡμῖν ὅλην τὴν γένεσιν τοῦ κόσμου θεοῦ λόγους εἴρηκεν ὁ Μωσῆς. συνεχῶς γάρ φησιν ἐφ᾽ ἑκάστου· ‘καὶ εἶπεν ὁ θεὸς, καὶ ἐγένετο.’ </reading>
+          </unit>
+        </div>
+        <div number="4" fragment="4">
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">δοκοῦσι δέ μοι περιειργασμένοι πάντα κατηκολουθηκέναι τούτῳ Πυθαγόρας τε καὶ Σωκράτης καὶ Πλάτων λέγοντες ἀκούειν φωνῆς θεοῦ, τὴν κατασκευὴν τῶν ὅλων συνθεωροῦντες ἀκριβῶς ὑπὸ θεοῦ γεγονυῖαν καὶ συνεχομένην ἀδιαλείπτως. ἔτι δὲ καὶ Ὀρφεὺς ἐν ποιήμασι τῶν κατὰ τὸν Ἱερὸν Λόγον αὐτῷ λεγομένων οὕτως ἐκτίθεται περὶ τοῦ διακρατεῖσθαι θείᾳ δυνάμει τὰ πάντα καὶ γενητὰ ὑπάρχειν καὶ ἐπὶ πάντων εἶναι τὸν θεόν. λέγει δ᾽ οὕτως·</reading>
+          </unit>
+        </div>
+        <div number="5" fragment="4">
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes"> φθέγξομαι οἷς θέμις ἐστί, θύρας δ᾽ ἐπίθεσθε βέβηλοι,
+					</reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      φεύγοντες δικαίων θεσμούς, θείοιο τιθέντος
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      πᾶσιν ὁμοῦ· σὺ δ᾽ ἄκουε, φαεσφόρου ἔκγονε Μήνης 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      Μουσαῖ᾽. ἐξενέπω γὰρ ἀληθέα· μηδέ σε τὰ πρὶν 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἐν στήθεσσι φανέντα φίλης αἰῶνος ἀμέρσῃ, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      εἰς δὲ λόγον θεῖον βλέψας τούτῳ προσέδρευε, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἰθύνων κραδίης νοερὸν κύτος· εὖ δ᾽ ἐπίβαινε 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἀτραπιτοῦ, μοῦνον δ᾽ ἐσόρα κόσμοιο τυπωτὴν 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἀθάνατον. παλαιὸς δὲ λόγος περὶ τοῦδε φαείνει· 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      Εἷς ἔστ᾽ αὐτοτελής, αὐτοῦ δ᾽ ὕπο πάντα τελεῖται, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἐν δ᾽ αὐτοῖς αὐτὸς περινίσσεται, οὐδέ τις αὐτὸν 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      εἰσοράᾳ ψυχὴν θνητῶν, νῷ δ᾽ εἰσοράαται. 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      αὐτὸς δ᾽ ἐξ ἀγαθῶν θνητοῖς κακὸν οὐκ ἐπιτέλλει 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἀνθρώποις· αὐτῷ δὲ χάρις καὶ μῖσος ὀπηδεῖ·
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      καὶ πόλεμος καὶ λοιμὸς ἰδ᾽ ἄλγεα δακρυόεντα· 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      οὐδέ τίς ἐσθ᾽ ἕτερος. σὺ δέ κεν ῥέα πάντ᾽ ἐσορήσω, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      αἴ κεν ἴδῃς αὐτόν· πρὶν δή ποτε δεῦρ᾽ ἐπὶ γαῖαν, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      τέκνον ἐμόν, δείξω σοι, ὁπηνίκα {τὰ} δέρκομαι αὐτοῦ 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἴχνια καὶ χεῖρα στιβαρὴν κρατεροῖο θεοῖο. 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      αὐτὸν δ᾽ οὐχ ὁρόω· περὶ γὰρ νέφος ἐστήρικται 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      λοιπὸν ἐμοί· ᾽στᾶσιν δὲ δεκάπτυχον ἀνθρώποισιν. 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      οὐ γάρ κέν τις ἴδοι θνητῶν μερόπων κραίνοντα, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      εἰ μὴ μουνογενής τις ἀπορρὼξ φύλου ἄνωθεν 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      Χαλδαίων· ἴδρις γὰρ ἔην ἄστροιο πορείης 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      καὶ σφαίρης κίνημ᾽ ἀμφὶ χθόνα ὡς περιτέλλει 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      κυκλοτερές τ᾽ ἐν ἴσῳ, κατὰ δὲ σφέτερον κνώδακα. 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      πνεύματα δ᾽ ἡνιοχεῖ περί τ᾽ ἠέρα καὶ περὶ χεῦμα 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      νάματος· ἐκφαίνει δὲ πυρὸς σέλας ἰφιγενήτου. 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      αὐτὸς δὴ μέγαν αὖθις ἐπ᾽ οὐρανὸν ἐστήρικται 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      χρυσέῳ εἰνὶ θρόνῳ· γαίη δ᾽ ὑπὸ ποσσὶ βέβηκε· 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      χεῖρα δὲ δεξιτερὴν ἐπὶ τέρμασιν Ὠκεανοῖο
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἐκτέτακεν· ὀρέων δὲ τρέμει βάσις ἔνδοθι θυμῷ 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      οὐδὲ φέρειν δύναται κρατερὸν μένος. ἔστι δὲ πάντως 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      αὐτὸς ἐπουράνιος καὶ ἐπὶ χθονὶ πάντα τελευτᾷ, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἀρχὴν αὐτὸς ἔχων καὶ μέσσην ἠδὲ τελευτήν, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ὡς λόγος ἀρχαίων, ὡς ὑδογενὴς διέταξεν, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἐκ θεόθεν γνώμῃσι λαβὼν κατὰ δίπλακα θεσμόν. 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἄλλως οὐ θεμιτὸν δὲ λέγειν· τρομέω δέ γε γυῖα, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ἐν νόῳ· ἐξ ὑπάτου κραίνει περὶ πάντ᾽ ἐνὶ τάξει. 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      ὦ τέκνον, σὺ δὲ τοῖσι νόοισι πελάζευ, γλώσσης 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+      εὖ μάλ᾽ ἐπικρατέων, στέρνοισι δὲ ἔνθεο φήμην.</reading>
+          </unit>
+        </div>
+        <div number="6" fragment="4">
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">καὶ Ἄρατος δὲ περὶ τῶν αὐτῶν φησιν οὕτως· 
+</reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">Ἐκ θεοῦ ἀρχώμεσθα, τὸν οὐδέποτ᾽ ἄνδρες ἐῶσιν 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">ἄρρητον· μεσταὶ δὲ θεοῦ πᾶσαι μὲν ἀγυιαί, 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">πᾶσαι δ᾽ ἀνθρώπων ἀγοραί, μεστὴ δὲ θάλασσα 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">καὶ λιμένες, πάντη δὲ θεοῦ κεχρήμεθα πάντες. 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">τοῦ γὰρ καὶ γένος ἐσμέν· ὁ δ᾽ ἤπιος ἀνθρώποισι 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">δεξιὰ σημαίνει, λαοὺς δ᾽ ἐπὶ ἔργον ἐγείρει
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">μιμνήσκων βιότοιο· λέγει δ᾽ ὅτε βῶλος ἀρίστη 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">βουσί τε καὶ μακέλῃσι, λέγει δ᾽ ὅτε δεξιαὶ ὧραι 
+      </reading>
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">καὶ φυτὰ γυρῶσαι καὶ σπέρματα πάντα βαλέσθαι. </reading>
+          </unit>
+        </div>
+        <div number="7" fragment="4">
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Mras ">σαφῶς οἴομαι δεδεῖχθαι διότι διὰ πάντων ἐστὶν ἡ δύναμις τοῦ θεοῦ. καθὼς δὲ δεῖ, σεσημάγκαμεν περιαιροῦντες τὸν διὰ τῶν ποιημάτων Δία καὶ Ζῆνα· τὸ γὰρ τῆς διανοίας αὐτῶν ἐπὶ θεὸν ἀναπέμπεται, διόπερ οὕτως ἡμῖν εἴρηται. οὐκ ἀπεοικότως οὖν τοῖς ἐπεζητημένοις προενηνέγμεθα ταῦτα. </reading>
+          </unit>
+        </div>
+        <div number="8" fragment="4">
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Mras ">πᾶσι γὰρ τοῖς φιλοσόφοις ὁμολογεῖται διότι δεῖ περὶ θεοῦ διαλήψεις ὁσίας ἔχειν, ὃ μάλιστα παρακελεύεται καλῶς ἡ καθ᾽ ἡμᾶς αἵρεσις. ἡ δὲ τοῦ νόμου κατασκευὴ πᾶσα τοῦ καθ᾽ ἡμᾶς περὶ εὐσεβείας τέτακται καὶ δικαιοσύνης καὶ ἐγκρατείας καὶ τῶν λοιπῶν ἀγαθῶν τῶν κατὰ ἀλήθειαν.”
+</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </text>
+</version>
+      
+<version title="Stromata (frag. 4a)" author="Clement of Alexandria" language="Greek" fragment="4">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="5">
+    <div number="14">  
+      <div number="99">
+        <div number="3" fragment="4">
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">“καὶ τὸ σύνολον Πυθαγόρας καὶ Σωκράτης καὶ Πλάτων, λέγοντες ἀκούειν φωνῆς θεοῦ, τὴν κατασκευὴν τῶν ὅλων θεωροῦντες ἀκριβῶς ὑπὸ θεοῦ γεγονυῖαν καὶ συνεχομένην ἀδιαλείπτως, ἀκηκόασι {γὰρ} τοῦ Μωυσέως λέγοντος ‘εἶπεν, καὶ ἐγένετο,’ τὸν λόγον τοῦ θεοῦ ἔργον εἶναι διαγράφοντος.”
+					</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+</text>
+</version>
+      
+<version title="Protrepticus (frag. 4b)" author="Clement of Alexandria" language="Greek" fragment="4">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />     
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Treu" language="Greek" show="yes">
+      <name>O. Stählin and U. Treu</name>
+      <bibliography>O. Stählin and U. Treu, Clemens Alexandrinus (vol. 1; 3d ed.; GCS 56 [12]; Berlin: Akademie, 1972).</bibliography>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>      
+    <div number="7">
+      <div number="73">
+        <div number="2a" fragment="4">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Stählin-Treu ">Ἄρατος μὲν οὖν διὰ πάντων τὴν δύναμιν τοῦ θεοῦ διήκειν νοεῖ. . . .
+					</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </text>
+</version>
+      
+<version title="Stromata (frag. 4c)" author="Clement of Alexandria" language="Greek" fragment="4">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+  <div number="5">
+    <div number="14">      
+      <div number="101">
+        <div number="4" fragment="4">
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">. . . ὁ γὰρ διὰ τῶν ποιημάτων καὶ καταλογάδην συγγραμμάτων ᾀδόμενος Ζεὺς τὴν ἔννοιαν ἐπὶ τὸν θεὸν ἀναφέρει.
+					</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+ </text>
+</version>      
+
+<version title="Praeparatio Evangelica (frag. 5)" author="Eusebius" language="Greek" fragment="5">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />     
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Mras" language="Greek" show="yes">
+      <name>Karl Mras</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="13">      
+      <div number="12" >
+        <div number="9" fragment="5">
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Mras ">Τούτοις ἑξῆς μεθ᾽ ἕτερα ἐπιλέγει· 
+   “Ἐχομένως δ᾽ ἐστὶν ὡς ὁ θεός, &lt; ὃς &gt; τὸν ὅλον κόσμον κατεσκεύακε, καὶ δέδωκεν ἀνάπαυσιν ἡμῖν, διὰ τὸ κακόπαθον εἶναι πᾶσι τὴν βιοτήν, ἑβδόμην ἡμέραν, ἣ δὴ καὶ πρώτη φυσικῶς ἂν λέγοιτο φωτὸς γένεσις, ἐν ὧͺ τὰ πάντα συνθεωρεῖται. </reading>
+          </unit>
+        </div>
+        <div number="10" fragment="5">
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Mras ">μεταφέροιτο δ᾽ ἂν τὸ αὐτὸ καὶ ἐπὶ τῆς σοφίας· τὸ γὰρ πᾶν φῶς ἐστιν ἐξ αὐτῆς. καί τινες εἰρήκασι τῶν ἐκ τῆς αἱρέσεως ὄντες &lt; τῆς &gt; ἐκ τοῦ Περιπάτου λαμπτῆρος αὐτὴν ἔχειν τάξιν· ἀκολουθοῦντες γὰρ αὐτῇ συνεχῶς ἀτάραχοι καταστήσονται δι᾽ ὅλου τοῦ βίου. </reading>
+          </unit>
+        </div>
+        <div number="11" fragment="5">
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Mras ">σαφέστερον δὲ καὶ κάλλιον τῶν ἡμετέρων προγόνων τις εἶπε Σολομῶν αὐτὴν πρὸ οὐρανοῦ καὶ γῆς ὑπάρχειν· τὸ δὴ σύμφωνόν ἐστι τῷ προειρημένῳ. τὸ δὲ διασαφούμενον διὰ τῆς νομοθεσίας ἀποπεπαυκέναι τὸν θεὸν ἐν αὐτῇ, τοῦτο οὐχ, ὥς τινες ὑπολαμβάνουσι, μηκέτι ποιεῖν τι τὸν θεὸν καθέστηκεν, ἀλλ᾽ ἐπὶ τῷ καταπεπαυκέναι τὴν τάξιν αὐτῶν οὕτως εἰς πάντα τὸν χρόνον τεταχέναι. </reading>
+          </unit>
+        </div>
+        <div number="12" fragment="5">
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Mras ">σημαίνει γὰρ ὡς ἐν ἓξ ἡμέραις ἐποίησε τόν τε οὐρανὸν καὶ τὴν γῆν καὶ πάντα τὰ ἐν αὐτοῖς, ἵνα τοὺς χρόνους δηλώσῃ καὶ τὴν τάξιν προείπῃ τί τίνος προτερεῖ. τάξας γάρ, οὕτως αὐτὰ συνέχει καὶ μεταποιεῖ. διασεσάφηκε δ᾽ ἡμῖν αὐτὴν ἔννομον ἕνεκεν σημείου τοῦ περὶ ἡμᾶς ἑβδόμου λόγου καθεστῶτος, ἐν ὧͺ γνῶσιν ἔχομεν ἀνθρωπίνων καὶ θείων πραγμάτων. </reading>
+          </unit>
+        </div>
+        <div number="13" fragment="5">
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">δι᾽ ἑβδομάδων δὲ καὶ πᾶς ὁ κόσμος κυκλεῖται τῶν ζῳογονουμένων καὶ τῶν φυομένων ἁπάντων· τῷ δὲ σάββατον αὐτὴν προσαγορεύεσθαι διερμηνεύεται ἀνάπαυσις οὖσα. διασαφεῖ δὲ καὶ Ὅμηρος καὶ Ἡσίοδος, μετειληφότες ἐκ τῶν ἡμετέρων βιβλίων ἱερὰν εἶναι. Ἡσίοδος μὲν οὕτως· 
+					 </reading>
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+  πρῶτον ἕνη τετράς τε καὶ ἑβδόμη ἱερὸν ἦμαρ·
+   </reading>
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following"> 
+καὶ πάλιν λέγει· 
+ </reading>
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+  ἑβδομάτη δ᾽ αὖτις λαμπρὸν φάος ἠελίοιο. </reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">Ὅμηρος δὲ οὕτω λέγει· 
+					 </reading>
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+  ἑβδομάτη δἤπειτα κατήλυθεν, ἱερὸν ἦμαρ·
+   </reading>
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">
+καὶ πάλιν· 
+ </reading>
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+  ἕβδομον ἦμαρ ἔην καὶ τῷ τετέλεστο ἅπαντα 
+   </reading>
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">
+καί· 
+ </reading>
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">
+  ἑβδομάτῃ δ᾽ ἠοῖ λίπομεν ῥόον ἐξ Ἀχέροντος. </reading>
+          </unit>
+        </div>
+        <div number="15" fragment="5">
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Mras ">τοῦτο δὴ σημαίνων, ὡς ἀπὸ τῆς κατὰ ψυχὴν λήθης καὶ κακίας ἐν τῷ κατὰ ἀλήθειαν ἑβδόμῳ λόγῳ καταλιμπάνεται τὰ προειρημένα καὶ γνῶσιν ἀληθείας λαμβάνομεν, καθὼς προείρηται. </reading>
+          </unit>
+        </div>
+        <div number="16" fragment="5">
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">Λίνος δέ φησιν οὕτως· 
+</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">ἑβδομάτῃ δ᾽ ἠοῖ τετελεσμένα πάντα τέτυκται· 
+					</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">καὶ πάλιν· 
+					</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">ἑβδόμη εἰν ἀγαθοῖς καὶ ἑβδόμη ἐστὶ γενέθλη 
+					</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">καί· 
+					</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">ἑβδόμη ἐν πρώτοισι καὶ ἑβδόμη ἐστὶ τελείη 
+					</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">&lt; καί· &gt; 
+					</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">ἑπτὰ δὲ πάντα τέτυκται ἐν οὐρανῷ ἀστερόεντι, 
+					</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following" indent="yes">ἐν κύκλοισι φανέντ᾽ ἐπιτελλομένοις ἐνιαυτοῖς.” 
+					</reading>
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Mras " linebreak="following">Τὰ μὲν οὖν Ἀριστοβούλου τοιαῦτα. ὁποῖα δὲ καὶ Κλήμεντι περὶ τῆς αὐτῆς εἴρηται ὑποθέσεως, γνοίης ἂν διὰ τούτων·</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+</text>
+</version>
+
+<version title="Stromata (frag. 5a)" author="Clement of Alexandria" language="Greek" fragment="5">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="6">
+      <div number="16">
+      <div number="137">
+        <div number="4" fragment="5">
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">τρίτος δέ ἐστι λόγος ὁ μηνύων γεγονέναι πρὸς τοῦ θεοῦ τὸν κόσμον καὶ δεδωκέναι ἀνάπαυσιν ἡμῖν ἑβδόμην ἡμέραν διὰ τὴν κατὰ τὸν βίον κακοπάθειαν· θεὸς γὰρ ἄκμητός τε καὶ ἀπαθὴς καὶ ἀπροσδεής, ἀναπαύλης δὲ ἡμεῖς οἱ σαρκοφοροῦντες δεόμεθα.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="138">
+        <div number="1" fragment="5">
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">ἡ ἑβδόμη τοίνυν ἡμέρα ἀνάπαυσις κηρύσσεται, ἀποχῇ κακῶν ἑτοιμάζουσα τὴν ἀρχέγονον ἡμέραν τὴν τῷ ὄντι ἀνάπαυσιν ἡμῶν, ἣ δὴ καὶ πρώτη τῷ ὄντι φωτὸς γένεσις, ἐν ᾧ τὰ πάντα συνθεωρεῖται καὶ πάντα κληρονομεῖται.</reading>
+          </unit>
+        </div>
+        <div number="2" fragment="5">
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">ἐκ ταύτης τῆς ἡμέρας ἡ πρώτη σοφία καὶ ἡ γνῶσις ἡμῖν ἐλλάμπεται· τὸ γὰρ φῶς τῆς ἀληθείας φῶς ἀληθές, ἄσκιον, ἀμερῶς μεριζόμενον πνεῦμα κυρίου εἰς τοὺς διὰ πίστεως ἡγιασμένους, λαμπτῆρος ἐπέχον, τάξιν εἰς τὴν τῶν ὄντων ἐπίγνωσιν.</reading>
+          </unit>
+        </div>
+        <div number="3" fragment="5">
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">ἀκολουθοῦντες οὖν αὐτῷ δι’ ὅλου τοῦ βίου ἀπαθεῖς καθιστάμεθα, τὸ δέ ἐστιν ἀναπαύσασθαι.</reading>
+          </unit>
+        </div>
+        <div number="4" fragment="5">
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="doubleFollowing">διὸ καὶ Σολομὼν πρὸ οὐρανοῦ καὶ γῆς καὶ πάντων τῶν ὄντων τῷ παντοκράτορι γεγονέναι τὴν σοφίαν λέγει, ἧς ἡ μέθεξις (ἡ κατὰ δύναμιν, οὐ κατ’ οὐσίαν λέγω) θείων καὶ ἀνθρωπίνων καταληπτικῶς ἐπιστήμονα εἶναι διδάσκει.</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+</text>
+</version>
+      
+<version title="Stromata (frag. 5b)" author="Clement of Alexandria" language="Greek" fragment="5">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>      
+    <div number="6">
+      <div number="16">
+      <div number="141">
+        <div number="7b" fragment="5">
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">. . . οὐ τοίνυν, ὥσπερ τινὲς ὑπολαμβάνουσι τὴν ἀνάπαυσιν τοῦ θεοῦ, πέπαυται ποιῶν ὁ θεός· ἀγαθὸς γὰρ ὤν, εἰ παύσεταί ποτε ἀγαθοεργῶν, καὶ τοῦ θεὸς εἶναι παύσεται, ὅπερ οὐδὲ εἰπεῖν θέμις.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="142">
+        <div number="1" fragment="5">
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="doubleFollowing">ἔστιν δ’ οὖν καταπεπαυκέναι τὸ τὴν τάξιν τῶν γενομένων εἰς πάντα χρόνον ἀπαραβάτως φυλάσσεσθαι τεταχέναι καὶ τῆς παλαιᾶς ἀταξίας ἕκαστον τῶν κτισμάτων καταπεπαυκέναι·</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+</text>
+</version>
+        
+<version title="Stromata (frag. 5c)" author="Clement of Alexandria" language="Greek" fragment="5">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>    
+    <div number="6">
+      <div number="16">
+      <div number="142">
+        <div number="4b" fragment="5">
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="doubleFollowing">. . . Ἤδη δὲ καὶ ἐν ἑβδομάσι πᾶς ὁ κόσμος κυκλεῖται τῶν ζῳογονουμένων καὶ τῶν φυομένων ἁπάντων.</reading>
+          </unit>
+        </div>
+      </div>
+        <elipsis />
+      <div number="144">
+        <div number="3" fragment="5">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">τάς τε τῶν ἡλικιῶν μεταβολὰς κατὰ ἑβδομάδα γίνεσθαι Σόλωνος αἱ ἐλεγεῖαι δηλοῦσιν ὧδέ πως·</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+</text>
+</version>
+
+<version title="Stromata (frag. 5d)" author="Clement of Alexandria" language="Greek" fragment="5">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />    
+    <division label="Paragraph" />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+      <name>Stählin, Früchtel, and Treu</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>    
+    <div number="5">
+      <div number="14">
+      <div number="107">
+        <div number="1" fragment="5">
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">Ἀλλὰ καὶ τὴν ἑβδόμην ἱερὰν οὐ μόνον οἱ Ἑβραῖοι, ἀλλὰ καὶ οἱ Ἕλληνες ἴσασι, καθ’ ἣν ὁ πᾶς κόσμος κυκλεῖται τῶν ζωογονουμένων καὶ φυομένων ἁπάντων.
+					</reading>
+          </unit>
+        </div>
+        <div number="2" fragment="5">
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">Ἡσίοδος μὲν &lt; οὖν &gt; οὕτως περὶ αὐτῆς λέγει· 
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">πρῶτον ἔνη τετράς τε καὶ ἑβδόμη ἱερὸν ἦμαρ.
+</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">καὶ πάλιν·
+</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἑβδομάτῃ δ’ αὖθις λαμπρὸν φάος ἠελίοιο.</reading>
+          </unit>
+        </div>
+        <div number="107.3">
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">Ὅμηρος δέ·
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἑβδομάτῃ δἤπειτα κατήλυθεν ἱερὸν ἦμαρ.
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">καί·
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἑβδόμη ἦν ἱερή.
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">καὶ πάλιν·
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἕβδομον ἦμαρ ἔην, καὶ τῷ τετέλεστο ἅπαντα.
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">καὶ αὖθις·
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἑβδομάτῃ δ’ ἠοῖ λίπομεν ῥόον ἐξ Ἀχέροντος.</reading>
+          </unit>
+        </div>
+        <div number="107.4">
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">ναὶ μὴν καὶ Καλλίμαχος ὁ ποιητὴς γράφει·
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἑβδομάτῃ δ’ ἠοῖ καί οἱ τετύκοντο ἅπαντα.
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">καὶ πάλιν·
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἑβδόμη εἰν ἀγαθοῖσ&lt;ι&gt; καὶ ἑβδόμη ἐστὶ γενέθλη.
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">καὶ·
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἑβδόμη ἐν πρώτοισι{ν} καὶ ἑβδόμη ἐστὶ τελείη.
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following">καὶ·
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἑπτὰ δὲ πάντα τέτυκτο ἐν οὐρανῷ ἀστερόεντι
+					</reading>
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="following" indent="yes">ἐν κύκλοισι φανέντα ἐπιτελλομένοις ἐνιαυτοῖς.</reading>
+          </unit>
+        </div>
+       </div>
+       <div number="108">
+        <div number="1" fragment="5">
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel-Treu ">ἀλλὰ καὶ αἱ Σόλωνος ἐλεγεῖαι σφόδρα τὴν ἑβδομάδα ἐκθειάζουσιν.</reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+  </div>
+</text>
+</version>  
+
+<version title="Praeparatio Evangelica (frag. 5e)" author="Eusebius" language="Greek" fragment="5">
+  <divisions>
+    <division label="Book" delimiter="." />    
+    <division label="Chapter" delimiter="." />
+    <division label="Section" delimiter="." />      
+  </divisions>
+  <manuscripts>
+    <ms abbrev="Mras" language="Greek" show="yes">
+      <name>Karl Mras</name>
+      <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 217-28. Fragment §1 Eusebius, Hist. Eccl. 7.32.16-18; Fragment §2 Eusebius, Praep. Evang. 8.9.38–8.10.17; Fragment §3 Eusebius, Praep. Evang. 13.12.1-2; Fragment §4 Eusebius, Praep. Evang. 13.12.3-8; Fragment §5 Eusebius, Praep. Evang. 13.12.9-16
+</bibliography>
+    </ms>
+  </manuscripts>
+  <text>    
+    <div number="7">
+      <div number="13">
+        <div number="7" fragment="5">
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Mras ">καὶ Ἀριστόβουλος δὲ ἄλλος Ἑβραίων σοφὸς ἀνήρ, κατὰ τὴν τῶν Πτολεμαίων ἀκμάσας ἡγεμονίαν, κυροῖ τὸ δόγμα ὡς πάτριον, αὐτῷ Πτολεμαίῳ τὴν τῶν ἱερῶν νόμων προσφωνῶν ἑρμηνείαν, ἐν ᾗ τάδε φησί·</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="1" fragment="5">
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Mras ">“Μεταφέροιτο δ’ ἂν τὸ αὐτὸ καὶ ἐπὶ τῆς σοφίας· τὸ γὰρ πᾶν φῶς ἐστιν ἐξ αὐτῆς. διὸ καί τινες εἰρήκασι τῶν ἐκ τῆς αἱρέσεως ὄντες τοῦ Περιπάτου λαμπτῆρος αὐτὴν ἔχειν τάξιν. ἀκολουθοῦντες γὰρ αὐτῇ συνεχῶς, ἀτάραχοι καταστήσονται δι’ ὅλου τοῦ βίου. σαφέστερον δὲ καὶ κάλλιον τῶν ἡμετέρων προγόνων τις εἶπε Σολομῶν, πρὸ οὐρανοῦ καὶ γῆς αὐτὴν ὑπάρχειν· τὸ δὲ σύμφωνόν ἐστι τῷ προειρημένῳ.”</reading>
+          </unit>
+        </div>
+      </div>
+     </div>      
+    </text>
+  </version>
+</book>

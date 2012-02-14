@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+    <!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+    <!ELEMENT version (divisions,resources*,manuscripts+,text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+    <!ELEMENT divisions (division)+>
+    <!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+    <!ELEMENT resources (resource)+>
+    <!ELEMENT resource (info+,URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+    <!ELEMENT info (#PCDATA)>
+    <!ELEMENT URL (#PCDATA)>
+    <!ELEMENT manuscripts (ms)+>
+    <!ELEMENT ms (name,bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA|sup)*>
+    <!ELEMENT sup (#PCDATA)>
+    <!ELEMENT bibliography (#PCDATA|booktitle)*>
+    <!ELEMENT booktitle (#PCDATA)>
+    <!ELEMENT text (div)+>
+    <!ELEMENT div (div|unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+    <!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+    <!ELEMENT reading (#PCDATA|w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+    <!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+]>
+<book filename="ClMal" title="Cleodemus Malchus" textStructure="fragmentary">
+    <version title="Jewish Antiquities" author="Flavius Josephus" language="Greek" fragment="1">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Section"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Niese" show="yes">
+                <name>Niese</name>
+                <bibliography>
+                    Benedictus Niese, ed., Flavii Iosephi Opera (7 vols.; 2d. ed.; Berlin: Widmann, 1955), 1.58-59.
+                    Cleodemus Malchus on the sons of Abraham: Josephus, Ant. 1.15.1 §239-241; = Eusebius, Praep. Evang. 9.20.2-4
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="1">
+                <div number="239">
+                    <unit id="1" group="0" parallel="">
+                        <reading option="0" mss="Niese ">
+                            λέγεται δέ, ὡς οὗτος ὁ Ἑώφρην στρατεύσας ἐπὶ τὴν Λιβύην κατέσχεν αὐτὴν καὶ οἱ υἱωνοὶ αὐτοῦ κατοικήσαντες ἐν αὐτῇ τὴν γῆν ἀπὸ τοῦ ἐκείνου ὀνόματος Ἀφρικὰ προσηγόρευσαν.
+                        </reading>
+                    </unit>
+                </div>
+                <div number="240">
+                    <unit id="2" group="0" parallel="">
+                        <reading option="0" mss="Niese ">
+                            μαρτυρεῖ δέ μου τῷ λόγῳ Ἀλέξανδρος ὁ πολυίστωρ λέγων οὕτως· “Κλεόδημος δέ φησιν ὁ προφήτης ὁ καὶ Μάλχος ἱστορῶν τὰ περὶ Ἰουδαίων, καθὼς καὶ Μωυσῆς ἱστόρησεν ὁ νομοθέτης αὐτῶν, ὅτι ἐκ τῆς Κατούρας Ἁβράμῳ ἐγένοντο παῖδες ἱκανοί.
+                        </reading>
+                    </unit>
+                </div>
+                <div number="241">
+                    <unit id="3" group="0" parallel="">
+                        <reading option="0" mss="Niese ">
+                            λέγει δὲ αὐτῶν καὶ τὰ ὀνόματα ὀνομάζων τρεῖς Ἰαφέραν Σούρην Ἰαφράν. ἀπὸ Σούρου μὲν τὴν Ἀσσυρίαν κεκλῆσθαι, ἀπὸ δὲ τῶν δύο Ἰαφρᾶ τε καὶ Ἰαφέρου, πόλιν τε Ἐφρᾶν καὶ τὴν χώραν Ἀφρικὰ ὀνομασθῆναι. τούτους γὰρ Ἡρακλεῖ συστρατεῦσαι ἐπὶ Λιβύην καὶ Ἀνταῖον· γήμαντά τε τὴν Ἀφράνου θυγατέρα Ἡρακλέα γεννῆσαι υἱὸν ἐξ αὐτῆς Δίδωρον· τούτου δὲ γενέσθαι Σόφωνα, ἀφ᾽ οὗ τοὺς βαρβάρους Σόφακας λέγεσθαι.”
+                        </reading>
+                    </unit>
+                </div>
+            </div>
+        </text>
+    </version>
+    <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="1">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Section" delimiter=":"/>
+            <division label="Paragraph"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="Mras" show="yes">
+                <name>Mras</name>
+                <bibliography>
+                    Cleodemus Malchus on the sons of Abraham: Josephus, Ant. 1.15.1 §239-241; = Eusebius, Praep. Evang. 9.20.2-4
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+          <div number="9">
+            <div number="20">
+                <div number="2">
+                    <unit id="4" group="0" parallel="">
+                        <reading option="0" mss="Mras ">
+                            Ταῦτα μὲν δὴ ἀπὸ τῆς προειρημένης τοῦ Πολυΐστορος γραφῆς. καὶ ὁ Ἰώσηπος δὲ ἐν τῇ πρώτῃ τῆς Ἀρχαιολογίας τοῦ αὐτοῦ μνημονεύει διὰ τούτων· “Λέγεται δὲ ὡς οὗτος ὁ Ἀφρὴν στρατεύσας ἐπὶ τὴν Λιβύην κατέσχεν αὐτὴν καὶ οἱ υἱωνοὶ αὐτοῦ κατοικήσαντες ἐν αὐτῇ τὴν γῆν ἀπὸ τοῦ ἐκείνου ὀνόματος Ἀφρικὰ προσηγόρευσαν.
+                        </reading>
+                    </unit>
+                </div>
+                <div number="3">
+                    <unit id="5" group="0" parallel="">
+                        <reading option="0" mss="Mras ">
+                            μαρτυρεῖ δέ μου τῷ λόγῳ Ἀλέξανδρος ὁ Πολυΐστωρ λέγων οὕτως· ‘Κλεόδημος δέ φησιν ὁ προφήτης, ὁ καὶ Μαλχᾶς, ἱστορῶν τὰ περὶ Ἰουδαίων, καθὼς καὶ Μωσῆς ἱστόρηκεν ὁ νομοθέτης αὐτῶν, ὅτι ἐκ τῆς Χεττούρας Ἁβραάμῳ ἐγένοντο παῖδες ἱκανοί· λέγει δὲ αὐτῶν καὶ τὰ ὀνόματα, ὀνομάζων τρεῖς, Ἀφέρ, Ἀσσουρί, Ἀφράν·
+                        </reading>
+                    </unit>
+                </div>
+                <div number="4">
+                    <unit id="6" group="0" parallel="">
+                        <reading option="0" mss="Mras ">
+                            καὶ ἀπὸ Ἀσσουρὶ μὲν τὴν Ἀσσυρίαν, ἀπὸ δὲ τῶν δύο, Ἀφρά τε καὶ Ἀφέρ, πόλιν τε Ἀφρὰν καὶ τὴν χώραν Ἀφρικὰ ὀνομασθῆναι. τούτους δὲ Ἡρακλεῖ συστρατεῦσαι ἐπὶ Λιβύην καὶ Ἀνταῖον· γήμαντα δὲ τὴν Ἀφρὰ θυγατέρα Ἡρακλέα γεννῆσαι υἱὸν ἐξ αὐτῆς Διόδωρον. τούτου δὲ γενέσθαι Σοφωνᾶν, ἀφ᾽ οὗ τοὺς βαρβάρους Σοφὰς λέγεσθαι.’” Τὰ μὲν οὖν περὶ τοῦ Ἀβραὰμ ὡς ἐν ὀλίγοις τοσαῦτα παρακείσθω.
+                        </reading>
+                    </unit>
+                </div>
+            </div>
+        </div>
+        </text>
+    </version>
+</book>

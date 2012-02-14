@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ language CDATA #REQUIRED
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="Theod" title="Theodotus" textStructure="fragmentary">
+  <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 204-207. Fragment 1: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.1; 
+Fragment 2: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.2; 
+Fragment 3: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.3; 
+Fragment 4: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.4-6; 
+Fragment 5: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.7; 
+Fragment 6: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.8-9; 
+Fragment 7: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.9; 
+Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.10-12.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    <div number="9">
+      <div number="22">
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+            <reading option="0" mss="Mras ">κβʹ. ΘΕΟΔΟΤΟΥ ΠΕΡΙ ΤΟΥ ΙΑΚΩΒ     
+“Τὰ δὲ Σίκιμά φησι Θεόδοτος ἐν τῷ περὶ Ἰουδαίων ἀπὸ Σικιμίου τοῦ Ἑρμοῦ λαβεῖν τὴν ὀνομασίαν· τοῦτον γὰρ καὶ κτίσαι τὴν πόλιν· κεῖσθαι δ᾽ αὐτήν 
+φησιν ἐν τῇ {περὶ} Ἰουδαίων οὕτως· 
+      ‘Ἡ δ᾽ ἄρ᾽ ἔην ἀγαθή τε καὶ αἰγινόμος καὶ ὑδρηλή, 
+      οὐδὲ μὲν ἔσκεν ὁδὸς δολιχὴ πόλιν εἰσαφικέσθαι 
+      ἀγρόθεν. οὐδέ ποτε δρία λαχνήεντα πονεῦσιν. 
+      ἐξ αὐτῆς δὲ μάλ᾽ ἄγχι δύ᾽ οὔρεα φαίνετ᾽ ἐρυμνά, 
+      ποίης τε πλήθοντα καὶ ὕλης· τῶν δὲ μεσηγὺ 
+      ἀτραπιτὸς τέτμηται ἀραιή {αὐλῶπις}· ἐν δ᾽ ἑτέρωθι  
+      ἡ διερὴ Σικίμων καταφαίνεται, ἱερὸν ἄστυ, 
+      νέρθεν ὑπὸ ῥίζῃ δεδμημένον, ἀμφὶ δὲ τεῖχος 
+      λισσὸν ὑπώρειαν ὑποδέδρομεν αἰπύθεν ἕρκος.’” </reading>
+          </unit>
+        </div>
+      </div>
+			</div>
+  </text>
+	</version>
+  <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 204-207. Fragment 1: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.1; 
+Fragment 2: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.2; 
+Fragment 3: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.3; 
+Fragment 4: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.4-6; 
+Fragment 5: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.7; 
+Fragment 6: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.8-9; 
+Fragment 7: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.9; 
+Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.10-12.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+			<div number="9">
+      <div number="22">
+        <div number="2">
+          <unit id="2" group="0" parallel="">
+            <reading option="0" mss="Mras ">“ὕστερον δέ φησιν αὐτὴν ὑπὸ Ἑβραίων κατασχεθῆναι, δυναστεύοντος Ἐμμώρ· τὸν γὰρ Ἐμμὼρ υἱὸν γεννῆσαι Συχέμ. φησὶ δέ· 
+      ‘Ἐνθένδε, ξένε, ποιμενόφι πτόλιν ἤλυθ᾽ Ἰακὼβ 
+      εὐρεῖαν Σικίμων· ἐπὶ δ᾽ ἀνδράσι τοῖσιν ἔτῃσιν 
+      ἀρχὸς Ἐμὼρ σὺν παιδὶ Συχέμ, μάλ᾽ ἀτειρέε φῶτε.’” </reading>
+          </unit>
+        </div>
+      </div>
+    </div>
+		</text>
+		</version>
+  <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="3">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 204-207. Fragment 1: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.1; 
+Fragment 2: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.2; 
+Fragment 3: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.3; 
+Fragment 4: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.4-6; 
+Fragment 5: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.7; 
+Fragment 6: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.8-9; 
+Fragment 7: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.9; 
+Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.10-12.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    	<div number="9">
+      <div number="22">
+        <div number="3">
+          <unit id="3" group="0" parallel="">
+            <reading option="0" mss="Mras ">“εἶτα περὶ Ἰακὼβ καὶ τὴν εἰς Μεσοποταμίαν αὐτοῦ παρουσίαν καὶ τὸν τῶν δύο γυναικῶν γάμον καὶ τὴν τῶν τέκνων γένεσιν καὶ τὴν παρουσίαν τὴν ἐκ Μεσοποταμίας ἐπὶ τὰ Σίκιμα. εἶπε δέ· 
+      ‘Ἰακὼβ Συρίην κτηνοτρόφον ἷκτο καὶ εὐρὺ 
+      ῥεῖθρον Ἐϋφρήταο λίπεν ποταμοῦ κελάδοντος. 
+      ἤλυθε γὰρ κἀκεῖθι λιπὼν δριμεῖαν ἐνιπὴν 
+      αὐτοκασιγνήτοιο· πρόφρων ὑπέδεκτο δόμονδε 
+      Λάβαν, ὅς οἱ ἔην μὲν ἀνεψιός, ἀλλὰ τότ᾽ οἶος 
+      ἤνασσεν Συρίης, νειηγενὲς αἷμα λεγογχώς. 
+      τῷ δὲ γάμον κούρης μὲν ὑπέσχετο καὶ κατένευσεν  
+      ὁπλοτάτης· οὐ μὴν τελέθειν ἐπεμαίετο πάμπαν, 
+      ἀλλὰ δόλον τολύπευσε καὶ εἰς λέχος ἀνέρι πέμπε 
+      Λείαν, ἥ οἱ ἔην προγενεστέρη. οὐδέ μιν ἔμπης 
+      ἔλλαθεν, ἀλλ᾽ ἐνόησε κακορραφίην καὶ ἔδεκτο 
+      παῖδ᾽ ἑτέρην, ἀμφοῖν δ᾽ ἐμίγη σὺν ὁμαίμοσιν ἧͺσι. 
+      τῷ δ᾽ υἱεῖς ἐγένοντο νόῳ πεπνυμένοι αἰνῶς 
+      ἕνδεκα καὶ κούρη Δείνα περικαλλὲς ἔχουσα 
+      εἶδος, ἐπίστρεπτον δὲ δέμας καὶ ἀμύμονα θυμόν.’” </reading>
+          </unit>
+        </div>
+      </div>
+			</div>
+		</text>
+		</version>
+	  <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="4">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 204-207. Fragment 1: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.1; 
+Fragment 2: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.2; 
+Fragment 3: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.3; 
+Fragment 4: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.4-6; 
+Fragment 5: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.7; 
+Fragment 6: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.8-9; 
+Fragment 7: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.9; 
+Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.10-12.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    	<div number="9">
+      <div number="22">
+        <div number="4">
+          <unit id="4" group="0" parallel="">
+            <reading option="0" mss="Mras ">“ἀπὸ δὲ τοῦ Εὐφράτου φησὶ τὸν Ἰακὼβ ἐλθεῖν εἰς τὰ Σίκιμα πρὸς Ἐμμώρ· τὸν δὲ ὑποδέξασθαι αὐτὸν καὶ μέρος τι τῆς χώρας δοῦναι. καὶ αὐτὸν μὲν τὸν Ἰακὼβ γεωμορεῖν, τοὺς δὲ υἱοὺς αὐτοῦ ἕνδεκα τὸν ἀριθμὸν ὄντας ποιμαίνειν, τὴν δὲ θυγατέρα Δείναν καὶ τὰς γυναῖκας ἐριουργεῖν. καὶ τὴν Δείναν παρθένον οὖσαν εἰς τὰ Σίκιμα ἐλθεῖν πανηγύρεως οὔσης βουλομένην θεάσασθαι τὴν πόλιν· Συχὲμ δὲ τὸν τοῦ Ἐμμὼρ υἱὸν ἰδόντα ἐρασθῆναι αὐτῆς καὶ ἁρπάσαντα ὡς ἑαυτὸν διακομίσαι καὶ φθεῖραι αὐτήν. </reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="5" group="0" parallel="">
+            <reading option="0" mss="Mras ">αὖθις δὲ σὺν τῷ πατρὶ ἐλθόντα πρὸς τὸν Ἰακὼβ αἰτεῖν αὐτὴν πρὸς γάμου κοινωνίαν· τὸν δὲ οὐ φάναι δώσειν, πρὶν ἂν ἢ πάντας τοὺς οἰκοῦντας τὰ Σίκιμα περιτεμνομένους Ἰουδαΐσαι· τὸν δὲ Ἐμμὼρ φάναι πείσειν αὐτούς. φησὶ δὲ περὶ τοῦ δεῖν περιτέμνεσθαι αὐτοὺς ὁ Ἰακώβ· </reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="6" group="0" parallel="">
+            <reading option="0" mss="Mras ">‘Οὐ γὰρ δὴ θεμιτόν γε τόδ᾽ Ἑβραίοισι τέτυκται, 
+      γαμβροὺς ἄλλοθεν εἴς γε νυούς τ᾽ ἀγέμεν ποτὶ δῶμα, 
+      ἀλλ᾽ ὅστις γενεῆς ἐξεύχεται εἶναι ὁμοίης.’” </reading>
+          </unit>
+        </div>
+      </div>
+			</div>
+			</text>
+			</version>
+  <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="5">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 204-207. Fragment 1: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.1; 
+Fragment 2: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.2; 
+Fragment 3: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.3; 
+Fragment 4: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.4-6; 
+Fragment 5: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.7; 
+Fragment 6: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.8-9; 
+Fragment 7: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.9; 
+Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.10-12.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    	<div number="9">			
+      <div number="22">
+        <div number="7">
+          <unit id="7" group="0" parallel="">
+            <reading option="0" mss="Mras ">“εἶτα ὑποβὰς περὶ τῆς περιτομῆς· 
+      ‘Ὅς ποτ᾽, ἐπεὶ πάτρης ἐξήγαγε δῖον Ἀβραάμ, 
+      αὐτὸς ἀπ᾽ οὐρανόθεν κάλεσ’ ἀνέρα παντὶ σὺν οἴκῳ 
+      σάρκ᾽ ἀποσυλῆσαι πόσθης ἄπο, καί ῥ᾽ ἐτέλεσσεν· 
+      ἀστεμφὲς δὲ τέτυκται, ἐπεὶ θεὸς αὐτὸς ἔειπε.’” </reading>
+          </unit>
+        </div>
+      </div>
+			</div>
+			</text>
+			</version>
+  <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="6">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 204-207. Fragment 1: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.1; 
+Fragment 2: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.2; 
+Fragment 3: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.3; 
+Fragment 4: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.4-6; 
+Fragment 5: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.7; 
+Fragment 6: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.8-9; 
+Fragment 7: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.9; 
+Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.10-12.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>			
+    <div number="9">
+      <div number="22">
+        <div number="8">
+          <unit id="8" group="0" parallel="">
+            <reading option="0" mss="Mras ">“πορευθέντος οὖν εἰς τὴν πόλιν τοῦ Ἐμμὼρ καὶ τοὺς ὑποτασσομένους παρακαλοῦντος περιτέμνεσθαι, ἕνα τῶν Ἰακὼβ υἱῶν τὸ ὄνομα Συμεῶνα διαγνῶναι τόν τε Ἐμμὼρ καὶ τὸν Συχὲμ ἀνελεῖν, τὴν ὕβριν τῆς ἀδελφῆς μὴ βουληθέντα πολιτικῶς ἐνεγκεῖν· ταῦτα δὲ διαγνόντα Λευὶν τῷ ἀδελφῷ κοινώσασθαι· λαβόντα δ᾽ αὐτὸν συγκάταινον ἐπὶ τὴν πρᾶξιν παρορμῆσαι, λόγιον προφερόμενον τὸν θεὸν ἀνελεῖν φάμενον τοῖς Ἁβραὰμ ἀπογόνοις δέκα ἔθνη δώσειν. </reading>
+          </unit>
+        </div>
+        <div number="9a">
+          <unit id="9" group="0" parallel="">
+            <reading option="0" mss="Mras ">φησὶ δὲ οὕτως ὁ Συμεὼν πρὸς τὸν Λευίν· 
+      ‘Εὖ γὰρ ἐγὼ μῦθόν &lt;γε&gt; πεπυσμένος εἰμὶ θεοῖο· 
+      δώσειν γάρ ποτ᾽ ἔφησε δέκ᾽ ἔθνεα παισὶν Ἁβραάμ.’” </reading>
+          </unit>
+        </div>
+      </div>
+			</div>
+			</text>
+			</version>
+  <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="7">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 204-207. Fragment 1: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.1; 
+Fragment 2: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.2; 
+Fragment 3: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.3; 
+Fragment 4: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.4-6; 
+Fragment 5: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.7; 
+Fragment 6: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.8-9; 
+Fragment 7: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.9; 
+Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.10-12.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+    	<div number="9">			
+      <div number="22">
+        <div number="9b">
+          <unit id="10" group="0" parallel="">
+            <reading option="0" mss="Mras ">“τὸν δὲ θεὸν αὐτοῖς τοῦτον τὸν νοῦν ἐμβαλεῖν διὰ τὸ τοὺς ἐν Σικίμοις ἀσεβεῖς εἶναι. φησὶ δέ· 
+      ‘Βλάπτε θεὸς Σικίμων οἰκήτορας, οὐ γὰρ ἔτιον 
+      εἰς αὐτοὺς ὅστις κε μόλῃ κακὸς οὐδὲ μὲν ἐσθλός· 
+      οὐδὲ δίκας ἐδίκαζον ἀνὰ πτόλιν οὐδὲ θέμιστας· 
+      λοίγια δ᾽ ὠρώρει τοῖσιν μεμελημένα ἔργα.’” </reading>
+          </unit>
+        </div>
+      </div>
+			</div>
+			</text>
+			</version>
+  <version title="Praep. Evang." author="Eusebius" language="Greek" fragment="8">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>Text from A.-M. Denis (ed.), Fragmenta pseudepigraphorum quae supersunt graeca (PVTG 3; Leiden: Brill, 1970) 204-207. Fragment 1: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.1; 
+Fragment 2: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.2; 
+Fragment 3: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.3; 
+Fragment 4: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.4-6; 
+Fragment 5: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.7; 
+Fragment 6: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.8-9; 
+Fragment 7: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.9; 
+Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praeparatio Evangelica 9.22.10-12.
+</bibliography>
+      </ms>
+    </manuscripts>
+    <text>		
+		<div number="9">
+      <div number="22">
+        <div number="10">
+          <unit id="11" group="0" parallel="">
+            <reading option="0" mss="Mras ">“τὸν οὖν Λευὶν καὶ τὸν Συμεῶνα εἰς τὴν πόλιν καθωπλισμένους ἐλθεῖν καὶ πρῶτα μὲν τοὺς ἐντυγχάνοντας ἀναιρεῖν, ἔπειτα δὲ καὶ τὸν Ἐμμὼρ καὶ τὸν Συχὲμ φονεῦσαι. </reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="12" group="0" parallel="">
+            <reading option="0" mss="Mras ">λέγει δὲ περὶ τῆς ἀναιρέσεως αὐτῶν οὕτως· 
+      ‘Ὣς τότε δὴ Συμεὼν μὲν Ἐμὼρ ὤρουσεν ἐπ᾽ αὐτὸν 
+      πλῆξέ τέ οἱ κεφαλήν, δειρὴν δ᾽ ἕλεν ἐν χερὶ λαιῇ, 
+      λεῖψε δ᾽ ἔτι σπαίρουσαν, ἐπεὶ πόνος ἄλλος ὀρώρει. 
+      τόφρα δὲ καὶ Λευὶν μένος ἄσχετος ἔλλαβε χαίτης 
+      γούνων ἁπτόμενον Συχὲμ ἄσπετα μαργήναντα. 
+      ἤλασε δὲ κληϊδα μέσην, δῦ δὲ ξίφος ὀξὺ 
+      σπλάγχνα διὰ στέρνων, λίπε δὲ ψυχὴ δέμας εὐθύς.’ 
+πυθομένους δὲ καὶ τοὺς ἑτέρους ἀδελφοὺς τὴν πρᾶξιν αὐτῶν ἐπιβοηθῆσαι καὶ τὴν πόλιν ἐκπορθῆσαι καὶ τὴν ἀδελφὴν ἀναρρυσαμένους μετὰ τῶν αἰχμαλώτων εἰς τὴν πατρῴαν ἔπαυλιν διακομίσαι.” Τούτοις καὶ τὰ ἑξῆς περὶ τοῦ Ἰωσὴφ ἐκ τῆς αὐτῆς τοῦ Πολυΐστορος γραφῆς ἐπισυνήφθω·</reading>
+          </unit>
+        </div>
+      </div>
+			</div>
+    </text>
+  </version>
+</book>
