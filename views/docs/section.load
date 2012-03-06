@@ -4,11 +4,23 @@
 {{pass}}
 <select>
 
+<select class='mselect'>
+{{for m in mslist:}}
+	{{=OPTION(m, _value=m)}}
+{{pass}}
+<select>
+
 <script>
 //refresh this text pane when version selector is refreshed
-$('.vselect').on('change', function(e){
-	the_val = $(this).val();
-	the_loader = $(this).parent().attr('id');
-	web2py_component('/grammateus3/docs/section.load/{{=filename}}/' + the_val, the_loader);
+$('.vselect, .mselect').on('change', function(e){
+	var the_loader = $(this).parent().attr('id');
+	if ($(this).hasClass('vselect')){
+		var the_v = $(this).val();
+		var the_m = 'newval';
+	}
+	else {
+		var the_v = $(this).prev('select').val();
+		var the_m = $(this).val();
+	}
+	web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m, the_loader);
 });
-</script>
