@@ -1,0 +1,14 @@
+<select class='vselect'>
+{{for v in versions:}}
+	{{=OPTION(v, _value=v)}}
+{{pass}}
+<select>
+
+<script>
+//refresh this text pane when version selector is refreshed
+$('.vselect').on('change', function(e){
+	the_val = $(this).val();
+	the_loader = $(this).parent().attr('id');
+	web2py_component('/grammateus3/docs/section.load/{{=filename}}/' + the_val, the_loader);
+});
+</script>
