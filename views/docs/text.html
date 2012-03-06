@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+
+{{=H1(filename)}}
+
+<div class='versionwindow'>
+{{=LOAD('docs', 'section.load', args=[filename], ajax=True)}}
+</div>
