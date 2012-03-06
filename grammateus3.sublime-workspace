@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"curr",
+				"current_ms"
+			],
+			[
+				"ms",
+				"mselect"
+			],
+			[
 				"file",
 				"filename"
 			],
@@ -47,7 +55,7 @@
 			"file": "controllers/docs.py",
 			"settings":
 			{
-				"buffer_size": 2652,
+				"buffer_size": 3548,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +71,7 @@
 			"file": "views/docs/section.load",
 			"settings":
 			{
-				"buffer_size": 374,
+				"buffer_size": 643,
 				"line_ending": "Unix"
 			}
 		}
@@ -169,7 +177,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -177,15 +185,15 @@
 					"file": "controllers/docs.py",
 					"settings":
 					{
-						"buffer_size": 2652,
+						"buffer_size": 3548,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1664,
-								1664
+								2142,
+								2142
 							]
 						],
 						"settings":
@@ -195,7 +203,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 510.0,
+						"translation.y": 337.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -231,20 +239,21 @@
 					"file": "views/docs/section.load",
 					"settings":
 					{
-						"buffer_size": 374,
+						"buffer_size": 643,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								92,
-								92
+								521,
+								521
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -310,7 +319,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 249.0,
 	"status_bar_visible": true
 }

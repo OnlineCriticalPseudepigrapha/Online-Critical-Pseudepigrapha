@@ -3,6 +3,8 @@ from lxml import etree
 
 from parse import BookParser
 
+import pprint
+
 """
 List of session objects used in text display:
 session.filename
@@ -36,22 +38,49 @@ def section():
     info = p.book_info()
     #get title of document
     title = info['title']
+
     #get names of all versions of current doc and select the version to display
-    #use second url argument as version name if present, otherwise default to first version
     versions = [version['title'] for version in info['versions']]     
-    if len(request.args) < 2:
-        current_version = versions[0]
-    else:
-        current_version = request.args[1].replace('_', ' ')
+    if 'version' in request.vars:
+        current_version = request.vars['version'].replace('_', ' ')
         #move selected version to top of list for selectbox
         i = versions.index(current_version)
         versions.insert(0, versions.pop(i))
+    else:
+        current_version = versions[0]
 
-    ref = dict()
+    #find selected version in parsed text
+    for version in info['versions']:
+        for k, v in version.items():
+            if k == 'title' and v == current_version:
+                curv = version
+            else:
+                pass
+
+    #get list of mss
+    mslist = [k.strip() for k, v in curv['manuscript'].items()]
+    print 'mslist', mslist
+    #use the third url argument as manuscript name if present, otherwise default to first version
+    #check for 'newval' value, indicating the version has changed
+    if 'type' in request.vars and request.vars['type'] != 'newval':
+        current_ms = request.vars['type'].replace('_', ' ')
+        current_ms = current_ms.strip()
+        print 'current_ms', current_ms
+        #move selected version to top of list for selectbox
+        i = mslist.index(current_ms)
+        mslist.insert(0, mslist.pop(i))        
+    else:
+        current_ms = mslist[0]
+
+    ref = {1:1, 2:2}
         
     print versions, current_version
+
+    #pprint.pprint(info)
+
     return dict(title = title, versions = versions, current_version = current_version, 
-                info = info, filename = filename)
+                info = info, filename = filename, mslist = mslist)
+
 
 def test():
     filename = request.args[0]
