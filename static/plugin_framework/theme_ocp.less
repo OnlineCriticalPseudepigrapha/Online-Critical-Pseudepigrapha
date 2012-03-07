@@ -1,0 +1,424 @@
+/* blog_theme */
+/* a sub-theme for the "framework" layout plugin for web2py */
+/* copyright Ian W. Scott, 2011 */
+/* licensed under GPL 3.0 as a free, open-source resource */
+
+@import "framework";
+
+body {
+    background-color:@greye;
+    .linear-gradient(@greye,@greyd);
+    background-repeat: no-repeat;
+    z-index:1;
+    font-family: @fonts2;
+}
+
+header {
+    position:relative;
+    display:block;
+    height:@lineheight2;
+    line-height:@lineheight2;
+    .linear-gradient(@brown1, @brown2);
+    .box-shadow(0,2px,6px,rgba(0,0,0,0.3));
+    z-index:99;
+    padding:0;
+
+    #appname {
+        height:@lineheight2;
+        line-height:@lineheight2;
+        margin:0;
+    }
+
+    h1 a {
+        margin:0 @lineheight3;
+        line-height:@lineheight2;   
+        height:@lineheight2;     
+        color:#fff;
+        display:block;
+        .inset-text;
+        font-size:@typeheight;
+        font-family:Ubuntu;
+        text-transform: uppercase;
+        font-weight:normal;
+        letter-spacing: 2px;
+    }
+
+}
+
+nav {
+    background-color:transparent;
+    padding: 0;
+    margin:0;
+    height:100%;
+    border-left:1px solid rgba(0,0,0,0.1);
+
+    .sf-menu {
+        li {
+            background-color:transparent;
+            height:@lineheight2;
+            line-height:@lineheight2;
+            
+            a, a:link, a:visited {
+                color:#fff;
+                .inset-text;
+                border-left:1px solid rgba(270,270,270,0.3);
+                border-right:1px solid rgba(0,0,0,0.1);
+                padding:0 @typeheight;
+            }
+            a:hover, a:active, a:focus {
+                .linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));
+            }
+        }
+        li:hover, li.sfHover {
+            background-color:transparent;
+
+            li {
+                line-height: @lineheight2;
+                height: @lineheight2;
+                background-color:@grey3;
+                
+                a:hover {
+                    color:@sky;
+                }
+            }
+        }
+
+        li:last-child {
+            a {
+                border-right:none;
+                padding-l:@lineheight2;
+            }
+
+            li {
+                
+            }
+        }
+    }
+
+}
+
+.auth_navbar {
+    .inset-text;
+    
+    color:#fff;
+    height:@lineheight2;
+    line-height:@lineheight2;
+    display:block;
+
+    a, a:link, a:visited {
+        .inset-text;
+        height:@lineheight2;
+        line-height:@lineheight2;
+        color:#fff;
+        border-left:1px solid rgba(270,270,270,0.3);
+        border-right:1px solid rgba(0,0,0,0.1);
+        padding:0 @typeheight;
+        display:block;
+        float:right;
+    }
+    a:hover, a:active, a:focus {
+        .linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));
+    }
+    a:last-child {
+        margin-left: @typeheight;
+    }
+    a:first-child {
+        border-right:none;
+    }
+}
+
+#page {
+    background-color:@greyf5;
+    .box-shadow(0,2px,6px,rgba(0,0,0,0.3));
+    z-index:1;
+
+    article {
+        padding:@lineheight3;
+        padding-left:@lineheight * 4;
+        margin-right:30%;
+        padding-right:@lineheight * 4;
+        text-align:justify;
+        -moz-hyphens:auto;
+        -webkit-hyphens:auto;
+        font-family:prociono;
+        color:#666;
+
+        .date_created {
+            display:block;
+            color:@sky;
+        }
+
+        .article_wrapper {
+            padding:0;
+        }
+
+        p {
+
+        }
+
+        li {
+            line-height: @lineheight2;
+            border-bottom: 1px solid @greye5;
+        }
+
+        a, a:link, a:visited {
+            color: @dusky-blue1;
+        }
+
+        a:hover {
+            color: @dusky-blue2;
+        }
+
+    }
+
+    .comments{
+        padding: 0;
+        margin-top: @lineheight3;
+
+        .comment {
+            padding: 0;
+            padding-bottom: @lineheight;
+            margin-bottom: @lineheight;
+            border-bottom: 1px solid #e6e6e6;
+            color: #888;
+
+            .comment_author{
+                color: @red;
+            }
+            .comment_date {
+                color: #aaa;
+                display: block;
+                float: right;
+            }
+            .comment_body {
+                display: block;
+            }
+        }
+
+        textarea {
+            border: 1px solid #ccc;
+        }
+    }
+
+    #left_sidebar, #right_sidebar {
+        padding:@lineheight3;
+        padding-left:@lineheight;
+        width:30%;
+        float:right;
+        border-left:1px solid #e6e6e6;
+        clear:right;
+        margin-left:@lineheight3;
+        padding-bottom: 0;
+        font-family:prociono;
+
+        h2 {
+            
+                        
+            font-weight: normal;
+            color: #aaa;
+            cursor:pointer;
+        }
+
+        a, a:link, a:visited {
+            color:@cranberry;
+        }
+
+        a:hover {
+            color:@red;
+        }
+
+        div {
+            padding: 0;
+            margin-bottom: @lineheight;
+
+            ul {
+                display:none;
+            }
+        }
+    }
+
+    #viewpane, #listpane {
+        position:relative;
+        padding:0;
+    }
+
+}
+
+#page.appadmin {
+    padding: @lineheight3;
+}
+
+.list_control{
+    padding:0;
+    background: @greya;
+    border-right:1px solid @grey8;
+    border-left:1px solid @grey8;
+
+    h2 {
+        font-weight:normal;
+        color:@greye;
+        margin-right:@lineheight;
+        margin-left:@lineheight;
+        line-height: @lineheight3;
+        display:inline-block;
+        height:@lineheight3;
+        font-size:@typeheight2;
+        .text-shadow(0,0,3px, rgba(0,0,0,0.1));
+    }
+    a {
+        float:right;
+        color:@mist;
+        display:block;
+        line-height:@lineheight3;
+        height:@lineheight3;
+        margin-right:@lineheight;
+    }
+    a:hover {
+                color:@white;
+                .text-shadow(0);
+    }
+}
+
+#listpane {
+
+    width:@typeheight * 19;
+
+    li {
+        display:block;
+        height:@lineheight2;
+        line-height:@lineheight2;
+        overflow:hidden;
+        padding-left:@lineheight;
+        .linear-gradient(#f5f5f5, #eeeeee);
+        border-bottom: @greyc;
+
+        a, a:link, a:visited {
+            color:@dusky-blue1;
+        }
+        a:hover {
+            color:@dusky-blue2;
+        }
+    }
+}
+
+#listpane:after {
+    content:' ';
+}
+
+#listpane:before {
+    content:' ';
+    .tapered-shadow;
+}
+
+#page #viewpane {
+    width: @typeheight * 40;
+    padding-top: @lineheight;
+
+    table {
+        width: 90%;
+
+        a {
+            float: right;
+        }
+
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+}
+
+#viewpane {
+    form {
+        padding:0;
+        margin:0;
+
+        input[type=text], select {
+            height:@lineheight2;
+            lineheight:@lineheight2;
+        }
+        select {
+            width:300px;
+            max-width:300px;
+        }
+        #notes_tags select {
+            width:460px;
+            height:140px;
+        }
+    }
+
+}
+
+footer {
+    background-color:transparent;
+    color:@dusky-blue1;
+    
+    .copyright {
+        font-size: @typeheight * .8;
+    }
+    
+    #poweredby {
+        float:right;
+    }
+    
+}
+
+.flash {
+    position:absolute;
+    width:280px;
+    left:50%;
+    top:0;
+    margin-left:-140px;
+    z-index:100;
+}
+
+/* ================= iPad in portrait ================= */
+@media all and (orientation:portrait){
+}
+
+/* ================= iPad in landscape ================= */
+@media all and (orientation:landscape){
+}
+
+/* ================= iPhone4 (retina screen) ================= */
+@media only screen
+and (-webkit-min-device-pixel-ratio: 2)
+and (max-device-width: 480px){
+}
+
+/* ================= Intermediate browser viewing area (480px+)================= */
+@media screen
+and (max-width: 480px){
+
+#left_sidebar, #right_sidebar {
+    padding:0;
+    width:20px;
+    overflow: hidden;
+}
+
+#left_sidebar:hover, #right_sidebar:hover {
+    padding:@lineheight3;
+    width:30%;
+}
+
+
+}
+
+/* ================= Wide browser viewing area (768px +) ==================== */
+@media only screen
+and (max-width: 768px) {
+
+
+
+}
+
+/* ================= Max browser viewing area (1140px +) ==================== */
+@media only screen and (min-width: 1140px) {
+
+}
+
+/* ============================================================================= Print styles. Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ ========================================================================== */
+@media print {
+
+}

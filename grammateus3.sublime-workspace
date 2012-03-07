@@ -4,12 +4,60 @@
 		"selected_items":
 		[
 			[
-				"curr",
+				"the",
+				"the_loader"
+			],
+			[
+				"firstref",
+				"firstref_parts"
+			],
+			[
+				"v",
+				"vars"
+			],
+			[
+				"to",
+				"to_ref"
+			],
+			[
+				"from",
+				"from_ref"
+			],
+			[
+				"_",
+				"_class"
+			],
+			[
+				"ref",
+				"ref_parts"
+			],
+			[
+				"curren",
 				"current_ms"
 			],
 			[
-				"ms",
-				"mselect"
+				"sel",
+				"sel_text"
+			],
+			[
+				"end",
+				"end_sel"
+			],
+			[
+				"start",
+				"start_sel"
+			],
+			[
+				"level",
+				"level1_start"
+			],
+			[
+				"level1",
+				"level1_end"
+			],
+			[
+				"text",
+				"text_structure"
 			],
 			[
 				"file",
@@ -55,7 +103,7 @@
 			"file": "controllers/docs.py",
 			"settings":
 			{
-				"buffer_size": 3548,
+				"buffer_size": 5509,
 				"line_ending": "Unix"
 			}
 		},
@@ -71,8 +119,25 @@
 			"file": "views/docs/section.load",
 			"settings":
 			{
-				"buffer_size": 643,
+				"buffer_size": 2380,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/plugin_framework/framework.less",
+			"settings":
+			{
+				"buffer_size": 9778,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/plugin_framework/theme_ocp.less",
+			"settings":
+			{
+				"buffer_size": 8467,
+				"line_ending": "Unix",
+				"name": "/* blog_theme */"
 			}
 		}
 	],
@@ -112,6 +177,8 @@
 	},
 	"file_history":
 	[
+		"/home/iscott/web/web2py/applications/grammateus3/views/layout.html",
+		"/home/iscott/web/web2py/applications/grammateus3/static/plugin_framework/theme.less",
 		"/home/iscott/web/web2py/applications/grammateus3/controllers/docs.py",
 		"/home/iscott/web/web2py/applications/grammateus3/views/text.html",
 		"/home/iscott/web/web2py/applications/paideia/modules/plugin_ajaxselect.py",
@@ -177,7 +244,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -185,15 +252,15 @@
 					"file": "controllers/docs.py",
 					"settings":
 					{
-						"buffer_size": 3548,
+						"buffer_size": 5509,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2142,
-								2142
+								4721,
+								4721
 							]
 						],
 						"settings":
@@ -203,7 +270,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 337.0,
+						"translation.y": 1479.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -220,8 +287,8 @@
 						"selection":
 						[
 							[
-								131,
-								131
+								141,
+								141
 							]
 						],
 						"settings":
@@ -239,15 +306,15 @@
 					"file": "views/docs/section.load",
 					"settings":
 					{
-						"buffer_size": 643,
+						"buffer_size": 2380,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								521,
-								521
+								248,
+								248
 							]
 						],
 						"settings":
@@ -257,6 +324,63 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "static/plugin_framework/framework.less",
+					"settings":
+					{
+						"buffer_size": 9778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3333,
+								3338
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2307.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "static/plugin_framework/theme_ocp.less",
+					"settings":
+					{
+						"buffer_size": 8467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2352,
+								2357
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/* blog_theme */",
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1423.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -319,7 +443,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 249.0,
+	"side_bar_visible": true,
+	"side_bar_width": 307.0,
 	"status_bar_visible": true
 }

@@ -57,6 +57,7 @@ def section():
             if k == 'title' and v == current_version:
                 curv = version
                 vlang = curv['language']
+                levels = curv['organisation_levels']
             else:
                 pass
 
@@ -75,18 +76,39 @@ def section():
     else:
         current_ms = mslist[0]
 
-    #build tuple for starting ref
-    start_sel = (1, 1)
-    end_sel = (3, 2)
+    #build hierarchical dict of references
+    reflist = [ref for ref, units in curv['text_structure'].items()]
 
+    #build list for starting ref
+    if 'from' in request.vars:
+        from_input = request.vars['from']
+        start_sel = from_input.split('-')
+        del start_sel[-1]
+        print 'using url ref'
+    else:
+        firstref = reflist[0]
+        firstref_parts = re.split('[:\.,;_-]', firstref)
+        start_sel = [firstref_parts[l-1] for l in range(levels)]
+        print 'using default first ref'
+
+    #build list for ending ref
+    if 'to' in request.vars:                
+        to_input = request.vars['to']
+        end_sel = to_input.split('-')
+        del end_sel[-1]
+    else:
+        end_sel = start_sel
+    print 'start_sel', start_sel
+    print 'end_sel', end_sel
     #gather text from units within the selected section of the doc
     #filters the current version for only readings in the current
     #text type
     sel_text = []
     for ref, units in curv['text_structure'].items():
         ref_parts = re.split('[:\.,;_-]', ref)
-        if int(ref_parts[0]) >= 1 and int(ref_parts[0]) <= end_sel[0]:
-                print ref
+        if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):
+                print ref_parts
+                sel_text.append(SPAN(ref, _class = 'ref'))
                 for unit_ref, unit_val in units.items():
                     for mss, raw_text in unit_val.items():
                         if current_ms[-1] != ' ':
@@ -100,7 +122,9 @@ def section():
                             pass
 
     return dict(title = title, versions = versions, current_version = current_version, 
-                info = info, filename = filename, mslist = mslist, sel_text = sel_text)
+                info = info, filename = filename, mslist = mslist, 
+                sel_text = sel_text, levels = levels, start_sel = start_sel, 
+                end_sel = end_sel)
 
 
 def test():
