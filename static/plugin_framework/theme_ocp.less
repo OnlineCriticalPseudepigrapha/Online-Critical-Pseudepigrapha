@@ -132,6 +132,28 @@ nav {
     .box-shadow(0,2px,6px,rgba(0,0,0,0.3));
     z-index:1;
 
+    form.version_nav{
+        background-color:#ddd;
+        padding:@lineheight/2;
+
+        .from, .to {
+            width:40px;
+            height:@lineheight2;
+            line-height:@lineheight2;
+        }
+
+        .from:focus, .to:focus {
+            border:1px solid @green;
+            .box-shadow-inset(1,0,0,#000);
+        }
+
+        input[type=submit]{
+            .button-green-grad();
+            border:1px solid @green;
+            .box-shadow(0,0,0,#000);
+        }
+    }
+
     article {
         padding:@lineheight3;
         padding-left:@lineheight * 4;
