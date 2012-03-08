@@ -10,8 +10,15 @@
 {{pass}}
 <select>
 
+<div class='textframe'>
+{{for s in sel_text:}}
+	{{=s}}
+{{pass}}
+</div>
+
 <script>
-//refresh this text pane when version selector is refreshed
+//refresh this text pane when version selector or manuscript
+//selector is refreshed
 $('.vselect, .mselect').on('change', function(e){
 	var the_loader = $(this).parent().attr('id');
 	if ($(this).hasClass('vselect')){
