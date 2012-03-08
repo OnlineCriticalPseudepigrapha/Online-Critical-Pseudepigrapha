@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"ver",
+				"versionwindow"
+			],
+			[
+				"app",
+				"apparatusframe"
+			],
+			[
+				"text",
+				"textframe"
+			],
+			[
+				"the_",
+				"the_loader"
+			],
+			[
+				"cu",
+				"current_version"
+			],
+			[
 				"the",
 				"the_loader"
 			],
@@ -56,10 +76,6 @@
 				"level1_end"
 			],
 			[
-				"text",
-				"text_structure"
-			],
-			[
 				"file",
 				"filename"
 			],
@@ -103,7 +119,7 @@
 			"file": "controllers/docs.py",
 			"settings":
 			{
-				"buffer_size": 5509,
+				"buffer_size": 5957,
 				"line_ending": "Unix"
 			}
 		},
@@ -111,15 +127,7 @@
 			"file": "views/docs/text.html",
 			"settings":
 			{
-				"buffer_size": 141,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/docs/section.load",
-			"settings":
-			{
-				"buffer_size": 2380,
+				"buffer_size": 121,
 				"line_ending": "Unix"
 			}
 		},
@@ -135,9 +143,17 @@
 			"file": "static/plugin_framework/theme_ocp.less",
 			"settings":
 			{
-				"buffer_size": 8467,
+				"buffer_size": 8956,
 				"line_ending": "Unix",
 				"name": "/* blog_theme */"
+			}
+		},
+		{
+			"file": "views/docs/section.load",
+			"settings":
+			{
+				"buffer_size": 2802,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -177,9 +193,9 @@
 	},
 	"file_history":
 	[
+		"/home/iscott/web/web2py/applications/grammateus3/controllers/docs.py",
 		"/home/iscott/web/web2py/applications/grammateus3/views/layout.html",
 		"/home/iscott/web/web2py/applications/grammateus3/static/plugin_framework/theme.less",
-		"/home/iscott/web/web2py/applications/grammateus3/controllers/docs.py",
 		"/home/iscott/web/web2py/applications/grammateus3/views/text.html",
 		"/home/iscott/web/web2py/applications/paideia/modules/plugin_ajaxselect.py",
 		"/home/ian/.config/sublime-text-2/Packages/SublimeCodeIntel/Base File.sublime-settings",
@@ -244,7 +260,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -252,15 +268,15 @@
 					"file": "controllers/docs.py",
 					"settings":
 					{
-						"buffer_size": 5509,
+						"buffer_size": 5957,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4721,
-								4721
+								4931,
+								4931
 							]
 						],
 						"settings":
@@ -270,7 +286,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1479.0,
+						"translation.y": 2064.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -280,15 +296,15 @@
 					"file": "views/docs/text.html",
 					"settings":
 					{
-						"buffer_size": 141,
+						"buffer_size": 121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								141,
-								141
+								114,
+								114
 							]
 						],
 						"settings":
@@ -303,33 +319,6 @@
 				},
 				{
 					"buffer": 2,
-					"file": "views/docs/section.load",
-					"settings":
-					{
-						"buffer_size": 2380,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								248,
-								248
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "static/plugin_framework/framework.less",
 					"settings":
 					{
@@ -351,25 +340,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2307.0,
+						"translation.y": 768.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "static/plugin_framework/theme_ocp.less",
 					"settings":
 					{
-						"buffer_size": 8467,
+						"buffer_size": 8956,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2352,
-								2357
+								2230,
+								2230
 							]
 						],
 						"settings":
@@ -380,7 +369,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1423.0,
+						"translation.y": 1512.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "views/docs/section.load",
+					"settings":
+					{
+						"buffer_size": 2802,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2788,
+								2788
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1568.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -405,6 +427,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -415,6 +443,7 @@
 		"rows":
 		[
 			0.0,
+			0.567632850242,
 			1.0
 		]
 	},
@@ -443,7 +472,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 307.0,
 	"status_bar_visible": true
 }

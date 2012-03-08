@@ -1,12 +1,14 @@
+<h2>{{=title}}</h2>
+
 <form class='version_nav'>
 
 <span>from</span>
 {{for l in range(levels):}}
-<input type='text' value='{{=l}}' class='{{=l}} from' />
+<input type='text' value='{{=start_sel[l]}}' class='{{=l}} from' />
 {{pass}}
 <span>to</span>
 {{for l in range(levels):}}
-<input type='text' value='{{=l}}' class='{{=l}} to' />
+<input type='text' value='{{=end_sel[l]}}' class='{{=l}} to' />
 {{pass}}
 
 <input id='textnavsubmit' type='submit' value='Go' />
@@ -16,14 +18,14 @@
 {{for v in versions:}}
 	{{=OPTION(v, _value=v)}}
 {{pass}}
-<select>
+</select>
 
 <label for='mselect'>Text Type</label>
 <select class='mselect'>
 {{for m in mslist:}}
 	{{=OPTION(m, _value=m)}}
 {{pass}}
-<select>
+</select>
 </form>
 
 <div class='textframe'>
@@ -40,7 +42,7 @@
 //refresh this text pane when version selector or manuscript
 //selector is refreshed
 $('.vselect, .mselect').on('change', function(e){
-	var the_loader = $(this).parent().attr('id');
+	var the_loader = $(this).parents('div').attr('id');
 	var from_ref = '';
 	$('input.from').each(function(){
 		from_ref += $(this).val();
@@ -60,6 +62,7 @@ $('.vselect, .mselect').on('change', function(e){
 		var the_v = $(this).parent('.version_nav').find('.vselect').val();
 		var the_m = $(this).val();
 	}
+	alert(the_loader);
 	web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref, the_loader);
 });
 
@@ -83,3 +86,12 @@ $('#textnavsubmit').on('click', function(event){
 	});
 	event.preventDefault()
 });
+
+$('.textframe a').on('click', function(){
+	var the_unit = $(this).attr('href');
+	var $p = $(this).parents('.versionwindow');
+	var the_v = $p.find('.vselect').val();
+	the_target = $p.find('.apparatusframe').attr('id');
+	web2py_component('/grammateus3/docs/apparatus.load/{{=filename}}?version=' + the_v + '&unit=' + the_unit, the_target);
+});
+</script>
