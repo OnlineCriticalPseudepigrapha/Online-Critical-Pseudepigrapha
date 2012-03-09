@@ -1,0 +1,30 @@
+/* blog_theme */
+/* a sub-theme for the "framework" layout plugin for web2py */
+/* copyright Ian W. Scott, 2011 */
+/* licensed under GPL 3.0 as a free, open-source resource */
+
+@import "notebook_style";
+
+body{
+    .fluid-page;
+}
+
+#page {
+    height:100% - @lineheight2;
+}
+
+.textframe {
+    a, a:visited, a:link {
+        color: @dusky-blue1;
+        .transition(color, 100ms);
+    }
+
+    a:hover {
+        color: @dusky-blue2;
+        .transition(color, 100ms);
+    }
+
+    .ref {
+        color:@cranberry;
+    }
+}
