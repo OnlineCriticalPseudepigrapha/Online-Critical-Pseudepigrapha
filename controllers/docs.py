@@ -131,8 +131,40 @@ def section():
     for s in sel_text:
         print s[0]
 
-    return dict(title = title, versions = versions, current_version = current_version, info = info, filename = filename, mslist = mslist, sel_text = sel_text, levels = levels, start_sel = start_sel, end_sel = end_sel)
+    return dict(title = title, versions = versions, current_version = current_version,
+                info = info, filename = filename, mslist = mslist, sel_text = sel_text,
+                levels = levels, start_sel = start_sel, end_sel = end_sel)
 
+
+def apparatus():
+    filename = request.args[0]
+    book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
+    p = BookParser(book_file)
+    info = p.book_info()
+
+    #if no unit has been requested, present the default message
+    if request.vars['called'] == 'no':
+        rlist = SPAN('Click on any blue text to display textual variants for those words. If no links are available that may mean no variants are attested or it may mean that this document does not yet have a complete textual apparatus. See the document introduction for details.')
+    #if a unit has been requested, assemble that unit's readings
+    else:
+        #get current version
+        current_version = request.vars['version'].replace('_', ' ')
+        print 'current version: ', current_version
+
+        #find selected version in parsed text
+        for version in info['versions']:
+            for k, v in version.items():
+                if k == 'title' and v == current_version:
+                    curv = version
+                    vlang = curv['language']
+
+        #find requested unit and get reading information
+        for ref, units in curv['text_structure'].items():
+            for unit_ref, unit_val in units.items():
+                if unit_ref == request.vars['unit']:
+                    rlist = {k:v for k, v in unit_val.items()}
+
+    return dict(rlist = rlist)
 
 def test():
     filename = request.args[0]
