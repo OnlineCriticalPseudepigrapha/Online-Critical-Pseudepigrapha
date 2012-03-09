@@ -1,1 +1,9 @@
-{{=rlist}}
+{{if type(rlist) is dict:}}
+	<table>
+	{{for k,v in rlist.items():}}
+		{{=TR(TD(k), TD(v))}}
+	{{pass}}
+	</table>
+{{else:}}
+	{{=rlist}}
+{{pass}}
