@@ -1,12 +1,10 @@
-@import "framework";
+/* blog_theme */
+/* a sub-theme for the "framework" layout plugin for web2py */
+/* copyright Ian W. Scott, 2011 */
+/* licensed under GPL 3.0 as a free, open-source resource */
 
-body {
-    background-color:@greye;
-    .linear-gradient(@greye,@greyd);
-    background-repeat: no-repeat;
-    z-index:1;
-    font-family: @fonts2;
-}
+@import "notebook_style";
+
 
 header {
     position:relative;
@@ -52,11 +50,11 @@ nav {
             background-color:transparent;
             height:@lineheight2;
             line-height:@lineheight2;
-            
+            .blockletter;
+
             a, a:link, a:visited {
                 color:#fff;
                 .inset-text;
-                .blockletter-small;
                 border-left:1px solid rgba(270,270,270,0.3);
                 border-right:1px solid rgba(0,0,0,0.1);
                 padding:0 @typeheight;
@@ -72,7 +70,7 @@ nav {
                 line-height: @lineheight2;
                 height: @lineheight2;
                 background-color:@grey3;
-                
+                .blockletter;
                 a:hover {
                     color:@sky;
                 }
@@ -86,7 +84,7 @@ nav {
             }
 
             li {
-                
+                .blockletter;
             }
         }
     }
@@ -95,7 +93,7 @@ nav {
 
 .auth_navbar {
     .inset-text;
-    .blockletter-small;
+    .blockletter;
     color:#fff;
     height:@lineheight2;
     line-height:@lineheight2;
@@ -209,7 +207,8 @@ nav {
 
         h2 {
             
-                        
+            .blockletter();
+            
             font-weight: normal;
             color: #aaa;
             cursor:pointer;
@@ -349,7 +348,6 @@ nav {
 footer {
     background-color:transparent;
     color:@dusky-blue1;
-    .blockletter-small;
     
     .copyright {
         font-size: @typeheight * .8;
@@ -361,58 +359,3 @@ footer {
     
 }
 
-.flash {
-	width:280px;
-    left:50%;
-    margin-left:-140px;
-}
-
-/* ================= iPad in portrait ================= */
-@media all and (orientation:portrait){
-}
-
-/* ================= iPad in landscape ================= */
-@media all and (orientation:landscape){
-}
-
-/* ================= iPhone4 (retina screen) ================= */
-@media only screen
-and (-webkit-min-device-pixel-ratio: 2)
-and (max-device-width: 480px){
-}
-
-/* ================= Intermediate browser viewing area (480px+)================= */
-@media screen
-and (max-width: 480px){
-
-#left_sidebar, #right_sidebar {
-    padding:0;
-    width:20px;
-    overflow: hidden;
-}
-
-#left_sidebar:hover, #right_sidebar:hover {
-    padding:@lineheight3;
-    width:30%;
-}
-
-
-}
-
-/* ================= Wide browser viewing area (768px +) ==================== */
-@media only screen
-and (max-width: 768px) {
-
-
-
-}
-
-/* ================= Max browser viewing area (1140px +) ==================== */
-@media only screen and (min-width: 1140px) {
-
-}
-
-/* ============================================================================= Print styles. Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ ========================================================================== */
-@media print {
-
-}

@@ -114,6 +114,7 @@ def section():
     print 'matching text in: '
     for ref, units in curv['text_structure'].items():
         ref_parts = re.split('[:\.,;_-]', ref)
+        print 'versions is type: ', type(versions)
         if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):
                 print ref_parts
                 sel_text.append(SPAN(ref, _class = 'ref'))
