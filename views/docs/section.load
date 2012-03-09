@@ -1,14 +1,32 @@
+<h2>{{=title}}</h2>
+
+<form class='version_nav'>
+
+<span>from</span>
+{{for l in range(levels):}}
+<input type='text' value='{{=start_sel[l]}}' class='{{=l}} from' />
+{{pass}}
+<span>to</span>
+{{for l in range(levels):}}
+<input type='text' value='{{=end_sel[l]}}' class='{{=l}} to' />
+{{pass}}
+
+<input id='textnavsubmit' type='submit' value='Go' />
+
+<label for='vselect'>Version</label>
 <select class='vselect'>
 {{for v in versions:}}
 	{{=OPTION(v, _value=v)}}
 {{pass}}
-<select>
+</select>
 
+<label for='mselect'>Text Type</label>
 <select class='mselect'>
 {{for m in mslist:}}
 	{{=OPTION(m, _value=m)}}
 {{pass}}
-<select>
+</select>
+</form>
 
 <div class='textframe'>
 {{for s in sel_text:}}
@@ -16,18 +34,64 @@
 {{pass}}
 </div>
 
+<div class='apparatusframe'>
+{{=LOAD('docs', 'apparatus.load', args=[filename], vars=dict(called='no'), ajax=True)}}
+</div>
+
 <script>
 //refresh this text pane when version selector or manuscript
 //selector is refreshed
 $('.vselect, .mselect').on('change', function(e){
-	var the_loader = $(this).parent().attr('id');
+	var the_loader = $(this).parents('div').attr('id');
+	var from_ref = '';
+	$('input.from').each(function(){
+		from_ref += $(this).val();
+		from_ref += '-';
+	});
+	var to_ref = '';
+	$('input.to').each(function(){
+		to_ref += $(this).val();
+		to_ref += '-';
+	});
+
 	if ($(this).hasClass('vselect')){
 		var the_v = $(this).val();
 		var the_m = 'newval';
 	}
 	else {
-		var the_v = $(this).prev('select').val();
+		var the_v = $(this).parent('.version_nav').find('.vselect').val();
 		var the_m = $(this).val();
 	}
-	web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m, the_loader);
+	web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref, the_loader);
 });
+
+$('#textnavsubmit').on('click', function(event){
+	var from_ref = '';
+	$('input.from').each(function(){
+		from_ref += $(this).val();
+		from_ref += '-';
+	});
+	var to_ref = '';
+	$('input.to').each(function(){
+		to_ref += $(this).val();
+		to_ref += '-';
+	});	
+	$('.versionwindow').each(function(){
+		var $the_loader = $(this).children('div');
+		var loader_id = $the_loader.attr('id');
+		var the_v = $the_loader.find('.vselect').val();
+		var the_m = $the_loader.find('.mselect').val();
+		web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref, loader_id);
+	});
+	event.preventDefault();
+});
+
+$('.textframe a').on('click', function(event){
+	var the_unit = $(this).attr('href');
+	var $p = $(this).parents('.versionwindow');
+	var the_v = $p.find('.vselect').val();
+	the_target = $p.find('.apparatusframe').children().attr('id');
+	web2py_component('/grammateus3/docs/apparatus.load/{{=filename}}?version=' + the_v + '&unit=' + the_unit, the_target);
+	event.preventDefault();
+});
+</script>

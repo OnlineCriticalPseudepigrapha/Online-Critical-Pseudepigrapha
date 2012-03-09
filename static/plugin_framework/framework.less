@@ -1,0 +1,547 @@
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'SBLGreekRegular';
+    src: url('sbl_grk-webfont.eot');
+    src: local('☺'), url('sbl_grk-webfont.woff') format('woff'), url('sbl_grk-webfont.ttf') format('truetype'), url('sbl_grk-webfont.svg#webfontRelj09Wi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EstrangeloEdessaRegular';
+    src: url('estre-webfont.eot');
+    src: local('☺'), url('estre-webfont.woff') format('woff'), url('estre-webfont.ttf') format('truetype'), url('estre-webfont.svg#webfont7YE92Obt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SBLHebrewRegular';
+    src: url('sbl_hbrw-webfont.eot');
+    src: local('☺'), url('sbl_hbrw-webfont.woff') format('woff'), url('sbl_hbrw-webfont.ttf') format('truetype'), url('sbl_hbrw-webfont.svg#webfontUHtlyWNi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* typography for non-Roman scripts */
+.Ethiopic {
+    font-size:@typeheight2;
+}
+
+.Aramaic, .Hebrew {
+    font-family:SBLHebrewRegular, 'Ezra SIL', 'Times New Roman';
+    font-size:@typeheight * 1.75;
+    direction: rtl;
+    line-height:@lineheight2;
+}
+
+.Greek {
+    font-family:SBLGreekRegular, Gentium, 'Galatia SIL', Palatino, 'Palatino Linotype', 'Times New Roman';
+    font-size:@typeheight * 1.25;    
+    direction: ltr;
+    line-height:@lineheight2;
+}
+
+.Syriac {
+    font-family:'EstrangeloEdessaRegular';
+    direction: ltr;
+}
+
+.Latin, .English {
+    font-family:prociono, Palatino, 'Palatino Linotype';
+}
+
+/* layout dimensions */
+@pagewidth: @typeheight * 60;
+@maxpagewidth:@typeheight * 60;
+@minpagewidth:640px;
+
+/* text dimensions */
+@typeheight: 16px;
+@smalltype: @typeheight * 0.8;
+@lineheight: @typeheight * 1.5;
+@typeheight2: @typeheight * 1.5;
+@lineheight2: @lineheight * 1.5;
+@typeheight3: @typeheight * 2.5;
+@lineheight3: @lineheight * 2.5;
+
+/* colours */
+@red:#B10808;
+@warning:#a40000;
+@wine:#701;
+@cranberry:#852625;
+@cinnamon:#845852; /* paideia */
+
+@orange:#FF9700;
+@tangerine:#dd4814; /* ubuntu */
+
+@yellow:yellow;
+@ocp-yellow:#ffc100;
+
+@dark-green:#0D3100;
+@green:#5BA917;
+@grass1:#96BC44; /* ocp */
+@grass2:#690; /* ocp */
+@moss:#809240; /* paideia */
+@spring-green:#AAE557;
+
+@mist:#E4EDF7;
+@sky:#7E9AFF;
+@aqua1:#00BFF3;
+@aqua2:#1087A4;
+@sea1:#007DBB; /* ocp */
+@sea2:#069; /* ocp */
+@blue:#164CA8;
+@dusky-blue1:#607890;
+@dusky-blue2:#003366;
+@dark-blue:#000631;
+
+@purple:#58007D;
+@aubergine:#772953; /* ubuntu */
+@pink:#D8D;
+
+@brown1:#D99E52;
+@brown2:#956929;
+@warm-brown:#960; /* ocp */
+@swamp:#BEB013;
+
+@mdn-beige1:#F6F6F1;
+@mdn-beige2:#E0E0D5;
+@cream:#F8F0E5; /* paideia */
+@tapioca:#F2E5D4; /* paideia */
+
+@yellow-beige1:#EBFC97;
+@ocp-beige1:#F5F3EA;
+@ocp-beige2:#E3E1D3;
+@ocp-beige3:#E4DFC8;
+@granite1:#959174; /* ocp */
+@granite2:#79765D; /* ocp */
+
+@white:#fff;
+@greyf5:#f5f5f5; /*google light background*/
+@greyef:#efefef;
+@greye:#eee;
+@greye5:#e5e5e5;
+@greyd:#ddd;
+@greyc:#ccc;
+@greya:#aaa;
+@grey8:#888;
+@grey85:#858585;
+@grey6:#666;
+@grey3:#333;
+@grey2d:#2d2d2d; /*google black*/
+@black:#000;
+
+/* page */
+body{
+    .fixed-page;
+}
+
+/* fonts */
+@fonts1:"Palatino Linotype", serif;
+@fonts2:prociono, "Palatino Linotype", serif;
+@fonts3:ubuntu,arial,sans-serif;
+
+body {
+    .textdefaults;
+}
+
+.textdefaults() {
+    font-size: @typeheight;
+    line-height: @lineheight;
+    font-family: @fonts1;
+    color:@grey6;
+}
+
+.blockletter() {
+    text-transform:uppercase;
+    font-family:@fonts3;
+    font-size:@smalltype;
+}
+
+.blockletter-small() {
+    text-transform:uppercase;
+    font-family:@fonts3;
+    font-size:@smalltype;
+}
+
+.formfieldtext() {
+    .textdefaults;
+}
+
+/*****       ******/
+/***** links ******/
+/*****       ******/
+a {
+    text-decoration: none;
+}
+
+a:hover, a:active, a:link{
+    text-decoration: none;
+}
+
+/* the main action button or link in a region or form */
+.button_primary {
+}
+
+.button_secondary {
+
+}
+
+/*****          ******/
+/***** headings ******/
+/*****          ******/
+
+/* basic classes to apply to all heading levels */
+.heading() {
+    font-family: @fonts1;
+    display:block;
+    margin:0;
+}
+
+h1, h2, h3 {
+    .heading;
+}
+
+h1, h1 a {
+    font-size: @typeheight3;
+    line-height: @lineheight3;
+}
+
+/* text divisions */
+div, section, aside{
+    padding:14px;
+}
+
+form div{
+    padding:0;
+}
+
+/* modal frame */
+
+
+
+.ui-resizable-handle {
+    padding:0;
+}
+
+#modal_frame {
+    display:none;
+    position:absolute;
+    top:15%;
+    left:50%;
+    padding:24px;
+    width:400px;
+    min-height:260px;
+    background-color:#fff;
+    border-radius:2px;
+    .box-shadow(0,2px,12px,rgba(0,0,0,0.7));
+    z-index:1;
+    margin-left:-200px;
+}
+
+/* lists */
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+/* forms */
+
+input[type=text], select, textarea {    
+    border:1px solid #eee;
+    .textdefaults;
+    .transition();
+}
+
+input[type=text]:focus, textarea:focus {
+    .box-shadow-inset(0, 1px, 2px, rgba(0,0,0,0.4));
+    border:1px solid @green;
+    .transition();
+}
+
+textarea {
+    padding:0 @typeheight;
+    .formfieldtext;
+}
+
+input[type=text], select {
+    line-height:28px;
+
+    option {
+        padding-left:@typeheight;
+    }
+}
+
+select {
+    background:#fff;
+    border:1px solid #eee;
+}
+
+form label {
+    line-height:@lineheight2;
+    .blockletter-small();
+}
+
+input[type=submit] {
+    .button-green-grad;
+    border:1px solid @green;    
+}
+
+/* tables */
+
+td {
+    vertical-align:top;
+}
+
+form tr td:first-child {
+    text-align:right;
+    padding-right:@typeheight;
+}
+
+form td {
+    min-height:@lineheight2;
+}
+
+/* layout */
+
+.fluid-page() {
+    header, #page, footer {
+        width:100%
+    }
+}
+
+.fixed-page() {
+    header, #page, footer {
+        position: relative;
+        width:@pagewidth;
+        min-width:@minpagewidth;
+        background-color: @white;
+        margin:0 auto;
+        padding:0;    
+    }
+}
+
+header {
+    background-color: #f5f5f5;
+}
+
+nav {
+    margin:0;
+    float:right;
+}
+
+#page {
+    min-height: 480px;
+}
+
+/* web2py specific */
+
+.auth_navbar {
+    position: relative;
+    display:block;
+    float:right;
+    height:@lineheight2;
+    line-height:@lineheight2;
+}
+
+.auth_navbar a{
+}
+
+div.flash {
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    padding: @typeheight;
+    top: 0;
+    right: 0px;
+    min-width: 280px;
+    opacity: 0.85;
+    margin: 0px 0px 10px 10px;
+    color: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.8);
+    border: 1px solid #ccc;
+    .border-radius(0,0,5px,5px);
+    z-index: 100;
+    .box-shadow;
+}
+
+div.error {
+    background-color: red;
+    color: white;
+    padding: 3px;
+}
+
+/* non-semantic utility classes */
+
+.clear{
+    clear:both;
+    padding:0;
+}
+
+.text-shadow(@x:0, @y:2px, @blur:3px, @color:rgba(0,0,0,0.5)){
+    -moz-text-shadow:@arguments;
+    -webkit-text-shadow:@arguments;
+    -o-text-shadow:@arguments;
+    -ms-text-shadow:@arguments;
+    text-shadow:@arguments;
+}
+
+.inset-text() {
+    -moz-text-shadow: 0 -1px 1px rgba(0,0,0,0.5), 0 1px 0 rgba(270,270,270,0.5);
+    -webkit-text-shadow: 0 -1px 1px rgba(0,0,0,0.5), 0 1px 0 rgba(270,270,270,0.5);
+    -o-text-shadow: 0 -1px 1px rgba(0,0,0,0.5), 0 1px 0 rgba(270,270,270,0.5);
+    -ms-text-shadow: 0 -1px 1px rgba(0,0,0,0.5), 0 1px 0 rgba(270,270,270,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.5), 0 1px 0 rgba(270,270,270,0.5);
+}
+
+.border-radius(@a:0, @b:0, @c:0, @d:0){
+    -moz-border-radius: @arguments;
+    -webkit-border-radius: @arguments;
+    -o-border-radius: @arguments;
+    -ms-border-radius: @arguments;
+    border-radius: @arguments;
+}
+
+.box-shadow(@x: 0, @y:2px, @blur:6px, @color:rgba(0,0,0,0.3)) {
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+  -ms-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.box-shadow-inset(@x:0, @y:1px, @blur:4px, @color:rgba(0,0,0,0.2)) {
+  -moz-box-shadow:@arguments inset;
+  -webkit-box-shadow: @arguments inset;
+  -o-box-shadow: @arguments inset;
+  -ms-box-shadow: @arguments inset;
+  box-shadow: @arguments inset;
+}
+
+.tapered-shadow(){
+    position:absolute;
+    display:block;
+    width:100%;
+    height:14px;
+    top:0px;
+    overflow:hidden;
+    .radial-gradient;
+    background-position:0 -10px;
+    background-repeat:no-repeat;
+}
+
+.linear-gradient(@col1:#fff, @col2:#fff){
+    background-color:@col2;
+    background-image:-moz-linear-gradient(@col1, @col2);
+    background-image:-webkit-gradient(linear, 0 0, 0 100%, from(@col1), to(@col2));
+    background-image:-o-linear-gradient(@col1, @col2);
+    background-image:-ms-linear-gradient(@col1, @col2);
+}
+
+.radial-gradient(@h:50%, @v:53%, @hue1:rgba(0,0,0,0.3), @hue2:rgba(0,0,0,0)) {
+    background-image: -moz-radial-gradient(@h @v, ellipse closest-side, @hue1, @hue2 100%);
+    background-image: -webkit-radial-gradient(@h @v, ellipse closest-side, @hue1, @hue2 100%);
+    background-image: -o-radial-gradient(@h @v, ellipse closest-side, @hue1, @hue2 100%);
+    background-image: -ms-radial-gradient(@h @v, ellipse closest-side, @hue1, @hue2 100%);
+    background-image: radial-gradient(@h @v, ellipse closest-side, @hue1, @hue2 100%);
+}
+
+.transition(@target:all, @time:200ms, @easing:ease-in-out){
+    -webkit-transition:@target @time @easing;
+    -moz-transition:@target @time @easing;
+    -o-transition:@target @time @easing;
+    -ms-transition:@target @time @easing;
+    transition:@target @time @easing;
+}
+
+.speech-bubble(@br:@lineheight2) {
+    position:relative;
+    border-radius:@br;
+    padding:@br;
+    margin-left:260px;
+    background:#fff;
+    min-height:100px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.3);
+
+    :after {
+        content:"<div></div>";
+        position:absolute;
+        left:-15px;
+        top:50%;
+        width:0px;
+        height:0px;
+        border-bottom:15px solid transparent;  /* left arrow slant */
+        border-top:15px solid transparent; /* right arrow slant */
+        border-right:15px solid #fff; /* bottom, add background color here */
+        font-size:0px;
+        line-height:0px;
+        background:transparent;
+    }
+
+}
+
+.border-image(@img, @a, @b, @c, @d) {
+    border-width: @a px @b px @c px @d px;
+    -moz-border-image: url(@img) @a @b @c @d repeat;
+    -webkit-border-image: url(@img) @a @b @c @d repeat;
+    -o-border-image: url(@img) @a @b @c @d repeat;
+    border-image: url(@img) @a @b @c @d repeat;
+}
+
+.button {
+    display:inline-block;
+    line-height:@lineheight2;
+    height:@lineheight2;
+    margin-left:@typeheight;
+    padding:0 @typeheight;
+    color:#fff;
+    .transition();
+
+    :hover {
+        .box-shadow(0, 2px, 6px, rgba(0,0,0,0.4));
+        .transition();        
+    }
+}
+
+.button-green-grad {
+    .button;
+    .linear-gradient(#84C63C, #489615);
+}
+
+.button-yellow-grad {
+    .button;
+    .linear-gradient(#FFD272, #EFAD1F);
+}
+
+.sticker(@diam:@lineheight, @rad:@typeheight) {
+    display:inline-block;
+    width:@diam;
+    height:@diam;
+    line-height:@diam;
+    padding:0;
+    text-align:center;
+    .border-radius(@rad,@rad,@rad,@rad);
+    font-weight:bold;
+    .border-radius(@rad,@rad,@rad,@rad);
+    .transition();
+
+    :hover{
+        .box-shadow(0, 2px, 4px);
+        .transition();
+    }
+}
+
+.red-sticker{
+    background-color:@red;
+    color:#fff;
+    .sticker;
+}

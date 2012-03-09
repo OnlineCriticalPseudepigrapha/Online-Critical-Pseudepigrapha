@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"fixed",
+				"fixed-page"
+			],
+			[
+				"lin",
+				"lineheight2"
+			],
+			[
+				"type",
+				"typeheight2"
+			],
+			[
 				"curr",
 				"current_ms"
 			],
@@ -55,7 +67,7 @@
 			"file": "controllers/docs.py",
 			"settings":
 			{
-				"buffer_size": 3548,
+				"buffer_size": 7359,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +75,7 @@
 			"file": "views/docs/text.html",
 			"settings":
 			{
-				"buffer_size": 141,
+				"buffer_size": 121,
 				"line_ending": "Unix"
 			}
 		},
@@ -71,7 +83,45 @@
 			"file": "views/docs/section.load",
 			"settings":
 			{
-				"buffer_size": 643,
+				"buffer_size": 2641,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/docs/apparatus.load",
+			"settings":
+			{
+				"buffer_size": 10,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/plugin_framework/framework.less",
+			"settings":
+			{
+				"buffer_size": 11374,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "@import \"framework\";\n\nbody {\n    background-color:@greye;\n    .linear-gradient(@greye,@greyd);\n    background-repeat: no-repeat;\n    z-index:1;\n    font-family: @fonts2;\n}\n\nheader {\n    position:relative;\n    display:block;\n    height:@lineheight2;\n    line-height:@lineheight2;\n    .linear-gradient(@brown1, @brown2);\n    .box-shadow(0,2px,6px,rgba(0,0,0,0.3));\n    z-index:99;\n    padding:0;\n\n    #appname {\n        height:@lineheight2;\n        line-height:@lineheight2;\n        margin:0;\n    }\n\n    h1 a {\n        margin:0 @lineheight3;\n        line-height:@lineheight2;   \n        height:@lineheight2;     \n        color:#fff;\n        display:block;\n        .inset-text;\n        font-size:@typeheight;\n        font-family:Ubuntu;\n        text-transform: uppercase;\n        font-weight:normal;\n        letter-spacing: 2px;\n    }\n\n}\n\nnav {\n    background-color:transparent;\n    padding: 0;\n    margin:0;\n    height:100%;\n    border-left:1px solid rgba(0,0,0,0.1);\n\n    .sf-menu {\n        li {\n            background-color:transparent;\n            height:@lineheight2;\n            line-height:@lineheight2;\n            \n            a, a:link, a:visited {\n                color:#fff;\n                .inset-text;\n                border-left:1px solid rgba(270,270,270,0.3);\n                border-right:1px solid rgba(0,0,0,0.1);\n                padding:0 @typeheight;\n            }\n            a:hover, a:active, a:focus {\n                .linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));\n            }\n        }\n        li:hover, li.sfHover {\n            background-color:transparent;\n\n            li {\n                line-height: @lineheight2;\n                height: @lineheight2;\n                background-color:@grey3;\n                \n                a:hover {\n                    color:@sky;\n                }\n            }\n        }\n\n        li:last-child {\n            a {\n                border-right:none;\n                padding-l:@lineheight2;\n            }\n\n            li {\n                \n            }\n        }\n    }\n\n}\n\n.auth_navbar {\n    .inset-text;\n    \n    color:#fff;\n    height:@lineheight2;\n    line-height:@lineheight2;\n    display:block;\n\n    a, a:link, a:visited {\n        .inset-text;\n        height:@lineheight2;\n        line-height:@lineheight2;\n        color:#fff;\n        border-left:1px solid rgba(270,270,270,0.3);\n        border-right:1px solid rgba(0,0,0,0.1);\n        padding:0 @typeheight;\n        display:block;\n        float:right;\n    }\n    a:hover, a:active, a:focus {\n        .linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));\n    }\n    a:last-child {\n        margin-left: @typeheight;\n    }\n    a:first-child {\n        border-right:none;\n    }\n}\n\n#page {\n    background-color:@greyf5;\n    .box-shadow(0,2px,6px,rgba(0,0,0,0.3));\n    z-index:1;\n\n    form.version_nav{\n        background-color:#ddd;\n        padding:@lineheight/2;\n\n        .from, .to {\n            width:40px;\n            height:@lineheight2;\n            line-height:@lineheight2;\n        }\n\n        .from:focus, .to:focus {\n            border:1px solid @green;\n            .box-shadow-inset(1,0,0,#000);\n        }\n\n        input[type=submit]{\n            .button-green-grad();\n            border:1px solid @green;\n            .box-shadow(0,0,0,#000);\n        }\n    }\n\n    article {\n        padding:@lineheight3;\n        padding-left:@lineheight * 4;\n        margin-right:30%;\n        padding-right:@lineheight * 4;\n        text-align:justify;\n        -moz-hyphens:auto;\n        -webkit-hyphens:auto;\n        font-family:prociono;\n        color:#666;\n\n        .date_created {\n            display:block;\n            color:@sky;\n        }\n\n        .article_wrapper {\n            padding:0;\n        }\n\n        p {\n\n        }\n\n        li {\n            line-height: @lineheight2;\n            border-bottom: 1px solid @greye5;\n        }\n\n        a, a:link, a:visited {\n            color: @dusky-blue1;\n        }\n\n        a:hover {\n            color: @dusky-blue2;\n        }\n\n    }\n\n    .comments{\n        padding: 0;\n        margin-top: @lineheight3;\n\n        .comment {\n            padding: 0;\n            padding-bottom: @lineheight;\n            margin-bottom: @lineheight;\n            border-bottom: 1px solid #e6e6e6;\n            color: #888;\n\n            .comment_author{\n                color: @red;\n            }\n            .comment_date {\n                color: #aaa;\n                display: block;\n                float: right;\n            }\n            .comment_body {\n                display: block;\n            }\n        }\n\n        textarea {\n            border: 1px solid #ccc;\n        }\n    }\n\n    #left_sidebar, #right_sidebar {\n        padding:@lineheight3;\n        padding-left:@lineheight;\n        width:30%;\n        float:right;\n        border-left:1px solid #e6e6e6;\n        clear:right;\n        margin-left:@lineheight3;\n        padding-bottom: 0;\n        font-family:prociono;\n\n        h2 {\n            \n                        \n            font-weight: normal;\n            color: #aaa;\n            cursor:pointer;\n        }\n\n        a, a:link, a:visited {\n            color:@cranberry;\n        }\n\n        a:hover {\n            color:@red;\n        }\n\n        div {\n            padding: 0;\n            margin-bottom: @lineheight;\n\n            ul {\n                display:none;\n            }\n        }\n    }\n\n    #viewpane, #listpane {\n        position:relative;\n        padding:0;\n    }\n\n}\n\n#page.appadmin {\n    padding: @lineheight3;\n}\n\n.list_control{\n    padding:0;\n    background: @greya;\n    border-right:1px solid @grey8;\n    border-left:1px solid @grey8;\n\n    h2 {\n        font-weight:normal;\n        color:@greye;\n        margin-right:@lineheight;\n        margin-left:@lineheight;\n        line-height: @lineheight3;\n        display:inline-block;\n        height:@lineheight3;\n        font-size:@typeheight2;\n        .text-shadow(0,0,3px, rgba(0,0,0,0.1));\n    }\n    a {\n        float:right;\n        color:@mist;\n        display:block;\n        line-height:@lineheight3;\n        height:@lineheight3;\n        margin-right:@lineheight;\n    }\n    a:hover {\n                color:@white;\n                .text-shadow(0);\n    }\n}\n\n#listpane {\n\n    width:@typeheight * 19;\n\n    li {\n        display:block;\n        height:@lineheight2;\n        line-height:@lineheight2;\n        overflow:hidden;\n        padding-left:@lineheight;\n        .linear-gradient(#f5f5f5, #eeeeee);\n        border-bottom: @greyc;\n\n        a, a:link, a:visited {\n            color:@dusky-blue1;\n        }\n        a:hover {\n            color:@dusky-blue2;\n        }\n    }\n}\n\n#listpane:after {\n    content:' ';\n}\n\n#listpane:before {\n    content:' ';\n    .tapered-shadow;\n}\n\n#page #viewpane {\n    width: @typeheight * 40;\n    padding-top: @lineheight;\n\n    table {\n        width: 90%;\n\n        a {\n            float: right;\n        }\n\n    }\n\n    textarea {\n        width: 90%;\n    }\n\n}\n\n#viewpane {\n    form {\n        padding:0;\n        margin:0;\n\n        input[type=text], select {\n            height:@lineheight2;\n            lineheight:@lineheight2;\n        }\n        select {\n            width:300px;\n            max-width:300px;\n        }\n        #notes_tags select {\n            width:460px;\n            height:140px;\n        }\n    }\n\n}\n\nfooter {\n    background-color:transparent;\n    color:@dusky-blue1;\n    .blockletter-small;\n    \n    .copyright {\n        font-size: @typeheight * .8;\n    }\n    \n    #poweredby {\n        float:right;\n    }\n    \n}\n\n.flash {\n	width:280px;\n    left:50%;\n    margin-left:-140px;\n}\n\n/* ================= iPad in portrait ================= */\n@media all and (orientation:portrait){\n}\n\n/* ================= iPad in landscape ================= */\n@media all and (orientation:landscape){\n}\n\n/* ================= iPhone4 (retina screen) ================= */\n@media only screen\nand (-webkit-min-device-pixel-ratio: 2)\nand (max-device-width: 480px){\n}\n\n/* ================= Intermediate browser viewing area (480px+)================= */\n@media screen\nand (max-width: 480px){\n\n#left_sidebar, #right_sidebar {\n    padding:0;\n    width:20px;\n    overflow: hidden;\n}\n\n#left_sidebar:hover, #right_sidebar:hover {\n    padding:@lineheight3;\n    width:30%;\n}\n\n\n}\n\n/* ================= Wide browser viewing area (768px +) ==================== */\n@media only screen\nand (max-width: 768px) {\n\n\n\n}\n\n/* ================= Max browser viewing area (1140px +) ==================== */\n@media only screen and (min-width: 1140px) {\n\n}\n\n/* ============================================================================= Print styles. Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ ========================================================================== */\n@media print {\n\n}",
+			"file": "static/plugin_framework/notebook_style.less",
+			"file_size": 8766,
+			"file_write_time": 1331264165000000,
+			"settings":
+			{
+				"buffer_size": 8749,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/* blog_theme */\n/* a sub-theme for the \"framework\" layout plugin for web2py */\n/* copyright Ian W. Scott, 2011 */\n/* licensed under GPL 3.0 as a free, open-source resource */\n\n@import \"notebook_style\";\n\nbody{\n    .fluid-page;\n}\n\n.textframe {\n    a, a:visited, a:link {\n        color: @dusky-blue1;\n        .transition(color, 100ms);\n    }\n\n    a:hover {\n        color: @dusky-blue2;\n        .transition(color, 100ms);\n    }\n\n    .ref {\n        color:@cranberry;\n    }\n}",
+			"file": "static/plugin_framework/theme_ocp.less",
+			"file_size": 513,
+			"file_write_time": 1331264325000000,
+			"settings":
+			{
+				"buffer_size": 470,
 				"line_ending": "Unix"
 			}
 		}
@@ -79,9 +129,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 180.0,
+		"height": 72.0,
 		"selected_items":
 		[
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -95,7 +149,7 @@
 				"Package Control: Discover Packages"
 			]
 		],
-		"width": 449.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -112,6 +166,7 @@
 	},
 	"file_history":
 	[
+		"/home/ian/web/web2py/applications/paideia/static/plugin_framework/framework.less",
 		"/home/iscott/web/web2py/applications/grammateus3/controllers/docs.py",
 		"/home/iscott/web/web2py/applications/grammateus3/views/text.html",
 		"/home/iscott/web/web2py/applications/paideia/modules/plugin_ajaxselect.py",
@@ -177,7 +232,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -185,25 +240,26 @@
 					"file": "controllers/docs.py",
 					"settings":
 					{
-						"buffer_size": 3548,
+						"buffer_size": 7359,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2142,
-								2142
+								6519,
+								6519
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 337.0,
+						"translation.y": 2020.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -213,15 +269,15 @@
 					"file": "views/docs/text.html",
 					"settings":
 					{
-						"buffer_size": 141,
+						"buffer_size": 121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								24,
+								24
 							]
 						],
 						"settings":
@@ -239,21 +295,129 @@
 					"file": "views/docs/section.load",
 					"settings":
 					{
-						"buffer_size": 643,
+						"buffer_size": 2641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								521,
-								521
+								2243,
+								2243
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 675.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/docs/apparatus.load",
+					"settings":
+					{
+						"buffer_size": 10,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "static/plugin_framework/framework.less",
+					"settings":
+					{
+						"buffer_size": 11374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3871,
+								3871
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1845.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "static/plugin_framework/notebook_style.less",
+					"settings":
+					{
+						"buffer_size": 8749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "static/plugin_framework/theme_ocp.less",
+					"settings":
+					{
+						"buffer_size": 470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								230,
+								230
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
