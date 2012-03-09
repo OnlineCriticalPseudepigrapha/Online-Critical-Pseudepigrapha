@@ -35,7 +35,7 @@
 </div>
 
 <div class='apparatusframe'>
-<span>Click on any blue text to display textual variants for those words. If no links are available that may mean no variants are attested or it may mean that this document does not yet have a complete textual apparatus. See the document introduction for details.</span>
+{{=LOAD('docs', 'apparatus.load', args=[filename], vars=dict(called='no'), ajax=True)}}
 </div>
 
 <script>
@@ -62,7 +62,6 @@ $('.vselect, .mselect').on('change', function(e){
 		var the_v = $(this).parent('.version_nav').find('.vselect').val();
 		var the_m = $(this).val();
 	}
-	alert(the_loader);
 	web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref, the_loader);
 });
 
@@ -84,14 +83,15 @@ $('#textnavsubmit').on('click', function(event){
 		var the_m = $the_loader.find('.mselect').val();
 		web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref, loader_id);
 	});
-	event.preventDefault()
+	event.preventDefault();
 });
 
-$('.textframe a').on('click', function(){
+$('.textframe a').on('click', function(event){
 	var the_unit = $(this).attr('href');
 	var $p = $(this).parents('.versionwindow');
 	var the_v = $p.find('.vselect').val();
-	the_target = $p.find('.apparatusframe').attr('id');
+	the_target = $p.find('.apparatusframe').children().attr('id');
 	web2py_component('/grammateus3/docs/apparatus.load/{{=filename}}?version=' + the_v + '&unit=' + the_unit, the_target);
+	event.preventDefault();
 });
 </script>
