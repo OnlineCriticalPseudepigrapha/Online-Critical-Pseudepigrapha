@@ -9,13 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{=response.title or request.application}}</title>
     <!-- http://dev.w3.org/html5/markup/meta.name.html -->
-    <meta name="application-name" content="{{=request.application}}" />
+    <meta name="application-name" content="{{=response.title}}" />
     <!-- http://google.com/webmasters -->
     <meta name="google-site-verification" content="" />
     <!--  Mobile Viewport Fix (j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <link rel="stylesheet/less" type="text/css" href="{{=URL('static', 'plugin_framework/framework.less')}}">
     <link rel="stylesheet/less" type="text/css" href="{{=URL('static', 'plugin_framework/theme.less')}}">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
@@ -34,7 +33,8 @@
     {{response.files.append(URL('static','js/superfish.js'))}}
     {{response.files.append(URL('static', 'plugin_framework/jquery-ui/jquery-ui-1.8.16.custom.min.js'))}}
     {{response.files.append(URL('static', 'plugin_framework/jquery-ui/theme/jquery-ui-1.8.16.custom.css'))}}
-    <!-- include web2py specific js code (jquery, calendar, form stuff) -->    {{response.files.append(URL('static','plugin_framework/less-1.1.5.min.js'))}}
+    <!-- include web2py specific js code (jquery, calendar, form stuff) -->    
+    {{response.files.append(URL('static','plugin_framework/less-1.1.5.min.js'))}}
     {{include 'web2py_ajax.html'}}
 
     <!--sidebar settings-->
@@ -69,8 +69,7 @@
   <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
   <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
   <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
-  <!--[if (gt IE 9)|!(IE)]>
-  <!--> <body> <!--<![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
     <div class="flash">{{=response.flash or ''}}</div> <!-- notification div -->
     <div id='modal_frame'></div>
@@ -97,13 +96,13 @@
                 {{pass}}
             {{pass}}
 
-            <h1 id="appname">{{=A(request.application.capitalize(), _href=URL('default', 'index'))}}</h1>
+            <h1 id="appname">{{=A(response.title.capitalize(), _href=URL('default', 'index'))}}</h1>
 
         {{end}}
 
     </header>
 
-    <div id="page" class="{{=request.controller}} {{=request.function}} {{if request.args:}}{{=request.args[0]}}{{pass}}">
+    <div id="page" class="{{=request.controller}} {{=request.function}} {{for a in request.args:}}{{=a}}{{pass}}">
 
         <!-- left_sidebar -->
         {{if left_sidebar_enabled:}}
@@ -133,9 +132,9 @@
     <footer>
         {{block footer}} <!-- this is default footer -->
             <a href="http://www.web2py.com/" >
-                <img src="{{=URL('static','images/poweredby.png')}}"/>
+                <img id="poweredby" alt="Powered by web2py, the full-stack Python framework for rapid web development." src="{{=URL('static','images/poweredby.png')}}"/>
             </a>
-            {{=T('Copyright')}} &#169; Ian W. Scott 2011 (licensed under GPL 3.0)
+            <span class="copyright">{{=response.meta.copyright}}</span>
             <div class="clear"></div><!-- Clear the divs -->
         {{end}}
     </footer>

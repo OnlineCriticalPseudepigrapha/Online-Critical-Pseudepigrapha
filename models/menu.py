@@ -5,15 +5,18 @@
 ## Customize your APP title, subtitle and menus here
 #########################################################################
 
-response.title = ' '.join(word.capitalize() for word in request.application.split('_'))
-response.subtitle = T('customize me!')
+response.title = 'The Online Critical Pseudepigrapha'
+response.subtitle = T('Developing and Publishing Accurate Texts of the "Old Testament Pseudepigrapha"\
+    and related literature')
 
 ## read more at http://dev.w3.org/html5/markup/meta.name.html
-response.meta.author = 'Your Name <you@example.com>'
-response.meta.description = 'a cool new app'
-response.meta.keywords = 'web2py, python, framework'
+response.meta.author = 'Ian W. Scott <you@example.com>'
+response.meta.description = 'Free-access editions of the "Old Testament Pseudepigrapha"\
+    and related literature'
+response.meta.keywords = 'early judaism, religion, ancient, literature, Pseudepigrapha,\
+    apocrypha, textual criticism, primary texts, sources, manuscripts'
 response.meta.generator = 'Web2py Web Framework'
-response.meta.copyright = 'Copyright 2011'
+response.meta.copyright = 'Copyright 2006-2012'
 
 ## your http://google.com/analytics id
 response.google_analytics_id = None
@@ -23,12 +26,14 @@ response.google_analytics_id = None
 #########################################################################
 
 response.menu = [
-    (T('Home'), False, URL('default','index'), [])
+    (T('Documents'), False, URL('default','index'), []),
+    (T('Get involved'), False, URL('default','page/get-involved'), []),
+    (T('Help'), False, URL('default','page', args=['help']), []),
+    (T('Bug reports'), False, URL('default','page', args=['bugs']), []),
+    (T('Roadmap'), False, URL('default','page', args=['roadmap']), []),
+    (T('Copyright'), False, URL('default','page', args=['copyright']), []),
+    (T('Contact us'), False, URL('default','page', args=['contact']), []),  
     ]
-
-#########################################################################
-## provide shortcuts for development. remove in production
-#########################################################################
 
 def _():
     # shortcuts
@@ -37,7 +42,6 @@ def _():
     # useful links to internal and external resources
     response.menu+=[
         (SPAN('web2py',_style='color:yellow'),False, None, [
-                (T('My Sites'),False,URL('admin','default','site')),
                 (T('This App'),False,URL('admin','default','design/%s' % app), [
                         (T('Controller'),False,
                          URL('admin','default','edit/%s/controllers/%s.py' % (app,ctr))),
@@ -68,35 +72,7 @@ def _():
                         (T('Recipes'),False,'http://web2pyslices.com/'),
                         (T('Semantic'),False,'http://web2py.com/semantic'),
                         ]),
-                (T('Documentation'),False,'http://www.web2py.com/book', [
-                        (T('Preface'),False,'http://www.web2py.com/book/default/chapter/00'),
-                        (T('Introduction'),False,'http://www.web2py.com/book/default/chapter/01'),
-                        (T('Python'),False,'http://www.web2py.com/book/default/chapter/02'),
-                        (T('Overview'),False,'http://www.web2py.com/book/default/chapter/03'),
-                        (T('The Core'),False,'http://www.web2py.com/book/default/chapter/04'),
-                        (T('The Views'),False,'http://www.web2py.com/book/default/chapter/05'),
-                        (T('Database'),False,'http://www.web2py.com/book/default/chapter/06'),
-                        (T('Forms and Validators'),False,'http://www.web2py.com/book/default/chapter/07'),
-                        (T('Email and SMS'),False,'http://www.web2py.com/book/default/chapter/08'),
-                        (T('Access Control'),False,'http://www.web2py.com/book/default/chapter/09'),
-                        (T('Services'),False,'http://www.web2py.com/book/default/chapter/10'),
-                        (T('Ajax Recipes'),False,'http://www.web2py.com/book/default/chapter/11'),
-                        (T('Components and Plugins'),False,'http://www.web2py.com/book/default/chapter/12'),
-                        (T('Deployment Recipes'),False,'http://www.web2py.com/book/default/chapter/13'),
-                        (T('Other Recipes'),False,'http://www.web2py.com/book/default/chapter/14'),
-                        (T('Buy this book'),False,'http://stores.lulu.com/web2py'),
-                        ]),
-                (T('Community'),False, None, [
-                        (T('Groups'),False,'http://www.web2py.com/examples/default/usergroups'),
-                        (T('Twitter'),False,'http://twitter.com/web2py'),
-                        (T('Live Chat'),False,'http://webchat.freenode.net/?channels=web2py'),
-                        ]),
-                (T('Plugins'),False,None, [
-                        ('plugin_wiki',False,'http://web2py.com/examples/default/download'),
-                        (T('Other Plugins'),False,'http://web2py.com/plugins'),
-                        (T('Layout Plugins'),False,'http://web2py.com/layouts'),
-                        ])
                 ]
          )]
-_()
+#_()
 

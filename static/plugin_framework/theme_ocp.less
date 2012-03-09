@@ -9,11 +9,79 @@ body{
     .fluid-page;
 }
 
-#page {
-    height:100% - @lineheight2;
+nav {
+    ul.sf-menu{
+
+        li {
+            width:@lineheight * 2;
+
+            a, a:link, a:visited {
+                display:inline-block;
+                width:@lineheight * 2;
+                text-indent:-1999px;
+                color: rgba(0,0,0,0);
+                overflow: hidden; 
+
+            }
+
+        }
+
+        /* documents */
+        li:nth-child(1){
+            background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+            background-position: 16px -60px;
+        }
+
+        /* get-involved */
+        li:nth-child(2){
+            background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+            background-position: 16px -196px;
+        }
+
+        /* help */
+        li:nth-child(3){
+            background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+            background-position: 16px -196px;
+        }
+
+        /* bugs */
+        li:nth-child(4){
+            background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+            background-position: 16px -94px;
+        }
+
+    }
+}
+
+form.version_nav{
+    display: block;
+    background-color:@chalk;
+    padding:0, @lineheight/2;
+
+    .from, .to {
+        width:40px;
+        height:@lineheight2;
+        line-height:@lineheight2;
+        background:transparent;
+    }
+
+    .from:focus, .to:focus {
+        border:1px solid @green;
+        .box-shadow-inset(1,0,0,#000);
+    }
+
+    input[type=submit]{
+        .button-green-grad();
+        border:1px solid @green;
+        .box-shadow(0,0,0,#000);
+    }
+    z-index:20;
 }
 
 .textframe {
+
+    .box-shadow();
+
     a, a:visited, a:link {
         color: @dusky-blue1;
         .transition(color, 100ms);
@@ -27,4 +95,11 @@ body{
     .ref {
         color:@cranberry;
     }
+
+    z-index:10;
+}
+
+.apparatusframe {
+    background-color:@chalk;
+    z-index:9;
 }
