@@ -1,4 +1,21 @@
 {{extend 'layout.html'}}
+<a id='versionadder' href='#'>Add version</a>
 <div class='versionwindow'>
 {{=LOAD('docs', 'section.load', args=[filename], ajax=True)}}
 </div>
+
+<script>
+hHeight = $('header').height();
+fHeight = $('footer').height();
+pHeight = $(window).height() - (hHeight + fHeight);
+$('#page').outerHeight(pHeight);
+
+$('#versionadder').on('click', function(event){
+	newDiv = '<div id="2" class="versionwindow">';
+	newDiv += 'Here it is';
+	newDiv += '</div>';
+	$(this).parent('#page').append(newDiv);
+	//web2py_component()
+	event.preventDefault();
+});
+</script>

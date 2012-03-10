@@ -4,24 +4,8 @@
 		"selected_items":
 		[
 			[
-				"blo",
-				"blockletter-small"
-			],
-			[
-				"fi",
-				"fixed"
-			],
-			[
-				"fixed",
-				"fixed-page"
-			],
-			[
-				"lin",
-				"lineheight2"
-			],
-			[
-				"type",
-				"typeheight2"
+				"ver",
+				"versionwindow"
 			],
 			[
 				"curr",
@@ -72,18 +56,26 @@
 	"buffers":
 	[
 		{
-			"file": "static/plugin_framework/framework.less",
+			"file": "controllers/docs.py",
 			"settings":
 			{
-				"buffer_size": 11834,
+				"buffer_size": 7410,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "static/plugin_framework/notebook_style.less",
+			"file": "views/docs/text.html",
 			"settings":
 			{
-				"buffer_size": 8315,
+				"buffer_size": 571,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/docs/section.load",
+			"settings":
+			{
+				"buffer_size": 2682,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,15 +83,7 @@
 			"file": "static/plugin_framework/theme_ocp.less",
 			"settings":
 			{
-				"buffer_size": 2192,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/menu.py",
-			"settings":
-			{
-				"buffer_size": 4199,
+				"buffer_size": 2242,
 				"line_ending": "Unix"
 			}
 		}
@@ -107,13 +91,9 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 72.0,
+		"height": 272.0,
 		"selected_items":
 		[
-			[
-				"diff",
-				"FileDiffs: Menu"
-			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -127,7 +107,7 @@
 				"Package Control: Discover Packages"
 			]
 		],
-		"width": 472.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -144,11 +124,6 @@
 	},
 	"file_history":
 	[
-		"/home/ian/web/web2py/applications/grammateus3/views/plugin_framework/plugin_framework.html",
-		"/home/ian/web/ianwscott/public_html/applications/bloglet/views/plugin_framework/plugin_framework.html",
-		"/home/ian/web/web2py/applications/grammateus3/static/plugin_framework/theme_blog.less",
-		"/home/ian/web/ianwscott/public_html/applications/bloglet/static/plugin_framework/theme_blog.less",
-		"/home/ian/web/web2py/applications/paideia/static/plugin_framework/framework.less",
 		"/home/iscott/web/web2py/applications/grammateus3/controllers/docs.py",
 		"/home/iscott/web/web2py/applications/grammateus3/views/text.html",
 		"/home/iscott/web/web2py/applications/paideia/modules/plugin_ajaxselect.py",
@@ -214,86 +189,83 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "static/plugin_framework/framework.less",
+					"file": "controllers/docs.py",
 					"settings":
 					{
-						"buffer_size": 11834,
+						"buffer_size": 7410,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1937,
-								1937
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 765.0,
+						"translation.y": 1049.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "static/plugin_framework/notebook_style.less",
+					"file": "views/docs/text.html",
 					"settings":
 					{
-						"buffer_size": 8315,
+						"buffer_size": 571,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2550,
-								2550
+								311,
+								311
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1323.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "static/plugin_framework/theme_ocp.less",
+					"file": "views/docs/section.load",
 					"settings":
 					{
-						"buffer_size": 2192,
+						"buffer_size": 2682,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								413,
-								413
+								268,
+								268
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -303,28 +275,28 @@
 				},
 				{
 					"buffer": 3,
-					"file": "models/menu.py",
+					"file": "static/plugin_framework/theme_ocp.less",
 					"settings":
 					{
-						"buffer_size": 4199,
+						"buffer_size": 2242,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1352,
-								1352
+								1386,
+								1386
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
+							"syntax": "Packages/LESS/LESS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 52.0,
-						"translation.y": 300.0,
+						"translation.x": 0.0,
+						"translation.y": 990.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -387,7 +359,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 249.0,
 	"status_bar_visible": true
 }

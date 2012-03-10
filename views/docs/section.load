@@ -2,13 +2,13 @@
 
 <form class='version_nav'>
 
-<span>from</span>
+<label>from</span>
 {{for l in range(levels):}}
-<input type='text' value='{{=start_sel[l]}}' class='{{=l}} from' />
+<input type='text' id='start_ref{{=l}}' value='{{=start_sel[l]}}' class='{{=l}} from' />
 {{pass}}
 <span>to</span>
 {{for l in range(levels):}}
-<input type='text' value='{{=end_sel[l]}}' class='{{=l}} to' />
+<input type='text' id='end_ref{{=l}}' value='{{=end_sel[l]}}' class='{{=l}} to' />
 {{pass}}
 
 <input id='textnavsubmit' type='submit' value='Go' />
