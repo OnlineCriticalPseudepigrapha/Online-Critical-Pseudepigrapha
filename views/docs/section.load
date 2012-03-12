@@ -39,6 +39,12 @@
 </div>
 
 <script>
+//size page elements to fit in viewport
+hHeight = $('header').height();
+fHeight = $('footer').height();
+pHeight = $(window).height() - (hHeight + fHeight);
+$('#page').outerHeight(pHeight);
+
 //refresh this text pane when version selector or manuscript
 //selector is refreshed
 $('.vselect, .mselect').on('change', function(e){

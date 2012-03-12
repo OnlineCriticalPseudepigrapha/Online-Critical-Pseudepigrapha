@@ -1,4 +1,4 @@
-/* blog_theme */
+/* theme_ocp */
 /* a sub-theme for the "framework" layout plugin for web2py */
 /* copyright Ian W. Scott, 2011 */
 /* licensed under GPL 3.0 as a free, open-source resource */
@@ -10,51 +10,136 @@ body{
 }
 
 nav {
-    ul.sf-menu{
+
+    ul.auth_navbar, ul.sf-menu{
+
 
         li {
-            width:@lineheight * 2;
 
-            a, a:link, a:visited {
-                display:inline-block;
-                width:@lineheight * 2;
-                text-indent:-1999px;
-                color: rgba(0,0,0,0);
-                overflow: hidden; 
+            /* profile */
+            a.registerlink{}
 
+            /* profile */
+            a.profilelink{}
+
+            /* login */
+            a.loginlink{}
+
+            /* log out */
+            a.logoutlink{
+                background:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 14px -263px;
+                .buttonlink;
             }
 
-        }
+            /* documents */
+            a.documentslink{
+                background:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 16px -61px;
+                .buttonlink;
+            }
 
-        /* documents */
-        li:nth-child(1){
-            background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
-            background-position: 16px -60px;
-        }
+            /* help */
+            a.helplink{
+                background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 14px -196px;
+                .buttonlink;
+            }
 
-        /* get-involved */
-        li:nth-child(2){
-            background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
-            background-position: 16px -196px;
-        }
+            /* bugs */
+            a.bugslink{
+                background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 15px -94px;
+                .buttonlink;
+            }
 
-        /* help */
-        li:nth-child(3){
-            background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
-            background-position: 16px -196px;
-        }
+            /* ideas */
+            a.ideaslink{
+                background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 16px -230px;
+                .buttonlink;
+            }
 
-        /* bugs */
-        li:nth-child(4){
-            background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
-            background-position: 16px -94px;
-        }
+            /* copyright */
+            a.copyrightlink{
+                background-image:url('/grammateus3/static/plugin_framework/images/ocp/copyright.png');
+                background-position: 14px 9px;
+                .buttonlink;
+            }
 
+            /* suggestions */
+
+            a.suggestionslink {
+                background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 16px -230px;
+                .buttonlink;
+            }
+
+            /* contact */
+            a.contactlink{
+                background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 14px -127px;
+                .buttonlink;
+            }
+
+            /* drafts */
+            a.draftslink{
+                background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 13px -162px;
+                .buttonlink;
+            }
+
+            /* admin */
+            a.adminlink{
+                background-image:url('/grammateus3/static/plugin_framework/images/ocp-sprite.png');
+                background-position: 17px 8px;
+                .buttonlink;
+            }
+        }
     }
 }
 
 #page.text {
     padding:0;
+
+    div{
+        padding:0;
+    }
+
+    .versionwindow {
+        float: left;
+    }
+
+    #versionadder {
+        background-color:@dusky-blue1;
+        .sticker();
+        color: #fff;
+    }
+
+    .textframe {
+
+        padding:@lineheight2;
+
+        .box-shadow();
+        overflow: auto;
+
+        a, a:visited, a:link {
+            color: @dusky-blue1;
+            .transition(color, 100ms);
+        }
+
+        a:hover {
+            color: @dusky-blue2;
+            .transition(color, 100ms);
+        }
+
+        .ref {
+            color:@cranberry;
+        }
+
+        z-index:9;
+    }
+
 }
 
 form.version_nav{
@@ -80,28 +165,6 @@ form.version_nav{
         .box-shadow(0,0,0,#000);
     }
     z-index:8;
-}
-
-.textframe {
-
-    .box-shadow();
-    overflow: auto;
-
-    a, a:visited, a:link {
-        color: @dusky-blue1;
-        .transition(color, 100ms);
-    }
-
-    a:hover {
-        color: @dusky-blue2;
-        .transition(color, 100ms);
-    }
-
-    .ref {
-        color:@cranberry;
-    }
-
-    z-index:9;
 }
 
 .apparatusframe {

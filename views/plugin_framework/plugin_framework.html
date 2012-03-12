@@ -80,21 +80,18 @@
 
             <nav>
               {{block statusbar}} <!-- this is default statusbar -->
-              {{#------ superfish menu ------}}
-              {{=MENU(response.menu,_class='sf-menu')}}
-              <script type="text/javascript">
-                jQuery(document).ready(function(){
-                jQuery('ul.sf-menu').superfish();});
-              </script>
-              <div class="clear"></div><!-- Clear the divs -->
+                <!-- authbar content provided in plugin_framework model -->
+                {{=authbar()}}
+
+                {{#------ superfish menu ------}}
+                {{=MENU(response.menu,_class='sf-menu')}}
+                <script type="text/javascript">
+                  jQuery(document).ready(function(){
+                  jQuery('ul.sf-menu').superfish();});
+                </script>
+                <div class="clear"></div><!-- Clear the divs -->
               {{end}}
             </nav>
-
-            {{try:}}
-                {{='auth' in globals() and auth.navbar(separators=('',' ',''))}}
-            {{except:}}
-                {{pass}}
-            {{pass}}
 
             <h1 id="appname">{{=A(response.title.capitalize(), _href=URL('default', 'index'))}}</h1>
 
@@ -126,7 +123,7 @@
         {{include}}
 
         <div class="clear"></div><!-- Clear the divs -->
-
+0
     </div><!--page-->
 
     <footer>

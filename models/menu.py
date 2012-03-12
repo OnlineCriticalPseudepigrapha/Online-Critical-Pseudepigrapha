@@ -22,17 +22,32 @@ response.meta.copyright = 'Copyright 2006-2012'
 response.google_analytics_id = None
 
 #########################################################################
-## this is the main application menu add/remove items as required
+## main application menu
 #########################################################################
 
-response.menu = [
-    (T('Documents'), False, URL('default','index'), []),
-    (T('Get involved'), False, URL('default','page/get-involved'), []),
-    (T('Help'), False, URL('default','page', args=['help']), []),
-    (T('Bug reports'), False, URL('default','page', args=['bugs']), []),
-    (T('Roadmap'), False, URL('default','page', args=['roadmap']), []),
-    (T('Copyright'), False, URL('default','page', args=['copyright']), []),
-    (T('Contact us'), False, URL('default','page', args=['contact']), []),  
+response.menu = []
+
+if auth.has_membership('editors', auth.user_id):
+    response.menu += [
+        (T('Drafts'), False, A('Drafts', _href=URL('default','page', args=['drafts']), _class='draftslink'), []),
+    ]
+
+if auth.has_membership('administrators', auth.user_id):
+    response.menu += [
+        (T('Admin'), False, A('Admin', _href=URL('default','page', args=['admin']), _class='adminlink'), []),
+    ]
+
+response.menu += [
+    (T('Copyright'), False, A('Copyright', _href=URL('default','page', args=['copyright']), _class='copyrightlink'), []),
+    (T('Help and Information'), False, A('Help and Information', _href=URL('default','page', args=['help']), _class='helplink'), [
+        (T('FAQ'), False, A('FAQ', _href=URL('default','page', args=['faq']), _class='faqlink'), []),
+        (T('Roadmap'), False, A('Roadmap', _href=URL('default','page', args=['roadmap']), _class='roadmaplink'), []),
+        (T('Get involved'), False, A('Get involved', _href=URL('default','page', args=['get-involved']), _class='involvedlink'), []),
+    ]),    
+    (T('Bug reports'), False, A('Bug reports', _href=URL('default','page', args=['bugs']), _class='bugslink'), []),
+    (T('Suggestions'), False, A('Suggestions', _href=URL('default','page', args=['suggestions']), _class='suggestionslink'), []),
+    (T('Contact us'), False, A('Contact us', _href=URL('default','page', args=['contact']), _class='contactlink'), []),  
+    (T('Documents'), False, A('Documents', _href=URL('default','index'), _class='documentslink'), []),
     ]
 
 def _():

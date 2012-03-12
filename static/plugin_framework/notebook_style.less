@@ -31,13 +31,20 @@ header {
         color:#fff;
         display:block;
         .inset-text;
-        font-size:@typeheight;
-        font-family:Ubuntu;
-        text-transform: uppercase;
+        .blockletter-small;
         font-weight:normal;
         letter-spacing: 2px;
     }
 
+}
+
+.buttonlink() {
+    /* apply to any menu links (a elements) with icon backgrounds */
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:@lineheight * 2;
+    text-indent:-1999px;
+    overflow: hidden; 
 }
 
 nav {
@@ -47,26 +54,30 @@ nav {
     height:100%;
     border-left:1px solid rgba(0,0,0,0.1);
 
-    .sf-menu {
+    .sf-menu, .auth_navbar {
         li {
+            color:#fff;
+            .inset-text;
+            .blockletter-small;
             background-color:transparent;
             height:@lineheight2;
             line-height:@lineheight2;
-            
-            a, a:link, a:visited {
-                color:#fff;
-                .inset-text;
-                .blockletter-small;
-                border-left:1px solid rgba(270,270,270,0.3);
-                border-right:1px solid rgba(0,0,0,0.1);
+            float: right;
+            overflow: hidden;
+            border-left:1px solid rgba(270,270,270,0.1);
+            border-right:1px solid rgba(0,0,0,0.1);
+
+            a {
+                color: #fff;
                 padding:0 @typeheight;
-            }
-            a:hover, a:active, a:focus {
-                .linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));
+                height:@lineheight2;
+                line-height:@lineheight2;
             }
         }
+
         li:hover, li.sfHover {
             background-color:transparent;
+            .linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));
 
             li {
                 line-height: @lineheight2;
@@ -79,48 +90,8 @@ nav {
             }
         }
 
-        li:last-child {
-            a {
-                border-right:none;
-                padding-l:@lineheight2;
-            }
-
-            li {
-                
-            }
-        }
     }
 
-}
-
-.auth_navbar {
-    .inset-text;
-    .blockletter-small;
-    color:#fff;
-    height:@lineheight2;
-    line-height:@lineheight2;
-    display:block;
-
-    a, a:link, a:visited {
-        .inset-text;
-        height:@lineheight2;
-        line-height:@lineheight2;
-        color:#fff;
-        border-left:1px solid rgba(270,270,270,0.3);
-        border-right:1px solid rgba(0,0,0,0.1);
-        padding:0 @typeheight;
-        display:block;
-        float:right;
-    }
-    a:hover, a:active, a:focus {
-        .linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));
-    }
-    a:last-child {
-        margin-left: @typeheight;
-    }
-    a:first-child {
-        border-right:none;
-    }
 }
 
 #page {
