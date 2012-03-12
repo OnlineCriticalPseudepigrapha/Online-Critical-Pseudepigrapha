@@ -1,7 +1,7 @@
 {{if type(rlist) is dict:}}
 	<table>
 	{{for k,v in rlist.items():}}
-		{{=TR(TD(k), TD(v))}}
+		{{=TR(TD((k).replace(' ', ', ')), TD(v))}}
 	{{pass}}
 	</table>
 {{else:}}
