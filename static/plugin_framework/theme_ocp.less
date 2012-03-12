@@ -9,6 +9,10 @@ body{
     .fluid-page;
 }
 
+#appname a {
+    margin-left:@lineheight;
+}
+
 nav {
 
     ul.auth_navbar, ul.sf-menu{
@@ -106,14 +110,34 @@ nav {
         padding:0;
     }
 
+    //for book title
+    h2 {
+        padding: @lineheight;
+        padding-bottom:0;
+        color:@cranberry;
+    }
+
     .versionwindow {
         float: left;
+        width:90%;
     }
 
     #versionadder {
+        display: block;
+        height:@lineheight2;
+        line-height:@lineheight2;
+        padding: 0 @typeheight;
+        position: relative;
         background-color:@dusky-blue1;
-        .sticker();
+        float:right;
         color: #fff;
+        font-size:@typeheight2;
+        font-weight:bold;
+        .inset-text();
+        .box-shadow();
+        margin-right:@typeheight/2;
+        margin-top:@typeheight3;
+        .border-radius(0, 3px, 3px, 0)
     }
 
     .textframe {
