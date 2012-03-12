@@ -95,7 +95,7 @@ def section():
     else:
         firstref = reflist[0]
         firstref_parts = re.split('[:\.,;_-]', firstref)
-        start_sel = [firstref_parts[l-1] for l in range(levels)]
+        start_sel = [firstref_parts[l] for l in range(levels)]
         print 'using default first ref'
 
     #build list for ending ref
@@ -114,9 +114,8 @@ def section():
     print 'matching text in: '
     for ref, units in curv['text_structure'].items():
         ref_parts = re.split('[:\.,;_-]', ref)
-        print 'versions is type: ', type(versions)
         if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):
-                print ref_parts
+                
                 sel_text.append(SPAN(ref, _class = 'ref'))
                 for unit_ref, unit_val in units.items():
                     for mss, raw_text in unit_val.items():
