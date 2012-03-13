@@ -39,12 +39,6 @@
 </div>
 
 <script>
-//size page elements to fit in viewport
-hHeight = $('header').height();
-fHeight = $('footer').height();
-pHeight = $(window).height() - (hHeight + fHeight);
-$('#page').outerHeight(pHeight);
-
 //refresh this text pane when version selector or manuscript
 //selector is refreshed
 $('.vselect, .mselect').on('change', function(e){
@@ -100,4 +94,5 @@ $('.textframe a').on('click', function(event){
 	web2py_component('/grammateus3/docs/apparatus.load/{{=filename}}?version=' + the_v + '&unit=' + the_unit, the_target);
 	event.preventDefault();
 });
+
 </script>

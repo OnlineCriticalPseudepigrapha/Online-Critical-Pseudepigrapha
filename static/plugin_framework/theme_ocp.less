@@ -11,6 +11,7 @@ body{
 
 #appname a {
     margin-left:@lineheight;
+    font-weight:normal;
 }
 
 nav {
@@ -105,6 +106,7 @@ nav {
 
 #page.text {
     padding:0;
+    overflow: hidden;
 
     div{
         padding:0;
@@ -112,8 +114,7 @@ nav {
 
     //for book title
     h2 {
-        padding: @lineheight;
-        padding-bottom:0;
+        padding: @typeheight 0 0 @lineheight;
         color:@cranberry;
     }
 
@@ -142,9 +143,8 @@ nav {
 
     .textframe {
 
-        padding:@lineheight2;
-
-        .box-shadow();
+        padding:@lineheight @lineheight2 @typeheight @lineheight2;
+        z-index:9;
         overflow: auto;
 
         a, a:visited, a:link {
@@ -160,8 +160,20 @@ nav {
         .ref {
             color:@cranberry;
         }
+    }
 
-        z-index:9;
+    .apparatusframe {
+        background-color:@chalk;
+        z-index:1;
+        padding:@typeheight @lineheight;
+        overflow: auto;
+
+        td:first-child {
+            color: @cranberry;
+        }
+        td:nth-child(1){
+            padding: @typeheight;
+        }
     }
 
 }
@@ -169,29 +181,33 @@ nav {
 form.version_nav{
     display: block;
     background-color:@chalk;
-    padding:0, @lineheight/2;
+    padding:0 0 0 @lineheight;
+    z-index:20;
 
     .from, .to {
-        width:40px;
+        width:@typeheight;
         height:@lineheight2;
         line-height:@lineheight2;
         background:transparent;
+        color:@dusky-blue2;
+        border:0px solid @chalk;
+        font-size:@typeheight2;
+    }
+
+    .from:hover, .to:hover {
+        background-color:#fff;
     }
 
     .from:focus, .to:focus {
         border:1px solid @green;
         .box-shadow-inset(1,0,0,#000);
+        background-color:#fff;
     }
 
     input[type=submit]{
         .button-green-grad();
         border:1px solid @green;
         .box-shadow(0,0,0,#000);
+        margin: 0 @typeheight/2;
     }
-    z-index:8;
-}
-
-.apparatusframe {
-    background-color:@chalk;
-    z-index:10;
 }
