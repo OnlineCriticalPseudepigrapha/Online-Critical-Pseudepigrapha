@@ -123,7 +123,6 @@
         {{include}}
 
         <div class="clear"></div><!-- Clear the divs -->
-0
     </div><!--page-->
 
     <footer>
@@ -135,12 +134,6 @@
             <div class="clear"></div><!-- Clear the divs -->
         {{end}}
     </footer>
-
-    {{=BEAUTIFY(session)}}
-
-    {{if session.debug:}}
-        {{=DIV(session.debug, _class="debug")}}
-    {{pass}}
 
     <!--[if lt IE 7 ]>
     <script src="{{=URL('static','js/dd_belatedpng.js')}}"></script>

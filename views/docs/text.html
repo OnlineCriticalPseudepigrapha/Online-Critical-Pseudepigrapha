@@ -5,6 +5,42 @@
 </div>
 
 <script>
+function setDimensions(){
+    var hHeight = $('header').outerHeight();
+    var fHeight = $('footer').outerHeight();
+    var pHeight = $(window).height() - (hHeight + fHeight);
+    var nHeight = $('h2').outerHeight();
+    var navHeight = $('.versionNav').outerHeight();
+
+    var tHeight = (pHeight - (nHeight + navHeight))*0.6;
+    var aHeight = (pHeight - (nHeight + navHeight))*0.4;
+    $('.apparatusframe').each(function(){
+        $(this).css({'height':aHeight,'min-height':aHeight,'max-height':aHeight});
+    });
+    $('.textframe').each(function(){
+        $(this).css({'height':tHeight,'min-height':tHeight});
+    });
+    $('.versionwindow').each(function(){
+        $(this).css({'height':pHeight,'min-height':pHeight,'max-height':pHeight});
+    });
+    $('#page').css({'height':pHeight,'min-height':pHeight});
+
+    var wWidth = $(window).width();
+    var vaWidth = $('#versionadder').outerWidth();
+    var totalWidth = wWidth - (vaWidth + 12);
+    var frames = $('.versionwindow');
+    var fCount = frames.length;
+    frames.each(function(){
+        var w = totalWidth/fCount;
+        $(this).css({'width':w})
+    });
+}
+
+//size page elements to fit in viewport
+
+$(window).resize(function(){
+    setDimensions();
+});
 
 $('#versionadder').on('click', function(event){
 	newDiv = '<div id="2" class="versionwindow">';
@@ -12,6 +48,11 @@ $('#versionadder').on('click', function(event){
 	newDiv += '</div>';
 	$(this).parent('#page').append(newDiv);
 	//web2py_component()
+    setDimensions();
 	event.preventDefault();
 });
+
+//set initial dimensions to fit starting viewport size
+setDimensions();
+
 </script>

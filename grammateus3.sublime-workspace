@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
-				"ver",
+				"versio",
 				"versionwindow"
+			],
+			[
+				"ver",
+				"versionadder"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"line",
+				"lineheight"
+			],
+			[
+				"block",
+				"blockletter-small"
 			],
 			[
 				"curr",
@@ -56,18 +72,18 @@
 	"buffers":
 	[
 		{
-			"file": "controllers/docs.py",
+			"file": "models/menu.py",
 			"settings":
 			{
-				"buffer_size": 7410,
+				"buffer_size": 5165,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/docs/text.html",
+			"file": "controllers/docs.py",
 			"settings":
 			{
-				"buffer_size": 571,
+				"buffer_size": 7342,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +91,23 @@
 			"file": "views/docs/section.load",
 			"settings":
 			{
-				"buffer_size": 2682,
+				"buffer_size": 2718,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/docs/text.html",
+			"settings":
+			{
+				"buffer_size": 1730,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ian/Dropbox/Web_Pages/ocp/sites/all/modules/grammateus_reader/grammateus_reader.js",
+			"settings":
+			{
+				"buffer_size": 54869,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,7 +115,23 @@
 			"file": "static/plugin_framework/theme_ocp.less",
 			"settings":
 			{
-				"buffer_size": 2242,
+				"buffer_size": 5122,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/docs/apparatus.load",
+			"settings":
+			{
+				"buffer_size": 200,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/plugin_framework/plugin_framework.html",
+			"settings":
+			{
+				"buffer_size": 6657,
 				"line_ending": "Unix"
 			}
 		}
@@ -124,6 +172,18 @@
 	},
 	"file_history":
 	[
+		"/home/ian/web/web2py/applications/grammateus3/views/docs/text.html",
+		"/home/ian/web/web2py/applications/grammateus3/models/plugin_framework.py",
+		"/home/ian/web/web2py/applications/grammateus3/views/plugin_framework/plugin_framework.html",
+		"/home/ian/web/web2py/applications/grammateus3/grammateus3.sublime-project",
+		"/home/ian/web/web2py/applications/grammateus3/static/plugin_framework/theme_ocp.less",
+		"/home/ian/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/ian/web/web2py/applications/grammateus3/views/plugin_framework/authbar.html",
+		"/home/ian/web/web2py/applications/grammateus3/controllers/plugin_framework.py",
+		"/home/ian/web/web2py/gluon/tools.py",
+		"/home/ian/web/ianwscott/public_html/applications/bloglet/views/plugin_blog/left_sidebar.html",
+		"/home/ian/web/ianwscott/public_html/applications/bloglet/controllers/plugin_blog.py",
+		"/home/ian/web/web2py/applications/grammateus3/controllers/plugin_framework",
 		"/home/iscott/web/web2py/applications/grammateus3/controllers/docs.py",
 		"/home/iscott/web/web2py/applications/grammateus3/views/text.html",
 		"/home/iscott/web/web2py/applications/paideia/modules/plugin_ajaxselect.py",
@@ -166,6 +226,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}}",
+			"{{",
 			"versions",
 			"versionwindow",
 			"() + ', ';",
@@ -179,6 +241,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -194,18 +257,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "controllers/docs.py",
+					"file": "models/menu.py",
 					"settings":
 					{
-						"buffer_size": 7410,
+						"buffer_size": 5165,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1828,
+								1828
 							]
 						],
 						"settings":
@@ -215,25 +278,164 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1049.0,
+						"translation.y": 378.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "views/docs/text.html",
+					"file": "controllers/docs.py",
 					"settings":
 					{
-						"buffer_size": 571,
+						"buffer_size": 7342,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								311,
-								311
+								6556,
+								6556
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2520.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/docs/section.load",
+					"settings":
+					{
+						"buffer_size": 2718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1902,
+								1902
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 657.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/docs/text.html",
+					"settings":
+					{
+						"buffer_size": 1730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1295,
+								1295
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/ian/Dropbox/Web_Pages/ocp/sites/all/modules/grammateus_reader/grammateus_reader.js",
+					"settings":
+					{
+						"buffer_size": 54869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27973,
+								27916
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9698.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "static/plugin_framework/theme_ocp.less",
+					"settings":
+					{
+						"buffer_size": 5122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4109,
+								4109
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2304.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/docs/apparatus.load",
+					"settings":
+					{
+						"buffer_size": 200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
 							]
 						],
 						"settings":
@@ -247,56 +449,29 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "views/docs/section.load",
+					"buffer": 7,
+					"file": "views/plugin_framework/plugin_framework.html",
 					"settings":
 					{
-						"buffer_size": 2682,
+						"buffer_size": 6657,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								268,
-								268
+								5899,
+								5899
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "static/plugin_framework/theme_ocp.less",
-					"settings":
-					{
-						"buffer_size": 2242,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1386,
-								1386
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 990.0,
+						"translation.y": 2430.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -337,7 +512,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -356,7 +531,7 @@
 		],
 		"width": 0.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
