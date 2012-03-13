@@ -6,6 +6,7 @@
 #########################################################################
 
 response.title = 'The Online Critical Pseudepigrapha'
+response.mobiletitle = 'OCP'
 response.subtitle = T('Developing and Publishing Accurate Texts of the "Old Testament Pseudepigrapha"\
     and related literature')
 
