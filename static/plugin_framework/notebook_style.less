@@ -353,20 +353,25 @@ and (max-device-width: 480px){
 }
 
 /* ================= Intermediate browser viewing area (480px+)================= */
-@media screen
-and (max-width: 480px){
+@media all and (max-width: 480px){
 
-#left_sidebar, #right_sidebar {
-    padding:0;
-    width:20px;
-    overflow: hidden;
-}
+    #left_sidebar, #right_sidebar {
+        padding:0;
+        width:20px;
+        overflow: hidden;
+    }
 
-#left_sidebar:hover, #right_sidebar:hover {
-    padding:@lineheight3;
-    width:30%;
-}
+    #left_sidebar:hover, #right_sidebar:hover {
+        padding:@lineheight3;
+        width:30%;
+    }
 
+    .max-480 {
+        display: static;
+    }
+    .min-480 {
+        display: none;
+    }
 
 }
 
