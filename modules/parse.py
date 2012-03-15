@@ -41,18 +41,18 @@ class BookParser(object):
 
         info = {}
 
-        info['title'] = self.book.xpath('/book/@title')[0]
+        info['title'] = unicode(self.book.xpath('/book/@title')[0])
         try:
-            info['structure'] = self.book.xpath('/book/@textStructure')[0]
+            info['structure'] = unicode(self.book.xpath('/book/@textStructure')[0])
         except IndexError:
-            info['structure'] = ''
+            info['structure'] = unicode('')
 
         # Parse version tags
         info['versions'] = []
 
         for version in self.book.xpath('/book/version'):
             version_dict = OrderedDict()
-            version_dict.update((attr, version.xpath('@%s' % attr)[0]) for attr in ('title', 'author', 'language'))
+            version_dict.update((attr, unicode(version.xpath('@%s' % attr)[0])) for attr in ('title', 'author', 'language'))
 
             divisions = version.xpath('divisions/division')
             version_dict['organisation_levels'] = len(divisions)
@@ -63,7 +63,7 @@ class BookParser(object):
             for d in divisions[:-1]:
                 delimiter = d.xpath('@delimiter')
                 if delimiter:
-                    delimiters.append(delimiter[0])
+                    delimiters.append(unicode(delimiter[0]))
             if not delimiters:
                 delimiters = [self.default_delimiter] * (len(divisions) - 1)
 
@@ -71,14 +71,14 @@ class BookParser(object):
 
             mss = OrderedDict()
             for ms in version.xpath('manuscripts/ms'):
-                ms_dict = OrderedDict((attr, ms.xpath('@%s' % attr)[0]) for attr in ('abbrev', 'language'))
+                ms_dict = OrderedDict((attr, unicode(ms.xpath('@%s' % attr)[0])) for attr in ('abbrev', 'language'))
 
-                ms_dict['name'] = ms.xpath('name')[0].text.strip()
+                ms_dict['name'] = unicode(ms.xpath('name')[0].text.strip())
 
                 ms_dict['bibliography'] = []
                 bibliography = ms.xpath('bibliography')
                 if bibliography:
-                    ms_dict['bibliography'] = [b.text.strip() for b in bibliography]
+                    ms_dict['bibliography'] = [unicode(b.text.strip()) for b in bibliography]
 
                 mss[ms_dict['abbrev']] = ms_dict
 
@@ -100,7 +100,7 @@ class BookParser(object):
 
         parent = OrderedDict()
         for div in text.xpath('div'):
-            parent_key = div.xpath('@number')[0]
+            parent_key = unicode(div.xpath('@number')[0])
 
             child_structure = self.text_structure(div, delimiters[1:])
 
@@ -116,19 +116,17 @@ class BookParser(object):
                 # Child div has no children so extract the unit data
                 readings = OrderedDict()
                 for unit in div.xpath('unit'):
-                    unit_number = unit.xpath('@id')[0]
+                    unit_number = unicode(unit.xpath('@id')[0])
 
                     reading_dict = OrderedDict()
                     for reading in unit.xpath('reading'):
-                        mss = reading.xpath('@mss')[0]
+                        mss = unicode(reading.xpath('@mss')[0])
                         for m in mss.strip().split():
                             reading_dict[m] = reading.text
 
                     readings[unit_number] = reading_dict
 
-                key = div.xpath('@number')[0]
-
-                parent[key] = readings
+                parent[parent_key] = readings
 
         return parent
 
