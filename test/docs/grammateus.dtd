@@ -1,0 +1,46 @@
+<!ELEMENT book (version)+>
+<!ATTLIST book filename CDATA #REQUIRED>
+<!ATTLIST book title CDATA #REQUIRED>
+<!ATTLIST book textStructure CDATA #IMPLIED>
+<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
+<!ATTLIST version title CDATA #REQUIRED>
+<!ATTLIST version author CDATA #REQUIRED>
+<!ATTLIST version fragment CDATA #IMPLIED>
+<!ATTLIST version language CDATA #IMPLIED>
+<!ELEMENT divisions (division)+>
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division label CDATA #REQUIRED>
+<!ATTLIST division delimiter CDATA #IMPLIED>
+<!ELEMENT resources (resource)+>
+<!ELEMENT resource (info+ , URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT manuscripts (ms)+>
+<!ELEMENT ms (name , bibliography*)>
+<!ATTLIST ms abbrev CDATA #REQUIRED>
+<!ATTLIST ms language CDATA #REQUIRED>
+<!ATTLIST ms show CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA | sup)*>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+<!ELEMENT booktitle (#PCDATA)>
+<!ELEMENT text (div)+>
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div number CDATA #REQUIRED>
+<!ATTLIST div fragment CDATA #IMPLIED>
+<!ELEMENT unit (reading)+>
+<!ATTLIST unit id CDATA #REQUIRED>
+<!ATTLIST unit group CDATA "0">
+<!ATTLIST unit parallel CDATA #IMPLIED>
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading option CDATA #REQUIRED>
+<!ATTLIST reading mss CDATA #REQUIRED>
+<!ATTLIST reading linebreak CDATA #IMPLIED>
+<!ATTLIST reading indent CDATA #IMPLIED>
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w morph CDATA #IMPLIED>
+<!ATTLIST w lex CDATA #IMPLIED>
+<!ATTLIST w style CDATA #IMPLIED>
+<!ATTLIST w lang CDATA #IMPLIED>
+
