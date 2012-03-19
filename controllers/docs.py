@@ -1,7 +1,7 @@
 # coding: utf8
 from lxml import etree
 
-from parse import BookParser
+from parse import Book
 
 import pprint
 import inspect
@@ -39,9 +39,14 @@ def section():
     #get filename from end of url and parse the file with BookParser class
     filename = request.args[0]
     print 'filename: ', filename
-    book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-    p = BookParser(book_file)
-    info = p.book_info()
+    if session.info and filename in session.info:
+        info = session.info[filename]
+        print '\n\nstarting controller.section() using session.info'
+    else:
+        book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
+        p = Book(book_file)
+        info = p.book_info()
+        session.info[filename] = info
     #get title of document
     title = info['title']
 
@@ -83,26 +88,29 @@ def section():
         current_ms = mslist[0]
         print 'current_ms: ', current_ms
 
-    #build hierarchical dict of references
+    #build flat list of references
     reflist = [ref for ref, units in curv['text_structure'].items()]
 
     #build list for starting ref
     if 'from' in request.vars:
         from_input = request.vars['from']
-        start_sel = from_input.split('-')
-        del start_sel[-1]
+        start_sel = from_input[:-1]
+        start_sel = start_sel.replace('-', curv['delimiters'][0])
+        #TODO: allow for different delimiters from one level to the next
         print 'using url ref'
     else:
         firstref = reflist[0]
-        firstref_parts = re.split('[:\.,;_-]', firstref)
-        start_sel = [firstref_parts[l] for l in range(levels)]
+        start_sel = firstref
+        #firstref_parts = re.split('[:\.,;_-]', firstref)
+        #start_sel = [firstref_parts[l] for l in range(levels)]
         print 'using default first ref'
 
     #build list for ending ref
     if 'to' in request.vars:                
         to_input = request.vars['to']
-        end_sel = to_input.split('-')
-        del end_sel[-1]
+        end_sel = to_input[:-1]
+        end_sel = end_sel.replace('-', curv['delimiters'][0])
+        #del end_sel[-1]
     else:
         end_sel = start_sel
     print 'start_sel', start_sel
@@ -112,20 +120,26 @@ def section():
     #text type
     sel_text = []
     print 'matching text in: '
+    startIndex = reflist.index(start_sel)
+    endIndex = reflist.index(end_sel)
+
     for ref, units in curv['text_structure'].items():
-        ref_parts = re.split('[:\.,;_-]', ref)
-        if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):
-                
+        if (reflist.index(ref) >= reflist.index(start_sel)) and \
+            (reflist.index(ref) <= reflist.index(end_sel)):
+        #ref_parts = re.split('[:\.,;_-]', ref)
+        #if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):                
                 sel_text.append(SPAN(ref, _class = 'ref'))
                 for unit_ref, unit_val in units.items():
                     for mss, raw_text in unit_val.items():
                         if current_ms[-1] != ' ':
                             current_ms += ' '
                         if current_ms in (mss + ' '):
-                            if len(units) > 1:
+                            if len(unit_val) > 1:
                                 sel_text.append(A(raw_text, _class = vlang, _href=unit_ref))
                             else:
                                 sel_text.append(SPAN(raw_text, _class = vlang))
+                            print 'unit_val length: ', len(unit_val)
+                            print unit_val
                         else:
                             pass
     for s in sel_text:
@@ -138,9 +152,14 @@ def section():
 
 def apparatus():
     filename = request.args[0]
-    book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-    p = BookParser(book_file)
-    info = p.book_info()
+    if session.info and filename in session.info:
+        info = session.info[filename]
+        print '\n\nstarting controller.section() using session.info'
+    else:
+        book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
+        p = Book(book_file)
+        info = p.book_info()
+        session.info[filename] = info
 
     #if no unit has been requested, present the default message
     if request.vars['called'] == 'no':
@@ -169,7 +188,7 @@ def apparatus():
 def test():
     filename = request.args[0]
     book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-    p = BookParser(book_file)
+    p = Book(book_file)
     info = p.book_info()
 
     title = info['title']

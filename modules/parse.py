@@ -90,12 +90,12 @@ class Book(object):
             for ms in version.xpath('manuscripts/ms'):
                 ms_dict = OrderedDict((attr, unicode(ms.xpath('@%s' % attr)[0])) for attr in ('abbrev', 'language'))
 
-                ms_dict['name'] = unicode(ms.xpath('name')[0].text.strip())
+                ms_dict['name'] = unicode(ms.xpath('name')[0].text.strip()) or None
 
                 ms_dict['bibliography'] = []
                 bibliography = ms.xpath('bibliography')
                 if bibliography:
-                    ms_dict['bibliography'] = [unicode(b.text.strip()) for b in bibliography]
+                    ms_dict['bibliography'] = [unicode(b.text.strip()) for b in bibliography] or None
 
                 mss[ms_dict['abbrev']] = ms_dict
 

@@ -1,183 +1,102 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-
-<!ELEMENT book (version+)>
-<!ATTLIST book
- filename CDATA #REQUIRED
- title CDATA #REQUIRED
- textStructure CDATA #IMPLIED
->
-
-<!ELEMENT version (divisions, resources*, manuscripts+, text)>
-<!ATTLIST version
- title CDATA #REQUIRED
- author CDATA #REQUIRED
- fragment CDATA #IMPLIED
- language CDATA #IMPLIED
->
-
-<!ELEMENT divisions (division)+>
-
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division
- label CDATA #REQUIRED
- delimiter CDATA #IMPLIED
->
-
-<!ELEMENT resources (resource+)>
-<!ELEMENT resource (info+, URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-
-<!ELEMENT info (#PCDATA)>
-
-<!ELEMENT URL (#PCDATA)>
-
-<!ELEMENT manuscripts (ms+)>
-
-<!ELEMENT ms (name, bibliography*)>
-<!ATTLIST ms
- abbrev CDATA #REQUIRED
- language CDATA #REQUIRED
- show CDATA #REQUIRED
->
-
-<!ELEMENT name (#PCDATA | sup)*>
-
-<!ELEMENT sup (#PCDATA)>
-
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-
-<!ELEMENT booktitle (#PCDATA)>
-
-<!ELEMENT text (div+)>
-
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div
- number CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT unit (reading+)>
-<!ATTLIST unit
- id CDATA #REQUIRED
- group CDATA "0"
- parallel CDATA #IMPLIED
->
-
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading
- option CDATA #REQUIRED
- mss CDATA #REQUIRED
- linebreak CDATA #IMPLIED
- indent CDATA #IMPLIED
->
-
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w
- morph CDATA #IMPLIED
- lex CDATA #IMPLIED
- style CDATA #IMPLIED
- lang CDATA #IMPLIED
->
-
-]>
-<book filename="2Bar" title="2 (Syriac) Baruch">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="2Bar" title="2 (Syriac Apocalypse of) Baruch">
   <version title="Syriac" author="Daniel M. Gurtner" language="Syriac">
     <divisions>
-      <division label="Chapter" delimiter=":"/>
-      <division label="Verse"/>
+      <division label="Chapter" delimiter=":" />
+      <division label="Verse" />
     </divisions>
     <manuscripts>
       <ms abbrev="7aI" language="Syriac" show="yes">
-        <name/>
+        <name>7aI</name>
         <bibliography/>
       </ms>
       <ms abbrev="7aI*" language="Syriac" show="no">
-        <name/>
+        <name>7aI*</name>
         <bibliography/>
       </ms>
       <ms abbrev="7aI1" language="Syriac" show="no">
-        <name/>
+        <name>7aI1</name>
         <bibliography/>
       </ms>
       <ms abbrev="Schu" language="Syriac" show="no">
-        <name/>
+        <name>Schu</name>
         <bibliography/>
       </ms>
       <ms abbrev="CerIt" language="Syriac" show="no">
-        <name/>
+        <name>CerIt</name>
         <bibliography/>
       </ms>
       <ms abbrev="CerI" language="Syriac" show="no">
-        <name/>
+        <name>CerI</name>
         <bibliography/>
       </ms>
       <ms abbrev="CerII" language="Syriac" show="no">
-        <name/>
+        <name>CerII</name>
         <bibliography/>
       </ms>
       <ms abbrev="Dedering" language="Syriac" show="no">
-        <name/>
+        <name>Dedering</name>
         <bibliography/>
       </ms>
       <ms abbrev="Viol" language="Syriac" show="no">
-        <name/>
+        <name>Viol</name>
         <bibliography/>
       </ms>
       <ms abbrev="Gress" language="Syriac" show="no">
-        <name/>
+        <name>Gress</name>
         <bibliography/>
       </ms>
       <ms abbrev="Kmo" language="Syriac" show="no">
-        <name/>
+        <name>Kmo</name>
         <bibliography/>
       </ms>
       <ms abbrev="Ryss" language="Syriac" show="no">
-        <name/>
+        <name>Ryss</name>
         <bibliography/>
       </ms>
       <ms abbrev="ChaI" language="Syriac" show="no">
-        <name/>
+        <name>ChaI</name>
         <bibliography/>
       </ms>
       <ms abbrev="ChaII" language="Syriac" show="no">
-        <name/>
+        <name>ChaII</name>
         <bibliography/>
       </ms>
       <ms abbrev="Bensly" language="Syriac" show="no">
-        <name/>
+        <name>Bensly</name>
         <bibliography/>
       </ms>
       <ms abbrev="Kabisch" language="Syriac" show="no">
-        <name/>
+        <name>Kabisch</name>
         <bibliography/>
       </ms>
       <ms abbrev="Bog" language="Syriac" show="no">
-        <name/>
+        <name>Bog</name>
         <bibliography/>
       </ms>
       <ms abbrev="Zimm" language="Syriac" show="no">
-        <name/>
+        <name>Zimm</name>
         <bibliography/>
       </ms>
       <ms abbrev="1515" language="Syriac" show="no">
-        <name/>
+        <name>1515</name>
         <bibliography/>
       </ms>
       <ms abbrev="1313" language="Syriac" show="no">
-        <name/>
+        <name>1313</name>
         <bibliography/>
       </ms>
       <ms abbrev="1312" language="Syriac" show="no">
-        <name/>
+        <name>1312</name>
         <bibliography/>
       </ms>
       <ms abbrev="(?)" language="Syriac" show="no">
-        <name/>
+        <name>(?)</name>
         <bibliography/>
       </ms>
       <ms abbrev="apud" language="Syriac" show="no">
-        <name/>
+        <name>apud</name>
         <bibliography/>
       </ms>
     </manuscripts>

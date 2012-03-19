@@ -7,7 +7,7 @@ from parse import BookParser
 #book_file = '/home/jeff/src/ve/ocp/src/ocp/static/grammateus/docs/1En.xml'
 book_file = '../static/docs/1En_small.xml'
 
-p = BookParser(book_file)
+p = Book(book_file)
 
 info = p.book_info()
 
