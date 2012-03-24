@@ -1,5 +1,21 @@
 {{extend 'layout.html'}}
+<h2>{{=title}}</h2>
 <a id='versionadder' href='#'>+</a>
+
+<form class='ref_nav'>
+
+<label for='start_ref1'>from</label>
+{{for l in range(levels):}}
+<input type='text' id='start_ref{{=l}}' value='{{=start_sel[l]}}' class='{{=l}} from' />
+{{pass}}
+<label for='end_ref1'>to</label>
+{{for l in range(levels):}}
+<input type='text' id='end_ref{{=l}}' value='{{=end_sel[l]}}' class='{{=l}} to' />
+{{pass}}
+
+<input id='textnavsubmit' type='submit' value='Go' />
+</form>
+
 <div class='versionwindow'>
 {{=LOAD('docs', 'section.load', args=[filename], ajax=True)}}
 </div>
@@ -10,7 +26,7 @@ function setDimensions(){
     var fHeight = $('footer').outerHeight();
     var pHeight = $(window).height() - (hHeight + fHeight);
     var nHeight = $('h2').outerHeight();
-    var navHeight = $('.versionNav').outerHeight();
+    var navHeight = $('.ref_nav').outerHeight();
 
     var tHeight = (pHeight - (nHeight + navHeight))*0.6;
     var aHeight = (pHeight - (nHeight + navHeight))*0.4;
