@@ -4,12 +4,32 @@
 		"selected_items":
 		[
 			[
+				"se",
+				"session"
+			],
+			[
 				"file",
-				"filename	(local, instance)"
+				"filename"
+			],
+			[
+				"end",
+				"endref"
+			],
+			[
+				"del",
+				"delimiters"
+			],
+			[
+				"top",
+				"top_level"
+			],
+			[
+				"star",
+				"start_sel"
 			],
 			[
 				"first",
-				"firstref	(local, instance)"
+				"first_version"
 			],
 			[
 				"start",
@@ -83,7 +103,7 @@
 			"file": "controllers/docs.py",
 			"settings":
 			{
-				"buffer_size": 8262,
+				"buffer_size": 9347,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,7 +111,7 @@
 			"file": "views/docs/section.load",
 			"settings":
 			{
-				"buffer_size": 2718,
+				"buffer_size": 2329,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,7 +119,7 @@
 			"file": "views/docs/text.html",
 			"settings":
 			{
-				"buffer_size": 1730,
+				"buffer_size": 2152,
 				"line_ending": "Unix"
 			}
 		},
@@ -285,15 +305,15 @@
 					"file": "controllers/docs.py",
 					"settings":
 					{
-						"buffer_size": 8262,
+						"buffer_size": 9347,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6354,
-								6354
+								3062,
+								3062
 							]
 						],
 						"settings":
@@ -303,7 +323,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2779.0,
+						"translation.y": 1154.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -313,15 +333,15 @@
 					"file": "views/docs/section.load",
 					"settings":
 					{
-						"buffer_size": 2718,
+						"buffer_size": 2329,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1902,
-								1902
+								589,
+								589
 							]
 						],
 						"settings":
@@ -330,7 +350,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 657.0,
+						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -340,15 +360,15 @@
 					"file": "views/docs/text.html",
 					"settings":
 					{
-						"buffer_size": 1730,
+						"buffer_size": 2152,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1295,
-								1295
+								555,
+								555
 							]
 						],
 						"settings":
@@ -540,11 +560,15 @@
 		"rows":
 		[
 			0.0,
-			0.793103448275,
+			0.949031600408,
 			1.0
 		]
 	},
 	"menu_visible": true,
+	"output.unsaved_changes":
+	{
+		"height": 28.0
+	},
 	"replace":
 	{
 		"height": 62.0
@@ -569,7 +593,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 249.0,
 	"status_bar_visible": true
 }

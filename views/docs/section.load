@@ -1,18 +1,4 @@
-<h2>{{=title}}</h2>
-
-<form class='version_nav'>
-
-<label for='start_ref1'>from</label>
-{{for l in range(levels):}}
-<input type='text' id='start_ref{{=l}}' value='{{=start_sel[l]}}' class='{{=l}} from' />
-{{pass}}
-<label for='end_ref1'>to</label>
-{{for l in range(levels):}}
-<input type='text' id='end_ref{{=l}}' value='{{=end_sel[l]}}' class='{{=l}} to' />
-{{pass}}
-
-<input id='textnavsubmit' type='submit' value='Go' />
-
+<form class='version_selector'>
 <label for='vselect'>Version</label>
 <select class='vselect'>
 {{for v in versions:}}

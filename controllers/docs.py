@@ -21,13 +21,69 @@ def index():
     return dict(filename = filename)
 
 def text():
-    filename = request.args[0]
+    session.filename = request.args[0]
+    filename = session.filename
     #TODO: provide fallback and prompt if no filename is given in url
     
     #url to pass to web2py load helper in view to load doc section via ajax
     load_url = URL('docs', 'section.load', args=filename)
 
-    return dict(load_url = load_url, filename = filename)
+    #print url input for debugging purposes
+    varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
+    print 'start of section() method with url ', request.url, varlist
+    #get filename from end of url and parse the file with BookParser class
+    print 'filename: ', filename
+    if ('info' in session) and (filename in session.info):
+        info = session.info[filename]
+        print '\n\nstarting controller.section() using session.info'
+    else:
+        book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
+        p = Book(book_file)
+        info = p.book_info()
+        session.info = {filename:info}
+    #get title of document
+    title = info['title']
+
+    #get names of all versions of current doc
+    session.versions = [version['title'] for version in info['versions']]     
+    first_version = info['versions'][0]
+    delimiters = first_version['delimiters']
+
+    levels = first_version['organisation_levels']
+
+    #build flat list of references
+    refraw = [ref for ref, units in first_version['text_structure'].items()]
+    reflist = [re.split('[:\.,;_-]', r) for r in refraw]   
+
+    #build list for starting ref
+    if 'from' in request.vars:
+        start_sel = request.vars['from'][:-1]
+        start_sel = re.split('-', start_sel)
+        startref = start_sel.replace('-', delimiters[0])
+        #TODO: allow for different delimiters from one level to the next
+        print 'using url ref ', start_sel
+    else:
+        startref = reflist[0]
+        start_sel = [startref[l] for l in range(levels)]
+        print 'using default first ref ', start_sel
+
+    #build list for ending ref
+    if 'to' in request.vars:                        
+        end_sel = request.vars['to'][:-1]
+        end_sel = re.split('-', end_sel)
+        endref = end_sel.replace('-', delimiters[0])
+    else:
+        regex = re.compile('^'+start_sel[0]+delimiters[0])
+        #find all refs with the same top-level reference
+        this_div = [ref for ref in refraw if regex.match(ref)]
+        #choose the last one
+        endref = this_div[-1]
+        end_sel = re.split('[:\.,;_-]', endref)
+    print 'start_sel', start_sel
+    print 'end_sel', end_sel
+
+    return dict(load_url = load_url, title = title, levels = levels, 
+        start_sel = start_sel, end_sel = end_sel, filename = filename)
 
 def section():
     """
@@ -39,27 +95,24 @@ def section():
     #get filename from end of url and parse the file with BookParser class
     filename = request.args[0]
     print 'filename: ', filename
-    if session.info and filename in session.info:
+    if ('info' in session) and (filename in session.info):
         info = session.info[filename]
         print '\n\nstarting controller.section() using session.info'
     else:
         book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
         p = Book(book_file)
         info = p.book_info()
-        session.info[filename] = info
-    #get title of document
-    title = info['title']
+        session.info = {filename:info}
 
-    #get names of all versions of current doc and select the version to display
-    versions = [version['title'] for version in info['versions']]     
+    #select the version to display
     if 'version' in request.vars:
         current_version = request.vars['version'].replace('_', ' ')
         #move selected version to top of list for selectbox
-        i = versions.index(current_version)
-        versions.insert(0, versions.pop(i))
+        i = session.versions.index(current_version)
+        session.versions.insert(0, versions.pop(i))
         print 'current version: ', current_version.replace(' ', '&nbsp;')
     else:
-        current_version = versions[0]
+        current_version = session.versions[0]
         print 'current version: ', current_version.replace(' ', '&nbsp;')
 
     #find selected version in parsed text
@@ -88,33 +141,6 @@ def section():
         current_ms = mslist[0]
         print 'current_ms: ', current_ms
 
-    #build flat list of references
-    reflist = [ref for ref, units in curv['text_structure'].items()]
-
-    #build list for starting ref
-    if 'from' in request.vars:
-        from_input = request.vars['from']
-        start_sel = from_input[:-1]
-        start_sel = start_sel.replace('-', curv['delimiters'][0])
-        #TODO: allow for different delimiters from one level to the next
-        print 'using url ref'
-    else:
-        firstref = reflist[0]
-        start_sel = firstref
-        #firstref_parts = re.split('[:\.,;_-]', firstref)
-        #start_sel = [firstref_parts[l] for l in range(levels)]
-        print 'using default first ref'
-
-    #build list for ending ref
-    if 'to' in request.vars:                
-        to_input = request.vars['to']
-        end_sel = to_input[:-1]
-        end_sel = end_sel.replace('-', curv['delimiters'][0])
-        #del end_sel[-1]
-    else:
-        end_sel = start_sel
-    print 'start_sel', start_sel
-    print 'end_sel', end_sel
     #gather text from units within the selected section of the doc
     #filters the current version for only readings in the current
     #text type
@@ -145,9 +171,8 @@ def section():
     for s in sel_text:
         print s[0]
 
-    return dict(title = title, versions = versions, current_version = current_version,
-                info = info, filename = filename, mslist = mslist, sel_text = sel_text,
-                levels = levels, start_sel = start_sel, end_sel = end_sel)
+    return dict(versions = versions, current_version = current_version,
+                info = info, mslist = mslist, sel_text = sel_text)
 
 
 def apparatus():
