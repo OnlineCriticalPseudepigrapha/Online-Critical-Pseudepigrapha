@@ -4,36 +4,20 @@
 		"selected_items":
 		[
 			[
-				"se",
-				"session"
-			],
-			[
-				"file",
-				"filename"
-			],
-			[
-				"end",
-				"endref"
+				"start",
+				"startref"
 			],
 			[
 				"del",
-				"delimiters"
+				"delimiters	(local, instance)"
 			],
 			[
-				"top",
-				"top_level"
-			],
-			[
-				"star",
-				"start_sel"
+				"file",
+				"filename	(local, instance)"
 			],
 			[
 				"first",
-				"first_version"
-			],
-			[
-				"start",
-				"start_sel_txt	(local, instance)"
+				"firstref	(local, instance)"
 			],
 			[
 				"versio",
@@ -103,7 +87,7 @@
 			"file": "controllers/docs.py",
 			"settings":
 			{
-				"buffer_size": 9347,
+				"buffer_size": 9805,
 				"line_ending": "Unix"
 			}
 		},
@@ -154,14 +138,6 @@
 				"buffer_size": 729,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "static/docs/1En.xml",
-			"settings":
-			{
-				"buffer_size": 311728,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
@@ -204,6 +180,7 @@
 	},
 	"file_history":
 	[
+		"/home/ian/web/web2py/applications/grammateus3/static/docs/1En.xml",
 		"/home/ian/web/web2py/applications/grammateus3/models/menu.py",
 		"/home/ian/web/web2py/applications/grammateus3/static/docs/4Macc.xml",
 		"/home/ian/web/web2py/applications/grammateus3/static/docs/ApocrEzek.xml",
@@ -305,15 +282,15 @@
 					"file": "controllers/docs.py",
 					"settings":
 					{
-						"buffer_size": 9347,
+						"buffer_size": 9805,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3062,
-								3062
+								1914,
+								1914
 							]
 						],
 						"settings":
@@ -323,7 +300,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1154.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -340,8 +317,8 @@
 						"selection":
 						[
 							[
-								589,
-								589
+								0,
+								0
 							]
 						],
 						"settings":
@@ -350,7 +327,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 57.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -367,8 +344,8 @@
 						"selection":
 						[
 							[
-								555,
-								555
+								259,
+								259
 							]
 						],
 						"settings":
@@ -496,34 +473,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 7,
-					"file": "static/docs/1En.xml",
-					"settings":
-					{
-						"buffer_size": 311728,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								438,
-								438
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 720.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -560,15 +509,11 @@
 		"rows":
 		[
 			0.0,
-			0.949031600408,
+			0.931034482759,
 			1.0
 		]
 	},
 	"menu_visible": true,
-	"output.unsaved_changes":
-	{
-		"height": 28.0
-	},
 	"replace":
 	{
 		"height": 62.0
@@ -593,7 +538,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 249.0,
 	"status_bar_visible": true
 }

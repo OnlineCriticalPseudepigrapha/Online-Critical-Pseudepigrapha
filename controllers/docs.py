@@ -1,12 +1,7 @@
 # coding: utf8
 from lxml import etree
-
 from parse import Book
-
-import pprint
-import inspect
-
-import re
+import pprint, inspect, re
 
 """
 List of session objects used in text display:
@@ -14,6 +9,9 @@ session.filename
 session.info -- dict; parsed results of BookParser class for current doc
 session.title -- string; title of current doc
 session.versions -- list; names of all versions in current doc
+session.refraw -- list; references in the first version
+session.startref --
+session.endref --
 """
 
 def index():
@@ -52,26 +50,33 @@ def text():
     levels = first_version['organisation_levels']
 
     #build flat list of references
-    refraw = [ref for ref, units in first_version['text_structure'].items()]
-    reflist = [re.split('[:\.,;_-]', r) for r in refraw]   
+    refraw = [ref for ref, units in first_version['text_structure'].items()]   
+    session.refraw = refraw
 
     #build list for starting ref
     if 'from' in request.vars:
         start_sel = request.vars['from'][:-1]
         start_sel = re.split('-', start_sel)
-        startref = start_sel.replace('-', delimiters[0])
-        #TODO: allow for different delimiters from one level to the next
+        #create string ref with proper delimiters
+        startlist = [None] * (len(start_sel) + len(levels))
+        startlist[::2] = start_sel
+        startlist[1::2] = delimiters
+        startref = ''.join(startlist)
         print 'using url ref ', start_sel
     else:
-        startref = reflist[0]
-        start_sel = [startref[l] for l in range(levels)]
+        startref = refraw[0]
+        start_sel = re.split('[:\.,;_-]', startref)
         print 'using default first ref ', start_sel
 
     #build list for ending ref
     if 'to' in request.vars:                        
         end_sel = request.vars['to'][:-1]
         end_sel = re.split('-', end_sel)
-        endref = end_sel.replace('-', delimiters[0])
+        #create string ref with proper delimiters
+        endlist = [None] * (len(end_sel) + len(levels))
+        endlist[::2] = end_sel
+        endlist[1::2] = delimiters
+        endref = ''.join(endlist)
     else:
         regex = re.compile('^'+start_sel[0]+delimiters[0])
         #find all refs with the same top-level reference
@@ -79,6 +84,9 @@ def text():
         #choose the last one
         endref = this_div[-1]
         end_sel = re.split('[:\.,;_-]', endref)
+
+    session.startref = startref
+    session.endref = endref
     print 'start_sel', start_sel
     print 'end_sel', end_sel
 
@@ -144,14 +152,18 @@ def section():
     #gather text from units within the selected section of the doc
     #filters the current version for only readings in the current
     #text type
+    reflist = session.refraw
+    startref = session.startref
+    endref = session.endref
+
     sel_text = []
     print 'matching text in: '
-    startIndex = reflist.index(start_sel)
-    endIndex = reflist.index(end_sel)
+    startIndex = reflist.index(startref)
+    endIndex = reflist.index(endref)
 
     for ref, units in curv['text_structure'].items():
-        if (reflist.index(ref) >= reflist.index(start_sel)) and \
-            (reflist.index(ref) <= reflist.index(end_sel)):
+        if (reflist.index(ref) >= reflist.index(startref)) and \
+            (reflist.index(ref) <= reflist.index(endref)):
         #ref_parts = re.split('[:\.,;_-]', ref)
         #if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):                
                 sel_text.append(SPAN(ref, _class = 'ref'))
@@ -171,8 +183,8 @@ def section():
     for s in sel_text:
         print s[0]
 
-    return dict(versions = versions, current_version = current_version,
-                info = info, mslist = mslist, sel_text = sel_text)
+    return dict(versions = session.versions, current_version = current_version,
+                mslist = mslist, sel_text = sel_text, filename = session.filename)
 
 
 def apparatus():
