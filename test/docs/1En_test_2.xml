@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="1En" title="1 Enoch" textStructure="Book with textStructure">
+  <version title="Ethiopic" author="Anonymous">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="p1" language="Ethiopic" show="yes">
+          <name>John Rylands Library Ethiopic 23</name>
+      </ms>
+    </manuscripts>
+    <text>
+        <div number="1">
+            <div number="1">
+                <unit id="1">
+            <reading option="0" mss="Bertalotto p  "> ቃለ፡​በረከት፡​ዘሄኖከ፡​ዘከመ፡​ባረከ፡​ኅሩያነ፡​ወጻድቃነ፡​እለ፡​ሀለዉ፡​ይኩኑ፡​በዕለተ፡​ምንዳቤ፡​ለአሰስሎ፡​ኵሎ፡​እኩያን፡​ወረሲዓን፡​</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>
