@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="1En" title="1 Enoch">
+  <version title="Ethiopic 1" author="Anonymous" language="Ethiopic">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <resources>
+        <resource name="Resource1">
+            <info>Info 1</info>
+            <info>Info 2</info>
+            <URL>www.example.com</URL>
+        </resource>
+        <resource name="Resource2">
+            <info>Info 3</info>
+            <info>Info 4</info>
+        </resource>
+    </resources>
+    <resources>
+        <resource name="Resource3">
+            <info>Info 5</info>
+            <info>Info 6</info>
+            <URL>www.example.com</URL>
+        </resource>
+        <resource name="Resource4">
+            <info>Info 7</info>
+            <info>Info 8</info>
+        </resource>
+    </resources>
+    <manuscripts>
+      <ms abbrev="p1" language="Ethiopic" show="yes">
+          <name>
+              John Rylands Library Ethiopic 23
+              <sup>Sup 1</sup>
+              <sup>Sup 2</sup>
+          </name>
+      </ms>
+      <ms abbrev="p2" language="Ethiopic" show="yes">
+          <name>
+              John Rylands Library Ethiopic 23
+          </name>
+      </ms>
+      <ms abbrev="p3" language="Ethiopic" show="yes">
+          <name>
+              <sup>Sup 1</sup>
+              <sup>Sup 2</sup>
+          </name>
+          <bibliography>
+              M. Knibb, The Ethiopic book of Enoch : A New Edition in the Light of the Aramaic Dead Sea Fragments. Oxford: Clarendon, 1978.
+              <booktitle>Booktitle 1</booktitle>
+              <booktitle>Booktitle 2</booktitle>
+          </bibliography>
+          <bibliography>
+              M. Knibb, The Ethiopic book of Enoch : A New Edition in the Light of the Aramaic Dead Sea Fragments. Oxford: Clarendon, 1978.
+          </bibliography>
+          <bibliography>
+              <booktitle>Booktitle 3</booktitle>
+              <booktitle>Booktitle 4</booktitle>
+          </bibliography>
+          <bibliography>
+          </bibliography>
+      </ms>
+      <ms abbrev="Bertalotto " language="Ethiopic" show="yes">
+        <name>Bertalotto's correction of orthographic tendencies in ms p</name>
+        <bibliography>M. Knibb, The Ethiopic book of Enoch : A New Edition in the Light of the Aramaic Dead Sea Fragments. Oxford: Clarendon, 1978.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1" fragment="Fragment 1">
+        <div number="1" fragment="Fragment 2">
+          <unit id="1" group="1" parallel="Parallel 1">
+            <reading option="0" mss="Bertalotto p  "> ቃለ፡​በረከት፡​ዘሄኖከ፡​ዘከመ፡​ባረከ፡​ኅሩያነ፡​ወጻድቃነ፡​እለ፡​ሀለዉ፡​ይኩኑ፡​በዕለተ፡​ምንዳቤ፡​ለአሰስሎ፡​ኵሎ፡​እኩያን፡​ወረሲዓን፡​</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="2" group="2">
+              <reading option="0" mss="Bertalotto p " linebreak="following">
+                  ወአውሥአ፡​ሄኖክ፡​ወይቤ፡​ብእሲ፡​ጻድቅ፡​ዘእምኀበ፡​እግዚአብሔር፡​እንዘ፡​አዕይንቲሁ፡​ክሡታት፡​ወይሬኢ፡​
+                  <w morph="morph" lex="lex" style="style" lang="lang">w 1</w>
+              </reading>
+          </unit>
+          <unit id="3" parallel="Parallel 2">
+              <reading option="0" mss="p ">ራዕየ፡​
+                  <w morph="morph" lex="lex" style="style">w 2</w>
+              </reading>
+              <reading option="1" mss="Bertalotto " indent="yes">ራእየ፡​
+                  <w morph="morph" lex="lex" lang="lang">w 3</w>
+              </reading>
+          </unit>
+          <unit id="4" parallel="">
+              <reading option="0" mss="Bertalotto p " indent="no">ቅዱሰ፡​ዘበሰማያት፡​ዘአርአዩኒ፡​መላእክት፡​ወሰማዕኩ፡​እምኀቤሆሙ፡​ኵሎ፡​ወአእመርኩ፡​አነ፡​ዘእሬኢ፡​ወአኮ፡​ለዝ፡​ትውልድ፡​አላ፡​ለዘ፡​ይመጽኡ፡​ትውልድ፡​ርሑቃን፡​
+                  <w morph="morph" lex="lex">w 4</w>
+              </reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="5" parallel="">
+              <reading option="0" mss="Bertalotto p " linebreak="following" indent="yes">በእንተ፡​ኅሩያን፡​እቤ፡​ወአውሣእኩ፡​በእንቲአሆሙ፡​ምስለ፡​ዘይወጽእ፡​ቅዱስ፡​
+                  <w morph="morph" style="style" lang="lang">w 5</w>
+              </reading>
+          </unit>
+          <unit id="6" parallel="">
+              <reading option="0" mss="p ">ወዓቢይ፡​
+                  <w morph="morph" style="style">w 6</w>
+              </reading>
+            <reading option="1" mss="Bertalotto ">ወዐቢይ፡​
+                  <w morph="morph" lang="lang">w 7</w>
+            </reading>
+          </unit>
+          <unit id="7" parallel="">
+              <reading option="0" mss="Bertalotto p ">እማኅደሩ
+                  <w morph="morph">w 8</w>
+              </reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1" fragment="Fragment 3">
+          <unit id="25" parallel="">
+              <reading option="0" mss="Bertalotto p ">ጠየቁ፡​ኵሎ፡​ዘውስተ፡​ሰማይ፡​ግብረ፡​እፎ፡​ኢይመይጡ፡​ፍናዊሆሙ፡​ብርሃናት፡​ዘውስተ፡​ሰማይ፡​ከመ፡​ኵሉ፡​ይሠርቅ፡​
+                  <w lex="lex" style="style" lang="lang">w 9</w>
+              </reading>
+          </unit>
+          <unit id="26" parallel="">
+              <reading option="0" mss="Bertalotto ">ወየዐርብ፡​
+                  <w lex="lex" style="style">w 10</w>
+              </reading>
+              <reading option="1" mss="p ">ወየዓርብ፡​
+                  <w lex="lex" lang="lang">w 11</w>
+              </reading>
+          </unit>
+          <unit id="27" parallel="">
+              <reading option="0" mss="Bertalotto p ">ሥሩዕ፡​ኵሉ፡​በዘመኑ፡​
+                  <w lex="lex">w 12</w>
+              </reading>
+          </unit>
+          <unit id="28" parallel="">
+              <reading option="0" mss="Bertalotto ">ወኢይትዐደዉ፡​
+                  <w style="style" lang="lang">w 13</w>
+              </reading>
+              <reading option="1" mss="p ">ወኢይትዓደዉ፡​
+                  <w style="style">w 14</w>
+              </reading>
+          </unit>
+          <unit id="29" parallel="">
+              <reading option="0" mss="Bertalotto ">እምትእዛዞሙ።
+                  <w lang="lang">w 15</w>
+              </reading>
+              <reading option="1" mss="p ">እምትዛዞሙ።
+                  <w>w 16</w>
+              </reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Ethiopic 2" author="Anonymous" fragment="Fragment 1">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="p1" language="Ethiopic" show="yes">
+          <name>John Rylands Library Ethiopic 23</name>
+      </ms>
+    </manuscripts>
+    <text>
+        <div number="1">
+            <div number="1">
+                <unit id="1">
+            <reading option="0" mss="Bertalotto p  "> ቃለ፡​በረከት፡​ዘሄኖከ፡​ዘከመ፡​ባረከ፡​ኅሩያነ፡​ወጻድቃነ፡​እለ፡​ሀለዉ፡​ይኩኑ፡​በዕለተ፡​ምንዳቤ፡​ለአሰስሎ፡​ኵሎ፡​እኩያን፡​ወረሲዓን፡​</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Ethiopic 3" author="Anonymous">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="p1" language="Ethiopic" show="yes">
+          <name>John Rylands Library Ethiopic 23</name>
+      </ms>
+    </manuscripts>
+    <text>
+        <div number="1">
+            <div number="1">
+                <unit id="1">
+            <reading option="0" mss="Bertalotto p  "> ቃለ፡​በረከት፡​ዘሄኖከ፡​ዘከመ፡​ባረከ፡​ኅሩያነ፡​ወጻድቃነ፡​እለ፡​ሀለዉ፡​ይኩኑ፡​በዕለተ፡​ምንዳቤ፡​ለአሰስሎ፡​ኵሎ፡​እኩያን፡​ወረሲዓን፡​</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>
