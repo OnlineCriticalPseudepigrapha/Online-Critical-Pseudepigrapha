@@ -5,6 +5,12 @@
 
 @import "framework";
 
+@font-face{
+    font-family: 'MyWebFont';
+    src: url('fonts/websymbols-regular-webfont.eot');
+    src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/websymbols-regular-webfont.woff') format('woff'), url('fonts/websymbols-regular-webfont.ttf') format('truetype'), url('fonts/websymbols-regular-webfont.svg#websymbols-regular-webfont') format('svg');
+}
+
 body {
     background-color: @cream;
     background-image: url('/paideia/static/images/mosaic_texture1.png');
@@ -13,20 +19,22 @@ body {
     font-family: @fonts2;
 }
 
-body header {
-    height:@lineheight2;
+header {
+    position:relative;
+    display:block;
+    height:@lineheight3;
     background:transparent;
     z-index:99;
     padding:0;
 
-    h1, h1 a {
+    h1 a {
         margin:0;
         color: @moss;
-        .blockletter();
-        font-size:@typeheight2;
-        height:@typeheight2;
-        line-height:@lineheight2;
+        font-size:@typeheight3;
         font-family:@fonts1;
+        text-transform: uppercase;
+        font-weight:bold;
+        letter-spacing: 2px;
     }
 
 }
@@ -35,14 +43,15 @@ nav {
     background-color:transparent;
     padding: 0;
     margin:0;
-    height:@lineheight2;
-    .blockletter-small();
+    height:100%;
+    text-transform:uppercase;
+    font-size:@typeheight * .8;
 
     .sf-menu {
         li {
             background-color:transparent;
-            height:@lineheight2;
-            line-height:@lineheight2;
+            height:@lineheight3;
+            line-height:@lineheight3;
 
             a, a:link, a:visited {
                 color:@cranberry;
@@ -83,20 +92,16 @@ nav {
 
 .auth_navbar {
     color:@cranberry;
-    height:@lineheight2;
-    line-height:@lineheight2;
+    height:@lineheight3;
+    line-height:@lineheight3;
     display:block;
     font-weight:bold;
     text-transform:uppercase;  
     font-size:@typeheight * .8;  
 
-    li{
-        float: right;
-    }
-
     a, a:link, a:visited {
-        height:@lineheight2;
-        line-height:@lineheight2;
+        height:@lineheight3;
+        line-height:@lineheight3;
         color:@cranberry;
         padding:0 @typeheight;
         display:block;
@@ -109,8 +114,7 @@ nav {
     }
 }
 
-body #page {
-    margin-top:-@lineheight2;
+#page {
     background-color:@white;
     z-index:1;
     .border-image('/paideia/static/images/page_border.png', 171, 170, 170, 171);
@@ -118,53 +122,8 @@ body #page {
     background:@mist;
     overflow: hidden;
 
-    #page {
+    #page #page {
         .border-image('', 0, 0, 0, 0);
-    }
-
-    #utils {
-        background-color:#666;
-        color: #fff;
-        .inset-text;
-        position: absolute;
-        display: block;
-        width:300px;
-        left:-300px;
-        .transition();
-        z-index:99;
-        min-height:200px;
-        padding: @typeheight;
-
-        input{
-            width:@lineheight3;
-            margin-right:@typeheight;
-        }
-        a {
-            color: #fff;
-
-            :hover {
-                color: yellow;
-            }
-        }
-
-    }
-
-    #utils:after {
-        content:'S';
-        font-family:"Websymbol";
-        display: block;
-        position: absolute;
-        left:300px;
-        top:0;
-        background-color:#666;
-        padding: @typeheight/2;
-        .border-radius(0, @typeheight/2, @typeheight/2, 0);
-    }
-
-    #utils:hover {
-        left:0;
-        .box-shadow();
-        .transition();
     }
 
     h2 {
@@ -236,6 +195,19 @@ body #page {
         width:800px;
     }
 
+    .npc {
+        .speech-bubble(@lineheight);
+        margin-top: @lineheight;
+        margin-right: -@lineheight;
+    }
+
+    .responder {
+        .speech-bubble(@lineheight);
+        margin-top: @lineheight;
+        margin-right: -@lineheight;
+        background: @greyf5;
+    }
+
     .comments{
         padding: 0;
         margin-top: @lineheight3;
@@ -305,33 +277,48 @@ body #page {
 }
 
 #page.start {
-    background:@mist;
-    overflow: hidden;
+        background:@mist;
+        overflow: hidden;
+
+    .next_q {
+    }
 
 }
 
-#page.exploring {
-    overflow: hidden;
-    .speaker {
-        position: absolute;
+/* for admin ui */
+
+.taglist, #viewpane table .taglist{
+    width:85%;
+
+    li {
+        background-color:#eee;
+        border:solid 1px #ccc;
+        padding-left:@lineheight;
+        .transition();
         z-index:1;
-        left:-40px;
     }
-    .prompt, .responder, .quiz_type, .guidelines, 
-    .q_counter, .back_to_map {
+
+    li.editlink:hover {
+        .box-shadow();
+        .transition();
         z-index:10;
-        width:50%;
-        float: right;
-        clear:both;
     }
 
-    .prompt, .responder {
-        .speech-bubble(@lineheight);
-        margin-top: @lineheight;
+    a.editlink {
+        background-color:transparent;
+        background-image:none;
+        float: none;
+        color: @dusky-blue1;
+        margin:0;
+        box-shadow:none;
+        width:100%;
     }
-
-    .responder {
-        background: @greyf5;
+    a.editlink:hover {
+        background-color:transparent;
+        background-image:none;
+        float: none;
+        color: @dusky-blue2;
+        margin:0;
     }
 }
 
@@ -504,17 +491,29 @@ table.weeklycount span.cal_count{
     width: 65%;
     padding-top: @lineheight2;
 
+
+    form label {
+        color:@cranberry;
+    }
+
+    input, select {
+        width:85%;
+    }
+
     table {
         width: 100%;
 
-        a {
+        a.add_trigger, a.refresh_trigger {
             float: right;
+            .sticker();
+            background-color:@dusky-blue1;
+            color: @white;
         }
 
     }
 
     textarea {
-        width: 90%;
+        width: 85%;
     }
 
     form form {
@@ -533,14 +532,10 @@ table.weeklycount span.cal_count{
     }
 }
 
-body footer {
+footer {
     background-color:transparent;
     color:@dusky-blue2;
     .text-shadow();
-
-    #poweredby {
-        float: right;
-    }
 }
 
 .flash {
