@@ -11,6 +11,12 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: 'Websymbols';
+    src: url('../fonts/websymbols-regular-webfont.eot');
+    src: url('../fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/websymbols-regular-webfont.woff') format('woff'), url('fonts/websymbols-regular-webfont.ttf') format('truetype'), url('fonts/websymbols-regular-webfont.svg#websymbols-regular-webfont') format('svg');
+}
+
 @font-face {
     font-family: 'EstrangeloEdessaRegular';
     src: url('/grammateus3/static/plugin_framework/fonts/estre-webfont.eot');
@@ -301,6 +307,8 @@ input[type=text], select {
 select {
     background:#fff;
     border:1px solid #eee;
+    max-width:90%;
+    width:90%;
 }
 
 form label {

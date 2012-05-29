@@ -81,14 +81,17 @@ class Book(object):
                 readings = OrderedDict()
                 units = []
                 for u in div.xpath('unit'):
-                    attributes = self._getattrs(u, ('id', 'group', 'parallel'))
-                    if not attributes['group']:
-                        attributes['group'] = '0'
-                    units.append(attributes)
+                    unit = {}
+                    u_attributes = self._getattrs(u, ('id', 'group', 'parallel'))
+                    if not u_attributes['group']:
+                        u_attributes['group'] = '0'
+                    unit['id'] = u_attributes['id']
+                    unit['group'] = u_attributes['group']
+                    unit['parallel'] = u_attributes['parallel']
 
                     reading_dict = OrderedDict()
                     for reading in u.xpath('reading'):
-                        attributes = self._getattrs(reading, ('option', 'mss', 'linebreak', 'indent'))
+                        r_attributes = self._getattrs(reading, ('option', 'mss', 'linebreak', 'indent'))
 
                         w_list = []
                         for w in reading.xpath('w'):
@@ -97,14 +100,16 @@ class Book(object):
                                 'text': w.text
                             }))
 
-                        mss = unicode(attributes['mss'].strip())
+                        mss = unicode(r_attributes['mss'].strip())
                         reading_dict[mss] = {
-                            'attributes': attributes,
+                            'attributes': r_attributes,
                             'text': reading.text.strip(),
+                            #TODO: Integrate word list (parsed words) with text (unparsed text)
                             'w': w_list,
                         }
+                    unit['readings'] = reading_dict
 
-                    readings[units[-1]['id']] = reading_dict
+                    units.append(unit)
 
                 parent[parent_key] = {'attributes': parent_attributes, 'units': units, 'readings': readings}
 

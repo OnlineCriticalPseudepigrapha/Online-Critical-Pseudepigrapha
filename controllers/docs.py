@@ -22,7 +22,7 @@ def text():
     session.filename = request.args[0]
     filename = session.filename
     #TODO: provide fallback and prompt if no filename is given in url
-    
+
     #url to pass to web2py load helper in view to load doc section via ajax
     load_url = URL('docs', 'section.load', args=filename)
 
@@ -40,17 +40,17 @@ def text():
         info = p.book_info()
         session.info = {filename:info}
     #get title of document
-    title = info['title']
+    title = info['book']['title']
 
     #get names of all versions of current doc
-    session.versions = [version['title'] for version in info['versions']]     
-    first_version = info['versions'][0]
-    delimiters = first_version['delimiters']
-
-    levels = first_version['organisation_levels']
+    versions = info['version']
+    session.versions = [v['attributes']['title'] for v in versions]
+    first_v = versions[0]
+    delimiters = first_v['divisions']['delimiters']
+    levels = first_v['organisation_levels']
 
     #build flat list of references
-    refraw = [ref for ref, units in first_version['text_structure'].items()]   
+    refraw = [ref for ref, units in first_v['text_structure'].items()]
     session.refraw = refraw
 
     #build list for starting ref
@@ -69,7 +69,7 @@ def text():
         print 'using default first ref ', start_sel
 
     #build list for ending ref
-    if 'to' in request.vars:                        
+    if 'to' in request.vars:
         end_sel = request.vars['to'][:-1]
         end_sel = re.split('-', end_sel)
         #create string ref with proper delimiters
@@ -90,7 +90,7 @@ def text():
     print 'start_sel', start_sel
     print 'end_sel', end_sel
 
-    return dict(load_url = load_url, title = title, levels = levels, 
+    return dict(load_url = load_url, title = title, levels = levels,
         start_sel = start_sel, end_sel = end_sel, filename = filename)
 
 def section():
@@ -124,17 +124,14 @@ def section():
         print 'current version: ', current_version.replace(' ', '&nbsp;')
 
     #find selected version in parsed text
-    for version in info['versions']:
-        for k, v in version.items():
-            if k == 'title' and v == current_version:
+    for version in info['version']:
+        if version['attributes']['title'] == current_version:
                 curv = version
-                vlang = curv['language']
+                vlang = curv['attributes']['language']
                 levels = curv['organisation_levels']
-            else:
-                pass
 
     #get list of mss
-    mslist = [k.strip() for k, v in curv['manuscript'].items()]
+    mslist = [[k.strip() for k, c in v.iteritems()] for v in curv['manuscripts']]
     print 'mslist for this version: ', mslist
     #use the third url argument as manuscript name if present, otherwise default to first version
     #check for 'newval' value, indicating the version has changed
@@ -144,7 +141,7 @@ def section():
         print 'current_ms: ', current_ms
         #move selected text type to top of list for ms selectbox
         i = mslist.index(current_ms)
-        mslist.insert(0, mslist.pop(i))        
+        mslist.insert(0, mslist.pop(i))
     else:
         current_ms = mslist[0]
         print 'current_ms: ', current_ms
@@ -161,13 +158,13 @@ def section():
     startIndex = reflist.index(startref)
     endIndex = reflist.index(endref)
 
-    for ref, units in curv['text_structure'].items():
+    for ref, line in curv['text_structure'].items():
         if (reflist.index(ref) >= reflist.index(startref)) and \
             (reflist.index(ref) <= reflist.index(endref)):
         #ref_parts = re.split('[:\.,;_-]', ref)
-        #if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):                
+        #if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):
                 sel_text.append(SPAN(ref, _class = 'ref'))
-                for unit_ref, unit_val in units.items():
+                for unit_ref, unit_val in line.items():
                     for mss, raw_text in unit_val.items():
                         if current_ms[-1] != ' ':
                             current_ms += ' '
@@ -228,20 +225,35 @@ def test():
     p = Book(book_file)
     info = p.book_info()
 
-    title = info['title']
-    for version in info['versions']:
-        for key, value in version.items():
-            if key != 'text_structure':
-                print 'Version', key, '-->', value
+    pprint.pprint(info)
 
-            else:
-                print 'Version textstructure'
-                for ref, ref_val in value.items():
-                    for unit, unit_val in ref_val.items():
-                        for mss, mss_val in unit_val.items():
-                            print '\t', ref, '-->', unit, '-->', mss, '-->', mss_val
-        print '************'
-    print
-    print
+    ls = []
 
-    return dict(title = title, info = info)
+    title = info['book']['title']
+    ls.append(H1(title))
+    for version in info['version']:
+        d = DIV()
+        d.append(H2('Version'))
+        d.append(DIV(H3('Attributes'), version['attributes']))
+        d.append(DIV(H3('Organization levels'), version['organisation_levels']))
+        d.append(DIV(H3('Divisions'), version['divisions']))
+        d.append(DIV(H3('Resources'), version['resources']))
+        d.append(DIV(H3('Manuscripts'), version['manuscripts']))
+        d.append(DIV(H3('Text structure')))
+        for k, v in version['text_structure'].items():
+            d.append(H4(k))
+
+        #for key, value in version.items():
+            #if key != 'text_structure':
+                #print 'Version', key, '-->', value
+
+            #else:
+                #print 'Version textstructure'
+                #for ref, ref_val in value.items():
+                    #for unit, unit_val in ref_val.items():
+                        #for mss, mss_val in unit_val.items():
+                            #print '\t', ref, '-->', unit, '-->', mss, '-->', mss_val
+
+        ls.append(d)
+
+    return dict(info = info, ls = ls)
