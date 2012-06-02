@@ -1,7 +1,13 @@
 # coding: utf8
-from lxml import etree
 from parse import Book
-import pprint, inspect, re
+import pprint
+import re
+
+if 0:
+    from gluon import current, URL, A, SPAN, H1, DIV, H2, H3, H4
+    request = current.request
+    session = current.session
+    db = current.db
 
 """
 List of session objects used in text display:
@@ -157,28 +163,29 @@ def section():
     print 'matching text in: '
     startIndex = reflist.index(startref)
     endIndex = reflist.index(endref)
-
-    for ref, line in curv['text_structure'].items():
-        if (reflist.index(ref) >= reflist.index(startref)) and \
-            (reflist.index(ref) <= reflist.index(endref)):
-        #ref_parts = re.split('[:\.,;_-]', ref)
-        #if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):
-                sel_text.append(SPAN(ref, _class = 'ref'))
-                for unit_ref, unit_val in line.items():
-                    for mss, raw_text in unit_val.items():
-                        if current_ms[-1] != ' ':
-                            current_ms += ' '
-                        if current_ms in (mss + ' '):
-                            if len(unit_val) > 1:
-                                sel_text.append(A(raw_text, _class = vlang, _href=unit_ref))
-                            else:
-                                sel_text.append(SPAN(raw_text, _class = vlang))
-                            print 'unit_val length: ', len(unit_val)
-                            print unit_val
-                        else:
-                            pass
-    for s in sel_text:
-        print s[0]
+    print startIndex
+    sel_text = parse.get_reference(current_version, )
+#    for ref, line in curv['text_structure'].items():
+        #if (reflist.index(ref) >= reflist.index(startref)) and \
+            #(reflist.index(ref) <= reflist.index(endref)):
+        ##ref_parts = re.split('[:\.,;_-]', ref)
+        ##if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):
+                #sel_text.append(SPAN(ref, _class = 'ref'))
+                #for unit_ref, unit_val in line.items():
+                    #for mss, raw_text in unit_val.items():
+                        #if current_ms[-1] != ' ':
+                            #current_ms += ' '
+                        #if current_ms in (mss + ' '):
+                            #if len(unit_val) > 1:
+                                #sel_text.append(A(raw_text, _class = vlang, _href=unit_ref))
+                            #else:
+                                #sel_text.append(SPAN(raw_text, _class = vlang))
+                            #print 'unit_val length: ', len(unit_val)
+                            #print unit_val
+                        #else:
+                            #pass
+    #for s in sel_text:
+        #print s[0]
 
     return dict(versions = session.versions, current_version = current_version,
                 mslist = mslist, sel_text = sel_text, filename = session.filename)
