@@ -4,9 +4,10 @@
 /* licensed under GPL 3.0 as a free, open-source resource */
 
 @import "framework";
+@navheight:@lineheight2 - 4;
 
 body {
-    background-color: @cream;
+    background-color: @chalk;
     background-image: url('/paideia/static/images/mosaic_texture1.png');
     background-repeat: repeat;
     z-index:1;
@@ -14,35 +15,48 @@ body {
 }
 
 body header {
-    height:@lineheight2;
+    height:@navheight;
     background:transparent;
     z-index:99;
     padding:0;
+    margin-top:18px;
 
-    h1, h1 a {
-        margin:0;
-        color: @moss;
+    h1 {
+        height:@navheight;
+        line-height:@navheight;
+        overflow:hidden;
+        float:left;
+        margin: 6px 0 0 65px;
+    }
+
+    h1 a {
+        display:block;
+        background-color:@cream;
+        color: @cranberry;
         .blockletter();
         font-size:@typeheight2;
-        height:@typeheight2;
-        line-height:@lineheight2;
+        height:@navheight;
+        line-height:@navheight;
         font-family:@fonts1;
+        overflow:hidden;
+        padding:0 @typeheight;
+        letter-spacing:4px;
     }
 
 }
 
 nav {
-    background-color:transparent;
+    background-color:@cream;
     padding: 0;
-    margin:0;
-    height:@lineheight2;
+    margin:6px 64px 0 0;
+    height:@navheight;
     .blockletter-small();
 
     .sf-menu {
         li {
             background-color:transparent;
-            height:@lineheight2;
-            line-height:@lineheight2;
+            height:@navheight;
+            line-height:@navheight;
 
             a, a:link, a:visited {
                 color:@cranberry;
@@ -83,8 +97,8 @@ nav {
 
 .auth_navbar {
     color:@cranberry;
-    height:@lineheight2;
-    line-height:@lineheight2;
+    height:@navheight;
+    line-height:@navheight;
     display:block;
     font-weight:bold;
     text-transform:uppercase;  
@@ -95,28 +109,25 @@ nav {
     }
 
     a, a:link, a:visited {
-        height:@lineheight2;
-        line-height:@lineheight2;
+        height:@navheight;
+        line-height:@navheight;
         color:@cranberry;
-        padding:0 @typeheight;
         display:block;
         float:right;
+        margin:0 @typeheight;
     }
     a:hover, a:active, a:focus {
-    }
-    a:last-child {
-        margin-left: @typeheight;
     }
 }
 
 body #page {
-    margin-top:-@lineheight2;
-    background-color:@white;
+    margin-top:-(@lineheight2 + 14);
     z-index:1;
-    .border-image('/paideia/static/images/page_border.png', 171, 170, 170, 171);
+    .border-image('/paideia/static/images/page_border.png', 170, 170, 170, 171);
     border-width:65px;
-    background:@mist;
+    background:@chalk;
     overflow: hidden;
+    min-height: 700px;
 
     #page {
         .border-image('', 0, 0, 0, 0);
@@ -170,7 +181,7 @@ body #page {
     h2 {
         padding-left: @lineheight3;
         margin-top: @lineheight2;
-        color: @greya;
+        color: @dusky-blue2;
         text-shadow:0 0 6px #fff;
     }
 
@@ -221,19 +232,24 @@ body #page {
 
         h3 {
             margin-left: @lineheight3;
+            color:@cranberry;
+            text-transform:uppercase;
+            letter-spacing:2px;
         }
 
         .news_create_link {
             float: right;
             margin-right: @lineheight3;
             color: @moss;
+            .blockletter-small();
         }
 
     }
 
-    #town_map, #town_map_mask {
+    #town_map {
+        width:860px;
         position:absolute;
-        width:800px;
+        top:-100px;
     }
 
     .comments{
@@ -462,65 +478,6 @@ table.weeklycount span.cal_count{
                 color:@white;
                 .text-shadow(0);
     }
-}
-
-#viewpane, #listpane {
-    position:relative;
-    padding:0;
-}
-
-#listpane {
-
-    width:35%;
-
-    li {
-        display:block;
-        height:@lineheight2;
-        line-height:@lineheight2;
-        overflow:hidden;
-        padding-left:@lineheight;
-        .linear-gradient(#f5f5f5, #eeeeee);
-        border-bottom: @greyc;
-
-        a, a:link, a:visited {
-            color:@dusky-blue1;
-        }
-        a:hover {
-            color:@dusky-blue2;
-        }
-    }
-}
-
-#listpane:after {
-    content:' ';
-}
-
-#listpane:before {
-    content:' ';
-    .tapered-shadow;
-}
-
-#viewpane {
-    width: 65%;
-    padding-top: @lineheight2;
-
-    table {
-        width: 100%;
-
-        a {
-            float: right;
-        }
-
-    }
-
-    textarea {
-        width: 90%;
-    }
-
-    form form {
-      background-color:#eee;
-    }
-
 }
 
 #viewpane:before {
