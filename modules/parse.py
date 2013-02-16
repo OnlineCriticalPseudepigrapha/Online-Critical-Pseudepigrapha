@@ -1,7 +1,7 @@
 from collections import OrderedDict
-from itertools import izip_longest
+#from itertools import izip_longest
 from lxml import etree
-import gluon
+#import gluon
 
 
 class VersionDoesNotExist(Exception):
@@ -346,7 +346,8 @@ class Book(object):
         Raise MultipleDivsFound if the version contains more than one div with
         the given numbers.
         '''
-
+        verbose = False
+        if verbose: print 'using divs', divs
         path = 'text/%s' % '/'.join('div[@number=%s]' % d for d in divs)
         div = version.xpath(path)
 
@@ -361,7 +362,7 @@ class Book(object):
                 'ERROR: Version "%s" has %d divs with numbers "%s"'
                 % (version.get('title'), len(div), divs)
             )
-
+        if verbose: print 'div returned: ', div[0]
         return div[0]
 
 
@@ -373,7 +374,6 @@ class Book(object):
         Arguments:
             units - the result of calling xpath('unit') on a div element.
         '''
-
         results = OrderedDict()
         for unit in units:
             unit_number = unit.xpath('@id')[0]
@@ -382,8 +382,7 @@ class Book(object):
             for reading in unit.xpath('reading'):
                 mss = reading.xpath('@mss')[0]
                 for m in mss.strip().split():
-                    reading_dict[m] = reading.text
-
+                    readings[m] = reading.text
             results[unit_number] = readings
 
         return results

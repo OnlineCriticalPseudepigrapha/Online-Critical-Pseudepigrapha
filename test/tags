@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DTD_NAME	div_add_remove.py	/^DTD_NAME = 'grammateus.dtd'$/;"	v
+DTD_NAME	test_parser.py	/^DTD_NAME = 'grammateus.dtd'$/;"	v
+MAX_DIFF	test_parser.py	/^MAX_DIFF = False$/;"	v
+TEMP_DIR	div_add_remove.py	/^TEMP_DIR = '\/tmp'$/;"	v
+TEST_DOC	div_add_remove.py	/^TEST_DOC = 'ApocrEzek.xml'$/;"	v
+TEST_DOC_1	test_parser.py	/^TEST_DOC_1 = '1En_test_1.xml'$/;"	v
+TEST_DOC_2	test_parser.py	/^TEST_DOC_2 = '1En_test_2.xml'$/;"	v
+TestBookParser	test_parser.py	/^class TestBookParser(unittest.TestCase):$/;"	c
+TestDivAdd	div_add_remove.py	/^class TestDivAdd(unittest.TestCase):$/;"	c
+TestDivRemove	div_add_remove.py	/^class TestDivRemove(unittest.TestCase):$/;"	c
+_test_bottom_level_div_structure	div_add_remove.py	/^    def _test_bottom_level_div_structure(self, div):$/;"	m	class:TestDivAdd
+_test_div_count	div_add_remove.py	/^    def _test_div_count(self, divs):$/;"	m	class:TestDivAdd
+_test_div_count	div_add_remove.py	/^    def _test_div_count(self, divs):$/;"	m	class:TestDivRemove
+_test_div_exists	div_add_remove.py	/^    def _test_div_exists(self, version, div):$/;"	m	class:TestDivAdd
+_test_div_numbers	div_add_remove.py	/^    def _test_div_numbers(self, divs, expected):$/;"	m	class:TestDivAdd
+_test_div_removed	div_add_remove.py	/^    def _test_div_removed(self, version, div):$/;"	m	class:TestDivRemove
+_test_div_structure	div_add_remove.py	/^    def _test_div_structure(self, div, new_div):$/;"	m	class:TestDivAdd
+_test_unit_numbers	div_add_remove.py	/^    def _test_unit_numbers(self):$/;"	m	class:TestDivRemove
+app_root	div_add_remove.py	/^app_root = os.path.dirname(os.path.abspath(__file__)).rsplit('\/', 1)[0]$/;"	v
+app_root	test_parser.py	/^app_root = os.path.dirname(os.path.abspath(__file__)).rsplit('\/', 1)[0]$/;"	v
+docs_dir	div_add_remove.py	/^docs_dir = os.path.join(app_root, 'test\/docs')$/;"	v
+docs_dir	test_parser.py	/^docs_dir = os.path.join(app_root, 'test\/docs')$/;"	v
+dtd_file	div_add_remove.py	/^dtd_file = os.path.join(app_root, 'static\/docs\/%s' % DTD_NAME)$/;"	v
+dtd_file	test_parser.py	/^dtd_file = os.path.join(app_root, 'static\/docs\/%s' % DTD_NAME)$/;"	v
+modules_dir	div_add_remove.py	/^modules_dir = os.path.join(app_root, 'modules')$/;"	v
+modules_dir	test_parser.py	/^modules_dir = os.path.join(app_root, 'modules')$/;"	v
+setUp	div_add_remove.py	/^    def setUp(self):$/;"	m	class:TestDivAdd
+setUp	div_add_remove.py	/^    def setUp(self):$/;"	m	class:TestDivRemove
+setUp	test_parser.py	/^    def setUp(self):$/;"	m	class:TestBookParser
+tearDown	div_add_remove.py	/^    def tearDown(self):$/;"	m	class:TestDivAdd
+tearDown	div_add_remove.py	/^    def tearDown(self):$/;"	m	class:TestDivRemove
+test_add_bottom_level_div_at_end	div_add_remove.py	/^    def test_add_bottom_level_div_at_end(self):$/;"	m	class:TestDivAdd
+test_add_bottom_level_div_at_start	div_add_remove.py	/^    def test_add_bottom_level_div_at_start(self):$/;"	m	class:TestDivAdd
+test_add_bottom_level_div_in_middle	div_add_remove.py	/^    def test_add_bottom_level_div_in_middle(self):$/;"	m	class:TestDivAdd
+test_add_div_existing	div_add_remove.py	/^    def test_add_div_existing(self):$/;"	m	class:TestDivAdd
+test_add_second_level_div_at_end	div_add_remove.py	/^    def test_add_second_level_div_at_end(self):$/;"	m	class:TestDivAdd
+test_add_second_level_div_at_start	div_add_remove.py	/^    def test_add_second_level_div_at_start(self):$/;"	m	class:TestDivAdd
+test_add_second_level_div_in_middle	div_add_remove.py	/^    def test_add_second_level_div_in_middle(self):$/;"	m	class:TestDivAdd
+test_add_top_level_div_at_end	div_add_remove.py	/^    def test_add_top_level_div_at_end(self):$/;"	m	class:TestDivAdd
+test_add_top_level_div_at_start	div_add_remove.py	/^    def test_add_top_level_div_at_start(self):$/;"	m	class:TestDivAdd
+test_add_top_level_div_in_middle	div_add_remove.py	/^    def test_add_top_level_div_in_middle(self):$/;"	m	class:TestDivAdd
+test_parse_book_1	test_parser.py	/^    def test_parse_book_1(self):$/;"	m	class:TestBookParser
+test_parse_book_2	test_parser.py	/^    def test_parse_book_2(self):$/;"	m	class:TestBookParser
+test_remove_bottom_level_div	div_add_remove.py	/^    def test_remove_bottom_level_div(self):$/;"	m	class:TestDivRemove
+test_remove_last_top_level_div	div_add_remove.py	/^    def test_remove_last_top_level_div(self):$/;"	m	class:TestDivRemove
+test_remove_middle_level_div	div_add_remove.py	/^    def test_remove_middle_level_div(self):$/;"	m	class:TestDivRemove
+test_remove_top_level_div	div_add_remove.py	/^    def test_remove_top_level_div(self):$/;"	m	class:TestDivRemove
