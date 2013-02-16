@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Book	parse.py	/^class Book(object):$/;"	c
+DivDoesNotExist	parse.py	/^class DivDoesNotExist(Exception):$/;"	c
+MultipleDivsFound	parse.py	/^class MultipleDivsFound(Exception):$/;"	c
+MultipleVersionsFound	parse.py	/^class MultipleVersionsFound(Exception):$/;"	c
+RemoveLastDivError	parse.py	/^class RemoveLastDivError(Exception):$/;"	c
+VersionDoesNotExist	parse.py	/^class VersionDoesNotExist(Exception):$/;"	c
+__init__	parse.py	/^    def __init__(self, xml_file):$/;"	m	class:Book
+_getattrs	parse.py	/^    def _getattrs(self, element, attrs):$/;"	m	class:Book
+add_div	parse.py	/^    def add_div(self, version_title, new_div):$/;"	m	class:Book
+add_version	parse.py	/^    def add_version(self, attrs, elements):$/;"	m	class:Book
+book_file	test.py	/^book_file = '..\/static\/docs\/1En_small.xml'$/;"	v
+book_info	parse.py	/^    def book_info(self):$/;"	m	class:Book
+find_insertion_point	parse.py	/^    def find_insertion_point(self, parent, element, attr, values):$/;"	m	class:Book
+get_div	parse.py	/^    def get_div(self, version, divs):$/;"	m	class:Book
+get_divisions_info	parse.py	/^    def get_divisions_info(self, divisions):$/;"	m	class:Book
+get_manuscripts_info	parse.py	/^    def get_manuscripts_info(self, manuscripts):$/;"	m	class:Book
+get_readings	parse.py	/^    def get_readings(self, units):$/;"	m	class:Book
+get_reference	parse.py	/^    def get_reference(self, version_title, divs):$/;"	m	class:Book
+get_resources_info	parse.py	/^    def get_resources_info(self, resources):$/;"	m	class:Book
+get_text_info	parse.py	/^    def get_text_info(self, text, delimiters):$/;"	m	class:Book
+get_version	parse.py	/^    def get_version(self, version_title):$/;"	m	class:Book
+info	test.py	/^info = p.book_info()$/;"	v
+p	test.py	/^p = Book(book_file)$/;"	v
+remove_div	parse.py	/^    def remove_div(self, version_title, divs):$/;"	m	class:Book
+renumber_units	parse.py	/^    def renumber_units(self):$/;"	m	class:Book
+text_structure	parse.py	/^    def text_structure(self, text, delimiters):$/;"	m	class:Book
+write	parse.py	/^    def write(self):$/;"	m	class:Book

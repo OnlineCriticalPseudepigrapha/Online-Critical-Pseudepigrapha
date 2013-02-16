@@ -1,0 +1,580 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	builder.py	/^A = E.a # anchor$/;"	v
+ABBR	builder.py	/^ABBR = E.abbr # abbreviated form (e.g., WWW, HTTP, etc.)$/;"	v
+ACRONYM	builder.py	/^ACRONYM = E.acronym # $/;"	v
+ADDRESS	builder.py	/^ADDRESS = E.address # information on author$/;"	v
+APPLET	builder.py	/^APPLET = E.applet # Java applet (DEPRECATED)$/;"	v
+AREA	builder.py	/^AREA = E.area # client-side image map area$/;"	v
+ATTR	builder.py	/^ATTR = dict$/;"	v
+B	builder.py	/^B = E.b # bold text style$/;"	v
+BASE	builder.py	/^BASE = E.base # document base URI$/;"	v
+BASEFONT	builder.py	/^BASEFONT = E.basefont # base font size (DEPRECATED)$/;"	v
+BDO	builder.py	/^BDO = E.bdo # I18N BiDi over-ride$/;"	v
+BIG	builder.py	/^BIG = E.big # large text style$/;"	v
+BLOCKQUOTE	builder.py	/^BLOCKQUOTE = E.blockquote # long quotation$/;"	v
+BODY	builder.py	/^BODY = E.body # document body$/;"	v
+BR	builder.py	/^BR = E.br # forced line break$/;"	v
+BUTTON	builder.py	/^BUTTON = E.button # push button$/;"	v
+CAPTION	builder.py	/^CAPTION = E.caption # table caption$/;"	v
+CENTER	builder.py	/^CENTER = E.center # shorthand for DIV align=center (DEPRECATED)$/;"	v
+CITE	builder.py	/^CITE = E.cite # citation$/;"	v
+CLASS	builder.py	/^def CLASS(v): return {'class': v}$/;"	f
+CODE	builder.py	/^CODE = E.code # computer code fragment$/;"	v
+COL	builder.py	/^COL = E.col # table column$/;"	v
+COLGROUP	builder.py	/^COLGROUP = E.colgroup # table column group$/;"	v
+CheckboxGroup	__init__.py	/^class CheckboxGroup(list):$/;"	c
+CheckboxValues	__init__.py	/^class CheckboxValues(SetMixin):$/;"	c
+Cleaner	clean.py	/^class Cleaner(object):$/;"	c
+DD	builder.py	/^DD = E.dd # definition description$/;"	v
+DEL	builder.py	/^DEL = getattr(E, 'del') # deleted text$/;"	v
+DEL_END	diff.py	/^class DEL_END:$/;"	c
+DEL_START	diff.py	/^class DEL_START:$/;"	c
+DFN	builder.py	/^DFN = E.dfn # instance definition$/;"	v
+DIR	builder.py	/^DIR = E.dir # directory list (DEPRECATED)$/;"	v
+DIV	builder.py	/^DIV = E.div # generic language\/style container$/;"	v
+DL	builder.py	/^DL = E.dl # definition list$/;"	v
+DT	builder.py	/^DT = E.dt # definition term$/;"	v
+DefaultErrorCreator	formfill.py	/^class DefaultErrorCreator(object):$/;"	c
+DictMixin	_dictmixin.py	/^    class DictMixin:$/;"	c
+Document	_html5builder.py	/^class Document(object):$/;"	c
+DocumentType	_html5builder.py	/^class DocumentType(object):$/;"	c
+E	builder.py	/^E = ElementMaker(makeelement=html_parser.makeelement)$/;"	v
+EM	builder.py	/^EM = E.em # emphasis$/;"	v
+Element	__init__.py	/^def Element(*args, **kw):$/;"	f
+FIELDSET	builder.py	/^FIELDSET = E.fieldset # form control group$/;"	v
+FONT	builder.py	/^FONT = E.font # local change to font (DEPRECATED)$/;"	v
+FOR	builder.py	/^def FOR(v): return {'for': v}$/;"	f
+FORM	builder.py	/^FORM = E.form # interactive form$/;"	v
+FRAME	builder.py	/^FRAME = E.frame # subwindow$/;"	v
+FRAMESET	builder.py	/^FRAMESET = E.frameset # window subdivision$/;"	v
+FieldsDict	__init__.py	/^class FieldsDict(DictMixin):$/;"	c
+FormElement	__init__.py	/^class FormElement(HtmlElement):$/;"	c
+FormNotFound	formfill.py	/^class FormNotFound(LookupError):$/;"	c
+H1	builder.py	/^H1 = E.h1 # heading$/;"	v
+H2	builder.py	/^H2 = E.h2 # heading$/;"	v
+H3	builder.py	/^H3 = E.h3 # heading$/;"	v
+H4	builder.py	/^H4 = E.h4 # heading$/;"	v
+H5	builder.py	/^H5 = E.h5 # heading$/;"	v
+H6	builder.py	/^H6 = E.h6 # heading$/;"	v
+HEAD	builder.py	/^HEAD = E.head # document head$/;"	v
+HR	builder.py	/^HR = E.hr # horizontal rule$/;"	v
+HTML	builder.py	/^HTML = E.html # document root element$/;"	v
+HTMLParser	__init__.py	/^class HTMLParser(etree.HTMLParser):$/;"	c
+HTMLParser	html5parser.py	/^class HTMLParser(_HTMLParser):$/;"	c
+HtmlComment	__init__.py	/^class HtmlComment(etree.CommentBase, HtmlMixin):$/;"	c
+HtmlElement	__init__.py	/^class HtmlElement(etree.ElementBase, HtmlMixin):$/;"	c
+HtmlElementClassLookup	__init__.py	/^class HtmlElementClassLookup(etree.CustomElementClassLookup):$/;"	c
+HtmlEntity	__init__.py	/^class HtmlEntity(etree.EntityBase, HtmlMixin):$/;"	c
+HtmlMixin	__init__.py	/^class HtmlMixin(object):$/;"	c
+HtmlProcessingInstruction	__init__.py	/^class HtmlProcessingInstruction(etree.PIBase, HtmlMixin):$/;"	c
+I	builder.py	/^I = E.i # italic text style$/;"	v
+IFRAME	builder.py	/^IFRAME = E.iframe # inline subwindow$/;"	v
+IMG	builder.py	/^IMG = E.img # Embedded image$/;"	v
+INPUT	builder.py	/^INPUT = E.input # form control$/;"	v
+INS	builder.py	/^INS = E.ins # inserted text$/;"	v
+ISINDEX	builder.py	/^ISINDEX = E.isindex # single line prompt (DEPRECATED)$/;"	v
+InputElement	__init__.py	/^class InputElement(InputMixin, HtmlElement):$/;"	c
+InputGetter	__init__.py	/^class InputGetter(object):$/;"	c
+InputMixin	__init__.py	/^class InputMixin(object):$/;"	c
+InsensitiveSequenceMatcher	diff.py	/^class InsensitiveSequenceMatcher(difflib.SequenceMatcher):$/;"	c
+KBD	builder.py	/^KBD = E.kbd # text to be entered by the user$/;"	v
+LABEL	builder.py	/^LABEL = E.label # form field label text$/;"	v
+LEGEND	builder.py	/^LEGEND = E.legend # fieldset legend$/;"	v
+LI	builder.py	/^LI = E.li # list item$/;"	v
+LINK	builder.py	/^LINK = E.link # a media-independent link$/;"	v
+LabelElement	__init__.py	/^class LabelElement(HtmlElement):$/;"	c
+MAP	builder.py	/^MAP = E.map # client-side image map$/;"	v
+MENU	builder.py	/^MENU = E.menu # menu list (DEPRECATED)$/;"	v
+META	builder.py	/^META = E.meta # generic metainformation$/;"	v
+MultipleSelectOptions	__init__.py	/^class MultipleSelectOptions(SetMixin):$/;"	c
+NOFRAMES	builder.py	/^NOFRAMES = E.noframes # alternate content container for non frame-based rendering$/;"	v
+NOSCRIPT	builder.py	/^NOSCRIPT = E.noscript # alternate content container for non script-based rendering$/;"	v
+NoDeletes	diff.py	/^class NoDeletes(Exception):$/;"	c
+OBJECT	builder.py	/^OBJECT = E.object # generic embedded object$/;"	v
+OL	builder.py	/^OL = E.ol # ordered list$/;"	v
+OPTGROUP	builder.py	/^OPTGROUP = E.optgroup # option group$/;"	v
+OPTION	builder.py	/^OPTION = E.option # selectable choice$/;"	v
+P	builder.py	/^P = E.p # paragraph$/;"	v
+PARAM	builder.py	/^PARAM = E.param # named property value$/;"	v
+PRE	builder.py	/^PRE = E.pre # preformatted text$/;"	v
+Q	builder.py	/^Q = E.q # short inline quotation$/;"	v
+RadioGroup	__init__.py	/^class RadioGroup(list):$/;"	c
+S	builder.py	/^S = E.s # strike-through text style (DEPRECATED)$/;"	v
+SAMP	builder.py	/^SAMP = E.samp # sample program output, scripts, etc.$/;"	v
+SCRIPT	builder.py	/^SCRIPT = E.script # script statements$/;"	v
+SELECT	builder.py	/^SELECT = E.select # option selector$/;"	v
+SMALL	builder.py	/^SMALL = E.small # small text style$/;"	v
+SPAN	builder.py	/^SPAN = E.span # generic language\/style container$/;"	v
+STRIKE	builder.py	/^STRIKE = E.strike # strike-through text (DEPRECATED)$/;"	v
+STRONG	builder.py	/^STRONG = E.strong # strong emphasis$/;"	v
+STYLE	builder.py	/^STYLE = E.style # style info$/;"	v
+SUB	builder.py	/^SUB = E.sub # subscript$/;"	v
+SUP	builder.py	/^SUP = E.sup # superscript$/;"	v
+SelectElement	__init__.py	/^class SelectElement(InputMixin, HtmlElement):$/;"	c
+SetMixin	_setmixin.py	/^class SetMixin(object):$/;"	c
+TABLE	builder.py	/^TABLE = E.table # $/;"	v
+TBODY	builder.py	/^TBODY = E.tbody # table body$/;"	v
+TD	builder.py	/^TD = E.td # table data cell$/;"	v
+TEXTAREA	builder.py	/^TEXTAREA = E.textarea # multi-line text field$/;"	v
+TFOOT	builder.py	/^TFOOT = E.tfoot # table footer$/;"	v
+TH	builder.py	/^TH = E.th # table header cell$/;"	v
+THEAD	builder.py	/^THEAD = E.thead # table header$/;"	v
+TITLE	builder.py	/^TITLE = E.title # document title$/;"	v
+TR	builder.py	/^TR = E.tr # table row$/;"	v
+TT	builder.py	/^TT = E.tt # teletype or monospaced text style$/;"	v
+TextareaElement	__init__.py	/^class TextareaElement(InputMixin, HtmlElement):$/;"	c
+TreeBuilder	_html5builder.py	/^class TreeBuilder(_base.TreeBuilder):$/;"	c
+U	builder.py	/^U = E.u # underlined text style (DEPRECATED)$/;"	v
+UL	builder.py	/^UL = E.ul # unordered list$/;"	v
+VAR	builder.py	/^VAR = E.var # instance of a variable or program argument$/;"	v
+XHTMLParser	__init__.py	/^class XHTMLParser(etree.XMLParser):$/;"	c
+XHTMLParser	html5parser.py	/^    class XHTMLParser(_XHTMLParser):$/;"	c
+XHTML_NAMESPACE	__init__.py	/^XHTML_NAMESPACE = "http:\/\/www.w3.org\/1999\/xhtml"$/;"	v
+_MethodFunc	__init__.py	/^class _MethodFunc(object):$/;"	c
+__all__	ElementSoup.py	/^__all__ = ["parse", "convert_tree"]$/;"	v
+__all__	__init__.py	/^__all__ = [$/;"	v
+__all__	_dictmixin.py	/^__all__ = ['DictMixin']$/;"	v
+__all__	clean.py	/^__all__ = ['clean_html', 'clean', 'Cleaner', 'autolink', 'autolink_html',$/;"	v
+__all__	diff.py	/^__all__ = ['html_annotate', 'htmldiff']$/;"	v
+__all__	formfill.py	/^__all__ = ['FormNotFound', 'fill_form', 'fill_form_html',$/;"	v
+__all__	soupparser.py	/^__all__ = ["fromstring", "parse", "convert_tree"]$/;"	v
+__and__	_setmixin.py	/^    def __and__(self, other):$/;"	m	class:SetMixin	file:
+__bytes_replace_meta_content_type	__init__.py	/^__bytes_replace_meta_content_type = re.compile($/;"	v
+__call__	__init__.py	/^    def __call__(self, doc, *args, **kw):$/;"	m	class:_MethodFunc	file:
+__call__	clean.py	/^    def __call__(self, doc):$/;"	m	class:Cleaner	file:
+__call__	formfill.py	/^    def __call__(self, el, is_block, message):$/;"	m	class:DefaultErrorCreator	file:
+__cmp__	_dictmixin.py	/^        def __cmp__(self, other):$/;"	m	class:DictMixin	file:
+__contains__	__init__.py	/^    def __contains__(self, item):$/;"	m	class:FieldsDict	file:
+__contains__	__init__.py	/^    def __contains__(self, name):$/;"	m	class:InputGetter	file:
+__contains__	_dictmixin.py	/^        def __contains__(self, key):$/;"	m	class:DictMixin	file:
+__contains__	_setmixin.py	/^    def __contains__(self, item):$/;"	m	class:SetMixin	file:
+__delitem__	__init__.py	/^    def __delitem__(self, item):$/;"	m	class:FieldsDict	file:
+__fix_docstring	__init__.py	/^def __fix_docstring(s):$/;"	f	file:
+__ge__	_setmixin.py	/^    __ge__ = issuperset$/;"	v	class:SetMixin
+__getitem__	__init__.py	/^    def __getitem__(self, item):$/;"	m	class:FieldsDict	file:
+__getitem__	__init__.py	/^    def __getitem__(self, name):$/;"	m	class:InputGetter	file:
+__iand__	_setmixin.py	/^    def __iand__(self, other):$/;"	m	class:SetMixin	file:
+__init__	__init__.py	/^    def __init__(self, **kwargs):$/;"	m	class:HTMLParser
+__init__	__init__.py	/^    def __init__(self, **kwargs):$/;"	m	class:XHTMLParser
+__init__	__init__.py	/^    def __init__(self, classes=None, mixins=None):$/;"	m	class:HtmlElementClassLookup
+__init__	__init__.py	/^    def __init__(self, form):$/;"	m	class:InputGetter
+__init__	__init__.py	/^    def __init__(self, group):$/;"	m	class:CheckboxValues
+__init__	__init__.py	/^    def __init__(self, inputs):$/;"	m	class:FieldsDict
+__init__	__init__.py	/^    def __init__(self, name, copy=False, source_class=HtmlMixin):$/;"	m	class:_MethodFunc
+__init__	__init__.py	/^    def __init__(self, select):$/;"	m	class:MultipleSelectOptions
+__init__	_html5builder.py	/^    def __init__(self):$/;"	m	class:Document
+__init__	_html5builder.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:TreeBuilder
+__init__	_html5builder.py	/^    def __init__(self, name, publicId, systemId):$/;"	m	class:DocumentType
+__init__	clean.py	/^    def __init__(self, **kw):$/;"	m	class:Cleaner
+__init__	formfill.py	/^    def __init__(self, **kw):$/;"	m	class:DefaultErrorCreator
+__init__	html5parser.py	/^        def __init__(self, strict=False, **kwargs):$/;"	m	class:.XHTMLParser
+__init__	html5parser.py	/^    def __init__(self, strict=False, **kwargs):$/;"	m	class:HTMLParser
+__ior__	_setmixin.py	/^    def __ior__(self, other):$/;"	m	class:SetMixin	file:
+__isub__	_setmixin.py	/^    def __isub__(self, other):$/;"	m	class:SetMixin	file:
+__iter__	__init__.py	/^    def __iter__(self):$/;"	m	class:CheckboxValues	file:
+__iter__	__init__.py	/^    def __iter__(self):$/;"	m	class:InputGetter	file:
+__iter__	__init__.py	/^    def __iter__(self):$/;"	m	class:MultipleSelectOptions	file:
+__iter__	_dictmixin.py	/^        def __iter__(self):$/;"	m	class:DictMixin	file:
+__ixor__	_setmixin.py	/^    def __ixor__(self, other):$/;"	m	class:SetMixin	file:
+__le__	_setmixin.py	/^    __le__ = issubset$/;"	v	class:SetMixin
+__len__	_dictmixin.py	/^        def __len__(self):$/;"	m	class:DictMixin	file:
+__len__	_setmixin.py	/^    def __len__(self):$/;"	m	class:SetMixin	file:
+__new__	diff.py	/^    def __new__(cls, tag, data, html_repr, pre_tags=None, $/;"	m	class:tag_token	file:
+__new__	diff.py	/^    def __new__(cls, text, pre_tags=None, post_tags=None, trailing_whitespace=False):$/;"	m	class:token	file:
+__or__	_setmixin.py	/^    def __or__(self, other):$/;"	m	class:SetMixin	file:
+__repr__	__init__.py	/^    def __repr__(self):$/;"	m	class:CheckboxGroup	file:
+__repr__	__init__.py	/^    def __repr__(self):$/;"	m	class:CheckboxValues	file:
+__repr__	__init__.py	/^    def __repr__(self):$/;"	m	class:FieldsDict	file:
+__repr__	__init__.py	/^    def __repr__(self):$/;"	m	class:InputGetter	file:
+__repr__	__init__.py	/^    def __repr__(self):$/;"	m	class:InputMixin	file:
+__repr__	__init__.py	/^    def __repr__(self):$/;"	m	class:MultipleSelectOptions	file:
+__repr__	__init__.py	/^    def __repr__(self):$/;"	m	class:RadioGroup	file:
+__repr__	_dictmixin.py	/^        def __repr__(self):$/;"	m	class:DictMixin	file:
+__repr__	diff.py	/^    def __repr__(self):$/;"	m	class:tag_token	file:
+__repr__	diff.py	/^    def __repr__(self):$/;"	m	class:token	file:
+__setitem__	__init__.py	/^    def __setitem__(self, item, value):$/;"	m	class:FieldsDict	file:
+__str_replace_meta_content_type	__init__.py	/^__str_replace_meta_content_type = re.compile($/;"	v
+__sub__	_setmixin.py	/^    def __sub__(self, other):$/;"	m	class:SetMixin	file:
+__xor__	_setmixin.py	/^    def __xor__(self, other):$/;"	m	class:SetMixin	file:
+_action__del	__init__.py	/^    def _action__del(self):$/;"	m	class:FormElement
+_action__get	__init__.py	/^    def _action__get(self):$/;"	m	class:FormElement
+_action__set	__init__.py	/^    def _action__set(self, value):$/;"	m	class:FormElement
+_add_class	formfill.py	/^def _add_class(el, class_name):$/;"	f
+_all_xpath	__init__.py	/^    _all_xpath = etree.XPath(".\/\/*[local-name() = 'select' or local-name() = 'input' or local-name() = 'textarea']")$/;"	v	class:InputGetter
+_append_text	soupparser.py	/^def _append_text(parent, element, text):$/;"	f
+_archive_re	__init__.py	/^_archive_re = re.compile(r'[^ ]+')$/;"	v
+_avoid_classes	clean.py	/^_avoid_classes = ['nolink']$/;"	v
+_avoid_elements	clean.py	/^_avoid_elements = ['textarea', 'pre', 'code', 'head', 'select', 'a']$/;"	v
+_avoid_hosts	clean.py	/^_avoid_hosts = [$/;"	v
+_avoid_word_break_classes	clean.py	/^_avoid_word_break_classes = ['nobreak']$/;"	v
+_avoid_word_break_elements	clean.py	/^_avoid_word_break_elements = ['pre', 'textarea', 'code']$/;"	v
+_body_re	diff.py	/^_body_re = re.compile(r'<body.*?>', re.I|re.S)$/;"	v
+_break_prefer_re	clean.py	/^_break_prefer_re = re.compile(r'[^a-z]', re.I)$/;"	v
+_break_text	clean.py	/^def _break_text(text, max_width, break_character):$/;"	f
+_check	formfill.py	/^def _check(el, check):$/;"	f
+_checked__get	__init__.py	/^    def _checked__get(self):$/;"	m	class:InputElement
+_checked__set	__init__.py	/^    def _checked__set(self, value):$/;"	m	class:InputElement
+_class_xpath	__init__.py	/^_class_xpath = etree.XPath("descendant-or-self::*[@class and contains(concat(' ', normalize-space(@class), ' '), concat(' ', $class_name, ' '))]")$/;"	v
+_collect_string_content	__init__.py	/^_collect_string_content = etree.XPath("string()")$/;"	v
+_conditional_comment_re	clean.py	/^_conditional_comment_re = re.compile($/;"	v
+_contains_block_level_tag	__init__.py	/^def _contains_block_level_tag(el):$/;"	f
+_contains_block_level_tag	diff.py	/^def _contains_block_level_tag(el):$/;"	f
+_convert_children	soupparser.py	/^def _convert_children(parent, beautiful_soup_tree, makeelement):$/;"	f
+_convert_tree	soupparser.py	/^def _convert_tree(beautiful_soup_tree, makeelement):$/;"	f
+_css_import_re	__init__.py	/^_css_import_re = re.compile(r'@import "(.*?)"')$/;"	v
+_css_import_re	clean.py	/^_css_import_re = re.compile($/;"	v
+_css_javascript_re	clean.py	/^_css_javascript_re = re.compile($/;"	v
+_css_url_re	__init__.py	/^_css_url_re = re.compile(r'url\\(('+'["][^"]*["]|'+"['][^']*[']|"+r'[^)]*)\\)', re.I)$/;"	v
+_default_element_classes	__init__.py	/^    _default_element_classes = {}$/;"	v	class:HtmlElementClassLookup
+_element_name	__init__.py	/^def _element_name(el):$/;"	f
+_end_body_re	diff.py	/^_end_body_re = re.compile(r'<\/body.*?>', re.I|re.S)$/;"	v
+_fields__get	__init__.py	/^    def _fields__get(self):$/;"	m	class:FormElement
+_fields__set	__init__.py	/^    def _fields__set(self, value):$/;"	m	class:FormElement
+_fill_form	formfill.py	/^def _fill_form(el, values):$/;"	f
+_fill_multiple	formfill.py	/^def _fill_multiple(input, value):$/;"	f
+_fill_single	formfill.py	/^def _fill_single(input, value):$/;"	f
+_find_elements_for_name	formfill.py	/^def _find_elements_for_name(form, name, error):$/;"	f
+_find_external_links	clean.py	/^_find_external_links = etree.XPath($/;"	v
+_find_form	formfill.py	/^def _find_form(el, form_id=None, form_index=None):$/;"	f
+_find_form_ids	formfill.py	/^def _find_form_ids(el):$/;"	f
+_find_styled_elements	clean.py	/^_find_styled_elements = etree.XPath($/;"	v
+_find_tag	html5parser.py	/^def _find_tag(tree, tag):$/;"	f
+_fixup_ins_del_tags	diff.py	/^def _fixup_ins_del_tags(doc):$/;"	f
+_for_element__del	__init__.py	/^    def _for_element__del(self):$/;"	m	class:LabelElement
+_for_element__get	__init__.py	/^    def _for_element__get(self):$/;"	m	class:LabelElement
+_for_element__set	__init__.py	/^    def _for_element__set(self, other):$/;"	m	class:LabelElement
+_form_name_xpath	formfill.py	/^_form_name_xpath = XPath('descendant-or-self::form[name=$name]|descendant-or-self::x:form[name=$name]', namespaces={'x':XHTML_NAMESPACE})$/;"	v
+_forms_xpath	__init__.py	/^_forms_xpath = etree.XPath("descendant-or-self::form|descendant-or-self::x:form",$/;"	v
+_has_sneaky_javascript	clean.py	/^    def _has_sneaky_javascript(self, style):$/;"	m	class:Cleaner
+_id_xpath	__init__.py	/^_id_xpath = etree.XPath("descendant-or-self::*[@id=$id]")$/;"	v
+_input_xpath	formfill.py	/^_input_xpath = XPath('|'.join(['descendant-or-self::'+_tag for _tag in ('input','select','textarea','x:input','x:select','x:textarea')]),$/;"	v
+_ins_del_re	diff.py	/^_ins_del_re = re.compile(r'<\/?(ins|del).*?>', re.I|re.S)$/;"	v
+_insert_break	clean.py	/^def _insert_break(word, width, break_character):$/;"	f
+_insert_error	formfill.py	/^def _insert_error(el, error, error_class, error_creator):$/;"	f
+_javascript_scheme_re	clean.py	/^_javascript_scheme_re = re.compile($/;"	v
+_kill_elements	clean.py	/^    def _kill_elements(self, doc, condition, iterate=None):$/;"	m	class:Cleaner
+_label__del	__init__.py	/^    def _label__del(self):$/;"	m	class:HtmlMixin
+_label__get	__init__.py	/^    def _label__get(self):$/;"	m	class:HtmlMixin
+_label__set	__init__.py	/^    def _label__set(self, label):$/;"	m	class:HtmlMixin
+_label_for_xpath	formfill.py	/^_label_for_xpath = XPath('\/\/label[@for=$for_id]|\/\/x:label[@for=$for_id]',$/;"	v
+_label_xpath	__init__.py	/^_label_xpath = etree.XPath("\/\/label[@for=$id]|\/\/x:label[@for=$id]",$/;"	v
+_link_regexes	clean.py	/^_link_regexes = [$/;"	v
+_link_text	clean.py	/^def _link_text(text, link_regexes, avoid_hosts, factory):$/;"	f
+_merge_element_contents	diff.py	/^def _merge_element_contents(el):$/;"	f
+_method__get	__init__.py	/^    def _method__get(self):$/;"	m	class:FormElement
+_method__set	__init__.py	/^    def _method__set(self, value):$/;"	m	class:FormElement
+_move_el_inside_block	diff.py	/^def _move_el_inside_block(el, tag):$/;"	f
+_multiple__get	__init__.py	/^    def _multiple__get(self):$/;"	m	class:SelectElement
+_multiple__set	__init__.py	/^    def _multiple__set(self, value):$/;"	m	class:SelectElement
+_name	__init__.py	/^    def _name(self):$/;"	m	class:FormElement
+_name__del	__init__.py	/^    def _name__del(self):$/;"	m	class:InputMixin
+_name__get	__init__.py	/^    def _name__get(self):$/;"	m	class:InputMixin
+_name__set	__init__.py	/^    def _name__set(self, value):$/;"	m	class:InputMixin
+_name_xpath	__init__.py	/^    _name_xpath = etree.XPath(".\/\/*[@name = $name and (local-name(.) = 'select' or local-name(.) = 'input' or local-name(.) = 'textarea')]")$/;"	v	class:InputGetter
+_name_xpath	formfill.py	/^_name_xpath = XPath('descendant-or-self::*[@name=$name]')$/;"	v
+_nons	__init__.py	/^def _nons(tag):$/;"	f
+_options_xpath	__init__.py	/^_options_xpath = etree.XPath("descendant-or-self::option|descendant-or-self::x:option",$/;"	v
+_parse	soupparser.py	/^def _parse(source, beautifulsoup, makeelement, **bsargs):$/;"	f
+_rel_links_xpath	__init__.py	/^_rel_links_xpath = etree.XPath("descendant-or-self::a[@rel]|descendant-or-self::x:a[@rel]",$/;"	v
+_remove_javascript_link	clean.py	/^    def _remove_javascript_link(self, link):$/;"	m	class:Cleaner
+_select	formfill.py	/^def _select(el, select):$/;"	f
+_strings	html5parser.py	/^    _strings = (bytes, str)$/;"	v
+_strings	html5parser.py	/^    _strings = basestring$/;"	v
+_substitute_comments	clean.py	/^    _substitute_comments = re.compile(r'\/\\*.*?\\*\/', re.S).sub$/;"	v	class:Cleaner
+_substitute_whitespace	clean.py	/^_substitute_whitespace = re.compile(r'\\s+').sub$/;"	v
+_tag_link_attrs	clean.py	/^    _tag_link_attrs = dict($/;"	v	class:Cleaner
+_takes_multiple	formfill.py	/^def _takes_multiple(input):$/;"	f
+_transform_result	__init__.py	/^def _transform_result(typ, result):$/;"	f
+_type__get	__init__.py	/^    def _type__get(self):$/;"	m	class:InputElement
+_type__set	__init__.py	/^    def _type__set(self, value):$/;"	m	class:InputElement
+_unicode	diff.py	/^    _unicode = str$/;"	v
+_unicode	diff.py	/^    _unicode = unicode$/;"	v
+_unquote_match	__init__.py	/^def _unquote_match(s, pos):$/;"	f
+_value__del	__init__.py	/^    def _value__del(self):$/;"	m	class:CheckboxGroup
+_value__del	__init__.py	/^    def _value__del(self):$/;"	m	class:InputElement
+_value__del	__init__.py	/^    def _value__del(self):$/;"	m	class:RadioGroup
+_value__del	__init__.py	/^    def _value__del(self):$/;"	m	class:SelectElement
+_value__del	__init__.py	/^    def _value__del(self):$/;"	m	class:TextareaElement
+_value__get	__init__.py	/^    def _value__get(self):$/;"	m	class:CheckboxGroup
+_value__get	__init__.py	/^    def _value__get(self):$/;"	m	class:InputElement
+_value__get	__init__.py	/^    def _value__get(self):$/;"	m	class:RadioGroup
+_value__get	__init__.py	/^    def _value__get(self):$/;"	m	class:SelectElement
+_value__get	__init__.py	/^    def _value__get(self):$/;"	m	class:TextareaElement
+_value__set	__init__.py	/^    def _value__set(self, value):$/;"	m	class:CheckboxGroup
+_value__set	__init__.py	/^    def _value__set(self, value):$/;"	m	class:InputElement
+_value__set	__init__.py	/^    def _value__set(self, value):$/;"	m	class:RadioGroup
+_value__set	__init__.py	/^    def _value__set(self, value):$/;"	m	class:SelectElement
+_value__set	__init__.py	/^    def _value__set(self, value):$/;"	m	class:TextareaElement
+action	__init__.py	/^    action = property(_action__get, _action__set, _action__del, doc=_action__get.__doc__)$/;"	v	class:FormElement
+action	_diffcommand.py	/^    action="store_true",$/;"	v
+add	__init__.py	/^    def add(self, item):$/;"	m	class:MultipleSelectOptions
+add	__init__.py	/^    def add(self, value):$/;"	m	class:CheckboxValues
+add_nofollow	clean.py	/^    add_nofollow = False$/;"	v	class:Cleaner
+allow_element	clean.py	/^    def allow_element(self, el):$/;"	m	class:Cleaner
+allow_embedded_url	clean.py	/^    def allow_embedded_url(self, el, url):$/;"	m	class:Cleaner
+allow_follow	clean.py	/^    def allow_follow(self, anchor):$/;"	m	class:Cleaner
+allow_tags	clean.py	/^    allow_tags = None$/;"	v	class:Cleaner
+annotate	_diffcommand.py	/^def annotate(options, args):$/;"	f
+annoying_tags	clean.py	/^    annoying_tags = True$/;"	v	class:Cleaner
+appendChild	_html5builder.py	/^    def appendChild(self, element):$/;"	m	class:Document
+autolink	clean.py	/^def autolink(el, link_regexes=_link_regexes,$/;"	f
+autolink_html	clean.py	/^def autolink_html(html, *args, **kw):$/;"	f
+base_url	__init__.py	/^    base_url = property(base_url, doc=base_url.__doc__)$/;"	v	class:HtmlMixin
+base_url	__init__.py	/^    def base_url(self):$/;"	m	class:HtmlMixin
+basestring	__init__.py	/^    basestring = (str, bytes)$/;"	v
+basestring	__init__.py	/^    basestring = __builtins__["basestring"]$/;"	v
+basestring	clean.py	/^    basestring = (str, bytes)$/;"	v
+basestring	clean.py	/^    basestring = __builtins__['basestring']$/;"	v
+basestring	diff.py	/^    basestring = __builtins__["basestring"]$/;"	v
+basestring	diff.py	/^    basestring = str$/;"	v
+basestring	formfill.py	/^    basestring = __builtins__["basestring"]$/;"	v
+basestring	formfill.py	/^    basestring = str$/;"	v
+block_inside	formfill.py	/^    block_inside = True$/;"	v	class:DefaultErrorCreator
+block_level_container_tags	diff.py	/^block_level_container_tags = ($/;"	v
+block_level_tags	diff.py	/^block_level_tags = ($/;"	v
+block_tags	defs.py	/^block_tags = general_block_tags | list_tags | table_tags | frozenset([$/;"	v
+body	__init__.py	/^    body = property(body, doc=body.__doc__)$/;"	v	class:HtmlMixin
+body	__init__.py	/^    def body(self):$/;"	m	class:HtmlMixin
+body_end_re	_diffcommand.py	/^body_end_re = re.compile($/;"	v
+body_start_re	_diffcommand.py	/^body_start_re = re.compile($/;"	v
+bytes	__init__.py	/^    bytes = __builtins__["bytes"]$/;"	v
+bytes	__init__.py	/^    bytes = str$/;"	v
+bytes	clean.py	/^    bytes = __builtins__['bytes']$/;"	v
+bytes	clean.py	/^    bytes = str$/;"	v
+checkable	__init__.py	/^    checkable = property(checkable, doc=checkable.__doc__)$/;"	v	class:InputElement
+checkable	__init__.py	/^    def checkable(self):$/;"	m	class:InputElement
+checked	__init__.py	/^    checked = property(_checked__get, _checked__set, doc=_checked__get.__doc__)$/;"	v	class:InputElement
+clean	clean.py	/^clean = Cleaner()$/;"	v
+clean_html	clean.py	/^    def clean_html(self, html):$/;"	m	class:Cleaner
+clean_html	clean.py	/^clean_html = clean.clean_html$/;"	v
+cleanup_delete	diff.py	/^def cleanup_delete(chunks):$/;"	f
+cleanup_html	diff.py	/^def cleanup_html(html):$/;"	f
+clear	_dictmixin.py	/^        def clear(self):$/;"	m	class:DictMixin
+clear	_setmixin.py	/^    def clear(self):$/;"	m	class:SetMixin
+commentClass	_html5builder.py	/^    commentClass = None$/;"	v	class:TreeBuilder
+comments	clean.py	/^    comments = True$/;"	v	class:Cleaner
+compress_merge_back	diff.py	/^def compress_merge_back(tokens, tok): $/;"	f
+compress_tokens	diff.py	/^def compress_tokens(tokens):$/;"	f
+convert_tree	soupparser.py	/^def convert_tree(beautiful_soup_tree, makeelement=None):$/;"	f
+copy	_setmixin.py	/^    def copy(self):$/;"	m	class:SetMixin
+copy_annotations	diff.py	/^def copy_annotations(src, dest): $/;"	f
+cssselect	__init__.py	/^    def cssselect(self, expr):$/;"	m	class:HtmlMixin
+default	_diffcommand.py	/^    default="-",$/;"	v
+default_error_creator	formfill.py	/^default_error_creator = DefaultErrorCreator()$/;"	v
+default_markup	diff.py	/^def default_markup(text, version):$/;"	f
+default_message	formfill.py	/^    default_message = "Invalid"$/;"	v	class:DefaultErrorCreator
+deprecated_tags	defs.py	/^deprecated_tags = frozenset([$/;"	v
+description	_diffcommand.py	/^    description=description,$/;"	v
+dest	_diffcommand.py	/^    dest="annotation",$/;"	v
+dest	_diffcommand.py	/^    dest="output",$/;"	v
+difference	_setmixin.py	/^    def difference(self, other):$/;"	m	class:SetMixin
+difference_update	_setmixin.py	/^    def difference_update(self, other):$/;"	m	class:SetMixin
+discard	_setmixin.py	/^    def discard(self, item):$/;"	m	class:SetMixin
+doctypeClass	_html5builder.py	/^    doctypeClass = DocumentType$/;"	v	class:TreeBuilder
+documentClass	_html5builder.py	/^    documentClass = Document$/;"	v	class:TreeBuilder
+document_fromstring	__init__.py	/^def document_fromstring(html, parser=None, **kw):$/;"	f
+document_fromstring	html5parser.py	/^def document_fromstring(html, guess_charset=True, parser=None):$/;"	f
+drop_tag	__init__.py	/^    def drop_tag(self):$/;"	m	class:HtmlMixin
+drop_tree	__init__.py	/^    def drop_tree(self):$/;"	m	class:HtmlMixin
+elementClass	_html5builder.py	/^    elementClass = None$/;"	v	class:TreeBuilder
+embedded	clean.py	/^    embedded = True$/;"	v	class:Cleaner
+empty_tags	defs.py	/^empty_tags = frozenset([$/;"	v
+empty_tags	diff.py	/^empty_tags = ($/;"	v
+end_tag	diff.py	/^def end_tag(el):$/;"	f
+end_whitespace_re	diff.py	/^end_whitespace_re = re.compile(r'[ \\t\\n\\r]$')$/;"	v
+error_block_class	formfill.py	/^    error_block_class = 'error-block'$/;"	v	class:DefaultErrorCreator
+error_container_tag	formfill.py	/^    error_container_tag = 'div'$/;"	v	class:DefaultErrorCreator
+error_message_class	formfill.py	/^    error_message_class = 'error-message'$/;"	v	class:DefaultErrorCreator
+event_attrs	defs.py	/^event_attrs = frozenset([$/;"	v
+expand_tokens	diff.py	/^def expand_tokens(tokens, equal=False):$/;"	f
+fields	__init__.py	/^    fields = property(_fields__get, _fields__set, doc=_fields__get.__doc__)$/;"	v	class:FormElement
+fill_form	formfill.py	/^def fill_form($/;"	f
+fill_form_html	formfill.py	/^def fill_form_html(html, values, form_id=None, form_index=None):$/;"	f
+find_class	__init__.py	/^    def find_class(self, class_name):$/;"	m	class:HtmlMixin
+find_class	__init__.py	/^find_class = _MethodFunc('find_class', copy=False)$/;"	v
+find_rel_links	__init__.py	/^    def find_rel_links(self, rel):$/;"	m	class:HtmlMixin
+find_rel_links	__init__.py	/^find_rel_links = _MethodFunc('find_rel_links', copy=False)$/;"	v
+fixup_chunks	diff.py	/^def fixup_chunks(chunks):$/;"	f
+fixup_ins_del_tags	diff.py	/^def fixup_ins_del_tags(html):$/;"	f
+flatten_el	diff.py	/^def flatten_el(el, include_hrefs, skip_tag=False):$/;"	f
+font_style_tags	defs.py	/^font_style_tags = frozenset([$/;"	v
+for_element	__init__.py	/^    for_element = property(_for_element__get, _for_element__set, _for_element__del,$/;"	v	class:LabelElement
+form_tags	defs.py	/^form_tags = frozenset([$/;"	v
+form_values	__init__.py	/^    def form_values(self):$/;"	m	class:FormElement
+forms	__init__.py	/^    def forms(self):$/;"	m	class:HtmlMixin
+forms	__init__.py	/^    forms = property(forms, doc=forms.__doc__)$/;"	v	class:HtmlMixin
+forms	clean.py	/^    forms = True$/;"	v	class:Cleaner
+fragmentClass	_html5builder.py	/^    fragmentClass = Document$/;"	v	class:TreeBuilder
+fragment_fromstring	__init__.py	/^def fragment_fromstring(html, create_parent=False, base_url=None,$/;"	f
+fragment_fromstring	html5parser.py	/^def fragment_fromstring(html, create_parent=False,$/;"	f
+fragments_fromstring	__init__.py	/^def fragments_fromstring(html, no_leading_text=False, base_url=None,$/;"	f
+fragments_fromstring	html5parser.py	/^def fragments_fromstring(html, no_leading_text=False,$/;"	f
+frame_tags	defs.py	/^frame_tags = frozenset([$/;"	v
+frames	clean.py	/^    frames = True$/;"	v	class:Cleaner
+fromstring	__init__.py	/^def fromstring(html, base_url=None, parser=None, **kw):$/;"	f
+fromstring	html5parser.py	/^def fromstring(html, guess_charset=True, parser=None):$/;"	f
+fromstring	soupparser.py	/^def fromstring(data, beautifulsoup=None, makeelement=None, **bsargs):$/;"	f
+general_block_tags	defs.py	/^general_block_tags = frozenset([$/;"	v
+get	_dictmixin.py	/^        def get(self, key, default=None):$/;"	m	class:DictMixin
+getDocument	_html5builder.py	/^    def getDocument(self):$/;"	m	class:TreeBuilder
+getFragment	_html5builder.py	/^    def getFragment(self):$/;"	m	class:TreeBuilder
+get_element_by_id	__init__.py	/^    def get_element_by_id(self, id, *default):$/;"	m	class:HtmlMixin
+get_matching_blocks	diff.py	/^    def get_matching_blocks(self):$/;"	m	class:InsensitiveSequenceMatcher
+handle_entities	soupparser.py	/^handle_entities = re.compile("&(\\w+);").sub$/;"	v
+has_key	_dictmixin.py	/^        def has_key(self, key):$/;"	m	class:DictMixin
+head	__init__.py	/^    def head(self):$/;"	m	class:HtmlMixin
+head	__init__.py	/^    head = property(head, doc=head.__doc__)$/;"	v	class:HtmlMixin
+head_tags	defs.py	/^head_tags = frozenset([$/;"	v
+help	_diffcommand.py	/^    help="Do an annotation")$/;"	v
+help	_diffcommand.py	/^    help="File to write the difference to",$/;"	v
+hide_when_equal	diff.py	/^    hide_when_equal = False$/;"	v	class:token
+hide_when_equal	diff.py	/^    hide_when_equal = True$/;"	v	class:href_token
+host_whitelist	clean.py	/^    host_whitelist = ()$/;"	v	class:Cleaner
+href_token	diff.py	/^class href_token(token):$/;"	c
+html	diff.py	/^    def html(self):$/;"	m	class:href_token
+html	diff.py	/^    def html(self):$/;"	m	class:tag_token
+html	diff.py	/^    def html(self):$/;"	m	class:token
+html_annotate	diff.py	/^def html_annotate(doclist, markup=default_markup):$/;"	f
+html_annotate_merge_annotations	diff.py	/^def html_annotate_merge_annotations(tokens_old, tokens_new): $/;"	f
+html_parser	__init__.py	/^html_parser = HTMLParser()$/;"	v
+html_parser	html5parser.py	/^html_parser = HTMLParser()$/;"	v
+html_to_xhtml	__init__.py	/^def html_to_xhtml(html):$/;"	f
+htmldiff	diff.py	/^def htmldiff(old_html, new_html):$/;"	f
+htmldiff_tokens	diff.py	/^def htmldiff_tokens(html1_tokens, html2_tokens):$/;"	f
+inputs	__init__.py	/^    def inputs(self):$/;"	m	class:FormElement
+inputs	__init__.py	/^    inputs = property(inputs, doc=inputs.__doc__)$/;"	v	class:FormElement
+insertComment	_html5builder.py	/^    def insertComment(self, data, parent=None):$/;"	m	class:TreeBuilder
+insertDoctype	_html5builder.py	/^    def insertDoctype(self, name, publicId, systemId):$/;"	m	class:TreeBuilder
+insertRoot	_html5builder.py	/^    def insertRoot(self, name):$/;"	m	class:TreeBuilder
+insert_before	formfill.py	/^    insert_before = True$/;"	v	class:DefaultErrorCreator
+insert_errors	formfill.py	/^def insert_errors($/;"	f
+insert_errors_html	formfill.py	/^def insert_errors_html(html, values, **kw):$/;"	f
+intersection	_setmixin.py	/^    def intersection(self, other):$/;"	m	class:SetMixin
+intersection_update	_setmixin.py	/^    def intersection_update(self, other):$/;"	m	class:SetMixin
+is_end_tag	diff.py	/^def is_end_tag(tok):$/;"	f
+is_start_tag	diff.py	/^def is_start_tag(tok):$/;"	f
+is_word	diff.py	/^def is_word(tok):$/;"	f
+issubset	_setmixin.py	/^    def issubset(self, other):$/;"	m	class:SetMixin
+issuperset	_setmixin.py	/^    def issuperset(self, other):$/;"	m	class:SetMixin
+items	_dictmixin.py	/^        def items(self):$/;"	m	class:DictMixin
+iteritems	_dictmixin.py	/^        def iteritems(self):$/;"	m	class:DictMixin
+iterkeys	_dictmixin.py	/^        def iterkeys(self):$/;"	m	class:DictMixin
+iterlinks	__init__.py	/^    def iterlinks(self):$/;"	m	class:HtmlMixin
+iterlinks	__init__.py	/^iterlinks = _MethodFunc('iterlinks', copy=False)$/;"	v
+itervalues	_dictmixin.py	/^        def itervalues(self):$/;"	m	class:DictMixin
+javascript	clean.py	/^    javascript = True$/;"	v	class:Cleaner
+keys	__init__.py	/^    def keys(self):$/;"	m	class:FieldsDict
+keys	__init__.py	/^    def keys(self):$/;"	m	class:InputGetter
+kill_conditional_comments	clean.py	/^    def kill_conditional_comments(self, doc):$/;"	m	class:Cleaner
+kill_tags	clean.py	/^    kill_tags = None$/;"	v	class:Cleaner
+label	__init__.py	/^    label = property(_label__get, _label__set, _label__del, doc=_label__get.__doc__)$/;"	v	class:HtmlMixin
+link_attrs	defs.py	/^link_attrs = frozenset([$/;"	v
+link_repl	__init__.py	/^        def link_repl(href):$/;"	f	function:HtmlMixin.make_links_absolute
+links	clean.py	/^    links = True$/;"	v	class:Cleaner
+list_tags	defs.py	/^list_tags = frozenset([$/;"	v
+locate_unbalanced_end	diff.py	/^def locate_unbalanced_end(unbalanced_end, pre_delete, post_delete):$/;"	f
+locate_unbalanced_start	diff.py	/^def locate_unbalanced_start(unbalanced_start, pre_delete, post_delete):$/;"	f
+lookup	__init__.py	/^    def lookup(self, node_type, document, namespace, name):$/;"	m	class:HtmlElementClassLookup
+main	_diffcommand.py	/^def main(args=None):$/;"	f
+make_links_absolute	__init__.py	/^    def make_links_absolute(self, base_url=None, resolve_base_href=True):$/;"	m	class:HtmlMixin
+make_links_absolute	__init__.py	/^make_links_absolute = _MethodFunc('make_links_absolute', copy=True)$/;"	v
+markup_serialize_tokens	diff.py	/^def markup_serialize_tokens(tokens, markup_func):$/;"	f
+merge_delete	diff.py	/^def merge_delete(del_chunks, doc):$/;"	f
+merge_insert	diff.py	/^def merge_insert(ins_chunks, doc):$/;"	f
+meta	clean.py	/^    meta = True$/;"	v	class:Cleaner
+metavar	_diffcommand.py	/^    metavar="FILE",$/;"	v
+method	__init__.py	/^    method = property(_method__get, _method__set, doc=_method__get.__doc__)$/;"	v	class:FormElement
+multiple	__init__.py	/^    multiple = property(_multiple__get, _multiple__set, doc=_multiple__get.__doc__)$/;"	v	class:SelectElement
+name	__init__.py	/^    name = property(_name__get, _name__set, _name__del, doc=_name__get.__doc__)$/;"	v	class:InputMixin
+namespaces	__init__.py	/^                               namespaces={'x':XHTML_NAMESPACE})$/;"	v
+namespaces	__init__.py	/^                             namespaces={'x':XHTML_NAMESPACE})$/;"	v
+namespaces	__init__.py	/^                           namespaces={'x':XHTML_NAMESPACE})$/;"	v
+namespaces	clean.py	/^    namespaces={'x':XHTML_NAMESPACE})$/;"	v
+namespaces	formfill.py	/^                               namespaces={'x':XHTML_NAMESPACE})$/;"	v
+namespaces	formfill.py	/^                               namespaces={'x':XHTML_NAMESPACE})$/;"	v	class:FormNotFound
+nonstandard_tags	defs.py	/^nonstandard_tags = frozenset(['blink', 'marquee'])$/;"	v
+open_http_urllib	__init__.py	/^def open_http_urllib(method, url, values):$/;"	f
+open_in_browser	__init__.py	/^def open_in_browser(doc, encoding=None):$/;"	f
+options	__init__.py	/^    def options(self):$/;"	m	class:MultipleSelectOptions
+options	__init__.py	/^    options = property(options)$/;"	v	class:MultipleSelectOptions
+page_structure	clean.py	/^    page_structure = True$/;"	v	class:Cleaner
+parse	ElementSoup.py	/^def parse(file, beautifulsoup=None, makeelement=None):$/;"	f
+parse	__init__.py	/^def parse(filename_or_url, parser=None, base_url=None, **kw):$/;"	f
+parse	html5parser.py	/^def parse(filename_url_or_file, guess_charset=True, parser=None):$/;"	f
+parse	soupparser.py	/^def parse(file, beautifulsoup=None, makeelement=None, **bsargs):$/;"	f
+parse_html	diff.py	/^def parse_html(html, cleanup=True):$/;"	f
+parser	_diffcommand.py	/^parser = optparse.OptionParser($/;"	v
+phrase_tags	defs.py	/^phrase_tags = frozenset([$/;"	v
+pop	_dictmixin.py	/^        def pop(self, key, *args):$/;"	m	class:DictMixin
+popitem	_dictmixin.py	/^        def popitem(self):$/;"	m	class:DictMixin
+processing_instructions	clean.py	/^    processing_instructions = True$/;"	v	class:Cleaner
+read_file	_diffcommand.py	/^def read_file(filename):$/;"	f
+remove	__init__.py	/^    def remove(self, item):$/;"	m	class:MultipleSelectOptions
+remove	__init__.py	/^    def remove(self, value):$/;"	m	class:CheckboxValues
+remove_tags	clean.py	/^    remove_tags = None$/;"	v	class:Cleaner
+remove_unknown_tags	clean.py	/^    remove_unknown_tags = True$/;"	v	class:Cleaner
+reset	_html5builder.py	/^    def reset(self):$/;"	m	class:TreeBuilder
+resolve_base_href	__init__.py	/^    def resolve_base_href(self):$/;"	m	class:HtmlMixin
+resolve_base_href	__init__.py	/^resolve_base_href = _MethodFunc('resolve_base_href', copy=True)$/;"	v
+rewrite_links	__init__.py	/^    def rewrite_links(self, link_repl_func, resolve_base_href=True,$/;"	m	class:HtmlMixin
+rewrite_links	__init__.py	/^rewrite_links = _MethodFunc('rewrite_links', copy=True)$/;"	v
+safe_attrs	defs.py	/^safe_attrs = frozenset([$/;"	v
+safe_attrs_only	clean.py	/^    safe_attrs_only = True$/;"	v	class:Cleaner
+scripts	clean.py	/^    scripts = True$/;"	v	class:Cleaner
+serialize_html_fragment	diff.py	/^def serialize_html_fragment(el, skip_outer=False):$/;"	f
+setdefault	_dictmixin.py	/^        def setdefault(self, key, default=None):$/;"	m	class:DictMixin
+special_inline_tags	defs.py	/^special_inline_tags = frozenset([$/;"	v
+split_body	_diffcommand.py	/^def split_body(html):$/;"	f
+split_delete	diff.py	/^def split_delete(chunks):$/;"	f
+split_unbalanced	diff.py	/^def split_unbalanced(chunks):$/;"	f
+split_words	diff.py	/^def split_words(text):$/;"	f
+start_tag	diff.py	/^def start_tag(el):$/;"	f
+start_whitespace_re	diff.py	/^start_whitespace_re = re.compile(r'^[ \\t\\n\\r]')$/;"	v
+style	clean.py	/^    style = False$/;"	v	class:Cleaner
+submit_form	__init__.py	/^def submit_form(form, extra_values=None, open_http=None):$/;"	f
+symmetric_difference	_setmixin.py	/^    def symmetric_difference(self, other):$/;"	m	class:SetMixin
+symmetric_difference_update	_setmixin.py	/^    def symmetric_difference_update(self, other):$/;"	m	class:SetMixin
+table_tags	defs.py	/^table_tags = frozenset([$/;"	v
+tag_token	diff.py	/^class tag_token(token):$/;"	c
+tags	defs.py	/^tags = (top_level_tags | head_tags | general_block_tags | list_tags$/;"	v
+text_content	__init__.py	/^    def text_content(self):$/;"	m	class:HtmlMixin
+threshold	diff.py	/^    threshold = 2$/;"	v	class:InsensitiveSequenceMatcher
+token	diff.py	/^class token(_unicode):$/;"	c
+tokenize	diff.py	/^def tokenize(html, include_hrefs=True):$/;"	f
+tokenize_annotated	diff.py	/^def tokenize_annotated(doc, annotation): $/;"	f
+top_level_tags	defs.py	/^top_level_tags = frozenset([$/;"	v
+tostring	__init__.py	/^def tostring(doc, pretty_print=False, include_meta_content_type=False,$/;"	f
+type	__init__.py	/^    type = property(_type__get, _type__set, doc=_type__get.__doc__)$/;"	v	class:InputElement
+unescape	soupparser.py	/^def unescape(string):$/;"	f
+unescape_entity	soupparser.py	/^    def unescape_entity(m):$/;"	f	function:unescape
+unichr	clean.py	/^    unichr = __builtins__['unichr']$/;"	v
+unichr	clean.py	/^    unichr = chr$/;"	v
+unicode	__init__.py	/^    unicode = __builtins__["unicode"]$/;"	v
+unicode	__init__.py	/^    unicode = str$/;"	v
+unicode	clean.py	/^    unicode = __builtins__['unicode']$/;"	v
+unicode	clean.py	/^    unicode = str$/;"	v
+union	_setmixin.py	/^    def union(self, other):$/;"	m	class:SetMixin
+update	_dictmixin.py	/^        def update(self, other=None, **kwargs):$/;"	m	class:DictMixin
+update	_setmixin.py	/^    def update(self, other):$/;"	m	class:SetMixin
+usage	_diffcommand.py	/^    usage="%prog [OPTIONS] FILE1 FILE2\\n"$/;"	v
+value	__init__.py	/^    value = property(_value__get, _value__set, _value__del, doc=_value__get.__doc__)$/;"	v	class:CheckboxGroup
+value	__init__.py	/^    value = property(_value__get, _value__set, _value__del, doc=_value__get.__doc__)$/;"	v	class:InputElement
+value	__init__.py	/^    value = property(_value__get, _value__set, _value__del, doc=_value__get.__doc__)$/;"	v	class:RadioGroup
+value	__init__.py	/^    value = property(_value__get, _value__set, _value__del, doc=_value__get.__doc__)$/;"	v	class:SelectElement
+value	__init__.py	/^    value = property(_value__get, _value__set, _value__del, doc=_value__get.__doc__)$/;"	v	class:TextareaElement
+value_options	__init__.py	/^    def value_options(self):$/;"	m	class:RadioGroup
+value_options	__init__.py	/^    def value_options(self):$/;"	m	class:SelectElement
+value_options	__init__.py	/^    value_options = property(value_options, doc=value_options.__doc__)$/;"	v	class:RadioGroup
+value_options	__init__.py	/^    value_options = property(value_options, doc=value_options.__doc__)$/;"	v	class:SelectElement
+values	_dictmixin.py	/^        def values(self):$/;"	m	class:DictMixin
+whitelist_tags	clean.py	/^    whitelist_tags = set(['iframe', 'embed'])$/;"	v	class:Cleaner
+word_break	clean.py	/^def word_break(el, max_width=40,$/;"	f
+word_break_html	clean.py	/^def word_break_html(html, *args, **kw):$/;"	f
+xhtml_parser	__init__.py	/^xhtml_parser = XHTMLParser()$/;"	v
+xhtml_parser	html5parser.py	/^    xhtml_parser = XHTMLParser()$/;"	v
+xhtml_to_html	__init__.py	/^def xhtml_to_html(xhtml):$/;"	f

@@ -103,15 +103,19 @@ def section():
     """
     populates a single text pane via the section.load view (refreshable via ajax)
     """
+    #'verbose' variable is for turning testing output on and off
+    verbose = False
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
-    print 'start of section() method with url ', request.url, varlist
+    if verbose == True:
+        print 'start of section() method with url ', request.url, varlist
     #get filename from end of url and parse the file with BookParser class
     filename = request.args[0]
-    print 'filename: ', filename
-    if ('info' in session) and (filename in session.info):
+    if verbose == True: print 'filename: ', filename
+    if 0 and ('info' in session) and (filename in session.info):
         info = session.info[filename]
-        print '\n\nstarting controller.section() using session.info'
+        if verbose == True:
+            print '\n\nstarting controller.section() using session.info'
     else:
         book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
         p = Book(book_file)
@@ -122,12 +126,15 @@ def section():
     if 'version' in request.vars:
         current_version = request.vars['version'].replace('_', ' ')
         #move selected version to top of list for selectbox
-        i = session.versions.index(current_version)
-        session.versions.insert(0, versions.pop(i))
-        print 'current version: ', current_version.replace(' ', '&nbsp;')
+        if 'versions' in session:
+            i = session.versions.index(current_version)
+            session.versions.insert(0, session.versions.pop(i))
+        if verbose == True:
+            print 'current version: ', current_version.replace(' ', '&nbsp;')
     else:
         current_version = session.versions[0]
-        print 'current version: ', current_version.replace(' ', '&nbsp;')
+        if verbose == True:
+            print 'current version: ', current_version.replace(' ', '&nbsp;')
 
     #find selected version in parsed text
     for version in info['version']:
@@ -135,60 +142,52 @@ def section():
                 curv = version
                 vlang = curv['attributes']['language']
                 levels = curv['organisation_levels']
-
     #get list of mss
     mslist = [[k.strip() for k, c in v.iteritems()] for v in curv['manuscripts']]
-    print 'mslist for this version: ', mslist
+    if verbose == True: print 'mslist for this version: ', mslist
     #use the third url argument as manuscript name if present, otherwise default to first version
     #check for 'newval' value, indicating the version has changed
     if 'type' in request.vars and request.vars['type'] != 'newval':
         current_ms = request.vars['type'].replace('_', ' ')
         current_ms = current_ms.strip()
-        print 'current_ms: ', current_ms
+        if verbose == True: print 'current_ms: ', current_ms
         #move selected text type to top of list for ms selectbox
         i = mslist.index(current_ms)
         mslist.insert(0, mslist.pop(i))
     else:
         current_ms = mslist[0]
-        print 'current_ms: ', current_ms
+        if verbose == True: print 'current_ms: ', current_ms
 
     #gather text from units within the selected section of the doc
     #filters the current version for only readings in the current
     #text type
     reflist = session.refraw
     startref = session.startref
+    start_sel = startref.split(':')
     endref = session.endref
+    end_sel = endref.split(':')
+    #make sure space delimiter is present at end of current_ms
+    if current_ms[0][-1] != ' ':
+        current_ms[0] += ' '
 
-    sel_text = []
-    print 'matching text in: '
-    startIndex = reflist.index(startref)
-    endIndex = reflist.index(endref)
-    print startIndex
-    sel_text = parse.get_reference(current_version, )
-#    for ref, line in curv['text_structure'].items():
-        #if (reflist.index(ref) >= reflist.index(startref)) and \
-            #(reflist.index(ref) <= reflist.index(endref)):
-        ##ref_parts = re.split('[:\.,;_-]', ref)
-        ##if int(ref_parts[0]) >= int(start_sel[0]) and int(ref_parts[0]) <= int(end_sel[0]):
-                #sel_text.append(SPAN(ref, _class = 'ref'))
-                #for unit_ref, unit_val in line.items():
-                    #for mss, raw_text in unit_val.items():
-                        #if current_ms[-1] != ' ':
-                            #current_ms += ' '
-                        #if current_ms in (mss + ' '):
-                            #if len(unit_val) > 1:
-                                #sel_text.append(A(raw_text, _class = vlang, _href=unit_ref))
-                            #else:
-                                #sel_text.append(SPAN(raw_text, _class = vlang))
-                            #print 'unit_val length: ', len(unit_val)
-                            #print unit_val
-                        #else:
-                            #pass
-    #for s in sel_text:
-        #print s[0]
 
-    return dict(versions = session.versions, current_version = current_version,
-                mslist = mslist, sel_text = sel_text, filename = session.filename)
+    text = []
+    parsed_text = p.get_reference(current_version, start_sel)
+    text.append(SPAN(startref, _class='ref'))
+    for u, v in parsed_text.iteritems():
+        for mss, reading in v.iteritems():
+            if current_ms[0] in (mss + ' '):
+                if reading == '':
+                    text.append(A('*', _class='placeholder', _href=u))
+                elif len(parsed_text.keys()) > 1:
+                    text.append(A(reading, _class=vlang, _href=u))
+                else:
+                    text.append(SPAN(reading, _class = vlang))
+            else:
+                pass
+
+    return dict(versions=session.versions, current_version=current_version,
+                mslist=mslist, sel_text=text, filename=session.filename)
 
 
 def apparatus():
