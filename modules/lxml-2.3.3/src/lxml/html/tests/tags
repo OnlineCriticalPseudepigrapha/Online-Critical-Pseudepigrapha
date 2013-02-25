@@ -1,0 +1,39 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BS_INSTALLED	test_elementsoup.py	/^    BS_INSTALLED = False$/;"	v
+BS_INSTALLED	test_elementsoup.py	/^    BS_INSTALLED = True$/;"	v
+CleanerTest	test_clean.py	/^class CleanerTest(unittest.TestCase):$/;"	c
+DummyInput	test_feedparser_data.py	/^class DummyInput:$/;"	c
+FeedTestCase	test_feedparser_data.py	/^class FeedTestCase(unittest.TestCase):$/;"	c
+SoupParserTestCase	test_elementsoup.py	/^    class SoupParserTestCase(HelperTestCase):$/;"	c
+__init__	test_feedparser_data.py	/^    def __init__(self, **kw):$/;"	m	class:DummyInput
+__init__	test_feedparser_data.py	/^    def __init__(self, filename):$/;"	m	class:FeedTestCase
+_data_expect_re	transform_feedparser_data.py	/^_data_expect_re = re.compile(r"entries\\[0\\]\\['[^']+'\\](?:\\[0\\]\\['value'\\])?\\s*==\\s*(.*)")$/;"	v
+_desc_re	transform_feedparser_data.py	/^_desc_re = re.compile(r'\\s*Description:\\s*(.*)')$/;"	v
+_expect_re	transform_feedparser_data.py	/^_expect_re = re.compile(r'\\s*Expect:\\s*(.*)')$/;"	v
+_feed_data_expect_re	transform_feedparser_data.py	/^_feed_data_expect_re = re.compile(r"feed\\['[^']+'\\]\\s*==\\s*(.*)")$/;"	v
+bar_re	test_feedparser_data.py	/^bar_re = re.compile(r"-----+")$/;"	v
+feed_dirs	test_feedparser_data.py	/^feed_dirs = [$/;"	v
+parse	test_feedparser_data.py	/^    def parse(self):$/;"	m	class:FeedTestCase
+parse_content	transform_feedparser_data.py	/^def parse_content(content):$/;"	f
+runTest	test_feedparser_data.py	/^    def runTest(self):$/;"	m	class:FeedTestCase
+serialize_content	transform_feedparser_data.py	/^def serialize_content(d):$/;"	f
+shortDescription	test_feedparser_data.py	/^    def shortDescription(self):$/;"	m	class:FeedTestCase
+test_allow_tags	test_clean.py	/^    def test_allow_tags(self):$/;"	m	class:CleanerTest
+test_broken_attribute	test_elementsoup.py	/^        def test_broken_attribute(self):$/;"	m	class:SoupParserTestCase
+test_suite	test_autolink.py	/^def test_suite():$/;"	f
+test_suite	test_basic.py	/^def test_suite():$/;"	f
+test_suite	test_clean.py	/^def test_suite():$/;"	f
+test_suite	test_diff.py	/^def test_suite():$/;"	f
+test_suite	test_elementsoup.py	/^def test_suite():$/;"	f
+test_suite	test_feedparser_data.py	/^def test_suite():$/;"	f
+test_suite	test_formfill.py	/^def test_suite():$/;"	f
+test_suite	test_forms.py	/^def test_suite():$/;"	f
+test_suite	test_rewritelinks.py	/^def test_suite():$/;"	f
+test_suite	test_xhtml.py	/^def test_suite():$/;"	f
+translate_all	transform_feedparser_data.py	/^def translate_all(dir):$/;"	f
+translate_file	transform_feedparser_data.py	/^def translate_file(filename):$/;"	f

@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+GetInHMS	appadmin.py	/^    def GetInHMS(seconds):$/;"	f	function:ccache
+apparatus	docs.py	/^def apparatus():$/;"	f
+args	appadmin.py	/^                 args=[request.application])], [T('db'), False,$/;"	v
+call	default.py	/^def call():$/;"	f
+ccache	appadmin.py	/^def ccache():$/;"	f
+csv	appadmin.py	/^def csv():$/;"	f
+data	default.py	/^def data():$/;"	f
+databases	appadmin.py	/^databases = get_databases(None)$/;"	v
+db	docs.py	/^    db = current.db$/;"	v
+download	appadmin.py	/^def download():$/;"	f
+download	default.py	/^def download():$/;"	f
+eval_in_global_env	appadmin.py	/^def eval_in_global_env(text):$/;"	f
+get_database	appadmin.py	/^def get_database(request):$/;"	f
+get_databases	appadmin.py	/^def get_databases(request):$/;"	f
+get_query	appadmin.py	/^def get_query(request):$/;"	f
+get_table	appadmin.py	/^def get_table(request):$/;"	f
+global_env	appadmin.py	/^global_env = copy.copy(globals())$/;"	v
+hosts	appadmin.py	/^    hosts = (http_host, )$/;"	v
+hosts	appadmin.py	/^    hosts = (http_host, socket.gethostname(),$/;"	v
+http_host	appadmin.py	/^http_host = request.env.http_host.split(':')[0]$/;"	v
+ignore_rw	appadmin.py	/^ignore_rw = True$/;"	v
+import_csv	appadmin.py	/^def import_csv(table, file):$/;"	f
+index	appadmin.py	/^def index():$/;"	f
+index	default.py	/^def index():$/;"	f
+index	docs.py	/^def index():$/;"	f
+insert	appadmin.py	/^def insert():$/;"	f
+key_table	appadmin.py	/^    def key_table(keys):$/;"	f	function:ccache
+query_by_table_type	appadmin.py	/^def query_by_table_type(tablename,db,request=request):$/;"	f
+remote_addr	appadmin.py	/^remote_addr = request.env.remote_addr$/;"	v
+request	docs.py	/^    request = current.request$/;"	v
+section	docs.py	/^def section():$/;"	f
+select	appadmin.py	/^def select():$/;"	f
+session	docs.py	/^    session = current.session$/;"	v
+state	appadmin.py	/^def state():$/;"	f
+test	docs.py	/^def test():$/;"	f
+text	docs.py	/^def text():$/;"	f
+update	appadmin.py	/^def update():$/;"	f
+user	default.py	/^def user():$/;"	f
+vars	appadmin.py	/^                 vars=dict(send=URL(args=request.args,vars=request.vars))))$/;"	v
