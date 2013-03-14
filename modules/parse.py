@@ -1,7 +1,9 @@
 from collections import OrderedDict
-#from itertools import izip_longest
 from lxml import etree
-#import gluon
+
+
+class InvalidDocumentException(Exception):
+    pass
 
 
 class VersionDoesNotExist(Exception):
@@ -35,88 +37,31 @@ class Book(object):
                       divisions
     """
 
-    def __init__(self, xml_file):
-
-        self.xml_file = xml_file
-
-        # Validate document against its schema
-        parser = etree.XMLParser(dtd_validation=True)
+    def __init__(self, xml_data):
         try:
-            self.tree = etree.parse(xml_file, parser)
-        except etree.XMLSyntaxError:
-            raise  # Just reraise for now
+            if getattr(xml_data, "read"):
+                self._tree = etree.parse(xml_data)
+            else:
+                self._tree = etree.parse(open(xml_data))
+        except AttributeError as e:
+            raise TypeError("Book() requires XML data in a file-like object")
 
-        self.encoding = etree.DocInfo(self.tree).encoding
-
-        self.book = self.tree.getroot()
-
+        # self.encoding = etree.DocInfo(self.tree).encoding
+        self._book = self._tree.getroot()
+        self._structure_info = self._get_book_info()
         self.default_delimiter = '.'
 
-        self.structure = self.book_info()
+    def validate(self, dtd_data):
+        """Detached validation from parsing due to performance reasons."""
+        try:
+            dtd = etree.DTD(dtd_data)
+        except AttributeError as e:
+            raise TypeError("validate() requires DTD in a file-like object")
+        if not dtd.validate(self._tree):
+            raise InvalidDocumentException(dtd.error_log.filter_from_errors()[0])
 
-    ### Extraction methods
-
-    def text_structure(self, text, delimiters):
-        """
-        Extract the div structure from a given text tag.
-        """
-
-        parent = OrderedDict()
-        for div in text.xpath('div'):
-            parent_attributes = [self._getattrs(div, ('number', 'fragment'))]
-
-            parent_key = unicode(parent_attributes[0]['number'])
-
-            child_structure = self.text_structure(div, delimiters[1:])
-
-            if child_structure:
-                for k, v in child_structure.items():
-                    key = '%s%s%s' % (parent_key, delimiters[0], k)
-                    parent[key] = v
-                    attributes = parent_attributes + v['attributes']
-                    parent[key]['attributes'] = attributes
-
-                    # Remove child keys
-                    del child_structure[k]
-
-            else:
-                # Child div has no children so extract the unit data
-                readings = OrderedDict()
-                units = []
-                for u in div.xpath('unit'):
-                    unit = {}
-                    u_attributes = self._getattrs(u, ('id', 'group', 'parallel'))
-                    if not u_attributes['group']:
-                        u_attributes['group'] = '0'
-                    unit['id'] = u_attributes['id']
-                    unit['group'] = u_attributes['group']
-                    unit['parallel'] = u_attributes['parallel']
-
-                    reading_dict = OrderedDict()
-                    for reading in u.xpath('reading'):
-                        r_attributes = self._getattrs(reading, ('option', 'mss', 'linebreak', 'indent'))
-
-                        w_list = []
-                        for w in reading.xpath('w'):
-                            w_list.append(dict({
-                                'attributes': self._getattrs(w, ('morph', 'lex', 'style', 'lang')),
-                                'text': w.text
-                            }))
-
-                        mss = unicode(r_attributes['mss'].strip())
-                        reading_dict[mss] = {
-                            'attributes': r_attributes,
-                            'text': reading.text.strip(),
-                            #TODO: Integrate word list (parsed words) with text (unparsed text)
-                            'w': w_list,
-                        }
-                    unit['readings'] = reading_dict
-
-                    units.append(unit)
-
-                parent[parent_key] = {'attributes': parent_attributes, 'units': units, 'readings': readings}
-
-        return parent
+    def book_info(self):
+        return self._structure_info
 
     def _getattrs(self, element, attrs):
         """
@@ -138,6 +83,29 @@ class Book(object):
         attributes.update((attr, '') for attr in attrs if attr not in attributes)
 
         return attributes
+
+    def _get_book_info(self):
+        """Return a dictionary containing information about the book's structure."""
+
+        info = {'book': self._getattrs(self._book.xpath('/book')[0], ('filename', 'title', 'textStructure')),
+                'version': []}
+
+        # Parse version tags
+        for version in self._book.xpath('/book/version'):
+            version_dict = OrderedDict()
+            version_dict['attributes'] = self._getattrs(version, ('title', 'author', 'fragment', 'language'))
+
+            divisions = version.xpath('divisions/division')
+            version_dict['organisation_levels'] = len(divisions)
+
+            version_dict['divisions'] = self.get_divisions_info(divisions)
+            version_dict['resources'] = self.get_resources_info(version.xpath('resources'))
+            version_dict['manuscripts'] = self.get_manuscripts_info(version.xpath('manuscripts'))
+            version_dict['text_structure'] = self.get_text_info(version.xpath('text'),
+                                                                version_dict['divisions']['delimiters'])
+            info['version'].append(version_dict)
+
+        return info
 
     def get_divisions_info(self, divisions):
         """
@@ -259,39 +227,67 @@ class Book(object):
 
         return data
 
-    ### End extraction methods
+    def text_structure(self, text, delimiters):
+        """Extract the div structure from a given text tag."""
 
-    def book_info(self):
-        """
-        Return a dictionary containing information about the book's structure.
-        """
+        parent = OrderedDict()
+        for div in text.xpath('div'):
+            parent_attributes = [self._getattrs(div, ('number', 'fragment'))]
 
-        info = {'book': self._getattrs(self.book.xpath('/book')[0],
-                                       ('filename', 'title', 'textStructure')), 'version': []}
+            parent_key = unicode(parent_attributes[0]['number'])
 
-        # Parse version tags
+            child_structure = self.text_structure(div, delimiters[1:])
 
-        for version in self.book.xpath('/book/version'):
-            version_dict = OrderedDict()
-            version_dict['attributes'] = self._getattrs(version,
-                                                        ('title', 'author', 'fragment', 'language'))
+            if child_structure:
+                for k, v in child_structure.items():
+                    key = '%s%s%s' % (parent_key, delimiters[0], k)
+                    parent[key] = v
+                    attributes = parent_attributes + v['attributes']
+                    parent[key]['attributes'] = attributes
 
-            divisions = version.xpath('divisions/division')
-            version_dict['organisation_levels'] = len(divisions)
+                    # Remove child keys
+                    del child_structure[k]
 
-            version_dict['divisions'] = self.get_divisions_info(divisions)
-            version_dict['resources'] = self.get_resources_info(version.xpath('resources'))
-            version_dict['manuscripts'] = self.get_manuscripts_info(version.xpath('manuscripts'))
-            version_dict['text_structure'] = self.get_text_info(version.xpath('text'),
-                                                                version_dict['divisions']['delimiters'])
+            else:
+                # Child div has no children so extract the unit data
+                readings = OrderedDict()
+                units = []
+                for u in div.xpath('unit'):
+                    unit = {}
+                    u_attributes = self._getattrs(u, ('id', 'group', 'parallel'))
+                    if not u_attributes['group']:
+                        u_attributes['group'] = '0'
+                    unit['id'] = u_attributes['id']
+                    unit['group'] = u_attributes['group']
+                    unit['parallel'] = u_attributes['parallel']
 
-            info['version'].append(version_dict)
+                    reading_dict = OrderedDict()
+                    for reading in u.xpath('reading'):
+                        r_attributes = self._getattrs(reading, ('option', 'mss', 'linebreak', 'indent'))
 
-        self.structure = info
+                        w_list = []
+                        for w in reading.xpath('w'):
+                            w_list.append(dict({
+                                'attributes': self._getattrs(w, ('morph', 'lex', 'style', 'lang')),
+                                'text': w.text
+                            }))
 
-        return info
+                        mss = unicode(r_attributes['mss'].strip())
+                        reading_dict[mss] = {
+                            'attributes': r_attributes,
+                            'text': reading.text.strip() if reading.text else "",
+                            #TODO: Integrate word list (parsed words) with text (unparsed text)
+                            'w': w_list,
+                        }
+                    unit['readings'] = reading_dict
 
-    def get_version(self, version_title):
+                    units.append(unit)
+
+                parent[parent_key] = {'attributes': parent_attributes, 'units': units, 'readings': readings}
+
+        return parent
+
+    def _get_version(self, version_title):
         """
         Return a version given its title.
 
@@ -305,272 +301,275 @@ class Book(object):
         the specified title.
         """
 
-        version = self.book.xpath('/book/version[@title="%s"]' % version_title)
+        versions = self._book.xpath('/book/version[@title="%s"]' % version_title)
 
-        if not version:
+        if not versions:
             raise VersionDoesNotExist(
                 'ERROR: Book "%s" does not have a version with title "%s"'
-                % (self.structure['title'], version_title)
+                % (self._structure_info['title'], version_title)
             )
 
-        if len(version) > 1:
+        if len(versions) > 1:
             raise MultipleVersionsFound(
                 'ERROR: Book "%s" has %d versions with title "%s"'
-                % (self.structure['title'], len(version), version_title)
+                % (self._structure_info['title'], len(versions), version_title)
             )
 
-        return version[0]
+        return versions[0]
 
-    def get_div(self, version, divs):
-        """
-        Return a div given a version and div numbers.
+    def get_text(self, version_title, text_type, start, end=None):
+        version = self._get_version()
 
-        Arguments:
-            version - the version containg the required div.
-            divs - an iterable of div numbers with the number of the top most
-                    levels preceding lower level numbers.
 
-        Raise DivDoesNotExist if the version does not contain a div with the
-        given numbers.
+    # def get_div(self, version, divs):
+    #     """
+    #     Return a div given a version and div numbers.
+    #
+    #     Arguments:
+    #         version - the version containg the required div.
+    #         divs - an iterable of div numbers with the number of the top most
+    #                 levels preceding lower level numbers.
+    #
+    #     Raise DivDoesNotExist if the version does not contain a div with the
+    #     given numbers.
+    #
+    #     Raise MultipleDivsFound if the version contains more than one div with
+    #     the given numbers.
+    #     """
+    #     verbose = False
+    #     if verbose:
+    #         print 'using divs', divs
+    #     path = 'text/%s' % '/'.join('div[@number=%s]' % d for d in divs)
+    #     div = version.xpath(path)
+    #
+    #     if not div:
+    #         raise DivDoesNotExist(
+    #             'ERROR: Version "%s" does not have a div with numbers "%s"'
+    #             % (version.get('title'), divs)
+    #         )
+    #
+    #     if len(div) > 1:
+    #         raise MultipleDivsFound(
+    #             'ERROR: Version "%s" has %d divs with numbers "%s"'
+    #             % (version.get('title'), len(div), divs)
+    #         )
+    #     if verbose:
+    #         print 'div returned: ', div[0]
+    #     return div[0]
 
-        Raise MultipleDivsFound if the version contains more than one div with
-        the given numbers.
-        """
-        verbose = False
-        if verbose:
-            print 'using divs', divs
-        path = 'text/%s' % '/'.join('div[@number=%s]' % d for d in divs)
-        div = version.xpath(path)
+    # def get_readings(self, units):
+    #     """
+    #     Return the readings for each unit in units as an OrderedDict. The keys
+    #     are unit @ids and the values are OrderedDicts of @mss/text pairs.
+    #
+    #     Arguments:
+    #         units - the result of calling xpath('unit') on a div element.
+    #     """
+    #     results = OrderedDict()
+    #     for unit in units:
+    #         unit_number = unit.xpath('@id')[0]
+    #
+    #         readings = OrderedDict()
+    #         for reading in unit.xpath('reading'):
+    #             mss = reading.xpath('@mss')[0]
+    #             for m in mss.strip().split():
+    #                 readings[m] = reading.text
+    #         results[unit_number] = readings
+    #
+    #     return results
 
-        if not div:
-            raise DivDoesNotExist(
-                'ERROR: Version "%s" does not have a div with numbers "%s"'
-                % (version.get('title'), divs)
-            )
+    # def renumber_units(self):
+    #     """
+    #     If we're adding or removing an element that contains units (a version,
+    #     div or unit), all units that follow the affected units must be
+    #     renumbered since all units in a document must be numbered consecutively.
+    #
+    #     It may not be the most efficient way, but we just renumber all the units
+    #     starting with 1.
+    #     """
+    #
+    #     units = self.tree.xpath('//unit')
+    #     for index, unit in enumerate(units):
+    #         unit.set('number', unicode(index + 1))
 
-        if len(div) > 1:
-            raise MultipleDivsFound(
-                'ERROR: Version "%s" has %d divs with numbers "%s"'
-                % (version.get('title'), len(div), divs)
-            )
-        if verbose:
-            print 'div returned: ', div[0]
-        return div[0]
+    # def get_reference(self, version_title, divs):
+    #     """
+    #     Get the text referenced by the version title and div numbers.
+    #
+    #     Arguments:
+    #         version_title - the title of the required version.
+    #         divs - an iterable of div numbers with the number of the top most
+    #                levels preceding lower level numbers.
+    #
+    #     Return an OrderedDict keyed by unit id. The values are an OrderedDict of
+    #     manuscript, text pairs.
+    #     """
+    #     version = self.get_version(version_title)
+    #
+    #     div = self.get_div(version, divs)
+    #
+    #     # Check that we have a bottom level div
+    #     if not len(div):
+    #         raise ValueError(
+    #             'ERROR: Div %s is empty.'
+    #             % divs
+    #         )
+    #
+    #     units = div.xpath('unit')
+    #     if not units:
+    #         raise ValueError(
+    #             'ERROR: Div %s has no units.'
+    #             % divs
+    #         )
+    #
+    #     return self.get_readings(units)
 
-    def get_readings(self, units):
-        """
-        Return the readings for each unit in units as an OrderedDict. The keys
-        are unit @ids and the values are OrderedDicts of @mss/text pairs.
+    # def find_insertion_point(self, parent, element, attr, values):
+    #     """
+    #     Find where to insert a new child element within a parent element's
+    #     children.
+    #
+    #     Get all the parent's children where the attribute named by 'attr' has a
+    #     value less than or equal to the first item in 'values'. In the case of
+    #     multilevel elements like <div>, recurse down the tree until we find the
+    #     insertion position.
+    #
+    #     Arguments:
+    #         parent - the element into which the new child is to be inserted.
+    #         element - the tag of the child to be inserted.
+    #         attr - the name of the child's attribute on which the search for the
+    #                insertion point will be performed.
+    #         values - an iterable containing the values of the attribute to be
+    #                  matched. Multiple values of the attribute are needed where
+    #                  we have multiple levels of elements with the same name to
+    #                  be searched e.g. div.
+    #
+    #     Return a tuple containing the current parent element, the index at which
+    #     to insert the new element and the unused portion of the values list.
+    #
+    #     TODO: Allow for multiple attribute names each with multiple values
+    #           (might be needed for adding units)?
+    #     """
+    #
+    #     children = parent.xpath('%s[@%s<=%s]' % (element, attr, values[0]))
+    #     if len(children):
+    #         if children[-1].get(attr) == values[0]:
+    #             parent, index, values = self.find_insertion_point(children[-1], element, attr, values[1:])
+    #         else:
+    #             index = len(children)
+    #
+    #     else:
+    #         index = 0
+    #
+    #     return parent, index, values
 
-        Arguments:
-            units - the result of calling xpath('unit') on a div element.
-        """
-        results = OrderedDict()
-        for unit in units:
-            unit_number = unit.xpath('@id')[0]
+    # def write(self):
+    #     """
+    #     Write xml tree to file.
+    #     """
+    #
+    #     fp = open(self.xml_file, 'w')
+    #     self.tree.write(fp)
 
-            readings = OrderedDict()
-            for reading in unit.xpath('reading'):
-                mss = reading.xpath('@mss')[0]
-                for m in mss.strip().split():
-                    readings[m] = reading.text
-            results[unit_number] = readings
+    # def add_div(self, version_title, new_div):
+    #     """
+    #     Add a new div to the version with the given version title at the
+    #     location given by the div numbers in div.
+    #
+    #     Raise ValueError if the div already exists.
+    #
+    #     Arguments:
+    #         version_title - the title of the required version.
+    #         new_div - an iterable of div numbers with the number of the top most
+    #                   levels preceding lower level numbers. It defines the
+    #                   location in the version's text element in which to insert
+    #                   the new div.
+    #     """
+    #
+    #     version = self.get_version(version_title)
+    #
+    #     # Make sure div doesn't already exist
+    #     div = None
+    #     try:
+    #         div = self.get_div(version, new_div)
+    #     except DivDoesNotExist:
+    #         pass
+    #     except:
+    #         raise
+    #
+    #     if div is not None:
+    #         raise ValueError(
+    #             'ERROR: <div> %s already exists in <version> %s'
+    #             % (','.join(new_div), version_title)
+    #         )
+    #
+    #     # Find out where to insert the new div
+    #     text = version.xpath('text')[0]
+    #     element, index, values = self.find_insertion_point(text, 'div', 'number', new_div)
+    #
+    #     # Insert the new div and the required children
+    #     while values:
+    #         new = etree.Element('div')
+    #         new.set('number', values[0])
+    #         element.insert(index, new)
+    #         element = element.xpath('div')[index]
+    #         values = values[1:]
+    #         index = 0
+    #
+    #     # Rebuild book_info
+    #     self.structure = self.book_info()
+    #
+    #     # TODO: Update cache (when caching implemented)
+    #
+    #     # Write to file
+    #     self.write()
 
-        return results
+    # def remove_div(self, version_title, divs):
+    #     """
+    #     Remove the div referenced by the version title and div numbers.
+    #     Do nothing if the <div> does not exist.
+    #
+    #     Arguments:
+    #         version_title - the title of the required version.
+    #         divs - an iterable of div numbers with the number of the top most
+    #                levels preceding lower level numbers.
+    #     """
+    #
+    #     version = self.get_version(version_title)
+    #
+    #     # We cannot remove a top level div if it's the only one in the version's
+    #     # <text> element since it must contain at least one <div> according to
+    #     # the DTD.
+    #     if len(divs) == 1:   # Removing a top level div
+    #         num_divs = version.xpath('text/div')
+    #         if len(num_divs) == 1:
+    #             raise RemoveLastDivError('Attempt to remove the only <div> in version.')
+    #
+    #     try:
+    #         div = self.get_div(version, divs)
+    #     except DivDoesNotExist:
+    #         return
+    #
+    #     # Remove div
+    #     div.getparent().remove(div)
+    #
+    #     # Renumber units in subsequent divs and versions
+    #     self.renumber_units()
+    #
+    #     # Rebuild book_info
+    #     self.structure = self.book_info()
+    #
+    #     # TODO: Update cache (when caching implemented)
+    #
+    #     # Write to file
+    #     self.write()
 
-    def renumber_units(self):
-        """
-        If we're adding or removing an element that contains units (a version,
-        div or unit), all units that follow the affected units must be
-        renumbered since all units in a document must be numbered consecutively.
-
-        It may not be the most efficient way, but we just renumber all the units
-        starting with 1.
-        """
-
-        units = self.tree.xpath('//unit')
-        for index, unit in enumerate(units):
-            unit.set('number', unicode(index + 1))
-
-    def get_reference(self, version_title, divs):
-        """
-        Get the text referenced by the version title and div numbers.
-
-        Arguments:
-            version_title - the title of the required version.
-            divs - an iterable of div numbers with the number of the top most
-                   levels preceding lower level numbers.
-
-        Return an OrderedDict keyed by unit id. The values are an OrderedDict of
-        manuscript, text pairs.
-        """
-
-        version = self.get_version(version_title)
-
-        div = self.get_div(version, divs)
-
-        # Check that we have a bottom level div
-        if not len(div):
-            raise ValueError(
-                'ERROR: Div %s is empty.'
-                % divs
-            )
-
-        units = div.xpath('unit')
-        if not units:
-            raise ValueError(
-                'ERROR: Div %s has no units.'
-                % divs
-            )
-
-        return self.get_readings(units)
-
-    def find_insertion_point(self, parent, element, attr, values):
-        """
-        Find where to insert a new child element within a parent element's
-        children.
-
-        Get all the parent's children where the attribute named by 'attr' has a
-        value less than or equal to the first item in 'values'. In the case of
-        multilevel elements like <div>, recurse down the tree until we find the
-        insertion position.
-
-        Arguments:
-            parent - the element into which the new child is to be inserted.
-            element - the tag of the child to be inserted.
-            attr - the name of the child's attribute on which the search for the
-                   insertion point will be performed.
-            values - an iterable containing the values of the attribute to be
-                     matched. Multiple values of the attribute are needed where
-                     we have multiple levels of elements with the same name to
-                     be searched e.g. div.
-
-        Return a tuple containing the current parent element, the index at which
-        to insert the new element and the unused portion of the values list.
-
-        TODO: Allow for multiple attribute names each with multiple values
-              (might be needed for adding units)?
-        """
-
-        children = parent.xpath('%s[@%s<=%s]' % (element, attr, values[0]))
-        if len(children):
-            if children[-1].get(attr) == values[0]:
-                parent, index, values = self.find_insertion_point(children[-1], element, attr, values[1:])
-            else:
-                index = len(children)
-
-        else:
-            index = 0
-
-        return parent, index, values
-
-    def write(self):
-        """
-        Write xml tree to file.
-        """
-
-        fp = open(self.xml_file, 'w')
-        self.tree.write(fp)
-
-    def add_div(self, version_title, new_div):
-        """
-        Add a new div to the version with the given version title at the
-        location given by the div numbers in div.
-
-        Raise ValueError if the div already exists.
-
-        Arguments:
-            version_title - the title of the required version.
-            new_div - an iterable of div numbers with the number of the top most
-                      levels preceding lower level numbers. It defines the
-                      location in the version's text element in which to insert
-                      the new div.
-        """
-
-        version = self.get_version(version_title)
-
-        # Make sure div doesn't already exist
-        div = None
-        try:
-            div = self.get_div(version, new_div)
-        except DivDoesNotExist:
-            pass
-        except:
-            raise
-
-        if div is not None:
-            raise ValueError(
-                'ERROR: <div> %s already exists in <version> %s'
-                % (','.join(new_div), version_title)
-            )
-
-        # Find out where to insert the new div
-        text = version.xpath('text')[0]
-        element, index, values = self.find_insertion_point(text, 'div', 'number', new_div)
-
-        # Insert the new div and the required children
-        while values:
-            new = etree.Element('div')
-            new.set('number', values[0])
-            element.insert(index, new)
-            element = element.xpath('div')[index]
-            values = values[1:]
-            index = 0
-
-        # Rebuild book_info
-        self.structure = self.book_info()
-
-        # TODO: Update cache (when caching implemented)
-
-        # Write to file
-        self.write()
-
-    def remove_div(self, version_title, divs):
-        """
-        Remove the div referenced by the version title and div numbers.
-        Do nothing if the <div> does not exist.
-
-        Arguments:
-            version_title - the title of the required version.
-            divs - an iterable of div numbers with the number of the top most
-                   levels preceding lower level numbers.
-        """
-
-        version = self.get_version(version_title)
-
-        # We cannot remove a top level div if it's the only one in the version's
-        # <text> element since it must contain at least one <div> according to
-        # the DTD.
-        if len(divs) == 1:   # Removing a top level div
-            num_divs = version.xpath('text/div')
-            if len(num_divs) == 1:
-                raise RemoveLastDivError('Attempt to remove the only <div> in version.')
-
-        try:
-            div = self.get_div(version, divs)
-        except DivDoesNotExist:
-            return
-
-        # Remove div
-        div.getparent().remove(div)
-
-        # Renumber units in subsequent divs and versions
-        self.renumber_units()
-
-        # Rebuild book_info
-        self.structure = self.book_info()
-
-        # TODO: Update cache (when caching implemented)
-
-        # Write to file
-        self.write()
-
-    def add_version(self, attrs, elements):
-        """
-        Add a new version.
-
-        Arguments:
-            attrs - dictionary of the version element's attributes
-            elements - dictionary defining the version element's elements
-        """
-        pass
+    # def add_version(self, attrs, elements):
+    #     """
+    #     Add a new version.
+    #
+    #     Arguments:
+    #         attrs - dictionary of the version element's attributes
+    #         elements - dictionary defining the version element's elements
+    #     """
+    #     pass
