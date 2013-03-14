@@ -7,21 +7,25 @@ from lxml import etree
 class VersionDoesNotExist(Exception):
     pass
 
+
 class MultipleVersionsFound(Exception):
     pass
+
 
 class DivDoesNotExist(Exception):
     pass
 
+
 class MultipleDivsFound(Exception):
     pass
+
 
 class RemoveLastDivError(Exception):
     pass
 
 
 class Book(object):
-    '''
+    """
     Parser for OCP XML files
 
     It provides methods for:
@@ -29,7 +33,7 @@ class Book(object):
     book_info() - extract book structure information from xml
     get_reference() - extract readings given a version title and an iterable of
                       divisions
-    '''
+    """
 
     def __init__(self, xml_file):
 
@@ -40,7 +44,7 @@ class Book(object):
         try:
             self.tree = etree.parse(xml_file, parser)
         except etree.XMLSyntaxError:
-            raise   # Just reraise for now
+            raise  # Just reraise for now
 
         self.encoding = etree.DocInfo(self.tree).encoding
 
@@ -50,13 +54,12 @@ class Book(object):
 
         self.structure = self.book_info()
 
-
     ### Extraction methods
 
     def text_structure(self, text, delimiters):
-        '''
+        """
         Extract the div structure from a given text tag.
-        '''
+        """
 
         parent = OrderedDict()
         for div in text.xpath('div'):
@@ -115,9 +118,8 @@ class Book(object):
 
         return parent
 
-
     def _getattrs(self, element, attrs):
-        '''
+        """
         Return an OrderedDict of an element's attributes/values. If the element
         does not have a requested attribute, add the attribute with an empty
         string as it's value.
@@ -128,7 +130,7 @@ class Book(object):
                     to extract from the element. This is usually a complete list
                     of the element's attributes according to the DTD, but it
                     doesn't have to be.
-        '''
+        """
 
         attributes = OrderedDict(element.items())
 
@@ -137,14 +139,13 @@ class Book(object):
 
         return attributes
 
-
     def get_divisions_info(self, divisions):
-        '''
+        """
         Return a dictionary of lists of <divisions> tag attributes and text.
 
         Arguments:
             divisions - a list of <divisions> elements from which we are extracting data.
-        '''
+        """
 
         data = {
             'labels': [],
@@ -176,24 +177,21 @@ class Book(object):
 
         return data
 
-
     def get_resources_info(self, resources):
-        '''
+        """
         Return a list of dictionaries of <resource> tag attributes and text.
 
         Arguments:
             resources - a list of <resources> elements from which we are extracting data.
-        '''
+        """
 
         data = []
 
         for res in resources:
             res_data = []
             for r in res.xpath('resource'):
-                resource = {}
-
-                resource['attributes'] = self._getattrs(r, ('name', ))
-                resource['info'] = [unicode(i.text) for i in r.xpath('info')]
+                resource = {'attributes': self._getattrs(r, ('name', )),
+                            'info': [unicode(i.text) for i in r.xpath('info')]}
                 url = r.xpath('URL')
                 if url:
                     resource['url'] = unicode(url[0].text)
@@ -206,24 +204,22 @@ class Book(object):
 
         return data
 
-
     def get_manuscripts_info(self, manuscripts):
-        '''
+        """
         Return a list of dictionaries of <manuscripts> tag attributes and text.
 
         Arguments:
             manuscripts - a list of <manuscripts> elements from which we are extracting data.
-        '''
+        """
 
         data = []
 
         for manuscript in manuscripts:
             ms_data = OrderedDict()
             for ms in manuscript.xpath('ms'):
-                ms_dict = {}
-                ms_dict['attributes'] = OrderedDict((attr, unicode(ms.xpath('@%s' % attr)[0])) for attr in ('abbrev', 'language', 'show'))
+                ms_dict = {'attributes': OrderedDict(
+                    (attr, unicode(ms.xpath('@%s' % attr)[0])) for attr in ('abbrev', 'language', 'show')), 'name': {}}
 
-                ms_dict['name'] = {}
                 name = ms.xpath('name')[0]
                 if name.text is not None:
                     ms_dict['name']['text'] = unicode(name.text.strip())
@@ -249,16 +245,15 @@ class Book(object):
 
         return data
 
-
     def get_text_info(self, text, delimiters):
-        '''
+        """
         Return a OrderedDict containing data from a <text> element.
 
         Arguments:
             text - the <text> element from which we are extracting data.
             delimiters - a list of the delimiters used to seperate a document's
                          divisions
-        '''
+        """
 
         data = self.text_structure(text[0], delimiters)
 
@@ -267,17 +262,14 @@ class Book(object):
     ### End extraction methods
 
     def book_info(self):
-        '''
+        """
         Return a dictionary containing information about the book's structure.
-        '''
+        """
 
-        info = {}
-
-        info['book'] = self._getattrs(self.book.xpath('/book')[0],
-                                        ('filename', 'title', 'textStructure'))
+        info = {'book': self._getattrs(self.book.xpath('/book')[0],
+                                       ('filename', 'title', 'textStructure')), 'version': []}
 
         # Parse version tags
-        info['version'] = []
 
         for version in self.book.xpath('/book/version'):
             version_dict = OrderedDict()
@@ -299,9 +291,8 @@ class Book(object):
 
         return info
 
-
     def get_version(self, version_title):
-        '''
+        """
         Return a version given its title.
 
         Arguments:
@@ -312,7 +303,7 @@ class Book(object):
 
         Raise MultipleVersionsFound if the book has more than one version with
         the specified title.
-        '''
+        """
 
         version = self.book.xpath('/book/version[@title="%s"]' % version_title)
 
@@ -325,14 +316,13 @@ class Book(object):
         if len(version) > 1:
             raise MultipleVersionsFound(
                 'ERROR: Book "%s" has %d versions with title "%s"'
-                % (self.book_info['title'], len(version), version_title)
+                % (self.structure['title'], len(version), version_title)
             )
 
         return version[0]
 
-
     def get_div(self, version, divs):
-        '''
+        """
         Return a div given a version and div numbers.
 
         Arguments:
@@ -345,9 +335,10 @@ class Book(object):
 
         Raise MultipleDivsFound if the version contains more than one div with
         the given numbers.
-        '''
+        """
         verbose = False
-        if verbose: print 'using divs', divs
+        if verbose:
+            print 'using divs', divs
         path = 'text/%s' % '/'.join('div[@number=%s]' % d for d in divs)
         div = version.xpath(path)
 
@@ -362,18 +353,18 @@ class Book(object):
                 'ERROR: Version "%s" has %d divs with numbers "%s"'
                 % (version.get('title'), len(div), divs)
             )
-        if verbose: print 'div returned: ', div[0]
+        if verbose:
+            print 'div returned: ', div[0]
         return div[0]
 
-
     def get_readings(self, units):
-        '''
+        """
         Return the readings for each unit in units as an OrderedDict. The keys
         are unit @ids and the values are OrderedDicts of @mss/text pairs.
 
         Arguments:
             units - the result of calling xpath('unit') on a div element.
-        '''
+        """
         results = OrderedDict()
         for unit in units:
             unit_number = unit.xpath('@id')[0]
@@ -387,24 +378,22 @@ class Book(object):
 
         return results
 
-
     def renumber_units(self):
-        '''
+        """
         If we're adding or removing an element that contains units (a version,
         div or unit), all units that follow the affected units must be
         renumbered since all units in a document must be numbered consecutively.
 
         It may not be the most efficient way, but we just renumber all the units
         starting with 1.
-        '''
+        """
 
         units = self.tree.xpath('//unit')
         for index, unit in enumerate(units):
-            unit.set('number', unicode(index+1))
-
+            unit.set('number', unicode(index + 1))
 
     def get_reference(self, version_title, divs):
-        '''
+        """
         Get the text referenced by the version title and div numbers.
 
         Arguments:
@@ -414,7 +403,7 @@ class Book(object):
 
         Return an OrderedDict keyed by unit id. The values are an OrderedDict of
         manuscript, text pairs.
-        '''
+        """
 
         version = self.get_version(version_title)
 
@@ -436,9 +425,8 @@ class Book(object):
 
         return self.get_readings(units)
 
-
     def find_insertion_point(self, parent, element, attr, values):
-        '''
+        """
         Find where to insert a new child element within a parent element's
         children.
 
@@ -462,7 +450,7 @@ class Book(object):
 
         TODO: Allow for multiple attribute names each with multiple values
               (might be needed for adding units)?
-        '''
+        """
 
         children = parent.xpath('%s[@%s<=%s]' % (element, attr, values[0]))
         if len(children):
@@ -476,18 +464,16 @@ class Book(object):
 
         return parent, index, values
 
-
     def write(self):
-        '''
+        """
         Write xml tree to file.
-        '''
+        """
 
         fp = open(self.xml_file, 'w')
         self.tree.write(fp)
 
-
     def add_div(self, version_title, new_div):
-        '''
+        """
         Add a new div to the version with the given version title at the
         location given by the div numbers in div.
 
@@ -499,7 +485,7 @@ class Book(object):
                       levels preceding lower level numbers. It defines the
                       location in the version's text element in which to insert
                       the new div.
-        '''
+        """
 
         version = self.get_version(version_title)
 
@@ -539,9 +525,8 @@ class Book(object):
         # Write to file
         self.write()
 
-
     def remove_div(self, version_title, divs):
-        '''
+        """
         Remove the div referenced by the version title and div numbers.
         Do nothing if the <div> does not exist.
 
@@ -549,7 +534,7 @@ class Book(object):
             version_title - the title of the required version.
             divs - an iterable of div numbers with the number of the top most
                    levels preceding lower level numbers.
-        '''
+        """
 
         version = self.get_version(version_title)
 
@@ -580,16 +565,12 @@ class Book(object):
         # Write to file
         self.write()
 
-
     def add_version(self, attrs, elements):
-        '''
+        """
         Add a new version.
 
         Arguments:
             attrs - dictionary of the version element's attributes
             elements - dictionary defining the version element's elements
-        '''
-
+        """
         pass
-
-
