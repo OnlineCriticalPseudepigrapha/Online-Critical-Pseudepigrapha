@@ -453,8 +453,7 @@ class Book(object):
         return divpaths
 
     def get_text(self, version_title, text_type, start_div, end_div=None):
-        texts = []
-        Reading = namedtuple("Reading", "unit_id, language, readings_in_unit, text")
+        Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
 
         version = self._book.xpath("/book/version[@title='{}']".format(version_title))
         if version is None:
@@ -470,7 +469,7 @@ class Book(object):
             raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
         manuscript = manuscript[0]
         if manuscript.get("show") == "no":
-            return texts
+            raise StopIteration
 
         reading_filter = "reading[re:test(@mss, '^{0} | {0} ')]".format(text_type)
 
@@ -478,12 +477,15 @@ class Book(object):
             readings = version.xpath("text/{}//{}".format(divpath, reading_filter),
                                      namespaces={"re": "http://exslt.org/regular-expressions"})
             for reading in readings:
-                texts.append(Reading(reading.getparent().get("id"),
-                                     version.get("language"),
-                                     len(reading.getparent().getchildren()),
-                                     reading.text))
+                yield Text(reading.getparent().get("id"),
+                              version.get("language"),
+                              len(reading.getparent().getchildren()),
+                              reading.text.strip() if reading.text else "")
 
-        return texts
+    def get_readings(self, unit_id):
+        Reading = namedtuple("Reading", "mss, text")
+        for reading in self._book.xpath("//unit[@id={}]/reading".format(unit_id)):
+            yield Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else "")
 
     # def get_div(self, version, divs):
     #     """
@@ -737,4 +739,3 @@ class Book(object):
     #         elements - dictionary defining the version element's elements
     #     """
     #     pass
-
