@@ -6,12 +6,12 @@ class InvalidDocumentException(Exception):
     pass
 
 
-class VersionDoesNotExist(Exception):
-    pass
-
-
-class MultipleVersionsFound(Exception):
-    pass
+# class VersionDoesNotExist(Exception):
+#     pass
+#
+#
+# class MultipleVersionsFound(Exception):
+#     pass
 
 
 class DivDoesNotExist(Exception):
@@ -23,6 +23,14 @@ class MultipleDivsFound(Exception):
 
 
 class RemoveLastDivError(Exception):
+    pass
+
+
+class ElementDoesNotExist(Exception):
+    pass
+
+
+class MultipleElementsReturned(Exception):
     pass
 
 
@@ -287,39 +295,187 @@ class Book(object):
 
         return parent
 
-    def _get_version(self, version_title):
-        """
-        Return a version given its title.
+    # def _get_version(self, version_title):
+    #     """
+    #     Return a version given its title.
+    #
+    #     Arguments:
+    #         version_title - the title of the required version.
+    #
+    #     Raise VersionDoesNotExist if a version with the specified title does not
+    #     exist.
+    #
+    #     Raise MultipleVersionsFound if the book has more than one version with
+    #     the specified title.
+    #     """
+    #
+    #     versions = self._book.xpath('/book/version[@title="%s"]' % version_title)
+    #
+    #     if not versions:
+    #         raise VersionDoesNotExist(
+    #             'ERROR: Book "%s" does not have a version with title "%s"'
+    #             % (self._structure_info['title'], version_title)
+    #         )
+    #
+    #     if len(versions) > 1:
+    #         raise MultipleVersionsFound(
+    #             'ERROR: Book "%s" has %d versions with title "%s"'
+    #             % (self._structure_info['title'], len(versions), version_title)
+    #         )
+    #
+    #     return versions[0]
 
-        Arguments:
-            version_title - the title of the required version.
+    @staticmethod
+    def gen_divpath(start_div=None, end_div=None):
+        divpaths = []
+        divpaths_desc = []
+        prefix_div = []
+        prefix_divpath = ""
 
-        Raise VersionDoesNotExist if a version with the specified title does not
-        exist.
+        # convert the ids to integer
+        if start_div:
+            start_div = map(int, start_div)
+        if end_div:
+            end_div = map(int, end_div)
 
-        Raise MultipleVersionsFound if the book has more than one version with
-        the specified title.
-        """
+        if start_div and end_div:
+            # bring them same length if required
+            # if len(start_div) > len(end_div):
+            #     end_div += [None] * (len(start_div) - len(end_div))
+            # elif len(end_div) > len(start_div):
+            #     start_div += [None] * (len(end_div) - len(start_div))
 
-        versions = self._book.xpath('/book/version[@title="%s"]' % version_title)
+            # checking positions order: start_div position must be before end_div position
+            start_checksum = "".join(map(str, start_div))
+            end_checksum = "".join(map(str, end_div))
+            if len(start_checksum) > len(end_checksum):
+                end_checksum = end_checksum.ljust(len(start_checksum), "0")
+            elif len(end_checksum) > len(start_checksum):
+                start_checksum = start_checksum.ljust(len(end_checksum), "0")
+            if start_checksum > end_checksum:
+                return divpaths
 
-        if not versions:
-            raise VersionDoesNotExist(
-                'ERROR: Book "%s" does not have a version with title "%s"'
-                % (self._structure_info['title'], version_title)
-            )
+            # detecting prefix path
+            for s, e in zip(start_div, end_div):
+                if s == e:
+                    prefix_div.append(s)
+            if prefix_div:
+                start_div = start_div[len(prefix_div):]
+                end_div = end_div[len(prefix_div):]
 
-        if len(versions) > 1:
-            raise MultipleVersionsFound(
-                'ERROR: Book "%s" has %d versions with title "%s"'
-                % (self._structure_info['title'], len(versions), version_title)
-            )
+        if start_div:
+            start_divpaths_desc = []
+            for path_pos in xrange(len(start_div)):
+                one_divpath_desc = []
+                for div_pos, div_id in enumerate(reversed(start_div)):
+                    if div_pos < path_pos:
+                        one_divpath_desc.append((None, div_id))
+                    elif div_pos > path_pos:
+                        one_divpath_desc.append(("=", div_id))
+                    elif path_pos == 0:
+                        one_divpath_desc.append((">=", div_id))
+                    else:
+                        one_divpath_desc.append((">", div_id))
+                one_divpath_desc.reverse()
+                start_divpaths_desc.append(one_divpath_desc)
+            divpaths_desc = start_divpaths_desc
 
-        return versions[0]
+        if end_div:
+            end_divpaths_desc = []
+            for path_pos in xrange(len(end_div)):
+                one_divpath_desc = []
+                for div_pos, div_id in enumerate(reversed(end_div)):
+                    if div_pos < path_pos:
+                        one_divpath_desc.append((None, div_id))
+                    elif div_pos > path_pos:
+                        one_divpath_desc.append(("=", div_id))
+                    elif path_pos == 0:
+                        one_divpath_desc.append(("<=", div_id))
+                    else:
+                        one_divpath_desc.append(("<", div_id))
+                one_divpath_desc.reverse()
+                end_divpaths_desc.append(one_divpath_desc)
+            end_divpaths_desc.reverse()
+            divpaths_desc = end_divpaths_desc
 
-    def get_text(self, version_title, text_type, start, end=None):
-        version = self._get_version()
+        if start_div and end_div:
+            # we have both end point of the structure, let's try to merge
+            # last operand of start_divpaths_desc and first operand of end_divpaths_desc
+            ops = (start_divpaths_desc[-1][0][0], end_divpaths_desc[0][0][0])
+            if ops == (">=", "<="):
+                # FIXME: it's ugly hacking
+                op = ">={} and @number<=".format(start_divpaths_desc[-1][0][1])
+                div_id = end_divpaths_desc[0][0][1]
+                start_divpaths_desc[-1][0] = (op, div_id)
+                #del end_divpaths_desc[0]
+                divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
+            elif ops == (">", "<"):
+                # FIXME: it's ugly hacking
+                op = ">{} and @number<".format(start_divpaths_desc[-1][0][1])
+                div_id = end_divpaths_desc[0][0][1]
+                start_divpaths_desc[-1][0] = (op, div_id)
+                #del end_divpaths_desc[0]
+                divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
+            elif ops == (">", "<="):
+                # FIXME: it's ugly hacking
+                op = ">{} and @number<=".format(start_divpaths_desc[-1][0][1])
+                div_id = end_divpaths_desc[0][0][1]
+                start_divpaths_desc[-1][0] = (op, div_id)
+                #del end_divpaths_desc[0]
+                divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
+            elif ops == (">=", "<"):
+                # FIXME: it's ugly hacking
+                op = ">={} and @number<".format(start_divpaths_desc[-1][0][1])
+                div_id = end_divpaths_desc[0][0][1]
+                start_divpaths_desc[-1][0] = (op, div_id)
+                #del end_divpaths_desc[0]
+                divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
+            else:
+                # merge the path descriptions without merging
+                divpaths_desc = start_divpaths_desc + end_divpaths_desc
 
+        # format real xpath portions
+        if prefix_div:
+            prefix_divpath = "/".join("div[@number={}]".format(div_id) for div_id in prefix_div)
+        if divpaths_desc:
+            for desc in divpaths_desc:
+                formatted_path_item = [prefix_divpath] if prefix_divpath else []
+                for op, div_id in desc:
+                    if op and div_id:
+                        formatted_path_item.append("div[@number{}{}]".format(op, div_id))
+                    else:
+                        formatted_path_item.append("div")
+                divpaths.append("/".join(formatted_path_item))
+        else:
+            divpaths = [prefix_divpath] if prefix_divpath else []
+
+        return divpaths
+
+    def get_text(self, version_title, text_type, start_div, end_div=None):
+        texts = OrderedDict()
+
+        version = self._book.xpath("/book/version[@title='{}']".format(version_title))
+        if version is None:
+            raise ElementDoesNotExist("<version> element with abbrev='{}' does not exist".format(text_type))
+        elif len(version) > 1:
+            raise MultipleElementsReturned("There are more <version> elements with abbrev='{}'".format(text_type))
+        version = version[0]
+
+        manuscript = version.xpath("manuscripts/ms[@abbrev='{}']".format(text_type))
+        if manuscript is None:
+            raise ElementDoesNotExist("<manuscript> element with abbrev='{}' does not exist".format(text_type))
+        elif len(manuscript)>1:
+            raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
+        manuscript = manuscript[0]
+        if manuscript.get("show") == "no":
+            return texts
+
+        # FIXME: the mss attrib can contain more text_style
+        reading_filter = "reading[@mss='{}']".format(text_type)
+
+        # ... work in progress ...
+
+        return texts
 
     # def get_div(self, version, divs):
     #     """
