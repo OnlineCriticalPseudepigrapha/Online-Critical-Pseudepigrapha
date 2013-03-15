@@ -121,12 +121,19 @@ def test_gen_divpath_diff_depth_2():
 
 
 def test_book_get_text(test_book):
-    Reading = namedtuple("Reading", "unit_id, language, readings_in_unit, text")
-    assert test_book.get_text("Greek", "TestOne", (1,)) == [Reading("812", "Greek", 3, u"ἰδοὺ ἦλθεν κύριος "),
-                                                            Reading("815", "Greek", 3, u"ἐλέγξαι "),
-                                                            Reading("816", "Greek", 2, u"πάντας τοὺς ἀσεβεῖς, ")]
+    Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
+    assert list(test_book.get_text("Greek", "TestOne", (1,))) == [Text("812", "Greek", 3, u""),
+                                                                  Text("815", "Greek", 3, u"ἐλέγξαι"),
+                                                                  Text("816", "Greek", 2, u"πάντας τοὺς ἀσεβεῖς,")]
 
 
 def test_book_get_hidden_text(test_book):
-    Reading = namedtuple("Reading", "unit_id, language, readings_in_unit, text")
-    assert test_book.get_text("Greek", "TestTwo", (1,)) == []
+    Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
+    assert list(test_book.get_text("Greek", "TestTwo", (1,))) == []
+
+
+def test_book_get_readings(test_book):
+    Reading = namedtuple("Reading", "mss, text")
+    assert list(test_book.get_readings(812)) == [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                                                 Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                                                 Reading("TestOne", u"")]
