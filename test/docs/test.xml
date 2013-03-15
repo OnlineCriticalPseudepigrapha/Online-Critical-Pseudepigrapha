@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE book SYSTEM "grammateus.dtd">
-<book filename="1En" title="1 Enoch">
+<book filename="test" title="Test Book">
   <version title="Ethiopic" author="Anonymous" language="Ethiopic">
     <divisions>
       <division label="Chapter" delimiter=":"/>
@@ -3502,9 +3502,15 @@
         <bibliography>G. Dindorf, Georgius Syncellus et Nicephorus Constantinopolitanus. (Corpus scriptorum historiae Byzantinae 20-21; Bonn, 1829). Reprinted in M. Black (ed.), Apocalypsis Henochi Graece (PVTG 3; Leiden: Brill, 1970) </bibliography>
         <bibliography>A. A. Mosshammer, 1984.</bibliography>
       </ms>
-      <ms abbrev="Jude" language="Greek" show="yes">
-        <name>Jude 14-15</name>
-      </ms>
+        <ms abbrev="Jude" language="Greek" show="yes">
+            <name>Jude 14-15</name>
+        </ms>
+        <ms abbrev="TestOne" language="Greek" show="yes">
+            <name>TestOne</name>
+        </ms>
+        <ms abbrev="TestTwo" language="Greek" show="no">
+            <name>TestTwo</name>
+        </ms>
     </manuscripts>
     <text>
       <div number="1">
@@ -3604,10 +3610,12 @@
           <unit id="812" group="0" parallel="">
             <reading option="0" mss="Gizeh ">ὅτι ἔρχεται </reading>
             <reading option="1" mss="Jude ">ἰδοὺ ἦλθεν κύριος </reading>
+            <reading option="2" mss="TestOne ">ἰδοὺ ἦλθεν κύριος </reading>
           </unit>
           <unit id="813" group="0" parallel="">
             <reading option="0" mss="Gizeh ">σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ, </reading>
             <reading option="1" mss="Jude ">ἐν ἁγίαις μυριάσιν αὐτοῦ, </reading>
+            <reading option="2" mss="TestTwo ">ἐν ἁγίαις μυριάσιν αὐτοῦ, </reading>
           </unit>
           <unit id="814" group="0" parallel="">
             <reading option="0" mss="Gizeh Jude ">ποιῆσαι κρίσιν κατὰ πάντων, καὶ </reading>
@@ -3615,9 +3623,11 @@
           <unit id="815" group="0" parallel="">
             <reading option="0" mss="Gizeh ">ἀπολέσει </reading>
             <reading option="1" mss="Jude ">ἐλέγξαι </reading>
+            <reading option="2" mss="Jude TestOne ">ἐλέγξαι </reading>
           </unit>
           <unit id="816" group="0" parallel="">
             <reading option="0" mss="Gizeh Jude ">πάντας τοὺς ἀσεβεῖς, </reading>
+            <reading option="1" mss="Gizeh2 TestOne  ">πάντας τοὺς ἀσεβεῖς, </reading>
           </unit>
           <unit id="817" group="0" parallel="">
             <reading option="0" mss="Gizeh ">καὶ ἐλέγξει πᾶσαν σάρκα περὶ πάντων </reading>

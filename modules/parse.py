@@ -1,8 +1,9 @@
+from collections import namedtuple
 from collections import OrderedDict
 from lxml import etree
 
 
-class InvalidDocumentException(Exception):
+class InvalidDocument(Exception):
     pass
 
 
@@ -66,7 +67,7 @@ class Book(object):
         except AttributeError as e:
             raise TypeError("validate() requires DTD in a file-like object")
         if not dtd.validate(self._tree):
-            raise InvalidDocumentException(dtd.error_log.filter_from_errors()[0])
+            raise InvalidDocument(dtd.error_log.filter_from_errors()[0])
 
     def book_info(self):
         return self._structure_info
@@ -452,7 +453,8 @@ class Book(object):
         return divpaths
 
     def get_text(self, version_title, text_type, start_div, end_div=None):
-        texts = OrderedDict()
+        texts = []
+        Reading = namedtuple("Reading", "unit_id, language, readings_in_unit, text")
 
         version = self._book.xpath("/book/version[@title='{}']".format(version_title))
         if version is None:
@@ -470,10 +472,16 @@ class Book(object):
         if manuscript.get("show") == "no":
             return texts
 
-        # FIXME: the mss attrib can contain more text_style
-        reading_filter = "reading[@mss='{}']".format(text_type)
+        reading_filter = "reading[re:test(@mss, '^{0} | {0} ')]".format(text_type)
 
-        # ... work in progress ...
+        for divpath in Book.gen_divpath(start_div, end_div):
+            readings = version.xpath("text/{}//{}".format(divpath, reading_filter),
+                                     namespaces={"re": "http://exslt.org/regular-expressions"})
+            for reading in readings:
+                texts.append(Reading(reading.getparent().get("id"),
+                                     version.get("language"),
+                                     len(reading.getparent().getchildren()),
+                                     reading.text))
 
         return texts
 
@@ -729,3 +737,4 @@ class Book(object):
     #         elements - dictionary defining the version element's elements
     #     """
     #     pass
+
