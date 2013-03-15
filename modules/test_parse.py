@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 
 from StringIO import StringIO
+from collections import namedtuple
 
 import pytest
 
 from modules.parse import Book
-from modules.parse import InvalidDocumentException
+from modules.parse import InvalidDocument
 
 XML_FILE = "test/docs/test.xml"
 DTD_FILE = "static/docs/grammateus.dtd"
 
 
 @pytest.fixture(scope="module")
-def sample_book():
+def test_book():
     return Book(open(XML_FILE))
 
 
@@ -21,15 +22,15 @@ def test_false_init():
         Book(1)
 
 
-def test_validation(sample_book):
+def test_validation(test_book):
     # validation without success
     book = Book(StringIO("""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <!DOCTYPE book SYSTEM "grammateus.dtd">
         <book></book>"""))
-    with pytest.raises(InvalidDocumentException):
+    with pytest.raises(InvalidDocument):
         book.validate(open(DTD_FILE))
     # validation with success
-    assert sample_book.validate(open(DTD_FILE)) is None
+    assert test_book.validate(open(DTD_FILE)) is None
 
 
 def test_gen_divpath_open_end():
@@ -117,3 +118,15 @@ def test_gen_divpath_diff_depth_2():
                                                    "div[@number>1 and @number<3]/div",
                                                    "div[@number=3]/div[@number<4]/div",
                                                    "div[@number=3]/div[@number=4]/div[@number<=5]"]
+
+
+def test_book_get_text(test_book):
+    Reading = namedtuple("Reading", "unit_id, language, readings_in_unit, text")
+    assert test_book.get_text("Greek", "TestOne", (1,)) == [Reading("812", "Greek", 3, u"ἰδοὺ ἦλθεν κύριος "),
+                                                            Reading("815", "Greek", 3, u"ἐλέγξαι "),
+                                                            Reading("816", "Greek", 2, u"πάντας τοὺς ἀσεβεῖς, ")]
+
+
+def test_book_get_hidden_text(test_book):
+    Reading = namedtuple("Reading", "unit_id, language, readings_in_unit, text")
+    assert test_book.get_text("Greek", "TestTwo", (1,)) == []
