@@ -1,6 +1,13 @@
+# -*- coding: utf-8 -*-
+
 from collections import namedtuple
 from collections import OrderedDict
+import os
 from lxml import etree
+
+from gluon import A, DIV, SPAN, TAG
+
+XML_FILE_STORAGE_PATH = "static/docs"
 
 
 class InvalidDocument(Exception):
@@ -478,9 +485,9 @@ class Book(object):
                                      namespaces={"re": "http://exslt.org/regular-expressions"})
             for reading in readings:
                 yield Text(reading.getparent().get("id"),
-                              version.get("language"),
-                              len(reading.getparent().getchildren()),
-                              reading.text.strip() if reading.text else "")
+                           version.get("language"),
+                           len(reading.getparent().getchildren()),
+                           reading.text.strip() if reading.text else "")
 
     def get_readings(self, unit_id):
         Reading = namedtuple("Reading", "mss, text")
@@ -739,3 +746,94 @@ class Book(object):
     #         elements - dictionary defining the version element's elements
     #     """
     #     pass
+
+
+class BookManager(object):
+    """
+    Manager class for reading and manipulating more books in one step.
+    """
+
+    xml_file_storage_path = XML_FILE_STORAGE_PATH
+
+    @staticmethod
+    def load(xml_book_name):
+        """
+        Load the given book from the proper storage
+
+        :param xml_book_name: the name of the book
+        :return: file-like object
+        """
+        return open(os.path.join(BookManager.xml_file_storage_path, "{}.xml".format(xml_book_name)), "r")
+
+    @staticmethod
+    def get_text(text_positions, as_gluon=True):
+        """
+        Retrieving sections of text in running form
+
+        :param text_positions: a list of dictionaries with the following key/value pairs
+        {"book": <string, the file name of the requested xml file>
+         "version": <string, the title of the requested version>
+         "text_type": <string, type of the requested text>
+         "start": <tuple, identifying the starting point of the requested text section>
+         "end": <tuple, identifying the end point of the requested text section (optional)> }
+        :param as_gluon: Be the items are wrapped into gluon objects or not?
+        :return: reading fragments based on the arguments in the requested form
+        """
+        items = []
+        for text_position in text_positions:
+            book = None
+            try:
+                book = Book(BookManager.load(text_position.get("book", "")))
+            except IOError as e:
+                pass  # FIXME: we should send back some kind of error message
+            if book:
+                book_items = []
+                for item in book.get_text(text_position.get("version", ""),
+                                          text_position.get("text_type", ""),
+                                          text_position.get("start"),
+                                          text_position.get("end")):
+                    if as_gluon:
+                        item_text = item.text if item.text else "*"
+                        book_items.append(SPAN(A(item_text, _href=str(item.readings_in_unit))
+                                          if item.readings_in_unit > 1 else item_text,
+                                          _id=item.unit_id,
+                                          _class="{} {}".format(item.language, item.readings_in_unit)))
+                    else:
+                        book_items.append(item)
+                if as_gluon:
+                    items.append(DIV(book_items))
+                else:
+                    items += book_items
+        return items
+
+    @staticmethod
+    def get_readings(unit_descriptions, as_gluon=True):
+        """
+        Retrieving the text of all readings for one unit of the XML file
+
+        :param unit_descriptions: a list of dictionaries with the following key/value pairs
+        {"book": <string, the file name of the xml file to be read>
+         "unit_id": <integer, identifier of the requested unit> )
+        :param as_gluon: Be the items are wrapped into gluon objects or not?
+        :return: reading fragments based on the arguments in the requested form
+        """
+        items = []
+        for unit_description in unit_descriptions:
+            book = None
+            try:
+                book = Book(BookManager.load(unit_description.get("book", "")))
+            except IOError as e:
+                pass  # FIXME: we should send back some kind of error message
+            if book:
+                book_items = []
+                for item in book.get_readings(unit_description.get("unit_id")):
+                    if as_gluon:
+                        book_items.append(TAG.dt(item.mss))
+                        book_items.append(TAG.dd(item.text if item.text else "*"))
+                    else:
+                        book_items.append(item)
+                if as_gluon:
+                    items.append(TAG.dl(book_items))
+                else:
+                    items += book_items
+        return items
