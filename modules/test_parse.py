@@ -5,11 +5,17 @@ from collections import namedtuple
 
 import pytest
 
+from gluon import A, DIV, SPAN
+
 from modules.parse import Book
+from modules.parse import BookManager
 from modules.parse import InvalidDocument
 
+XML_FILE_STORAGE_PATH = "test/docs"
 XML_FILE = "test/docs/test.xml"
 DTD_FILE = "static/docs/grammateus.dtd"
+
+BookManager.xml_file_storage_path = XML_FILE_STORAGE_PATH
 
 
 @pytest.fixture(scope="module")
@@ -29,7 +35,7 @@ def test_validation(test_book):
         <book></book>"""))
     with pytest.raises(InvalidDocument):
         book.validate(open(DTD_FILE))
-    # validation with success
+        # validation with success
     assert test_book.validate(open(DTD_FILE)) is None
 
 
@@ -124,7 +130,7 @@ def test_book_get_text(test_book):
     Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
     assert list(test_book.get_text("Greek", "TestOne", (1,))) == [Text("812", "Greek", 3, u""),
                                                                   Text("815", "Greek", 3, u"ἐλέγξαι"),
-                                                                  Text("816", "Greek", 2, u"πάντας τοὺς ἀσεβεῖς,")]
+                                                                  Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,")]
 
 
 def test_book_get_hidden_text(test_book):
@@ -137,3 +143,60 @@ def test_book_get_readings(test_book):
     assert list(test_book.get_readings(812)) == [Reading("Gizeh", u"ὅτι ἔρχεται"),
                                                  Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
                                                  Reading("TestOne", u"")]
+
+
+def test_bookman_get_text():
+    Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
+    items = list(BookManager.get_text([{"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                       {"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
+                                      as_gluon=False))
+    assert items == [Text("812", "Greek", 3, u""),
+                     Text("815", "Greek", 3, u"ἐλέγξαι"),
+                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
+                     Text("812", "Greek", 3, u""),
+                     Text("815", "Greek", 3, u"ἐλέγξαι"),
+                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,")]
+
+
+def test_bookman_get_text_as_gluon():
+    Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
+    items = list(BookManager.get_text([{"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                       {"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
+                                      as_gluon=True))
+    html = '<div>' \
+           '<span class="Greek 3" id="812"><a href="3">*</a></span>' \
+           '<span class="Greek 3" id="815"><a href="3">{}</a></span>' \
+           '<span class="Greek 1" id="816">{}</span>' \
+           '</div>'.format(u"ἐλέγξαι".encode("utf-8"), u"πάντας τοὺς ἀσεβεῖς,".encode("utf-8"))
+    # assert str(items[0]) == str(DIV([SPAN(A("*", _href="3"), _id="812", _class="Greek 3"),
+    #                                  SPAN(A(u"ἐλέγξαι", _href="3"), _id="815", _class="Greek 3"),
+    #                                  SPAN(u"πάντας τοὺς ἀσεβεῖς,", _id="816", _class="Greek 1")]))
+    assert str(items[0]) == html
+    assert str(items[1]) == html
+
+
+def test_bookman_get_readings():
+    Reading = namedtuple("Reading", "mss, text")
+    items = list(BookManager.get_readings([{"book": "Test", "unit_id": 812},
+                                           {"book": "Test", "unit_id": 812}],
+                                          as_gluon=False))
+    assert items == [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                     Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                     Reading("TestOne", u""),
+                     Reading("Gizeh", u"ὅτι ἔρχεται"),
+                     Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                     Reading("TestOne", u"")]
+
+
+def test_bookman_get_readings_as_gluon():
+    Reading = namedtuple("Reading", "mss, text")
+    items = list(BookManager.get_readings([{"book": "Test", "unit_id": 812},
+                                           {"book": "Test", "unit_id": 812}],
+                                          as_gluon=True))
+    html = '<dl>' \
+           '<dt>Gizeh</dt><dd>{}</dd>' \
+           '<dt>Jude</dt><dd>{}</dd>' \
+           '<dt>TestOne</dt><dd>*</dd>' \
+           '</dl>'.format(u"ὅτι ἔρχεται".encode("utf-8"), u"ἰδοὺ ἦλθεν κύριος".encode("utf-8"))
+    assert str(items[0]) == html
+    assert str(items[1]) == html
