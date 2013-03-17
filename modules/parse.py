@@ -2,7 +2,7 @@
 
 from collections import namedtuple
 from collections import OrderedDict
-import os
+
 from lxml import etree
 
 from gluon import A, DIV, SPAN, TAG
@@ -15,37 +15,25 @@ class InvalidDocument(Exception):
     pass
 
 
-# class VersionDoesNotExist(Exception):
-#     pass
-#
-#
-# class MultipleVersionsFound(Exception):
-#     pass
-
-
-class DivDoesNotExist(Exception):
+class ElementDoesNotExist(Exception):
     pass
 
 
-class MultipleDivsFound(Exception):
+class MultipleElementsReturned(Exception):
     pass
 
 
-class RemoveLastDivError(Exception):
+class InvalidDIVPath(Exception):
     pass
 
 
-# class ElementDoesNotExist(Exception):
-#     pass
-#
-#
-# class MultipleElementsReturned(Exception):
-#     pass
-#
-#
+class NotAllowedManuscript(Exception):
+    pass
+
+
 class Book(object):
     """
-    Parser for OCP XML files
+    Parser and manipulator class for OCP XML files
 
     It provides methods for:
 
@@ -333,36 +321,6 @@ class Book(object):
 
         return parent
 
-    # def _get_version(self, version_title):
-    #     """
-    #     Return a version given its title.
-    #
-    #     Arguments:
-    #         version_title - the title of the required version.
-    #
-    #     Raise VersionDoesNotExist if a version with the specified title does not
-    #     exist.
-    #
-    #     Raise MultipleVersionsFound if the book has more than one version with
-    #     the specified title.
-    #     """
-    #
-    #     versions = self._book.xpath('/book/version[@title="%s"]' % version_title)
-    #
-    #     if not versions:
-    #         raise VersionDoesNotExist(
-    #             'ERROR: Book "%s" does not have a version with title "%s"'
-    #             % (self._structure_info['title'], version_title)
-    #         )
-    #
-    #     if len(versions) > 1:
-    #         raise MultipleVersionsFound(
-    #             'ERROR: Book "%s" has %d versions with title "%s"'
-    #             % (self._structure_info['title'], len(versions), version_title)
-    #         )
-    #
-    #     return versions[0]
-
     @staticmethod
     def gen_divpath(start_div=None, end_div=None):
         divpaths = []
@@ -391,7 +349,9 @@ class Book(object):
             elif len(end_checksum) > len(start_checksum):
                 start_checksum = start_checksum.ljust(len(end_checksum), "0")
             if start_checksum > end_checksum:
-                return divpaths
+                raise InvalidDIVPath("The start position ({}) is afterwards than the end position ({}).".format(
+                    ".".join(map(str, start_div)),
+                    ".".join(map(str, end_div))))
 
             # detecting prefix path
             for s, e in zip(start_div, end_div):
@@ -494,23 +454,19 @@ class Book(object):
 
         version = self._book.xpath("/book/version[@title='{}']".format(version_title))
         if not version:
-            #raise ElementDoesNotExist("<version> element with abbrev='{}' does not exist".format(text_type))
-            raise StopIteration
+            raise ElementDoesNotExist("<version> element with title='{}' does not exist".format(version_title))
         elif len(version) > 1:
-            #raise MultipleElementsReturned("There are more <version> elements with abbrev='{}'".format(text_type))
-            raise StopIteration
+            raise MultipleElementsReturned("There are more <version> elements with title='{}'".format(version_title))
         version = version[0]
 
         manuscript = version.xpath("manuscripts/ms[@abbrev='{}']".format(text_type))
         if not manuscript:
-            #raise ElementDoesNotExist("<manuscript> element with abbrev='{}' does not exist".format(text_type))
-            raise StopIteration
+            raise ElementDoesNotExist("<manuscript> element with abbrev='{}' does not exist".format(text_type))
         elif len(manuscript) > 1:
-            #raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
-            raise StopIteration
+            raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
         manuscript = manuscript[0]
         if manuscript.get("show") == "no":
-            raise StopIteration
+            raise NotAllowedManuscript
 
         reading_filter = "reading[re:test(@mss, '^{0} | {0} ')]".format(text_type)
 
@@ -534,63 +490,6 @@ class Book(object):
                               xml_declaration=True,
                               doctype="<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
                               standalone=False)
-
-    # def get_div(self, version, divs):
-    #     """
-    #     Return a div given a version and div numbers.
-    #
-    #     Arguments:
-    #         version - the version containg the required div.
-    #         divs - an iterable of div numbers with the number of the top most
-    #                 levels preceding lower level numbers.
-    #
-    #     Raise DivDoesNotExist if the version does not contain a div with the
-    #     given numbers.
-    #
-    #     Raise MultipleDivsFound if the version contains more than one div with
-    #     the given numbers.
-    #     """
-    #     verbose = False
-    #     if verbose:
-    #         print 'using divs', divs
-    #     path = 'text/%s' % '/'.join('div[@number=%s]' % d for d in divs)
-    #     div = version.xpath(path)
-    #
-    #     if not div:
-    #         raise DivDoesNotExist(
-    #             'ERROR: Version "%s" does not have a div with numbers "%s"'
-    #             % (version.get('title'), divs)
-    #         )
-    #
-    #     if len(div) > 1:
-    #         raise MultipleDivsFound(
-    #             'ERROR: Version "%s" has %d divs with numbers "%s"'
-    #             % (version.get('title'), len(div), divs)
-    #         )
-    #     if verbose:
-    #         print 'div returned: ', div[0]
-    #     return div[0]
-
-    # def get_readings(self, units):
-    #     """
-    #     Return the readings for each unit in units as an OrderedDict. The keys
-    #     are unit @ids and the values are OrderedDicts of @mss/text pairs.
-    #
-    #     Arguments:
-    #         units - the result of calling xpath('unit') on a div element.
-    #     """
-    #     results = OrderedDict()
-    #     for unit in units:
-    #         unit_number = unit.xpath('@id')[0]
-    #
-    #         readings = OrderedDict()
-    #         for reading in unit.xpath('reading'):
-    #             mss = reading.xpath('@mss')[0]
-    #             for m in mss.strip().split():
-    #                 readings[m] = reading.text
-    #         results[unit_number] = readings
-    #
-    #     return results
 
     # def renumber_units(self):
     #     """
@@ -805,7 +704,7 @@ class BookManager(object):
         :param xml_book_name: the name of the book
         :return: file-like object
         """
-        return open(os.path.join(BookManager.xml_file_storage_path, "{}.xml".format(xml_book_name)), "r")
+        return open(("{}/{}.xml".format(BookManager.xml_file_storage_path, xml_book_name)), "r")
 
     @staticmethod
     def get_text(text_positions, as_gluon=True):
@@ -819,16 +718,15 @@ class BookManager(object):
          "start": <tuple, identifying the starting point of the requested text section>
          "end": <tuple, identifying the end point of the requested text section (optional)> }
         :param as_gluon: Be the items are wrapped into gluon objects or not?
-        :return: reading fragments based on the arguments in the requested form
+        :return: dictionary with the following key/value pairs
+        {"result": <list of reading fragments based on the arguments in the requested form>,
+        "error": <list of error messages (as many items as text_positions has))>}
         """
         items = []
+        errors = []
         for text_position in text_positions:
-            book = None
             try:
                 book = Book.open(BookManager._load(text_position.get("book", "")))
-            except IOError as e:
-                pass  # FIXME: we should send back some kind of error message
-            if book:
                 book_items = []
                 for item in book.get_text(text_position.get("version", ""),
                                           text_position.get("text_type", ""),
@@ -847,7 +745,15 @@ class BookManager(object):
                         items.append(DIV(book_items))
                     else:
                         items += book_items
-        return items
+            except IOError as e:
+                errors.append(str(e))
+            except ElementDoesNotExist as e:
+                errors.append(e.message)
+            except MultipleElementsReturned as e:
+                errors.append(e.message)
+            else:
+                errors.append(None)
+        return {"result": items, "error": errors}
 
     @staticmethod
     def get_readings(unit_descriptions, as_gluon=True):
@@ -858,16 +764,15 @@ class BookManager(object):
         {"book": <string, the file name of the xml file to be read>
          "unit_id": <integer, identifier of the requested unit> )
         :param as_gluon: Be the items are wrapped into gluon objects or not?
-        :return: reading fragments based on the arguments in the requested form
+        :return: dictionary with the following key/value pairs
+        {"result": <list of reading fragments based on the arguments in the requested form>,
+        "error": <list of error messages (as many items as unit_descriptions has))>}
         """
         items = []
+        errors = []
         for unit_description in unit_descriptions:
-            book = None
             try:
                 book = Book.open(BookManager._load(unit_description.get("book", "")))
-            except IOError as e:
-                pass  # FIXME: we should send back some kind of error message
-            if book:
                 book_items = []
                 for item in book.get_readings(unit_description.get("unit_id")):
                     if as_gluon:
@@ -879,4 +784,8 @@ class BookManager(object):
                     items.append(TAG.dl(book_items))
                 else:
                     items += book_items
-        return items
+            except IOError as e:
+                errors.append(str(e))
+            else:
+                errors.append(None)
+        return {"result": items, "error": errors}
