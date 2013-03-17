@@ -8,6 +8,7 @@ from lxml import etree
 from gluon import A, DIV, SPAN, TAG
 
 XML_FILE_STORAGE_PATH = "static/docs"
+XML_DRAFT_FILE_STORAGE_PATH = "static/docs/draft"
 
 
 class InvalidDocument(Exception):
@@ -34,14 +35,14 @@ class RemoveLastDivError(Exception):
     pass
 
 
-class ElementDoesNotExist(Exception):
-    pass
-
-
-class MultipleElementsReturned(Exception):
-    pass
-
-
+# class ElementDoesNotExist(Exception):
+#     pass
+#
+#
+# class MultipleElementsReturned(Exception):
+#     pass
+#
+#
 class Book(object):
     """
     Parser for OCP XML files
@@ -53,18 +54,42 @@ class Book(object):
                       divisions
     """
 
-    def __init__(self, xml_data):
+    @staticmethod
+    def open(xml_book_data):
+        """
+        Factory method for parsing a preloaded xml file
+
+        :param xml_book_data: book structure wrapped into a file-like object
+        :return: Book object
+        """
+        book = Book()
         try:
-            if getattr(xml_data, "read"):
-                self._tree = etree.parse(xml_data)
+            if getattr(xml_book_data, "read"):
+                book._tree = etree.parse(xml_book_data)
             else:
-                self._tree = etree.parse(open(xml_data))
+                book._tree = etree.parse(open(xml_book_data))
         except AttributeError as e:
             raise TypeError("Book() requires XML data in a file-like object")
+        book._book = book._tree.getroot()
+        book._structure_info = book._get_book_info()
+        return book
 
+    @staticmethod
+    def create(filename, title):
+        """
+        Factory method for creating new book structure
+
+        :param filename:
+        :param title:
+        :return: Book object
+        """
+        book = Book()
+        return book
+
+    def __init__(self):
+        self._tree = None
+        self._book = None
         # self.encoding = etree.DocInfo(self.tree).encoding
-        self._book = self._tree.getroot()
-        self._structure_info = self._get_book_info()
         self.default_delimiter = '.'
 
     def validate(self, dtd_data):
@@ -463,17 +488,21 @@ class Book(object):
         Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
 
         version = self._book.xpath("/book/version[@title='{}']".format(version_title))
-        if version is None:
-            raise ElementDoesNotExist("<version> element with abbrev='{}' does not exist".format(text_type))
+        if not version:
+            #raise ElementDoesNotExist("<version> element with abbrev='{}' does not exist".format(text_type))
+            raise StopIteration
         elif len(version) > 1:
-            raise MultipleElementsReturned("There are more <version> elements with abbrev='{}'".format(text_type))
+            #raise MultipleElementsReturned("There are more <version> elements with abbrev='{}'".format(text_type))
+            raise StopIteration
         version = version[0]
 
         manuscript = version.xpath("manuscripts/ms[@abbrev='{}']".format(text_type))
-        if manuscript is None:
-            raise ElementDoesNotExist("<manuscript> element with abbrev='{}' does not exist".format(text_type))
-        elif len(manuscript)>1:
-            raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
+        if not manuscript:
+            #raise ElementDoesNotExist("<manuscript> element with abbrev='{}' does not exist".format(text_type))
+            raise StopIteration
+        elif len(manuscript) > 1:
+            #raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
+            raise StopIteration
         manuscript = manuscript[0]
         if manuscript.get("show") == "no":
             raise StopIteration
@@ -754,9 +783,10 @@ class BookManager(object):
     """
 
     xml_file_storage_path = XML_FILE_STORAGE_PATH
+    xml_draft_file_storage_path = XML_DRAFT_FILE_STORAGE_PATH
 
     @staticmethod
-    def load(xml_book_name):
+    def _load(xml_book_name):
         """
         Load the given book from the proper storage
 
@@ -783,7 +813,7 @@ class BookManager(object):
         for text_position in text_positions:
             book = None
             try:
-                book = Book(BookManager.load(text_position.get("book", "")))
+                book = Book.open(BookManager._load(text_position.get("book", "")))
             except IOError as e:
                 pass  # FIXME: we should send back some kind of error message
             if book:
@@ -800,10 +830,11 @@ class BookManager(object):
                                           _class="{} {}".format(item.language, item.readings_in_unit)))
                     else:
                         book_items.append(item)
-                if as_gluon:
-                    items.append(DIV(book_items))
-                else:
-                    items += book_items
+                if book_items:
+                    if as_gluon:
+                        items.append(DIV(book_items))
+                    else:
+                        items += book_items
         return items
 
     @staticmethod
@@ -821,7 +852,7 @@ class BookManager(object):
         for unit_description in unit_descriptions:
             book = None
             try:
-                book = Book(BookManager.load(unit_description.get("book", "")))
+                book = Book.open(BookManager._load(unit_description.get("book", "")))
             except IOError as e:
                 pass  # FIXME: we should send back some kind of error message
             if book:
