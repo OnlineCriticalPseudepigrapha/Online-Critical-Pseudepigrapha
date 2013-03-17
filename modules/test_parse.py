@@ -20,17 +20,17 @@ BookManager.xml_file_storage_path = XML_FILE_STORAGE_PATH
 
 @pytest.fixture(scope="module")
 def test_book():
-    return Book(open(XML_FILE))
+    return Book.open(open(XML_FILE))
 
 
 def test_false_init():
     with pytest.raises(TypeError):
-        Book(1)
+        Book.open(1)
 
 
 def test_validation(test_book):
     # validation without success
-    book = Book(StringIO("""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    book = Book.open(StringIO("""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <!DOCTYPE book SYSTEM "grammateus.dtd">
         <book></book>"""))
     with pytest.raises(InvalidDocument):
@@ -138,6 +138,13 @@ def test_book_get_hidden_text(test_book):
     assert list(test_book.get_text("Greek", "TestTwo", (1,))) == []
 
 
+def test_book_get_text_w_wrong_args(test_book):
+    assert list(test_book.get_text("XGreek", "TestOne", (1,))) == []  # Invalid version
+    assert list(test_book.get_text("Greek", "XTestOne", (1,))) == []  # Invalid text type
+    assert list(test_book.get_text("Greek", "TestOne", (1, 2, 3, 4, 5))) == []  # Invalid start div depth
+    assert list(test_book.get_text("Greek", "TestOne", (2, ), (1, ))) == []  # Invalid start and end div points
+
+
 def test_book_get_readings(test_book):
     Reading = namedtuple("Reading", "mss, text")
     assert list(test_book.get_readings(812)) == [Reading("Gizeh", u"ὅτι ἔρχεται"),
@@ -145,10 +152,38 @@ def test_book_get_readings(test_book):
                                                  Reading("TestOne", u"")]
 
 
+def test_book_get_readings_w_wrong_args(test_book):
+    assert list(test_book.get_readings(2000)) == []
+
+
 def test_bookman_get_text():
     Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
     items = list(BookManager.get_text([{"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
                                        {"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
+                                      as_gluon=False))
+    assert items == [Text("812", "Greek", 3, u""),
+                     Text("815", "Greek", 3, u"ἐλέγξαι"),
+                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
+                     Text("812", "Greek", 3, u""),
+                     Text("815", "Greek", 3, u"ἐλέγξαι"),
+                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,")]
+
+
+def test_bookman_get_text_w_wrong_args():
+    Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
+    # Invalid book name
+    items = list(BookManager.get_text([{"book": "XTest", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
+                                      as_gluon=False))
+    assert items == []
+    # Invalid version name
+    items = list(BookManager.get_text([{"book": "Test", "version": "XGreek", "text_type": "TestOne", "start": (1,)}],
+                                      as_gluon=False))
+    assert items == []
+    # Invalid and valid request together
+    items = list(BookManager.get_text([{"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                       {"book": "XTest", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                       {"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                       {"book": "Test", "version": "XGreek", "text_type": "TestOne", "start": (1,)}],
                                       as_gluon=False))
     assert items == [Text("812", "Greek", 3, u""),
                      Text("815", "Greek", 3, u"ἐλέγξαι"),
@@ -168,9 +203,6 @@ def test_bookman_get_text_as_gluon():
            '<span class="Greek 3" id="815"><a href="3">{}</a></span>' \
            '<span class="Greek 1" id="816">{}</span>' \
            '</div>'.format(u"ἐλέγξαι".encode("utf-8"), u"πάντας τοὺς ἀσεβεῖς,".encode("utf-8"))
-    # assert str(items[0]) == str(DIV([SPAN(A("*", _href="3"), _id="812", _class="Greek 3"),
-    #                                  SPAN(A(u"ἐλέγξαι", _href="3"), _id="815", _class="Greek 3"),
-    #                                  SPAN(u"πάντας τοὺς ἀσεβεῖς,", _id="816", _class="Greek 1")]))
     assert str(items[0]) == html
     assert str(items[1]) == html
 
