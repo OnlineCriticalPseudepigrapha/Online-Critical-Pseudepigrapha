@@ -42,7 +42,7 @@ def text():
         print '\n\nstarting controller.section() using session.info'
     else:
         book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-        p = Book(book_file)
+        p = Book.open(book_file)
         info = p.book_info()
         session.info = {filename:info}
     #get title of document
@@ -118,7 +118,7 @@ def section():
             print '\n\nstarting controller.section() using session.info'
     else:
         book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-        p = Book(book_file)
+        p = Book.open(book_file)
         info = p.book_info()
         session.info = {filename:info}
 
@@ -197,7 +197,7 @@ def apparatus():
         print '\n\nstarting controller.section() using session.info'
     else:
         book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-        p = Book(book_file)
+        p = Book.open(book_file)
         info = p.book_info()
         session.info[filename] = info
 
@@ -228,7 +228,7 @@ def apparatus():
 def test():
     filename = request.args[0]
     book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-    p = Book(book_file)
+    p = Book.open(book_file)
     info = p.book_info()
 
     pprint.pprint(info)
