@@ -75,7 +75,7 @@ class Book(object):
         return book
 
     @staticmethod
-    def create(filename, title):
+    def create(filename, title, frags=False):
         """
         Factory method for creating new book structure
 
@@ -84,10 +84,15 @@ class Book(object):
         :return: Book object
         """
         book = Book()
+        attrib = {"filename": filename, "title": title}
+        if frags:
+            attrib["textStructure"] = "fragmentary"
+        book._book = etree.Element("book", attrib=attrib)
+        book._tree = etree.ElementTree(book._book)
         return book
 
     def __init__(self):
-        self._tree = None
+        self._tree = None  # TODO: Is it really needed?
         self._book = None
         # self.encoding = etree.DocInfo(self.tree).encoding
         self.default_delimiter = '.'
@@ -522,6 +527,13 @@ class Book(object):
         Reading = namedtuple("Reading", "mss, text")
         for reading in self._book.xpath("//unit[@id={}]/reading".format(unit_id)):
             yield Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else "")
+
+    def serialize(self):
+        return etree.tostring(self._tree,
+                              encoding="utf-8",
+                              xml_declaration=True,
+                              doctype="<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
+                              standalone=False)
 
     # def get_div(self, version, divs):
     #     """
