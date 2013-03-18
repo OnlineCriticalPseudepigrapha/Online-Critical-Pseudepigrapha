@@ -23,6 +23,10 @@ class MultipleElementsReturned(Exception):
     pass
 
 
+class ElementAlreadyExists(Exception):
+    pass
+
+
 class InvalidDIVPath(Exception):
     pass
 
@@ -449,15 +453,40 @@ class Book(object):
 
         return divpaths
 
+    def _get_version(self, version_title):
+        versions = self._book.xpath("/book/version[@title='{}']".format(version_title))
+        if not versions:
+            raise ElementDoesNotExist("<version> element with title='{}' does not exist".format(version_title))
+        elif len(versions) > 1:
+            raise MultipleElementsReturned("There are more <version> elements with title='{}'".format(version_title))
+        return versions[0]
+
+    def _get(self, element_name, attribute, path_prefix=None):
+        """
+        Get back the requested element if it exists and there's no more with the given attribute
+        """
+        xpath = "/{}/{}[@{}='{}']".format(path_prefix if path_prefix else self._book.tag,
+                                          element_name,
+                                          attribute.keys()[0],
+                                          attribute.values()[0])
+        elements = self._book.xpath(xpath)
+        if not elements:
+            raise ElementDoesNotExist("<{}> element with {}='{}' does not exist".format(element_name,
+                                                                                        attribute.keys()[0],
+                                                                                        attribute.values()[0]))
+        elif len(elements) > 1:
+            raise MultipleElementsReturned("There are more <{}> elements with {}='{}'".format(element_name,
+                                                                                              attribute.keys()[0],
+                                                                                              attribute.values()[0]))
+        return elements[0]
+
+    # RI methods
+
     def get_text(self, version_title, text_type, start_div, end_div=None):
         Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
 
-        version = self._book.xpath("/book/version[@title='{}']".format(version_title))
-        if not version:
-            raise ElementDoesNotExist("<version> element with title='{}' does not exist".format(version_title))
-        elif len(version) > 1:
-            raise MultipleElementsReturned("There are more <version> elements with title='{}'".format(version_title))
-        version = version[0]
+        # version = self._get_version(version_title)
+        version = self._get("version", {"title": version_title})
 
         manuscript = version.xpath("manuscripts/ms[@abbrev='{}']".format(text_type))
         if not manuscript:
@@ -483,6 +512,41 @@ class Book(object):
         Reading = namedtuple("Reading", "mss, text")
         for reading in self._book.xpath("//unit[@id={}]/reading".format(unit_id)):
             yield Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else "")
+
+    # EI methods
+
+    def add_version(self, version_title, language, author):
+        if self._book.xpath("version[@title='{}']".format(version_title)):
+            raise ElementAlreadyExists("<version> element with title='{}' already exists")
+        version = etree.SubElement(self._book,
+                                   "version",
+                                   attrib={"title": version_title,
+                                           "author": author,
+                                           "language": language})
+        # add mandatory subelements
+        etree.SubElement(version, "divisions")
+        etree.SubElement(version, "manuscripts")
+        etree.SubElement(version, "text")
+
+        # TODO: currently this part is disabled
+        # manuscripts = etree.SubElement(version, "manuscripts")
+        # if mss:
+        #     if isinstance(mss, basestring):
+        #         mss = mss.split()
+        #         if len(mss)==1:
+        #             mss = mss[0].split(",")
+        #     for ms in mss:
+        #         etree.SubElement(manuscripts, "ms", attrib={"abbrev": ms})
+
+    def update_version(self, version_title, language, author):
+        version = self._get("version", {"title": version_title})
+        version.set("title", version_title)
+        version.set("author", author)
+        version.set("language", language)
+
+    def del_version(self, version_title):
+        version = self._get("version", {"title": version_title})
+        version.getparent().remove(version)
 
     def serialize(self):
         return etree.tostring(self._tree,
