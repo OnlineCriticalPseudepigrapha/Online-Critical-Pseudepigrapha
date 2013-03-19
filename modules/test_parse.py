@@ -129,6 +129,9 @@ def test_gen_divpath_diff_depth_2():
                                                    "div[@number=3]/div[@number=4]/div[@number<=5]"]
 
 
+## Testing RI
+
+
 def test_book_get_text(test_book):
     Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
     assert list(test_book.get_text("Greek", "TestOne", (1,))) == [Text("812", "Greek", 3, u""),
@@ -263,6 +266,9 @@ def test_bookman_get_readings_as_gluon():
     assert result["error"] == [None, None]
 
 
+## Testing EI
+
+
 def fix_doctype(str):
     """
     There is a stupid bug somewhere and I don't want to spent my time to discover it.
@@ -273,16 +279,16 @@ def fix_doctype(str):
 
 
 def test_book_create():
-    book = Book.create("MyTest", "My Test Book", True)
+    book = Book.create(filename="MyTest", title="My Test Book")
     assert fix_doctype(
         book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
-                                  '<book filename="MyTest" textStructure="fragmentary" title="My Test Book"/>'
+                                  '<book filename="MyTest" title="My Test Book"/>'
 
 
 def test_book_crud_version():
-    book = Book.create("MyTest", "My Test Book", True)
-    book.add_version("MyVersion", "MyLanguage", "Me")
+    book = Book.create(filename="MyTest", title="My Test Book", frags=True)
+    book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
     assert fix_doctype(
         book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
@@ -293,7 +299,7 @@ def test_book_crud_version():
                                   '<text/>' \
                                   '</version>' \
                                   '</book>'
-    book.update_version("MyVersion", "MyVersion2", "MyLanguage2")
+    book.update_version(version_title="MyVersion", new_version_title="MyVersion2", new_language="MyLanguage2")
     assert fix_doctype(
         book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
@@ -304,7 +310,7 @@ def test_book_crud_version():
                                   '<text/>' \
                                   '</version>' \
                                   '</book>'
-    book.del_version("MyVersion2")
+    book.del_version(version_title="MyVersion2")
     assert fix_doctype(
         book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
@@ -312,10 +318,10 @@ def test_book_crud_version():
 
 
 def test_book_crud_manuscript():
-    book = Book.create("MyTest", "My Test Book", True)
-    book.add_version("MyVersion", "MyLanguage", "Me")
-    book.add_manuscript("MyVersion", abbrev="MyManuscript", language="MyLanguage")
-    book.add_manuscript("MyVersion", abbrev="MyManuscript2", language="MyLanguage2", show=False)
+    book = Book.create(filename="MyTest", title="My Test Book", frags=True)
+    book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
+    book.add_manuscript(version_title="MyVersion", abbrev="MyManuscript", language="MyLanguage")
+    book.add_manuscript(version_title="MyVersion", abbrev="MyManuscript2", language="MyLanguage2", show=False)
     assert fix_doctype(
         book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
@@ -333,7 +339,7 @@ def test_book_crud_manuscript():
                                   '<text/>' \
                                   '</version>' \
                                   '</book>'
-    book.update_manuscript("MyVersion", "MyManuscript2",
+    book.update_manuscript(version_title="MyVersion", abbrev="MyManuscript2",
                            new_abbrev="MyManuscript3",
                            new_language="MyLanguage3",
                            new_show=True)
@@ -354,7 +360,7 @@ def test_book_crud_manuscript():
                                   '<text/>' \
                                   '</version>' \
                                   '</book>'
-    book.del_manuscript("MyVersion", "MyManuscript3")
+    book.del_manuscript(version_title="MyVersion", abbrev="MyManuscript3")
     assert fix_doctype(
         book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
@@ -364,6 +370,64 @@ def test_book_crud_manuscript():
                                   '<manuscripts>' \
                                   '<ms abbrev="MyManuscript" language="MyLanguage" show="yes">' \
                                   '<name/>' \
+                                  '</ms>' \
+                                  '</manuscripts>' \
+                                  '<text/>' \
+                                  '</version>' \
+                                  '</book>'
+
+
+def test_book_crud_bibliography():
+    book = Book.create(filename="MyTest", title="My Test Book", frags=True)
+    book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
+    book.add_manuscript(version_title="MyVersion", abbrev="MyManuscript", language="MyLanguage")
+    book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography")
+    book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography2")
+    assert fix_doctype(
+        book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                  "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                  '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                                  '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                                  '<divisions/>' \
+                                  '<manuscripts>' \
+                                  '<ms abbrev="MyManuscript" language="MyLanguage" show="yes">' \
+                                  '<name/>' \
+                                  '<bibliography>MyBibliography</bibliography>' \
+                                  '<bibliography>MyBibliography2</bibliography>' \
+                                  '</ms>' \
+                                  '</manuscripts>' \
+                                  '<text/>' \
+                                  '</version>' \
+                                  '</book>'
+    book.update_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography",
+                             new_text="MyBibliography1")
+    assert fix_doctype(
+        book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                  "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                  '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                                  '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                                  '<divisions/>' \
+                                  '<manuscripts>' \
+                                  '<ms abbrev="MyManuscript" language="MyLanguage" show="yes">' \
+                                  '<name/>' \
+                                  '<bibliography>MyBibliography1</bibliography>' \
+                                  '<bibliography>MyBibliography2</bibliography>' \
+                                  '</ms>' \
+                                  '</manuscripts>' \
+                                  '<text/>' \
+                                  '</version>' \
+                                  '</book>'
+    book.del_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography2")
+    assert fix_doctype(
+        book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                  "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                  '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                                  '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                                  '<divisions/>' \
+                                  '<manuscripts>' \
+                                  '<ms abbrev="MyManuscript" language="MyLanguage" show="yes">' \
+                                  '<name/>' \
+                                  '<bibliography>MyBibliography1</bibliography>' \
                                   '</ms>' \
                                   '</manuscripts>' \
                                   '<text/>' \
