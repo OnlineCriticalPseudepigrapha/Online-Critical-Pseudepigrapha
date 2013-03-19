@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from collections import namedtuple
 from collections import OrderedDict
 
@@ -9,6 +8,9 @@ from gluon import A, DIV, SPAN, TAG
 
 XML_FILE_STORAGE_PATH = "static/docs"
 XML_DRAFT_FILE_STORAGE_PATH = "static/docs/draft"
+XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",
+                       "doctype": "<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
+                       "standalone": False}
 
 
 class InvalidDocument(Exception):
@@ -57,12 +59,13 @@ class Book(object):
         book = Book()
         try:
             if getattr(xml_book_data, "read"):
-                book._tree = etree.parse(xml_book_data)
+                tree = etree.parse(xml_book_data)
             else:
-                book._tree = etree.parse(open(xml_book_data))
+                tree = etree.parse(open(xml_book_data))
         except AttributeError as e:
             raise TypeError("Book() requires XML data in a file-like object")
-        book._book = book._tree.getroot()
+        book._book = tree.getroot()
+        book._docinfo.update({i: getattr(tree.docinfo, i) for i in XML_DEFAULT_DOCINFO.keys()})
         book._structure_info = book._get_book_info()
         return book
 
@@ -80,13 +83,12 @@ class Book(object):
         if frags:
             attrib["textStructure"] = "fragmentary"
         book._book = etree.Element("book", attrib=attrib)
-        book._tree = etree.ElementTree(book._book)
+
         return book
 
     def __init__(self):
-        self._tree = None  # TODO: Is it really needed?
         self._book = None
-        # self.encoding = etree.DocInfo(self.tree).encoding
+        self._docinfo = XML_DEFAULT_DOCINFO
         self.default_delimiter = '.'
 
     def validate(self, dtd_data):
@@ -95,7 +97,7 @@ class Book(object):
             dtd = etree.DTD(dtd_data)
         except AttributeError as e:
             raise TypeError("validate() requires DTD in a file-like object")
-        if not dtd.validate(self._tree):
+        if not dtd.validate(self._book):
             raise InvalidDocument(dtd.error_log.filter_from_errors()[0])
 
     def book_info(self):
@@ -538,22 +540,21 @@ class Book(object):
         #     for ms in mss:
         #         etree.SubElement(manuscripts, "ms", attrib={"abbrev": ms})
 
-    def update_version(self, version_title, language, author):
+    def update_version(self, version_title, new_version_title=None, new_language=None, new_author=None):
         version = self._get("version", {"title": version_title})
-        version.set("title", version_title)
-        version.set("author", author)
-        version.set("language", language)
+        if new_version_title:
+            version.set("title", new_version_title)
+        if new_language:
+            version.set("language", new_language)
+        if new_author:
+            version.set("author", new_author)
 
     def del_version(self, version_title):
         version = self._get("version", {"title": version_title})
         version.getparent().remove(version)
 
-    def serialize(self):
-        return etree.tostring(self._tree,
-                              encoding="utf-8",
-                              xml_declaration=True,
-                              doctype="<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
-                              standalone=False)
+    def serialize(self, pretty=True):
+        return etree.tostring(self._book, xml_declaration=True, pretty_print=pretty, **self._docinfo)
 
     # def renumber_units(self):
     #     """
