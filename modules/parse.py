@@ -463,15 +463,16 @@ class Book(object):
             raise MultipleElementsReturned("There are more <version> elements with title='{}'".format(version_title))
         return versions[0]
 
-    def _get(self, element_name, attribute, path_prefix=None):
+    def _get(self, element_name, attribute, on_element=None):
         """
         Get back the requested element if it exists and there's no more with the given attribute
         """
-        xpath = "/{}/{}[@{}='{}']".format(path_prefix if path_prefix else self._book.tag,
-                                          element_name,
+        xpath = element_name
+        if attribute:
+            xpath = "{}[@{}='{}']".format(element_name,
                                           attribute.keys()[0],
                                           attribute.values()[0])
-        elements = self._book.xpath(xpath)
+        elements = on_element.xpath(xpath) if on_element else self._book.xpath(xpath)
         if not elements:
             raise ElementDoesNotExist("<{}> element with {}='{}' does not exist".format(element_name,
                                                                                         attribute.keys()[0],
@@ -490,12 +491,14 @@ class Book(object):
         # version = self._get_version(version_title)
         version = self._get("version", {"title": version_title})
 
-        manuscript = version.xpath("manuscripts/ms[@abbrev='{}']".format(text_type))
-        if not manuscript:
-            raise ElementDoesNotExist("<manuscript> element with abbrev='{}' does not exist".format(text_type))
-        elif len(manuscript) > 1:
-            raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
-        manuscript = manuscript[0]
+        # manuscript = version.xpath("manuscripts/ms[@abbrev='{}']".format(text_type))
+        # if not manuscript:
+        #     raise ElementDoesNotExist("<manuscript> element with abbrev='{}' does not exist".format(text_type))
+        # elif len(manuscript) > 1:
+        #     raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
+        # manuscript = manuscript[0]
+        manuscript = self._get("manuscripts/ms", {"abbrev": text_type}, version)
+
         if manuscript.get("show") == "no":
             raise NotAllowedManuscript
 
@@ -553,8 +556,33 @@ class Book(object):
         version = self._get("version", {"title": version_title})
         version.getparent().remove(version)
 
+    def add_manuscript(self, version_title, abbrev, language, show=True):
+        manuscripts = self._get("manuscripts", None, self._get("version", {"title": version_title}))
+        etree.SubElement(manuscripts,
+                         "ms", {"abbrev": abbrev,
+                                "language": language,
+                                "show": "yes" if show else "no"}).append(etree.Element("name"))
+
+    def update_manuscript(self, version_title, abbrev, new_abbrev, new_language=None, new_show=None):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        # ms = version.xpath("manuscripts/ms[@abbrev='{}'".format(abbrev))
+        if new_abbrev:
+            ms.set("abbrev", new_abbrev)
+        if new_language:
+            ms.set("language", new_language)
+        if new_show is not None:
+            ms.set("show", "yes" if new_show else "no")
+
+    def del_manuscript(self, version_title, abbrev):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        # ms = self._get("version", {"title": version_title}).xpath("manuscripts/ms[@abbrev='{}'".format(abbrev))
+        ms.getparent().remove(ms)
+
     def serialize(self, pretty=True):
-        return etree.tostring(self._book, xml_declaration=True, pretty_print=pretty, **self._docinfo)
+        return etree.tostring(self._book,
+                              xml_declaration=True,
+                              pretty_print=pretty,
+                              **self._docinfo)
 
     # def renumber_units(self):
     #     """
