@@ -565,7 +565,6 @@ class Book(object):
 
     def update_manuscript(self, version_title, abbrev, new_abbrev, new_language=None, new_show=None):
         ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        # ms = version.xpath("manuscripts/ms[@abbrev='{}'".format(abbrev))
         if new_abbrev:
             ms.set("abbrev", new_abbrev)
         if new_language:
@@ -577,6 +576,22 @@ class Book(object):
         ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
         # ms = self._get("version", {"title": version_title}).xpath("manuscripts/ms[@abbrev='{}'".format(abbrev))
         ms.getparent().remove(ms)
+
+    def add_bibliography(self, version_title, abbrev, text):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        etree.SubElement(ms, "bibliography").text = text
+
+    def update_bibliography(self, version_title, abbrev, text, new_text):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        for bio in ms.iter("bibliography"):
+            if bio.text == text:
+                bio.text = new_text
+
+    def del_bibliography(self, version_title, abbrev, text):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        for bio in ms.iter("bibliography"):
+            if bio.text == text:
+                bio.getparent().remove(bio)
 
     def serialize(self, pretty=True):
         return etree.tostring(self._book,
