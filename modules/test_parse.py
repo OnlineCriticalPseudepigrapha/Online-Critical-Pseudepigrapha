@@ -261,3 +261,34 @@ def test_bookman_get_readings_as_gluon():
     assert str(result["result"][1]) == html
     assert len(result["result"]) == 2
     assert result["error"] == [None, None]
+
+
+def test_book_create():
+    book = Book.create("MyTest", "My Test Book", True)
+    assert book.serialize(False) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                    "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                    '<book filename="MyTest" textStructure="fragmentary" title="My Test Book"/>'
+    book.add_version("MyVersion", "MyLanguage", "Me")
+    assert book.serialize(False) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                    "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                    '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                                    '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                                    '<divisions/>' \
+                                    '<manuscripts/>' \
+                                    '<text/>' \
+                                    '</version>' \
+                                    '</book>'
+    book.update_version("MyVersion", "MyVersion2", "MyLanguage2")
+    assert book.serialize(False) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                    "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                    '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                                    '<version author="Me" language="MyLanguage2" title="MyVersion2">' \
+                                    '<divisions/>' \
+                                    '<manuscripts/>' \
+                                    '<text/>' \
+                                    '</version>' \
+                                    '</book>'
+    book.del_version("MyVersion2")
+    assert book.serialize(False) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                    "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                    '<book filename="MyTest" textStructure="fragmentary" title="My Test Book"/>'
