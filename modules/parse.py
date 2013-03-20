@@ -467,21 +467,40 @@ class Book(object):
         """
         Get back the requested element if it exists and there's no more with the given attribute
         """
-        xpath = element_name
         if attribute:
             xpath = "{}[@{}='{}']".format(element_name,
                                           attribute.keys()[0],
                                           attribute.values()[0])
-        elements = on_element.xpath(xpath) if on_element else self._book.xpath(xpath)
-        if not elements:
-            raise ElementDoesNotExist("<{}> element with {}='{}' does not exist".format(element_name,
-                                                                                        attribute.keys()[0],
-                                                                                        attribute.values()[0]))
-        elif len(elements) > 1:
-            raise MultipleElementsReturned("There are more <{}> elements with {}='{}'".format(element_name,
-                                                                                              attribute.keys()[0],
-                                                                                              attribute.values()[0]))
+            elements = on_element.xpath(xpath) if on_element else self._book.xpath(xpath)
+            if not elements:
+                raise ElementDoesNotExist("<{}> element with {}='{}' does not exist".format(element_name,
+                                                                                            attribute.keys()[0],
+                                                                                            attribute.values()[0]))
+            elif len(elements) > 1:
+                raise MultipleElementsReturned("There are more <{}> elements with {}='{}'".format(element_name,
+                                                                                                  attribute.keys()[0],
+                                                                                                  attribute.values()[0]))
+        else:
+            xpath = element_name
+            elements = on_element.xpath(xpath) if on_element else self._book.xpath(xpath)
+            if not elements:
+                raise ElementDoesNotExist("Element does not exist on this xpath <{}>".format(xpath))
+            elif len(elements) > 1:
+                raise MultipleElementsReturned("There are more elements on this xpath <{}>".format(xpath))
+
         return elements[0]
+
+    def _renumber_units(self):
+        """
+        If we're adding or removing an element that contains units (a version,
+        div or unit), all units that follow the affected units must be
+        renumbered since all units in a document must be numbered consecutively.
+
+        It may not be the most efficient way, but we just renumber all the units
+        starting with 1.
+        """
+        for index, unit in enumerate(self._book.xpath("//unit"), 1):
+            unit.set("id", str(index))
 
     # RI methods
 
@@ -593,25 +612,72 @@ class Book(object):
             if bio.text == text:
                 bio.getparent().remove(bio)
 
+    def add_div(self, version_title, div_name, div_parent_path, preceding_div=None):
+        if div_parent_path:
+            parent_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_parent_path])
+            div_parent = self._get(parent_xpath, attribute=None, on_element=self._get("version", {"title": version_title}))
+        else:
+            div_parent = self._get("text", attribute=None, on_element=self._get("version", {"title": version_title}))
+        if preceding_div:
+            div_sibling = self._get("div", attribute={"number": preceding_div}, on_element=div_parent)
+            div_sibling.addnext(etree.Element("div", {"number": str(div_name)}))
+        else:
+            div_parent.append(etree.Element("div", {"number": str(div_name)}))
+
+    # TODO: update of div[@number]?
+
+    def del_div(self, version_title, div_path):
+        div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
+        div = self._get(div_xpath, attribute=None, on_element=self._get("version", {"title": version_title}))
+        div.getparent().remove(div)
+        self._renumber_units()
+
+    def add_unit(self, version_title, div_path):
+        parent_div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
+        parent_div = self._get(parent_div_xpath,
+                               attribute=None,
+                               on_element=self._get("version", {"title": version_title}))
+        etree.SubElement(parent_div, "unit", {"id": "0"}).append(etree.Element("reading"))
+        self._renumber_units()
+
+    def update_unit(self, version_title, unit_id, readings):
+        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
+        unit.clear()
+        unit.set("id", unit_id)
+        for option, reading in enumerate(readings):
+            etree.SubElement(unit, etree.Element("reading", {"option": option, "mss": reading[0]})).text = reading[1]
+
+    def split_unit(self, version_title, unit_id, reading_pos, split_point):
+        unit = self._get("//unit", {"id": unit_id}, self._get("version", {"title": version_title}))
+        if reading_pos < len(unit):
+            reading = unit[reading_pos]
+            if isinstance(split_point, basestring) and split_point in reading.text:
+                prev = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                prev.text = reading.text[:reading.text.find(split_point)]
+                reading.addprevious(prev)
+                next = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                next.text = reading.text[reading.text.find(split_point)+len(split_point):]
+                reading.addnext(next)
+                reading.text = split_point
+            elif isinstance(split_point, int):
+                next = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                next.text = reading.text[split_point:]
+                reading.addnext(next)
+                reading.text = reading.text[:split_point]
+            # renumbering the option attribute
+            for index, reading in enumerate(unit):
+                reading.set("option", str(index))
+
+    def del_unit(self, version_title, unit_id):
+        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
+        unit.getparent().remove(unit)
+        self._renumber_units()
+
     def serialize(self, pretty=True):
         return etree.tostring(self._book,
                               xml_declaration=True,
                               pretty_print=pretty,
                               **self._docinfo)
-
-    # def renumber_units(self):
-    #     """
-    #     If we're adding or removing an element that contains units (a version,
-    #     div or unit), all units that follow the affected units must be
-    #     renumbered since all units in a document must be numbered consecutively.
-    #
-    #     It may not be the most efficient way, but we just renumber all the units
-    #     starting with 1.
-    #     """
-    #
-    #     units = self.tree.xpath('//unit')
-    #     for index, unit in enumerate(units):
-    #         unit.set('number', unicode(index + 1))
 
     # def get_reference(self, version_title, divs):
     #     """
@@ -683,14 +749,6 @@ class Book(object):
     #         index = 0
     #
     #     return parent, index, values
-
-    # def write(self):
-    #     """
-    #     Write xml tree to file.
-    #     """
-    #
-    #     fp = open(self.xml_file, 'w')
-    #     self.tree.write(fp)
 
     # def add_div(self, version_title, new_div):
     #     """
@@ -784,17 +842,6 @@ class Book(object):
     #
     #     # Write to file
     #     self.write()
-
-    # def add_version(self, attrs, elements):
-    #     """
-    #     Add a new version.
-    #
-    #     Arguments:
-    #         attrs - dictionary of the version element's attributes
-    #         elements - dictionary defining the version element's elements
-    #     """
-    #     pass
-
 
 class BookManager(object):
     """
