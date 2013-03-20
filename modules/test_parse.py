@@ -433,3 +433,56 @@ def test_book_crud_bibliography():
                                   '<text/>' \
                                   '</version>' \
                                   '</book>'
+
+
+def test_book_crud_div():
+    book = Book.create(filename="MyTest", title="My Test Book", frags=True)
+    book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
+    book.add_div(version_title="MyVersion", div_name="MyDiv1", div_parent_path=None)
+    book.add_div(version_title="MyVersion", div_name="MyDiv1.1", div_parent_path=["MyDiv1"])
+    book.add_div(version_title="MyVersion", div_name="MyDiv1.1.1", div_parent_path=["MyDiv1", "MyDiv1.1"])
+    # with preceding
+    book.add_div(version_title="MyVersion", div_name="MyDiv2", div_parent_path=None, preceding_div="MyDiv1")
+    book.add_div(version_title="MyVersion", div_name="MyDiv1.1.2", div_parent_path=["MyDiv1", "MyDiv1.1"], preceding_div="MyDiv1.1.1")
+    assert fix_doctype(
+        book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                  "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                  '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                                  '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                                  '<divisions/>' \
+                                  '<manuscripts/>' \
+                                  '<text>' \
+                                  '<div number="MyDiv1">' \
+                                  '<div number="MyDiv1.1">' \
+                                  '<div number="MyDiv1.1.1"/>' \
+                                  '<div number="MyDiv1.1.2"/>' \
+                                  '</div>' \
+                                  '</div>' \
+                                  '<div number="MyDiv2"/>' \
+                                  '</text>' \
+                                  '</version>' \
+                                  '</book>'
+    book.del_div(version_title="MyVersion", div_path=["MyDiv1", "MyDiv1.1"])
+    book.del_div(version_title="MyVersion", div_path=["MyDiv2"])
+    assert fix_doctype(
+        book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                                  "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                                  '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                                  '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                                  '<divisions/>' \
+                                  '<manuscripts/>' \
+                                  '<text>' \
+                                  '<div number="MyDiv1"/>' \
+                                  '</text>' \
+                                  '</version>' \
+                                  '</book>'
+
+
+def test_book_crud_unit():
+    book = Book.create(filename="MyTest", title="My Test Book", frags=True)
+    book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
+    assert 0
+    # add_unit():
+    # split_unit():
+    # update_unit():
+    # del_unit():
