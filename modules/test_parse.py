@@ -278,6 +278,9 @@ def fix_doctype(str):
     return str.replace('"grammateus.dtd"', "'grammateus.dtd'")
 
 
+# TODO: add testcases for _get() method
+
+
 def test_book_create():
     book = Book.create(filename="MyTest", title="My Test Book")
     assert fix_doctype(
@@ -299,6 +302,9 @@ def test_book_crud_version():
                                   '<text/>' \
                                   '</version>' \
                                   '</book>'
+    with pytest.raises(ElementDoesNotExist):
+        # non existing version
+        book.update_version(version_title="XMyVersion", new_version_title="MyVersion2", new_language="MyLanguage2")
     book.update_version(version_title="MyVersion", new_version_title="MyVersion2", new_language="MyLanguage2")
     assert fix_doctype(
         book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
@@ -310,6 +316,9 @@ def test_book_crud_version():
                                   '<text/>' \
                                   '</version>' \
                                   '</book>'
+    with pytest.raises(ElementDoesNotExist):
+        # non existing version
+        book.del_version(version_title="XMyVersion")
     book.del_version(version_title="MyVersion2")
     assert fix_doctype(
         book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
@@ -436,53 +445,217 @@ def test_book_crud_bibliography():
 
 
 def test_book_crud_div():
+    # prepering book
     book = Book.create(filename="MyTest", title="My Test Book", frags=True)
     book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
+
+    # add div
     book.add_div(version_title="MyVersion", div_name="MyDiv1", div_parent_path=None)
     book.add_div(version_title="MyVersion", div_name="MyDiv1.1", div_parent_path=["MyDiv1"])
     book.add_div(version_title="MyVersion", div_name="MyDiv1.1.1", div_parent_path=["MyDiv1", "MyDiv1.1"])
+    book.add_div(version_title="MyVersion", div_name="MyDiv1.1.3", div_parent_path=["MyDiv1", "MyDiv1.1"])
     # with preceding
     book.add_div(version_title="MyVersion", div_name="MyDiv2", div_parent_path=None, preceding_div="MyDiv1")
     book.add_div(version_title="MyVersion", div_name="MyDiv1.1.2", div_parent_path=["MyDiv1", "MyDiv1.1"], preceding_div="MyDiv1.1.1")
-    assert fix_doctype(
-        book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
-                                  "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
-                                  '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
-                                  '<version author="Me" language="MyLanguage" title="MyVersion">' \
-                                  '<divisions/>' \
-                                  '<manuscripts/>' \
-                                  '<text>' \
-                                  '<div number="MyDiv1">' \
-                                  '<div number="MyDiv1.1">' \
-                                  '<div number="MyDiv1.1.1"/>' \
-                                  '<div number="MyDiv1.1.2"/>' \
-                                  '</div>' \
-                                  '</div>' \
-                                  '<div number="MyDiv2"/>' \
-                                  '</text>' \
-                                  '</version>' \
-                                  '</book>'
+    with pytest.raises(ElementDoesNotExist):
+        # non existing parent path
+        book.add_div(version_title="MyVersion", div_name="MyDiv0", div_parent_path=["MyXDiv"])
+    with pytest.raises(ElementDoesNotExist):
+        # non existing preceding
+        book.add_div(version_title="MyVersion", div_name="MyDiv0", div_parent_path=["MyXDiv1"], preceding_div="MyDiv1")
+    result_xml = fix_doctype(book.serialize(False))
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                   '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                   '<divisions/>' \
+                   '<manuscripts/>' \
+                   '<text>' \
+                   '<div number="MyDiv1">' \
+                   '<div number="MyDiv1.1">' \
+                   '<div number="MyDiv1.1.1"/>' \
+                   '<div number="MyDiv1.1.2"/>' \
+                   '<div number="MyDiv1.1.3"/>' \
+                   '</div>' \
+                   '</div>' \
+                   '<div number="MyDiv2"/>' \
+                   '</text>' \
+                   '</version>' \
+                   '</book>'
+    assert result_xml == expected_xml
+
+    # del div
     book.del_div(version_title="MyVersion", div_path=["MyDiv1", "MyDiv1.1"])
     book.del_div(version_title="MyVersion", div_path=["MyDiv2"])
-    assert fix_doctype(
-        book.serialize(False)) == "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
-                                  "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
-                                  '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
-                                  '<version author="Me" language="MyLanguage" title="MyVersion">' \
-                                  '<divisions/>' \
-                                  '<manuscripts/>' \
-                                  '<text>' \
-                                  '<div number="MyDiv1"/>' \
-                                  '</text>' \
-                                  '</version>' \
-                                  '</book>'
+    result_xml = fix_doctype(book.serialize(False))
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                   '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                   '<divisions/>' \
+                   '<manuscripts/>' \
+                   '<text>' \
+                   '<div number="MyDiv1"/>' \
+                   '</text>' \
+                   '</version>' \
+                   '</book>'
+    assert result_xml == expected_xml
+
+    # update div
+    book.update_div(version_title="MyVersion", div_path=["MyDiv1"], new_div_name="MyDiv")
+    result_xml = fix_doctype(book.serialize(False))
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                   '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                   '<divisions/>' \
+                   '<manuscripts/>' \
+                   '<text>' \
+                   '<div number="MyDiv"/>' \
+                   '</text>' \
+                   '</version>' \
+                   '</book>'
+    assert result_xml == expected_xml
 
 
 def test_book_crud_unit():
+    # prepering book
     book = Book.create(filename="MyTest", title="My Test Book", frags=True)
     book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
-    assert 0
-    # add_unit():
-    # split_unit():
-    # update_unit():
-    # del_unit():
+    book.add_div(version_title="MyVersion", div_name="1", div_parent_path=None)
+    book.add_div(version_title="MyVersion", div_name="1.1", div_parent_path=["1"])
+    book.add_div(version_title="MyVersion", div_name="1.1.1", div_parent_path=["1", "1.1"])
+    book.add_div(version_title="MyVersion", div_name="1.1.2", div_parent_path=["1", "1.1"])
+    book.add_div(version_title="MyVersion", div_name="1.1.3", div_parent_path=["1", "1.1"])
+    book.add_div(version_title="MyVersion", div_name="2", div_parent_path=None)
+
+    # add unit
+    book.add_unit(version_title="MyVersion", div_path=["1", "1.1", "1.1.2"])
+    book.add_unit(version_title="MyVersion", div_path=["1", "1.1", "1.1.1"])
+    book.add_unit(version_title="MyVersion", div_path=["1", "1.1", "1.1.1"])
+    result_xml = fix_doctype(book.serialize(False))
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                   '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                   '<divisions/>' \
+                   '<manuscripts/>' \
+                   '<text>' \
+                   '<div number="1">' \
+                   '<div number="1.1">' \
+                   '<div number="1.1.1">' \
+                   '<unit id="1"><reading/></unit>' \
+                   '<unit id="2"><reading/></unit>' \
+                   '</div>' \
+                   '<div number="1.1.2">' \
+                   '<unit id="3"><reading/></unit>' \
+                   '</div>' \
+                   '<div number="1.1.3"/>' \
+                   '</div>' \
+                   '</div>' \
+                   '<div number="2"/>' \
+                   '</text>' \
+                   '</version>' \
+                   '</book>'
+    assert result_xml == expected_xml
+
+    # update unit
+    book.update_unit(version_title="MyVersion",
+                     unit_id="2",
+                     readings=(("MyMSS", u"Ütvefúró tükörfúrógép"), ("MyMSS", u"ἰδοὺ ἦλθεν κύριος")))
+    result_xml = fix_doctype(book.serialize(False))
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                   '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                   '<divisions/>' \
+                   '<manuscripts/>' \
+                   '<text>' \
+                   '<div number="1">' \
+                   '<div number="1.1">' \
+                   '<div number="1.1.1">' \
+                   '<unit id="1"><reading/></unit>' \
+                   '<unit id="2">' \
+                   '<reading mss="MyMSS" option="0">Ütvefúró tükörfúrógép</reading>' \
+                   '<reading mss="MyMSS" option="1">ἰδοὺ ἦλθεν κύριος</reading>' \
+                   '</unit>' \
+                   '</div>' \
+                   '<div number="1.1.2">' \
+                   '<unit id="3"><reading/></unit>' \
+                   '</div>' \
+                   '<div number="1.1.3"/>' \
+                   '</div>' \
+                   '</div>' \
+                   '<div number="2"/>' \
+                   '</text>' \
+                   '</version>' \
+                   '</book>'
+    assert result_xml == expected_xml
+
+    # split unit
+    book.split_unit(version_title="MyVersion",
+                    unit_id="2",
+                    reading_pos=0,
+                    split_point=9)
+    book.split_unit(version_title="MyVersion",
+                    unit_id="2",
+                    reading_pos="2",
+                    split_point=u"ἦλθεν")
+    result_xml = fix_doctype(book.serialize(False))
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                   '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                   '<divisions/>' \
+                   '<manuscripts/>' \
+                   '<text>' \
+                   '<div number="1">' \
+                   '<div number="1.1">' \
+                   '<div number="1.1.1">' \
+                   '<unit id="1"><reading/></unit>' \
+                   '<unit id="2">' \
+                   '<reading mss="MyMSS" option="0">Ütvefúró </reading>' \
+                   '<reading mss="MyMSS" option="1">tükörfúrógép</reading>' \
+                   '<reading mss="MyMSS" option="2">ἰδοὺ </reading>' \
+                   '<reading mss="MyMSS" option="3">ἦλθεν</reading>' \
+                   '<reading mss="MyMSS" option="4"> κύριος</reading>' \
+                   '</unit>' \
+                   '</div>' \
+                   '<div number="1.1.2">' \
+                   '<unit id="3"><reading/></unit>' \
+                   '</div>' \
+                   '<div number="1.1.3"/>' \
+                   '</div>' \
+                   '</div>' \
+                   '<div number="2"/>' \
+                   '</text>' \
+                   '</version>' \
+                   '</book>'
+    assert result_xml == expected_xml
+
+    # del unit
+    book.del_unit(version_title="MyVersion", unit_id="2")
+    result_xml = fix_doctype(book.serialize(False))
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                   '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                   '<divisions/>' \
+                   '<manuscripts/>' \
+                   '<text>' \
+                   '<div number="1">' \
+                   '<div number="1.1">' \
+                   '<div number="1.1.1">' \
+                   '<unit id="1"><reading/></unit>' \
+                   '</div>' \
+                   '<div number="1.1.2">' \
+                   '<unit id="2"><reading/></unit>' \
+                   '</div>' \
+                   '<div number="1.1.3"/>' \
+                   '</div>' \
+                   '</div>' \
+                   '<div number="2"/>' \
+                   '</text>' \
+                   '</version>' \
+                   '</book>'
+    assert result_xml == expected_xml
