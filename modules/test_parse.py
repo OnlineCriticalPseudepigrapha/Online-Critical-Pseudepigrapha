@@ -9,10 +9,16 @@ from parse import Book, BookManager
 from parse import InvalidDocument, ElementDoesNotExist, InvalidDIVPath, NotAllowedManuscript
 
 XML_FILE_STORAGE_PATH = "test/docs"
-XML_FILE = "test/docs/test.xml"
+XML_FILE_BACKUP_STORAGE_PATH = "test/docs/backups"
+XML_DRAFT_FILE_STORAGE_PATH = "test/docs/drafts"
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH = "test/docs/drafts/backups"
+XML_FILE = "test/docs/drafts/test_parse.xml"
 DTD_FILE = "static/docs/grammateus.dtd"
 
 BookManager.xml_file_storage_path = XML_FILE_STORAGE_PATH
+BookManager.xml_file_backup_storage_path = XML_FILE_BACKUP_STORAGE_PATH
+BookManager.xml_draft_file_storage_path = XML_DRAFT_FILE_STORAGE_PATH
+BookManager.xml_draft_file_backup_storage_path = XML_DRAFT_FILE_BACKUP_STORAGE_PATH
 
 
 @pytest.fixture(scope="module")
@@ -20,12 +26,12 @@ def test_book():
     return Book.open(open(XML_FILE))
 
 
-def test_false_init():
+def test_book_false_init():
     with pytest.raises(TypeError):
         Book.open(1)
 
 
-def test_validation(test_book):
+def test_book_validation(test_book):
     # validation without success
     book = Book.open(StringIO("""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <!DOCTYPE book SYSTEM "grammateus.dtd">
@@ -177,9 +183,10 @@ def test_book_get_readings_w_wrong_args(test_book):
 
 def test_bookman_get_text():
     Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
-    result = BookManager.get_text([{"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
-                                   {"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
+    result = BookManager.get_text([{"book": "test_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                   {"book": "test_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
                                   as_gluon=False)
+    print result["error"]
     assert result == {"result": [Text("812", "Greek", 3, u""),
                                  Text("815", "Greek", 3, u"ἐλέγξαι"),
                                  Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
@@ -193,22 +200,22 @@ def test_bookman_get_text_w_wrong_args():
     Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
 
     # Invalid book name
-    result = BookManager.get_text([{"book": "XTest", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
+    result = BookManager.get_text([{"book": "Xtest_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
                                   as_gluon=False)
     assert result == {"result": [],
-                      "error": ["[Errno 2] No such file or directory: 'test/docs/XTest.xml'"]}
+                      "error": ["[Errno 2] No such file or directory: '{}/Xtest_parse.xml'".format(XML_DRAFT_FILE_STORAGE_PATH)]}
 
     # Invalid version name
-    result = BookManager.get_text([{"book": "Test", "version": "XGreek", "text_type": "TestOne", "start": (1,)}],
+    result = BookManager.get_text([{"book": "test_parse", "version": "XGreek", "text_type": "TestOne", "start": (1,)}],
                                   as_gluon=False)
     assert result == {"result": [],
                       "error": ["<version> element with title='XGreek' does not exist"]}
 
     # Invalid and valid request together
-    results = BookManager.get_text([{"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
-                                    {"book": "XTest", "version": "Greek", "text_type": "TestOne", "start": (1,)},
-                                    {"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
-                                    {"book": "Test", "version": "XGreek", "text_type": "TestOne", "start": (1,)}],
+    results = BookManager.get_text([{"book": "test_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                    {"book": "Xtest_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                    {"book": "test_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                    {"book": "test_parse", "version": "XGreek", "text_type": "TestOne", "start": (1,)}],
                                    as_gluon=False)
     assert results == {"result": [Text("812", "Greek", 3, u""),
                                   Text("815", "Greek", 3, u"ἐλέγξαι"),
@@ -217,14 +224,14 @@ def test_bookman_get_text_w_wrong_args():
                                   Text("815", "Greek", 3, u"ἐλέγξαι"),
                                   Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,")],
                        "error": [None,
-                                 "[Errno 2] No such file or directory: 'test/docs/XTest.xml'",
+                                 "[Errno 2] No such file or directory: '{}/Xtest_parse.xml'".format(XML_DRAFT_FILE_STORAGE_PATH),
                                  None,
                                  "<version> element with title='XGreek' does not exist"]}
 
 
 def test_bookman_get_text_as_gluon():
-    result = BookManager.get_text([{"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)},
-                                   {"book": "Test", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
+    result = BookManager.get_text([{"book": "test_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)},
+                                   {"book": "test_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
                                   as_gluon=True)
     html = '<div>' \
            '<span class="Greek 3" id="812"><a href="3">*</a></span>' \
@@ -239,8 +246,8 @@ def test_bookman_get_text_as_gluon():
 
 def test_bookman_get_readings():
     Reading = namedtuple("Reading", "mss, text")
-    result = BookManager.get_readings([{"book": "Test", "unit_id": 812},
-                                       {"book": "Test", "unit_id": 812}],
+    result = BookManager.get_readings([{"book": "test_parse", "unit_id": 812},
+                                       {"book": "test_parse", "unit_id": 812}],
                                       as_gluon=False)
     assert result["result"] == [Reading("Gizeh", u"ὅτι ἔρχεται"),
                                 Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
@@ -252,8 +259,8 @@ def test_bookman_get_readings():
 
 
 def test_bookman_get_readings_as_gluon():
-    result = BookManager.get_readings([{"book": "Test", "unit_id": 812},
-                                       {"book": "Test", "unit_id": 812}],
+    result = BookManager.get_readings([{"book": "test_parse", "unit_id": 812},
+                                       {"book": "test_parse", "unit_id": 812}],
                                       as_gluon=True)
     html = '<dl>' \
            '<dt>Gizeh</dt><dd>{}</dd>' \
@@ -658,4 +665,13 @@ def test_book_crud_unit():
                    '</text>' \
                    '</version>' \
                    '</book>'
+    assert result_xml == expected_xml
+
+
+def test_bookman_create_book():
+    BookManager.create_book("MyNewBook", "My new book")
+    result_xml = open("{}/MyNewBook.xml".format(XML_DRAFT_FILE_STORAGE_PATH)).read()
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyNewBook" title="My new book"/>\n'
     assert result_xml == expected_xml
