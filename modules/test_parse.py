@@ -673,8 +673,8 @@ def test_book_crud_unit():
 
 def test_bookman_create_publish_copy():
     # setup
-    book_name = "MyNewBook"
-    book_file_pattern = "{}/{}_????????_??????.xml"
+    book_name = "MyNewBookTest"
+    book_file_pattern = "{}/{}_????????_??????_??????.xml"
     files_to_remove = []
     for xml_folder in [XML_DRAFT_FILE_BACKUP_STORAGE_PATH,
                        XML_FILE_BACKUP_STORAGE_PATH]:
@@ -703,6 +703,21 @@ def test_bookman_create_publish_copy():
     result_xml = fix_doctype(open("{}/{}.xml".format(XML_DRAFT_FILE_STORAGE_PATH, book_name)).read())
     assert result_xml == expected_xml
     assert len(glob.glob(book_file_pattern.format(XML_DRAFT_FILE_BACKUP_STORAGE_PATH, book_name))) == 1
+
+    # edit (add version)
+    BookManager.add_version(book_name, "MyVersion", "MyLanguage", "Me")
+    result_xml = fix_doctype(open("{}/{}.xml".format(XML_DRAFT_FILE_STORAGE_PATH, book_name)).read())
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="{}" title="My new book">\n' \
+                   '  <version author="Me" language="MyLanguage" title="MyVersion">\n' \
+                   '    <divisions/>\n' \
+                   '    <manuscripts/>\n' \
+                   '    <text/>\n' \
+                   '  </version>\n' \
+                   '</book>\n'.format(book_name)
+    assert result_xml == expected_xml
+    assert len(glob.glob(book_file_pattern.format(XML_DRAFT_FILE_BACKUP_STORAGE_PATH, book_name))) == 2
 
     # publish
     BookManager.publish_book(book_name)
