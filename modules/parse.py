@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from collections import namedtuple
 from collections import OrderedDict
+from datetime import datetime
 import os
-import time
 
 from lxml import etree
 
@@ -741,9 +741,9 @@ class BookManager(object):
         book_name = book.get_filename()
         new_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
         if os.path.isfile(new_file_path):
-            backup_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_storage_path,
+            backup_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_backup_storage_path,
                                                      book_name,
-                                                     time.strftime("%Y%m%d_%H%M%S"))
+                                                     datetime.now().strftime("%Y%m%d_%H%M%S_%f"))
             os.rename(new_file_path, backup_file_path)
         f = open(new_file_path, "w")
         f.write(book.serialize())
@@ -856,7 +856,7 @@ class BookManager(object):
         if os.path.isfile(to_file_path):
             backup_to_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_backup_storage_path,
                                                         book_name,
-                                                        time.strftime("%Y%m%d_%H%M%S"))
+                                                        datetime.now().strftime("%Y%m%d_%H%M%S_%f"))
             os.rename(to_file_path, backup_to_file_path)
         f = open(to_file_path, "w")
         f.write(open(from_file_path).read())
@@ -875,7 +875,7 @@ class BookManager(object):
         if os.path.isfile(to_file_path):
             backup_to_file_path = "{}/{}_{}.xml".format(BookManager.xml_file_backup_storage_path,
                                                         book_name,
-                                                        time.strftime("%Y%m%d_%H%M%S"))
+                                                        datetime.now().strftime("%Y%m%d_%H%M%S_%f"))
             os.rename(to_file_path, backup_to_file_path)
         f = open(to_file_path, "w")
         f.write(open(from_file_path).read())
