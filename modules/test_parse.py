@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
+import glob
 
+import os
 from StringIO import StringIO
 from collections import namedtuple
 
@@ -12,8 +14,9 @@ XML_FILE_STORAGE_PATH = "test/docs"
 XML_FILE_BACKUP_STORAGE_PATH = "test/docs/backups"
 XML_DRAFT_FILE_STORAGE_PATH = "test/docs/drafts"
 XML_DRAFT_FILE_BACKUP_STORAGE_PATH = "test/docs/drafts/backups"
-XML_FILE = "test/docs/drafts/test_parse.xml"
-DTD_FILE = "static/docs/grammateus.dtd"
+
+TEST_XML_FILE = "test/docs/drafts/test_parse.xml"
+TEST_DTD_FILE = "static/docs/grammateus.dtd"
 
 BookManager.xml_file_storage_path = XML_FILE_STORAGE_PATH
 BookManager.xml_file_backup_storage_path = XML_FILE_BACKUP_STORAGE_PATH
@@ -23,7 +26,7 @@ BookManager.xml_draft_file_backup_storage_path = XML_DRAFT_FILE_BACKUP_STORAGE_P
 
 @pytest.fixture(scope="module")
 def test_book():
-    return Book.open(open(XML_FILE))
+    return Book.open(open(TEST_XML_FILE))
 
 
 def test_book_false_init():
@@ -37,9 +40,9 @@ def test_book_validation(test_book):
         <!DOCTYPE book SYSTEM "grammateus.dtd">
         <book></book>"""))
     with pytest.raises(InvalidDocument):
-        book.validate(open(DTD_FILE))
+        book.validate(open(TEST_DTD_FILE))
     # validation with success
-    assert test_book.validate(open(DTD_FILE)) is None
+    assert test_book.validate(open(TEST_DTD_FILE)) is None
 
 
 def test_gen_divpath_open_end():
@@ -668,10 +671,52 @@ def test_book_crud_unit():
     assert result_xml == expected_xml
 
 
-def test_bookman_create_book():
-    BookManager.create_book("MyNewBook", "My new book")
-    result_xml = open("{}/MyNewBook.xml".format(XML_DRAFT_FILE_STORAGE_PATH)).read()
+def test_bookman_create_publish_copy():
+    # setup
+    book_name = "MyNewBook"
+    book_file_pattern = "{}/{}_????????_??????.xml"
+    files_to_remove = []
+    for xml_folder in [XML_DRAFT_FILE_BACKUP_STORAGE_PATH,
+                       XML_FILE_BACKUP_STORAGE_PATH]:
+        files_to_remove += glob.glob(book_file_pattern.format(xml_folder, book_name))
+    for xml_folder in [XML_DRAFT_FILE_STORAGE_PATH,
+                       XML_FILE_STORAGE_PATH]:
+        files_to_remove += glob.glob("{}/{}.xml".format(xml_folder, book_name))
+    for file_path in files_to_remove:
+        os.remove(file_path)
+
+    # create new
+    BookManager.create_book(book_name, "My new book")
+    result_xml = fix_doctype(open("{}/{}.xml".format(XML_DRAFT_FILE_STORAGE_PATH, book_name)).read())
     expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                    "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
-                   '<book filename="MyNewBook" title="My new book"/>\n'
+                   '<book filename="{}" title="My new book"/>\n'.format(book_name)
     assert result_xml == expected_xml
+
+    # publish
+    BookManager.publish_book(book_name)
+    result_xml = fix_doctype(open("{}/{}.xml".format(XML_FILE_STORAGE_PATH, book_name)).read())
+    assert result_xml == expected_xml
+
+    # copy as draft
+    BookManager.copy_book(book_name)
+    result_xml = fix_doctype(open("{}/{}.xml".format(XML_DRAFT_FILE_STORAGE_PATH, book_name)).read())
+    assert result_xml == expected_xml
+    assert len(glob.glob(book_file_pattern.format(XML_DRAFT_FILE_BACKUP_STORAGE_PATH, book_name))) == 1
+
+    # publish
+    BookManager.publish_book(book_name)
+    result_xml = fix_doctype(open("{}/{}.xml".format(XML_FILE_STORAGE_PATH, book_name)).read())
+    assert result_xml == expected_xml
+    assert len(glob.glob(book_file_pattern.format(XML_FILE_BACKUP_STORAGE_PATH, book_name))) == 1
+
+    # teardown
+    files_to_remove = []
+    for xml_folder in [XML_DRAFT_FILE_BACKUP_STORAGE_PATH,
+                       XML_FILE_BACKUP_STORAGE_PATH]:
+        files_to_remove += glob.glob(book_file_pattern.format(xml_folder, book_name))
+    for xml_folder in [XML_DRAFT_FILE_STORAGE_PATH,
+                       XML_FILE_STORAGE_PATH]:
+        files_to_remove += glob.glob("{}/{}.xml".format(xml_folder, book_name))
+    for file_path in files_to_remove:
+        os.remove(file_path)

@@ -854,7 +854,7 @@ class BookManager(object):
         from_file_path = "{}/{}.xml".format(BookManager.xml_file_storage_path, book_name)
         to_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
         if os.path.isfile(to_file_path):
-            backup_to_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_storage_path,
+            backup_to_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_backup_storage_path,
                                                         book_name,
                                                         time.strftime("%Y%m%d_%H%M%S"))
             os.rename(to_file_path, backup_to_file_path)
