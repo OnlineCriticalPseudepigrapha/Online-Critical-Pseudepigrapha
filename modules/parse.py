@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 from collections import namedtuple
 from collections import OrderedDict
+import os
+import time
 
 from lxml import etree
 
 from gluon import A, DIV, SPAN, TAG
 
 XML_FILE_STORAGE_PATH = "static/docs"
+XML_FILE_BACKUP_STORAGE_PATH = "static/docs/backups"
 XML_DRAFT_FILE_STORAGE_PATH = "static/docs/draft"
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH = "static/docs/draft/backups"
+
 XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",
                        "doctype": "<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
                        "standalone": False}
@@ -507,6 +512,9 @@ class Book(object):
         for index, unit in enumerate(self._book.xpath("//unit"), 1):
             unit.set("id", str(index))
 
+    def get_filename(self):
+        return self._book.get("filename")
+
     # RI methods
 
     def get_text(self, version_title, text_type, start_div, end_div=None):
@@ -695,6 +703,8 @@ class Book(object):
                               pretty_print=pretty,
                               **self._docinfo)
 
+    def save(self):
+        BookManager._save(self)
 
 ## BookManager class
 
@@ -707,17 +717,37 @@ class BookManager(object):
     """
 
     xml_file_storage_path = XML_FILE_STORAGE_PATH
+    xml_file_backup_storage_path = XML_FILE_BACKUP_STORAGE_PATH
     xml_draft_file_storage_path = XML_DRAFT_FILE_STORAGE_PATH
+    xml_draft_file_backup_storage_path = XML_DRAFT_FILE_BACKUP_STORAGE_PATH
 
     @staticmethod
-    def _load(xml_book_name):
+    def _load(book_name):
         """
-        Load the given book from the proper storage
+        Load the given book from the draft folder
 
-        :param xml_book_name: the name of the book
+        :param book_name: the name of the book
         :return: file-like object
         """
-        return open(("{}/{}.xml".format(BookManager.xml_file_storage_path, xml_book_name)), "r")
+        return open(("{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)), "r")
+
+    @staticmethod
+    def _save(book):
+        """
+        Save the given book to the draft folder with backup
+
+        :param book: a Book instance
+        """
+        book_name = book.get_filename()
+        new_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
+        if os.path.isfile(new_file_path):
+            backup_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_storage_path,
+                                                     book_name,
+                                                     time.strftime("%Y%m%d_%H%M%S"))
+            os.rename(new_file_path, backup_file_path)
+        f = open(new_file_path, "w")
+        f.write(book.serialize())
+        f.close()
 
     @staticmethod
     def get_text(text_positions, as_gluon=True):
@@ -802,3 +832,59 @@ class BookManager(object):
             else:
                 errors.append(None)
         return {"result": items, "error": errors}
+
+    @staticmethod
+    def create_book(book_name, book_title, frags=False):
+        """
+        Create and save a new book in the draft folder
+
+        :param book_name:
+        :return:
+        """
+        Book.create(book_name, book_title, frags).save()
+
+    @staticmethod
+    def copy_book(book_name):
+        """
+        Copy a book from the main storage place to the draft folder
+
+        :param book_name:
+        :return:
+        """
+        from_file_path = "{}/{}.xml".format(BookManager.xml_file_storage_path, book_name)
+        to_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
+        if os.path.isfile(to_file_path):
+            backup_to_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_storage_path,
+                                                        book_name,
+                                                        time.strftime("%Y%m%d_%H%M%S"))
+            os.rename(to_file_path, backup_to_file_path)
+        f = open(to_file_path, "w")
+        f.write(open(from_file_path).read())
+        f.close()
+
+    @staticmethod
+    def publish_book(book_name):
+        """
+        Copy a book from draft folder to the main storage place
+
+        :param book_name:
+        :return:
+        """
+        from_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
+        to_file_path = "{}/{}.xml".format(BookManager.xml_file_storage_path, book_name)
+        if os.path.isfile(to_file_path):
+            backup_to_file_path = "{}/{}_{}.xml".format(BookManager.xml_file_backup_storage_path,
+                                                        book_name,
+                                                        time.strftime("%Y%m%d_%H%M%S"))
+            os.rename(to_file_path, backup_to_file_path)
+        f = open(to_file_path, "w")
+        f.write(open(from_file_path).read())
+        f.close()
+
+    @staticmethod
+    def add_version(book_name, version_title, language, author):
+        book = Book.open(BookManager._load(book_name))
+        book.add_version(version_title, language, author)
+        book.save()
+
+
