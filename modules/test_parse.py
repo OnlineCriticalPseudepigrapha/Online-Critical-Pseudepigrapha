@@ -34,14 +34,15 @@ def test_book_false_init():
         Book.open(1)
 
 
-def test_book_validation(test_book):
-    # validation without success
+def test_book_validation_w_invalid_doc():
     book = Book.open(StringIO("""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <!DOCTYPE book SYSTEM "grammateus.dtd">
         <book></book>"""))
     with pytest.raises(InvalidDocument):
         book.validate(open(TEST_DTD_FILE))
-    # validation with success
+
+
+def test_book_validation_w_valid_doc(test_book):
     assert test_book.validate(open(TEST_DTD_FILE)) is None
 
 
@@ -82,8 +83,17 @@ def test_book_get_text_w_end(test_book):
     assert result_list == expected_list
 
 
-def test_book_get_text_w_invalid_startdiv(test_book):
+def test_book_get_text_w_invalid_start(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1, 2, 3, 4, 5)))
+    expected_list = [Text("812", "Greek", 3, u""),
+                     Text("815", "Greek", 3, u"ἐλέγξαι"),
+                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
+                     Text("825", "Greek", 2, u"καὶ")]
+    assert result_list == expected_list
+
+
+def test_book_get_text_w_invalid_start_and_end(test_book):
+    result_list = list(test_book.get_text("Greek", "TestOne", (1, 2, 3, 4, "5"), (2, "X", "Y")))
     expected_list = [Text("812", "Greek", 3, u""),
                      Text("815", "Greek", 3, u"ἐλέγξαι"),
                      Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
@@ -107,13 +117,17 @@ def test_book_get_text_w_invalid_text_type(test_book):
 
 
 def test_book_get_readings(test_book):
-    assert list(test_book.get_readings(812)) == [Reading("Gizeh", u"ὅτι ἔρχεται"),
-                                                 Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                                                 Reading("TestOne", u"")]
+    result = list(test_book.get_readings(812))
+    expected = [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                Reading("TestOne", u"")]
+    assert result == expected
 
 
 def test_book_get_readings_w_invalid_unit_id(test_book):
-    assert list(test_book.get_readings(2000)) == []
+    result = list(test_book.get_readings(2000))
+    expected = []
+    assert result == expected
 
 
 ## BookManager tests
@@ -191,13 +205,15 @@ def test_bookman_get_readings():
     result = BookManager.get_readings([{"book": "test_parse", "unit_id": 812},
                                        {"book": "test_parse", "unit_id": 812}],
                                       as_gluon=False)
-    assert result["result"] == [Reading("Gizeh", u"ὅτι ἔρχεται"),
-                                Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                                Reading("TestOne", u""),
-                                Reading("Gizeh", u"ὅτι ἔρχεται"),
-                                Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                                Reading("TestOne", u"")]
-    assert result["error"] == [None, None]
+    expected = {"result": [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                           Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                           Reading("TestOne", u""),
+                           Reading("Gizeh", u"ὅτι ἔρχεται"),
+                           Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                           Reading("TestOne", u"")],
+                "error": [None, None]}
+    assert result["result"] == expected["result"]
+    assert result["error"] == expected["error"]
 
 
 def test_bookman_get_readings_as_gluon():
@@ -205,10 +221,10 @@ def test_bookman_get_readings_as_gluon():
                                        {"book": "test_parse", "unit_id": 812}],
                                       as_gluon=True)
     html = '<dl>' \
-           '<dt>Gizeh</dt><dd>{}</dd>' \
-           '<dt>Jude</dt><dd>{}</dd>' \
+           '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>' \
+           '<dt>Jude</dt><dd>ἰδοὺ ἦλθεν κύριος</dd>' \
            '<dt>TestOne</dt><dd>*</dd>' \
-           '</dl>'.format(u"ὅτι ἔρχεται".encode("utf-8"), u"ἰδοὺ ἦλθεν κύριος".encode("utf-8"))
+           '</dl>'
     assert str(result["result"][0]) == html
     assert str(result["result"][1]) == html
     assert len(result["result"]) == 2
@@ -218,16 +234,13 @@ def test_bookman_get_readings_as_gluon():
 ## Testing EI
 
 
-def fix_doctype(str):
+def fix_doctype(xml_string):
     """
     There is a stupid bug somewhere and I don't want to spent my time to discover it.
     When I run the test script at first time the enclosing marks around grammateus.dtd is different
-    than when I rerun the failed test cases. Maybe PyCharm runtime env maybe something else...
+    than when I rerun the failed test cases again. Maybe PyCharm runtime env maybe something else...
     """
-    return str.replace('"grammateus.dtd"', "'grammateus.dtd'")
-
-
-# TODO: add testcases for _get() method
+    return xml_string.replace('"grammateus.dtd"', "'grammateus.dtd'")  # TODO: find the reason of this
 
 
 def test_book_create():
@@ -238,6 +251,7 @@ def test_book_create():
                                   '<book filename="MyTest" title="My Test Book"/>'
 
 
+# TODO: split 'crud' test cases into parts
 def test_book_crud_version():
     book = Book.create(filename="MyTest", title="My Test Book", frags=True)
     book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
