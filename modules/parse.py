@@ -596,7 +596,7 @@ class Book(object):
 
     # EI methods
 
-    def add_version(self, version_title, language, author):
+    def add_version(self, version_title, language, author, mss=None):
         if self._book.xpath("version[@title='{}']".format(version_title)):
             raise ElementAlreadyExists("<version> element with title='{}' already exists")
         version = etree.SubElement(self._book,
@@ -606,18 +606,17 @@ class Book(object):
                                            "language": language})
         # add mandatory subelements
         etree.SubElement(version, "divisions")
-        etree.SubElement(version, "manuscripts")
+        manuscripts = etree.SubElement(version, "manuscripts")
+        if mss:
+            if isinstance(mss, basestring):
+                mss = mss.split()
+                if len(mss) == 1:
+                    mss = mss[0].split(",")
+            for ms in mss:
+                etree.SubElement(manuscripts,
+                                 "ms",
+                                 attrib={"abbrev": ms, "language": "", "show": ""}).append(etree.Element("name"))
         etree.SubElement(version, "text")
-
-        # TODO: currently this part is disabled
-        # manuscripts = etree.SubElement(version, "manuscripts")
-        # if mss:
-        #     if isinstance(mss, basestring):
-        #         mss = mss.split()
-        #         if len(mss)==1:
-        #             mss = mss[0].split(",")
-        #     for ms in mss:
-        #         etree.SubElement(manuscripts, "ms", attrib={"abbrev": ms})
 
     def update_version(self, version_title, new_version_title=None, new_language=None, new_author=None):
         version = self._get("version", {"title": version_title})
@@ -657,17 +656,15 @@ class Book(object):
         ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
         etree.SubElement(ms, "bibliography").text = text
 
-    def update_bibliography(self, version_title, abbrev, text, new_text):
+    def update_bibliography(self, version_title, abbrev, index, new_text):
         ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        for bio in ms.iter("bibliography"):
-            if bio.text == text:
-                bio.text = new_text
+        bibliography = self._get("bibliography[{}]".format(index + 1), None, ms)
+        bibliography.text = new_text
 
-    def del_bibliography(self, version_title, abbrev, text):
+    def del_bibliography(self, version_title, abbrev, index):
         ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        for bio in ms.iter("bibliography"):
-            if bio.text == text:
-                bio.getparent().remove(bio)
+        bibliography = self._get("bibliography[{}]".format(index + 1), None, ms)
+        bibliography.getparent().remove(bibliography)
 
     def add_div(self, version_title, div_name, div_parent_path, preceding_div=None):
         if div_parent_path:
