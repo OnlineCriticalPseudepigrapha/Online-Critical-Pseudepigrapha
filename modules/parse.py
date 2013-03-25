@@ -17,8 +17,11 @@ XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",
                        "doctype": "<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
                        "standalone": False}
 
+Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
+Reading = namedtuple("Reading", "mss, text")
 
 ## Common Exception classes
+
 
 class InvalidDocument(Exception):
     pass
@@ -72,7 +75,7 @@ class Book(object):
                 tree = etree.parse(xml_book_data)
             else:
                 tree = etree.parse(open(xml_book_data))
-        except AttributeError as e:
+        except AttributeError:
             raise TypeError("Book() requires XML data in a file-like object")
         book._book = tree.getroot()
         book._docinfo.update({i: getattr(tree.docinfo, i) for i in XML_DEFAULT_DOCINFO.keys()})
@@ -99,13 +102,14 @@ class Book(object):
     def __init__(self):
         self._book = None
         self._docinfo = XML_DEFAULT_DOCINFO
+        self._structure_info = {}
         self.default_delimiter = '.'
 
     def validate(self, dtd_data):
         """Detached validation from parsing due to performance reasons."""
         try:
             dtd = etree.DTD(dtd_data)
-        except AttributeError as e:
+        except AttributeError:
             raise TypeError("validate() requires DTD in a file-like object")
         if not dtd.validate(self._book):
             raise InvalidDocument(dtd.error_log.filter_from_errors()[0])
@@ -337,141 +341,133 @@ class Book(object):
 
         return parent
 
-    @staticmethod
-    def gen_divpath(start_div=None, end_div=None):
-        divpaths = []
-        divpaths_desc = []
-        prefix_div = []
-        prefix_divpath = ""
-
-        # convert the ids to integer
-        if start_div:
-            start_div = map(int, start_div)
-        if end_div:
-            end_div = map(int, end_div)
-
-        if start_div and end_div:
-            # bring them same length if required
-            # if len(start_div) > len(end_div):
-            #     end_div += [None] * (len(start_div) - len(end_div))
-            # elif len(end_div) > len(start_div):
-            #     start_div += [None] * (len(end_div) - len(start_div))
-
-            # checking positions order: start_div position must be before end_div position
-            start_checksum = "".join(map(str, start_div))
-            end_checksum = "".join(map(str, end_div))
-            if len(start_checksum) > len(end_checksum):
-                end_checksum = end_checksum.ljust(len(start_checksum), "0")
-            elif len(end_checksum) > len(start_checksum):
-                start_checksum = start_checksum.ljust(len(end_checksum), "0")
-            if start_checksum > end_checksum:
-                raise InvalidDIVPath("The start position ({}) is afterwards than the end position ({}).".format(
-                    ".".join(map(str, start_div)),
-                    ".".join(map(str, end_div))))
-
-            # detecting prefix path
-            for s, e in zip(start_div, end_div):
-                if s == e:
-                    prefix_div.append(s)
-            if prefix_div:
-                start_div = start_div[len(prefix_div):]
-                end_div = end_div[len(prefix_div):]
-
-        if start_div:
-            start_divpaths_desc = []
-            for path_pos in xrange(len(start_div)):
-                one_divpath_desc = []
-                for div_pos, div_id in enumerate(reversed(start_div)):
-                    if div_pos < path_pos:
-                        one_divpath_desc.append((None, div_id))
-                    elif div_pos > path_pos:
-                        one_divpath_desc.append(("=", div_id))
-                    elif path_pos == 0:
-                        one_divpath_desc.append((">=", div_id))
-                    else:
-                        one_divpath_desc.append((">", div_id))
-                one_divpath_desc.reverse()
-                start_divpaths_desc.append(one_divpath_desc)
-            divpaths_desc = start_divpaths_desc
-
-        if end_div:
-            end_divpaths_desc = []
-            for path_pos in xrange(len(end_div)):
-                one_divpath_desc = []
-                for div_pos, div_id in enumerate(reversed(end_div)):
-                    if div_pos < path_pos:
-                        one_divpath_desc.append((None, div_id))
-                    elif div_pos > path_pos:
-                        one_divpath_desc.append(("=", div_id))
-                    elif path_pos == 0:
-                        one_divpath_desc.append(("<=", div_id))
-                    else:
-                        one_divpath_desc.append(("<", div_id))
-                one_divpath_desc.reverse()
-                end_divpaths_desc.append(one_divpath_desc)
-            end_divpaths_desc.reverse()
-            divpaths_desc = end_divpaths_desc
-
-        if start_div and end_div:
-            # we have both end point of the structure, let's try to merge
-            # last operand of start_divpaths_desc and first operand of end_divpaths_desc
-            ops = (start_divpaths_desc[-1][0][0], end_divpaths_desc[0][0][0])
-            if ops == (">=", "<="):
-                # FIXME: it's ugly hacking
-                op = ">={} and @number<=".format(start_divpaths_desc[-1][0][1])
-                div_id = end_divpaths_desc[0][0][1]
-                start_divpaths_desc[-1][0] = (op, div_id)
-                #del end_divpaths_desc[0]
-                divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
-            elif ops == (">", "<"):
-                # FIXME: it's ugly hacking
-                op = ">{} and @number<".format(start_divpaths_desc[-1][0][1])
-                div_id = end_divpaths_desc[0][0][1]
-                start_divpaths_desc[-1][0] = (op, div_id)
-                #del end_divpaths_desc[0]
-                divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
-            elif ops == (">", "<="):
-                # FIXME: it's ugly hacking
-                op = ">{} and @number<=".format(start_divpaths_desc[-1][0][1])
-                div_id = end_divpaths_desc[0][0][1]
-                start_divpaths_desc[-1][0] = (op, div_id)
-                #del end_divpaths_desc[0]
-                divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
-            elif ops == (">=", "<"):
-                # FIXME: it's ugly hacking
-                op = ">={} and @number<".format(start_divpaths_desc[-1][0][1])
-                div_id = end_divpaths_desc[0][0][1]
-                start_divpaths_desc[-1][0] = (op, div_id)
-                #del end_divpaths_desc[0]
-                divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
-            else:
-                # merge the path descriptions without merging
-                divpaths_desc = start_divpaths_desc + end_divpaths_desc
-
-        # format real xpath portions
-        if prefix_div:
-            prefix_divpath = "/".join("div[@number={}]".format(div_id) for div_id in prefix_div)
-        if divpaths_desc:
-            for desc in divpaths_desc:
-                formatted_path_item = [prefix_divpath] if prefix_divpath else []
-                for op, div_id in desc:
-                    if op and div_id:
-                        formatted_path_item.append("div[@number{}{}]".format(op, div_id))
-                    else:
-                        formatted_path_item.append("div")
-                divpaths.append("/".join(formatted_path_item))
-        else:
-            divpaths = [prefix_divpath] if prefix_divpath else []
-
-        return divpaths
-
-    def _get_version(self, version_title):
-        versions = self._book.xpath("/book/version[@title='{}']".format(version_title))
-        if not versions:
-            raise ElementDoesNotExist("<version> element with title='{}' does not exist".format(version_title))
-        elif len(versions) > 1:
-            raise MultipleElementsReturned("There are more <version> elements with title='{}'".format(version_title))
-        return versions[0]
+    # @staticmethod
+    # def gen_divpath(start_div=None, end_div=None):
+    #     divpaths = []
+    #     divpaths_desc = []
+    #     prefix_div = []
+    #     prefix_divpath = ""
+    #
+    #     # convert the ids to integer
+    #     if start_div:
+    #         start_div = map(int, start_div)
+    #     if end_div:
+    #         end_div = map(int, end_div)
+    #
+    #     if start_div and end_div:
+    #         # bring them same length if required
+    #         # if len(start_div) > len(end_div):
+    #         #     end_div += [None] * (len(start_div) - len(end_div))
+    #         # elif len(end_div) > len(start_div):
+    #         #     start_div += [None] * (len(end_div) - len(start_div))
+    #
+    #         # checking positions order: start_div position must be before end_div position
+    #         start_checksum = "".join(map(str, start_div))
+    #         end_checksum = "".join(map(str, end_div))
+    #         if len(start_checksum) > len(end_checksum):
+    #             end_checksum = end_checksum.ljust(len(start_checksum), "0")
+    #         elif len(end_checksum) > len(start_checksum):
+    #             start_checksum = start_checksum.ljust(len(end_checksum), "0")
+    #         if start_checksum > end_checksum:
+    #             raise InvalidDIVPath("The start position ({}) is afterwards than the end position ({}).".format(
+    #                 ".".join(map(str, start_div)),
+    #                 ".".join(map(str, end_div))))
+    #
+    #         # detecting prefix path
+    #         for s, e in zip(start_div, end_div):
+    #             if s == e:
+    #                 prefix_div.append(s)
+    #         if prefix_div:
+    #             start_div = start_div[len(prefix_div):]
+    #             end_div = end_div[len(prefix_div):]
+    #
+    #     if start_div:
+    #         start_divpaths_desc = []
+    #         for path_pos in xrange(len(start_div)):
+    #             one_divpath_desc = []
+    #             for div_pos, div_id in enumerate(reversed(start_div)):
+    #                 if div_pos < path_pos:
+    #                     one_divpath_desc.append((None, div_id))
+    #                 elif div_pos > path_pos:
+    #                     one_divpath_desc.append(("=", div_id))
+    #                 elif path_pos == 0:
+    #                     one_divpath_desc.append((">=", div_id))
+    #                 else:
+    #                     one_divpath_desc.append((">", div_id))
+    #             one_divpath_desc.reverse()
+    #             start_divpaths_desc.append(one_divpath_desc)
+    #         divpaths_desc = start_divpaths_desc
+    #
+    #     if end_div:
+    #         end_divpaths_desc = []
+    #         for path_pos in xrange(len(end_div)):
+    #             one_divpath_desc = []
+    #             for div_pos, div_id in enumerate(reversed(end_div)):
+    #                 if div_pos < path_pos:
+    #                     one_divpath_desc.append((None, div_id))
+    #                 elif div_pos > path_pos:
+    #                     one_divpath_desc.append(("=", div_id))
+    #                 elif path_pos == 0:
+    #                     one_divpath_desc.append(("<=", div_id))
+    #                 else:
+    #                     one_divpath_desc.append(("<", div_id))
+    #             one_divpath_desc.reverse()
+    #             end_divpaths_desc.append(one_divpath_desc)
+    #         end_divpaths_desc.reverse()
+    #         divpaths_desc = end_divpaths_desc
+    #
+    #     if start_div and end_div:
+    #         # we have both end point of the structure, let's try to merge
+    #         # last operand of start_divpaths_desc and first operand of end_divpaths_desc
+    #         ops = (start_divpaths_desc[-1][0][0], end_divpaths_desc[0][0][0])
+    #         if ops == (">=", "<="):
+    #             # FIXME: it's ugly hacking
+    #             op = ">={} and @number<=".format(start_divpaths_desc[-1][0][1])
+    #             div_id = end_divpaths_desc[0][0][1]
+    #             start_divpaths_desc[-1][0] = (op, div_id)
+    #             #del end_divpaths_desc[0]
+    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
+    #         elif ops == (">", "<"):
+    #             # FIXME: it's ugly hacking
+    #             op = ">{} and @number<".format(start_divpaths_desc[-1][0][1])
+    #             div_id = end_divpaths_desc[0][0][1]
+    #             start_divpaths_desc[-1][0] = (op, div_id)
+    #             #del end_divpaths_desc[0]
+    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
+    #         elif ops == (">", "<="):
+    #             # FIXME: it's ugly hacking
+    #             op = ">{} and @number<=".format(start_divpaths_desc[-1][0][1])
+    #             div_id = end_divpaths_desc[0][0][1]
+    #             start_divpaths_desc[-1][0] = (op, div_id)
+    #             #del end_divpaths_desc[0]
+    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
+    #         elif ops == (">=", "<"):
+    #             # FIXME: it's ugly hacking
+    #             op = ">={} and @number<".format(start_divpaths_desc[-1][0][1])
+    #             div_id = end_divpaths_desc[0][0][1]
+    #             start_divpaths_desc[-1][0] = (op, div_id)
+    #             #del end_divpaths_desc[0]
+    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
+    #         else:
+    #             # merge the path descriptions without merging
+    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc
+    #
+    #     # format real xpath portions
+    #     if prefix_div:
+    #         prefix_divpath = "/".join("div[@number={}]".format(div_id) for div_id in prefix_div)
+    #     if divpaths_desc:
+    #         for desc in divpaths_desc:
+    #             formatted_path_item = [prefix_divpath] if prefix_divpath else []
+    #             for op, div_id in desc:
+    #                 if op and div_id:
+    #                     formatted_path_item.append("div[@number{}{}]".format(op, div_id))
+    #                 else:
+    #                     formatted_path_item.append("div")
+    #             divpaths.append("/".join(formatted_path_item))
+    #     else:
+    #         divpaths = [prefix_divpath] if prefix_divpath else []
+    #
+    #     return divpaths
 
     def _get(self, element_name, attribute, on_element=None):
         """
@@ -518,35 +514,83 @@ class Book(object):
     # RI methods
 
     def get_text(self, version_title, text_type, start_div, end_div=None):
-        Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
 
-        # version = self._get_version(version_title)
         version = self._get("version", {"title": version_title})
 
-        # manuscript = version.xpath("manuscripts/ms[@abbrev='{}']".format(text_type))
-        # if not manuscript:
-        #     raise ElementDoesNotExist("<manuscript> element with abbrev='{}' does not exist".format(text_type))
-        # elif len(manuscript) > 1:
-        #     raise MultipleElementsReturned("There are more <manuscript> elements with abbrev='{}'".format(text_type))
-        # manuscript = manuscript[0]
         manuscript = self._get("manuscripts/ms", {"abbrev": text_type}, version)
-
         if manuscript.get("show") == "no":
             raise NotAllowedManuscript
 
-        reading_filter = "reading[re:test(@mss, '^{0} | {0} ')]".format(text_type)
+        reading_filter = "reading[re:test(@mss, '^{0} | {0} | {0}$|^{0}$')]".format(text_type)
 
-        for divpath in Book.gen_divpath(start_div, end_div):
-            readings = version.xpath("text/{}//{}".format(divpath, reading_filter),
-                                     namespaces={"re": "http://exslt.org/regular-expressions"})
-            for reading in readings:
+        start_div_elements = []
+        if start_div:
+            base_element = version.xpath("text")[0]
+            for div_number in start_div:
+                try:
+                    base_element = self._get("div", {"number": div_number}, base_element)
+                    start_div_elements.append(base_element)
+                except ElementDoesNotExist:
+                    break  # we keep the last correct element
+
+        end_div_elements = []
+        if end_div:
+            base_element = version.xpath("text")[0]
+            for div_number in end_div:
+                try:
+                    base_element = self._get("div", {"number": div_number}, base_element)
+                    end_div_elements.append(base_element)
+                except ElementDoesNotExist:
+                    break  # we keep the last correct element
+
+        if start_div_elements:
+            current_div = start_div_elements[-1]
+            current_level = len(start_div_elements) - 1
+        else:
+            current_div = version.xpath("text/div")[0]
+            current_level = 0
+
+        if end_div_elements:
+            last_div = end_div_elements[-1]
+        else:
+            last_div = version.xpath(".//{}[last()]".format(reading_filter))[0].getparent().getparent()
+
+        # iterate through the <div> elements and search the required <reading>
+        while end_div_elements and len(end_div_elements) > current_level and current_div == end_div_elements[current_level]:
+            if current_div.getchildren():
+                current_div = current_div.getchildren()[0]
+                current_level += 1
+            else:
+                raise StopIteration
+        while True:
+            for reading in current_div.xpath(".//{}".format(reading_filter),
+                                             namespaces={"re": "http://exslt.org/regular-expressions"}):
                 yield Text(reading.getparent().get("id"),
                            version.get("language"),
                            len(reading.getparent().getchildren()),
                            reading.text.strip() if reading.text else "")
 
+            if current_div == last_div:
+                raise StopIteration
+
+            while not current_div.getnext() and current_level > 0:
+                current_div = current_div.getparent()
+                current_level -= 1
+                if current_div == last_div:
+                    raise StopIteration
+
+            if current_div.getnext():
+                current_div = current_div.getnext()
+                while end_div_elements and len(end_div_elements) > current_level and current_div == end_div_elements[current_level]:
+                    if current_div.getchildren():
+                        current_div = current_div.getchildren()[0]
+                        current_level += 1
+                    else:
+                        raise StopIteration
+            else:
+                raise StopIteration
+
     def get_readings(self, unit_id):
-        Reading = namedtuple("Reading", "mss, text")
         for reading in self._book.xpath("//unit[@id={}]/reading".format(unit_id)):
             yield Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else "")
 
@@ -672,19 +716,19 @@ class Book(object):
             if isinstance(split_point, basestring) and split_point in reading.text:
                 reading_parts = reading.text.split(split_point)
                 # prev elem
-                prev = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                prev.text = reading_parts[0]
-                reading.addprevious(prev)
+                prev_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                prev_elem.text = reading_parts[0]
+                reading.addprevious(prev_elem)
                 # current elem
                 reading.text = split_point
                 # next elem
-                next = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                next.text = reading_parts[1]
-                reading.addnext(next)
+                next_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                next_elem.text = reading_parts[1]
+                reading.addnext(next_elem)
             elif isinstance(split_point, int):
-                next = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                next.text = reading.text[split_point:]
-                reading.addnext(next)
+                next_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                next_elem.text = reading.text[split_point:]
+                reading.addnext(next_elem)
                 reading.text = reading.text[:split_point]
             # renumbering the option attribute
             for index, reading in enumerate(unit):
@@ -887,4 +931,93 @@ class BookManager(object):
         book.add_version(version_title, language, author)
         book.save()
 
+    @staticmethod
+    def update_version(book_name, version_title, new_version_title=None, new_language=None, new_author=None):
+        book = Book.open(BookManager._load(book_name))
+        book.update_version(version_title, new_version_title, new_language, new_author)
+        book.save()
+
+    @staticmethod
+    def del_version(book_name, version_title):
+        book = Book.open(BookManager._load(book_name))
+        book.del_version(version_title)
+        book.save()
+
+    @staticmethod
+    def add_manuscript(book_name, version_title, abbrev, language, show=True):
+        book = Book.open(BookManager._load(book_name))
+        book.add_manuscript(version_title, abbrev, language, show)
+        book.save()
+
+    @staticmethod
+    def update_manuscript(book_name, version_title, abbrev, new_abbrev, new_language=None, new_show=None):
+        book = Book.open(BookManager._load(book_name))
+        book.update_manuscript(version_title, abbrev, new_abbrev, new_language, new_show)
+        book.save()
+
+    @staticmethod
+    def del_manuscript(book_name, version_title, abbrev):
+        book = Book.open(BookManager._load(book_name))
+        book.del_manuscript(version_title, abbrev)
+        book.save()
+
+    @staticmethod
+    def add_bibliography(book_name, version_title, abbrev, text):
+        book = Book.open(BookManager._load(book_name))
+        book.add_bibliography(version_title, abbrev, text)
+        book.save()
+
+    @staticmethod
+    def update_bibliography(book_name, version_title, abbrev, text, new_text):
+        book = Book.open(BookManager._load(book_name))
+        book.update_bibliography(version_title, abbrev, text, new_text)
+        book.save()
+
+    @staticmethod
+    def del_bibliography(book_name, version_title, abbrev, text):
+        book = Book.open(BookManager._load(book_name))
+        book.del_bibliography(version_title, abbrev, text)
+        book.save()
+
+    @staticmethod
+    def add_div(book_name, version_title, div_name, div_parent_path, preceding_div):
+        book = Book.open(BookManager._load(book_name))
+        book.add_div(version_title, div_name, div_parent_path, preceding_div)
+        book.save()
+
+    @staticmethod
+    def update_div(book_name, version_title, div_path, new_div_name):
+        book = Book.open(BookManager._load(book_name))
+        book.update_div(version_title, div_path, new_div_name)
+        book.save()
+
+    @staticmethod
+    def del_div(book_name, version_title, div_path):
+        book = Book.open(BookManager._load(book_name))
+        book.del_div(version_title, div_path)
+        book.save()
+
+    @staticmethod
+    def add_unit(book_name, version_title, div_path):
+        book = Book.open(BookManager._load(book_name))
+        book.add_unit(version_title, div_path)
+        book.save()
+
+    @staticmethod
+    def update_unit(book_name, version_title, unit_id, readings):
+        book = Book.open(BookManager._load(book_name))
+        book.update_unit(version_title, unit_id, readings)
+        book.save()
+
+    @staticmethod
+    def split_unit(book_name, version_title, unit_id, reading_pos, split_point):
+        book = Book.open(BookManager._load(book_name))
+        book.split_unit(version_title, unit_id, reading_pos, split_point)
+        book.save()
+
+    @staticmethod
+    def del_unit(book_name, version_title, unit_id):
+        book = Book.open(BookManager._load(book_name))
+        book.del_unit(version_title, unit_id)
+        book.save()
 
