@@ -2,7 +2,7 @@
 <!ATTLIST book filename CDATA #REQUIRED>
 <!ATTLIST book title CDATA #REQUIRED>
 <!ATTLIST book textStructure CDATA #IMPLIED>
-<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
+<!ELEMENT version (divisions , resources* , manuscripts , text)>
 <!ATTLIST version title CDATA #REQUIRED>
 <!ATTLIST version author CDATA #REQUIRED>
 <!ATTLIST version fragment CDATA #IMPLIED>
