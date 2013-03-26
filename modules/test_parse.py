@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from collections import namedtuple
 import glob
 
 import os
@@ -35,6 +36,7 @@ def new_book():
     book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
     return book
 
+
 def test_book_false_init():
     with pytest.raises(TypeError):
         Book.open(1)
@@ -54,56 +56,55 @@ def test_book_validation_w_valid_doc(test_book):
 
 ## Testing RI
 
-
 def test_book_get_text(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1,)))
-    expected_list = [Text("788", "Greek", 2, u"Λόγος"),
-                     Text("812", "Greek", 3, u""),
-                     Text("815", "Greek", 3, u"ἐλέγξαι"),
-                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
-                     Text("825", "Greek", 2, u"καὶ")]
+    expected_list = [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος"),
+                     Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                     Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι"),
+                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς,"),
+                     Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ")]
     assert result_list == expected_list
 
 
 def test_book_get_text_w_same_start_and_end_at_level_1(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1,), (1,)))
-    expected_list = [Text("788", "Greek", 2, u"Λόγος"),
-                     Text("812", "Greek", 3, u""),
-                     Text("815", "Greek", 3, u"ἐλέγξαι"),
-                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,")]
+    expected_list = [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος"),
+                     Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                     Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι"),
+                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς,")]
     assert result_list == expected_list
 
 
 def test_book_get_text_w_same_start_and_end_at_level_2(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1, 1), (1, 1)))
-    expected_list = [Text("788", "Greek", 2, u"Λόγος")]
+    expected_list = [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος")]
     assert result_list == expected_list
 
 
 def test_book_get_text_w_end(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1, 2), (2,)))
-    expected_list = [Text("812", "Greek", 3, u""),
-                     Text("815", "Greek", 3, u"ἐλέγξαι"),
-                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
-                     Text("825", "Greek", 2, u"καὶ")]
+    expected_list = [Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                     Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι"),
+                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς,"),
+                     Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ")]
     assert result_list == expected_list
 
 
 def test_book_get_text_w_invalid_start(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1, 2, 3, 4, 5)))
-    expected_list = [Text("812", "Greek", 3, u""),
-                     Text("815", "Greek", 3, u"ἐλέγξαι"),
-                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
-                     Text("825", "Greek", 2, u"καὶ")]
+    expected_list = [Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                     Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι"),
+                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς,"),
+                     Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ")]
     assert result_list == expected_list
 
 
 def test_book_get_text_w_invalid_start_and_end(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1, 2, 3, 4, "5"), (2, "X", "Y")))
-    expected_list = [Text("812", "Greek", 3, u""),
-                     Text("815", "Greek", 3, u"ἐλέγξαι"),
-                     Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
-                     Text("825", "Greek", 2, u"καὶ")]
+    expected_list = [Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                     Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι"),
+                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς,"),
+                     Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ")]
     assert result_list == expected_list
 
 
@@ -145,8 +146,8 @@ def test_bookman_get_text():
                                    {"book": "test_parse", "version": "Greek", "text_type": "TestOne",
                                     "start": (1, 1), "end": (1, 1)}],
                                   as_gluon=False)
-    expected = {"result": [Text("788", "Greek", 2, u"Λόγος"),
-                           Text("788", "Greek", 2, u"Λόγος")],
+    expected = {"result": [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος"),
+                           Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος")],
                 "error": [None, None]}
     assert result == expected
 
@@ -177,11 +178,11 @@ def test_bookman_get_text_w_mixed_valid_and_invalid():
                                    {"book": "test_parse", "version": "XGreek", "text_type": "TestOne",
                                     "start": (1,)}],
                                   as_gluon=False)
-    expected = {"result": [Text("788", "Greek", 2, u"Λόγος"),
-                           Text("812", "Greek", 3, u""),
-                           Text("815", "Greek", 3, u"ἐλέγξαι"),
-                           Text("816", "Greek", 1, u"πάντας τοὺς ἀσεβεῖς,"),
-                           Text("825", "Greek", 2, u"καὶ")],
+    expected = {"result": [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος"),
+                           Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                           Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι"),
+                           Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς,"),
+                           Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ")],
                 "error": [None,
                           "[Errno 2] No such file or directory: '{}/Xtest_parse.xml'".format(XML_DRAFT_FILE_STORAGE_PATH),
                           None,
@@ -194,17 +195,50 @@ def test_bookman_get_text_as_gluon():
     result = BookManager.get_text([{"book": "test_parse", "version": "Greek", "text_type": "TestOne",
                                     "start":(1, 2), "end":(1, )},
                                    {"book": "test_parse", "version": "Greek", "text_type": "TestOne",
-                                    "start":(1, 2), "end":(1, )}],
+                                    "start":(1, ), "end":(1, )},
+                                   {"book": "test_parse", "version": "Greek", "text_type": "TestOne",
+                                    "start":(1, ), "end":(2, )}],
                                   as_gluon=True)
-    expected = '<div>' \
-               '<span class="Greek 3" id="812"><a href="3">*</a></span>' \
-               '<span class="Greek 3" id="815"><a href="3">ἐλέγξαι</a></span>' \
-               '<span class="Greek 1" id="816">πάντας τοὺς ἀσεβεῖς,</span>' \
-               '</div>'
-    assert str(result["result"][0]) == expected
-    assert str(result["result"][1]) == expected
-    assert len(result["result"]) == 2
-    assert result["error"] == [None, None]
+    expected0 = '<div>' \
+                '<span class="level-2" id="1">1</span>' \
+                '<span class="delimiter-2" id="delimiter-2-1">.</span>' \
+                '<span class="level-1" id="9">9</span>' \
+                '<span class="unit Greek 3 linebreak_yes" id="812"><a href="812">*</a></span>' \
+                '<span class="unit Greek 3 indent" id="815"><a href="815">ἐλέγξαι</a></span>' \
+                '<span class="unit Greek 1" id="816">πάντας τοὺς ἀσεβεῖς,</span>' \
+                '</div>'
+    expected1 = '<div>' \
+                '<span class="level-2" id="1">1</span>' \
+                '<span class="delimiter-2" id="delimiter-2-1">.</span>' \
+                '<span class="level-1" id="1">1</span>' \
+                '<span class="unit Greek 2" id="788"><a href="788">Λόγος</a></span>' \
+                \
+                '<span class="level-1" id="9">9</span>' \
+                '<span class="unit Greek 3 linebreak_yes" id="812"><a href="812">*</a></span>' \
+                '<span class="unit Greek 3 indent" id="815"><a href="815">ἐλέγξαι</a></span>' \
+                '<span class="unit Greek 1" id="816">πάντας τοὺς ἀσεβεῖς,</span>' \
+                '</div>'
+    expected2 = '<div>' \
+                '<span class="level-2" id="1">1</span>' \
+                '<span class="delimiter-2" id="delimiter-2-1">.</span>' \
+                '<span class="level-1" id="1">1</span>' \
+                '<span class="unit Greek 2" id="788"><a href="788">Λόγος</a></span>' \
+                \
+                '<span class="level-1" id="9">9</span>' \
+                '<span class="unit Greek 3 linebreak_yes" id="812"><a href="812">*</a></span>' \
+                '<span class="unit Greek 3 indent" id="815"><a href="815">ἐλέγξαι</a></span>' \
+                '<span class="unit Greek 1" id="816">πάντας τοὺς ἀσεβεῖς,</span>' \
+                \
+                '<span class="level-2" id="2">2</span>' \
+                '<span class="delimiter-2" id="delimiter-2-2">.</span>' \
+                '<span class="level-1" id="1">1</span>' \
+                '<span class="unit Greek 2" id="825"><a href="825">καὶ</a></span>' \
+                '</div>'
+    assert len(result["result"]) == 3
+    assert str(result["result"][0]) == expected0
+    assert str(result["result"][1]) == expected1
+    assert str(result["result"][2]) == expected2
+    assert result["error"] == [None, None, None]
 
 
 def test_bookman_get_readings():

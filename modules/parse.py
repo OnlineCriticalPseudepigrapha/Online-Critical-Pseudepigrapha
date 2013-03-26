@@ -17,7 +17,7 @@ XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",
                        "doctype": "<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
                        "standalone": False}
 
-Text = namedtuple("Text", "unit_id, language, readings_in_unit, text")
+Text = namedtuple("Text", "div_path, unit_id, language, readings_in_unit, linebreak, indent, text")
 Reading = namedtuple("Reading", "mss, text")
 
 ## Common Exception classes
@@ -114,6 +114,20 @@ class Book(object):
             raise TypeError("validate() requires DTD in a file-like object")
         if not dtd.validate(self._book):
             raise InvalidDocument(dtd.error_log.filter_from_errors()[0])
+
+    def validate_semantic(self):
+        """
+        Validate the inner structure and values of the book document
+
+        Tips for validating:
+        * number of levels of divisions == number of levels of divs
+        * each //reading/@mss in //manuscripts/ms/@abbrev
+        * correct numbers in reading/@option
+        * units are strictly at the deepest level of div structure
+        * there are no duplicated div/@number at the same level
+        * the //unit/@id is unique and consecutive
+        """
+        pass
 
     def book_info(self):
         return self._structure_info
@@ -361,7 +375,7 @@ class Book(object):
                                                                                                   attribute.values()[0]))
         else:
             xpath = element_name
-            elements = on_element.xpath(xpath) if on_element else self._book.xpath(xpath)
+            elements = on_element.xpath(xpath) if on_element is not None else self._book.xpath(xpath)
             if not elements:
                 raise ElementDoesNotExist("Element does not exist on this xpath <{}>".format(xpath))
             elif len(elements) > 1:
@@ -386,10 +400,20 @@ class Book(object):
 
     # RI methods
 
+    # def _divpath_to_elementpath(self, divpath):
+    #     return []
+
     def get_text(self, version_title, text_type, start_div, end_div=None):
+        """
+        Get back text sections as generator
 
+        :param version_title: search <reading> node under this version
+        :param text_type: search <reading> node where @mss==text_type
+        :param start_div: tuple of div numbers, search from this point of <div> structure
+        :param end_div: tuple of div numbers, search to this point of <div> structure
+        :raise:
+        """
         version = self._get("version", {"title": version_title})
-
         manuscript = self._get("manuscripts/ms", {"abbrev": text_type}, version)
         if manuscript.get("show") == "no":
             raise NotAllowedManuscript
@@ -438,15 +462,23 @@ class Book(object):
         while True:
             for reading in current_div.xpath(".//{}".format(reading_filter),
                                              namespaces={"re": "http://exslt.org/regular-expressions"}):
-                yield Text(reading.getparent().get("id"),
+                current_divpath = []
+                tmp_div = reading.getparent().getparent()
+                while tmp_div.tag != "text":
+                    current_divpath.insert(0, tmp_div.get("number"))
+                    tmp_div = tmp_div.getparent()
+                yield Text(tuple(current_divpath),
+                           reading.getparent().get("id"),
                            version.get("language"),
                            len(reading.getparent().getchildren()),
+                           reading.get("linebreak", ""),
+                           reading.get("indent", ""),
                            reading.text.strip() if reading.text else "")
 
             if current_div == last_div:
                 raise StopIteration
 
-            while current_div.getnext() is not None and current_level > 0:
+            while current_div.getnext() is None and current_level > 0:
                 current_div = current_div.getparent()
                 current_level -= 1
                 if current_div == last_div:
@@ -687,16 +719,43 @@ class BookManager(object):
             try:
                 book = Book.open(BookManager._load(text_position.get("book", "")))
                 book_items = []
+                last_div_path = []
                 for item in book.get_text(text_position.get("version", ""),
                                           text_position.get("text_type", ""),
                                           text_position.get("start"),
                                           text_position.get("end")):
                     if as_gluon:
+                        if item.div_path != last_div_path:
+                            same_level = 0
+                            for idp, ldp in zip(item.div_path, last_div_path):
+                                if idp == ldp:
+                                    same_level += 1
+                                else:
+                                    break
+                            level_countdown = len(item.div_path) - same_level
+                            for div_path_item in item.div_path[same_level:-1]:
+                                book_items.append(SPAN(div_path_item,
+                                                       _id=div_path_item,
+                                                       _class="level-{}".format(level_countdown)))
+                                book_items.append(SPAN(".",
+                                                       _id="delimiter-{}-{}".format(level_countdown, div_path_item),
+                                                       _class="delimiter-{}".format(level_countdown)))
+                                level_countdown -= 1
+                            div_path_item = item.div_path[-1]
+                            book_items.append(SPAN(div_path_item,
+                                                   _id=div_path_item,
+                                                   _class="level-{}".format(level_countdown)))
+                            last_div_path = item.div_path
+
                         item_text = item.text if item.text else "*"
-                        book_items.append(SPAN(A(item_text, _href=str(item.readings_in_unit))
+                        class_extra = ("{} {}".format("linebreak_{}".format(item.linebreak) if item.linebreak else "",
+                                                      "indent" if item.indent.upper() == "YES" else "")).strip()
+                        book_items.append(SPAN(A(item_text, _href=str(item.unit_id))
                                           if item.readings_in_unit > 1 else item_text,
                                           _id=item.unit_id,
-                                          _class="{} {}".format(item.language, item.readings_in_unit)))
+                                          _class=("unit {} {} {}".format(item.language,
+                                                                         item.readings_in_unit,
+                                                                         class_extra)).strip()))
                     else:
                         book_items.append(item)
                 if book_items:
