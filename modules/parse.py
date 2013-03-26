@@ -87,8 +87,9 @@ class Book(object):
         """
         Factory method for creating new book structure
 
-        :param filename:
-        :param title:
+        :param frags: boolean, when it's True the textStructure attribute of <book> will be "fragmentary"
+        :param filename: string
+        :param title: string
         :return: Book object
         """
         book = Book()
@@ -341,143 +342,15 @@ class Book(object):
 
         return parent
 
-    # @staticmethod
-    # def gen_divpath(start_div=None, end_div=None):
-    #     divpaths = []
-    #     divpaths_desc = []
-    #     prefix_div = []
-    #     prefix_divpath = ""
-    #
-    #     # convert the ids to integer
-    #     if start_div:
-    #         start_div = map(int, start_div)
-    #     if end_div:
-    #         end_div = map(int, end_div)
-    #
-    #     if start_div and end_div:
-    #         # bring them same length if required
-    #         # if len(start_div) > len(end_div):
-    #         #     end_div += [None] * (len(start_div) - len(end_div))
-    #         # elif len(end_div) > len(start_div):
-    #         #     start_div += [None] * (len(end_div) - len(start_div))
-    #
-    #         # checking positions order: start_div position must be before end_div position
-    #         start_checksum = "".join(map(str, start_div))
-    #         end_checksum = "".join(map(str, end_div))
-    #         if len(start_checksum) > len(end_checksum):
-    #             end_checksum = end_checksum.ljust(len(start_checksum), "0")
-    #         elif len(end_checksum) > len(start_checksum):
-    #             start_checksum = start_checksum.ljust(len(end_checksum), "0")
-    #         if start_checksum > end_checksum:
-    #             raise InvalidDIVPath("The start position ({}) is afterwards than the end position ({}).".format(
-    #                 ".".join(map(str, start_div)),
-    #                 ".".join(map(str, end_div))))
-    #
-    #         # detecting prefix path
-    #         for s, e in zip(start_div, end_div):
-    #             if s == e:
-    #                 prefix_div.append(s)
-    #         if prefix_div:
-    #             start_div = start_div[len(prefix_div):]
-    #             end_div = end_div[len(prefix_div):]
-    #
-    #     if start_div:
-    #         start_divpaths_desc = []
-    #         for path_pos in xrange(len(start_div)):
-    #             one_divpath_desc = []
-    #             for div_pos, div_id in enumerate(reversed(start_div)):
-    #                 if div_pos < path_pos:
-    #                     one_divpath_desc.append((None, div_id))
-    #                 elif div_pos > path_pos:
-    #                     one_divpath_desc.append(("=", div_id))
-    #                 elif path_pos == 0:
-    #                     one_divpath_desc.append((">=", div_id))
-    #                 else:
-    #                     one_divpath_desc.append((">", div_id))
-    #             one_divpath_desc.reverse()
-    #             start_divpaths_desc.append(one_divpath_desc)
-    #         divpaths_desc = start_divpaths_desc
-    #
-    #     if end_div:
-    #         end_divpaths_desc = []
-    #         for path_pos in xrange(len(end_div)):
-    #             one_divpath_desc = []
-    #             for div_pos, div_id in enumerate(reversed(end_div)):
-    #                 if div_pos < path_pos:
-    #                     one_divpath_desc.append((None, div_id))
-    #                 elif div_pos > path_pos:
-    #                     one_divpath_desc.append(("=", div_id))
-    #                 elif path_pos == 0:
-    #                     one_divpath_desc.append(("<=", div_id))
-    #                 else:
-    #                     one_divpath_desc.append(("<", div_id))
-    #             one_divpath_desc.reverse()
-    #             end_divpaths_desc.append(one_divpath_desc)
-    #         end_divpaths_desc.reverse()
-    #         divpaths_desc = end_divpaths_desc
-    #
-    #     if start_div and end_div:
-    #         # we have both end point of the structure, let's try to merge
-    #         # last operand of start_divpaths_desc and first operand of end_divpaths_desc
-    #         ops = (start_divpaths_desc[-1][0][0], end_divpaths_desc[0][0][0])
-    #         if ops == (">=", "<="):
-    #             # FIXME: it's ugly hacking
-    #             op = ">={} and @number<=".format(start_divpaths_desc[-1][0][1])
-    #             div_id = end_divpaths_desc[0][0][1]
-    #             start_divpaths_desc[-1][0] = (op, div_id)
-    #             #del end_divpaths_desc[0]
-    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
-    #         elif ops == (">", "<"):
-    #             # FIXME: it's ugly hacking
-    #             op = ">{} and @number<".format(start_divpaths_desc[-1][0][1])
-    #             div_id = end_divpaths_desc[0][0][1]
-    #             start_divpaths_desc[-1][0] = (op, div_id)
-    #             #del end_divpaths_desc[0]
-    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
-    #         elif ops == (">", "<="):
-    #             # FIXME: it's ugly hacking
-    #             op = ">{} and @number<=".format(start_divpaths_desc[-1][0][1])
-    #             div_id = end_divpaths_desc[0][0][1]
-    #             start_divpaths_desc[-1][0] = (op, div_id)
-    #             #del end_divpaths_desc[0]
-    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
-    #         elif ops == (">=", "<"):
-    #             # FIXME: it's ugly hacking
-    #             op = ">={} and @number<".format(start_divpaths_desc[-1][0][1])
-    #             div_id = end_divpaths_desc[0][0][1]
-    #             start_divpaths_desc[-1][0] = (op, div_id)
-    #             #del end_divpaths_desc[0]
-    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc[1:]
-    #         else:
-    #             # merge the path descriptions without merging
-    #             divpaths_desc = start_divpaths_desc + end_divpaths_desc
-    #
-    #     # format real xpath portions
-    #     if prefix_div:
-    #         prefix_divpath = "/".join("div[@number={}]".format(div_id) for div_id in prefix_div)
-    #     if divpaths_desc:
-    #         for desc in divpaths_desc:
-    #             formatted_path_item = [prefix_divpath] if prefix_divpath else []
-    #             for op, div_id in desc:
-    #                 if op and div_id:
-    #                     formatted_path_item.append("div[@number{}{}]".format(op, div_id))
-    #                 else:
-    #                     formatted_path_item.append("div")
-    #             divpaths.append("/".join(formatted_path_item))
-    #     else:
-    #         divpaths = [prefix_divpath] if prefix_divpath else []
-    #
-    #     return divpaths
-
     def _get(self, element_name, attribute, on_element=None):
         """
-        Get back the requested element if it exists and there's no more with the given attribute
+        Get back the requested element if it exists and there's one and only one with the given attribute
         """
         if attribute:
             xpath = "{}[@{}='{}']".format(element_name,
                                           attribute.keys()[0],
                                           attribute.values()[0])
-            elements = on_element.xpath(xpath) if on_element else self._book.xpath(xpath)
+            elements = on_element.xpath(xpath) if on_element is not None else self._book.xpath(xpath)
             if not elements:
                 raise ElementDoesNotExist("<{}> element with {}='{}' does not exist".format(element_name,
                                                                                             attribute.keys()[0],
@@ -573,13 +446,13 @@ class Book(object):
             if current_div == last_div:
                 raise StopIteration
 
-            while not current_div.getnext() and current_level > 0:
+            while current_div.getnext() is not None and current_level > 0:
                 current_div = current_div.getparent()
                 current_level -= 1
                 if current_div == last_div:
                     raise StopIteration
 
-            if current_div.getnext():
+            if current_div.getnext() is not None:
                 current_div = current_div.getnext()
                 while end_div_elements and len(end_div_elements) > current_level and current_div == end_div_elements[current_level]:
                     if current_div.getchildren():
@@ -656,14 +529,14 @@ class Book(object):
         ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
         etree.SubElement(ms, "bibliography").text = text
 
-    def update_bibliography(self, version_title, abbrev, index, new_text):
+    def update_bibliography(self, version_title, abbrev, bibliography_pos, new_text):
         ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        bibliography = self._get("bibliography[{}]".format(index + 1), None, ms)
+        bibliography = self._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
         bibliography.text = new_text
 
-    def del_bibliography(self, version_title, abbrev, index):
+    def del_bibliography(self, version_title, abbrev, bibliography_pos):
         ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        bibliography = self._get("bibliography[{}]".format(index + 1), None, ms)
+        bibliography = self._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
         bibliography.getparent().remove(bibliography)
 
     def add_div(self, version_title, div_name, div_parent_path, preceding_div=None):
@@ -706,7 +579,7 @@ class Book(object):
             etree.SubElement(unit, "reading", {"option": str(index), "mss": reading[0]}).text = reading[1]
 
     def split_unit(self, version_title, unit_id, reading_pos, split_point):
-        unit = self._get("//unit", {"id": unit_id}, self._get("version", {"title": version_title}))
+        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
         reading_pos = int(reading_pos)
         if -1 < reading_pos < len(unit):
             reading = unit[reading_pos]
@@ -752,7 +625,7 @@ class Book(object):
 
 class BookManager(object):
     """
-    Manager class for books, it can
+    Facade class for Books, it can
     - manage loading/saving books
     - manipulate more books in one step
     """
@@ -770,16 +643,18 @@ class BookManager(object):
         :param book_name: the name of the book
         :return: file-like object
         """
+        # TODO: add loading from cache option
         return open(("{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)), "r")
 
     @staticmethod
-    def _save(book):
+    def _save(book_object):
         """
         Save the given book to the draft folder with backup
 
-        :param book: a Book instance
+        :param book_object: a Book instance
         """
-        book_name = book.get_filename()
+        # TODO: add saving into cache option
+        book_name = book_object.get_filename()
         new_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
         if os.path.isfile(new_file_path):
             backup_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_backup_storage_path,
@@ -787,7 +662,7 @@ class BookManager(object):
                                                      datetime.now().strftime("%Y%m%d_%H%M%S_%f"))
             os.rename(new_file_path, backup_file_path)
         f = open(new_file_path, "w")
-        f.write(book.serialize())
+        f.write(book_object.serialize())
         f.close()
 
     @staticmethod
@@ -879,6 +754,8 @@ class BookManager(object):
         """
         Create and save a new book in the draft folder
 
+        :param book_title:
+        :param frags: When it's True, the textStructure attribute of <book> will be "fragmentary"
         :param book_name:
         :return:
         """
@@ -889,7 +766,7 @@ class BookManager(object):
         """
         Copy a book from the main storage place to the draft folder
 
-        :param book_name:
+        :param book_name: string
         :return:
         """
         from_file_path = "{}/{}.xml".format(BookManager.xml_file_storage_path, book_name)
@@ -924,96 +801,234 @@ class BookManager(object):
 
     @staticmethod
     def add_version(book_name, version_title, language, author):
+        """
+        Add <version> node to the book structure with the given attributes
+
+        :param book_name:
+        :param version_title:
+        :param language:
+        :param author:
+        """
         book = Book.open(BookManager._load(book_name))
         book.add_version(version_title, language, author)
         book.save()
 
     @staticmethod
     def update_version(book_name, version_title, new_version_title=None, new_language=None, new_author=None):
+        """
+        Update the given <version> node with the given attributes
+
+        :param book_name:
+        :param version_title:
+        :param new_version_title:
+        :param new_language:
+        :param new_author:
+        """
         book = Book.open(BookManager._load(book_name))
         book.update_version(version_title, new_version_title, new_language, new_author)
         book.save()
 
     @staticmethod
     def del_version(book_name, version_title):
+        """
+        Remove the given <version> node
+
+        :param book_name:
+        :param version_title:
+        """
         book = Book.open(BookManager._load(book_name))
         book.del_version(version_title)
         book.save()
 
     @staticmethod
     def add_manuscript(book_name, version_title, abbrev, language, show=True):
+        """
+        Add <ms> node to the given <version>/<manuscripts> node
+
+        :param book_name:
+        :param version_title:
+        :param abbrev:
+        :param language:
+        :param show:
+        """
         book = Book.open(BookManager._load(book_name))
         book.add_manuscript(version_title, abbrev, language, show)
         book.save()
 
     @staticmethod
     def update_manuscript(book_name, version_title, abbrev, new_abbrev, new_language=None, new_show=None):
+        """
+        Update <ms> node under the given <version>/<manuscrips> with the given attributes
+
+        :param book_name:
+        :param version_title:
+        :param abbrev:
+        :param new_abbrev:
+        :param new_language:
+        :param new_show:
+        """
         book = Book.open(BookManager._load(book_name))
         book.update_manuscript(version_title, abbrev, new_abbrev, new_language, new_show)
         book.save()
 
     @staticmethod
     def del_manuscript(book_name, version_title, abbrev):
+        """
+        Remove <ms> node from the given <version>/<manuscrips> node
+
+        :param book_name:
+        :param version_title:
+        :param abbrev:
+        """
         book = Book.open(BookManager._load(book_name))
         book.del_manuscript(version_title, abbrev)
         book.save()
 
     @staticmethod
     def add_bibliography(book_name, version_title, abbrev, text):
+        """
+        Add <bibliography> node to the given <version>/<manuscrips>/<ms> node
+
+        :param book_name:
+        :param version_title:
+        :param abbrev:
+        :param text:
+        """
         book = Book.open(BookManager._load(book_name))
         book.add_bibliography(version_title, abbrev, text)
         book.save()
 
     @staticmethod
-    def update_bibliography(book_name, version_title, abbrev, text, new_text):
+    def update_bibliography(book_name, version_title, abbrev, bibliography_pos, new_text):
+        """
+        Update <bibliography> node under the given <version>/<manuscrips>/<ms> node with the given attributes
+
+        :param book_name:
+        :param version_title:
+        :param abbrev:
+        :param bibliography_pos: zero based position of the bibliography node inside <ms> node
+        :param new_text:
+        """
         book = Book.open(BookManager._load(book_name))
-        book.update_bibliography(version_title, abbrev, text, new_text)
+        book.update_bibliography(version_title, abbrev, bibliography_pos, new_text)
         book.save()
 
     @staticmethod
-    def del_bibliography(book_name, version_title, abbrev, text):
+    def del_bibliography(book_name, version_title, abbrev, bibliography_pos):
+        """
+        Remove <bibliography> node from the given <version>/<manuscrips>/<ms> node
+
+        :param book_name:
+        :param version_title:
+        :param abbrev:
+        :param bibliography_pos: zero based position of the bibliography node inside <ms> node
+        """
         book = Book.open(BookManager._load(book_name))
-        book.del_bibliography(version_title, abbrev, text)
+        book.del_bibliography(version_title, abbrev, bibliography_pos)
         book.save()
 
     @staticmethod
     def add_div(book_name, version_title, div_name, div_parent_path, preceding_div):
+        """
+        Add new <div> node to a book under the given <version>/text/<div_parent_path> with the given div_name
+
+        :param book_name: string
+        :param version_title: string
+        :param div_name: string, this is the 'number' attribute of the div
+        :param div_parent_path: list, list of ancestor <div> nodes
+        :param preceding_div:  string, insert the new <div> node after the <div> node with this name
+        """
         book = Book.open(BookManager._load(book_name))
         book.add_div(version_title, div_name, div_parent_path, preceding_div)
         book.save()
 
     @staticmethod
     def update_div(book_name, version_title, div_path, new_div_name):
+        """
+        Update the <div> node at the last position of the div_path with the given new_div_name
+
+        :param book_name:
+        :param version_title:
+        :param div_path: list, list of <div> nodes to the desired <div>
+        :param new_div_name:
+        """
         book = Book.open(BookManager._load(book_name))
         book.update_div(version_title, div_path, new_div_name)
         book.save()
 
     @staticmethod
     def del_div(book_name, version_title, div_path):
+        """
+        Remove the <div> node from the end of the given div_path
+
+        :param book_name:
+        :param version_title:
+        :param div_path: list, list of <div> nodes to the desired <div>
+        """
         book = Book.open(BookManager._load(book_name))
         book.del_div(version_title, div_path)
         book.save()
 
     @staticmethod
     def add_unit(book_name, version_title, div_path):
+        """
+        Add <unit> node to the given <version>/text/<div_path>
+
+        :param book_name:
+        :param version_title:
+        :param div_path: list, list of <div> nodes to the desired <div>
+        """
         book = Book.open(BookManager._load(book_name))
         book.add_unit(version_title, div_path)
         book.save()
 
     @staticmethod
     def update_unit(book_name, version_title, unit_id, readings):
+        """
+        Update <unit> node with the given <readings> elements.
+        This method clears the existing <reading> nodes from the given <unit> before popuplates with the new <reading>s.
+
+        :param book_name:
+        :param version_title:
+        :param unit_id: number in integer or string type
+        :param readings: list of tuples, each of which represents one <reading> element in the <unit>. 
+        Each tuple should contain two items: 
+        1) a string representing the "mss” value of the updated <reading>
+        2) a string representing the text content of that <reading>
+        """
         book = Book.open(BookManager._load(book_name))
         book.update_unit(version_title, unit_id, readings)
         book.save()
 
     @staticmethod
     def split_unit(book_name, version_title, unit_id, reading_pos, split_point):
+        """
+        This actually splits a <reading> node under the given <unit> into 2 or 3 pieces.
+        If this split_point argument is an integer, that should be interpreted as the index within 
+        the text of the <reading> where the split should be made (a 2­way split). 
+        If this argument is a string, that should be interpreted as the text to be contined
+        in the middle <reading> of a 3­way split, with the preceding and following characters being moved 
+        to the new <reading>s added before and after this middle <reading>.
+
+        :param book_name:
+        :param version_title:
+        :param unit_id: number in integer or string type
+        :param reading_pos: number in integer or string type
+        :param split_point: integer or string
+        """
         book = Book.open(BookManager._load(book_name))
         book.split_unit(version_title, unit_id, reading_pos, split_point)
         book.save()
 
     @staticmethod
     def del_unit(book_name, version_title, unit_id):
+        """
+        Remove <unit> node from the given <version> node
+
+        :param book_name:
+        :param version_title:
+        :param unit_id: number in integer or string type
+        """
         book = Book.open(BookManager._load(book_name))
         book.del_unit(version_title, unit_id)
         book.save()

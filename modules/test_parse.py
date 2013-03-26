@@ -192,9 +192,9 @@ def test_bookman_get_text_w_mixed_valid_and_invalid():
 
 def test_bookman_get_text_as_gluon():
     result = BookManager.get_text([{"book": "test_parse", "version": "Greek", "text_type": "TestOne",
-                                    "start": (1, 2), "end": (1, )},
+                                    "start":(1, 2), "end":(1, )},
                                    {"book": "test_parse", "version": "Greek", "text_type": "TestOne",
-                                    "start": (1, 2), "end": (1, )}],
+                                    "start":(1, 2), "end":(1, )}],
                                   as_gluon=True)
     expected = '<div>' \
                '<span class="Greek 3" id="812"><a href="3">*</a></span>' \
@@ -416,7 +416,7 @@ def test_book_update_bibliography(new_book):
     new_book.add_manuscript(version_title="MyVersion", abbrev="MyManuscript", language="MyLanguage")
     new_book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography")
     new_book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography2")
-    new_book.update_bibliography(version_title="MyVersion", abbrev="MyManuscript", index=0, new_text="MyBibliography1")
+    new_book.update_bibliography(version_title="MyVersion", abbrev="MyManuscript", bibliography_pos=0, new_text="MyBibliography1")
 
     result = fix_doctype(new_book.serialize(False))
     expected = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
@@ -441,8 +441,8 @@ def test_book_del_bibliography(new_book):
     new_book.add_manuscript(version_title="MyVersion", abbrev="MyManuscript", language="MyLanguage")
     new_book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography")
     new_book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography2")
-    new_book.update_bibliography(version_title="MyVersion", abbrev="MyManuscript", index=0, new_text="MyBibliography1")
-    new_book.del_bibliography(version_title="MyVersion", abbrev="MyManuscript", index=1)
+    new_book.update_bibliography(version_title="MyVersion", abbrev="MyManuscript", bibliography_pos=0, new_text="MyBibliography1")
+    new_book.del_bibliography(version_title="MyVersion", abbrev="MyManuscript", bibliography_pos=1)
 
     result = fix_doctype(new_book.serialize(False))
     expected = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
