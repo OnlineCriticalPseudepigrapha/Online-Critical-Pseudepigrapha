@@ -19,6 +19,7 @@ XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",
 
 Text = namedtuple("Text", "div_path, unit_id, language, readings_in_unit, linebreak, indent, text")
 Reading = namedtuple("Reading", "mss, text")
+W = namedtuple("W", "attributes, text")
 
 ## Common Exception classes
 
@@ -400,8 +401,17 @@ class Book(object):
 
     # RI methods
 
-    # def _divpath_to_elementpath(self, divpath):
-    #     return []
+    def _div_path_to_element_path(self, version, div_path):
+        div_elements = []
+        if div_path:
+            base_element = version.xpath("text")[0]
+            for div_number in div_path:
+                try:
+                    base_element = self._get("div", {"number": div_number}, base_element)
+                    div_elements.append(base_element)
+                except ElementDoesNotExist:
+                    break  # we keep the last correct element
+        return div_elements
 
     def get_text(self, version_title, text_type, start_div, end_div=None):
         """
@@ -420,25 +430,27 @@ class Book(object):
 
         reading_filter = "reading[re:test(@mss, '^{0} | {0} | {0}$|^{0}$')]".format(text_type)
 
-        start_div_elements = []
-        if start_div:
-            base_element = version.xpath("text")[0]
-            for div_number in start_div:
-                try:
-                    base_element = self._get("div", {"number": div_number}, base_element)
-                    start_div_elements.append(base_element)
-                except ElementDoesNotExist:
-                    break  # we keep the last correct element
+        # start_div_elements = []
+        # if start_div:
+        #     base_element = version.xpath("text")[0]
+        #     for div_number in start_div:
+        #         try:
+        #             base_element = self._get("div", {"number": div_number}, base_element)
+        #             start_div_elements.append(base_element)
+        #         except ElementDoesNotExist:
+        #             break  # we keep the last correct element
+        start_div_elements = self._div_path_to_element_path(version, start_div)
 
-        end_div_elements = []
-        if end_div:
-            base_element = version.xpath("text")[0]
-            for div_number in end_div:
-                try:
-                    base_element = self._get("div", {"number": div_number}, base_element)
-                    end_div_elements.append(base_element)
-                except ElementDoesNotExist:
-                    break  # we keep the last correct element
+        # end_div_elements = []
+        # if end_div:
+        #     base_element = version.xpath("text")[0]
+        #     for div_number in end_div:
+        #         try:
+        #             base_element = self._get("div", {"number": div_number}, base_element)
+        #             end_div_elements.append(base_element)
+        #         except ElementDoesNotExist:
+        #             break  # we keep the last correct element
+        end_div_elements = self._div_path_to_element_path(version, end_div)
 
         if start_div_elements:
             current_div = start_div_elements[-1]
@@ -462,18 +474,30 @@ class Book(object):
         while True:
             for reading in current_div.xpath(".//{}".format(reading_filter),
                                              namespaces={"re": "http://exslt.org/regular-expressions"}):
+                # build list of div_numbers until the current div
                 current_divpath = []
                 tmp_div = reading.getparent().getparent()
                 while tmp_div.tag != "text":
                     current_divpath.insert(0, tmp_div.get("number"))
                     tmp_div = tmp_div.getparent()
+                # build reading data
+                ws = []
+                for w in reading.iter("w"):
+                    ws.append(W(attributes=w.attrib,
+                                text=w.text if w.text else u""))
+                    ws.append(w.tail if w.tail else u"")
+                if ws:
+                    ws.insert(0, reading.text if reading.text else "")
+                    text = tuple(ws)
+                else:
+                    text = reading.text if reading.text else ""
                 yield Text(tuple(current_divpath),
                            reading.getparent().get("id"),
                            version.get("language"),
                            len(reading.getparent().getchildren()),
                            reading.get("linebreak", ""),
                            reading.get("indent", ""),
-                           reading.text.strip() if reading.text else "")
+                           text)
 
             if current_div == last_div:
                 raise StopIteration
@@ -747,7 +771,20 @@ class BookManager(object):
                                                    _class="level-{}".format(level_countdown)))
                             last_div_path = item.div_path
 
-                        item_text = item.text if item.text else "*"
+                        # processing text
+                        if isinstance(item.text, tuple):
+                            item_text = []
+                            for w in item.text:
+                                if isinstance(w, basestring):
+                                    item_text.append(w)
+                                else:
+                                    w_class = " ".join("{}_{}".format(k, v) for k, v in w.attributes.items())
+                                    w_class = ("w {}".format(w_class)).strip()
+                                    item_text.append(SPAN(w.text, _class=w_class))
+                            # item_text = SPAN(*item_text)
+                        else:
+                            item_text = [item.text if item.text else "*"]
+                        # add extra style elements
                         class_extra = ("{} {}".format("linebreak_{}".format(item.linebreak) if item.linebreak else "",
                                                       "indent" if item.indent.upper() == "YES" else "")).strip()
                         book_items.append(SPAN(A(item_text, _href=str(item.unit_id))
