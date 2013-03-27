@@ -47,11 +47,11 @@ def test_book_validation_w_invalid_doc():
         <!DOCTYPE book SYSTEM "grammateus.dtd">
         <book></book>"""))
     with pytest.raises(InvalidDocument):
-        book.validate(open(TEST_DTD_FILE))
+        book.validate_by_dtd(open(TEST_DTD_FILE))
 
 
 def test_book_validation_w_valid_doc(test_book):
-    assert test_book.validate(open(TEST_DTD_FILE)) is None
+    assert test_book.validate_by_dtd(open(TEST_DTD_FILE)) is None
 
 
 ## Testing RI
