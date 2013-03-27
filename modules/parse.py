@@ -28,6 +28,10 @@ class InvalidDocument(Exception):
     pass
 
 
+class SemanticallyInvalidDocument(Exception):
+    pass
+
+
 class ElementDoesNotExist(Exception):
     pass
 
@@ -72,11 +76,12 @@ class Book(object):
         """
         book = Book()
         try:
-            if getattr(xml_book_data, "read"):
+            if getattr(xml_book_data, "read", None):
                 tree = etree.parse(xml_book_data)
             else:
                 tree = etree.parse(open(xml_book_data))
-        except AttributeError:
+        except AttributeError as e:
+            print e.message
             raise TypeError("Book() requires XML data in a file-like object")
         book._book = tree.getroot()
         book._docinfo.update({i: getattr(tree.docinfo, i) for i in XML_DEFAULT_DOCINFO.keys()})
@@ -108,7 +113,12 @@ class Book(object):
         self.default_delimiter = '.'
 
     def validate(self, dtd_data):
-        """Detached validation from parsing due to performance reasons."""
+        """Validate the book structure with both validation methods"""
+        self.validate_by_dtd(dtd_data)
+        self.validate_by_semantic()
+
+    def validate_by_dtd(self, dtd_data):
+        """Validate the book structure with DTD"""
         try:
             dtd = etree.DTD(dtd_data)
         except AttributeError:
@@ -116,19 +126,28 @@ class Book(object):
         if not dtd.validate(self._book):
             raise InvalidDocument(dtd.error_log.filter_from_errors()[0])
 
-    def validate_semantic(self):
-        """
-        Validate the inner structure and values of the book document
+    def validate_by_semantic(self):
+        """Validate the inner structure and values of the book document"""
+        # each //reading/@mss in //manuscripts/ms/@abbrev
+        for version in self._book.xpath("version"):
+            ms_reg = set()
+            for abbrev in version.xpath("manuscripts/ms/@abbrev"):
+                ms_reg.add(abbrev.strip())
+            ms_in_use = set()
+            for mss in version.xpath(".//reading/@mss"):
+                for ms in mss.split(" "):
+                    if ms.strip():
+                        ms_in_use.add(ms.strip())
+            if ms_in_use > ms_reg:
+                raise SemanticallyInvalidDocument(
+                    "<version title='{}'> has missing manuscript definition(s): {}".format(version.get("title"),
+                                                                                           ",".join(ms_in_use - ms_reg)))
 
-        Tips for validating:
-        * number of levels of divisions == number of levels of divs
-        * each //reading/@mss in //manuscripts/ms/@abbrev
-        * correct numbers in reading/@option
-        * units are strictly at the deepest level of div structure
-        * there are no duplicated div/@number at the same level
-        * the //unit/@id is unique and consecutive
-        """
-        pass
+        # TODO: the //unit/@id is unique and consecutive
+        # TODO: number of levels of divisions == number of levels of divs
+        # TODO: there are no duplicated div/@number at the same level
+        # TODO: units are strictly at the deepest level of div structure
+        # TODO: correct numbers in reading/@option
 
     def book_info(self):
         return self._structure_info
