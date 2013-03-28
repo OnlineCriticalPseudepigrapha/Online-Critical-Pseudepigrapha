@@ -9,7 +9,7 @@ import pytest
 
 from parse import Text, Reading, W
 from parse import Book, BookManager
-from parse import InvalidDocument, ElementDoesNotExist, NotAllowedManuscript
+from parse import ElementDoesNotExist, NotAllowedManuscript
 
 XML_FILE_STORAGE_PATH = "test/docs"
 XML_FILE_BACKUP_STORAGE_PATH = "test/docs/backups"
@@ -42,16 +42,23 @@ def test_book_false_init():
         Book.open(1)
 
 
-def test_book_validation_w_invalid_doc():
+def test_book_validation_w_dtd_invalid_doc():
     book = Book.open(StringIO("""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <!DOCTYPE book SYSTEM "grammateus.dtd">
         <book></book>"""))
-    with pytest.raises(InvalidDocument):
-        book.validate_by_dtd(open(TEST_DTD_FILE))
+    assert book.validate(open(TEST_DTD_FILE)) is False
 
 
-def test_book_validation_w_valid_doc(test_book):
-    assert test_book.validate_by_dtd(open(TEST_DTD_FILE)) is None
+def test_book_validation_w_dtd_valid_and_semantically_invalid_doc(test_book):
+    expected_errors = ["<version title='Qumran Aramaic'>//<unit id='684'> has wrong id. It should be '1'.",
+                       "<version title='Latin Fragments'> has missing manuscript definition(s) which are in use: CB185,TertullianB",
+                       "<version title='Latin Fragments'>//<unit id='755'> has wrong id. It should be '1'.",
+                       "<version title='Greek'> has missing manuscript definition(s) which are in use: Gizeh*,Swete,F-R,Charles,Syncellus2,Black,Dindorf,Bonner,Lods,Ε,Goar,Dillman,Kenyon",
+                       "<version title='Greek'>//<unit id='788'> has wrong id. It should be '1'.",
+                       "<version title='Greek'/text/div number='107'> has <div> with not unique name (number)",
+                       ]
+    assert test_book.validate(open(TEST_DTD_FILE)) is False
+    assert test_book.validation_errors == expected_errors
 
 
 ## Testing RI
@@ -188,7 +195,8 @@ def test_bookman_get_text_w_invalid_book():
     result = BookManager.get_text([{"book": "Xtest_parse", "version": "Greek", "text_type": "TestOne", "start": (1,)}],
                                   as_gluon=False)
     expected = {"result": [],
-                "error": ["[Errno 2] No such file or directory: '{}/Xtest_parse.xml'".format(XML_DRAFT_FILE_STORAGE_PATH)]}
+                "error": ["[Errno 2] No such file or directory: '{}/Xtest_parse.xml'".format(
+                    XML_DRAFT_FILE_STORAGE_PATH)]}
     assert result == expected
 
 
@@ -224,7 +232,8 @@ def test_bookman_get_text_w_mixed_valid_and_invalid():
                                                                         W({}, u"sit"),
                                                                         " amet"))],
                 "error": [None,
-                          "[Errno 2] No such file or directory: '{}/Xtest_parse.xml'".format(XML_DRAFT_FILE_STORAGE_PATH),
+                          "[Errno 2] No such file or directory: '{}/Xtest_parse.xml'".format(
+                              XML_DRAFT_FILE_STORAGE_PATH),
                           None,
                           "<version> element with title='XGreek' does not exist"]}
     assert result["result"] == expected["result"]
@@ -275,7 +284,9 @@ def test_bookman_get_text_as_gluon():
                 '<span class="unit Greek 2" id="825"><a href="825">καὶ</a></span>' \
                 \
                 '<span class="level-1" id="2">2</span>' \
-                '<span class="unit Greek 2" id="828"><a href="828">Lorem <span class="w lang_lang morph_morph lex_lex style_style">ipsum</span> dolor <span class="w">sit</span> amet</a></span>' \
+                '<span class="unit Greek 2" id="828">' \
+                '<a href="828">Lorem <span class="w lang_lang morph_morph lex_lex style_style">ipsum</span> dolor <span class="w">sit</span> amet</a>' \
+                '</span>' \
                 '</div>'
     assert len(result["result"]) == 3
     assert str(result["result"][0]) == expected0
@@ -383,6 +394,7 @@ def test_book_update_version(new_book):
                '<text/>' \
                '</version>' \
                '</book>'
+    assert result == expected
 
 
 def test_book_update_version_on_nonexisting_version(new_book):
@@ -470,7 +482,7 @@ def test_book_add_bibliography(new_book):
     new_book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography")
     new_book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography2")
 
-    result = fix_doctype( new_book.serialize(False))
+    result = fix_doctype(new_book.serialize(False))
     expected = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
                '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
@@ -518,7 +530,8 @@ def test_book_del_bibliography(new_book):
     new_book.add_manuscript(version_title="MyVersion", abbrev="MyManuscript", language="MyLanguage")
     new_book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography")
     new_book.add_bibliography(version_title="MyVersion", abbrev="MyManuscript", text="MyBibliography2")
-    new_book.update_bibliography(version_title="MyVersion", abbrev="MyManuscript", bibliography_pos=0, new_text="MyBibliography1")
+    new_book.update_bibliography(version_title="MyVersion", abbrev="MyManuscript", bibliography_pos=0,
+                                 new_text="MyBibliography1")
     new_book.del_bibliography(version_title="MyVersion", abbrev="MyManuscript", bibliography_pos=1)
 
     result = fix_doctype(new_book.serialize(False))
