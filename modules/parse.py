@@ -24,14 +24,6 @@ W = namedtuple("W", "attributes, text")
 ## Common Exception classes
 
 
-class InvalidDocument(Exception):
-    pass
-
-
-class SemanticallyInvalidDocument(Exception):
-    pass
-
-
 class ElementDoesNotExist(Exception):
     pass
 
@@ -49,6 +41,10 @@ class InvalidDIVPath(Exception):
 
 
 class NotAllowedManuscript(Exception):
+    pass
+
+
+class NotUniqueDIVName(Exception):
     pass
 
 
@@ -110,26 +106,50 @@ class Book(object):
         self._book = None
         self._docinfo = XML_DEFAULT_DOCINFO
         self._structure_info = {}
+        self._validation_errors = []
         self.default_delimiter = '.'
+
+    @property
+    def validation_errors(self):
+        return self._validation_errors
 
     def validate(self, dtd_data):
         """Validate the book structure with both validation methods"""
-        self.validate_by_dtd(dtd_data)
-        self.validate_by_semantic()
+        self._validation_errors = []
+        self._validate_by_dtd(dtd_data)
+        self._validate_by_semantic()
+        return self._validation_errors == []
 
-    def validate_by_dtd(self, dtd_data):
+    def _validate_by_dtd(self, dtd_data):
         """Validate the book structure with DTD"""
         try:
             dtd = etree.DTD(dtd_data)
         except AttributeError:
             raise TypeError("validate() requires DTD in a file-like object")
         if not dtd.validate(self._book):
-            raise InvalidDocument(dtd.error_log.filter_from_errors()[0])
+            self._validation_errors += dtd.error_log.filter_from_errors()
 
-    def validate_by_semantic(self):
+    def _validate_by_semantic(self):
         """Validate the inner structure and values of the book document"""
-        # each //reading/@mss in //manuscripts/ms/@abbrev
+
+        def do_div_name_checking_on_children(parent_element):
+            """Do recursive checking on unique div names under the parent_element"""
+            div_names = set()
+            num_of_div_names = 0
+            for div_element in parent_element.iterchildren("div"):
+                num_of_div_names += 1
+                div_names.add(div_element.get("number"))
+                do_div_name_checking_on_children(div_element)
+            if num_of_div_names != len(div_names):
+                raise NotUniqueDIVName(
+                    "/".join("div number='{}'".format(div_name) for div_name in self._get_div_path(parent_element)))
+
+        semantic_errors = []
+
+        # let's run trough the versions
         for version in self._book.xpath("version"):
+
+            # each //reading/@mss in //manuscripts/ms/@abbrev
             ms_reg = set()
             for abbrev in version.xpath("manuscripts/ms/@abbrev"):
                 ms_reg.add(abbrev.strip())
@@ -139,15 +159,44 @@ class Book(object):
                     if ms.strip():
                         ms_in_use.add(ms.strip())
             if ms_in_use > ms_reg:
-                raise SemanticallyInvalidDocument(
-                    "<version title='{}'> has missing manuscript definition(s): {}".format(version.get("title"),
-                                                                                           ",".join(ms_in_use - ms_reg)))
+                semantic_errors.append(
+                    (u"<version title='{}'> has missing manuscript definition(s) which are in use: {}".format(
+                        version.get("title"),
+                        u",".join(ms_in_use - ms_reg))).encode("utf-8"))
 
-        # TODO: the //unit/@id is unique and consecutive
-        # TODO: number of levels of divisions == number of levels of divs
-        # TODO: there are no duplicated div/@number at the same level
-        # TODO: units are strictly at the deepest level of div structure
-        # TODO: correct numbers in reading/@option
+            # the //unit/@id is unique and consecutive
+            for index, unit_id in enumerate(version.xpath(".//unit/@id"), 1):
+                if index != int(unit_id):
+                    semantic_errors.append(
+                        "<version title='{}'>//<unit id='{}'> has wrong id. "
+                        "It should be '{}'.".format(version.get("title"), unit_id, index))
+                    break
+
+            # number of levels of divisions == number of levels of divs
+            ## I couldn't test it because the _get_book_info() is method too sensitive to this type of error
+            num_of_divisions = int(version.xpath("count(divisions/division)"))
+            xpath_to_deeper_div_than_divisions = "text/{}//div".format("/".join(["div"] * num_of_divisions))
+            deeper_div = version.xpath(xpath_to_deeper_div_than_divisions)
+            if deeper_div:
+                semantic_errors.append(
+                    "<version title='{}'> has deeper <div> structure than in <divisions>. "
+                    "For example: <text/{}>".format(
+                        version.get("title"),
+                        "/".join("div number=''".format(div_name) for div_name in self._get_div_path(deeper_div))))
+
+            # there are no duplicated div/@number at the same level
+            try:
+                do_div_name_checking_on_children(self._get("text", None, on_element=version))
+            except NotUniqueDIVName as e:
+                semantic_errors.append(
+                    "<version title='{}'/text/{}> has <div> with not unique name (number)".format(
+                        version.get("title"),
+                        e.message))
+
+            # TODO: units are strictly at the deepest level of div structure
+            # TODO: correct numbers in reading/@option
+
+        self._validation_errors += semantic_errors
 
     def book_info(self):
         return self._structure_info
@@ -403,17 +452,23 @@ class Book(object):
 
         return elements[0]
 
-    def _renumber_units(self):
+    def _renumber_units(self, version_element):
         """
-        If we're adding or removing an element that contains units (a version,
-        div or unit), all units that follow the affected units must be
-        renumbered since all units in a document must be numbered consecutively.
-
-        It may not be the most efficient way, but we just renumber all the units
-        starting with 1.
+        If we're adding or removing an element that contains units (div or unit),
+        all units that follow the affected units must be renumbered since all units
+        in a document must be numbered consecutively.
         """
-        for index, unit in enumerate(self._book.xpath("//unit"), 1):
+        for index, unit in enumerate(version_element.xpath(".//unit"), 1):
             unit.set("id", str(index))
+
+    def _get_div_path(self, div_element):
+        """
+        Create a list of div names (div/@number) to the div_element (list of ancestor divs)
+
+        :param div_element:
+        :return:
+        """
+        return reversed([div_element.get("number")] + [elem.get("number") for elem in div_element.iterancestors("div")])
 
     def get_filename(self):
         return self._book.get("filename")
@@ -442,6 +497,8 @@ class Book(object):
         :param end_div: tuple of div numbers, search to this point of <div> structure
         :raise:
         """
+
+        # TODO: optimize and improve this algorythm to a more matured iteration
         version = self._get("version", {"title": version_title})
         manuscript = self._get("manuscripts/ms", {"abbrev": text_type}, version)
         if manuscript.get("show") == "no":
@@ -449,26 +506,7 @@ class Book(object):
 
         reading_filter = "reading[re:test(@mss, '^{0} | {0} | {0}$|^{0}$')]".format(text_type)
 
-        # start_div_elements = []
-        # if start_div:
-        #     base_element = version.xpath("text")[0]
-        #     for div_number in start_div:
-        #         try:
-        #             base_element = self._get("div", {"number": div_number}, base_element)
-        #             start_div_elements.append(base_element)
-        #         except ElementDoesNotExist:
-        #             break  # we keep the last correct element
         start_div_elements = self._div_path_to_element_path(version, start_div)
-
-        # end_div_elements = []
-        # if end_div:
-        #     base_element = version.xpath("text")[0]
-        #     for div_number in end_div:
-        #         try:
-        #             base_element = self._get("div", {"number": div_number}, base_element)
-        #             end_div_elements.append(base_element)
-        #         except ElementDoesNotExist:
-        #             break  # we keep the last correct element
         end_div_elements = self._div_path_to_element_path(version, end_div)
 
         if start_div_elements:
@@ -493,13 +531,6 @@ class Book(object):
         while True:
             for reading in current_div.xpath(".//{}".format(reading_filter),
                                              namespaces={"re": "http://exslt.org/regular-expressions"}):
-                # build list of div_numbers until the current div
-                current_divpath = []
-                tmp_div = reading.getparent().getparent()
-                while tmp_div.tag != "text":
-                    current_divpath.insert(0, tmp_div.get("number"))
-                    tmp_div = tmp_div.getparent()
-                # build reading data
                 ws = []
                 for w in reading.iter("w"):
                     ws.append(W(attributes=w.attrib,
@@ -510,7 +541,7 @@ class Book(object):
                     text = tuple(ws)
                 else:
                     text = reading.text if reading.text else ""
-                yield Text(tuple(current_divpath),
+                yield Text(tuple(self._get_div_path(reading.getparent().getparent())),
                            reading.getparent().get("id"),
                            version.get("language"),
                            len(reading.getparent().getchildren()),
@@ -628,23 +659,26 @@ class Book(object):
 
     def update_div(self, version_title, div_path, new_div_name):
         div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
-        div = self._get(div_xpath, attribute=None, on_element=self._get("version", {"title": version_title}))
+        version = self._get("version", {"title": version_title})
+        div = self._get(div_xpath, attribute=None, on_element=version)
         div.set("number", new_div_name)
-        self._renumber_units()
+        self._renumber_units(version)
 
     def del_div(self, version_title, div_path):
         div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
-        div = self._get(div_xpath, attribute=None, on_element=self._get("version", {"title": version_title}))
+        version = self._get("version", {"title": version_title})
+        div = self._get(div_xpath, attribute=None, on_element=version)
         div.getparent().remove(div)
-        self._renumber_units()
+        self._renumber_units(version)
 
     def add_unit(self, version_title, div_path):
         parent_div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
+        version = self._get("version", {"title": version_title})
         parent_div = self._get(parent_div_xpath,
                                attribute=None,
-                               on_element=self._get("version", {"title": version_title}))
+                               on_element=version)
         etree.SubElement(parent_div, "unit", {"id": "0"}).append(etree.Element("reading"))
-        self._renumber_units()
+        self._renumber_units(version)
 
     def update_unit(self, version_title, unit_id, readings):
         unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
@@ -682,9 +716,10 @@ class Book(object):
             raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
 
     def del_unit(self, version_title, unit_id):
-        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
+        version = self._get("version", {"title": version_title})
+        unit = self._get("//unit", {"id": str(unit_id)}, on_element=version)
         unit.getparent().remove(unit)
-        self._renumber_units()
+        self._renumber_units(version)
 
     def serialize(self, pretty=True):
         return etree.tostring(self._book,
