@@ -696,19 +696,19 @@ class Book(object):
                 reading_parts = reading.text.split(split_point)
                 # prev elem
                 prev_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                prev_elem.text = reading_parts[0]
+                prev_elem.text = reading_parts[0].strip()
                 reading.addprevious(prev_elem)
                 # current elem
-                reading.text = split_point
+                reading.text = split_point.strip()
                 # next elem
                 next_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                next_elem.text = reading_parts[1]
+                next_elem.text = reading_parts[1].strip()
                 reading.addnext(next_elem)
             elif isinstance(split_point, int):
                 next_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                next_elem.text = reading.text[split_point:]
+                next_elem.text = reading.text[split_point:].strip()
                 reading.addnext(next_elem)
-                reading.text = reading.text[:split_point]
+                reading.text = reading.text[:split_point].strip()
             # renumbering the option attribute
             for index, reading in enumerate(unit):
                 reading.set("option", str(index))
