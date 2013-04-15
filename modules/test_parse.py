@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from collections import namedtuple
 import glob
 
 import os
@@ -9,7 +8,7 @@ import pytest
 
 from parse import Text, Reading, W
 from parse import Book, BookManager
-from parse import ElementDoesNotExist, NotAllowedManuscript
+from parse import ElementDoesNotExist, InvalidDIVPath, NotAllowedManuscript
 
 XML_FILE_STORAGE_PATH = "test/docs"
 XML_FILE_BACKUP_STORAGE_PATH = "test/docs/backups"
@@ -90,9 +89,22 @@ def test_book_get_text_w_same_start_and_end_at_level_1(test_book):
     assert result_list == expected_list
 
 
-def test_book_get_text_w_same_start_and_end_at_level_2(test_book):
+def test_book_get_text_w_first_one(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1, 1), (1, 1)))
     expected_list = [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος")]
+    assert result_list == expected_list
+
+
+def test_book_get_text_w_last_one(test_book):
+    result_list = list(test_book.get_text("Greek", "TestOne", (2, 2), (2, 2)))
+    expected_list = [Text(("2", "2"), "828", "Greek", 2, "", "", ("Lorem ",
+                                                                  W({"morph": "morph",
+                                                                     "lex": "lex",
+                                                                     "style": "style",
+                                                                     "lang": "lang"}, "ipsum"),
+                                                                  " dolor ",
+                                                                  W({}, u"sit"),
+                                                                  " amet"))]
     assert result_list == expected_list
 
 
@@ -145,6 +157,11 @@ def test_book_get_text_w_invalid_start_and_end(test_book):
                                                                   W({}, u"sit"),
                                                                   " amet"))]
     assert result_list == expected_list
+
+
+def test_book_get_text_w_invalid_start_and_end_position_pair(test_book):
+    with pytest.raises(InvalidDIVPath):
+        list(test_book.get_text("Greek", "TestOne", (1, 2), (1, 1)))
 
 
 def test_book_get_text_w_not_allowed_manuscript(test_book):
