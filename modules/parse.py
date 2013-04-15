@@ -487,6 +487,9 @@ class Book(object):
                     break  # we keep the last correct element
         return div_elements
 
+    def _get_div_positions(self, div_elements):
+        return [int(div_element.xpath("count(preceding-sibling::div)") + 1) for div_element in div_elements]
+
     def get_text(self, version_title, text_type, start_div, end_div=None):
         """
         Get back text sections as generator
@@ -498,7 +501,6 @@ class Book(object):
         :raise:
         """
 
-        # TODO: optimize and improve this algorythm to a more matured iteration
         version = self._get("version", {"title": version_title})
         manuscript = self._get("manuscripts/ms", {"abbrev": text_type}, version)
         if manuscript.get("show") == "no":
@@ -509,25 +511,33 @@ class Book(object):
         start_div_elements = self._div_path_to_element_path(version, start_div)
         end_div_elements = self._div_path_to_element_path(version, end_div)
 
+        # set the absolutely start div element (in full deep)
         if start_div_elements:
-            current_div = start_div_elements[-1]
-            current_level = len(start_div_elements) - 1
+            current_element = start_div_elements[-1]
         else:
-            current_div = version.xpath("text/div")[0]
-            current_level = 0
+            current_element = version.xpath("text")[0]
+        while current_element.xpath("div"):
+            current_element = current_element.xpath("div[1]")[0]
+            start_div_elements.append(current_element)
 
+        # set the absolutely last div element (in full deep)
         if end_div_elements:
-            last_div = end_div_elements[-1]
+            current_element = end_div_elements[-1]
         else:
-            last_div = version.xpath(".//{}[last()]".format(reading_filter))[0].getparent().getparent()
+            current_element = version.xpath("text")[0]
+        while current_element.xpath("div"):
+            current_element = current_element.xpath("div[last()]")[0]
+            end_div_elements.append(current_element)
+
+        # detect invalid start and end position pair
+        if self._get_div_positions(start_div_elements) > self._get_div_positions(end_div_elements):
+            raise InvalidDIVPath("The start position ({}) is afterwards than the end position ({}).".format(
+                "/".join(map(str, start_div)),
+                "/".join(map(str, end_div))))
 
         # iterate through the <div> elements and search the required <reading>
-        while end_div_elements and len(end_div_elements) > current_level and current_div == end_div_elements[current_level]:
-            if current_div.getchildren():
-                current_div = current_div.getchildren()[0]
-                current_level += 1
-            else:
-                raise StopIteration
+        current_div = start_div_elements[-1]
+        last_div = end_div_elements[-1]
         while True:
             for reading in current_div.xpath(".//{}".format(reading_filter),
                                              namespaces={"re": "http://exslt.org/regular-expressions"}):
@@ -548,26 +558,24 @@ class Book(object):
                            reading.get("linebreak", ""),
                            reading.get("indent", ""),
                            text)
-
             if current_div == last_div:
                 raise StopIteration
-
-            while current_div.getnext() is None and current_level > 0:
-                current_div = current_div.getparent()
-                current_level -= 1
-                if current_div == last_div:
-                    raise StopIteration
-
-            if current_div.getnext() is not None:
-                current_div = current_div.getnext()
-                while end_div_elements and len(end_div_elements) > current_level and current_div == end_div_elements[current_level]:
-                    if current_div.getchildren():
-                        current_div = current_div.getchildren()[0]
-                        current_level += 1
-                    else:
-                        raise StopIteration
             else:
-                raise StopIteration
+                if current_div.getnext() is None:
+                    # go up while there is no sibling (and the tag is not <text>)
+                    while current_div.getnext() is None and current_div.tag != "text":
+                        current_div = current_div.getparent()
+                    if current_div.tag == "text":
+                        raise StopIteration
+
+                    # go along on the current level
+                    current_div = current_div.getnext()
+
+                    # and go down to the deepest <div>
+                    while current_div.getchildren() and current_div.getchildren()[0].tag == "div":
+                        current_div = current_div.getchildren()[0]
+                else:
+                    current_div = current_div.getnext()
 
     def get_readings(self, unit_id):
         for reading in self._book.xpath("//unit[@id={}]/reading".format(unit_id)):
