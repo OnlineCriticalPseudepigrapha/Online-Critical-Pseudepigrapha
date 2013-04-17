@@ -10,13 +10,15 @@ from parse import Text, Reading, W
 from parse import Book, BookManager
 from parse import ElementDoesNotExist, InvalidDIVPath, NotAllowedManuscript
 
-XML_FILE_STORAGE_PATH = "test/docs"
-XML_FILE_BACKUP_STORAGE_PATH = "test/docs/backups"
-XML_DRAFT_FILE_STORAGE_PATH = "test/docs/drafts"
-XML_DRAFT_FILE_BACKUP_STORAGE_PATH = "test/docs/drafts/backups"
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
-TEST_XML_FILE = "test/docs/drafts/test_parse.xml"
-TEST_DTD_FILE = "static/docs/grammateus.dtd"
+XML_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test/docs")
+XML_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test/docs/backups")
+XML_DRAFT_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test/docs/drafts")
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test/docs/drafts/backups")
+
+TEST_XML_FILE = os.path.join(PROJECT_ROOT, "test/docs/drafts/test_parse.xml")
+TEST_DTD_FILE = os.path.join(PROJECT_ROOT, "static/docs/grammateus.dtd")
 
 BookManager.xml_file_storage_path = XML_FILE_STORAGE_PATH
 BookManager.xml_file_backup_storage_path = XML_FILE_BACKUP_STORAGE_PATH

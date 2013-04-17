@@ -8,10 +8,12 @@ from lxml import etree
 
 from gluon import A, DIV, SPAN, TAG
 
-XML_FILE_STORAGE_PATH = "static/docs"
-XML_FILE_BACKUP_STORAGE_PATH = "static/docs/backups"
-XML_DRAFT_FILE_STORAGE_PATH = "static/docs/draft"
-XML_DRAFT_FILE_BACKUP_STORAGE_PATH = "static/docs/draft/backups"
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
+XML_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static/docs")
+XML_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static/docs/backups")
+XML_DRAFT_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static/docs/draft")
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static/docs/draft/backups")
 
 XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",
                        "doctype": "<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
@@ -863,7 +865,7 @@ class BookManager(object):
                     else:
                         items += book_items
             except IOError as e:
-                errors.append(str(e))
+                errors.append(str(e).replace("\\\\", "\\"))
             except ElementDoesNotExist as e:
                 errors.append(e.message)
             except MultipleElementsReturned as e:
