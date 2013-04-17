@@ -64,30 +64,53 @@ def test_book_validation_w_dtd_valid_and_semantically_invalid_doc(test_book):
 
 ## Testing RI
 
+
 def test_book_get_text(test_book):
-    result_list = list(test_book.get_text("Greek", "TestOne", (1,)))
-    expected_list = [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος"),
-                     Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
-                     Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι "),
-                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς, "),
-                     Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ"),
-                     Text(("2", "2"), "828", "Greek", 2, "", "", ("Lorem ",
-                                                                  W({"morph": "morph",
-                                                                     "lex": "lex",
-                                                                     "style": "style",
-                                                                     "lang": "lang"}, "ipsum"),
-                                                                  " dolor ",
-                                                                  W({}, u"sit"),
-                                                                  " amet"))]
+    result_list = list(test_book.get_text("Greek", "TestOne", (107,)))
+    expected_list = [Text(("107", "1"), "1347", "Greek", 1, "", "", None),
+                     Text(("107", "2"), "1348", "Greek", 1, "", "", None),
+                     Text(("107", "2"), "1349", "Greek", 1, "", "", None)]
     assert result_list == expected_list
 
 
 def test_book_get_text_w_same_start_and_end_at_level_1(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (1,), (1,)))
     expected_list = [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος"),
+                     Text(("1", "2"), "789", "Greek", 1, "", "", None),
+                     Text(("1", "2"), "790", "Greek", 1, "", "", None),
+                     Text(("1", "2"), "791", "Greek", 1, "", "", None),
+                     Text(("1", "2"), "792", "Greek", 2, "", "", None),
+                     Text(("1", "2"), "793", "Greek", 1, "", "", None),
+                     Text(("1", "2"), "794", "Greek", 1, "", "", None),
+                     Text(("1", "2"), "795", "Greek", 1, "", "", None),
+                     Text(("1", "2"), "796", "Greek", 1, "", "", None),
+                     Text(("1", "3"), "797", "Greek", 1, "", "", None),
+                     Text(("1", "3"), "798", "Greek", 1, "", "", None),
+                     Text(("1", "4"), "799", "Greek", 1, "", "", None),
+                     Text(("1", "4"), "800", "Greek", 1, "", "", None),
+                     Text(("1", "4"), "801", "Greek", 1, "", "", None),
+                     Text(("1", "5"), "802", "Greek", 1, "", "", None),
+                     Text(("1", "5"), "803", "Greek", 2, "", "", None),
+                     Text(("1", "5"), "804", "Greek", 1, "", "", None),
+                     Text(("1", "6"), "805", "Greek", 1, "", "", None),
+                     Text(("1", "6"), "806", "Greek", 2, "", "", None),
+                     Text(("1", "6"), "807", "Greek", 1, "", "", None),
+                     Text(("1", "7"), "808", "Greek", 1, "", "", None),
+                     Text(("1", "8"), "809", "Greek", 1, "", "", None),
+                     Text(("1", "8"), "810", "Greek", 2, "", "", None),
+                     Text(("1", "8"), "811", "Greek", 1, "", "", None),
                      Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                     Text(("1", "9"), "813", "Greek", 3, "", "", None),
+                     Text(("1", "9"), "814", "Greek", 1, "", "", None),
                      Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι "),
-                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς, ")]
+                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς, "),
+                     Text(("1", "9"), "817", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "818", "Greek", 1, "", "", None),
+                     Text(("1", "9"), "819", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "820", "Greek", 1, "", "", None),
+                     Text(("1", "9"), "821", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "822", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "823", "Greek", 1, "", "", None)]
     assert result_list == expected_list
 
 
@@ -99,7 +122,9 @@ def test_book_get_text_w_first_one(test_book):
 
 def test_book_get_text_w_last_one(test_book):
     result_list = list(test_book.get_text("Greek", "TestOne", (2, 2), (2, 2)))
-    expected_list = [Text(("2", "2"), "828", "Greek", 2, "", "", ("Lorem ",
+    expected_list = [Text(("2", "2"), "826", "Greek", 1, "", "", None),
+                     Text(("2", "2"), "827", "Greek", 3, "", "", None),
+                     Text(("2", "2"), "828", "Greek", 2, "", "", ("Lorem ",
                                                                   W({"morph": "morph",
                                                                      "lex": "lex",
                                                                      "style": "style",
@@ -111,11 +136,23 @@ def test_book_get_text_w_last_one(test_book):
 
 
 def test_book_get_text_w_end(test_book):
-    result_list = list(test_book.get_text("Greek", "TestOne", (1, 2), (2,)))
+    result_list = list(test_book.get_text("Greek", "TestOne", (1, 9), (2,)))
     expected_list = [Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                     Text(("1", "9"), "813", "Greek", 3, "", "", None),
+                     Text(("1", "9"), "814", "Greek", 1, "", "", None),
                      Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι "),
                      Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς, "),
+                     Text(("1", "9"), "817", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "818", "Greek", 1, "", "", None),
+                     Text(("1", "9"), "819", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "820", "Greek", 1, "", "", None),
+                     Text(("1", "9"), "821", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "822", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "823", "Greek", 1, "", "", None),
+                     Text(("2", "1"), "824", "Greek", 1, "", "", None),
                      Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ"),
+                     Text(("2", "2"), "826", "Greek", 1, "", "", None),
+                     Text(("2", "2"), "827", "Greek", 3, "", "", None),
                      Text(("2", "2"), "828", "Greek", 2, "", "", ("Lorem ",
                                                                   W({"morph": "morph",
                                                                      "lex": "lex",
@@ -123,33 +160,29 @@ def test_book_get_text_w_end(test_book):
                                                                      "lang": "lang"}, "ipsum"),
                                                                   " dolor ",
                                                                   W({}, u"sit"),
-                                                                  " amet"))]
-    assert result_list == expected_list
-
-
-def test_book_get_text_w_invalid_start(test_book):
-    result_list = list(test_book.get_text("Greek", "TestOne", (1, 2, 3, 4, 5)))
-    expected_list = [Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
-                     Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι "),
-                     Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς, "),
-                     Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ"),
-                     Text(("2", "2"), "828", "Greek", 2, "", "", ("Lorem ",
-                                                                  W({"morph": "morph",
-                                                                     "lex": "lex",
-                                                                     "style": "style",
-                                                                     "lang": "lang"}, "ipsum"),
-                                                                  " dolor ",
-                                                                  W({}, u"sit"),
-                                                                  " amet"))]
+                                                                  " amet")),
+                     Text(("2", "3"), "829", "Greek", 1, "", "", None)]
     assert result_list == expected_list
 
 
 def test_book_get_text_w_invalid_start_and_end(test_book):
-    result_list = list(test_book.get_text("Greek", "TestOne", (1, 2, 3, 4, "5"), (2, "X", "Y")))
+    result_list = list(test_book.get_text("Greek", "TestOne", (1, 9, 3, 4, 5), (2, 2, "X", "Y")))
     expected_list = [Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                     Text(("1", "9"), "813", "Greek", 3, "", "", None),
+                     Text(("1", "9"), "814", "Greek", 1, "", "", None),
                      Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι "),
                      Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς, "),
+                     Text(("1", "9"), "817", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "818", "Greek", 1, "", "", None),
+                     Text(("1", "9"), "819", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "820", "Greek", 1, "", "", None),
+                     Text(("1", "9"), "821", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "822", "Greek", 2, "", "", None),
+                     Text(("1", "9"), "823", "Greek", 1, "", "", None),
+                     Text(("2", "1"), "824", "Greek", 1, "", "", None),
                      Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ"),
+                     Text(("2", "2"), "826", "Greek", 1, "", "", None),
+                     Text(("2", "2"), "827", "Greek", 3, "", "", None),
                      Text(("2", "2"), "828", "Greek", 2, "", "", ("Lorem ",
                                                                   W({"morph": "morph",
                                                                      "lex": "lex",
@@ -233,15 +266,50 @@ def test_bookman_get_text_w_mixed_valid_and_invalid():
                                    {"book": "Xtest_parse", "version": "Greek", "text_type": "TestOne",
                                     "start": (1,)},
                                    {"book": "test_parse", "version": "Greek", "text_type": "TestOne",
-                                    "start": (2, )},
+                                    "start": (2, ), "end": (2, )},
                                    {"book": "test_parse", "version": "XGreek", "text_type": "TestOne",
                                     "start": (1,)}],
                                   as_gluon=False)
     expected = {"result": [Text(("1", "1"), "788", "Greek", 2, "", "", u"Λόγος"),
+                           Text(("1", "2"), "789", "Greek", 1, "", "", None),
+                           Text(("1", "2"), "790", "Greek", 1, "", "", None),
+                           Text(("1", "2"), "791", "Greek", 1, "", "", None),
+                           Text(("1", "2"), "792", "Greek", 2, "", "", None),
+                           Text(("1", "2"), "793", "Greek", 1, "", "", None),
+                           Text(("1", "2"), "794", "Greek", 1, "", "", None),
+                           Text(("1", "2"), "795", "Greek", 1, "", "", None),
+                           Text(("1", "2"), "796", "Greek", 1, "", "", None),
+                           Text(("1", "3"), "797", "Greek", 1, "", "", None),
+                           Text(("1", "3"), "798", "Greek", 1, "", "", None),
+                           Text(("1", "4"), "799", "Greek", 1, "", "", None),
+                           Text(("1", "4"), "800", "Greek", 1, "", "", None),
+                           Text(("1", "4"), "801", "Greek", 1, "", "", None),
+                           Text(("1", "5"), "802", "Greek", 1, "", "", None),
+                           Text(("1", "5"), "803", "Greek", 2, "", "", None),
+                           Text(("1", "5"), "804", "Greek", 1, "", "", None),
+                           Text(("1", "6"), "805", "Greek", 1, "", "", None),
+                           Text(("1", "6"), "806", "Greek", 2, "", "", None),
+                           Text(("1", "6"), "807", "Greek", 1, "", "", None),
+                           Text(("1", "7"), "808", "Greek", 1, "", "", None),
+                           Text(("1", "8"), "809", "Greek", 1, "", "", None),
+                           Text(("1", "8"), "810", "Greek", 2, "", "", None),
+                           Text(("1", "8"), "811", "Greek", 1, "", "", None),
                            Text(("1", "9"), "812", "Greek", 3, "yes", "", u""),
+                           Text(("1", "9"), "813", "Greek", 3, "", "", None),
+                           Text(("1", "9"), "814", "Greek", 1, "", "", None),
                            Text(("1", "9"), "815", "Greek", 3, "", "yes", u"ἐλέγξαι "),
                            Text(("1", "9"), "816", "Greek", 1, "", "", u"πάντας τοὺς ἀσεβεῖς, "),
+                           Text(("1", "9"), "817", "Greek", 2, "", "", None),
+                           Text(("1", "9"), "818", "Greek", 1, "", "", None),
+                           Text(("1", "9"), "819", "Greek", 2, "", "", None),
+                           Text(("1", "9"), "820", "Greek", 1, "", "", None),
+                           Text(("1", "9"), "821", "Greek", 2, "", "", None),
+                           Text(("1", "9"), "822", "Greek", 2, "", "", None),
+                           Text(("1", "9"), "823", "Greek", 1, "", "", None),
+                           Text(("2", "1"), "824", "Greek", 1, "", "", None),
                            Text(("2", "1"), "825", "Greek", 2, "", "", u"καὶ"),
+                           Text(("2", "2"), "826", "Greek", 1, "", "", None),
+                           Text(("2", "2"), "827", "Greek", 3, "", "", None),
                            Text(("2", "2"), "828", "Greek", 2, "", "", ("Lorem ",
                                                                         W({"morph": "morph",
                                                                            "lex": "lex",
@@ -249,7 +317,8 @@ def test_bookman_get_text_w_mixed_valid_and_invalid():
                                                                            "lang": "lang"}, "ipsum"),
                                                                         " dolor ",
                                                                         W({}, u"sit"),
-                                                                        " amet"))],
+                                                                        " amet")),
+                           Text(("2", "3"), "829", "Greek", 1, "", "", None)],
                 "error": [None,
                           "[Errno 2] No such file or directory: '{}/Xtest_parse.xml'".format(
                               XML_DRAFT_FILE_STORAGE_PATH),
@@ -263,55 +332,110 @@ def test_bookman_get_text_as_gluon():
     result = BookManager.get_text([{"book": "test_parse", "version": "Greek", "text_type": "TestOne",
                                     "start":(1, 2), "end":(1, )},
                                    {"book": "test_parse", "version": "Greek", "text_type": "TestOne",
-                                    "start":(1, ), "end":(1, )},
-                                   {"book": "test_parse", "version": "Greek", "text_type": "TestOne",
-                                    "start":(1, ), "end":(2, )}],
+                                    "start":(1, ), "end":(1, )}],
                                   as_gluon=True)
     expected0 = '<div>' \
                 '<span class="level-2" id="1">1</span>' \
                 '<span class="delimiter-2" id="delimiter-2-1">.</span>' \
+                '<span class="level-1" id="2">2</span>' \
+                '<span class="unit Greek 1" id="789">†</span>' \
+                '<span class="unit Greek 1" id="790">†</span>' \
+                '<span class="unit Greek 1" id="791">†</span>' \
+                '<span class="unit Greek 2" id="792"><a href="792">†</a></span>' \
+                '<span class="unit Greek 1" id="793">†</span>' \
+                '<span class="unit Greek 1" id="794">†</span>' \
+                '<span class="unit Greek 1" id="795">†</span>' \
+                '<span class="unit Greek 1" id="796">†</span>' \
+                '<span class="level-1" id="3">3</span>' \
+                '<span class="unit Greek 1" id="797">†</span>' \
+                '<span class="unit Greek 1" id="798">†</span>' \
+                '<span class="level-1" id="4">4</span>' \
+                '<span class="unit Greek 1" id="799">†</span>' \
+                '<span class="unit Greek 1" id="800">†</span>' \
+                '<span class="unit Greek 1" id="801">†</span>' \
+                '<span class="level-1" id="5">5</span>' \
+                '<span class="unit Greek 1" id="802">†</span>' \
+                '<span class="unit Greek 2" id="803"><a href="803">†</a></span>' \
+                '<span class="unit Greek 1" id="804">†</span>' \
+                '<span class="level-1" id="6">6</span>' \
+                '<span class="unit Greek 1" id="805">†</span>' \
+                '<span class="unit Greek 2" id="806"><a href="806">†</a></span>' \
+                '<span class="unit Greek 1" id="807">†</span>' \
+                '<span class="level-1" id="7">7</span>' \
+                '<span class="unit Greek 1" id="808">†</span>' \
+                '<span class="level-1" id="8">8</span>' \
+                '<span class="unit Greek 1" id="809">†</span>' \
+                '<span class="unit Greek 2" id="810"><a href="810">†</a></span>' \
+                '<span class="unit Greek 1" id="811">†</span>' \
                 '<span class="level-1" id="9">9</span>' \
                 '<span class="unit Greek 3 linebreak_yes" id="812"><a href="812">*</a></span>' \
+                '<span class="unit Greek 3" id="813"><a href="813">†</a></span>' \
+                '<span class="unit Greek 1" id="814">†</span>' \
                 '<span class="unit Greek 3 indent" id="815"><a href="815">ἐλέγξαι </a></span>' \
                 '<span class="unit Greek 1" id="816">πάντας τοὺς ἀσεβεῖς, </span>' \
+                '<span class="unit Greek 2" id="817"><a href="817">†</a></span>' \
+                '<span class="unit Greek 1" id="818">†</span>' \
+                '<span class="unit Greek 2" id="819"><a href="819">†</a></span>' \
+                '<span class="unit Greek 1" id="820">†</span>' \
+                '<span class="unit Greek 2" id="821"><a href="821">†</a></span>' \
+                '<span class="unit Greek 2" id="822"><a href="822">†</a></span>' \
+                '<span class="unit Greek 1" id="823">†</span>' \
                 '</div>'
     expected1 = '<div>' \
                 '<span class="level-2" id="1">1</span>' \
                 '<span class="delimiter-2" id="delimiter-2-1">.</span>' \
                 '<span class="level-1" id="1">1</span>' \
                 '<span class="unit Greek 2" id="788"><a href="788">Λόγος</a></span>' \
-                \
-                '<span class="level-1" id="9">9</span>' \
-                '<span class="unit Greek 3 linebreak_yes" id="812"><a href="812">*</a></span>' \
-                '<span class="unit Greek 3 indent" id="815"><a href="815">ἐλέγξαι </a></span>' \
-                '<span class="unit Greek 1" id="816">πάντας τοὺς ἀσεβεῖς, </span>' \
-                '</div>'
-    expected2 = '<div>' \
-                '<span class="level-2" id="1">1</span>' \
-                '<span class="delimiter-2" id="delimiter-2-1">.</span>' \
-                '<span class="level-1" id="1">1</span>' \
-                '<span class="unit Greek 2" id="788"><a href="788">Λόγος</a></span>' \
-                \
-                '<span class="level-1" id="9">9</span>' \
-                '<span class="unit Greek 3 linebreak_yes" id="812"><a href="812">*</a></span>' \
-                '<span class="unit Greek 3 indent" id="815"><a href="815">ἐλέγξαι </a></span>' \
-                '<span class="unit Greek 1" id="816">πάντας τοὺς ἀσεβεῖς, </span>' \
-                \
-                '<span class="level-2" id="2">2</span>' \
-                '<span class="delimiter-2" id="delimiter-2-2">.</span>' \
-                '<span class="level-1" id="1">1</span>' \
-                '<span class="unit Greek 2" id="825"><a href="825">καὶ</a></span>' \
-                \
                 '<span class="level-1" id="2">2</span>' \
-                '<span class="unit Greek 2" id="828">' \
-                '<a href="828">Lorem <span class="w lang_lang morph_morph lex_lex style_style">ipsum</span> dolor <span class="w">sit</span> amet</a>' \
-                '</span>' \
+                '<span class="unit Greek 1" id="789">†</span>' \
+                '<span class="unit Greek 1" id="790">†</span>' \
+                '<span class="unit Greek 1" id="791">†</span>' \
+                '<span class="unit Greek 2" id="792"><a href="792">†</a></span>' \
+                '<span class="unit Greek 1" id="793">†</span>' \
+                '<span class="unit Greek 1" id="794">†</span>' \
+                '<span class="unit Greek 1" id="795">†</span>' \
+                '<span class="unit Greek 1" id="796">†</span>' \
+                '<span class="level-1" id="3">3</span>' \
+                '<span class="unit Greek 1" id="797">†</span>' \
+                '<span class="unit Greek 1" id="798">†</span>' \
+                '<span class="level-1" id="4">4</span>' \
+                '<span class="unit Greek 1" id="799">†</span>' \
+                '<span class="unit Greek 1" id="800">†</span>' \
+                '<span class="unit Greek 1" id="801">†</span>' \
+                '<span class="level-1" id="5">5</span>' \
+                '<span class="unit Greek 1" id="802">†</span>' \
+                '<span class="unit Greek 2" id="803"><a href="803">†</a></span>' \
+                '<span class="unit Greek 1" id="804">†</span>' \
+                '<span class="level-1" id="6">6</span>' \
+                '<span class="unit Greek 1" id="805">†</span>' \
+                '<span class="unit Greek 2" id="806"><a href="806">†</a></span>' \
+                '<span class="unit Greek 1" id="807">†</span>' \
+                '<span class="level-1" id="7">7</span>' \
+                '<span class="unit Greek 1" id="808">†</span>' \
+                '<span class="level-1" id="8">8</span>' \
+                '<span class="unit Greek 1" id="809">†</span>' \
+                '<span class="unit Greek 2" id="810"><a href="810">†</a></span>' \
+                '<span class="unit Greek 1" id="811">†</span>' \
+                '<span class="level-1" id="9">9</span>' \
+                '<span class="unit Greek 3 linebreak_yes" id="812"><a href="812">*</a></span>' \
+                '<span class="unit Greek 3" id="813"><a href="813">†</a></span>' \
+                '<span class="unit Greek 1" id="814">†</span>' \
+                '<span class="unit Greek 3 indent" id="815"><a href="815">ἐλέγξαι </a></span>' \
+                '<span class="unit Greek 1" id="816">πάντας τοὺς ἀσεβεῖς, </span>' \
+                '<span class="unit Greek 2" id="817"><a href="817">†</a></span>' \
+                '<span class="unit Greek 1" id="818">†</span>' \
+                '<span class="unit Greek 2" id="819"><a href="819">†</a></span>' \
+                '<span class="unit Greek 1" id="820">†</span>' \
+                '<span class="unit Greek 2" id="821"><a href="821">†</a></span>' \
+                '<span class="unit Greek 2" id="822"><a href="822">†</a></span>' \
+                '<span class="unit Greek 1" id="823">†</span>' \
                 '</div>'
-    assert len(result["result"]) == 3
+    assert len(result["result"]) == 2
+    print str(result["result"][0])
+    print expected0
     assert str(result["result"][0]) == expected0
     assert str(result["result"][1]) == expected1
-    assert str(result["result"][2]) == expected2
-    assert result["error"] == [None, None, None]
+    assert result["error"] == [None, None]
 
 
 def test_bookman_get_readings():

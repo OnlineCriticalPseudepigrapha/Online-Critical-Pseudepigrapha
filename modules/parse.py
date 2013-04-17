@@ -541,25 +541,36 @@ class Book(object):
         current_div = start_div_elements[-1]
         last_div = end_div_elements[-1]
         while True:
-            for reading in current_div.xpath(".//{}".format(reading_filter),
-                                             namespaces={"re": "http://exslt.org/regular-expressions"}):
-                ws = []
-                for w in reading.iter("w"):
-                    ws.append(W(attributes=w.attrib,
-                                text=w.text if w.text else u""))
-                    ws.append(w.tail if w.tail else u"")
-                if ws:
-                    ws.insert(0, reading.text if reading.text else "")
-                    text = tuple(ws)
+            for unit in current_div.getchildren():
+                readings_in_unit = len(unit.getchildren())
+                readings = unit.xpath(reading_filter, namespaces={"re": "http://exslt.org/regular-expressions"})
+                if readings:
+                    for reading in readings:
+                        ws = []
+                        for w in reading.iter("w"):
+                            ws.append(W(attributes=w.attrib,
+                                        text=w.text if w.text else u""))
+                            ws.append(w.tail if w.tail else u"")
+                        if ws:
+                            ws.insert(0, reading.text if reading.text else "")
+                            text = tuple(ws)
+                        else:
+                            text = reading.text if reading.text else ""
+                        yield Text(tuple(self._get_div_path(unit.getparent())),
+                                   unit.get("id"),
+                                   version.get("language"),
+                                   readings_in_unit,
+                                   reading.get("linebreak", ""),
+                                   reading.get("indent", ""),
+                                   text)
                 else:
-                    text = reading.text if reading.text else ""
-                yield Text(tuple(self._get_div_path(reading.getparent().getparent())),
-                           reading.getparent().get("id"),
-                           version.get("language"),
-                           len(reading.getparent().getchildren()),
-                           reading.get("linebreak", ""),
-                           reading.get("indent", ""),
-                           text)
+                    yield Text(tuple(self._get_div_path(unit.getparent())),
+                               unit.get("id"),
+                               version.get("language"),
+                               readings_in_unit,
+                               "",
+                               "",
+                               None)
             if current_div == last_div:
                 raise StopIteration
             else:
@@ -847,7 +858,7 @@ class BookManager(object):
                                     item_text.append(SPAN(w.text, _class=w_class))
                             # item_text = SPAN(*item_text)
                         else:
-                            item_text = [item.text if item.text else "*"]
+                            item_text = [item.text if item.text else u"†" if item.text is None else u"*"]
                         # add extra style elements
                         class_extra = ("{} {}".format("linebreak_{}".format(item.linebreak) if item.linebreak else "",
                                                       "indent" if item.indent.upper() == "YES" else "")).strip()
