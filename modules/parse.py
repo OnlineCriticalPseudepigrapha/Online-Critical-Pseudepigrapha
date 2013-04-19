@@ -595,6 +595,14 @@ class Book(object):
         for reading in version.xpath(".//unit[@id={}]/reading".format(unit_id)):
             yield Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else "")
 
+    def get_group(self, version_title, unit_group):
+        version = self._get("version", {"title": version_title})
+        groups = OrderedDict()
+        for reading in version.xpath(".//unit[@group={}]/reading".format(unit_group)):
+            groups.setdefault(reading.getparent().get("id"), []).append(
+                Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else ""))
+        return groups
+
     # EI methods
 
     def add_version(self, version_title, language, author, mss=None):
@@ -915,7 +923,42 @@ class BookManager(object):
                 if as_gluon:
                     items.append(TAG.dl(book_items))
                 else:
-                    items += book_items
+                    items += [book_items]
+            except IOError as e:
+                errors.append(str(e))
+            else:
+                errors.append(None)
+        return {"result": items, "error": errors}
+
+    @staticmethod
+    def get_group(group_descriptions, as_gluon=True):
+        """
+        Retrieving the text of all readings for one group of the XML file
+
+        :param group_descriptions: a list of dictionaries with the following key/value pairs
+        {"book": <string, the file name of the xml file to be read>
+         "version": <string, the name of the version>
+         "unit_group": <integer, identifier of the requested unit> )
+        :param as_gluon: Be the items are wrapped into gluon objects or not?
+        :return: dictionary with the following key/value pairs
+        {"result": <list of reading fragments based on the arguments in the requested form>,
+        "error": <list of error messages (as many items as unit_descriptions has))>}
+        """
+        items = []
+        errors = []
+        for group_description in group_descriptions:
+            try:
+                book = Book.open(BookManager._load(group_description.get("book", "")))
+                book_items = book.get_group(group_description.get("version"), group_description.get("unit_group"))
+                if as_gluon:
+                    tmp_items = []
+                    for unit_id, readings in book_items.iteritems():
+                        for reading in readings:
+                            tmp_items.append(TAG.dt(reading.mss))
+                            tmp_items.append(TAG.dd(reading.text if reading.text else "*"))
+                    items.append(TAG.dl(tmp_items))
+                else:
+                    items += [book_items]
             except IOError as e:
                 errors.append(str(e))
             else:
