@@ -590,8 +590,9 @@ class Book(object):
                 else:
                     current_div = current_div.getnext()
 
-    def get_readings(self, unit_id):
-        for reading in self._book.xpath("//unit[@id={}]/reading".format(unit_id)):
+    def get_readings(self, version_title, unit_id):
+        version = self._get("version", {"title": version_title})
+        for reading in version.xpath(".//unit[@id={}]/reading".format(unit_id)):
             yield Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else "")
 
     # EI methods
@@ -892,6 +893,7 @@ class BookManager(object):
 
         :param unit_descriptions: a list of dictionaries with the following key/value pairs
         {"book": <string, the file name of the xml file to be read>
+         "version": <string, the name of the version>
          "unit_id": <integer, identifier of the requested unit> )
         :param as_gluon: Be the items are wrapped into gluon objects or not?
         :return: dictionary with the following key/value pairs
@@ -904,7 +906,7 @@ class BookManager(object):
             try:
                 book = Book.open(BookManager._load(unit_description.get("book", "")))
                 book_items = []
-                for item in book.get_readings(unit_description.get("unit_id")):
+                for item in book.get_readings(unit_description.get("version"), unit_description.get("unit_id")):
                     if as_gluon:
                         book_items.append(TAG.dt(item.mss))
                         book_items.append(TAG.dd(item.text if item.text else "*"))

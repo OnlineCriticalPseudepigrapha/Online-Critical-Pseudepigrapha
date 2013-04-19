@@ -215,7 +215,7 @@ def test_book_get_text_w_invalid_text_type(test_book):
 
 
 def test_book_get_readings(test_book):
-    result = list(test_book.get_readings(812))
+    result = list(test_book.get_readings("Greek", 812))
     expected = [Reading("Gizeh", u"ὅτι ἔρχεται"),
                 Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
                 Reading("TestOne", u"")]
@@ -223,7 +223,7 @@ def test_book_get_readings(test_book):
 
 
 def test_book_get_readings_w_invalid_unit_id(test_book):
-    result = list(test_book.get_readings(2000))
+    result = list(test_book.get_readings("Greek", 2000))
     expected = []
     assert result == expected
 
@@ -330,9 +330,9 @@ def test_bookman_get_text_w_mixed_valid_and_invalid():
 
 def test_bookman_get_text_as_gluon():
     result = BookManager.get_text([{"book": "test_parse", "version": "Greek", "text_type": "TestOne",
-                                    "start":(1, 2), "end":(1, )},
+                                    "start": (1, 2), "end": (1, )},
                                    {"book": "test_parse", "version": "Greek", "text_type": "TestOne",
-                                    "start":(1, ), "end":(1, )}],
+                                    "start": (1, ), "end": (1, )}],
                                   as_gluon=True)
     expected0 = '<div>' \
                 '<span class="level-2" id="1">1</span>' \
@@ -439,8 +439,8 @@ def test_bookman_get_text_as_gluon():
 
 
 def test_bookman_get_readings():
-    result = BookManager.get_readings([{"book": "test_parse", "unit_id": 812},
-                                       {"book": "test_parse", "unit_id": 812}],
+    result = BookManager.get_readings([{"book": "test_parse", "version": "Greek", "unit_id": 812},
+                                       {"book": "test_parse", "version": "Greek", "unit_id": 812}],
                                       as_gluon=False)
     expected = {"result": [Reading("Gizeh", u"ὅτι ἔρχεται"),
                            Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
@@ -454,8 +454,8 @@ def test_bookman_get_readings():
 
 
 def test_bookman_get_readings_as_gluon():
-    result = BookManager.get_readings([{"book": "test_parse", "unit_id": 812},
-                                       {"book": "test_parse", "unit_id": 812}],
+    result = BookManager.get_readings([{"book": "test_parse", "version": "Greek", "unit_id": 812},
+                                       {"book": "test_parse", "version": "Greek", "unit_id": 812}],
                                       as_gluon=True)
     html = '<dl>' \
            '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>' \
