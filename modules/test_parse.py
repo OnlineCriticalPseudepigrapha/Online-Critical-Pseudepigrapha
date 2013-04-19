@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from collections import OrderedDict
 import glob
 
 import os
@@ -228,6 +229,24 @@ def test_book_get_readings_w_invalid_unit_id(test_book):
     assert result == expected
 
 
+def test_book_get_group(test_book):
+    result = test_book.get_group("Greek", 14)
+    expected = OrderedDict({"812": [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                                    Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                                    Reading("TestOne", u"")],
+                            "813": [Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                    Reading("Jude", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,"),
+                                    Reading("TestTwo", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,")],
+                            "814": [Reading("Gizeh Jude", u"ποιῆσαι κρίσιν κατὰ πάντων, καὶ")]})
+    assert result == expected
+
+
+def test_book_get_group_w_invalid_group_id(test_book):
+    result = test_book.get_group("Greek", "2000")
+    expected = OrderedDict()
+    assert result == expected
+
+
 ## BookManager tests
 
 
@@ -431,8 +450,6 @@ def test_bookman_get_text_as_gluon():
                 '<span class="unit Greek 1" id="823">†</span>' \
                 '</div>'
     assert len(result["result"]) == 2
-    print str(result["result"][0])
-    print expected0
     assert str(result["result"][0]) == expected0
     assert str(result["result"][1]) == expected1
     assert result["error"] == [None, None]
@@ -442,12 +459,12 @@ def test_bookman_get_readings():
     result = BookManager.get_readings([{"book": "test_parse", "version": "Greek", "unit_id": 812},
                                        {"book": "test_parse", "version": "Greek", "unit_id": 812}],
                                       as_gluon=False)
-    expected = {"result": [Reading("Gizeh", u"ὅτι ἔρχεται"),
-                           Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                           Reading("TestOne", u""),
-                           Reading("Gizeh", u"ὅτι ἔρχεται"),
-                           Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                           Reading("TestOne", u"")],
+    expected = {"result": [[Reading("Gizeh", u"ὅτι ἔρχεται"),
+                            Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                            Reading("TestOne", u"")],
+                           [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                            Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                            Reading("TestOne", u"")]],
                 "error": [None, None]}
     assert result["result"] == expected["result"]
     assert result["error"] == expected["error"]
@@ -461,6 +478,48 @@ def test_bookman_get_readings_as_gluon():
            '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>' \
            '<dt>Jude</dt><dd>ἰδοὺ ἦλθεν κύριος</dd>' \
            '<dt>TestOne</dt><dd>*</dd>' \
+           '</dl>'
+    assert str(result["result"][0]) == html
+    assert str(result["result"][1]) == html
+    assert len(result["result"]) == 2
+    assert result["error"] == [None, None]
+
+
+def test_bookman_get_group():
+    result = BookManager.get_group([{"book": "test_parse", "version": "Greek", "unit_group": 14},
+                                    {"book": "test_parse", "version": "Greek", "unit_group": 14}],
+                                   as_gluon=False)
+    expected = {"result": [OrderedDict({"812": [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                                                Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                                                Reading("TestOne", u"")],
+                                        "813": [Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                                Reading("Jude", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,"),
+                                                Reading("TestTwo", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,")],
+                                        "814": [Reading("Gizeh Jude", u"ποιῆσαι κρίσιν κατὰ πάντων, καὶ")]}),
+                           OrderedDict({"812": [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                                                Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
+                                                Reading("TestOne", u"")],
+                                        "813": [Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                                Reading("Jude", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,"),
+                                                Reading("TestTwo", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,")],
+                                        "814": [Reading("Gizeh Jude", u"ποιῆσαι κρίσιν κατὰ πάντων, καὶ")]})],
+                "error": [None, None]}
+    assert result["result"] == expected["result"]
+    assert result["error"] == expected["error"]
+
+
+def test_bookman_get_group_as_gluon():
+    result = BookManager.get_group([{"book": "test_parse", "version": "Greek", "unit_group": 14},
+                                    {"book": "test_parse", "version": "Greek", "unit_group": 14}],
+                                   as_gluon=True)
+    html = '<dl>' \
+           '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>' \
+           '<dt>Jude</dt><dd>ἰδοὺ ἦλθεν κύριος</dd>' \
+           '<dt>TestOne</dt><dd>*</dd>' \
+           '<dt>Gizeh</dt><dd>σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,</dd>' \
+           '<dt>Jude</dt><dd>ἐν ἁγίαις μυριάσιν αὐτοῦ,</dd>' \
+           '<dt>TestTwo</dt><dd>ἐν ἁγίαις μυριάσιν αὐτοῦ,</dd>' \
+           '<dt>Gizeh Jude</dt><dd>ποιῆσαι κρίσιν κατὰ πάντων, καὶ</dd>' \
            '</dl>'
     assert str(result["result"][0]) == html
     assert str(result["result"][1]) == html
