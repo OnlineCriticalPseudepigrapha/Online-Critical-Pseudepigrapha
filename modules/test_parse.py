@@ -959,7 +959,7 @@ def test_book_split_unit(new_book):
     new_book.add_unit(version_title="MyVersion", div_path=["1", "1.1", "1.1.1"])
     new_book.update_unit(version_title="MyVersion",
                          unit_id="2",
-                         readings=(("MyMSS", u"Ütvefúró tükörfúrógép"), ("MyMSS", u"ἰδοὺ ἦλθεν κύριος")))
+                         readings=(("MyMSS1", u"Ütvefúró tükörfúrógép"), ("MyMSS2", u"ἰδοὺ ἦλθεν κύριος")))
     # split unit
     new_book.split_unit(version_title="MyVersion",
                         unit_id="2",
@@ -967,7 +967,7 @@ def test_book_split_unit(new_book):
                         split_point=9)
     new_book.split_unit(version_title="MyVersion",
                         unit_id="2",
-                        reading_pos="2",
+                        reading_pos="1",
                         split_point=u"ἦλθεν")
     result_xml = fix_doctype(new_book.serialize(False))
     expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
@@ -982,11 +982,72 @@ def test_book_split_unit(new_book):
                    '<div number="1.1.1">' \
                    '<unit id="1"><reading/></unit>' \
                    '<unit id="2">' \
-                   '<reading mss="MyMSS" option="0">Ütvefúró</reading>' \
-                   '<reading mss="MyMSS" option="1">tükörfúrógép</reading>' \
-                   '<reading mss="MyMSS" option="2">ἰδοὺ</reading>' \
-                   '<reading mss="MyMSS" option="3">ἦλθεν</reading>' \
-                   '<reading mss="MyMSS" option="4">κύριος</reading>' \
+                   '<reading mss="MyMSS1" option="0">Ütvefúró</reading>' \
+                   '<reading mss="MyMSS2" option="1">ἰδοὺ</reading>' \
+                   '</unit>' \
+                   '<unit id="3">' \
+                   '<reading mss="MyMSS1" option="0"></reading>' \
+                   '<reading mss="MyMSS2" option="1">ἦλθεν</reading>' \
+                   '</unit>' \
+                   '<unit id="4">' \
+                   '<reading mss="MyMSS1" option="0"></reading>' \
+                   '<reading mss="MyMSS2" option="1">κύριος</reading>' \
+                   '</unit>' \
+                   '<unit id="5">' \
+                   '<reading mss="MyMSS1" option="0">tükörfúrógép</reading>' \
+                   '<reading mss="MyMSS2" option="1"></reading>' \
+                   '</unit>' \
+                   '</div>' \
+                   '<div number="1.1.2">' \
+                   '<unit id="6"><reading/></unit>' \
+                   '</div>' \
+                   '</div>' \
+                   '</div>' \
+                   '</text>' \
+                   '</version>' \
+                   '</book>'
+    assert result_xml == expected_xml
+
+
+def test_book_split_reading(new_book):
+    # prepering book
+    new_book.add_div(version_title="MyVersion", div_name="1", div_parent_path=None)
+    new_book.add_div(version_title="MyVersion", div_name="1.1", div_parent_path=["1"])
+    new_book.add_div(version_title="MyVersion", div_name="1.1.1", div_parent_path=["1", "1.1"])
+    new_book.add_div(version_title="MyVersion", div_name="1.1.2", div_parent_path=["1", "1.1"])
+    new_book.add_unit(version_title="MyVersion", div_path=["1", "1.1", "1.1.2"])
+    new_book.add_unit(version_title="MyVersion", div_path=["1", "1.1", "1.1.1"])
+    new_book.add_unit(version_title="MyVersion", div_path=["1", "1.1", "1.1.1"])
+    new_book.update_unit(version_title="MyVersion",
+                         unit_id="2",
+                         readings=(("MyMSS1", u"Ütvefúró tükörfúrógép"), ("MyMSS2", u"ἰδοὺ ἦλθεν κύριος")))
+    # split unit
+    new_book.split_reading(version_title="MyVersion",
+                           unit_id="2",
+                           reading_pos=0,
+                           split_point=9)
+    new_book.split_reading(version_title="MyVersion",
+                           unit_id="2",
+                           reading_pos="2",
+                           split_point=u"ἦλθεν")
+    result_xml = fix_doctype(new_book.serialize(False))
+    expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
+                   "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
+                   '<book filename="MyTest" textStructure="fragmentary" title="My Test Book">' \
+                   '<version author="Me" language="MyLanguage" title="MyVersion">' \
+                   '<divisions/>' \
+                   '<manuscripts/>' \
+                   '<text>' \
+                   '<div number="1">' \
+                   '<div number="1.1">' \
+                   '<div number="1.1.1">' \
+                   '<unit id="1"><reading/></unit>' \
+                   '<unit id="2">' \
+                   '<reading mss="MyMSS1" option="0">Ütvefúró</reading>' \
+                   '<reading mss="MyMSS1" option="1">tükörfúrógép</reading>' \
+                   '<reading mss="MyMSS2" option="2">ἰδοὺ</reading>' \
+                   '<reading mss="MyMSS2" option="3">ἦλθεν</reading>' \
+                   '<reading mss="MyMSS2" option="4">κύριος</reading>' \
                    '</unit>' \
                    '</div>' \
                    '<div number="1.1.2">' \
