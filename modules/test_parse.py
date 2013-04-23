@@ -229,6 +229,18 @@ def test_book_get_readings_w_invalid_unit_id(test_book):
     assert result == expected
 
 
+def test_book_get_unit_group(test_book):
+    result = list(test_book.get_unit_group("Greek", 812))
+    expected = [10, 14]
+    assert result == expected
+
+
+def test_book_get_unit_group_w_invalid_unit_id(test_book):
+    result = list(test_book.get_readings("Greek", 2000))
+    expected = []
+    assert result == expected
+
+
 def test_book_get_group(test_book):
     result = test_book.get_group("Greek", 14)
     expected = OrderedDict({"812": [Reading("Gizeh", u"ὅτι ἔρχεται"),
@@ -484,6 +496,14 @@ def test_bookman_get_readings_as_gluon():
     assert len(result["result"]) == 2
     assert result["error"] == [None, None]
 
+
+def test_bookman_get_unit_group():
+    result = BookManager.get_unit_group([{"book": "test_parse", "version": "Greek", "unit_id": 812},
+                                         {"book": "test_parse", "version": "Greek", "unit_id": 813}])
+    expected = {"result": [[10, 14], [14, 10]],
+                "error": [None, None]}
+    assert result["result"] == expected["result"]
+    assert result["error"] == expected["error"]
 
 def test_bookman_get_group():
     result = BookManager.get_group([{"book": "test_parse", "version": "Greek", "unit_group": 14},
