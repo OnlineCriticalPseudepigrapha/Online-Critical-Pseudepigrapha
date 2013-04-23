@@ -595,10 +595,22 @@ class Book(object):
         for reading in version.xpath(".//unit[@id={}]/reading".format(unit_id)):
             yield Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else "")
 
+    def get_unit_group(self, version_title, unit_id):
+        version = self._get("version", {"title": version_title})
+        unit = version.xpath(".//unit[@id={}]".format(unit_id))
+        groups = []
+        if unit:
+            try:
+                groups = map(int, unit[0].get("group", "").split(" "))
+            except ValueError:
+                pass
+        return groups
+
     def get_group(self, version_title, unit_group):
         version = self._get("version", {"title": version_title})
         groups = OrderedDict()
-        for reading in version.xpath(".//unit[@group={}]/reading".format(unit_group)):
+        reading_filter = ".//unit[re:test(@group, '^{0} | {0} | {0}$|^{0}$')]/reading".format(unit_group)
+        for reading in version.xpath(reading_filter, namespaces={"re": "http://exslt.org/regular-expressions"}):
             groups.setdefault(reading.getparent().get("id"), []).append(
                 Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else ""))
         return groups
@@ -924,6 +936,34 @@ class BookManager(object):
                     items.append(TAG.dl(book_items))
                 else:
                     items += [book_items]
+            except IOError as e:
+                errors.append(str(e))
+            else:
+                errors.append(None)
+        return {"result": items, "error": errors}
+
+    @staticmethod
+    def get_unit_group(unit_descriptions):
+        """
+        Retrieving the group id of a given unit of the XML file
+
+        :param unit_descriptions: a list of dictionaries with the following key/value pairs
+        {"book": <string, the file name of the xml file to be read>
+         "version": <string, the name of the version>
+         "unit_id": <integer, identifier of the requested unit> )
+        :return: dictionary with the following key/value pairs
+        {"result": <list of reading fragments based on the arguments in the requested form>,
+        "error": <list of error messages (as many items as unit_descriptions has))>}
+        """
+        items = []
+        errors = []
+        for unit_description in unit_descriptions:
+            try:
+                book = Book.open(BookManager._load(unit_description.get("book", "")))
+                book_items = []
+                for item in book.get_unit_group(unit_description.get("version"), unit_description.get("unit_id")):
+                    book_items.append(item)
+                items += [book_items]
             except IOError as e:
                 errors.append(str(e))
             else:
