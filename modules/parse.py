@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from collections import namedtuple
 from collections import OrderedDict
+from copy import deepcopy
 from datetime import datetime
 import os
 
@@ -729,7 +730,41 @@ class Book(object):
         for index, reading in enumerate(readings):
             etree.SubElement(unit, "reading", {"option": str(index), "mss": reading[0]}).text = reading[1]
 
+    def _clone_unit(self, unit_element):
+        cloned_unit = deepcopy(unit_element)
+        for r in cloned_unit.iterchildren():
+            r.text = ""
+        return cloned_unit
+
     def split_unit(self, version_title, unit_id, reading_pos, split_point):
+        version = self._get("version", {"title": version_title})
+        unit = self._get("//unit", {"id": str(unit_id)}, version)
+        reading_pos = int(reading_pos)
+        if -1 < reading_pos < len(unit):
+            reading = unit[reading_pos]
+            if isinstance(split_point, basestring) and split_point in reading.text:
+                reading_parts = reading.text.split(split_point)
+                # new unit for the last part of the text
+                next_unit = self._clone_unit(unit)
+                next_unit[reading_pos].text = reading_parts[1].strip()
+                unit.addnext(next_unit)
+                # new unit for the middle part of the text
+                next_unit = self._clone_unit(unit)
+                next_unit[reading_pos].text = split_point.strip()
+                unit.addnext(next_unit)
+                # keep the current for the first part of the text
+                reading.text = reading_parts[0].strip()
+            elif isinstance(split_point, int):
+                next_unit = self._clone_unit(unit)
+                next_unit[reading_pos].text = reading.text[split_point:].strip()
+                unit.addnext(next_unit)
+                reading.text = reading.text[:split_point].strip()
+            # renumber units
+            self._renumber_units(version)
+        else:
+            raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
+
+    def split_reading(self, version_title, unit_id, reading_pos, split_point):
         unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
         reading_pos = int(reading_pos)
         if -1 < reading_pos < len(unit):
@@ -751,7 +786,7 @@ class Book(object):
                 next_elem.text = reading.text[split_point:].strip()
                 reading.addnext(next_elem)
                 reading.text = reading.text[:split_point].strip()
-            # renumbering the option attribute
+            # renumber the option attribute
             for index, reading in enumerate(unit):
                 reading.set("option", str(index))
         else:
@@ -837,7 +872,7 @@ class BookManager(object):
         errors = []
         for text_position in text_positions:
             try:
-                book = Book.open(BookManager._load(text_position.get("book", "")))
+                book = Book.open(BookManager._load(text_position.get("book")))
                 book_items = []
                 last_div_path = []
                 for item in book.get_text(text_position.get("version", ""),
@@ -924,7 +959,7 @@ class BookManager(object):
         errors = []
         for unit_description in unit_descriptions:
             try:
-                book = Book.open(BookManager._load(unit_description.get("book", "")))
+                book = Book.open(BookManager._load(unit_description.get("book")))
                 book_items = []
                 for item in book.get_readings(unit_description.get("version"), unit_description.get("unit_id")):
                     if as_gluon:
@@ -959,7 +994,7 @@ class BookManager(object):
         errors = []
         for unit_description in unit_descriptions:
             try:
-                book = Book.open(BookManager._load(unit_description.get("book", "")))
+                book = Book.open(BookManager._load(unit_description.get("book")))
                 book_items = []
                 for item in book.get_unit_group(unit_description.get("version"), unit_description.get("unit_id")):
                     book_items.append(item)
@@ -988,7 +1023,7 @@ class BookManager(object):
         errors = []
         for group_description in group_descriptions:
             try:
-                book = Book.open(BookManager._load(group_description.get("book", "")))
+                book = Book.open(BookManager._load(group_description.get("book")))
                 book_items = book.get_group(group_description.get("version"), group_description.get("unit_group"))
                 if as_gluon:
                     tmp_items = []
@@ -1259,7 +1294,8 @@ class BookManager(object):
     @staticmethod
     def split_unit(book_name, version_title, unit_id, reading_pos, split_point):
         """
-        This actually splits a <reading> node under the given <unit> into 2 or 3 pieces.
+        This actually splits a <reading> node of the given <unit> into 2 or 3 pieces and
+        moves the parts into new <unit> nodes.
         If this split_point argument is an integer, that should be interpreted as the index within 
         the text of the <reading> where the split should be made (a 2­way split). 
         If this argument is a string, that should be interpreted as the text to be contined
@@ -1274,6 +1310,26 @@ class BookManager(object):
         """
         book = Book.open(BookManager._load(book_name))
         book.split_unit(version_title, unit_id, reading_pos, split_point)
+        book.save()
+
+    @staticmethod
+    def split_reading(book_name, version_title, unit_id, reading_pos, split_point):
+        """
+        This actually splits a <reading> node of the given <unit> into 2 or 3 pieces.
+        If this split_point argument is an integer, that should be interpreted as the index within 
+        the text of the <reading> where the split should be made (a 2­way split). 
+        If this argument is a string, that should be interpreted as the text to be contined
+        in the middle <reading> of a 3­way split, with the preceding and following characters being moved 
+        to the new <reading>s added before and after this middle <reading>.
+
+        :param book_name:
+        :param version_title:
+        :param unit_id: number in integer or string type
+        :param reading_pos: number in integer or string type
+        :param split_point: integer or string
+        """
+        book = Book.open(BookManager._load(book_name))
+        book.split_reading(version_title, unit_id, reading_pos, split_point)
         book.save()
 
     @staticmethod
