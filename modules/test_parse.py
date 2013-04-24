@@ -216,10 +216,17 @@ def test_book_get_text_w_invalid_text_type(test_book):
 
 
 def test_book_get_readings(test_book):
-    result = list(test_book.get_readings("Greek", 812))
-    expected = [Reading("Gizeh", u"ὅτι ἔρχεται"),
+    result = test_book.get_readings("Greek", 812)
+    expected = [Reading("7QEnoch", None),
+                Reading("POxy2069", None),
+                Reading("CB185", None),
+                Reading("V1809", None),
+                Reading("Gizeh", u"ὅτι ἔρχεται"),
+                Reading("Gizeh2", None),
+                Reading("Syncellus", None),
                 Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                Reading("TestOne", u"")]
+                Reading("TestOne", u""),
+                Reading("TestTwo", None)]
     assert result == expected
 
 
@@ -243,13 +250,35 @@ def test_book_get_unit_group_w_invalid_unit_id(test_book):
 
 def test_book_get_group(test_book):
     result = test_book.get_group("Greek", 14)
-    expected = OrderedDict({"812": [Reading("Gizeh", u"ὅτι ἔρχεται"),
+    expected = OrderedDict({"812": [Reading("7QEnoch", None),
+                                    Reading("POxy2069", None),
+                                    Reading("CB185", None),
+                                    Reading("V1809", None),
+                                    Reading("Gizeh", u"ὅτι ἔρχεται"),
+                                    Reading("Gizeh2", None),
+                                    Reading("Syncellus", None),
                                     Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                                    Reading("TestOne", u"")],
-                            "813": [Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                    Reading("TestOne", u""),
+                                    Reading("TestTwo", None)],
+                            "813": [Reading("7QEnoch", None),
+                                    Reading("POxy2069", None),
+                                    Reading("CB185", None),
+                                    Reading("V1809", None),
+                                    Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                    Reading("Gizeh2", None),
+                                    Reading("Syncellus", None),
                                     Reading("Jude", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,"),
+                                    Reading("TestOne", None),
                                     Reading("TestTwo", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,")],
-                            "814": [Reading("Gizeh Jude", u"ποιῆσαι κρίσιν κατὰ πάντων, καὶ")]})
+                            "814": [Reading("7QEnoch", None),
+                                    Reading("POxy2069", None),
+                                    Reading("CB185", None),
+                                    Reading("V1809", None),
+                                    Reading("Gizeh2", None),
+                                    Reading("Syncellus", None),
+                                    Reading("TestOne", None),
+                                    Reading("TestTwo", None),
+                                    Reading("Gizeh Jude", u"ποιῆσαι κρίσιν κατὰ πάντων, καὶ")]})
     assert result == expected
 
 
@@ -468,33 +497,67 @@ def test_bookman_get_text_as_gluon():
 
 
 def test_bookman_get_readings():
-    result = BookManager.get_readings([{"book": "test_parse", "version": "Greek", "unit_id": 812},
+    result = BookManager.get_readings([{"book": "test_parse", "version": "Greek", "unit_id": 810},
                                        {"book": "test_parse", "version": "Greek", "unit_id": 812}],
                                       as_gluon=False)
-    expected = {"result": [[Reading("Gizeh", u"ὅτι ἔρχεται"),
+    expected = {"result": [[Reading("7QEnoch", None),
+                            Reading("POxy2069", None),
+                            Reading("CB185", None),
+                            Reading("V1809", None),
+                            Reading("Gizeh", u"γενηται"),
+                            Reading("Gizeh2", None),
+                            Reading("Syncellus", None),
+                            Reading("Jude", None),
+                            Reading("TestOne", None),
+                            Reading("Swete Charles Black Dindorf TestTwo", u"γενήσεται")],
+                           [Reading("7QEnoch", None),
+                            Reading("POxy2069", None),
+                            Reading("CB185", None),
+                            Reading("V1809", None),
+                            Reading("Gizeh", u"ὅτι ἔρχεται"),
+                            Reading("Gizeh2", None),
+                            Reading("Syncellus", None),
                             Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                            Reading("TestOne", u"")],
-                           [Reading("Gizeh", u"ὅτι ἔρχεται"),
-                            Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                            Reading("TestOne", u"")]],
+                            Reading("TestOne", u""),
+                            Reading("TestTwo", None)]],
                 "error": [None, None]}
-    assert result["result"] == expected["result"]
+    assert result["result"][0] == expected["result"][0]
+    assert result["result"][1] == expected["result"][1]
     assert result["error"] == expected["error"]
 
 
 def test_bookman_get_readings_as_gluon():
-    result = BookManager.get_readings([{"book": "test_parse", "version": "Greek", "unit_id": 812},
+    result = BookManager.get_readings([{"book": "test_parse", "version": "Greek", "unit_id": 810},
                                        {"book": "test_parse", "version": "Greek", "unit_id": 812}],
                                       as_gluon=True)
-    html = '<dl>' \
-           '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>' \
-           '<dt>Jude</dt><dd>ἰδοὺ ἦλθεν κύριος</dd>' \
-           '<dt>TestOne</dt><dd>*</dd>' \
-           '</dl>'
-    assert str(result["result"][0]) == html
-    assert str(result["result"][1]) == html
-    assert len(result["result"]) == 2
-    assert result["error"] == [None, None]
+    expected = {"result": ['<dl>'
+                           '<dt>7QEnoch</dt><dd>†</dd>'
+                           '<dt>POxy2069</dt><dd>†</dd>'
+                           '<dt>CB185</dt><dd>†</dd>'
+                           '<dt>V1809</dt><dd>†</dd>'
+                           '<dt>Gizeh</dt><dd>γενηται</dd>'
+                           '<dt>Gizeh2</dt><dd>†</dd>'
+                           '<dt>Syncellus</dt><dd>†</dd>'
+                           '<dt>Jude</dt><dd>†</dd>'
+                           '<dt>TestOne</dt><dd>†</dd>'
+                           '<dt>Swete Charles Black Dindorf TestTwo</dt><dd>γενήσεται</dd>'
+                           '</dl>',
+                           '<dl>'
+                           '<dt>7QEnoch</dt><dd>†</dd>'
+                           '<dt>POxy2069</dt><dd>†</dd>'
+                           '<dt>CB185</dt><dd>†</dd>'
+                           '<dt>V1809</dt><dd>†</dd>'
+                           '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>'
+                           '<dt>Gizeh2</dt><dd>†</dd>'
+                           '<dt>Syncellus</dt><dd>†</dd>'
+                           '<dt>Jude</dt><dd>ἰδοὺ ἦλθεν κύριος</dd>'
+                           '<dt>TestOne</dt><dd></dd>'
+                           '<dt>TestTwo</dt><dd>†</dd>'
+                           '</dl>'],
+                "error": [None, None]}
+    assert str(result["result"][0]) == str(expected["result"][0])
+    assert str(result["result"][1]) == str(expected["result"][1])
+    assert result["error"] == expected["error"]
 
 
 def test_bookman_get_unit_group():
@@ -505,46 +568,130 @@ def test_bookman_get_unit_group():
     assert result["result"] == expected["result"]
     assert result["error"] == expected["error"]
 
+
 def test_bookman_get_group():
     result = BookManager.get_group([{"book": "test_parse", "version": "Greek", "unit_group": 14},
-                                    {"book": "test_parse", "version": "Greek", "unit_group": 14}],
+                                    {"book": "test_parse", "version": "Greek", "unit_group": 10}],
                                    as_gluon=False)
-    expected = {"result": [OrderedDict({"812": [Reading("Gizeh", u"ὅτι ἔρχεται"),
+    expected = {"result": [OrderedDict({"812": [Reading("7QEnoch", None),
+                                                Reading("POxy2069", None),
+                                                Reading("CB185", None),
+                                                Reading("V1809", None),
+                                                Reading("Gizeh", u"ὅτι ἔρχεται"),
+                                                Reading("Gizeh2", None),
+                                                Reading("Syncellus", None),
                                                 Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                                                Reading("TestOne", u"")],
-                                        "813": [Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                                Reading("TestOne", u""),
+                                                Reading("TestTwo", None)],
+                                        "813": [Reading("7QEnoch", None),
+                                                Reading("POxy2069", None),
+                                                Reading("CB185", None),
+                                                Reading("V1809", None),
+                                                Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                                Reading("Gizeh2", None),
+                                                Reading("Syncellus", None),
                                                 Reading("Jude", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,"),
+                                                Reading("TestOne", None),
                                                 Reading("TestTwo", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,")],
-                                        "814": [Reading("Gizeh Jude", u"ποιῆσαι κρίσιν κατὰ πάντων, καὶ")]}),
-                           OrderedDict({"812": [Reading("Gizeh", u"ὅτι ἔρχεται"),
+                                        "814": [Reading("7QEnoch", None),
+                                                Reading("POxy2069", None),
+                                                Reading("CB185", None),
+                                                Reading("V1809", None),
+                                                Reading("Gizeh2", None),
+                                                Reading("Syncellus", None),
+                                                Reading("TestOne", None),
+                                                Reading("TestTwo", None),
+                                                Reading("Gizeh Jude", u"ποιῆσαι κρίσιν κατὰ πάντων, καὶ")]}),
+                           OrderedDict({"812": [Reading("7QEnoch", None),
+                                                Reading("POxy2069", None),
+                                                Reading("CB185", None),
+                                                Reading("V1809", None),
+                                                Reading("Gizeh", u"ὅτι ἔρχεται"),
+                                                Reading("Gizeh2", None),
+                                                Reading("Syncellus", None),
                                                 Reading("Jude", u"ἰδοὺ ἦλθεν κύριος"),
-                                                Reading("TestOne", u"")],
-                                        "813": [Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                                Reading("TestOne", u""),
+                                                Reading("TestTwo", None)],
+                                        "813": [Reading("7QEnoch", None),
+                                                Reading("POxy2069", None),
+                                                Reading("CB185", None),
+                                                Reading("V1809", None),
+                                                Reading("Gizeh", u"σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,"),
+                                                Reading("Gizeh2", None),
+                                                Reading("Syncellus", None),
                                                 Reading("Jude", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,"),
-                                                Reading("TestTwo", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,")],
-                                        "814": [Reading("Gizeh Jude", u"ποιῆσαι κρίσιν κατὰ πάντων, καὶ")]})],
+                                                Reading("TestOne", None),
+                                                Reading("TestTwo", u"ἐν ἁγίαις μυριάσιν αὐτοῦ,")]})],
                 "error": [None, None]}
-    assert result["result"] == expected["result"]
+    assert result["result"][0] == expected["result"][0]
+    assert result["result"][1] == expected["result"][1]
     assert result["error"] == expected["error"]
 
 
 def test_bookman_get_group_as_gluon():
     result = BookManager.get_group([{"book": "test_parse", "version": "Greek", "unit_group": 14},
-                                    {"book": "test_parse", "version": "Greek", "unit_group": 14}],
+                                    {"book": "test_parse", "version": "Greek", "unit_group": 10}],
                                    as_gluon=True)
-    html = '<dl>' \
-           '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>' \
-           '<dt>Jude</dt><dd>ἰδοὺ ἦλθεν κύριος</dd>' \
-           '<dt>TestOne</dt><dd>*</dd>' \
-           '<dt>Gizeh</dt><dd>σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,</dd>' \
-           '<dt>Jude</dt><dd>ἐν ἁγίαις μυριάσιν αὐτοῦ,</dd>' \
-           '<dt>TestTwo</dt><dd>ἐν ἁγίαις μυριάσιν αὐτοῦ,</dd>' \
-           '<dt>Gizeh Jude</dt><dd>ποιῆσαι κρίσιν κατὰ πάντων, καὶ</dd>' \
-           '</dl>'
-    assert str(result["result"][0]) == html
-    assert str(result["result"][1]) == html
-    assert len(result["result"]) == 2
-    assert result["error"] == [None, None]
+    expected = {"result": ['<dl>'
+                           '<dt>7QEnoch</dt><dd>†</dd>'
+                           '<dt>POxy2069</dt><dd>†</dd>'
+                           '<dt>CB185</dt><dd>†</dd>'
+                           '<dt>V1809</dt><dd>†</dd>'
+                           '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>'
+                           '<dt>Gizeh2</dt><dd>†</dd>'
+                           '<dt>Syncellus</dt><dd>†</dd>'
+                           '<dt>Jude</dt><dd>ἰδοὺ ἦλθεν κύριος</dd>'
+                           '<dt>TestOne</dt><dd></dd>'
+                           '<dt>TestTwo</dt><dd>†</dd>'
+
+                           '<dt>7QEnoch</dt><dd>†</dd>'
+                           '<dt>POxy2069</dt><dd>†</dd>'
+                           '<dt>CB185</dt><dd>†</dd>'
+                           '<dt>V1809</dt><dd>†</dd>'
+                           '<dt>Gizeh</dt><dd>σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,</dd>'
+                           '<dt>Gizeh2</dt><dd>†</dd>'
+                           '<dt>Syncellus</dt><dd>†</dd>'
+                           '<dt>Jude</dt><dd>ἐν ἁγίαις μυριάσιν αὐτοῦ,</dd>'
+                           '<dt>TestOne</dt><dd>†</dd>'
+                           '<dt>TestTwo</dt><dd>ἐν ἁγίαις μυριάσιν αὐτοῦ,</dd>'
+
+                           '<dt>7QEnoch</dt><dd>†</dd>'
+                           '<dt>POxy2069</dt><dd>†</dd>'
+                           '<dt>CB185</dt><dd>†</dd>'
+                           '<dt>V1809</dt><dd>†</dd>'
+                           '<dt>Gizeh2</dt><dd>†</dd>'
+                           '<dt>Syncellus</dt><dd>†</dd>'
+                           '<dt>TestOne</dt><dd>†</dd>'
+                           '<dt>TestTwo</dt><dd>†</dd>'
+                           '<dt>Gizeh Jude</dt><dd>ποιῆσαι κρίσιν κατὰ πάντων, καὶ</dd>'
+                           '</dl>',
+                           '<dl>'
+                           '<dt>7QEnoch</dt><dd>†</dd>'
+                           '<dt>POxy2069</dt><dd>†</dd>'
+                           '<dt>CB185</dt><dd>†</dd>'
+                           '<dt>V1809</dt><dd>†</dd>'
+                           '<dt>Gizeh</dt><dd>ὅτι ἔρχεται</dd>'
+                           '<dt>Gizeh2</dt><dd>†</dd>'
+                           '<dt>Syncellus</dt><dd>†</dd>'
+                           '<dt>Jude</dt><dd>ἰδοὺ ἦλθεν κύριος</dd>'
+                           '<dt>TestOne</dt><dd></dd>'
+                           '<dt>TestTwo</dt><dd>†</dd>'
+
+                           '<dt>7QEnoch</dt><dd>†</dd>'
+                           '<dt>POxy2069</dt><dd>†</dd>'
+                           '<dt>CB185</dt><dd>†</dd>'
+                           '<dt>V1809</dt><dd>†</dd>'
+                           '<dt>Gizeh</dt><dd>σὺν ταῖς μυριάσιν αὐτοῦ καὶ τοῖς ἁγίοις αὐτοῦ,</dd>'
+                           '<dt>Gizeh2</dt><dd>†</dd>'
+                           '<dt>Syncellus</dt><dd>†</dd>'
+                           '<dt>Jude</dt><dd>ἐν ἁγίαις μυριάσιν αὐτοῦ,</dd>'
+                           '<dt>TestOne</dt><dd>†</dd>'
+                           '<dt>TestTwo</dt><dd>ἐν ἁγίαις μυριάσιν αὐτοῦ,</dd>'
+                           '</dl>'],
+                "error": [None, None]}
+    assert str(result["result"][0]) == str(expected["result"][0])
+    assert str(result["result"][1]) == str(expected["result"][1])
+    assert result["error"] == expected["error"]
 
 
 ## Testing EI

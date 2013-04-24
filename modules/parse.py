@@ -591,30 +591,60 @@ class Book(object):
                 else:
                     current_div = current_div.getnext()
 
+    def _get_readings_of_unit(self, unit_element, default_readings):
+        """
+        Return the whole set of manuscripts including the required but maybe missing elements from <manuscripts>
+        :param unit_element:
+        :param default_readings: OrderedDict, where key = manuscripts/ms@abbrev, value = None
+        """
+        readings = deepcopy(default_readings)
+        # compare to existing manuscripts
+        for reading in unit_element.iter("reading"):
+            mss = reading.get("mss").strip()
+            # when there are more ms in it
+            if len(mss.split(" ")) > 1:
+                for ms in mss.split(" "):
+                    try:
+                        del readings[ms]
+                    except KeyError:
+                        pass
+            # update manuscripts
+            readings[mss] = reading.text.strip() if reading.text else u""
+        # iterate
+        return [Reading(ms, text) for ms, text in readings.iteritems()]
+
     def get_readings(self, version_title, unit_id):
-        version = self._get("version", {"title": version_title})
-        for reading in version.xpath(".//unit[@id={}]/reading".format(unit_id)):
-            yield Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else "")
+        readings = []
+        try:
+            version = self._get("version", {"title": version_title})
+            unit = self._get(".//unit", {"id": unit_id}, on_element=version)
+            readings = self._get_readings_of_unit(
+                unit,
+                default_readings=OrderedDict([[abbrev, None] for abbrev in version.xpath("manuscripts/ms/@abbrev")]))
+        except ElementDoesNotExist:
+            pass
+        return readings
 
     def get_unit_group(self, version_title, unit_id):
         version = self._get("version", {"title": version_title})
         unit = version.xpath(".//unit[@id={}]".format(unit_id))
         groups = []
-        if unit:
-            try:
-                groups = map(int, unit[0].get("group", "").split(" "))
-            except ValueError:
-                pass
+        try:
+            groups = map(int, unit[0].get("group", "").split(" "))
+        except (IndexError, ValueError):
+            pass
         return groups
 
     def get_group(self, version_title, unit_group):
+        group = OrderedDict()  # key: unit id, value: readings of a unit
         version = self._get("version", {"title": version_title})
-        groups = OrderedDict()
-        reading_filter = ".//unit[re:test(@group, '^{0} | {0} | {0}$|^{0}$')]/reading".format(unit_group)
-        for reading in version.xpath(reading_filter, namespaces={"re": "http://exslt.org/regular-expressions"}):
-            groups.setdefault(reading.getparent().get("id"), []).append(
-                Reading(reading.get("mss").strip(), reading.text.strip() if reading.text else ""))
-        return groups
+        # create default readings based on children of manuscripts and try to keep this ms definition order
+        default_readings = OrderedDict([[abbrev, None] for abbrev in version.xpath("manuscripts/ms/@abbrev")])
+        unit_filter = ".//unit[re:test(@group, '^{0} | {0} | {0}$|^{0}$')]".format(unit_group)
+        # loop over the units of a unit_group
+        for unit in version.xpath(unit_filter, namespaces={"re": "http://exslt.org/regular-expressions"}):
+            group[unit.get("id")] = self._get_readings_of_unit(unit, default_readings=default_readings)
+        return group
 
     # EI methods
 
@@ -964,7 +994,7 @@ class BookManager(object):
                 for item in book.get_readings(unit_description.get("version"), unit_description.get("unit_id")):
                     if as_gluon:
                         book_items.append(TAG.dt(item.mss))
-                        book_items.append(TAG.dd(item.text if item.text else "*"))
+                        book_items.append(TAG.dd(item.text if item.text else u"†" if item.text is None else ""))
                     else:
                         book_items.append(item)
                 if as_gluon:
@@ -1030,7 +1060,7 @@ class BookManager(object):
                     for unit_id, readings in book_items.iteritems():
                         for reading in readings:
                             tmp_items.append(TAG.dt(reading.mss))
-                            tmp_items.append(TAG.dd(reading.text if reading.text else "*"))
+                            tmp_items.append(TAG.dd(reading.text if reading.text else u"†" if reading.text is None else ""))
                     items.append(TAG.dl(tmp_items))
                 else:
                     items += [book_items]
