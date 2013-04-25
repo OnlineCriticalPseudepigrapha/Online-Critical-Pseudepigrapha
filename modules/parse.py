@@ -11,10 +11,10 @@ from gluon import A, DIV, SPAN, TAG
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
-XML_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static/docs")
-XML_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static/docs/backups")
-XML_DRAFT_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static/docs/draft")
-XML_DRAFT_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static/docs/draft/backups")
+XML_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static", "docs")
+XML_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static", "docs", "backups")
+XML_DRAFT_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static", "docs", "draft")
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "static", "docs", "draft", "backups")
 
 XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",
                        "doctype": "<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
@@ -49,6 +49,14 @@ class NotAllowedManuscript(Exception):
 
 class NotUniqueDIVName(Exception):
     pass
+
+
+## Common tools
+
+
+def copy_file(src, dst):
+    with open(dst, "w") as f:
+        f.write(open(src).read())
 
 
 ## Book class
@@ -872,11 +880,12 @@ class BookManager(object):
         """
         # TODO: add saving into cache option
         book_name = book_object.get_filename()
-        new_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
+        new_file_path = os.path.join(BookManager.xml_draft_file_storage_path, "{}.xml".format(book_name))
         if os.path.isfile(new_file_path):
-            backup_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_backup_storage_path,
-                                                     book_name,
-                                                     datetime.now().strftime("%Y%m%d_%H%M%S_%f"))
+            backup_file_path = os.path.join(BookManager.xml_draft_file_backup_storage_path,
+                                            "{}_{}.xml".format(
+                                                book_name,
+                                                datetime.now().strftime("%Y%m%d_%H%M%S_%f")))
             os.rename(new_file_path, backup_file_path)
         f = open(new_file_path, "w")
         f.write(book_object.serialize())
@@ -1090,16 +1099,18 @@ class BookManager(object):
         :param book_name: string
         :return:
         """
-        from_file_path = "{}/{}.xml".format(BookManager.xml_file_storage_path, book_name)
-        to_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
+        from_file_path = os.path.join(BookManager.xml_file_storage_path, "{}.xml".format(book_name))
+        to_file_path = os.path.join(BookManager.xml_draft_file_storage_path, "{}.xml".format(book_name))
         if os.path.isfile(to_file_path):
-            backup_to_file_path = "{}/{}_{}.xml".format(BookManager.xml_draft_file_backup_storage_path,
-                                                        book_name,
-                                                        datetime.now().strftime("%Y%m%d_%H%M%S_%f"))
+            backup_to_file_path = os.path.join(BookManager.xml_draft_file_backup_storage_path,
+                                               "{}_{}.xml".format(
+                                                   book_name,
+                                                   datetime.now().strftime("%Y%m%d_%H%M%S_%f")))
+            print ">> copy from_file_path: {}".format(from_file_path)
+            print ">> copy to_file_path: {}".format(to_file_path)
+            print ">> copy backup_to_file_path: {}".format(backup_to_file_path)
             os.rename(to_file_path, backup_to_file_path)
-        f = open(to_file_path, "w")
-        f.write(open(from_file_path).read())
-        f.close()
+        copy_file(from_file_path, to_file_path)
 
     @staticmethod
     def publish_book(book_name):
@@ -1109,16 +1120,15 @@ class BookManager(object):
         :param book_name:
         :return:
         """
-        from_file_path = "{}/{}.xml".format(BookManager.xml_draft_file_storage_path, book_name)
-        to_file_path = "{}/{}.xml".format(BookManager.xml_file_storage_path, book_name)
+        from_file_path = os.path.join(BookManager.xml_draft_file_storage_path, "{}.xml".format(book_name))
+        to_file_path = os.path.join(BookManager.xml_file_storage_path, "{}.xml".format(book_name))
         if os.path.isfile(to_file_path):
-            backup_to_file_path = "{}/{}_{}.xml".format(BookManager.xml_file_backup_storage_path,
-                                                        book_name,
-                                                        datetime.now().strftime("%Y%m%d_%H%M%S_%f"))
+            backup_to_file_path = os.path.join(BookManager.xml_file_backup_storage_path,
+                                               "{}_{}.xml".format(
+                                                   book_name,
+                                                   datetime.now().strftime("%Y%m%d_%H%M%S_%f")))
             os.rename(to_file_path, backup_to_file_path)
-        f = open(to_file_path, "w")
-        f.write(open(from_file_path).read())
-        f.close()
+        copy_file(from_file_path, to_file_path)
 
     @staticmethod
     def add_version(book_name, version_title, language, author):
