@@ -13,13 +13,13 @@ from parse import ElementDoesNotExist, InvalidDIVPath, NotAllowedManuscript
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
-XML_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test/docs")
-XML_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test/docs/backups")
-XML_DRAFT_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test/docs/drafts")
-XML_DRAFT_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test/docs/drafts/backups")
+XML_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test", "docs")
+XML_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test", "docs", "backups")
+XML_DRAFT_FILE_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test", "docs", "drafts")
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH = os.path.join(PROJECT_ROOT, "test", "docs", "drafts", "backups")
 
-TEST_XML_FILE = os.path.join(PROJECT_ROOT, "test/docs/drafts/test_parse.xml")
-TEST_DTD_FILE = os.path.join(PROJECT_ROOT, "static/docs/grammateus.dtd")
+TEST_XML_FILE = os.path.join(PROJECT_ROOT, "test", "docs", "drafts", "test_parse.xml")
+TEST_DTD_FILE = os.path.join(PROJECT_ROOT, "static", "docs", "grammateus.dtd")
 
 BookManager.xml_file_storage_path = XML_FILE_STORAGE_PATH
 BookManager.xml_file_backup_storage_path = XML_FILE_BACKUP_STORAGE_PATH
@@ -1246,20 +1246,21 @@ def test_book_del_unit(new_book):
 def test_bookman_create_publish_copy():
     # setup
     book_name = "MyNewBookTest"
-    book_file_pattern = "{}/{}_????????_??????_??????.xml"
+    book_file_pattern = "{}_????????_??????_??????.xml"
     files_to_remove = []
     for xml_folder in [XML_DRAFT_FILE_BACKUP_STORAGE_PATH,
                        XML_FILE_BACKUP_STORAGE_PATH]:
-        files_to_remove += glob.glob(book_file_pattern.format(xml_folder, book_name))
+        files_to_remove += glob.glob(os.path.join(xml_folder, book_file_pattern.format(book_name)))
     for xml_folder in [XML_DRAFT_FILE_STORAGE_PATH,
                        XML_FILE_STORAGE_PATH]:
-        files_to_remove += glob.glob("{}/{}.xml".format(xml_folder, book_name))
+        files_to_remove += glob.glob(os.path.join(xml_folder, "{}.xml".format(book_name)))
     for file_path in files_to_remove:
         os.remove(file_path)
 
     # create new
     BookManager.create_book(book_name, "My new book")
-    result_xml = fix_doctype(open("{}/{}.xml".format(XML_DRAFT_FILE_STORAGE_PATH, book_name)).read())
+    assert os.path.isfile(os.path.join(XML_DRAFT_FILE_STORAGE_PATH, "{}.xml".format(book_name)))
+    result_xml = fix_doctype(open(os.path.join(XML_DRAFT_FILE_STORAGE_PATH, "{}.xml".format(book_name))).read())
     expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                    "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
                    '<book filename="{}" title="My new book"/>\n'.format(book_name)
@@ -1267,18 +1268,19 @@ def test_bookman_create_publish_copy():
 
     # publish
     BookManager.publish_book(book_name)
-    result_xml = fix_doctype(open("{}/{}.xml".format(XML_FILE_STORAGE_PATH, book_name)).read())
+    assert os.path.isfile(os.path.join(XML_FILE_STORAGE_PATH, "{}.xml".format(book_name)))
+    result_xml = fix_doctype(open(os.path.join(XML_FILE_STORAGE_PATH, "{}.xml".format(book_name))).read())
     assert result_xml == expected_xml
 
     # copy as draft
     BookManager.copy_book(book_name)
-    result_xml = fix_doctype(open("{}/{}.xml".format(XML_DRAFT_FILE_STORAGE_PATH, book_name)).read())
+    result_xml = fix_doctype(open(os.path.join(XML_DRAFT_FILE_STORAGE_PATH, "{}.xml".format(book_name))).read())
     assert result_xml == expected_xml
-    assert len(glob.glob(book_file_pattern.format(XML_DRAFT_FILE_BACKUP_STORAGE_PATH, book_name))) == 1
+    assert len(glob.glob(os.path.join(XML_DRAFT_FILE_BACKUP_STORAGE_PATH, book_file_pattern.format(book_name)))) == 1
 
     # edit (add version)
     BookManager.add_version(book_name, "MyVersion", "MyLanguage", "Me")
-    result_xml = fix_doctype(open("{}/{}.xml".format(XML_DRAFT_FILE_STORAGE_PATH, book_name)).read())
+    result_xml = fix_doctype(open(os.path.join(XML_DRAFT_FILE_STORAGE_PATH, "{}.xml".format(book_name))).read())
     expected_xml = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n" \
                    "<!DOCTYPE book SYSTEM 'grammateus.dtd'>\n" \
                    '<book filename="{}" title="My new book">\n' \
@@ -1289,21 +1291,21 @@ def test_bookman_create_publish_copy():
                    '  </version>\n' \
                    '</book>\n'.format(book_name)
     assert result_xml == expected_xml
-    assert len(glob.glob(book_file_pattern.format(XML_DRAFT_FILE_BACKUP_STORAGE_PATH, book_name))) == 2
+    assert len(glob.glob(os.path.join(XML_DRAFT_FILE_BACKUP_STORAGE_PATH, book_file_pattern.format(book_name)))) == 2
 
     # publish
     BookManager.publish_book(book_name)
-    result_xml = fix_doctype(open("{}/{}.xml".format(XML_FILE_STORAGE_PATH, book_name)).read())
+    result_xml = fix_doctype(open(os.path.join(XML_FILE_STORAGE_PATH, "{}.xml".format(book_name))).read())
     assert result_xml == expected_xml
-    assert len(glob.glob(book_file_pattern.format(XML_FILE_BACKUP_STORAGE_PATH, book_name))) == 1
+    assert len(glob.glob(os.path.join(XML_FILE_BACKUP_STORAGE_PATH, book_file_pattern.format(book_name)))) == 1
 
     # teardown
     files_to_remove = []
     for xml_folder in [XML_DRAFT_FILE_BACKUP_STORAGE_PATH,
                        XML_FILE_BACKUP_STORAGE_PATH]:
-        files_to_remove += glob.glob(book_file_pattern.format(xml_folder, book_name))
+        files_to_remove += glob.glob(os.path.join(xml_folder, book_file_pattern.format(book_name)))
     for xml_folder in [XML_DRAFT_FILE_STORAGE_PATH,
                        XML_FILE_STORAGE_PATH]:
-        files_to_remove += glob.glob("{}/{}.xml".format(xml_folder, book_name))
+        files_to_remove += glob.glob(os.path.join(xml_folder, "{}.xml".format(book_name)))
     for file_path in files_to_remove:
         os.remove(file_path)
