@@ -7,7 +7,7 @@ from StringIO import StringIO
 
 import pytest
 
-from parse import check_path
+from . import check_path
 from parse import Text, Reading, W
 from parse import Book, BookManager
 from parse import ElementDoesNotExist, InvalidDIVPath, NotAllowedManuscript
