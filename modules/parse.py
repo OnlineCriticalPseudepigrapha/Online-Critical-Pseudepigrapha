@@ -9,11 +9,7 @@ from lxml import etree
 
 from gluon import A, DIV, SPAN, TAG
 
-
-def check_path(path):
-    if os.path.exists(path):
-        return path
-    raise OSError(2, "{}: {}".format(os.strerror(2), path))
+from . import check_path
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
