@@ -9,12 +9,9 @@ This is the re-write of the Grammateus web-publishing platform in Python using t
 Contributors
 ------------
 
-Ian W. Scott (scottianw@gmail.com)  
-- lead developer  
-Támas Makó  
-- parse.py module and associated unit tests   
-Jeff de Ruyter   
-- earlier parsing classes  
+Ian W. Scott (scottianw@gmail.com), lead developer  
+Támas Makó, wrote the parse.py module and associated unit tests   
+Jeff de Ruyter, wrote earlier parsing classes  
 
 License
 -------
