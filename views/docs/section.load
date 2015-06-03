@@ -14,7 +14,7 @@
 </select>
 </form>
 
-<div class='textframe'>
+<div id='textframe0' class='textframe'>
 {{for s in sel_text:}}
 	{{=s}}
 {{pass}}
@@ -61,7 +61,7 @@ $('#textnavsubmit').on('click', function(event){
 	$('input.to').each(function(){
 		to_ref += $(this).val();
 		to_ref += '-';
-	});	
+	});
 	$('.versionwindow').each(function(){
 		var $the_loader = $(this).children('div');
 		var loader_id = $the_loader.attr('id');

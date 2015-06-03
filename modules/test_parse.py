@@ -15,12 +15,18 @@ from parse import ElementDoesNotExist, InvalidDIVPath, NotAllowedManuscript
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 XML_FILE_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "test", "docs"))
-XML_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "test", "docs", "backups"))
-XML_DRAFT_FILE_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "test", "docs", "drafts"))
-XML_DRAFT_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "test", "docs", "drafts", "backups"))
+XML_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "test",
+                                                       "docs", "backups"))
+XML_DRAFT_FILE_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "test",
+                                                      "docs", "drafts"))
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT,
+                                                             "test", "docs",
+                                                             "drafts", "backups"))
 
-TEST_XML_FILE = check_path(os.path.join(PROJECT_ROOT, "test", "docs", "drafts", "test_parse.xml"))
-TEST_DTD_FILE = check_path(os.path.join(PROJECT_ROOT, "static", "docs", "grammateus.dtd"))
+TEST_XML_FILE = check_path(os.path.join(PROJECT_ROOT, "test", "docs", "drafts",
+                                        "test_parse.xml"))
+TEST_DTD_FILE = check_path(os.path.join(PROJECT_ROOT, "static", "docs",
+                                        "grammateus.dtd"))
 
 BookManager.xml_file_storage_path = XML_FILE_STORAGE_PATH
 BookManager.xml_file_backup_storage_path = XML_FILE_BACKUP_STORAGE_PATH
@@ -36,7 +42,8 @@ def test_book():
 @pytest.fixture()
 def new_book():
     book = Book.create(filename="MyTest", title="My Test Book", frags=True)
-    book.add_version(version_title="MyVersion", language="MyLanguage", author="Me")
+    book.add_version(version_title="MyVersion", language="MyLanguage",
+                     author="Me")
     return book
 
 

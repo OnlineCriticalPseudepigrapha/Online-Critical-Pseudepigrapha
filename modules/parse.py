@@ -11,12 +11,17 @@ from gluon import A, DIV, SPAN, TAG
 
 from . import check_path
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                            os.pardir))
 
 XML_FILE_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static", "docs"))
-XML_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static", "docs", "backups"))
-XML_DRAFT_FILE_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static", "docs", "drafts"))
-XML_DRAFT_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static", "docs", "drafts", "backups"))
+XML_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static",
+                                                       "docs", "backups"))
+XML_DRAFT_FILE_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static",
+                                                      "docs", "drafts"))
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT,
+                                                             "static", "docs",
+                                                             "drafts", "backups"))
 
 XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",
                        "doctype": "<!DOCTYPE book SYSTEM 'grammateus.dtd'>",
@@ -26,7 +31,9 @@ Text = namedtuple("Text", "div_path, unit_id, language, readings_in_unit, linebr
 Reading = namedtuple("Reading", "mss, text")
 W = namedtuple("W", "attributes, text")
 
-## Common Exception classes
+# -------------------------------
+# Common Exception classes
+# -------------------------------
 
 
 class ElementDoesNotExist(Exception):
@@ -53,7 +60,9 @@ class NotUniqueDIVName(Exception):
     pass
 
 
-## Common tools
+# -------------------------------
+# Common tools
+# -------------------------------
 
 
 def copy_file(src, dst):
@@ -61,7 +70,9 @@ def copy_file(src, dst):
         f.write(open(src).read())
 
 
-## Book class
+# -------------------------------
+# classes
+# -------------------------------
 
 
 class Book(object):
@@ -186,7 +197,7 @@ class Book(object):
                     break
 
             # number of levels of divisions == number of levels of divs
-            ## I couldn't test it because the _get_book_info() is method too sensitive to this type of error
+            # I couldn't test it because the _get_book_info() is method too sensitive to this type of error
             num_of_divisions = int(version.xpath("count(divisions/division)"))
             xpath_to_deeper_div_than_divisions = "text/{}//div".format("/".join(["div"] * num_of_divisions))
             deeper_div = version.xpath(xpath_to_deeper_div_than_divisions)
@@ -337,7 +348,9 @@ class Book(object):
             ms_data = OrderedDict()
             for ms in manuscript.xpath('ms'):
                 ms_dict = {'attributes': OrderedDict(
-                    (attr, unicode(ms.xpath('@%s' % attr)[0])) for attr in ('abbrev', 'language', 'show')), 'name': {}}
+                    (attr, unicode(ms.xpath('@%s' % attr)[0]))
+                    for attr in ('abbrev', 'language', 'show')
+                    if ms.xpath('@%s' % attr)), 'name': {}}
 
                 name = ms.xpath('name')[0]
                 if name.text is not None:
@@ -345,8 +358,9 @@ class Book(object):
                 else:
                     ms_dict['name']['text'] = ''
 
-                ms_dict['name']['sup'] = [unicode(s.text.strip()) for s in name.xpath('sup')]
-
+                ms_dict['name']['sup'] = [unicode(s.text.strip())
+                                          for s in name.xpath('sup')]
+                print 'ms_dict', ms_dict['name']['text']
                 ms_dict['bibliography'] = []
                 for bib in ms.xpath('bibliography'):
                     bib_dict = {}
@@ -354,7 +368,8 @@ class Book(object):
                         bib_dict['text'] = unicode(bib.text.strip())
                     else:
                         bib_dict['text'] = []
-                    bib_dict['booktitle'] = [unicode(b.text.strip()) for b in bib.xpath('booktitle')]
+                    bib_dict['booktitle'] = [unicode(b.text.strip())
+                                             for b in bib.xpath('booktitle') if b]
 
                     ms_dict['bibliography'].append(bib_dict)
 
@@ -373,8 +388,10 @@ class Book(object):
             delimiters - a list of the delimiters used to seperate a document's
                          divisions
         """
-
-        data = self.text_structure(text[0], delimiters)
+        try:
+            data = self.text_structure(text[0], delimiters)
+        except Exception:
+            data = 'none'
 
         return data
 
@@ -603,9 +620,11 @@ class Book(object):
 
     def _get_readings_of_unit(self, unit_element, default_readings):
         """
-        Return the whole set of manuscripts including the required but maybe missing elements from <manuscripts>
+        Return the whole set of manuscripts including the required but maybe
+        missing elements from <manuscripts>
         :param unit_element:
-        :param default_readings: OrderedDict, where key = manuscripts/ms@abbrev, value = None
+        :param default_readings: OrderedDict, where key = manuscripts/ms@abbrev,
+        value = None
         """
         readings = deepcopy(default_readings)
         # compare to existing manuscripts
@@ -630,7 +649,8 @@ class Book(object):
             unit = self._get(".//unit", {"id": unit_id}, on_element=version)
             readings = self._get_readings_of_unit(
                 unit,
-                default_readings=OrderedDict([[abbrev, None] for abbrev in version.xpath("manuscripts/ms/@abbrev")]))
+                default_readings=OrderedDict([[abbrev, None] for abbrev in
+                                              version.xpath("manuscripts/ms/@abbrev")]))
         except ElementDoesNotExist:
             pass
         return readings
@@ -648,12 +668,16 @@ class Book(object):
     def get_group(self, version_title, unit_group):
         group = OrderedDict()  # key: unit id, value: readings of a unit
         version = self._get("version", {"title": version_title})
-        # create default readings based on children of manuscripts and try to keep this ms definition order
-        default_readings = OrderedDict([[abbrev, None] for abbrev in version.xpath("manuscripts/ms/@abbrev")])
+        # create default readings based on children of manuscripts and try
+        # to keep this ms definition order
+        default_readings = OrderedDict([[abbrev, None] for abbrev in
+                                        version.xpath("manuscripts/ms/@abbrev")])
         unit_filter = ".//unit[re:test(@group, '^{0} | {0} | {0}$|^{0}$')]".format(unit_group)
         # loop over the units of a unit_group
-        for unit in version.xpath(unit_filter, namespaces={"re": "http://exslt.org/regular-expressions"}):
-            group[unit.get("id")] = self._get_readings_of_unit(unit, default_readings=default_readings)
+        for unit in version.xpath(unit_filter,
+                                  namespaces={"re": "http://exslt.org/regular-expressions"}):
+            group[unit.get("id")] = self._get_readings_of_unit(unit,
+                                                               default_readings=default_readings)
         return group
 
     # EI methods
@@ -846,8 +870,6 @@ class Book(object):
 
     def save(self):
         BookManager._save(self)
-
-## BookManager class
 
 
 class BookManager(object):
@@ -1386,4 +1408,3 @@ class BookManager(object):
         book = Book.open(BookManager._load(book_name))
         book.del_unit(version_title, unit_id)
         book.save()
-

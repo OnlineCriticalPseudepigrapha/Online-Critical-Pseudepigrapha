@@ -34,14 +34,15 @@ def text():
 
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
-    print 'start of section() method with url ', request.url, varlist
-    #get filename from end of url and parse the file with BookParser class
+    print 'start of text() method with url ', request.url, varlist
+
+    #get filename from end of url and parse the file with Book class
     print 'filename: ', filename
     if ('info' in session) and (filename in session.info):
         info = session.info[filename]
-        print '\n\nstarting controller.section() using session.info'
+        print 'using session.info'
     else:
-        book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
+        book_file = 'applications/grammateus3/static/docs/{}.xml'.format(filename)
         p = Book.open(book_file)
         info = p.book_info()
         session.info = {filename:info}
@@ -94,7 +95,7 @@ def text():
     session.startref = startref
     session.endref = endref
     print 'start_sel', start_sel
-    print 'end_sel', end_sel
+    print 'end_sel', end_sel, '\n\n'
 
     return dict(load_url = load_url, title = title, levels = levels,
         start_sel = start_sel, end_sel = end_sel, filename = filename)
@@ -104,18 +105,17 @@ def section():
     populates a single text pane via the section.load view (refreshable via ajax)
     """
     #'verbose' variable is for turning testing output on and off
-    verbose = False
+    vbs = True
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
-    if verbose == True:
-        print 'start of section() method with url ', request.url, varlist
+    if vbs: print '\n\nstart of section() method with url ', request.url, varlist
+
     #get filename from end of url and parse the file with BookParser class
     filename = request.args[0]
-    if verbose == True: print 'filename: ', filename
+    if vbs: print 'filename: ', filename
     if 0 and ('info' in session) and (filename in session.info):
         info = session.info[filename]
-        if verbose == True:
-            print '\n\nstarting controller.section() using session.info'
+        if vbs: print 'using session.info'
     else:
         book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
         p = Book.open(book_file)
@@ -129,12 +129,10 @@ def section():
         if 'versions' in session:
             i = session.versions.index(current_version)
             session.versions.insert(0, session.versions.pop(i))
-        if verbose == True:
-            print 'current version: ', current_version.replace(' ', '&nbsp;')
+        if vbs: print 'current version: ', current_version.replace(' ', '&nbsp;')
     else:
         current_version = session.versions[0]
-        if verbose == True:
-            print 'current version: ', current_version.replace(' ', '&nbsp;')
+        if vbs: print 'current version: ', current_version.replace(' ', '&nbsp;')
 
     #find selected version in parsed text
     for version in info['version']:
@@ -144,19 +142,19 @@ def section():
                 levels = curv['organisation_levels']
     #get list of mss
     mslist = [[k.strip() for k, c in v.iteritems()] for v in curv['manuscripts']]
-    if verbose == True: print 'mslist for this version: ', mslist
+    if vbs == True: print 'mslist for this version: ', mslist
     #use the third url argument as manuscript name if present, otherwise default to first version
     #check for 'newval' value, indicating the version has changed
     if 'type' in request.vars and request.vars['type'] != 'newval':
         current_ms = request.vars['type'].replace('_', ' ')
         current_ms = current_ms.strip()
-        if verbose == True: print 'current_ms: ', current_ms
+        if vbs: print 'current_ms: ', current_ms
         #move selected text type to top of list for ms selectbox
         i = mslist.index(current_ms)
         mslist.insert(0, mslist.pop(i))
     else:
-        current_ms = mslist[0]
-        if verbose == True: print 'current_ms: ', current_ms
+        current_ms = mslist[0][0]
+        if vbs: print 'current_ms: ', current_ms
 
     #gather text from units within the selected section of the doc
     #filters the current version for only readings in the current
@@ -166,28 +164,25 @@ def section():
     start_sel = startref.split(':')
     endref = session.endref
     end_sel = endref.split(':')
-    #make sure space delimiter is present at end of current_ms
-    if current_ms[0][-1] != ' ':
-        current_ms[0] += ' '
 
+    mytext = []
+    parsed_text = list(p.get_text(current_version, current_ms, start_sel, end_sel))
+    print list(parsed_text)
 
-    text = []
-    parsed_text = p.get_reference(current_version, start_sel)
-    text.append(SPAN(startref, _class='ref'))
-    for u, v in parsed_text.iteritems():
-        for mss, reading in v.iteritems():
-            if current_ms[0] in (mss + ' '):
-                if reading == '':
-                    text.append(A('*', _class='placeholder', _href=u))
-                elif len(parsed_text.keys()) > 1:
-                    text.append(A(reading, _class=vlang, _href=u))
-                else:
-                    text.append(SPAN(reading, _class = vlang))
-            else:
-                pass
+    mytext.append(SPAN(startref, _class='ref'))
+    for u in parsed_text:
+        print 'loop'
+        if u.text == '':
+            mytext.append(A('*', _class='placeholder', _href=u.unit_id))
+        elif u.readings_in_unit > 1:
+            mytext.append(A(u.text, _class=u.language, _href=u.unit_id))
+        else:
+            mytext.append(SPAN(u.text, _class=u.language))
+    for t in mytext:
+        print t
 
     return dict(versions=session.versions, current_version=current_version,
-                mslist=mslist, sel_text=text, filename=session.filename)
+                mslist=mslist, sel_text=mytext, filename=session.filename)
 
 
 def apparatus():

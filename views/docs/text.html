@@ -16,8 +16,9 @@
 <input id='textnavsubmit' type='submit' value='Go' />
 </form>
 
-<div class='versionwindow'>
-{{=LOAD('docs', 'section.load', args=[filename], ajax=True)}}
+<div id='versionwindow0' class='versionwindow'>
+{{=LOAD('docs', 'section.load', args=[filename], ajax=True,
+        target='versionwindow0')}}
 </div>
 
 <script>
