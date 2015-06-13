@@ -9,7 +9,7 @@ from lxml import etree
 
 from gluon import A, DIV, SPAN, TAG
 
-from . import check_path
+from utils import check_path
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                             os.pardir))

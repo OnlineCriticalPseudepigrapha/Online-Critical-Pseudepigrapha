@@ -1,23 +1,25 @@
 <form class='version_selector'>
 <label for='vselect'>Version</label>
 <select class='vselect'>
-{{for v in versions:}}
-	{{=OPTION(v, _value=v)}}
-{{pass}}
+{{for v in versions:
+	=OPTION(v, _value=v)
+pass}}
 </select>
 
 <label for='mselect'>Text Type</label>
 <select class='mselect'>
-{{for m in mslist:}}
-	{{=OPTION(m, _value=m)}}
-{{pass}}
+
+{{for m in mslist:
+print mslist
+	=OPTION(m, _value=m)
+pass}}
 </select>
 </form>
 
 <div id='textframe0' class='textframe'>
-{{for s in sel_text:}}
-	{{=s}}
-{{pass}}
+{{for s in sel_text:
+	=s
+pass}}
 </div>
 
 <div class='apparatusframe'>
