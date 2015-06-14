@@ -1,0 +1,46 @@
+/* specific overrides for ocp site */
+
+div#textwrapper                {position:absolute;
+    #versionadder              {float:right;
+                                position:relative;
+                                /*display:block;*/
+                                /*font-size: 2em;*/
+                                /*top: -20px;*/
+    }
+    .ref_nav                   {background-color: #ddd;
+                                /*height: 3em;*/
+                                /*line-height: 3em;*/
+                                padding: 0.5em;
+        input[type=text]       {//line-height: 2em;
+                                width: 4em;
+        }
+    }
+    div.versionwindow          {position:relative;
+                                float:left;
+                                padding: 0;
+
+        .version_selector      {background-color:#efefef;
+                                padding: 0.5em 1em;
+            a.version-closer   {font-size: 1.5em;
+                                color: #aaa;
+                                line-height:1.75em;
+                                height:1.75em;
+                                display:inline-block;
+                &:hover        {color: red;
+                }
+            }
+        }
+        .textframe             {color: #666;
+                                overflow: auto;
+                                padding: 1em;
+            .refmarker_0       {color: rgb(185, 107, 107);
+                                font-size: 1.3em;
+            }
+            .refmarker_1       {color: rgb(236, 201, 58);
+                                font-size: 1em;
+            }
+        }
+    }
+
+
+}

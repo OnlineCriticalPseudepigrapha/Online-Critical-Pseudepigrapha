@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
-from parse import Book
-import pprint
+from parse import Book, ElementDoesNotExist, NotAllowedManuscript
+from plugin_utils import flatten
 import re
+import traceback
 
 if 0:
-    from gluon import current, URL, A, SPAN, H1, DIV, H2, H3, H4
+    from gluon import current, URL, A, SPAN
     request = current.request
     session = current.session
+    response = current.response
     db = current.db
 
 """
@@ -20,9 +22,11 @@ session.startref --
 session.endref --
 """
 
+
 def index():
     filename = request.args[0]
-    return dict(filename = filename)
+    return dict(filename=filename)
+
 
 def text():
     session.filename = request.args[0]
@@ -45,7 +49,7 @@ def text():
         book_file = 'applications/grammateus3/static/docs/{}.xml'.format(filename)
         p = Book.open(book_file)
         info = p.book_info()
-        session.info = {filename:info}
+        session.info = {filename: info}
     #get title of document
     title = info['book']['title']
 
@@ -97,14 +101,97 @@ def text():
     print 'start_sel', start_sel
     print 'end_sel', end_sel, '\n\n'
 
-    return dict(load_url = load_url, title = title, levels = levels,
-        start_sel = start_sel, end_sel = end_sel, filename = filename)
+    return {'load_url': load_url,
+            'title': title,
+            'levels': levels,
+            'start_sel': start_sel,
+            'end_sel': end_sel,
+            'filename': filename}
+
 
 def section():
     """
     populates a single text pane via the section.load view (refreshable via ajax)
+
+    Book.book_info() :: Returns a dictionary with the keys 'book' and 'version'
+
+    book ::     the title of the current document
+    version ::  a list of ordered dictionaries, one per language version
+
+    Each version OrderedDict has the keys:
+        'attributes'            ::
+        'organisation_levels'   ::
+        'divisions'             ::
+        'resources'             ::
+        'manuscripts'           ::
+        'text_structure'        ::
+
+    the parser module returns the specified text section to this controller as
+    a dictionary with these keys:
+        ['attributes', 'organisation_levels', 'divisions', 'resources',
+         'manuscripts', 'text_structure']
+
+    'manuscripts' is a list of OrderedDicts, each representing a manuscript:
+
+        [OrderedDict([(u'P',
+                       {'attributes': OrderedDict([('abbrev', u'P'),
+                                                   ('language', u'Greek'),
+                                                   ('show', u'yes')]),
+                        'bibliography': [{'text': u'S. Brock (ed.),',
+                                          'booktitle': []},
+                                         {'text': u'M. R. James,',
+                                          'booktitle': []}],
+                        'name': {'text': u'Paris BN gr 2658', 'sup': []}
+                        }
+                       ),
+                      ])
+         ]
+
+    '
+
+
+    a list of dictionaries structured like this:
+
+    [{'readings': OrderedDict([(u'P S V Brock Kraft',
+                                {'attributes': OrderedDict([('option', '0'),
+                                                            ('mss', 'P S V Brock Kraft '),
+                                                            ('linebreak', ''),
+                                                            ('indent', '')]),
+                                 'w': [],
+                                 'text': u'\u03bf\u1f56\u03bd'
+                                 }
+                                )]),
+     'group': '0',
+     'id': '4562',
+     'parallel': ''
+     },
+    ]
+
+    Each dictionary represents one 'unit' of textual variation. The 'readings'
+    for each unit is a dictionary of the variant readings for that section of
+    the text with the keys being a string with the ms sigla which attest each
+    reading.
+
+    The text is returned by the get_text() generator method as a series of Text
+    objects. Converted to a list, the generated output looks like:
+
+        [Text(div_path=('Title', '0'),
+            unit_id='1',
+            language='Greek',
+            readings_in_unit=4,
+            linebreak='',
+            indent='',
+            text=u'\u0394\u03b9\u03b1\u03b8\u1f75\u03ba\u03b7 '),
+        Text(div_path=('Title', '0'),
+            unit_id='2',
+            language='Greek',
+            readings_in_unit=2,
+            linebreak='',
+            indent='',
+            text='')]
+
     """
-    #'verbose' variable is for turning testing output on and off
+    #'vbs' variable is for turning testing output on and off
     vbs = True
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
@@ -115,12 +202,16 @@ def section():
     if vbs: print 'filename: ', filename
     if 0 and ('info' in session) and (filename in session.info):
         info = session.info[filename]
+        print 'info is ---------------------------------------'
+        print info['version'][0]['organisation_levels']
         if vbs: print 'using session.info'
     else:
         book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
         p = Book.open(book_file)
         info = p.book_info()
-        session.info = {filename:info}
+        print 'info for session:'
+        print info['version'][0]['organisation_levels']
+        session.info = {filename: info}
 
     #select the version to display
     if 'version' in request.vars:
@@ -141,8 +232,8 @@ def section():
                 vlang = curv['attributes']['language']
                 levels = curv['organisation_levels']
     #get list of mss
-    mslist = [[k.strip() for k, c in v.iteritems()] for v in curv['manuscripts']]
-    if vbs == True: print 'mslist for this version: ', mslist
+    mslist = flatten([[k.strip() for k, c in v.iteritems()]
+                      for v in curv['manuscripts']])
     #use the third url argument as manuscript name if present, otherwise default to first version
     #check for 'newval' value, indicating the version has changed
     if 'type' in request.vars and request.vars['type'] != 'newval':
@@ -153,36 +244,73 @@ def section():
         i = mslist.index(current_ms)
         mslist.insert(0, mslist.pop(i))
     else:
-        current_ms = mslist[0][0]
-        if vbs: print 'current_ms: ', current_ms
+        current_ms = mslist[0]
 
     #gather text from units within the selected section of the doc
     #filters the current version for only readings in the current
     #text type
-    reflist = session.refraw
-    startref = session.startref
-    start_sel = startref.split(':')
-    endref = session.endref
-    end_sel = endref.split(':')
+    if 'from' in request.vars:
+        startref = request.vars['from']
+        start_sel = [s for s in startref.split('-') if s]
+        if 'to' in request.vars:
+            endref = request.vars['to']
+            end_sel = [s for s in endref.split('-') if s]
+        else:
+            end_sel = start_sel
+
+    else:
+        reflist = session.refraw
+        startref = session.startref
+        start_sel = startref.split(':')
+        endref = session.endref
+        end_sel = endref.split(':')
 
     mytext = []
-    parsed_text = list(p.get_text(current_version, current_ms, start_sel, end_sel))
-    print list(parsed_text)
+    try:
+        parsed_text = list(p.get_text(current_version, current_ms, start_sel, end_sel))
+    except ElementDoesNotExist, e:
+        try:
+            print traceback.format_exc()
+            parsed_text = list(p.get_text(current_version, current_ms + ' ', start_sel, end_sel))
+        except ElementDoesNotExist, e:
+            print traceback.format_exc()
+            response.flash = 'Sorry, no text matched the selected range.'
+    except NotAllowedManuscript, e:
+        print traceback.format_exc()
+        response.flash = 'Sorry, that text type is not part of the {} version' \
+                         ''.format(current_version)
 
-    mytext.append(SPAN(startref, _class='ref'))
+    # build the running display text ----------------------------------------
+    refcounter = [None] * levels
     for u in parsed_text:
-        print 'loop'
+        # insert reference number/label when it changes
+        reflist = list(u.div_path)
+        for idx, r in enumerate(reflist):
+            if refcounter[idx] == r:
+                pass
+            else:
+                mytext.append(SPAN(' {}'.format(unicode(r)),
+                                   _class='refmarker_{}'.format(idx)))
+                refcounter[idx] = r
+        punctuation = [u'.', u';', u'·', u'"', u"'", u',', u'?', u'«', u'»', u'·']
         if u.text == '':
-            mytext.append(A('*', _class='placeholder', _href=u.unit_id))
+            mytext.append(A(u' *', _class='placeholder', _href=u.unit_id))
         elif u.readings_in_unit > 1:
+            if u.text not in punctuation:
+                mytext.append(u' ')
             mytext.append(A(u.text, _class=u.language, _href=u.unit_id))
         else:
+            if u.text not in punctuation:
+                mytext.append(u' ')
             mytext.append(SPAN(u.text, _class=u.language))
     for t in mytext:
         print t
 
-    return dict(versions=session.versions, current_version=current_version,
-                mslist=mslist, sel_text=mytext, filename=session.filename)
+    return {'versions': session.versions,
+            'current_version': current_version,
+            'mslist': mslist,
+            'sel_text': mytext,
+            'filename': session.filename}
 
 
 def apparatus():
@@ -216,45 +344,6 @@ def apparatus():
         for ref, units in curv['text_structure'].items():
             for unit_ref, unit_val in units.items():
                 if unit_ref == request.vars['unit']:
-                    rlist = {k:v for k, v in unit_val.items()}
+                    rlist = {k: v for k, v in unit_val.items()}
 
-    return dict(rlist = rlist)
-
-def test():
-    filename = request.args[0]
-    book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-    p = Book.open(book_file)
-    info = p.book_info()
-
-    pprint.pprint(info)
-
-    ls = []
-
-    title = info['book']['title']
-    ls.append(H1(title))
-    for version in info['version']:
-        d = DIV()
-        d.append(H2('Version'))
-        d.append(DIV(H3('Attributes'), version['attributes']))
-        d.append(DIV(H3('Organization levels'), version['organisation_levels']))
-        d.append(DIV(H3('Divisions'), version['divisions']))
-        d.append(DIV(H3('Resources'), version['resources']))
-        d.append(DIV(H3('Manuscripts'), version['manuscripts']))
-        d.append(DIV(H3('Text structure')))
-        for k, v in version['text_structure'].items():
-            d.append(H4(k))
-
-        #for key, value in version.items():
-            #if key != 'text_structure':
-                #print 'Version', key, '-->', value
-
-            #else:
-                #print 'Version textstructure'
-                #for ref, ref_val in value.items():
-                    #for unit, unit_val in ref_val.items():
-                        #for mss, mss_val in unit_val.items():
-                            #print '\t', ref, '-->', unit, '-->', mss, '-->', mss_val
-
-        ls.append(d)
-
-    return dict(info = info, ls = ls)
+    return {rlist: rlist}
