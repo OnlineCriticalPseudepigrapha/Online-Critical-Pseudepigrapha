@@ -1,19 +1,38 @@
 {{extend 'layout.html'}}
+
+<div id='textwrapper' class='textwrapper'>
 <h2>{{=title}}</h2>
-<a id='versionadder' href='#'>+</a>
 
-<form class='ref_nav'>
 
-<label for='start_ref1'>from</label>
-{{for l in range(levels):}}
-<input type='text' id='start_ref{{=l}}' value='{{=start_sel[l]}}' class='{{=l}} from' />
-{{pass}}
-<label for='end_ref1'>to</label>
-{{for l in range(levels):}}
-<input type='text' id='end_ref{{=l}}' value='{{=end_sel[l]}}' class='{{=l}} to' />
-{{pass}}
+<form class='ref_nav form-inline'>
+    <a id='versionadder' href='#' class='btn btn-success pull-right'>
+        <span class='glyphicon glyphicon-plus-sign'></span>
+    </a>
+    <div class='form-group'>
+        <div class='input-group'>
+            <div class="input-group-addon">from</div>
+            {{for l in range(levels):}}
+            <input type='text' id='start_ref{{=l}}' value='{{=start_sel[l]}}' class='{{=l}} from form-control' />
+            {{pass}}
+            <div class="input-group-addon">to</div>
+            {{for l in range(levels):}}
+            <input type='text' id='end_ref{{=l}}' value='{{=end_sel[l]}}' class='{{=l}} to form-control' />
+            {{pass}}
+        </div>
+        <input id='textnavsubmit' class='btn btn-success form-control' type='submit' value='Go' />
 
-<input id='textnavsubmit' type='submit' value='Go' />
+        <div class='btn-group' role='group'>
+            <button type='button' class='nextbutton btn btn-primary' >
+                <span class='glyphicon glyphicon-triangle-left'></span>
+                back
+            </button>
+            <button type='button' class='prevbutton btn btn-primary' >
+                next
+                <span class='glyphicon glyphicon-triangle-right'></span>
+            </button>
+        </div>
+
+    </div>
 </form>
 
 <div id='versionwindow0' class='versionwindow'>
@@ -21,8 +40,12 @@
         target='versionwindow0')}}
 </div>
 
+
+</div>
+
 <script>
 function setDimensions(){
+    console.log('setting dimensions');
     var hHeight = $('header').outerHeight();
     var fHeight = $('footer').outerHeight();
     var pHeight = $(window).height() - (hHeight + fHeight);
@@ -45,11 +68,14 @@ function setDimensions(){
     var wWidth = $(window).width();
     var vaWidth = $('#versionadder').outerWidth();
     var totalWidth = wWidth - (vaWidth + 12);
-    var frames = $('.versionwindow');
-    var fCount = frames.length;
-    frames.each(function(){
-        var w = totalWidth/fCount;
-        $(this).css({'width':w})
+    var $frames = $('.versionwindow');
+    var fCount = $frames.size();
+    console.log(fCount + 'versions');
+    $frames.each(function(){
+        var w = totalWidth/fCount - 20;
+        console.log('setting width to ' + w + 'px');
+        $(this).css({'width':w,
+                     'max-width':w});
     });
 }
 
@@ -60,12 +86,65 @@ $(window).resize(function(){
 });
 
 $('#versionadder').on('click', function(event){
-	newDiv = '<div id="2" class="versionwindow">';
-	newDiv += 'Here it is';
+    console.log('adding new div');
+
+    // get reference
+	var from_ref = '';
+	$('input.from').each(function(){
+		from_ref += $(this).val();
+		from_ref += '-';
+	});
+	var to_ref = '';
+	$('input.to').each(function(){
+		to_ref += $(this).val();
+		to_ref += '-';
+	});
+
+    // get initial version and text type
+    var $frames = $('.versionwindow')
+    var $prevframe = $frames.first();
+    var the_v = $prevframe.find('.vselect').val();
+	var the_m = $prevframe.find('.mselect').val();
+
+    // get index for new versionwindow
+    var fcount = $frames.length;
+    var newcount = fcount + 1
+
+    // add new versionwindow
+	var newDiv = '<div id="versionwindow' + newcount + '" class="versionwindow">';
 	newDiv += '</div>';
-	$(this).parent('#page').append(newDiv);
-	//web2py_component()
+	$('#textwrapper').append(newDiv);
+
+    // populate via ajax
+    var the_url = '/grammateus3/docs/section.load/{{=filename}}?version=';
+    the_url += the_v + '&type=' + the_m;
+    the_url += '&from=' + from_ref + '&to=' + to_ref;
+    web2py_component(the_url, 'versionwindow' + newcount);
+
+    // set dimensions here so the new pane is sized vertically
     setDimensions();
+
+	event.preventDefault();
+});
+
+$('.nextbutton, .prevbutton').on('click', function(event){
+    direction = $.trim($(this).text());
+    console.log(direction)
+	var from_ref = '';
+	$('input.from').each(function(){
+		from_ref += $(this).val();
+		from_ref += '-';
+	});
+	$('.versionwindow').each(function(){
+		var $the_form = $(this).children('form.version_selector');
+		var loader_id = $(this).attr('id');
+		var the_v = $the_form.find('.vselect').val();
+		var the_m = $the_form.find('.mselect').val();
+        var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
+        var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + direction;
+        console.log(baseurl + urlvars);
+		web2py_component(baseurl + urlvars, loader_id);
+	});
 	event.preventDefault();
 });
 

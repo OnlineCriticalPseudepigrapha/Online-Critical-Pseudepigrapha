@@ -9,7 +9,7 @@ from lxml import etree
 
 from gluon import A, DIV, SPAN, TAG
 
-from utils import check_path
+from plugin_utils import check_path
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                             os.pardir))
@@ -457,28 +457,36 @@ class Book(object):
 
     def _get(self, element_name, attribute, on_element=None):
         """
-        Get back the requested element if it exists and there's one and only one with the given attribute
+        Get back the requested element if it exists and is unique.
+
         """
         if attribute:
             xpath = "{}[@{}='{}']".format(element_name,
                                           attribute.keys()[0],
                                           attribute.values()[0])
-            elements = on_element.xpath(xpath) if on_element is not None else self._book.xpath(xpath)
+            elements = on_element.xpath(xpath) if on_element is not None \
+                        else self._book.xpath(xpath)
             if not elements:
-                raise ElementDoesNotExist("<{}> element with {}='{}' does not exist".format(element_name,
-                                                                                            attribute.keys()[0],
-                                                                                            attribute.values()[0]))
+                raise ElementDoesNotExist("<{}> element with {}='{}' does not "
+                                          "exist".format(element_name,
+                                                         attribute.keys()[0],
+                                                         attribute.values()[0]))
             elif len(elements) > 1:
-                raise MultipleElementsReturned("There are more <{}> elements with {}='{}'".format(element_name,
-                                                                                                  attribute.keys()[0],
-                                                                                                  attribute.values()[0]))
+                raise MultipleElementsReturned("There are more <{}> elements "
+                                               "with {}='{}'"
+                                               "".format(element_name,
+                                                         attribute.keys()[0],
+                                                         attribute.values()[0]))
         else:
             xpath = element_name
-            elements = on_element.xpath(xpath) if on_element is not None else self._book.xpath(xpath)
+            elements = on_element.xpath(xpath) if on_element is not None \
+                        else self._book.xpath(xpath)
             if not elements:
-                raise ElementDoesNotExist("Element does not exist on this xpath <{}>".format(xpath))
+                raise ElementDoesNotExist("Element does not exist on this "
+                                          "xpath <{}>".format(xpath))
             elif len(elements) > 1:
-                raise MultipleElementsReturned("There are more elements on this xpath <{}>".format(xpath))
+                raise MultipleElementsReturned("There are more elements on "
+                                               "this xpath <{}>".format(xpath))
 
         return elements[0]
 

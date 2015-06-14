@@ -1,19 +1,20 @@
-<form class='version_selector'>
-<label for='vselect'>Version</label>
-<select class='vselect'>
-{{for v in versions:
-	=OPTION(v, _value=v)
-pass}}
-</select>
+<form class='version_selector form-inline'>
+    <div class='form-group'>
+        <select class='vselect form-control'>
+            {{for v in versions:
+                =OPTION(v, _value=v)
+            pass}}
+        </select>
 
-<label for='mselect'>Text Type</label>
-<select class='mselect'>
-
-{{for m in mslist:
-print mslist
-	=OPTION(m, _value=m)
-pass}}
-</select>
+        <select class='mselect form-control'>
+            {{for m in mslist:
+                =OPTION(m, _value=m)
+            pass}}
+        </select>
+    </div>
+    <a class='version-closer pull-right'>
+        <span class='glyphicon glyphicon-remove-circle'></span>
+    </a>
 </form>
 
 <div id='textframe0' class='textframe'>
@@ -22,9 +23,9 @@ pass}}
 pass}}
 </div>
 
-<div class='apparatusframe'>
-{{=LOAD('docs', 'apparatus.load', args=[filename], vars=dict(called='no'), ajax=True)}}
-</div>
+<!--<div class='apparatusframe'>-->
+<!--{{=LOAD('docs', 'apparatus.load', args=[filename], vars=dict(called='no'), ajax=True)}}-->
+<!--</div>-->
 
 <script>
 //refresh this text pane when version selector or manuscript
@@ -43,15 +44,19 @@ $('.vselect, .mselect').on('change', function(e){
 	});
 
 	if ($(this).hasClass('vselect')){
+        console.log('version change');
 		var the_v = $(this).val();
 		var the_m = 'newval';
 	}
 	else {
-		var the_v = $(this).parent('.version_nav').find('.vselect').val();
+        console.log('ms change');
+        var the_v = '{{=current_version}}';
 		var the_m = $(this).val();
 	}
 	web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref, the_loader);
+
 });
+
 
 $('#textnavsubmit').on('click', function(event){
 	var from_ref = '';
@@ -65,11 +70,17 @@ $('#textnavsubmit').on('click', function(event){
 		to_ref += '-';
 	});
 	$('.versionwindow').each(function(){
-		var $the_loader = $(this).children('div');
-		var loader_id = $the_loader.attr('id');
-		var the_v = $the_loader.find('.vselect').val();
-		var the_m = $the_loader.find('.mselect').val();
-		web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref, loader_id);
+		var $the_form = $(this).children('form.version_selector');
+		var loader_id = $(this).attr('id');
+        console.log(loader_id);
+		var the_v = $the_form.find('.vselect').val();
+        console.log(the_v);
+		var the_m = $the_form.find('.mselect').val();
+        console.log(the_m);
+        var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
+        var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
+        console.log(baseurl + urlvars);
+		web2py_component(baseurl + urlvars, loader_id);
 	});
 	event.preventDefault();
 });
