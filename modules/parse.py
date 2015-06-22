@@ -223,6 +223,117 @@ class Book(object):
         self._validation_errors += semantic_errors
 
     def book_info(self):
+        """
+        Returns a dictionary with the keys 'book' and 'version'
+
+        Returns
+        ----------
+
+        dict
+            A dictionary of information about the current document with the
+            following keys:
+
+            book (string): the title of the current document
+
+            version (list): a list of ordered dictionaries, one per language
+                version. Each version OrderedDict has the following keys:
+
+                attributes (OrderedDict): with the keys:
+
+                    title (string): the readable title of the document version
+                    author (string): the author of the document version
+                    language (string): the language of the document version
+                    fragment (string): ?????
+
+                divisions (dict): with the keys:
+
+                    delimiters (list): a list of unicode strings, each of which
+                        is the character to be used as a delimiter between
+                        reference numbers.
+                    text (list): [u'', u''] ?????
+                    labels (list): a list of unicode strings with the readable
+                        labels used for each organisational level (top-level
+                        first)
+
+                organisation_levels (integer): the depth of nested structural
+                    units in the document's primary organization scheme.
+
+                manuscripts (list): a list of OrderedDicts, each representing
+                    a manuscript. Each manuscript OrderedDict has the following
+                    keys:
+
+                    attributes (OrderedDict): with the following keys:
+
+                        abbrev (unicode): the string short-form used in xml
+                            markup
+                        language (unicode): a string giving the language name
+                        show (unicode): with either 'yes' or 'no' indicating
+                            whether the current mansuscript (text type) should
+                            be shown in running form in the interface or only
+                            in the apparatus.
+
+                    bibliography (list): a list of dictionaries, each of which
+                        has the keys:
+
+                        text (unicode): 'S. Brock (ed.),' ????
+                        booktitle (list): []  ????
+
+                    name (dictionary): with the keys:
+                        text (unicode): u'Paris BN gr 2658'
+                        sup (list): []
+
+                resources (list):  ????
+
+                text_structure (OrderedDict): This is a complex OrderedDict
+                    containing a representation of the whole document. Each key
+                    is a complete reference including delimiters (e.g., u'1:1').
+                    Each corresponding value is a dictionary with these keys:
+
+                        units (list): a list of dictionaries, each representing
+                            one textual variation unit. Each dictionary has
+                            the keys:
+
+                                parallel (string): to hold the identifier of
+                                    any unit that is judged to hold a semantic
+                                    parallel to the current one.
+                                group: (string): to hold the identifier of any
+                                    larger variation structures of which the
+                                    unit is a part.
+                                id (string): the identifier for this variation
+                                    unit.
+                                readings (OrderedDict):': In which each key is
+                                    a unicode string holding a (space delimited)
+                                    set of ms sigla and the value is an
+                                    OrderedDict with the information on the text
+                                    attested by those mss. The keys of these
+                                    ordered dicts are:
+
+                                    attributes (OrderedDict): with the keys:
+                                        option (string): number to set order of
+                                            display of readings in the apparatus
+                                            mss (string): a redundant duplicate
+                                                of the string key for this
+                                                reading
+                                        linebreak (string):  ????
+                                        indent (string):  ????
+                                    w (list): to hold parsing info on the words
+                                        of the reading ????
+                                    text (unicode): The actual text of the
+                                        document for this unit according to
+                                        these mss.
+                        attributes (list): a list of OrderedDicts representing
+                            the same reference information contained (in string
+                            form) in the key for this structural section. Each
+                            OrderedDict in the list has the keys:
+
+                            number (string): the reference number for the
+                                current organizational section of the document.
+                            fragment (string): the identifier for a document
+                                fragment if appropriate ????
+
+                        readings (OrderedDict): ???? appears always empty?
+
+        """
         return self._structure_info
 
     def _getattrs(self, element, attrs):

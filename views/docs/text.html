@@ -18,32 +18,30 @@
             {{for l in range(levels):}}
             <input type='text' id='end_ref{{=l}}' value='{{=end_sel[l]}}' class='{{=l}} to form-control' />
             {{pass}}
+            <div class="input-group-btn">
+                <input id='textnavsubmit' class='btn btn-success' type='submit' value='Go' />
+            </div>
         </div>
-        <input id='textnavsubmit' class='btn btn-success form-control' type='submit' value='Go' />
-
+    </div>
+    <div class='form-group'>
         <div class='btn-group' role='group'>
-            <button type='button' class='nextbutton btn btn-primary' >
-                <span class='glyphicon glyphicon-triangle-left'></span>
-                back
-            </button>
-            <button type='button' class='prevbutton btn btn-primary' >
-                next
-                <span class='glyphicon glyphicon-triangle-right'></span>
-            </button>
+            <button type='button' class='nextbutton btn-primary' ><span class='glyphicon glyphicon-triangle-left'></span>back</button>
+            <button type='button' class='prevbutton btn-primary' >next<span class='glyphicon glyphicon-triangle-right'></span></button>
         </div>
 
     </div>
 </form>
 
-<div id='versionwindow0' class='versionwindow'>
+<div id='versionwindow_0' class='versionwindow'>
 {{=LOAD('docs', 'section.load', args=[filename], ajax=True,
-        target='versionwindow0')}}
+        target='versionwindow_0')}}
 </div>
 
 
 </div>
 
 <script>
+//size page elements to fit in viewport
 function setDimensions(){
     console.log('setting dimensions');
     var hHeight = $('header').outerHeight();
@@ -78,13 +76,12 @@ function setDimensions(){
                      'max-width':w});
     });
 }
-
-//size page elements to fit in viewport
-
+// resize elements when viewport changes size
 $(window).resize(function(){
     setDimensions();
 });
 
+// add a new versionwindow and populate with selected text range
 $('#versionadder').on('click', function(event){
     console.log('adding new div');
 
@@ -102,16 +99,22 @@ $('#versionadder').on('click', function(event){
 
     // get initial version and text type
     var $frames = $('.versionwindow')
-    var $prevframe = $frames.first();
+    var $prevframe = $frames.last();
+    console.log($prevframe);
     var the_v = $prevframe.find('.vselect').val();
 	var the_m = $prevframe.find('.mselect').val();
 
     // get index for new versionwindow
-    var fcount = $frames.length;
-    var newcount = fcount + 1
+    var prevname = $prevframe.attr('id');
+    console.log('prevname: ' + prevname);
+    var prevnum = prevname.split('_')[1];
+    console.log('prevnum: ' + prevnum);
+    var prevnum = parseInt(prevnum);
+    var newnum = prevnum + 1;
+    var newdivid = 'versionwindow_' + newnum;
 
     // add new versionwindow
-	var newDiv = '<div id="versionwindow' + newcount + '" class="versionwindow">';
+	var newDiv = '<div id="' + newdivid + '" class="versionwindow">';
 	newDiv += '</div>';
 	$('#textwrapper').append(newDiv);
 
@@ -119,7 +122,7 @@ $('#versionadder').on('click', function(event){
     var the_url = '/grammateus3/docs/section.load/{{=filename}}?version=';
     the_url += the_v + '&type=' + the_m;
     the_url += '&from=' + from_ref + '&to=' + to_ref;
-    web2py_component(the_url, 'versionwindow' + newcount);
+    web2py_component(the_url, newdivid);
 
     // set dimensions here so the new pane is sized vertically
     setDimensions();
@@ -127,6 +130,8 @@ $('#versionadder').on('click', function(event){
 	event.preventDefault();
 });
 
+
+// change ref and refresh text windows when next or prev buttons clicked
 $('.nextbutton, .prevbutton').on('click', function(event){
     direction = $.trim($(this).text());
     console.log(direction)
@@ -141,11 +146,93 @@ $('.nextbutton, .prevbutton').on('click', function(event){
 		var the_v = $the_form.find('.vselect').val();
 		var the_m = $the_form.find('.mselect').val();
         var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
-        var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + direction;
+        var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + direction + '0';
         console.log(baseurl + urlvars);
 		web2py_component(baseurl + urlvars, loader_id);
 	});
 	event.preventDefault();
+});
+
+
+//refresh this text pane when version selector or manuscript
+//selector is refreshed
+$('.vselect, .mselect').on('change', function(e){
+	var the_loader = $(this).parents('.versionwindow').attr('id');
+    console.log('loader: ', the_loader);
+	var from_ref = '';
+	$('input.from').each(function(){
+		from_ref += $(this).val();
+		from_ref += '-';
+	});
+	var to_ref = '';
+	$('input.to').each(function(){
+		to_ref += $(this).val();
+		to_ref += '-';
+	});
+
+	if ($(this).hasClass('vselect')){
+        console.log('version change');
+		var the_v = $(this).val();
+		var the_m = 'newval';
+	}
+	else {
+        console.log('ms change');
+        var $vselect = $(this).siblings('.vselect');
+        var the_v = $vselect.val();
+		var the_m = $(this).val();
+	}
+    var myurl = '/grammateus3/docs/section.load/{{=filename}}?version='
+    myurl += the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref
+	web2py_component(myurl, the_loader);
+
+});
+
+//refresh this text pane when "go" nav button clicked
+$('#textnavsubmit').on('click', function(event){
+	var from_ref = '';
+	$('input.from').each(function(){
+		from_ref += $(this).val();
+		from_ref += '-';
+	});
+	var to_ref = '';
+	$('input.to').each(function(){
+		to_ref += $(this).val();
+		to_ref += '-';
+	});
+	$('.versionwindow').each(function(){
+		var $the_form = $(this).children('form.version_selector');
+		var loader_id = $(this).attr('id');
+        console.log(loader_id);
+		var the_v = $the_form.find('.vselect').val();
+        console.log(the_v);
+		var the_m = $the_form.find('.mselect').val();
+        console.log(the_m);
+        var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
+        var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
+        console.log(baseurl + urlvars);
+		web2py_component(baseurl + urlvars, loader_id);
+	});
+	event.preventDefault();
+});
+
+//display readings in apparatus when text link clicked
+$('.textframe a').on('click', function(event){
+	var the_unit = $(this).attr('href');
+	var $p = $(this).parents('.versionwindow');
+	var the_v = $p.find('.vselect').val();
+	the_target = $p.find('.apparatusframe').children().attr('id');
+	web2py_component('/grammateus3/docs/apparatus.load/{{=filename}}?version=' + the_v + '&unit=' + the_unit, the_target);
+	event.preventDefault();
+});
+
+//close this version window
+$('.version-closer span').on('click', function(event){
+    console.log('clicked version-closer');
+    $myversion = $(this).parents('.versionwindow');
+    console.log('$myversion to close: ', $myversion);
+    $myversion.remove();
+    setDimensions();
+    event.preventDefault();
 });
 
 //set initial dimensions to fit starting viewport size

@@ -5,14 +5,13 @@
                 =OPTION(v, _value=v)
             pass}}
         </select>
-
         <select class='mselect form-control'>
             {{for m in mslist:
                 =OPTION(m, _value=m)
             pass}}
         </select>
     </div>
-    <a class='version-closer pull-right'>
+    <a class='version-closer pull-right' href='#'>
         <span class='glyphicon glyphicon-remove-circle'></span>
     </a>
 </form>
@@ -28,70 +27,32 @@ pass}}
 <!--</div>-->
 
 <script>
-//refresh this text pane when version selector or manuscript
-//selector is refreshed
-$('.vselect, .mselect').on('change', function(e){
-	var the_loader = $(this).parents('div').attr('id');
-	var from_ref = '';
-	$('input.from').each(function(){
-		from_ref += $(this).val();
-		from_ref += '-';
+
+
+//reset 'from' and 'to' fields if reference was changed by "next" button
+function setrefs(){
+    start_sel = "{{=start_sel_str}}".split('|');
+    end_sel = "{{=end_sel_str}}".split('|');
+    console.log('start_sel:' + start_sel);
+    console.log('end_sel:' + end_sel);
+
+    $frominputs = $('input.from')
+    $frominputs.each(function(){
+        myindex = $frominputs.index($(this));
+		from_ref = $(this).val();
+        if (start_sel[myindex] != from_ref){
+            $(this).val(start_sel[myindex]);
+        };
 	});
-	var to_ref = '';
-	$('input.to').each(function(){
-		to_ref += $(this).val();
-		to_ref += '-';
+
+    $toinputs = $('input.to')
+    $toinputs.each(function(){
+        myindex = $toinputs.index($(this));
+		to_ref = $(this).val();
+        if (end_sel[myindex] != to_ref){
+            $(this).val(end_sel[myindex]);
+        };
 	});
-
-	if ($(this).hasClass('vselect')){
-        console.log('version change');
-		var the_v = $(this).val();
-		var the_m = 'newval';
-	}
-	else {
-        console.log('ms change');
-        var the_v = '{{=current_version}}';
-		var the_m = $(this).val();
-	}
-	web2py_component('/grammateus3/docs/section.load/{{=filename}}?version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref, the_loader);
-
-});
-
-
-$('#textnavsubmit').on('click', function(event){
-	var from_ref = '';
-	$('input.from').each(function(){
-		from_ref += $(this).val();
-		from_ref += '-';
-	});
-	var to_ref = '';
-	$('input.to').each(function(){
-		to_ref += $(this).val();
-		to_ref += '-';
-	});
-	$('.versionwindow').each(function(){
-		var $the_form = $(this).children('form.version_selector');
-		var loader_id = $(this).attr('id');
-        console.log(loader_id);
-		var the_v = $the_form.find('.vselect').val();
-        console.log(the_v);
-		var the_m = $the_form.find('.mselect').val();
-        console.log(the_m);
-        var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
-        var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
-        console.log(baseurl + urlvars);
-		web2py_component(baseurl + urlvars, loader_id);
-	});
-	event.preventDefault();
-});
-
-$('.textframe a').on('click', function(event){
-	var the_unit = $(this).attr('href');
-	var $p = $(this).parents('.versionwindow');
-	var the_v = $p.find('.vselect').val();
-	the_target = $p.find('.apparatusframe').children().attr('id');
-	web2py_component('/grammateus3/docs/apparatus.load/{{=filename}}?version=' + the_v + '&unit=' + the_unit, the_target);
-	event.preventDefault();
-});
-
+};
+setrefs();
 </script>

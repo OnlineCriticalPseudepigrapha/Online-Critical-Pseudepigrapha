@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
+
 from parse import Book, ElementDoesNotExist, NotAllowedManuscript
 from plugin_utils import flatten
+from pprint import pprint
 import re
 import traceback
+from collections import OrderedDict
 
 if 0:
     from gluon import current, URL, A, SPAN
@@ -17,7 +20,8 @@ session.filename
 session.info -- dict; parsed results of BookParser class for current doc
 session.title -- string; title of current doc
 session.versions -- list; names of all versions in current doc
-session.refraw -- list; references in the first version
+session.refraw -- list; flast list of formatted references in the first version
+session.refhierarch -- OrderedDict;
 session.startref --
 session.endref --
 """
@@ -29,8 +33,10 @@ def index():
 
 
 def text():
+    vbs = False
     session.filename = request.args[0]
     filename = session.filename
+    if vbs: print 'filename: ', filename
     #TODO: provide fallback and prompt if no filename is given in url
 
     #url to pass to web2py load helper in view to load doc section via ajax
@@ -38,18 +44,11 @@ def text():
 
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
-    print 'start of text() method with url ', request.url, varlist
+    if vbs: print 'start of text() method with url ', request.url, varlist
 
-    #get filename from end of url and parse the file with Book class
-    print 'filename: ', filename
-    if ('info' in session) and (filename in session.info):
-        info = session.info[filename]
-        print 'using session.info'
-    else:
-        book_file = 'applications/grammateus3/static/docs/{}.xml'.format(filename)
-        p = Book.open(book_file)
-        info = p.book_info()
-        session.info = {filename: info}
+    # get parsed document info
+    info, p = _get_bookinfo(filename)
+
     #get title of document
     title = info['book']['title']
 
@@ -63,6 +62,9 @@ def text():
     #build flat list of references
     refraw = [ref for ref, units in first_v['text_structure'].items()]
     session.refraw = refraw
+    #build hierarchical nexted dicts of references
+    refhierarch = _make_refs_hierarchical(refraw, levels)
+    session.refhierarch = refhierarch
 
     #build list for starting ref
     if 'from' in request.vars:
@@ -105,72 +107,76 @@ def text():
             'title': title,
             'levels': levels,
             'start_sel': start_sel,
+            'start_sel_str': '|'.join(start_sel),
             'end_sel': end_sel,
+            'end_sel_str': '|'.join(end_sel),
             'filename': filename}
+
+
+def _get_bookinfo(filename):
+    """
+    Retrieve info about the book and parsed book object from session or parser.
+
+    """
+    vbs = False
+    # FIXME: error when using session values
+    if 0 and ('info' in session.keys()) and (filename in session.info.keys()) and \
+            ('p' in session.keys()) and (filename in session.p.keys()):
+        info = session.info[filename]
+        p = session.p[filename]
+        if vbs: print 'using session.info'
+    else:
+        book_file = 'applications/grammateus3/static/docs/{}.xml'.format(filename)
+        p = Book.open(book_file)
+        if session.p:
+            session.p[filename] = p
+        else:
+            session.p = {filename: p}
+        info = p.book_info()
+        session.info = {filename: info}
+    return info, p
+
+
+def _make_refs_hierarchical(refraw, levels):
+    """
+    Convert flat list of formatted references into hierarchically nested dicts.
+
+    """
+    vbs = True
+
+    def uniq(seq):
+        seen = set()
+        seen_add = seen.add
+        return [x for x in seq if not (x in seen or seen_add(x))]
+
+    flatlists = [re.split('[:\.,;_-]', r) for r in refraw]
+    if vbs: print flatlists, '\n'
+    hierarch = OrderedDict()
+    topnums = uniq([l[0] for l in flatlists])
+    if vbs: print 'topnums', topnums, '\n'
+    for num in topnums:
+        childicts = OrderedDict([(l[1], OrderedDict()) for l in flatlists if l[0] == num])
+        hierarch[num] = childicts
+        if levels > 2:
+            for key, val in hierarch[num]:
+                mydict3 = OrderedDict([(l[2], OrderedDict()) for l in flatlists
+                                      if l[0] == num and l[1] == key])
+                hierarch[num][key] = mydict3
+                if levels > 3:
+                    for key3, val3 in hierarch[num][key]:
+                        mydict4 = OrderedDict([(l[3], OrderedDict()) for l in flatlists
+                                              if l[0] == num
+                                              and l[1] == key
+                                              and l[2] == key3])
+                        hierarch[num][key][key3] = mydict4
+    if vbs: print 'hierarch ------------------------------------------------'
+    if vbs: pprint(hierarch)
+    return hierarch
 
 
 def section():
     """
-    populates a single text pane via the section.load view (refreshable via ajax)
-
-    Book.book_info() :: Returns a dictionary with the keys 'book' and 'version'
-
-    book ::     the title of the current document
-    version ::  a list of ordered dictionaries, one per language version
-
-    Each version OrderedDict has the keys:
-        'attributes'            ::
-        'organisation_levels'   ::
-        'divisions'             ::
-        'resources'             ::
-        'manuscripts'           ::
-        'text_structure'        ::
-
-    the parser module returns the specified text section to this controller as
-    a dictionary with these keys:
-        ['attributes', 'organisation_levels', 'divisions', 'resources',
-         'manuscripts', 'text_structure']
-
-    'manuscripts' is a list of OrderedDicts, each representing a manuscript:
-
-        [OrderedDict([(u'P',
-                       {'attributes': OrderedDict([('abbrev', u'P'),
-                                                   ('language', u'Greek'),
-                                                   ('show', u'yes')]),
-                        'bibliography': [{'text': u'S. Brock (ed.),',
-                                          'booktitle': []},
-                                         {'text': u'M. R. James,',
-                                          'booktitle': []}],
-                        'name': {'text': u'Paris BN gr 2658', 'sup': []}
-                        }
-                       ),
-                      ])
-         ]
-
-    '
-
-
-    a list of dictionaries structured like this:
-
-    [{'readings': OrderedDict([(u'P S V Brock Kraft',
-                                {'attributes': OrderedDict([('option', '0'),
-                                                            ('mss', 'P S V Brock Kraft '),
-                                                            ('linebreak', ''),
-                                                            ('indent', '')]),
-                                 'w': [],
-                                 'text': u'\u03bf\u1f56\u03bd'
-                                 }
-                                )]),
-     'group': '0',
-     'id': '4562',
-     'parallel': ''
-     },
-    ]
-
-    Each dictionary represents one 'unit' of textual variation. The 'readings'
-    for each unit is a dictionary of the variant readings for that section of
-    the text with the keys being a string with the ms sigla which attest each
-    reading.
+    Populates a single text pane via the section.load view (refreshable via ajax)
 
     The text is returned by the get_text() generator method as a series of Text
     objects. Converted to a list, the generated output looks like:
@@ -200,18 +206,7 @@ def section():
     #get filename from end of url and parse the file with BookParser class
     filename = request.args[0]
     if vbs: print 'filename: ', filename
-    if 0 and ('info' in session) and (filename in session.info):
-        info = session.info[filename]
-        print 'info is ---------------------------------------'
-        print info['version'][0]['organisation_levels']
-        if vbs: print 'using session.info'
-    else:
-        book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-        p = Book.open(book_file)
-        info = p.book_info()
-        print 'info for session:'
-        print info['version'][0]['organisation_levels']
-        session.info = {filename: info}
+    info, p = _get_bookinfo(filename)
 
     #select the version to display
     if 'version' in request.vars:
@@ -234,7 +229,8 @@ def section():
     #get list of mss
     mslist = flatten([[k.strip() for k, c in v.iteritems()]
                       for v in curv['manuscripts']])
-    #use the third url argument as manuscript name if present, otherwise default to first version
+    #use the third url argument as manuscript name if present, otherwise
+    #default to first version
     #check for 'newval' value, indicating the version has changed
     if 'type' in request.vars and request.vars['type'] != 'newval':
         current_ms = request.vars['type'].replace('_', ' ')
@@ -249,12 +245,39 @@ def section():
     #gather text from units within the selected section of the doc
     #filters the current version for only readings in the current
     #text type
+
     if 'from' in request.vars:
         startref = request.vars['from']
         start_sel = [s for s in startref.split('-') if s]
         if 'to' in request.vars:
             endref = request.vars['to']
             end_sel = [s for s in endref.split('-') if s]
+
+            # handle 'next' and 'prev' buttons
+            dirs = {'next': 1, 'back': -1}
+            if endref[:4] in ['next', 'back']:
+                mylevel = int(endref[4:])  # expects like next2
+                if vbs: print 'mylevel', mylevel
+                next_start_sel = []
+                cur_unit = session.refhierarch
+                print 'cur_unit', cur_unit
+                for idx in (range(mylevel) or [0]):
+                    print 'idx', idx
+                    print 'this level ref', start_sel[idx]
+                    cur_unit = cur_unit[str(start_sel[idx])]
+                    print "cur_unit", cur_unit
+                    if idx == mylevel:
+                        print 'at changing level'
+                        curindex = cur_unit.keys().index(start_sel[idx])
+                        nextval = cur_unit.keys()[curindex + dirs[endref[:4]]]
+                        next_start_sel.append(nextval)
+                    else:
+                        print 'keeping level the same'
+                        next_start_sel.append(start_sel[idx])
+                print 'next start ref = ', next_start_sel
+                start_sel = next_start_sel
+                end_sel = start_sel
+
         else:
             end_sel = start_sel
 
@@ -303,12 +326,14 @@ def section():
             if u.text not in punctuation:
                 mytext.append(u' ')
             mytext.append(SPAN(u.text, _class=u.language))
-    for t in mytext:
-        print t
+
+    print 'sending', '-'.join(start_sel)
 
     return {'versions': session.versions,
             'current_version': current_version,
             'mslist': mslist,
+            'start_sel_str': '|'.join(start_sel),
+            'end_sel_str': '|'.join(end_sel),
             'sel_text': mytext,
             'filename': session.filename}
 
