@@ -5,8 +5,11 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 GetInHMS	appadmin.py	/^    def GetInHMS(seconds):$/;"	f	function:ccache
+_get_bookinfo	docs.py	/^def _get_bookinfo(filename):$/;"	f
+_make_refs_hierarchical	docs.py	/^def _make_refs_hierarchical(refraw, levels):$/;"	f
 apparatus	docs.py	/^def apparatus():$/;"	f
 args	appadmin.py	/^                 args=[request.application])], [T('db'), False,$/;"	v
+auth	plugin_utils.py	/^    auth = current.auth$/;"	v
 call	default.py	/^def call():$/;"	f
 ccache	appadmin.py	/^def ccache():$/;"	f
 csv	appadmin.py	/^def csv():$/;"	f
@@ -18,6 +21,7 @@ download	default.py	/^def download():$/;"	f
 eval_in_global_env	appadmin.py	/^def eval_in_global_env(text):$/;"	f
 get_database	appadmin.py	/^def get_database(request):$/;"	f
 get_databases	appadmin.py	/^def get_databases(request):$/;"	f
+get_next_unit	docs.py	/^    def get_next_unit():$/;"	f	function:section
 get_query	appadmin.py	/^def get_query(request):$/;"	f
 get_table	appadmin.py	/^def get_table(request):$/;"	f
 global_env	appadmin.py	/^global_env = copy.copy(globals())$/;"	v
@@ -34,11 +38,12 @@ key_table	appadmin.py	/^    def key_table(keys):$/;"	f	function:ccache
 query_by_table_type	appadmin.py	/^def query_by_table_type(tablename,db,request=request):$/;"	f
 remote_addr	appadmin.py	/^remote_addr = request.env.remote_addr$/;"	v
 request	docs.py	/^    request = current.request$/;"	v
+request	plugin_utils.py	/^    request = current.request$/;"	v
+response	docs.py	/^    response = current.response$/;"	v
 section	docs.py	/^def section():$/;"	f
 select	appadmin.py	/^def select():$/;"	f
 session	docs.py	/^    session = current.session$/;"	v
 state	appadmin.py	/^def state():$/;"	f
-test	docs.py	/^def test():$/;"	f
 text	docs.py	/^def text():$/;"	f
 update	appadmin.py	/^def update():$/;"	f
 user	default.py	/^def user():$/;"	f
