@@ -5,29 +5,128 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 Book	parse.py	/^class Book(object):$/;"	c
-DivDoesNotExist	parse.py	/^class DivDoesNotExist(Exception):$/;"	c
-MultipleDivsFound	parse.py	/^class MultipleDivsFound(Exception):$/;"	c
-MultipleVersionsFound	parse.py	/^class MultipleVersionsFound(Exception):$/;"	c
-RemoveLastDivError	parse.py	/^class RemoveLastDivError(Exception):$/;"	c
-VersionDoesNotExist	parse.py	/^class VersionDoesNotExist(Exception):$/;"	c
-__init__	parse.py	/^    def __init__(self, xml_file):$/;"	m	class:Book
+BookManager	parse.py	/^class BookManager(object):$/;"	c
+ElementAlreadyExists	parse.py	/^class ElementAlreadyExists(Exception):$/;"	c
+ElementDoesNotExist	parse.py	/^class ElementDoesNotExist(Exception):$/;"	c
+ErrorReport	plugin_utils.py	/^class ErrorReport(object):$/;"	c
+InvalidDIVPath	parse.py	/^class InvalidDIVPath(Exception):$/;"	c
+MultipleElementsReturned	parse.py	/^class MultipleElementsReturned(Exception):$/;"	c
+NotAllowedManuscript	parse.py	/^class NotAllowedManuscript(Exception):$/;"	c
+NotUniqueDIVName	parse.py	/^class NotUniqueDIVName(Exception):$/;"	c
+PROJECT_ROOT	parse.py	/^PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),$/;"	v
+Reading	parse.py	/^Reading = namedtuple("Reading", "mss, text")$/;"	v
+Text	parse.py	/^Text = namedtuple("Text", "div_path, unit_id, language, readings_in_unit, linebreak, indent, text")$/;"	v
+W	parse.py	/^W = namedtuple("W", "attributes, text")$/;"	v
+XML_DEFAULT_DOCINFO	parse.py	/^XML_DEFAULT_DOCINFO = {"encoding": "UTF-8",$/;"	v
+XML_DRAFT_FILE_BACKUP_STORAGE_PATH	parse.py	/^XML_DRAFT_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT,$/;"	v
+XML_DRAFT_FILE_STORAGE_PATH	parse.py	/^XML_DRAFT_FILE_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static",$/;"	v
+XML_FILE_BACKUP_STORAGE_PATH	parse.py	/^XML_FILE_BACKUP_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static",$/;"	v
+XML_FILE_STORAGE_PATH	parse.py	/^XML_FILE_STORAGE_PATH = check_path(os.path.join(PROJECT_ROOT, "static", "docs"))$/;"	v
+__init__	parse.py	/^    def __init__(self):$/;"	m	class:Book
+__init__	plugin_utils.py	/^    def __init__(self, mail=None):$/;"	m	class:ErrorReport
+_build_message	plugin_utils.py	/^    def _build_message(self, callingClass, callingMethod, callingUser,$/;"	m	class:ErrorReport
+_clone_unit	parse.py	/^    def _clone_unit(self, unit_element):$/;"	m	class:Book
+_div_path_to_element_path	parse.py	/^    def _div_path_to_element_path(self, version, div_path):$/;"	m	class:Book
+_get	parse.py	/^    def _get(self, element_name, attribute, on_element=None):$/;"	m	class:Book
+_get_book_info	parse.py	/^    def _get_book_info(self):$/;"	m	class:Book
+_get_div_path	parse.py	/^    def _get_div_path(self, div_element):$/;"	m	class:Book
+_get_div_positions	parse.py	/^    def _get_div_positions(self, div_elements):$/;"	m	class:Book
+_get_message_frame	plugin_utils.py	/^    def _get_message_frame(self, callingClass, callingMethod, callingUser,$/;"	m	class:ErrorReport
+_get_next_div	parse.py	/^    def _get_next_div(self, startelements, level=0):$/;"	m	class:Book
+_get_readings_for_units	parse.py	/^    def _get_readings_for_units(self, current_div, last_div, text_type, version):$/;"	m	class:Book
+_get_readings_of_unit	parse.py	/^    def _get_readings_of_unit(self, unit_element, default_readings):$/;"	m	class:Book
 _getattrs	parse.py	/^    def _getattrs(self, element, attrs):$/;"	m	class:Book
-add_div	parse.py	/^    def add_div(self, version_title, new_div):$/;"	m	class:Book
-add_version	parse.py	/^    def add_version(self, attrs, elements):$/;"	m	class:Book
-book_file	test.py	/^book_file = '..\/static\/docs\/1En_small.xml'$/;"	v
+_load	parse.py	/^    def _load(book_name):$/;"	m	class:BookManager
+_renumber_units	parse.py	/^    def _renumber_units(self, version_element):$/;"	m	class:Book
+_save	parse.py	/^    def _save(book_object):$/;"	m	class:BookManager
+_validate_by_dtd	parse.py	/^    def _validate_by_dtd(self, dtd_data):$/;"	m	class:Book
+_validate_by_semantic	parse.py	/^    def _validate_by_semantic(self):$/;"	m	class:Book
+add_bibliography	parse.py	/^    def add_bibliography(book_name, version_title, abbrev, text):$/;"	m	class:BookManager
+add_bibliography	parse.py	/^    def add_bibliography(self, version_title, abbrev, text):$/;"	m	class:Book
+add_div	parse.py	/^    def add_div(book_name, version_title, div_name, div_parent_path, preceding_div):$/;"	m	class:BookManager
+add_div	parse.py	/^    def add_div(self, version_title, div_name, div_parent_path, preceding_div=None):$/;"	m	class:Book
+add_manuscript	parse.py	/^    def add_manuscript(book_name, version_title, abbrev, language, show=True):$/;"	m	class:BookManager
+add_manuscript	parse.py	/^    def add_manuscript(self, version_title, abbrev, language, show=True):$/;"	m	class:Book
+add_unit	parse.py	/^    def add_unit(book_name, version_title, div_path):$/;"	m	class:BookManager
+add_unit	parse.py	/^    def add_unit(self, version_title, div_path):$/;"	m	class:Book
+add_version	parse.py	/^    def add_version(book_name, version_title, language, author):$/;"	m	class:BookManager
+add_version	parse.py	/^    def add_version(self, version_title, language, author, mss=None):$/;"	m	class:Book
 book_info	parse.py	/^    def book_info(self):$/;"	m	class:Book
-find_insertion_point	parse.py	/^    def find_insertion_point(self, parent, element, attr, values):$/;"	m	class:Book
-get_div	parse.py	/^    def get_div(self, version, divs):$/;"	m	class:Book
+bulk_update	plugin_utils.py	/^def bulk_update():$/;"	f
+capitalize	plugin_utils.py	/^def capitalize(letter):$/;"	f
+capitalize_first	plugin_utils.py	/^def capitalize_first(mystring):$/;"	f
+check_path	plugin_utils.py	/^def check_path(path):$/;"	f
+clr	plugin_utils.py	/^def clr(string, mycol='white'):$/;"	f
+copy_book	parse.py	/^    def copy_book(book_name):$/;"	m	class:BookManager
+copy_file	parse.py	/^def copy_file(src, dst):$/;"	f
+create	parse.py	/^    def create(filename, title, frags=False):$/;"	m	class:Book
+create_book	parse.py	/^    def create_book(book_name, book_title, frags=False):$/;"	m	class:BookManager
+del_bibliography	parse.py	/^    def del_bibliography(book_name, version_title, abbrev, bibliography_pos):$/;"	m	class:BookManager
+del_bibliography	parse.py	/^    def del_bibliography(self, version_title, abbrev, bibliography_pos):$/;"	m	class:Book
+del_div	parse.py	/^    def del_div(book_name, version_title, div_path):$/;"	m	class:BookManager
+del_div	parse.py	/^    def del_div(self, version_title, div_path):$/;"	m	class:Book
+del_manuscript	parse.py	/^    def del_manuscript(book_name, version_title, abbrev):$/;"	m	class:BookManager
+del_manuscript	parse.py	/^    def del_manuscript(self, version_title, abbrev):$/;"	m	class:Book
+del_unit	parse.py	/^    def del_unit(book_name, version_title, unit_id):$/;"	m	class:BookManager
+del_unit	parse.py	/^    def del_unit(self, version_title, unit_id):$/;"	m	class:Book
+del_version	parse.py	/^    def del_version(book_name, version_title):$/;"	m	class:BookManager
+del_version	parse.py	/^    def del_version(self, version_title):$/;"	m	class:Book
+do_div_name_checking_on_children	parse.py	/^        def do_div_name_checking_on_children(parent_element):$/;"	f	function:Book._validate_by_semantic
+encodeutf8	plugin_utils.py	/^def encodeutf8(rawstring):$/;"	f
+firstletter	plugin_utils.py	/^def firstletter(mystring):$/;"	f
+flatten	plugin_utils.py	/^def flatten(items, seqtypes=(list, tuple)):$/;"	f
+gather_from_field	plugin_utils.py	/^def gather_from_field(tablename, fieldname, regex_str, exclude,$/;"	f
 get_divisions_info	parse.py	/^    def get_divisions_info(self, divisions):$/;"	m	class:Book
+get_filename	parse.py	/^    def get_filename(self):$/;"	m	class:Book
+get_group	parse.py	/^    def get_group(group_descriptions, as_gluon=True):$/;"	m	class:BookManager
+get_group	parse.py	/^    def get_group(self, version_title, unit_group):$/;"	m	class:Book
 get_manuscripts_info	parse.py	/^    def get_manuscripts_info(self, manuscripts):$/;"	m	class:Book
-get_readings	parse.py	/^    def get_readings(self, units):$/;"	m	class:Book
-get_reference	parse.py	/^    def get_reference(self, version_title, divs):$/;"	m	class:Book
+get_readings	parse.py	/^    def get_readings(self, version_title, unit_id):$/;"	m	class:Book
+get_readings	parse.py	/^    def get_readings(unit_descriptions, as_gluon=True):$/;"	m	class:BookManager
 get_resources_info	parse.py	/^    def get_resources_info(self, resources):$/;"	m	class:Book
+get_text	parse.py	/^    def get_text(self, version_title, text_type, start_div, end_div=None,$/;"	m	class:Book
+get_text	parse.py	/^    def get_text(text_positions, as_gluon=True):$/;"	m	class:BookManager
 get_text_info	parse.py	/^    def get_text_info(self, text, delimiters):$/;"	m	class:Book
-get_version	parse.py	/^    def get_version(self, version_title):$/;"	m	class:Book
-info	test.py	/^info = p.book_info()$/;"	v
-p	test.py	/^p = Book(book_file)$/;"	v
-remove_div	parse.py	/^    def remove_div(self, version_title, divs):$/;"	m	class:Book
-renumber_units	parse.py	/^    def renumber_units(self):$/;"	m	class:Book
+get_unit_group	parse.py	/^    def get_unit_group(self, version_title, unit_id):$/;"	m	class:Book
+get_unit_group	parse.py	/^    def get_unit_group(unit_descriptions):$/;"	m	class:BookManager
+import_from_csv	plugin_utils.py	/^def import_from_csv():$/;"	f
+islist	plugin_utils.py	/^def islist(obj):$/;"	f
+load_json	plugin_utils.py	/^def load_json(data):$/;"	f
+lowercase	plugin_utils.py	/^def lowercase(letter):$/;"	f
+make_json	plugin_utils.py	/^def make_json(data):$/;"	f
+make_rows_from_field	plugin_utils.py	/^def make_rows_from_field():$/;"	f
+make_rows_from_filenames	plugin_utils.py	/^def make_rows_from_filenames():$/;"	f
+makeutf8	plugin_utils.py	/^def makeutf8(rawstring):$/;"	f
+migrate_back	plugin_utils.py	/^def migrate_back():$/;"	f
+migrate_field	plugin_utils.py	/^def migrate_field():$/;"	f
+migrate_table	plugin_utils.py	/^def migrate_table():$/;"	f
+multiple_replace	plugin_utils.py	/^def multiple_replace(string, key_values, return_unicode=True):$/;"	f
+open	parse.py	/^    def open(xml_book_data):$/;"	m	class:Book
+print_rows_as_dicts	plugin_utils.py	/^def print_rows_as_dicts():$/;"	f
+publish_book	parse.py	/^    def publish_book(book_name):$/;"	m	class:BookManager
+replace_in_field	plugin_utils.py	/^def replace_in_field():$/;"	f
+save	parse.py	/^    def save(self):$/;"	m	class:Book
+send_report	plugin_utils.py	/^    def send_report(self, callingClass, callingMethod, callingUser='',$/;"	m	class:ErrorReport
+serialize	parse.py	/^    def serialize(self, pretty=True):$/;"	m	class:Book
+split_reading	parse.py	/^    def split_reading(book_name, version_title, unit_id, reading_pos, split_point):$/;"	m	class:BookManager
+split_reading	parse.py	/^    def split_reading(self, version_title, unit_id, reading_pos, split_point):$/;"	m	class:Book
+split_unit	parse.py	/^    def split_unit(book_name, version_title, unit_id, reading_pos, split_point):$/;"	m	class:BookManager
+split_unit	parse.py	/^    def split_unit(self, version_title, unit_id, reading_pos, split_point):$/;"	m	class:Book
 text_structure	parse.py	/^    def text_structure(self, text, delimiters):$/;"	m	class:Book
-write	parse.py	/^    def write(self):$/;"	m	class:Book
+update_bibliography	parse.py	/^    def update_bibliography(book_name, version_title, abbrev, bibliography_pos, new_text):$/;"	m	class:BookManager
+update_bibliography	parse.py	/^    def update_bibliography(self, version_title, abbrev, bibliography_pos, new_text):$/;"	m	class:Book
+update_div	parse.py	/^    def update_div(book_name, version_title, div_path, new_div_name):$/;"	m	class:BookManager
+update_div	parse.py	/^    def update_div(self, version_title, div_path, new_div_name):$/;"	m	class:Book
+update_manuscript	parse.py	/^    def update_manuscript(book_name, version_title, abbrev, new_abbrev, new_language=None, new_show=None):$/;"	m	class:BookManager
+update_manuscript	parse.py	/^    def update_manuscript(self, version_title, abbrev, new_abbrev, new_language=None, new_show=None):$/;"	m	class:Book
+update_unit	parse.py	/^    def update_unit(book_name, version_title, unit_id, readings):$/;"	m	class:BookManager
+update_unit	parse.py	/^    def update_unit(self, version_title, unit_id, readings):$/;"	m	class:Book
+update_version	parse.py	/^    def update_version(book_name, version_title, new_version_title=None, new_language=None, new_author=None):$/;"	m	class:BookManager
+update_version	parse.py	/^    def update_version(self, version_title, new_version_title=None, new_language=None, new_author=None):$/;"	m	class:Book
+util_interface	plugin_utils.py	/^def util_interface(funcname):$/;"	f
+validate	parse.py	/^    def validate(self, dtd_data):$/;"	m	class:Book
+validation_errors	parse.py	/^    def validation_errors(self):$/;"	m	class:Book
+xml_draft_file_backup_storage_path	parse.py	/^    xml_draft_file_backup_storage_path = XML_DRAFT_FILE_BACKUP_STORAGE_PATH$/;"	v	class:BookManager
+xml_draft_file_storage_path	parse.py	/^    xml_draft_file_storage_path = XML_DRAFT_FILE_STORAGE_PATH$/;"	v	class:BookManager
+xml_file_backup_storage_path	parse.py	/^    xml_file_backup_storage_path = XML_FILE_BACKUP_STORAGE_PATH$/;"	v	class:BookManager
+xml_file_storage_path	parse.py	/^    xml_file_storage_path = XML_FILE_STORAGE_PATH$/;"	v	class:BookManager

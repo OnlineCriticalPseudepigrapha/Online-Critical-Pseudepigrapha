@@ -253,31 +253,6 @@ def section():
             endref = request.vars['to']
             end_sel = [s for s in endref.split('-') if s]
 
-            # handle 'next' and 'prev' buttons
-            dirs = {'next': 1, 'back': -1}
-            if endref[:4] in ['next', 'back']:
-                mylevel = int(endref[4:])  # expects like next2
-                if vbs: print 'mylevel', mylevel
-                next_start_sel = []
-                cur_unit = session.refhierarch
-                print 'cur_unit', cur_unit
-                for idx in (range(mylevel) or [0]):
-                    print 'idx', idx
-                    print 'this level ref', start_sel[idx]
-                    cur_unit = cur_unit[str(start_sel[idx])]
-                    print "cur_unit", cur_unit
-                    if idx == mylevel:
-                        print 'at changing level'
-                        curindex = cur_unit.keys().index(start_sel[idx])
-                        nextval = cur_unit.keys()[curindex + dirs[endref[:4]]]
-                        next_start_sel.append(nextval)
-                    else:
-                        print 'keeping level the same'
-                        next_start_sel.append(start_sel[idx])
-                print 'next start ref = ', next_start_sel
-                start_sel = next_start_sel
-                end_sel = start_sel
-
         else:
             end_sel = start_sel
 
@@ -289,12 +264,38 @@ def section():
         end_sel = endref.split(':')
 
     mytext = []
+
+    # handle 'next' and 'previous' navigation via 'endref' values
+    # numbers indicate organizational level at which to move forward or back
+    next_level = None
+    if endref[:4] == 'next':
+        next_level = int(endref[4:])  # expects like next2
+        end_sel = start_sel
+        print 'next_level:', next_level
+    previous_level = None
+    if endref[:4] == 'back':
+        previous_level = int(endref[4:])  # expects like previous2
+        end_sel = start_sel
+        print 'previous_level:', previous_level
+
     try:
-        parsed_text = list(p.get_text(current_version, current_ms, start_sel, end_sel))
+        # re-set start_sel and end_sel from output in case 'next' or 'back'
+        text_iterator, start_sel, end_sel = p.get_text(current_version,
+                                                       current_ms, start_sel,
+                                                       end_sel,
+                                                       next_level=next_level,
+                                                       previous_level=previous_level)
+        parsed_text = list(text_iterator)
     except ElementDoesNotExist, e:
         try:
             print traceback.format_exc()
-            parsed_text = list(p.get_text(current_version, current_ms + ' ', start_sel, end_sel))
+            text_iterator, start_sel, end_sel = p.get_text(current_version,
+                                                           current_ms + ' ',
+                                                           start_sel,
+                                                           end_sel,
+                                                           next_level=next_level,
+                                                           previous_level=previous_level)
+            parsed_text = list(text_iterator)
         except ElementDoesNotExist, e:
             print traceback.format_exc()
             response.flash = 'Sorry, no text matched the selected range.'
