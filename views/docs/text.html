@@ -126,13 +126,12 @@ $('#versionadder').on('click', function(event){
 
     // set dimensions here so the new pane is sized vertically
     setDimensions();
-
 	event.preventDefault();
 });
 
 
 // change ref and refresh text windows when next or prev buttons clicked
-$('.nextbutton, .prevbutton').on('click', function(event){
+$(document).on('click', '.nextbutton, .prevbutton', function(event){
     direction = $.trim($(this).text());
     console.log(direction)
 	var from_ref = '';
@@ -156,35 +155,35 @@ $('.nextbutton, .prevbutton').on('click', function(event){
 
 //refresh this text pane when version selector or manuscript
 //selector is refreshed
-$('.vselect, .mselect').on('change', function(e){
-	var the_loader = $(this).parents('.versionwindow').attr('id');
+$(document).on('change', '.vselect, .mselect', function(event){
+    console.log('trying to change');
+    var the_loader = $(this).parents('.versionwindow').attr('id');
     console.log('loader: ', the_loader);
-	var from_ref = '';
-	$('input.from').each(function(){
-		from_ref += $(this).val();
-		from_ref += '-';
-	});
+    var from_ref = '';
+    $('input.from').each(function(){
+        from_ref += $(this).val();
+        from_ref += '-';
+    });
 	var to_ref = '';
-	$('input.to').each(function(){
-		to_ref += $(this).val();
-		to_ref += '-';
-	});
+    $('input.to').each(function(){
+        to_ref += $(this).val();
+        to_ref += '-';
+    });
 
-	if ($(this).hasClass('vselect')){
+    if ($(this).hasClass('vselect')){
         console.log('version change');
-		var the_v = $(this).val();
-		var the_m = 'newval';
-	}
-	else {
+        var the_v = $(this).val();
+        var the_m = 'newval';
+    }
+    else {
         console.log('ms change');
         var $vselect = $(this).siblings('.vselect');
         var the_v = $vselect.val();
-		var the_m = $(this).val();
-	}
-    var myurl = '/grammateus3/docs/section.load/{{=filename}}?version='
-    myurl += the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref
-	web2py_component(myurl, the_loader);
-
+        var the_m = $(this).val();
+    }
+    var myurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
+    myurl += the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
+    web2py_component(myurl, the_loader);
 });
 
 //refresh this text pane when "go" nav button clicked
@@ -216,17 +215,19 @@ $('#textnavsubmit').on('click', function(event){
 });
 
 //display readings in apparatus when text link clicked
-$('.textframe a').on('click', function(event){
+$(document).on('click', '.textframe a', function(event){
 	var the_unit = $(this).attr('href');
 	var $p = $(this).parents('.versionwindow');
 	var the_v = $p.find('.vselect').val();
-	the_target = $p.find('.apparatusframe').children().attr('id');
+    var $aframe = $p.find('.apparatusframe');
+    $aframe.html('<i class="fa fa-circle-o-notch fa-spin"></i>');
+	the_target = $aframe.children().attr('id');
 	web2py_component('/grammateus3/docs/apparatus.load/{{=filename}}?version=' + the_v + '&unit=' + the_unit, the_target);
 	event.preventDefault();
 });
 
 //close this version window
-$('.version-closer span').on('click', function(event){
+$(document).on('click', '.version-closer span', function(event){
     console.log('clicked version-closer');
     $myversion = $(this).parents('.versionwindow');
     console.log('$myversion to close: ', $myversion);

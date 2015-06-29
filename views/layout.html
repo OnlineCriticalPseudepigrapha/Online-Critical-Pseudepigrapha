@@ -1,39 +1,50 @@
 <!DOCTYPE html>
+<!-- adapted by Ian W. Scott from the default layout.html file included in the
+    web2py scaffolding app -->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
-  <head>
+
+<head>
     <meta charset="utf-8">
     <!-- www.phpied.com/conditional-comments-block-downloads/ -->
     <!-- Always force latest IE rendering engine
-         (even in intranet) & Chrome Frame
-         Remove this if you use the .htaccess -->
+        (even in intranet) & Chrome Frame
+            Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge{{=not request.is_local and ',chrome=1' or ''}}">
     <!--  Mobile Viewport Fix
-          j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
-          device-width: Occupy full width of the screen in its current orientation
-          initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-          user-scalable = yes allows the user to zoom in -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{=response.title or request.application}}</title>
+            j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
+            device-width: Occupy full width of the screen in its current orientation
+            initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+            user-scalable = yes allows the user to zoom in -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <title>{{=response.pagetitle or request.application}}</title>
     <!-- http://dev.w3.org/html5/markup/meta.name.html -->
-    <meta name="application-name" content="{{=request.application}}">
-    <!-- Speaking of Google, don't forget to set your site up:
-         http://google.com/webmasters -->
-    <meta name="google-site-verification" content="">
+    <meta name="application-name" content="{{=request.application}}" />
+    <meta name="google-site-verification" content="{{=response.meta.google_verify}}" />
+
     <!-- include stylesheets -->
     <link rel="stylesheet" href="{{=URL('static','css/bootstrap.min.css')}}"/>
     <!--<link rel="stylesheet" href="{{=URL('static','css/bootstrap-theme.min.css')}}"/>-->
     <link rel="stylesheet" href="{{=URL('static','css/web2py-bootstrap3.css')}}"/>
-    <link rel="stylesheet" href="{{=URL('static','css/localtheme.css')}}"/>
+    <link rel="stylesheet" href="{{=URL('static','css/theme.css')}}"/>
+    <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!--imported fonts-->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
     <link rel="shortcut icon" href="{{=URL('static','images/favicon.ico')}}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
-    <!-- All JavaScript at the bottom, except for Modernizr which enables
-         HTML5 elements & feature detects -->
+
+    <!-- All JavaScript at the bottom, except ... -->
+    {{include 'web2py_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css, web2py.js -- >
+    <!-- Modernizr for HTML5 elements & feature detects -->
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
-    <!--[if lt IE 9]>
-        <script src="{{=URL('static','js/respond-1.4.2.min.js')}}"></script>
-        <![endif]-->
-    <!-- Favicons -->
-    {{include 'web2py_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
+    <!-- Respond.js for the support of media queries in IE8 -->
+    <!--[if lt IE 9]><script src="{{=URL('static','js/respond-1.4.2.min.js')}}"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+
     {{block head}}{{end}}
     {{
     # using sidebars need to know what sidebar you want to use
@@ -47,7 +58,6 @@
     }}
   </head>
   <body>
-    <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
     <div class="flash alert alert-dismissable">{{=response.flash or ''}}</div>
     <!-- Navbar ======================================= -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -59,11 +69,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          {{=response.logo or ''}}
+            {{=response.logo or ''}}
+            {{=A(response.title.capitalize(),
+                _href=response.homeurl,
+                _class='navbar-brand')}}
+                <small>{{=response.subtitle or ''}}</small>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav navbar-right">
-            {{='auth' in globals() and auth.navbar('Welcome',mode='dropdown') or ''}}
+            {{='auth' in globals() and auth.navbar('Welcome', mode='dropdown') or ''}}
           </ul>
           {{if response.menu:}}
           {{=MENU(response.menu, _class='nav navbar-nav',li_class='dropdown',ul_class='dropdown-menu')}}
@@ -71,7 +85,7 @@
         </div>
       </div>
     </nav>
-    <!-- Masthead ===================================== -->    
+    <!-- Masthead ===================================== -->
     {{block header}}
     {{end}}
     <!-- Main ========================================= -->
@@ -103,7 +117,7 @@
 
     </div>
 
-    {{block footer}} <!-- this is default footer -->      
+    {{block footer}} <!-- this is default footer -->
     <footer class="footer">
       <div class="container-fluid">
         <div class="copyright pull-left">{{=T('Copyright')}} &#169; {{=request.now.year}}</div>
