@@ -471,7 +471,6 @@ class Book(object):
 
                 ms_dict['name']['sup'] = [unicode(s.text.strip())
                                           for s in name.xpath('sup')]
-                print 'ms_dict', ms_dict['name']['text']
                 ms_dict['bibliography'] = []
                 for bib in ms.xpath('bibliography'):
                     bib_dict = {}
@@ -630,24 +629,79 @@ class Book(object):
             base_element = version.xpath("text")[0]
             for div_number in div_path:
                 try:
-                    base_element = self._get("div", {"number": div_number}, base_element)
+                    base_element = self._get("div", {"number": div_number},
+                                             base_element)
                     div_elements.append(base_element)
                 except ElementDoesNotExist:
                     break  # we keep the last correct element
         return div_elements
 
-    def _get_div_positions(self, div_elements):
-        return [int(div_element.xpath("count(preceding-sibling::div)") + 1) for div_element in div_elements]
+    def _get_next_or_prev(self, startelements, level=0, direction=None):
+        """
+        Find the next sequential div at the given organizational level of the doc.
 
-    def get_text(self, version_title, text_type, start_div, end_div=None):
+        Arguments
+        ---------
+            startelements (list): list of etree.Element objects in format
+                delivered by _div_path_to_element_path().
+            level (int): integer indicating the organizational level at which
+                the next element should be found.
+            direction (str): expects one of two values: 'next' or 'prev'. This
+                governs the direction of traversal.
+
+        Returns
+        -------
+
+            list: element objects corresponding to the new div location, like
+                return value from _div_path_to_element_path().
+
+        """
+        div_elements = []
+        if level > 0:  # top level refs not changing
+            div_elements.extend(startelements[:level])
+        if direction == 'next':
+            mynext = startelements[level].getnext()  # increment at right level
+        elif direction == 'prev':
+            mynext = startelements[level].getprevious()  # increment at right level
+
+        if not mynext:  # already at last entity
+            print 'already at doc end'
+            return startelements
+        div_elements.append(mynext)
+        if level < (len(startelements) - 1):  # increment is not at lowest level
+            for n in range(len(startelements) - (level + 1)):
+                try:
+                    mynext = mynext[0]
+                    div_elements.append(mynext)
+                except KeyError:
+                    print 'parser._get_next_div:: no child present'
+                    break
+
+        return div_elements
+
+    def _get_div_positions(self, div_elements):
+        return [int(div_element.xpath("count(preceding-sibling::div)") + 1)
+                for div_element in div_elements]
+
+    def get_text(self, version_title, text_type, start_div, end_div=None,
+                 next_level=None, previous_level=None):
         """
         Get back text sections as generator
 
-        :param version_title: search <reading> node under this version
-        :param text_type: search <reading> node where @mss==text_type
-        :param start_div: tuple of div numbers, search from this point of <div> structure
-        :param end_div: tuple of div numbers, search to this point of <div> structure
-        :raise:
+        Arguments
+        ----------
+
+            version_title (str): search <reading> node under this version
+            text_type (str): search <reading> node where @mss==text_type
+            start_div (tuple): tuple of div numbers, search from this point of <div> structure
+            end_div (tuple): tuple of div numbers, search to this point of <div> structure
+
+        Return
+        -------
+            iterator: yielding a series of Text objects for the selected range
+            tuple: reference for start of range returned
+            tuple: reference for end of range returned
+
         """
 
         version = self._get("version", {"title": version_title})
@@ -655,12 +709,23 @@ class Book(object):
         if manuscript.get("show") == "no":
             raise NotAllowedManuscript
 
-        reading_filter = "reading[re:test(@mss, '^{0} | {0} | {0}$|^{0}$')]".format(text_type)
-
-        start_div_elements = self._div_path_to_element_path(version, start_div)
         end_div_elements = self._div_path_to_element_path(version, end_div)
+        start_div_elements = self._div_path_to_element_path(version, start_div)
+        # handle navigating to next text section
+        if next_level != None:
+            start_div_elements = self._get_next_or_prev(start_div_elements,
+                                                        next_level,
+                                                        direction='next')
+            end_div_elements = start_div_elements[:(next_level + 1)]
 
-        # set the absolutely start div element (in full deep)
+        # handle navigating to previous text section
+        if previous_level != None:
+            start_div_elements = self._get_next_or_prev(start_div_elements,
+                                                        previous_level,
+                                                        direction='prev')
+            end_div_elements = start_div_elements[:(previous_level + 1)]
+
+        # set the absolutely start div element (at full depth)
         if start_div_elements:
             current_element = start_div_elements[-1]
         else:
@@ -669,7 +734,7 @@ class Book(object):
             current_element = current_element.xpath("div[1]")[0]
             start_div_elements.append(current_element)
 
-        # set the absolutely last div element (in full deep)
+        # set the absolutely last div element (at full depth)
         if end_div_elements:
             current_element = end_div_elements[-1]
         else:
@@ -680,17 +745,46 @@ class Book(object):
 
         # detect invalid start and end position pair
         if self._get_div_positions(start_div_elements) > self._get_div_positions(end_div_elements):
-            raise InvalidDIVPath("The start position ({}) is afterwards than the end position ({}).".format(
-                "/".join(map(str, start_div)),
-                "/".join(map(str, end_div))))
-
-        # iterate through the <div> elements and search the required <reading>
+            raise InvalidDIVPath("The start position ({}) is after the end "
+                                 "position ({}).".format("/".join(map(str,
+                                                                      start_div)),
+                                                         "/".join(map(str,
+                                                                      end_div))))
         current_div = start_div_elements[-1]
+        new_start_sel = tuple(self._get_div_path(current_div))
         last_div = end_div_elements[-1]
+        new_end_sel = tuple(self._get_div_path(last_div))
+
+        text_iterator = self._get_readings_for_units(current_div,
+                                                     last_div,
+                                                     text_type,
+                                                     version)
+
+        return text_iterator, new_start_sel, new_end_sel
+
+    def _get_readings_for_units(self, current_div, last_div, text_type, version):
+        """
+        iterate through the supplied <div> elements and search the required <reading>
+
+        Arguments
+        ---------
+
+            current_div (Element):
+            last_div (Element):
+            text_type (str):
+            version ():
+
+        Return
+        -------
+            iterator: yielding a series of Text objects for the selected range
+
+        """
+        reading_filter = "reading[re:test(@mss, '^{0} | {0} | {0}$|^{0}$')]".format(text_type)
         while True:
             for unit in current_div.getchildren():
                 readings_in_unit = len(unit.getchildren())
-                readings = unit.xpath(reading_filter, namespaces={"re": "http://exslt.org/regular-expressions"})
+                readings = unit.xpath(reading_filter,
+                                      namespaces={"re": "http://exslt.org/regular-expressions"})
                 if readings:
                     for reading in readings:
                         ws = []
@@ -1039,16 +1133,29 @@ class BookManager(object):
         """
         Retrieving sections of text in running form
 
-        :param text_positions: a list of dictionaries with the following key/value pairs
-        {"book": <string, the file name of the requested xml file>
-         "version": <string, the title of the requested version>
-         "text_type": <string, type of the requested text>
-         "start": <tuple, identifying the starting point of the requested text section>
-         "end": <tuple, identifying the end point of the requested text section (optional)> }
-        :param as_gluon: Be the items are wrapped into gluon objects or not?
-        :return: dictionary with the following key/value pairs
-        {"result": <list of reading fragments based on the arguments in the requested form>,
-        "error": <list of error messages (as many items as text_positions has))>}
+        Arguments
+        ----------
+            text_positions (list): a list of dictionaries with the following
+                key/value pairs
+
+                book (str): the file name of the requested xml file
+                version (str): the title of the requested version
+                text_type (str): type of the requested text
+                start (tuple): identifying the starting point of the requested text section
+                end (tuple): identifying the end point of the requested text section (optional)
+
+            as_gluon (bool): Are the items to be wrapped into gluon html helper objects or not?
+
+        Returns
+        --------
+
+            dict: a dictionary with the following key/value pairs
+
+                result (list): list of reading fragments based on the arguments
+                    in the requested form
+                error (list): list of error messages (as many items as
+                    text_positions has))
+
         """
         items = []
         errors = []
@@ -1061,6 +1168,8 @@ class BookManager(object):
                                           text_position.get("text_type", ""),
                                           text_position.get("start"),
                                           text_position.get("end")):
+                    print 'in BookManager.get_text(): item is'
+                    print item
                     if as_gluon:
                         if item.div_path != last_div_path:
                             same_level = 0
@@ -1112,7 +1221,7 @@ class BookManager(object):
                     if as_gluon:
                         items.append(DIV(book_items))
                     else:
-                        items += book_items
+                        items.append(book_items)
             except IOError as e:
                 errors.append(str(e).replace("\\\\", "\\"))
             except ElementDoesNotExist as e:
