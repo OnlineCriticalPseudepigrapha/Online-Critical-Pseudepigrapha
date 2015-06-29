@@ -22,9 +22,9 @@
 pass}}
 </div>
 
-<!--<div class='apparatusframe'>-->
-<!--{{=LOAD('docs', 'apparatus.load', args=[filename], vars=dict(called='no'), ajax=True)}}-->
-<!--</div>-->
+<div class='apparatusframe'>
+    {{=LOAD('docs', 'apparatus.load', args=[filename], vars={'called': 'no'})}}
+</div>
 
 <script>
 
@@ -55,4 +55,6 @@ function setrefs(){
 	});
 };
 setrefs();
+
+setDimensions();
 </script>

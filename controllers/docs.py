@@ -2,13 +2,11 @@
 
 from parse import Book, ElementDoesNotExist, NotAllowedManuscript
 from plugin_utils import flatten
-from pprint import pprint
 import re
 import traceback
-from collections import OrderedDict
 
 if 0:
-    from gluon import current, URL, A, SPAN
+    from gluon import current, URL, A, SPAN, P
     request = current.request
     session = current.session
     response = current.response
@@ -62,9 +60,6 @@ def text():
     #build flat list of references
     refraw = [ref for ref, units in first_v['text_structure'].items()]
     session.refraw = refraw
-    #build hierarchical nexted dicts of references
-    refhierarch = _make_refs_hierarchical(refraw, levels)
-    session.refhierarch = refhierarch
 
     #build list for starting ref
     if 'from' in request.vars:
@@ -137,11 +132,14 @@ def _get_bookinfo(filename):
     return info, p
 
 
+"""
+deprecated
+
 def _make_refs_hierarchical(refraw, levels):
-    """
+    '''
     Convert flat list of formatted references into hierarchically nested dicts.
 
-    """
+    '''
     vbs = True
 
     def uniq(seq):
@@ -172,6 +170,7 @@ def _make_refs_hierarchical(refraw, levels):
     if vbs: print 'hierarch ------------------------------------------------'
     if vbs: pprint(hierarch)
     return hierarch
+"""
 
 
 def section():
@@ -205,7 +204,6 @@ def section():
 
     #get filename from end of url and parse the file with BookParser class
     filename = request.args[0]
-    if vbs: print 'filename: ', filename
     info, p = _get_bookinfo(filename)
 
     #select the version to display
@@ -340,36 +338,23 @@ def section():
 
 
 def apparatus():
+    print 'starting apparatus controller'
     filename = request.args[0]
-    if session.info and filename in session.info:
-        info = session.info[filename]
-        print '\n\nstarting controller.section() using session.info'
-    else:
-        book_file = 'applications/grammateus3/static/docs/%s.xml' % filename
-        p = Book.open(book_file)
-        info = p.book_info()
-        session.info[filename] = info
+    info, p = _get_bookinfo(filename)
 
     #if no unit has been requested, present the default message
     if request.vars['called'] == 'no':
-        rlist = SPAN('Click on any blue text to display textual variants for those words. If no links are available that may mean no variants are attested or it may mean that this document does not yet have a complete textual apparatus. See the document introduction for details.')
+        readings = P('Click on any blue text to display textual variants ' \
+                        'for those words. If no links are available that may ' \
+                        'mean no variants are attested or it may mean that ' \
+                        'this document does not yet have a complete textual ' \
+                        'apparatus. See the document introduction for details.',
+                     _class='apparatus-message')
     #if a unit has been requested, assemble that unit's readings
     else:
         #get current version
         current_version = request.vars['version'].replace('_', ' ')
-        print 'current version: ', current_version
+        unit = request.vars['unit']
+        readings = p.get_readings(current_version, unit)
 
-        #find selected version in parsed text
-        for version in info['versions']:
-            for k, v in version.items():
-                if k == 'title' and v == current_version:
-                    curv = version
-                    vlang = curv['language']
-
-        #find requested unit and get reading information
-        for ref, units in curv['text_structure'].items():
-            for unit_ref, unit_val in units.items():
-                if unit_ref == request.vars['unit']:
-                    rlist = {k: v for k, v in unit_val.items()}
-
-    return {rlist: rlist}
+    return {'rlist': readings}

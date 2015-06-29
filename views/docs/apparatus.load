@@ -1,7 +1,10 @@
-{{if type(rlist) is dict:}}
-	<table>
-	{{for k,v in rlist.items():}}
-		{{=TR(TD((k).replace(' ', ', ')), TD(v))}}
+<h4>Variant readings</h4>
+{{if isinstance(rlist, list):}}
+	<table class='table'>
+	{{for reading in rlist:}}
+		{{=TR(TD(reading.mss, _class='mss'),
+              TD(reading.text, _class='reading-text'))
+          }}
 	{{pass}}
 	</table>
 {{else:}}
