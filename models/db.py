@@ -16,12 +16,14 @@ if current.request.is_local:
     from gluon.custom_import import track_changes
     track_changes()
 
+
 def check_path(path):
     if os.path.exists(path):
         return path
     raise OSError(2, "{}: {}".format(os.strerror(2), path))
 
 db = DAL('sqlite://storage.sqlite')
+current.db = db
 
 # by default give a view/generic.extension to all actions from localhost
 # none otherwise. a pattern can be 'controller/function.extension'

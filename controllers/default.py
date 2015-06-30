@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 # this file is released under public domain and you can use without limitations
 
+if 0:
+    from gluon import db, current, auth, LOAD
+    response = current.response
+    request = current.request
+
+
 def index():
     """
     Present main index page.
@@ -8,7 +14,34 @@ def index():
     Send dictionary of document records to the view views/default/index.html
     """
     docrows = db(db.docs.id > 0).select()
-    return dict(docrows = docrows)
+    return {'docrows': docrows}
+
+
+def page():
+    """
+    """
+    pagelabel = request.args[0]
+    pagerow = db(db.pages.page_label == pagelabel).select().first()
+    return pagerow['content']
+
+
+def list():
+    """
+    Present a plugin_listandedit widget for creating and editing db records.
+
+    URL Arguments
+    ---------
+
+        0:  The name of the db table to be manipulated by the widget.
+
+    """
+
+    widget = LOAD('plugin_listandedit', 'widget.load',
+                  args=request.args,
+                  vars=request.vars,
+                  ajax=False)
+    return {'widget': widget}
+
 
 def user():
     """
@@ -32,9 +65,9 @@ def download():
     allows downloading of uploaded files
     http://..../[app]/default/download/[filename]
     """
-    return response.download(request,db)
+    return response.download(request, db)
 
-
+'''
 def call():
     """
     exposes services. for example:
@@ -61,4 +94,4 @@ def data():
       LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
     """
     return dict(form=crud())
-
+'''

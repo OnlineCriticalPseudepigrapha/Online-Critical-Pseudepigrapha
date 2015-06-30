@@ -6,7 +6,7 @@
 {{pass}}
 
 <div class='docs_list'>
-    <h3>Choose a document to read</h3> 
+    <h3>Choose a document to read</h3>
     <ul>
     {{for doc in docrows:}}
         {{=LI(A(doc.name, _href=URL('docs', 'text', args=doc.filename)))}}
@@ -15,6 +15,36 @@
 </div>
 
 {{block right_sidebar}}
+<h3>General Editor</h3>
+    <ul>
+        <li>Ian W. Scott (2006-)</li>
+        <li>Ken M. Penner (2006-2009, 2013-)</li>
+        <li><h4>Past Editors</h4>
+            <ul><li>David M. Miller (2006-2007)</li></ul>
+        </li>
+    </ul>
+
+<h3>Review Board</h3>
+
+    <ul>
+        <li>Judith H. Newman (2009-present)</li>
+        <li>James H. Charlesworth (2006-present)</li>
+        <li>Robert A. Kraft (2006-2008)</li>
+        <li>Craig A. Evans (2006-2007)</li>
+    </ul>
+
+<h3>About the Project</h3>
+
+<p>The mandate of the Online Critical Pseudepigrapha is to develop and publish
+electronic editions of the best critical texts of the "Old Testament" Pseudepigrapha
+and related literature.</p>
+
+<p>Note that in a few cases it has not yet been feasible
+to publish the best eclectic text of a given document. In other cases the OCP
+edition of a document does not yet include all of the textual evidence. Readers
+should consult the "text status" information on the introductory page for each
+document to determine whether a better or more complete text exists elsewhere.</p>
+
 {{=A(T("Administrative Interface"), _href=URL('admin','default','index'), _class='button', _style='margin-top: 1em;')}}
 {{end}}
 

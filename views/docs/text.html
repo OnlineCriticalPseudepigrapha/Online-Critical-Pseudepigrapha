@@ -156,9 +156,8 @@ $(document).on('click', '.nextbutton, .prevbutton', function(event){
 //refresh this text pane when version selector or manuscript
 //selector is refreshed
 $(document).on('change', '.vselect, .mselect', function(event){
-    console.log('trying to change');
-    var the_loader = $(this).parents('.versionwindow').attr('id');
-    console.log('loader: ', the_loader);
+    var $loader = $(this).parents('.versionwindow')
+    var the_loader = $loader.attr('id');
     var from_ref = '';
     $('input.from').each(function(){
         from_ref += $(this).val();
@@ -171,19 +170,17 @@ $(document).on('change', '.vselect, .mselect', function(event){
     });
 
     if ($(this).hasClass('vselect')){
-        console.log('version change');
         var the_v = $(this).val();
         var the_m = 'newval';
     }
     else {
-        console.log('ms change');
-        var $vselect = $(this).siblings('.vselect');
-        var the_v = $vselect.val();
         var the_m = $(this).val();
+        var the_v = $loader.find('.vselect').val();
     }
-    var myurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
-    myurl += the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
-    web2py_component(myurl, the_loader);
+    $loader.children('.textframe').html('<i class="fa fa-spinner fa-spin"></i>');
+    var baseurl = '/grammateus3/docs/section.load/{{=filename}}?';
+    var urlvars = 'version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
+    web2py_component(baseurl + urlvars, the_loader);
 });
 
 //refresh this text pane when "go" nav button clicked
@@ -209,6 +206,7 @@ $('#textnavsubmit').on('click', function(event){
         var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
         var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
         console.log(baseurl + urlvars);
+        $(this).children('.textframe').html('<i class="fa fa-spinner fa-spin"></i>');
 		web2py_component(baseurl + urlvars, loader_id);
 	});
 	event.preventDefault();
@@ -220,9 +218,13 @@ $(document).on('click', '.textframe a', function(event){
 	var $p = $(this).parents('.versionwindow');
 	var the_v = $p.find('.vselect').val();
     var $aframe = $p.find('.apparatusframe');
-    $aframe.html('<i class="fa fa-circle-o-notch fa-spin"></i>');
 	the_target = $aframe.children().attr('id');
-	web2py_component('/grammateus3/docs/apparatus.load/{{=filename}}?version=' + the_v + '&unit=' + the_unit, the_target);
+    $aframe.find('.readings-wrapper').html('<i class="fa fa-spinner fa-spin"></i>');
+    var baseurl = '/grammateus3/docs/apparatus.load/{{=filename}}?';
+    var urlvars = 'version=' + the_v + '&unit=' + the_unit;
+    console.log(baseurl);
+    console.log(urlvars);
+	web2py_component(baseurl + urlvars, the_target);
 	event.preventDefault();
 });
 
