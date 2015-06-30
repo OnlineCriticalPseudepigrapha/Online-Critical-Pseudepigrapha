@@ -43,29 +43,22 @@ if auth.has_membership('editors', auth.user_id):
 
 if auth.has_membership('administrators', auth.user_id):
     response.menu += [
-        (T('Admin'), False, A(I(_class='fa fa-cog'), ' Admin', '#', _class='adminlink'), [
-            (T('Create and Edit'), False, URL(A(_href='#')), [
-                (T('Pages'), False, A(_href=URL('listing', 'pages')), []),
-                (T('Users'), False, A(_href=URL('listing', 'users')), []),
-            ]),
-            (T('Manage'), False, A('#'), [
-                (T('Database'), False, A(_href=URL(app, 'appadmin', 'index')), []),
-                (T('Web IDE'), False, A(_href=URL('admin', 'default', 'design/{}'.format(app))), []),
-                (T('Errors'), False, A(_href=URL('admin', 'default', 'errors/{}'.format(app))), []),
-            ]),
-            (T('web2py'), False, URL('#'), [
-                (T('web2py Documentation'), False, 'http://www.web2py.com/book', []),
-                (T('web2py Home'), False, 'http://www.web2py.com', []),
-                (T('web2py Google Group'), False, 'https://groups.google.com/forum/web2py', []),
-            ]),
+        (T('Admin'), False, A(SPAN(I(_class='fa fa-cog'), ' Admin'), _href='#', _class='adminlink'), [
+            (T('Documents'), False, A('Documents', _href=URL('default', 'list', args=['docs'])), []),
+            (T('Bibliography'), False, A('Bibliography', _href=URL('default', 'list', args=['biblio'])), []),
+            (T('Pages'), False, A('Pages', _href=URL('default', 'list', args=['pages'])), []),
+            (T('Users'), False, A('Users', _href=URL('default', 'list', args=['auth_user'])), []),
+            (T('Database'), False, A('Database', _href=URL(app, 'appadmin', 'index')), []),
+            (T('Web IDE'), False, A('Web IDE', _href=URL('admin', 'default', 'design/{}'.format(app))), []),
+            (T('Errors'), False, A('Errors', _href=URL('admin', 'default', 'errors/{}'.format(app))), []),
         ]),
     ]
 
 response.menu += [
     (T('Documents'), False, A(I(_class='fa fa-book'), ' Documents', _href=URL('default', 'index'), _class='documentslink'), []),
     (T('Copyright'), False, A(I(_class='fa fa-copyright'), ' Copyright', _href=URL('default', 'page', args=['copyright']), _class='copyrightlink'), []),
-    (T('Help and Information'), False, A(I(_class='fa fa-info-circle'), ' Help and Information', _href=URL('default', 'page', args=['help']), _class='helplink'), [
-        (T('About'), False, A(_href=URL('admin', 'default', 'about/{}'.format(app))), []),
+    (T('Help and Information'), False, A(I(_class='fa fa-info-circle'), ' Help and Information', _href='#', _class='helplink'), [
+        (T('About'), False, A('About', _href=URL('admin', 'default', 'about/{}'.format(app))), []),
         (T('FAQ'), False, A('FAQ', _href=URL('default', 'page', args=['faq']), _class='faqlink'), []),
         (T('Roadmap'), False, A('Roadmap', _href=URL('default', 'page', args=['roadmap']), _class='roadmaplink'), []),
         (T('Get involved'), False, A('Get involved', _href=URL('default', 'page', args=['get-involved']), _class='involvedlink'), []),

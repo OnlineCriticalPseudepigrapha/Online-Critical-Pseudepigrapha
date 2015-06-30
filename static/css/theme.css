@@ -1,0 +1,140 @@
+/* specific overrides for ocp site */
+@font-face {
+  font-family: 'SBL Greek';
+  src: url('../fonts/sbl_grk-webfont.eot');
+  src: url('../fonts/sbl_grk-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('../fonts/sbl_grk-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+   url('../fonts/sbl_grk-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+   url('../fonts/sbl_grk-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('../fonts/sbl_grk-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'SBL Hebrew';
+  src: url('../fonts/sbl_hbrw-webfont.eot');
+  src: url('../fonts/sbl_hbrw-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('../fonts/sbl_hbrw-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+   url('../fonts/sbl_hbrw-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+   url('../fonts/sbl_hbrw-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('../fonts/sbl_hbrw-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Estrangelo';
+  src: url('../fonts/estre-webfont.eot');
+  src: url('../fonts/estre-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('../fonts/estre-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+   url('../fonts/estre-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+   url('../fonts/estre-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('../fonts/estre-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* Legacy iOS */
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+body .fa-spinner {
+  font-size: 2em;
+  color: #666;
+}
+.navbar {
+  background-color: #615F55;
+}
+.navbar .navbar-header {
+  background-color: #615F55;
+}
+.navbar .navbar-header .navbar-brand {
+  color: white;
+  text-transform: capitalize;
+}
+.navbar .navbar-header small {
+  display: none;
+}
+.navbar .navbar-inverse .navbar-nav > li > a {
+  color: #E4DFC8;
+}
+div#textwrapper {
+  position: absolute;
+}
+div#textwrapper #versionadder {
+  float: right;
+  position: relative;
+  /*display:block;*/
+
+  /*font-size: 2em;*/
+
+  /*top: -20px;*/
+
+}
+div#textwrapper .ref_nav {
+  background-color: #E4DFC8;
+  /*height: 3em;*/
+
+  /*line-height: 3em;*/
+
+  padding: 0.5em;
+}
+div#textwrapper .ref_nav input[type=text] {
+  width: 4em;
+}
+div#textwrapper div.versionwindow {
+  position: relative;
+  float: left;
+  padding: 0;
+}
+div#textwrapper div.versionwindow .version_selector {
+  background-color: #F5F3EA;
+  padding: 0.5em 1em;
+}
+div#textwrapper div.versionwindow .version_selector a.version-closer {
+  font-size: 1.5em;
+  color: #aaa;
+  line-height: 1.75em;
+  height: 1.75em;
+  display: inline-block;
+}
+div#textwrapper div.versionwindow .version_selector a.version-closer:hover {
+  color: red;
+}
+div#textwrapper div.versionwindow .textframe {
+  color: #333;
+  overflow: auto;
+  padding: 1em;
+}
+div#textwrapper div.versionwindow .textframe .Greek {
+  font-family: "SBL Greek";
+  font-size: 1.2em;
+}
+div#textwrapper div.versionwindow .textframe .Hebrew {
+  font-family: "SBL Hebrew";
+  font-size: 1.2em;
+}
+div#textwrapper div.versionwindow .textframe .Aramaic {
+  font-family: "SBL Hebrew";
+  font-size: 1.2em;
+}
+div#textwrapper div.versionwindow .textframe .Ethiopic {
+  font-family: "Estrangelo";
+  font-size: 1em;
+}
+div#textwrapper div.versionwindow .textframe .refmarker_0 {
+  color: #b96b6b;
+  font-size: 1.3em;
+}
+div#textwrapper div.versionwindow .textframe .refmarker_1 {
+  color: #ecc93a;
+  font-size: 1em;
+}
+div#textwrapper div.versionwindow .apparatusframe {
+  border-top: 1px solid #ddd;
+}
+div#textwrapper div.versionwindow .apparatusframe p {
+  padding: 0 1em;
+  color: #aaa;
+}
+div#textwrapper div.versionwindow .apparatusframe td.mss {
+  max-width: 200px;
+  width: 200px;
+}
+footer {
+  display: none;
+}
