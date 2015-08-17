@@ -22,7 +22,8 @@ def page():
     """
     pagelabel = request.args[0]
     pagerow = db(db.pages.page_label == pagelabel).select().first()
-    return pagerow['content']
+    return {'body': pagerow['body'],
+            'title': pagerow['title']}
 
 
 def list():

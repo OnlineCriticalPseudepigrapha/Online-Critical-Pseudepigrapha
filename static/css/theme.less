@@ -1,4 +1,17 @@
 /* specific overrides for ocp site */
+@white: #fff;
+@beige1: #E4DFC8;
+@beige2: #e3e1d3;
+@pale-beige: #FCFBF7;
+@light-brown: #A9A06A;
+@dark-brown: #615F55;
+@darker-brown: #4B4A43;
+@spring-green: #96bc44;
+@dark-blue: #006699;
+@light-blue: #007DBB;
+@grey6: #666;
+@grey3: #333;
+@greya: #aaa;
 
 @font-face {
   font-family: 'SBL Greek';
@@ -32,19 +45,144 @@
 
 body                           {font-family: 'Open Sans', sans-serif;
     .fa-spinner                {font-size: 2em;
-                                color: #666;
+                                color: @grey6;
+    }
+
+    .Greek             {font-family: "SBL Greek";
+                        font-size: 1.2em;
+    }
+    .Hebrew            {font-family: "SBL Hebrew";
+                        font-size: 1.2em;
+    }
+    .Aramaic           {font-family: "SBL Hebrew";
+                        font-size: 1.2em;
+    }
+    .Ethiopic          {font-family: "Estrangelo";
+                        font-size: 1em;
+    }
+    /*.Latin             {font-family:*/
+
+    h1                 {color: @light-brown;
+    }
+    h2                 {color: @spring-green;
+    }
+    h3                 {color: @light-brown;
+    }
+    h4                 {text-transform: uppercase;
+                        color: lighten(@light-blue, 10%);
+                        font-size: 1.2em;
+                        letter-spacing: 1px;
+                        margin-bottom: 0.5em;
+                        /*font-weight: bold;*/
+    }
+
+    table.table        {background-color: @pale-beige;
+                        border-bottom: 1px solid @beige2;
+        tr             {
+            td         {border-top: 1px solid @beige2;
+            }
+        }
+    }
+
+    p                  {color: @grey3;
+                        text-align: justify;
+                        -moz-hyphens: auto;
+                        -webkit-hyphens: auto;
+                        -ms-hyphens: auto;
+                        hyphens: auto;
+    }
+
+    ul                 {
+        &.bibliography {list-style: outside none none;
+            li         {text-indent: -2em;
+                        margin-bottom: 0.5em;
+                &.annotation       {text-indent: 0;
+                                    color: @greya;
+                }
+            }
+        }
     }
 }
 
-.navbar                        {background-color: #615F55;
-    .navbar-header                 {background-color: #615F55;
-        .navbar-brand              {color: white;
+.navbar-inverse                    {background-color: @dark-brown;
+    .navbar-header                 {background-color: @dark-brown;
+        .navbar-brand              {color: @white;
                                     text-transform: capitalize;
         }
         small                      {display: none;
         }
     }
-    .navbar-inverse .navbar-nav > li > a           {color: #E4DFC8;
+    .navbar-nav                    {
+        li > a                     {color: @beige1;
+            &:focus,
+            &:hover                {background-color:  @darker-brown;
+            }
+        }
+        .open                      {
+            a, 
+            a:focus,
+            a:hover                {background-color:  @darker-brown;
+            }
+        }
+    }
+}
+
+#right_sidebar                 {height: 800px;
+    ul                     {list-style: outside none none;
+                            padding-left: 1em;
+                            border-left: 1em solid transparent;
+        li                 {color: @dark-brown;
+        }
+    }
+    .sidebar-wrapper           {background-color: @pale-beige;
+                                padding: 1em 0;
+                                width: 100%;
+                                height: 100%;
+        .doc-version,
+        .read-text             {display: block;
+                                width: 100%;
+                                color: @white;
+                                line-height: 2em;
+                                padding-left: 1em;
+        }
+        .doc-version           {background-color: @spring-green;
+        }
+        .read-text             {background-color: @dark-blue;
+            &:hover,
+            &:active           {background-color: @light-blue;
+                                text-decoration: none;
+            }
+        }
+        h4                     {margin-left: 1em;
+                                color: @light-brown;
+        }
+        #sidebar-menu          {padding-left: 0;
+                                margin-left: -1em;
+            li                 {line-height: 1.5em;
+                a                  {color: @dark-brown;
+                                    border-left: 2px solid transparent;
+                                    padding: 0 0 0 2em;
+                    &:hover,
+                    &:active       {border-left: 2px solid @light-brown;
+                                    background-color: transparent;
+                                    border-radius: 0;
+                    }
+                }
+            }
+        }
+        p                       {padding-left: 1.2em;
+        }
+    }
+
+}
+
+.docs_list                     {
+    ul                         {list-style: outside none none;
+                                padding-left: 1em;
+        .doc-link-span         {color: @light-brown;
+            a                  {color: @light-brown;
+            }
+        }
     }
 }
 
@@ -81,18 +219,6 @@ div#textwrapper                {position:absolute;
         .textframe             {color: #333;
                                 overflow: auto;
                                 padding: 1em;
-            .Greek             {font-family: "SBL Greek";
-                                font-size: 1.2em;
-            }
-            .Hebrew            {font-family: "SBL Hebrew";
-                                font-size: 1.2em;
-            }
-            .Aramaic           {font-family: "SBL Hebrew";
-                                font-size: 1.2em;
-            }
-            .Ethiopic          {font-family: "Estrangelo";
-                                font-size: 1em;
-            }
             .refmarker_0       {color: rgb(185, 107, 107);
                                 font-size: 1.3em;
             }

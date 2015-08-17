@@ -31,26 +31,168 @@
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  /*.Latin             {font-family:*/
+
 }
 body .fa-spinner {
   font-size: 2em;
-  color: #666;
+  color: #666666;
 }
-.navbar {
-  background-color: #615F55;
+body .Greek {
+  font-family: "SBL Greek";
+  font-size: 1.2em;
 }
-.navbar .navbar-header {
-  background-color: #615F55;
+body .Hebrew {
+  font-family: "SBL Hebrew";
+  font-size: 1.2em;
 }
-.navbar .navbar-header .navbar-brand {
-  color: white;
+body .Aramaic {
+  font-family: "SBL Hebrew";
+  font-size: 1.2em;
+}
+body .Ethiopic {
+  font-family: "Estrangelo";
+  font-size: 1em;
+}
+body h1 {
+  color: #a9a06a;
+}
+body h2 {
+  color: #96bc44;
+}
+body h3 {
+  color: #a9a06a;
+}
+body h4 {
+  text-transform: uppercase;
+  color: #009fee;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+  /*font-weight: bold;*/
+
+}
+body table.table {
+  background-color: #fcfbf7;
+  border-bottom: 1px solid #e3e1d3;
+}
+body table.table tr td {
+  border-top: 1px solid #e3e1d3;
+}
+body p {
+  color: #333333;
+  text-align: justify;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+body ul.bibliography {
+  list-style: outside none none;
+}
+body ul.bibliography li {
+  text-indent: -2em;
+  margin-bottom: 0.5em;
+}
+body ul.bibliography li.annotation {
+  text-indent: 0;
+  color: #aaaaaa;
+}
+.navbar-inverse {
+  background-color: #615f55;
+}
+.navbar-inverse .navbar-header {
+  background-color: #615f55;
+}
+.navbar-inverse .navbar-header .navbar-brand {
+  color: #ffffff;
   text-transform: capitalize;
 }
-.navbar .navbar-header small {
+.navbar-inverse .navbar-header small {
   display: none;
 }
-.navbar .navbar-inverse .navbar-nav > li > a {
-  color: #E4DFC8;
+.navbar-inverse .navbar-nav li > a {
+  color: #e4dfc8;
+}
+.navbar-inverse .navbar-nav li > a:focus,
+.navbar-inverse .navbar-nav li > a:hover {
+  background-color: #4b4a43;
+}
+.navbar-inverse .navbar-nav .open a,
+.navbar-inverse .navbar-nav .open a:focus,
+.navbar-inverse .navbar-nav .open a:hover {
+  background-color: #4b4a43;
+}
+#right_sidebar {
+  height: 800px;
+}
+#right_sidebar ul {
+  list-style: outside none none;
+  padding-left: 1em;
+  border-left: 1em solid transparent;
+}
+#right_sidebar ul li {
+  color: #615f55;
+}
+#right_sidebar .sidebar-wrapper {
+  background-color: #fcfbf7;
+  padding: 1em 0;
+  width: 100%;
+  height: 100%;
+}
+#right_sidebar .sidebar-wrapper .doc-version,
+#right_sidebar .sidebar-wrapper .read-text {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  line-height: 2em;
+  padding-left: 1em;
+}
+#right_sidebar .sidebar-wrapper .doc-version {
+  background-color: #96bc44;
+}
+#right_sidebar .sidebar-wrapper .read-text {
+  background-color: #006699;
+}
+#right_sidebar .sidebar-wrapper .read-text:hover,
+#right_sidebar .sidebar-wrapper .read-text:active {
+  background-color: #007dbb;
+  text-decoration: none;
+}
+#right_sidebar .sidebar-wrapper h4 {
+  margin-left: 1em;
+  color: #a9a06a;
+}
+#right_sidebar .sidebar-wrapper #sidebar-menu {
+  padding-left: 0;
+  margin-left: -1em;
+}
+#right_sidebar .sidebar-wrapper #sidebar-menu li {
+  line-height: 1.5em;
+}
+#right_sidebar .sidebar-wrapper #sidebar-menu li a {
+  color: #615f55;
+  border-left: 2px solid transparent;
+  padding: 0 0 0 2em;
+}
+#right_sidebar .sidebar-wrapper #sidebar-menu li a:hover,
+#right_sidebar .sidebar-wrapper #sidebar-menu li a:active {
+  border-left: 2px solid #a9a06a;
+  background-color: transparent;
+  border-radius: 0;
+}
+#right_sidebar .sidebar-wrapper p {
+  padding-left: 1.2em;
+}
+.docs_list ul {
+  list-style: outside none none;
+  padding-left: 1em;
+}
+.docs_list ul .doc-link-span {
+  color: #a9a06a;
+}
+.docs_list ul .doc-link-span a {
+  color: #a9a06a;
 }
 div#textwrapper {
   position: absolute;
@@ -99,22 +241,6 @@ div#textwrapper div.versionwindow .textframe {
   color: #333;
   overflow: auto;
   padding: 1em;
-}
-div#textwrapper div.versionwindow .textframe .Greek {
-  font-family: "SBL Greek";
-  font-size: 1.2em;
-}
-div#textwrapper div.versionwindow .textframe .Hebrew {
-  font-family: "SBL Hebrew";
-  font-size: 1.2em;
-}
-div#textwrapper div.versionwindow .textframe .Aramaic {
-  font-family: "SBL Hebrew";
-  font-size: 1.2em;
-}
-div#textwrapper div.versionwindow .textframe .Ethiopic {
-  font-family: "Estrangelo";
-  font-size: 1em;
 }
 div#textwrapper div.versionwindow .textframe .refmarker_0 {
   color: #b96b6b;

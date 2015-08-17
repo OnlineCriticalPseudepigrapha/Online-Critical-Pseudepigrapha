@@ -1,0 +1,63 @@
+{{left_sidebar_enabled,right_sidebar_enabled=False,True}}
+{{extend 'layout.html'}}
+
+{{=H1(title, _class='document_title')}}
+
+{{for field_title, field_content in body_fields.iteritems():}}
+    {{=H2(field_title, _id=field_title, _class='section_title')}}
+    {{=XML(field_content)}}
+{{pass}}
+
+{{block right_sidebar}}
+
+<div class="affix sidebar-wrapper">
+
+    <span class="doc-version">Version {{=version}}</span>
+    <a href="{{=URL('docs', 'text', args=[filename])}}" class="read-text">Read the text</a>
+
+    <h4>Document Editor(s)</h4>
+    <ul class="editor-list">
+    {{for editor_id, editor_name in editors.iteritems():}}
+        {{=LI(editor_name)}}
+    {{pass}}
+    </ul>
+
+    {{if assistant_editors:}}
+        <h4>Assistant Editor(s)</h4>
+        <ul class="assistant-editor-list">
+        {{for assistant_editor_id, assistant_editor_name in assistant_editors.iteritems():}}
+            {{=LI(assistant_editor_name)}}
+        {{pass}}
+        </ul>
+    {{pass}}
+
+    {{if proofreaders:}}
+        <h4>Proofreader(s)</h4>
+        <ul class="proofreader-list">
+        {{for proofreader_id, proofreader_name in proofreaders.iteritems():}}
+            {{=LI(proofreader_name)}}
+        {{pass}}
+        </ul>
+    {{pass}}
+
+    <h4>Sections</h4>
+    <ul id="sidebar-menu" class="nav nav-pills nav-stacked sidebar-menu">
+        {{for field_title in body_fields.keys():}}
+            {{=LI(A(field_title, _href='#{}'.format(field_title)))}}
+        {{pass}}
+        <li class="toplink"><a href="#top">Return to top</a><li>
+    </ul>
+
+
+    <h4>Citation Format</h4>
+    {{=XML(citation_format)}}
+</div>
+
+
+{{end}}
+
+<script>
+
+$('table').addClass('table');
+
+</script>

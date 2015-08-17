@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from gluon.tools import Auth, Crud, Service, PluginManager, Recaptcha
+from gluon.tools import Auth, Crud, Service, PluginManager, Recaptcha2
 from gluon import current
 request, response = current.request, current.response
 from gluon.dal import DAL
 import os
+
+if 0:
+    from gluon import URL
 
 """
 # if SSL/HTTPS is properly configured and you want all HTTP requests to
@@ -22,7 +25,7 @@ def check_path(path):
         return path
     raise OSError(2, "{}: {}".format(os.strerror(2), path))
 
-db = DAL('sqlite://storage.sqlite')
+db = DAL('sqlite://storage.sqlite', fake_migrate=False, migrate=True)
 current.db = db
 
 # by default give a view/generic.extension to all actions from localhost
@@ -32,35 +35,52 @@ response.generic_patterns = ['*'] if request.is_local else []
 # response.optimize_css = 'concat,minify,inline'
 # response.optimize_js = 'concat,minify,inline'
 
+# -------------------------------------------------------------
+# get private data from secure file
+# -------------------------------------------------------------
+keydata = {}
+with open('applications/grammateus3/private/app.keys', 'r') as keyfile:
+    for line in keyfile:
+        k, v = line.split()
+        keydata[k] = v
+
 auth = Auth(db, hmac_key=Auth.get_or_create_key())
 crud, service, plugins = Crud(db), Service(), PluginManager()
 
 # create all tables needed by auth if not custom tables
 auth.define_tables()
 
+# -------------------------------------------------------------
 # configure email
+# -------------------------------------------------------------
 mail = auth.settings.mailer
-mail.settings.server = 'logging' or 'smtp.gmail.com:587'
-mail.settings.sender = 'you@gmail.com'
-mail.settings.login = 'username:password'
+mail.settings.server = keydata['email_server']  # 'logging' # SMTP server
+print mail.settings.server
+mail.settings.sender = keydata['email_address']  # email
+mail.settings.login = '{}:{}'.format(keydata['email_user'], keydata['email_pass'])  # credentials or None
+mail.settings.tls = True
+current.mail = mail
 
-
+# -------------------------------------------------------------
 # enable recaptcha (keys for ianwscott.fluxflex.com)
-auth.settings.captcha = Recaptcha(request,
-    '6Ldy5ccSAAAAALlI2gJuwFQYe-iaZ_oyQs3nhX-9',
-    '6Ldy5ccSAAAAABr8FhJeb_aELfEC7SJOOyvhJp0R')
-auth.settings.login_captcha = None
-auth.settings.register_captcha = Recaptcha(request,
-    '6Ldy5ccSAAAAALlI2gJuwFQYe-iaZ_oyQs3nhX-9',
-    '6Ldy5ccSAAAAABr8FhJeb_aELfEC7SJOOyvhJp0R')
-auth.settings.retrieve_username_captcha = Recaptcha(request,
-    '6Ldy5ccSAAAAALlI2gJuwFQYe-iaZ_oyQs3nhX-9',
-    '6Ldy5ccSAAAAABr8FhJeb_aELfEC7SJOOyvhJp0R')
-auth.settings.retrieve_password_captcha = Recaptcha(request,
-    '6Ldy5ccSAAAAALlI2gJuwFQYe-iaZ_oyQs3nhX-9',
-    '6Ldy5ccSAAAAABr8FhJeb_aELfEC7SJOOyvhJp0R')
+# -------------------------------------------------------------
+auth.settings.register_captcha = Recaptcha2(request,
+    keydata['captcha_public_key'], keydata['captcha_private_key'])
+auth.settings.retrieve_username_captcha = Recaptcha2(request,
+    keydata['captcha_public_key'], keydata['captcha_private_key'])
+auth.settings.retrieve_password_captcha = Recaptcha2(request,
+    keydata['captcha_public_key'], keydata['captcha_private_key'])
 
+# -------------------------------------------------------------
 # configure auth policy
+# -------------------------------------------------------------
 auth.settings.registration_requires_verification = False
 auth.settings.registration_requires_approval = False
 auth.settings.reset_password_requires_verification = True
+auth.messages.verify_email = 'Click on the link http://' \
+    + request.env.http_host + URL('default', 'user', args=['verify_email']) \
+    + '/%(key)s to verify your email'
+auth.settings.reset_password_requires_verification = True
+auth.messages.reset_password = 'Click on the link http://' \
+    + request.env.http_host + URL('default', 'user', args=['reset_password'])\
+    + '/%(key)s to reset your password'

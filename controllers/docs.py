@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from collections import OrderedDict
 from parse import Book, ElementDoesNotExist, NotAllowedManuscript
 from plugin_utils import flatten
 import re
@@ -28,6 +29,46 @@ session.endref --
 def index():
     filename = request.args[0]
     return dict(filename=filename)
+
+
+def intro():
+    session.filename = request.args[0]
+    filename = session.filename
+    docrow = db(db.docs.filename == filename).select().first()
+
+    display_fields = OrderedDict([('introduction', 'Introduction'),
+                                  ('provenance', 'Provenance and Cultural Setting'),
+                                  ('themes', 'Major Themes'),
+                                  ('status', 'Current State of the OCP Text'),
+                                  ('manuscripts', 'Manuscripts'),
+                                  ('bibliography', 'Bibliography'),
+                                  ('corrections', 'Corrections'),
+                                  ('sigla', 'Sigla Used in the Text'),
+                                  ('copyright', 'Copyright Information')]
+                                 )
+    body_fields = OrderedDict([(v, docrow[k]) for k, v in display_fields.iteritems()
+                               if docrow[k]])
+
+    editors = db(db.auth_user.id.belongs(docrow['editor'])).select()
+    editor_names = OrderedDict([(e['id'], '{} {}'.format(e['first_name'], e['last_name']))
+                    for e in editors])
+
+    asst_editors = db(db.auth_user.id.belongs(docrow['assistant_editor'])).select()
+    asst_editor_names = OrderedDict([(e['id'], '{} {}'.format(e['first_name'], e['last_name']))
+                    for e in asst_editors])
+
+    proofreaders = db(db.auth_user.id.belongs(docrow['proofreader'])).select()
+    proofreader_names = OrderedDict([(e['id'], '{} {}'.format(e['first_name'], e['last_name']))
+                    for e in proofreaders])
+
+    return {'title': docrow['name'],
+            'body_fields': body_fields,
+            'citation_format': docrow['citation_format'],
+            'editors': editor_names,
+            'assistant_editors': asst_editor_names,
+            'proofreaders': proofreader_names,
+            'filename': filename,
+            'version': docrow['version']}
 
 
 def text():
@@ -344,10 +385,10 @@ def apparatus():
 
     #if no unit has been requested, present the default message
     if request.vars['called'] == 'no':
-        readings = P('Click on any blue text to display textual variants ' \
-                        'for those words. If no links are available that may ' \
-                        'mean no variants are attested or it may mean that ' \
-                        'this document does not yet have a complete textual ' \
+        readings = P('Click on any blue text to display textual variants '
+                        'for those words. If no links are available that may '
+                        'mean no variants are attested or it may mean that '
+                        'this document does not yet have a complete textual '
                         'apparatus. See the document introduction for details.',
                      _class='apparatus-message')
     #if a unit has been requested, assemble that unit's readings
