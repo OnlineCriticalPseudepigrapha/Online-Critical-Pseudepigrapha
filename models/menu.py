@@ -38,12 +38,15 @@ response.menu = []
 
 if auth.has_membership('editors', auth.user_id):
     response.menu += [
-        (T('Drafts'), False, A(I(_class='fa fa-book'), ' Drafts', _href=URL('default', 'page', args=['drafts']), _class='draftslink'), []),
+        (T('Drafts'), False, A(I(_class='fa fa-book'), SPAN(' Drafts', _class="visible-lg-inline"),
+                               _href=URL('default', 'page', args=['drafts']),
+                               _class='draftslink'), []),
     ]
 
 if auth.has_membership('administrators', auth.user_id):
     response.menu += [
-        (T('Admin'), False, A(SPAN(I(_class='fa fa-cog'), ' Admin'), _href='#', _class='adminlink'), [
+        (T('Admin'), False, A(I(_class='fa fa-cog'), SPAN(' Admin', _class="visible-lg-inline"),
+                              _href='#', _class='adminlink'), [
             (T('Documents'), False, A('Documents', _href=URL('default', 'list', args=['docs'])), []),
             (T('Bibliography'), False, A('Bibliography', _href=URL('default', 'list', args=['biblio'])), []),
             (T('Pages'), False, A('Pages', _href=URL('default', 'list', args=['pages'])), []),
@@ -55,17 +58,37 @@ if auth.has_membership('administrators', auth.user_id):
     ]
 
 response.menu += [
-    (T('Documents'), False, A(I(_class='fa fa-book'), ' Documents', _href=URL('default', 'index'), _class='documentslink'), []),
-    (T('Copyright'), False, A(I(_class='fa fa-copyright'), ' Copyright', _href=URL('default', 'page', args=['copyright']), _class='copyrightlink'), []),
-    (T('Help and Information'), False, A(I(_class='fa fa-info-circle'), ' Help and Information', _href='#', _class='helplink'), [
-        (T('About'), False, A('About', _href=URL('admin', 'default', 'about/{}'.format(app))), []),
-        (T('FAQ'), False, A('FAQ', _href=URL('default', 'page', args=['faq']), _class='faqlink'), []),
-        (T('Roadmap'), False, A('Roadmap', _href=URL('default', 'page', args=['roadmap']), _class='roadmaplink'), []),
-        (T('Get involved'), False, A('Get involved', _href=URL('default', 'page', args=['get-involved']), _class='involvedlink'), []),
+    (T('Documents'), False, A(I(_class='fa fa-book'),
+                              SPAN(' Documents', _class="visible-lg-inline"),
+                              _href=URL('default', 'index'), _class='documentslink'), []),
+    (T('Help and Information'), False, A(I(_class='fa fa-info-circle'),
+                                         SPAN(' Help and Information',  _class="visible-lg-inline"),
+                                         _href='#', _class='helplink'), [
+        (T('About'), False, A(I(_class='fa fa-info-circle fa-fw'),
+                              SPAN('About'),
+                              _href=URL('default', 'page', args=['about']),
+                              _class='aboutlink'), []),
+        (T('FAQ'), False, A(I(_class='fa fa-question-circle fa-fw'),
+                            SPAN('FAQ'),
+                            _href=URL('default', 'page', args=['faq']),
+                            _class='faqlink'), []),
+        (T('Copyright'), False, A(I(_class='fa fa-copyright fa-fw'),
+                                  SPAN(' Copyright'),
+                                  _href=URL('default', 'page', args=['copyright']),
+                                  _class='copyrightlink'), []),
     ]),
-    (T('Bug reports'), False, A(I(_class='fa fa-bug'), ' Bug reports', _href=URL('default', 'page', args=['bugs']), _class='bugslink'), []),
-    (T('Suggestions'), False, A(I(_class='fa fa-comment'), ' Suggestions', _href=URL('default', 'page', args=['suggestions']), _class='suggestionslink'), []),
-    (T('Contact us'), False, A(I(_class='fa fa-bullhorn'), ' Contact us', _href=URL('default', 'page', args=['contact']), _class='contactlink'), []),
+    (T('Contact Us'), False, A(I(_class='fa fa-bullhorn'),
+                               SPAN(' Contact us', _class="visible-lg-inline"),
+                               _href=URL('default', 'page', args=['contact']), _class='contactlink'), [
+        (T('Bug reports'), False, A(I(_class='fa fa-bug fa-fw'),
+                                    SPAN(' Bug reports'),
+                                    _href=URL('default', 'page', args=['bugs']),
+                                    _class='bugslink'), []),
+        (T('Suggestions'), False, A(I(_class='fa fa-commenting-o fa-fw'),
+                                    SPAN(' Suggestions'),
+                                    _href=URL('default', 'page', args=['suggestions']),
+                                    _class='suggestionslink'), []),
+    ]),
     ]
 
 

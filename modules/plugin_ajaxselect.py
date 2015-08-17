@@ -1,0 +1,1 @@
+../plugins/plugin_ajaxselect/modules/plugin_ajaxselect.py

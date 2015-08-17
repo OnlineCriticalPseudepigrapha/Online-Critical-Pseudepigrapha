@@ -1,39 +1,50 @@
-{{left_sidebar_enabled,right_sidebar_enabled=False,True}}
+{{left_sidebar_enabled,right_sidebar_enabled=False, True}}
 {{extend 'layout.html'}}
 
 {{if 'message' in globals():}}
 <h3>{{#=message}}</h3>
 {{pass}}
 
+<h3>News and Updates</h3>
+
 <div class='docs_list'>
-    <h3>Choose a document to read</h3>
-    <ul>
+    <h2>Documents</h2>
+    <ul class="">
     {{for doc in docrows:}}
-        {{=LI(A(doc.name, _href=URL('docs', 'text', args=doc.filename)))}}
+        {{=LI(A(doc.name, _href=URL('docs', 'text', args=[doc.filename])),
+              SPAN(' ( ',
+                   A('text', _href=URL('docs', 'text', args=[doc.filename])),
+                   ' | ',
+                   A('introduction', _href=URL('docs', 'intro', args=[doc.filename])), ' )',
+                   _class="doc-link-span"
+                   )
+              )
+          }}
     {{pass}}
     </ul>
 </div>
 
 {{block right_sidebar}}
-<h3>General Editor</h3>
+
+<div class="sidebar-wrapper">
+
+<h4>General Editors</h4>
     <ul>
         <li>Ian W. Scott (2006-)</li>
         <li>Ken M. Penner (2006-2009, 2013-)</li>
-        <li><h4>Past Editors</h4>
-            <ul><li>David M. Miller (2006-2007)</li></ul>
-        </li>
+        <li>David M. Miller (2006-2007)</li>
     </ul>
 
-<h3>Review Board</h3>
+<h4>Review Board</h4>
 
     <ul>
-        <li>Judith H. Newman (2009-present)</li>
-        <li>James H. Charlesworth (2006-present)</li>
+        <li>Judith H. Newman (2009-)</li>
+        <li>James H. Charlesworth (2006-)</li>
         <li>Robert A. Kraft (2006-2008)</li>
         <li>Craig A. Evans (2006-2007)</li>
     </ul>
 
-<h3>About the Project</h3>
+<h4>About the Project</h4>
 
 <p>The mandate of the Online Critical Pseudepigrapha is to develop and publish
 electronic editions of the best critical texts of the "Old Testament" Pseudepigrapha
@@ -45,6 +56,7 @@ edition of a document does not yet include all of the textual evidence. Readers
 should consult the "text status" information on the introductory page for each
 document to determine whether a better or more complete text exists elsewhere.</p>
 
-{{=A(T("Administrative Interface"), _href=URL('admin','default','index'), _class='button', _style='margin-top: 1em;')}}
+</div>
+
 {{end}}
 
