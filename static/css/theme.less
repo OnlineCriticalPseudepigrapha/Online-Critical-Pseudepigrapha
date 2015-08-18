@@ -44,8 +44,11 @@
 }
 
 body                           {font-family: 'Open Sans', sans-serif;
-    .fa-spinner                {font-size: 2em;
-                                color: @grey6;
+    .fa-circle-o-notch {font-size: 8em;
+                        color: @greya;
+                        position: relative;
+                        left: 50%;
+                        margin: 1em 0 0 -0.5em ;
     }
 
     .Greek             {font-family: "SBL Greek";
@@ -224,6 +227,15 @@ div#textwrapper                {position:absolute;
             }
             .refmarker_1       {color: rgb(236, 201, 58);
                                 font-size: 1em;
+                                font-weight: bold;
+            }
+            .refmarker_2       {color: @spring-green;
+                                font-size: 1em;
+                                font-weight: bold;
+            }
+            .refmarker_3       {color: @light-blue;
+                                font-size: 1em;
+                                font-weight: bold;
             }
         }
         .apparatusframe        {border-top: 1px solid #ddd;

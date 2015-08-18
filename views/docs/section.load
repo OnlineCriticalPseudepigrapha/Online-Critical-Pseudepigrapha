@@ -40,9 +40,16 @@ function setrefs(){
     $frominputs.each(function(){
         myindex = $frominputs.index($(this));
 		from_ref = $(this).val();
-        if (start_sel[myindex] != from_ref){
-            $(this).val(start_sel[myindex]);
-        };
+        {{if structure == 'fragmentary':}}
+            var fragment = {{=fragment}}
+            if (fragment != from_ref){
+                $(this).val(fragment);
+            };
+        {{else:}}
+            if (start_sel[myindex] != from_ref){
+                $(this).val(start_sel[myindex]);
+            };
+        {{pass}}
 	});
 
     $toinputs = $('input.to')

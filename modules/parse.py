@@ -3,12 +3,10 @@ from collections import namedtuple
 from collections import OrderedDict
 from copy import deepcopy
 from datetime import datetime
-import os
-
-from lxml import etree
-
 from gluon import A, DIV, SPAN, TAG
-
+from kitchen.text.converters import to_unicode
+from lxml import etree
+import os
 from plugin_utils import check_path
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
@@ -570,12 +568,15 @@ class Book(object):
         Get back the requested element if it exists and is unique.
 
         """
+        vbs = False
         if attribute:
-            xpath = "{}[@{}='{}']".format(element_name,
-                                          attribute.keys()[0],
-                                          attribute.values()[0])
+            xpath = u"{}[@{}='{}']".format(to_unicode(element_name),
+                                           to_unicode(attribute.keys()[0]),
+                                           to_unicode(attribute.values()[0]))
+            if vbs: print '_get(): 1'
             elements = on_element.xpath(xpath) if on_element is not None \
                         else self._book.xpath(xpath)
+            if vbs: print '_get(): 2'
             if not elements:
                 raise ElementDoesNotExist("<{}> element with {}='{}' does not "
                                           "exist".format(element_name,
@@ -703,14 +704,20 @@ class Book(object):
             tuple: reference for end of range returned
 
         """
-
+        vbs = False
+        if vbs: print "get_text() start --------------------------------"
+        if vbs: print "get_text() getting version", version_title
         version = self._get("version", {"title": version_title})
+        if vbs: print "get_text(): version", version
         manuscript = self._get("manuscripts/ms", {"abbrev": text_type}, version)
+        if vbs: print "get_text(): manuscript", manuscript
         if manuscript.get("show") == "no":
             raise NotAllowedManuscript
 
         end_div_elements = self._div_path_to_element_path(version, end_div)
+        if vbs: print "get_text(): got end_div_elements"
         start_div_elements = self._div_path_to_element_path(version, start_div)
+        if vbs: print "get_text(): got start_div_elements"
         # handle navigating to next text section
         if next_level != None:
             start_div_elements = self._get_next_or_prev(start_div_elements,
@@ -754,11 +761,12 @@ class Book(object):
         new_start_sel = tuple(self._get_div_path(current_div))
         last_div = end_div_elements[-1]
         new_end_sel = tuple(self._get_div_path(last_div))
-
+        if vbs: print "get_text: getting text_iterator"
         text_iterator = self._get_readings_for_units(current_div,
                                                      last_div,
                                                      text_type,
                                                      version)
+        if vbs: print "get_text: got text_iterator"
 
         return text_iterator, new_start_sel, new_end_sel
 
@@ -779,7 +787,8 @@ class Book(object):
             iterator: yielding a series of Text objects for the selected range
 
         """
-        reading_filter = "reading[re:test(@mss, '^{0} | {0} | {0}$|^{0}$')]".format(text_type)
+        reading_filter = u"reading[re:test(@mss, '^{0} | {0} | {0}$|^{0}$')]" \
+                          "".format(to_unicode(text_type))
         while True:
             for unit in current_div.getchildren():
                 readings_in_unit = len(unit.getchildren())

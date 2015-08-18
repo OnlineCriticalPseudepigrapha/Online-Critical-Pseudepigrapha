@@ -10,13 +10,18 @@
     </a>
     <div class='form-group'>
         <div class='input-group'>
-            <div class="input-group-addon">from</div>
-            {{for l in range(levels):}}
-            <input type='text' id='start_ref{{=l}}' value='{{=start_sel[l]}}' class='{{=l}} from form-control' />
-            {{pass}}
-            <div class="input-group-addon">to</div>
-            {{for l in range(levels):}}
-            <input type='text' id='end_ref{{=l}}' value='{{=end_sel[l]}}' class='{{=l}} to form-control' />
+            {{if structure == 'fragmentary':}}
+                <div class="input-group-addon">Fragment</div>
+                <input type='text' id='start_ref_0' value='{{=start_sel}}' class='0 from form-control' />
+            {{else:}}
+                <div class="input-group-addon">from</div>
+                {{for l in range(levels):}}
+                <input type='text' id='start_ref{{=l}}' value='{{=start_sel[l]}}' class='{{=l}} from form-control' />
+                {{pass}}
+                <div class="input-group-addon">to</div>
+                {{for l in range(levels):}}
+                <input type='text' id='end_ref{{=l}}' value='{{=end_sel[l]}}' class='{{=l}} to form-control' />
+                {{pass}}
             {{pass}}
             <div class="input-group-btn">
                 <input id='textnavsubmit' class='btn btn-success' type='submit' value='Go' />
@@ -34,7 +39,7 @@
 
 <div id='versionwindow_0' class='versionwindow'>
 {{=LOAD('docs', 'section.load', args=[filename], ajax=True,
-        target='versionwindow_0')}}
+        target='versionwindow_0', content=XML('<i class="fa fa-circle-o-notch fa-spin"></i>'))}}
 </div>
 
 
@@ -100,15 +105,12 @@ $('#versionadder').on('click', function(event){
     // get initial version and text type
     var $frames = $('.versionwindow')
     var $prevframe = $frames.last();
-    console.log($prevframe);
     var the_v = $prevframe.find('.vselect').val();
 	var the_m = $prevframe.find('.mselect').val();
 
     // get index for new versionwindow
     var prevname = $prevframe.attr('id');
-    console.log('prevname: ' + prevname);
     var prevnum = prevname.split('_')[1];
-    console.log('prevnum: ' + prevnum);
     var prevnum = parseInt(prevnum);
     var newnum = prevnum + 1;
     var newdivid = 'versionwindow_' + newnum;
@@ -122,6 +124,7 @@ $('#versionadder').on('click', function(event){
     var the_url = '/grammateus3/docs/section.load/{{=filename}}?version=';
     the_url += the_v + '&type=' + the_m;
     the_url += '&from=' + from_ref + '&to=' + to_ref;
+    $('#' + newdivid).html('<i class="fa fa-circle-o-notch fa-spin"></i>');
     web2py_component(the_url, newdivid);
 
     // set dimensions here so the new pane is sized vertically
@@ -133,22 +136,26 @@ $('#versionadder').on('click', function(event){
 // change ref and refresh text windows when next or prev buttons clicked
 $(document).on('click', '.nextbutton, .prevbutton', function(event){
     direction = $.trim($(this).text());
-    console.log(direction)
-	var from_ref = '';
-	$('input.from').each(function(){
-		from_ref += $(this).val();
-		from_ref += '-';
-	});
-	$('.versionwindow').each(function(){
-		var $the_form = $(this).children('form.version_selector');
-		var loader_id = $(this).attr('id');
-		var the_v = $the_form.find('.vselect').val();
-		var the_m = $the_form.find('.mselect').val();
+    var from_ref = '';
+    $('input.from').each(function(){
+        from_ref += $(this).val();
+        from_ref += '-';
+    });
+    $('.versionwindow').each(function(){
+        var $the_form = $(this).children('form.version_selector');
+        var loader_id = $(this).attr('id');
+        var the_v = $the_form.find('.vselect').val();
+        {{if structure == 'fragmentary':}}
+            var the_m = 'newval';
+        {{else:}}
+            var the_m = $the_form.find('.mselect').val();
+        {{pass}}
+        console.log('type: ' + the_m);
         var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
         var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + direction + '0';
-        console.log(baseurl + urlvars);
-		web2py_component(baseurl + urlvars, loader_id);
-	});
+        $(this).children('.textframe').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
+        web2py_component(baseurl + urlvars, loader_id);
+    });
 	event.preventDefault();
 });
 
@@ -177,7 +184,7 @@ $(document).on('change', '.vselect, .mselect', function(event){
         var the_m = $(this).val();
         var the_v = $loader.find('.vselect').val();
     }
-    $loader.children('.textframe').html('<i class="fa fa-spinner fa-spin"></i>');
+    $loader.children('.textframe').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
     var baseurl = '/grammateus3/docs/section.load/{{=filename}}?';
     var urlvars = 'version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
     web2py_component(baseurl + urlvars, the_loader);
@@ -206,7 +213,7 @@ $('#textnavsubmit').on('click', function(event){
         var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
         var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
         console.log(baseurl + urlvars);
-        $(this).children('.textframe').html('<i class="fa fa-spinner fa-spin"></i>');
+        $(this).children('.textframe').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
 		web2py_component(baseurl + urlvars, loader_id);
 	});
 	event.preventDefault();
@@ -219,7 +226,7 @@ $(document).on('click', '.textframe a', function(event){
 	var the_v = $p.find('.vselect').val();
     var $aframe = $p.find('.apparatusframe');
 	the_target = $aframe.children().attr('id');
-    $aframe.find('.readings-wrapper').html('<i class="fa fa-spinner fa-spin"></i>');
+    $aframe.find('.readings-wrapper').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
     var baseurl = '/grammateus3/docs/apparatus.load/{{=filename}}?';
     var urlvars = 'version=' + the_v + '&unit=' + the_unit;
     console.log(baseurl);

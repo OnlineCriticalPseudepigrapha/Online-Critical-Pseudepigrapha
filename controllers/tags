@@ -6,24 +6,28 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 GetInHMS	appadmin.py	/^    def GetInHMS(seconds):$/;"	f	function:ccache
 _get_bookinfo	docs.py	/^def _get_bookinfo(filename):$/;"	f
-_make_refs_hierarchical	docs.py	/^def _make_refs_hierarchical(refraw, levels):$/;"	f
 apparatus	docs.py	/^def apparatus():$/;"	f
 args	appadmin.py	/^                 args=[request.application])], [T('db'), False,$/;"	v
 auth	plugin_utils.py	/^    auth = current.auth$/;"	v
-call	default.py	/^def call():$/;"	f
 ccache	appadmin.py	/^def ccache():$/;"	f
 csv	appadmin.py	/^def csv():$/;"	f
-data	default.py	/^def data():$/;"	f
 databases	appadmin.py	/^databases = get_databases(None)$/;"	v
 db	docs.py	/^    db = current.db$/;"	v
+db	plugin_ajaxselect.py	/^    db = current.db$/;"	v
+db	plugin_listandedit.py	/^    db = current.db$/;"	v
 download	appadmin.py	/^def download():$/;"	f
 download	default.py	/^def download():$/;"	f
+dupAndEdit	plugin_listandedit.py	/^def dupAndEdit():$/;"	f
+edit	plugin_listandedit.py	/^def edit():$/;"	f
 eval_in_global_env	appadmin.py	/^def eval_in_global_env(text):$/;"	f
+get_current_ms	docs.py	/^    def get_current_ms(mslist):$/;"	f	function:section
 get_database	appadmin.py	/^def get_database(request):$/;"	f
 get_databases	appadmin.py	/^def get_databases(request):$/;"	f
-get_next_unit	docs.py	/^    def get_next_unit():$/;"	f	function:section
+get_display_version	docs.py	/^    def get_display_version(myversions):$/;"	f	function:section
+get_prev_next_levels	docs.py	/^    def get_prev_next_levels(startref, endref, start_sel, end_sel):$/;"	f	function:section
 get_query	appadmin.py	/^def get_query(request):$/;"	f
 get_table	appadmin.py	/^def get_table(request):$/;"	f
+get_version_info	docs.py	/^    def get_version_info(current_version):$/;"	f	function:section
 global_env	appadmin.py	/^global_env = copy.copy(globals())$/;"	v
 hosts	appadmin.py	/^    hosts = (http_host, )$/;"	v
 hosts	appadmin.py	/^    hosts = (http_host, socket.gethostname(),$/;"	v
@@ -34,17 +38,30 @@ index	appadmin.py	/^def index():$/;"	f
 index	default.py	/^def index():$/;"	f
 index	docs.py	/^def index():$/;"	f
 insert	appadmin.py	/^def insert():$/;"	f
+intro	docs.py	/^def intro():$/;"	f
+itemlist	plugin_listandedit.py	/^def itemlist():$/;"	f
 key_table	appadmin.py	/^    def key_table(keys):$/;"	f	function:ccache
+linked_create_form	plugin_ajaxselect.py	/^def linked_create_form():$/;"	f
+linked_edit_form	plugin_ajaxselect.py	/^def linked_edit_form():$/;"	f
+list	default.py	/^def list():$/;"	f
+page	default.py	/^def page():$/;"	f
 query_by_table_type	appadmin.py	/^def query_by_table_type(tablename,db,request=request):$/;"	f
 remote_addr	appadmin.py	/^remote_addr = request.env.remote_addr$/;"	v
+request	default.py	/^    request = current.request$/;"	v
 request	docs.py	/^    request = current.request$/;"	v
+request	plugin_listandedit.py	/^    request = current.request$/;"	v
 request	plugin_utils.py	/^    request = current.request$/;"	v
+response	default.py	/^    response = current.response$/;"	v
 response	docs.py	/^    response = current.response$/;"	v
+response	plugin_listandedit.py	/^    response = current.response$/;"	v
 section	docs.py	/^def section():$/;"	f
 select	appadmin.py	/^def select():$/;"	f
 session	docs.py	/^    session = current.session$/;"	v
+session	plugin_listandedit.py	/^    session = current.session$/;"	v
+set_widget	plugin_ajaxselect.py	/^def set_widget():$/;"	f
 state	appadmin.py	/^def state():$/;"	f
 text	docs.py	/^def text():$/;"	f
 update	appadmin.py	/^def update():$/;"	f
 user	default.py	/^def user():$/;"	f
 vars	appadmin.py	/^                 vars=dict(send=URL(args=request.args,vars=request.vars))))$/;"	v
+widget	plugin_listandedit.py	/^def widget():$/;"	f
