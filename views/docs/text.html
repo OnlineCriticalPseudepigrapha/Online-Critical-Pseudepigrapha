@@ -121,7 +121,7 @@ $('#versionadder').on('click', function(event){
 	$('#textwrapper').append(newDiv);
 
     // populate via ajax
-    var the_url = '/grammateus3/docs/section.load/{{=filename}}?version=';
+    var the_url = '/docs/section.load/{{=filename}}?version=';
     the_url += the_v + '&type=' + the_m;
     the_url += '&from=' + from_ref + '&to=' + to_ref;
     $('#' + newdivid).html('<i class="fa fa-circle-o-notch fa-spin"></i>');
@@ -151,7 +151,7 @@ $(document).on('click', '.nextbutton, .prevbutton', function(event){
             var the_m = $the_form.find('.mselect').val();
         {{pass}}
         console.log('type: ' + the_m);
-        var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
+        var baseurl = '/docs/section.load/{{=filename}}?version=';
         var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + direction + '0';
         $(this).children('.textframe').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
         web2py_component(baseurl + urlvars, loader_id);
@@ -185,7 +185,7 @@ $(document).on('change', '.vselect, .mselect', function(event){
         var the_v = $loader.find('.vselect').val();
     }
     $loader.children('.textframe').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
-    var baseurl = '/grammateus3/docs/section.load/{{=filename}}?';
+    var baseurl = '/docs/section.load/{{=filename}}?';
     var urlvars = 'version=' + the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
     web2py_component(baseurl + urlvars, the_loader);
 });
@@ -210,7 +210,7 @@ $('#textnavsubmit').on('click', function(event){
         console.log(the_v);
 		var the_m = $the_form.find('.mselect').val();
         console.log(the_m);
-        var baseurl = '/grammateus3/docs/section.load/{{=filename}}?version=';
+        var baseurl = '/docs/section.load/{{=filename}}?version=';
         var urlvars = the_v + '&type=' + the_m  + '&from=' + from_ref + '&to=' + to_ref;
         console.log(baseurl + urlvars);
         $(this).children('.textframe').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
@@ -227,7 +227,7 @@ $(document).on('click', '.textframe a', function(event){
     var $aframe = $p.find('.apparatusframe');
 	the_target = $aframe.children().attr('id');
     $aframe.find('.readings-wrapper').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
-    var baseurl = '/grammateus3/docs/apparatus.load/{{=filename}}?';
+    var baseurl = '/docs/apparatus.load/{{=filename}}?';
     var urlvars = 'version=' + the_v + '&unit=' + the_unit;
     console.log(baseurl);
     console.log(urlvars);
