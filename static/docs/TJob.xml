@@ -105,10 +105,6 @@
         <name>Slavonic version</name>
         <bibliography>S. Brock (ed.), <booktitle>Testamentum Iobi</booktitle> (PVTG 2; Leiden: Brill, 1967) 19-59</bibliography>
       </ms>
-      <ms abbrev="Coptic" language="Coptic" show="no">
-        <name>P. Köln Inv. Nr. 3221</name>
-        <bibliography> C. Roemer and H. J. Thissen, "P. Köln Inv. Nr. 3221: Das Testament des Hiob in koptischer Sprache. Ein Vorbericht." <booktitle>Studies on the Testament of Job.</booktitle> (Ed. M. A. Knibb and P. W. van der Horst. Cambridge: Cambridge University Press, 1989) 33-45</bibliography>
-      </ms>
       <ms abbrev="Brock" language="Greek" show="yes">
         <name>S. Brock's eclectic text, based on P</name>
         <bibliography>S. Brock (ed.), <booktitle>Testamentum Iobi</booktitle> (PVTG 2; Leiden: Brill, 1967) 19-59</bibliography>
@@ -19631,8 +19627,16 @@
     </text>
   </version>
   <version title="Coptic" author="" language="Coptic">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
     <manuscripts>
-    	<ms abbrev="Cop1"><name>Coptic1</name></ms>
+      <ms abbrev="Coptic" language="Coptic" show="yes">
+        <name>P. Köln Inv. Nr. 3221</name>
+        <bibliography> C. Roemer and H. J. Thissen, "P. Köln Inv. Nr. 3221: Das Testament des Hiob in koptischer Sprache. Ein Vorbericht." <booktitle>Studies on the Testament of Job.</booktitle> (Ed. M. A. Knibb and P. W. van der Horst. Cambridge: Cambridge University Press, 1989) 33-45</bibliography>
+      </ms>
     </manuscripts>
+    <text></text>
   </version>
 </book>
