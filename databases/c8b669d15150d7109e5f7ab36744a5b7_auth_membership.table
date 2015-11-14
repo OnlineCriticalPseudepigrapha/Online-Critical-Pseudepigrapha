@@ -13,7 +13,7 @@ p6
 I3
 sS'sql'
 p7
-S'INTEGER REFERENCES auth_group (id) ON DELETE CASCADE'
+S'INTEGER REFERENCES auth_group (id) ON DELETE CASCADE  '
 p8
 sS'notnull'
 p9
@@ -32,7 +32,7 @@ I00
 sg6
 I2
 sg7
-S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE'
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
 p14
 sg9
 I00
