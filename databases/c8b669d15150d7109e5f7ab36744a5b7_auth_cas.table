@@ -13,7 +13,7 @@ p6
 I2
 sS'sql'
 p7
-S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE'
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
 p8
 sS'notnull'
 p9
@@ -25,13 +25,13 @@ p11
 ssS'uuid'
 p12
 (dp13
-S'type'
+S'sortable'
 p14
-S'string'
-p15
-sS'sortable'
-p16
 I5
+sS'type'
+p15
+S'string'
+p16
 sS'sql'
 p17
 S'CHAR(512)'
@@ -57,9 +57,9 @@ ssS'url'
 p23
 (dp24
 g14
-g15
-sg16
 I4
+sg15
+g16
 sg17
 S'CHAR(512)'
 p25
