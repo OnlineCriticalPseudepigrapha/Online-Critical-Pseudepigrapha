@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+<h1>Editing {{=filename}}</h1>
+
+{{for label, url in buttons.items():}}
+    {{=A(label, callback=url, _class='btn btn-warning')}}
+{{pass}}
+<!-- {{=LOAD('docs','text.load', args=[filename], ajax=True)}} -->
