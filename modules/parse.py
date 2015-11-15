@@ -568,7 +568,7 @@ class Book(object):
         Get back the requested element if it exists and is unique.
 
         """
-        vbs = False
+        vbs = True
         if attribute:
             xpath = u"{}[@{}='{}']".format(to_unicode(element_name),
                                            to_unicode(attribute.keys()[0]),
@@ -589,26 +589,39 @@ class Book(object):
                                                          attribute.keys()[0],
                                                          attribute.values()[0]))
         else:
+            if vbs: print 'getting element'
             xpath = element_name
+            if vbs: print 'getting element a'
             elements = on_element.xpath(xpath) if on_element is not None \
                         else self._book.xpath(xpath)
+            if vbs: print 'getting element b'
             if not elements:
                 raise ElementDoesNotExist("Element does not exist on this "
                                           "xpath <{}>".format(xpath))
+                if vbs: print 'getting element c'
             elif len(elements) > 1:
                 raise MultipleElementsReturned("There are more elements on "
                                                "this xpath <{}>".format(xpath))
+                if vbs: print 'getting element d'
 
         return elements[0]
 
-    def _renumber_units(self, version_element):
+    def _renumber_units(self):
         """
         If we're adding or removing an element that contains units (div or unit),
         all units that follow the affected units must be renumbered since all units
         in a document must be numbered consecutively.
         """
-        for index, unit in enumerate(version_element.xpath(".//unit"), 1):
-            unit.set("id", str(index))
+        print '_renumber_units'
+        try:
+            print len(self._book.xpath("//unit"))
+            for index, unit in enumerate(self._book.xpath(".//unit"), 1):
+                print index
+                unit.set("id", str(index))
+                for idx, reading in enumerate(unit.xpath(".//reading")):
+                    reading.set("option", str(idx))
+        except Exception as e:
+            traceback.print_exc(e)
 
     def _get_div_path(self, div_element):
         """
@@ -991,14 +1004,14 @@ class Book(object):
         version = self._get("version", {"title": version_title})
         div = self._get(div_xpath, attribute=None, on_element=version)
         div.set("number", new_div_name)
-        self._renumber_units(version)
+        self._renumber_units()
 
     def del_div(self, version_title, div_path):
         div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
         version = self._get("version", {"title": version_title})
         div = self._get(div_xpath, attribute=None, on_element=version)
         div.getparent().remove(div)
-        self._renumber_units(version)
+        self._renumber_units()
 
     def add_unit(self, version_title, div_path):
         parent_div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
@@ -1007,7 +1020,7 @@ class Book(object):
                                attribute=None,
                                on_element=version)
         etree.SubElement(parent_div, "unit", {"id": "0"}).append(etree.Element("reading"))
-        self._renumber_units(version)
+        self._renumber_units()
 
     def update_unit(self, version_title, unit_id, readings):
         unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
@@ -1046,7 +1059,7 @@ class Book(object):
                 unit.addnext(next_unit)
                 reading.text = reading.text[:split_point].strip()
             # renumber units
-            self._renumber_units(version)
+            self._renumber_units()
         else:
             raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
 
@@ -1082,7 +1095,7 @@ class Book(object):
         version = self._get("version", {"title": version_title})
         unit = self._get("//unit", {"id": str(unit_id)}, on_element=version)
         unit.getparent().remove(unit)
-        self._renumber_units(version)
+        self._renumber_units()
 
     def serialize(self, pretty=True):
         return etree.tostring(self._book,
@@ -1361,7 +1374,9 @@ class BookManager(object):
         :return:
         """
         from_file_path = os.path.join(BookManager.xml_file_storage_path, "{}.xml".format(book_name))
+        assert os.path.isfile(from_file_path)
         to_file_path = os.path.join(BookManager.xml_draft_file_storage_path, "{}.xml".format(book_name))
+        print 'copying', to_file_path
         if os.path.isfile(to_file_path):
             backup_to_file_path = os.path.join(BookManager.xml_draft_file_backup_storage_path,
                                                "{}_{}.xml".format(
@@ -1370,8 +1385,11 @@ class BookManager(object):
             print ">> copy from_file_path: {}".format(from_file_path)
             print ">> copy to_file_path: {}".format(to_file_path)
             print ">> copy backup_to_file_path: {}".format(backup_to_file_path)
-            os.rename(to_file_path, backup_to_file_path)
-        copy_file(from_file_path, to_file_path)
+            copy_file(to_file_path, backup_to_file_path)
+            assert os.path.isfile(backup_to_file_path)
+        else:
+            copy_file(from_file_path, to_file_path)
+            assert os.path.isfile(to_file_path)
 
     @staticmethod
     def publish_book(book_name):
@@ -1390,6 +1408,16 @@ class BookManager(object):
                                                    datetime.now().strftime("%Y%m%d_%H%M%S_%f")))
             os.rename(to_file_path, backup_to_file_path)
         copy_file(from_file_path, to_file_path)
+
+    @staticmethod
+    def renumber_units(book_name):
+        """
+        Renumber units and readings consecutively throughout the document.
+        """
+        print 'BookManager::renumber_units'
+        book = Book.open(BookManager._load(book_name))
+        book._renumber_units()
+        book.save()
 
     @staticmethod
     def add_version(book_name, version_title, language, author):
@@ -1645,3 +1673,4 @@ class BookManager(object):
         book = Book.open(BookManager._load(book_name))
         book.del_unit(version_title, unit_id)
         book.save()
+        return 'Done renumbering units'
