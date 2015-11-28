@@ -8,6 +8,7 @@ from kitchen.text.converters import to_unicode
 from lxml import etree
 import os
 from plugin_utils import check_path
+import traceback
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                             os.pardir))
@@ -498,7 +499,8 @@ class Book(object):
         """
         try:
             data = self.text_structure(text[0], delimiters)
-        except Exception:
+        except Exception as e:
+            traceback.print_exc(e)
             data = 'none'
 
         return data
@@ -509,13 +511,16 @@ class Book(object):
         parent = OrderedDict()
         for div in text.xpath('div'):
             parent_attributes = [self._getattrs(div, ('number', 'fragment'))]
+            print 'parent_attributes', parent_attributes
 
             parent_key = unicode(parent_attributes[0]['number'])
+            print 'parent_key', parent_key
 
             child_structure = self.text_structure(div, delimiters[1:])
 
             if child_structure:
                 for k, v in child_structure.items():
+                    print 'delimiters', delimiters[0]
                     key = '%s%s%s' % (parent_key, delimiters[0], k)
                     parent[key] = v
                     attributes = parent_attributes + v['attributes']
