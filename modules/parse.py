@@ -511,16 +511,11 @@ class Book(object):
         parent = OrderedDict()
         for div in text.xpath('div'):
             parent_attributes = [self._getattrs(div, ('number', 'fragment'))]
-            print 'parent_attributes', parent_attributes
-
             parent_key = unicode(parent_attributes[0]['number'])
-            print 'parent_key', parent_key
-
             child_structure = self.text_structure(div, delimiters[1:])
 
             if child_structure:
                 for k, v in child_structure.items():
-                    print 'delimiters', delimiters[0]
                     key = '%s%s%s' % (parent_key, delimiters[0], k)
                     parent[key] = v
                     attributes = parent_attributes + v['attributes']
@@ -858,7 +853,7 @@ class Book(object):
                 else:
                     current_div = current_div.getnext()
 
-    def _get_readings_of_unit(self, unit_element, default_readings):
+    def _get_readings_of_unit(self, unit_element):
         """
         Return the whole set of manuscripts including the required but maybe
         missing elements from <manuscripts>
@@ -866,18 +861,9 @@ class Book(object):
         :param default_readings: OrderedDict, where key = manuscripts/ms@abbrev,
         value = None
         """
-        readings = deepcopy(default_readings)
-        # compare to existing manuscripts
+        readings = OrderedDict([])
         for reading in unit_element.iter("reading"):
             mss = reading.get("mss").strip()
-            # when there are more ms in it
-            if len(mss.split(" ")) > 1:
-                for ms in mss.split(" "):
-                    try:
-                        del readings[ms]
-                    except KeyError:
-                        pass
-            # update manuscripts
             readings[mss] = reading.text.strip() if reading.text else u""
         # iterate
         return [Reading(ms, text) for ms, text in readings.iteritems()]
@@ -887,10 +873,7 @@ class Book(object):
         try:
             version = self._get("version", {"title": version_title})
             unit = self._get(".//unit", {"id": unit_id}, on_element=version)
-            readings = self._get_readings_of_unit(
-                unit,
-                default_readings=OrderedDict([[abbrev, None] for abbrev in
-                                              version.xpath("manuscripts/ms/@abbrev")]))
+            readings = self._get_readings_of_unit(unit)
         except ElementDoesNotExist:
             pass
         return readings
