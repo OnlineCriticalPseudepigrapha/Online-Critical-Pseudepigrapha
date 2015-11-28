@@ -79,7 +79,7 @@ def text():
     Gather document information to prepare initial reader interface.
     """
     vbs = True
-    if vbs: print "text() start -------------------------------------"
+    if vbs: print "controller::docs::text() start -------------------------------------"
     session.filename = request.args[0]
     filename = session.filename
     if vbs: print 'filename: ', filename
@@ -90,7 +90,7 @@ def text():
 
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
-    if vbs: print 'start of text() method with url ', request.url, varlist
+    if vbs: print 'controller::docs::text() url ', request.url, 'vars', varlist
 
     # get parsed document info
     info, p = _get_bookinfo(filename)
@@ -198,7 +198,7 @@ def _get_bookinfo(filename):
     vbs = False
     # FIXME: error when using session values
     # _element object can't be pickled, and pickling is necessary to store
-    # an object in session
+    # an object in session, so if condition below is disabled
     if 0 and ('info' in session.keys()) and (filename in session.info.keys()) and \
             ('p' in session.keys()) and (filename in session.p.keys()):
         info = session.info[filename]
