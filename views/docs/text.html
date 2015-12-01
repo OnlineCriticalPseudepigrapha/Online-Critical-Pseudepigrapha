@@ -252,6 +252,28 @@ $(document).on('click', '.version-closer span', function(event){
     event.preventDefault();
 });
 
+// make font larger
+$(document).on('click', '.larger-button', function(event){
+    var fontsize = parseInt($('.textframe').css('font-size'));
+    var newsize = fontsize + 1;
+    $('.textframe').each(function(){
+        $(this).css('font-size', newsize);
+    });
+    ajax('/docs/set_font_size/' + newsize, [], ':eval');
+    event.preventDefault();
+});
+
+// make font smaller
+$(document).on('click', '.smaller-button', function(event){
+    var fontsize = parseInt($('.textframe').css('font-size'));
+    var newsize = fontsize - 1;
+    $('.textframe').each(function(){
+        $(this).css('font-size', newsize);
+    });
+    ajax('/docs/set_font_size/' + newsize, [], ':eval');
+    event.preventDefault();
+});
+
 //set initial dimensions to fit starting viewport size
 setDimensions();
 
