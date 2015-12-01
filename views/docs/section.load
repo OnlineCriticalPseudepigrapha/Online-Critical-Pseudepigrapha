@@ -27,7 +27,12 @@ pass}}
 </div>
 
 <script>
-
+{{if fontsize:}}
+console.log('in section fontsize is', {{=fontsize}});
+$('.textframe').each(function(){
+    $(this).css('font-size', {{=fontsize}});
+});
+{{pass}}
 
 //reset 'from' and 'to' fields if reference was changed by "next" button
 function setrefs(){

@@ -285,6 +285,8 @@ def section():
     """
     #'vbs' variable is for turning testing output on and off
     vbs = True
+    fontsize = session.font_size if 'font_size' in session.keys() else None
+    if vbs: print 'fontsize in controller:', fontsize
     if vbs: print 'section() start -------------------------------------------'
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
@@ -504,7 +506,8 @@ def section():
             'fragment': myfrag,
             'sel_text': mytext,
             'filename': session.filename,
-            'structure': session.structure[filename]}
+            'structure': session.structure[filename],
+            'fontsize': fontsize}
 
 
 def apparatus():
@@ -528,3 +531,9 @@ def apparatus():
         readings = p.get_readings(current_version, unit)
 
     return {'rlist': readings}
+
+def set_font_size():
+    newsize = request.args[0]
+    session.font_size = newsize
+    print 'new font-size', session.font_size
+    return None
