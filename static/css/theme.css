@@ -2,41 +2,32 @@
 @font-face {
   font-family: 'SBL Greek';
   src: url('../fonts/sbl_grk-webfont.eot');
-  src: url('../fonts/sbl_grk-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-   url('../fonts/sbl_grk-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-   url('../fonts/sbl_grk-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-   url('../fonts/sbl_grk-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-   url('../fonts/sbl_grk-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* IE9 Compat Modes */
+  src: url('../fonts/sbl_grk-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/sbl_grk-webfont.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/sbl_grk-webfont.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/sbl_grk-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/sbl_grk-webfont.svg#svgFontName') format('svg');
   /* Legacy iOS */
 }
 @font-face {
   font-family: 'SBL Hebrew';
   src: url('../fonts/sbl_hbrw-webfont.eot');
-  src: url('../fonts/sbl_hbrw-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-   url('../fonts/sbl_hbrw-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-   url('../fonts/sbl_hbrw-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-   url('../fonts/sbl_hbrw-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-   url('../fonts/sbl_hbrw-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* IE9 Compat Modes */
+  src: url('../fonts/sbl_hbrw-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/sbl_hbrw-webfont.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/sbl_hbrw-webfont.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/sbl_hbrw-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/sbl_hbrw-webfont.svg#svgFontName') format('svg');
   /* Legacy iOS */
 }
 @font-face {
   font-family: 'Estrangelo';
   src: url('../fonts/estre-webfont.eot');
-  src: url('../fonts/estre-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-   url('../fonts/estre-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-   url('../fonts/estre-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-   url('../fonts/estre-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-   url('../fonts/estre-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* IE9 Compat Modes */
+  src: url('../fonts/estre-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/estre-webfont.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/estre-webfont.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/estre-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/estre-webfont.svg#svgFontName') format('svg');
   /* Legacy iOS */
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  direction: ltr;
   /*.Latin             {font-family:*/
-
 }
 body .fa-circle-o-notch {
   font-size: 8em;
-  color: #aaaaaa;
+  color: #aaa;
   position: relative;
   left: 50%;
   margin: 1em 0 0 -0.5em;
@@ -44,27 +35,35 @@ body .fa-circle-o-notch {
 body .Greek {
   font-family: "SBL Greek";
   font-size: 1.2em;
+  direction: ltr;
 }
 body .Hebrew {
   font-family: "SBL Hebrew";
   font-size: 1.2em;
+  direction: rtl;
 }
 body .Aramaic {
   font-family: "SBL Hebrew";
   font-size: 1.2em;
+  direction: rtl;
+}
+body .Syriac {
+  font-family: "Estrangelo";
+  font-size: 1em;
+  direction: rtl;
 }
 body .Ethiopic {
   font-family: "Estrangelo";
   font-size: 1em;
 }
 body h1 {
-  color: #a9a06a;
+  color: #A9A06A;
 }
 body h2 {
   color: #96bc44;
 }
 body h3 {
-  color: #a9a06a;
+  color: #A9A06A;
 }
 body h4 {
   text-transform: uppercase;
@@ -73,17 +72,16 @@ body h4 {
   letter-spacing: 1px;
   margin-bottom: 0.5em;
   /*font-weight: bold;*/
-
 }
 body table.table {
-  background-color: #fcfbf7;
+  background-color: #FCFBF7;
   border-bottom: 1px solid #e3e1d3;
 }
 body table.table tr td {
   border-top: 1px solid #e3e1d3;
 }
 body p {
-  color: #333333;
+  color: #333;
   text-align: justify;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
@@ -99,32 +97,32 @@ body ul.bibliography li {
 }
 body ul.bibliography li.annotation {
   text-indent: 0;
-  color: #aaaaaa;
+  color: #aaa;
 }
 .navbar-inverse {
-  background-color: #615f55;
+  background-color: #615F55;
 }
 .navbar-inverse .navbar-header {
-  background-color: #615f55;
+  background-color: #615F55;
 }
 .navbar-inverse .navbar-header .navbar-brand {
-  color: #ffffff;
+  color: #fff;
   text-transform: capitalize;
 }
 .navbar-inverse .navbar-header small {
   display: none;
 }
 .navbar-inverse .navbar-nav li > a {
-  color: #e4dfc8;
+  color: #E4DFC8;
 }
 .navbar-inverse .navbar-nav li > a:focus,
 .navbar-inverse .navbar-nav li > a:hover {
-  background-color: #4b4a43;
+  background-color: #4B4A43;
 }
 .navbar-inverse .navbar-nav .open a,
 .navbar-inverse .navbar-nav .open a:focus,
 .navbar-inverse .navbar-nav .open a:hover {
-  background-color: #4b4a43;
+  background-color: #4B4A43;
 }
 #right_sidebar {
   height: 800px;
@@ -135,10 +133,10 @@ body ul.bibliography li.annotation {
   border-left: 1em solid transparent;
 }
 #right_sidebar ul li {
-  color: #615f55;
+  color: #615F55;
 }
 #right_sidebar .sidebar-wrapper {
-  background-color: #fcfbf7;
+  background-color: #FCFBF7;
   padding: 1em 0;
   width: 100%;
   height: 100%;
@@ -147,7 +145,7 @@ body ul.bibliography li.annotation {
 #right_sidebar .sidebar-wrapper .read-text {
   display: block;
   width: 100%;
-  color: #ffffff;
+  color: #fff;
   line-height: 2em;
   padding-left: 1em;
 }
@@ -159,12 +157,12 @@ body ul.bibliography li.annotation {
 }
 #right_sidebar .sidebar-wrapper .read-text:hover,
 #right_sidebar .sidebar-wrapper .read-text:active {
-  background-color: #007dbb;
+  background-color: #007DBB;
   text-decoration: none;
 }
 #right_sidebar .sidebar-wrapper h4 {
   margin-left: 1em;
-  color: #a9a06a;
+  color: #A9A06A;
 }
 #right_sidebar .sidebar-wrapper #sidebar-menu {
   padding-left: 0;
@@ -174,13 +172,13 @@ body ul.bibliography li.annotation {
   line-height: 1.5em;
 }
 #right_sidebar .sidebar-wrapper #sidebar-menu li a {
-  color: #615f55;
+  color: #615F55;
   border-left: 2px solid transparent;
   padding: 0 0 0 2em;
 }
 #right_sidebar .sidebar-wrapper #sidebar-menu li a:hover,
 #right_sidebar .sidebar-wrapper #sidebar-menu li a:active {
-  border-left: 2px solid #a9a06a;
+  border-left: 2px solid #A9A06A;
   background-color: transparent;
   border-radius: 0;
 }
@@ -192,10 +190,10 @@ body ul.bibliography li.annotation {
   padding-left: 1em;
 }
 .docs_list ul .doc-link-span {
-  color: #a9a06a;
+  color: #A9A06A;
 }
 .docs_list ul .doc-link-span a {
-  color: #a9a06a;
+  color: #A9A06A;
 }
 div#textwrapper {
   position: absolute;
@@ -204,18 +202,13 @@ div#textwrapper #versionadder {
   float: right;
   position: relative;
   /*display:block;*/
-
   /*font-size: 2em;*/
-
   /*top: -20px;*/
-
 }
 div#textwrapper .ref_nav {
   background-color: #E4DFC8;
   /*height: 3em;*/
-
   /*line-height: 3em;*/
-
   padding: 0.5em;
 }
 div#textwrapper .ref_nav input[type=text] {
@@ -260,7 +253,7 @@ div#textwrapper div.versionwindow .textframe .refmarker_2 {
   font-weight: bold;
 }
 div#textwrapper div.versionwindow .textframe .refmarker_3 {
-  color: #007dbb;
+  color: #007DBB;
   font-size: 1em;
   font-weight: bold;
 }

@@ -16,7 +16,7 @@
     </a>
 </form>
 
-<div id='textframe0' class='textframe'>
+<div id='textframe0' class='textframe {{=version_language}}'>
 {{for s in sel_text:
 	=s
 pass}}
@@ -27,12 +27,7 @@ pass}}
 </div>
 
 <script>
-{{if fontsize:}}
-console.log('in section fontsize is', {{=fontsize}});
-$('.textframe').each(function(){
-    $(this).css('font-size', {{=fontsize}});
-});
-{{pass}}
+
 
 //reset 'from' and 'to' fields if reference was changed by "next" button
 function setrefs(){
