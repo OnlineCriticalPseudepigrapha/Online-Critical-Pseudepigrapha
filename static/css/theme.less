@@ -45,11 +45,15 @@
 
 body                           {font-family: 'Open Sans', sans-serif;
                                 direction: ltr;
+
     .fa-circle-o-notch {font-size: 8em;
                         color: @greya;
                         position: relative;
                         left: 50%;
                         margin: 1em 0 0 -0.5em ;
+    }
+
+    .refmarker, .placeholder  {font-family: 'Open Sans', sans-serif;
     }
 
     .Greek             {font-family: "SBL Greek";
@@ -115,6 +119,8 @@ body                           {font-family: 'Open Sans', sans-serif;
     }
 }
 
+// top navigation
+
 .navbar-inverse                    {background-color: @dark-brown;
     .navbar-header                 {background-color: @dark-brown;
         .navbar-brand              {color: @white;
@@ -137,6 +143,8 @@ body                           {font-family: 'Open Sans', sans-serif;
         }
     }
 }
+
+// document introductions
 
 #right_sidebar                 {height: 800px;
     ul                     {list-style: outside none none;
@@ -187,6 +195,8 @@ body                           {font-family: 'Open Sans', sans-serif;
 
 }
 
+// front index page
+
 .docs_list                     {
     ul                         {list-style: outside none none;
                                 padding-left: 1em;
@@ -197,7 +207,11 @@ body                           {font-family: 'Open Sans', sans-serif;
     }
 }
 
+// document text interface
+
 div#textwrapper                {position:absolute;
+
+    // Text navigation
     #versionadder              {float:right;
                                 position:relative;
                                 /*display:block;*/
@@ -212,6 +226,11 @@ div#textwrapper                {position:absolute;
                                 width: 4em;
         }
     }
+    .smaller-button span       {font-size: 0.6em;
+    }
+
+
+    // Text sections
     div.versionwindow          {position:relative;
                                 float:left;
                                 padding: 0;

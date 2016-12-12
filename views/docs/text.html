@@ -12,7 +12,7 @@
         <div class='btn-group' role='group'>
             <button type='button' class='larger-button btn' ><span class='glyphicon glyphicon-font'></span></button>
             <button type='button' class='smaller-button btn' ><span class='glyphicon glyphicon-font'></span></button>
-            <button type='button' class='smaller-button btn' ><span class='glyphicon glyphicon-print'></span></button>
+            <!--<button type='button' class='smaller-button btn' ><span class='glyphicon glyphicon-print'></span></button>-->
         </div>
     </div>
     <div class='form-group'>
@@ -259,7 +259,7 @@ $(document).on('click', '.larger-button', function(event){
     $('.textframe').each(function(){
         $(this).css('font-size', newsize);
     });
-    ajax('/docs/set_font_size/' + newsize, [], ':eval');
+    /*ajax('/docs/set_font_size/' + newsize, [], ':eval');*/
     event.preventDefault();
 });
 
@@ -270,7 +270,7 @@ $(document).on('click', '.smaller-button', function(event){
     $('.textframe').each(function(){
         $(this).css('font-size', newsize);
     });
-    ajax('/docs/set_font_size/' + newsize, [], ':eval');
+    /*ajax('/docs/set_font_size/' + newsize, [], ':eval');*/
     event.preventDefault();
 });
 

@@ -32,6 +32,10 @@ body .fa-circle-o-notch {
   left: 50%;
   margin: 1em 0 0 -0.5em;
 }
+body .refmarker,
+body .placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
 body .Greek {
   font-family: "SBL Greek";
   font-size: 1.2em;
@@ -213,6 +217,9 @@ div#textwrapper .ref_nav {
 }
 div#textwrapper .ref_nav input[type=text] {
   width: 4em;
+}
+div#textwrapper .smaller-button span {
+  font-size: 0.6em;
 }
 div#textwrapper div.versionwindow {
   position: relative;
