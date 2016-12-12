@@ -480,7 +480,7 @@ def section():
                 pass
             else:
                 mytext.append(SPAN(' {}'.format(unicode(r)),
-                                _class='refmarker_{}'.format(idx)))
+                                _class='refmarker refmarker_{}'.format(idx)))
                 refcounter[idx] = r
         punctuation = [u'.', u';', u'·', u'"', u"'", u',', u'?', u'«', u'»', u'·']
         if u.text == '':
