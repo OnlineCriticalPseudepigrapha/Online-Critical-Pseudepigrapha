@@ -79,7 +79,7 @@ def text():
     Gather document information to prepare initial reader interface.
     """
     vbs = True
-    if vbs: print "controller::docs::text() start -------------------------------------"
+    if vbs: print "text() start -------------------------------------"
     session.filename = request.args[0]
     filename = session.filename
     if vbs: print 'filename: ', filename
@@ -90,7 +90,7 @@ def text():
 
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
-    if vbs: print 'controller::docs::text() url ', request.url, 'vars', varlist
+    if vbs: print 'start of text() method with url ', request.url, varlist
 
     # get parsed document info
     info, p = _get_bookinfo(filename)
@@ -198,7 +198,7 @@ def _get_bookinfo(filename):
     vbs = False
     # FIXME: error when using session values
     # _element object can't be pickled, and pickling is necessary to store
-    # an object in session, so if condition below is disabled
+    # an object in session
     if 0 and ('info' in session.keys()) and (filename in session.info.keys()) and \
             ('p' in session.keys()) and (filename in session.p.keys()):
         info = session.info[filename]
@@ -285,8 +285,6 @@ def section():
     """
     #'vbs' variable is for turning testing output on and off
     vbs = True
-    fontsize = session.font_size if 'font_size' in session.keys() else None
-    if vbs: print 'fontsize in controller:', fontsize
     if vbs: print 'section() start -------------------------------------------'
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
@@ -500,14 +498,14 @@ def section():
 
     return {'versions': myversions,
             'current_version': current_version,
+            'version_language': vlang,
             'mslist': mslist,
             'start_sel_str': '|'.join(start_sel),
             'end_sel_str': '|'.join(end_sel),
             'fragment': myfrag,
             'sel_text': mytext,
             'filename': session.filename,
-            'structure': session.structure[filename],
-            'fontsize': fontsize}
+            'structure': session.structure[filename]}
 
 
 def apparatus():
@@ -531,9 +529,3 @@ def apparatus():
         readings = p.get_readings(current_version, unit)
 
     return {'rlist': readings}
-
-def set_font_size():
-    newsize = request.args[0]
-    session.font_size = newsize
-    print 'new font-size', session.font_size
-    return None

@@ -82,36 +82,6 @@
 
 ]>
 <book filename="TAdam" title="Testament of Adam" textStructure="criticalApparatus">
-  <version title="Syriac" author="Anonymous" language="Syriac">
-    <divisions>
-      <division label="Chapter" delimiter=":"/>
-      <division label="Verse"/>
-    </divisions>
-    <manuscripts>
-      <ms abbrev="A" language="Syriac" show="yes">
-        <name>BM Add. 14,624 (folios 8b-10a)</name>
-        <bibliography></bibliography>
-      </ms>
-    </manuscripts>
-    <text>
-      <div number="1">
-        <div number="1">
-          <unit id="1" group="0" parallel="">
-              <reading option="0" mss="A ">ܬܘܒ ܕܝܬܝܩܐ ܕܐܒܘܢ</reading>
-          </unit>
-          <unit id="2" group="0" parallel="">
-              <reading option="0" mss="A ">ܐܕܡ. ܫܥܬܐ ܩܕܡܝܬܐ</reading>
-          </unit>
-          <unit id="3" group="0" parallel="">
-              <reading option="0" mss="A ">ܕܠܠܝܐ: ܬܘܕܝܬܐ ܕܫܐܕܐ̈</reading>
-          </unit>
-          <unit id="4" group="0" parallel="">
-              <reading option="0" mss="A ">ܘܒܗ̇ܝ ܫܥܬܐ ܠܐ</reading>
-          </unit>
-        </div>
-      </div>
-    </text>
-  </version>
   <version title="Greek" author="Anonymous" language="Greek">
     <divisions>
       <division label="Chapter" delimiter=":"/>
