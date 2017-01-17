@@ -479,18 +479,18 @@ def section():
             if refcounter[idx] == r:
                 pass
             else:
-                mytext.append(SPAN(' {}'.format(unicode(r)),
+                mytext.append(SPAN(' {} '.format(unicode(r)),
                                 _class='refmarker refmarker_{}'.format(idx)))
                 refcounter[idx] = r
         punctuation = [u'.', u';', u'·', u'"', u"'", u',', u'?', u'«', u'»', u'·']
         if u.text == '':
             mytext.append(A(u' *', _class='placeholder', _href=u.unit_id))
         elif u.readings_in_unit > 1:
-            if u.text not in punctuation:
+            if u.text not in punctuation and u.language not in ['Ethiopic']:
                 mytext.append(u' ')
             mytext.append(A(u.text, _class=u.language, _href=u.unit_id))
         else:
-            if u.text not in punctuation:
+            if u.text not in punctuation and u.language not in ['Ethiopic']:
                 mytext.append(u' ')
             mytext.append(SPAN(u.text, _class=u.language))
 
