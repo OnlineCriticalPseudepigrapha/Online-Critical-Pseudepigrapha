@@ -43,6 +43,16 @@
        url('../fonts/estre-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+	font-family: 'Abyssinica SIL';
+	src: url('../fonts/hinted-AbyssinicaSIL.eot');
+	src: local('Abyssinica SIL'), local('AbyssinicaSIL'),
+        url('../fonts/hinted-AbyssinicaSIL.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/hinted-AbyssinicaSIL.woff2') format('woff2'),
+		url('../fonts/hinted-AbyssinicaSIL.woff') format('woff'),
+		url('../fonts/hinted-AbyssinicaSIL.ttf') format('truetype'),
+		url('../fonts/hinted-AbyssinicaSIL.svg#AbyssinicaSIL') format('svg');
+}
 body                           {font-family: 'Open Sans', sans-serif;
                                 direction: ltr;
 
@@ -69,11 +79,12 @@ body                           {font-family: 'Open Sans', sans-serif;
                         direction: rtl;
     }
     .Syriac            {font-family: "Estrangelo";
-                        font-size: 1em;
+                        font-size: 1.5em;
                         direction: rtl;
     }
-    .Ethiopic          {font-family: "Estrangelo";
-                        font-size: 1em;
+    .Ethiopic          {font-family: "Abyssinica SIL";
+                        font-size: 1.3em;
+                        direction: ltr;
     }
     /*.Latin             {font-family:*/
 
@@ -136,7 +147,7 @@ body                           {font-family: 'Open Sans', sans-serif;
             }
         }
         .open                      {
-            a, 
+            a,
             a:focus,
             a:hover                {background-color:  @darker-brown;
             }
