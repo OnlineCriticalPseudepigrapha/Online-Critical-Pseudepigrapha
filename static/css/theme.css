@@ -20,6 +20,11 @@
   src: url('../fonts/estre-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/estre-webfont.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/estre-webfont.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/estre-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/estre-webfont.svg#svgFontName') format('svg');
   /* Legacy iOS */
 }
+@font-face {
+  font-family: 'Abyssinica SIL';
+  src: url('../fonts/hinted-AbyssinicaSIL.eot');
+  src: local('Abyssinica SIL'), local('AbyssinicaSIL'), url('../fonts/hinted-AbyssinicaSIL.eot?#iefix') format('embedded-opentype'), url('../fonts/hinted-AbyssinicaSIL.woff2') format('woff2'), url('../fonts/hinted-AbyssinicaSIL.woff') format('woff'), url('../fonts/hinted-AbyssinicaSIL.ttf') format('truetype'), url('../fonts/hinted-AbyssinicaSIL.svg#AbyssinicaSIL') format('svg');
+}
 body {
   font-family: 'Open Sans', sans-serif;
   direction: ltr;
@@ -53,12 +58,13 @@ body .Aramaic {
 }
 body .Syriac {
   font-family: "Estrangelo";
-  font-size: 1em;
+  font-size: 1.5em;
   direction: rtl;
 }
 body .Ethiopic {
-  font-family: "Estrangelo";
-  font-size: 1em;
+  font-family: "Abyssinica SIL";
+  font-size: 1.3em;
+  direction: ltr;
 }
 body h1 {
   color: #A9A06A;
