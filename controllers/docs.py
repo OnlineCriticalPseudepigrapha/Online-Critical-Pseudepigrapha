@@ -165,7 +165,10 @@ def text():
             endlist[1::2] = delimiters
             endref = ''.join(endlist)
         else:
-            regex = re.compile('^'+start_sel[0]+delimiters[0])
+            if vbs: print 'start_sel', start_sel
+            if vbs: print 'delimiters', delimiters
+            my_delimiter = delimiters[0] if len(delimiters) else ''
+            regex = re.compile('^' + start_sel[0] + my_delimiter)
             #find all refs with the same top-level reference
             this_div = [ref for ref in refraw if regex.match(ref)]
             #choose the last one
