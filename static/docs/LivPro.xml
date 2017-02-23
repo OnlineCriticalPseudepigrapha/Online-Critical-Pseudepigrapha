@@ -10,6 +10,7 @@
 
 <!ELEMENT version (divisions, resources*, manuscripts+, text)>
 <!ATTLIST version
+ language CDATA #REQUIRED
  title CDATA #REQUIRED
  author CDATA #REQUIRED
  fragment CDATA #IMPLIED
@@ -81,13 +82,13 @@
 
 ]>
 <book filename="LivPro" title="Lives of the Prophets">
-  <version title="" author="">
+  <version title="Greek" author="" language="Greek">
     <divisions>
       <division label="Chapter" delimiter=":"/>
       <division label="Verse"/>
     </divisions>
     <manuscripts>
-      <ms abbrev="Torrey" language="Greek" show="no">
+      <ms abbrev="Torrey" language="Greek" show="yes">
         <name>Torrey</name>
         <bibliography>C. C. Torrey, The Lives of the Prophets: Greek Text and Translation (JBLMS 1; Philadelphia: SBL, 1946).</bibliography>
       </ms>
