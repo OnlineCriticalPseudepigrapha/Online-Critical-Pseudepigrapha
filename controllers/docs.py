@@ -305,6 +305,7 @@ def section():
                     vlang = curv['attributes']['language']
                     levels = curv['organisation_levels']
         print 'ms keys', curv['manuscripts'][0].keys()
+        print 'v keys:', curv['manuscripts'][0]
         mslist = flatten([[to_unicode(k.strip()) for k, c in v.iteritems()
                            if c['attributes']['show'] == 'yes']
                           for v in curv['manuscripts']])
