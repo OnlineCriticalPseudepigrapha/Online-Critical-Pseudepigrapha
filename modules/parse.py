@@ -576,6 +576,7 @@ class Book(object):
             if vbs: print '_get(): 1'
             elements = on_element.xpath(xpath) if on_element is not None \
                         else self._book.xpath(xpath)
+            if vbs: print 'elements:', elements
             if vbs: print '_get(): 2'
             if not elements:
                 raise ElementDoesNotExist("<{}> element with {}='{}' does not "
@@ -717,7 +718,7 @@ class Book(object):
             tuple: reference for end of range returned
 
         """
-        vbs = False
+        vbs = True
         if vbs: print "get_text() start --------------------------------"
         if vbs: print "get_text() getting version", version_title
         version = self._get("version", {"title": version_title})
