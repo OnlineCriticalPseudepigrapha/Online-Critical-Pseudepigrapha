@@ -47,10 +47,10 @@ if auth.has_membership('administrators', auth.user_id):
     response.menu += [
         (T('Admin'), False, A(I(_class='fa fa-cog'), SPAN(' Admin', _class="visible-lg-inline"),
                               _href='#', _class='adminlink'), [
-            (T('Documents'), False, A('Documents', _href=URL('default', 'list', args=['docs'])), []),
-            (T('Bibliography'), False, A('Bibliography', _href=URL('default', 'list', args=['biblio'])), []),
-            (T('Pages'), False, A('Pages', _href=URL('default', 'list', args=['pages'])), []),
-            (T('Users'), False, A('Users', _href=URL('default', 'list', args=['auth_user'])), []),
+            (T('Documents'), False, A('Documents', _href=URL('default', 'listing', args=['docs'])), []),
+            (T('Bibliography'), False, A('Bibliography', _href=URL('default', 'listing', args=['biblio'])), []),
+            (T('Pages'), False, A('Pages', _href=URL('default', 'listing', args=['pages'])), []),
+            (T('Users'), False, A('Users', _href=URL('default', 'listing', args=['auth_user'])), []),
             (T('Database'), False, A('Database', _href=URL(app, 'appadmin', 'index')), []),
             (T('Web IDE'), False, A('Web IDE', _href=URL('admin', 'default', 'design/{}'.format(app))), []),
             (T('Errors'), False, A('Errors', _href=URL('admin', 'default', 'errors/{}'.format(app))), []),

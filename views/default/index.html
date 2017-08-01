@@ -8,20 +8,134 @@
 <h3>News and Updates</h3>
 
 <div class='docs_list'>
+
     <h2>Documents</h2>
-    <ul class="">
-    {{for doc in docrows:}}
-        {{=LI(A(doc.name, _href=URL('docs', 'text', args=[doc.filename])),
-              SPAN(' ( ',
-                   A('text', _href=URL('docs', 'text', args=[doc.filename])),
-                   ' | ',
-                   A('introduction', _href=URL('docs', 'intro', args=[doc.filename])), ' )',
-                   _class="doc-link-span"
-                   )
-              )
-          }}
-    {{pass}}
-    </ul>
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Alphabetical by Genre
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+
+                <!-- inner accordion for genres =========================== -->
+                <div class="panel-group" id="accordion-genres" role="tablist" aria-multiselectable="true">
+                {{for g in genrerows.keys():}}
+                {{g_word = g.split()[0]}}
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_{{=g_word}}">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_{{=g_word}}" aria-expanded="true" aria-controls="genresCollapse_{{=g_word}}">
+                            {{=g.capitalize()}}
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_{{=g_word}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_{{=g_word}}">
+                        <div class="panel-body">
+                        <ul class="">
+                            {{for doc in genrerows[g]:}}
+                            {{=LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
+                                SPAN(' ( ',
+                                    A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
+                                    ' | ',
+                                    A('introduction', _href=URL('docs', 'intro', args=[doc["filename"]])), ' )',
+                                    _class="doc-link-span"
+                                    )
+                                )
+                            }}
+                            {{pass}}
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                {{pass}}
+                </div>
+                <!-- inner accordion for genres ends =========================== -->
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Alphabetical by Biblical Figure
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+
+                <!-- inner accordion for figures =========================== -->
+                <div class="panel-group" id="accordion-figures" role="tablist" aria-multiselectable="true">
+                {{for f in figurerows.keys():}}
+                {{f_word = f.split()[0]}}
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_{{=f_word}}">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_{{=f_word}}" aria-expanded="true" aria-controls="figuresCollapse_{{=f_word}}">
+                            {{=f}}
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_{{=f_word}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_{{=f_word}}">
+                        <div class="panel-body">
+                        <ul class="">
+                            {{for doc in figurerows[f]:}}
+                            {{=LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
+                                SPAN(' ( ',
+                                    A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
+                                    ' | ',
+                                    A('introduction', _href=URL('docs', 'intro', args=[doc["filename"]])), ' )',
+                                    _class="doc-link-span"
+                                    )
+                                )
+                            }}
+                            {{pass}}
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                {{pass}}
+                </div>
+                <!-- inner accordion for figures ends =========================== -->
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Alphabetical by Full Title
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+            <ul class="">
+            {{for doc in docrows:}}
+                {{=LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
+                    SPAN(' ( ',
+                        A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
+                        ' | ',
+                        A('introduction', _href=URL('docs', 'intro', args=[doc['filename']])), ' )',
+                        _class="doc-link-span"
+                        )
+                    )
+                }}
+            {{pass}}
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div> <!--close div panel group-->
 </div>
 
 {{block right_sidebar}}

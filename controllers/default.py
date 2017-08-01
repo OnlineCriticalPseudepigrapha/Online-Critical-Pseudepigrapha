@@ -6,6 +6,9 @@ if 0:
     response = current.response
     request = current.request
 
+from collections import OrderedDict
+from operator import itemgetter
+
 
 def index():
     """
@@ -14,7 +17,27 @@ def index():
     Send dictionary of document records to the view views/default/index.html
     """
     docrows = db(db.docs.id > 0).select()
-    return {'docrows': docrows}
+    doclist = sorted(docrows.as_list(), key=itemgetter('name'))
+    docs_with_genres = sorted([d for d in doclist if d["genres"]],
+                              key=itemgetter('name'))
+    docs_with_figures = [d for d in doclist if d["figures"]]
+    genres = sorted(list(set([db.genres[genre].genre for doc in docs_with_genres
+                             for genre in doc["genres"]])))
+    figures = sorted(list(set([db.biblical_figures[figure].figure for doc in docs_with_figures
+                              for figure in doc["figures"]])))
+    genre_rows = OrderedDict()
+    for g in genres:
+        gid = db.genres(db.genres.genre == g).id
+        genre_rows[g] = [d for d in docs_with_genres if gid in d["genres"]]
+
+    figure_rows = OrderedDict()
+    for f in figures:
+        fid = db.biblical_figures(db.biblical_figures.figure == f).id
+        figure_rows[f] = [d for d in docs_with_figures if fid in d["figures"]]
+
+    return {'docrows': doclist,
+            'genrerows': genre_rows,
+            'figurerows': figure_rows}
 
 
 def page():
@@ -26,7 +49,7 @@ def page():
             'title': pagerow['title']}
 
 
-def list():
+def listing():
     """
     Present a plugin_listandedit widget for creating and editing db records.
 
