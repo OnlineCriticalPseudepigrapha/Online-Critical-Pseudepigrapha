@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE book [
+
+<!ELEMENT book (version+)>
+<!ATTLIST book
+ filename CDATA #REQUIRED
+ title CDATA #REQUIRED
+ textStructure CDATA #IMPLIED
+>
+
+<!ELEMENT version (divisions, resources*, manuscripts+, text)>
+<!ATTLIST version
+ language CDATA #REQUIRED
+ title CDATA #REQUIRED
+ author CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT divisions (division)+>
+
+<!ELEMENT division (#PCDATA)>
+<!ATTLIST division
+ label CDATA #REQUIRED
+ delimiter CDATA #IMPLIED
+>
+
+<!ELEMENT resources (resource+)>
+<!ELEMENT resource (info+, URL?)>
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!ELEMENT info (#PCDATA)>
+
+<!ELEMENT URL (#PCDATA)>
+
+<!ELEMENT manuscripts (ms+)>
+
+<!ELEMENT ms (name, bibliography*)>
+<!ATTLIST ms
+ abbrev CDATA #REQUIRED
+ language CDATA #REQUIRED
+ show CDATA #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA | sup)*>
+
+<!ELEMENT sup (#PCDATA)>
+
+<!ELEMENT bibliography (#PCDATA | booktitle)*>
+
+<!ELEMENT booktitle (#PCDATA)>
+
+<!ELEMENT text (div+)>
+
+<!ELEMENT div (div | unit)*>
+<!ATTLIST div
+ number CDATA #REQUIRED
+ fragment CDATA #IMPLIED
+>
+
+<!ELEMENT unit (reading+)>
+<!ATTLIST unit
+ id CDATA #REQUIRED
+ group CDATA "0"
+ parallel CDATA #REQUIRED
+>
+
+<!ELEMENT reading (#PCDATA | w)*>
+<!ATTLIST reading
+ option CDATA #REQUIRED
+ mss CDATA #REQUIRED
+ linebreak CDATA #IMPLIED
+ indent CDATA #IMPLIED
+>
+
+<!ELEMENT w (#PCDATA)>
+<!ATTLIST w
+ morph CDATA #IMPLIED
+ lex CDATA #IMPLIED
+ style CDATA #IMPLIED
+ lang CDATA #IMPLIED
+>
+
+]>
+<book filename="4Q548" title="4Q548" textStructure="criticalApparatus">
+  <version title="4Q548" author="Anonymous" language="Aramaic">
+    <divisions>
+      <division label="Fragment" delimiter="."/>
+      <division label="Line"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="PH" language="Aramaic" show="yes">
+        <name>Perrin-Hama</name>
+        <bibliography></bibliography>
+      </ms>
+      <ms abbrev="P" language="Aramaic" show="no">
+        <name>Puech</name>
+        <bibliography></bibliography>
+      </ms>
+      <ms abbrev="M" language="Aramaic" show="no">
+        <name>Milik</name>
+        <bibliography></bibliography>
+      </ms>
+      <ms abbrev="MT" language="Aramaic" show="no">
+        <name>Martínez-Tigchelaar</name>
+        <bibliography></bibliography>
+      </ms>
+      <ms abbrev="D" language="Aramaic" show="no">
+        <name>Duke</name>
+        <bibliography></bibliography>
+      </ms>
+      <ms abbrev="B" language="Aramaic" show="no">
+        <name>Beyer</name>
+        <bibliography></bibliography>
+      </ms>
+      <ms abbrev="K" language="Aramaic" show="no">
+        <name>Kobelski</name>
+        <bibliography></bibliography>
+      </ms>
+      <ms abbrev="FH" language="Aramaic" show="no">
+        <name>Fitzmyer-Harrington</name>
+        <bibliography></bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1i">
+        <div number="0">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]ש̇בטין[</reading>
+              <reading option="1" mss="B ">] ושבטין [</reading>
+              <reading option="2" mss="P ">]ו̇שבטי̇ן[</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+                <reading option="0" mss="PH ">]ותא להון וכל</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ארח[ת</reading>
+              <reading option="1" mss="B ">ארח◦[</reading>
+              <reading option="2" mss="P ">ארחת̊[</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]אנון מן אסיאנהון [</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]ן</reading>
+              <reading option="1" mss="MT ">]ח</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">אנון מן מותא ומן א[</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ע]ליכון בני ברכתא ו̇ש[</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]כ̊ל דרי ישראל לכל[</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]א̊י</reading>
+              <reading option="1" mss="MT ">]◦י</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">חד̇א</reading>
+              <reading option="1" mss="P ">חר̇א</reading>
+              <reading option="2" mss="B D ">חרא</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">בי די בני צ[</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]כ̇ו̇ן</reading>
+              <reading option="1" mss="B ">]◦כון</reading>
+              <reading option="2" mss="P ">בש]מ̊כון</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">בני שקר ולא</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ב̇נ̊[י</reading>
+              <reading option="1" mss="D ">ב[</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]◦</reading>
+              <reading option="1" mss="M ">וא]ף̊</reading>
+              <reading option="2" mss="FH K ">וא]ף</reading>
+              <reading option="3" mss="B ">דת]א</reading>
+              <reading option="4" mss="MT ">ארח]א</reading>
+              <reading option="5" mss="P ">ארח]א̇</reading>
+              <reading option="6" mss="D "></reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">{י̇}צבתא</reading>
+              <reading option="1" mss="B ">צבתא</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">אנה</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">מודע̊</reading>
+              <reading option="1" mss="M ">מורע̇</reading>
+              <reading option="2" mss="K ">מורע</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ל[</reading>
+              <reading option="1" mss="B P ">ל̊כ̊[ון</reading>
+              <reading option="2" mss="D "></reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]ח̊ש̊ו̊כא חשיכין</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">להוון [</reading>
+              <reading option="1" mss="P ">להוון א̊[רו</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ל]ה̊וון</reading>
+              <reading option="1" mss="MT ">לה]וון</reading>
+              <reading option="2" mss="D ">]וון</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ו̇ב̇נ̊י̇</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">חשוכא</reading>
+              <reading option="1" mss="MT ">חשוכה</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">יתע̊ד̊̊ון[</reading>
+              <reading option="1" mss="M ">יתק̊ד̊ון [</reading>
+              <reading option="2" mss="FH K ">יתקדון [</reading>
+              <reading option="3" mss="B ">יתק̊ר̊ון [</reading>
+              <reading option="4" mss="D ">ית[ע]ד̇ון [</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]י̊</reading>
+              <reading option="1" mss="M ">חשיכי]ן̊</reading>
+              <reading option="2" mss="FH K MT ">חשיכי]ן</reading>
+              <reading option="3" mss="B ">חשי]ך̊</reading>
+              <reading option="4" mss="P ">חשי]ך̇</reading>
+              <reading option="5" mss="D "></reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">וכל̊[...]ם</reading>
+              <reading option="1" mss="D ">וכ[...]ם</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ו̇קשיט</reading>
+              <reading option="1" mss="M FH K ">וקשוט</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">נהיר[</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]ד̇י◦</reading>
+              <reading option="1" mss="M ">ולח]ד̇ו̇ת̊[א</reading>
+              <reading option="2" mss="FH ">]דות[א</reading>
+              <reading option="3" mss="K MT ">ולח]דות[א</reading>
+              <reading option="4" mss="B ">ול]דין̊ [</reading>
+              <reading option="5" mss="P ">ב]ד̇ינ̊[א</reading>
+              <reading option="6" mss="D ">די[</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">[...]◦</reading>
+              <reading option="1" mss="M B P ">יהכו]ן̊</reading>
+              <reading option="2" mss="FH K MT ">יהכו]ן</reading>
+              <reading option="3" mss="D "></reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">וכל בני חש[וכא</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]◦</reading>
+              <reading option="1" mss="K MT D "></reading>
+              <reading option="2" mss="P ">תנה]ר̊</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">לעמא נהי̊ר̊ו̇תא</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ואחו̇י̇</reading>
+              <reading option="1" mss="M FH K ">[ ואחיו</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">◦[</reading>
+              <reading option="1" mss="M FH K MT D "></reading>
+              <reading option="2" mss="B P "> ל̊[הון</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]◦ן</reading>
+              <reading option="1" mss="MT D ">]ן</reading>
+              <reading option="2" mss="P ">]ו̊ן</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">מן</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">חשוכא</reading>
+              <reading option="1" mss="MT ">חשוכה</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ארו כל [</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">נהורא̇[ ]וכל בני</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2i">
+        <div number="0">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">]ת̇תק[</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">אנה</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">◦[...]ה̊</reading>
+              <reading option="1" mss="M ">מ̊[הו]ד̊ע̊</reading>
+              <reading option="2" mss="FH K ">מ[הו]דע</reading>
+              <reading option="3" mss="B ">מ̊[חו]ה</reading>
+              <reading option="4" mss="MT ">מ[קר]ה</reading>
+              <reading option="5" mss="P ">מ̊[חו]ה̇</reading>
+              <reading option="6" mss="D ">[...]</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ש̊[</reading>
+              <reading option="1" mss="M FH K D "></reading>
+              <reading option="2" mss="B ">לכ̊[ון</reading>
+              <reading option="3" mss="MT ">לכ[ון</reading>
+              <reading option="4" mss="P ">ל̇כ̊[ון</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">להוון[ נהירין</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ובכל</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">מנדעחון[</reading>
+              <reading option="1" mss="FH ">מנדעהון[</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ארו</reading>
+              <reading option="1" mss="M FH K ">ארי</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">כל</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">סכל</reading>
+              <reading option="1" mss="M FH K ">כסל</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ורק̊[</reading>
+              <reading option="1" mss="M ">ורש̊[ע</reading>
+              <reading option="2" mss="K FH MT ">ורש[ע</reading>
+              <reading option="3" mss="B P ">ורש̊[יע</reading>
+              <reading option="4" mss="D ">ור[</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">לנהורא</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">לש̊מח̊[ת</reading>
+              <reading option="1" mss="B ">ו̊לת̊מי̊מו̊ת̊א̊</reading>
+              <reading option="2" mss="P ">first hand: ל̇{תמימותא}; correction: ל̇נ̊ע̊י̊מ̇ת̊א̊</reading>
+              <reading option="0" mss="D "></reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ולאבדנא</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">י̇הכין[</reading>
+              <reading option="1" mss="M FH K ">יהכון[</reading>
+              <reading option="2" mss="B MT D ">יהכון [</reading>
+              <reading option="3" mss="P ">י̇הכון [</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">וא[ו]ד̊עו̇[</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">בני̇[</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3i">
+        <div number="0">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ע̊מדין</reading>
+          </unit>
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ד̊[</reading>
+              <reading option="1" mss="P ">ח̊[</reading>
+              <reading option="2" mss="D ">ח[...]</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ליום מוע̊[ד</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">אסות̊[</reading>
+              <reading option="1" mss="D ">אסו[...]</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="1" group="0" parallel="">
+              <reading option="0" mss="PH ">ה̊[</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>
