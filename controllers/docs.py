@@ -287,7 +287,7 @@ def section():
 
     """
     #'vbs' variable is for turning testing output on and off
-    vbs = True
+    vbs = False
     if vbs: print 'section() start -------------------------------------------'
     #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
@@ -476,6 +476,8 @@ def section():
     # build the running display text ----------------------------------------
     mytext = []
     refcounter = [None] * levels
+    print 'PARSED ============================='
+    print parsed_text
     for u in parsed_text:
         # insert reference number/label when it changes
         reflist = list(u.div_path)
@@ -497,6 +499,15 @@ def section():
             if u.text not in punctuation and u.language not in ['Ethiopic']:
                 mytext.append(u' ')
             mytext.append(SPAN(u.text, _class=u.language))
+        try:
+            if u.linebreak == 'following':
+                mytext.append(BR())
+            if u.linebreak == 'doubleFollowing':
+                mytext.append(BR())
+                mytext.append(BR())
+        except e:
+            print 'LINEBREAK PROBLEM'
+            print e;
 
     if vbs: print 'sending', '-'.join(start_sel)
 
