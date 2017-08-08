@@ -525,6 +525,7 @@ def apparatus():
                         'this document does not yet have a complete textual '
                         'apparatus. See the document introduction for details.',
                      _class='apparatus-message')
+        current_version = ''
     #if a unit has been requested, assemble that unit's readings
     else:
         #get current version
@@ -532,4 +533,5 @@ def apparatus():
         unit = request.vars['unit']
         readings = p.get_readings(current_version, unit)
 
-    return {'rlist': readings}
+    return {'rlist': readings,
+            'version': current_version}

@@ -4,7 +4,7 @@
 	<table class='table'>
 	{{for reading in rlist:}}
 		{{=TR(TD(reading.mss, _class='mss'),
-              TD(reading.text, _class='reading-text'))
+              TD(SPAN(reading.text, _class=version), _class='reading-text'))
           }}
 	{{pass}}
 	</table>
