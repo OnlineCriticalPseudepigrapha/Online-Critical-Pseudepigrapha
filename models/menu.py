@@ -76,10 +76,11 @@ response.menu += [
                                   SPAN(' Copyright'),
                                   _href=URL('default', 'page', args=['copyright']),
                                   _class='copyrightlink'), []),
-    ])
-    # (T('Contact Us'), False, A(I(_class='fa fa-bullhorn'),
-    #                            SPAN(' Contact us', _class="visible-lg-inline"),
-    #                            _href=URL('default', 'page', args=['contact']), _class='contactlink'), [
+    ]),
+    (T('Contact Us'), False, A(I(_class='fa fa-bullhorn'),
+                               SPAN(' Contact us', _class="visible-lg-inline"),
+                               _href=URL('default', 'contact'),
+                               _class='contactlink'), [])
     #     (T('Bug reports'), False, A(I(_class='fa fa-bug fa-fw'),
     #                                 SPAN(' Bug reports'),
     #                                 _href=URL('default', 'page', args=['bugs']),
@@ -88,6 +89,7 @@ response.menu += [
     #                                 SPAN(' Suggestions'),
     #                                 _href=URL('default', 'page', args=['suggestions']),
     #                                 _class='suggestionslink'), []),
+    #
     # ]),
     ]
 
