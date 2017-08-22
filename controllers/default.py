@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 # this file is released under public domain and you can use without limitations
 
-if 0:
-    from gluon import db, current, auth, LOAD
-    response = current.response
-    request = current.request
-
 from collections import OrderedDict
 from operator import itemgetter
+
+if 0:
+    from gluon import db, current, auth, LOAD, SQLFORM, Field, IS_EMAIL, IS_NOT_EMPTY
+    from gluon import Recaptcha2, TR
+    response = current.response
+    request = current.request
 
 
 def index():
@@ -90,6 +91,38 @@ def download():
     http://..../[app]/default/download/[filename]
     """
     return response.download(request, db)
+
+
+def contact():
+    """
+    Controller for a simple contact form.
+    """
+    mail = current.mail
+    keydata = {}
+    with open('applications/grammateus3/private/app.keys', 'r') as keyfile:
+        for line in keyfile:
+            k, v = line.split()
+            keydata[k] = v
+
+    form = SQLFORM.factory(Field('your_email_address', requires=IS_EMAIL()),
+                           Field('message_title', requires=IS_NOT_EMPTY()),
+                           Field('message', 'text', requires=IS_NOT_EMPTY()),
+                           submit_button='Send message',
+                           separator=' ')
+    captcha = Recaptcha2(request,
+                         keydata['captcha_public_key'],
+                         keydata['captcha_private_key'])
+    form.element('table').insert(-1, TR('', captcha, ''))
+    if form.process().accepted:
+        if mail.send(to='scottianw@gmail.com',
+                     subject='OCP Contact: {}'.format(form.vars.message_title),
+                     message=form.vars.message):
+            response.flash = 'Thank you for your message.'
+            response.js = "jQuery('#%s').hide()" % request.cid
+        else:
+            form.errors.your_email = "Sorry, we were unable to send the email"
+    return dict(form=form)
+
 
 '''
 def call():
