@@ -49,7 +49,7 @@
     {{
     # using sidebars need to know what sidebar you want to use
     mc0 = 'col-md-12'
-    mc1 = 'col-md-9'
+    mc1 = 'col-md-8'
     mc2 = 'col-md-6'
     left_sidebar_enabled = globals().get('left_sidebar_enabled', False)
     right_sidebar_enabled = globals().get('right_sidebar_enabled', False)
@@ -93,7 +93,7 @@
     <!-- Begin page content -->
     <div class="container-fluid">
       {{if left_sidebar_enabled:}}
-        <div id="left_sidebar" class="col-md-3 left-sidebar">
+        <div id="left_sidebar" class="col-md-4 left-sidebar">
             {{block left_sidebar}}
             <h3>Left Sidebar</h3>
             <p></p>
@@ -108,7 +108,7 @@
       </div>
 
       {{if right_sidebar_enabled:}}
-        <div id="right_sidebar" class="col-md-3 right-sidebar clearfix" >
+        <div id="right_sidebar" class="col-md-4 right-sidebar clearfix" >
             {{block right_sidebar}}
             <h3>Right Sidebar</h3>
             <p></p>

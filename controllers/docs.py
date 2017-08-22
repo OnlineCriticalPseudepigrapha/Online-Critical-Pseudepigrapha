@@ -10,7 +10,7 @@ import re
 import traceback
 
 if 0:
-    from gluon import current, URL, A, SPAN, P
+    from gluon import current, URL, A, SPAN, P, BR
     request = current.request
     session = current.session
     response = current.response
@@ -304,8 +304,8 @@ def section():
                     curv = version
                     vlang = curv['attributes']['language']
                     levels = curv['organisation_levels']
-        print 'ms keys', curv['manuscripts'][0].keys()
-        print 'v keys:', curv['manuscripts'][0]
+        if vbs: print 'ms keys', curv['manuscripts'][0].keys()
+        if vbs: print 'v keys:', curv['manuscripts'][0]
         mslist = flatten([[to_unicode(k.strip()) for k, c in v.iteritems()
                            if c['attributes']['show'] == 'yes']
                           for v in curv['manuscripts']])
@@ -333,16 +333,17 @@ def section():
     def get_prev_next_levels(startref, endref, start_sel, end_sel):
         # handle 'next' and 'previous' navigation via 'endref' values
         # numbers indicate organizational level at which to move forward or back
+        vbs = False
         next_level = None
         if endref[:4] == 'next':
             next_level = int(endref[4:])  # expects like next2
             end_sel = start_sel
-            print 'next_level:', next_level
+            if vbs: print 'next_level:', next_level
         previous_level = None
         if endref[:4] == 'back':
             previous_level = int(endref[4:])  # expects like previous2
             end_sel = start_sel
-            print 'previous_level:', previous_level
+            if vbs: print 'previous_level:', previous_level
 
         return next_level, previous_level, end_sel
 
@@ -451,7 +452,7 @@ def section():
                   next_level,
                   previous_level]
         if vbs: print "section(): arguments for get_text():"
-        pprint(myargs)
+        if vbs: pprint(myargs)
         text_iterator, start_sel, end_sel = p.get_text(*myargs)
         parsed_text = list(text_iterator)
         if vbs: print "section(): got text"
@@ -476,8 +477,8 @@ def section():
     # build the running display text ----------------------------------------
     mytext = []
     refcounter = [None] * levels
-    print 'PARSED ============================='
-    print parsed_text
+    if vbs: print 'PARSED ============================='
+    if vbs: print parsed_text
     for u in parsed_text:
         # insert reference number/label when it changes
         reflist = list(u.div_path)
@@ -507,7 +508,7 @@ def section():
                 mytext.append(BR())
         except e:
             print 'LINEBREAK PROBLEM'
-            print e;
+            print e
 
     if vbs: print 'sending', '-'.join(start_sel)
 
@@ -524,7 +525,8 @@ def section():
 
 
 def apparatus():
-    print 'starting apparatus controller'
+    vbs = False
+    if vbs: print 'starting apparatus controller'
     filename = request.args[0]
     info, p = _get_bookinfo(filename)
 
