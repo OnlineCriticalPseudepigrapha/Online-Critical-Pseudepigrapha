@@ -52,17 +52,33 @@ def intro():
     body_fields = OrderedDict([(v, docrow[k]) for k, v in display_fields.iteritems()
                                if docrow[k]])
 
-    editors = db(db.auth_user.id.belongs(docrow['editor'])).select()
-    editor_names = OrderedDict([(e['id'], '{} {}'.format(e['first_name'], e['last_name']))
-                    for e in editors])
+    editor_names = OrderedDict([])
+    print editor_names, "======================================="
+    for ed in ['editor', 'editor2', 'editor3', 'editor4']:
+        if docrow[ed]:
+            myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
+            print ed, myrow
+            if myrow:
+                editor_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
+                                                        myrow['last_name'])
 
-    asst_editors = db(db.auth_user.id.belongs(docrow['assistant_editor'])).select()
-    asst_editor_names = OrderedDict([(e['id'], '{} {}'.format(e['first_name'], e['last_name']))
-                    for e in asst_editors])
+    asst_editor_names = OrderedDict([])
+    for ed in ['assistant_editor', 'assistant_editor2', 'assistant_editor3']:
+        if docrow[ed]:
+            myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
+            print ed, myrow
+            if myrow:
+                asst_editor_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
+                                                                myrow['last_name'])
 
-    proofreaders = db(db.auth_user.id.belongs(docrow['proofreader'])).select()
-    proofreader_names = OrderedDict([(e['id'], '{} {}'.format(e['first_name'], e['last_name']))
-                    for e in proofreaders])
+    proofreader_names = OrderedDict([])
+    for ed in ['proofreader', 'proofreader2', 'proofreader3']:
+        if docrow[ed]:
+            myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
+            print ed, myrow
+            if myrow:
+                proofreader_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
+                                                                myrow['last_name'])
 
     return {'title': docrow['name'],
             'body_fields': body_fields,
