@@ -53,11 +53,9 @@ def intro():
                                if docrow[k]])
 
     editor_names = OrderedDict([])
-    print editor_names, "======================================="
     for ed in ['editor', 'editor2', 'editor3', 'editor4']:
         if docrow[ed]:
             myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
-            print ed, myrow
             if myrow:
                 editor_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
                                                         myrow['last_name'])
@@ -66,7 +64,6 @@ def intro():
     for ed in ['assistant_editor', 'assistant_editor2', 'assistant_editor3']:
         if docrow[ed]:
             myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
-            print ed, myrow
             if myrow:
                 asst_editor_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
                                                                 myrow['last_name'])
@@ -75,7 +72,6 @@ def intro():
     for ed in ['proofreader', 'proofreader2', 'proofreader3']:
         if docrow[ed]:
             myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
-            print ed, myrow
             if myrow:
                 proofreader_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
                                                                 myrow['last_name'])
