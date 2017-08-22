@@ -160,6 +160,9 @@ body                           {font-family: 'Open Sans', sans-serif;
 // document introductions
 
 #right_sidebar                 {height: 800px;
+    &:not(.affix)               {left: 2em;
+                                padding-left: 0;
+    }
     ul                     {list-style: outside none none;
                             padding-left: 1em;
                             border-left: 1em solid transparent;
@@ -167,8 +170,7 @@ body                           {font-family: 'Open Sans', sans-serif;
         }
     }
     .sidebar-wrapper           {background-color: @pale-beige;
-                                padding: 1em 0;
-                                width: 100%;
+                                padding: 2em 0;
                                 height: 100%;
         .doc-version,
         .read-text             {display: block;
@@ -202,7 +204,7 @@ body                           {font-family: 'Open Sans', sans-serif;
                 }
             }
         }
-        p                       {padding-left: 1.2em;
+        p                       {padding: 0 2em;
         }
     }
 

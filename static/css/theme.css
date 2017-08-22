@@ -90,6 +90,9 @@ body table.table {
 body table.table tr td {
   border-top: 1px solid #e3e1d3;
 }
+body table.table tr td.siglum {
+  white-space: nowrap;
+}
 body p {
   color: #333;
   text-align: justify;
@@ -137,6 +140,10 @@ body ul.bibliography li.annotation {
 #right_sidebar {
   height: 800px;
 }
+#right_sidebar:not(.affix) {
+  left: 2em;
+  padding-left: 0;
+}
 #right_sidebar ul {
   list-style: outside none none;
   padding-left: 1em;
@@ -147,8 +154,7 @@ body ul.bibliography li.annotation {
 }
 #right_sidebar .sidebar-wrapper {
   background-color: #FCFBF7;
-  padding: 1em 0;
-  width: 100%;
+  padding: 2em 0;
   height: 100%;
 }
 #right_sidebar .sidebar-wrapper .doc-version,
@@ -193,7 +199,7 @@ body ul.bibliography li.annotation {
   border-radius: 0;
 }
 #right_sidebar .sidebar-wrapper p {
-  padding-left: 1.2em;
+  padding: 0 2em;
 }
 .docs_list ul {
   list-style: outside none none;

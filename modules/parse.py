@@ -8,6 +8,7 @@ from kitchen.text.converters import to_unicode
 from lxml import etree
 import os
 from plugin_utils import check_path
+from pprint import pprint
 import traceback
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
@@ -93,7 +94,7 @@ class Book(object):
         :param xml_book_data: book structure wrapped into a file-like object
         :return: Book object
         """
-        book = Book()
+        book = Book()  # FIXME: Why returning new instance of own class?
         try:
             if getattr(xml_book_data, "read", None):
                 tree = etree.parse(xml_book_data)
@@ -105,6 +106,8 @@ class Book(object):
         book._book = tree.getroot()
         book._docinfo.update({i: getattr(tree.docinfo, i) for i in XML_DEFAULT_DOCINFO.keys()})
         book._structure_info = book._get_book_info()
+        print "========================================================"
+        pprint(book._structure_info)
         return book
 
     @staticmethod
@@ -128,6 +131,7 @@ class Book(object):
     def __init__(self):
         self._book = None
         self._docinfo = XML_DEFAULT_DOCINFO
+        # dict with keys "doctype", "encoding", and "standalone"
         self._structure_info = {}
         self._validation_errors = []
         self.default_delimiter = '.'
