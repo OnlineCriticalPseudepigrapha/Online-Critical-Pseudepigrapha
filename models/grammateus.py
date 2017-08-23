@@ -24,16 +24,16 @@ db.define_table('biblical_figures',
 db.define_table('docs',
     Field('name'),
     Field('filename'),
-    Field('editor', 'list:reference auth_user'),
-    Field('editor2', 'list:reference auth_user'),
-    Field('editor3', 'list:reference auth_user'),
-    Field('editor4', 'list:reference auth_user'),
-    Field('assistant_editor', 'list:reference auth_user'),
-    Field('assistant_editor2', 'list:reference auth_user'),
-    Field('assistant_editor3', 'list:reference auth_user'),
-    Field('proofreader', 'list:reference auth_user'),
-    Field('proofreader2', 'list:reference auth_user'),
-    Field('proofreader3', 'list:reference auth_user'),
+    Field('editor', db.auth_user),
+    Field('editor2', db.auth_user),
+    Field('editor3', db.auth_user),
+    Field('editor4', db.auth_user),
+    Field('assistant_editor', db.auth_user),
+    Field('assistant_editor2', db.auth_user),
+    Field('assistant_editor3', db.auth_user),
+    Field('proofreader', db.auth_user),
+    Field('proofreader2', db.auth_user),
+    Field('proofreader3', db.auth_user),
     Field('version', 'double'),
     Field('introduction', 'text'),
     Field('provenance', 'text'),
@@ -50,55 +50,34 @@ db.define_table('docs',
     format='%(name)s')
 db.docs.editor.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                db.auth_user._format,
-                                               multiple=True))
+                                               multiple=False))
 db.docs.editor2.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                db.auth_user._format,
-                                               multiple=True))
+                                               multiple=False))
 db.docs.editor3.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                db.auth_user._format,
-                                               multiple=True))
+                                               multiple=False))
 db.docs.editor4.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                db.auth_user._format,
-                                               multiple=True))
-#db.docs.editor.widget = lambda field, value: AjaxSelect(field, value,
-                                                        #indx=1,
-                                                        #multi='basic',
-                                                        #lister='simple',
-                                                        #sortable=True,
-                                                        #orderby='last_name',
-                                                        #).widget()
+                                               multiple=False))
 db.docs.assistant_editor.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                          db.auth_user._format,
-                                                         multiple=True))
+                                                         multiple=False))
 db.docs.assistant_editor2.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                          db.auth_user._format,
-                                                         multiple=True))
+                                                         multiple=False))
 db.docs.assistant_editor3.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                          db.auth_user._format,
-                                                         multiple=True))
-#db.docs.assistant_editor.widget = lambda field, value: AjaxSelect(field, value,
-                                                        #indx=2,
-                                                        #multi='basic',
-                                                        #lister='simple',
-                                                        #sortable=True,
-                                                        #orderby='last_name',
-                                                        #).widget()
+                                                         multiple=False))
 db.docs.proofreader.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                     db.auth_user._format,
-                                                    multiple=True))
+                                                    multiple=False))
 db.docs.proofreader2.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                     db.auth_user._format,
-                                                    multiple=True))
+                                                    multiple=False))
 db.docs.proofreader3.requires = IS_EMPTY_OR(IS_IN_DB(db, 'auth_user.id',
                                                     db.auth_user._format,
-                                                    multiple=True))
-#db.docs.proofreader.widget = lambda field, value: AjaxSelect(field, value,
-                                                             #indx=3,
-                                                             #multi='basic',
-                                                             #lister='simple',
-                                                             #sortable=True,
-                                                             #orderby='last_name',
-                                                             #).widget()
+                                                    multiple=False))
 db.docs.genres.requires = IS_EMPTY_OR(IS_IN_DB(db, 'genres.id',
                                              db.genres._format,
                                              multiple=True))
@@ -112,6 +91,14 @@ db.define_table('biblio',
 
 db.define_table('pages',
     Field('page_label', 'string'),
+    Field('title', 'string'),
+    Field('body', 'text'),
+    Field('poster', db.auth_user, default=auth.user_id),
+    Field('post_date', 'datetime', default=datetime.datetime.utcnow()),
+    format='%(title)s')
+
+db.define_table('news',
+    Field('news_token', 'string'),
     Field('title', 'string'),
     Field('body', 'text'),
     Field('poster', db.auth_user, default=auth.user_id),

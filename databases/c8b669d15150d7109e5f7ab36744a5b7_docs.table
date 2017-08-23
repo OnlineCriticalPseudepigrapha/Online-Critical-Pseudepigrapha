@@ -32,12 +32,12 @@ I00
 sg6
 I8
 sg7
-S'TEXT'
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
 p14
 sg9
 I00
 sg10
-S'list:reference auth_user'
+S'reference auth_user'
 p15
 ssS'themes'
 p16
@@ -55,7 +55,7 @@ sg9
 I00
 sg10
 g11
-ssS'citation_format'
+ssS'bibliography'
 p19
 (dp20
 g4
@@ -63,7 +63,7 @@ I32768
 sg5
 I00
 sg6
-I24
+I20
 sg7
 S'TEXT'
 p21
@@ -114,14 +114,16 @@ I00
 sg6
 I11
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p31
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p32
 ssS'genres'
-p31
-(dp32
+p33
+(dp34
 g4
 I512
 sg5
@@ -129,31 +131,32 @@ I00
 sg6
 I25
 sg7
-g14
+S'TEXT'
+p35
 sg9
 I00
 sg10
 S'list:reference genres'
-p33
-ssS'bibliography'
-p34
-(dp35
+p36
+ssS'citation_format'
+p37
+(dp38
 g4
 I32768
 sg5
 I00
 sg6
-I20
+I24
 sg7
 S'TEXT'
-p36
+p39
 sg9
 I00
 sg10
 g11
 ssS'name'
-p37
-(dp38
+p40
+(dp41
 g4
 I512
 sg5
@@ -162,15 +165,15 @@ sg6
 I2
 sg7
 S'CHAR(512)'
-p39
+p42
 sg9
 I00
 sg10
 S'string'
-p40
+p43
 ssS'copyright'
-p41
-(dp42
+p44
+(dp45
 g4
 I32768
 sg5
@@ -179,14 +182,14 @@ sg6
 I23
 sg7
 S'TEXT'
-p43
+p46
 sg9
 I00
 sg10
 g11
 ssS'introduction'
-p44
-(dp45
+p47
+(dp48
 g4
 I32768
 sg5
@@ -195,14 +198,14 @@ sg6
 I15
 sg7
 S'TEXT'
-p46
+p49
 sg9
 I00
 sg10
 g11
 ssS'editor4'
-p47
-(dp48
+p50
+(dp51
 g4
 I512
 sg5
@@ -210,14 +213,16 @@ I00
 sg6
 I7
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p52
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p53
 ssS'provenance'
-p49
-(dp50
+p54
+(dp55
 g4
 I32768
 sg5
@@ -226,14 +231,14 @@ sg6
 I16
 sg7
 S'TEXT'
-p51
+p56
 sg9
 I00
 sg10
 g11
 ssS'editor2'
-p52
-(dp53
+p57
+(dp58
 g4
 I512
 sg5
@@ -241,14 +246,16 @@ I00
 sg6
 I5
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p59
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p60
 ssS'editor3'
-p54
-(dp55
+p61
+(dp62
 g4
 I512
 sg5
@@ -256,14 +263,16 @@ I00
 sg6
 I6
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p63
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p64
 ssS'filename'
-p56
-(dp57
+p65
+(dp66
 g4
 I512
 sg5
@@ -272,14 +281,14 @@ sg6
 I3
 sg7
 S'CHAR(512)'
-p58
+p67
 sg9
 I00
 sg10
-g40
+g43
 ssS'assistant_editor2'
-p59
-(dp60
+p68
+(dp69
 g4
 I512
 sg5
@@ -287,14 +296,16 @@ I00
 sg6
 I9
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p70
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p71
 ssS'assistant_editor3'
-p61
-(dp62
+p72
+(dp73
 g4
 I512
 sg5
@@ -302,14 +313,16 @@ I00
 sg6
 I10
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p74
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p75
 ssS'version'
-p63
-(dp64
+p76
+(dp77
 g4
 I512
 sg5
@@ -318,15 +331,15 @@ sg6
 I14
 sg7
 S'DOUBLE'
-p65
+p78
 sg9
 I00
 sg10
 S'double'
-p66
+p79
 ssS'figures'
-p67
-(dp68
+p80
+(dp81
 g4
 I512
 sg5
@@ -334,15 +347,15 @@ I00
 sg6
 I26
 sg7
-g14
+g35
 sg9
 I00
 sg10
 S'list:reference biblical_figures'
-p69
+p82
 ssS'editor'
-p70
-(dp71
+p83
+(dp84
 g4
 I512
 sg5
@@ -350,14 +363,16 @@ I00
 sg6
 I4
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p85
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p86
 ssS'corrections'
-p72
-(dp73
+p87
+(dp88
 g4
 I32768
 sg5
@@ -366,14 +381,14 @@ sg6
 I21
 sg7
 S'TEXT'
-p74
+p89
 sg9
 I00
 sg10
 g11
 ssS'proofreader2'
-p75
-(dp76
+p90
+(dp91
 g4
 I512
 sg5
@@ -381,14 +396,16 @@ I00
 sg6
 I12
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p92
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p93
 ssS'proofreader3'
-p77
-(dp78
+p94
+(dp95
 g4
 I512
 sg5
@@ -396,14 +413,16 @@ I00
 sg6
 I13
 sg7
-g14
+S'INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  '
+p96
 sg9
 I00
 sg10
-g15
+S'reference auth_user'
+p97
 ssS'sigla'
-p79
-(dp80
+p98
+(dp99
 g4
 I32768
 sg5
@@ -412,7 +431,7 @@ sg6
 I22
 sg7
 S'TEXT'
-p81
+p100
 sg9
 I00
 sg10
