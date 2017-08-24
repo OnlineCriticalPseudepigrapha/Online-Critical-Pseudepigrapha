@@ -10,7 +10,8 @@ import re
 import traceback
 
 if 0:
-    from gluon import current, URL, A, SPAN, P, BR
+    from gluon import current, URL, A, SPAN, P, BR, redirect
+    auth = current.auth
     request = current.request
     session = current.session
     response = current.response
@@ -32,6 +33,118 @@ session.endref --
 def index():
     filename = request.args[0]
     return dict(filename=filename)
+
+
+@auth.requires_membership('administrators')
+def create_draft_intro():
+    """
+    Controller to create a new draft doc intro and redirect to draft_intro
+    controller.
+    """
+    filename = request.args[0]
+    default_vals = {'filename': filename,
+                    'name': 'Document title here',
+                    'introduction': 'Provide a brief overview of the document\'s nature '
+                                    'and importance.',
+                    'provenance': 'Discuss the date, geographical location, and cultural '
+                                  'situation of composition. This is also the '
+                                  'place to discuss translation history and the '
+                                  'relationship between various text types.',
+                    'themes': 'Discuss the document\'s major themes.',
+                    'status': 'Discuss the current status of the OCP edition of '
+                              'the text. You should point out whether, e.g., a '
+                              'better eclectic text exists elsewhere, or whether '
+                              'there are manuscripts or text types that are not '
+                              'included here.',
+                    'manuscripts': 'Provide a list of all extant manuscripts, '
+                                   'including their official designations, their '
+                                   'current location (the institution where they '
+                                   'are held), their date of copying, and any print '
+                                   'editions of the manuscript in running form. If some '
+                                   'mss do not contain the full document, specify '
+                                   'which parts of the document are contained in each. '
+                                   'Note that this list will be converted to a table '
+                                   'by the OCP general editors.',
+                    'bibliography': 'Provide a bibliography of all published '
+                                    'editions of the text. It would be helpful '
+                                    'to annotate the list, indicating the quality '
+                                    'and distinctive features of each edition. '
+                                    'If multiple text types or language traditions '
+                                    'have different publication histories, provide '
+                                    'a heading and separate bibliography for each.',
+                    'corrections': 'If you have found errors in existing print '
+                                   'editions these can be presented here in a list.',
+                    'sigla': 'List here each symbol used in the text along with '
+                             'a brief description of its meaning. Standard punctuation '
+                             'need not be listed, but even common text-critical '
+                             'symbols (like square brackets, ellipses, or '
+                             'circles/dots above a character) should be included.',
+                    'copyright': 'Explain here, as best you understand it, the '
+                                 'copyright status of each text type included in '
+                                 'the OCP edition of your text. If you have '
+                                 'question about copyright issues, feel free to '
+                                 'ask the OCP general editors.',
+                    'version': '0.1'
+                    }
+    db['draftdocs'].insert(**default_vals)
+    redirect(URL('draft_intro', args=[filename]))
+
+
+@auth.requires_login()
+def draft_intro():
+    """
+    Controller for presenting draft versions of document introductions.
+    """
+    session.filename = request.args[0]
+    filename = session.filename
+    docrow = db(db.draftdocs.filename == filename).select().first()
+    if not docrow:
+        # draft document does not exist in the database, so can't be edited
+        return {'doc_exists': False,
+                'filename': filename}
+
+    else:
+        # draft document does exist in database and can be edited
+        display_fields = OrderedDict([('introduction', 'Introduction'),
+                                    ('provenance', 'Provenance and Cultural Setting'),
+                                    ('themes', 'Major Themes'),
+                                    ('status', 'Current State of the OCP Text'),
+                                    ('manuscripts', 'Manuscripts'),
+                                    ('bibliography', 'Bibliography'),
+                                    ('corrections', 'Corrections'),
+                                    ('sigla', 'Sigla Used in the Text'),
+                                    ('copyright', 'Copyright Information')]
+                                    )
+        body_fields = OrderedDict([(v, docrow[k]) for k, v in display_fields.iteritems()
+                                if docrow[k]])
+
+        editor_names = OrderedDict([])
+        for ed in ['editor', 'editor2', 'editor3', 'editor4']:
+            if docrow[ed]:
+                editor_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
+                                                                docrow[ed]['last_name'])
+
+        asst_editor_names = OrderedDict([])
+        for ed in ['assistant_editor', 'assistant_editor2', 'assistant_editor3']:
+            if docrow[ed]:
+                asst_editor_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
+                                                                    docrow[ed]['last_name'])
+
+        proofreader_names = OrderedDict([])
+        for ed in ['proofreader', 'proofreader2', 'proofreader3']:
+            if docrow[ed]:
+                proofreader_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
+                                                                    docrow[ed]['last_name'])
+
+        return {'doc_exists': True,
+                'title': docrow['name'],
+                'body_fields': body_fields,
+                'citation_format': docrow['citation_format'],
+                'editors': editor_names,
+                'assistant_editors': asst_editor_names,
+                'proofreaders': proofreader_names,
+                'filename': filename,
+                'version': docrow['version']}
 
 
 def intro():
