@@ -96,11 +96,11 @@ $('table').addClass('table');
 function hideOnClickOutside(selector) {
   function outsideClickListener(event){
     if (!$(event.target).closest(selector.parents('.trumbowyg-box')).length) {
+        var mytext = selector.trumbowyg('html');
+        console.log(mytext);
         selector.trumbowyg('destroy');
         removeClickListener();
-        console.log('almost fixing css');
         $('.intro_body_section').each(function(){
-            console.log(this);
             $(this).css('height', 'auto');
         });
     }
@@ -116,7 +116,6 @@ function hideOnClickOutside(selector) {
 // initialize editable sections when they are clicked
 $('.intro_body_section')
 .on('click', function(){
-    console.log('clicked');
     var mydiv = $(this);
     $(this).trumbowyg({
             autogrow: true,
@@ -135,10 +134,6 @@ $('.intro_body_section')
     $(this).css('min-height', '1em');
     $(this).parents('.trumbowyg-box').css('min-height', '2em');
     hideOnClickOutside(mydiv);
-})
-.on('tbwclose', function(){
-    var mytext = $(this).trumbowyg('html');
-    console.log(mytext);
 });
 
 </script>
