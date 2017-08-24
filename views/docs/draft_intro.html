@@ -18,20 +18,23 @@
         would like to have access, please contact the OCP general editors.</p>
 
         <p>To edit a section of this introduction, simply click
-        on that section (the heading or existing text) and it will become editable.
+        on the text in that section and it will become editable.
         Once you are finished editing, simply click elsewhere on the page and your
-        edits will be saved.</p>
+        edits will be saved. <b>Do not close or refresh the page with a paragraph
+        open for editing</b> or you will lose your work.</p>
 
-        <p>Detailed formatting, where necessary, will be done by the OCP general
-        editors. Please use <i>markdown</i> notation to provide simple formatting.
-        A quick reference for <i>markdown</i> notation is available <a href="http://geog.uoregon.edu/bartlein/courses/geog607/Rmd/MDquick-refcard.pdf">here</a>. If a section requires complex
-        formatting, supply that section as a word-processing file to the OCP general
-        editors via email.</p>
+        <p>Most formatting can be done using the toolbar that appears when a
+        section is open for editing. The fine details of formatting will be
+        cleaned up by the OCP editors as long as the meaning of your text is clear.
+        If a section requires unusually complex formatting, please supply that
+        section as a word-processing file to the OCP general editors via email.</p>
     </div>
 
     {{for field_title, field_content in body_fields.iteritems():}}
-        {{=H2(field_title, _id=field_title, _class='section_title')}}
-        {{=XML(field_content)}}
+    {{=H2(field_title, _id='{}_heading'.format(field_title), _class='section_title')}}
+        <div class="intro_body_section" id="{{=field_title}}">
+            {{=XML(field_content)}}
+        </div>
     {{pass}}
 
     {{block right_sidebar}}
@@ -88,5 +91,54 @@
 <script>
 
 $('table').addClass('table');
+
+// handle closing editable sections when they lose focus
+function hideOnClickOutside(selector) {
+  function outsideClickListener(event){
+    if (!$(event.target).closest(selector.parents('.trumbowyg-box')).length) {
+        selector.trumbowyg('destroy');
+        removeClickListener();
+        console.log('almost fixing css');
+        $('.intro_body_section').each(function(){
+            console.log(this);
+            $(this).css('height', 'auto');
+        });
+    }
+  }
+
+  function removeClickListener(){
+    $(document).off('click', outsideClickListener);
+  }
+
+  $(document).on('click', outsideClickListener);
+}
+
+// initialize editable sections when they are clicked
+$('.intro_body_section')
+.on('click', function(){
+    console.log('clicked');
+    var mydiv = $(this);
+    $(this).trumbowyg({
+            autogrow: true,
+            svgPath: '{{=URL("static/js", "icons.svg")}}',
+            btns: [
+                ['viewHTML'],
+                ['p', 'h3', 'h4'],
+                ['italic', 'superscript', 'subscript'],
+                ['link'],
+                'btnGrp-lists',
+                ['table'],
+                ['removeformat'],
+                ['fullscreen']
+        ],
+    });
+    $(this).css('min-height', '1em');
+    $(this).parents('.trumbowyg-box').css('min-height', '2em');
+    hideOnClickOutside(mydiv);
+})
+.on('tbwclose', function(){
+    var mytext = $(this).trumbowyg('html');
+    console.log(mytext);
+});
 
 </script>

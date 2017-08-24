@@ -95,6 +95,9 @@ def draft_intro():
     """
     Controller for presenting draft versions of document introductions.
     """
+    response.files.append(URL('static/js', 'trumbowyg.min.js'))
+    response.files.append(URL('static/js', 'trumbowyg.min.css'))
+    response.files.append(URL('static/js', 'trumbowyg.table.js'))
     session.filename = request.args[0]
     filename = session.filename
     docrow = db(db.draftdocs.filename == filename).select().first()
