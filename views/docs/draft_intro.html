@@ -89,51 +89,68 @@
 {{pass}} <!-- closing else condition if document does exist ===============-->
 
 <script>
+$(document).ready(function() {
+    $('table').addClass('table');
 
-$('table').addClass('table');
+    // handle closing editable sections when they lose focus
+    function hideOnClickOutside(selector) {
+        function outsideClickListener(event){
+            var wrapper = $(event.target).closest('.intro_body_section, .note-editor');
+            if (wrapper.find($(event.target)).length || selector[0] == event.target) {
+            }
+            else {
+                var mytext = selector.summernote('code');
+                console.log('retrieved text:');
+                console.log(mytext);
+                var section_title = selector.attr('id');
 
-// handle closing editable sections when they lose focus
-function hideOnClickOutside(selector) {
-  function outsideClickListener(event){
-    if (!$(event.target).closest(selector.parents('.trumbowyg-box')).length) {
-        var mytext = selector.trumbowyg('html');
-        console.log(mytext);
-        selector.trumbowyg('destroy');
-        removeClickListener();
-        $('.intro_body_section').each(function(){
-            $(this).css('height', 'auto');
-        });
+                // save changes made
+                $.post("{{=URL('docs', 'update_draft_intro')}}", {text: mytext,
+                                                                  section: section_title,
+                                                                  filename: "{{=filename}}"})
+                    .done(function(data) {
+                        alert(data);
+                    });
+
+                selector.summernote('destroy');
+                removeClickListener();
+            }
+        }
+
+        function removeClickListener(){
+            $(document).off('click', outsideClickListener);
+        }
+
+        $(document).on('click', outsideClickListener);
     }
-  }
 
-  function removeClickListener(){
-    $(document).off('click', outsideClickListener);
-  }
-
-  $(document).on('click', outsideClickListener);
-}
-
-// initialize editable sections when they are clicked
-$('.intro_body_section')
-.on('click', function(){
-    var mydiv = $(this);
-    $(this).trumbowyg({
-            autogrow: true,
-            svgPath: '{{=URL("static/js", "icons.svg")}}',
-            btns: [
-                ['viewHTML'],
-                ['p', 'h3', 'h4'],
-                ['italic', 'superscript', 'subscript'],
-                ['link'],
-                'btnGrp-lists',
-                ['table'],
-                ['removeformat'],
-                ['fullscreen']
-        ],
+    // initialize editable sections when they are clicked
+    $('.intro_body_section')
+    .on('click', function(){
+        var mydiv = $(this);
+        $(this).summernote({
+            focus: true,
+            codemirror: {
+                mode: 'xml',
+                lineNumbers: false,
+                lineWrapping: true,
+                htmlMode: true,
+                theme: 'solarized'
+            },
+            styleTags: ['p', 'h3', 'h4'],
+            toolbar: [
+                // [groupName, [list of button]]
+                ['undo', ['undo', 'redo']],
+                ['style', ['style']],
+                ['font', ['italic', 'bold', 'superscript', 'subscript', 'clear']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['misc', ['codeview', 'fullscreen', ]],
+                ['table', ['table']]
+            ],
+        });
+        hideOnClickOutside(mydiv);
     });
-    $(this).css('min-height', '1em');
-    $(this).parents('.trumbowyg-box').css('min-height', '2em');
-    hideOnClickOutside(mydiv);
-});
+
+}); // close document ready
 
 </script>
