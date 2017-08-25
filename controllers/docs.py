@@ -29,6 +29,17 @@ session.startref --
 session.endref --
 """
 
+DISPLAY_FIELDS = OrderedDict([('introduction', 'Introduction'),
+                            ('provenance', 'Provenance and Cultural Setting'),
+                            ('themes', 'Major Themes'),
+                            ('status', 'Current State of the OCP Text'),
+                            ('manuscripts', 'Manuscripts'),
+                            ('bibliography', 'Bibliography'),
+                            ('corrections', 'Corrections'),
+                            ('sigla', 'Sigla Used in the Text'),
+                            ('copyright', 'Copyright Information')]
+                            )
+
 
 def index():
     filename = request.args[0]
@@ -45,6 +56,7 @@ def create_draft_intro():
     published_intro = db(db.docs.filename == filename).select().first()
     if published_intro:
         db['draftdocs'].insert(**published_intro.as_dict())
+        db.commit()
     else:
         default_vals = {'filename': filename,
                         'name': 'Document title here',
@@ -91,7 +103,25 @@ def create_draft_intro():
                         'version': '0.1'
                         }
         db['draftdocs'].insert(**default_vals)
+        db.commit()
     redirect(URL('draft_intro', args=[filename]))
+
+
+@auth.requires_login()
+def update_draft_intro():
+    """
+    """
+    filename = request.vars['filename']
+
+    mytext = request.vars['text']
+    mysection = request.vars['section']
+    myfield_title = [f for f in DISPLAY_FIELDS.keys() if DISPLAY_FIELDS[f] == mysection][0]
+    new_content = {myfield_title: mytext}
+
+    db(db.draftdocs.filename == filename).update(**new_content)
+    db.commit()
+
+    return 'Success!'
 
 
 @auth.requires_login()
@@ -99,9 +129,12 @@ def draft_intro():
     """
     Controller for presenting draft versions of document introductions.
     """
-    response.files.append(URL('static/js', 'trumbowyg.min.js'))
-    response.files.append(URL('static/js', 'trumbowyg.min.css'))
-    response.files.append(URL('static/js', 'trumbowyg.table.js'))
+    response.files.append(URL('static/js/codemirror/lib', 'codemirror.js'))
+    response.files.append(URL('static/js/codemirror/lib', 'codemirror.css'))
+    response.files.append(URL('static/js/codemirror/theme', 'solarized.css'))
+    response.files.append(URL('static/js/codemirror/mode/xml', 'xml.js'))
+    response.files.append(URL('static/js/summernote', 'summernote.min.js'))
+    response.files.append(URL('static/js/summernote', 'summernote.css'))
     session.filename = request.args[0]
     filename = session.filename
     docrow = db(db.draftdocs.filename == filename).select().first()
@@ -112,17 +145,7 @@ def draft_intro():
 
     else:
         # draft document does exist in database and can be edited
-        display_fields = OrderedDict([('introduction', 'Introduction'),
-                                    ('provenance', 'Provenance and Cultural Setting'),
-                                    ('themes', 'Major Themes'),
-                                    ('status', 'Current State of the OCP Text'),
-                                    ('manuscripts', 'Manuscripts'),
-                                    ('bibliography', 'Bibliography'),
-                                    ('corrections', 'Corrections'),
-                                    ('sigla', 'Sigla Used in the Text'),
-                                    ('copyright', 'Copyright Information')]
-                                    )
-        body_fields = OrderedDict([(v, docrow[k]) for k, v in display_fields.iteritems()
+        body_fields = OrderedDict([(v, docrow[k]) for k, v in DISPLAY_FIELDS.iteritems()
                                 if docrow[k]])
 
         editor_names = OrderedDict([])
