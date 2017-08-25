@@ -6,11 +6,18 @@
     <br/><br/><p>Sorry, a draft of the introduction for {{=filename}}.xml does not yet exist.</p>
     <a href="{{=URL(a='grammateus3', c='docs', f='create_draft_intro', args=[filename])}}" class="btn btn-success">Create draft</a>
 
+{{elif doc_exists and not editing_permission:}}
+
+    <br/><br/><p>Sorry, you do not have permission to edit the introduction
+    page for <b>{{=title}}</b>.</p>
+    <p>If you want to obtain editing access, contact the OCP general editors
+    using the contact link in the navigation bar above.</p>
+
 {{else:}} <!-- draft doc does exist already ==============================-->
 
     {{=H1(title, _class='document_title')}}
 
-    <div class='draft_intro' id='editors_notes'>
+    <div class='draft_intro well well-sm' id='editors_notes'>
         <p><b>Note for editors:</b> Although this page looks much like the published
         introductions for OCP documents, it is private. You can only view and
         edit this if you are (a) logged in, and (b) listed as an editor, assistant
@@ -39,7 +46,7 @@
 
     {{block right_sidebar}}
 
-    {{if doc_exists:}} <!-- only show sidebar if draft doc exists -->
+    {{if doc_exists and editing_permission:}} <!-- only show sidebar if exists and user has permission -->
     <div class="affix sidebar-wrapper">
 
         <span class="doc-version">Version {{=version}}</span>

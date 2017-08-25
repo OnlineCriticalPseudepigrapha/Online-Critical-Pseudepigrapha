@@ -141,40 +141,57 @@ def draft_intro():
     if not docrow:
         # draft document does not exist in the database, so can't be edited
         return {'doc_exists': False,
+                'editing_permission': False,
                 'filename': filename}
 
     else:
         # draft document does exist in database and can be edited
-        body_fields = OrderedDict([(v, docrow[k]) for k, v in DISPLAY_FIELDS.iteritems()
-                                if docrow[k]])
+        editor_ids = [docrow['editor'], docrow['editor2'], docrow['editor3'],
+                      docrow['editor4'], docrow['assistant_editor'],
+                      docrow['assistant_editor2'], docrow['assistant_editor3'],
+                      docrow['proofreader'], docrow['proofreader2'],
+                      docrow['proofreader3']
+                      ]
+        if auth.has_membership('administrators') \
+                or (auth.has_membership('editors') and auth.user_id in editor_ids):
+            # current user has permission to edit this page
+            body_fields = OrderedDict([(v, docrow[k]) for k, v in DISPLAY_FIELDS.iteritems()
+                                    if docrow[k]])
 
-        editor_names = OrderedDict([])
-        for ed in ['editor', 'editor2', 'editor3', 'editor4']:
-            if docrow[ed]:
-                editor_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
-                                                                docrow[ed]['last_name'])
-
-        asst_editor_names = OrderedDict([])
-        for ed in ['assistant_editor', 'assistant_editor2', 'assistant_editor3']:
-            if docrow[ed]:
-                asst_editor_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
+            editor_names = OrderedDict([])
+            for ed in ['editor', 'editor2', 'editor3', 'editor4']:
+                if docrow[ed]:
+                    editor_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
                                                                     docrow[ed]['last_name'])
 
-        proofreader_names = OrderedDict([])
-        for ed in ['proofreader', 'proofreader2', 'proofreader3']:
-            if docrow[ed]:
-                proofreader_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
-                                                                    docrow[ed]['last_name'])
+            asst_editor_names = OrderedDict([])
+            for ed in ['assistant_editor', 'assistant_editor2', 'assistant_editor3']:
+                if docrow[ed]:
+                    asst_editor_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
+                                                                        docrow[ed]['last_name'])
 
-        return {'doc_exists': True,
-                'title': docrow['name'],
-                'body_fields': body_fields,
-                'citation_format': docrow['citation_format'],
-                'editors': editor_names,
-                'assistant_editors': asst_editor_names,
-                'proofreaders': proofreader_names,
-                'filename': filename,
-                'version': docrow['version']}
+            proofreader_names = OrderedDict([])
+            for ed in ['proofreader', 'proofreader2', 'proofreader3']:
+                if docrow[ed]:
+                    proofreader_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
+                                                                        docrow[ed]['last_name'])
+
+            return {'doc_exists': True,
+                    'editing_permission': True,
+                    'title': docrow['name'],
+                    'body_fields': body_fields,
+                    'citation_format': docrow['citation_format'],
+                    'editors': editor_names,
+                    'assistant_editors': asst_editor_names,
+                    'proofreaders': proofreader_names,
+                    'filename': filename,
+                    'version': docrow['version']}
+        else:
+            # current user does not have permission
+            return {'doc_exists': True,
+                    'editing_permission': False,
+                    'filename': filename,
+                    'title': docrow['name']}
 
 
 def intro():
