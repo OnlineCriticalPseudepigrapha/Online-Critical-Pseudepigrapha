@@ -40,15 +40,21 @@
                         <div class="panel-body">
                         <ul class="">
                             {{for doc in genrerows[g]:}}
-                            {{=LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
-                                SPAN(' ( ',
-                                    A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
-                                    ' | ',
-                                    A('introduction', _href=URL('docs', 'intro', args=[doc["filename"]])), ' )',
-                                    _class="doc-link-span"
-                                    )
-                                )
-                            }}
+                                {{myitem = LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
+                                            SPAN(' ( ',
+                                                A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
+                                                ' | ',
+                                                A('introduction', _href=URL('docs', 'intro', args=[doc["filename"]])),
+                                                _class="doc-link-span"
+                                                )
+                                            )
+                                  if auth.has_membership('administrators'):
+                                      myitem[1].append(' | ')
+                                      myitem[1].append(A('draft intro', _href=URL('docs', 'draft_intro', args=[doc["filename"]])))
+                                  pass
+                                  myitem[1].append(')')
+                                }}
+                                {{=myitem}}
                             {{pass}}
                         </ul>
                         </div>
@@ -88,15 +94,23 @@
                         <div class="panel-body">
                         <ul class="">
                             {{for doc in figurerows[f]:}}
-                            {{=LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
-                                SPAN(' ( ',
-                                    A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
-                                    ' | ',
-                                    A('introduction', _href=URL('docs', 'intro', args=[doc["filename"]])), ' )',
-                                    _class="doc-link-span"
-                                    )
-                                )
-                            }}
+
+                                {{myitem = LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
+                                            SPAN(' ( ',
+                                                A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
+                                                ' | ',
+                                                A('introduction', _href=URL('docs', 'intro', args=[doc["filename"]])),
+                                                _class="doc-link-span"
+                                                )
+                                            )
+                                  if auth.has_membership('administrators'):
+                                      myitem[1].append(' | ')
+                                      myitem[1].append(A('draft intro', _href=URL('docs', 'draft_intro', args=[doc["filename"]])))
+                                  pass
+                                  myitem[1].append(')')
+                                }}
+                                {{=myitem}}
+
                             {{pass}}
                         </ul>
                         </div>
@@ -121,15 +135,21 @@
         <div class="panel-body">
             <ul class="">
             {{for doc in docrows:}}
-                {{=LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
-                    SPAN(' ( ',
-                        A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
-                        ' | ',
-                        A('introduction', _href=URL('docs', 'intro', args=[doc['filename']])), ' )',
-                        _class="doc-link-span"
-                        )
-                    )
+                {{myitem = LI(A(doc["name"], _href=URL('docs', 'text', args=[doc["filename"]])),
+                            SPAN(' ( ',
+                                A('text', _href=URL('docs', 'text', args=[doc["filename"]])),
+                                ' | ',
+                                A('introduction', _href=URL('docs', 'intro', args=[doc["filename"]])),
+                                _class="doc-link-span"
+                                )
+                            )
+                    if auth.has_membership('administrators'):
+                        myitem[1].append(' | ')
+                        myitem[1].append(A('draft intro', _href=URL('docs', 'draft_intro', args=[doc["filename"]])))
+                    pass
+                    myitem[1].append(')')
                 }}
+                {{=myitem}}
             {{pass}}
             </ul>
             </div>
