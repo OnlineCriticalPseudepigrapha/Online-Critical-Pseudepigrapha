@@ -306,7 +306,7 @@ def text():
         levels = first_v['organisation_levels']
 
         #build flat list of references
-        refraw = [ref for ref, units in first_v['text_structure'].items()]
+        refraw = first_v['text_structure']
         if session.refraw:
             session.refraw[filename] = refraw
         else:
@@ -376,20 +376,20 @@ def _get_bookinfo(filename):
     # FIXME: error when using session values
     # _element object can't be pickled, and pickling is necessary to store
     # an object in session
-    if 0 and ('info' in session.keys()) and (filename in session.info.keys()) and \
-            ('p' in session.keys()) and (filename in session.p.keys()):
-        info = session.info[filename]
+    print "Getting info"
+    if 0 and ('p' in session.keys()) and (filename in session.p.keys()):
         p = cPickle.loads(session.p[filename])
-        if vbs: print info
-        if vbs: print 'using session.info'
     else:
         book_file = 'applications/grammateus3/static/docs/{}.xml'.format(filename)
-        p = Book.open(book_file)
-        if vbs: print 'using newly parsed book object'
+        p = Book(book_file)
         if session.p:
             session.p[filename] = p
         else:
             session.p = {filename: p}
+
+    if ('info' in session.keys()) and (filename in session.info.keys()):
+        info = session.info[filename]
+    else:
         info = p.book_info()
         session.info = {filename: info}
     if vbs: print "info", pprint(info)
@@ -574,7 +574,7 @@ def section():
         if session.refraw[filename]:
             reflist = session.refraw[filename]
         else:
-            reflist = [ref for ref, units in curv['text_structure'].items()]
+            reflist = curv['text_structure']
             session.refraw[filename] = reflist
 
         startref = reflist[0]
