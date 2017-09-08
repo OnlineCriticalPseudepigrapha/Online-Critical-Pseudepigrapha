@@ -106,8 +106,6 @@ class Book(object):
         book._book = tree.getroot()
         book._docinfo.update({i: getattr(tree.docinfo, i) for i in XML_DEFAULT_DOCINFO.keys()})
         book._structure_info = book._get_book_info()
-        print "========================================================"
-        pprint(book._structure_info)
         return book
 
     @staticmethod
@@ -361,7 +359,9 @@ class Book(object):
         return attributes
 
     def _get_book_info(self):
-        """Return a dictionary containing information about the book's structure."""
+        """
+        Return a dictionary containing information about the book's structure.
+        """
 
         info = {'book': self._getattrs(self._book.xpath('/book')[0], ('filename', 'title', 'textStructure')),
                 'version': []}
@@ -500,6 +500,9 @@ class Book(object):
             text - the <text> element from which we are extracting data.
             delimiters - a list of the delimiters used to seperate a document's
                          divisions
+
+        FIXME: This should instead just return a list of all section references,
+        including the proper delimiters.
         """
         try:
             data = self.text_structure(text[0], delimiters)
@@ -509,8 +512,70 @@ class Book(object):
 
         return data
 
+
     def text_structure(self, text, delimiters):
         """Extract the div structure from a given text tag."""
+
+        parent = OrderedDict()
+        for div in text.xpath('div'):
+            parent_attributes = [self._getattrs(div, ('number', 'fragment'))]
+            parent_key = unicode(parent_attributes[0]['number'])
+            child_structure = self.text_structure(div, delimiters[1:])
+
+            if child_structure:
+                for k, v in child_structure.items():
+                    key = '%s%s%s' % (parent_key, delimiters[0], k)
+                    parent[key] = v
+                    attributes = parent_attributes + v['attributes']
+                    parent[key]['attributes'] = attributes
+
+                    # Remove child keys
+                    del child_structure[k]
+
+            else:
+                # Child div has no children so extract the unit data
+                readings = OrderedDict()
+                units = []
+                for u in div.xpath('unit'):
+                    unit = {}
+                    u_attributes = self._getattrs(u, ('id', 'group', 'parallel'))
+                    if not u_attributes['group']:
+                        u_attributes['group'] = '0'
+                    unit['id'] = u_attributes['id']
+                    unit['group'] = u_attributes['group']
+                    unit['parallel'] = u_attributes['parallel']
+
+                    reading_dict = OrderedDict()
+                    for reading in u.xpath('reading'):
+                        r_attributes = self._getattrs(reading, ('option', 'mss', 'linebreak', 'indent'))
+
+                        w_list = []
+                        for w in reading.xpath('w'):
+                            w_list.append(dict({
+                                'attributes': self._getattrs(w, ('morph', 'lex', 'style', 'lang')),
+                                'text': w.text
+                            }))
+
+                        mss = unicode(r_attributes['mss'].strip())
+                        reading_dict[mss] = {
+                            'attributes': r_attributes,
+                            'text': reading.text.strip() if reading.text else "",
+                            #TODO: Integrate word list (parsed words) with text (unparsed text)
+                            'w': w_list,
+                        }
+                    unit['readings'] = reading_dict
+
+                    units.append(unit)
+
+                parent[parent_key] = {'attributes': parent_attributes, 'units': units, 'readings': readings}
+
+        return parent
+
+    def text_structure_old(self, text, delimiters):
+        """Extract the div structure from a given text tag.
+
+        #FIXME: This is obsolete code
+        """
 
         parent = OrderedDict()
         for div in text.xpath('div'):
