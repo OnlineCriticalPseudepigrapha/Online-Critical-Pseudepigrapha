@@ -311,6 +311,8 @@ def text():
             session.refraw[filename] = refraw
         else:
             session.refraw = {filename: refraw}
+        print 'refraw=================================================='
+        print refraw
 
         #build list for starting ref
         if 'from' in request.vars:
