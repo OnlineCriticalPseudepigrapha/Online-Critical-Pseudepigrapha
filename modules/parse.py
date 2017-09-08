@@ -9,6 +9,7 @@ from lxml import etree
 import os
 from plugin_utils import check_path
 from pprint import pprint
+import time
 import traceback
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),
@@ -70,43 +71,24 @@ def copy_file(src, dst):
         f.write(open(src).read())
 
 
+def timing(f):
+    def wrap(*args):
+        time1 = time.time()
+        ret = f(*args)
+        time2 = time.time()
+        print '%s function took %0.3f ms' % (f.func_name, (time2-time1)*1000.0)
+        return ret
+    return wrap
+
+
 # -------------------------------
 # classes
 # -------------------------------
 
-
-class Book(object):
+class BookMaker(object):
     """
-    Parser and manipulator class for OCP XML files
-
-    It provides methods for:
-
-    book_info() - extract book structure information from xml
-    get_reference() - extract readings given a version title and an iterable of
-                      divisions
+    Creates a new xml document.
     """
-
-    @staticmethod
-    def open(xml_book_data):
-        """
-        Factory method for parsing a preloaded xml file
-
-        :param xml_book_data: book structure wrapped into a file-like object
-        :return: Book object
-        """
-        book = Book()  # FIXME: Why returning new instance of own class?
-        try:
-            if getattr(xml_book_data, "read", None):
-                tree = etree.parse(xml_book_data)
-            else:
-                tree = etree.parse(open(xml_book_data))
-        except AttributeError as e:
-            print e.message
-            raise TypeError("Book() requires XML data in a file-like object")
-        book._book = tree.getroot()
-        book._docinfo.update({i: getattr(tree.docinfo, i) for i in XML_DEFAULT_DOCINFO.keys()})
-        book._structure_info = book._get_book_info()
-        return book
 
     @staticmethod
     def create(filename, title, frags=False):
@@ -126,11 +108,252 @@ class Book(object):
 
         return book
 
-    def __init__(self):
-        self._book = None
+
+class BookEditor(object):
+    """
+    Edits the content of an existing OCP xml file.
+    """
+
+    def __init__(self, mybook):
+        """
+        mybook: instance of Book class
+        """
+        self._book = mybook
+
+    def _renumber_units(self):
+        """
+        If we're adding or removing an element that contains units (div or unit),
+        all units that follow the affected units must be renumbered since all units
+        in a document must be numbered consecutively.
+        """
+        print '_renumber_units'
+        try:
+            print len(self._book.xpath("//unit"))
+            for index, unit in enumerate(self._book.xpath(".//unit"), 1):
+                print index
+                unit.set("id", str(index))
+                for idx, reading in enumerate(unit.xpath(".//reading")):
+                    reading.set("option", str(idx))
+        except Exception as e:
+            traceback.print_exc(e)
+
+    def add_bibliography(self, version_title, abbrev, text):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        etree.SubElement(ms, "bibliography").text = text
+
+    def update_bibliography(self, version_title, abbrev, bibliography_pos, new_text):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        bibliography = self._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
+        bibliography.text = new_text
+
+    def del_bibliography(self, version_title, abbrev, bibliography_pos):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        bibliography = self._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
+        bibliography.getparent().remove(bibliography)
+
+    def add_div(self, version_title, div_name, div_parent_path, preceding_div=None):
+        if div_parent_path:
+            parent_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_parent_path])
+            div_parent = self._get(parent_xpath, attribute=None, on_element=self._get("version", {"title": version_title}))
+        else:
+            div_parent = self._get("text", attribute=None, on_element=self._get("version", {"title": version_title}))
+        if preceding_div:
+            div_sibling = self._get("div", attribute={"number": preceding_div}, on_element=div_parent)
+            div_sibling.addnext(etree.Element("div", {"number": str(div_name)}))
+        else:
+            div_parent.append(etree.Element("div", {"number": str(div_name)}))
+
+    def update_div(self, version_title, div_path, new_div_name):
+        div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
+        version = self._get("version", {"title": version_title})
+        div = self._get(div_xpath, attribute=None, on_element=version)
+        div.set("number", new_div_name)
+        self._renumber_units()
+
+    def del_div(self, version_title, div_path):
+        div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
+        version = self._get("version", {"title": version_title})
+        div = self._get(div_xpath, attribute=None, on_element=version)
+        div.getparent().remove(div)
+        self._renumber_units()
+
+    def add_unit(self, version_title, div_path):
+        parent_div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
+        version = self._get("version", {"title": version_title})
+        parent_div = self._get(parent_div_xpath,
+                               attribute=None,
+                               on_element=version)
+        etree.SubElement(parent_div, "unit", {"id": "0"}).append(etree.Element("reading"))
+        self._renumber_units()
+
+    def update_unit(self, version_title, unit_id, readings):
+        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
+        unit.clear()
+        unit.set("id", unit_id)
+        for index, reading in enumerate(readings):
+            etree.SubElement(unit, "reading", {"option": str(index), "mss": reading[0]}).text = reading[1]
+
+    def _clone_unit(self, unit_element):
+        cloned_unit = deepcopy(unit_element)
+        for r in cloned_unit.iterchildren():
+            r.text = ""
+        return cloned_unit
+
+    def split_unit(self, version_title, unit_id, reading_pos, split_point):
+        version = self._get("version", {"title": version_title})
+        unit = self._get("//unit", {"id": str(unit_id)}, version)
+        reading_pos = int(reading_pos)
+        if -1 < reading_pos < len(unit):
+            reading = unit[reading_pos]
+            if isinstance(split_point, basestring) and split_point in reading.text:
+                reading_parts = reading.text.split(split_point)
+                # new unit for the last part of the text
+                next_unit = self._clone_unit(unit)
+                next_unit[reading_pos].text = reading_parts[1].strip()
+                unit.addnext(next_unit)
+                # new unit for the middle part of the text
+                next_unit = self._clone_unit(unit)
+                next_unit[reading_pos].text = split_point.strip()
+                unit.addnext(next_unit)
+                # keep the current for the first part of the text
+                reading.text = reading_parts[0].strip()
+            elif isinstance(split_point, int):
+                next_unit = self._clone_unit(unit)
+                next_unit[reading_pos].text = reading.text[split_point:].strip()
+                unit.addnext(next_unit)
+                reading.text = reading.text[:split_point].strip()
+            # renumber units
+            self._renumber_units()
+        else:
+            raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
+
+    def split_reading(self, version_title, unit_id, reading_pos, split_point):
+        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
+        reading_pos = int(reading_pos)
+        if -1 < reading_pos < len(unit):
+            reading = unit[reading_pos]
+            if isinstance(split_point, basestring) and split_point in reading.text:
+                reading_parts = reading.text.split(split_point)
+                # prev elem
+                prev_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                prev_elem.text = reading_parts[0].strip()
+                reading.addprevious(prev_elem)
+                # current elem
+                reading.text = split_point.strip()
+                # next elem
+                next_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                next_elem.text = reading_parts[1].strip()
+                reading.addnext(next_elem)
+            elif isinstance(split_point, int):
+                next_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
+                next_elem.text = reading.text[split_point:].strip()
+                reading.addnext(next_elem)
+                reading.text = reading.text[:split_point].strip()
+            # renumber the option attribute
+            for index, reading in enumerate(unit):
+                reading.set("option", str(index))
+        else:
+            raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
+
+    def del_unit(self, version_title, unit_id):
+        version = self._get("version", {"title": version_title})
+        unit = self._get("//unit", {"id": str(unit_id)}, on_element=version)
+        unit.getparent().remove(unit)
+        self._renumber_units()
+
+    def add_version(self, version_title, language, author, mss=None):
+        if self._book.xpath("version[@title='{}']".format(version_title)):
+            raise ElementAlreadyExists("<version> element with title='{}' already exists")
+        version = etree.SubElement(self._book,
+                                   "version",
+                                   attrib={"title": version_title,
+                                           "author": author,
+                                           "language": language})
+        # add mandatory subelements
+        etree.SubElement(version, "divisions")
+        manuscripts = etree.SubElement(version, "manuscripts")
+        if mss:
+            if isinstance(mss, basestring):
+                mss = mss.split()
+                if len(mss) == 1:
+                    mss = mss[0].split(",")
+            for ms in mss:
+                etree.SubElement(manuscripts,
+                                 "ms",
+                                 attrib={"abbrev": ms, "language": "", "show": ""}).append(etree.Element("name"))
+        etree.SubElement(version, "text")
+
+    def update_version(self, version_title, new_version_title=None, new_language=None, new_author=None):
+        version = self._get("version", {"title": version_title})
+        if new_version_title:
+            version.set("title", new_version_title)
+        if new_language:
+            version.set("language", new_language)
+        if new_author:
+            version.set("author", new_author)
+
+    def del_version(self, version_title):
+        version = self._get("version", {"title": version_title})
+        version.getparent().remove(version)
+
+    def add_manuscript(self, version_title, abbrev, language, show=True):
+        manuscripts = self._get("manuscripts", None, self._get("version", {"title": version_title}))
+        etree.SubElement(manuscripts,
+                         "ms", {"abbrev": abbrev,
+                                "language": language,
+                                "show": "yes" if show else "no"}).append(etree.Element("name"))
+
+    def update_manuscript(self, version_title, abbrev, new_abbrev, new_language=None, new_show=None):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        if new_abbrev:
+            ms.set("abbrev", new_abbrev)
+        if new_language:
+            ms.set("language", new_language)
+        if new_show is not None:
+            ms.set("show", "yes" if new_show else "no")
+
+    def del_manuscript(self, version_title, abbrev):
+        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        # ms = self._get("version", {"title": version_title}).xpath("manuscripts/ms[@abbrev='{}'".format(abbrev))
+        ms.getparent().remove(ms)
+
+    def serialize(self, pretty=True):
+        return etree.tostring(self._book,
+                              xml_declaration=True,
+                              pretty_print=pretty,
+                              **self._docinfo)
+
+    def save(self):
+        BookManager._save(self)
+
+
+class Book(object):
+    """
+    Parser and manipulator class for OCP XML files
+
+    It provides methods for:
+
+    book_info() - extract book structure information from xml
+    get_reference() - extract readings given a version title and an iterable of
+                      divisions
+    """
+
+    def __init__(self, xml_book_data):
+
+        try:
+            if getattr(xml_book_data, "read", None):
+                tree = etree.parse(xml_book_data)
+            else:
+                tree = etree.parse(open(xml_book_data))
+        except AttributeError as e:
+            print e.message
+            raise TypeError("Book() requires XML data in a file-like object")
+
+        self._book = tree.getroot()
         self._docinfo = XML_DEFAULT_DOCINFO
+        self._docinfo.update({i: getattr(tree.docinfo, i) for i in XML_DEFAULT_DOCINFO.keys()})
         # dict with keys "doctype", "encoding", and "standalone"
-        self._structure_info = {}
+        self._structure_info = self._get_book_info()
         self._validation_errors = []
         self.default_delimiter = '.'
 
@@ -492,6 +715,7 @@ class Book(object):
 
         return data
 
+    @timing
     def get_text_info(self, text, delimiters):
         """
         Return a OrderedDict containing data from a <text> element.
@@ -509,73 +733,35 @@ class Book(object):
         except Exception as e:
             traceback.print_exc(e)
             data = 'none'
+        print 'text_structure =================================='
+        print data
+        print '================================================'
 
         return data
-
 
     def text_structure(self, text, delimiters):
         """Extract the div structure from a given text tag."""
 
-        parent = OrderedDict()
+        refs = []
         for div in text.xpath('div'):
             parent_attributes = [self._getattrs(div, ('number', 'fragment'))]
             parent_key = unicode(parent_attributes[0]['number'])
-            child_structure = self.text_structure(div, delimiters[1:])
+            print 'div {}, level {}'.format(parent_key, len(delimiters))
 
-            if child_structure:
-                for k, v in child_structure.items():
-                    key = '%s%s%s' % (parent_key, delimiters[0], k)
-                    parent[key] = v
-                    attributes = parent_attributes + v['attributes']
-                    parent[key]['attributes'] = attributes
-
-                    # Remove child keys
-                    del child_structure[k]
-
+            if len(div.xpath('div')):
+                child_refs = self.text_structure(div, delimiters[1:])
+                print 'child refs are {}'.format(child_refs)
+                for ref in child_refs:
+                    refs.append('{}{}{}'.format(parent_key, delimiters[0], ref))
             else:
-                # Child div has no children so extract the unit data
-                readings = OrderedDict()
-                units = []
-                for u in div.xpath('unit'):
-                    unit = {}
-                    u_attributes = self._getattrs(u, ('id', 'group', 'parallel'))
-                    if not u_attributes['group']:
-                        u_attributes['group'] = '0'
-                    unit['id'] = u_attributes['id']
-                    unit['group'] = u_attributes['group']
-                    unit['parallel'] = u_attributes['parallel']
+                refs.append(parent_key)
 
-                    reading_dict = OrderedDict()
-                    for reading in u.xpath('reading'):
-                        r_attributes = self._getattrs(reading, ('option', 'mss', 'linebreak', 'indent'))
+        return refs
 
-                        w_list = []
-                        for w in reading.xpath('w'):
-                            w_list.append(dict({
-                                'attributes': self._getattrs(w, ('morph', 'lex', 'style', 'lang')),
-                                'text': w.text
-                            }))
-
-                        mss = unicode(r_attributes['mss'].strip())
-                        reading_dict[mss] = {
-                            'attributes': r_attributes,
-                            'text': reading.text.strip() if reading.text else "",
-                            #TODO: Integrate word list (parsed words) with text (unparsed text)
-                            'w': w_list,
-                        }
-                    unit['readings'] = reading_dict
-
-                    units.append(unit)
-
-                parent[parent_key] = {'attributes': parent_attributes, 'units': units, 'readings': readings}
-
-        return parent
-
+    """
     def text_structure_old(self, text, delimiters):
-        """Extract the div structure from a given text tag.
-
+        # Extract the div structure from a given text tag.
         #FIXME: This is obsolete code
-        """
 
         parent = OrderedDict()
         for div in text.xpath('div'):
@@ -631,6 +817,7 @@ class Book(object):
                 parent[parent_key] = {'attributes': parent_attributes, 'units': units, 'readings': readings}
 
         return parent
+    """
 
     def _get(self, element_name, attribute, on_element=None):
         """
@@ -675,23 +862,6 @@ class Book(object):
                 if vbs: print 'getting element d'
 
         return elements[0]
-
-    def _renumber_units(self):
-        """
-        If we're adding or removing an element that contains units (div or unit),
-        all units that follow the affected units must be renumbered since all units
-        in a document must be numbered consecutively.
-        """
-        print '_renumber_units'
-        try:
-            print len(self._book.xpath("//unit"))
-            for index, unit in enumerate(self._book.xpath(".//unit"), 1):
-                print index
-                unit.set("id", str(index))
-                for idx, reading in enumerate(unit.xpath(".//reading")):
-                    reading.set("option", str(idx))
-        except Exception as e:
-            traceback.print_exc(e)
 
     def _get_div_path(self, div_element):
         """
@@ -972,197 +1142,6 @@ class Book(object):
             group[unit.get("id")] = self._get_readings_of_unit(unit,
                                                                default_readings=default_readings)
         return group
-
-    # EI methods
-
-    def add_version(self, version_title, language, author, mss=None):
-        if self._book.xpath("version[@title='{}']".format(version_title)):
-            raise ElementAlreadyExists("<version> element with title='{}' already exists")
-        version = etree.SubElement(self._book,
-                                   "version",
-                                   attrib={"title": version_title,
-                                           "author": author,
-                                           "language": language})
-        # add mandatory subelements
-        etree.SubElement(version, "divisions")
-        manuscripts = etree.SubElement(version, "manuscripts")
-        if mss:
-            if isinstance(mss, basestring):
-                mss = mss.split()
-                if len(mss) == 1:
-                    mss = mss[0].split(",")
-            for ms in mss:
-                etree.SubElement(manuscripts,
-                                 "ms",
-                                 attrib={"abbrev": ms, "language": "", "show": ""}).append(etree.Element("name"))
-        etree.SubElement(version, "text")
-
-    def update_version(self, version_title, new_version_title=None, new_language=None, new_author=None):
-        version = self._get("version", {"title": version_title})
-        if new_version_title:
-            version.set("title", new_version_title)
-        if new_language:
-            version.set("language", new_language)
-        if new_author:
-            version.set("author", new_author)
-
-    def del_version(self, version_title):
-        version = self._get("version", {"title": version_title})
-        version.getparent().remove(version)
-
-    def add_manuscript(self, version_title, abbrev, language, show=True):
-        manuscripts = self._get("manuscripts", None, self._get("version", {"title": version_title}))
-        etree.SubElement(manuscripts,
-                         "ms", {"abbrev": abbrev,
-                                "language": language,
-                                "show": "yes" if show else "no"}).append(etree.Element("name"))
-
-    def update_manuscript(self, version_title, abbrev, new_abbrev, new_language=None, new_show=None):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        if new_abbrev:
-            ms.set("abbrev", new_abbrev)
-        if new_language:
-            ms.set("language", new_language)
-        if new_show is not None:
-            ms.set("show", "yes" if new_show else "no")
-
-    def del_manuscript(self, version_title, abbrev):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        # ms = self._get("version", {"title": version_title}).xpath("manuscripts/ms[@abbrev='{}'".format(abbrev))
-        ms.getparent().remove(ms)
-
-    def add_bibliography(self, version_title, abbrev, text):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        etree.SubElement(ms, "bibliography").text = text
-
-    def update_bibliography(self, version_title, abbrev, bibliography_pos, new_text):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        bibliography = self._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
-        bibliography.text = new_text
-
-    def del_bibliography(self, version_title, abbrev, bibliography_pos):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        bibliography = self._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
-        bibliography.getparent().remove(bibliography)
-
-    def add_div(self, version_title, div_name, div_parent_path, preceding_div=None):
-        if div_parent_path:
-            parent_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_parent_path])
-            div_parent = self._get(parent_xpath, attribute=None, on_element=self._get("version", {"title": version_title}))
-        else:
-            div_parent = self._get("text", attribute=None, on_element=self._get("version", {"title": version_title}))
-        if preceding_div:
-            div_sibling = self._get("div", attribute={"number": preceding_div}, on_element=div_parent)
-            div_sibling.addnext(etree.Element("div", {"number": str(div_name)}))
-        else:
-            div_parent.append(etree.Element("div", {"number": str(div_name)}))
-
-    def update_div(self, version_title, div_path, new_div_name):
-        div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
-        version = self._get("version", {"title": version_title})
-        div = self._get(div_xpath, attribute=None, on_element=version)
-        div.set("number", new_div_name)
-        self._renumber_units()
-
-    def del_div(self, version_title, div_path):
-        div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
-        version = self._get("version", {"title": version_title})
-        div = self._get(div_xpath, attribute=None, on_element=version)
-        div.getparent().remove(div)
-        self._renumber_units()
-
-    def add_unit(self, version_title, div_path):
-        parent_div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
-        version = self._get("version", {"title": version_title})
-        parent_div = self._get(parent_div_xpath,
-                               attribute=None,
-                               on_element=version)
-        etree.SubElement(parent_div, "unit", {"id": "0"}).append(etree.Element("reading"))
-        self._renumber_units()
-
-    def update_unit(self, version_title, unit_id, readings):
-        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
-        unit.clear()
-        unit.set("id", unit_id)
-        for index, reading in enumerate(readings):
-            etree.SubElement(unit, "reading", {"option": str(index), "mss": reading[0]}).text = reading[1]
-
-    def _clone_unit(self, unit_element):
-        cloned_unit = deepcopy(unit_element)
-        for r in cloned_unit.iterchildren():
-            r.text = ""
-        return cloned_unit
-
-    def split_unit(self, version_title, unit_id, reading_pos, split_point):
-        version = self._get("version", {"title": version_title})
-        unit = self._get("//unit", {"id": str(unit_id)}, version)
-        reading_pos = int(reading_pos)
-        if -1 < reading_pos < len(unit):
-            reading = unit[reading_pos]
-            if isinstance(split_point, basestring) and split_point in reading.text:
-                reading_parts = reading.text.split(split_point)
-                # new unit for the last part of the text
-                next_unit = self._clone_unit(unit)
-                next_unit[reading_pos].text = reading_parts[1].strip()
-                unit.addnext(next_unit)
-                # new unit for the middle part of the text
-                next_unit = self._clone_unit(unit)
-                next_unit[reading_pos].text = split_point.strip()
-                unit.addnext(next_unit)
-                # keep the current for the first part of the text
-                reading.text = reading_parts[0].strip()
-            elif isinstance(split_point, int):
-                next_unit = self._clone_unit(unit)
-                next_unit[reading_pos].text = reading.text[split_point:].strip()
-                unit.addnext(next_unit)
-                reading.text = reading.text[:split_point].strip()
-            # renumber units
-            self._renumber_units()
-        else:
-            raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
-
-    def split_reading(self, version_title, unit_id, reading_pos, split_point):
-        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
-        reading_pos = int(reading_pos)
-        if -1 < reading_pos < len(unit):
-            reading = unit[reading_pos]
-            if isinstance(split_point, basestring) and split_point in reading.text:
-                reading_parts = reading.text.split(split_point)
-                # prev elem
-                prev_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                prev_elem.text = reading_parts[0].strip()
-                reading.addprevious(prev_elem)
-                # current elem
-                reading.text = split_point.strip()
-                # next elem
-                next_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                next_elem.text = reading_parts[1].strip()
-                reading.addnext(next_elem)
-            elif isinstance(split_point, int):
-                next_elem = etree.Element("reading", {"option": "0", "mss": reading.get("mss")})
-                next_elem.text = reading.text[split_point:].strip()
-                reading.addnext(next_elem)
-                reading.text = reading.text[:split_point].strip()
-            # renumber the option attribute
-            for index, reading in enumerate(unit):
-                reading.set("option", str(index))
-        else:
-            raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
-
-    def del_unit(self, version_title, unit_id):
-        version = self._get("version", {"title": version_title})
-        unit = self._get("//unit", {"id": str(unit_id)}, on_element=version)
-        unit.getparent().remove(unit)
-        self._renumber_units()
-
-    def serialize(self, pretty=True):
-        return etree.tostring(self._book,
-                              xml_declaration=True,
-                              pretty_print=pretty,
-                              **self._docinfo)
-
-    def save(self):
-        BookManager._save(self)
 
 
 class BookManager(object):
