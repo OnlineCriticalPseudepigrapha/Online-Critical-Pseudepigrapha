@@ -280,13 +280,10 @@ def text():
     versions = info['version']
 
     if structure == 'fragmentary':  # find first fragment and set nav values
-        print versions[0].keys()
-        print versions[0]['attributes']
         fragments = sorted(list(set([v['attributes']['fragment'] for v in versions])))
         session.versions = {f: [v['attributes']['title'] for v in versions
                                 if v['attributes']['fragment'] == f]
                             for f in fragments}
-        print session.versions
 
         levels = None
         start_sel = fragments[0]
@@ -306,13 +303,11 @@ def text():
         levels = first_v['organisation_levels']
 
         #build flat list of references
-        refraw = first_v['text_structure']
+        refraw = first_v['reference_list']
         if session.refraw:
             session.refraw[filename] = refraw
         else:
             session.refraw = {filename: refraw}
-        print 'refraw=================================================='
-        print refraw
 
         #build list for starting ref
         if 'from' in request.vars:
@@ -351,8 +346,6 @@ def text():
 
         session.startref = startref
         session.endref = endref
-        print 'start_sel', start_sel
-        print 'end_sel', end_sel, '\n\n'
         start_sel_str = '|'.join(start_sel),
         end_sel_str = '|'.join(end_sel),
 
@@ -390,7 +383,7 @@ def _get_bookinfo(filename):
     if ('info' in session.keys()) and (filename in session.info.keys()):
         info = session.info[filename]
     else:
-        info = p.book_info()
+        info = p.get_book_info()
         session.info = {filename: info}
     if vbs: print "info", pprint(info)
     return info, p
@@ -463,14 +456,11 @@ def section():
     #'vbs' variable is for turning testing output on and off
     vbs = False
     if vbs: print 'section() start -------------------------------------------'
-    #print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
-    if vbs: print '\n\nstart of section() method with url ', request.url, varlist
 
     #get filename from end of url and parse the file with BookParser class
     filename = request.args[0]
     info, p = _get_bookinfo(filename)
-    if vbs: print "section(): got info and p"
 
     def get_version_info(current_version):
         for version in info['version']:
@@ -478,13 +468,9 @@ def section():
                     curv = version
                     vlang = curv['attributes']['language']
                     levels = curv['organisation_levels']
-        if vbs: print 'ms keys', curv['manuscripts'][0].keys()
-        if vbs: print 'v keys:', curv['manuscripts'][0]
         mslist = flatten([[to_unicode(k.strip()) for k, c in v.iteritems()
                            if c['attributes']['show'] == 'yes']
                           for v in curv['manuscripts']])
-        if vbs: print curv['manuscripts']
-        if vbs: print "section(): got mslist"
 
         return curv, vlang, levels, mslist
 
@@ -501,7 +487,7 @@ def section():
             mslist.insert(0, mslist.pop(i))
         else:
             current_ms = mslist[0]
-        if vbs: print "section(): current_ms is", current_ms
+
         return current_ms
 
     def get_prev_next_levels(startref, endref, start_sel, end_sel):
@@ -544,7 +530,6 @@ def section():
 
     # FRAGMENTARY ==========================================================
     if session.structure[filename] == 'fragmentary':
-        if vbs: print "section(): fragmentary text"
         myfrags = sorted(session.versions.keys())
         myfrag = myfrags[0] if not request.vars['from'] \
             else request.vars['from'].replace('-', '')
@@ -562,19 +547,16 @@ def section():
             elif fidx > (len(myfrags) - 1):
                 fidx = len(myfrags) - 1
             myfrag = myfrags[fidx]
-        if vbs: print 'current fragment:', myfrag
 
         myversions = session.versions[myfrag]
-        if vbs: pprint(session.versions)
         current_version, myversions = get_display_version(myversions)
         curv, vlang, levels, mslist = get_version_info(current_version)
-        if vbs: print "section(): mslist:", mslist
         current_ms = get_current_ms(mslist)
 
         if session.refraw[filename]:
             reflist = session.refraw[filename]
         else:
-            reflist = curv['text_structure']
+            reflist = curv['reference_list']
             session.refraw[filename] = reflist
 
         startref = reflist[0]
@@ -584,18 +566,12 @@ def section():
 
     # NON-FRAGMENTARY ==========================================================
     else:
-        if vbs: print "section(): non-fragmentary text"
         myversions = session.versions
-        if vbs: print "section(): 1"
         current_version, myversions = get_display_version(myversions)
-        if vbs: print "section(): 2"
         curv, vlang, levels, mslist = get_version_info(current_version)
-        if vbs: print "section(): mslist:", mslist
         current_ms = get_current_ms(mslist)
-        if vbs: print "section(): current ms is", current_ms
 
         if 'from' in request.vars:
-            if vbs: print "section(): getting specified ref"
             startref = request.vars['from']
             start_sel = [s for s in startref.split('-') if s]
             if 'to' in request.vars:
@@ -604,32 +580,25 @@ def section():
             else:
                 end_sel = start_sel
         else:
-            if vbs: print "section(): falling back to first (default) ref"
             reflist = session.refraw
             startref = session.startref
             start_sel = startref.split(':')
             endref = session.endref
             end_sel = endref.split(':')
 
-    if vbs: print "section(): rejoining common code"
-
     next_level, previous_level, end_sel = get_prev_next_levels(startref, endref,
                                                                 start_sel, end_sel)
 
     try:
         # re-set start_sel and end_sel from output in case 'next' or 'back'
-        if vbs: print "section(): getting text"
         myargs = [current_version,
                   current_ms,
                   start_sel,
                   end_sel,
                   next_level,
                   previous_level]
-        if vbs: print "section(): arguments for get_text():"
-        if vbs: pprint(myargs)
         text_iterator, start_sel, end_sel = p.get_text(*myargs)
         parsed_text = list(text_iterator)
-        if vbs: print "section(): got text"
     except ElementDoesNotExist, e:
         try:
             print traceback.format_exc()

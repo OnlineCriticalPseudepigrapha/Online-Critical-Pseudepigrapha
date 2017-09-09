@@ -8,7 +8,7 @@ from kitchen.text.converters import to_unicode
 from lxml import etree
 import os
 from plugin_utils import check_path
-from pprint import pprint
+# from pprint import pprint
 import time
 import traceback
 
@@ -109,6 +109,118 @@ class BookMaker(object):
         return book
 
 
+class BookValidator(object):
+    """
+    Validates an OCP xml file both by DTD and semantically.
+    """
+
+    def __init__(self):
+        """
+        Initializa a BookValidator object.
+        """
+        self._validation_errors = []
+
+    @property
+    def validation_errors(self):
+        return self._validation_errors
+
+    def validate(self, dtd_data, book):
+        """
+        Validate the book structure with both validation methods
+
+        params
+        --------
+        dtd_data
+        book (Book): The Book object whose xml file is to be validated.
+
+        """
+        self._validation_errors = []
+        self._validate_by_dtd(dtd_data, book)
+        self._validate_by_semantic(book)
+        return self._validation_errors == []
+
+    def _validate_by_dtd(self, dtd_data, book):
+        """Validate the book structure with DTD"""
+        try:
+            dtd = etree.DTD(dtd_data)
+        except AttributeError:
+            raise TypeError("validate() requires DTD in a file-like object")
+        if not dtd.validate(book):
+            self._validation_errors += dtd.error_log.filter_from_errors()
+
+    def _validate_by_semantic(self, book):
+        """Validate the inner structure and values of the book document"""
+
+        def do_div_name_checking_on_children(parent_element):
+            """Do recursive checking on unique div names under the parent_element"""
+            div_names = set()
+            num_of_div_names = 0
+            for div_element in parent_element.iterchildren("div"):
+                num_of_div_names += 1
+                div_names.add(div_element.get("number"))
+                do_div_name_checking_on_children(div_element)
+            if num_of_div_names != len(div_names):
+                raise NotUniqueDIVName(
+                    "/".join("div number='{}'".format(div_name)
+                             for div_name in book._locate_div_path(parent_element))
+                )
+
+        semantic_errors = []
+
+        # let's run trough the versions
+        for version in book.xpath("version"):
+
+            # each //reading/@mss in //manuscripts/ms/@abbrev
+            ms_reg = set()
+            for abbrev in version.xpath("manuscripts/ms/@abbrev"):
+                ms_reg.add(abbrev.strip())
+            ms_in_use = set()
+            for mss in version.xpath(".//reading/@mss"):
+                for ms in mss.split(" "):
+                    if ms.strip():
+                        ms_in_use.add(ms.strip())
+            if ms_in_use > ms_reg:
+                semantic_errors.append(
+                    (u"<version title='{}'> has missing manuscript definition(s) "
+                     "which are in use: {}".format(
+                        version.get("title"),
+                        u",".join(ms_in_use - ms_reg))).encode("utf-8"))
+
+            # the //unit/@id is unique and consecutive
+            for index, unit_id in enumerate(version.xpath(".//unit/@id"), 1):
+                if index != int(unit_id):
+                    semantic_errors.append(
+                        "<version title='{}'>//<unit id='{}'> has wrong id. "
+                        "It should be '{}'.".format(version.get("title"), unit_id, index))
+                    break
+
+            # number of levels of divisions == number of levels of divs
+            # I couldn't test it because the _get_book_info() is method too sensitive to this type of error
+            num_of_divisions = int(version.xpath("count(divisions/division)"))
+            xpath_to_deeper_div_than_divisions = "text/{}//div".format("/".join(["div"] * num_of_divisions))
+            deeper_div = version.xpath(xpath_to_deeper_div_than_divisions)
+            if deeper_div:
+                semantic_errors.append(
+                    "<version title='{}'> has deeper <div> structure than in <divisions>. "
+                    "For example: <text/{}>".format(
+                        version.get("title"),
+                        "/".join("div number=''".format(div_name) for div_name in book._locate_div_path(deeper_div))))
+
+            # there are no duplicated div/@number at the same level
+            try:
+                do_div_name_checking_on_children(book._get("text", None, on_element=version))
+            except NotUniqueDIVName as e:
+                semantic_errors.append(
+                    "<version title='{}'/text/{}> has <div> with not unique name (number)".format(
+                        version.get("title"),
+                        e.message))
+
+            # TODO: units are strictly at the deepest level of div structure
+            # TODO: correct numbers in reading/@option
+
+        self._validation_errors += semantic_errors
+
+
 class BookEditor(object):
     """
     Edits the content of an existing OCP xml file.
@@ -138,56 +250,56 @@ class BookEditor(object):
             traceback.print_exc(e)
 
     def add_bibliography(self, version_title, abbrev, text):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        ms = self._book._get("manuscripts/ms", {"abbrev": abbrev}, self._book._get("version", {"title": version_title}))
         etree.SubElement(ms, "bibliography").text = text
 
     def update_bibliography(self, version_title, abbrev, bibliography_pos, new_text):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        bibliography = self._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
+        ms = self._book._get("manuscripts/ms", {"abbrev": abbrev}, self._book._get("version", {"title": version_title}))
+        bibliography = self._book._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
         bibliography.text = new_text
 
     def del_bibliography(self, version_title, abbrev, bibliography_pos):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
-        bibliography = self._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
+        ms = self._book._get("manuscripts/ms", {"abbrev": abbrev}, self._book._get("version", {"title": version_title}))
+        bibliography = self._book._get("bibliography[{}]".format(int(bibliography_pos) + 1), None, ms)
         bibliography.getparent().remove(bibliography)
 
     def add_div(self, version_title, div_name, div_parent_path, preceding_div=None):
         if div_parent_path:
             parent_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_parent_path])
-            div_parent = self._get(parent_xpath, attribute=None, on_element=self._get("version", {"title": version_title}))
+            div_parent = self._book._get(parent_xpath, attribute=None, on_element=self._book._get("version", {"title": version_title}))
         else:
-            div_parent = self._get("text", attribute=None, on_element=self._get("version", {"title": version_title}))
+            div_parent = self._book._get("text", attribute=None, on_element=self._book._get("version", {"title": version_title}))
         if preceding_div:
-            div_sibling = self._get("div", attribute={"number": preceding_div}, on_element=div_parent)
+            div_sibling = self._book._get("div", attribute={"number": preceding_div}, on_element=div_parent)
             div_sibling.addnext(etree.Element("div", {"number": str(div_name)}))
         else:
             div_parent.append(etree.Element("div", {"number": str(div_name)}))
 
     def update_div(self, version_title, div_path, new_div_name):
         div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
-        version = self._get("version", {"title": version_title})
-        div = self._get(div_xpath, attribute=None, on_element=version)
+        version = self._book._get("version", {"title": version_title})
+        div = self._book._get(div_xpath, attribute=None, on_element=version)
         div.set("number", new_div_name)
         self._renumber_units()
 
     def del_div(self, version_title, div_path):
         div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
-        version = self._get("version", {"title": version_title})
-        div = self._get(div_xpath, attribute=None, on_element=version)
+        version = self._book._get("version", {"title": version_title})
+        div = self._book._get(div_xpath, attribute=None, on_element=version)
         div.getparent().remove(div)
         self._renumber_units()
 
     def add_unit(self, version_title, div_path):
         parent_div_xpath = "/".join(["text"] + ["div[@number='{}']".format(div_number) for div_number in div_path])
-        version = self._get("version", {"title": version_title})
-        parent_div = self._get(parent_div_xpath,
+        version = self._book._get("version", {"title": version_title})
+        parent_div = self._book._get(parent_div_xpath,
                                attribute=None,
                                on_element=version)
         etree.SubElement(parent_div, "unit", {"id": "0"}).append(etree.Element("reading"))
         self._renumber_units()
 
     def update_unit(self, version_title, unit_id, readings):
-        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
+        unit = self._book._get("//unit", {"id": str(unit_id)}, self._book._get("version", {"title": version_title}))
         unit.clear()
         unit.set("id", unit_id)
         for index, reading in enumerate(readings):
@@ -200,8 +312,8 @@ class BookEditor(object):
         return cloned_unit
 
     def split_unit(self, version_title, unit_id, reading_pos, split_point):
-        version = self._get("version", {"title": version_title})
-        unit = self._get("//unit", {"id": str(unit_id)}, version)
+        version = self._book._get("version", {"title": version_title})
+        unit = self._book._get("//unit", {"id": str(unit_id)}, version)
         reading_pos = int(reading_pos)
         if -1 < reading_pos < len(unit):
             reading = unit[reading_pos]
@@ -228,7 +340,7 @@ class BookEditor(object):
             raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
 
     def split_reading(self, version_title, unit_id, reading_pos, split_point):
-        unit = self._get("//unit", {"id": str(unit_id)}, self._get("version", {"title": version_title}))
+        unit = self._book._get("//unit", {"id": str(unit_id)}, self._book._get("version", {"title": version_title}))
         reading_pos = int(reading_pos)
         if -1 < reading_pos < len(unit):
             reading = unit[reading_pos]
@@ -256,8 +368,8 @@ class BookEditor(object):
             raise ElementDoesNotExist('<unit id="{}"> has no reading at position {}'.format(unit_id, reading_pos))
 
     def del_unit(self, version_title, unit_id):
-        version = self._get("version", {"title": version_title})
-        unit = self._get("//unit", {"id": str(unit_id)}, on_element=version)
+        version = self._book._get("version", {"title": version_title})
+        unit = self._book._get("//unit", {"id": str(unit_id)}, on_element=version)
         unit.getparent().remove(unit)
         self._renumber_units()
 
@@ -284,7 +396,7 @@ class BookEditor(object):
         etree.SubElement(version, "text")
 
     def update_version(self, version_title, new_version_title=None, new_language=None, new_author=None):
-        version = self._get("version", {"title": version_title})
+        version = self._book._get("version", {"title": version_title})
         if new_version_title:
             version.set("title", new_version_title)
         if new_language:
@@ -293,18 +405,18 @@ class BookEditor(object):
             version.set("author", new_author)
 
     def del_version(self, version_title):
-        version = self._get("version", {"title": version_title})
+        version = self._book._get("version", {"title": version_title})
         version.getparent().remove(version)
 
     def add_manuscript(self, version_title, abbrev, language, show=True):
-        manuscripts = self._get("manuscripts", None, self._get("version", {"title": version_title}))
+        manuscripts = self._book._get("manuscripts", None, self._book._get("version", {"title": version_title}))
         etree.SubElement(manuscripts,
                          "ms", {"abbrev": abbrev,
                                 "language": language,
                                 "show": "yes" if show else "no"}).append(etree.Element("name"))
 
     def update_manuscript(self, version_title, abbrev, new_abbrev, new_language=None, new_show=None):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        ms = self._book._get("manuscripts/ms", {"abbrev": abbrev}, self._book._get("version", {"title": version_title}))
         if new_abbrev:
             ms.set("abbrev", new_abbrev)
         if new_language:
@@ -313,7 +425,7 @@ class BookEditor(object):
             ms.set("show", "yes" if new_show else "no")
 
     def del_manuscript(self, version_title, abbrev):
-        ms = self._get("manuscripts/ms", {"abbrev": abbrev}, self._get("version", {"title": version_title}))
+        ms = self._book._get("manuscripts/ms", {"abbrev": abbrev}, self._book._get("version", {"title": version_title}))
         # ms = self._get("version", {"title": version_title}).xpath("manuscripts/ms[@abbrev='{}'".format(abbrev))
         ms.getparent().remove(ms)
 
@@ -321,10 +433,10 @@ class BookEditor(object):
         return etree.tostring(self._book,
                               xml_declaration=True,
                               pretty_print=pretty,
-                              **self._docinfo)
+                              **self._book._docinfo)
 
     def save(self):
-        BookManager._save(self)
+        BookManager._save(self._book)
 
 
 class Book(object):
@@ -333,9 +445,12 @@ class Book(object):
 
     It provides methods for:
 
-    book_info() - extract book structure information from xml
-    get_reference() - extract readings given a version title and an iterable of
-                      divisions
+    get_book_info() - extract book structure information from xml
+    get_filename() - return the filename of the xml document
+    get_group() - ???
+    get_readings() - return the variant readings for a variation unit
+    get_text() - return an iterator containing the text of a section
+    get_unit_group() - ???
     """
 
     def __init__(self, xml_book_data):
@@ -353,100 +468,10 @@ class Book(object):
         self._docinfo = XML_DEFAULT_DOCINFO
         self._docinfo.update({i: getattr(tree.docinfo, i) for i in XML_DEFAULT_DOCINFO.keys()})
         # dict with keys "doctype", "encoding", and "standalone"
-        self._structure_info = self._get_book_info()
-        self._validation_errors = []
+        self._structure_info = self._find_book_info()
         self.default_delimiter = '.'
 
-    @property
-    def validation_errors(self):
-        return self._validation_errors
-
-    def validate(self, dtd_data):
-        """Validate the book structure with both validation methods"""
-        self._validation_errors = []
-        self._validate_by_dtd(dtd_data)
-        self._validate_by_semantic()
-        return self._validation_errors == []
-
-    def _validate_by_dtd(self, dtd_data):
-        """Validate the book structure with DTD"""
-        try:
-            dtd = etree.DTD(dtd_data)
-        except AttributeError:
-            raise TypeError("validate() requires DTD in a file-like object")
-        if not dtd.validate(self._book):
-            self._validation_errors += dtd.error_log.filter_from_errors()
-
-    def _validate_by_semantic(self):
-        """Validate the inner structure and values of the book document"""
-
-        def do_div_name_checking_on_children(parent_element):
-            """Do recursive checking on unique div names under the parent_element"""
-            div_names = set()
-            num_of_div_names = 0
-            for div_element in parent_element.iterchildren("div"):
-                num_of_div_names += 1
-                div_names.add(div_element.get("number"))
-                do_div_name_checking_on_children(div_element)
-            if num_of_div_names != len(div_names):
-                raise NotUniqueDIVName(
-                    "/".join("div number='{}'".format(div_name) for div_name in self._get_div_path(parent_element)))
-
-        semantic_errors = []
-
-        # let's run trough the versions
-        for version in self._book.xpath("version"):
-
-            # each //reading/@mss in //manuscripts/ms/@abbrev
-            ms_reg = set()
-            for abbrev in version.xpath("manuscripts/ms/@abbrev"):
-                ms_reg.add(abbrev.strip())
-            ms_in_use = set()
-            for mss in version.xpath(".//reading/@mss"):
-                for ms in mss.split(" "):
-                    if ms.strip():
-                        ms_in_use.add(ms.strip())
-            if ms_in_use > ms_reg:
-                semantic_errors.append(
-                    (u"<version title='{}'> has missing manuscript definition(s) which are in use: {}".format(
-                        version.get("title"),
-                        u",".join(ms_in_use - ms_reg))).encode("utf-8"))
-
-            # the //unit/@id is unique and consecutive
-            for index, unit_id in enumerate(version.xpath(".//unit/@id"), 1):
-                if index != int(unit_id):
-                    semantic_errors.append(
-                        "<version title='{}'>//<unit id='{}'> has wrong id. "
-                        "It should be '{}'.".format(version.get("title"), unit_id, index))
-                    break
-
-            # number of levels of divisions == number of levels of divs
-            # I couldn't test it because the _get_book_info() is method too sensitive to this type of error
-            num_of_divisions = int(version.xpath("count(divisions/division)"))
-            xpath_to_deeper_div_than_divisions = "text/{}//div".format("/".join(["div"] * num_of_divisions))
-            deeper_div = version.xpath(xpath_to_deeper_div_than_divisions)
-            if deeper_div:
-                semantic_errors.append(
-                    "<version title='{}'> has deeper <div> structure than in <divisions>. "
-                    "For example: <text/{}>".format(
-                        version.get("title"),
-                        "/".join("div number=''".format(div_name) for div_name in self._get_div_path(deeper_div))))
-
-            # there are no duplicated div/@number at the same level
-            try:
-                do_div_name_checking_on_children(self._get("text", None, on_element=version))
-            except NotUniqueDIVName as e:
-                semantic_errors.append(
-                    "<version title='{}'/text/{}> has <div> with not unique name (number)".format(
-                        version.get("title"),
-                        e.message))
-
-            # TODO: units are strictly at the deepest level of div structure
-            # TODO: correct numbers in reading/@option
-
-        self._validation_errors += semantic_errors
-
-    def book_info(self):
+    def get_book_info(self):
         """
         Returns a dictionary with the keys 'book' and 'version'
 
@@ -581,7 +606,7 @@ class Book(object):
 
         return attributes
 
-    def _get_book_info(self):
+    def _find_book_info(self):
         """
         Return a dictionary containing information about the book's structure.
         """
@@ -597,16 +622,16 @@ class Book(object):
             divisions = version.xpath('divisions/division')
             version_dict['organisation_levels'] = len(divisions)
 
-            version_dict['divisions'] = self.get_divisions_info(divisions)
-            version_dict['resources'] = self.get_resources_info(version.xpath('resources'))
-            version_dict['manuscripts'] = self.get_manuscripts_info(version.xpath('manuscripts'))
-            version_dict['text_structure'] = self.get_text_info(version.xpath('text'),
+            version_dict['divisions'] = self._find_divisions_info(divisions)
+            version_dict['resources'] = self._find_resources_info(version.xpath('resources'))
+            version_dict['manuscripts'] = self._find_manuscripts_info(version.xpath('manuscripts'))
+            version_dict['reference_list'] = self._make_reference_list(version.xpath('text')[0],
                                                                 version_dict['divisions']['delimiters'])
             info['version'].append(version_dict)
 
         return info
 
-    def get_divisions_info(self, divisions):
+    def _find_divisions_info(self, divisions):
         """
         Return a dictionary of lists of <divisions> tag attributes and text.
 
@@ -644,7 +669,7 @@ class Book(object):
 
         return data
 
-    def get_resources_info(self, resources):
+    def _find_resources_info(self, resources):
         """
         Return a list of dictionaries of <resource> tag attributes and text.
 
@@ -671,7 +696,7 @@ class Book(object):
 
         return data
 
-    def get_manuscripts_info(self, manuscripts):
+    def _find_manuscripts_info(self, manuscripts):
         """
         Return a list of dictionaries of <manuscripts> tag attributes and text.
 
@@ -715,33 +740,16 @@ class Book(object):
 
         return data
 
-    @timing
-    def get_text_info(self, text, delimiters):
-        """
-        Return a OrderedDict containing data from a <text> element.
+    def _make_reference_list(self, text, delimiters):
+        """Assemble a flat list of references with the proper delimiters.
+
 
         Arguments:
             text - the <text> element from which we are extracting data.
             delimiters - a list of the delimiters used to seperate a document's
                          divisions
 
-        FIXME: This should instead just return a list of all section references,
-        including the proper delimiters.
         """
-        try:
-            data = self.text_structure(text[0], delimiters)
-        except Exception as e:
-            traceback.print_exc(e)
-            data = 'none'
-        print 'text_structure =================================='
-        print data
-        print '================================================'
-
-        return data
-
-    def text_structure(self, text, delimiters):
-        """Extract the div structure from a given text tag."""
-
         refs = []
         for div in text.xpath('div'):
             parent_attributes = [self._getattrs(div, ('number', 'fragment'))]
@@ -749,7 +757,7 @@ class Book(object):
             print 'div {}, level {}'.format(parent_key, len(delimiters))
 
             if len(div.xpath('div')):
-                child_refs = self.text_structure(div, delimiters[1:])
+                child_refs = self._make_reference_list(div, delimiters[1:])
                 print 'child refs are {}'.format(child_refs)
                 for ref in child_refs:
                     refs.append('{}{}{}'.format(parent_key, delimiters[0], ref))
@@ -829,11 +837,8 @@ class Book(object):
             xpath = u"{}[@{}='{}']".format(to_unicode(element_name),
                                            to_unicode(attribute.keys()[0]),
                                            to_unicode(attribute.values()[0]))
-            if vbs: print '_get(): 1'
             elements = on_element.xpath(xpath) if on_element is not None \
                         else self._book.xpath(xpath)
-            if vbs: print 'elements:', elements
-            if vbs: print '_get(): 2'
             if not elements:
                 raise ElementDoesNotExist("<{}> element with {}='{}' does not "
                                           "exist".format(element_name,
@@ -846,24 +851,19 @@ class Book(object):
                                                          attribute.keys()[0],
                                                          attribute.values()[0]))
         else:
-            if vbs: print 'getting element'
             xpath = element_name
-            if vbs: print 'getting element a'
             elements = on_element.xpath(xpath) if on_element is not None \
                         else self._book.xpath(xpath)
-            if vbs: print 'getting element b'
             if not elements:
                 raise ElementDoesNotExist("Element does not exist on this "
                                           "xpath <{}>".format(xpath))
-                if vbs: print 'getting element c'
             elif len(elements) > 1:
                 raise MultipleElementsReturned("There are more elements on "
                                                "this xpath <{}>".format(xpath))
-                if vbs: print 'getting element d'
 
         return elements[0]
 
-    def _get_div_path(self, div_element):
+    def _locate_div_path(self, div_element):
         """
         Create a list of div names (div/@number) to the div_element (list of ancestor divs)
 
@@ -874,8 +874,6 @@ class Book(object):
 
     def get_filename(self):
         return self._book.get("filename")
-
-    # RI methods
 
     def _div_path_to_element_path(self, version, div_path):
         div_elements = []
@@ -890,7 +888,7 @@ class Book(object):
                     break  # we keep the last correct element
         return div_elements
 
-    def _get_next_or_prev(self, startelements, level=0, direction=None):
+    def _locate_next_or_prev(self, startelements, level=0, direction=None):
         """
         Find the next sequential div at the given organizational level of the doc.
 
@@ -933,7 +931,7 @@ class Book(object):
 
         return div_elements
 
-    def _get_div_positions(self, div_elements):
+    def _locate_div_positions(self, div_elements):
         return [int(div_element.xpath("count(preceding-sibling::div)") + 1)
                 for div_element in div_elements]
 
@@ -942,13 +940,28 @@ class Book(object):
         """
         Get back text sections as generator
 
+        If next_level and previous_level are not set, this simply returns the
+        text for the section beginning with the "start_div" reference. If
+        "end_div" is not set the method returns text to the end of the structural
+        unit (div).
+
+        If either next_level or previous_level are set, this looks for the
+        next/previous structural unit (div) at the specified organizational
+        level and returns its text.
+
         Arguments
         ----------
 
             version_title (str): search <reading> node under this version
             text_type (str): search <reading> node where @mss==text_type
-            start_div (tuple): tuple of div numbers, search from this point of <div> structure
-            end_div (tuple): tuple of div numbers, search to this point of <div> structure
+            start_div (tuple): tuple of div numbers, search from this point of
+                <div> structure
+            end_div (tuple): tuple of div numbers, search to this point of
+                <div> structure
+            next_level (int): the structural level at which to navigate to the
+                next structural unit (div)
+            previous_level (int): the structural level at which to navigate to the
+                next structural unit (div)
 
         Return
         -------
@@ -958,29 +971,23 @@ class Book(object):
 
         """
         vbs = True
-        if vbs: print "get_text() start --------------------------------"
-        if vbs: print "get_text() getting version", version_title
         version = self._get("version", {"title": version_title})
-        if vbs: print "get_text(): version", version
         manuscript = self._get("manuscripts/ms", {"abbrev": text_type}, version)
-        if vbs: print "get_text(): manuscript", manuscript
         if manuscript.get("show") == "no":
             raise NotAllowedManuscript
 
         end_div_elements = self._div_path_to_element_path(version, end_div)
-        if vbs: print "get_text(): got end_div_elements"
         start_div_elements = self._div_path_to_element_path(version, start_div)
-        if vbs: print "get_text(): got start_div_elements"
         # handle navigating to next text section
         if next_level != None:
-            start_div_elements = self._get_next_or_prev(start_div_elements,
+            start_div_elements = self._locate_next_or_prev(start_div_elements,
                                                         next_level,
                                                         direction='next')
             end_div_elements = start_div_elements[:(next_level + 1)]
 
         # handle navigating to previous text section
         if previous_level != None:
-            start_div_elements = self._get_next_or_prev(start_div_elements,
+            start_div_elements = self._locate_next_or_prev(start_div_elements,
                                                         previous_level,
                                                         direction='prev')
             end_div_elements = start_div_elements[:(previous_level + 1)]
@@ -1004,18 +1011,18 @@ class Book(object):
             end_div_elements.append(current_element)
 
         # detect invalid start and end position pair
-        if self._get_div_positions(start_div_elements) > self._get_div_positions(end_div_elements):
+        if self._locate_div_positions(start_div_elements) > self._locate_div_positions(end_div_elements):
             raise InvalidDIVPath("The start position ({}) is after the end "
                                  "position ({}).".format("/".join(map(str,
                                                                       start_div)),
                                                          "/".join(map(str,
                                                                       end_div))))
         current_div = start_div_elements[-1]
-        new_start_sel = tuple(self._get_div_path(current_div))
+        new_start_sel = tuple(self._locate_div_path(current_div))
         last_div = end_div_elements[-1]
-        new_end_sel = tuple(self._get_div_path(last_div))
+        new_end_sel = tuple(self._locate_div_path(last_div))
         if vbs: print "get_text: getting text_iterator"
-        text_iterator = self._get_readings_for_units(current_div,
+        text_iterator = self._find_readings_for_units(current_div,
                                                      last_div,
                                                      text_type,
                                                      version)
@@ -1023,7 +1030,7 @@ class Book(object):
 
         return text_iterator, new_start_sel, new_end_sel
 
-    def _get_readings_for_units(self, current_div, last_div, text_type, version):
+    def _find_readings_for_units(self, current_div, last_div, text_type, version):
         """
         iterate through the supplied <div> elements and search the required <reading>
 
@@ -1059,7 +1066,7 @@ class Book(object):
                             text = tuple(ws)
                         else:
                             text = reading.text if reading.text else ""
-                        yield Text(tuple(self._get_div_path(unit.getparent())),
+                        yield Text(tuple(self._locate_div_path(unit.getparent())),
                                    unit.get("id"),
                                    version.get("language"),
                                    readings_in_unit,
@@ -1067,7 +1074,7 @@ class Book(object):
                                    reading.get("indent", ""),
                                    text)
                 else:
-                    yield Text(tuple(self._get_div_path(unit.getparent())),
+                    yield Text(tuple(self._locate_div_path(unit.getparent())),
                                unit.get("id"),
                                version.get("language"),
                                readings_in_unit,
@@ -1093,7 +1100,7 @@ class Book(object):
                 else:
                     current_div = current_div.getnext()
 
-    def _get_readings_of_unit(self, unit_element):
+    def get_readings(self, version_title, unit_id):
         """
         Return the whole set of manuscripts including the required but maybe
         missing elements from <manuscripts>
@@ -1101,19 +1108,18 @@ class Book(object):
         :param default_readings: OrderedDict, where key = manuscripts/ms@abbrev,
         value = None
         """
-        readings = OrderedDict([])
-        for reading in unit_element.iter("reading"):
-            mss = reading.get("mss").strip()
-            readings[mss] = reading.text.strip() if reading.text else u""
-        # iterate
-        return [Reading(ms, text) for ms, text in readings.iteritems()]
-
-    def get_readings(self, version_title, unit_id):
         readings = []
         try:
             version = self._get("version", {"title": version_title})
             unit = self._get(".//unit", {"id": unit_id}, on_element=version)
-            readings = self._get_readings_of_unit(unit)
+
+            raw_readings = OrderedDict([])
+            for reading in unit.iter("reading"):
+                mss = reading.get("mss").strip()
+                raw_readings[mss] = reading.text.strip() if reading.text else u""
+            # iterate
+            readings = [Reading(ms, text) for ms, text in raw_readings.iteritems()]
+
         except ElementDoesNotExist:
             pass
         return readings
