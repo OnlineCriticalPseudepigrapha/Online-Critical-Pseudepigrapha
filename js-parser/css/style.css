@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: "Didact Gothic";
+}
+
+.wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+nav {
+  display: flex;
+  background: #555;
+  padding: 16px;
+  color: white;
+}
+
+nav > div{
+  min-width: 100px;
+}
+
+nav > div + div{
+  margin-left: 16px;
+}
+
+nav label{
+  display: block;
+}
+
+nav select {
+  width: 100%;
+}
+
+article > h1 {
+  font-size: 2.5em;
+}
+
+span[data-number]:before {
+  display: inline-block;
+  margin: 0 .3em 0 .5em;
+  content: attr(data-number);
+  font-weight: bold;
+  color: #aaa;
+}
+
+[data-variants] {
+  color: #2467a2;
+  border-bottom: 1px solid rgba(36, 103, 162, .2);
+  cursor: pointer;
+}
+
+.active-variant{
+  background: #ffffac;
+}
+
+.notes {
+  border-top: 1px solid #eee;
+  margin-top: 2em;
+  padding-top: 2em;
+  font-size: .875em;
+}
+
+.note-ms {
+  display: block;
+  font-weight: bold;
+}

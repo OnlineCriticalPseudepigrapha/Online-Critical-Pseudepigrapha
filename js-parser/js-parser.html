@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>OCP</title>
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&amp;subset=greek-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav>
+      <div>
+          <label>Book</label>
+          <select id="book-select">
+            <option>Select One</option>
+            <option value="1En_test_1.xml">1 Enoch</option>
+            <option value="ApocrEzek.xml">Apocryphon of Ezekiel</option>
+          </select>
+      </div>
+      <div>
+        <label>Version</label>
+        <select id="version-select"></select>
+      </div>
+      <div>
+        <label>Manuscript</label>
+        <select id="ms-select"></select>
+      </div>
+    </nav>
+    <main class="wrapper">
+      <article id="text"></article>
+      <footer class="notes"></footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/parser.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        $(document).on('click', '[data-variants]', function(e){
+          e.preventDefault();
+          $('.active-variant').removeClass('active-variant');
+          $(this).addClass('active-variant');
+          var variants = $(this).data('variants');
+          var html = '';
+          for(var i = 0; i < variants.length; i++){
+            html += '<h3>Variant Readings</h3>';
+            html += '<span class="note-ms">' + variants[i].ms + '</span>';
+            html += '<span class="note-variant">' + variants[i].text + '</span>';
+          }
+          $('.notes').html(html);
+        });
+      </script>
+  </body>
+</html>
