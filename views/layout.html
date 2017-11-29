@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{=URL('static','css/bootstrap.min.css')}}"/>
     <!--<link rel="stylesheet" href="{{=URL('static','css/bootstrap-theme.min.css')}}"/>-->
     <link rel="stylesheet" href="{{=URL('static','css/web2py-bootstrap3.css')}}"/>
+    <link rel="stylesheet" href="{{=URL('static','css/search.css')}}"/>
     <link rel="stylesheet" href="{{=URL('static','css/theme.css')}}"/>
     <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -79,6 +80,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav navbar-right">
             {{='auth' in globals() and auth.navbar('Welcome', mode='dropdown') or ''}}
+            <li><a href="#" id="search-container-button">search</a></li>
           </ul>
           {{if response.menu:}}
           {{=MENU(response.menu, _class='nav navbar-nav',li_class='dropdown',ul_class='dropdown-menu')}}
@@ -128,6 +130,780 @@
           </div>
       </div>
     </footer>
+    <div class="search-positioner">
+      <section class="search-container">
+        <button id="search-close" class="search-close"><i class="fa fa-angle-double-right"></i><span class="sr-only">close</span></button>
+        <div class="search-box">
+          <input id="search-input" type="search" placeholder="search">
+          <button type="button" class="search-button"><i class="fa fa-search"></i><span class="sr-only">search</span></button>
+        </div>
+        <div class="panel panel-default search-keyboard">
+          <h3 class="panel-heading collapsed" role="button" aria-expanded="false" data-toggle="collapse" data-target="#search-keyboard">Keyboard</h3>
+          <div id="search-keyboard" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="keyboard" data-lang="latin">
+                <div>
+                  <span class="char-container" data-key="Q">
+                    <span class="greek">
+                      <button>θ</button>
+                    </span>
+                    <span class="latin">
+                      <button>q</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span  class="char-container" data-key="W">
+                    <span class="greek">
+                      <button>ω</button>
+                      <div class="char-alternates">
+                          <button>ώ</button>
+                          <button>ὼ</button>
+                          <button>ῶ</button>
+                          <button>ὠ</button>
+                          <button>ὤ</button>
+                          <button>ὢ</button>
+                          <button>ὦ</button>
+                          <button>ὡ</button>
+                          <button>ὥ</button>
+                          <button>ὣ</button>
+                          <button>ὧ</button>
+                        </div>
+                    </span>
+                    <span class="latin">
+                      <button>w</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="E">
+                    <span class="greek">
+                      <button>ε</button>
+                      <div class="char-alternates">
+                          <button>έ</button>
+                          <button>ὲ</button>
+                          <button>ἐ</button>
+                          <button>ἔ</button>
+                          <button>ἒ</button>
+                          <button>ἑ</button>
+                          <button>ἕ</button>
+                          <button>ἓ</button>
+                        </div>
+                    </span>
+                    <span class="latin">
+                      <button>e</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container"  data-key="R">
+                    <span class="greek">
+                      <button>ρ</button>
+                      <div class="char-alternates">
+                        <button>ῤ</button>
+                        <button>ῥ</button>
+                      </div>
+                    </span>
+                    <span class="latin">
+                      <button>r</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container"  data-key="T">
+                    <span class="greek">
+                      <button>τ</button>
+                    </span>
+                    <span class="latin">
+                      <button>t</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container"  data-key="Y">
+                      <span class="greek">
+                        <button>ψ</button>
+                      </span>
+                      <span class="latin">
+                        <button>y</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                  </span>
+                  <span class="char-container"  data-key="U">
+                      <span class="greek">
+                        <button>υ</button>
+                        <div class="char-alternates">
+                          <button>ύ</button>
+                          <button>ὺ</button>
+                          <button>ῦ</button>
+                          <button>ὐ</button>
+                          <button>ὔ</button>
+
+                          <button>ὒ</button>
+                          <button>ὖ</button>
+                          <button>ὑ</button>
+                          <button>ὕ</button>
+                          <button>ὓ</button>
+
+                          <button>ὗ</button>
+                          <button>ϋ</button>
+                          <button>ΰ</button>
+                          <button>ῢ</button>
+                          <button>ῧ</button>
+                        </div>
+                      </span>
+                      <span class="latin">
+                        <button>u</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                  </span>
+                  <span class="char-container"  data-key="I">
+                      <span class="greek">
+                          <button>ι</button>
+                          <div class="char-alternates">
+                              <button>ί</button>
+                              <button>ὶ</button>
+                              <button>ῖ</button>
+                              <button>ἰ</button>
+                              <button>ἴ</button>
+                              <button>ἲ</button>
+                              <button>ἶ</button>
+                              <button>ἱ</button>
+                              <button>ἵ</button>
+                              <button>ἳ</button>
+                              <button>ἷ</button>
+                              <button>ϊ</button>
+                              <button>ΐ</button>
+                              <button>ῒ</button>
+                              <button>ῗ</button>
+                            </div>
+                        </span>
+                        <span class="latin">
+                          <button>i</button>
+                        </span>
+                  </span>
+                  <span class="char-container"  data-key="O">
+                      <span class="greek">
+                        <button>ο</button>
+                        <div class="char-alternates">
+                            <button>ό</button>
+                            <button>ὸ</button>
+                            <button>ὀ</button>
+                            <button>ὄ</button>
+                            <button>ὂ</button>
+                            <button>ὁ</button>
+                            <button>ὅ</button>
+                            <button>ὃ</button>
+                          </div>
+                      </span>
+                      <span class="latin">
+                        <button>o</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                  </span>
+                  <span class="char-container"  data-key="P">
+                      <span class="greek">
+                        <button>π</button>
+                      </span>
+                      <span class="latin">
+                        <button>p</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                  </span>
+                </div>
+                <div>
+                  <span class="char-container" data-key="A">
+                    <span class="greek">
+                      <button>α</button>
+                      <div class="char-alternates">
+                          <button>ά</button>
+                          <button>ὰ</button>
+                          <button>ᾶ</button>
+                          <button>ἀ</button>
+                          <button>ἄ</button>
+                          <button>ἂ</button>
+                          <button>ἆ</button>
+                          <button>ἁ</button>
+                          <button>ἅ</button>
+                          <button>ἃ</button>
+                          <button>ἇ</button>
+                        </div>
+                    </span>
+                    <span class="latin">
+                      <button>a</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="S">
+                    <span class="greek">
+                      <button>σ</button>
+                      <div class="char-alternates">
+                        <button>ς</button>
+                      </div>
+                    </span>
+                    <span class="latin">
+                      <button>s</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="D">
+                    <span class="greek">
+                      <button>δ</button>
+                    </span>
+                    <span class="latin">
+                      <button>d</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="F">
+                    <span class="greek">
+                      <button>φ</button>
+                    </span>
+                    <span class="latin">
+                      <button>f</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="G">
+                    <span class="greek">
+                      <button>γ</button>
+                    </span>
+                    <span class="latin">
+                      <button>g</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="H">
+                    <span class="greek">
+                      <button>η</button>
+                      <div class="char-alternates">
+                          <button>ή</button>
+                          <button>ὴ</button>
+                          <button>ῆ</button>
+                          <button>ἠ</button>
+                          <button>ἤ</button>
+                          <button>ἢ</button>
+                          <button>ἦ</button>
+                          <button>ἡ</button>
+                          <button>ἥ</button>
+                          <button>ἣ</button>
+                          <button>ἧ</button>
+                        </div>
+                    </span>
+                    <span class="latin">
+                      <button>h</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="J">
+                    <span class="greek">
+                      <button></button>
+                    </span>
+                    <span class="latin">
+                      <button>j</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="K">
+                    <span class="greek">
+                      <button>κ</button>
+                    </span>
+                    <span class="latin">
+                      <button>k</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                  <span class="char-container" data-key="L">
+                    <span class="greek">
+                      <button>λ</button>
+                    </span>
+                    <span class="latin">
+                      <button>l</button>
+                    </span>
+                    <span class="ethiopic">
+                      <button></button>
+                    </span>
+                    <span class="syriac">
+                      <button></button>
+                    </span>
+                  </span>
+                </div>
+                <div>
+                    <span class="char-container" data-key="Z">
+                      <span class="greek">
+                        <button>ζ</button>
+                      </span>
+                      <span class="latin">
+                        <button>z</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                    </span>
+                    <span class="char-container" data-key="X">
+                      <span class="greek">
+                        <button>χ</button>
+                      </span>
+                      <span class="latin">
+                        <button>x</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                    </span>
+                    <span class="char-container" data-key="C">
+                      <span class="greek">
+                        <button>ξ</button>
+                      </span>
+                      <span class="latin">
+                        <button>c</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                    </span>
+                    <span class="char-container" data-key="V">
+                      <span class="greek">
+                        <button></button>
+                      </span>
+                      <span class="latin">
+                        <button>v</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                    </span>
+                    <span class="char-container" data-key="B">
+                      <span class="greek">
+                        <button>β</button>
+                      </span>
+                      <span class="latin">
+                        <button>b</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                    </span>
+                    <span class="char-container" data-key="N">
+                      <span class="greek">
+                        <button>ν</button>
+                      </span>
+                      <span class="latin">
+                        <button>n</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                    </span>
+                    <span class="char-container" data-key="M">
+                      <span class="greek">
+                        <button>μ</button>
+                      </span>
+                      <span class="latin">
+                        <button>m</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button></button>
+                      </span>
+                      <span class="syriac">
+                        <button></button>
+                      </span>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="char-container space-bar" data-key=" ">
+                      <span class="greek">
+                        <button>&nbsp;</button>
+                      </span>
+                      <span class="latin">
+                        <button>&nbsp;</button>
+                      </span>
+                      <span class="ethiopic">
+                        <button>፡</button>
+                      </span>
+                      <span class="syriac">
+                        <button>&nbsp;</button>
+                      </span>
+                    </span>
+                    <span class="char-container" data-key=" ">
+
+                          <button class="backspace"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+
+                      </span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default search-settings">
+          <h3 class="panel-heading collapsed" role="button" aria-expanded="false" data-toggle="collapse" data-target="#search-settings">Settings</h3>
+          <div id="search-settings" class="collapse">
+            <div class="panel-body">
+              <div class="choice-list search-alphabet">
+                <h4>Alphabet</h4>
+                <ul>
+                  <li class="active" data-lang="latin">Lt</li>
+                  <li data-lang="greek">Gr</li>
+                  <li data-lang="ethiopic">Eth</li>
+                  <li data-lang="syriac">Syr</li>
+                </ul>
+              </div>
+              <ul class="search-options">
+                <li><label for="intro-mss"><input type="radio" name="search-scope" id="intro-mss">search introductions and manuscripts</label></li>
+                <li><label for="all-mss"><input type="radio" name="search-scope" id="all-mss">just search manuscripts</label></li>
+                <li><label for="ms"><input type="radio" name="search-scope" id="ms">just search <span class="current-text">current text</span></label></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="search-results">
+          <h3>Search Results</h3>
+          <div id="search-results">
+            <div>
+                <ol class="search-results-list">
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                    <li class="search-result">
+                      <h4>Testament of Job 15:23</h4>
+                      <div class="choice-list ">
+                        <h4>MSS</h4>
+                        <ul>
+                          <li class="ms-choice active" data-ms="P">P</li>
+                          <li class="ms-choice" data-ms="S">S</li>
+                          <li class="ms-choice" data-ms="V">V</li>
+                          <li class="ms-choice" data-ms="Brock">Brock</li>
+                          <li class="ms-choice" data-ms="Kline">Kline</li>
+                        </ul>
+                      </div>
+                      <div class="search-excerpt">
+                        <p class="active" data-ms="P">ἐγὼ γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ <span class="search-keyword">ἀδελφοῦ</span> Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="S">γάρ εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="V">ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Brock">εἰμι ἐκ τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                        <p data-ms="Kline">τῶν υἱῶν Ἠσαὺ ἀδελφοῦ Ἰακώβ, οὗ ἡ μήτηρ ὑμῶν ἐστιν Δίνα, ἐξ ἧς ἐγέννησα ὑμᾶς· ἡ γὰρ προτέρα μου γυνὴ ἐτελεύτησεν</p>
+                      </div>
+                      <div class="search-results-buttons">
+                        <button class="btn-sm">open</button>
+                        <button class="btn-sm">open in parallel</button>
+                      </div>
+                    </li>
+                  </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="panel-group" id="accordion-search" role="tablist" aria-multiselectable="true"></div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="search-drama">
+                <h5 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion-search" href="#genresCollapse_drama" aria-expanded="true" aria-controls="genresCollapse_drama" class="">
+                    Drama
+                    </a>
+                </h5>
+            </div>
+            <div id="genresCollapse_drama" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_drama" aria-expanded="true" style="">
+                <div class="panel-body">
+                <ul class="">
+
+
+                        <li><a href="/grammateus3/docs/text/EzekTrag">Exagoge of Ezekiel the Tragedian</a><span class="doc-link-span"> ( <a href="/grammateus3/docs/text/EzekTrag">text</a> | <a href="/grammateus3/docs/intro/EzekTrag">introduction</a>)</span></li>
+
+                </ul>
+                </div>
+            </div>
+          </div>
+      </div> -->
+
+      </section>
+    </div>
     {{end}}
     <!-- The javascript =============================== -->
     <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
@@ -144,5 +920,7 @@
     {{pass}}
     <!-- Share ============================y============ -->
     <script src="{{=URL('static','js/share.js',vars=dict(static=URL('static','images')))}}"></script>
+    <script src="{{=URL('static','js/hammer.min.js',vars=dict(static=URL('static','images')))}}"></script>
+    <script src="{{=URL('static','js/search.js',vars=dict(static=URL('static','images')))}}"></script>
   </body>
 </html>

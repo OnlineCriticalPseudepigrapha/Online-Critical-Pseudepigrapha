@@ -1,0 +1,283 @@
+.search-positioner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all .4s;
+}
+
+@media (min-width: 700px) {
+  .search-active > .container-fluid {
+    padding-right: 365px;
+    transition: .6s all;
+  }
+}
+
+.search-active .search-positioner {
+  width: 380px;
+  padding-left: 30px;
+}
+
+.search-container {
+  position: absolute;
+  bottom: 0;
+  right: -410px;
+  top: 0;
+  z-index: 1031;
+  width: 88%;
+  max-width: 350px;
+  background: #F5F3EA;
+  box-shadow: -1px 0 3px rgba(0,0,0,.15);
+  padding: 8px 16px;
+  transition: all .6s;
+}
+
+.search-active .search-container{
+  right: 0;
+}
+
+.search-close {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  height: 50px;
+  background: #F5F3EA !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-size: 1.5em;
+}
+
+.search-box {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.search-box [type=search],
+.search-box [type=button] {
+  font-size: 1.2em;
+}
+
+.search-box [type=search] {
+  width: 100%;
+  border: 1px solid #eae4d4;
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,.05);
+  padding: .3em;
+  padding-right: 2em;
+}
+
+.search-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  margin: 0;
+}
+
+.search-container .panel-heading {
+  position: relative;
+  background: transparent;
+  border-color: transparent;
+  margin: 0;
+  color: #A9A06A;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.search-container .panel-body {
+  padding-top: 0;
+}
+
+.search-container .panel-default {
+  background: #FCFBF7;
+  border-color: rgba(176, 159, 106, 0.25);
+  margin-bottom: 10px;
+}
+
+.search-container h4 {
+  font-size: .875em;
+}
+
+.search-options {
+  padding: 0;
+  list-style: none;
+}
+
+.search-options [type=radio]{
+  margin-bottom: 4px;
+  vertical-align: middle;
+}
+
+.choice-list h4,
+.choice-list ul,
+.choice-list ol,
+.choice-list li {
+  display: inline-block;
+  padding: 0;
+}
+
+.choice-list h4:after {
+  content: ':';
+}
+
+.choice-list ul {
+  margin-bottom: 10px;
+}
+
+.choice-list li {
+  min-width: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 1px rgba(97,95,85,.3);
+  padding-left: 6px;
+  padding-right: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.choice-list .active {
+  background: #009fee;
+  color: white;
+}
+
+.search-alphabet .choice-list li {
+  width: 24px;
+  height: 24px;
+}
+
+.search-alphabet.choice-list li {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.search-results {
+  display: none;
+  height: calc(100vh - 162px);
+  overflow: auto;
+  width: calc(100% + 16px);
+  padding-right: 16px;
+}
+
+.search-results.active {
+  display: block;
+}
+
+.search-results-list {
+  padding: 0;
+  list-style: none;
+}
+
+.search-result {
+  margin-bottom: 32px;
+}
+
+.search-excerpt p {
+  display: none;
+}
+
+.search-excerpt .active {
+  display: block;
+}
+
+.search-keyword {
+  font-weight: bold;
+}
+
+.search-keyboard .panel-heading:after,
+.search-settings .panel-heading:after {
+  position: absolute;
+  right: 16px;
+  top: 6px;
+  opacity: .6;
+  font-family: FontAwesome;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.search-keyboard .panel-heading:after{
+  content: "\f11c";
+}
+
+.search-settings .panel-heading:after {
+  content: "\f013";
+}
+
+.keyboard > div{
+  text-align: center;
+}
+
+.keyboard .char-container > span {
+  display: none;
+  /* position: relative; */
+}
+
+[data-lang="greek"].keyboard .greek {
+  display: inline-block;
+}
+
+[data-lang="latin"].keyboard .latin {
+  display: inline-block;
+}
+
+[data-lang="ethiopic"].keyboard .ethiopic {
+  display: inline-block;
+}
+
+[data-lang="syriac"].keyboard .syriac {
+  display: inline-block;
+}
+
+.char-alternates {
+  display: none;
+  position: absolute;
+  right: 16px;
+  left: 16px;
+  top: 8px;
+  z-index: 2;
+  background: #615F55;
+  padding: 4px;
+  white-space: normal;
+  text-align: center;
+}
+
+.hold .char-alternates {
+  display: block;
+}
+
+.keyboard button {
+  margin: 0 0 2px 0 !important;
+  padding: 0;
+  width: 23.7px;
+  height: 31px;
+}
+
+#keyboard-hold-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.space-bar button{
+  width: 180px;
+}
+
+
+[data-key]:before {
+  position: absolute;
+  padding: 1px 2px;
+  opacity: .5;
+  content: attr(data-key);
+  font-size: 9px;
+}
+
+[data-lang='latin'] [data-key]:before {
+  display: none;
+}
