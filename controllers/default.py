@@ -50,6 +50,7 @@ def page():
             'title': pagerow['title']}
 
 
+@auth.requires_membership('administrators')
 def listing():
     """
     Present a plugin_listandedit widget for creating and editing db records.
