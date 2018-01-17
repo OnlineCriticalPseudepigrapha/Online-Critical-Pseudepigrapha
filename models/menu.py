@@ -47,7 +47,9 @@ if auth.has_membership('editors') or \
                                _class='draftslink')
          ),
     ]
-    if auth.has_membership('editors'):
+    if auth.has_membership('administrators'):
+        mydrafts = db(db.draftdocs.id >= 0).select()
+    elif auth.has_membership('editors'):
         mydrafts = db((db.draftdocs.editor == auth.user_id) |
                       (db.draftdocs.editor2 == auth.user_id) |
                       (db.draftdocs.editor3 == auth.user_id) |
@@ -56,8 +58,6 @@ if auth.has_membership('editors') or \
                       (db.draftdocs.assistant_editor2 == auth.user_id) |
                       (db.draftdocs.assistant_editor3 == auth.user_id)
                       ).select()
-    elif auth.has_membership('administrators'):
-        mydrafts = db(db.draftdocs.id > 0).select()
 
     if mydrafts:
         print 'found drafts'
