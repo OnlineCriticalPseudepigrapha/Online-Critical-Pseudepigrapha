@@ -62,7 +62,7 @@ mail.settings.tls = True
 current.mail = mail
 
 # -------------------------------------------------------------
-# enable recaptcha (keys for ianwscott.fluxflex.com)
+# enable recaptcha (keys for ehosting)
 # -------------------------------------------------------------
 auth.settings.register_captcha = Recaptcha2(request,
     keydata['captcha_public_key'], keydata['captcha_private_key'])
@@ -74,13 +74,12 @@ auth.settings.retrieve_password_captcha = Recaptcha2(request,
 # -------------------------------------------------------------
 # configure auth policy
 # -------------------------------------------------------------
+auth.settings.mailer = mail                    # for user email verification
 auth.settings.registration_requires_verification = False
 auth.settings.registration_requires_approval = False
 auth.settings.reset_password_requires_verification = True
-auth.messages.verify_email = 'Click on the link http://' \
-    + request.env.http_host + URL('default', 'user', args=['verify_email']) \
-    + '/%(key)s to verify your email'
+auth.messages.verify_email = 'Click on the link %(link)s ' \
+    + 'to verify your email'
 auth.settings.reset_password_requires_verification = True
-auth.messages.reset_password = 'Click on the link http://' \
-    + request.env.http_host + URL('default', 'user', args=['reset_password'])\
-    + '/%(key)s to reset your password'
+auth.messages.reset_password = 'Click on the link %(link)s ' \
+    + 'to reset your password'
