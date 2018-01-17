@@ -36,24 +36,62 @@ app = request.application
 ctr = request.controller
 response.menu = []
 
-if auth.has_membership('editors', auth.user_id):
+if auth.has_membership('editors') or \
+        auth.has_membership('administrators'):
+    print 'editor'
+    print auth.user_id
     response.menu += [
-        (T('Drafts'), False, A(I(_class='fa fa-book'), SPAN(' Drafts', _class="visible-lg-inline"),
-                               _href=URL('default', 'page', args=['drafts']),
-                               _class='draftslink'), []),
+        (T('Drafts'), False, A(I(_class='fa fa-edit'),
+                               SPAN(' Drafts', _class="visible-lg-inline"),
+                               _href='#',
+                               _class='draftslink')
+         ),
     ]
+    if auth.has_membership('editors'):
+        mydrafts = db((db.draftdocs.editor == auth.user_id) |
+                      (db.draftdocs.editor2 == auth.user_id) |
+                      (db.draftdocs.editor3 == auth.user_id) |
+                      (db.draftdocs.editor4 == auth.user_id) |
+                      (db.draftdocs.assistant_editor == auth.user_id) |
+                      (db.draftdocs.assistant_editor2 == auth.user_id) |
+                      (db.draftdocs.assistant_editor3 == auth.user_id)
+                      ).select()
+    elif auth.has_membership('administrators'):
+        mydrafts = db(db.draftdocs.id > 0).select()
+
+    if mydrafts:
+        print 'found drafts'
+        draftlist = []
+        for draft in mydrafts:
+            draftlist.append((T(draft.name), False,
+                              A(draft.name,
+                                _href=URL('docs', 'draft_intro',
+                                          args=[draft.filename])
+                                )
+                              )
+                             )
+        response.menu[0] = response.menu[0] + (draftlist,)
+        print response.menu[0]
 
 if auth.has_membership('administrators', auth.user_id):
     response.menu += [
-        (T('Admin'), False, A(I(_class='fa fa-cog'), SPAN(' Admin', _class="visible-lg-inline"),
-                              _href='#', _class='adminlink'), [
-            (T('Documents'), False, A('Documents', _href=URL('default', 'listing', args=['docs'])), []),
-            (T('Bibliography'), False, A('Bibliography', _href=URL('default', 'listing', args=['biblio'])), []),
-            (T('Pages'), False, A('Pages', _href=URL('default', 'listing', args=['pages'])), []),
-            (T('Users'), False, A('Users', _href=URL('default', 'listing', args=['auth_user'])), []),
-            (T('Database'), False, A('Database', _href=URL(app, 'appadmin', 'index')), []),
-            (T('Web IDE'), False, A('Web IDE', _href=URL('admin', 'default', 'design/{}'.format(app))), []),
-            (T('Errors'), False, A('Errors', _href=URL('admin', 'default', 'errors/{}'.format(app))), []),
+        (T('Admin'), False,
+         A(I(_class='fa fa-cog'), SPAN(' Admin', _class="visible-lg-inline"),
+           _href='#', _class='adminlink'),
+         [(T('Documents'), False, A('Documents', _href=URL('default',
+                                    'listing', args=['docs'])), []),
+          (T('Bibliography'), False, A('Bibliography', _href=URL('default',
+                                       'listing', args=['biblio'])), []),
+          (T('Pages'), False, A('Pages', _href=URL('default', 'listing',
+                                args=['pages'])), []),
+          (T('Users'), False, A('Users', _href=URL('default', 'listing',
+                                args=['auth_user'])), []),
+          (T('Database'), False, A('Database', _href=URL(app, 'appadmin',
+                                   'index')), []),
+          (T('Web IDE'), False, A('Web IDE', _href=URL('admin', 'default',
+                                  'design/{}'.format(app))), []),
+          (T('Errors'), False, A('Errors', _href=URL('admin', 'default',
+                                 'errors/{}'.format(app))), []),
         ]),
     ]
 
