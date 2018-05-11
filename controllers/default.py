@@ -116,6 +116,7 @@ def contact():
     form.element('table').insert(-1, TR('', captcha, ''))
     if form.process().accepted:
         if mail.send(to='scottianw@gmail.com',
+                     reply_to=form.vars.your_email_address,
                      subject='OCP Contact: {}'.format(form.vars.message_title),
                      message=form.vars.message):
             response.flash = 'Thank you for your message.'
