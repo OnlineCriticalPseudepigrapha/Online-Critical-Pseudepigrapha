@@ -1,5 +1,7 @@
 #! /usr/bin/env python2
 
+from kitchen.text.converters import to_unicode, to_bytes, unicode_to_xml
+from kitchen.text.converters import bytes_to_xml
 from lxml import etree
 import os
 import sys
@@ -127,7 +129,7 @@ def new_tei_doc(filename):
                         print witstring
                         rdg.set('wit', witstring.decode('utf8'))
                         if reading.text:
-                            rdg.text = reading.text
+                            rdg.text = to_unicode(reading.text)
 
         for div in version.xpath('text/div'):
             mydiv = etree.SubElement(body, 'div')
@@ -140,7 +142,7 @@ def new_tei_doc(filename):
             mydiv.set('type', myref.get('unit'))
             addLayer(div, mydiv, 0, mybook, mynum)
 
-    return etree.tostring(teiCorpus, pretty_print=True)
+    return etree.tostring(teiCorpus, encoding="UTF-8", pretty_print=True)
 
 
 def write_converted_xml(filename):
@@ -154,7 +156,7 @@ def write_converted_xml(filename):
     with open(newpath, 'w') as myfile:
         myfile.write(xmlstring)
 
-    print xmlstring
+    print to_unicode(xmlstring)
 
 
 if __name__ == '__main__':
