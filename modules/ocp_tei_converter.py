@@ -120,7 +120,10 @@ def new_tei_doc(filename):
                     for reading in unit.xpath('reading'):
                         rdg = etree.SubElement(app, 'rdg')
                         witstring = ' '.join(['#{}'.format(sig) for sig in
-                                     reading.get('mss').encode('utf8').split(' ') if sig])
+                                              reading.get('mss').encode('utf8'
+                                              ).split(' ') if sig
+                                              ]
+                                             )
                         print witstring
                         rdg.set('wit', witstring.decode('utf8'))
                         if reading.text:
@@ -139,14 +142,15 @@ def new_tei_doc(filename):
 
     return etree.tostring(teiCorpus, pretty_print=True)
 
+
 def write_converted_xml(filename):
     '''
     Write out new xml string to a file in the directory static/docs/tei
     '''
     xmlstring = new_tei_doc(filename)
     newpath = os.path.join('/home/ian/web/web2py-grammateus3/'
-                      'applications/grammateus3/static/docs/tei',
-                      filename)
+                           'applications/grammateus3/static/docs/tei',
+                           filename)
     with open(newpath, 'w') as myfile:
         myfile.write(xmlstring)
 
