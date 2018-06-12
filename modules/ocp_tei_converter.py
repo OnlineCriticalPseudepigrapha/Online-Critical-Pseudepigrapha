@@ -1,6 +1,8 @@
 #! /usr/bin/env python2
 
 from lxml import etree
+import os
+import sys
 
 
 def new_tei_doc(filename):
@@ -137,6 +139,19 @@ def new_tei_doc(filename):
 
     return etree.tostring(teiCorpus, pretty_print=True)
 
+def write_converted_xml(filename):
+    '''
+    Write out new xml string to a file in the directory static/docs/tei
+    '''
+    xmlstring = new_tei_doc(filename)
+    newpath = os.path.join('/home/ian/web/web2py-grammateus3/'
+                      'applications/grammateus3/static/docs/tei',
+                      filename)
+    with open(newpath, 'w') as myfile:
+        myfile.write(xmlstring)
+
+    print xmlstring
+
 
 if __name__ == '__main__':
-    print new_tei_doc('1En.xml')
+    write_converted_xml('{}.xml'.format(sys.argv[1]))
