@@ -1,13 +1,12 @@
+#! /usr/bin/python3.5
 # -*- coding: utf-8 -*-
 
 from gluon.tools import Auth, Crud, Service, PluginManager, Recaptcha2
 from gluon import current
-request, response = current.request, current.response
 from gluon.dal import DAL
 import os
 
-if 0:
-    from gluon import URL
+request, response = current.request, current.response
 
 """
 # if SSL/HTTPS is properly configured and you want all HTTP requests to

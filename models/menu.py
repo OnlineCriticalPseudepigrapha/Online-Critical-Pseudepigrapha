@@ -1,35 +1,35 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.5
 # -*- coding: utf-8 -*-
 # this file is released under public domain and you can use without limitations
 
 if 0:
-    from gluon import current, T, auth, I, A, URL, SPAN
+    from gluon import current, T, I, A, URL, SPAN, DAL
     response = current.response
     request = current.request
+    auth = current.auth
+    db = DAL()
 
 #########################################################################
-## Customize your APP title, subtitle and menus here
+#  Customize your APP title, subtitle and menus here
 #########################################################################
 
 response.title = 'The Online Critical Pseudepigrapha'
 response.mobiletitle = 'OCP'
-response.subtitle = T('Developing and Publishing Accurate Texts of the "Old Testament Pseudepigrapha"\
-    and related literature')
-
-## read more at http://dev.w3.org/html5/markup/meta.name.html
+response.subtitle = T('Developing and Publishing Accurate Texts of the '
+                      '"Old Testament Pseudepigrapha" and related literature')
 response.meta.author = 'Ian W. Scott <scottianw@gmail.com>'
-response.meta.description = 'Free-access editions of the "Old Testament Pseudepigrapha"\
-    and related literature'
-response.meta.keywords = 'early judaism, religion, ancient, literature, Pseudepigrapha,\
-    apocrypha, textual criticism, primary texts, sources, manuscripts'
+response.meta.description = 'Free-access editions of the "Old Testament ' \
+                            ' Pseudepigrapha" and related literature'
+response.meta.keywords = 'early judaism, religion, ancient, literature, ' \
+                         'Pseudepigrapha, apocrypha, textual criticism, ' \
+                         'primary texts, sources, manuscripts'
 response.meta.generator = 'Web2py Web Framework'
-response.meta.copyright = 'Copyright 2006-2012'
+response.meta.copyright = 'Copyright 2006-2019'
 
-## your http://google.com/analytics id
 response.google_analytics_id = None
 
 #########################################################################
-## main application menu
+#  main application menu
 #########################################################################
 
 app = request.application
@@ -38,8 +38,6 @@ response.menu = []
 
 if auth.has_membership('editors') or \
         auth.has_membership('administrators'):
-    print 'editor'
-    print auth.user_id
     response.menu += [
         (T('Drafts'), False, A(I(_class='fa fa-edit'),
                                SPAN(' Drafts', _class="visible-lg-inline"),
@@ -60,7 +58,6 @@ if auth.has_membership('editors') or \
                       ).select()
 
     if mydrafts:
-        print 'found drafts'
         draftlist = []
         for draft in mydrafts:
             draftlist.append((T(draft.name), False,
@@ -75,57 +72,90 @@ if auth.has_membership('editors') or \
 
 if auth.has_membership('administrators', auth.user_id):
     response.menu += [
-        (T('Admin'), False,
-         A(I(_class='fa fa-cog'), SPAN(' Admin', _class="visible-lg-inline"),
+        (T('Admin'),
+         False,
+         A(I(_class='fa fa-cog'),
+           SPAN(' Admin', _class="visible-lg-inline"),
            _href='#', _class='adminlink'),
-         [(T('Documents'), False, A('Documents', _href=URL('default',
-                                    'listing', args=['docs'])), []),
-          (T('Bibliography'), False, A('Bibliography', _href=URL('default',
-                                       'listing', args=['biblio'])), []),
-          (T('Pages'), False, A('Pages', _href=URL('default', 'listing',
-                                args=['pages'])), []),
-          (T('Users'), False, A('Users', _href=URL('default', 'listing',
-                                args=['auth_user'])), []),
-          (T('Database'), False, A('Database', _href=URL(app, 'appadmin',
-                                   'index')), []),
-          (T('Web IDE'), False, A('Web IDE', _href=URL('admin', 'default',
-                                  'design/{}'.format(app))), []),
-          (T('Errors'), False, A('Errors', _href=URL('admin', 'default',
-                                 'errors/{}'.format(app))), []),
-        ]),
+         [(T('Documents'),
+           False,
+           A('Documents', _href=URL('default', 'listing', args=['docs'])),
+           []),
+          (T('Bibliography'),
+           False,
+           A('Bibliography', _href=URL('default', 'listing', args=['biblio'])),
+           []),
+          (T('Pages'),
+           False,
+           A('Pages', _href=URL('default', 'listing', args=['pages'])),
+           []),
+          (T('Users'),
+           False,
+           A('Users', _href=URL('default', 'listing', args=['auth_user'])),
+           []),
+          (T('Database'),
+           False,
+           A('Database', _href=URL(app, 'appadmin', 'index')),
+           []),
+          (T('Web IDE'),
+           False,
+           A('Web IDE', _href=URL('admin', 'default',
+                                  'design/{}'.format(app))),
+           []),
+          (T('Errors'),
+           False,
+           A('Errors', _href=URL('admin', 'default', 'errors/{}'.format(app))),
+           []),
+          ]),
     ]
 
 response.menu += [
-    (T('Documents'), False, A(I(_class='fa fa-book'),
-                              SPAN(' Documents', _class="visible-lg-inline"),
-                              _href=URL('default', 'index'), _class='documentslink'), []),
-    (T('Help and Information'), False, A(I(_class='fa fa-info-circle'),
-                                         SPAN(' Help and Information',  _class="visible-lg-inline"),
-                                         _href='#', _class='helplink'), [
-        (T('About'), False, A(I(_class='fa fa-info-circle fa-fw'),
-                              SPAN('About'),
-                              _href=URL('default', 'page', args=['about']),
-                              _class='aboutlink'), []),
-        (T('FAQ'), False, A(I(_class='fa fa-question-circle fa-fw'),
-                            SPAN('FAQ'),
-                            _href=URL('default', 'page', args=['faq']),
-                            _class='faqlink'), []),
-        (T('Copyright'), False, A(I(_class='fa fa-copyright fa-fw'),
-                                  SPAN(' Copyright'),
-                                  _href=URL('default', 'page', args=['copyright']),
-                                  _class='copyrightlink'), []),
-    ]),
-    (T('Contact Us'), False, A(I(_class='fa fa-bullhorn'),
-                               SPAN(' Contact us', _class="visible-lg-inline"),
-                               _href=URL('default', 'contact'),
-                               _class='contactlink'), [])
+    (T('Documents'),
+     False,
+     A(I(_class='fa fa-book'),
+       SPAN(' Documents', _class="visible-lg-inline"),
+       _href=URL('default', 'index'),
+       _class='documentslink'),
+     []),
+    (T('Help and Information'),
+     False,
+     A(I(_class='fa fa-info-circle'),
+       SPAN(' Help and Information',  _class="visible-lg-inline"),
+       _href='#', _class='helplink'),
+     [(T('About'),
+       False,
+       A(I(_class='fa fa-info-circle fa-fw'),
+         SPAN('About'),
+         _href=URL('default', 'page', args=['about']), _class='aboutlink'),
+       []),
+      (T('FAQ'),
+       False,
+       A(I(_class='fa fa-question-circle fa-fw'),
+         SPAN('FAQ'),
+         _href=URL('default', 'page', args=['faq']), _class='faqlink'),
+       []),
+      (T('Copyright'),
+       False,
+       A(I(_class='fa fa-copyright fa-fw'),
+         SPAN(' Copyright'),
+         _href=URL('default', 'page', args=['copyright']),
+         _class='copyrightlink'),
+       []),
+      ]),
+    (T('Contact Us'),
+     False,
+     A(I(_class='fa fa-bullhorn'),
+       SPAN(' Contact us', _class="visible-lg-inline"),
+       _href=URL('default', 'contact'),
+       _class='contactlink'),
+     [])
     #     (T('Bug reports'), False, A(I(_class='fa fa-bug fa-fw'),
     #                                 SPAN(' Bug reports'),
-    #                                 _href=URL('default', 'page', args=['bugs']),
+    #                             _href=URL('default', 'page', args=['bugs']),
     #                                 _class='bugslink'), []),
     #     (T('Suggestions'), False, A(I(_class='fa fa-commenting-o fa-fw'),
     #                                 SPAN(' Suggestions'),
-    #                                 _href=URL('default', 'page', args=['suggestions']),
+    #                       _href=URL('default', 'page', args=['suggestions']),
     #                                 _class='suggestionslink'), []),
     #
     # ]),
