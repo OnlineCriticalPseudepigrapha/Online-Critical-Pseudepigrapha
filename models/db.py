@@ -25,6 +25,7 @@ def check_path(path):
         return path
     raise OSError(2, "{}: {}".format(os.strerror(2), path))
 
+
 db = DAL('sqlite://storage.sqlite', fake_migrate=False, migrate=True)
 current.db = db
 
@@ -55,9 +56,10 @@ auth.define_tables()
 # -------------------------------------------------------------
 mail = auth.settings.mailer
 mail.settings.server = keydata['email_server']  # 'logging' # SMTP server
-print mail.settings.server
+print('mail.settings.server')
 mail.settings.sender = keydata['email_address']  # email
-mail.settings.login = '{}:{}'.format(keydata['email_user'], keydata['email_pass'])  # credentials or None
+mail.settings.login = '{}:{}'.format(keydata['email_user'],
+                                     keydata['email_pass'])
 mail.settings.tls = True
 current.mail = mail
 
@@ -65,11 +67,18 @@ current.mail = mail
 # enable recaptcha (keys for ehosting)
 # -------------------------------------------------------------
 auth.settings.register_captcha = Recaptcha2(request,
-    keydata['captcha_public_key'], keydata['captcha_private_key'])
+                                            keydata['captcha_public_key'],
+                                            keydata['captcha_private_key'])
 auth.settings.retrieve_username_captcha = Recaptcha2(request,
-    keydata['captcha_public_key'], keydata['captcha_private_key'])
+                                                     keydata['captcha'
+                                                             '_public_key'],
+                                                     keydata['captcha'
+                                                             '_private_key'])
 auth.settings.retrieve_password_captcha = Recaptcha2(request,
-    keydata['captcha_public_key'], keydata['captcha_private_key'])
+                                                     keydata['captcha'
+                                                             '_public_key'],
+                                                     keydata['captcha'
+                                                             '_private_key'])
 
 # -------------------------------------------------------------
 # configure auth policy
