@@ -1,3 +1,4 @@
+#! /usr/bin/python3.5
 # -*- coding: utf-8 -*-
 # this file is released under public domain and you can use without limitations
 
@@ -5,7 +6,8 @@ from collections import OrderedDict
 from operator import itemgetter
 
 if 0:
-    from gluon import db, current, auth, LOAD, SQLFORM, Field, IS_EMAIL, IS_NOT_EMPTY
+    from gluon import db, current, auth, LOAD, SQLFORM, Field
+    from gluon import IS_EMAIL, IS_NOT_EMPTY
     from gluon import Recaptcha2, TR
     response = current.response
     request = current.request
@@ -18,14 +20,16 @@ def index():
     Send dictionary of document records to the view views/default/index.html
     """
     docrows = db(db.docs.id > 0).select()
+    print(docrows)
     doclist = sorted(docrows.as_list(), key=itemgetter('name'))
     docs_with_genres = sorted([d for d in doclist if d["genres"]],
                               key=itemgetter('name'))
     docs_with_figures = [d for d in doclist if d["figures"]]
-    genres = sorted(list(set([db.genres[genre].genre for doc in docs_with_genres
-                             for genre in doc["genres"]])))
-    figures = sorted(list(set([db.biblical_figures[figure].figure for doc in docs_with_figures
-                              for figure in doc["figures"]])))
+    genres = sorted(list(set([db.genres[genre].genre for d in docs_with_genres
+                              for genre in d["genres"]])))
+    figures = sorted(list(set([db.biblical_figures[figure].figure
+                               for doc in docs_with_figures
+                               for figure in doc["figures"]])))
     genre_rows = OrderedDict()
     for g in genres:
         gid = db.genres(db.genres.genre == g).id
