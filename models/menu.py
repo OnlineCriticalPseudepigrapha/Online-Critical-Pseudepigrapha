@@ -68,7 +68,6 @@ if auth.has_membership('editors') or \
                               )
                              )
         response.menu[0] = response.menu[0] + (draftlist,)
-        print response.menu[0]
 
 if auth.has_membership('administrators', auth.user_id):
     response.menu += [
