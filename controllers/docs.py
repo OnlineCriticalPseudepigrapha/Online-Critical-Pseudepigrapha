@@ -1,3 +1,4 @@
+#! /usr/bin/python3.5
 # -*- coding: utf-8 -*-
 
 from collections import OrderedDict
@@ -30,15 +31,16 @@ session.endref --
 """
 
 DISPLAY_FIELDS = OrderedDict([('introduction', 'Introduction'),
-                            ('provenance', 'Provenance and Cultural Setting'),
-                            ('themes', 'Major Themes'),
-                            ('status', 'Current State of the OCP Text'),
-                            ('manuscripts', 'Manuscripts'),
-                            ('bibliography', 'Bibliography'),
-                            ('corrections', 'Corrections'),
-                            ('sigla', 'Sigla Used in the Text'),
-                            ('copyright', 'Copyright Information')]
-                            )
+                              ('provenance', 'Provenance and '
+                                             'Cultural Setting'),
+                              ('themes', 'Major Themes'),
+                              ('status', 'Current State of the OCP Text'),
+                              ('manuscripts', 'Manuscripts'),
+                              ('bibliography', 'Bibliography'),
+                              ('corrections', 'Corrections'),
+                              ('sigla', 'Sigla Used in the Text'),
+                              ('copyright', 'Copyright Information')]
+                             )
 
 
 def index():
@@ -60,46 +62,60 @@ def create_draft_intro():
     else:
         default_vals = {'filename': filename,
                         'name': 'Document title here',
-                        'introduction': 'Provide a brief overview of the document\'s nature '
-                                        'and importance.',
-                        'provenance': 'Discuss the date, geographical location, and cultural '
-                                    'situation of composition. This is also the '
-                                    'place to discuss translation history and the '
-                                    'relationship between various text types.',
+                        'introduction': 'Provide a brief overview of the '
+                                        ' document\'s nature and importance.',
+                        'provenance': 'Discuss the date, geographical '
+                                      'location, and cultural situation '
+                                      'of composition. This is also the '
+                                      'place to discuss translation '
+                                      'history and the relationship '
+                                      'between various text types.',
                         'themes': 'Discuss the document\'s major themes.',
-                        'status': 'Discuss the current status of the OCP edition of '
-                                'the text. You should point out whether, e.g., a '
-                                'better eclectic text exists elsewhere, or whether '
-                                'there are manuscripts or text types that are not '
-                                'included here.',
-                        'manuscripts': 'Provide a list of all extant manuscripts, '
-                                    'including their official designations, their '
-                                    'current location (the institution where they '
-                                    'are held), their date of copying, and any print '
-                                    'editions of the manuscript in running form. If some '
-                                    'mss do not contain the full document, specify '
-                                    'which parts of the document are contained in each. '
-                                    'Note that this list will be converted to a table '
-                                    'by the OCP general editors.',
-                        'bibliography': 'Provide a bibliography of all published '
-                                        'editions of the text. It would be helpful '
-                                        'to annotate the list, indicating the quality '
-                                        'and distinctive features of each edition. '
-                                        'If multiple text types or language traditions '
-                                        'have different publication histories, provide '
-                                        'a heading and separate bibliography for each.',
-                        'corrections': 'If you have found errors in existing print '
-                                    'editions these can be presented here in a list.',
-                        'sigla': 'List here each symbol used in the text along with '
-                                'a brief description of its meaning. Standard punctuation '
-                                'need not be listed, but even common text-critical '
-                                'symbols (like square brackets, ellipses, or '
-                                'circles/dots above a character) should be included.',
-                        'copyright': 'Explain here, as best you understand it, the '
-                                    'copyright status of each text type included in '
-                                    'the OCP edition of your text. If you have '
-                                    'question about copyright issues, feel free to '
-                                    'ask the OCP general editors.',
+                        'status': 'Discuss the current status of the OCP '
+                                  'edition of the text. You should point out '
+                                  'whether, e.g., a better eclectic text '
+                                  'exists elsewhere, or whether there are '
+                                  'manuscripts or text types that are not '
+                                  'included here.',
+                        'manuscripts': 'Provide a list of all extant '
+                                       'manuscripts, including their official '
+                                       'designations, their current location '
+                                       '(the institution where they are '
+                                       'held), their date of copying, and any '
+                                       'print editions of the manuscript in '
+                                       'running form. If some mss do not '
+                                       'contain the full document, specify '
+                                       'which parts of the document are '
+                                       'contained in each. '
+                                       'Note that this list will be converted '
+                                       'to a table by the OCP general '
+                                       'editors.',
+                        'bibliography': 'Provide a bibliography of all '
+                                        'published editions of the text. It '
+                                        'would be helpful to annotate the '
+                                        'list, indicating the quality '
+                                        'and distinctive features of each '
+                                        'edition. If multiple text types or '
+                                        'language traditions have different '
+                                        'publication histories, provide '
+                                        'a heading and separate bibliography '
+                                        'for each.',
+                        'corrections': 'If you have found errors in existing '
+                                       'print editions these can be presented '
+                                       ' here in a list.',
+                        'sigla': 'List here each symbol used in the text '
+                                 'along with a brief description of its '
+                                 'meaning. Standard punctuation need not be '
+                                 'listed, but even common text-critical '
+                                 'symbols (like square brackets, ellipses, or '
+                                 'circles/dots above a character) should be '
+                                 'included.',
+                        'copyright': 'Explain here, as best you understand '
+                                     'it, the copyright status of each text '
+                                     'type included in the OCP edition of '
+                                     'your text. If you have question about '
+                                     'copyright issues, feel free to ask the '
+                                     'OCP general editors.',
                         'version': '0.1'
                         }
         db['draftdocs'].insert(**default_vals)
@@ -115,7 +131,8 @@ def update_draft_intro():
 
     mytext = request.vars['text']
     mysection = request.vars['section']
-    myfield_title = [f for f in DISPLAY_FIELDS.keys() if DISPLAY_FIELDS[f] == mysection][0]
+    myfield_title = [f for f in DISPLAY_FIELDS.keys()
+                     if DISPLAY_FIELDS[f] == mysection][0]
     new_content = {myfield_title: mytext}
 
     db(db.draftdocs.filename == filename).update(**new_content)
@@ -153,28 +170,32 @@ def draft_intro():
                       docrow['proofreader3']
                       ]
         if auth.has_membership('administrators') \
-                or (auth.has_membership('editors') and auth.user_id in editor_ids):
+                or (auth.has_membership('editors')
+                    and auth.user_id in editor_ids):
             # current user has permission to edit this page
-            body_fields = OrderedDict([(v, docrow[k]) for k, v in DISPLAY_FIELDS.iteritems()
-                                    if docrow[k]])
+            body_fields = OrderedDict([(v, docrow[k]) for k, v
+                                       in DISPLAY_FIELDS.iteritems()
+                                       if docrow[k]])
 
             editor_names = OrderedDict([])
             for ed in ['editor', 'editor2', 'editor3', 'editor4']:
                 if docrow[ed]:
-                    editor_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
-                                                                    docrow[ed]['last_name'])
+                    editor_names[docrow[ed]['id']] = '{} {}'.format(
+                        docrow[ed]['first_name'], docrow[ed]['last_name'])
 
             asst_editor_names = OrderedDict([])
-            for ed in ['assistant_editor', 'assistant_editor2', 'assistant_editor3']:
+            for ed in ['assistant_editor',
+                       'assistant_editor2',
+                       'assistant_editor3']:
                 if docrow[ed]:
-                    asst_editor_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
-                                                                        docrow[ed]['last_name'])
+                    asst_editor_names[docrow[ed]['id']] = '{} {}'.format(
+                        docrow[ed]['first_name'], docrow[ed]['last_name'])
 
             proofreader_names = OrderedDict([])
             for ed in ['proofreader', 'proofreader2', 'proofreader3']:
                 if docrow[ed]:
-                    proofreader_names[docrow[ed]['id']] = '{} {}'.format(docrow[ed]['first_name'],
-                                                                        docrow[ed]['last_name'])
+                    proofreader_names[docrow[ed]['id']] = '{} {}'.format(
+                        docrow[ed]['first_name'], docrow[ed]['last_name'])
 
             return {'doc_exists': True,
                     'editing_permission': True,
@@ -200,7 +221,8 @@ def intro():
     docrow = db(db.docs.filename == filename).select().first()
 
     display_fields = OrderedDict([('introduction', 'Introduction'),
-                                  ('provenance', 'Provenance and Cultural Setting'),
+                                  ('provenance',
+                                   'Provenance and Cultural Setting'),
                                   ('themes', 'Major Themes'),
                                   ('status', 'Current State of the OCP Text'),
                                   ('manuscripts', 'Manuscripts'),
@@ -209,32 +231,32 @@ def intro():
                                   ('sigla', 'Sigla Used in the Text'),
                                   ('copyright', 'Copyright Information')]
                                  )
-    body_fields = OrderedDict([(v, docrow[k]) for k, v in display_fields.iteritems()
-                               if docrow[k]])
+    body_fields = OrderedDict([(v, docrow[k]) for k, v
+                               in display_fields.iteritems() if docrow[k]])
 
     editor_names = OrderedDict([])
     for ed in ['editor', 'editor2', 'editor3', 'editor4']:
         if docrow[ed]:
             myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
             if myrow:
-                editor_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
-                                                        myrow['last_name'])
+                editor_names[myrow['id']] = '{} {}'.format(
+                    myrow['first_name'], myrow['last_name'])
 
     asst_editor_names = OrderedDict([])
     for ed in ['assistant_editor', 'assistant_editor2', 'assistant_editor3']:
         if docrow[ed]:
             myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
             if myrow:
-                asst_editor_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
-                                                                myrow['last_name'])
+                asst_editor_names[myrow['id']] = '{} {}'.format(
+                    myrow['first_name'], myrow['last_name'])
 
     proofreader_names = OrderedDict([])
     for ed in ['proofreader', 'proofreader2', 'proofreader3']:
         if docrow[ed]:
             myrow = docrow[ed][0] if type(docrow[ed]) is list else docrow[ed]
             if myrow:
-                proofreader_names[myrow['id']] = '{} {}'.format(myrow['first_name'],
-                                                                myrow['last_name'])
+                proofreader_names[myrow['id']] = '{} {}'.format(
+                    myrow['first_name'], myrow['last_name'])
 
     return {'title': docrow['name'],
             'body_fields': body_fields,
@@ -251,23 +273,23 @@ def text():
     Gather document information to prepare initial reader interface.
     """
     vbs = True
-    if vbs: print "text() start -------------------------------------"
+    if vbs: print("text() start -------------------------------------")
     session.filename = request.args[0]
     filename = session.filename
-    if vbs: print 'filename: ', filename
-    #TODO: provide fallback and prompt if no filename is given in url
+    if vbs: print('filename: ', filename)
+    # TODO: provide fallback and prompt if no filename is given in url
 
-    #url to pass to web2py load helper in view to load doc section via ajax
+    # url to pass to web2py load helper in view to load doc section via ajax
     load_url = URL('docs', 'section.load', args=filename)
 
-    #print url input for debugging purposes
+    # print url input for debugging purposes
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
-    if vbs: print 'start of text() method with url ', request.url, varlist
+    if vbs: print('start of text() method with url ', request.url, varlist)
 
     # get parsed document info
     info, p = _get_bookinfo(filename)
 
-    #get title of document
+    # get title of document
     title = info['book']['title']
     # get structure type for document
     structure = info['book']['textStructure']
@@ -276,11 +298,12 @@ def text():
     else:
         session.structure = {filename: structure}
 
-    #get names of all versions of current doc
+    # get names of all versions of current doc
     versions = info['version']
 
     if structure == 'fragmentary':  # find first fragment and set nav values
-        fragments = sorted(list(set([v['attributes']['fragment'] for v in versions])))
+        fragments = sorted(list(set([v['attributes']['fragment'] for v
+                                     in versions])))
         session.versions = {f: [v['attributes']['title'] for v in versions
                                 if v['attributes']['fragment'] == f]
                             for f in fragments}
@@ -296,51 +319,51 @@ def text():
         else:
             session.refraw = {filename: None}
 
-    else:  # find starting and ending refs for first text section and set nav values
+    else:  # find start/end refs for first text section and set nav values
         session.versions = [v['attributes']['title'] for v in versions]
         first_v = versions[0]
         delimiters = first_v['divisions']['delimiters']
         levels = first_v['organisation_levels']
 
-        #build flat list of references
+        # build flat list of references
         refraw = first_v['reference_list']
         if session.refraw:
             session.refraw[filename] = refraw
         else:
             session.refraw = {filename: refraw}
 
-        #build list for starting ref
+        # build list for starting ref
         if 'from' in request.vars:
             start_sel = request.vars['from'][:-1]
             start_sel = re.split('-', start_sel)
-            #create string ref with proper delimiters
+            # create string ref with proper delimiters
             startlist = [None] * (len(start_sel) + len(levels))
             startlist[::2] = start_sel
             startlist[1::2] = delimiters
             startref = ''.join(startlist)
-            if vbs: print 'text(): using url ref ', start_sel
+            if vbs: print('text(): using url ref ', start_sel)
         else:
             startref = refraw[0]
             start_sel = re.split('[:\.,;_-]', startref)
-            if vbs: print 'text(): using default first ref ', start_sel
+            if vbs: print('text(): using default first ref ', start_sel)
 
-        #build list for ending ref
+        # build list for ending ref
         if 'to' in request.vars:
             end_sel = request.vars['to'][:-1]
             end_sel = re.split('-', end_sel)
-            #create string ref with proper delimiters
+            # create string ref with proper delimiters
             endlist = [None] * (len(end_sel) + len(levels))
             endlist[::2] = end_sel
             endlist[1::2] = delimiters
             endref = ''.join(endlist)
         else:
-            if vbs: print 'start_sel', start_sel
-            if vbs: print 'delimiters', delimiters
+            if vbs: print('start_sel', start_sel)
+            if vbs: print('delimiters', delimiters)
             my_delimiter = delimiters[0] if len(delimiters) else ''
             regex = re.compile('^' + start_sel[0] + my_delimiter)
-            #find all refs with the same top-level reference
+            # find all refs with the same top-level reference
             this_div = [ref for ref in refraw if regex.match(ref)]
-            #choose the last one
+            # choose the last one
             endref = this_div[-1]
             end_sel = re.split('[:\.,;_-]', endref)
 
@@ -369,11 +392,12 @@ def _get_bookinfo(filename):
     # FIXME: error when using session values
     # _element object can't be pickled, and pickling is necessary to store
     # an object in session
-    print "Getting info"
+    print("Getting info")
     if 0 and ('p' in session.keys()) and (filename in session.p.keys()):
         p = cPickle.loads(session.p[filename])
     else:
-        book_file = 'applications/grammateus3/static/docs/{}.xml'.format(filename)
+        book_file = 'applications/grammateus3/static/docs/' \
+                    '{}.xml'.format(filename)
         p = Book(book_file)
         if session.p:
             session.p[filename] = p
@@ -385,7 +409,7 @@ def _get_bookinfo(filename):
     else:
         info = p.get_book_info()
         session.info = {filename: info}
-    if vbs: print "info", pprint(info)
+    if vbs: print("info", pprint(info))
     return info, p
 
 
@@ -410,7 +434,8 @@ def _make_refs_hierarchical(refraw, levels):
     topnums = uniq([l[0] for l in flatlists])
     if vbs: print 'topnums', topnums, '\n'
     for num in topnums:
-        childicts = OrderedDict([(l[1], OrderedDict()) for l in flatlists if l[0] == num])
+        childicts = OrderedDict([(l[1], OrderedDict()) for l
+        in flatlists if l[0] == num])
         hierarch[num] = childicts
         if levels > 2:
             for key, val in hierarch[num]:
@@ -419,7 +444,8 @@ def _make_refs_hierarchical(refraw, levels):
                 hierarch[num][key] = mydict3
                 if levels > 3:
                     for key3, val3 in hierarch[num][key]:
-                        mydict4 = OrderedDict([(l[3], OrderedDict()) for l in flatlists
+                        mydict4 = OrderedDict([(l[3], OrderedDict())
+                        for l in flatlists
                                               if l[0] == num
                                               and l[1] == key
                                               and l[2] == key3])
@@ -432,7 +458,7 @@ def _make_refs_hierarchical(refraw, levels):
 
 def section():
     """
-    Populates a single text pane via the section.load view (refreshable via ajax)
+    Populate single text pane via the section.load view (refreshable via ajax)
 
     The text is returned by the get_text() generator method as a series of Text
     objects. Converted to a list, the generated output looks like:
@@ -453,12 +479,12 @@ def section():
             text='')]
 
     """
-    #'vbs' variable is for turning testing output on and off
+    # 'vbs' variable is for turning testing output on and off
     vbs = False
-    if vbs: print 'section() start -------------------------------------------'
+    if vbs: print('section() start ------------------------------------------')
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
 
-    #get filename from end of url and parse the file with BookParser class
+    # get filename from end of url and parse the file with BookParser class
     filename = request.args[0]
     info, p = _get_bookinfo(filename)
 
@@ -475,14 +501,14 @@ def section():
         return curv, vlang, levels, mslist
 
     def get_current_ms(mslist):
-        #use the third url argument as manuscript name if present, otherwise
-        #default to first version
-        #check for 'newval' value, indicating the version has changed
+        # use the third url argument as manuscript name if present, otherwise
+        # default to first version
+        # check for 'newval' value, indicating the version has changed
         if 'type' in request.vars and request.vars['type'] != 'newval':
             current_ms = request.vars['type'].replace('_', ' ')
             current_ms = current_ms.strip()
-            if vbs: print 'current_ms: ', current_ms
-            #move selected text type to top of list for ms selectbox
+            if vbs: print('current_ms: ', current_ms)
+            # move selected text type to top of list for ms selectbox
             i = mslist.index(to_unicode(current_ms))
             mslist.insert(0, mslist.pop(i))
         else:
@@ -492,37 +518,39 @@ def section():
 
     def get_prev_next_levels(startref, endref, start_sel, end_sel):
         # handle 'next' and 'previous' navigation via 'endref' values
-        # numbers indicate organizational level at which to move forward or back
+        # numbers indicate org. level at which to move forward or back
         vbs = False
         next_level = None
         if endref[:4] == 'next':
             next_level = int(endref[4:])  # expects like next2
             end_sel = start_sel
-            if vbs: print 'next_level:', next_level
+            if vbs: print('next_level:', next_level)
         previous_level = None
         if endref[:4] == 'back':
             previous_level = int(endref[4:])  # expects like previous2
             end_sel = start_sel
-            if vbs: print 'previous_level:', previous_level
+            if vbs: print('previous_level:', previous_level)
 
         return next_level, previous_level, end_sel
 
     def get_display_version(myversions):
-        #select the version to display
+        # select the version to display
         try:
             if 'version' in request.vars:
                 current_version = request.vars['version'].replace('_', ' ')
-                #move selected version to top of list for selectbox
+                # move selected version to top of list for selectbox
                 if myversions and current_version in myversions:
                     i = myversions.index(current_version)
                     myversions.insert(0, myversions.pop(i))
                 else:
                     current_version = myversions[0]
-                if vbs: print 'current version: ', current_version.replace(' ', '&nbsp;')
+                if vbs: print('current version: ',
+                              current_version.replace(' ', '&nbsp;'))
             else:
                 current_version = myversions[0]
-                if vbs: print 'current version: ', current_version.replace(' ', '&nbsp;')
-        except Exception, e:
+                if vbs: print('current version: ',
+                              current_version.replace(' ', '&nbsp;'))
+        except Exception:
             traceback.print_exc(5)
         return current_version, myversions
 
@@ -564,7 +592,7 @@ def section():
         endref = reflist[-1]
         end_sel = endref.split(':')
 
-    # NON-FRAGMENTARY ==========================================================
+    # NON-FRAGMENTARY =========================================================
     else:
         myversions = session.versions
         current_version, myversions = get_display_version(myversions)
@@ -586,8 +614,10 @@ def section():
             endref = session.endref
             end_sel = endref.split(':')
 
-    next_level, previous_level, end_sel = get_prev_next_levels(startref, endref,
-                                                                start_sel, end_sel)
+    next_level, previous_level, end_sel = get_prev_next_levels(startref,
+                                                               endref,
+                                                               start_sel,
+                                                               end_sel)
 
     try:
         # re-set start_sel and end_sel from output in case 'next' or 'back'
@@ -599,29 +629,28 @@ def section():
                   previous_level]
         text_iterator, start_sel, end_sel = p.get_text(*myargs)
         parsed_text = list(text_iterator)
-    except ElementDoesNotExist, e:
+    except ElementDoesNotExist as e:
         try:
-            print traceback.format_exc()
-            text_iterator, start_sel, end_sel = p.get_text(current_version,
-                                                        current_ms + ' ',
-                                                        start_sel,
-                                                        end_sel,
-                                                        next_level=next_level,
-                                                        previous_level=previous_level)
+            print(traceback.format_exc())
+            myparams = [current_version, current_ms + ' ',
+                        start_sel, end_sel]
+            myvars = {"next_level": next_level,
+                      "previous_level": previous_level}
+            text_iterator, start_sel, end_sel = p.get_text(*myparams, **myvars)
             parsed_text = list(text_iterator)
-        except ElementDoesNotExist, e:
-            print traceback.format_exc()
+        except ElementDoesNotExist as e:
+            print(traceback.format_exc())
             response.flash = 'Sorry, no text matched the selected range.'
-    except NotAllowedManuscript, e:
-        print traceback.format_exc()
-        response.flash = 'Sorry, that text type is not part of the {} version' \
-                        ''.format(current_version)
+    except NotAllowedManuscript as e:
+        print(traceback.format_exc())
+        response.flash = 'Sorry, that text type is not part of the {} ' \
+                         'version'.format(current_version)
 
     # build the running display text ----------------------------------------
     mytext = []
     refcounter = [None] * levels
-    if vbs: print 'PARSED ============================='
-    if vbs: print parsed_text
+    if vbs: print('PARSED =============================')
+    if vbs: print(parsed_text)
     for u in parsed_text:
         # insert reference number/label when it changes
         reflist = list(u.div_path)
@@ -630,9 +659,11 @@ def section():
                 pass
             else:
                 mytext.append(SPAN(' {} '.format(unicode(r)),
-                                _class='refmarker refmarker_{}'.format(idx)))
+                                   _class='refmarker refmarker_{}'.format(idx))
+                              )
                 refcounter[idx] = r
-        punctuation = [u'.', u';', u'·', u'"', u"'", u',', u'?', u'«', u'»', u'·']
+        punctuation = [u'.', u';', u'·', u'"', u"'", u',', u'?', u'«', u'»',
+                       u'·']
         if u.text == '':
             mytext.append(A(u' *', _class='placeholder', _href=u.unit_id))
         elif u.readings_in_unit > 1:
@@ -649,11 +680,11 @@ def section():
             if u.linebreak == 'doubleFollowing':
                 mytext.append(BR())
                 mytext.append(BR())
-        except e:
-            print 'LINEBREAK PROBLEM'
-            print e
+        except Exception as e:
+            print('LINEBREAK PROBLEM')
+            print(e)
 
-    if vbs: print 'sending', '-'.join(start_sel)
+    if vbs: print('sending', '-'.join(start_sel))
 
     return {'versions': myversions,
             'current_version': current_version,
@@ -669,22 +700,22 @@ def section():
 
 def apparatus():
     vbs = False
-    if vbs: print 'starting apparatus controller'
+    if vbs: print('starting apparatus controller')
     filename = request.args[0]
     info, p = _get_bookinfo(filename)
 
-    #if no unit has been requested, present the default message
+    # if no unit has been requested, present the default message
     if request.vars['called'] == 'no':
         readings = P('Click on any blue text to display textual variants '
-                        'for those words. If no links are available that may '
-                        'mean no variants are attested or it may mean that '
-                        'this document does not yet have a complete textual '
-                        'apparatus. See the document introduction for details.',
+                     'for those words. If no links are available that may '
+                     'mean no variants are attested or it may mean that '
+                     'this document does not yet have a complete textual '
+                     'apparatus. See the document introduction for details.',
                      _class='apparatus-message')
         current_version = ''
-    #if a unit has been requested, assemble that unit's readings
+    # if a unit has been requested, assemble that unit's readings
     else:
-        #get current version
+        # get current version
         current_version = request.vars['version'].replace('_', ' ')
         unit = request.vars['unit']
         readings = p.get_readings(current_version, unit)

@@ -20,7 +20,6 @@ def index():
     Send dictionary of document records to the view views/default/index.html
     """
     docrows = db(db.docs.id > 0).select()
-    print(docrows)
     doclist = sorted(docrows.as_list(), key=itemgetter('name'))
     docs_with_genres = sorted([d for d in doclist if d["genres"]],
                               key=itemgetter('name'))
