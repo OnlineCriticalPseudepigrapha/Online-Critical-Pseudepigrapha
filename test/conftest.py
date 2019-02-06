@@ -22,10 +22,10 @@ web2py.db.commit()
 To run tests:
 
 cd path/to/web2py (you must be in web2py root directory to run tests)
-python2.7 -m pytest -x [-l] [-q|-v] -s applications/my_app_name/tests
+python3.6 -m pytest -x [-l] [-q|-v] -s applications/my_app_name/tests
 
 (used to need running web2py instance:
-    python web2py.py -a my_password --nogui &
+    python3.6 web2py.py -a my_password --nogui &
 but no longer necessary.)
 
 
@@ -123,7 +123,7 @@ def fixture_cleanup_db(web2py):
     # for tab in web2py.db.tables:
     #     web2py.db[tab].truncate()
     # web2py.db.commit()
-    print '\nran fixture cleanup !!!!!!!!!!!!!!!!!!!!!!!!!\n'
+    print('\nran fixture cleanup !!!!!!!!!!!!!!!!!!!!!!!!!\n')
     pass
 
 
@@ -239,10 +239,10 @@ def db(web2py, request):
         """
         Delete any newly inserted rows in the test database.
         """
-        print 'checking for inserted rows to remove**********'
+        print('checking for inserted rows to remove**********')
         #pprint(newrows)
         if newrows:
-            print 'removing'
+            print('removing')
             for tbl, rowids in newrows.iteritems():
                 mydb(mydb[tbl].id.belongs(rowids)).delete()
                 for i in rowids:
