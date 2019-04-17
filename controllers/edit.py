@@ -56,6 +56,7 @@ def _get_bookinfo(filename):
     # if vbs: print "info", pprint(info)
     return info, p
 
+@auth.requires_membership('administrators')
 def renumber():
     """
     Renumber units and options throughout the current document.
@@ -67,6 +68,7 @@ def renumber():
     filename = session.filename
     return BookManager.renumber_units(filename)
 
+@auth.requires_membership('administrators')
 def publish():
     """
     Copy current draft xml file to the public location for document files.

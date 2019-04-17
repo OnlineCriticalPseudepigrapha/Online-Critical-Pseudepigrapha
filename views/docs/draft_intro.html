@@ -52,6 +52,8 @@
         <span class="doc-version">Version {{=version}}</span>
         <a href="{{=URL('docs', 'text', args=[filename])}}" class="read-text">Read the text</a>
 
+        <a href="{{=URL('docs', 'publish_draft_intro', args=[filename])}}" class="read-text">Publish completed draft</a>
+
         <h4>Document Editor(s)</h4>
         <ul class="editor-list">
         {{for editor_id, editor_name in editors.iteritems():}}

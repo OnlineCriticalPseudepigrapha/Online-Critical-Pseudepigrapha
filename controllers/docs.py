@@ -47,6 +47,18 @@ def index():
 
 
 @auth.requires_membership('administrators')
+def publish_draft_intro():
+    """
+    Controller to publish the current draft doc intro to the public site.
+    """
+    filename = request.args[0]
+    draft_intro = db(db.draftdocs.filename == filename).select().first()
+    db(db.docs.filename == filename).update(**draft_intro)
+    db.commit()
+
+    return 'Success!'
+
+@auth.requires_membership('administrators')
 def create_draft_intro():
     """
     Controller to create a new draft doc intro and redirect to draft_intro
