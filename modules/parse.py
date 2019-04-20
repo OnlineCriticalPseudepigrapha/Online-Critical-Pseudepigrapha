@@ -661,7 +661,10 @@ class Book(object):
             text.append(unicode(d.text or ''))
 
         if not delimiters:
-            delimiters = [self.default_delimiter] * (len(divisions) - 1)
+            try:
+                delimiters = [self.default_delimiter] * (len(divisions) - 1)
+            except AttributeError:
+                delimiters = ['.']
 
         data['labels'] = labels
         data['delimiters'] = delimiters
@@ -759,8 +762,9 @@ class Book(object):
             if len(div.xpath('div')):
                 child_refs = self._make_reference_list(div, delimiters[1:])
                 print 'child refs are {}'.format(child_refs)
+                mydelimiter = delimiters[0] if len(delimiters) else ''
                 for ref in child_refs:
-                    refs.append('{}{}{}'.format(parent_key, delimiters[0], ref))
+                    refs.append('{}{}{}'.format(parent_key, mydelimiter, ref))
             else:
                 refs.append(parent_key)
 

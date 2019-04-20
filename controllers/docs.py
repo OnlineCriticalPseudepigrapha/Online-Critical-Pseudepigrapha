@@ -447,8 +447,12 @@ def text():
             #find all refs with the same top-level reference
             this_div = [ref for ref in refraw if regex.match(ref)]
             #choose the last one
-            endref = this_div[-1]
-            end_sel = re.split('[:\.,;_-]', endref)
+            try:
+                endref = this_div[-1]
+                end_sel = re.split('[:\.,;_-]', endref)
+            except IndexError:  # if text with only one level
+                endref = startref
+                end_sel = start_sel
 
         session.startref = startref
         session.endref = endref

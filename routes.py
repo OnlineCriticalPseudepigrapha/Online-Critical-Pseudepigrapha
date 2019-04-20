@@ -1,6 +1,6 @@
 
 routes_in = (
-    # ('/admin/$anything', '/admin/$anything'),
+    ('/admin/$anything', '/admin/$anything'),
     # ('/static/$anything', '/grammateus3/static/$anything'),
     # ('/appadmin/$anything', '/grammateus3/appadmin/$anything'),
     # ('/docs/$anything', '/grammateus3/docs/$anything'),
