@@ -2,6 +2,7 @@
 
 from collections import OrderedDict
 from kitchen.text.converters import to_unicode
+import os
 from parse import Book, ElementDoesNotExist, NotAllowedManuscript
 import cPickle
 from plugin_utils import flatten
@@ -41,22 +42,114 @@ DISPLAY_FIELDS = OrderedDict([('introduction', 'Introduction'),
                             )
 
 
+DOC_ALIASES = {
+    'HistRech': ['history-of-rechabites', 'histrech', 'rechabites'],
+    '1En': ['first-enoch', '1enoch', '1en', '1enoch'],
+    '2Bar': ['2baruch', '2bar', 'syrbar',
+             'syriacbaruch', 'syrbaruch', 'syriacbar', '2-bar', '2-baruch',
+             'syr-bar', 'syr-baruch', 'syriac-baruch'],
+    '3Bar': ['3Baruch', '3baruch', '3bar', 'grbar', 'greekbar',
+             'grkbar', 'grbaruch', 'greekbaruch', 'grkbaruch'],
+    '3Macc': ['3Maccabees', '3macc', '3maccabees', '3-maccabees', '3-macc'],
+    '4Ezra': ['4ezra', '4ez', '2esdras', '2esdr', '2es', 'syrezra',
+              'syrapocezra', 'syriacezra', 'syriacapocezra', '4-ezra',
+              '4-esdras', 'syr-ez', 'syr-ezra', 'syriac-ezra'],
+    '4Macc': ['4maccabees', '4macc', '4-maccabees', '4-macc'],
+    '4Q548': ['4q548'],
+    'ApocrEzek': ['apocrezek', 'apocezek', 'ezekapocr',
+                  'ezekapocryphon', 'ezapocr', 'ezapocryphon',
+                  'apoc-ezek', 'apocr-ezek', 'apoc-ezekiel', 'apocr-ezekiel',
+                  'apocryphon-ezek', 'apoc-ez', 'apocryphon-of-ezekiel'],
+    'ArisEx': ['aristeas-exegete', 'arisex', 'aristeas-ex', 'aris-ex',
+               'aristeas-the-exegete'],
+    'Aristob': ['aristob', 'aristobulus', 'aristobulos', 'aristobolos',
+                'aristobolus'],
+    'Artap': ['artapanus', 'artap'],
+    'Mois': ['assmos', 'assmoses', 'assumption-of-moses', 'ass-mos',
+             'ass-moses', 'tmos', 'tmoses', 'testmos', 'testmoses', 't-moses',
+             'test-moses', 't-mos', 'test-mos', 'testament-of-moses', 'mois'],
+    'ClMal': ['cleodemusmalchus', 'cleodemus-malchus', 'clmalchus',
+              'cl-malchus', 'cl-mal', 'cleodemosmalchos', 'cleodemos-malchos',
+              'clmalchos', 'cl-malchos', 'clmal'],
+    'ElMod': ['elmod', 'eldad-modad', 'eldad&modad', 'eldad-and-modad',
+              'eldadandmodad'],
+    'Eup': ['eupolemus', 'eupolemos'],
+    'EzekTrag': ['ezekiel-the-tragedian', 'ezektrag', 'eztrag', 'ez-trag',
+                 'ez-tragedian', 'ezek-trag', 'ezek-tragedian', 'exag',
+                 'exagoge', 'eztragedian', 'ezektragedian',
+                 'ezekiel-tragedian', 'ezekiel-trag', 'ezekieltragedian',
+                 'ezekieltrag'],
+    'Jub': ['jub', 'jubilees', 'book-of-jubilees', 'jubil'],
+    'LetAris': ['letaris', 'aris', 'aristeas', 'letaristeas', 'let-aris',
+                'let-aristeas', 'letter-of-aristeas'],
+    'AdamEve': ['adameve', 'adam-eve', 'adam-and-eve', 'adam&eve',
+                'life-of-adam-and-eve', 'lifeofadamandeve',
+                'life-of-adam&eve', 'lifeofadam&eve'],
+    'LivPro': ['livpro', 'lives-of-the-prophets', 'livesoftheprophets',
+               'livesofprophets', 'lives-of-prophets', 'livespro',
+               'lives-of-pro', 'lives-pro', 'lives-prophets'],
+    '4Bar': ['4bar', '4baruch', 'paraleip', 'paraleip-jer', 'paraleip-ier',
+             'paraleipomena', 'paraleipomena-ieremiou', 'paraleip-ieremiou',
+             'para-ier', 'para-ieremiou', 'paraleipomena-jeremiou',
+             'paraleip-jeremiou', 'para-jer', 'para-jeremiou'],
+    'PhEPoet': ['philo-epic-poet', 'phepoet', 'philo-the-epic-poet',
+                'philo-poet', 'philoepoet', 'philoepicpoet', 'ph-e-poet'],
+    'PssSol': ['psssol', 'psssolomon', 'pssolomon', 'psalmsofsol',
+               'psalmsofsolomon', 'pss-sol', 'pss-solomon', 'psalms-of-sol',
+               'psalms-of-solomon'],
+    'Ps-Eup': ['pseup', 'pseudo-eup', 'pseudoeup', 'pseudo-eupolemos',
+               'pseudeoeupolemos', 'pseudo-eupolemus', 'pseudoeupolemus',
+               'ps-eup', 'ps-eupol', 'pseupol', 'ps-eupolemos',
+               'pseupolemos', 'ps-eupolemus', 'pseupolemus'],
+    'SibOr': ['sibyllineoracles', 'sibor', 'sib-or', 'sibylline-oracles',
+              'sibyllineor', 'sibylline-or', 'siboracles', 'sib-oracles'],
+    'TAbr': ['tabr', 'tabraham', 'testabr', 'tab', 'testab', 'testabraham',
+             'testamentabraham', 'testamentofabraham', 't-ab', 't-abr',
+             't-abraham', 'test-abr', 'test-ab', 'test-abraham',
+             'test-of-abraham', 'testofabraham', 'testament-abraham',
+             'testament-of-abraham', 'testament-abr', 'testament-of-abr',
+             'testamentabr', 'testamentofabr'],
+    'TAdam': ['tadam', 'testadam', 'testamentadam', 'testamentofadam',
+              'testofadam', 't-adam', 'test-adam', 'testament-adam',
+              'testament-of-adam', 'test-of-adam'],
+    'TJob': ['tjob', 'testjob', 'testamentjob', 'testamentofjob', 'testofjob',
+             't-job', 'test-job', 'testament-job', 'testament-of-job',
+             'test-of-job'],
+    'TSol': ['tsol', 'testsol', 'testamentsol', 'testamentofsol', 'tsolomon',
+             'testsolomon', 'testamentsolomon', 'testamentofsolomon', 't-sol',
+             'test-sol', 'testament-sol', 'testament-of-sol', 't-solomon',
+             'test-solomon', 'testament-solomon', 'testament-of-solomon'],
+    'Theod': ['theod', 'theodotos', 'theodotus'],
+    'Amram': ['amram', 'amr', 'visionsofamram', 'visions-of-amram']
+}
+
+
 def index():
-    filename = request.args[0]
+    filename = get_truename(request.args[0])
     return dict(filename=filename)
 
+
+def get_truename(mystring):
+    if mystring[-5:] == '.html':
+        mystring = os.path.splitext(mystring)[0]
+    mystring = mystring.lower()
+    truename = [key for key in DOC_ALIASES.keys() if key.lower() == mystring or mystring.lower() in DOC_ALIASES[key]][0]
+    return truename
 
 @auth.requires_membership('administrators')
 def publish_draft_intro():
     """
     Controller to publish the current draft doc intro to the public site.
     """
-    filename = request.args[0]
+    filename = get_truename(request.args[0])
     draft_intro = db(db.draftdocs.filename == filename).select().first()
-    db(db.docs.filename == filename).update(**draft_intro)
+
+    draft_data = {k:val for mykey, val in draft_intro.as_dict().items() for k in DISPLAY_FIELDS.keys() if k == mykey}
+
+    db(db.docs.filename == filename).update(**draft_data)
     db.commit()
 
-    return 'Success!'
+    return draft_data
 
 @auth.requires_membership('administrators')
 def create_draft_intro():
@@ -64,7 +157,7 @@ def create_draft_intro():
     Controller to create a new draft doc intro and redirect to draft_intro
     controller.
     """
-    filename = request.args[0]
+    filename = get_truename(request.args[0])
     published_intro = db(db.docs.filename == filename).select().first()
     if published_intro:
         db['draftdocs'].insert(**published_intro.as_dict())
@@ -147,7 +240,8 @@ def draft_intro():
     response.files.append(URL('static/js/codemirror/mode/xml', 'xml.js'))
     response.files.append(URL('static/js/summernote', 'summernote.min.js'))
     response.files.append(URL('static/js/summernote', 'summernote.css'))
-    session.filename = request.args[0]
+    session.filename = get_truename(request.args[0])
+
     filename = session.filename
     docrow = db(db.draftdocs.filename == filename).select().first()
     if not docrow:
@@ -207,7 +301,7 @@ def draft_intro():
 
 
 def intro():
-    session.filename = request.args[0]
+    session.filename = get_truename(request.args[0])
     filename = session.filename
     docrow = db(db.docs.filename == filename).select().first()
 
@@ -264,7 +358,7 @@ def text():
     """
     vbs = True
     if vbs: print "text() start -------------------------------------"
-    session.filename = request.args[0]
+    session.filename = get_truename(request.args[0])
     filename = session.filename
     if vbs: print 'filename: ', filename
     #TODO: provide fallback and prompt if no filename is given in url
@@ -471,7 +565,7 @@ def section():
     varlist = [(str(k) + ':' + str(v)) for k, v in request.vars.items()]
 
     #get filename from end of url and parse the file with BookParser class
-    filename = request.args[0]
+    filename = get_truename(request.args[0])
     info, p = _get_bookinfo(filename)
 
     def get_version_info(current_version):
@@ -682,7 +776,7 @@ def section():
 def apparatus():
     vbs = False
     if vbs: print 'starting apparatus controller'
-    filename = request.args[0]
+    filename = get_truename(request.args[0])
     info, p = _get_bookinfo(filename)
 
     #if no unit has been requested, present the default message
