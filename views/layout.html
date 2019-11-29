@@ -38,12 +38,22 @@
     <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
 
     <!-- All JavaScript at the bottom, except ... -->
+    <script type = "text/javascript">
+      <!--
+        console.log('Redirecting from ' + window.location.href);
+        if ( window.location.hostname == "ocp.tyndale.ca" || 
+             window.location.protocol == "http:" ) {
+            window.location = "https://pseudepigrapha.org";
+        }
+      //-->
+    </script>
+
     {{include 'web2py_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css, web2py.js -- >
     <!-- Modernizr for HTML5 elements & feature detects -->
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
     <!-- Respond.js for the support of media queries in IE8 -->
     <!--[if lt IE 9]><script src="{{=URL('static','js/respond-1.4.2.min.js')}}"></script><![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
 
     {{block head}}{{end}}
     {{
