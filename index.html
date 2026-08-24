@@ -212,7 +212,7 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
     }
     .nav-link {
       font-size: 0.9rem;
@@ -228,6 +228,23 @@
       background: var(--bg-secondary);
       text-decoration: none;
     }
+    .nav-btn-reader {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-gold);
+      color: #ffffff !important;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none !important;
+      box-shadow: 0 2px 4px rgba(197, 155, 39, 0.25);
+      transition: all 0.15s ease;
+    }
+    .nav-btn-reader:hover {
+      background: var(--accent-gold-dark);
+    }
     .nav-btn-gh {
       display: inline-flex;
       align-items: center;
@@ -235,16 +252,14 @@
       background: var(--bg-secondary);
       color: var(--text-primary);
       border: 1px solid var(--border-color);
-      padding: 6px 14px;
+      padding: 6px 12px;
       border-radius: var(--radius-sm);
       font-size: 0.88rem;
       font-weight: 600;
       transition: all 0.15s ease;
     }
     .nav-btn-gh:hover {
-      background: var(--accent-gold);
-      color: #ffffff;
-      border-color: var(--accent-gold);
+      background: var(--border-color);
       text-decoration: none;
     }
     .theme-toggle {
@@ -273,7 +288,7 @@
       border-bottom: 1px solid var(--border-color);
     }
     .hero-content {
-      max-width: 860px;
+      max-width: 880px;
     }
     .hero-badge {
       display: inline-flex;
@@ -307,6 +322,13 @@
       font-size: 1.25rem;
       color: var(--text-secondary);
       line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
       margin-bottom: 24px;
     }
 
@@ -598,7 +620,7 @@
     }
     .btn-action {
       flex: 1;
-      min-width: 90px;
+      min-width: 85px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -606,7 +628,7 @@
       padding: 8px 12px;
       border-radius: var(--radius-sm);
       font-size: 0.82rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       text-decoration: none !important;
       transition: all 0.15s ease;
@@ -867,8 +889,8 @@
           <strong>Project Transition:</strong> The legacy dynamic server is retired as we transition to a modern DTS-compliant API via Knowledge Commons Works. All TEI XML critical editions remain fully preserved and freely accessible below.
         </div>
       </div>
-      <a href="#transition" class="status-banner-link">
-        Learn more about DTS transition &rarr;
+      <a href="reader.html?doc=TJob.xml" class="status-banner-link">
+        Open Interactive Reader &rarr;
       </a>
     </div>
   </aside>
@@ -884,6 +906,10 @@
         </div>
       </a>
       <nav>
+        <a href="reader.html?doc=TJob.xml" class="nav-btn-reader">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          Open Reader
+        </a>
         <a href="#catalog" class="nav-link">Texts Catalog</a>
         <a href="#about" class="nav-link">About OCP</a>
         <a href="#team" class="nav-link">Editorial Board</a>
@@ -907,6 +933,17 @@
       <p>
         The mandate of the <strong>Online Critical Pseudepigrapha (OCP)</strong> is to develop and publish electronic editions of the best critical texts of the Jewish and Christian Pseudepigrapha and related Hellenistic Jewish literature, complete with full manuscript variants and textual witnesses.
       </p>
+      
+      <div class="hero-actions">
+        <a href="reader.html?doc=TJob.xml" class="btn-action btn-primary" style="padding:10px 20px; font-size:0.95rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          Launch Parallel Reader (Testament of Job)
+        </a>
+        <a href="reader.html?doc=1En.xml" class="btn-action btn-secondary" style="padding:10px 20px; font-size:0.95rem;">
+          Read 1 Enoch (Ethiopic)
+        </a>
+      </div>
+
       <div class="stats-bar">
         <div class="stat-item">
           <span class="stat-num" id="statTotalDocs">39</span>
@@ -934,7 +971,7 @@
       <div class="section-header">
         <div class="section-title">
           <h3>Critical Texts Catalog</h3>
-          <p>Search, filter, view, or download the full TEI-compliant XML source files.</p>
+          <p>Read editions in our interactive parallel reader, or view raw TEI XML source files.</p>
         </div>
       </div>
 
@@ -983,7 +1020,7 @@
 
         <div class="results-meta">
           <span id="resultsCounter">Showing 39 texts</span>
-          <span style="font-size:0.8rem;">Click <strong>View XML</strong> to open raw text, or <strong>Quick Preview</strong> for document details.</span>
+          <span style="font-size:0.8rem;">Click <strong>Read Text</strong> to open the multi-pane parallel apparatus reader.</span>
         </div>
       </div>
 
@@ -1101,7 +1138,7 @@
 
         <div class="content-block">
           <h4>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="21" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             Open Access &amp; Licensing
           </h4>
           <p>
@@ -1135,8 +1172,9 @@
       <div class="modal-footer">
         <span id="modalFilename" class="doc-filename"></span>
         <div style="display:flex; gap:8px;">
+          <a id="modalReadBtn" href="#" class="btn-action btn-primary">Read in Reader</a>
           <a id="modalRawBtn" href="#" target="_blank" class="btn-action btn-secondary">Open Full XML</a>
-          <a id="modalDownloadBtn" href="#" download class="btn-action btn-primary">Download XML</a>
+          <a id="modalDownloadBtn" href="#" download class="btn-action btn-outline">Download XML</a>
         </div>
       </div>
     </div>
@@ -1740,6 +1778,7 @@
         const langBadgeClass = getLanguageBadgeClass(doc.language);
         const mssText = doc.mss_count > 0 ? `${doc.mss_count} witness${doc.mss_count > 1 ? 'es' : ''}` : 'Single text / fragment';
         const docPath = 'static/docs/' + doc.filename;
+        const readerPath = 'reader.html?doc=' + doc.filename;
         const ghPath = 'https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha/blob/master/static/docs/' + doc.filename;
 
         return `
@@ -1764,17 +1803,16 @@
               </div>
             </div>
             <div class="doc-actions">
-              <a href="${docPath}" target="_blank" class="btn-action btn-primary" title="Open raw XML in browser">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-                View XML
+              <a href="${readerPath}" class="btn-action btn-primary" title="Open in Parallel Digital Reader">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                Read Text
               </a>
               <button onclick="openPreview('${doc.filename}')" class="btn-action btn-secondary" title="Preview XML header and structure">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 Preview
               </button>
-              <a href="${ghPath}" target="_blank" rel="noopener" class="btn-action btn-outline" title="View on GitHub">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                Source
+              <a href="${docPath}" target="_blank" class="btn-action btn-outline" title="Open raw XML in browser">
+                XML
               </a>
             </div>
           </div>
@@ -1815,6 +1853,7 @@
     const modalDocBadges = document.getElementById('modalDocBadges');
     const modalXmlContent = document.getElementById('modalXmlContent');
     const modalFilename = document.getElementById('modalFilename');
+    const modalReadBtn = document.getElementById('modalReadBtn');
     const modalRawBtn = document.getElementById('modalRawBtn');
     const modalDownloadBtn = document.getElementById('modalDownloadBtn');
 
@@ -1829,6 +1868,7 @@
         <span class="badge ${getLanguageBadgeClass(doc.language)}">${doc.language}</span>
         <span class="badge badge-neutral">${doc.mss_count} Witnesses</span>
       `;
+      modalReadBtn.href = 'reader.html?doc=' + doc.filename;
       modalRawBtn.href = 'static/docs/' + doc.filename;
       modalDownloadBtn.href = 'static/docs/' + doc.filename;
       modalDownloadBtn.setAttribute('download', doc.filename);
@@ -1846,7 +1886,7 @@
           modalXmlContent.textContent = lines + (text.split('\n').length > 60 ? '\n\n<!-- ... [Remaining document content truncated for preview] ... -->' : '');
         })
         .catch(err => {
-          modalXmlContent.textContent = 'Preview unavailable via file protocol or network error. You can click "Open Full XML" or "Download XML" below to view the file.';
+          modalXmlContent.textContent = 'Preview unavailable via file protocol or network error. You can click "Read in Reader" or "Open Full XML" below.';
         });
     }
 

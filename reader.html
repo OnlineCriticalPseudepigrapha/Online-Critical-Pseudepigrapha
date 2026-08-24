@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Critical Edition Reader — Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Parallel multi-pane digital critical edition reader with interactive apparatus for the Online Critical Pseudepigrapha." />
+  <link rel="icon" type="image/png" href="static/favicon.png" />
+  
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500;600&family=Gentium+Plus:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Reader Stylesheet -->
+  <link rel="stylesheet" href="static/css/reader.css" />
+  
+  <script>
+    // Theme Initializer
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="reader-header">
+    <div style="display:flex; align-items:center; gap:16px;">
+      <a href="index.html" class="reader-brand" title="Return to OCP Home & Catalog">
+        <span class="brand-badge">OCP</span>
+      </a>
+
+      <!-- Document Switcher -->
+      <div class="doc-selector-wrapper">
+        <select id="docSelect" class="doc-select" aria-label="Select Pseudepigrapha Document"></select>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+    </div>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <button id="addPaneBtn" class="btn-header btn-primary-header" title="Open a new parallel comparison column">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        Add Parallel Column
+      </button>
+
+      <button id="infoDrawerBtn" class="btn-header" title="Document Introduction, Provenance & Witnesses">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        About Work
+      </button>
+
+      <!-- Font Zoom -->
+      <div style="display:flex; gap:2px;">
+        <button id="zoomOutBtn" class="icon-btn" title="Decrease Text Size" aria-label="Decrease Font Size">A-</button>
+        <button id="zoomInBtn" class="icon-btn" title="Increase Text Size" aria-label="Increase Font Size">A+</button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button id="themeToggle" class="icon-btn" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+
+      <a href="index.html" class="btn-header" title="Return to Catalog">Catalog &rarr;</a>
+    </div>
+  </header>
+
+  <!-- Global Synchronized Navigation Bar -->
+  <nav class="reader-navbar">
+    <div class="nav-range-group">
+      <span class="nav-label">From:</span>
+      <select id="fromRefSelect" class="ref-select" aria-label="From reference"></select>
+      <span class="nav-label">To:</span>
+      <select id="toRefSelect" class="ref-select" aria-label="To reference"></select>
+    </div>
+
+    <div class="active-range-badge" id="activeRangeBadge">
+      Loading passage...
+    </div>
+
+    <div class="nav-step-group">
+      <button id="prevBtn" class="btn-nav-step" title="Previous section">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Previous
+      </button>
+      <button id="nextBtn" class="btn-nav-step" title="Next section">
+        Next
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Multi-Pane Parallel Workspace -->
+  <main class="reader-workspace" id="panesContainer">
+    <!-- Parallel columns injected dynamically by reader.js -->
+  </main>
+
+  <!-- Manuscript Info Popover Tooltip -->
+  <div id="msPopover" class="ms-popover" role="tooltip"></div>
+
+  <!-- Slide-out Document Info Drawer -->
+  <div id="infoDrawerBackdrop" class="info-drawer-backdrop" role="dialog" aria-modal="true" aria-labelledby="drawerDocTitle">
+    <div class="info-drawer">
+      <div class="drawer-header">
+        <h3 id="drawerDocTitle" style="font-family:var(--font-title); font-size:1.15rem;">About Document</h3>
+        <button id="closeDrawerBtn" class="pane-close-btn" aria-label="Close drawer">&times;</button>
+      </div>
+      <div id="drawerDocBody" class="drawer-body">
+        <!-- Document details populated by reader.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- OCP Parser and Reader Scripts -->
+  <script src="static/js/ocp-tei-parser.js"></script>
+  <script src="static/js/reader.js"></script>
+</body>
+</html>
