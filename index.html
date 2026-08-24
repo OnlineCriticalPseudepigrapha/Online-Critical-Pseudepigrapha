@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Critical Pseudepigrapha (OCP)</title>
+  <meta name="description" content="Electronic editions of critical texts of the Old Testament Pseudepigrapha and related literature with manuscript variants." />
+  <link rel="icon" type="image/png" href="static/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --bg-card-hover: #faf8f5;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --border-focus: #c59b27;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --accent-gold-light: #fdf8eb;
+      --accent-navy: #0f2027;
+      --accent-blue: #205493;
+      --accent-blue-light: #eef4fc;
+      --badge-greek: #0d6efd;
+      --badge-greek-bg: #e8f0fe;
+      --badge-syriac: #6f42c1;
+      --badge-syriac-bg: #f3ebff;
+      --badge-latin: #d97706;
+      --badge-latin-bg: #fef3c7;
+      --badge-ethiopic: #059669;
+      --badge-ethiopic-bg: #ecfdf5;
+      --badge-aramaic: #dc2626;
+      --badge-aramaic-bg: #fee2e2;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --bg-card-hover: #222e42;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --border-focus: #e5b945;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+      --accent-gold-light: #2c2514;
+      --accent-navy: #090d13;
+      --accent-blue: #60a5fa;
+      --accent-blue-light: #172554;
+      --badge-greek-bg: #1e293b;
+      --badge-syriac-bg: #2e1065;
+      --badge-latin-bg: #451a03;
+      --badge-ethiopic-bg: #064e3b;
+      --badge-aramaic-bg: #450a0a;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: var(--accent-gold-dark);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    a:hover {
+      color: var(--accent-gold);
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Banner */
+    .status-banner {
+      background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);
+      color: #ffffff;
+      padding: 14px 0;
+      border-bottom: 2px solid var(--accent-gold);
+      font-size: 0.92rem;
+    }
+    .status-banner-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .status-banner-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(197, 155, 39, 0.25);
+      border: 1px solid var(--accent-gold);
+      color: #ffd978;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+    }
+    .status-banner-text {
+      flex: 1;
+      color: #e2e8f0;
+    }
+    .status-banner-text strong {
+      color: #ffffff;
+    }
+    .status-banner-link {
+      color: #ffd978 !important;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    .status-banner-link:hover {
+      color: #ffffff !important;
+    }
+
+    /* Header */
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+      transition: background-color 0.25s ease;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1b263b, #0d1b2a);
+      border: 1px solid var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      font-family: var(--font-title);
+      font-weight: 800;
+      font-size: 1.15rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .brand-text h1 {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+    }
+    .brand-text span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+    }
+    .nav-link:hover {
+      color: var(--accent-gold);
+      background: var(--bg-secondary);
+      text-decoration: none;
+    }
+    .nav-btn-gh {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+    .nav-btn-gh:hover {
+      background: var(--accent-gold);
+      color: #ffffff;
+      border-color: var(--accent-gold);
+      text-decoration: none;
+    }
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .theme-toggle:hover {
+      color: var(--text-primary);
+      border-color: var(--text-muted);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 48px 0 36px;
+      background: radial-gradient(circle at top right, var(--accent-gold-light) 0%, transparent 60%),
+                  linear-gradient(180deg, var(--bg-card) 0%, var(--bg-primary) 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .hero-content {
+      max-width: 860px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-gold-light);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold-dark);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    [data-theme="dark"] .hero-badge {
+      color: var(--accent-gold);
+    }
+    .hero h2 {
+      font-family: var(--font-title);
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+    .hero p {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .stats-bar {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-num {
+      font-family: var(--font-title);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent-gold-dark);
+      line-height: 1;
+    }
+    [data-theme="dark"] .stat-num {
+      color: var(--accent-gold);
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Catalog Section */
+    .catalog-section {
+      padding: 40px 0 60px;
+      flex: 1;
+    }
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .section-title h3 {
+      font-family: var(--font-title);
+      font-size: 1.6rem;
+      color: var(--text-primary);
+      letter-spacing: 0.03em;
+    }
+    .section-title p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Controls Bar */
+    .controls-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .controls-row-top {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+    .search-box svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 14px 10px 42px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      outline: none;
+      transition: all 0.15s ease;
+    }
+    .search-input:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(197, 155, 39, 0.15);
+      background: var(--bg-card);
+    }
+    .select-wrapper {
+      position: relative;
+    }
+    .custom-select {
+      appearance: none;
+      padding: 10px 36px 10px 14px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      font-family: var(--font-sans);
+      cursor: pointer;
+      outline: none;
+      transition: all 0.15s ease;
+    }
+    .custom-select:focus {
+      border-color: var(--border-focus);
+    }
+    .select-wrapper svg {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: var(--text-muted);
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+    .pill-btn {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pill-btn:hover {
+      background: var(--border-color);
+      color: var(--text-primary);
+    }
+    .pill-btn.active {
+      background: var(--accent-gold);
+      color: #ffffff;
+      border-color: var(--accent-gold);
+      box-shadow: 0 2px 4px rgba(197, 155, 39, 0.25);
+    }
+    .pill-count {
+      font-size: 0.72rem;
+      background: rgba(0,0,0,0.1);
+      padding: 1px 6px;
+      border-radius: 999px;
+    }
+    .pill-btn.active .pill-count {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .results-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding-top: 8px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Document Grid */
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+    .doc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .doc-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-focus);
+      background: var(--bg-card-hover);
+    }
+    .doc-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .doc-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+    }
+    .badge-greek { background: var(--badge-greek-bg); color: var(--badge-greek); border: 1px solid rgba(13,110,253,0.3); }
+    .badge-syriac { background: var(--badge-syriac-bg); color: var(--badge-syriac); border: 1px solid rgba(111,66,193,0.3); }
+    .badge-latin { background: var(--badge-latin-bg); color: var(--badge-latin); border: 1px solid rgba(217,119,6,0.3); }
+    .badge-ethiopic { background: var(--badge-ethiopic-bg); color: var(--badge-ethiopic); border: 1px solid rgba(5,150,105,0.3); }
+    .badge-aramaic { background: var(--badge-aramaic-bg); color: var(--badge-aramaic); border: 1px solid rgba(220,38,38,0.3); }
+    .badge-neutral { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border-color); }
+
+    .doc-title {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+    }
+    .doc-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+    }
+    .doc-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .doc-meta-row strong {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .doc-filename {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      background: var(--bg-secondary);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+
+    .doc-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+    .btn-action {
+      flex: 1;
+      min-width: 90px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #ffffff !important;
+    }
+    .btn-primary:hover {
+      background: var(--accent-gold-dark);
+      box-shadow: 0 2px 6px rgba(197, 155, 39, 0.3);
+    }
+    .btn-secondary {
+      background: var(--bg-secondary);
+      color: var(--text-primary) !important;
+      border-color: var(--border-color);
+    }
+    .btn-secondary:hover {
+      background: var(--border-color);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary) !important;
+      border-color: var(--border-color);
+    }
+    .btn-outline:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary) !important;
+    }
+
+    /* Modal / Drawer */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.open {
+      display: flex;
+    }
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 900px;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      animation: modalSlide 0.2s ease-out;
+    }
+    @keyframes modalSlide {
+      from { transform: translateY(12px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-secondary);
+    }
+    .modal-title h4 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--text-primary);
+    }
+    .modal-close {
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      line-height: 1;
+      padding: 4px;
+    }
+    .modal-close:hover {
+      color: var(--text-primary);
+    }
+    .modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .xml-preview-box {
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
+      line-height: 1.5;
+      overflow-x: auto;
+      max-height: 400px;
+      border: 1px solid #1e293b;
+    }
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-secondary);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Content Sections (About, Team, Citation) */
+    .content-section {
+      padding: 50px 0;
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-card);
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    @media (max-width: 840px) {
+      .content-grid { grid-template-columns: 1fr; }
+      .docs-grid { grid-template-columns: 1fr; }
+      .header-inner { height: auto; padding: 14px 0; flex-direction: column; gap: 14px; }
+      nav { flex-wrap: wrap; justify-content: center; }
+    }
+    .content-block h4 {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .content-block p {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+    .team-list {
+      list-style: none;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-secondary);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent-gold);
+    }
+    .member-name {
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+    .member-role {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .citation-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      position: relative;
+    }
+    .citation-code {
+      font-family: var(--font-serif);
+      font-style: italic;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--accent-navy);
+      color: #94a3b8;
+      padding: 40px 0;
+      margin-top: auto;
+      border-top: 3px solid var(--accent-gold);
+      font-size: 0.88rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-brand h5 {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 18px;
+    }
+    .footer-links a {
+      color: #cbd5e1;
+    }
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Empty state */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 2px dashed var(--border-color);
+    }
+    .empty-state h4 {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Transition Status Notice Banner -->
+  <aside class="status-banner" aria-label="Infrastructure status">
+    <div class="container status-banner-content">
+      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <span class="status-banner-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          Status Notice (Aug 2026)
+        </span>
+        <div class="status-banner-text">
+          <strong>Project Transition:</strong> The legacy dynamic server is retired as we transition to a modern DTS-compliant API via Knowledge Commons Works. All TEI XML critical editions remain fully preserved and freely accessible below.
+        </div>
+      </div>
+      <a href="#transition" class="status-banner-link">
+        Learn more about DTS transition &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <div class="brand-logo">OCP</div>
+        <div class="brand-text">
+          <h1>Online Critical Pseudepigrapha</h1>
+          <span>Electronic Editions of Pseudepigrapha &amp; Related Texts</span>
+        </div>
+      </a>
+      <nav>
+        <a href="#catalog" class="nav-link">Texts Catalog</a>
+        <a href="#about" class="nav-link">About OCP</a>
+        <a href="#team" class="nav-link">Editorial Board</a>
+        <a href="#citation" class="nav-link">Citation</a>
+        <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener" class="nav-btn-gh">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Dark / Light mode" aria-label="Toggle Dark or Light Theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">Scholarly Digital Edition Repository</div>
+      <h2>Critical Electronic Editions of the Pseudepigrapha</h2>
+      <p>
+        The mandate of the <strong>Online Critical Pseudepigrapha (OCP)</strong> is to develop and publish electronic editions of the best critical texts of the Jewish and Christian Pseudepigrapha and related Hellenistic Jewish literature, complete with full manuscript variants and textual witnesses.
+      </p>
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-num" id="statTotalDocs">39</span>
+          <span class="stat-label">Critical Editions</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Ancient Languages</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Open Access TEI XML</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">DTS</span>
+          <span class="stat-label">API Compliant Ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <main class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title">
+          <h3>Critical Texts Catalog</h3>
+          <p>Search, filter, view, or download the full TEI-compliant XML source files.</p>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-card">
+        <div class="controls-row-top">
+          <div class="search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search by title, filename, biblical figure, or genre (e.g. Enoch, Baruch, Greek, Jubilees)..." aria-label="Search documents" />
+          </div>
+
+          <div class="select-wrapper">
+            <select id="genreSelect" class="custom-select" aria-label="Filter by Genre">
+              <option value="all">All Genres</option>
+              <option value="Apocalypses">Apocalypses</option>
+              <option value="Testaments">Testaments</option>
+              <option value="Hellenistic Jewish Authors">Hellenistic Jewish Authors</option>
+              <option value="Rewritten Bible">Rewritten Bible</option>
+              <option value="Psalms / Poetry">Psalms / Poetry</option>
+              <option value="Narratives">Narratives / Romances</option>
+            </select>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+
+          <div class="select-wrapper">
+            <select id="sortSelect" class="custom-select" aria-label="Sort documents">
+              <option value="title-asc">Sort: Title (A &rarr; Z)</option>
+              <option value="title-desc">Sort: Title (Z &rarr; A)</option>
+              <option value="lang">Sort: Language</option>
+              <option value="size-desc">Sort: File Size (Largest)</option>
+              <option value="mss-desc">Sort: Most Witnesses</option>
+            </select>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </div>
+
+        <div class="filter-pills">
+          <span class="filter-label">Language:</span>
+          <button class="pill-btn active" data-lang="all">All <span class="pill-count" id="countAll">39</span></button>
+          <button class="pill-btn" data-lang="Greek">Greek <span class="pill-count" id="countGreek">25</span></button>
+          <button class="pill-btn" data-lang="Syriac">Syriac <span class="pill-count" id="countSyriac">4</span></button>
+          <button class="pill-btn" data-lang="Latin">Latin <span class="pill-count" id="countLatin">5</span></button>
+          <button class="pill-btn" data-lang="Ethiopic">Ethiopic <span class="pill-count" id="countEthiopic">2</span></button>
+          <button class="pill-btn" data-lang="Aramaic">Aramaic <span class="pill-count" id="countAramaic">3</span></button>
+        </div>
+
+        <div class="results-meta">
+          <span id="resultsCounter">Showing 39 texts</span>
+          <span style="font-size:0.8rem;">Click <strong>View XML</strong> to open raw text, or <strong>Quick Preview</strong> for document details.</span>
+        </div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="docs-grid" id="docsGrid">
+        <!-- Document cards dynamically injected by JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Details & Transition Section -->
+  <section class="content-section" id="transition">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block" id="about">
+          <h4>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            About the Online Critical Pseudepigrapha
+          </h4>
+          <p>
+            The <strong>Online Critical Pseudepigrapha</strong> was established to meet the scholarly need for versatile, electronically formatted critical editions of extra-biblical early Jewish and Christian literature. Unlike print editions, OCP was constructed from the ground up as a multi-witness textual repository capable of representing complex variant apparatus, translation versions, and linguistic annotations.
+          </p>
+          <p>
+            Each edition is encoded in structured TEI-compatible XML, recording individual textual units, readings, and assigned manuscript sigla.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h4>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            The DTS Transition &amp; Future Platform
+          </h4>
+          <p>
+            The original Web2Py-based server platform is now decommissioned. The editorial team is working towards publishing the OCP repository via a modern <strong>Distributed Text Services (DTS)</strong> compliant API integrated with <strong>Knowledge Commons Works</strong> (based on InvenioRDM).
+          </p>
+          <p>
+            This upcoming platform will provide automated TEI ingestion, standardized DTS navigation endpoints (Collections, Navigation, and Documents APIs), and an embedded reader component for seamless integration across digital humanities tools.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Team & Review Board -->
+  <section class="content-section" id="team" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h4>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            General Editors
+          </h4>
+          <div class="team-list">
+            <div class="team-member">
+              <span class="member-name">Ian W. Scott, PhD</span>
+              <span class="member-role">Lead Repository Architect, Knowledge Commons Works / Michigan State University (Co-founder)</span>
+            </div>
+            <div class="team-member">
+              <span class="member-name">Ken M. Penner, PhD</span>
+              <span class="member-role">Professor of Religious Studies, St. Francis Xavier University (Co-founder &amp; General Editor)</span>
+            </div>
+            <div class="team-member">
+              <span class="member-name">David M. Miller, PhD</span>
+              <span class="member-role">Briercrest College and Seminary (Co-founder, 2006–2007)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <h4>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Scholarly Review Board
+          </h4>
+          <div class="team-list">
+            <div class="team-member">
+              <span class="member-name">Judith H. Newman, PhD</span>
+              <span class="member-role">Emmanuel College / University of Toronto</span>
+            </div>
+            <div class="team-member">
+              <span class="member-name">James H. Charlesworth, PhD</span>
+              <span class="member-role">Princeton Theological Seminary</span>
+            </div>
+            <div class="team-member">
+              <span class="member-name">Robert A. Kraft, PhD &dagger;</span>
+              <span class="member-role">University of Pennsylvania</span>
+            </div>
+            <div class="team-member">
+              <span class="member-name">Craig A. Evans, PhD</span>
+              <span class="member-role">Houston Christian University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citation & Licensing Section -->
+  <section class="content-section" id="citation">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <h4>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            How to Cite OCP Editions
+          </h4>
+          <div class="citation-box">
+            <span class="citation-code">
+              Ian W. Scott and Ken M. Penner, eds. <em>The Online Critical Pseudepigrapha</em>. Atlanta: Society of Biblical Literature / Online: pseudepigrapha.org.
+            </span>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0;">
+              When citing specific texts, include the individual editor named in the document metadata, the text title, and reference to the OCP edition.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <h4>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            Open Access &amp; Licensing
+          </h4>
+          <p>
+            The textual files of the Online Critical Pseudepigrapha are made available as free, open-source resources under the <strong>GNU General Public License (GPL v3.0)</strong> and Creative Commons licenses for scholarly research, computational philology, and educational use.
+          </p>
+          <p>
+            To contribute corrections, propose new editions, or report errata, please visit our <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub Repository</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Preview Modal -->
+  <div class="modal-backdrop" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalDocTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">
+          <h4 id="modalDocTitle">Document Preview</h4>
+        </div>
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; align-items:center;">
+          <div id="modalDocMeta" style="font-size:0.9rem; color:var(--text-secondary);"></div>
+          <div id="modalDocBadges" class="doc-badges"></div>
+        </div>
+        <p style="font-size:0.9rem; color:var(--text-muted);">TEI XML Source Snippet (First 60 lines):</p>
+        <pre class="xml-preview-box"><code id="modalXmlContent">Loading document XML source...</code></pre>
+      </div>
+      <div class="modal-footer">
+        <span id="modalFilename" class="doc-filename"></span>
+        <div style="display:flex; gap:8px;">
+          <a id="modalRawBtn" href="#" target="_blank" class="btn-action btn-secondary">Open Full XML</a>
+          <a id="modalDownloadBtn" href="#" download class="btn-action btn-primary">Download XML</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h5>Online Critical Pseudepigrapha</h5>
+        <p>&copy; 2006&ndash;2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub Repo</a>
+        <a href="https://works.hcommons.org" target="_blank" rel="noopener">Knowledge Commons</a>
+        <a href="https://www.stfx.ca" target="_blank" rel="noopener">St. Francis Xavier University</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Embedded Catalog Data & Script -->
+  <script>
+    const DOCS_DATA = [
+  {
+    "filename": "1En.xml",
+    "title": "1 Enoch",
+    "language": "Ethiopic",
+    "genre": "Apocalypses",
+    "figure": "Enoch",
+    "mss_count": 26,
+    "mss_langs": [
+      "Aramaic",
+      "Ethiopic",
+      "Greek",
+      "Latin"
+    ],
+    "size_kb": 644.5
+  },
+  {
+    "filename": "2Bar-Syr.xml",
+    "title": "2 Baruch (Syriac Text)",
+    "language": "Syriac",
+    "genre": "Apocalypses",
+    "figure": "Baruch",
+    "mss_count": 23,
+    "mss_langs": [
+      "Syriac"
+    ],
+    "size_kb": 427.1
+  },
+  {
+    "filename": "2Bar.xml",
+    "title": "2 Baruch (Syriac Apocalypse of Baruch)",
+    "language": "Syriac",
+    "genre": "Apocalypses",
+    "figure": "Baruch",
+    "mss_count": 25,
+    "mss_langs": [
+      "Greek",
+      "Latin",
+      "Syriac"
+    ],
+    "size_kb": 436.4
+  },
+  {
+    "filename": "3Bar.xml",
+    "title": "3 Baruch (Greek Apocalypse of Baruch)",
+    "language": "Greek",
+    "genre": "Apocalypses",
+    "figure": "Baruch",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 59.9
+  },
+  {
+    "filename": "3Macc.xml",
+    "title": "3 Maccabees",
+    "language": "Greek",
+    "genre": "Historical / Wisdom",
+    "figure": "Maccabees",
+    "mss_count": 0,
+    "mss_langs": [],
+    "size_kb": 0.0
+  },
+  {
+    "filename": "4Bar.xml",
+    "title": "4 Baruch (Paraleipomena Ieremiou)",
+    "language": "Greek",
+    "genre": "Apocalypses",
+    "figure": "Baruch / Jeremiah",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 82.1
+  },
+  {
+    "filename": "4Ezra.xml",
+    "title": "4 Ezra (Syriac Text)",
+    "language": "Syriac",
+    "genre": "Apocalypses",
+    "figure": "Ezra",
+    "mss_count": 10,
+    "mss_langs": [
+      "Latin",
+      "Syriac"
+    ],
+    "size_kb": 391.5
+  },
+  {
+    "filename": "4Macc.xml",
+    "title": "4 Maccabees",
+    "language": "Greek",
+    "genre": "Wisdom / Philosophical",
+    "figure": "Maccabees",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 179.5
+  },
+  {
+    "filename": "4Q548.xml",
+    "title": "4Q548 (Dead Sea Scrolls fragment)",
+    "language": "Aramaic",
+    "genre": "Apocalypses / Qumran",
+    "figure": "Amram / Visions",
+    "mss_count": 9,
+    "mss_langs": [
+      "Aramaic",
+      "English"
+    ],
+    "size_kb": 25.0
+  },
+  {
+    "filename": "AdamEve.xml",
+    "title": "Life of Adam and Eve (Apocalypse of Moses)",
+    "language": "Greek",
+    "genre": "Testaments / Narratives",
+    "figure": "Adam & Eve",
+    "mss_count": 3,
+    "mss_langs": [
+      "Greek",
+      "Latin"
+    ],
+    "size_kb": 134.8
+  },
+  {
+    "filename": "Amram.xml",
+    "title": "Visions of Amram (4Q543-547)",
+    "language": "Aramaic",
+    "genre": "Testaments / Visions",
+    "figure": "Amram",
+    "mss_count": 1,
+    "mss_langs": [
+      "Aramaic"
+    ],
+    "size_kb": 17.5
+  },
+  {
+    "filename": "ApocrEzek.xml",
+    "title": "Apocryphon of Ezekiel",
+    "language": "Greek",
+    "genre": "Prophetic / Fragments",
+    "figure": "Ezekiel",
+    "mss_count": 13,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 45.6
+  },
+  {
+    "filename": "ArisEx.xml",
+    "title": "Aristeas the Exegete",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors",
+    "figure": "Aristeas",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 4.2
+  },
+  {
+    "filename": "Aristob.xml",
+    "title": "Aristobulus",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors",
+    "figure": "Aristobulus",
+    "mss_count": 17,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 85.9
+  },
+  {
+    "filename": "Artap.xml",
+    "title": "Artapanus",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors",
+    "figure": "Artapanus",
+    "mss_count": 4,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 36.4
+  },
+  {
+    "filename": "ClMal.xml",
+    "title": "Cleodemus Malchus",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors",
+    "figure": "Cleodemus Malchus",
+    "mss_count": 2,
+    "mss_langs": [],
+    "size_kb": 8.3
+  },
+  {
+    "filename": "ElMod.xml",
+    "title": "Eldad and Modad",
+    "language": "Greek",
+    "genre": "Prophetic / Fragments",
+    "figure": "Eldad and Modad",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 3.2
+  },
+  {
+    "filename": "Esdl.xml",
+    "title": "Vision of Ezra (Visio Beati Esdrae)",
+    "language": "Latin",
+    "genre": "Apocalypses",
+    "figure": "Ezra",
+    "mss_count": 1,
+    "mss_langs": [
+      "Latin"
+    ],
+    "size_kb": 34.1
+  },
+  {
+    "filename": "Esdr.xml",
+    "title": "4 Ezra (Latin Text)",
+    "language": "Latin",
+    "genre": "Apocalypses",
+    "figure": "Ezra",
+    "mss_count": 2,
+    "mss_langs": [
+      "Latin"
+    ],
+    "size_kb": 165.4
+  },
+  {
+    "filename": "Eup.xml",
+    "title": "Eupolemus",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors",
+    "figure": "Eupolemus",
+    "mss_count": 7,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 50.4
+  },
+  {
+    "filename": "EzekTrag.xml",
+    "title": "Ezekiel the Tragedian (Exagoge)",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors / Drama",
+    "figure": "Moses / Ezekiel",
+    "mss_count": 17,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 128.5
+  },
+  {
+    "filename": "HistRech.xml",
+    "title": "History of the Rechabites",
+    "language": "Greek",
+    "genre": "Narratives / Legends",
+    "figure": "Rechabites / Zosimus",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 73.8
+  },
+  {
+    "filename": "JosAsen.xml",
+    "title": "Joseph and Aseneth",
+    "language": "Greek",
+    "genre": "Narratives / Romances",
+    "figure": "Joseph & Aseneth",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 134.5
+  },
+  {
+    "filename": "Jub.xml",
+    "title": "Jubilees (Greek & Latin Fragments)",
+    "language": "Greek",
+    "genre": "Rewritten Bible",
+    "figure": "Moses / Patriarchs",
+    "mss_count": 2,
+    "mss_langs": [
+      "Greek",
+      "Latin"
+    ],
+    "size_kb": 192.8
+  },
+  {
+    "filename": "Jubi.xml",
+    "title": "Jubilees (Latin Version)",
+    "language": "Latin",
+    "genre": "Rewritten Bible",
+    "figure": "Moses / Patriarchs",
+    "mss_count": 1,
+    "mss_langs": [
+      "Latin"
+    ],
+    "size_kb": 144.6
+  },
+  {
+    "filename": "LetAris.xml",
+    "title": "Letter of Aristeas to Philocrates",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors / Epistles",
+    "figure": "Aristeas / Septuagint",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 223.0
+  },
+  {
+    "filename": "LivPro.xml",
+    "title": "Lives of the Prophets",
+    "language": "Greek",
+    "genre": "Biographical / Prophetic",
+    "figure": "Prophets",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 63.1
+  },
+  {
+    "filename": "Mois.xml",
+    "title": "Assumption of Moses (Testament of Moses)",
+    "language": "Latin",
+    "genre": "Testaments / Apocalypses",
+    "figure": "Moses",
+    "mss_count": 1,
+    "mss_langs": [
+      "Latin"
+    ],
+    "size_kb": 37.8
+  },
+  {
+    "filename": "PhEPoet.xml",
+    "title": "Philo the Epic Poet",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors / Poetry",
+    "figure": "Philo Epic Poet",
+    "mss_count": 6,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 14.5
+  },
+  {
+    "filename": "Ps-Eup.xml",
+    "title": "Pseudo-Eupolemus",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors",
+    "figure": "Pseudo-Eupolemus",
+    "mss_count": 2,
+    "mss_langs": [],
+    "size_kb": 11.9
+  },
+  {
+    "filename": "PssSol.xml",
+    "title": "Psalms of Solomon",
+    "language": "Greek",
+    "genre": "Psalms / Poetry",
+    "figure": "Solomon / Messianic",
+    "mss_count": 13,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 552.5
+  },
+  {
+    "filename": "SibOr.xml",
+    "title": "Sibylline Oracles",
+    "language": "Greek",
+    "genre": "Oracles / Poetry",
+    "figure": "Sibyl",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 885.1
+  },
+  {
+    "filename": "TAbA.xml",
+    "title": "Testament of Abraham (Recension A)",
+    "language": "Greek",
+    "genre": "Testaments",
+    "figure": "Abraham",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 127.4
+  },
+  {
+    "filename": "TAbB.xml",
+    "title": "Testament of Abraham (Recension B)",
+    "language": "Greek",
+    "genre": "Testaments",
+    "figure": "Abraham",
+    "mss_count": 1,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 67.8
+  },
+  {
+    "filename": "TAbr.xml",
+    "title": "Testament of Abraham (Combined)",
+    "language": "Greek",
+    "genre": "Testaments",
+    "figure": "Abraham",
+    "mss_count": 2,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 193.8
+  },
+  {
+    "filename": "TAdam.xml",
+    "title": "Testament of Adam",
+    "language": "Syriac",
+    "genre": "Testaments",
+    "figure": "Adam",
+    "mss_count": 3,
+    "mss_langs": [
+      "Greek",
+      "Syriac"
+    ],
+    "size_kb": 48.9
+  },
+  {
+    "filename": "TJob.xml",
+    "title": "Testament of Job",
+    "language": "Greek",
+    "genre": "Testaments",
+    "figure": "Job",
+    "mss_count": 12,
+    "mss_langs": [
+      "Coptic",
+      "Greek",
+      "Slavonic"
+    ],
+    "size_kb": 964.4
+  },
+  {
+    "filename": "TSol.xml",
+    "title": "Testament of Solomon",
+    "language": "Greek",
+    "genre": "Testaments / Magical",
+    "figure": "Solomon",
+    "mss_count": 4,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 150.0
+  },
+  {
+    "filename": "Theod.xml",
+    "title": "Theodotus",
+    "language": "Greek",
+    "genre": "Hellenistic Jewish Authors / Poetry",
+    "figure": "Theodotus / Shechem",
+    "mss_count": 8,
+    "mss_langs": [
+      "Greek"
+    ],
+    "size_kb": 24.3
+  }
+];
+
+    // Theme Management
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('ocp-theme') || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const target = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', target);
+      localStorage.setItem('ocp-theme', target);
+    });
+
+    // Language counts
+    const langCounts = { all: DOCS_DATA.length };
+    DOCS_DATA.forEach(d => {
+      const l = d.language || 'Other';
+      langCounts[l] = (langCounts[l] || 0) + 1;
+    });
+    document.getElementById('countAll').textContent = langCounts.all || 0;
+    if (document.getElementById('countGreek')) document.getElementById('countGreek').textContent = langCounts.Greek || 0;
+    if (document.getElementById('countSyriac')) document.getElementById('countSyriac').textContent = langCounts.Syriac || 0;
+    if (document.getElementById('countLatin')) document.getElementById('countLatin').textContent = langCounts.Latin || 0;
+    if (document.getElementById('countEthiopic')) document.getElementById('countEthiopic').textContent = langCounts.Ethiopic || 0;
+    if (document.getElementById('countAramaic')) document.getElementById('countAramaic').textContent = langCounts.Aramaic || 0;
+
+    // Search and Filtering State
+    let currentFilterLang = 'all';
+    let currentGenre = 'all';
+    let currentSearch = '';
+    let currentSort = 'title-asc';
+
+    const docsGrid = document.getElementById('docsGrid');
+    const searchInput = document.getElementById('searchInput');
+    const genreSelect = document.getElementById('genreSelect');
+    const sortSelect = document.getElementById('sortSelect');
+    const resultsCounter = document.getElementById('resultsCounter');
+    const pillButtons = document.querySelectorAll('.pill-btn');
+
+    function getLanguageBadgeClass(lang) {
+      const l = (lang || '').toLowerCase();
+      if (l.includes('greek')) return 'badge-greek';
+      if (l.includes('syriac')) return 'badge-syriac';
+      if (l.includes('latin')) return 'badge-latin';
+      if (l.includes('ethiopic')) return 'badge-ethiopic';
+      if (l.includes('aramaic')) return 'badge-aramaic';
+      return 'badge-neutral';
+    }
+
+    function renderDocs() {
+      let filtered = DOCS_DATA.filter(doc => {
+        // Language filter
+        if (currentFilterLang !== 'all') {
+          if (doc.language !== currentFilterLang && !doc.mss_langs.includes(currentFilterLang)) {
+            return false;
+          }
+        }
+        // Genre filter
+        if (currentGenre !== 'all') {
+          if (!doc.genre.toLowerCase().includes(currentGenre.toLowerCase())) {
+            return false;
+          }
+        }
+        // Search filter
+        if (currentSearch.trim()) {
+          const query = currentSearch.toLowerCase().trim();
+          const matchTitle = doc.title.toLowerCase().includes(query);
+          const matchFile = doc.filename.toLowerCase().includes(query);
+          const matchGenre = doc.genre.toLowerCase().includes(query);
+          const matchFigure = (doc.figure || '').toLowerCase().includes(query);
+          const matchLang = doc.language.toLowerCase().includes(query);
+          if (!matchTitle && !matchFile && !matchGenre && !matchFigure && !matchLang) {
+            return false;
+          }
+        }
+        return true;
+      });
+
+      // Sorting
+      filtered.sort((a, b) => {
+        if (currentSort === 'title-asc') return a.title.localeCompare(b.title);
+        if (currentSort === 'title-desc') return b.title.localeCompare(a.title);
+        if (currentSort === 'lang') return a.language.localeCompare(b.language);
+        if (currentSort === 'size-desc') return b.size_kb - a.size_kb;
+        if (currentSort === 'mss-desc') return b.mss_count - a.mss_count;
+        return 0;
+      });
+
+      resultsCounter.textContent = `Showing ${filtered.length} of ${DOCS_DATA.length} texts`;
+
+      if (filtered.length === 0) {
+        docsGrid.innerHTML = `
+          <div class="empty-state">
+            <h4>No texts found matching your filter</h4>
+            <p>Try adjusting your search terms or clearing the active filters.</p>
+          </div>
+        `;
+        return;
+      }
+
+      docsGrid.innerHTML = filtered.map(doc => {
+        const langBadgeClass = getLanguageBadgeClass(doc.language);
+        const mssText = doc.mss_count > 0 ? `${doc.mss_count} witness${doc.mss_count > 1 ? 'es' : ''}` : 'Single text / fragment';
+        const docPath = 'static/docs/' + doc.filename;
+        const ghPath = 'https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha/blob/master/static/docs/' + doc.filename;
+
+        return `
+          <div class="doc-card" data-file="${doc.filename}">
+            <div class="doc-header">
+              <div class="doc-badges">
+                <span class="badge ${langBadgeClass}">${doc.language}</span>
+                <span class="badge badge-neutral">${doc.genre}</span>
+                <span class="badge badge-neutral">${doc.size_kb} KB</span>
+              </div>
+              <h4 class="doc-title">${doc.title}</h4>
+              <div class="doc-meta">
+                <div class="doc-meta-row">
+                  <strong>Witnesses:</strong>
+                  <span>${mssText} ${doc.mss_langs.length > 1 ? '(' + doc.mss_langs.join(', ') + ')' : ''}</span>
+                </div>
+                ${doc.figure ? `<div class="doc-meta-row"><strong>Subject:</strong> <span>${doc.figure}</span></div>` : ''}
+                <div class="doc-meta-row">
+                  <strong>File:</strong>
+                  <span class="doc-filename">${doc.filename}</span>
+                </div>
+              </div>
+            </div>
+            <div class="doc-actions">
+              <a href="${docPath}" target="_blank" class="btn-action btn-primary" title="Open raw XML in browser">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                View XML
+              </a>
+              <button onclick="openPreview('${doc.filename}')" class="btn-action btn-secondary" title="Preview XML header and structure">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                Preview
+              </button>
+              <a href="${ghPath}" target="_blank" rel="noopener" class="btn-action btn-outline" title="View on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                Source
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', (e) => {
+      currentSearch = e.target.value;
+      renderDocs();
+    });
+
+    genreSelect.addEventListener('change', (e) => {
+      currentGenre = e.target.value;
+      renderDocs();
+    });
+
+    sortSelect.addEventListener('change', (e) => {
+      currentSort = e.target.value;
+      renderDocs();
+    });
+
+    pillButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pillButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilterLang = btn.getAttribute('data-lang');
+        renderDocs();
+      });
+    });
+
+    // Modal Handling
+    const previewModal = document.getElementById('previewModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalDocTitle = document.getElementById('modalDocTitle');
+    const modalDocMeta = document.getElementById('modalDocMeta');
+    const modalDocBadges = document.getElementById('modalDocBadges');
+    const modalXmlContent = document.getElementById('modalXmlContent');
+    const modalFilename = document.getElementById('modalFilename');
+    const modalRawBtn = document.getElementById('modalRawBtn');
+    const modalDownloadBtn = document.getElementById('modalDownloadBtn');
+
+    function openPreview(filename) {
+      const doc = DOCS_DATA.find(d => d.filename === filename);
+      if (!doc) return;
+
+      modalDocTitle.textContent = doc.title;
+      modalFilename.textContent = doc.filename;
+      modalDocMeta.textContent = `Language: ${doc.language} | Genre: ${doc.genre} | Size: ${doc.size_kb} KB`;
+      modalDocBadges.innerHTML = `
+        <span class="badge ${getLanguageBadgeClass(doc.language)}">${doc.language}</span>
+        <span class="badge badge-neutral">${doc.mss_count} Witnesses</span>
+      `;
+      modalRawBtn.href = 'static/docs/' + doc.filename;
+      modalDownloadBtn.href = 'static/docs/' + doc.filename;
+      modalDownloadBtn.setAttribute('download', doc.filename);
+      modalXmlContent.textContent = 'Fetching TEI XML source...';
+
+      previewModal.classList.add('open');
+
+      fetch('static/docs/' + doc.filename)
+        .then(res => {
+          if (!res.ok) throw new Error('Network response error');
+          return res.text();
+        })
+        .then(text => {
+          const lines = text.split('\n').slice(0, 60).join('\n');
+          modalXmlContent.textContent = lines + (text.split('\n').length > 60 ? '\n\n<!-- ... [Remaining document content truncated for preview] ... -->' : '');
+        })
+        .catch(err => {
+          modalXmlContent.textContent = 'Preview unavailable via file protocol or network error. You can click "Open Full XML" or "Download XML" below to view the file.';
+        });
+    }
+
+    modalCloseBtn.addEventListener('click', () => {
+      previewModal.classList.remove('open');
+    });
+
+    previewModal.addEventListener('click', (e) => {
+      if (e.target === previewModal) previewModal.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && previewModal.classList.contains('open')) {
+        previewModal.classList.remove('open');
+      }
+    });
+
+    // Initial render
+    renderDocs();
+  </script>
+</body>
+</html>
