@@ -580,7 +580,7 @@ class OcpReaderApp {
       <div class="drawer-section">
         <h4>How to Cite This Edition</h4>
         <div style="background:var(--bg-panel-secondary); padding:12px; border-radius:6px; font-family:var(--font-body); font-style:italic; font-size:0.95rem;">
-          Ian W. Scott and Ken M. Penner, eds. <em>The Online Critical Pseudepigrapha: ${this.book.title}</em>. Atlanta: Society of Biblical Literature / Online: pseudepigrapha.org.
+          ${this.citationHtml()}
         </div>
       </div>
       <div class="drawer-section">
@@ -600,6 +600,18 @@ class OcpReaderApp {
       this.introData = null;
       drawerBody.innerHTML = drawerHtml(); // leaves "not available" placeholder in place
     }
+  }
+
+  // Per-document "how to cite" text (with that document's own editors),
+  // exported from the docs.citation_format column. Falls back to the
+  // generic site-wide OCP citation for the handful of documents that have
+  // no citation_format on record, or before intros.json has loaded.
+  citationHtml() {
+    const entry = this.introData && this.activeDoc === this.introData._docKey
+      ? this.introData
+      : null;
+    if (entry && entry.citation) return entry.citation;
+    return `Ian W. Scott and Ken M. Penner, eds. <em>The Online Critical Pseudepigrapha: ${this.book.title}</em>. Atlanta: Society of Biblical Literature / Online: pseudepigrapha.org.`;
   }
 
   // Build the introduction / provenance / themes ... HTML from data exported

@@ -8,7 +8,8 @@ The reader is deployed as a fully static site (GitHub Pages), so it cannot
 query the web2py database directly. This script bridges the gap: run it after
 the database is updated, commit the resulting static/docs/intros.json, and
 the reader's "About Document" drawer will show the introduction and related
-body fields for each document.
+body fields for each document, plus that document's own per-work citation
+(with its actual editors) instead of the generic site-wide OCP citation.
 
 Usage (from the repository root):
 
@@ -61,6 +62,8 @@ def main(argv=None):
     columns = {row[1] for row in conn.execute('PRAGMA table_info(docs)')}
     export_fields = [(k, label) for k, label in DISPLAY_FIELDS if k in columns]
 
+    has_citation_col = 'citation_format' in columns
+
     docs = {}
     empty = 0
     for row in conn.execute('SELECT * FROM docs'):
@@ -72,6 +75,11 @@ def main(argv=None):
             'version': row['version'],
             'fields': OrderedDict_safe(export_fields, row),
         }
+        # citation_format holds the per-document "how to cite" text, with its
+        # own editors/proofreaders — distinct from the generic OCP-wide
+        # citation and from the DISPLAY_FIELDS body sections above.
+        if has_citation_col and row['citation_format'] and str(row['citation_format']).strip():
+            entry['citation'] = row['citation_format']
         if not any(entry['fields'].values()):
             empty += 1
         docs[f'{filename}.xml'] = entry
