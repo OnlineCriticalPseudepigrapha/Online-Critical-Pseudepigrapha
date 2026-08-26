@@ -1,0 +1,31 @@
+# GitHub Pages / Jekyll config.
+#
+# This repo is a web2py application (Python backend), not a Jekyll site.
+# GitHub Pages was walking the whole app tree, which contains symlinks
+# into uninitialized git submodules (plugins/*) and (previously) a few
+# symlinks hardcoded to the original developer's own machine path —
+# Jekyll's realpath check dies on the first broken one it finds.
+#
+# NOTE: static/ is intentionally NOT excluded — index.html fetches the
+# actual XML text data from static/docs/*.xml at runtime, plus css/
+# fonts/images live there too. Only the three still-broken symlinks
+# into uninitialized submodules are excluded individually below; the
+# favicon symlinks under static/ were repointed to real files in
+# static/images/ instead of being excluded.
+exclude:
+  - modules
+  - views
+  - controllers
+  - models
+  - static/plugin_ajaxselect
+  - static/plugin_listandedit
+  - static/plugin_widgets
+  - plugins
+  - test
+  - js-parser
+  - languages
+  - cron
+  - cache
+  - bin
+  - .ropeproject
+  - .settings
