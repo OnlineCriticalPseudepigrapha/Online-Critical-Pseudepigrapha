@@ -615,6 +615,45 @@ body {
   line-height: 1.6;
 }
 
+/* Introduction / body fields imported from the database export
+   (static/docs/intros.json). The stored content is arbitrary HTML, so give
+   common block elements sane spacing and colors inside the drawer. */
+.intro-body-content {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.intro-body-content p { margin: 0 0 10px; }
+.intro-body-content h1, .intro-body-content h2,
+.intro-body-content h3, .intro-body-content h4 {
+  font-family: var(--font-title);
+  color: var(--text-main);
+  margin: 14px 0 6px;
+}
+.intro-body-content ul, .intro-body-content ol {
+  margin: 0 0 10px;
+  padding-left: 22px;
+}
+.intro-body-content li { margin-bottom: 4px; }
+.intro-body-content table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.intro-body-content th, .intro-body-content td {
+  border: 1px solid var(--border-color);
+  padding: 5px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.intro-body-content blockquote {
+  margin: 0 0 10px;
+  padding-left: 12px;
+  border-left: 3px solid var(--border-color);
+}
+
 /* Manuscript Tooltip Popover */
 .ms-popover {
   position: absolute;

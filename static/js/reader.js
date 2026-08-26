@@ -44,6 +44,20 @@ const OCP_DOCUMENTS = [
   { filename: 'Theod.xml', title: 'Theodotus', lang: 'Greek' }
 ];
 
+// Display labels for the database body fields exported to
+// static/docs/intros.json (mirrors DISPLAY_FIELDS in controllers/docs.py)
+const INTRO_FIELD_TITLES = {
+  introduction: 'Introduction',
+  provenance: 'Provenance and Cultural Setting',
+  themes: 'Major Themes',
+  status: 'Current State of the OCP Text',
+  manuscripts: 'Manuscripts',
+  bibliography: 'Bibliography',
+  corrections: 'Corrections',
+  sigla: 'Sigla Used in the Text',
+  copyright: 'Copyright Information'
+};
+
 class OcpReaderApp {
   constructor() {
     this.activeDoc = 'TJob.xml';
@@ -514,11 +528,29 @@ class OcpReaderApp {
     this.infoDrawerBackdrop.classList.remove('open');
   }
 
-  populateInfoDrawer() {
+  // Fetch the document introductions exported from the SQLite db
+  // (scripts/export_intros.py -> static/docs/intros.json). Fetched at most
+  // once per page load; results are shared across documents.
+  async loadIntros() {
+    if (!this.introsPromise) {
+      this.introsPromise = fetch('static/docs/intros.json')
+        .then(res => res.ok ? res.json() : Promise.reject(new Error(`HTTP ${res.status}`)))
+        .catch(err => {
+          console.warn('Could not load document introductions:', err);
+          this.introsPromise = null; // allow retry on next drawer open
+          return null;
+        });
+    }
+    return this.introsPromise;
+  }
+
+  async populateInfoDrawer() {
     if (!this.book) return;
     const drawerTitle = document.getElementById('drawerDocTitle');
     const drawerBody = document.getElementById('drawerDocBody');
 
+    // Render everything except the intro immediately, then stream the
+    // introduction/body fields in when the JSON arrives.
     drawerTitle.textContent = this.book.title;
 
     let mssListHtml = '';
@@ -534,11 +566,13 @@ class OcpReaderApp {
       `;
     }
 
-    drawerBody.innerHTML = `
+    const drawerHtml = () => {
+      const introSections = this.introSectionsHtml();
+      return `${introSections}
       <div class="drawer-section">
         <h4>Document Information</h4>
         <p><strong>Title:</strong> ${this.book.title}</p>
-        <p><strong>Filename:</strong> <code>${this.book.filename}</code></p>
+        <p><strong>Filename:</strong> <code>${this.activeDoc}</code></p>
         <p><strong>Text Structure:</strong> ${this.book.textStructure}</p>
         <p><strong>Versions:</strong> ${this.book.versions.map(v => v.title + ' (' + v.language + ')').join(', ')}</p>
       </div>
@@ -552,8 +586,41 @@ class OcpReaderApp {
       <div class="drawer-section">
         <h4>TEI XML Source</h4>
         <a href="static/docs/${this.activeDoc}" target="_blank" class="btn-header btn-primary-header" style="display:inline-flex;">View Raw TEI XML</a>
-      </div>
-    `;
+      </div>`;
+    };
+
+    drawerBody.innerHTML = drawerHtml();
+
+    const intros = await this.loadIntros();
+    // Re-render only if the user hasn't switched documents while we waited.
+    if (intros && intros.documents[this.activeDoc]) {
+      this.introData = Object.assign({_docKey: this.activeDoc}, intros.documents[this.activeDoc]);
+      drawerBody.innerHTML = drawerHtml();
+    } else if (!intros) {
+      this.introData = null;
+      drawerBody.innerHTML = drawerHtml(); // leaves "not available" placeholder in place
+    }
+  }
+
+  // Build the introduction / provenance / themes ... HTML from data exported
+  // out of the database by scripts/export_intros.py.
+  introSectionsHtml() {
+    const entry = this.introData && this.activeDoc === this.introData._docKey
+      ? this.introData
+      : null;
+    if (!entry) {
+      return `
+      <div class="drawer-section">
+        <h4>Introduction</h4>
+        <p style="color:var(--text-muted); font-size:0.9rem;">Introduction text is not yet available for offline reading.</p>
+      </div>`;
+    }
+    const sections = Object.entries(entry.fields).map(([key, html]) => `
+      <div class="drawer-section intro-body-field" id="intro-${key}">
+        <h4>${INTRO_FIELD_TITLES[key] || key}</h4>
+        <div class="intro-body-content">${html}</div>
+      </div>`).join('');
+    return sections;
   }
 }
 
