@@ -399,7 +399,7 @@ class OcpReaderApp {
           u.isOmitted ? 'is-omitted' : ''
         ].filter(Boolean).join(' ');
 
-        const displayText = u.isOmitted ? '[omitted]' : u.readingText;
+        const displayText = u.isOmitted ? '\u2E06' : u.readingText;
         html += `<span class="${classes}" data-unit="${u.id}" data-ref="${u.ref}">${displayText}</span> `;
         if (u.linebreak) html += `<br/>`;
       });
@@ -453,7 +453,7 @@ class OcpReaderApp {
     appData.readings.forEach(r => {
       const mssChips = r.mss.map(m => `<span class="ms-chip" data-ms="${m}">${m}</span>`).join(' ');
       const isBaseOption = r.option === '0' || r.option === 0;
-      const readingText = r.isOmission ? '<span style="color:var(--text-muted); font-style:italic;">[omitted]</span>' : r.text;
+      const readingText = r.isOmission ? '<span style="color:var(--text-muted); font-style:italic;">\u2E06</span>' : r.text;
 
       tableHtml += `
         <tr>
