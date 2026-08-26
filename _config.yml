@@ -1,0 +1,23 @@
+# GitHub Pages / Jekyll config.
+#
+# This repo is a web2py application (Python backend), not a Jekyll site.
+# GitHub Pages was walking the whole app tree, which contains symlinks
+# into uninitialized git submodules (plugins/*) and a few symlinks
+# hardcoded to the original developer's own machine path — Jekyll's
+# realpath check dies on the first broken one it finds. Exclude the
+# app source so Pages just renders README.md / index.html.
+exclude:
+  - modules
+  - views
+  - controllers
+  - models
+  - static
+  - plugins
+  - test
+  - js-parser
+  - languages
+  - cron
+  - cache
+  - bin
+  - .ropeproject
+  - .settings
