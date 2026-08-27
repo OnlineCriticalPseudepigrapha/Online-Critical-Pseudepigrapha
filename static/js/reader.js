@@ -579,7 +579,7 @@ class OcpReaderApp {
       ${mssListHtml}
       <div class="drawer-section">
         <h4>How to Cite This Edition</h4>
-        <div style="background:var(--bg-panel-secondary); padding:12px; border-radius:6px; font-family:var(--font-body); font-style:italic; font-size:0.95rem;">
+        <div style="background:var(--bg-panel-secondary); padding:12px; border-radius:6px; font-family:var(--font-body); font-size:0.95rem;">
           ${this.citationHtml()}
         </div>
       </div>
