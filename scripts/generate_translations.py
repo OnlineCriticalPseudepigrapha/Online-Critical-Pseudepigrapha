@@ -219,6 +219,14 @@ def process_file(xml_path, batch_size=50, target_language=DEFAULT_LANGUAGE):
     for v_idx, v_elem in enumerate(existing_versions):
         v_title = v_elem.attrib.get('title') or root.attrib.get('title') or f'Version {v_idx+1}'
         v_lang = v_elem.attrib.get('language') or root.attrib.get('language') or 'Greek'
+
+        # Skip source versions that are themselves translations (English or the
+        # target language) — we translate FROM the original-language base text.
+        v_lang_l = v_lang.lower()
+        if lang_lower in v_lang_l or 'english' in v_lang_l:
+            print(f"  Version [{v_idx}] '{v_title}' ({v_lang}): skipping (already a translation).")
+            continue
+
         units_data = extract_units(v_elem)
         print(f"  Version [{v_idx}] '{v_title}' ({v_lang}): {len(units_data)} units to translate.")
 
