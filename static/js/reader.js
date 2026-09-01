@@ -212,7 +212,7 @@ class OcpReaderApp {
       this.panes = [];
       this.nextPaneId = 1;
 
-      // Add primary pane
+      // Add primary pane (critical edition / base version)
       this.panes.push({
         id: this.nextPaneId++,
         versionIdx: 0,
@@ -220,11 +220,13 @@ class OcpReaderApp {
         activeUnitId: null
       });
 
-      // If document has multiple language versions (e.g. TAbr, Jub, TAdam), automatically add second pane for comparison
+      // If document has an English translation or other parallel versions, automatically add second pane
       if (this.book.versions.length > 1) {
+        const englishIdx = this.book.versions.findIndex(v => (v.language || '').toLowerCase().includes('english'));
+        const secondaryIdx = (englishIdx !== -1 && englishIdx !== 0) ? englishIdx : 1;
         this.panes.push({
           id: this.nextPaneId++,
-          versionIdx: 1,
+          versionIdx: secondaryIdx,
           selectedMs: '__eclectic__',
           activeUnitId: null
         });
@@ -367,12 +369,13 @@ class OcpReaderApp {
 
   getScriptClass(language) {
     const l = (language || '').toLowerCase();
+    if (l.includes('english')) return 'script-english';
     if (l.includes('greek')) return 'script-greek';
     if (l.includes('syriac')) return 'script-syriac';
     if (l.includes('ethiopic')) return 'script-ethiopic';
     if (l.includes('latin')) return 'script-latin';
     if (l.includes('aramaic') || l.includes('hebrew')) return 'script-aramaic';
-    return 'script-greek';
+    return 'script-english';
   }
 
   renderPaneContent(pane, paneElem) {

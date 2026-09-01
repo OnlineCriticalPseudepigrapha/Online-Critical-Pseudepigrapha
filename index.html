@@ -36,6 +36,8 @@
       --badge-ethiopic-bg: #ecfdf5;
       --badge-aramaic: #dc2626;
       --badge-aramaic-bg: #fee2e2;
+      --badge-english: #0284c7;
+      --badge-english-bg: #e0f2fe;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
       --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
       --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
@@ -69,6 +71,7 @@
       --badge-latin-bg: #451a03;
       --badge-ethiopic-bg: #064e3b;
       --badge-aramaic-bg: #450a0a;
+      --badge-english-bg: #082f49;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
       --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
       --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
@@ -572,6 +575,7 @@
     .badge-latin { background: var(--badge-latin-bg); color: var(--badge-latin); border: 1px solid rgba(217,119,6,0.3); }
     .badge-ethiopic { background: var(--badge-ethiopic-bg); color: var(--badge-ethiopic); border: 1px solid rgba(5,150,105,0.3); }
     .badge-aramaic { background: var(--badge-aramaic-bg); color: var(--badge-aramaic); border: 1px solid rgba(220,38,38,0.3); }
+    .badge-english { background: var(--badge-english-bg); color: var(--badge-english); border: 1px solid rgba(2,132,199,0.3); }
     .badge-neutral { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border-color); }
 
     .doc-title {
@@ -1715,6 +1719,7 @@
 
     function getLanguageBadgeClass(lang) {
       const l = (lang || '').toLowerCase();
+      if (l.includes('english')) return 'badge-english';
       if (l.includes('greek')) return 'badge-greek';
       if (l.includes('syriac')) return 'badge-syriac';
       if (l.includes('latin')) return 'badge-latin';

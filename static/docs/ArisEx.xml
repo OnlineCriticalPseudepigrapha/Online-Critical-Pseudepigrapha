@@ -53,4 +53,55 @@
     </div>
   </text>
  </version>
+ <version title="English" author="OCP" fragment="1" language="English">
+  <divisions>
+   <division label="Book" delimiter="." />
+   <division label="Chapter" delimiter="." />
+   <division label="Line" />
+  </divisions>
+  <manuscripts>
+    <ms abbrev="OCP-Trans" language="English" show="yes">
+      <name>OCP Translation</name>
+      <bibliography>English translation based on the Greek text of Eusebius, Praep. Evang. 9.24.1-9.25.4 (Craig A. Evans edition).</bibliography>
+    </ms>
+  </manuscripts>
+  <text>
+    <div number="9">
+     <div number="24">
+      <div number="1">
+        <unit id="en_0" group="0" parallel="">
+          <reading option="0" mss="OCP-Trans" linebreak="following">. . . And hear what the same author also relates concerning Job:</reading>
+        </unit>
+      </div>
+     </div>
+     <div number="25">
+      <div number="heading">
+        <unit id="en_1" group="0" parallel="">
+          <reading option="0" mss="OCP-Trans" linebreak="following">25. Likewise of Aristeas Concerning Job</reading>
+        </unit>
+      </div>
+      <div number="1">
+        <unit id="en_2" group="0" parallel="">
+          <reading option="0" mss="OCP-Trans">“And Aristeas says in his book Concerning the Jews that Esau, having married Bassara, begot a son in Edom named Job; and that he lived in the land of Ausitis, on the borders of Idumea and Arabia.</reading>
+        </unit>
+      </div>
+      <div number="2">
+        <unit id="en_3" group="0" parallel="">
+          <reading option="0" mss="OCP-Trans">And that he was righteous and rich in possessions; for he acquired seven thousand sheep, three thousand camels, five hundred yoke of oxen, and five hundred she-asses feeding at pasture; and he had also extensive farming lands.</reading>
+        </unit>
+      </div>
+      <div number="3">
+        <unit id="en_4" group="0" parallel="">
+          <reading option="0" mss="OCP-Trans">And that this Job was formerly called Jobab. But when God tried him, he persevered, though he was encompassed with great misfortunes. For first his asses and oxen were carried off by robbers, then the sheep were burned up with fire that fell from heaven along with the shepherds; not long after, the camels were also driven off by robbers; then his children died when the house collapsed; and on the very same day his body was covered with sores.</reading>
+        </unit>
+      </div>
+      <div number="4">
+        <unit id="en_5" group="0" parallel="">
+          <reading option="0" mss="OCP-Trans">And when he was in a wretched plight, there came to visit him Eliphas, king of the Temanites, and Baldad, ruler of the Shuhites, and Sophar, king of the Minaioi; and there came also Elihu, son of Barachiel the Zobite. And when they exhorted him, he said that even without exhortation he remained steadfast in his piety and through his afflictions. And God, admiring his courage, released him from his disease and made him master of manifold possessions.” Such is the account of Polyhistor concerning these matters. . . .</reading>
+        </unit>
+      </div>
+     </div>
+    </div>
+  </text>
+ </version>
 </book>

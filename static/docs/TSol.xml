@@ -1,51 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-<!ELEMENT book (version)+>
-<!ATTLIST book filename CDATA #REQUIRED>
-<!ATTLIST book title CDATA #REQUIRED>
-<!ATTLIST book textStructure CDATA #IMPLIED>
-<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
-<!ATTLIST version title CDATA #REQUIRED>
-<!ATTLIST version author CDATA #REQUIRED>
-<!ATTLIST version fragment CDATA #IMPLIED>
-<!ATTLIST version language CDATA #IMPLIED>
-<!ELEMENT divisions (division)+>
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division label CDATA #REQUIRED>
-<!ATTLIST division delimiter CDATA #IMPLIED>
-<!ELEMENT resources (resource)+>
-<!ELEMENT resource (info+ , URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-<!ELEMENT info (#PCDATA)>
-<!ELEMENT URL (#PCDATA)>
-<!ELEMENT manuscripts (ms)+>
-<!ELEMENT ms (name , bibliography*)>
-<!ATTLIST ms abbrev CDATA #REQUIRED>
-<!ATTLIST ms language CDATA #REQUIRED>
-<!ATTLIST ms show CDATA #REQUIRED>
-<!ELEMENT name (#PCDATA | sup)*>
-<!ELEMENT sup (#PCDATA)>
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-<!ELEMENT booktitle (#PCDATA)>
-<!ELEMENT text (div)+>
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div number CDATA #REQUIRED>
-<!ATTLIST div fragment CDATA #IMPLIED>
-<!ELEMENT unit (reading)+>
-<!ATTLIST unit id CDATA #REQUIRED>
-<!ATTLIST unit group CDATA "0">
-<!ATTLIST unit parallel CDATA #IMPLIED>
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading option CDATA #REQUIRED>
-<!ATTLIST reading mss CDATA #REQUIRED>
-<!ATTLIST reading linebreak CDATA #IMPLIED>
-<!ATTLIST reading indent CDATA #IMPLIED>
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w morph CDATA #IMPLIED>
-<!ATTLIST w lex CDATA #IMPLIED>
-<!ATTLIST w style CDATA #IMPLIED>
-<!ATTLIST w lang CDATA #IMPLIED>
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="TSol" title="Testament of Solomon">
   <version title="Greek" author="" language="Greek">
     <divisions>
@@ -75,7 +28,7 @@
         <name>VW</name>
         <bibliography>Text: C. C. McCown, The Testament of Solomon (UNT 9; Leipzig: J. C. Hinrichs, 1922) 5-75.</bibliography>
       </ms>
-    </manuscripts>        
+    </manuscripts>
     <text>
       <div number="1">
         <div number="0">
@@ -1527,6 +1480,1467 @@
         <div number="10">
           <unit id="279" group="0" parallel="">
             <reading option="0" mss="McCown ">δόξα σοι, ὁ θεός μου, καὶ κύριος, δόξα σοι σὺν τῇ ὑπερευκλεεῖ θεοτόκῳ καὶ τῷ τιμίῳ προδρόμῳ καὶ πάντας ἁγίους, δόξα σοι.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="English" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of English based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="0">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Blessed are you, Lord God, who granted this power to Solomon! To you be glory and might forever. Amen.</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, while the temple of the city of Jerusalem was being built, and the craftsmen were working in it,</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ornias, the demonic spirit, would come at sunset and take half of the wages and half of the food from a boy who was the chief craftsman. And he would suck the thumb of his right hand every day. And the boy, whom I loved very much, became thin.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I, Solomon, one day questioned the boy and said to him, “Have I not loved you more than all the craftsmen working in the temple of God, and given you double wages and food? How is it then that you become thin every day?”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the boy said, “I beg you, King, listen to what has happened to me. After we are dismissed from the work of the temple of God at sunset, when I am resting, an evil demon comes and takes from me half of my wages and half of my food. And he takes my right hand and sucks my thumb. And behold, as my soul is distressed, my body wastes away every day.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when I, King Solomon, heard these things, I entered the temple of God and prayed with all my soul, confessing to him night and day, that the demon might be delivered into my hands and that I might have power over him.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it came to pass, as I prayed to the God of heaven and earth, that a ring was given to me by the Lord Sabaoth through Michael the archangel, having a seal engraved with a precious stone.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to me, “Take, Solomon, son of David, this gift which the Lord God Almighty Sabaoth has sent to you. And you shall imprison all the demons, both female and male, and through them you shall build Jerusalem, by your bearing this seal of God.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, becoming overjoyed, hymned and glorified the God of heaven and earth. And on the next day, I commanded the boy to come to me and I gave him the seal,</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and I said to him, “At whatever hour the demon comes to you, throw this ring at the demon's chest, saying to him, ‘Come, Solomon calls you,’ and quickly come to me, considering nothing of what he will threaten you with.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, at the customary hour, Ornias, the harsh demon, came like a burning fire, so as to take the boy's wages as was his custom.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the boy, according to what Solomon had told him, threw the ring at the demon’s chest, saying to him, “Come, Solomon calls you.” And he went quickly to Solomon.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the demon cried out, saying to the boy, “What have you done? Take the ring and give it to Solomon, and I will give you the silver and gold of all the earth; only do not lead me away to Solomon.”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the boy said to him, “As the Lord God of Israel lives, I will not endure you unless I lead you to Solomon.”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the boy came and said to Solomon, “King Solomon, I have brought you the demon as you commanded me, and behold, he stands outside the gates, bound and crying with a loud voice, offering me the silver and gold of all the earth so that I would not lead him to you.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1 ">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when I, Solomon, heard these things, I rose from my throne and saw the demon shivering and trembling, and I said to him, “Who are you, and what is your name?” The demon said, “My name is Ornias.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Tell me, in what zodiacal sign do you dwell?” And the demon answered and said, “In Aquarius; and those who are in Aquarius, because of their desire for women, I strangle as they call upon the zodiacal sign Virgo.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I am also a somnolent one, transforming into three forms: sometimes as a man having a desire for the form of unpubescent female children, and when I touch them they suffer greatly; sometimes I become winged, going to the celestial regions; sometimes I appear in the form of a lion.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I am a descendant of an archangel of the power of God, but I am frustrated by the archangel Uriel.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When I, Solomon, heard the name of the archangel, I prayed and glorified the God of heaven and earth, and having sealed him, I assigned him to the work of stone-cutting, to cut stones for the temple, brought by sea from Arabia, those lying by the shore.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as he was afraid to touch iron, he said to me, “I beg you, King Solomon, allow me to be at ease, and I will bring all the demons to you.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But as he was unwilling to be subject to me, I prayed for the archangel Uriel to come to my aid. And immediately I saw the archangel Uriel descending from heaven to me.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he commanded whales to rise from the sea, and he dried up their portion and threw their lot upon the earth, and thus he subjected the great demon Ornias to cut stones and to complete the building of the temple which I, Solomon, was building.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again I glorified the God of heaven and earth and commanded Ornias to go to his own place, and I gave him the seal, saying, “Go and bring the ruler of the demons here to me.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1 ">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ornias took the ring and went to Beelzeboul and said to him, “Come, Solomon calls you.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Beelzeboul said to him, “Tell me, who is this Solomon of whom you speak?”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ornias threw the ring at Beelzeboul's chest, saying, “King Solomon calls you.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Beelzeboul cried out as from a great burning flame of fire, and rising, he followed him with force and came to me.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when I saw the ruler of the demons coming, I glorified God and said, “Blessed are you, Lord God Almighty, who has given to your servant Solomon the wisdom, the associate of your thrones, and has subjected to me all the power of the demons.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I questioned him and said, “Tell me, who are you?” The demon said, “I am Beelzeboul, the exarch of the demons.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I demanded that he constantly attend me closely and show me the manifestation against the demons. And he promised me to bring all the unclean spirits to me in bonds. And I again glorified the God of heaven and earth, giving thanks to him always.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1 ">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I inquired of the demon if there were female demons. And when he said there were, I wished to know them.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Beelzeboul went and showed me Onoskelis, having a very beautiful form, and the body of a fair-skinned woman, but with the legs of a she-mule.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when she came to me, I said to her, “Tell me, who are you?”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she said, “I am called Onoskelis, an embodied spirit that dwells on the earth; I have my dwelling in caves, and I have a multifaceted character.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Sometimes I choke a human, other times I distort them from nature. My dwellings are mostly cliffs, caves, and ravines.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Many times I even have intercourse with humans, who think I am a woman, especially with those who are fair-skinned, because these are my fellow-star worshipers. For these worship my star secretly and openly and do not know that they harm themselves and provoke me to be more evil.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For they wish to acquire gold through remembrance. But I give a little to those who worship me well.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked her from where she was born. And she said, “I was born from an untimely sound, that which is called ‘echo of the sky,’ when lead emitted a sound in matter.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to her, “Under what star do you pass?” And she said, “During the full moon, because I travel mostly during the moon.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said, “Which angel is it that renders you ineffective?” And she said, “The one who is also in you, O king.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, considering these things to be mockery, ordered a soldier to strike her. And she cried out and said, “I tell you, O king, I swear by the wisdom of God given to you.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I spoke the name of the Holy One of Israel and ordered her to spin the hemp for the ropes of the work of the temple of God. And thus, sealed and bound, she was compelled to stand night and day spinning the hemp.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1 ">
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I ordered another demon to be brought to me; and they brought to me Asmodeus, the evil demon, bound.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked him, “Who are you?” And he, casting a threatening look, said, “Who are you?”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Do you answer thus, having been punished?” And he, fixing the same gaze upon me, said, “How can I answer you? You are a son of man, and I am of an angel, and I was born through a daughter of man, so no arrogant word of a heavenly race to an earthly one.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“My star dwells in heaven and humans call me the Great Bear, but others the serpent-footed one; for this reason, smaller stars accompany my star, for indeed the dignity and throne of my father are in heaven until today.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And do not ask me many things, Solomon, for your kingdom will be torn apart in due time, and this glory of yours is temporary, and you will have little time to torment us, and again we shall have pasture among humanity so that they worship us as gods, men not knowing the names of the angels appointed over us.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard these things, bound him more carefully and ordered him to be beaten and to give an account of who he was called and what his work was.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The demon said, “I am called Asmodeus, renowned; I swell with evil against humans throughout the entire world. I am an enemy of newlyweds; I destroy the beauty of virgins and alter hearts.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Is this your only work?” And he said again, “Through the stars I spread female madness, and then into raging storms, and I have killed as many as seven.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And so I adjured him by the name of the Lord Sabaoth: “Fear, Asmodeus, God and tell me by which angel you are rendered ineffective.” And the demon said, “Raphael, who stands before God; but he also pursues me with the liver and gall of a fish, smoked on charcoal embers.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I asked him again, saying, “Do not hide a word from me, for I am Solomon, son of David, and tell me the name of the fish that you reverence.” And he said, “Its name is called glanis; it is found in the rivers of the Assyrians; for it alone is born there, because I also am found in those regions.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I say to him, “Nothing else from you, Asmodeus?” And he said to me, “The power of God, who bound me with indissoluble chains through his seal, knows that what I have told you is true. But I ask you, King Solomon, do not condemn me to water.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, smiling, said, “As the Lord God of my fathers lives, you shall wear irons and make clay for all the furnishings of the temple, grinding the supplies of the village.” And I ordered ten pitchers to be made and for him to be drenched. And the demon, groaning terribly, performed what was commanded him. He did this because Asmodeus also possessed foreknowledge.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, glorified God, who gave me this authority; and I kept Asmodeus burning the liver of the fish and the gall with a piece of white storax because he was powerful, and his voice was suppressed, and he was full of bitter teeth.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1 ">
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again I ordered Beelzeboul to appear before me, and sitting down, it seemed good to me to ask him, “Why are you alone the prince of the demons?”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he says to me, “Because I alone was left of the heavenly angels. For I was first among the heavenly angels, called Beelzeboul.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And after me, a second godless one whom God cut off, and now, shut up here, he holds my race in Tartarus in bonds; and he is nurtured in the Red Sea; who in his own time will come to triumph.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “What are your deeds?” And he said to me, “I also overthrow by means of tyrants, and I make demons to be worshipped by humans, and I stir up holy and chosen priests to lust. And I cause enmities in cities and murders and bring on wars.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Bring me the one in the Red Sea whom you said was being nurtured.” And he says, “I will not bring anyone to you. But one named Effippas will come, who will bind him and bring him up from the abyss.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Tell me how that one is in the abyss of the Red Sea and what his name is.” And he said, “Do not ask me; you cannot learn from me, for he himself will come to you because I am also with you.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Tell me in what star you dwell.” And he says, “That which is called Hesperia by humans.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I say, “Tell me by which angel you are rendered ineffective.” And he said, “By the Almighty God; and he is called Patike by the Hebrews. The one who came down from on high; and for the Hellenists, it is Emmanuel. Whom I fear trembling. If anyone adjures me by Eloi, the great name of his power, I become invisible.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard these things, ordered him to saw Theban marble. And as he began to saw, all the demons cried out with a loud voice because of their king Beelzeboul.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, asked him, saying, “If you wish to receive release, tell me about the heavenly things.” And Beelzeboul said, “Listen, O king: if you burn incense of ashes and frankincense and sea bulbs, and nard and saffron, and light seven lamps in an earthquake, you will overthrow a house. But if you, being pure, light them at dawn in the sunlight of day, you will see the heavenly dragons how they coil and draw the chariot of the sun.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard these things, rebuked him and said, “Be silent and saw the marbles as I commanded you.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1 ">
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, blessing God, ordered another demon to be present before me; and it came before my face. And it had its face borne high in the air above, and the rest of its body coiling like a snail.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it broke many soldiers and raised a fierce dust from the earth and carried it upwards and threw many things to astonish me, and I said, “Whom shall I ask?” for a long time.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when I arose, I spat on the ground in that place and sealed it with the ring of God, and so the wind ceased. Then I asked him, saying, “Who are you?” And so, shaking off dust, he answered me, “What do you want, King Solomon?”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I answered him, “Tell me what you are saying, and I want to question you.” And thus I give thanks to God who made me wise, to answer their counsels. And the demon said to me, “I am called Lix Tetrax.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “What is your activity?” And he said, “I scatter people and cause spasms, and I kindle fire, and I burn fields, and I destroy houses. I have the greatest activity in the summer. If I find an opportunity, I enter into corners of walls, night and day. For I am already a child of the great one.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Under what star are you situated?” And he said, “At the very tip of the moon’s horn, the one located in the south, there is my star. For I was commanded to draw up the errors of the Hemitrite. For this reason, many people, when they see it, pray to the Hemitrite by these three names: Boultalā; Thallāl; Melchāl; and I heal them.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, said to him, “When you wish to do evil, by whom are you rendered inactive?” And he said, “By the angel by whom even the Hemitrite ceases.” And I asked him, “By what name are you rendered inactive?” And he said, “By the name of the archangel Azaēl.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I sealed the demon and commanded him to seize stones and hurl them to the upper parts of the Temple for the craftsmen. And the demon, being compelled, did what was commanded to him.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1 ">
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I again glorified God who had given me this authority, and I commanded another demon to appear before me. And seven spirits came, bound together and intertwined, beautiful in appearance and graceful.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, seeing them, wondered and asked them, “Who are you?” And they said, “We are the elemental rulers of the darkness of the world.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the first one said, “I am Deception.” The second: “I am Strife.” The third: “I am Clotho.” The fourth: “I am Confusion.” The fifth: “I am Error.” The sixth: “I am Power.” The seventh: “I am Malice.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And our stars appear small in heaven, and we are called gods. We change together and we dwell together, sometimes in Lydia, sometimes on Olympus, sometimes on the great mountain.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, questioned them, beginning from the first, “Tell me, what is your work?” And it said, “I am Deception. I weave deception and bring to mind most evil heresies. But I have an angel who renders me inactive, Lamachiel.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The second said, “I am Strife. I contend, bringing wood, stones, swords, my weapons of the place. But I have an angel who renders me inactive, Barouchiel.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Likewise, the third said, “I am Clotho. I revolve, and I make everything fight and not live peaceably. And why say much? I have an angel who renders me inactive, Marmarōth.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the fourth said, “I make people not to be prudent. I divide. I separate. With Strife also accompanying me, I separate brothers and do many other similar things. And why say much? But I have an angel who renders me inactive, the great Balthioul.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fifth said, “I am Error, King Solomon, and I lead you astray and have led you astray and caused you to kill brothers. I lead you astray to search tombs and I teach grave-robbers, and I lead souls astray from all piety, and I do many other evil things. But I have an angel who renders me inactive, Ouriel.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Likewise, the sixth said, “I am Power. I raise up tyrants, I depose kings, and I give power to all adversaries. I have an angel who renders me inactive, Asterarōth.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Likewise, the seventh said, “I am Malice, and I will corrupt you, O King, when I am commanded by the bonds of Artemis. For it is for these things that you are to fulfill your desire as one most beloved, but for myself, a desire for wisdom. For if anyone is wise, he will not turn a step towards me.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard these things, sealed them with the ring of God and commanded them to dig the foundations of the Temple. And its length was fixed at two hundred and fifty cubits. And they performed all that was commanded to them.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1 ">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again I asked that other demons come, and a demon was brought to me, a man in all his limbs, but headless.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Tell me who you are, and how you are called?” And the demon said, “I am called Murder. For I devour heads, wishing to make a head for myself, and I am not satisfied. I desire to make a head like yours, O King.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Having heard these things, I sealed him, stretching out my hand against his chest. And the demon jumped up and tore himself apart and grumbled, saying, “Woe is me! Where did I find the traitor Ornēas? I do not see.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “And from where do you see?” And he said, “Through my breasts.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard the pleasure of his voice and wishing to learn, asked him, “From where do you speak?” And he said, “My voice has inherited the voices of many people. For as many as are called mute among men, I have shut up their heads. When children are ten days old, then at night, when the child cries, I become a spirit and enter through the voice.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">In untimely deaths, my encounter is more harmful. And my power is in my hands, and taking heads with my hands as if with wood, I cut them off and add them to myself, and thus I consume them through the neck by the fire that is within me. I am the one who burns the limbs and sends them to the feet and causes ulcers.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And by the fiery lightning, I am rendered inactive.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded him to be with Beelzeboul until this friend also arrives.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1 ">
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded another demon to appear before me. And he came before my face, having the form of a large dog, and he spoke to me with a loud voice, “Hail, O King Solomon.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I was amazed and said to him, “Who are you, dog?” And he said, “You think I am a dog. For before you, O King, I was a man. But I accomplished many unlawful deeds in the world, and I prevailed by superiority, and I held the stars of the heavens, and I contrive more evil deeds.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, I harm people who follow my star, and I turn them to madness, and I seize the minds of men through the throat, and thus I destroy them.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “What is your name?” And he said, “Rabdos.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “What is your work, and what do you think you can accomplish for me?” The demon said, “Give me a man of yours, and I will lead him to a mountain place, and I will show him a green stone that moves, with which you will adorn the Temple of God.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, having heard these things, ordered my servant to go with him, having the ring of the seal of God with him, and I said to him, “Go with him, and wherever he shows you the green stone, seal it with the ring, observe the place carefully, and bring the ring to me.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he went and showed him the green stone, and he sealed it with the ring of God, and they brought the green stone to me.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I decided, having sealed the two demons, the headless one and the dog, to bind them and to carry the stone day and night like a lamp for the working craftsmen.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I took from the removal of that stone two hundred shekels in the altar's stands. And the stone was like the appearance of a leek.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having glorified the Lord God and enclosed the treasure of the stone, commanded the demons to hew marbles for the building of the Temple.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked the dog, “By which angel are you rendered inactive?” And he said, “By the great Briathos.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1 ">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded other demons to come before me again. And one came roaring like a lion, standing upright, and he answered me with a word, “King Solomon, I also have this form, a spirit that can in no way be bound.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“I attack all people lying sick, entering stealthily, and I make the person relentless, so that the cause of their illness cannot be healed.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“I also have another activity: I dispatch the legions of demons subject to me, for I am from the western regions, and the name for all the demons under me is ‘legions.’”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked him, “What is your name?” And he said, “Leonotophoron. An Arab by race.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “How are you rendered inactive with your legion, or what angel do you have?” The demon said, “If I tell you the name, I bind not only myself but also the legion of demons under me.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I said to him, “I adjure you by the name of the great God Most High: by what name are you rendered inactive with your legion?” The demon said, “By the name of the one who endured much suffering from humans, whose name is Emmanuel, who even now has bound us and will come upon a precipice of water to torture us. And he is brought down by three characters, resounding.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I condemned his legion to bring wood from the forest, and Leonotophoron to saw them into small pieces with his claws and throw them beneath the lime kiln.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1 ">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, having worshipped the God of Israel, commanded another demon to come forth. And a three-headed dragon of terrifying color came before me.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked him, “Who are you?” And he said, “I am a triple-horned spirit, working in three ways. In the wombs of women, I blind children and twist their ears and make them mute and deaf, and I strike people on their bodies and make them fall down, foam at the mouth, and gnash their teeth.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And I have a manner in which I am rendered inactive by the designated place of the skull, for there an angel of the great counsel predetermined me to suffer, and now he will openly dwell upon wood. That one will render me inactive in that by which I am subject.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And in the place where it was lifted, King Solomon, he will set up a purple pillar in the air, a gift formed by Ephippas, brought from the Red Sea, from inner Arabia. And at the beginning of the temple which you have begun to build, King Solomon, much gold is stored up, which you should dig up and take.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having sent my servant, found as the demon told me, and having sealed it with the ring, I praised God.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then I said to him, “Tell me what you are called.” And the demon said, “Head of Dragons.” And I commanded him to make bricks for the temple of God.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="1 ">
+          <unit id="en_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded another demon to be present before me. And a woman came before me in appearance, but her form, together with her limbs, was dishevelled with her hair.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to her, “Who are you?” And she said, “And who are you? Or what need do you have to learn what my affairs are like? But if you wish to learn, go into the royal chambers and, having washed your hands, sit down again on your throne and ask me, and then you will learn, O king, who I am.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having done this and sat on my throne, asked her and said, “Who are you?” And she said, “Obyzouth, who does not sleep at night, but roams all over the world among women, and watching the hour, I seek out and strangle infants, and every night I do not go forth without doing mischief. But you cannot command me. And I go about in inaccessible places.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And my work is nothing but the destruction of infants and the injuring of eyes and the condemnation of mouths and the ruin of minds and the pain of bodies.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when I, Solomon, heard these things, I was amazed, and I did not behold her form, but her body was darkness and her hair was wild.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, say to her, “Tell me, evil spirit, by what angel are you rendered inactive?” And she said to me, “By the angel Raphael. And when women give birth, write my name on a piece of paper, and I will flee from there.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, having heard these things, commanded her to be bound by her hair and to be hung before the temple so that all the passing sons of Israel, seeing, would glorify God who gave me this authority.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="1 ">
+          <unit id="en_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again I commanded another demon to be present before me. And a dragon-like creature came to me, rolling itself, but having the face and feet of a human, and the limbs of a dragon, and wings on its back.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And seeing him, I was astonished and said to him, “Who are you and from where have you come?” And the spirit said to me, “First, I stood before you, King Solomon, a spirit deified among humans. But now rendered inactive by the seal of God given to you.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And now I am the one called Pterodragon, not associating with many women. But with a few and beautiful ones, who bear the name of that star-wood.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And I go to them as a winged spirit, associating through the buttocks, and the one whom I assaulted conceives, and the offspring born from her becomes Love. But being unable to be conceived by men, that woman also perished. This is my activity.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Therefore, just allow me to be satisfied, but the rest of the demons, being troubled by you and utterly confused, will speak all truth. But they will cause the future supply of wood that you gather for the building in the temple to be consumed by fire.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as the demon spoke these things, behold, the spirit that came out of his mouth set fire to the forest of Lebanon and burned all the wood that I had placed for the temple of God.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, saw what the spirit had done and was amazed, and having glorified God, I asked the dragon-like demon, saying, “Tell me, by what angel are you rendered inactive?” And he said to me, “By the great angel who sits in the second heaven, called in Hebrew, Bazazath.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard these things and invoked his angel, condemned him to saw marble for the construction of the temple of God.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="1 ">
+          <unit id="en_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having blessed God, I commanded another demon to be present before me. And another spirit came before me, having the form of a woman, but with two other heads on its shoulders, along with hands.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked her, “Tell me, who are you?” And she said to me, “I am Enephegos, who is also called by myriad names.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to her, “By what angel are you rendered inactive?” And she said to me, “What are you seeking? What do you need? I transform myself as a so-called goddess, and I transform myself again and become having another form.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And do not wish to know all about me by this means, but since you are present to me, listen to this: I sit beside the moon and for this reason I possess three forms.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“When I am magically constrained by the wise, I become like Kronos. But when I come down again concerning those who bring me down, I appear in another form. The measure of the element is unconquered and unlimited and inactive. Therefore, I transform myself into three forms and come down and become such as you see.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But I am rendered inactive by the angel Rathanel, who sits in the third heaven. Therefore, I say to you: this temple cannot contain me.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, I, Solomon, having prayed to my God and having invoked the angel whom he mentioned to me, Rathanael, made the seal and sealed it with a threefold chain, and below the bonds of the chain I made the seal of God.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the spirit prophesied to me, saying: “These things, King Solomon, you do for us. But after some time your kingdom will be torn apart for you, and again in time this temple will be broken apart, and all Jerusalem will be gathered together by the king of the Persians, Medes, and Chaldeans. And the vessels of this temple which you make will serve other gods.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Along with these, all the vessels in which you confine us will be broken by human hands, and then we will come forth with great power from here, and we will be scattered throughout the world.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And we will wander throughout the whole inhabited world for a long time until the Son of God is stretched out on a tree. For no such king like him will arise, who will nullify all of us, whose mother will mingle with a man.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And who will receive such power over spirits except for him? Whom the first devil will seek to tempt, and he will not prevail against him, whose numerical value of the name is 600, which is Emmanuel.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Therefore, King Solomon, your time is evil, and your years are few and evil, and your kingdom will be given to your servant.”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard these things, glorified God and, marveling at the answers of the demons concerning the consequences, I disbelieved them and did not believe the things spoken by them.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when they came to pass, then I understood, and in my death, I wrote this testament for the sons of Israel and gave it to them so that they might know the powers of the demons, their forms, and the names of the angels by whom the demons are rendered powerless.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having glorified the Lord, the God of Israel, I commanded the spirit to be bound with indissoluble bonds.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="1 ">
+          <unit id="en_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having blessed God, I commanded another spirit to appear. And another demon came before me, having the form of a horse in front and a fish behind. And it spoke with a loud voice: “King Solomon, I am a difficult sea spirit. Therefore, I arise and come upon the open seas from the sea and hinder the people sailing in it.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And rousing myself like a wave and transforming myself, I enter the ships. And this is my work, to receive goods and people. For I take and stir up and cast men into the sea; thus, I crave bodies, but I cast them out of the sea up to here.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Since Beelzeboul, the master of airy, earthly, and subterranean spirits, advises concerning the actions of each one of us, for this reason, I also came up from the sea to receive some counsel from him.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And I have another appearance and action: I transform into waves and come up from the sea and show myself to people, and they call me Kynopegos because I transform into a man; my name is true. And I send a certain nausea to people through my ascent.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“So I came to the counsel of the ruler Beelzeboul, and he bound me into your hands. But now I stand before you, and because I have no water for two or three days, my spirit that speaks to you fails.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Tell me by what angel you are rendered powerless.” And he said, “By Iameth.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded him to be thrown into a flask, and ten measures of seawater to be poured around it, and I sealed it on top with marble, and I covered the mouth of the vessel with asphalt, pitch, and tow, and having sealed it with the ring, I commanded it to be placed in the temple of God.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="1 ">
+          <unit id="en_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded another spirit to appear to me. And a spirit came, having the form of a man, dark, and with shining eyes. And I questioned him, saying, “Who are you?” And he said, “I am a violent spirit of a giant man who died in slaughter at the time of the giants.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Tell me what you do on earth and where you have your dwelling.” And he said to me, “My dwelling is in inaccessible places. This is my work: I sit beside dead people in tombs, and prematurely I deform the dead, and if I seize anyone, I immediately kill him with the sword.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But if I am unable to kill, I cause him to be demonized and to devour his own flesh, and saliva to flow down from his cheeks.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Fear the God of heaven and earth, and tell me by what angel you are rendered powerless.” And he said to me, “The Savior who is to come down renders me powerless, whose sign is on his forehead; if anyone writes it, he renders me powerless, and being rebuked, I quickly turn away from him. This sign is a cross.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard these things, confined the demon just as I did the other demons.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="1 ">
+          <unit id="en_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded another demon to appear to me. And the thirty-six elements came before me. Their heads were like shapeless dogs. Among them were human-formed, bull-formed, beast-faced, dragon-formed, sphinx-faced, bird-faced.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, seeing these, questioned them, saying, “And who are you?” And they said together with one voice, “We are the thirty-six elements, the world-rulers of the darkness of this age.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But you cannot harm or confine us, O king. But since God has given you authority over all airy, earthly, and subterranean spirits, behold, we stand before you as the rest of the spirits.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having called one spirit, said to it, “Who are you?” And it said to me, “I am the first decan of the zodiacal circle, who is called Ryax.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_166" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“I cause men's heads to ache and shake their temples. As soon as I hear, ‘Michael, confine Ryax,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_167" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The second said, “I am called Barsaphael. I cause hemicrania in men who are in my hour. As soon as I hear, ‘Gabriel, confine Barsaphael,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_168" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The third said, “I am called Artosael. I greatly harm the eyes. As soon as I hear, ‘Uriel, confine Artosael,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_169" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fourth said, “I am called Horopel. I send upon throats quinsy and putrefaction. As soon as I hear, ‘Raphael, confine Horopel,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_170" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fifth said, “I am called Kairoxanonadal. I cause blockages of the ears. But if I hear, ‘Orouel, confine Kairoxanonadal,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_171" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The sixth said, “I am called Sphendonael. I produce parotid swelling and opisthotonus. But if I hear, ‘Sabael, confine Sphendonael,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_172" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The seventh said, “I am called Sphandor. I reduce the strength of shoulders and paralyze the nerves of hands, and I weary limbs. But if I hear, ‘Arael, confine Sphandor,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_173" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eighth said, “I am called Belbel. I pervert the hearts and minds of men . . . But if I hear, ‘Carael, confine Belbel,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_174" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The ninth said, “I am called Kourtarel. I send internal gripes. But if I hear, ‘Iaoth, confine Kourtarel,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_175" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The tenth said, “I am called Metathiax. I cause pains in the kidneys. But if I hear, ‘Adonael, confine Metathiax,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_176" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eleventh said, “I am called Katanikotaēl. I send strife and arrogance into houses. If anyone wishes to live in peace, let him write on seven laurel leaves the names that nullify me: ‘Angel; Iaē; Ieō; Sabaōth; imprison Katanikotaēl,’ and having washed the laurel leaves, let him sprinkle his house with the water, and I will immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_177" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twelfth said, “I am called Sapthoraēl. I cast dissension among people and I rejoice in causing them to stumble. If anyone writes these things: ‘Iaē; Ieō; sons of Sabaōth,’ and wears it around his neck, I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_178" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The thirteenth said, “I am called Phobothēl. I cause nerve relaxations. But if I hear ‘Adōnaï,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_179" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fourteenth said, “I am called Lerōēl. I inflict chills and shivers and stomach pain. If I hear, ‘Iaz, do not remain, do not warm, for Solomon is better than eleven fathers,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_180" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fifteenth said, “I am called Soubelti. I send shivering and numbness. But if I hear, ‘Rhizōēl, imprison Soubelti,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_181" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The sixteenth said, “I am called Katrax. I inflict incurable fevers on people. Whoever wishes to become healthy, let him grind coriander and anoint his lips, saying, ‘I adjure you by Dan, depart from the creature of God,’ and I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_182" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The seventeenth said, “I am called Ieropa. I sit on a person’s stomach and cause greetings in the bathhouse; and on the road, I find the person and make him fall. But whoever says into the right ear of the sufferer, three times, ‘Iouda zizabou,’ behold, he makes me withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_183" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eighteenth said, “I am called Modebēl. I separate wife from husband. If anyone writes the names of the eight fathers and places it in the doorways, I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_184" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The nineteenth said, “I am called Marderaō. I inflict incurable fevers; and in whatever house you write my name, I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_185" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twentieth said, “I am called Rhux Nathōth. I sit on people’s knees. If anyone writes on paper, ‘Phnounēbiēl,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_186" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-first said, “I am called Rhux Alath. I cause shortness of breath in infants. If anyone writes, ‘Rarideris,’ and carries it, I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_187" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-second said, “I am called Rhux Audameōth. I send heart pain. If anyone writes, ‘Raiouōth,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="en_188" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-third said, “I am called Rhux Manthadō. I cause kidneys to ache. If anyone writes, ‘Iaōth, Ouriēl,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="en_189" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-fourth said, “I am called Rhux Aktonmē. I cause ribs to ache. If anyone writes on wood from a failed ship, ‘Aeriou Marmaraōth,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="en_190" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-fifth said, “I am called Rhux Anatreth. I cause boils and fiery sensations to rise in the intestines. If I hear, ‘Arara ararē,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="en_191" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-sixth said, “I am called Rhux ho Enautha. I steal wits and alter hearts. If anyone writes, ‘Kalazaēl,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="en_192" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-seventh said, “I am called Rhux Axēsbouth. I make people consumptive and hemorrhaging. If anyone adjures me into pure wine and gives it to the sufferer, I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="en_193" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-eighth said, “I am called Rhux Hapai. I send sleeplessness. If anyone writes, ‘Kok; pnēdismos,’ and binds it to his temples, I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="en_194" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twenty-ninth said, “I am called Rhux Anostēr. I send uterine madness and cause pains in the bladder. If anyone, after grinding three laurel berries into pure oil, anoints while saying, ‘I adjure you by Marmaraōth,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="en_195" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The thirtieth said, “I am called Rhux Physikoreth. I cause chronic illness. If anyone puts salt into oil and anoints the sick person, saying, ‘Cherubim, Seraphim, help,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="35">
+          <unit id="en_196" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The thirty-first said, “I am called Rhux Aleurēth. Swallowing fish bones; if anyone places a fish bone on the breasts of the sufferer, I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="36">
+          <unit id="en_197" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The thirty-second said, “I am called Rhux Ichthyon. I paralyze nerves. But if I hear, ‘Adōnaï malthē,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="37">
+          <unit id="en_198" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The thirty-third said, “I am called Rhux Achoneōth. I cause pain in the throat and tonsils. If anyone writes on ivy leaves, ‘Leikourgos, botrydon anachōris,’ I immediately withdraw.”</reading>
+          </unit>
+        </div>
+        <div number="38">
+          <unit id="en_199" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The thirty-fourth said, “I am called Rhux Autōth. I cause envies among friends and strife. But I am nullified by the first and second written.”</reading>
+          </unit>
+        </div>
+        <div number="39">
+          <unit id="en_200" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The thirty-fifth said, “I am called Rhux Phtheneōth. I bewitch every person, but I am nullified by the much-suffering eye being engraved.”</reading>
+          </unit>
+        </div>
+        <div number="40">
+          <unit id="en_201" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The thirty-sixth said, “I am called Rhux Mianeth. I am envious of the body; I lay waste to houses; I destroy flesh. If anyone writes in the doorways of the house thus: ‘Melpō ardad anaath,’ I flee from the place.”</reading>
+          </unit>
+        </div>
+        <div number="41">
+          <unit id="en_202" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when I, Solomon, heard these things, I glorified the God of heaven and earth, and I commanded them to bring water.</reading>
+          </unit>
+        </div>
+        <div number="42">
+          <unit id="en_203" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I prayed to God that the thirty-six demons who hinder humanity would come to the temple of God.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="1 ">
+          <unit id="en_204" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, was honored by all the people under heaven. And I was building the temple of God, and my kingdom was prospering.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_205" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the kings came to me to see the temple of God that I was building, and they brought gold and silver to me, and they brought bronze and iron and lead and wood for the construction of the temple.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_206" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Among these, the Queen of Sheba, a sorceress from the South, came with much understanding and bowed down before me.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="1 ">
+          <unit id="en_207" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, one of the old craftsmen threw himself down before me, saying, “King Solomon, son of David, have mercy on me in my old age.” And I said to him, “Speak, old man, what you wish.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_208" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said, “I beg you, King. I have an only son, and he continually brings harsh insults upon me; for he strikes my face and my head, because he threatens to bring about my bitter death. For this reason, I have come so that you may avenge me.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_209" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When I heard these things, I commanded his son to be brought to me. And when he had come, I said to him, “Is this how you are?”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_210" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said, “I am filled with despair, King, so as to strike my father with my hand. Be merciful to me, O King; for it is unlawful to hear such a parable and distress.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_211" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, I, Solomon, having heard the young man, urged the elder to come to his senses. But he refused and said, “Let him be put to death.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_212" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And seeing the demon Ornias laughing, I became very angry when he laughed before me. So I removed this one and ordered Ornias to come, and I said to him, “Accursed one, did you laugh at me?”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_213" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But he said, “I beg you, O king, I did not laugh because of you, but because of the wretched old man and the miserable young man, his son, because in three days he will die, and behold, the old man wishes to kill him wickedly.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_214" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said, “Is it truly so?” The demon said, “Yes, O king.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_215" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded the demon to withdraw and the old man and his son to come, and I commanded them to become friends.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_216" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to the elder, “In three days bring your son here to me.” And they bowed down and departed.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_217" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I commanded again that Ornias be brought to me, and I said to him, “Tell me how you know this, that the young man will die in three days.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_218" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said, “We demons ascend to the firmament of heaven and fly among the stars, and we hear the decrees that come forth from God concerning the souls of men.”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_219" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And then we come, and whether by power, or by fire, or by sword, or by accident, transforming ourselves, we destroy.”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_220" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I questioned him, “Tell me then, how can you ascend into heaven, being demons?”</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_221" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to me, “Whatever is accomplished in heaven, so also on earth. For the principalities and authorities and powers fly above and are deemed worthy of entrance into heaven.”</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_222" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But we demons are weak, having no basis for ascent or rest, and we fall like leaves from trees, and those men who observe us think that the falling ones from heaven are stars.”</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_223" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“It is not so, O king, but we fall because of our weakness, and having no assistance from anywhere, we fall like lightning to the earth, and we burn down cities and set fields ablaze. But the stars of heaven are established in the firmament.”</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_224" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having heard these things, I, Solomon, commanded the demon to be kept until five days.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_225" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But after five days, when I called the old man, he refused to come. Then, when he came, I saw him distressed and mourning.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_226" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Where is your son, old man?” And he said, “I have become childless, O king, and without hope I watch over the tomb of my son.”</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_227" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having heard these things and knowing that what had been spoken to me by the demon was true, I glorified the God of heaven and earth.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="21">
+        <div number="1 ">
+          <unit id="en_228" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Queen of the South, Sheba, marvelled and saw the temple which I was building, and she gave ten thousand copper shekels.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_229" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she entered into the temple and saw the altar and the cherubim and seraphim overshadowing the mercy seat, and the two hundred lamp-stones sparkling with various colors, lamps of emeralds and hyacinths and sapphires.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_230" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she saw the silver and bronze and golden vessels, and the bases of the columns intertwined with bronze chains. She also saw the bronze sea having a stand and the thirty-six bulls.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_231" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all were working in the temple of God for a wage of one talent of gold, apart from the demons.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="1 ">
+          <unit id="en_232" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Adarkes, the King of the Arabs, sent a letter, saying thus: “Adarkes, King of the Arabs, to King Solomon, greetings. Behold, we have heard of the wisdom given to you, and that you, being a man, have been granted understanding by the Lord over all spirits, both aerial and terrestrial and subterranean.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_233" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“There is a spirit in Arabia; for in the morning a gust of wind comes until the third hour, and its breath is terrible and kills men and cattle, and no breath can live before the demon.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_234" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Therefore, I beg you, since the spirit is like wind, devise something according to the wisdom given to you by the Lord your God, and condescend to send a man capable of seizing it.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_235" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And behold, we shall be yours, King Solomon, both I and all my people and all my land, and all Arabia will be at peace, if you perform this vengeance for us.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_236" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Therefore, we beg you, do not overlook our supplication, and be our Lord always forever. May my Lord be well always and forever.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_237" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, having read this letter and folded it, gave it to my servant, saying to him, “In seven days you will remind me of this letter.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_238" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jerusalem was being built, and the temple was being completed. And there was a great cornerstone which I wished to place as the head of the corner for the completion of the temple of God.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_239" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the artisans and all the demons who were assisting came together to bring the stone and place it on the pinnacle of the temple, but they were not able to move it.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_240" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But after seven days, I, remembering the letter of the King of the Arabs, commanded my young man and said to him, “Saddle your camel and take a wineskin and this seal,”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_241" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“and go to Arabia, to the place where the evil spirit breathes, and hold the wineskin and the ring before the body of the wineskin.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_242" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And when the wineskin is inflated, you will find that it is the demon that breathes there. Then quickly, with force, tie the wineskin and seal it with the ring, saddle it onto the camel, and bring it here. And go in good health.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_243" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the boy did as he was commanded and went to Arabia. And the people of that place disbelieved whether it would indeed be possible to seize the evil spirit.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_244" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And rising early, the servant stood before the spirit of the breath and placed the wineskin on the ground; he also placed the ring on it. And it entered into the wineskin and inflated it.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_245" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the boy, standing, tied the wineskin at its mouth in the name of the Lord Sabaoth, and the demon remained inside the wineskin.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_246" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the boy also remained for three days as proof, and the spirit no longer breathed, and the Arabs recognized that he had securely shut in the spirit.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_247" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then he saddled the wineskin onto the camel. And the Arabs sent the boy with gifts and honors, praising God, for they remained in peace. The boy brought in the spirit and placed it at the head of the Temple.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_248" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The next day, I, Solomon, entered the Temple; and I was grieved about the cornerstone. And the wineskin rose and walked seven paces, then its mouth stood still and bowed to me.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_249" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I was amazed that the wineskin had powers and walked, so I commanded it to stand up. And the wineskin rose and stood on its feet, inflated.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_250" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked it, saying, “Who are you?” The spirit within said, “I am a demon called Ephippas, the one in Arabia.”</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_251" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to it, “By what angel are you rendered powerless?” And it said, “By the one who is to be born of a virgin, since angels worship him, and who is to be crucified by the Jews.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="23">
+        <div number="1 ">
+          <unit id="en_252" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then I said to it, “What can you do for me?” And it said, “I am able to move mountains and to transport houses and to cast down kings.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_253" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to it, “If you are able, lift this stone to the beginning of the corner of the Temple.” And it said, “Not only will I lift this stone, king, but also with the demon in the Red Sea, the aerial pillar in the Red Sea, and you will set it wherever you wish.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_254" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And saying these things, it went beneath the stone and lifted it, and it ascended the staircase carrying the stone and placed it at the top of the entrance of the Temple.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_255" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, being uplifted, said, “Truly now the scripture is fulfilled which says, ‘The stone which the builders rejected, this became the head of the corner,’ and the rest.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="24">
+        <div number="1 ">
+          <unit id="en_256" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again I said to it, “Go, bring me the pillar you spoke of in the Red Sea.” And Ephippas went and brought up the demon and the pillar, both carrying them from Arabia.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_257" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, having wisely understood that these two spirits could shake the whole inhabited world in a single moment, sealed them on both sides with the ring and said, “Guard them carefully.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_258" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they remained holding the pillar in the air until today as proof of the wisdom given to me.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_259" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the pillar was hanging, exceedingly large, through the air, being held by the spirits, and thus from below the spirits appeared like air holding it.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_260" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as we gazed, the base of the pillar became askew, and it remains so until today.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="25">
+        <div number="1 ">
+          <unit id="en_261" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked the other demon that had come up from the sea with the pillar, “Who are you, and what is your name, and what is your work? For I hear many things about you.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_262" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the demon said, “I, King Solomon, am called Abezehtibou; and formerly I sat in the first heaven, whose name is Amelouth.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_263" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“I am therefore a grievous and winged and one-winged spirit, a plotter against every breath under the heavens. I was present when Moses entered before Pharaoh, king of Egypt, hardening his heart.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_264" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“I am the one whom Jannes and Jambres invoked, who contended with Moses in Egypt. I am the one who strove against Moses in the wonders and in the signs.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_265" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then I said to it, “How then were you found in the Red Sea?” And it said, “At the exodus of the sons of Israel, I hardened the heart of Pharaoh and made his heart and the hearts of his servants proud.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_266" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And I made them pursue after the sons of Israel, and Pharaoh and all the Egyptians followed. Then I was present there and we followed, and we all went up into the Red Sea.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_267" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And it happened when the sons of Israel had crossed over, the water turned back and covered all the camp of the Egyptians; then I was found there and was covered by the water and remained in the sea, guarded beneath the pillar until Ephippas came up.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_268" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Solomon, swore him to hold the pillar until the consummation.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_269" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And with God, I adorned his Temple in all beauty. And I was rejoicing and glorifying him.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="26">
+        <div number="1 ">
+          <unit id="en_270" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now I took wives from every country and kingdom, whose number was countless. And I went to the king of the Jebusites and saw a woman in their kingdom and loved her greatly, and I desired to join her with my wives.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_271" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to their priests, “Give me this Shunamite, for I love her greatly.” And they said to me, “If you love our daughter, worship our gods, the great Raphan and Moloch, and take her.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_272" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I was unwilling to worship. Instead, I said to them, “I do not worship a foreign god.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_273" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But they pressured the virgin, saying, “If it happens that you enter into Solomon’s kingdom, tell him, ‘I will not sleep with you unless you conform to my people, and take five locusts and sacrifice them in the name of Raphan and Moloch.’”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_274" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But because I loved the girl, as she was very beautiful, and being foolish, I thought nothing of the blood of the locusts, and I took them in my hands and sacrificed them in the name of Raphan and Moloch to the idols. And I took the virgin into the house of my kingdom.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_275" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Spirit of God departed from me, and from that day my words became as nonsense. And she compelled me to build temples for the idols.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_276" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And so I, the wretched one, followed her counsel, and completely the glory of God departed from me and my spirit was darkened, and I became a laughingstock to idols and demons.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_277" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, I have written this testament of mine, so that those who hear may pray and give heed to the last things and not to the first, so that they may fully find grace forever; Amen.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_278" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So I, Solomon, son of David, son of Jesse, wrote my testament and sealed it with the ring of God. And I died in my kingdom and was gathered to my fathers in peace in Jerusalem. And the temple of the Lord God was completed, where beneath his throne a river flows; to whom ten thousands of angels and thousands of archangels and cherubim stood by, crying out, seraphim crying out and saying: “Holy, holy, holy is the Lord of hosts, and blessed are you forever and ever; Amen.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_279" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Glory to you, my God and Lord, glory to you with the most glorious Theotokos and the venerable Forerunner and all the saints, glory to you.</reading>
           </unit>
         </div>
       </div>

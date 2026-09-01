@@ -1,85 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-
-<!ELEMENT book (version+)>
-<!ATTLIST book
- filename CDATA #REQUIRED
- title CDATA #REQUIRED
- textStructure CDATA #IMPLIED
->
-
-<!ELEMENT version (divisions, resources*, manuscripts+, text)>
-<!ATTLIST version
- title CDATA #REQUIRED
- author CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT divisions (division)+>
-
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division
- label CDATA #REQUIRED
- delimiter CDATA #IMPLIED
->
-
-<!ELEMENT resources (resource+)>
-<!ELEMENT resource (info+, URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-
-<!ELEMENT info (#PCDATA)>
-
-<!ELEMENT URL (#PCDATA)>
-
-<!ELEMENT manuscripts (ms+)>
-
-<!ELEMENT ms (name, bibliography*)>
-<!ATTLIST ms
- abbrev CDATA #REQUIRED
- language CDATA #REQUIRED
- show CDATA #REQUIRED
->
-
-<!ELEMENT name (#PCDATA | sup)*>
-
-<!ELEMENT sup (#PCDATA)>
-
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-
-<!ELEMENT booktitle (#PCDATA)>
-
-<!ELEMENT text (div+)>
-
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div
- number CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT unit (reading+)>
-<!ATTLIST unit
- id CDATA #REQUIRED
- group CDATA "0"
- parallel CDATA #REQUIRED
->
-
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading
- option CDATA #REQUIRED
- mss CDATA #REQUIRED
- linebreak CDATA #IMPLIED
- indent CDATA #IMPLIED
->
-
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w
- morph CDATA #IMPLIED
- lex CDATA #IMPLIED
- style CDATA #IMPLIED
- lang CDATA #IMPLIED
->
-
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="Jubi" title="Jubilees">
   <version title="" author="">
     <divisions>
@@ -2344,6 +2263,2273 @@
         <div number="22">
           <unit id="437" group="0" parallel="">
             <reading option="0" mss="Ceriani ">Et tu monse manda filiis istrahel ut custodiant praeceptum paschae et quemadmodum mandatum est tibi indica illis per singulos enim annos in tempore dierum suorum et per diem festum azymorum ut manducent azyma septem dies et ut faciant diem festum eius et ut offerant oblationem per singulos dies in septem diebus laetitiae in cons&lt;pectu&gt; ---.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="English" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of English based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="13">
+        <div number="10">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">--- And he dwelt there two years. And he moved from there toward the south as far as Bealoth, and a famine arose over the land.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abram went into Egypt in the third year of the week, and he dwelt in the land of Egypt five years before his wife was taken from him.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Tanis, a city of Egypt, was built at that time, seven years after Hebron.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it came to pass, when Pharaoh had taken Sarah the wife of Abram, the Lord afflicted Pharaoh and his house with great plagues because of Sarah the wife of Abram.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And then Abram was greatly enriched with riches: with all sheep and cattle and donkeys and camels and horses, and male servants and female servants, and with much silver and gold. And indeed Lot, his brother's son, also had riches.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Pharaoh returned Sarah the wife of Abram to her husband, and sent him away from the land of Egypt. And he came to the place where he had pitched his tent at the first, to the place of the altar, with Ai on the east and Bethel on the west; and he blessed the Lord his God who had brought him back in peace.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it came to pass in the forty-first jubilee, in the third year of the first week, he returned to this place and offered burnt offerings, and called upon the name of the Lord: 'You are God Most High, my God forever and ever.'</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the fourth year of this week, Lot was separated from him and dwelt in Sodom. And the men of Sodom were exceedingly sinful and wicked in their hearts.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">--- because Lot, the son of his brother, was separated from him, because he had no children.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Lot was taken captive from him. And in the fourth year of this week of this jubilee, God said to Abram: 'Lift up your eyes from the place where you are sitting, to the west and south and east and north.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For all the land that you see I will give to you and to your seed forever. And I will make your seed like the sand of the sea, so that your seed will not be numbered.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as for you, arise, walk through its length and breadth, and see it all, for to your seed I will give it.' And Abram went to Hebron and dwelt there. ---</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="20">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">--- him, and I will multiply him and increase him exceedingly. For he will beget twelve princes, and I will make him a great nation.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And my covenant I will establish with Isaac, whom Sarah shall bear to you at this season in the coming year.'</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he finished speaking with him, and God went up from Abraham.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham did just as God had said to him, and he took Ishmael his son and all those born in his house and those bought with money, every male in his house; and he circumcised the flesh of their foreskin at that time.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham circumcised himself on that day, and all those born in his house and his domestic servants and those bought with money, even of the sons of foreigners, he circumcised them all.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This law is for all the generations of eternity, and there is no passing over a single day of the days, because it has been commanded as an eternal ordinance and written on the heavenly tablets.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">That every male born whose flesh of his foreskin is not circumcised by the eighth day does not belong to the covenant which God covenanted with Abraham, for he belongs to the children of destruction; and there is no longer a sign upon him that he belongs to God, but rather of destruction and perdition from the earth, because he has broken the covenant of the Lord our God.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For all the angels of the presence and all the archangels of blessing—from the days of their creation, before the angels of the presence and the angels of sanctification—he sanctified Israel, that it might be together with him and with his holy angels.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And do you command the children of Israel that they keep the covenant of this sign throughout their generations as an eternal covenant, and they will not be rooted out from the land.</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he has decreed in the decree of the covenant that it be kept forever among all the children of Israel.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For Ishmael and his sons and his brothers and Esau God did not draw near to himself, nor did he choose from among them, although they also are of the sons of Abraham, as he knew them; but he chose Israel, that they should be to him a people.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he sanctified him and com---</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="5 ">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">--- all their works, how they were exceedingly wicked and sinful and unclean, practicing uncleannesses in their flesh and committing abominations upon the earth.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For in this manner God will execute judgment in the places, wherever they commit the abomination of Sodom, thus he will judge them.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we delivered Lot from there, because God remembered Abraham, so that he delivered him from the midst of the overthrow.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he and his daughters committed iniquity on the earth such as had not been done in all the earth from the days of Adam until him, that a man should lie with his daughters.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For behold, it is commanded and written concerning all their seed on the heavenly tablets, that such shall be removed and exterminated, and that their judgment shall be like the judgment of Sodom, so that not any seed of a man shall be left among them on the earth in the day of judgment.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in this month Abraham departed from Hebron, and went and dwelt between Kadesh and Shur in the borders of Gerar.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the middle of the fifth month he moved from there and dwelt beside the Well of the Oath.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the middle of the sixth month God visited Sarah and did for her as he had spoken.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she conceived and bore a son in the seventh month, in the middle of the month, at the time of which God had spoken to Abraham; on the festival day of the firstfruits, Isaac was born.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham circumcised his son on the eighth day; he was the first to be circumcised according to the covenant ordained forever.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the sixth year of the fourth week we came to Abraham beside the Well of the Oath, and we appeared to him as we had said to Sarah, that we would return to her and she would have conceived a son.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we returned in the seventh month, and we found Sarah pregnant before us. And we blessed him, and told him all that had been decreed concerning him: and how he was to die, and that he would still beget six sons, and that he would see all of them before he died; but in Isaac shall a name be multiplied and called.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the seed of his sons shall be nations, and they shall be numbered with the nations; but of the sons of Isaac one shall become a holy seed, and shall not be numbered among the nations.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he shall be in the portion of the Most High, since all his seed has fallen into the possession of God, that they might be to God a sanctified people out of all the nations belonging to Him, and that it may be a kingdom of priests and a holy people.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we went on our way, and we told Sarah all that we had told him; and they both rejoiced with great joy.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he built an altar there to the Lord who had delivered him, and who had brought him in His favor to the land of his sojourning. And he made a festival of joy in this month for seven days beside the altar,</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and he built booths for himself and for his servants on this festival. And he was the first to observe the Festival of Booths on the earth.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And during these days he offered each day upon the altar an offering to the Lord: two calves, two rams, seven sheep, and one he-goat for sins, to make atonement through it for himself and for his seed.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as a peace offering: seven rams, seven kids, seven sheep, and seven he-goats, and their grain offerings and their wine offerings; and he burned all their fat upon the altar ... a sacrifice for a sweet aroma.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And morning and evening he burned compound incense: frankincense, galbanum, stacte, nard, myrrh, spikenard, and costus—these seven pure spices he burned, chopped and mixed equally.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he celebrated this festival for seven days, feasting with all his heart and with all his soul, he and all his household; and no stranger was with them, nor any uncircumcised person.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he blessed his Creator who created him, because he perceived and knew that from him would come a planting of truth for eternal generations, and from him a holy seed, that it might be like Him who created all things.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he blessed and rejoiced, and he called the name of this festival 'The Festival, the Day of Joy Acceptable to the Most High God.'</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we blessed him forever, and his seed with him throughout all the generations of all the earth, because he celebrated this festival in its season, according to the testimony of the heavenly tablets.</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore it has been decreed in the heavenly tablets concerning Israel that there should be a Festival of Booths for seven full days in joy, in the seventh month, acceptable before the Lord, an eternal statute for their generations in each year.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And there shall be no end of times, because it is commanded forever to Israel that they should observe it and sit in booths, and that they should place wreaths upon their heads, and take leafy branches and willows from the brook.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham took of the beauty of palm trees and the fruit of a goodly tree, and every day he went around my altar with branches seven times in the morning, praising and giving thanks to his God for all things in joy.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="1">
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the first year of the fifth week in this jubilee, Isaac was weaned; and Abraham made a great feast in the third month, on the day when his son Isaac was weaned.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ishmael, the son of Hagar the Egyptian maidservant, was in his place before Abraham his father. And Abraham rejoiced and blessed God because he saw sons born to him, and had not died without children.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he remembered the words which He had spoken to him on the day when Lot separated from him. And he rejoiced because God had given him seed upon the earth to inherit it; and with his whole mouth he blessed Him who created all things.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Sarah saw Ishmael playing with Isaac, and Abraham rejoicing with great joy, and she became jealous of Ishmael, and said to Abraham: 'Cast out this maidservant and her son, for the son of this maidservant shall not inherit with my son Isaac.'</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the word seemed very evil in the eyes of Abraham on account of the maidservant and on account of her son, that he should cast them away from himself.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And God said to Abraham: ---.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="10">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was troubled, and said: 'Here am I.'</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him: 'Do not lay your hand upon the boy, and do nothing to him; for now I have shown that you fear your God, and have not withheld your firstborn son from me.'</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Prince Mastema was put to shame. And Abraham, lifting up his eyes, looked, and behold, a single ram was caught by its horns. And Abraham went and took the ram, and offered it up in place of Isaac his son.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham called the name of that place 'The Lord Has Seen,' so that it is said on the mountain, 'The Lord has appeared.' This is Mount Zion.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham was called by his name a second time from heaven, for we were there to speak to him in the name of the Lord.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And He said: 'By Myself I have sworn, says the Lord: because you have done this thing and have not withheld your only son on account of Me, whom you loved, I will indeed bless you, and I will indeed multiply your seed like the stars of heaven and like the sand that is by the seashore; and your seed shall possess the cities of his adversaries.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in your seed all the nations of the earth shall be blessed, because you obeyed My voice, and I have shown to all that you are faithful to Me in all that I told you: walk in peace.'</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham went to his young men, and they arose and went to Beersheba, and Abraham dwelt by the Well of the Oath.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he used to celebrate the festival three times every year. For he also celebrated these seven days in joy, and called it the festival of the Lord according to the seven days in which he went and returned.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it was decreed and written on the heavenly tablets concerning Israel and concerning his seed that they should celebrate a festival for seven days, rejoicing in gladness.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="1">
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the first year of the weeks of the forty-second jubilee, Abraham returned and dwelt opposite Hebron—that is, Kiriath-arba—for two weeks of years.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the year of the third week of this jubilee, the days of the life of Sarah were completed, and she died in Hebron.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham came to mourn for her. And we tested him to see if his spirit was patient and not fainthearted in the words of his mouth. And in this also he was found most patient, and he was not troubled.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For in patience of spirit he spoke with the sons of Heth, that they might give him a place where he might bury his dead.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And God gave him favor in the sight of all who saw him, and he entreated in meekness the sons of Heth, and they gave him the field of the double cave, which is opposite Mamre—that is, Hebron—for four hundred pieces of silver.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they requested this of him, saying: "We give it to you for nothing." But he did not accept it from their hands for nothing, for he gave the price of the place, paying the full sum of money; and he bowed down before them twice, and after this he buried his dead in the double cave.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the days of the life of Sarah were one hundred and twenty-seven years, that is, two jubilees and four weeks, less one year: these are the days of the life of Sarah.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This was the tenth trial in which Abraham was found, and in it he was faithful and patient in spirit.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he did not speak a word concerning the promise of the land, as God had said he would give it to him and to his seed after him, but he asked a place from them that he might bury his dead. For he was found faithful, and he was recorded as a friend of God on the heavenly tablets.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in its fourth year Abraham took a wife for his son Isaac; and her name was Rebecca, the daughter of Bethuel, the son of Nahor, Abraham's brother, the sister of Laban, daughter of Bethuel; and Bethuel was the son of Milcah, the wife of Nahor, Abraham's brother.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham took for himself a third wife, and her name was Keturah, from the daughters of his household servants, because Hagar had died before Sarah.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she bore him six sons: Zimran, and Jokshan, and Medan, and Midian, and Ishbak, and Shuah, in two weeks of years.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the sixth week of this second year Rebecca bore Isaac two sons, Esau and Jacob. And Jacob was gentle and upright, and Esau was harsh, a man of the field and hairy; and Jacob dwelt in tents.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they grew up and both became young men; and Jacob learned letters, but Esau did not learn, for he was a rustic man and a hunter, but he learned warfare, and all his deeds were harsh.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham loved Jacob, but Isaac loved Esau.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham saw the deeds of Esau, and knew that in Jacob his seed and name would be called; and he called Rebecca and commanded her concerning Jacob, because she loved Jacob more than Esau.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to her: "My daughter, watch over the name of my son Jacob, for he shall be my preservation upon the earth, and for a blessing upon the sons of men, and the glory of all my seed.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For I know that God has chosen him for himself as a holy people from among all the peoples that are upon the face of the whole earth.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, Isaac loves Esau more than Jacob, but I see that you love Jacob in truth.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Continue even more to be gracious to him, and let your eyes be upon him in love, for he will be a blessing to us upon the earth, from now and into every generation of the earth.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore let your hands be strong, and let your heart rejoice in your son Jacob, for I have loved him above all my sons. Therefore he and his seed shall be blessed forever, and it shall fill all the earth.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">If, then, a man can number the sand of the earth, then his seed also can be numbered.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the blessings with which God has blessed me and my seed shall belong to Jacob and to his seed all the days.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in his seed my name and the name of my fathers shall be blessed: Shem, Noah, Enoch, Mahalalel, Enosh, and Adam.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they shall lay the foundations of heaven and establish the earth, so that all the luminaries of the firmament may be acknowledged."</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham called...</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="5 ">
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...just as they were judged on account of their wickedness, because they were mingling with harlots, and practicing uncleanness, and committing every abomination, and neglecting the commandments.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And therefore, lest you also give your name for a curse, and your whole life for a hissing, and all your sons for destruction and for the sword, and you become accursed like Sodom, and all your remnant like the sons of Gomorrah.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And therefore I testify to you, my sons: love the God of heaven, and cling to all his commandments, and do not go after all their abominations and after all their uncleannesses.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you shall not make for yourselves molten gods or carved images, for they are vain, and there is no spirit in them at all, for they are the works of hands, and all who trust in them trust in nothing. And therefore do not serve them, and do not worship them.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But serve the Most High God, and worship him by worshipping and waiting upon his face at all times; and do truth and righteousness before him, that he may guide you and give you mercy, and send down for you the early and the latter rains, and bless all your works whatever you work upon the earth, and bless your bread and your water, and he will bless the fruit of your womb and the fruit of your land, as well as the herds of your cattle and the flocks of your sheep.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you shall be a blessing upon the earth, and all the nations of the earth shall desire you, and they shall bless your sons in my name, so that they may be a blessing just as I am."</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he gave gifts to Ishmael, to his sons, and to the sons of Keturah, and sent them away from his son Isaac...</reading>
+          </unit>
+        </div>
+        <div number="12 ">
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...and his sons, and the sons of Keturah and their sons; and they dwelt from Paran as far as the entrance of Babylon, in all the eastern country opposite the desert.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And these were mixed with those, and their name was attached to the Arabs and Ishmaelites unto this day.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="21">
+        <div number="1">
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the sixth year of the seventh week of this jubilee, Abraham called his son Isaac and commanded him, saying: "I have grown old and do not know the day of my death, and I am full of my days.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, my son, I am one hundred and seventy-five years old, in all the days of my life having our God always in remembrance and seeking him with all my strength, that I might do all his will and walk uprightly in all his ways.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And therefore my soul hated idols, and I spurned those who served them; and I gave my heart and spirit to keep and do the will of him who created me.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For God is living, and holy, and faithful, and righteous, and above all with him there is no partiality that he should accept gifts; for God is righteous, and executes judgment on all who transgress his words and who despise his testimony.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you, my son, keep his precepts, and his commandments, and his judgments, and do not go after abominations and after molten images.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And do not eat any blood of any flesh, whether of those that are on the earth or of those that fly in the air.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And if you slaughter a sacrifice of peace offerings, you shall slaughter it, but its blood you shall pour out upon the altar. And all the blood of the burnt offering upon the altar, with fine flour mixed with oil and with its wine—you shall offer all these upon the altar of fruit offerings: it is a pleasing aroma in the sight of God.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the fat of the peace offering you shall offer upon the fire upon the altar: both the fat that is upon the belly and all the fat that is upon the entrails, and the two kidneys and all the fat that is upon them and that is upon the thigh; and the liver that is upon the lobe, separate it with the kidneys.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And thus you shall offer everything for a pleasing aroma, acceptable in the sight of the Lord, with their offerings and with its wine for a pleasing aroma, food of fruit offerings to the Lord.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you shall eat the flesh on that day and on the morrow, and [the sun] shall not go down...</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="2 ">
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...Isaac had many riches in Beersheba; and Isaac was going and looking after what he possessed, and he returned to his father.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">At that time Ishmael came to see his father, and both came together. And Isaac sacrificed a victim of fruit offerings and offered it upon the altar of his father which he had made in Hebron.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he made a peace offering and made a feast of rejoicing before Ishmael his brother. And Rebekah made a new cake from the new grain and gave it to Jacob her son, that he might bring it to Abraham his father from the first fruits of the earth, so that he might eat and bless the Creator of all before he died.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac also sent by the hand of Jacob the best of his peace offerings and wine to his father Abraham, so that he might eat and drink.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham ate and drank, and he blessed the Most High Lord who created heaven and earth, who made all the fatness of the earth and gave it to the children of men, that they might eat and drink and bless their Creator.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And now I give thanks, my God, because you have shown me this day; and behold, I am one hundred and seventy-five years old, an old man and full of days, and all my days have been for me days of peace.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sword of the enemy has not had dominion over me in all the days in which you gave me these sons of mine, all the days of my life unto this day.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">May your mercy and your peace now be upon this boy, Lord, and upon his seed, so that they may be to you an acceptable people and an inheritance among all the children of the earth, from now and unto all the days of the generations of the earth for all ages.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham called his son Jacob and said: 'My son Jacob, may the God of all bless you and strengthen you to do truth and his will in his sight, and to choose you and your seed to be a people for him and in his will in all days. And you, my son Jacob, draw near to me and kiss me.'</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob drew near and kissed him. And he said: 'Blessed be my son Jacob and all his sons to the Most High God in all things. May God give you a seed of truth, and from your sons may he sanctify in the midst of all the earth. Nations shall serve you, and all peoples shall bow down before your name.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Become strong in the presence of men, and exercise dominion over all the seed of Seth. Then your ways and the ways of your sons shall be justified, so that they may be a holy people.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">May the Most High God give you all the blessings with which he blessed me, and blessed Noah and Adam; and may they rest upon the crown of the sanctification of your seed throughout every generation, unto eternity.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he will cleanse you from all defilement and injustice, that he may be merciful to all your injustices and your negligence; and he will strengthen you and bless you, and you will inherit all the earth.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you shall renew his covenant with him, that you may be to him a people of inheritance for all ages, and he will be to you and to your seed a God in truth and righteousness all the days of the earth.'</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">'And you, my son Jacob, remember my words and keep the precepts of your father Abraham. Separate yourself from the nations and do not eat with them, nor act according to their works, and do not become a companion to them; for their works are pollution, and all their way is uncleanness, abomination, and filth.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For they sacrifice to the dead, and worship demons, and eat upon tombs; and all their works are vain and of no account.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they have no heart to consider, and their eyes do not see what their works are, and how they go astray, saying to wood: "You are my God," and to stone: "You are my Lord, and you are my deliverer"; and they have no heart.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you, my son Jacob, the Most High God will help you, and the God of Adam will strengthen you, and he will separate you from all their abominations and from all error...'</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="23">
+        <div number="8 ">
+          <unit id="en_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...in his one hundred and seventy-fifth year, he completed the days of his life, an old man and full of days.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For the days of the ancients were the days of his life. And in the nineteenth jubilee after the flood, the days of these jubilees began to diminish, and men began to grow old more quickly, and the days of their life were diminished on account of the tribulation of many things and their doing evil in their ways, except Abraham.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For Abraham was perfect in all his works with God, and pleasing in truth all the days of his life. And behold, he did not complete four jubilees in his life until he grew old because of the wickedness of the evil ones, and he was satisfied with his days.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the generations that arise from this time until the day of the great judgment shall grow old quickly, before they complete two jubilees, and their spirit of understanding will depart from them.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in those days, if a man lives a jubilee and a half of years, they will say concerning him: 'His life was abundant, and the greater part of his days [were sorrow] and distress, and there is no peace.'</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For wound is upon wound, and pain upon pain, and tribulation upon tribulation, and evil rumor upon evil rumor, and sickness upon sickness, and all his judgments... evil according to this very thing, with corruption and calamity and snows and hoarfrosts and ice and fever and chills and suffocation and famine and death and sword and captivity and every plague of mourning.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all these things shall come upon the generation that is wicked, that commits iniquity on the earth, with uncleanness and fornications and pollutions, the abominations of their works.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then they will say: 'The days of the ancients were many, up to a thousand years, and they were good days; for behold, as for the days of our life, if a man lives long, they are seventy years, and if very strong, eighty; and these are evil, and there is no peace at all in the days of that most wicked generation.'</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in that generation it shall come to pass that children will rebuke their fathers and their elders on account of iniquity and injustices, and on account of the word of their mouth, and on account of the great wickednesses that they commit, because they forsake the covenant that God established between his hand and them, to keep and to do all his commandments and his precepts and all his statutes, and there is none that turns aside to the right or to the left.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Because all have done wickedly, and every mouth speaks evil, and all their deeds are uncleanness and hatred, and all their ways are pollutions, and abomination, and destruction.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, the land will perish because of all their deeds, and there is no seed and wine and oil, because all their works have become corrupt, and all perish—beasts, and cattle, and birds, and all the fish of the sea—because of the evil of the children of men.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they will dispute with one another: young men with the elders, and elders with the youths, the poor with the rich, the lowly with the great, and the needy with the one who exercises authority over the law, concerning the covenant, because they have forgotten the commandment and the covenant and feast day and month and sabbath and jubilee and all the ordinances.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they will stand with bow and with swords and in war to turn them back to the way, and they will not turn back until much blood is poured out upon the earth, one against another.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And those who are preserved in the way of truth will not depart from their evil, nor will they turn back. For all of them will exalt themselves toward fraud and wealth, so that each one takes all that belongs to his neighbor, and they will call upon a great name, not in truth and not in righteousness. And they will defile the holy sanctuary with abominations of wickedness and impurities.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And there will be great wrath from the Lord upon the works of that generation. And he will give them over to the sword, and to judgment, into captivity, and plunder, and devouring.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he will cause to rise up against them the sinners, the sinners of the Gentiles, who have no...</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="24">
+        <div number="13 ">
+          <unit id="en_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...of years. And Abimelech gave command concerning him, saying, 'Any man who troubles him or anything belonging to him shall surely die.'</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac grew in the land of the Philistines, and he acquired great wealth, and oxen, and sheep, camels, and donkeys, and a large household.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he sowed in the land of the Philistines and reaped a hundredfold; and Isaac became very great, and the Philistines envied him.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the wells that the servants of Abraham had dug in the life of Abraham, the Philistines stopped up after the death of Abraham and filled them with earth.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abimelech said to Isaac, 'Depart from us, for you have become much greater than we.' And Isaac departed from there with his people in the first year of the seventh week.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And turning from there, they dug the wells of water that the servants of his father Abraham had dug and the Philistines had filled up after the death of his father Abraham; and he gave them names according to the names his father had given them.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the servants of Isaac dug wells in the valley and found living water in it, and the shepherds of Gerar disputed with the shepherds of Isaac, saying, 'The water is ours.' And Isaac called the name of the well Contention, because they were contentious with us.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they dug another well, and they disputed over that one as well, and he called its name Enmity. And they dug a third well, and they did not dispute over it, and he called its name Room. And Isaac said, 'For now the Lord God has made room for us and multiplied us upon the earth.'</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And... and... in the first year of the first week.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The Lord appeared to him on that very night, on the first day of the first month, and said to him, 'I am the God of Abraham your father. Do not fear, for I am with you, and I will bless you and multiply your seed like the sand of the earth on account of Abraham my servant.'</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he built... which his father had built, and he called upon the name of the Lord and offered sacrifices to the God of his father Abraham.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they dug a well and found living water.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the servants of Isaac dug another well again and did not find water, and they came and reported to Isaac that they had not found water. And Isaac said, 'Because of what I swore on this day to the Philistines, this word has happened to us.'</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he called the name of that place Well of the Oath, because there Abimelech and Ahuzzath his friend and Phicol the commander of his army had sworn.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="en_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac knew on that day that... he swore to make peace with him.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="en_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac cursed the Philistines on that day and said, 'Cursed be the Philistines in the day of wrath and indignation from among all the nations. May God deliver them to reproach and a curse and the indignation of wrath, into the hand of a sinful people and into the hand of the Kittim.'</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="en_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And may a righteous people uproot them in judgment from under heaven, because they are enemies and adversaries to my children throughout their generations upon the earth.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="en_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And no remnant shall be left to them, nor any survivor escaping in the day of the wrath of judgment, but rather unto destruction and annihilation, so that all the seed of the Philistines may be removed from the face of the earth, and no name whatsoever will be left to them upon the earth.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="en_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And even if they ascend up to heaven, from there they shall be brought down; and wherever they flee, from there they shall be snatched away; and if they hide themselves among the nations, they shall be uprooted; and if they descend into Sheol, there their judgment will abound, and there will be no peace for them there at all.</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="en_166" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And if they go into captivity into the hand of all who seek their life, even in the midst of Sheol they shall perish, and they shall have no seed and no name in all the earth, because they shall depart into an eternal curse.'</reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="en_167" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For thus it is written and sealed concerning them in the heavenly tablets, that it should be done to them on the day of judgment, so that they may be uprooted from the face of the earth.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="25">
+        <div number="1">
+          <unit id="en_168" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the second year of the weeks of this jubilee, Rebekah called her son Jacob and spoke to him, saying, 'My son, do not take for yourself...'</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="26">
+        <div number="8 ">
+          <unit id="en_169" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...of his counsel, and he will be angry against me, and I shall bring upon myself a curse and not a blessing.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_170" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Rebekah his mother said to him, 'Upon me be your curse, my son; only obey my voice.'</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_171" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob obeyed the voice of his mother Rebekah, and he went and took two young and tender goats and brought them to his mother; and his mother prepared them as food just as he desired.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_172" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Rebekah took the best garments of Esau her older son, which were with her in the house, and put them on Jacob her younger son, and she put the skins of the young goats around his arms and shoulders and upon his bare neck.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_173" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">She placed the food that she had prepared and the bread into the hands of Jacob her son.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_174" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob went in to his father and said, 'I am your son; I have done as you told me. Rise up, sit, and eat of my game, father, so that your soul may bless me.'</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_175" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac said to his son, 'How is it that you have found it so quickly, my son?'</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_176" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob said, "Because the Lord your God made it succeed before me."</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_177" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac said to him, "Come near to me that I may feel you, my son, whether you are my son Esau."</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_178" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob drew near to Isaac his father, and he felt him and said, "The voice indeed is the voice of Jacob, but the hands are the hands of Esau."</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_179" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he did not recognize him, because there was a turning away from heaven to distract his spirit. And he did not recognize him because his hands were hairy like the hands of his brother Esau. And he blessed him.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_180" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said, "Are you my son Esau?" And Jacob said, "I am your son." And Isaac said, "Bring it near to me, and I will eat of your game, my son, so that my soul may bless you."</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_181" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he brought it to him and he ate, and he brought him wine and he drank.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_182" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac his father said to him, "Come near to me and kiss me, my son." And he drew near and kissed him.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_183" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he smelled the smell of his garments and blessed him and said, "Behold, the smell of my son is like the smell of a full field which God has blessed."</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_184" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And may he give you—</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="27">
+        <div number="11 ">
+          <unit id="en_185" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">—and to your seed after you, that you may possess as an inheritance the land of your sojourning and all the land which God gave to Abraham. Go in peace, my son."</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_186" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac sent Jacob away, and he went to Mesopotamia to Laban, son of Bethuel the Syrian, the brother of Rebekah, the mother of Jacob.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_187" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it came to pass when he went to Mesopotamia, Rebekah's spirit was grieved after Jacob her son, and she wept.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_188" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac said to Rebekah, "My sister, do not weep for Jacob my son, for he will go in peace and return in peace.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_189" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Most High God will guard him from all evil, and will be with him, and will not forsake him all the days.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_190" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For I know that all his ways will be directed in everything in which he travels until he returns to us in peace, and we shall see him in peace.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_191" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Do not fear concerning him, therefore, my sister, for he is on the upright path and will be a perfect, truthful man, and he will not be forsaken; do not weep."</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_192" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac comforted Rebekah concerning Jacob her son, and he blessed him.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_193" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the forty-fourth jubilee, in the second year of the week, Jacob went out from the Well of the Oath to go to Haran. And he arrived at Lydia, which is on the mountain—this is Bethel—on the first day of the first month of this week; and he arrived at the place in the evening and turned aside from the road at the sunset of his journey; in this night he slept there, for the sun had set.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_194" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And taking some of the stones of that place, he put it under his head beneath a tree; and he was traveling alone.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_195" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as he slept, he dreamed in that night: and behold, a ladder was set up on the earth, and its top reached into heaven; and behold, the angels of God were ascending and descending on it, and the Lord was resting upon it.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_196" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he spoke with Jacob and said, "I am the Lord, the God of Abraham your father and the God of Isaac; the land on which you sleep, to you I will give it, and to your seed after you.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_197" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And your seed shall be like the sand of the earth, and it shall spread abroad to the sea and to the east and to the north and to the south; and in you and in your seed all the tribes of the earth shall be blessed.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_198" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold—</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="28">
+        <div number="16 ">
+          <unit id="en_199" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">—of your womb, or have I forsaken you?"</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_200" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Rachel saw that Leah had borne Jacob four sons—Reuben, Simeon, Levi, Judah—Rachel said to Jacob, "Go in to Bilhah my handmaid, and she will conceive and bear me a son."</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_201" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she gave Bilhah her handmaid as a wife; and she conceived and bore a son, and she called his name Dan, in the ninth month of this sixth year of the week.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_202" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob went in again to Bilhah, and she conceived and bore a second son to Jacob; and Rachel called his name Naphtali, in the fifth month of the seventh year, in the second year of the fourth week.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_203" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Leah, seeing that she was restrained and was not bearing, gave her other handmaid to Jacob as a wife; and she conceived and bore a son, and Leah called his name Gad, in the twelfth month of the eighth year, on the third day of the fifth week.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_204" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He went in to her, and she bore him a son, and she called his name Asher, in the second month on the tenth day, in the fifth year of the fourth week.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_205" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He went in to Leah, and she conceived and bore a son, and she called his name Issachar; and in the fourth year, in the month of the fifth year, on the day of the fourth week, she gave him to a nurse.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_206" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob went in again to Leah, and she conceived and bore two, a male and a female; and she called the name of the male Zebulun, and the name of the female Dinah, in the seventh month of the seventh year, the sixth of the fourth week.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_207" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">God had mercy on Rachel and opened her womb, and she conceived and bore a son, and she called his name Joseph, on the first day of the fourth month in the sixth year of this fourth week.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_208" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">At the time when Joseph was born, Jacob said to Laban, "Give me my wives and my sons, and I will go to my father Isaac and make a household for myself; for I have completed the years in which I served you for your two daughters, and I will go to the house of my father."</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_209" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Laban said to Jacob, "Stay with me for wages, and pasture my sheep again, and I will give you wages."</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="en_210" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they agreed concerning wages, that he should give him—</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="29">
+        <div number="8 ">
+          <unit id="en_211" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...that the name of that place was called 'Heap of Witness' according to this hill.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_212" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For previously the land of Gilead was called the land of the Rephaim, because it is the land of the Rephaim. And there were born the Rephaim, that is, giants of ten cubits, and nine, and eight cubits, and even seven cubits was their height.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_213" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And their dwelling was from the land of the children of Ammon as far as Mount Hermon, and the seats of their kingdom were Karnaim, and Ashtaroth, and Edrei, and Misam, ... and Sihon.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_214" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord destroyed them because of the evil of their deeds, for they were exceedingly wicked; and in their place He caused the Amorites to dwell, wicked and sinful, such as no nation is hated, because they fulfilled all their sins; and they no longer have length of days upon the earth.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_215" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob sent Laban away, and he went into Mesopotamia, into the land of the east; and Jacob turned to the land of Gilead.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_216" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the ninth month Jacob crossed over with his eleven sons; and on that day his brother Esau came to him and was reconciled, and he went away from him to the land of Seir, and Jacob dwelt in tents.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_217" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the first year of this jubilee, in the fifth week, he crossed the Jordan and dwelt across the Jordan. And he was pasturing his sheep from the Salt Sea as far as the Ascent of Akrabbim.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_218" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he sent to his father Isaac from all his possessions garments, and food, and meat, and drink, milk, butter, and cheese, and dates from the valley.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_219" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And to his mother Rebekah each year four times, between the seasons of the months: between the threshing floor and the autumn harvest, and between autumn and the rains, and between the rains and the spring, to this tower of Abraham.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_220" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For Isaac had returned from the Well of the Oath and gone up to the tower of his father Abraham, and dwelt there in his land, he and his sons.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_221" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Because at the time when Jacob went to Mesopotamia, Esau took for himself a wife, Mahalath the daughter of Ishmael, and he took all the flocks of his father and his wives, and going up, he dwelt in Mount Seir and left his father Isaac at the Well of the Oath.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_222" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore Isaac went up from the Well of the Oath to the tower of his father Abraham in the mountain of Hebron.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_223" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">There Jacob was sending whatever was needed to his father and to his mother season by season, all things that were necessary for all their needs; and they blessed Jacob with all their heart and with all their soul.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="30">
+        <div number="1">
+          <unit id="en_224" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the first year of the sixth week he went up to Salem, to the east of Shechem, in peace, in the fourth month.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_225" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And there they carried off Dinah, the daughter of Jacob, into the house of Shechem, the son of Hamor the Hivite, the prince of the land; and he defiled her, for he lay with her, and she was a young girl, twelve years old.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_226" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And afterward he asked for her from her father and all her brothers as a wife. And Jacob and his sons were indignant with the men of Shechem because they had defiled their sister Dinah; and they spoke to them deceitfully and mocked them with craftiness.</reading>
+          </unit>
+        </div>
+        <div number="4 ">
+          <unit id="en_227" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...Simeon and Levi; and Simeon and Levi resolved in their heart to destroy them, and they executed judgment upon the men of Shechem... whom they found in it, and they did not leave in it even one, for they killed all of them in judgment, because they had defiled Dinah their sister.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_228" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...it shall not be any longer that the daughters of Israel are defiled; because judgment was decreed in heaven against them, that they should fight with the sword against all of Shechem, because they wrought shame in Israel.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_229" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord delivered them into the hands of the sons of Jacob, that they might uproot them with the sword and that judgment might be executed upon them; and it shall no longer be in... Israel that a virgin of Israel be defiled.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_230" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And whatever man there is from the children of Israel who sees fit to give his daughter or his sister to any man from the seed of the Gentiles shall perish and be stoned with stones, because he has wrought shame in Israel; and the woman shall be burned with fire, because she has contaminated the house of her father; he shall be uprooted from Israel.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_231" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And there shall be no harlot or abomination in Israel all the days of the generations of the earth, because Israel is holy to the Lord, and every man who defiles it shall die by stoning.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_232" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For thus it is written and decreed on the heavenly tablets concerning all the seed of Israel: that whoever defiles it shall surely die, and shall be stoned with stones.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_233" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And to this law there shall be no end of time, and for it there shall be no remission or any atonement; but rather let the man be cut off whoever defiles his daughter among the people of Israel, because from his seed he has given to a foreigner, and they acted impiously to contaminate it.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_234" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you, Moses, command the children of Israel and testify to them that they must not give of their daughters to the Gentiles, and that they must not take for their sons from their daughters, for it is an abomination before the Lord.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_235" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For this reason I have written for you in the words of the law all the accounts of the deeds of the Shechemites which they did to Dinah, and how the sons of Jacob spoke, saying: 'We will not give our daughter to a man who has a foreskin, for that would be a reproach to us.'</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_236" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it is a reproach to Israel, those who give or take from the daughters of the Gentiles, because it is an abomination and uncleanness in all Israel.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_237" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Israel shall not be cleansed from this abomination if he has a wife from the Gentiles, and it shall not be cleansed if we give of our daughters to any of the Gentiles.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_238" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For it is plague upon plague and curse upon curse, and all the judgments of plagues and the curse of curses will come upon anyone who does this deed; and if he transgresses and despises it, doing abominations and defiling the sanctuary of God, and for those who profane His holy name, the whole people together will be judged for all of his abominations.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_239" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And He will not show partiality, nor will He accept sacrifice or burnt offerings, nor will He smell a sweet aroma to receive it, concerning every man or woman in Israel who defiles the holy things.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_240" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Wherefore I commanded you, saying: 'Testify with this testimony in Israel, and see what was done to the Shechemites and to their sons, how they were delivered into the hand of the men, the sons of Jacob, and they killed them in judgment, and it was reckoned to them in truth and recorded for them as righteousness.'</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_241" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the seed of Levi was designated for the priesthood and as Levites, to serve before the Lord just as we do all the days; and Levi and his sons are blessed forever, because he was zealous for truth to execute judgment and vengeance upon all who rose up against Israel.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_242" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And thus blessing and righteousness are recorded for him as a testimony on the heavenly tablets before the God of all.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_243" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the righteousness that a man does in his life will be remembered; through all the seasons of the year, up to a thousand years, it will be presented, and it will come to him and to his seed after him, and he is recorded as a righteous friend on the heavenly tablets.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_244" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I have written for you all these words and commanded you to proclaim them to the children of Israel, that they may not do evil, nor transgress the commandments, nor break the covenant ordained for them, but perform them; and they will be recorded as friends of God.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_245" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">If, however, they transgress the covenant and act abominably in any of the ways written on the heavenly tablets, they shall be enemies of God, and they will be blotted out from the book of life and written in the book of destruction, among those who are uprooted from the earth.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_246" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on the day when the sons of Jacob struck Shechem, a writing went up for them in heaven that they had executed truth and judgment and vengeance upon them; and they were recorded for a blessing.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_247" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they brought Dinah their sister out of the house of Shechem, and they took captive everything that was in Shechem: their sheep, and their cattle, and their donkeys, and all their substance, and all their herds; and they brought everything to Jacob their father.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_248" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he spoke to them regarding why they had destroyed the city, for he feared those who inhabit the land, the Canaanites and the Perizzites.</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_249" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the fear of the Lord came upon all the cities that were around Shechem, and they did not pursue after Jacob to harm him, because fear had fallen upon them.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="31">
+        <div number="1">
+          <unit id="en_250" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on the first day of the month ---.</reading>
+          </unit>
+        </div>
+        <div number="9 ">
+          <unit id="en_251" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">--- son, for they are like you.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_252" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he declared to him, saying: "In truth they are my sons, and you have truly seen, father, that they are my sons."</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_253" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they drew near to him, and turning, he kissed them and embraced them both together.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_254" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the spirit of prophecy came into the mouth of Isaac, and he held Levi with his right hand and Judah with his left.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_255" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he turned to Levi first and began to bless him first, and he blessed Levi, saying: "May the God of all and the Lord of the ages himself bless you and your sons for all ages.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_256" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And may the Lord grant to you and to your great seed to understand his glory, and he will draw your seed near to himself from all flesh so that you may serve him in his sanctuary like the angels of the presence and like the holy ones; and according to them shall the seed of your sons also be, for glory and greatness and sanctification; and he has sanctified them for all ages.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_257" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they shall be princes and judges for all the seed of Jacob. They shall declare the word of God in truth, and they shall examine all his judgments in righteousness, and they shall declare my ways to this Jacob and my paths to this Israel. The blessing of God shall be given to his seed, that they may bless all the beloved seed.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_258" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Your mother called your name Levi, and in truth she called your name: you shall be for the beauty of God and a companion of all the sons of Jacob. Your table shall be for you, and you and your sons shall eat from it; and for all ages your table shall be full, and your food shall not fail for all ages.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_259" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all who hate you shall fall before your face, and all your enemies shall be destroyed and perish. For he who blesses you shall be blessed, and if there is any nation that curses you, it shall be cursed."</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_260" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And to Judah he said: "May God give you strength and power, that you may trample all who hate you. A prince shall you be, and one of your sons --- shall go forth and possess all the earth and the regions. Then the peoples will fear before your face, and all the nations will be dismayed, and all ---"</reading>
+          </unit>
+        </div>
+        <div number="29 ">
+          <unit id="en_261" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">--- creating all things, to whom you prayed a prayer.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="en_262" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to Rebekah: "Go with your son." And Rebekah went with her son Jacob, and Deborah her nurse with her, and they arrived at Bethel.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="en_263" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he remembered the blessing with which his father had blessed him and his two sons, Levi and Judah; and he rejoiced and blessed the God of his fathers, Abraham and Isaac:</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="en_264" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">"Now I know that I have eternal hope, and my sons, before Almighty God; and thus it was ordained concerning the two and their portion in the testimonies of eternity on the heavenly tablets, just as Isaac blessed them."</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="32">
+        <div number="1">
+          <unit id="en_265" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they slept that night in Bethel, and Levi dreamed as though he were ordained as priest of the Most High God forever; and waking from his sleep, he blessed God.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_266" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob, rising early at dawn on the fourteenth day of this month, tithed everything that had come with him, from human being down to every living creature, and from gold down to every vessel and garment; he tithed everything.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_267" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at that time Rachel was pregnant with her son Benjamin. Jacob counted his sons starting from him, and the lot went up and Levi fell as the portion of God; and his father clothed him in priestly garments and ordained him.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_268" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">On the fifteenth day of this month he also offered upon the altar fourteen calves from the herd, and twenty-eight rams, and forty-nine sheep, and seven kids, and twenty-one male goats—these burnt offerings upon the altar of fruits, acceptable as a pleasing aroma before God.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_269" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This was his offering from the vow which he had vowed to tithe, along with their sacrifices and with their wine.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_270" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the fire consumed the frankincense upon the fire from above, he also offered as a peace offering two calves, four rams, two yearling lambs, and two male goats. And he did these once daily for seven days.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_271" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he blessed and sang a hymn to God, who had delivered him from all his tribulations, and because he had fulfilled his vow.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_272" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he tithed all ---</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_273" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">wherever they shall set the sole of their feet against the children of men.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_274" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I will give to your seed all the blessings that are under heaven, and they shall rule and exercise authority over all nations according to their will, and after this they shall possess the whole earth and inherit it forever."</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_275" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when he finished speaking with him, he ascended from him; and Jacob was watching until he had ascended from him into heaven.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_276" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he saw in a vision of the night, and behold, an angel of God was descending from heaven, and seven boxwood tablets were in his hand; and he gave them to Jacob, and he read and understood what was written on them, and what would come upon him and upon his sons for all ages.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_277" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he showed him whatever was written on the boxwood tablets, and said to him: "Do not build up this place, and do not make it an eternal sanctuary, and do not dwell in this place, for this place shall not be so. But go to the place of the tower of Abraham your father, and live with Isaac your father until the day of your father's death.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_278" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For in Egypt you will die in peace, and in this land you will be buried in glory, and you will be laid in the tomb of your fathers with Abraham and Isaac.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_279" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Do not fear, for just as you have seen and read, so shall all things that are written come to pass."</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_280" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob said: "Lord, how will I remember all that I have read and seen?" And he said to him: "I will remind you of everything."</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_281" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he ascended from him; and he awoke from his sleep and remembered everything that he had read and seen; and he kept secret all the words that he had read and seen.</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="en_282" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he observed one day there and sacrificed on it as much as he had been sacrificing on the previous days; and he called its name 'Retention', because he was retained there for one day, and the previous days he called feast days.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="en_283" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And thus it was revealed that they should be done, and it was written on the heavenly tablets; on account of which it was revealed to him to observe that day and to add it to the seven feast days.</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="en_284" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And its name was called 'Retention', because it was added to the days of the feast days according to the number of the days of the year.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="en_285" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on the twenty-third day of this month, during the night, Deborah, the nurse of Rebecca, died. And they buried her below the city, under the oak near the brook; and they called the name of that place 'the Brook of Deborah'.</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="en_286" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob went and returned to the Tower to his father Isaac; and Jacob sent in his hand rams and sheep and he-goats to make food for his father according to his desire.</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="en_287" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he went after his mother until he came to Ephrathah, and he remained there.</reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="en_288" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Rachel gave birth to a boy on that night, and called his name Benjamin, in this jubilee, on the tenth day of the eighth month, in the first year of the sixth week.</reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="en_289" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Rachel died there, and she was buried in the land of Ephrath—that is, Bethlehem; and Jacob built a pillar over the tomb of Rachel on the way to her tomb.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="33">
+        <div number="1">
+          <unit id="en_290" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob went and settled south of Migdal-Eder; and he went to his father Isaac, he and his wife Leah, on the first day of the tenth month.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_291" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Reuben saw Bilhah, the handmaid of Rachel, the concubine of his father, bathing herself in water in a secret place, and he loved her.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_292" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he went in secretly by night to Bilhah and found her sleeping in her bed alone in her tent.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_293" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he slept with her, and she awoke; and behold, Reuben was with her on the bed. And lifting the coverlet, she seized him and cried out, and she recognized that it was Reuben.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_294" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was ashamed before her, and she released her hands from him, and he fled.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_295" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she grieved exceedingly over this, and told everyone how he had come.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_296" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Jacob came, she reported it to him and said to Jacob: 'I am not clean for you, for I have been defiled toward you, because Reuben has defiled me and slept with me by night; and I was asleep and did not know until he uncovered my covering and slept with me.'</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_297" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob was exceedingly angry with Reuben because he had slept with Bilhah.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_298" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he did not know [her again...].</reading>
+          </unit>
+        </div>
+        <div number="18 ">
+          <unit id="en_299" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[... to show] partiality and [accept] gifts.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_300" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And make known to them the words of this covenant, so that they may hear and take heed concerning them, that they may not perish and may not be uprooted from the land; because there is uncleanness and abomination and hatred and defilement for all who do them on the earth in the sight of our God.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_301" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it is a great sin upon the earth, because Israel is a holy people to the Lord their God, and a people of inheritance, and a priestly and royal people, and of sanctification; and there shall be no uncleanness in the midst of the holy people.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_302" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the third year of this sixth week Jacob and all his sons went and dwelt in the Tower of Abraham, beside his father Isaac and his mother Rebecca.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_303" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now these are the names of the sons of Jacob: the firstborn Reuben, Simeon, Levi, Judah, Issachar, Zebulun—the sons of Leah; and the sons of Rachel: Joseph and Benjamin; and the sons of Bilhah: Dan and Naphtali; and the sons of Zilpah: Gad and Asher; and Dinah, the daughter of Leah, the only daughter of Jacob.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_304" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when these arrived, they bowed down to Isaac and Rebecca. And when they saw them, they blessed Jacob and all his sons. And Isaac rejoiced exceedingly because he saw the sons of Jacob, his younger son, and he blessed them.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="34">
+        <div number="1">
+          <unit id="en_305" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the forty-fourth jubilee, in the sixth year of this week, Jacob sent his sons to pasture his sheep, and his servants with them, to the plain of Shechem.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_306" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the seven kings of the Amorites assembled against them and took up position in an ambush to kill them and to plunder their sheep [...].</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_307" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now Jacob and Levi and Judah and Joseph were in the Tower beside his father Isaac, because his spirit was faint and they could not leave him. And Benjamin was the youngest; for this reason he had remained with his father.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_308" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the kings arrived: the king of Sappho, and the king of Arco, and the king of Saragan, and the king of Silo, and the king of Gaas, and the king of Beth-horon, and the king of Manesacer, and all who inhabit the hill country and who inhabit places in the land of Canaan.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_309" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it was told to Jacob: 'Behold, the kings of the Amor[ites...].'</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="35">
+        <div number="3 ">
+          <unit id="en_310" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[...] until this day, and all my deeds and everything that is in my heart, that all my days I [...] to do good [...] to all.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_311" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And how could I not do this word which you command me, to do for my father and my brothers?</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_312" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I ask, tell me, mother, what perverse thing you have seen in me, so that I may turn away from it and the mercy of the Lord may be upon me.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_313" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Rebecca said to him: 'My son, all my days I have not seen in you any perverse deed, but uprightness. And yet I will tell you the whole truth, my son: I am dying this year, and I shall not pass beyond this year further in my life. I am dying and shall live no longer; [...] fifty years am I completing in my life.'</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_314" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob laughed at the words of his mother because [... she was to die]. And she was sitting before him and was strong, and not weak in her strength; for she was going out and coming in, and her teeth were strong, and sickness had not afflicted her all her days.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_315" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob said to her: 'Blessed am I if my days should approach the days of your life [...]. [...] in me [...] likewise [...] you have spoken with me concerning your death.'</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_316" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she went in [...] to Isaac and said to him: "One petition I ask of you, that you put Esau under an oath that he will not afflict his brother Jacob, nor persecute him, nor harbor enmity against him. For you know the mind of Esau, that it has been evil from his youth, and there is nothing upright in him. [...] his brother."</reading>
+          </unit>
+        </div>
+        <div number="10 ">
+          <unit id="en_317" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[...] all that he has done [...] day [...] until this day on which [...] seized [...].</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_318" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">We were asking [...] from him of our own things [...] as though he were showing mercy to us.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_319" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was bitter toward you because you blessed Jacob your son, who is perfect and truthful, for there is no malice in him [...].</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="36">
+        <div number="20">
+          <unit id="en_320" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he served God with all his heart and with all his soul, and according to the visible commandments, according to the division of the times of his generations.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_321" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the forty-fifth jubilee, in the fourth year of the second week, Leah the wife of Jacob died, and they buried her in the double cave beside Rebecca his mother.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_322" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all his sons and his servants were present to weep with him for Leah his wife, and to comfort him concerning her, for he was mourning for her.</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_323" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he loved her greatly from the day that Rachel her sister died, because she was perfect and upright in all her ways, and honored Jacob all the days that he lived with her, and he did not hear any wicked word from her mouth, because she was quiet and peaceful and [...] honorable [...].</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_324" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he remembered all her deeds which she did in her life, and therefore he loved her greatly with all his heart and with his soul.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="37">
+        <div number="1">
+          <unit id="en_325" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on the day Isaac, the father of Jacob and Esau, died, the sons of Esau heard that Isaac had given the greater [...] honorable portion to Jacob, his younger son, and they were very indignant.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_326" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they disputed with Esau, saying: "Why has Jacob been set over you, though he is younger, and your father gave him the greater portion and made you inferior?"</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_327" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Esau said to them: "Because I gave the birthright to Jacob for a little boiled lentils; and on the day when my father sent me to hunt game for him so that he might eat and bless me, he came with deceit and brought food and drink to my father, and my father blessed him and placed me under his hand."</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_328" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And now our father put us under an oath, me and him, that we should not seek evil against each other, each against his brother, and that we should be in love and in peace, each man with his brother, so that we do not practice malice against one another.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_329" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they said to him: "We will not listen to you to make peace with him, because our strength is mightier than his strength, and we are stronger men than he. We will go against him, and kill him, and destroy him and [his] sons [...]."</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="38">
+        <div number="1 ">
+          <unit id="en_330" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[...] that we may give him glory.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_331" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Jacob bent his bow and sent forth an arrow and struck Esau his brother upon his right breast and struck him down.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_332" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he shot a second arrow and struck Adoram the Aramaean near his left breast, and cast him down and killed him.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_333" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after this the sons of Jacob went forth, they and their servants, divided toward the four winds of the tower.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_334" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Judah went out first, and Naphtali and Gad with him, and fifty servants with him toward the south of the tower; and they slew whomever they found before them, and not even one of them escaped.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_335" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Levi and Dan and Asher went out toward the east of the tower, and fifty with them, and they slew the warriors of Moab and Ammon.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_336" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Reuben and Issachar and Zebulun went out, and their fifty with them, and they also slew the warriors of the Philistines.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_337" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Simeon and Benjamin and Hanoch the son of Reuben went out toward the west of the tower, and their fifty with them; and they slew four hundred fighting men of Edom and of the Horites; and six hundred and four sons of Esau fled with them, and they left the body of their father cast out upon the height which is in Adoraim.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_338" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sons of Jacob pursued after them as far as Mount Seir. And Jacob buried Esau his brother on the height which is Adoraim, and he returned into the tower.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_339" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sons of Jacob besieged the sons of Esau in Mount Seir, and subjugated them so that they became servants to the sons of Jacob.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_340" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they sent to Jacob their father asking if they might make peace with them.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_341" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they placed the yoke of fear upon them, that they should pay tribute to Jacob and to his sons all the days.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_342" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they were paying tribute to Jacob until the day of his going down into Egypt.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_343" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the children of Edom have not ceased from the yoke of fear which the sons of Jacob imposed on them until this day.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_344" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And these are the kings who reigned in Edom before a king reigned over the children of Israel, until this day in the land of Edom:</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_345" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Barad the son of Beor, and the name of his city was [...].</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="39">
+        <div number="9">
+          <unit id="en_346" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she assailed him and took hold of him inside the house, that she might force him and sleep with her; and she closed the doors of the house and held him. But Joseph left his garments, and opening the door, fled outside from her presence.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_347" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the woman saw that he had spurned her, she lied to her husband against him before his master, saying: "This Hebrew servant of yours, whom you loved, attempted to force me, that he might sleep with me. And it happened when I raised my voice, he fled outside and left his garments in my hands, with which I had held his garments from below [...]."</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_348" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Egyptian saw the garments of Joseph and the broken door, and heard the words of his wife, and put Joseph into the house of the bound, in the place where the king's prisoners were kept.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_349" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was there in bonds; and the Lord gave him favor in the sight of the chief of the prison, and mercy in his sight, because he saw that the Lord was with him, and everything that Joseph did, God made to prosper.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_350" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And therefore he gave everything into his hands. And the chief of the prison did not know anything of the things that were done in the prison, because Joseph was doing all of them, and the Lord made them prosper.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_351" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was there for two years. And at that time Pharaoh, king of Egypt, became angry with his two eunuchs, that is, with the chief cupbearer and with the chief baker, and he put them in prison in the house of the chief cook, in the prison-house in which Joseph also was held.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_352" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the keeper of the prison appointed Joseph to serve them, and he served before them.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_353" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the men dreamed dreams, the chief cupbearer and the chief baker, and they told them to Joseph.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_354" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And just as Joseph had interpreted to them, so it happened to them: Pharaoh restored the chief cupbearer to his office, and he hanged the chief baker, just as Joseph had told him.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_355" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the chief cupbearer did not remember Joseph in the prison-house, though he had told him all that would happen to him; and he did not remember to intercede with King Pharaoh to release Joseph, for he forgot.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="40">
+        <div number="1">
+          <unit id="en_356" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at that time Pharaoh dreamed two dreams in one night concerning the famine that was to come upon [...] the earth. And having awakened from sleep, he called all the interpreters of dreams who were in his kingdom and the enchanters, and he told them his dreams, but they could not interpret his dreams.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_357" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the chief cupbearer remembered Joseph and told King Pharaoh about him; and he brought him out of the prison-house and recounted in his presence the two dreams [...].</reading>
+          </unit>
+        </div>
+        <div number="3 ">
+          <unit id="en_358" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[...] interpreted [...]: 'The two dreams are one. There will be seven continuous years of abundance in all the land of Egypt, and seven years of famine; so it shall be in all the land.'</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_359" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And now let Pharaoh appoint overseers over all the land of Egypt, who shall gather food throughout every city and store it up during the seven years of abundance as food for the seven years of famine that are to come, and the land will not perish from the famine, for it will be very severe over all the land.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_360" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And God gave Joseph favor and mercy in the sight of Pharaoh, and Pharaoh said to his servants, 'Can we find a man more prudent and wiser than this one, since the Spirit of God is with him?'</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_361" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he placed him second to himself in all his kingdom and with authority over all the land of Egypt, and he set him upon the second chariot which belonged to Pharaoh.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_362" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he clothed him with a garment of fine linen, and put a golden necklace around his neck, and they proclaimed before him, 'Elel and Habirel,' and he put a ring upon his hand. And he set him over all his house, and magnified him, and said, 'I shall not be greater than you except in my throne alone.'</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_363" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Joseph received authority over the whole land of Egypt. And all the princes of Pharaoh and his servants and all who did the king's work loved him, because he walked in truth, and there was in him no pride or arrogance [...].</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="41">
+        <div number="6 ">
+          <unit id="en_364" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[...] Tamar, his daughter-in-law: 'Remain as a widow in your father's house until my son Shelah grows up, and I will give you to him as a wife.'</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_365" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he grew up, but Bathshua, the wife of Judah, did not allow her son Shelah to take her. And Bathshua, the wife of Judah, died in the fifth year of this week.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_366" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the sixth year of this (week), Judah went up to shear his sheep in Timnasar; and it was told to Tamar, 'Behold, your father-in-law is going up to shear his sheep in Timnah.'</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_367" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she put off from herself the garments of her widowhood, and clothed herself in fine garments, and adorned herself, and sat at the gate by the road to Timnah.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_368" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Judah arrived, he found her and thought she was a harlot, and said to her, 'I will come in to you.' She said, 'Come in,' and he went in to her.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_369" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she said to him, 'Give me my hire.' And he said, 'There is nothing in my hand except the ring that I have on my finger, and the necklace, and the staff that is in my hand.'</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_370" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she said to him, 'Give them to me until you send my hire.' And Judah said, 'I will send you a young goat.' And he gave them to her, and he was with her, and she conceived by him.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_371" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Judah went to the sheep,</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_372" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and he sent her a young goat by the hand of his Adullamite shepherd, but he did not find her. And he asked the men of that place, saying, 'Where is that harlot who was here?' And they said to him, 'There is no harlot here with us.'</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_373" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And returning, he told Judah, saying, 'I did not find her, and moreover I asked the men of that place, and they said that there was no harlot in that place.' And Judah said, 'Let her keep them, lest perhaps she ridicule us.'</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_374" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when three months had passed for her, it became evident that she was with child; and they told Judah, saying, 'Behold, Tamar your daughter-in-law is with child.'</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_375" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Judah came to the house of her father and said to her father and to her brothers, 'Bring her out, and let her be burned with fire, because she has committed impurity in Israel.'</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_376" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it came to pass, when she was being brought out to be burned, that she sent to her father-in-law the ring, the necklace, and the staff, and said, 'Recognize whose these are; by him I am with child.'</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_377" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And [...]</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="42">
+        <div number="2">
+          <unit id="en_378" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now in the land of Egypt there was bread, because Joseph had gathered the grain of the land during the seven years of abundance and had been guarding it.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_379" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Egyptians came to Joseph so that he might give them food; and opening the storehouses in which the grain was, he gave it to them to eat in the first year, for he sold it to them.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_380" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now the famine grew very severe in the land of Canaan, and Jacob heard that there was grain in Egypt; and he sent his ten sons to get food for themselves, but Benjamin he did not send with them. And the ten sons of Jacob arrived in Egypt.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_381" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Joseph recognized them, but they did not recognize him; and Joseph spoke harshly to them and said to them, 'You have come to spy out the land,' and he imprisoned them.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_382" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And sending word, he summoned them, and taking Simeon from them, he bound him and sent his nine brothers away.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_383" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he filled their containers and returned their money to them.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_384" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he commanded them concerning their younger brother, that they should bring him.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_385" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sons of Jacob went up from the land of Egypt and came to the land of Canaan, and they related to their father everything that had happened to them, and how harshly the ruler of the land had spoken with them, and had detained Simeon until we present our brother Benjamin to him.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_386" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Jacob said: "You have bereaved me of my children. Joseph is no more, and Simeon is no more. If you take Benjamin, your malice will be accomplished against me."</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_387" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said: "My son will not go with you, lest he fall ill on the way. For their mother bore these two; one has perished, and if you take this one and any illness befalls him on the way, you will bring down my gray hairs with sorrow to Sheol."</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_388" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For they told him that their money had also been returned to them in their sacks, and Jacob was afraid to send him with them.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_389" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now the famine increased and grew severe in the land, for many of the children of the Egyptians had kept their seed in storage ever since they saw Joseph gathering grain and storing it in storehouses so that it might be preserved for the years of famine.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_390" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Egyptians ate them...</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="45">
+        <div number="8 ">
+          <unit id="en_391" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...the land of Egypt suffered because of the famine. And Joseph acquired the whole land of Egypt for Pharaoh for food, for he purchased the people, the beasts, and everything for Pharaoh.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_392" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the seven years of famine came to an end, and Joseph gave seed and food to the people of the land so that they might sow the land in the eighth year, because the river had risen over all the land of Egypt.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_393" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For during the seven years of famine it had not risen and had not watered except a few places along the riverbank. And in the eighth year the Egyptians sowed their land and gathered good crops in that year.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_394" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This was the first year of the fifth week of the forty-fifth jubilee.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_395" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Joseph took a fifth part of all that grew in the land of Egypt as a royal portion, and gave four parts to them for food and for seed; and Joseph established this as an ordinance for all the Egyptians throughout the whole land of Egypt unto this day.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_396" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Israel lived in the land of Egypt seventeen years, and all the years of his life which he lived were three jubilees, one hundred and forty-seven years; and he expired and died in the forty-fifth jubilee, in the fourth year of the fifth week.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_397" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Israel blessed his sons before he died and told them whatever would happen to them in the land of Egypt in the last days. And he blessed them, and he blessed Joseph with a double portion in the land.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_398" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he slept with his fathers and was buried in the double cave in the land of Canaan beside his father Abraham, in the tomb which he had dug for himself in Hebron.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_399" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he gave all his books and the books of his fathers to his son Levi, that he might preserve them and renew them for his children unto this day.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="46">
+        <div number="1">
+          <unit id="en_400" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it came to pass after the death of Jacob that the children of Israel multiplied in the land of Egypt and became a great nation; and they were of one heart, so that each one loved his brother, and brother joined with neighbor...</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_401" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the king of Canaan devised an evil plot to afflict them.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_402" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at that time the Egyptians said: "Behold, the people of the children of Israel have multiplied greatly and have become more numerous than we. Come, therefore, let us afflict them before they multiply, and let us oppress them with their labors, lest war should confront us and then they also fight against us alongside our enemies, departing from our land, because their heart and their face are toward the land of Canaan."</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_403" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the king set taskmasters over them to afflict them with their labors. And they built fortified cities for Pharaoh—Pithom, Rameses, and On—and they rebuilt every wall that had fallen into ruin in the cities of Egypt.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_404" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they reduced them to servitude with violence; and the more they oppressed them, the more they multiplied.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_405" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Egyptians abhorred the children of Israel.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="47">
+        <div number="1">
+          <unit id="en_406" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the forty-seventh jubilee, in the seventh week, in its seventh year, his father came from the land of Canaan. And he begot in the fourth week, in its sixth year, of the forty-eighth jubilee. This is the time of tribulation upon the children of Israel.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_407" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Pharaoh, king of Egypt, issued a decree concerning them, that they should cast into the river all their male children who were born to them.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_408" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they were watching for seven months until the time when you were born. And your mother hid you for three months, and they informed against her.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_409" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And being afraid, she made an ark and smeared it with bitumen and pitch, and placed it along the riverbank, and kept you in it for seven days. And your mother would come by night and nurse you with milk, and by day your sister Miriam guarded you from the birds.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_410" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at that time Thermuthis, the daughter of Pharaoh, went out to bathe in the river, and she heard the sound of your crying, and she told her maiden to bring the child to her; and they brought you.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_411" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And taking you out of the ark, she had pity on you.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_412" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And your sister said to her: "Shall I go and call for you, if you wish, a Hebrew woman who may nurse him for you?" And she said to her: "Go."</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_413" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she called her mother and yours, Jochebed, and she gave wages to that woman...</reading>
+          </unit>
+        </div>
+        <div number="9 ">
+          <unit id="en_414" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...and taught... and when you completed... week, they brought you into the royal court. And you were... three weeks of years until the time when you went out from the royal court and saw an Egyptian beating your brother, and you struck him and dug in the earth and hid him in the sand.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_415" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on the second day you found two of the children of Israel striving together, and you said to the one who was beating his neighbor: "Why are you beating your brother?"</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_416" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was filled with wrath and indignation... and said: "Who made you a ruler or a judge over us? Do you mean to kill me as you killed the Egyptian yesterday?" ...</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="48">
+        <div number="1">
+          <unit id="en_417" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the forty-ninth jubilee, in the sixth year of the third week, you departed and dwelt in the land of Midian... five weeks and one year. And in the fiftieth jubilee, in the second week, in its second year, you returned to Egypt.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_418" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you yourself know who spoke with you under Mount Sinai, and what Prince Mastema wished to do with you when you were returning to Egypt on the way when you met him at the lodging place.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_419" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Did he not with all his power seek to kill you, that he might rescue the Egyptians from your hand, because he saw that you were sent to execute judgment and wreak vengeance on the Egyptians?</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_420" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I delivered you from his hand, and you performed the signs and wonders, whatever you were sent to perform in Egypt against Pharaoh, and against all his house, and against all his people.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_421" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And God openly wrought a great defense for Israel, and struck them with blood, and with frogs, and gnats, and dog-flies, and with malignant sores which were ... and with the death of their livestock; and with hailstones he destroyed all their growing things, and the locust devoured what had been left from the hail; and with darkness, [and the death] of their firstborn, both of humans and of beasts; and upon all the gods of the Egyptians the Lord took vengeance...</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="49">
+        <div number="7 ">
+          <unit id="en_422" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...[all the] days of your life, that you may observe it every year, once a year, on its appointed days according to its law, and it shall not pass away. And it shall be on its appointed days, and from month to month.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_423" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For it is an eternal commandment, and written upon the heavenly tablets concerning all the children of Israel, that they should observe it every year on its day, once a year, throughout their generations; and there is no end of time for it, because it is ordained forever.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_424" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the man who is clean and does not do it on the day of its appointed time, so as to bring an acceptable offering before the Lord, and to eat and to drink before the Lord on the day of his feast, shall be cut off; and the man [who is] clean and who is near, because he did not offer the offering to the Lord in its appointed season, that man shall bear his sin.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_425" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the children of Israel shall come and observe the Passover at its appointed time, on the fourteenth day of the first month, in the evening, from its third part until the third part of the night; for two parts of the day are in light, and the third part is in the evening.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_426" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This is what the Lord commanded you, that you should observe it in the evening.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_427" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And no one shall sacrifice at any hour of daylight, but only in the evening, and they shall eat it during the evening hours until the third part of the night; and whatever remains of all the flesh after the third part of the night shall be burned with fire.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_428" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it shall not be boiled in water, nor shall it be eaten raw, but roasted on fire you shall carefully eat it: its head with its entrails and with its feet you shall roast with fire. And no bone among all its bones shall be broken, and there shall be no affliction among the children of Israel on this day.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_429" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore the Lord commanded the children of Israel to observe the Passover on the day of its appointed time, and no bone of it shall be broken, for it is a feast day and a day of commandment. It shall not pass from day to day, nor from month to month, but [shall be kept] at its appointed time.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_430" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you, command the children of Israel to observe the Passover throughout their generations every year, once a year, on the day of its appointed time; and it shall be an acceptable testimony before God, and no plague shall come upon them from him to destroy or to cut them off in that year in which they observe the Passover at its appointed time according to all its commandments.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_431" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it shall not be eaten outside the sanctuary of the Lord, but beside the tabernacle of the Lord; and the whole congregation of the children of Israel shall observe it at its appointed time.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_432" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And every man who neglects in the muster to eat it in the sanctuary of our God before the Lord, from twenty years old and upward—because it is thus commanded and written that it should be eaten in his sanctuary—</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_433" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the children of Israel come into the land of their possession, into the land of Canaan, and they set up the tabernacle of God in the midst of the land in one of their tribes until the day on which the sanctuary of God is built in the land, they shall come and observe the Passover before the tabernacle of God every year.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_434" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at the time when the house is built in the name of the Lord in the land of their possession, there they shall offer and slaughter the Passover in the evening toward the going down of the sun, in the third part of the day.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_435" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they shall offer its blood upon the base of the altar, and they shall offer the fat upon the fire of the altar, and they shall eat the flesh roasted with fire in the court of the house sanctified in the name of the Lord.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_436" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they shall not be permitted to observe the Passover in their cities in any place, except before the tabernacle of the Lord and before the house where his name has dwelt upon it; and they shall not go astray from following the Lord.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_437" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you, Moses, command the children of Israel that they keep the ordinance of the Passover; and declare to them, as it was commanded to you, year by year at the time of its days, and concerning the festival of Unleavened Bread, that they should eat unleavened bread for seven days and celebrate its festival, and offer an offering day by day throughout the seven days of joy before...</reading>
           </unit>
         </div>
       </div>

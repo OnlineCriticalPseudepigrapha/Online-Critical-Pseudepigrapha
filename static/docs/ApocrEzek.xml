@@ -1,843 +1,1424 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book SYSTEM "grammateus.dtd">
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="ApocrEzek" title="Apocryphon of Ezekiel" textStructure="fragmentary">
-    <version title="Panarion (Frag. 1)" author="Epiphanius" language="Greek" fragment="1">
-        <divisions>
-            <division label="Book" delimiter="."/>
-            <division label="Chapter" delimiter="."/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Holl" language="Greek" show="yes">
-                <name>
+  <version title="Panarion (Frag. 1)" author="Epiphanius" language="Greek" fragment="1">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Holl" language="Greek" show="yes">
+        <name>
                     Holl
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="64">
-                <div number="70">
-                    <div number="5">
-                        <unit id="1" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                &#8220;Ἀναστήσονται γὰρ οἱ νεκροὶ καὶ ἐγερθήσονται οἱ ἐν τοῖς μνημείοις,&#8221; φησὶν ὁ προφήτης. ἵνα δὲ καὶ τὰ ὑπὸ τοῦ Ἰεζεκιὴλ τοῦ προφήτου ἐν τῷ ἰδίῳ ἀποκρύφῳ ῥηθέντα περὶ ἀναστάσεως μὴ παρασιωπήσω, καὶ αὐτὰ ἐνταῦθα παραθήσομαι. αἰνιγματωδῶς γὰρ διηγούμενος λέγει περὶ τῆς δικαίας κρίσεως ἧͺ κοινωνεῖ ψυχὴ καὶ σῶμα, ὅτι
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="64">
+        <div number="70">
+          <div number="5">
+            <unit id="1" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                “Ἀναστήσονται γὰρ οἱ νεκροὶ καὶ ἐγερθήσονται οἱ ἐν τοῖς μνημείοις,” φησὶν ὁ προφήτης. ἵνα δὲ καὶ τὰ ὑπὸ τοῦ Ἰεζεκιὴλ τοῦ προφήτου ἐν τῷ ἰδίῳ ἀποκρύφῳ ῥηθέντα περὶ ἀναστάσεως μὴ παρασιωπήσω, καὶ αὐτὰ ἐνταῦθα παραθήσομαι. αἰνιγματωδῶς γὰρ διηγούμενος λέγει περὶ τῆς δικαίας κρίσεως ἧͺ κοινωνεῖ ψυχὴ καὶ σῶμα, ὅτι
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="6">
-                        <unit id="2" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="2" group="0" parallel="">
+              <reading option="0" mss="Holl ">
                                 βασιλεύς τις ἐν τῇ αὐτοῦ βασιλείᾳ πάντας εἶχεν ἐστρατευμένους, παγανὸν δὲ οὐκ εἶχεν ἀλλ᾽ ἢ μόνον δύο, ἕνα χωλὸν καὶ ἕνα τυφλόν, καὶ ἕκαστος &lt;αὐτῶν&gt; κατ᾽ ἰδίαν ἐκαθέζετο καὶ κατ᾽ ἰδίαν ὤͺκει.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="7">
-                        <unit id="3" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="3" group="0" parallel="">
+              <reading option="0" mss="Holl ">
                                 γάμους δὲ ποιήσας ὁ βασιλεὺς τῷ ἰδίῳ υἱῷ ἐκάλεσε πάντας τοὺς ἐν τῇ αὐτοῦ βασιλείᾳ, περιεφρόνησε δὲ τῶν δύο παγανῶν, τοῦ τε χωλοῦ καὶ τοῦ τυφλοῦ· οἱ δὲ ἠγανάκτησαν ἐν ἑαυτοῖς καὶ ἐπιβουλὴν ἐργάσασθαι τῷ βασιλεῖ ἐπενόουν.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="8">
-                        <unit id="4" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                παράδεισον δὲ εἶχεν ὁ βασιλεύς, καὶ ἀπὸ μήκοθεν ὁ τυφλὸς ἐλάλει τῷ χωλῷ λέγων &#8220;πόσον ἦν ἡμῶν τὸ κλάσμα τοῦ ἄρτου μετὰ τῶν ὄχλων τῶν κληθέντων εἰς τὴν εὐφρασίαν; δεῦρο τοίνυν, καθὼς ἐποίησεν ἡμῖν, ἀμυνώμεθα αὐτόν.&#8221;
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="4" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                παράδεισον δὲ εἶχεν ὁ βασιλεύς, καὶ ἀπὸ μήκοθεν ὁ τυφλὸς ἐλάλει τῷ χωλῷ λέγων “πόσον ἦν ἡμῶν τὸ κλάσμα τοῦ ἄρτου μετὰ τῶν ὄχλων τῶν κληθέντων εἰς τὴν εὐφρασίαν; δεῦρο τοίνυν, καθὼς ἐποίησεν ἡμῖν, ἀμυνώμεθα αὐτόν.”
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="9">
-                        <unit id="5" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                ὁ δὲ ἕτερος ἠρώτα &#8220;ποίῳ τρόπῳ&#8221;; ὁ δὲ εἶπεν &#8220;ἀπέλθωμεν εἰς τὸν παράδεισον αὐτοῦ καὶ ἀφανίσωμεν ἐκεῖ τὰ τοῦ παραδείσου.&#8221; ὁ δὲ εἶπεν &#8220;καὶ πῶς δύναμαι, χωλὸς ὢν καὶ μὴ δυνάμενος ἐπισαίνειν&#8221;; ὁ δὲ τυφλὸς ἔφη &#8220;αὐτὸς ἐγὼ δύναμαί τι πράττειν μὴ ὁρῶν ποῦ ἀπέρχομαι; ἀλλὰ τεχνασώμεθα.&#8221;
+            </unit>
+          </div>
+          <div number="9">
+            <unit id="5" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                ὁ δὲ ἕτερος ἠρώτα “ποίῳ τρόπῳ”; ὁ δὲ εἶπεν “ἀπέλθωμεν εἰς τὸν παράδεισον αὐτοῦ καὶ ἀφανίσωμεν ἐκεῖ τὰ τοῦ παραδείσου.” ὁ δὲ εἶπεν “καὶ πῶς δύναμαι, χωλὸς ὢν καὶ μὴ δυνάμενος ἐπισαίνειν”; ὁ δὲ τυφλὸς ἔφη “αὐτὸς ἐγὼ δύναμαί τι πράττειν μὴ ὁρῶν ποῦ ἀπέρχομαι; ἀλλὰ τεχνασώμεθα.”
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="10">
-                        <unit id="6" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                τίλας χόρτον τὸν πλησίον καὶ πλέξας σχοινίον ἠκόντισε τῷ τυφλῷ καὶ εἶπεν &#8220;κράτει, καὶ δεῦρο πρὸς τὸ σχοινίον πρός με.&#8221; ὡς δὲ ἐποίησεν ὃ προετράπη, ὅτε ἔφθασε λέγει &#8220;δεῦρό μοι γενοῦ πόδες καὶ βάστασόν με, καὶ γίνομαί σοι ὀφθαλμοί, ἄνωθεν ὁδηγῶν σε δεξιὰ καὶ εὐώνυμα.&#8221;
+            </unit>
+          </div>
+          <div number="10">
+            <unit id="6" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                τίλας χόρτον τὸν πλησίον καὶ πλέξας σχοινίον ἠκόντισε τῷ τυφλῷ καὶ εἶπεν “κράτει, καὶ δεῦρο πρὸς τὸ σχοινίον πρός με.” ὡς δὲ ἐποίησεν ὃ προετράπη, ὅτε ἔφθασε λέγει “δεῦρό μοι γενοῦ πόδες καὶ βάστασόν με, καὶ γίνομαί σοι ὀφθαλμοί, ἄνωθεν ὁδηγῶν σε δεξιὰ καὶ εὐώνυμα.”
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="11">
-                        <unit id="7" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
+            </unit>
+          </div>
+          <div number="11">
+            <unit id="7" group="0" parallel="">
+              <reading option="0" mss="Holl ">
                                 τοῦτο δὲ ποιήσαντες κατέβησαν εἰς τὸν παράδεισον· εἶτα λοιπὸν εἴτε ἠδίκησαν εἴτε καὶ οὐκ ἠδίκησαν, ὅμως τὰ ἴχνη πέφηνεν ἐν τῷ παραδείσῳ.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="12">
-                        <unit id="8" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                καταλύσαντες δὲ ἐκ τῶν γάμων οἱ εὐφρανθέντες καταβάντες εἰς τὸν παράδεισον ἐξεπλάγησαν τὰ ἴχνη εὑρόντες ἐν τῷ παραδείσῳ καὶ ταῦτα ἀνήγγειλαν τῷ βασιλεῖ, λέγοντες &#8220;ἅπαντες στρατιῶται ἐν τῇ βασιλείᾳ σου καὶ οὐδείς ἐστι παγανός. πόθεν τοίνυν ἴχνη παγανῶν ἐν τῷ παραδείσῳ&#8221;;
+            </unit>
+          </div>
+          <div number="12">
+            <unit id="8" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                καταλύσαντες δὲ ἐκ τῶν γάμων οἱ εὐφρανθέντες καταβάντες εἰς τὸν παράδεισον ἐξεπλάγησαν τὰ ἴχνη εὑρόντες ἐν τῷ παραδείσῳ καὶ ταῦτα ἀνήγγειλαν τῷ βασιλεῖ, λέγοντες “ἅπαντες στρατιῶται ἐν τῇ βασιλείᾳ σου καὶ οὐδείς ἐστι παγανός. πόθεν τοίνυν ἴχνη παγανῶν ἐν τῷ παραδείσῳ”;
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="13">
-                        <unit id="9" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                ὁ δὲ ἐθαύμασε, [καὶ] ὡς μὲν ἡ παραβολὴ δηλονότι τοῦ ἀποκρύφου λέγει ὡς πρὸς τὸν ἄνθρωπον αἰνιττομένη, ὁ θεὸς δὲ οὐδὲν ἀγνοεῖ. ἡ δὲ διήγησις λέγει ὡς μετεστείλατο τὸν χωλὸν καὶ τὸν τυφλὸν καὶ ἠρώτησε τὸν τυφλόν &#8220;μὴ σὺ κατῆλθες εἰς τὸν παράδεισον&#8221;; ὁ δὲ ἔφη &#8220;οἴμοι, κύριε· ὁρᾷς ἡμῶν τὴν ἀδυναμίαν, οἶδας ὅτι &lt;οὐχ&gt; ὁρῶ ποῦ βαδίζω.&#8221;
+            </unit>
+          </div>
+          <div number="13">
+            <unit id="9" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                ὁ δὲ ἐθαύμασε, [καὶ] ὡς μὲν ἡ παραβολὴ δηλονότι τοῦ ἀποκρύφου λέγει ὡς πρὸς τὸν ἄνθρωπον αἰνιττομένη, ὁ θεὸς δὲ οὐδὲν ἀγνοεῖ. ἡ δὲ διήγησις λέγει ὡς μετεστείλατο τὸν χωλὸν καὶ τὸν τυφλὸν καὶ ἠρώτησε τὸν τυφλόν “μὴ σὺ κατῆλθες εἰς τὸν παράδεισον”; ὁ δὲ ἔφη “οἴμοι, κύριε· ὁρᾷς ἡμῶν τὴν ἀδυναμίαν, οἶδας ὅτι &lt;οὐχ&gt; ὁρῶ ποῦ βαδίζω.”
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="14">
-                        <unit id="10" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                εἶτα ἐλθὼν ἐπὶ τὸν χωλὸν καὶ αὐτὸν ἠρώτα &#8220;σὺ κατῆλθες εἰς τὸν παράδεισόν μου&#8221;; ὁ δὲ ἀποκριθεὶς εἶπεν &#8220;ὦ κύριε, πικρᾶναί μου τὴν ψυχὴν ἐν τῷ μέρει τῆς ἀδυναμίας βούλει.&#8221; καὶ λοιπὸν ἡ κρίσις ἀργεῖ.
+            </unit>
+          </div>
+          <div number="14">
+            <unit id="10" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                εἶτα ἐλθὼν ἐπὶ τὸν χωλὸν καὶ αὐτὸν ἠρώτα “σὺ κατῆλθες εἰς τὸν παράδεισόν μου”; ὁ δὲ ἀποκριθεὶς εἶπεν “ὦ κύριε, πικρᾶναί μου τὴν ψυχὴν ἐν τῷ μέρει τῆς ἀδυναμίας βούλει.” καὶ λοιπὸν ἡ κρίσις ἀργεῖ.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="15">
-                        <unit id="11" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
+            </unit>
+          </div>
+          <div number="15">
+            <unit id="11" group="0" parallel="">
+              <reading option="0" mss="Holl ">
                                 τί οὖν ποιεῖ ὁ κριτὴς ὁ δίκαιος; ἀναγνοὺς ποίῳ τρόπῳ ἀμφότεροι ἐζεύχθησαν ἐπιτίθησι τὸν χωλὸν τῷ πηρῷ καὶ τοὺς ἀμφοτέρους ἐτάζει μάστιξι, καὶ οὐ δύνανται ἀρνήσασθαι.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="16">
-                        <unit id="12" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                ἑκάτεροι ἀλλήλους ἐλέγχουσιν, ὁ μὲν χωλὸς λέγων τῷ τυφλῷ &#8220;οὐ σύ με ἐβάστασας καὶ ἀπήνεγκας&#8221;; καὶ ὁ τυφλὸς τῷ χωλῷ &#8220;οὐκ αὐτὸς ὀφθαλμοί μου γέγονας&#8221;;
+            </unit>
+          </div>
+          <div number="16">
+            <unit id="12" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                ἑκάτεροι ἀλλήλους ἐλέγχουσιν, ὁ μὲν χωλὸς λέγων τῷ τυφλῷ “οὐ σύ με ἐβάστασας καὶ ἀπήνεγκας”; καὶ ὁ τυφλὸς τῷ χωλῷ “οὐκ αὐτὸς ὀφθαλμοί μου γέγονας”;
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="17">
-                        <unit id="13" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
+            </unit>
+          </div>
+          <div number="17">
+            <unit id="13" group="0" parallel="">
+              <reading option="0" mss="Holl ">
                                 οὕτως τὸ σῶμα τῇ ψυχῇ καὶ ἡ ψυχὴ τῷ σώματι εἰς ἔλεγχον τῆς κοινῆς ἐργασίας συνάπτεται, καὶ ἡ κρίσις τελεία γίνεται περὶ ἀμφοτέρων, σώματός τε καὶ ψυχῆς, τῶν ἔργων [τῶν] γεγενημένων εἴτε ἀγαθῶν εἴτε φαύλων.
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
-    
-    <version title="To the Romans" author="Clement of Rome" language="Greek" fragment="2">
-        <divisions>
-            <division label="Chapter" delimiter="."/>
-            <division label="Verse"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Jaubert" language="Greek" show="yes">
-                <name>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="To the Romans" author="Clement of Rome" language="Greek" fragment="2">
+    <divisions>
+      <division label="Chapter" delimiter="."/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Jaubert" language="Greek" show="yes">
+        <name>
                     Jaubert
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="8">
-                <div number="3">
-                    <unit id="14" group="0" parallel="">
-                        <reading option="0" mss="Jaubert ">
-                            &#8220;Μετανοήσατε, οἶκος Ἰσραήλ, ἀπὸ τῆς ἀνομίας ὑμῶν· εἶπον τοῖς υἱοῖς τοῦ λαοῦ μου· Ἐὰν ὦσιν αἱ ἁμαρτίαι ὑμῶν ἀπὸ τῆς γῆς ἕως τοῦ οὐρανοῦ καὶ ἐὰν ὦσιν πυρρότεραι κόκκου καὶ μελανώτεραι σάκκου, καὶ ἐπιστραφῆτε πρός με ἐξ ὅλης τῆς καρδίας καὶ εἴπητε· Πάτερ· ἐπακούσομαι ὑμῶν ὡς λαοῦ ἁγίου.&#8221;
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="8">
+        <div number="3">
+          <unit id="14" group="0" parallel="">
+            <reading option="0" mss="Jaubert ">
+                            “Μετανοήσατε, οἶκος Ἰσραήλ, ἀπὸ τῆς ἀνομίας ὑμῶν· εἶπον τοῖς υἱοῖς τοῦ λαοῦ μου· Ἐὰν ὦσιν αἱ ἁμαρτίαι ὑμῶν ἀπὸ τῆς γῆς ἕως τοῦ οὐρανοῦ καὶ ἐὰν ὦσιν πυρρότεραι κόκκου καὶ μελανώτεραι σάκκου, καὶ ἐπιστραφῆτε πρός με ἐξ ὅλης τῆς καρδίας καὶ εἴπητε· Πάτερ· ἐπακούσομαι ὑμῶν ὡς λαοῦ ἁγίου.”
                         </reading>
-                    </unit>
-                </div>
-            </div>  
-        </text>
-    </version>
-    
-    <version title="Paedagogus" author="Clement of Alexandria" language="Greek" fragment="2">
-        <divisions>
-            <division label="Book" delimiter="."/>
-            <division label="Section" delimiter="."/>
-            <division label="Chapter" delimiter="."/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Stählin-Treu" language="Greek" show="yes">
-                <name>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Paedagogus" author="Clement of Alexandria" language="Greek" fragment="2">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Section" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Treu" language="Greek" show="yes">
+        <name>
                     Stählin-Treu
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="1">
-                <div number="10">
-                    <div number="91">
-                        <div number="2">
-                            <unit id="15" group="0" parallel="">
-                                <reading option="0" mss="Stählin-Treu ">
-                                    φησὶ γὰρ δι’ Ἰεζεκιήλ· &#8220;ἐὰν ἐπιστραφῆτε ἐξ ὅλης τῆς καρδίας καὶ εἴπητε· πάτερ, ἀκούσομαι ὑμῶν ὥσπερ λαοῦ ἁγίου.&#8221;
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="10">
+          <div number="91">
+            <div number="2">
+              <unit id="15" group="0" parallel="">
+                <reading option="0" mss="Stählin-Treu ">
+                                    φησὶ γὰρ δι’ Ἰεζεκιήλ· “ἐὰν ἐπιστραφῆτε ἐξ ὅλης τῆς καρδίας καὶ εἴπητε· πάτερ, ἀκούσομαι ὑμῶν ὥσπερ λαοῦ ἁγίου.”
                                 </reading>
-                            </unit>
-                        </div>
-                    </div>
-                </div>
+              </unit>
             </div>
-        </text>
-    </version>
-    
-    <version title="Quis dives salvetur" author="Clement of Alexandria" language="Greek" fragment="2">
-        <divisions>
-            <division label="Chapter" delimiter="."/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Stählin-Früchtel" language="Greek" show="yes">
-                <name>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Quis dives salvetur" author="Clement of Alexandria" language="Greek" fragment="2">
+    <divisions>
+      <division label="Chapter" delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Früchtel" language="Greek" show="yes">
+        <name>
                     Stählin-Früchtel
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="39">
-                <div number="4">
-                    <unit id="16" group="0" parallel="">
-                        <reading option="0" mss="Stählin-Früchtel ">
-                            διὸ καὶ κέκραγεν· &#8220;ἔλεον θέλω καὶ οὐ θυσίαν· οὐ βούλομαι τὸν θάνατον τοῦ ἁμαρτωλοῦ, ἀλλὰ τὴν μετάνοιαν· κἂν ὦσιν αἱ ἁμαρτίαι ὑμῶν ὡς φοινικοῦν ἔριον, ὡς χιόνα λευκανῶ, κἂν μελάντερον τοῦ σκότους, ὡς ἔριον λευκὸν ἐκνίψας ποιήσω.&#8221;
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="39">
+        <div number="4">
+          <unit id="16" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel ">
+                            διὸ καὶ κέκραγεν· “ἔλεον θέλω καὶ οὐ θυσίαν· οὐ βούλομαι τὸν θάνατον τοῦ ἁμαρτωλοῦ, ἀλλὰ τὴν μετάνοιαν· κἂν ὦσιν αἱ ἁμαρτίαι ὑμῶν ὡς φοινικοῦν ἔριον, ὡς χιόνα λευκανῶ, κἂν μελάντερον τοῦ σκότους, ὡς ἔριον λευκὸν ἐκνίψας ποιήσω.”
                         </reading>
-                    </unit>
-                </div>
-            </div>
-        </text>
-    </version>
-    
-    <version title="Stromata" author="Clement of Alexandria" fragment="2" language="Greek">
-        <divisions>
-            <division label="Book" delimiter="."/>
-            <division label="Section" delimiter="."/>
-            <division label="Chapter" delimiter="."/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Stählin-Früchtel" language="Greek" show="yes">
-                <name>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Stromata" author="Clement of Alexandria" fragment="2" language="Greek">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Section" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Früchtel" language="Greek" show="yes">
+        <name>
                     Craig A. Evans
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="7">
-                <div number="16">
-                    <div number="94">
-                        <div number="2">
-                            <unit id="17" group="0" parallel="">
-                                <reading option="0" mss="Stählin-Früchtel ">
-                                    &#8220;τέτοκεν καὶ οὐ τέτοκεν,&#8221; φησὶν ἡ γραφή . . .
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="7">
+        <div number="16">
+          <div number="94">
+            <div number="2">
+              <unit id="17" group="0" parallel="">
+                <reading option="0" mss="Stählin-Früchtel ">
+                                    “τέτοκεν καὶ οὐ τέτοκεν,” φησὶν ἡ γραφή . . .
                                 </reading>
-                            </unit>
-                        </div>
-                    </div>
-                </div>
+              </unit>
             </div>
-        </text>
-    </version>
-    
-    <version title="Panarion (Frag. 3)" author="Epiphanius" fragment="3" language="Greek">
-        <divisions>
-            <division label="Book" Delimiter="."/>
-            <division label="Chapter" Delimiter="."/>
-            <division label="Line"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Holl" language="Greek" show="yes">
-                <name>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Panarion (Frag. 3)" author="Epiphanius" fragment="3" language="Greek">
+    <divisions>
+      <division label="Book" Delimiter="."/>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Line"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Holl" language="Greek" show="yes">
+        <name>
                     Holl
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="30">
-                <div number="30">
-                    <div number="3">
-                        <unit id="24" group="0" parallel="">
-                            <reading option="0" mss="Holl ">
-                                καὶ πάλιν ἐν ἑτέρῳ τόπῳ λέγει &#8220;καὶ τέξεται ἡ δάμαλις καὶ ἐροῦσιν, οὐ τέτοκεν.&#8221;
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="30">
+        <div number="30">
+          <div number="3">
+            <unit id="24" group="0" parallel="">
+              <reading option="0" mss="Holl ">
+                                καὶ πάλιν ἐν ἑτέρῳ τόπῳ λέγει “καὶ τέξεται ἡ δάμαλις καὶ ἐροῦσιν, οὐ τέτοκεν.”
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
-    
-    <version title="Acts of Peter" author="Anonymous" fragment="3" language="Latin">
-        <divisions>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Lipsius-Bonnet" language="Greek" show="yes">
-                <name>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Acts of Peter" author="Anonymous" fragment="3" language="Latin">
+    <divisions>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Lipsius-Bonnet" language="Greek" show="yes">
+        <name>
                     Lipsius-Bonnet
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="24">
-                <unit id="18" group="0" parallel="">
-                    <reading option="0" mss="Lipsius-Bonnet ">
-                        . . . et iterum dicit: &#8220;Peperit et non peperit.&#8221;
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="24">
+        <unit id="18" group="0" parallel="">
+          <reading option="0" mss="Lipsius-Bonnet ">
+                        . . . et iterum dicit: “Peperit et non peperit.”
                     </reading>
-                </unit>
-            </div>
-        </text>
-    </version>
-    
-    <version title="De carne Christi" author="Tertullian" fragment="3" language="Latin">
-        <divisions>
-            <division label="Chapter" Delimiter="."/>
-            <division label="Line"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Evans" language="Greek" show="yes">
-                <name>
+        </unit>
+      </div>
+    </text>
+  </version>
+  <version title="De carne Christi" author="Tertullian" fragment="3" language="Latin">
+    <divisions>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Line"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Evans" language="Greek" show="yes">
+        <name>
                     Ernest Evans
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="23">
-                <div number="7">
-                    <unit id="19" group="0" parallel="">
-                        <reading option="0" mss="Evans ">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="23">
+        <div number="7">
+          <unit id="19" group="0" parallel="">
+            <reading option="0" mss="Evans ">
                             Agnoscimus ergo signum contradicibile conceptum et partum virginis Mariae, de
                         </reading>
-                    </unit>
-                </div>
-                <div number="8">
-                    <unit id="20" group="0" parallel="">
-                        <reading option="0" mss="Evans ">
-                            quo Academici isti, &#8220;Peperit et non peperit virgo et non virgo.&#8221;
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="20" group="0" parallel="">
+            <reading option="0" mss="Evans ">
+                            quo Academici isti, “Peperit et non peperit virgo et non virgo.”
                         </reading>
-                    </unit>
-                </div>
-                <div number="27">
-                    <unit id="21" group="0" parallel="">
-                        <reading option="0" mss="Evans ">
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="21" group="0" parallel="">
+            <reading option="0" mss="Evans ">
                             . . .
                         </reading>
-                    </unit>
-                </div>
-                <div number="28">
-                    <unit id="22" group="0" parallel="">
-                        <reading option="0" mss="Evans ">
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="22" group="0" parallel="">
+            <reading option="0" mss="Evans ">
                             Legimus quidem apud Ezechielem de vacca
                         </reading>
-                    </unit>
-                </div>
-                <div number="29">
-                    <unit id="23" group="0" parallel="">
-                        <reading option="0" mss="Evans ">
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="23" group="0" parallel="">
+            <reading option="0" mss="Evans ">
                             illa, quae peperit et non peperit.
                         </reading>
-                    </unit>
-                </div>
-            </div>
-        </text>
-    </version>
-    
-    <version title="Against the Jews" author="Gregory of Nyssa" language="Greek" fragment="3">
-        <divisions>
-            <division label="Chapter" Delimiter="."/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Migne" language="Greek" show="yes">
-                <name>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Against the Jews" author="Gregory of Nyssa" language="Greek" fragment="3">
+    <divisions>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Migne" language="Greek" show="yes">
+        <name>
                     Migne
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="3">
-                <div number="16">
-                    <unit id="25" group="0" parallel="">
-                        <reading option="0" mss="Migne ">
-                            Καὶ πάλιν, &#8220;Ἰδοὺ ἡ δάμαλις τέτοκε, καὶ οὐ τέτοκε.&#8221; Τοῦτο δὲ δηλοῖ τὴν Παρθένον.
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="3">
+        <div number="16">
+          <unit id="25" group="0" parallel="">
+            <reading option="0" mss="Migne ">
+                            Καὶ πάλιν, “Ἰδοὺ ἡ δάμαλις τέτοκε, καὶ οὐ τέτοκε.” Τοῦτο δὲ δηλοῖ τὴν Παρθένον.
                         </reading>
-                    </unit>
-                </div>
-            </div>
-        </text>
-    </version>
-    
-    <version title="Dialogue with Trypho" author="Justin Martyr" fragment="4" language="Greek">
-        <divisions>
-            <division label="Chapter" Delimiter="."/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Goodspeed" language="Greek" show="yes">
-                <name>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Dialogue with Trypho" author="Justin Martyr" fragment="4" language="Greek">
+    <divisions>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Goodspeed" language="Greek" show="yes">
+        <name>
                     Goodspeed
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="47">
-                <div number="5">
-                    <unit id="26" group="0" parallel="">
-                        <reading option="0" mss="Goodspeed ">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="47">
+        <div number="5">
+          <unit id="26" group="0" parallel="">
+            <reading option="0" mss="Goodspeed ">
                             ἡ γὰρ χρηστότης καὶ ἡ φιλανθρωπία τοῦ θεοῦ καὶ τὸ ἄμετρον τοῦ πλούτου αὐτοῦ τὸν μετανοοῦντα ἀπὸ τῶν ἁμαρτημάτων, ὡς δι᾽ Ἰεζεκιὴλ μηνύει, ὡς δίκαιον καὶ ἀναμάρτητον ἔχει· καὶ τὸν ἀπὸ εὐσεβείας ἢ δικαιοπραξίας μετατιθέμενον ἐπὶ ἀδικίαν καὶ ἀθεότητα ὡς ἁμαρτωλὸν καὶ ἄδικον καὶ ἀσεβῆ ἐπίσταται. διὸ καὶ ὁ ἡμέτερος κύριος Ἰησοῦς Χριστὸς εἶπεν· Ἐν οἷς ἂν ὑμᾶς καταλάβω, ἐν τούτοις καὶ κρινῶ.
                         </reading>
-                    </unit>
-                </div>
-            </div>
-        </text>
-    </version>
-    
-    <version title="Quis dives salvetur (Frag. 4)" author="Clement of Alexandria" fragment="4" language="Greek">
-        <divisions>
-            <division label="Chapter" Delimiter="."/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Stählin-Früchtel" language="Greek" show="yes">
-                <name>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Quis dives salvetur (Frag. 4)" author="Clement of Alexandria" fragment="4" language="Greek">
+    <divisions>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Früchtel" language="Greek" show="yes">
+        <name>
                     Stählin-Früchtel
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="40">
-                <div number="2">
-                    <unit id="27" group="0" parallel="">
-                        <reading option="0" mss="Stählin-Früchtel ">
-                            &#8220;ἐφ’ οἷς γὰρ ἂν εὕρω ὑμᾶς,&#8221; φησίν, &#8220;ἐπὶ τούτοις καὶ κρινῶ·&#8221;
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="40">
+        <div number="2">
+          <unit id="27" group="0" parallel="">
+            <reading option="0" mss="Stählin-Früchtel ">
+                            “ἐφ’ οἷς γὰρ ἂν εὕρω ὑμᾶς,” φησίν, “ἐπὶ τούτοις καὶ κρινῶ·”
                         </reading>
-                    </unit>
-                </div>
-            </div>
-        </text>
-    </version>
-    
-    <version title="Paedagogus (Frag. 5)" author="Clement of Alexandria" fragment="5" language="Greek">
-        <divisions>
-            <division label="Book" Delimiter="."/>
-            <division label="Section" Delimiter="."/>
-            <division label="Chapter" Delimiter="."/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Stählin-Treu" language="Greek" show="yes">
-                <name>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Paedagogus (Frag. 5)" author="Clement of Alexandria" fragment="5" language="Greek">
+    <divisions>
+      <division label="Book" Delimiter="."/>
+      <division label="Section" Delimiter="."/>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Treu" language="Greek" show="yes">
+        <name>
                     Stählin-Treu
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="1">
-                <div number="9">
-                    <div number="84">
-                        <div number="2">
-                            <unit id="28" group="0" parallel="">
-                                <reading option="0" mss="Stählin-Treu ">
-                                    Φησὶν γοῦν διὰ Ἰεζεκιὴλ πρὸς τοὺς πρεσβυτέρους ἀποταθεὶς καί τινα αὐτοῖς σωτήριον παρατιθέμενος εὐλόγου φροντίδος ὑπογραμμόν· &#8220;καὶ τὸ χωλὸν καταδήσω καὶ τὸ ὀχλούμενον ἰάσομαι καὶ τὸ πλανώμενον ἐπιστρέψω καὶ βοσκήσω αὐτοὺς ἐγὼ εἰς τὸ ὄρος τὸ ἅγιόν μου.&#8221; ταῦτ᾽ ἐστὶν ἀγαθοῦ ποιμένος ἐπαγγέλματα· βόσκησον ἡμᾶς τοὺς νηπίους ὡς πρόβατα.
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="9">
+          <div number="84">
+            <div number="2">
+              <unit id="28" group="0" parallel="">
+                <reading option="0" mss="Stählin-Treu ">
+                                    Φησὶν γοῦν διὰ Ἰεζεκιὴλ πρὸς τοὺς πρεσβυτέρους ἀποταθεὶς καί τινα αὐτοῖς σωτήριον παρατιθέμενος εὐλόγου φροντίδος ὑπογραμμόν· “καὶ τὸ χωλὸν καταδήσω καὶ τὸ ὀχλούμενον ἰάσομαι καὶ τὸ πλανώμενον ἐπιστρέψω καὶ βοσκήσω αὐτοὺς ἐγὼ εἰς τὸ ὄρος τὸ ἅγιόν μου.” ταῦτ᾽ ἐστὶν ἀγαθοῦ ποιμένος ἐπαγγέλματα· βόσκησον ἡμᾶς τοὺς νηπίους ὡς πρόβατα.
                                 </reading>
-                            </unit>
-                        </div>
-                        <div number="3">
-                            <unit id="29" group="0" parallel="">
-                                <reading option="0" mss="Stählin-Treu ">
-                                    Ναί, δέσποτα, τῆς σῆς πλήρωσον νομῆς, τῆς δικαιοσύνης· ναί, παιδαγωγέ, ποίμανον ἡμᾶς εἰς τὸ ἅγιόν σου ὄρος, πρὸς τὴν ἐκκλησίαν, τὴν ὑψωμένην, τὴν ὑπερνεφῆ, τὴν ἁπτομένην οὐρανῶν. &#8220;Καὶ ἔσομαι,&#8221; φησίν, &#8220;αὐτῶν ποιμὴν καὶ ἔσομαι ἐγγὺς αὐτῶν&#8221; ὡς ὁ χιτὼν τοῦ χρωτὸς αὐτῶν·
-                                </reading>
-                            </unit>
-                        </div>
-                    </div>
-                </div>
+              </unit>
             </div>
-        </text>
-    </version>
-    
-    <version title="Pap. Chester Beatty XII" author="Anonymous" fragment="5" language="Greek">
-        <divisions>
-            <division label="Fragment" Delimiter="."/>
-            <division label="Side" Delimiter="."/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Bonner" language="Greek" show="yes">
-                <name>
+            <div number="3">
+              <unit id="29" group="0" parallel="">
+                <reading option="0" mss="Stählin-Treu ">
+                                    Ναί, δέσποτα, τῆς σῆς πλήρωσον νομῆς, τῆς δικαιοσύνης· ναί, παιδαγωγέ, ποίμανον ἡμᾶς εἰς τὸ ἅγιόν σου ὄρος, πρὸς τὴν ἐκκλησίαν, τὴν ὑψωμένην, τὴν ὑπερνεφῆ, τὴν ἁπτομένην οὐρανῶν. “Καὶ ἔσομαι,” φησίν, “αὐτῶν ποιμὴν καὶ ἔσομαι ἐγγὺς αὐτῶν” ὡς ὁ χιτὼν τοῦ χρωτὸς αὐτῶν·
+                                </reading>
+              </unit>
+            </div>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Pap. Chester Beatty XII" author="Anonymous" fragment="5" language="Greek">
+    <divisions>
+      <division label="Fragment" Delimiter="."/>
+      <division label="Side" Delimiter="."/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Bonner" language="Greek" show="yes">
+        <name>
                     Bonner
                 </name>
-                <bibliography>
+        <bibliography>
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="frag. 1" fragment="5">
-                <div number="recto">
-                    <unit id="30" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="frag. 1" fragment="5">
+        <div number="recto">
+          <unit id="30" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [ . . . ] ε̣γυπτ[ιω]ν αγαλ̣[λιασομαι δε ε
                         </reading>
-                    </unit>
-                    <unit id="31" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="31" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [γω εν] α̣υτοις εαν̣ ερουσ̣[ιν πατερ ακου
                         </reading>
-                    </unit>
-                    <unit id="32" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="32" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [σθη]σεται και εσοντ[αι μετα εμου
                         </reading>
-                    </unit>
-                    <unit id="33" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="33" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [επι γ]η̣ς ζωης ω ιημ ε̣[ιπον προς τον κ̅ν̅
                         </reading>
-                    </unit>
-                    <unit id="34" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="34" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [κ̅ε̅ μ]η με ελλεγ’ξης τ̣[ω θυμω σου μη
                         </reading>
-                    </unit>
-                    <unit id="35" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="35" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [δε π]εδευσης με εν τη[ οργη σου δοκι
                         </reading>
-                    </unit>
-                    <unit id="36" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="36" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [μαζο]μαι εως των νεφ[ρων μου δια
                         </reading>
-                    </unit>
-                    <unit id="37" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="37" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [λελ]υμαι εως της κοιλ̣[ιας μου δος
                         </reading>
-                    </unit>
-                    <unit id="38" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="38" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [μοι το] ελεος σου εις εφημ[ερον ως ελεη
                         </reading>
-                    </unit>
-                    <unit id="39" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="39" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [σας α]β̣ρααμ’ τον πατερα ημ̣[ων και ι
                         </reading>
-                    </unit>
-                    <unit id="40" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="40" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [σακ’ κα]ι ιακωβ’ αλλα σε τον κ̅ν̣̅ [τον
                         </reading>
-                    </unit>
-                    <unit id="41" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="41" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [θ̅ν̅ η]μ̣ων εγνωκαμεν και . [
                         </reading>
-                    </unit>
-                    <unit id="42" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="42" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ε̣νεσι και εγεννηθη[
                         </reading>
-                    </unit>
-                    <unit id="43" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="43" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             απο]καθημενης μεμ̣[
                         </reading>
-                    </unit>
-                    <unit id="44" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="44" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ς εβδελοιχθημε̣[ν
                         </reading>
-                    </unit>
-                    <unit id="45" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="45" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]τ̣ο ονομα απ[
                         </reading>
-                    </unit>
-                    <unit id="46" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="46" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]μενω . [
                         </reading>
-                    </unit>
-                    <unit id="47" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="47" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]π̣λατεια . [
                         </reading>
-                    </unit>
-                </div>
-                <div number="verso">
-                    <unit id="48" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="both">
+          </unit>
+        </div>
+        <div number="verso">
+          <unit id="48" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="both">
                             [το πλανωμενο]ν̣ ου̣κ̣ επ̣[εσ]τρεψ[ατε και
                         </reading>
-                    </unit>
-                    <unit id="49" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="49" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [το ενοχλουμενο]ν ουκ εθ̣[ε]ραπ[ευσατε
                         </reading>
-                    </unit>
-                    <unit id="50" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="50" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [και ποιειτε τον] λαον μου πλαν[ασθαι α
                         </reading>
-                    </unit>
-                    <unit id="51" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="51" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [πο νομης της] κ̣αλης και πορευ[εσθαι εις
                         </reading>
-                    </unit>
-                    <unit id="52" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="52" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [τριβολους κ]αι ακανθας αντι χ̣[ορτου
                         </reading>
-                    </unit>
-                    <unit id="53" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="53" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [και ουκ ετηρη]σατε την εμην εν̣[τολην
                         </reading>
-                    </unit>
-                    <unit id="54" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="54" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [αλλα πας πυμη]ν εξ υμων ανεω[ξε το στο
                         </reading>
-                    </unit>
-                    <unit id="55" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="55" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [μα και πολλ]ο̣ι εις καταβρωμα α̣[υτοις ε
                         </reading>
-                    </unit>
-                    <unit id="56" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="56" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [γενοντο αλ]λ̣α ειδου εγω διακριν[ω κριον
                         </reading>
-                    </unit>
-                    <unit id="57" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="57" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [προς κριον] και μοσχον προς μοσχ[ον και
                         </reading>
-                    </unit>
-                    <unit id="58" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="58" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [το χωλο]ν̣ κατε̣δησω και το ενο[χλουμε
                         </reading>
-                    </unit>
-                    <unit id="59" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="59" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [νον ια]σ̣ομαι και το πλανομε̣[νον επι
                         </reading>
-                    </unit>
-                    <unit id="60" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="60" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [στρεψω κ]αι βοσκησω αυτου̣[ς εγω και ανα
                         </reading>
-                    </unit>
-                    <unit id="61" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="61" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [παυσω ε]πι το ορος το αγιον [μου και ε
                         </reading>
-                    </unit>
-                    <unit id="62" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="62" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [σομαι αυ]τοις πυμην κ[αι εσομαι εγγυς
                         </reading>
-                    </unit>
-                    <unit id="63" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="63" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [αυτων ως ο χ]ιτων του χρ̣[ωτος αυτων και
                         </reading>
-                    </unit>
-                    <unit id="64" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="64" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [επικαλεσ]ονται με̣ [και ερω ιδου παρει
                         </reading>
-                    </unit>
-                    <unit id="65" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="65" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [μι εαν διαβαι]ν̣ω̣σιν ο̣[υκ ολισθησου
                         </reading>
-                    </unit>
-                    <unit id="66" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="66" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             [σιν λεγει κ̅ς̅] εκ̣ο[
                         </reading>
-                    </unit>
-                </div>
-            </div>
-            <div number="frag. 2">
-                <div number="recto">
-                    <unit id="67" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="both">
+          </unit>
+        </div>
+      </div>
+      <div number="frag. 2">
+        <div number="recto">
+          <unit id="67" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="both">
                             ]α̣νισ . [
                         </reading>
-                    </unit>
-                    <unit id="68" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="68" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]πυρος β  ̣[. . . .] . [ . ] . [
                         </reading>
-                    </unit>
-                    <unit id="69" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="69" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ε̣ι εκ’μειαινοντ[ες
                         </reading>
-                    </unit>
-                    <unit id="70" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="70" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ε̣τι προσεβαινον τη̣[
                         </reading>
-                    </unit>
-                    <unit id="71" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="71" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             πρεσ]βυτας αδυναμουν[τας
                         </reading>
-                    </unit>
-                    <unit id="72" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="72" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ε]πι τα ϋψηλα και π . . [
                         </reading>
-                    </unit>
-                    <unit id="73" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="73" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]δια το οδαγους μη ε[χειν
                         </reading>
-                    </unit>
-                    <unit id="74" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="74" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ε̣ο̣ς̣ εισιν οι της φων[ης
                         </reading>
-                    </unit>
-                    <unit id="75" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="75" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ] . . [ . ] ανεβλεψα δε κ[
                         </reading>
-                    </unit>
-                    <unit id="76" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="76" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ] . ου κρεμαμενου . [
                         </reading>
-                    </unit>
-                    <unit id="77" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="77" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ανου καθιπταμ̣[
                         </reading>
-                    </unit>
-                    <unit id="78" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="78" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]υ̣τον και ειπ̣[α
                         </reading>
-                    </unit>
-                </div>
-                <div number="verso">
-                    <unit id="79" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="both">
+          </unit>
+        </div>
+        <div number="verso">
+          <unit id="79" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="both">
                             ] . . . [
                         </reading>
-                    </unit>
-                    <unit id="80" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="80" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ] . ε . [ . . . . ] . [ . ] ως ο κ[
                         </reading>
-                    </unit>
-                    <unit id="81" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="81" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ιν π .[ . ]. . ληθην[
                         </reading>
-                    </unit>
-                    <unit id="82" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="82" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ε]στιν τω δεδουλευ[μενω
                         </reading>
-                    </unit>
-                    <unit id="83" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="83" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ] . καρδια καθαρα κα̣[ι
                         </reading>
-                    </unit>
-                    <unit id="84" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="84" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ].ται επι κ̅ν̅ τον θ̅ν̅[
                         </reading>
-                    </unit>
-                    <unit id="85" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="85" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]αι τα συντετριμ’με̣[να
                         </reading>
-                    </unit>
-                    <unit id="86" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="86" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]οι ϋμας και στησε[ται
                         </reading>
-                    </unit>
-                    <unit id="87" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="87" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]μετα παντος του . [
                         </reading>
-                    </unit>
-                    <unit id="88" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="88" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ε]ρ̣ημωμενην ϋπο[
                         </reading>
-                    </unit>
-                    <unit id="89" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="89" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ] . ησθησεται αυτ[
                         </reading>
-                    </unit>
-                    <unit id="90" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="90" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ] . λις και . . . [
                         </reading>
-                    </unit>
-                    <unit id="91" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="91" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ον . [
                         </reading>
-                    </unit>
-                </div>
-            </div>
-            <div number="frag. 3">
-                <div number="recto">
-                    <unit id="92" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="both">
+          </unit>
+        </div>
+      </div>
+      <div number="frag. 3">
+        <div number="recto">
+          <unit id="92" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="both">
                             ]ι νυν υμ . [
                         </reading>
-                    </unit>
-                    <unit id="93" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="93" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]ται απο του ν̣[
                         </reading>
-                    </unit>
-                    <unit id="94" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="94" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             μο]χ̣θηρων και̣[
                         </reading>
-                    </unit>
-                </div>
-                <div number="verso">
-                    <unit id="95" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="both">
+          </unit>
+        </div>
+        <div number="verso">
+          <unit id="95" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="both">
                             ]. χωρας .[
                         </reading>
-                    </unit>
-                    <unit id="96" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="96" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]η̣ς καλυπ[
                         </reading>
-                    </unit>
-                    <unit id="97" group="0" parallel="">
-                        <reading option="0" mss="Bonner " linebreak="following">
+          </unit>
+          <unit id="97" group="0" parallel="">
+            <reading option="0" mss="Bonner " linebreak="following">
                             ]γεινεται ε[
                         </reading>
-                    </unit>
-                </div>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Panarion (Frag. 1) (English)" author="OCP" language="English" fragment="1">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Panarion (Frag. 1) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="64">
+        <div number="70">
+          <div number="5">
+            <unit id="en_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“For the dead will rise and those in the tombs will be raised,” says the prophet. In order that I may not pass over in silence what was said by the prophet Ezekiel in his own apocryphon concerning the resurrection, I will set them forth here as well. For, relating in an enigmatic way, he speaks concerning the righteous judgment in which soul and body share, saying that:</reading>
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="en_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">A certain king in his kingdom had all his men conscripted, and he had no one at leisure except only two, one lame and one blind. And each of them sat alone and lived alone.</reading>
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="en_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">But the king, having made a marriage feast for his own son, called all those in his kingdom, yet he disdained the two men at leisure, both the lame and the blind. But they became indignant within themselves and contemplated to work mischief against the king.</reading>
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="en_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Now the king had a garden, and from a distance the blind man spoke to the lame man saying, “How small was our portion of bread compared to the multitudes invited to the feast! Come then, just as he treated us, let us get revenge on him.”</reading>
+            </unit>
+          </div>
+          <div number="9">
+            <unit id="en_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">But the other asked, “In what way?” And he said, “Let us go into his garden and destroy the things of the garden there.” But he said, “And how can I, being lame and unable to move?” But the blind man said, “Can I myself do anything without seeing where I am going? But let us devise a plan.”</reading>
+            </unit>
+          </div>
+          <div number="10">
+            <unit id="en_6" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">He plucked the nearby grass and, braiding a rope, he threw it to the blind man and said, “Hold it, and come toward the rope to me.” And when he did what he was instructed, when he reached him, he said, “Come, be my feet and carry me, and I will be your eyes, guiding you from above, to the right and to the left.”</reading>
+            </unit>
+          </div>
+          <div number="11">
+            <unit id="en_7" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And having done this, they went down into the garden. Then, whether they did damage or did not do damage, nevertheless, their tracks appeared in the garden.</reading>
+            </unit>
+          </div>
+          <div number="12">
+            <unit id="en_8" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Now when those who had feasted finished from the wedding and went down into the garden, they were astonished to find the tracks in the garden, and they reported these things to the king, saying, “All are soldiers in your kingdom, and no one is at leisure. From where then are there tracks of men at leisure in the garden?”</reading>
+            </unit>
+          </div>
+          <div number="13">
+            <unit id="en_9" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And he wondered—[and] as the parable of the apocryphon clearly states, alluding to man, God knows nothing. And the narrative says that he sent for the lame and the blind man and asked the blind man, “Did you go down into the garden?” And he said, “Alas, Lord! You see our weakness, you know that I do not see where I am going.”</reading>
+            </unit>
+          </div>
+          <div number="14">
+            <unit id="en_10" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Then coming to the lame man, he also asked him, “Did you go down into my garden?” And he answered and said, “O Lord, you wish to embitter my soul regarding my weakness.” And then the judgment is delayed.</reading>
+            </unit>
+          </div>
+          <div number="15">
+            <unit id="en_11" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">What then does the righteous judge do? Having learned in what way both were yoked together, he places the lame man upon the blind man, and he examines both with scourges, and they are unable to deny it.</reading>
+            </unit>
+          </div>
+          <div number="16">
+            <unit id="en_12" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Each accuses the other, the lame man saying to the blind man, “Did you not carry me and take me?” And the blind man to the lame man, “Did you not become my eyes?”</reading>
+            </unit>
+          </div>
+          <div number="17">
+            <unit id="en_13" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Thus the body is joined to the soul and the soul to the body for the exposure of their common work, and the judgment becomes complete concerning both, body and soul, regarding the deeds done, whether good or evil.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="To the Romans (English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Chapter" delimiter="."/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of To the Romans (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="8">
+        <div number="3">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">"Repent, O house of Israel, from your lawlessness. I said to the sons of my people: 'If your sins are from the earth to heaven, and if they are redder than scarlet and blacker than sackcloth, and you turn to me with all your heart and say, 'Father!' I will listen to you as a holy people."</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Paedagogus (English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Section" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Paedagogus (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="10">
+          <div number="91">
+            <div number="2">
+              <unit id="en_15" group="0" parallel="">
+                <reading option="0" mss="OCP-Trans ">For it says through Ezekiel, “If you turn from your whole heart and say, ‘Father, I will obey you as a holy people.’”</reading>
+              </unit>
             </div>
-        </text>
-    </version>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Quis dives salvetur (English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Chapter" delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Quis dives salvetur (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="39">
+        <div number="4">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, it also cries out: “I desire mercy and not sacrifice; I do not wish the death of the sinner, but repentance; even if your sins are like crimson wool, I will make them white as snow, and even if they are darker than darkness, I will make them like white wool after washing them.”</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Stromata (English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Section" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Stromata (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="7">
+        <div number="16">
+          <div number="94">
+            <div number="2">
+              <unit id="en_17" group="0" parallel="">
+                <reading option="0" mss="OCP-Trans ">“She has given birth and has not given birth,” says the Scripture . . .</reading>
+              </unit>
+            </div>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Panarion (Frag. 3) (English)" author="OCP" language="English" fragment="3">
+    <divisions>
+      <division label="Book" Delimiter="."/>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Line"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Panarion (Frag. 3) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="30">
+        <div number="30">
+          <div number="3">
+            <unit id="en_24" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And again in another place it says, “And the heifer will give birth, and they will say, ‘It did not give birth.’”</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Acts of Peter (English)" author="OCP" language="English" fragment="3">
+    <divisions>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Acts of Peter (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="24">
+        <unit id="en_18" group="0" parallel="">
+          <reading option="0" mss="OCP-Trans ">. . . and again it says: “She gave birth and did not give birth.”</reading>
+        </unit>
+      </div>
+    </text>
+  </version>
+  <version title="De carne Christi (English)" author="OCP" language="English" fragment="3">
+    <divisions>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Line"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of De carne Christi (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="23">
+        <div number="7">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, we recognize the paradoxical sign, the conception and birth of the virgin Mary, concerning</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">which these Academics say, “She bore and did not bear, a virgin and not a virgin.”</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">. . .</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Indeed, we read in Ezekiel about that cow</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">which bore and did not bear.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Against the Jews (English)" author="OCP" language="English" fragment="3">
+    <divisions>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Against the Jews (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="3">
+        <div number="16">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again, “Behold, the heifer has given birth, and has not given birth.” This indicates the Virgin.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Dialogue with Trypho (English)" author="OCP" language="English" fragment="4">
+    <divisions>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Dialogue with Trypho (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="47">
+        <div number="5">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For the goodness and philanthropy of God, and the immeasurable nature of his wealth, considers the one who repents from sins—as he makes clear through Ezekiel—as righteous and blameless; and he understands the one who turns from piety or righteous conduct to unrighteousness and godlessness as a sinner, unrighteous, and impious. Therefore, our Lord Jesus Christ also said: “In whatever state I find you, in these I will also judge.”</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Quis dives salvetur (Frag. 4) (English)" author="OCP" language="English" fragment="4">
+    <divisions>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Quis dives salvetur (Frag. 4) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="40">
+        <div number="2">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For in whatever state I find you,” he says, “in that I will also judge.”</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Paedagogus (Frag. 5) (English)" author="OCP" language="English" fragment="5">
+    <divisions>
+      <division label="Book" Delimiter="."/>
+      <division label="Section" Delimiter="."/>
+      <division label="Chapter" Delimiter="."/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Paedagogus (Frag. 5) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="9">
+          <div number="84">
+            <div number="2">
+              <unit id="en_28" group="0" parallel="">
+                <reading option="0" mss="OCP-Trans ">Indeed, addressing the elders through Ezekiel and presenting them with a salutary example of reasonable care, he says: “And I will bind up the lame and I will heal the afflicted and I will bring back the straying and I will feed them on my holy mountain.” These are the promises of a good shepherd. Feed us, the infants, as sheep.</reading>
+              </unit>
+            </div>
+            <div number="3">
+              <unit id="en_29" group="0" parallel="">
+                <reading option="0" mss="OCP-Trans ">Yes, Master, fulfill your pasture of righteousness; yes, Instructor, shepherd us to your holy mountain, to the church, the exalted, the super-celestial, that which touches the heavens. “And I will be,” he says, “their shepherd and I will be near them” as a garment to their skin.</reading>
+              </unit>
+            </div>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Pap. Chester Beatty XII (English)" author="OCP" language="English" fragment="5">
+    <divisions>
+      <division label="Fragment" Delimiter="."/>
+      <division label="Side" Delimiter="."/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Pap. Chester Beatty XII (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="frag. 1">
+        <div number="recto">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[...] of Egyptians. But I will rejoice i[n] th[em. If] th[ey] say, 'Father, listen,'</reading>
+          </unit>
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[I will rejo]ice i[n] th[em. If] th[ey] say, 'Father, listen,'</reading>
+          </unit>
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[it will be hea]rd, and they will be [with me]</reading>
+          </unit>
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[on the ear]th of life.' O Iem, [I] said to the Lord,</reading>
+          </unit>
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[Lord, do] not rebuke me with your [wrath, nor]</reading>
+          </unit>
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[correct] me in your [anger]. I am [tested] to my kidneys;</reading>
+          </unit>
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[I am tested] to my kidneys;</reading>
+          </unit>
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[I am dis]solved to my stomach. [Give] me</reading>
+          </unit>
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[your] mercy for a day, [just as you had mercy on]</reading>
+          </unit>
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[Abraham], our father, [and Isaac]</reading>
+          </unit>
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[and Jacob]. But we have known you, the Lord, [our]</reading>
+          </unit>
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[God], and [...]</reading>
+          </unit>
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">] generation and was born [...]</reading>
+          </unit>
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">] sitting down. We were [...]</reading>
+          </unit>
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">] we were defiled [...]</reading>
+          </unit>
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">] the name from [...]</reading>
+          </unit>
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">] remaining [...]</reading>
+          </unit>
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">] wide [...]</reading>
+          </unit>
+        </div>
+        <div number="verso">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[the wandering one] you did not turn b[ack, and]</reading>
+          </unit>
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[the troubled one] you did not h[eal],</reading>
+          </unit>
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[and you cause] my people to go ast[ray from]</reading>
+          </unit>
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[the good pasture] and to go [into]</reading>
+          </unit>
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[thorns and] thistles instead of gr[ass],</reading>
+          </unit>
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[and you did not keep] my comman[dment],</reading>
+          </unit>
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[but every sheph]erd among you op[ened] his mo[uth],</reading>
+          </unit>
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[and many became] food for th[em].</reading>
+          </unit>
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[But behold, I will] judge [ram] against ram,</reading>
+          </unit>
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[and ram] against ram, and calf against calf, [and]</reading>
+          </unit>
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[I will bind up the lame] and heal the tro[ubled],</reading>
+          </unit>
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[and I will] heal, and the wandering [one I will turn]</reading>
+          </unit>
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[back] and I will pasture th[em, and I will]</reading>
+          </unit>
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[give them rest] on my holy mountain, [and I will]</reading>
+          </unit>
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[be] a shepherd [to them], and I will be ne[ar]</reading>
+          </unit>
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[them as the] garment of th[eir] skin, [and]</reading>
+          </unit>
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[they will call] upon me, [and I will say, 'Behold, I am ready!']</reading>
+          </unit>
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[they will not slip] when they [cross] over</reading>
+          </unit>
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[The Lord says]:</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="frag. 2">
+        <div number="recto">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">he arose</reading>
+          </unit>
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of fire...</reading>
+          </unit>
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">defiling...</reading>
+          </unit>
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">they still went on to...</reading>
+          </unit>
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">elderly men, unable [to climb]</reading>
+          </unit>
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">upon the high places and...</reading>
+          </unit>
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">because they did not [have] a guide.</reading>
+          </unit>
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...are those of the voice.</reading>
+          </unit>
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...And I looked up...</reading>
+          </unit>
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...hanging...</reading>
+          </unit>
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...from the sky descending...</reading>
+          </unit>
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">him and [I] said</reading>
+          </unit>
+        </div>
+        <div number="verso">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...</reading>
+          </unit>
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...as the Lord</reading>
+          </unit>
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...</reading>
+          </unit>
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">it is to him who has been enslaved.</reading>
+          </unit>
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">a pure heart and</reading>
+          </unit>
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to the Lord God.</reading>
+          </unit>
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and the crushed</reading>
+          </unit>
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">you, and he will set [it] up</reading>
+          </unit>
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">with all of the...</reading>
+          </unit>
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">desolated by...</reading>
+          </unit>
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">it will be pleased with it.</reading>
+          </unit>
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">city and...</reading>
+          </unit>
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="frag. 3">
+        <div number="recto">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">now you...</reading>
+          </unit>
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">from the...</reading>
+          </unit>
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">wicked and...</reading>
+          </unit>
+        </div>
+        <div number="verso">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">land...</reading>
+          </unit>
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">covering</reading>
+          </unit>
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">it happens...</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
 </book>

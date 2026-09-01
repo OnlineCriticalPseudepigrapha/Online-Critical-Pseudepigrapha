@@ -1,51 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-<!ELEMENT book (version)+>
-<!ATTLIST book filename CDATA #REQUIRED>
-<!ATTLIST book title CDATA #REQUIRED>
-<!ATTLIST book textStructure CDATA #IMPLIED>
-<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
-<!ATTLIST version title CDATA #REQUIRED>
-<!ATTLIST version author CDATA #REQUIRED>
-<!ATTLIST version fragment CDATA #IMPLIED>
-<!ATTLIST version language CDATA #IMPLIED>
-<!ELEMENT divisions (division)+>
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division label CDATA #REQUIRED>
-<!ATTLIST division delimiter CDATA #IMPLIED>
-<!ELEMENT resources (resource)+>
-<!ELEMENT resource (info+ , URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-<!ELEMENT info (#PCDATA)>
-<!ELEMENT URL (#PCDATA)>
-<!ELEMENT manuscripts (ms)+>
-<!ELEMENT ms (name , bibliography*)>
-<!ATTLIST ms abbrev CDATA #REQUIRED>
-<!ATTLIST ms language CDATA #REQUIRED>
-<!ATTLIST ms show CDATA #REQUIRED>
-<!ELEMENT name (#PCDATA | sup)*>
-<!ELEMENT sup (#PCDATA)>
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-<!ELEMENT booktitle (#PCDATA)>
-<!ELEMENT text (div)+>
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div number CDATA #REQUIRED>
-<!ATTLIST div fragment CDATA #IMPLIED>
-<!ELEMENT unit (reading)+>
-<!ATTLIST unit id CDATA #REQUIRED>
-<!ATTLIST unit group CDATA "0">
-<!ATTLIST unit parallel CDATA #IMPLIED>
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading option CDATA #REQUIRED>
-<!ATTLIST reading mss CDATA #REQUIRED>
-<!ATTLIST reading linebreak CDATA #IMPLIED>
-<!ATTLIST reading indent CDATA #IMPLIED>
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w morph CDATA #IMPLIED>
-<!ATTLIST w lex CDATA #IMPLIED>
-<!ATTLIST w style CDATA #IMPLIED>
-<!ATTLIST w lang CDATA #IMPLIED>
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="HistRech" title="The History of the Rechabites">
   <version title="Greek" author="Anonymous" language="Greek">
     <divisions>
@@ -965,6 +918,928 @@
           <unit id="172" group="0" parallel="">
             <reading option="0" mss="Charlesworth ">ἔστιν δὲ ὁ κύριος συνήγορος καὶ ὄφελος πάντων εἰς τοὺς ἀτελευτήτους αἰῶνας τῶν αἰώνων ἀμήν·
 </reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="English" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of English based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Title">
+        <div number="0">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The Narrative of Zosimus concerning the life of the blessed. Lord, bless.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="1">
+        <div number="1 ">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">At that time there was a man named Zosimus from the desert, who had not eaten bread for forty years and had not drunk wine; and he had not seen the face of a human being.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was entreating God so that he might see the administration of the blessed.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, an angel of the Lord was sent, saying to him, “Zosimus, man of God, behold, I have been sent from the Most High, the God of all, to tell you that you will go to the blessed; but you will not dwell with them.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But do not exalt your heart, saying, ‘For forty years I have not eaten bread.’ For the word of God is greater than bread, and the Spirit of God is greater than wine.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For your saying, ‘I have not seen the face of a human being,’ behold, the face of the Great King is near you.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Zosimus said, “I know that whatever the Lord desires, he is able to do.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the angel said to him, “Know this also: that you are not worthy of even one of their meals. Nevertheless, arise and go.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1 ">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Zosimus, having left my cave, with God leading me, I was going, not knowing the way where I was going.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having traveled for forty days, my spirit failed me and my body became weak. And having despaired, I sat down and was praying in that place for three days.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, an animal came from the desert, its name was Camel. And having knelt down on the ground, it took me upon its neck. And it went through the desert and set me down.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And there was a great roaring of wild beasts there, and gnashing, and deadly poison.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having become fearful, I prayed to the Lord. And there was a great earthquake in that place with a noise.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And a whirlwind of wind blew, and it lifted me from the ground and raised me to its wing. And I was praying and going. And it set me down in a riverine place; and the name of the river was Eumelēs.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, as I was intending to cross the river, someone cried out as if from the water, saying, “Zosimus, man of God, you cannot pass through me; for man cannot cut through my waters. But rather, look from the waters up to the sky.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as I looked, I saw a wall of cloud extending from the waters up to the sky.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the cloud said, “Zosimus, man of God, no bird from this world passes through me, nor breath of wind, nor the sun itself, nor the Tempter in this world can pass through me.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1 ">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I was amazed at these words and at the voice that said these things to me.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as I was praying, behold, two beautiful and most fair trees appeared from the earth, laden with fragrant fruits.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the tree bent down from here, took me upon its top, and rose very high in the middle of the river. And the other tree met it and received me into its branches. And having bent down, it set me down on the ground.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And both trees rose up and set me across from the river.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I rested for three days in that place. And again, having risen, I was going, though I did not know where.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And that place was full of much fragrance, and there was no mountain there, but that place was a level, undefiled plain, entirely crowned, and all the land was beautiful.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1 ">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I saw there a naked man sitting. And I said to myself, “Is this perhaps the Tempter?”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I remembered the voice of the cloud, that it had said to me, “that not even the Tempter himself in the world passes through me.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And thus, having taken courage, I said to him, “Greetings, brother.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he, answering, said to me, “Grace be with you.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again I said to him, “Tell me, man of God, who are you?”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he, answering, said to me, “And you, who are you?”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, answering, told him all about myself, and that I had prayed to the Lord, and he had brought me to this place.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he, answering, said to me, “I also know that you are a man of God. If not, you would not have passed through the cloud and the river and the air.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For the width of the river is about thirty miles; and the cloud reaches to the sky; and the depth of the river reaches to the abysses.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1 ">
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having finished this speech, the man said again, “Did you come here from the futility of the world?”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to him, “Why are you naked?”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said, “How did you know that I am naked? For you are wearing skins from the sheep of the earth, and they are decaying with your body. But look up to the height of the sky and see what kind of garment is mine.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when I looked up to heaven, I saw his face like the face of an angel; and his garment was like lightning, going from east to west; and I was afraid because he was a son of God; and I became trembling, falling to the ground;</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1 ">
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And &lt;giving his hand&gt;, he raised me, saying, “I am also one of the blessed ones.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Come, so that I may lead you to the elders.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And grasping my hand, he walked with me; and he led me to a certain crowd, and in that crowd were elders like sons of God; and young men were standing by the elders.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when I drew near to them, they said, “This one has come from the vanity of the world. Come, let us pray to the Lord, and he will reveal this mystery to us.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Perhaps the end has arrived, because a man of vanity has come here.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And standing up, they prayed to the Lord with one accord; and behold, two angels descended from the heavens and said, “Do not fear the man, for God has sent him so that he may spend seven days and receive your administrations, and then he will depart and go to his own place.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the angels of God, having said these things, ascended into heaven before our eyes.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1 ">
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the elders of the blessed ones entrusted me to one of the servants, saying, “Guard him for seven days.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So the servant, taking me, led me to his cave; and we were living beneath a tree, being provided for.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For from the sixth hour until the sixth hour, then we ate; and the water came out from the tree, sweeter than honey; and we drank to our fill, and again the water returned to its place.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the family who were there heard about me, that a man had come here from the vanity of the world.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the whole family was stirred; and &lt;they came to see me&gt; because it seemed strange to them.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So &lt;they were asking me&gt; everything; and I was telling them.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I was disheartened in my spirit and my body; and I appealed to the man of God who was serving me and said, “I beg you, brother, if anyone comes to see me, tell them that I am not here so that I may rest a little.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the man of God cried out, saying, “Alas, for the story of Adam has been repeated for me; for Satan deceived him through Eve, and this man wants to make me a liar through flattery, though he is here. He said to me that you will lie, and he said that I am not here.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">&lt;Take me away&gt; from here, otherwise I will flee &lt;from the village&gt;; for behold, he wants to sow in me the seeds of the world of vanity.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the crowd and the elders rose up against me and said, “Depart from us, man; we do not know from where you have come to us.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I wept with a great weeping; and understanding departed from me; and I cried out to the elders, saying, “Forgive me, my masters!” And the elders, having stopped, provided silence.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then I explained to them the things from the beginning until now, and that I prayed to God to come to you; and he deemed me worthy.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the elders said, “And now, what &lt;do you want&gt; us to do for you?”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to them, “I want to receive your administrations from you.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1 ">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they rejoiced with great joy, and taking stone tablets, they inscribed on them with their fingernails, saying, “Hear, hear, sons of our men who have become blessed, for we are also from you.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For when Jeremiah the prophet proclaimed that the city of Jerusalem would be delivered into the hands of those who destroy, he tore his garments and put on sackcloth around his waist; and he &lt;sprinkled ashes&gt; upon his head; and he took dust on his bed; and he told all the people to turn from their evil way.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And our father Rechab, son of Aminadab, also heard and said to us, ‘Hear, sons of Rechab and daughters of your father, and take off your garments from your body and you shall not drink a jar of wine; and you shall not eat bread from fire; and you shall not drink strong drink or honey until the Lord hears your prayer.’</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we said, “We will do what he commanded us and we will obey.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we threw off our outer garment from our body; and we did not eat bread from fire; and we did not drink a jar of wine, nor honey, nor strong drink; and we wept with great weeping; and we prayed to the Lord.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he heard our prayer; and he turned his wrath away from the city of Jerusalem; and mercy from the Lord came to the city of Jerusalem, and he had compassion on his people; and he turned away his deadly wrath.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1 ">
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after these things the king of the city of Jerusalem died; and another king arose.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the people gathered to him; and they made it known to him about us and said, “There are some among your people who have changed their way from us.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So the king called them and asked them why they had done this.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he summoned us and asked, “&lt;Who are you&gt; and of what religion or from what country?”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we said to him, “We are from your people of the city of Jerusalem.” And the king said, “Whose sons are you?” And we said to him, “We are sons of your servant, our father Rechab, sons of Jonadab.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Jeremiah the prophet proclaimed, while your father the king was alive, he proclaimed death to the city of Jerusalem, saying that in three more days the whole city would be put to death.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And your father the king, having heard, repented of his sins; and he issued a decree to all to turn from their evil way.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But our father, your servant, heard and commanded us, saying: “You shall not drink a jar of wine, nor shall you eat bread made with fire, until the Lord hears your petition.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So we obeyed our father’s command. We bared our bodies, and we did not drink wine, and we did not eat bread made with fire. And we prayed to the Lord concerning the city of Jerusalem.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord had mercy on his people, and he turned away his wrath. And we saw, and our soul was helped, and we said, “It is good for us to be this way.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1 ">
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the king said to us, “You have done well.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now, therefore, mingle with my people, and eat bread, and drink wine, and glorify your Lord. And you shall be obedient to God and to the king.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But we said that we would not disobey God.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the king, becoming angry, put us in prison. And we spent that night keeping vigil.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, a light shone in the dwelling, and an angel uncovered the prison. And he took hold of our heads and led us out of the prison. And he placed us in the air, and brought us to the water of the river. And he said to us, “Where the water goes, you also go.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we walked with the water and with the angel.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When, therefore, he brought us to this place, the river became cold, and the water disappeared. And the place was torn open, and water rose from the abyss.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he surrounded this homeland with a wall, and a wall of cloud came and overshadowed the water.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he did not scatter us over all the earth, but he gave us this homeland.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1 ">
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Hear, hear, sons of men, the administration of the blessed!</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For God has placed us in this land. For we are pious, but not immortal.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For the earth brings forth most fragrant fruit, and sweet water, sweeter than honey, flows from the trunks of the trees. And these are our food and drink.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we also pray night and day. And all our diligence is this:</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Hear, sons of men, that among us there is no vine, nor cultivated land, nor works of wood or iron, nor is there a house for us, nor a building, nor fire, nor a sword, nor idle iron, nor workable iron, nor silver, nor gold, nor an exceedingly heavy or bitter air.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Nor are there among us those who take wives for themselves until they have two children.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after producing two children, they separate from each other and are in purity, not knowing that they were once accustomed to marriage, but as if from the beginning existing in virginity.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">One child remains for marriage, and one for virginity.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1 ">
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And there is no count of time among us, neither weeks nor months nor a year. For all our day is one day.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on our caves, leaves of trees are laid up, and this is our bed beneath the trees.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But we are not naked in body, as you indeed suppose. For we have the garment of immortality and we are not ashamed of one another.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at the sixth hour we eat every day. For the fruit of the tree descends by itself at the sixth hour, and we eat to our fill and drink.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again, the water returns to its place.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we also know you who are in the world there and those who are in sins, and your works. For every day the angels of God come and report to us even the number of your years.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But we pray for you to the Lord, because we also are from you and from your race. But also because God has chosen us and God has placed us in this place without sin.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the angels of God dwell with us every day and tell us all things concerning you. And we rejoice with the angels on account of the righteous deeds.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But for the deeds of sinners, we grieve. And weeping, we pray to the Lord, that he might cease from wrath and spare your sins.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="1 ">
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when the time of the forty days comes, all the trees cease from bearing fruit.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And manna rains from heaven, which he gave to our fathers. And the manna is sweeter than honey.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And thus we know that the season of the year has changed.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when the time of the holy Passover comes, then again the trees produce the fragrant fruit. And thus we know that it is the beginning of the year.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the feast of the resurrection of the Lord is observed with much vigil. For we shall be watchful for three days and three nights.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="1 ">
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we also know the time of our completion. For there is no torture and torment, nor toil for our body, nor despondency, nor illness. But there is peace and much endurance and love.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For our soul is not troubled by the angels to depart; for the angels rejoice when they receive our souls; and our souls also rejoice with the angels when they see them;</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">just as a bride awaits the bridegroom, so our soul awaits the good news from the holy angels, saying nothing superfluous but only this: ‘The Lord calls you.’</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the soul departs from the body and approaches the angels. And when they see the soul departing undefiled, the angels rejoice and, spreading out their robes, they receive it.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the angels will bless it, saying, ‘Blessed are you, soul, because the will of God has been fulfilled in you.’</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="1 ">
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now this is the length of our life:</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">if one departs from the body in youth, the remaining days of his life are three hundred sixty years;</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">but if one departs from the body in old age, the remaining days of his life are seven hundred eighty-eight years.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The day of our completion has been revealed to us by the angels.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When the angels of God come to take us, we go with them.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the elders, seeing the angels, gather all the people. And we depart with the angels, chanting, until the angels go to the place of our dwelling.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And because we have no implement, the angels of God make the container for our body themselves.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And thus, the one called by God descends. And all of us, from the small to the great, greet him, sending him forth and arranging ourselves.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And then the soul departs from the body; and the angels greet it.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we behold the form of the soul, as a form of light, completely filled throughout the body, without male or female.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="1 ">
+          <unit id="en_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the angels, taking it up, sing a song and chant a hymn to God. And again, other orders of angels eagerly meet it, greeting the soul as it approaches and enters the firmaments.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when it goes to the place where it must worship God, the Son of God himself, with the angels, receives the soul of the blessed one and brings it to the undefiled Father of the ages.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again, when the angels sing above, we who are below listen to them. And again, we sing, and they listen in heaven above.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And thus, between us and the angels, the doxology of the hymnody ascends.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when the soul of the blessed one falls on its face and worships the Lord, then we also fall and worship the Lord at the same hour.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the Lord raises it, then we also rise.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when it goes to the appointed place, we also go to the assembly, fulfilling the eucharist of the Lord.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Having written these things, and all the administration of the blessed ones, we gave them to our brother Zosimus, and we sent him forth to the place of the trees near the river Eumeles.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="1 ">
+          <unit id="en_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I, Zosimus, again entreated the blessed ones that they might intercede for me with the Lord, that the trees might receive me to cross.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all cried out to the Lord, saying, “O God, who has shown us your wonders and caused your servant Zosimus to come to us from the world of vanity, restore him again to his place in peace.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And command these trees to bend down and take up your servant, and set him on the other side.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when they had completed their prayer, immediately the trees bent down before them and received me, just as before.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And standing on the other side of the river, I cried out with a loud voice and said, “People of righteousness, who are brothers of the holy angels, give me a prayer with peace, for behold, I am departing from you.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after offering a prayer, they all cried out, saying, “Peace, peace to you, brother.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="1 ">
+          <unit id="en_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then I prayed to the Lord, and a whirlwind came to me, and it took me on its wings, and it carried me to the place where it found me sitting, and it released me in peace.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And raising its voice, the wind said to me, “Blessed are you, Zosimus, because you have been numbered with the blessed ones.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the animal from the wilderness came, whose name is Camel, and it took me upon its neck, and it carried me eighty-five stages.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it placed me in the place where it found me praying.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it departed in peace, crying and saying, “Blessed are you, Zosimus, because you have been numbered with the blessed ones.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="1 ">
+          <unit id="en_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when Satan saw me being glorified, he wanted to tempt me and cast me out of the monastery.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But an angel of God came and said to me, “Zosimus, behold, Satan is coming to tempt you, but the Lord will fight for you. For the glory of your faith requires that you should possess Satan.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and an angel of God appeared, crying and saying, “You have come well, blessed one of Christ.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Come, I will lead you to the cave that will become the dwelling of your body.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For your cave will be a witness in the desert, a healing for those who come, for the sick, a place of testing and torment for demons.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And taking my hand, he strengthened me and led me for forty days to the cave where I was dwelling.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And a table of righteousness was made, and I was lodging with the angels of God.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I placed the tablets given to me by the blessed saints on the altar platform in my cave.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="1 ">
+          <unit id="en_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, when the angels of God had ascended, the Devil came, having a wild appearance, and driven by wrath and bitterness.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He said to me, “I knew that God intended to make you like the blessed ones, and that they would be sinless and superior to the angels.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And for this reason, I introduced an evil thought, and entered the vessel of the serpent cunningly to a cunning one.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And for this reason, I caused Adam, the first man, to transgress, for him to taste of the tree of life, since God had commanded him not to eat from it, so that he might remain equal in glory to God and the holy angels.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you again went and brought this commandment</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">so that they might not be sinless. I will show you how I will destroy you and all who receive this commandment, so that they may not be sinless, and the book that you brought.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="21">
+        <div number="1 ">
+          <unit id="en_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after saying these things, the Devil departed from me.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after eight days, he gathered with himself one thousand three hundred and sixty demons, and he seized me from the cave while I was praying.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they beat me, playing ball among themselves for forty days.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after forty days, the Devil wept before me and said, “Woe to me, because for one man I have lost the world! For he has conquered me through his prayer.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he began to run from me. But I, grasping him, made him stop and said, “You shall not escape or flee from me until you swear to me that you will no longer tempt humanity.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And weeping with a great and violent lament, he swore to me by the firmament of heaven, “As long as your dwelling is here, and after you, I will not go to that place.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then I released him, casting him and the demons with him into the eternal fire.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the angel who had been well-pleased with me at the table came, and led me into my cave with much glory.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="1 ">
+          <unit id="en_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after this, I lived thirty-six years, and I distributed the administration of the blessed ones to the fathers in the desert.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the Devil wept because of the tablets of the administration of the blessed ones, “Because if this spreads in the world, I will become a laughingstock, and these will remain sinless, and I alone will be in folly.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after the completion of the thirty-six years, the angels of God came to me, just as they did to the blessed ones.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the monks and everyone who heard were gathered, and this testament was read before all.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in such a way of life, he delivered his soul to God.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="23">
+        <div number="1 ">
+          <unit id="en_166" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I, Krouseos, being one of those in the desert, having brought it out, gave it to all who wish to learn and benefit.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_167" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, the angels of God gathered the body of Saint Zosimos as a very precious gift.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_168" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And we saw the soul of the blessed one, illuminated seven times brighter than the sun.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_169" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And immediately seven palm trees grew in that place and overshadowed the cave.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_170" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And a spring of water, holy water, also rose in that place, and to this day, it is a healing and salvation for all the sick who approach.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_171" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Peace to all who hear the memory of Saint Zosimos.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_172" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord is an advocate and helper to all for the endless ages of ages. Amen.</reading>
           </unit>
         </div>
       </div>

@@ -1,51 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-<!ELEMENT book (version)+>
-<!ATTLIST book filename CDATA #REQUIRED>
-<!ATTLIST book title CDATA #REQUIRED>
-<!ATTLIST book textStructure CDATA #IMPLIED>
-<!ELEMENT version (divisions , resources* , manuscripts+ , text)>
-<!ATTLIST version title CDATA #REQUIRED>
-<!ATTLIST version author CDATA #REQUIRED>
-<!ATTLIST version fragment CDATA #IMPLIED>
-<!ATTLIST version language CDATA #IMPLIED>
-<!ELEMENT divisions (division)+>
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division label CDATA #REQUIRED>
-<!ATTLIST division delimiter CDATA #IMPLIED>
-<!ELEMENT resources (resource)+>
-<!ELEMENT resource (info+ , URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-<!ELEMENT info (#PCDATA)>
-<!ELEMENT URL (#PCDATA)>
-<!ELEMENT manuscripts (ms)+>
-<!ELEMENT ms (name , bibliography*)>
-<!ATTLIST ms abbrev CDATA #REQUIRED>
-<!ATTLIST ms language CDATA #REQUIRED>
-<!ATTLIST ms show CDATA #REQUIRED>
-<!ELEMENT name (#PCDATA | sup)*>
-<!ELEMENT sup (#PCDATA)>
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-<!ELEMENT booktitle (#PCDATA)>
-<!ELEMENT text (div)+>
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div number CDATA #REQUIRED>
-<!ATTLIST div fragment CDATA #IMPLIED>
-<!ELEMENT unit (reading)+>
-<!ATTLIST unit id CDATA #REQUIRED>
-<!ATTLIST unit group CDATA "0">
-<!ATTLIST unit parallel CDATA #IMPLIED>
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading option CDATA #REQUIRED>
-<!ATTLIST reading mss CDATA #REQUIRED>
-<!ATTLIST reading linebreak CDATA #IMPLIED>
-<!ATTLIST reading indent CDATA #IMPLIED>
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w morph CDATA #IMPLIED>
-<!ATTLIST w lex CDATA #IMPLIED>
-<!ATTLIST w style CDATA #IMPLIED>
-<!ATTLIST w lang CDATA #IMPLIED>
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="Mois" title="Assumption of Moses">
   <version title="Latin" author="" language="Latin">
     <divisions>
@@ -750,6 +703,714 @@
         <div number="13">
           <unit id="134" group="0" parallel="">
             <reading option="0" mss="Ceriani ">exiuit enim deus qui praeuidit omnia in saecula et stabilitum est testamentum illius et iureiu ando quod</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="English" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of English based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">...</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">which is the two thousand five hundredth year from the creation of the earth.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For otherwise, the number of those in the east ... and ... and ... of the departure of the Phoenix</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">when the people went out after the departure that was made by Moses up to Amman across the Jordan,</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the prophecy that was made by Moses in the book of Deuteronomy.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">who called to himself Jesus, son of Nun, a man approved by the Lord,</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to be a successor to the people and to the tabernacle of testimony with all its holy things,</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">so that he might lead the people into the land given to their tribes,</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">so that it might be given to them by covenant and by oath, which he spoke in the tabernacle, to give concerning Jesus, saying this word to Jesus:</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And promise according to your diligence to do all that has been commanded, as it is without dispute.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, thus says the Lord of the world:</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he created the world for the sake of his people.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he did not begin its inception of creation and from the beginning of the world make it manifest, so that the Gentiles might be convicted concerning it and humbly dispute among themselves and convict themselves.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, he devised and found me, who from the beginning of the world was prepared to be the arbiter of his covenant.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And then I make it clear to you that the time of the years of my life is fulfilled, and I pass into the sleep of my fathers and openly to all the people.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">However, receive this writing to recognize the safekeeping of the books which I will deliver to you,</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">which you shall arrange and bind and place in earthenware vessels in the place which he made from the beginning of the creation of the world,</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">so that his name may be invoked until the day of repentance, in the regard with which the Lord looks upon them at the consummation of the end of days.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Through you they will enter into the land which he decreed and promised to give to their fathers,</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">in which you will bless and give to each one and establish for them a lot in me, and you will confirm for them a kingdom, and you will leave to them the offices of the places according to what will please their Lord in judgment and righteousness.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">However, after they enter into their land, for years, and afterwards it will be ruled by princes and tyrants for eighteen years, and for eighteen years, breaking off from the tribe of x, for two tribes will descend and transfer the tabernacle of testimony.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the God of heaven made manifest his tabernacle and the iron of his sanctuary, and two tribes of holiness will be established.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For ten tribes will establish kingdoms for themselves according to their ordinances,</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and they will offer sacrifices for twenty years.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And seven will surround the walls, and I will go around nine, and they will approach the covenant of the Lord and will pollute the boundary which the Lord made with them.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they will sacrifice their sons to foreign gods, and they will place idols in the tabernacle, serving them.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the house of the Lord they will act wickedly and will carve many idols of every animal.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">In those times, a king will come to them from the east, and his cavalry will cover their land and</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">he will set fire to their colony with the holy house of the Lord, and he will take all the holy vessels.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he will cast out all the people and will lead them into the land of his own country, and he will lead two tribes with him.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the two tribes will call out to the ten tribes, and they will lead themselves like lions in the dusty fields, hungry and thirsty with our children.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they will cry out, “Righteous and holy is the Lord! For you have sinned, and we likewise have been brought with you.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the ten tribes will weep, hearing the reproaches of the words of the two tribes,</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and they will say, “What shall we do to you, brothers? Has not this affliction come upon every house of Israel?”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all the tribes will weep, crying out to heaven and saying,</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">O God of Abraham, and God of Isaac, and God of Jacob, remember your covenant which you made with them and the oath which you swore to them by yourself, that their seed would never fail from the land which you gave to them.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then they will remember me on that day, saying, tribe to tribe and a man to his neighbor,</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Is this not what Moses testified to us among the prophets, who suffered many things in Egypt and in the Red Sea and in the wilderness for forty years?</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He testified and called heaven and earth as witnesses for us, lest we transgress his commandments in which he was our arbiter.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">These things have come upon us according to his words and according to his affirmation, just as he testified to us in those times, and which have come upon us, even to be led captive to the eastern region.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they will serve for about seventy-seven years.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then one who is over them entered and spread out his hands and knelt down and prayed for them, saying,</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Lord, the king of all on high, who rules the world, who willed this people to be your people, this chosen people, then you willed to be called their God, according to the covenant which you made with their fathers.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they went captive to a foreign land with their wives and children, and near the gate of foreigners and where great majesty is.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Look and have mercy on them, O heavenly Lord.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then their God remembers because of the covenant which he made with their fathers, and he will make known his mercy even in those times.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he sends into the heart of the king that he might have mercy on them and dismiss them to their land and region.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then some parts of the tribes will ascend and come to their appointed place and will surround the place, renewing it.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But two tribes will remain steadfast in their appointed faith, sorrowful and groaning, because they will not be able to offer sacrifices to the Lord, the God of their fathers.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the ten tribes will grow and will come among the children in the time of the tribe.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the times of rebuke draw near and vengeance arises from kings, sharers in wickedness,</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and punishing them, and they themselves will be divided against the truth because of what happened.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">They will avoid justice and approach iniquity, and they will defile the house of their servitude through generations, and because they will commit fornication after foreign gods.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For they will not follow the truth of God, but some will defile the altars with the offerings which they will impose on the Lord, who are not priests but servants born of servants.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For those who are their masters and teachers in those times will be admiring persons of greed and receivers of gifts, and they will sell justice, receiving penalties.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And therefore the settlement and the limits of their habitation will be filled with wickedness and iniquities from God, so that those who act will be impious judges; they will be within it after the limits of the habitation with wickedness and iniquities from the Lord. Those who act will be impious judges; they will be in the field to judge as each one wishes.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1">
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then kings ruling over them will arise, and they will be called high priests of God, performing impiety from the holy of holies.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And a petulant king will succeed them, who will not be of the lineage of priests, a rash and wicked man, and he will judge them as they deserve.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He will strike down their leaders with the sword, and each one in unknown places, and their bodies, so that no one knows where their bodies are.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He kills the elders and the young, and he will not spare.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then his great terror will be upon them in their land.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he will execute judgments upon them as the Egyptians did to them for thirty-four years, and they will punish them.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he will subdue the children, yielding shorter times to themselves.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">They will come to their peers in death, and a powerful king will kill them because he will conquer them.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they will lead captives, and he burns a part of their temple with fire; some he crucifies around their settlement.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">From this deed, the times will end in a moment. The course will be completed in four hours.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">They are compelled according to the beginnings, three to the ends, nine because of the beginning, three, the seventh, the second, three, in the third, two hours.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And pestilential and impious men will reign from these, teaching themselves to be righteous.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And these will stir up the anger of their souls, who will be deceitful men, self-pleasing, feigned in all their ways, and at every hour of the day loving feasts, devourers of gluttony.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">They will despise all divine things.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">... eaters of good things, saying that they do these things out of mercy...</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">themselves and destroyers seeking... deceivers concealing themselves so that they could not be known, impious, full of crime and iniquity from east to west.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">saying, 'We will have banquets and luxury, eating and drinking.' And we thought, 'We will be like princes.'</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And their hands and minds handle impure things, and their mouth will speak great things, and they will moreover say,</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">'Do not... touch, lest you defile me, in the place where... s... is d... su... us... in... re... raui... to the people who are to them.'</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1">
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And then vengeance and wrath will come upon them, such as has not been upon them from the beginning until that time, in which he raised up for them a king of the kings of the earth and a power from great power, who will crucify those confessing circumcision.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he will torture those who kill, and he delivered the bound to the leader into custody.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And their wives will be given to the gods of the nations. And their children, male infants, will be circumcised by doctors, male infants to induce acrosis on them.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For they will be punished in them with torments and fire and iron, and will be forced to openly carry their defiled idols, just as they are equally holding them.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And by those tormenting them, they will likewise be forced to enter their hidden place, and will be forced by goads to blaspheme the word contemptuously, and finally after these things, even the laws that they had above their altar.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1">
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then, as he spoke, a man from the tribe of Levi, whose name will be Taxo, who had seven sons, speaking to them, imploring,</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">'See, sons, behold, vengeance has come upon another people, cruel, impure, and a degradation without mercy, and they hold prominence.'</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For what nation, or what region, or what people of the impious in a house who committed many wicked deeds have suffered such evils as have befallen us?</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now therefore, sons, listen to me, for you see and know that neither their parents nor their ancestors ever tempted God to transgress his commandments.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For you know that these are our strengths, and we will do this.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Let us fast for three days, and on the fourth day let us enter the cave that is in the field, and let us die rather than transgress the commandments of the Lord of lords, the God of our parents.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For if we do this and die, our blood will be avenged before the Lord.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And then his kingdom will appear in all his creation. And then the devil will have an end, and sorrow will be brought with him.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the hands of the messenger who is appointed on high will be filled, who will immediately avenge them from their enemies.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For the Heavenly One will... from the throne of his kingdom, and will go forth from his holy dwelling with indignation and wrath because of his sons.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the earth will tremble to its ends, it will be shaken, and the high mountains will be humbled and shaken, and the valleys will fall.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The sun will not give light, and the horns of the moon will turn into darkness and will be broken, and the whole will turn into blood, and the sphere of the stars will be disturbed.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sea will recede to the abyss, the sources of the waters will fail, and the rivers will be terrified.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Because the Most High God, the Eternal One alone, arises, and will come openly to avenge the nations and destroy all their idols.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then you, O Israel, will be blessed, and you will ascend upon the necks and wings of the eagle, and you will be filled.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And God will exalt you and make you inherit the heaven of stars, the place of their dwelling.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you will look down from on high and see your enemies on the earth, and you will recognize them, and you will rejoice and give thanks and confess your Creator.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For you, Joshua son of Nun, keep these words and this book.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For there will be 250 times from death's reception until his coming, which are accomplished.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And this course... of these which they meet until they are consumed.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I was going to the sleep of my fathers.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, you, Joshua son of Nun, God has chosen you to be my successor of the same covenant.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1">
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Joshua heard the words of Moses, all that were written in his scripture, all that he had foretold, he tore his garments and fell at my feet.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he encouraged Moses and wept with him.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Joshua answered him and said,</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Why do you conceal me, Lord Moses? And in what way shall I be concealed? Concerning what did that harsh voice speak, which came out of your mouth, which is full of tears and groans, because you are departing from this people….”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“What place receives you…?”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Or what will be the monument of burial?”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Or who would dare to transfer your body, O man, from place to place?”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For all who die according to their age have their burial places on the earth. But your burial, from the rising of the sun to its setting, and from the south to the ends of the north, the whole orb of the earth is your sepulchre.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Lord, Ah! And who will nourish this people?”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Or who is it who will pity them? And who will be their leader on the way?”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Or who will pray for them, not even enduring for a single day, so that I might lead them into the land of the Arabs?”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“How then shall I be able to [care for] this people, like a father his only son, or like a master a virgin daughter who is prepared for such a husband, who guarded her body, fearing the sun, and lest her feet be unshod for running upon the earth?”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“... I will provide for them food and drink according to their desire, according to their will.”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“... for there were a hundred thousand of them. But these have grown so much through your prayers, Lord Moses.”</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And what wisdom or understanding do I have in the house… to speak words or to judge or to answer?”</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But also the kings of the Amorites, when they hear, will believe that we have been overcome, saying, ‘There is no longer a sacred spirit worthy of the Lord among them, a multiple and incomprehensible Lord of the word, faithful in all things, a divine prophet perfected throughout the world, a teacher. Let us go to them!’”</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“If the enemies have sinned impiously, once again, against their Lord, there is no defender for them who would offer prayers for them to the Lord, as Moses was a great messenger who, at every hour, day and night, had his knees fixed on the ground, praying and beholding the omnipotent world with mercy and justice, remembering the covenant of the parents and placating the Lord by an oath.”</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For they will say, ‘He is not with them. Therefore, let us go and confound them from the face of the earth.’”</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“What then will become of this people, Lord Moses?”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1">
+          <unit id="en_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after Jesus finished his words, he again prostrated himself at Moses’ feet.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Moses took his hand and raised him up to a chair before him. And he answered and said to him,</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Joshua, do not be contemptuous, but show yourself secure and attend to my words.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“All the nations that are on the face of the earth, God created, and He foreknew them and us from the beginning of the creation of the world until the end of the age. And nothing is neglected by Him, not even the smallest thing, but He foreknew and prepared all things with them….”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“The Lord foreknew all things that would happen in this world, and behold, he is taken away.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“……he appointed me for them, and for their sins…. and to… for them.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For not because of my strength or weakness, but rather His mercy and patience have covered me.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For I say to you, Joshua, not because of the piety of this people will you exterminate the nations.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“All the firmaments of the heavens and the world were made as tried by God, and they are under none other than His right hand.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Therefore, those who do and fulfill the commandments of God grow and demand a good way.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But those who sin and neglect the commandments are deprived of the good things that were foretold. And they will be punished by the nations with many torments.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For it is impossible that he should completely exterminate and abandon them.”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For God, who foreknew all things forever, has gone forth, and His covenant and His oath, which…”</reading>
           </unit>
         </div>
       </div>

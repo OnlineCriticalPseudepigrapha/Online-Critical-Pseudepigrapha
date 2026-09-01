@@ -1,86 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE book [
-
-<!ELEMENT book (version+)>
-<!ATTLIST book
- filename CDATA #REQUIRED
- title CDATA #REQUIRED
- textStructure CDATA #IMPLIED
->
-
-<!ELEMENT version (divisions, resources*, manuscripts+, text)>
-<!ATTLIST version
- language CDATA #REQUIRED
- title CDATA #REQUIRED
- author CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT divisions (division)+>
-
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division
- label CDATA #REQUIRED
- delimiter CDATA #IMPLIED
->
-
-<!ELEMENT resources (resource+)>
-<!ELEMENT resource (info+, URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-
-<!ELEMENT info (#PCDATA)>
-
-<!ELEMENT URL (#PCDATA)>
-
-<!ELEMENT manuscripts (ms+)>
-
-<!ELEMENT ms (name, bibliography*)>
-<!ATTLIST ms
- abbrev CDATA #REQUIRED
- language CDATA #REQUIRED
- show CDATA #REQUIRED
->
-
-<!ELEMENT name (#PCDATA | sup)*>
-
-<!ELEMENT sup (#PCDATA)>
-
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-
-<!ELEMENT booktitle (#PCDATA)>
-
-<!ELEMENT text (div+)>
-
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div
- number CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT unit (reading+)>
-<!ATTLIST unit
- id CDATA #REQUIRED
- group CDATA "0"
- parallel CDATA #REQUIRED
->
-
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading
- option CDATA #REQUIRED
- mss CDATA #REQUIRED
- linebreak CDATA #IMPLIED
- indent CDATA #IMPLIED
->
-
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w
- morph CDATA #IMPLIED
- lex CDATA #IMPLIED
- style CDATA #IMPLIED
- lang CDATA #IMPLIED
->
-
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="TAbr" title="Testament of Abraham">
   <version title="Recension A" author="Anonymous" language="Greek">
     <divisions>
@@ -2358,6 +2276,2287 @@
         <div number="9">
           <unit id="175" group="0" parallel="">
             <reading option="0" mss="James ">ὅτι αὐτῷ πρέπει δόξα, τιμὴ καὶ προσκύνησις, τοῦ πατρὸς καὶ τοῦ υἱοῦ καὶ τοῦ ἁγίου πνεύματος νῦν καὶ ἀεὶ καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων. Ἀμήν.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Recension A (English)" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Recension A (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Abraham lived the measure of his life, nine hundred ninety-five years. And having lived all the years of his life in quietness and meekness and righteousness, the righteous man was very hospitable.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he pitched his tent at the crossroads of the Oak of Mamre, and he received everyone, rich and poor, kings and rulers, crippled and infirm, friends and strangers, neighbors and passers-by. The devout, most holy, righteous, and hospitable Abraham received them equally.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the common and unavoidable bitter cup of death also reached him, as well as the uncertain end of life.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, the Lord God called his archangel Michael and said to him, “Go down, Archistrategos Michael, to Abraham, and speak to him about death, so that he may make arrangements concerning his affairs.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For I have blessed him like the stars of the heaven, and like the sand by the seashore. And he is in great abundance of life and many possessions, and he is very rich. Moreover, he is righteous before everyone in all goodness, hospitable and loving until the end of his life.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So you, Archangel Michael, go to Abraham, my beloved friend, and announce to him about his death, and assure him that</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">‘You are about to depart at this time from this vain world, and you are about to migrate from the body and will come to your own Lord in good things.’”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos, having departed from the presence of God, went down to Abraham at the Oak of Mamre, and he found the righteous Abraham in the field nearby, with pairs of plowing oxen attending him, along with the sons of Masek and twelve other servants. And behold, the Archistrategos was coming toward him.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Abraham saw the Archistrategos Michael coming from afar, like a most handsome soldier, Abraham arose and went to meet him, as was his custom, to go out to meet and receive all strangers.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos greeted him first and said, “Hail, most honored father, righteous chosen soul of God, genuine friend of the Heavenly One.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to the Archistrategos, “Hail, most honored soldier, radiant as the sun and most handsome beyond all the sons of men! Welcome have you come.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“This is the favor I ask concerning your presence: From where has the youth of your age come? Teach me, your supplicant, from where and from what army and by what road has your beauty arrived?”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos said, “I, righteous Abraham, come from the great city. I have been sent by the great King, bringing a message for his genuine friend, because the King also summons him.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, “Come, my lord, go with me to my field.” And the Archistrategos said, “I will come.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when they went to the field of plowing, they sat down for conversation.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to his servants, the sons of Masek, “Go to the herd of horses and bring two gentle and tame horses, so that I and this stranger may mount them.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos said, “No, my lord Abraham, let them not bring horses, because I abstain from this, from ever sitting on a four-footed animal.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For was not my King rich in much merchandise, having authority over both men and all kinds of animals? But I abstain from this, from ever sitting on a four-footed animal.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Let us go, therefore, righteous soul, walking on foot to your house, being lifted up.” And Abraham said, “Amen, so be it.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">As they were going from the field to his house,</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">along that road stood a cypress tree.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And according to the command of God, the tree cried out with a human voice and said, “Holy, holy, holy is the Lord God who calls to him those who love him!”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham hid the mystery, supposing that the Archistrategos had not heard the voice of the tree.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when they came near the house, they sat down in the courtyard. And Isaac, seeing the face of the angel, said to Sarah his mother, “My lady mother, behold the man sitting with my father Abraham is not a son from the race of those who dwell on the earth.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac ran and bowed down to him and fell at the feet of the bodiless one. And the bodiless one blessed him and said, “The Lord God will grant you his promise which he promised to your father Abraham and to his seed, and he will grant you also the precious prayer of your father and your mother.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to Isaac his son, “Child Isaac, draw water from the well and bring it to me in the basin, so that we may wash the feet of this stranger, for he has toiled coming to us from a long journey.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac ran to the well and drew water in the basin and brought it to them.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham approached and washed the feet of the Archistrategos Michael. And Abraham’s heart was moved, and he wept over the stranger.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac, seeing his father weeping, also wept. And the Archistrategos, seeing them weeping, also wept with them.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos’ tears fell into the water of the basin, and they became precious stones.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham, seeing the wonder and being amazed, secretly took the stones and hid the mystery, keeping it alone in his heart.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to Isaac his son, “Go, my beloved son, to the chamber of the dining room and adorn it.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And spread for us there two couches, one for me and one for this man who has become our guest today. And prepare for us there a stool and a lampstand and a table with an abundance of every good thing. Adorn the dwelling, child, and spread out fine linen and purple and byssus. Burn every precious and glorious incense, and bringing fragrant herbs from Paradise, fill our house.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Light seven oil lamps so that we may rejoice, because this man who has become our guest today is more glorious than kings and rulers, for his appearance surpasses all the sons of men.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac prepared everything well. And Abraham, taking the Archangel Michael, went up into the chamber of the dining room, and they both sat down on the couches, and between them was set a table with an abundance of every good thing.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So the Commander, having arisen, went outside, as if needing to relieve himself, and he ascended to heaven in the blink of an eye and stood before God, and said to him,</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Master, Lord, let your power know that I cannot announce the message of death to that righteous man, for I have not seen a man on earth like him—merciful, hospitable, righteous, truthful, God-fearing, abstaining from every evil deed. And now know, Lord, that I cannot announce the message of death.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the Lord said, “Go down, Archangel Michael, to my friend Abraham, and whatever he tells you, do it. And whatever he eats, you also eat with him. But I will put my Holy Spirit upon his son Isaac,</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and I will cast the memory of his death into Isaac’s heart, so that he himself may also see his father’s death in a dream, and Isaac will declare the vision, and you will interpret it; and he himself will know his end.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archangel said, “Lord, all the heavenly spirits are incorporeal, and they neither eat nor drink. Yet this man has set a table before me with an abundance of all earthly and perishable good things. And now, Lord, what shall I do? How shall I conceal myself from him, sitting at one table with him?”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the Lord said, “Go down to him, and do not worry about this. For when you sit with him, I will send upon you an all-consuming spirit, and it will consume from your hands and through your mouth everything on the table. And rejoice with him in everything.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Only interpret the matters of the vision well, so that Abraham may know the sickle of death, and the uncertain end of life, and so that he may make arrangements concerning all his possessions, because I have blessed him more than the sand of the sea and like the stars of heaven.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the Archangel went down to Abraham’s house and sat with him at the table, while Isaac served them.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When the meal was finished, Abraham offered the customary prayer, and the Archangel prayed with him, and each rested on his bed.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Isaac said to his father, “Father, I also wanted to rest with you in this dining room, so that I too might hear your conversations. For I love to hear the distinct speech of this most virtuous man.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “No, child, but go to your own dining room and rest on your bed, so that we may not be a burden to this man.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Isaac, having received a blessing from them, and having blessed them, went to his own dining room and lay down on his bed.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But God cast the memory of death into Isaac’s heart as if in dreams.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And about the third hour of the night, Isaac, waking up, rose from his bed and came running to the dining room where his father was sleeping with the Archangel.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So Isaac, reaching the door, cried out, saying, “Father Abraham, rise and open for me quickly, so that I may enter and embrace your neck and kiss you before they take you from me.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So Abraham arose and opened for him. And Isaac, having entered, embraced his neck and began to weep with a loud voice.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So Abraham, moved in his inner being, also wept with him with a loud voice. And when the Archangel saw them weeping, he also wept.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Sarah, being in her tent, heard their weeping and came running to them, and found them embracing and weeping.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Sarah said with weeping, “My lord Abraham, what is this that you are weeping? Tell me, my lord,</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Has this brother who visited us today brought you news about your nephew Lot, that he has died, and because of this you mourn so?”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the Archangel answered and said to her, “No, sister Sarah, it is not as you say. But your son Isaac, as it seems to me, saw a dream, and came to us weeping, and when we saw him, our inner beings were moved, and we wept.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1">
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when Sarah heard the distinct speech of the Archangel, she immediately recognized that it was an angel of the Lord speaking.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So Sarah signaled Abraham to go outside toward the door, and she said to him, “My lord Abraham, do you know who this man is?”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “I do not know.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Sarah said, “Do you remember, my lord, the three heavenly men who visited our tent by the oak of Mamre when you slaughtered the blameless calf and set a table before them?</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the meat was consumed, the calf rose again and suckled its mother with rejoicing. Do you not know, my lord Abraham, that they also granted us the fruit of the womb, Isaac, by promise? For this is one of those three holy men.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, “O Sarah, you have spoken truly. Glory and blessing be from God and the Father! For even I, late in the evening, when I washed his feet in the basin, said in my heart, ‘These feet are from the three men whom I washed then.’”,</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And his tears, falling late into the basin, became precious stones. And he took them out of his bosom and gave them to Sarah, saying, “If you disbelieve me, now look at these.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Sarah, taking them, bowed down and kissed them and said, “Glory to God who shows us wonders! And now know, my lord Abraham, that a revelation of some deed is upon us, whether evil or good.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham, leaving Sarah, went into the dining room and said to Isaac, “Come, my beloved son, tell me the truth, what did you see and what have you suffered that you came to us so quickly?”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac, answering, began to say, “I saw, my lord, this night the sun and the moon above my head, and their rays circling and illuminating me.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as I was watching these things and rejoicing, I saw heaven opened, and I saw a luminous man descend from heaven, shining more brightly than seven suns.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And that sun-like man came and took the sun from my head, and ascended to the heavens from where he had come.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I was greatly grieved that he had taken the sun from me. And shortly after, while I was still grieving and anxious, I saw that man come out of heaven a second time. And he took the moon from my head as well.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I wept greatly and implored that luminous man and said, “No, my lord, do not take my glory from me; have mercy on me and hear me. Even if you have taken the sun from me, at least leave the moon upon me.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But he said, “Let them be taken up to the King on high, for he wants them there.” And he took them from me, but left their rays upon me.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the archistrategos said, “Listen, righteous Abraham. The sun that your child saw, you are he, his father. And the moon likewise is his mother, Sarah. And the light-bearing man who descended from the heaven of God—this is he who has been sent from God, who is about to take your righteous soul from you.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And now know, most honored Abraham, that you are about to leave this worldly life at this time and to go away to God.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Abraham said to the archistrategos, “O wonder, newer than wonders! Are you then he who is about to take my soul from me?”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The archistrategos said to him, “I am Michael, the archistrategos who stands before God, and I was sent to you to announce to you the remembrance of death. And after this I will go away to him, as we were commanded.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, “Now I know that you are an angel of the Lord, and you were sent to take my soul. But I will not follow you. Rather, do what you command.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1">
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now when the archistrategos heard this word, he immediately became invisible. And going up into heaven, he stood before God and reported everything he had seen in Abraham’s house.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The archistrategos also said this to the Master: “And your friend Abraham says this: ‘I will not follow you, but do what you command.’ ”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But now, Master Almighty, what does your glory and immortal kingdom command?”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then God said to the archistrategos Michael, “Go to my friend Abraham yet again, and speak to him thus:</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">‘Thus says the Lord your God, who brought you into the land of promise, who blessed you more than the sand of the sea and more than the stars of heaven,</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">who opened the barren womb of Sarah and granted you Isaac, the fruit of the womb, in your old age.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Truly I say to you, I will surely bless you, and I will surely multiply your offspring, and I will give you all that you ask from me, for I am the Lord your God, and besides me there is no other.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But why do you resist me, and what is your sorrow? Declare it! And why do you resist my archangel Michael?</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Or do you not know that all from Adam and Eve have died? And no one among the prophets escaped death. And none of the kings is immortal. No one among the patriarchs escaped the mystery of death. All have died, all have settled in Hades, all are gathered by the sickle of death.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But upon you I did not send death; I did not allow a deadly illness to come upon you. I did not permit the sickle of death to meet you; I did not permit the nets of Hades to entangle you. I never wished for any evil to meet you.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But for a good consolation I sent forth my archistrategos Michael to you, so that you might know your departure from the world, and make arrangements concerning your house and concerning all your possessions, and that you might bless Isaac, your beloved son. And now know that I have done these things, not wishing to grieve you.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And why did you say to my archistrategos, “I will not follow you”? Why did you say these things? And do you not know that if I were to permit death to come upon you, then I would see whether you would come or not come?’ ”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1">
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now the archistrategos, having received the Lord’s admonitions, descended to Abraham. And when the righteous man saw him, he fell on his face to the ground like a dead person.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the archistrategos told him all that he had heard from the Most High. Then the holy and righteous Abraham arose with many tears, fell at the feet of the bodiless one, and implored him, saying,</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“I beg you, archistrategos of the heavenly powers, since you have deemed it worthy to come yourself to me, your sinful and unworthy servant, day by day, I entreat you even now, archistrategos, to render service for me yet once more with a word to the Most High, and you shall say to him:</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">‘Thus says Abraham your servant: “Lord, Lord, in every deed and word that I asked of you, you heard me, and you fulfilled all my counsel.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And now, Lord, I do not resist your power, for I also know that I am not immortal but mortal. Since, therefore, everything yields to your command and shudders and trembles at the presence of your power, I also fear, but I ask one request from you.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And now, Master Lord, hear my supplication, for while I am still in this body, I wish to see all the inhabited world and all the creations that you established by a single word, Master. And when I see these things, then if I depart from life, I will be without grief.” ’ ”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So the archistrategos went again and stood before God and reported everything to him, saying, “Thus says your friend Abraham: ‘I wanted to gaze upon all the inhabited world in my life, before I die.’ ”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the Most High heard these things, he again commanded the archistrategos Michael and said to him, “Take a cloud of light, and angels who have authority over chariots, and descend and take the righteous Abraham on a cherubic chariot and lift him up into the ether of heaven, so that he may see all the inhabited world.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1">
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the archangel Michael descended and took Abraham on a cherubic chariot and lifted him up into the ether of heaven and led him upon the cloud and sixty angels, and Abraham was going up on a vehicle over all the inhabited world.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham observed the world as it was that day: some plowing, others driving wagons, in another place tending flocks, elsewhere camping outdoors, and dancing and playing and playing the lyre, in another place wrestling and litigating, elsewhere weeping, and then dead people being carried to a tomb.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he also saw newly married couples being entertained at a banquet. And simply put, he saw everything that was happening in the world, both good and evil.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So as Abraham was passing through, he saw men bearing swords, holding sharpened swords in their hands, and Abraham asked the archistrategos, “Who are these?”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the archistrategos said, “These are thieves, who intend to commit murder and to steal and to sacrifice and to destroy.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, “Lord, Lord, hear my voice and command that beasts come out of the thicket and devour them.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And immediately at his word, beasts came out of the thicket and devoured them.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he saw in another place a man and a woman committing fornication with each other.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said, “Lord, Lord, command that the earth open up and swallow them.” And immediately the earth split open and swallowed them.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he saw in another place people digging through a house and plundering others’ possessions.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said, “Lord, Lord, command fire to come down from heaven and consume them.” And at his word, fire came down from heaven and consumed them.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And immediately a voice came from heaven to the chief commander, saying this, “Command, O Michael, chief commander, to stop the chariot, and turn Abraham back, so that he may not see the entire inhabited world.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For if he sees all those living in sin, he will destroy every created being. For behold, Abraham has not sinned, and he has no pity on sinners.”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“But I created the world, and I do not wish to destroy any of them. Rather, I await the death of the sinner, until he repents and lives.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So lead Abraham up to the first gate of heaven, so that he may see there the judgments and retributions, and repent concerning the souls of the sinners whom he destroyed.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1">
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Michael turned the chariot and brought Abraham to the East, to the first gate of heaven.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham saw two roads: one road narrow and constricted, and the other broad and spacious.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">{And he saw there two gates: one gate was broad,} corresponding to the broad road, and one gate was narrow, corresponding to the narrow road.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And outside of those two gates there, I saw a man sitting on a golden throne. And the appearance of that man was fearsome, similar to the Lord.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I saw many souls being driven by angels and being led in through the broad gate, and I saw other, few souls, and they were carried by angels through the narrow gate.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the wonderful one sitting on the golden throne observed few entering through the narrow gate, but many entering through the broad gate, immediately that wonderful man tore the hairs of his head and the sides of his beard and threw himself to the ground from the throne, weeping and lamenting.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when he observed many souls entering through the narrow gate, then he rose from the ground and sat on his throne with great joy, rejoicing and exulting.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Abraham asked the chief commander, “My Lord, chief commander, who is this man, the all-wonderful one, who is adorned with such glory, and at one time weeps and laments, and at another time rejoices and exults?”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the bodiless one said, “This is Adam, the first-formed one, who is in such glory, and he beholds the world, inasmuch as all came from him.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when he sees many souls entering through the narrow gate, then he rises and sits on his throne, rejoicing and exulting in joy, because this narrow gate is for the righteous, leading to life, and those who enter through it come to paradise. And because of this, Adam the first-formed rejoices, because he sees souls being saved.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when he sees many souls entering through the broad gate, then he tears the hairs of his head and throws himself to the ground, weeping and lamenting bitterly. Because the broad gate is for sinners, leading to destruction and to eternal punishment. And because of this, Adam the first-formed falls from his throne, weeping and lamenting over the destruction of sinners, because many are those who are perishing, but few are those who are being saved.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For among seven thousand, scarcely one soul is found that is righteous and undefiled.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1">
+          <unit id="en_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">While I was still speaking these things, behold, two angels, fiery in appearance, merciless in disposition, and severe in gaze, were driving tens of thousands of souls, mercilessly beating them with fiery whips.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And one angel was holding one soul. And they led all the souls into the broad gate toward destruction.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So we also followed the angels and came inside that broad gate.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the middle, between the two gates, stood a fearsome throne in the form of fearsome crystal, flashing like fire.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And upon it sat a wonderful man, radiant as the sun, resembling a son of God.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And before him stood a crystal-like table, entirely made of gold and fine linen.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on top of the table was a book lying, its thickness six cubits, and its width ten cubits.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on its right and on its left stood two angels, holding paper and ink and a reed pen.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And before the table sat a light-bearing angel, holding a balance in his hand.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And on the left sat an angel, entirely fiery, merciless and severe, holding in his hand a trumpet, inside of which he contained all-consuming fire, a testing instrument for sinners.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the wonderful man sitting on the throne himself judged and pronounced sentence on the souls.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the two angels, the one on the right and the one on the left, recorded; the one on the right recorded the righteous deeds, and the one on the left the sins.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the one before the table, holding the balance, weighed the souls.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the fiery angel, holding the fire, tested the souls.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham asked the chief commander Michael, “What are these things that we are observing?” And the chief commander said, “These things which you see, holy Abraham, are the judgment and retribution.”</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, the angel holding the soul in his hand brought it before the judge.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the judge said to one of the angels ministering to him, “Open this book for me and find for me the sins of this soul.”</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when he opened the book, he found its balances showing sins and righteous deeds as equal. And he delivered her neither to the torturers nor to those who were being saved, but he stood her in the middle.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="1">
+          <unit id="en_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, "My Lord Archistrategos, who is this judge, so wondrous? And who are the angels who are recording? And who is the sun-shaped angel holding the balance? And who is the fiery angel holding the fire?"</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos said, "Do you see, most holy Abraham, the terrible man sitting on the throne? This is the son of Adam, the first-formed, who is called Abel, whom the wicked Cain killed.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he sits here to judge all creation and to convict the righteous and the sinners. For God said, 'I do not judge you, but every human will be judged by a human.'</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For this reason, he has given him judgment, to judge the world until his great and glorious coming. And then, righteous Abraham, a perfect judgment and recompense occurs, eternal and unchangeable, which no one can overturn.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For every human being has been born from the first-formed, and therefore, here first they are judged by his son.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at the second coming, they will be judged by the twelve tribes of Israel, and every breath and every creature.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And third, they will be judged by the Lord God of all, and then finally the end of that judgment is near, and the verdict is terrible, and no one can annul it.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And so, through three tribunals, the judgment of the world and the recompense occur. And for this reason, a word is not finally secured upon one or two witnesses; but upon three witnesses every word will be established.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The two angels, the one on the right and the one on the left, these are the ones who record sins and righteous deeds. The one on the right records righteous deeds, and the one on the left records sins.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sun-shaped angel, holding the balance in his hand, this is Doqiel the archangel, the righteous weigher, and he weighs righteous deeds and sins according to the righteousness of God.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the fiery and merciless angel, holding the fire in his hand, this is Pyrouel the archangel, who has authority over the fire, and he tests the works of humankind by fire.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And if the fire burns up anyone's work, immediately the angel of judgment takes him and leads him away to the place of sinners, a most bitter punishment.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But if the fire tests anyone's work and does not touch it, this one is justified, and the angel of righteousness takes him and brings him up to be saved in the lot of the righteous.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And thus, most righteous Abraham, all things in all respects are tested by fire and by scale.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="1">
+          <unit id="en_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to the Archistrategos, "My Lord Archistrategos, the soul that the angel held in his hand, how was it condemned to the middle?"</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos said, "Listen, righteous Abraham; because the judge found her sins and righteous deeds to be equal, and he delivered her neither to judgment nor to salvation, until the Judge of all comes."</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to the Archistrategos, "And what else remains for the soul to be saved?"</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos said, "If she acquires one righteous deed above her sins, she comes to salvation."</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to the Archistrategos, "Come, Michael Archistrategos, let us offer a prayer for this soul, and let us see if God will hear us." And the Archistrategos said, "Amen, may it be so."</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they made supplication and prayer for the soul; and God heard them, and when they rose from prayer, they did not see the soul standing there.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to the angel, "Where is the soul that you kept in the middle?"</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the angel said, "She has been saved through your righteous prayer, and behold, a light-bearing angel took her and brought her up into Paradise."</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, "I glorify the name of the Most High God and his immeasurable mercy."</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to the Archistrategos, "I beg you, Archangel, hear my supplication, and let us again entreat the Lord and fall before his mercies,</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_166" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and let us ask his mercy for the souls of the sinners whom I once, in my evil thinking, cursed and destroyed, whom the earth swallowed up and whom the beasts divided, and whom the fire consumed because of my words.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_167" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now I know that I have sinned before the Lord our God. Come, Michael, Archistrategos of the heavenly powers, come, let us entreat God with tears, so that he may forgive my sin and pardon them for my sake."</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_168" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos heard him, and they made supplication before God; and as they were entreating for a long time, a voice came from heaven, saying,</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_169" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">"Abraham, Abraham, I have heard your voice and your supplication, and I forgive you the sin, and those whom you think I destroyed, I have recalled them and brought them to life out of extreme goodness.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_170" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For for a time I delivered them up for judgment. But those whom I destroy alive on earth, I will not deliver up in death."</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="1">
+          <unit id="en_171" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the voice of the Lord also said to the Archistrategos, "Michael, Michael, my minister, turn Abraham back to his house, because behold, his end is near and the measure of his life is completed, so that he may make arrangements concerning all things, and then take him and bring him up to me."</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_172" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Archistrategos, turning the chariot and the cloud, brought Abraham to his house.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_173" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when he went into his chamber, he sat on his bed.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_174" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Sarah his wife came and embraced the feet of the bodiless one and, supplicating, said, "I thank you, my Lord, that you have brought my lord Abraham; for behold, we thought he had been taken up from us."</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_175" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac his son also came and embraced his neck. Likewise, all his male and female servants surrounded Abraham in a circle and embraced him, glorifying God.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_176" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the bodiless one said to him, “Listen, righteous Abraham. Behold, your wife Sarah, behold also your beloved son Isaac, behold also all your male and female servants around you.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_177" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Make an arrangement concerning all that you possess, because the day has drawn near on which you are about to depart from the body and come yet again to the Lord.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_178" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “Did the Lord say it, or are you saying these things of your own accord?”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_179" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the chief commander said, “Listen, righteous Abraham. The Master commanded, and I am speaking to you.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_180" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “I will not follow you.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_181" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When the chief commander heard this word, he immediately went out from the presence of Abraham and ascended to the heavens and stood before the Most High God and said,</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_182" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Lord Almighty, behold, I have heeded your friend Abraham in all that he said to you and I fulfilled his request, and I showed him your power and all the earth and sea under heaven, I showed him judgment and retribution by means of a cloud and chariots, and again he says, ‘I will not follow you.’ ”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_183" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Most High said to the angel, “Even if my friend Abraham again says thus, ‘I will not follow you’?”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_184" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the archangel said, “Lord Almighty, he speaks thus; and I refrain from touching him, because from the beginning he happens to be your friend and he did all things pleasing before you.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_185" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And there is no man like him on the earth, not even Job, that marvelous man; and because of this I refrain from touching him. Therefore, command, immortal King, what word shall come to pass.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="1">
+          <unit id="en_186" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the Most High said, “Call for me here Death, the one called ‘shameless face’ and ‘pitiless gaze.’ ”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_187" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael, the bodiless one, went and said to Death, “Come, the Master of creation, the immortal King, calls you.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_188" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When Death heard, he shuddered and trembled, seized by much fear, and coming with much fear he stood before the invisible Father, shuddering, groaning, and trembling, awaiting the Master’s command.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_189" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore the invisible God says to Death, “Come, bitter and savage name of the world, hide your savagery, cover your rottenness, and cast away your bitterness from yourself, and clothe yourself in your beauty and all your glory,</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_190" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and descend to my friend Abraham and take him and bring him to me. But even now I say to you that you are not to terrify him, but receive him with flattery, for he is my genuine friend.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_191" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Having heard these things, Death went out from the presence of the Most High and clothed himself in a most brilliant garment and made his appearance like the sun and became fair and beautiful beyond the sons of men, arrayed in the form of an archangel, with his cheeks flashing with fire, and he went to Abraham.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_192" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the righteous Abraham went out from his chamber and sat under the oaks of Mamre, holding his jaw with his hand and awaiting the arrival of the archangel Michael.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_193" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, an odor of fragrance came to him, and a radiance of light; and Abraham turned and saw Death coming to him in great glory and beauty; and Abraham rose and met him, supposing him to be the chief commander of God.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_194" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Death saw him, he prostrated himself to him, saying, “Hail, honored Abraham, righteous soul, genuine friend of the Most High God, and fellow-dweller of the holy angels.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_195" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said to Death, “Hail, sun-seen one, sun-formed one, most glorious helper, light-bearer, marvelous man, from where does your glory come to us, and who are you, and from where have you come?”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_196" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore Death says, “Abraham, righteousness, behold, I tell you the truth: I am the bitter cup of death.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_197" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Abraham says to him, “No, but you are the beauty of the world, you are the glory and the comeliness of angels and of men, you are more beautiful than every form, and you say, ‘I am the bitter cup of death,’ and do you not say rather, ‘I am more beautiful than every good thing’?”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_198" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Death said, “For I tell you the truth: what God named me, that also I tell you.”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_199" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “For what have you come here?”</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_200" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Death said, “I have come for your holy soul.”</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_201" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore Abraham says, “I know what you are saying, but I will not follow you.” But Death, becoming silent, did not answer him a word.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="1">
+          <unit id="en_202" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Abraham arose and went into his house; and Death also followed him there; and Abraham went up into his chamber; and Death also went up with him; and Abraham reclined on his couch; and Death also came and sat at his feet.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_203" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “Go away, go away from me, for I wish to rest on my couch.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_204" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Death says, “I will not depart until I take your spirit from you.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_205" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Abraham says to him, “By the immortal God I tell you that you must tell me the truth: are you Death?”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_206" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Death says to him, “I am Death; I am the one who corrupts the world.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_207" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “I beg you, since you are Death, tell me, do you go to all others thus in such beauty and glory and comeliness?”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_208" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said, “No, my lord Abraham; for your righteousnesses and the immeasurable depth of your hospitality and the greatness of your love for God became a crown upon my head, and I approach the righteous in beauty and in much tranquility and flattery.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_209" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But to sinners I approach in much rottenness and savagery and greatest bitterness and with a savage and pitiless gaze.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_210" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “I beg you, listen to me and show me your savagery and all your rottenness and bitterness.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_211" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said, “You will not be able to gaze upon my ferocity, most righteous Abraham.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_212" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said, “Yes, I will be able to gaze upon all your ferocity for the sake of the name of the living God, because the power of my heavenly God is with me.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_213" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Death stripped off all his beauty and charm, and all the glory and the sun-like form that he wore,</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_214" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and he put on a tyrannical garment, and made his appearance dark and wilder than all kinds of beasts and more unclean than all uncleanness.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_215" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he showed Abraham seven fiery heads of dragons, and fourteen faces, of most flaming fire and great ferocity, and a dark face and a most gloomy face of a viper and a most terrifying face of a precipice and a fiercer face of an asp and a face of a terrifying lion and a face of a horned serpent and a basilisk.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_216" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He also showed the face of a fiery sword and a sword-bearing face and a face of lightning terribly flashing and the sound of terrifying thunder.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_217" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He also showed another face of a wild surging sea and a wild boiling river and a terrifying three-headed dragon and a cup filled with poisons.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_218" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And, to speak simply, he showed him much ferocity and unbearable bitterness and every deadly disease as the stench of Death.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_219" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And because of the great bitterness and ferocity, about seven thousand children and maidservants died.</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_220" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the righteous Abraham came to a disregard for death so that his spirit was about to fail.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="1">
+          <unit id="en_221" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when the most holy Abraham saw these things, he said to Death, “I beg you, utterly destructive Death, hide your ferocity and put on the beauty and form which you had before.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_222" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Immediately Death hid his ferocity and put on his beauty which he had before.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_223" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said to Death, “Why did you do this, that you killed all my children and maidservants? Did God send you here today for this reason?”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_224" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said, “No, my lord Abraham, it is not as you say; but I was sent here for your sake.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_225" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said to Death, “And how did these die? Did not even the Lord speak?”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_226" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Death said, “Believe, most righteous Abraham, that even this is wondrous, that you were not snatched away with them; but nevertheless, I will tell you the truth:</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_227" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For if the right hand of God had not been with you at that hour, you too would have departed from this life.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_228" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the righteous Abraham said, “Now I know that I came to a disregard for death, so that my spirit was about to fail.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_229" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I beg you, utterly destructive Death, since the children have also died untimely, come, let us entreat the Lord our God that he may hear us and raise up those who have died untimely because of your ferocity.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_230" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said, “Amen, may it be so.” Then Abraham arose and fell upon his face to the earth, praying, and Death with him.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_231" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And God sent a spirit of life upon those who had died, and they were brought back to life. Then, therefore, the righteous Abraham gave glory to God.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="1">
+          <unit id="en_232" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And going up into his upper room, he reclined. And Death also came and stood before him.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_233" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said to him, “Depart from me, for I wish to rest, for my spirit is in a state of disregard.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_234" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said, “I will not depart from you until I take your soul.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_235" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham, with a stern face and an angry look, said to Death, “Who commanded you to say these things? You say these words on your own, boasting, and I will not follow you until the archistrategos Michael comes to me and I depart with him.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_236" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I tell you this too: if you wish me to follow you, teach me all your transformations, the seven fiery heads of the dragons, and what the face of the precipice is, and what the sharp sword is, and what the great boiling river is, and what the muddied sea fiercely surging is.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_237" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Teach me also about the unbearable thunder and the terrifying lightning, and what the foul cup full of poisons is. Teach me about everything.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_238" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said, “Listen, righteous Abraham, for seven ages I ravage the world and lead all to Hades, kings and rulers, rich and poor, slaves and free, I send to the bottom of Hades; and for this reason I showed you the seven heads of the dragons.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_239" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I showed you the face of fire because many die by being burned by fire and see death through the face of fire.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_240" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I showed you the face of the precipice because many people, falling from the height of trees or terrifying precipices, and becoming nonexistent, die, and in the form of a terrifying precipice they see death.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_241" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I showed you the face of the sword because many are slain by the sword in wars, and they see death in the sword.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_242" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I showed you the face of the great boiling river because many are swept away by the immersion of many waters and, being carried off by very great rivers, they drown and die and see death untimely.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_243" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I showed you the face of the wild surging sea because many who have fallen into a great stormy sea and suffered shipwreck become submerged, seeing a watery death.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_244" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I showed you the unbearable thunder and the terrifying lightning because many people, when wrath comes in the hour, when unbearable thunder and terrifying lightning come, are snatched away and thus see death.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_245" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I also showed you venomous beasts, asps and basilisks and leopards and lions and lion cubs and bears and vipers, and to speak simply, I showed you the face of every beast, most righteous one, because many people are slain by beasts.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_246" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Others, however, fail and perish, blown away by venomous snakes, {by vipers, asps, horned snakes, and basilisks}, and by an adder.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_247" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I also showed you poisoned cups filled with drugs, because many people are given drugs to drink by other people and immediately die unexpectedly.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="1">
+          <unit id="en_248" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, "I beg you, is there also an unexpected death? Announce it to me."</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_249" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Death says, "Amen, amen, I say to you in God's truth, that there are seventy-two deaths. And one death is the righteous one, which has a limit. And many people come to death in one hour, being delivered to the grave.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_250" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For behold, I have announced to you everything you asked for. Now I tell you, most righteous Abraham, abandon all deliberation and cease asking anything further once and for all. And come, follow me, as God and the Judge of all things has commanded me."</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_251" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to Death, "Depart from me for a little while longer, so that I may rest on my bed, for great despondency is upon me.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_252" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For since I beheld you with my eyes, my strength has failed, and all the members of my body feel to me like the weight of lead, and my spirit is greatly troubled. Withdraw for a short while; for I said, 'I cannot bear to look upon your form.'"</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_253" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Isaac, his son, came and fell upon his chest, weeping. And Sarah, his wife, also came and clung to his feet, lamenting bitterly.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_254" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all his servants and handmaids came and encircled his bed, weeping exceedingly. But Abraham came to a disregard for death.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_255" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said to Abraham, "Come, kiss my right hand; and cheerfulness and life and strength will come to you."</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_256" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For Death deceived Abraham; and he kissed his hand, and immediately his soul clung to the hand of Death.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_257" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And immediately Michael the Archangel appeared with a multitude of angels, and they took his precious soul in their hands in a linen cloth woven by God.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_258" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And with divinely-inspired ointments and perfumes they embalmed the body of the righteous Abraham until the third day of his completion, and they buried him in the land of promise, in the Oak of Mamre.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_259" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the angels ministered to his precious soul and ascended to heaven, singing the Trisagion hymn to the Lord, the God of all, and they presented it for the worship of God and Father.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_260" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And indeed, after much praise and doxology had been offered to the Lord, and Abraham had worshipped, the immaculate voice of God and Father came, saying thus:</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_261" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">"Therefore, take my friend Abraham into Paradise, where are the tabernacles of my righteous ones and the abodes of my holy ones Isaac and Jacob in his bosom, where there is no toil, no sorrow, no groaning, but peace and exultation and unending life."</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_262" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[With whom may we also, my beloved brothers, imitate the hospitality of the patriarch Abraham and acquire his virtuous way of life, so that we may be deemed worthy of eternal life, glorifying the Father and the Son and the Holy Spirit; to Him be glory and dominion forever. Amen.]</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Recension B (English)" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Recension B (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">It came to pass that when the days of Abraham’s death drew near, the Lord said to Michael:</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Arise and go to Abraham my servant, and tell him that he is to depart from life,”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“for behold, the days of your temporary life are fulfilled; that he may set his house in order before he dies.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael went and came to Abraham, and he found him sitting before his oxen, ready for plowing. He was very old in appearance, and he had his son embraced.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So, when Abraham saw the archangel Michael, he rose from the ground and greeted him, not knowing who he was, and said to him:</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“May God save you! Rise and go well on your way.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael answered him, “You are a benevolent man, good father.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham answered and said to him, “Come, draw near to me, brother, and tarry a little while, so that I may order an animal to be brought,”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“that we may go into my house and you may rest with me, for it is towards evening, and in the morning, having arisen, you may go wherever you wish, lest some evil beast meet you and harm you.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Michael asked Abraham, saying, “Tell me your name, before I enter your house, lest I become a burden to you.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham answered and said, “My parents named me Abram, and the Lord named me Abraham, saying, ‘Arise and go from your house and from your kindred, and come to a land which I will show you.’ ”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And when I went to the land which the Lord showed me, he said to me, ‘Your name shall no longer be called Abram, but your name shall be Abraham.’ ”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Michael answered and said to him, “Forgive me, my father, O man beloved by God, for I am a stranger, and I heard concerning you that when you went forty stadia and brought a calf and sacrificed it, entertaining angels in your house, that they might rest.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">After both had said these things, they rose and went into the house.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham called one of his servants and said to him, “Go, bring me a beast for the stranger to sit upon, for he is tired from his journey.”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael said, “Do not trouble the young man, but let us go, carried along, until we reach your house, for I have enjoyed your conversation.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they arose and went.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as they drew near to the city, about three stadia away, they found a large tree having three hundred branches, similar to a heather plant.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they heard a voice singing from its branches, “Holy, because you have brought the purpose for which you were sent.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham heard the voice, and he hid the mystery in his heart, saying to himself, “What, then, is this mystery that I have heard?”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When he came into the house, Abraham said to his servants, “Arise, go out to the sheep, and bring three fatlings and slaughter them quickly and serve them, so that we may eat and drink, for there is joy as on this day.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the servants brought the fatlings, and Abraham called his son Isaac and said to him, “My child Isaac, arise and pour water into the basin, that we may wash the feet of this stranger.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he brought it as he was commanded.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, “I have an understanding of what will happen, for in this basin I will no longer wash the feet of a man who is a stranger to us.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When Isaac heard his father speaking these things, he wept, and said to him, “My father, what is this that you said, ‘It is my last time to wash the feet of a foreign man’?”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Abraham saw his son weeping, he also wept greatly; and Michael, seeing them weeping, also wept; and Michael’s tears fell into the basin, and they became precious stones.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When Sarah heard their weeping, being inside her house, she came out and said to Abraham, “My lord, why is it that you weep in this manner?”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham answered and said to her, “There is nothing bad; go into your house and attend to your own affairs, lest we become a burden to the man.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Sarah retired, for she was about to prepare the dinner.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sun drew near to setting; and Michael went out of the house, and he was taken up into the heavens to worship before God.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For when the sun sets, all the angels worship God; and Michael himself is the chief of the angels.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And all worshiped and departed, each to his own place.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael, answering before God, said, “Lord, command me to be questioned before your holy glory.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord says to Michael, “Declare what you wish.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the archangel answered and said, “Lord, you sent me to Abraham, to tell him: ‘Depart from your body, and come out of the world; the Lord calls you.’ ”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I myself do not dare, Lord, to appear to him, because he is your friend and a righteous man, who receives strangers.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I entreat you, Lord, command the memory of Abraham’s death to enter into his heart,</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and let me not tell him. For this is a great brevity, to say, 'Depart from the world,' and especially from his own body.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For you from the beginning caused him to have mercy on the souls of all people.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the Lord said to Michael, “Arise and go to Abraham, and be a guest with him.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And whatever you see him eating, you also eat, and wherever he lies down to sleep, you also sleep there.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For I will cast the memory of Abraham’s death into the heart of Isaac his son in a dream.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Michael went to Abraham’s house that evening, and found them preparing supper; and they ate and drank and rejoiced.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to his son Isaac, “Arise, child, make the bed for the man so that he may rest, and put the lamp on the lampstand.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac did as his father commanded him.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac said to his father, “Father, I also am coming to sleep near you.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham answered him, “No, my child, lest we become a burden to this man, but go away into your chamber and rest.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But as Isaac did not want to disobey his father’s command, he went away and rested in his chamber.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1">
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And it came to pass about the seventh hour of the night, Isaac, awaking, came to the door of his father’s house, crying out and saying, “Father, open, so that I may enjoy you before they take you from me.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham arose and opened, and Isaac entered and clung to his father’s neck, weeping, and lamenting, he kissed him.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham wept with his son; and Michael saw them weeping and he also wept.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Sarah, hearing the weeping from her bedroom, cried out saying,</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“My lord Abraham, what is this weeping? Has the stranger told you concerning your nephew Lot that he has died? Or has something else happened to us?”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Michael answered and said to Sarah, “No, Sarah, I brought no tidings concerning Lot; but concerning all your philanthropy I have learned that you excel all people on earth, and God has remembered you.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Sarah says to Abraham, “How did you dare to weep when the man of God entered among you?”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And how did your eyes, the pairs of light, shed tears? For today is a day of joy.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore Abraham says to her, “How do you know that he is a man of God?”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Sarah answered and said, “Because I recognize and say that this is one of the three men who were guests with us at the Oak of Mamre, when one of the lads went and brought a calf and you sacrificed it.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And you said to me, 'Arise, prepare so that we may eat with these men in our house.' ”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham answered and said, “You have understood well, O woman.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For when I washed his feet, I knew in my heart that these were the feet that I washed at the Oak of Mamre, and as I began to ask about his journey, he told me that he was going to watch over Lot his brother from Sodom; and then I recognized the mystery.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to Michael, “Tell me, O man of God, and reveal to me why you came here.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael said, “Your son Isaac will declare it to you.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham says to his son, “My beloved son, tell me what you saw in a dream today and were disturbed; tell me.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac answered his father, “I saw in a dream myself, the sun and the moon;</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and a crown came upon my head; and there was a man exceedingly great, shining from heaven, like light called 'father of light.'</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he took the sun from my head; and then he left the rays in my midst.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I wept and said, 'I entreat you, my lord, do not take away the glory of my head and the light of my house and all my glory.'</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sun and the moon and the stars mourned, saying, 'Do not take away the glory of our power.'</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And that luminous man answered and said to me, 'Do not weep that I have taken the light of your house; for he was taken up from toils to rest, and from lowliness to height.'</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">they take him from distress to spaciousness, they take him from darkness to light.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I said to him, “I beg you, Lord, take the rays with him too.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to me, “There are twelve hours in the day, and then I take all the rays.”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">While the luminous man was saying these things, I saw the sun of my house ascending to heaven, but I no longer saw that crown.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And that sun was like you, my father.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael said to Abraham, “Your son Isaac has spoken the truth, for you are; and you will be taken up into the heavens,</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">but your body will remain on the earth until seven thousand ages are fulfilled; for then all flesh will be raised.”</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now then, Abraham, set your house in order, and concerning your children, for you have completely heard your dispensation.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham answered and said to Michael, “I beg you, Lord, if I am to depart from my body, I would like to be taken up bodily, so that I may behold the creations that the Lord my God created in heaven and on earth.”</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael answered and said, “This is not my doing; but I will go and report to the Lord about this, and if I am commanded, I will show you all these things.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1">
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael ascended into the heavens and spoke before the Lord concerning Abraham;</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord answered Michael, “Go and take Abraham in body and show him everything, and whatever he tells you, do it as if he were my friend.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">So Michael went out and took Abraham upon a cloud in body, and brought him up to the Ocean River.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham looked intently and saw two gates, one small and the other large.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And between the two gates sat a man on a throne of great glory, and a multitude of angels around him.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was weeping, and again laughing, and his weeping exceeded his laughter sevenfold.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to Michael, “Who is this man sitting between the two gates with great glory? Sometimes he laughs, sometimes he weeps, and his weeping exceeds his laughter sevenfold?”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael said to Abraham, “Do you not know who he is?”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said, “No, Lord.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael said to Abraham, “Do you see these two gates, the small one and the large one?”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">These are the ones that lead to life and to destruction.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And this man sitting between them, this is Adam, the first man whom the Lord formed.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he placed him in this place to observe every soul coming out of the body, since all are from him.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, whenever you see him weeping, know that he has seen many souls being led to destruction.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But whenever you see him laughing, he has seen a few souls being led to life.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Do you see how his weeping exceeds his laughter? Because he sees the greater part of the world being led through the wide way to destruction, therefore his weeping exceeds his laughter sevenfold.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1">
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, “And the one who cannot enter through the narrow gate, cannot enter into life?”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Abraham wept, saying, “Woe to me, what shall I do?”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For I am a man broad in body, and how shall I be able to enter the narrow gate, into which a child of fifteen years cannot enter?”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael answered and said to Abraham, “Do not fear, father, nor be grieved, for you shall enter through it unhindered, and all who are like you.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as Abraham stood and wondered, behold, an angel of the Lord was driving sixty thousand sinful souls to destruction.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham says to Michael, “Are all these going to destruction?”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael says to him, “Yes, but let us go and search among these souls, if there is even one righteous among them.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when they went, they found an angel holding in his hand one soul of a woman from among those sixty thousand, because he found her sins equally balanced with all her works, and they were neither in toil nor in rest, but in a place of neutrality.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But he took those souls to destruction.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to Michael, “Lord, is this the angel who takes souls out of the body, or not?”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Michael answered and said, “This is Death, and he leads them to the place of judgment, so that the judge may judge them.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1">
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham says, “My Lord, I beg you to lead me up to the place of judgment, so that I too may see how they are judged.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Michael took Abraham upon a cloud and brought him to Paradise.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when he arrived at the place where the judge was, the angel came and gave that soul to the judge.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the soul said, “Have mercy on me, Lord.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the judge said, “How shall I have mercy on you, since you did not have mercy on your daughter, whom you had, the fruit of your womb? Why did you murder her?”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And she answered, “No, Lord; no murder occurred by me, but this daughter of mine lied about me.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the judge commanded the one who records the memoranda to come.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And behold, cherubim carrying two books, and a man of exceedingly great size was with them; and he had three crowns on his head,</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and one crown was higher than the other two crowns; and the crowns were called “Crowns of Testimony.”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the man had a golden pen in his hand; and the judge says to him, “Verify the sin of this soul.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And that man opened one of the books that were with the cherubim, and he sought the sin of the woman’s soul and found it.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the judge said, “O wretched soul, how do you say that you did not commit murder?”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Did you not, after the death of your husband, go and commit adultery with your daughter’s husband, and kill her?”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he also exposed her other sins, and whatever she had done from her youth.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When the woman heard these things, she cried out, saying, “Woe is me, woe is me, because I forgot all the sins I committed in the world; but here they were not forgotten!”</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then they took her also and handed her over to the tormentors.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1">
+          <unit id="en_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to Michael, “Lord, who is this judge, and who is the other, who exposes the sins?”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael says to Abraham, “Do you see the judge? This is Abel, the first to bear witness; and God brought him here to judge.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And this one who indicates is Enoch, the teacher of heaven and earth and the scribe of righteousness.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For the Lord sent them here to record the sins and the righteous deeds of each one.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham says, “And how can Enoch bear the burden of souls, not having seen death? Or how can he pronounce judgment on all souls?”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael said, “If he pronounces judgment on them, it is not permitted; but Enoch himself does not pronounce judgment,</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">but it is the Lord who pronounces judgment, and this one’s part is only to write.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Because Enoch prayed to the Lord, saying, ‘I do not wish, Lord, to pronounce judgment on souls, so that I may not become a burden to anyone.’ ”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And the Lord said to Enoch, ‘I will command you to write the sins of a soul that is propitiated, and it will enter into life.’ ”</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“ ‘And if the soul is not propitiated and does not repent, you will find its sins written, and it will be cast into punishment.’ ”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1">
+          <unit id="en_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after Abraham saw the place of judgment, the cloud brought him down into the firmament below.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham, looking down upon the earth, saw a man committing adultery with a married woman.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And turning, Abraham says to Michael, “Do you see this sin? But, Lord, send fire from heaven to consume them!”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And immediately fire came down and consumed them.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Because the Lord had said to Michael, “Whatever Abraham asks you to do for him, do it.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again, looking up, Abraham saw other people slandering their companions,</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and he said, “Let the earth open and swallow them!”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when he had spoken, the earth swallowed them alive.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again the cloud brought him up to another place; and Abraham saw some going to a deserted place to commit murder.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to Michael, “Do you see this sin? Let wild beasts come out of the wilderness and tear them apart.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at that very hour, wild beasts came out of the wilderness and devoured them.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then the Lord God spoke to Michael, saying, “Return Abraham to his house, and do not let him traverse all the creation which I have made, because he has no compassion on sinners,</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">but I have compassion on sinners, so that they may turn back and live, and repent of their sins, and be saved.”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And at the ninth hour Michael returned Abraham to his house.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Sarah his wife, not having seen Abraham [nor knowing] what had happened, was consumed by grief and gave up her spirit.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after Abraham returned, he found her dead, and he buried her.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="1">
+          <unit id="en_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Now when the days of Abraham’s death drew near, the Lord God said to Michael, “Death shall not dare to approach to take away the soul of my servant, for he is my friend.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But go and adorn Death with much beauty, and so send him to Abraham so that he may behold him with his eyes.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael immediately, as he was commanded, adorned Death with much beauty, and so sent him to Abraham, so that he might behold him. And he sat down near Abraham.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham, seeing Death sitting near him, was greatly afraid.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said to Abraham, “Greetings, holy soul; greetings, friend of the Lord God; greetings, comfort to the hospitality of travelers.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said, “You have come well, servant of the Most High God. I beg you, tell me who you are, and come into the house, partake of food and drink, and depart from me; for since I saw you sitting near me, my soul has been troubled.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For surely I am not worthy to be near you, for you are a lofty spirit, but I am flesh and blood, and for this reason I cannot bear your glory.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“For I see your beauty, that it is not of this world.”</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said to Abraham, “I tell you, in all the creation that God created, no one like you was found.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For God himself sought and found no such one on all the earth.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Abraham said to Death, “How dare you lie? For I see your beauty that it is not of this world.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death said to Abraham, “Do not think, Abraham, that this beauty is mine, or that I always go to every person in this way.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">No, but if someone is righteous like you, I receive crowns in this way and go to him; but if he is a sinner, I come in great decay and make a crown for my head from their sin, and I trouble them with great fear, so that they are amazed.”</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore Abraham says to him, “And where does this beauty come from?”</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death says, “There is no one more corrupt than I.”</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Abraham says to him, “And are you indeed the one called Death?”</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_166" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He answered him and said, “I am the bitter name; I am weeping . . . .”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="1">
+          <unit id="en_167" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But Abraham said to Death, “Show us your corruption.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_168" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Death revealed his corruption; and he had two heads.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_169" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">One had the face of a dragon, and through it some die suddenly by vipers.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_170" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The other head was like a sword; for this reason some die by the sword as by bows.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_171" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">On that day, Abraham's servants died because of their fear of Death.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_172" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When Abraham saw them, he prayed to the Lord, and he raised them up.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_173" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But God turned and extended Abraham's life as in dreams, and the chief commander Michael took him up to the heavens.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_174" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Isaac buried his father near his mother Sarah, glorifying and praising God.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_175" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For to him belongs glory, honor, and worship, to the Father and to the Son and to the Holy Spirit, now and always and to the ages of ages. Amen.</reading>
           </unit>
         </div>
       </div>

@@ -1,579 +1,929 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-    <!ELEMENT book (version)+>
-<!ATTLIST book filename CDATA #REQUIRED>
-<!ATTLIST book title CDATA #REQUIRED>
-<!ATTLIST book textStructure CDATA #IMPLIED>
-    <!ELEMENT version (divisions,resources*,manuscripts+,text)>
-<!ATTLIST version title CDATA #REQUIRED>
-<!ATTLIST version author CDATA #REQUIRED>
-<!ATTLIST version fragment CDATA #IMPLIED>
-<!ATTLIST version language CDATA #IMPLIED>
-    <!ELEMENT divisions (division)+>
-    <!ELEMENT division (#PCDATA)>
-<!ATTLIST division label CDATA #REQUIRED>
-<!ATTLIST division delimiter CDATA #IMPLIED>
-    <!ELEMENT resources (resource)+>
-    <!ELEMENT resource (info+,URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-    <!ELEMENT info (#PCDATA)>
-    <!ELEMENT URL (#PCDATA)>
-    <!ELEMENT manuscripts (ms)+>
-    <!ELEMENT ms (name,bibliography*)>
-<!ATTLIST ms abbrev CDATA #REQUIRED>
-<!ATTLIST ms language CDATA #REQUIRED>
-<!ATTLIST ms show CDATA #REQUIRED>
-    <!ELEMENT name (#PCDATA|sup)*>
-    <!ELEMENT sup (#PCDATA)>
-    <!ELEMENT bibliography (#PCDATA|booktitle)*>
-    <!ELEMENT booktitle (#PCDATA)>
-    <!ELEMENT text (div)+>
-    <!ELEMENT div (div|unit)*>
-<!ATTLIST div number CDATA #REQUIRED>
-<!ATTLIST div fragment CDATA #IMPLIED>
-    <!ELEMENT unit (reading)+>
-<!ATTLIST unit id CDATA #REQUIRED>
-<!ATTLIST unit group CDATA "0">
-<!ATTLIST unit parallel CDATA #IMPLIED>
-    <!ELEMENT reading (#PCDATA|w)*>
-<!ATTLIST reading option CDATA #REQUIRED>
-<!ATTLIST reading mss CDATA #REQUIRED>
-<!ATTLIST reading linebreak CDATA #IMPLIED>
-<!ATTLIST reading indent CDATA #IMPLIED>
-    <!ELEMENT w (#PCDATA)>
-<!ATTLIST w morph CDATA #IMPLIED>
-<!ATTLIST w lex CDATA #IMPLIED>
-<!ATTLIST w style CDATA #IMPLIED>
-<!ATTLIST w lang CDATA #IMPLIED>
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="Eup" title="Eupolemus" textStructure="fragmentary">
-    <version title="Stromata (Frag. 1)" author="Clement of Alexandria" fragment="1" language="Greek">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Chapter" delimiter=":"/>
-            <division label="Verse"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
-                <name>
+  <version title="Stromata (Frag. 1)" author="Clement of Alexandria" fragment="1" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+        <name>
                     Stählin-Früchtel-Treu
                 </name>
-                <bibliography>
+        <bibliography>
                     Carl R. Holladay, Historians (vol. 1 of Fragments from Hellenistic Jewish Authors; TT 20; PS 10; Chico, Calif.: Scholars Press, 1983), 93-156. Fragment §1: Clement, Strom. 1.23.153.4; Eusebius, Praep. Evang. 9.25.4 and 9.26.1 (quoting Alexander Polyhistor, On the Jews); Fragment §2: Clement, Strom., 1.21.130.3 (quoting Alexander Polyhistor, On the Jews); Eusebius, Praep. Evang. 9.30.1–34.18 (quoting Alexander Polyhistor, On the Jews); Fragment §3: Eusebius, Praep. Evang. 9.34.20 (quoting Alexander Polyhistor, On the Jews); Fragment §4: Eusebius, Praep. Evang. 9.39.1-5 (quoting Alexander Polyhistor, On the Jews); Fragment §5: Clement, Strom. 1.21.141.4-5
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="1">
-                <div number="23">
-                    <div number="153">
-                        <div number="4">
-                            <unit id="1" group="0" parallel="">
-                                <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="doubleFollowing">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="23">
+          <div number="153">
+            <div number="4">
+              <unit id="1" group="0" parallel="">
+                <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="doubleFollowing">
                                     Εὐπόλεμος δὲ ἐν τῷ περὶ τῶν ἐν τῇ Ἰουδαίᾳ βασιλέων τὸν Μωυσῆ φησι πρῶτον σοφὸν γενέσθαι καὶ γραμματικὴν πρῶτον τοῖς Ἰουδαίοις παραδοῦναι καὶ παρὰ Ἰουδαίων Φοίνικας παραλαβεῖν, Ἕλληνας δὲ παρὰ Φοινίκων.
                                 </reading>
-                            </unit>
-                        </div>
-                    </div>
-                </div>
+              </unit>
             </div>
-        </text>
-    </version>
-    <version title="Praep. Evang. (Frag. 1b)" author="Eusebius" fragment="1" language="Greek">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Mras" language="Greek" show="yes">
-                <name>Mras</name>
-                <bibliography>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 1b)" author="Eusebius" fragment="1" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>Mras</name>
+        <bibliography>
                     Carl R. Holladay, Historians (vol. 1 of Fragments from Hellenistic Jewish Authors; TT 20; PS 10; Chico, Calif.: Scholars Press, 1983), 93-156. Fragment §1: Clement, Strom. 1.23.153.4; Eusebius, Praep. Evang. 9.25.4 and 9.26.1 (quoting Alexander Polyhistor, On the Jews); Fragment §2: Clement, Strom., 1.21.130.3 (quoting Alexander Polyhistor, On the Jews); Eusebius, Praep. Evang. 9.30.1–34.18 (quoting Alexander Polyhistor, On the Jews); Fragment §3: Eusebius, Praep. Evang. 9.34.20 (quoting Alexander Polyhistor, On the Jews); Fragment §4: Eusebius, Praep. Evang. 9.39.1-5 (quoting Alexander Polyhistor, On the Jews); Fragment §5: Clement, Strom. 1.21.141.4-5
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="9">
-                <div number="25">
-                    <div number="4">
-                        <unit id="2" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="25">
+          <div number="4">
+            <unit id="2" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 Τοσαῦτα καὶ περὶ τούτων ὁ Πολυΐστωρ. Καὶ περὶ Μωσέως δὲ ὁ αὐτὸς πλεῖστα παρατίθεται, ὧν καὶ αὐτῶν ἐπακοῦσαι ἄξιον·
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-                <div number="26">
-                    <div number="Heading">
-                        <unit id="3" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+        </div>
+        <div number="26">
+          <div number="Heading">
+            <unit id="3" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 ΕΥΠΟΛΕΜΟΥ ΠΕΡΙ ΜΩΣΕΩΣ
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="1">
-                        <unit id="4" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="4" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 "Εὐπόλεμος δέ φησι τὸν Μωσῆν πρῶτον σοφὸν γενέσθαι καὶ γράμματα παραδοῦναι τοῖς Ἰουδαίοις πρῶτον, παρὰ δὲ Ἰουδαίων Φοίνικας παραλαβεῖν, Ἕλληνας δὲ παρὰ Φοινίκων, νόμους τε πρῶτον γράψαι Μωσῆν τοῖς Ἰουδαίοις."
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
-    <version title="Stromata (Frag. 2)" author="Clement of Alexandria" fragment="2" language="Greek">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Chapter" delimiter=":"/>
-            <division label="Verse"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
-                <name>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Stromata (Frag. 2)" author="Clement of Alexandria" fragment="2" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+        <name>
                     Stählin-Früchtel-Treu
                 </name>
-                <bibliography>
+        <bibliography>
                     Carl R. Holladay, Historians (vol. 1 of Fragments from Hellenistic Jewish Authors; TT 20; PS 10; Chico, Calif.: Scholars Press, 1983), 93-156. Fragment §1: Clement, Strom. 1.23.153.4; Eusebius, Praep. Evang. 9.25.4 and 9.26.1 (quoting Alexander Polyhistor, On the Jews); Fragment §2: Clement, Strom., 1.21.130.3 (quoting Alexander Polyhistor, On the Jews); Eusebius, Praep. Evang. 9.30.1–34.18 (quoting Alexander Polyhistor, On the Jews); Fragment §3: Eusebius, Praep. Evang. 9.34.20 (quoting Alexander Polyhistor, On the Jews); Fragment §4: Eusebius, Praep. Evang. 9.39.1-5 (quoting Alexander Polyhistor, On the Jews); Fragment §5: Clement, Strom. 1.21.141.4-5
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="1">
-                <div number="21">
-                    <div number="130">
-                        <div number="3">
-                            <unit id="5" group="0" parallel="">
-                                <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="doubleFollowing">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="21">
+          <div number="130">
+            <div number="3">
+              <unit id="5" group="0" parallel="">
+                <reading option="0" mss="Stählin-Früchtel-Treu " linebreak="doubleFollowing">
                                     Ἀλέξανδρος δὲ ὁ Πολυΐστωρ ἐπικληθεὶς ἐν τῷ περὶ Ἰουδαίων συγγράμματι ἀνέγραψέν τινας ἐπιστολὰς Σολομῶνος μὲν πρός τε Οὐάφρην τὸν Αἰγύπτου βασιλέα πρός τε τὸν Φοινίκης Τυρίων τάς τε αὐτῶν πρὸς Σολομῶντα, καθ᾽ ἃς δείκνυται ὁ μὲν Οὐάφρης ὀκτὼ μυριάδας ἀνδρῶν Αἰγυπτίων ἀπεσταλκέναι αὐτῷ εἰς οἰκοδομὴν τοῦ νεώ, ἅτερος δὲ τὰς ἴσας σὺν ἀρχιτέκτονι Τυρίῳ ἐκ μητρὸς Ἰουδαίας ἐκ τῆς φυλῆς Δαβίδ, ὡς ἐκεῖ γέγραπται, Ὑπέρων τοὔνομα.
                                 </reading>
-                            </unit>
-                        </div>
-                    </div>
-                </div>
+              </unit>
             </div>
-        </text>
-    </version>
-    <version title="Praep. Evang. (Frag. 2b)" author="Eusebius" fragment="2" language="Greek">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Mras" language="Greek" show="yes">
-                <name>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2b)" author="Eusebius" fragment="2" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>
                     Mras
                 </name>
-                <bibliography>
+        <bibliography>
                     Carl R. Holladay, Historians (vol. 1 of Fragments from Hellenistic Jewish Authors; TT 20; PS 10; Chico, Calif.: Scholars Press, 1983), 93-156. Fragment §1: Clement, Strom. 1.23.153.4; Eusebius, Praep. Evang. 9.25.4 and 9.26.1 (quoting Alexander Polyhistor, On the Jews); Fragment §2: Clement, Strom., 1.21.130.3 (quoting Alexander Polyhistor, On the Jews); Eusebius, Praep. Evang. 9.30.1–34.18 (quoting Alexander Polyhistor, On the Jews); Fragment §3: Eusebius, Praep. Evang. 9.34.20 (quoting Alexander Polyhistor, On the Jews); Fragment §4: Eusebius, Praep. Evang. 9.39.1-5 (quoting Alexander Polyhistor, On the Jews); Fragment §5: Clement, Strom. 1.21.141.4-5
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="9">
-                <div number="30">
-                    <div number="Heading">
-                        <unit id="6" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="30">
+          <div number="Heading">
+            <unit id="6" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 |ΕΥΠΟΛΕΜΟΥ ΠΕΡΙ ΔΑΒΙΔ ΚΑΙ ΣΟΛΟΜΩΝΟΣ ΟΙ ΕΒΑΣΙΛΕΥΣΑΝ ΕΒΡΑΙΩΝ ΚΑΙ ΠΕΡΙ ΙΕΡΟΣΟΛΥΜΩΝ
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="1">
-                        <unit id="7" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="7" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 "Εὐπόλεμος δέ φησιν ἔν τινι Περὶ τῆς Ἠλίου προφητείας Μωσῆν προφητεῦσαι ἔτη μ ́ · εἶτα Ἰησοῦν, τὸν τοῦ Ναυῆ υἱόν, ἔτη λ ́· βιῶσαι δ᾽ αὐτὸν ἔτη ρι ́ πῆξαί τε τὴν ἱερὰν σκηνὴν ἐν Σιλοῖ.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="2">
-                        <unit id="8" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="8" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 μετὰ δὲ ταῦτα προφήτην γενέσθαι Σαμουήλ. εἶτα τῇ τοῦ θεοῦ βουλήσει ὑπὸ Σαμουὴλ Σαοῦλον βασιλέα αἱρεθῆναι, ἄρξαντα δὲ ἔτη κα ́ τελευτῆσαι.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="3">
-                        <unit id="9" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="9" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 εἶτα Δαβὶδ τὸν τούτου υἱὸν δυναστεῦσαι, ὃν καταστρέψασθαι Σύρους τοὺς παρὰ τὸν Εὐφράτην οἰκοῦντας ποταμὸν καὶ τὴν Κομμαγηνὴν καὶ τοὺς ἐν Γαλαδηνῇ Ἀσσυρίους καὶ Φοίνικας. στρατεῦσαι δ᾽ αὐτὸν καὶ ἐπὶ Ἰδουμαίους καὶ Ἀμμανίτας καὶ Μωαβίτας καὶ Ἰτουραίους καὶ Ναβαταίους καὶ Ναβδαίους,
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="4">
-                        <unit id="10" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="10" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 αὖθις δὲ ἐπιστρατεῦσαι ἐπὶ Σούρωνα βασιλέα Τύρου καὶ Φοινίκης· οὓς καὶ ἀναγκάσαι φόρους Ἰουδαίοις ὑποτελεῖν· πρός τε Οὐαφρῆν τὸν Αἰγύπτιον βασιλέα φιλίαν συνθέσθαι.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="5">
-                        <unit id="11" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="11" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 βουλόμενόν τε τὸν Δαβὶδ οἰκοδομῆσαι ἱερὸν τῷ θεῷ ἀξιοῦν τὸν θεὸν τόπον αὐτῷ δεῖξαι τοῦ θυσιαστηρίου. ἔνθα δὴ ἄγγελον αὐτῷ ὀφθῆναι ἑστῶτα ἐπάνω τοῦ τόπου, οὗ τὸν βωμὸν ἱδρῦσθαι ἐν Ἱεροσολύμοις, καὶ κελεύειν αὐτὸν μὴ ἱδρύ{ε}σθαι τὸ ἱερόν, διὰ τὸ αἵματι ἀνθρωπίνῳ πεφύρθαι καὶ πολλὰ ἔτη πεπολεμηκέναι·
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="6">
-                        <unit id="12" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="12" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 εἶναι δ᾽ αὐτῷ ὄνομα Διαναθάν· προστάξαι τε αὐτῷ τοῦτον ὅπως τῷ υἱῷ ἐπιτρέψῃ τὴν οἰκοδομίαν, αὐτὸν δὲ εὐτρεπίζειν τὰ πρὸς τὴν κατασκευὴν ἀνήκοντα, χρυσίον, ἀργύριον, χαλκόν, λίθους, ξύλα κυπαρίσσινα καὶ κέδρινα.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="7">
-                        <unit id="13" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="13" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 ἀκούσαντα δὲ τὸν Δαβὶδ πλοῖα ναυπηγήσασθαι ἐν Ἐλάνοις πόλει τῆς Ἀραβίας καὶ πέμψαι μεταλλευτὰς εἰς τὴν Οὐφρῆ νῆσον, κειμένην ἐν τῇ Ἐρυθρᾷ Θαλάσσῃ, μέταλλα χρυσικὰ ἔχουσαν· καὶ τὸ χρυσίον ἐκεῖθεν μετακομίσαι τοὺς μεταλλευτὰς εἰς τὴν Ἰουδαίαν.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="8">
-                        <unit id="14" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="14" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 βασιλεύσαντα δὲ τὸν Δαβὶδ ἔτη μ ́ Σολομῶνι τῷ υἱῷ τὴν ἀρχὴν παραδοῦναι, ὄντι ἐτῶν ιβ ́, ἐνώπιον Ἠλεὶ τοῦ ἀρχιερέως καὶ τῶν δώδεκα φυλάρχων καὶ παραδοῦναι αὐτῷ τόν τε χρυσὸν καὶ ἄργυρον καὶ χαλκὸν καὶ λίθον καὶ ξύλα κυπαρίσσινα καὶ κέδρινα. | καὶ αὐτὸν μὲν τελευτῆσαι, Σολομῶνα δὲ βασιλεύειν καὶ γράψαι πρὸς Οὐαφρῆν τὸν Αἰγύπτου βασιλέα τὴν ὑπογεγραμμένην ἐπιστολήν."
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-                <div number="31">
-                    <div number="1">
-                        <unit id="15" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+        </div>
+        <div number="31">
+          <div number="1">
+            <unit id="15" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 ΕΠΙΣΤΟΛΗ ΣΟΛΟΜΩΝΟΣ
                             </reading>
-                        </unit>
-                        <unit id="16" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="16" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 "Βασιλεὺς Σολομῶν Οὐαφρῇ βασιλεῖ Αἰγύπτου φίλῳ πατρικῷ χαίρειν
                             </reading>
-                        </unit>
-                        <unit id="17" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="17" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 Γίνωσκέ με παρειληφότα τὴν βασιλείαν παρὰ Δαβὶδ τοῦ πατρὸς διὰ τοῦ θεοῦ τοῦ μεγίστου, [καὶ] ἐπιτεταχότος μοι οἰκοδομῆσαι ἱερὸν τῷ θεῷ, ὃς τὸν οὐρανὸν καὶ τὴν γῆν ἔκτισεν, ἅμα δέ σοι γράψαι ἀποστεῖλαί μοι τῶν παρὰ σοῦ λαῶν, οἳ παραστήσονταί μοι μέχρι τοῦ ἐπιτελέσαι πάντα κατὰ τὴν χρείαν, καθότι ἐπιτέτακται."
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-                <div number="32">
-                    <div number="1">
-                        <unit id="18" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+        </div>
+        <div number="32">
+          <div number="1">
+            <unit id="18" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 ΕΠΙΣΤΟΛΗ ΟΥΑΦΡΗ ΑΝΤΙΓΡΑΦΟΣ
                             </reading>
-                        </unit>
-                        <unit id="19" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="19" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 "Βασιλεὺς Οὐαφρῆς Σολομῶνι βασιλεῖ μεγάλῳ χαίρειν
                             </reading>
-                        </unit>
-                        <unit id="20" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="20" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 Ἅμα τῷ ἀναγνῶναι τὴν παρὰ σοῦ ἐπιστολὴν σφόδρα ἐχάρην καὶ λαμπρὰν ἡμέραν ἤγαγον ἐγώ τε καὶ ἡ δύναμίς μου πᾶσα ἐπὶ τῷ παρειληφέναι σε τὴν βασιλείαν παρὰ χρηστοῦ ἀνδρὸς καὶ δεδοκιμασμένου ὑπὸ τηλικούτου θεοῦ. περὶ δὲ ὧν γράφεις μοι, περὶ τῶν κατὰ τοὺς λαοὺς τοὺς παρ᾽ ἡμῖν, ἀπέσταλκά σοι μυριάδας ὀκτώ, ὧν καὶ τὰ πλήθη ἐξ ὧν εἰσι διασεσάφηκά σοι· ἐκ μὲν τοῦ Σεβριθίτου νομοῦ μυρίους, ἐκ δὲ τοῦ Μενδησίου καὶ Σεβεννύτου δισμυρίους· Βουσιρίτου, Λεοντοπολίτου καὶ Ἀθριβίτου ἀνὰ μυρίους. φρόντισον δὲ καὶ τὰ δέοντα αὐτοῖς καὶ τὰ ἄλλα, ὅπως εὐτακτῇ, καὶ ἵνα ἀποκατασταθῶσιν εἰς τὴν ἰδίαν, ὡς ἂν ἀπὸ τῆς χρείας γενόμενοι."
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-                <div number="33">
-                    <div number="1">
-                        <unit id="21" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+        </div>
+        <div number="33">
+          <div number="1">
+            <unit id="21" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 ΕΠΙΣΤΟΛΗ ΣΟΛΟΜΩΝΟΣ
                             </reading>
-                        </unit>
-                        <unit id="22" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="22" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 "Βασιλεὺς Σολομῶν Σούρωνι τῷ βασιλεῖ Τύρου καὶ Σιδῶνος καὶ Φοινίκης φίλῳ πατρικῷ χαίρειν
                             </reading>
-                        </unit>
-                        <unit id="23" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="23" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 Γίνωσκέ με παρειληφότα τὴν βασιλείαν παρὰ Δαβὶδ τοῦ πατρὸς διὰ τοῦ θεοῦ τοῦ μεγίστου, ἐπιτεταχότος μοι οἰκοδομῆσαι ἱερὸν τῷ θεῷ, ὃς τὸν οὐρανὸν καὶ τὴν γῆν ἔκτισεν, ἅμα δὲ καὶ σοὶ γράψαι ἀποστεῖλαί μοι τῶν παρὰ σοῦ λαῶν, οἳ συμπαραστήσονται ἡμῖν μέχρι τοῦ ἐπιτελέσαι τὴν τοῦ θεοῦ χρείαν, καθότι μοι ἐπιτέτακται. γέγραφα δὲ καὶ εἰς τὴν Γαλιλαίαν καὶ Σαμαρεῖτιν καὶ Μωαβῖτιν καὶ Ἀμμανῖτιν καὶ Γαλαδῖτιν χορηγεῖσθαι αὐτοῖς τὰ δέοντα ἐκ τῆς χώρας, κατὰ μῆνα κόρους σίτου μυρίους· ὁ δὲ κόρος ἐστὶν ἀρταβῶν ἕξ· καὶ οἴνου κόρους μυρίους· ὁ δὲ κόρος τοῦ οἴνου ἐστὶ μέτρα δέκα. τὸ δὲ ἔλαιον καὶ τὰ ἄλλα χορηγηθήσεται αὐτοῖς ἐκ τῆς Ἰουδαίας, ἱερεῖα δὲ εἰς κρεωφαγίαν ἐκ τῆς Ἀραβίας."
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-                <div number="34">
-                    <div number="1">
-                        <unit id="24" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+        </div>
+        <div number="34">
+          <div number="1">
+            <unit id="24" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 ΕΠΙΣΤΟΛΗ ΣΟΥΡΩΝΟΣ
                             </reading>
-                        </unit>
-                        <unit id="25" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+            <unit id="25" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 "Σούρων Σολομῶνι βασιλεῖ μεγάλῳ χαίρειν
                             </reading>
-                        </unit>
-                        <unit id="26" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+            <unit id="26" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 Εὐλογητὸς ὁ θεός, ὃς τὸν οὐρανὸν καὶ τὴν γῆν ἔκτισεν, ὃς εἵλετο ἄνθρωπον χρηστὸν ἐκ χρηστοῦ ἀνδρός· ἅμα τῷ ἀναγνῶναι τὴν παρὰ σοῦ ἐπιστολὴν σφόδρα ἐχάρην καὶ εὐλόγησα τὸν θεὸν ἐπὶ τῷ παρειληφέναι σὲ τὴν βασιλείαν.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="2">
-                        <unit id="27" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="27" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 περὶ δὲ ὧν γράφεις μοι, περὶ τῶν κατὰ τοὺς λαοὺς τοὺς παρ᾽ ἡμῖν, ἀπέσταλκά σοι Τυρίων καὶ Φοινίκων ὀκτακισμυρίους καὶ ἀρχιτέκτονά σοι ἀπέσταλκα ἄνθρωπον Τύριον, ἐκ μητρὸς Ἰουδαίας, ἐκ τῆς φυλῆς τῆς Δαβίδ. ὑπὲρ ὧν ἂν αὐτὸν ἐρωτήσῃς τῶν ὑπὸ τὸν οὐρανὸν πάντων κατ᾽ ἀρχιτεκτονίαν, ὑφηγήσεταί σοι καὶ ποιήσει.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="3">
-                        <unit id="28" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="28" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 περὶ δὲ τῶν δεόντων καὶ ἀποστελλομένων σοι παίδων καλῶς ποιήσεις ἐπιστείλας τοῖς κατὰ τόπον ἐπάρχοις, ὅπως χορηγῆται τὰ δέοντα.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="4">
-                        <unit id="29" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="29" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 Διελθὼν δὲ Σολομῶν, ἔχων τοὺς πατρικοὺς φίλους, ἐπὶ τὸ ὄρος τὸ τοῦ Λιβάνου μετὰ τῶν Σιδωνίων καὶ Τυρίων, μετήνεγκε τὰ ξύλα τὰ προκεκομμένα ὑπὸ τοῦ πατρὸς αὐτοῦ διὰ τῆς θαλάσσης εἰς Ἰόππην, ἐκεῖθεν δὲ πεζῇ εἰς Ἱεροσόλυμα. καὶ ἄρξασθαι οἰκοδομεῖν τὸ ἱερὸν τοῦ θεοῦ, ὄντα ἐτῶν τρισκαίδεκα, ἐργάζεσθαι δὲ τὰ ἔθνη τὰ προειρημένα καὶ φυλὰς δώδεκα τῶν Ἰουδαίων καὶ παρέχειν ταῖς ἑκκαίδεκα μυριάσι τὰ δέοντα πάντα, κατὰ μῆνα φυλὴν μίαν. θεμελιῶσαί τε τὸν ναὸν τοῦ θεοῦ, μῆκος πηχῶν ξ ́, πλάτος πηχῶν ξ ́, τὸ δὲ πλάτος τῆς οἰκοδομῆς καὶ τῶν θεμελίων πηχῶν ι ́. | οὕτω γὰρ αὐτῷ προστάξαι Νάθαν τὸν προφήτην τοῦ θεοῦ.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="5">
-                        <unit id="30" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="30" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 οἰκοδομεῖν δὲ ἐναλλὰξ δόμον λίθινον καὶ ἔνδεσμον κυπαρίσσινον, πελεκίνοις χαλκοῖς ταλαντιαίοις καταλαμβάνοντα{σ} τοὺς δύο δόμους. οὕτω δ᾽ αὐτὸν οἰκοδομήσαντα ξυλῶσαι ἔσωθεν κεδρίνοις ξύλοις καὶ κυπαρισσίνοις, ὥστε τὴν λιθίνην οἰκοδομὴν μὴ φαίνεσθαι· χρυσῶσαί τε τὸν ναὸν ἔσωθεν χωννύντα πλινθία χρυσᾶ πενταπήχη καὶ προστιθέναι προσηλοῦντα ἥλοις ἀργυροῖς, ταλαντιαίοις τὴν ὁλκήν, μαστοειδέσι τὸν ῥυθμόν, τέσσαρσι δὲ τὸν ἀριθμόν.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="6">
-                        <unit id="31" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="31" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 οὕτω δ᾽ αὐτὸν χρυσῶσαι ἀπὸ ἐδάφους ἕως τῆς ὀροφῆς τό τε ὀρόφωμα ποιῆσαι ἐκ φατνωμάτων χρυσῶν, τὸ δὲ δῶμα ποιῆσαι χαλκοῦν ἀπὸ κεραμίδων χαλκῶν, χαλκὸν χωνεύσαντα καὶ τοῦτον καταχέαντα. ποιῆσαι δὲ δύο στύλους χαλκοῦς καὶ καταχρυσῶσαι αὐτοὺς χρυσίῳ ἀδόλῳ, δακτύλου τὸ πάχος.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="7">
-                        <unit id="32" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="32" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 εἶναι δὲ τοὺς στύλους τῷ ναῷ ἰσομεγέθεις, τὸ δὲ πλάτος κύκλῳ ἕκαστον κίονα πηχῶν δέκα· στῆσαι δὲ αὐτοὺς τοῦ οἴκου ὃν μὲν ἐκ δεξιῶν, ὃν δὲ ἐξ εὐωνύμων. ποιῆσαι δὲ καὶ λυχνίας χρυσᾶς {δέκα}, δέκα τάλαντα ἑκάστην ὁλκὴν ἀγούσας, ὑπόδειγμα λαβόντα τὴν ὑπὸ Μωσέως ἐν τῇ σκηνῇ τοῦ μαρτυρίου τεθεῖσαν·
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="8">
-                        <unit id="33" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="33" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 στῆσαι δ᾽ ἐξ ἑκατέρου μέρους τοῦ σηκοῦ τὰς μὲν ἐκ δεξιῶν, τὰς δὲ ἐξ εὐωνύμων. ποιῆσαι δ᾽ αὐτὸν καὶ λύχνους χρυσοῦς ο ́, ὥστε καίεσθαι ἐφ᾽ ἑκάστης λυχνίας ἑπτά. οἰκοδομῆσαι δὲ καὶ τὰς πύλας τοῦ ἱεροῦ καὶ κατακοσμῆσαι χρυσίῳ καὶ ἀργυρίῳ· καὶ καταστεγάσαι φατνώμασι κεδρίνοις καὶ κυπαρισσίνοις.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="9">
-                        <unit id="34" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="9">
+            <unit id="34" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 ποιῆσαι δὲ καὶ κατὰ τὸ πρὸς βορρᾶν μέρος τοῦ ἱεροῦ στοὰν καὶ στύλους αὐτῇ ὑποστῆσαι χαλκοῦς μη ́· κατασκευάσαι δὲ καὶ λουτῆρα χαλκοῦν, μῆκος πηχῶν κ ́ καὶ πλάτος πηχῶν κ ́, τὸ δὲ ὕψος πηχῶν ε ́· ποιῆσαι δὲ ἐπ᾽ αὐτῷ στεφάνην πρὸς τὴν βάσιν ἔξω ὑπερέχουσαν πῆχυν ἕνα πρὸς τὸ τοὺς ἱερεῖς τούς τε πόδας προσκλύζεσθαι καὶ τὰς χεῖρας νίπτεσθαι ἐπιβαίνοντας· ποιῆσαι δὲ καὶ τὰς βάσεις τοῦ λουτῆρος τορευτὰς χωνευτὰς δώδεκα καὶ τῷ ὕψει ἀνδρομήκεις καὶ στῆσαι ἐξ ὑστέρου μέρους ὑπὸ τὸν λουτῆρα, ἐκ δεξιῶν τοῦ θυσιαστηρίου.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="10">
-                        <unit id="35" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="10">
+            <unit id="35" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 ποιῆσαι δὲ καὶ βάσιν χαλκῆν τῷ ὕψει πηχῶν δυοῖν κατὰ τὸν λουτῆρα, ἵν ́ ἐφεστήκῃ ἐπ᾽ αὐτῆς ὁ βασιλεύς, ὅταν προσεύχηται, ὅπως ὀπτάνηται τῷ λαῷ τῶν Ἰουδαίων. | οἰκοδομῆσαι δὲ καὶ τὸ θυσιαστήριον πηχῶν κε ́ ἐπὶ πήχεις κ ́, τὸ δὲ ὕψος πηχῶν δώδεκα.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="11">
-                        <unit id="36" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="11">
+            <unit id="36" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 ποιῆσαι δὲ καὶ δακτυλίους δύο χαλκοῦς ἁλυσιδωτοὺς καὶ στῆσαι αὐτοὺς ἐπὶ μηχανημάτων ὑπερεχόντων τῷ ὕψει τὸν ναὸν πήχεις κ ́ καὶ σκιάζειν ἐπάνω παντὸς τοῦ ἱεροῦ· καὶ προσκρεμάσαι ἑκάστῃ δίκτυϊ κώδωνας χαλκοῦς ταλαντιαίους τετρακοσίους· καὶ ποιῆσαι ὅλας τὰς δίκτυας πρὸς τὸ ψοφεῖν τοὺς κώδωνας καὶ ἀποσοβεῖν τὰ ὄρνεα, ὅπως μὴ καθίζῃ ἐπὶ τοῦ ἱεροῦ μηδὲ νοσσεύῃ ἐπὶ τοῖς φατνώμασι τῶν πυλῶν καὶ στοῶν καὶ μολύνῃ τοῖς ἀποπατήμασι τὸ ἱερόν.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="12">
-                        <unit id="37" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="12">
+            <unit id="37" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 περιβαλεῖν δὲ καὶ τὰ Ἱεροσόλυμα τὴν πόλιν τείχεσι καὶ πύργοις καὶ τάφροις· οἰκοδομῆσαι δὲ καὶ βασίλεια ἑαυτῷ.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="13">
-                        <unit id="38" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="13">
+            <unit id="38" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 προσαγορευθῆναι δὲ τὸ ἀνάκτορον πρῶτον μὲν ἱερὸν Σολομῶνος, ὕστερον δὲ παρεφθαρμένως τὴν πόλιν ἀπὸ τοῦ ἱεροῦ Ἱερουσαλὴμ ὀνομασθῆναι, ὑπὸ δὲ τῶν Ἑλλήνων φερωνύμως Ἱεροσόλυμα λέγεσθαι.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="14">
-                        <unit id="39" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="14">
+            <unit id="39" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 συντελέσαντα δὲ τὸ ἱερὸν καὶ τὴν πόλιν τειχίσαντα ἐλθεῖν εἰς Σηλὼμ καὶ θυσίαν τῷ θεῷ εἰς ὁλοκάρπωσιν προσαγαγεῖν βοῦς χιλίους. λαβόντα δὲ τὴν σκηνὴν καὶ τὸ θυσιαστήριον καὶ τὰ σκεύη, ἃ ἐποίησε Μωσῆς, εἰς Ἱεροσόλυμα ἐνεγκεῖν καὶ ἐν τῷ οἴκῳ θεῖναι.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="15">
-                        <unit id="40" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="15">
+            <unit id="40" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 καὶ τὴν κιβωτὸν δὲ καὶ τὸν βωμὸν τὸν χρυσοῦν καὶ τὴν λυχνίαν καὶ τὴν τράπεζαν καὶ τὰ ἄλλα σκεύη ἐκεῖ καταθέσθαι, καθὼς προστάξαι αὐτῷ τὸν προφήτην.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="16">
-                        <unit id="41" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="16">
+            <unit id="41" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 προσαγαγεῖν δὲ τῷ θεῷ θυσίαν μυρίαν, πρόβατα δισχίλια, μόσχους τρισχιλίους πεντακοσίους. τὸ δὲ σύμπαν χρυσίον τὸ εἰς τοὺς δύο στύλους καὶ τὸν ναὸν καταχρησθὲν εἶναι τάλαντα μυριάδων υξ ́· εἰς δὲ τοὺς ἥλους καὶ τὴν ἄλλην κατασκευὴν ἀργυρίου τάλαντα χίλια διακόσια τριάκοντα δύο· χαλκοῦ δὲ εἰς τοὺς κίονας καὶ τὸν λουτῆρα καὶ τὴν στοὰν τάλαντα μύρια ὀκτακισχίλια πεντήκοντα.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="17">
-                        <unit id="42" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="17">
+            <unit id="42" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 ἀποπέμψαι δὲ τὸν Σολομῶνα καὶ τοὺς Αἰγυπτίους καὶ τοὺς Φοίνικας, ἑκάστους εἰς τὴν ἑαυτῶν, ἑκάστῳ χρυσοῦ σίκλους δόντα δέκα· τὸ δὲ τάλαντον εἶναι σίκλον. καὶ τῷ μὲν Αἰγύπτου βασιλεῖ Οὐαφρῇ ἐλαίου μετρητὰς μυρίους, φοινικοβαλάνων ἀρτάβας χιλίας, μέλιτος δὲ ἀγγεῖνα ἑκατὸν καὶ ἀρώματα πέμψαι·
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="18">
-                        <unit id="43" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+          <div number="18">
+            <unit id="43" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 τῷ δὲ Σούρωνι εἰς Τύρον πέμψαι τὸν χρυσοῦν κίονα, τὸν ἐν Τύρῳ ἀνακείμενον ἐν τῷ ἱερῷ τοῦ Διός."
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
-    <version title="Praep. Evang. (Frag. 3)" author="Eusebius" fragment="3" language="Greek">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Mras" show="yes">
-                <name>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 3)" author="Eusebius" fragment="3" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" show="yes">
+        <name>
                     Mras
                 </name>
-                <bibliography>
+        <bibliography>
                     Carl R. Holladay, Historians (vol. 1 of Fragments from Hellenistic Jewish Authors; TT 20; PS 10; Chico, Calif.: Scholars Press, 1983), 93-156. Fragment §1: Clement, Strom. 1.23.153.4; Eusebius, Praep. Evang. 9.25.4 and 9.26.1 (quoting Alexander Polyhistor, On the Jews); Fragment §2: Clement, Strom., 1.21.130.3 (quoting Alexander Polyhistor, On the Jews); Eusebius, Praep. Evang. 9.30.1–34.18 (quoting Alexander Polyhistor, On the Jews); Fragment §3: Eusebius, Praep. Evang. 9.34.20 (quoting Alexander Polyhistor, On the Jews); Fragment §4: Eusebius, Praep. Evang. 9.39.1-5 (quoting Alexander Polyhistor, On the Jews); Fragment §5: Clement, Strom. 1.21.141.4-5
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="9">
-                <div number="34">
-                    <div number="20">
-                        <unit id="44" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="34">
+          <div number="20">
+            <unit id="44" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 ΕΥΠΟΛΕΜΟΥ ΠΕΡΙ ΣΟΛΟΜΩΝΟΣ
                             </reading>
-                        </unit>
-                        <unit id="45" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="45" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 "Ποιῆσαι δέ φησιν ὁ Εὐπόλεμος τὸν Σολομῶνα καὶ ἀσπίδας χρυσᾶς χιλίας, ὧν ἑκάστην πεντακοσίων εἶναι χρυσῶν. βιῶσαι δὲ αὐτὸν ἔτη πεντήκοντα δύο, ὧν ἐν εἰρήνῃ βασιλεῦσαι ἔτη μ ́."
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
-    <version title="Praep. Evang. (Frag. 4)" author="Eusebius" fragment="4" language="Greek">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Mras" language="Greek" show="yes">
-                <name>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 4)" author="Eusebius" fragment="4" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" language="Greek" show="yes">
+        <name>
                     Mras
                 </name>
-                <bibliography>
+        <bibliography>
                     Carl R. Holladay, Historians (vol. 1 of Fragments from Hellenistic Jewish Authors; TT 20; PS 10; Chico, Calif.: Scholars Press, 1983), 93-156. Fragment §1: Clement, Strom. 1.23.153.4; Eusebius, Praep. Evang. 9.25.4 and 9.26.1 (quoting Alexander Polyhistor, On the Jews); Fragment §2: Clement, Strom., 1.21.130.3 (quoting Alexander Polyhistor, On the Jews); Eusebius, Praep. Evang. 9.30.1–34.18 (quoting Alexander Polyhistor, On the Jews); Fragment §3: Eusebius, Praep. Evang. 9.34.20 (quoting Alexander Polyhistor, On the Jews); Fragment §4: Eusebius, Praep. Evang. 9.39.1-5 (quoting Alexander Polyhistor, On the Jews); Fragment §5: Clement, Strom. 1.21.141.4-5
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="9">
-                <div number="39">
-                    <div number="1">
-                        <unit id="46" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="39">
+          <div number="1">
+            <unit id="46" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 Ἐπὶ τούτοις καὶ τῆς Ἱερεμίου προφητείας τοῦ Πολυΐστορος μνήμην πεποιημένου, ἡμᾶς ἀποσιωπῆσαι ταύτην πάντων ἂν εἴη παραλογώτατον. κείσθω τοίνυν καὶ αὕτη·
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="2">
-                        <unit id="47" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="47" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 ΕΥΠΟΛΕΜΟΥ ΠΕΡΙ ΙΕΡΕΜΙΟΥ ΤΟΥ ΠΡΟΦΗΤΟΥ ΟΜΟΙΩΣ
                             </reading>
-                        </unit>
-                        <unit id="48" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+            <unit id="48" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 "Εἶτα Ἰωναχείμ· ἐπὶ τούτου προφητεῦσαι Ἱερεμίαν τὸν προφήτην. τοῦτον ὑπὸ τοῦ θεοῦ ἀποσταλέντα καταλαβεῖν τοὺς Ἰουδαίους θυσιάζοντας εἰδώλῳ χρυσῷ, ὧͺ εἶναι ὄνομα Βάαλ.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="3">
-                        <unit id="49" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="49" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 τοῦτον δὲ αὐτοῖς τὴν μέλλουσαν ἀτυχίαν δηλῶσαι. τὸν δὲ Ἰωναχεὶμ ζῶντα αὐτὸν ἐπιβαλέσθαι κατακαῦσαι· τὸν δὲ φάναι τοῖς ξύλοις τούτοις Βαβυλωνίοις ὀψοποιήσειν καὶ σκάψειν τὰς τοῦ Τίγριδος καὶ Εὐφράτου διώρυχας αἰχμαλωτισθέντας.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="4">
-                        <unit id="50" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="50" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 τὸν δὲ τῶν Βαβυλωνίων βασιλέα ἀκούσαντα Ναβουχοδονόσορ τὰ ὑπὸ τοῦ Ἱερεμίου προμαντευθέντα παρακαλέσαι Ἀστιβάρην τὸν Μήδων βασιλέα συστρατεύειν αὐτῷ.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="5">
-                        <unit id="51" group="0" parallel="">
-                            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="51" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
                                 παραλαβόντα δὲ Βαβυλωνίους καὶ Μήδους καὶ συναγαγόντα πεζῶν μὲν ὀκτωκαίδεκα, ἱππέων δὲ μυριάδας δώδεκα καὶ πεζῶν ἅρματα μυρία, πρῶτον μὲν τὴν Σαμαρεῖτιν καταστρέψασθαι καὶ Γαλιλαίαν καὶ Σκυθόπολιν καὶ τοὺς ἐν τῇ Γαλααδίτιδι οἰκοῦντας Ἰουδαίους· αὖθις δὲ τὰ Ἱεροσόλυμα παραλαβεῖν καὶ τὸν Ἰουδαίων βασιλέα Ἰωναχεὶμ ζωγρῆσαι· τὸν δὲ χρυσὸν τὸν ἐν τῷ ἱερῷ καὶ ἄργυρον καὶ χαλκὸν ἐκλέξαντα εἰς Βαβυλῶνα ἀποστεῖλαι, χωρὶς τῆς κιβωτοῦ καὶ τῶν ἐν αὐτῇ πλακῶν· ταύτην δὲ τὸν Ἱερεμίαν κατασχεῖν."
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
-    <version title="Stromata (Frag. 5)" author="Clement of Alexandria" fragment="5" language="Greek">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Chapter" delimiter=":"/>
-            <division label="Verse"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
-                <name>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Stromata (Frag. 5)" author="Clement of Alexandria" fragment="5" language="Greek">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Stählin-Früchtel-Treu" language="Greek" show="yes">
+        <name>
                     Stählin-Früchtel-Treu
                 </name>
-                <bibliography>
+        <bibliography>
                     Carl R. Holladay, Historians (vol. 1 of Fragments from Hellenistic Jewish Authors; TT 20; PS 10; Chico, Calif.: Scholars Press, 1983), 93-156. Fragment §1: Clement, Strom. 1.23.153.4; Eusebius, Praep. Evang. 9.25.4 and 9.26.1 (quoting Alexander Polyhistor, On the Jews); Fragment §2: Clement, Strom., 1.21.130.3 (quoting Alexander Polyhistor, On the Jews); Eusebius, Praep. Evang. 9.30.1–34.18 (quoting Alexander Polyhistor, On the Jews); Fragment §3: Eusebius, Praep. Evang. 9.34.20 (quoting Alexander Polyhistor, On the Jews); Fragment §4: Eusebius, Praep. Evang. 9.39.1-5 (quoting Alexander Polyhistor, On the Jews); Fragment §5: Clement, Strom. 1.21.141.4-5
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="1">
-                <div number="21">
-                    <div number="141">
-                        <div number="4">
-                            <unit id="52" group="0" parallel="">
-                                <reading option="0" mss="Stählin-Früchtel-Treu ">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="21">
+          <div number="141">
+            <div number="4">
+              <unit id="52" group="0" parallel="">
+                <reading option="0" mss="Stählin-Früchtel-Treu ">
                                     ἔτι δὲ καὶ Εὐπόλεμος ἐν τῇ ὁμοίᾳ πραγματείᾳ τὰ πάντα ἔτη φησὶν ἀπὸ Ἀδὰμ ἄχρι τοῦ πέμπτου ἔτους Δημητρίου βασιλείας Πτολεμαίου τὸ δωδέκατον βασιλεύοντος Αἰγύπτου συνάγεσθαι ἔτη, ερμθ ́.
                                 </reading>
-                            </unit>
-                        </div>
-                        <div number="5">
-                            <unit id="53" group="0" parallel="">
-                                <reading option="0" mss="Stählin-Früchtel-Treu ">
+              </unit>
+            </div>
+            <div number="5">
+              <unit id="53" group="0" parallel="">
+                <reading option="0" mss="Stählin-Früchtel-Treu ">
                                     ἀφ᾽ οὗ δὲ χρόνου ἐξήγαγε Μωυσῆς τοὺς Ἰουδαίους ἐξ Αἰγύπτου ἐπὶ τὴν προειρημένην προθεσμίαν συνάγεσθαι ἔτη {δισ}χίλια πεντακόσια ὀγδοήκοντα. ἀπὸ δὲ τοῦ χρόνου τούτου ἄχρι τῶν ἐν Ῥώμῃ ὑπάτων Γναίου Δομετίου καὶ Ἀσινίου συναθροίζεται ἔτη ἑκατὸν εἴκοσι.
                                 </reading>
-                            </unit>
-                        </div>
-                    </div>
-                </div>
+              </unit>
             </div>
-        </text>
-    </version>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Stromata (Frag. 1) (English)" author="OCP" language="English" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Stromata (Frag. 1) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="23">
+          <div number="153">
+            <div number="4">
+              <unit id="en_1" group="0" parallel="">
+                <reading option="0" mss="OCP-Trans ">Eupolemus, in his work concerning the kings in Judea, says that Moses was the first to become wise and the first to transmit writing to the Jews, and that the Phoenicians received it from the Jews, and the Greeks from the Phoenicians.</reading>
+              </unit>
+            </div>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 1b) (English)" author="OCP" language="English" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 1b) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="25">
+          <div number="4">
+            <unit id="en_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">So much for these things from Polyhistor. The same author also provides many things concerning Moses, which are also worth hearing:</reading>
+            </unit>
+          </div>
+        </div>
+        <div number="26">
+          <div number="Heading">
+            <unit id="en_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">EUPOLEMUS ON MOSES</reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="en_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">"Eupolemus says that Moses was the first wise man and the first to transmit letters to the Jews; and that the Phoenicians received them from the Jews, and the Greeks from the Phoenicians; and that Moses was the first to write laws for the Jews."</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Stromata (Frag. 2) (English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Stromata (Frag. 2) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="21">
+          <div number="130">
+            <div number="3">
+              <unit id="en_5" group="0" parallel="">
+                <reading option="0" mss="OCP-Trans ">Alexander, called Polyhistor, in his treatise concerning the Jews, recorded certain letters: from Solomon both to Ouaphres, the king of Egypt, and to the king of Tyre in Phoenicia, as well as their letters to Solomon. According to these, Ouaphres is shown to have sent him eighty thousand Egyptian men for the construction of the temple, while the other king sent an equal number, along with a Tyrian architect who was from a Jewish mother, from the tribe of David, as is written there, named Hyperon.</reading>
+              </unit>
+            </div>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2b) (English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 2b) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="30">
+          <div number="Heading">
+            <unit id="en_6" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Eupolemus, On David and Solomon Who Reigned Over the Hebrews and On Jerusalem</reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="en_7" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Eupolemus states in a certain work, On the Prophecy of Elijah, that Moses prophesied for 40 years; then Joshua, the son of Nun, for 30 years; and that he lived for 110 years, and set up the sacred tent in Shiloh.</reading>
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="en_8" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">After these things, Samuel became a prophet. Then, by the will of God, Saul was chosen king by Samuel, and after reigning for 21 years, he died.</reading>
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="en_9" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Then David, his son, reigned, who conquered the Syrians living along the Euphrates River, and Commagene, and the Assyrians in Gilead, and the Phoenicians. He also campaigned against the Idumaeans, and Ammonites, and Moabites, and Ituraeans, and Nabataeans, and Nabdaeans.</reading>
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="en_10" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Then he campaigned again against Souron, king of Tyre and Phoenicia, whom he compelled to pay tribute to the Jews; and he made a treaty of friendship with Uaphrēs, the king of Egypt.</reading>
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="en_11" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">When David desired to build a temple for God, he asked God to show him the place for the altar. There an angel appeared to him, standing above the place where the altar was to be set up in Jerusalem, and commanded him not to establish the temple, because he had been defiled by human blood and had waged war for many years.</reading>
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="en_12" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">His name was Dianathan; and he commanded him to entrust the building to his son, but for David himself to prepare the necessary materials for the construction: gold, silver, bronze, stones, cypress wood, and cedar wood.</reading>
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="en_13" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">After hearing this, David built ships in Elana, a city in Arabia, and sent miners to the island of Uphre, located in the Red Sea, which had gold mines; and the miners transported the gold from there to Judea.</reading>
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="en_14" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">After David reigned for 40 years, he handed over the rule to his son Solomon, who was 12 years old, in the presence of Eli the high priest and the twelve tribal chiefs. He handed over to him the gold and silver and bronze and stone and cypress wood and cedar wood. And David died, and Solomon reigned and wrote the following letter to Uaphrēs, the king of Egypt:</reading>
+            </unit>
+          </div>
+        </div>
+        <div number="31">
+          <div number="1">
+            <unit id="en_15" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Letter of Solomon</reading>
+            </unit>
+            <unit id="en_16" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“King Solomon to Uaphrēs, King of Egypt, a paternal friend, greetings.</reading>
+            </unit>
+            <unit id="en_17" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Know that I have received the kingship from my father David through God Most High, who has commanded me to build a temple for God, who created heaven and earth. At the same time, I write to you to send me some of your people, who will assist me until everything is completed according to the need, as it has been commanded.”</reading>
+            </unit>
+          </div>
+        </div>
+        <div number="32">
+          <div number="1">
+            <unit id="en_18" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Reply Letter of Uaphrēs</reading>
+            </unit>
+            <unit id="en_19" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“King Uaphrēs to Solomon, Great King, greetings.</reading>
+            </unit>
+            <unit id="en_20" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">As soon as I read your letter, I rejoiced greatly and I and all my forces observed a bright day because you have received the kingship from a good man approved by so great a God. Concerning what you write to me about the people among us, I have sent you eighty thousand, and I have clearly stated to you their numbers and from where they come: ten thousand from the Sebrithite nome, twenty thousand from the Mendesios and Sebennys nomes; from Busiris, Leontopolis, and Athribis, ten thousand each. Take care of their necessities and other things, so that there may be order, and so that they may be restored to their own land when they are finished with the work.”</reading>
+            </unit>
+          </div>
+        </div>
+        <div number="33">
+          <div number="1">
+            <unit id="en_21" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Letter of Solomon</reading>
+            </unit>
+            <unit id="en_22" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“King Solomon to Souron, King of Tyre, Sidon, and Phoenicia, a paternal friend, greetings.</reading>
+            </unit>
+            <unit id="en_23" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Know that I have received the kingship from my father David through God Most High, who has commanded me to build a temple for God, who created heaven and earth. At the same time, I write to you to send me some of your people, who will assist us until the work of God is completed, as it has been commanded to me. I have also written to Galilee and Samaria and Moab and Ammon and Gilead that their necessities should be supplied from the land, ten thousand kors of wheat per month; a kor is six artabas; and ten thousand kors of wine; a kor of wine is ten measures. The oil and other things will be supplied to them from Judea, and animals for meat from Arabia.”</reading>
+            </unit>
+          </div>
+        </div>
+        <div number="34">
+          <div number="1">
+            <unit id="en_24" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Letter of Souron</reading>
+            </unit>
+            <unit id="en_25" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“Souron to Solomon, Great King, greetings.</reading>
+            </unit>
+            <unit id="en_26" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Blessed be God, who created heaven and earth, who chose a good man from a good man. As soon as I read your letter, I greatly rejoiced and blessed God because you have received the kingship.</reading>
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="en_27" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Concerning what you write to me about the people among us, I have sent you eighty thousand Tyrians and Phoenicians, and I have sent you an architect, a Tyrian man, whose mother was a Jewess, from the tribe of David. Whatever you ask him concerning all things under heaven in terms of architecture, he will instruct you and perform it.</reading>
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="en_28" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Concerning the necessities for the servants being sent to you, you will do well to instruct the local governors to supply what is needed.</reading>
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="en_29" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Then Solomon, taking his paternal friends, went to Mount Lebanon with the Sidonians and Tyrians, and transported the timber, which his father had cut, by sea to Joppa, and from there by land to Jerusalem. And he began to build the temple of God, being thirteen years old, with the previously mentioned nations and twelve tribes of the Jews working, and supplying all necessities to the one hundred and sixty thousand, one tribe each month. He founded the temple of God, sixty cubits in length, sixty cubits in width, and the width of the building and the foundations ten cubits. For thus Nathan, the prophet of God, commanded him.</reading>
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="en_30" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">He was to build alternately a stone layer and a cypress wood binding, securing the two layers with bronze axes weighing a talent. Having built it thus, he was to panel it inside with cedar wood and cypress wood, so that the stone structure would not be visible. And he was to overlay the temple inside with gold, casting gold bricks five cubits long and attaching them with silver nails, weighing a talent each, mammiform in shape, four in number.</reading>
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="en_31" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Thus he was to gild it from the floor to the roof, and make the roof of golden panels, and the flat roof of bronze, from bronze tiles, having melted bronze and poured it out. And he was to make two bronze pillars and gild them with pure gold, a finger's thickness.</reading>
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="en_32" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">The pillars were to be of the same size as the temple, and the width of each column around was ten cubits. And he was to set them up, one on the right of the house, and the other on the left. And he was to make ten golden lampstands, each weighing ten talents, taking as a model the one placed by Moses in the Tent of Witness.</reading>
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="en_33" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">He was to set them up on each side of the sanctuary, some on the right and some on the left. And he was to make seventy golden lamps, so that seven would burn on each lampstand. And he was to build the gates of the temple and adorn them with gold and silver; and cover them with paneling of cedar and cypress.</reading>
+            </unit>
+          </div>
+          <div number="9">
+            <unit id="en_34" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">He was also to make a portico on the north side of the temple and set up forty-eight bronze pillars for it. And he was to construct a bronze laver, twenty cubits in length and twenty cubits in width, and five cubits in height. And he was to make on it a rim projecting one cubit outwards at the base, so that the priests could wash their feet and hands by stepping onto it. And he was to make twelve embossed cast bases for the laver, of human height, and set them up behind the laver, on the right side of the altar.</reading>
+            </unit>
+          </div>
+          <div number="10">
+            <unit id="en_35" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And he was to make a bronze stand two cubits high by the laver, so that the king might stand upon it when he prayed, in order to be seen by the people of the Jews. And he was to build the altar twenty-five cubits by twenty-five cubits, and twelve cubits in height.</reading>
+            </unit>
+          </div>
+          <div number="11">
+            <unit id="en_36" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And he was to make two bronze chained rings and set them up on machines projecting twenty cubits above the temple and casting shade over the entire temple; and suspend from each net four hundred bronze bells weighing a talent each; and make the entire nets in such a way that the bells would make a sound and drive away the birds, so that they might not settle on the temple nor nest on the paneling of the gates and porticoes and defile the temple with their droppings.</reading>
+            </unit>
+          </div>
+          <div number="12">
+            <unit id="en_37" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And he was to surround the city of Jerusalem with walls and towers and moats; and build a palace for himself.</reading>
+            </unit>
+          </div>
+          <div number="13">
+            <unit id="en_38" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">The palace was first called the Temple of Solomon, but later, corruptly, the city was named Jerusalem from the temple, and by the Greeks it was eponymously called Hierosolyma.</reading>
+            </unit>
+          </div>
+          <div number="14">
+            <unit id="en_39" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">After completing the temple and walling the city, he went to Shiloh and offered a thousand oxen as a whole burnt offering to God. And he took the tent and the altar and the vessels which Moses had made, and brought them to Jerusalem and placed them in the house.</reading>
+            </unit>
+          </div>
+          <div number="15">
+            <unit id="en_40" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And he placed the ark and the golden altar and the lampstand and the table and the other vessels there, just as the prophet commanded him.</reading>
+            </unit>
+          </div>
+          <div number="16">
+            <unit id="en_41" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">and he brought a myriad sacrifice to God: two thousand sheep, three thousand five hundred calves. The total gold used for the two pillars and the temple was forty-six myriad talents; and for the nails and the rest of the construction, one thousand two hundred thirty-two talents of silver; and for the columns, the laver, and the portico, eighteen thousand fifty talents of bronze.</reading>
+            </unit>
+          </div>
+          <div number="17">
+            <unit id="en_42" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And Solomon sent away the Egyptians and the Phoenicians, each to their own land, giving each ten shekels of gold; a talent being a shekel. And to Uaphrēs, the king of Egypt, he sent ten thousand measures of oil, one thousand artabas of date-palm fruit, one hundred vessels of honey, and spices.</reading>
+            </unit>
+          </div>
+          <div number="18">
+            <unit id="en_43" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And to Souron in Tyre he sent the golden pillar, which is dedicated in Tyre in the temple of Zeus."</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 3) (English)" author="OCP" language="English" fragment="3">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 3) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="34">
+          <div number="20">
+            <unit id="en_44" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">EUPOLEMUS CONCERNING SOLOMON</reading>
+            </unit>
+            <unit id="en_45" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">"Eupolemus says that Solomon also made a thousand golden shields, each of which was worth five hundred gold pieces. He lived fifty-two years, of which he reigned in peace for forty years."</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 4) (English)" author="OCP" language="English" fragment="4">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 4) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="39">
+          <div number="1">
+            <unit id="en_46" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Since Polyhistor has also made mention of Jeremiah's prophecy in connection with these things, it would be most illogical for us to omit it. Let it therefore also be included here:</reading>
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="en_47" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">EUPOLMEUS CONCERNING JEREMIAH THE PROPHET, SIMILARLY</reading>
+            </unit>
+            <unit id="en_48" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">"Then Ioacheim. During his time, Jeremiah the prophet prophesied. This man, having been sent by God, found the Judeans sacrificing to a golden idol, whose name was Baal.</reading>
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="en_49" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And he declared to them the misfortune that was to come. Ioacheim attempted to burn him alive; but he said that these timbers would be used by the Babylonians for cooking and for digging the canals of the Tigris and Euphrates, after they had been taken captive.</reading>
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="en_50" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Nabuchodonosor, the king of the Babylonians, having heard the things foretold by Jeremiah, requested Astibares, the king of the Medes, to campaign with him.</reading>
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="en_51" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And taking Babylonians and Medes, and having gathered one hundred eighty thousand infantry, one hundred twenty thousand cavalry, and ten thousand war chariots, he first subjugated Samaria and Galilee and Scythopolis and the Judeans dwelling in Galaaditis; and again he took Jerusalem and captured Ioacheim, the king of the Judeans; and he selected the gold, silver, and bronze that were in the temple and sent them to Babylon, except for the ark and the tablets in it; for Jeremiah kept these."</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Stromata (Frag. 5) (English)" author="OCP" language="English" fragment="5">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Stromata (Frag. 5) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="21">
+          <div number="141">
+            <div number="4">
+              <unit id="en_52" group="0" parallel="">
+                <reading option="0" mss="OCP-Trans ">Furthermore, Eupolemus in a similar work states that from Adam up to the fifth year of the reign of Demetrius, Ptolemy's twelfth year as king of Egypt, the total number of years sums up to 5940.</reading>
+              </unit>
+            </div>
+            <div number="5">
+              <unit id="en_53" group="0" parallel="">
+                <reading option="0" mss="OCP-Trans ">From the time when Moses led the Judeans out of Egypt up to the aforementioned limit, there are 2580 years. From that time up to the consuls Gnaeus Domitius and Asinius in Rome, 120 years are gathered.</reading>
+              </unit>
+            </div>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
 </book>

@@ -1,85 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-
-<!ELEMENT book (version+)>
-<!ATTLIST book
- filename CDATA #REQUIRED
- title CDATA #REQUIRED
- textStructure CDATA #IMPLIED
->
-
-<!ELEMENT version (divisions, resources*, manuscripts+, text)>
-<!ATTLIST version
- title CDATA #REQUIRED
- author CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT divisions (division)+>
-
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division
- label CDATA #REQUIRED
- delimiter CDATA #IMPLIED
->
-
-<!ELEMENT resources (resource+)>
-<!ELEMENT resource (info+, URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-
-<!ELEMENT info (#PCDATA)>
-
-<!ELEMENT URL (#PCDATA)>
-
-<!ELEMENT manuscripts (ms+)>
-
-<!ELEMENT ms (name, bibliography*)>
-<!ATTLIST ms
- abbrev CDATA #REQUIRED
- language CDATA #REQUIRED
- show CDATA #REQUIRED
->
-
-<!ELEMENT name (#PCDATA | sup)*>
-
-<!ELEMENT sup (#PCDATA)>
-
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-
-<!ELEMENT booktitle (#PCDATA)>
-
-<!ELEMENT text (div+)>
-
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div
- number CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT unit (reading+)>
-<!ATTLIST unit
- id CDATA #REQUIRED
- group CDATA "0"
- parallel CDATA #REQUIRED
->
-
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading
- option CDATA #REQUIRED
- mss CDATA #REQUIRED
- linebreak CDATA #IMPLIED
- indent CDATA #IMPLIED
->
-
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w
- morph CDATA #IMPLIED
- lex CDATA #IMPLIED
- style CDATA #IMPLIED
- lang CDATA #IMPLIED
->
-
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="Esdl" title="Vision of Ezra">
   <version title="" author="">
     <divisions>
@@ -672,6 +591,601 @@
         <div number="0">
           <unit id="115" group="0" parallel="">
             <reading option="0" mss="Bogaert ">EXPLICIT LEGENDA BEATI EXDRAE PROPHETAE</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="English" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of English based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Title">
+        <div number="0">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The Legend of the Blessed Prophet Ezra</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="Document Body">
+        <div number="1">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When Ezra prayed to the Lord Jesus Christ, he said: “Lord, grant me confidence so that I may not fear when I see the judgments of sinners.”</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And seven angels *of Tartarus* were given to me, and they lowered me six thousand seven hundred steps down into Hades.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And there I saw a gate of fire, and from it issued a very strong flame, seven hundred and two feet high. And outside the gate lay dragons and lions and black dogs, from whose mouths and ears and eyes issued a very strong flame.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Righteous men came and passed through with joy.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked the angel who was leading me: “Who are these, Lord, who proceed with such great joy?”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He said to me: “These are holy and God-fearing men, whose alms have been lifted up into the heavens.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">These are those who performed many acts of charity, clothed the naked, satisfied the hungry, and gave drink to the thirsty.”</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And sinners came to enter through that very gate. Dragons and dogs struck them, and fire consumed them. They said: “Lord, have mercy,” but no mercy was shown.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked the angel who was leading me: “Lord, who are these who are set in such great punishment?” And he said to me:</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“These are those who denied the Lord and on the Lord’s Day remained with women, and therefore they are in torments.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Lord, spare the sinners.”</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they took me down and plunged me seven hundred steps into Hades. And there I saw men with their hands bound downwards.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Some devils were supplying fire, others were striking them with fiery clubs.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the earth interceded, saying: “Strike them and do not spare them, for they have committed many evils upon me.”</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked the angel: “Lord, who are these who are set in such great punishment?”</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to me: “These are those who committed fornication with married women.”</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Lord, spare the sinners.”</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they took me down and placed me to the south. And there I saw men and women hanging by the eyelids of their eyes over fire, and four *Tartarean* devils were striking them with a fiery club.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to the angel: “Who are these who are set in such great evil?”</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He said to me: “These are those who did evil to father and mother and always desired evil desires.”</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Lord, spare the sinners.”</reading>
+          </unit>
+        </div>
+        <div number="23">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they brought me down two thousand five hundred steps into Hades. And there I saw a cauldron, which is interpreted as a kettle, not large, its width twelve cubits. There one could see sulfur, pitch, and resin, and it appeared twelve cubits high like a wave of the sea.</reading>
+          </unit>
+        </div>
+        <div number="24">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the righteous came and entered through its midst, walking upon the waves of fire, praising the Lord, as if they were walking upon dew and cold water.</reading>
+          </unit>
+        </div>
+        <div number="25">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked the angel and said: “Lord, who are these who proceed with such great joy?”</reading>
+          </unit>
+        </div>
+        <div number="26">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“These are those who performed many acts of charity, clothed and shod the naked.”</reading>
+          </unit>
+        </div>
+        <div number="27">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sinners came, and the angels of Satan cast them into the fire and pressed fiery *forks* upon their necks.</reading>
+          </unit>
+        </div>
+        <div number="28">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they cried out: “Lord, have mercy on me,” but no mercy was shown.</reading>
+          </unit>
+        </div>
+        <div number="29">
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">As soon as it was heard, their flesh was no longer visible through the fire and torments.</reading>
+          </unit>
+        </div>
+        <div number="30">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to the angel: “Who are these?”</reading>
+          </unit>
+        </div>
+        <div number="31">
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Those who were greedy, robbers, avaricious all the days of their lives, who did not receive the poor and strangers into their house,</reading>
+          </unit>
+        </div>
+        <div number="32">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and they and all their riches perished.”</reading>
+          </unit>
+        </div>
+        <div number="33">
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Lord, spare the sinners.”</reading>
+          </unit>
+        </div>
+        <div number="34">
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I walked in a dark place and there I saw *unquenchable* worms, whose length and height cannot be estimated; their length is said to be seven hundred *cubits*.</reading>
+          </unit>
+        </div>
+        <div number="35">
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And before its mouth stood many souls of sinners, and when it inhaled, twelve thousand souls entered into it, like flies, and when it exhaled, they all came out *of different colors*.</reading>
+          </unit>
+        </div>
+        <div number="36">
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to the angel, “Lord, who are these?” And he said to me, “These are those who were filled with all evil.” And I went forward and saw there a fiery river, and there was a great bridge over it. Its width was such that forty pairs of oxen could cross. And when the righteous came, they crossed with joy and gladness. And again, sinners came and crossed up to the middle, and then its narrowness returned such that it was as thin as a thread of yarn. And they were submerged in the river, and many serpents and scorpions that lay there received the souls of widowed women and men. And they begged for mercy, and no one pitied them.</reading>
+          </unit>
+        </div>
+        <div number="37">
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I went forward and saw a man sitting on a fiery throne, and angels of Satan ministered fire from every side, and his counselors stood around him.</reading>
+          </unit>
+        </div>
+        <div number="38">
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said to the angel, “Lord, who is this?” And he said to me, “This is King Herod, who killed many boys because of the Lord.”</reading>
+          </unit>
+        </div>
+        <div number="39">
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said, “Lord, you have judged a righteous judgment.”</reading>
+          </unit>
+        </div>
+        <div number="40">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I went forward, and I saw there men bound, and the angels of Tartarus were piercing their eyes with thorns.</reading>
+          </unit>
+        </div>
+        <div number="41">
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I asked the angel who these were. And he said, “These are those who showed strange paths to travelers.”</reading>
+          </unit>
+        </div>
+        <div number="43">
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I saw there virgins with fiery torches weighing five hundred pounds, coming with cries to the west. And I said to the angel, “Lord, who are these?”</reading>
+          </unit>
+        </div>
+        <div number="44">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to me, “These are those who corrupted their virginity before marriage.”</reading>
+          </unit>
+        </div>
+        <div number="45">
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I went forward and saw there many men, and many thousands of burning iron and lead upon them. And I asked the angel what this was.</reading>
+          </unit>
+        </div>
+        <div number="46">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to me, “These are mockers and corruptors of the law, and therefore they are judged.”</reading>
+          </unit>
+        </div>
+        <div number="47">
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">—Lord, spare the sinners.</reading>
+          </unit>
+        </div>
+        <div number="48">
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I went forward to the setting of the sun. And I saw there kings and princes,</reading>
+          </unit>
+        </div>
+        <div number="49">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and poor people standing there and appealing: “Lord, these are those who took away all our power.”</reading>
+          </unit>
+        </div>
+        <div number="50">
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I saw there another furnace, and sulfur pitch and other woods drawn from the Lord’s day were burning there. And children who laid hands on their parents and who denied their Lord, and who defrauded their hired worker of a just wage, were likewise cast in there.</reading>
+          </unit>
+        </div>
+        <div number="51">
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I saw in a dark place another furnace, and women who were there were cast in there. And I said to the angel, “Lord, who are these?”</reading>
+          </unit>
+        </div>
+        <div number="52">
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">—These are those who had children from adultery and killed them.</reading>
+          </unit>
+        </div>
+        <div number="53">
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the infants themselves appealed, saying, “Lord, the life that you gave us, these took away from us.” And there I saw other women hanging by the hairs of their heads, and serpents were drinking from their breasts around their necks.</reading>
+          </unit>
+        </div>
+        <div number="54">
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I said, “Lord, who are these?” —These are those who did not offer their breasts to infants and orphans.</reading>
+          </unit>
+        </div>
+        <div number="55">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">—Lord, spare the sinners.</reading>
+          </unit>
+        </div>
+        <div number="56">
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Then Michael and Gabriel came and said to me, “Ezra, come to heaven so that we may make the Passover.”</reading>
+          </unit>
+        </div>
+        <div number="57">
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I said, “As the Lord lives, I will not come unless I see the judgments of sinners.” And I went forward and saw men whom beasts were tearing apart, and I said, “Who are these?” And the angel said, “These are those who moved boundaries and spoke false testimony.”</reading>
+          </unit>
+        </div>
+        <div number="58">
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they brought me down four thousand ninety steps into Hades.</reading>
+          </unit>
+        </div>
+        <div number="59">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I saw many there, and their dwelling was splendid. And there was light there at all times. They had joy and gladness because they had done many good deeds on earth, and there was no sadness in them. They rejoiced in heavenly manna, because they had shown much charity and given many alms. There are also those who did not do well because they did not have the means to do so. Those in tribulation also appeared, and they were told words of comfort: “Let them be strengthened in light, just like those who did many good deeds and loved righteousness.” And I went forward and saw a pit a thousand five hundred feet deep, and a multitude of measures of food were burning there like wax, and sinners were being consumed there. And I said, “Lord, who are these?” And the angel said, “These are those who received usury and had no pity on those people.”</reading>
+          </unit>
+        </div>
+        <div number="60">
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when they saw all the judgments of Hades that were around them, the angels Michael, Gabriel, Raphael came and placed me in a fiery cloud and lifted me up to one heaven, not to the seventh. And congregations of angels came asking me what the judgments of sinners were. And I said, “Bow down and pray for sinners.” And they lifted me to another heaven. And prophets of the churches came asking me similarly, and I said, “Bow down and pray for sinners.” And they lifted me to the seventh heaven to the back of the Lord, from which I was not worthy to see anything else.</reading>
+          </unit>
+        </div>
+        <div number="61">
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And He said, “Ezra, I will repay you according to your works.” And I said:</reading>
+          </unit>
+        </div>
+        <div number="62">
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Lord, you have made the animals that graze on grass better than humans, because they do not give praise to you, they die and have no sin, but we miserable ones, living and dead, are tormented.”</reading>
+          </unit>
+        </div>
+        <div number="63">
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord answered, “Ezra, I made man and woman in my image and commanded them not to sin, and they sinned, and therefore they are in torments.”</reading>
+          </unit>
+        </div>
+        <div number="64">
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“And there are others who begged me and did not do my precepts, and similarly are not chosen in my kingdom.”</reading>
+          </unit>
+        </div>
+        <div number="67">
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">—Because you are righteous, because you are almighty, because you are merciful in splendor.</reading>
+          </unit>
+        </div>
+        <div number="68">
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">—Ezra, there are those whom wicked works will seize on the last day.</reading>
+          </unit>
+        </div>
+        <div number="69">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sun will fall into its blood, it will turn and recline, and darkness will come and the stars will fall to earth, and it will burn for seventy cubits.</reading>
+          </unit>
+        </div>
+        <div number="70">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “What has heaven sinned?” And the Lord said, “Heaven looks upon the wickedness of men.”</reading>
+          </unit>
+        </div>
+        <div number="71">
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Before long, Antichrist will be loosed with sorrow and temptation for the people, and he will say that he preaches in my name.</reading>
+          </unit>
+        </div>
+        <div number="72">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And a Christian will come forth and say that he fights for the human race, and he says, “If you are Christ, the Son of God, move this mountain.” And he will be able to do it and cannot recall it.</reading>
+          </unit>
+        </div>
+        <div number="73">
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And again he says, “Cause a storm so that rain may come.” And it does not come. He makes fish from a serpent, bread from a stone, water from sand.</reading>
+          </unit>
+        </div>
+        <div number="74">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And whoever believes in him will always hunger and thirst and will never be satisfied.</reading>
+          </unit>
+        </div>
+        <div number="75">
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “What form does this Antichrist have, that I may announce it to the children of men?”</reading>
+          </unit>
+        </div>
+        <div number="76">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord said, “His forehead is very high, he has a long head, he will have hairs on his eyebrows gathered together, his eyes are like the morning star, his nose will be a chasm, his upper lip is thinner, he will have no knee.</reading>
+          </unit>
+        </div>
+        <div number="77">
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And one Christian will say, “If you are Christ, the Son of God, bend your knees and pray.” And he will not be able to bend.</reading>
+          </unit>
+        </div>
+        <div number="78">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when the day of judgment comes, a Christian who believed in him will go to Mount Sinai and say, “I adjure you by the precious name of the Lord, O mountain and rock, fall upon me and cover me.”</reading>
+          </unit>
+        </div>
+        <div number="79">
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when the mountain hears the name of the Lord, it will melt and flow over him, and he will remain on hard ground.</reading>
+          </unit>
+        </div>
+        <div number="80">
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he will say, “Lord, where shall I flee? If I go to hell, where will I find rest? If I descend to the ocean of the sea, You are there. I cannot flee from You, because my sins will deliver me before Your face.</reading>
+          </unit>
+        </div>
+        <div number="81">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But I beg You, O Lord and Master, rise from Your seat, and let us pronounce judgment.”</reading>
+          </unit>
+        </div>
+        <div number="82">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord said, “Who will hear us?”</reading>
+          </unit>
+        </div>
+        <div number="83">
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ezra answered, “Your Son hears us.”</reading>
+          </unit>
+        </div>
+        <div number="84">
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“How will My Son, who was born from My voice, not hear?” said the Lord.</reading>
+          </unit>
+        </div>
+        <div number="85">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “Let Your priest hear us.”</reading>
+          </unit>
+        </div>
+        <div number="86">
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord said, “Go and ask My priest if he can pronounce judgment with Me.”</reading>
+          </unit>
+        </div>
+        <div number="87">
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “As the Lord lives, I judge against You because of all people who have no place.”</reading>
+          </unit>
+        </div>
+        <div number="88">
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“You will be chosen with My prophets.”</reading>
+          </unit>
+        </div>
+        <div number="89">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “Who created sinners?” And the Lord answered, “I did.” And Ezra said, “If You created sinners and me, it is better to destroy me than the whole world.”</reading>
+          </unit>
+        </div>
+        <div number="90">
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord answered, “Sinners are at rest from the ninth hour of the Sabbath until Monday; on other days, however, let them repent of their sins.”</reading>
+          </unit>
+        </div>
+        <div number="91">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “May it be as You please.”</reading>
+          </unit>
+        </div>
+        <div number="92">
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord said, “Ezra, go in peace and walk with My prophets. Where the righteous are, there you will also be.”</reading>
+          </unit>
+        </div>
+        <div number="93">
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord said to Michael, “Go and recall the soul of Ezra, My beloved.”</reading>
+          </unit>
+        </div>
+        <div number="94">
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Michael said, “Ezra, give your soul.”</reading>
+          </unit>
+        </div>
+        <div number="95">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra answered, “I beseech You that whoever buys my book or has it written, as many denarii as he gives and buys my book, may he have so many pounds of gold as helpers and consolation and eternal life.”</reading>
+          </unit>
+        </div>
+        <div number="96">
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And a spirit came and said, “Ezra, your prayer has been heard just as you requested, and all things have been given to you.”</reading>
+          </unit>
+        </div>
+        <div number="97">
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">An angel came to Ezra and said, “Give your soul.”</reading>
+          </unit>
+        </div>
+        <div number="98">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “From where will my soul depart?”</reading>
+          </unit>
+        </div>
+        <div number="99">
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the angel said, “Through your mouth.” Ezra answered, “My mouth announced the praise of the Lord; I will not yield my soul through my mouth.”</reading>
+          </unit>
+        </div>
+        <div number="100">
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the angel said, “Through your eye.” “My eyes saw the back of the Lord; I will not yield my soul through my eyes.”</reading>
+          </unit>
+        </div>
+        <div number="101">
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Through your nostrils.” “My nostrils smelled the Lord’s aromas; I will not yield my soul through my nostrils.”</reading>
+          </unit>
+        </div>
+        <div number="102">
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Through the crown of your head.” “The crown of my head was anointed by Aaron, the holy one of the Lord, with sanctified oil; my soul will not depart through the crown of my head.”</reading>
+          </unit>
+        </div>
+        <div number="103">
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Through your hands.” “My hands held the psaltery of the Lord; my soul will not depart through my hands.”</reading>
+          </unit>
+        </div>
+        <div number="104">
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Through your feet.” “My feet stood before the Lord; I will not yield my soul through my feet.”</reading>
+          </unit>
+        </div>
+        <div number="105">
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Michael came to the Lord and announced to Him all that he had seen.</reading>
+          </unit>
+        </div>
+        <div number="106">
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord said, “I will descend with My angels and bring his soul.”</reading>
+          </unit>
+        </div>
+        <div number="107">
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord descended and said, “Ezra, give your soul.”</reading>
+          </unit>
+        </div>
+        <div number="108">
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “Lord, hear my prayer and let my cry come to You. Lord God Almighty, I beseech You that whoever commemorates the book of my passion, may no sin afflict him, but may all be forgiven.”</reading>
+          </unit>
+        </div>
+        <div number="109">
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the Lord said, “I grant everything you have requested, but only give your soul.”</reading>
+          </unit>
+        </div>
+        <div number="110">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said, “Lord, I fear death.” And the Lord answered, “I died and was crucified and rose again, and now I sit at the right hand, and I do not fear death.”</reading>
+          </unit>
+        </div>
+        <div number="111">
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ezra answered, “If you did not fear death, why did you say, ‘My soul is sorrowful, even unto death’?”</reading>
+          </unit>
+        </div>
+        <div number="112">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The Lord answered, “You are speaking too much; give your soul, for you will not die. The body goes whence it came, the soul returns to the Father who gave it.”</reading>
+          </unit>
+        </div>
+        <div number="113">
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said again to the angels, “Mourn for me, good angels and archangels, prophets, apostles, martyrs, confessors, and virgins, and afterwards bury me.”</reading>
+          </unit>
+        </div>
+        <div number="114">
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And Ezra said again, “Lord Jesus Christ, do not abandon me when my soul departs from my body; may the angels of Satan not meet me and do me no harm.”</reading>
+          </unit>
+        </div>
+        <div number="115">
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the angel Michael said, “That which my Father commended to you.”</reading>
+          </unit>
+        </div>
+        <div number="116">
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The mountain trembled, and he gave up his spirit on the ninth day, as the month of July began.</reading>
+          </unit>
+        </div>
+        <div number="117">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Whoever celebrates the feast and memory of the blessed prophet Ezra shall have a share with my Lord Jesus Christ and with the blessed God-bearer Mary and with your blessed Archangel Michael. Amen.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="Explicit">
+        <div number="0">
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">HERE ENDS THE LEGEND OF THE BLESSED PROPHET EZRA</reading>
           </unit>
         </div>
       </div>

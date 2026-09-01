@@ -77,4 +77,32 @@
             </div>
         </text>
     </version>
+    <version title="English" author="OCP" language="English" fragment="1">
+        <divisions>
+            <division label="Book" delimiter=":"/>
+            <division label="Chapter" delimiter=":"/>
+            <division label="Verse"/>
+        </divisions>
+        <manuscripts>
+            <ms abbrev="OCP-Trans" language="English" show="yes">
+                <name>OCP Translation</name>
+                <bibliography>
+                    English translation based on the Greek text of Shepherd of Hermas, Visions 2.3.4 (cf. Num 11:26).
+                </bibliography>
+            </ms>
+        </manuscripts>
+        <text>
+            <div number="Visions 2">
+                <div number="3">
+                    <div number="4">
+                        <unit id="en_1" group="0" parallel="">
+                            <reading option="0" mss="OCP-Trans">
+                                “The Lord is near to those who turn to him,” as it is written in Eldad and Modat, who prophesied to the people in the wilderness.
+                            </reading>
+                        </unit>
+                    </div>
+                </div>
+            </div>
+        </text>
+    </version>
 </book>
