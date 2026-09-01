@@ -2,8 +2,11 @@
 """
 Automated OCP Translation Generator & Injector
 
-Translates OCP XML editions into English aligned to the base critical readings (Option 0)
-and injects valid <version language="English" ...> structures conforming to grammateus.dtd.
+Translates OCP XML editions into a target language aligned to the base critical
+readings (Option 0) and injects valid <version language="<Target>" ...>
+structures conforming to grammateus.dtd.
+
+Usage: python3 scripts/generate_translations.py --language French <xml> [...]
 """
 
 import sys
@@ -14,6 +17,8 @@ import subprocess
 import xml.etree.ElementTree as ET
 
 OPENROUTER_MODEL = "openrouter/google/gemini-3.7-flash"
+
+DEFAULT_LANGUAGE = "French"
 
 
 def extract_units(elem):
@@ -52,9 +57,9 @@ def extract_units(elem):
     return units_data
 
 
-def translate_units_batch(doc_title, version_title, lang, units_batch, retries=3):
+def translate_units_batch(doc_title, version_title, lang, target_language, units_batch, retries=3):
     """
-    Sends a batch of units to LLM to produce scholarly English translation.
+    Sends a batch of units to LLM to produce a scholarly translation in target_language.
     Returns dict mapping unit 'id' -> translation string.
     """
     if not units_batch:
@@ -69,12 +74,14 @@ def translate_units_batch(doc_title, version_title, lang, units_batch, retries=3
         })
 
     system_prompt = (
-        "You are an expert biblical scholar and classical translator specializing in the Old Testament Pseudepigrapha "
-        "(Greek, Syriac, Latin, Ethiopic, Aramaic). Translate the provided ancient text units into clear, accurate, "
-        "scholarly modern English suitable for the Online Critical Pseudepigrapha (OCP) digital editions. "
-        "Preserve proper names, titles, and biblical/historical references. "
-        "Return ONLY a JSON object mapping each unit 'id' (as a string) to its corresponding English translation string. "
-        "Do not include markdown code blocks or additional commentary."
+        f"You are an expert biblical scholar and classical translator specializing in the Old Testament Pseudepigrapha "
+        f"(Greek, Syriac, Latin, Ethiopic, Aramaic). Translate the provided ancient text units into clear, accurate, "
+        f"scholarly modern {target_language} suitable for the Online Critical Pseudepigrapha (OCP) digital editions. "
+        f"Preserve proper names, titles, and biblical/historical references. "
+        f"IMPORTANT: if a unit's original text is an omission marker (e.g. '[...]') or is empty, return the empty "
+        f"string \"\" for that unit — do NOT emit '[...]' or any placeholder. "
+        f"Return ONLY a JSON object mapping each unit 'id' (as a string) to its corresponding {target_language} "
+        f"translation string. Do not include markdown code blocks or additional commentary."
     )
 
     user_prompt = f"Document: {doc_title}\nVersion/Fragment: {version_title} ({lang})\n\nUnits to translate:\n" + json.dumps(prompt_items, ensure_ascii=False, indent=2)
@@ -103,14 +110,14 @@ def translate_units_batch(doc_title, version_title, lang, units_batch, retries=3
                 raise
 
 
-def build_translation_version_xml(source_elem, translated_map, units_data, ver_title="English", ver_author="OCP"):
+def build_translation_version_xml(source_elem, translated_map, units_data, ver_title="Translation", ver_author="OCP", target_language="English", lang_code="en"):
     """
     Constructs a new <version language="English" ...> ElementTree reproducing the division structure.
     """
     new_v = ET.Element('version')
     new_v.attrib['title'] = ver_title
     new_v.attrib['author'] = ver_author
-    new_v.attrib['language'] = 'English'
+    new_v.attrib['language'] = target_language
     if 'fragment' in source_elem.attrib:
         new_v.attrib['fragment'] = source_elem.attrib['fragment']
 
@@ -130,12 +137,12 @@ def build_translation_version_xml(source_elem, translated_map, units_data, ver_t
     mss = ET.SubElement(new_v, 'manuscripts')
     ms = ET.SubElement(mss, 'ms')
     ms.attrib['abbrev'] = 'OCP-Trans'
-    ms.attrib['language'] = 'English'
+    ms.attrib['language'] = target_language
     ms.attrib['show'] = 'yes'
     name_el = ET.SubElement(ms, 'name')
-    name_el.text = 'OCP Translation'
+    name_el.text = f'OCP {target_language} Translation'
     bib_el = ET.SubElement(ms, 'bibliography')
-    bib_el.text = f'English translation of {ver_title} based on the OCP critical edition.'
+    bib_el.text = f'{target_language} translation of {ver_title} based on the OCP critical edition.'
 
     # Construct text tree
     text_elem = ET.SubElement(new_v, 'text')
@@ -145,8 +152,10 @@ def build_translation_version_xml(source_elem, translated_map, units_data, ver_t
         path = u['path']
         u_id = u['id']
         en_text = translated_map.get(str(u_id)) or translated_map.get(u_id) or ""
-        if not en_text:
-            en_text = "[...]"
+        # Omissions / untranslated units render as empty strings (zero-length),
+        # not '[...]' — per OCP convention.
+        if en_text == "[...]":
+            en_text = ""
 
         current_parent = text_elem
         for i in range(len(path)):
@@ -158,7 +167,7 @@ def build_translation_version_xml(source_elem, translated_map, units_data, ver_t
             current_parent = div_cache[sub_path]
 
         unit_el = ET.SubElement(current_parent, 'unit')
-        unit_el.attrib['id'] = f"en_{u_id}"
+        unit_el.attrib['id'] = f"{lang_code}_{u_id}"
         unit_el.attrib['group'] = '0'
         unit_el.attrib['parallel'] = ''
 
@@ -170,7 +179,7 @@ def build_translation_version_xml(source_elem, translated_map, units_data, ver_t
     return new_v
 
 
-def process_file(xml_path, batch_size=50):
+def process_file(xml_path, batch_size=50, target_language=DEFAULT_LANGUAGE):
     """Processes an entire XML file, generating and appending English version(s)."""
     print(f"\nProcessing {xml_path}...")
     tree = ET.parse(xml_path)
@@ -197,13 +206,15 @@ def process_file(xml_path, batch_size=50):
         root.append(base_v)
         existing_versions = [base_v]
 
-    # Check if already has English
-    has_english = any('english' in (v.attrib.get('language') or '').lower() for v in existing_versions)
-    if has_english:
-        print("  Document already contains English version(s). Skipping.")
+    # Check if a translation in the target language already exists
+    lang_lower = target_language.lower()
+    has_target = any(lang_lower in (v.attrib.get('language') or '').lower() for v in existing_versions)
+    if has_target:
+        print(f"  Document already contains {target_language} version(s). Skipping.")
         return
 
     new_versions = []
+    lang_code = lang_lower[:2]
 
     for v_idx, v_elem in enumerate(existing_versions):
         v_title = v_elem.attrib.get('title') or root.attrib.get('title') or f'Version {v_idx+1}'
@@ -218,16 +229,16 @@ def process_file(xml_path, batch_size=50):
         for i in range(0, len(units_data), batch_size):
             chunk = units_data[i:i+batch_size]
             print(f"    Translating units {i+1} to {min(i+batch_size, len(units_data))}...")
-            chunk_res = translate_units_batch(doc_title, v_title, v_lang, chunk)
+            chunk_res = translate_units_batch(doc_title, v_title, v_lang, target_language, chunk)
             translated_map.update(chunk_res)
             time.sleep(0.5)
 
         if len(existing_versions) == 1:
-            en_title = "English"
+            tr_title = target_language
         else:
-            en_title = f"{v_title} (English)"
+            tr_title = f"{v_title} ({target_language})"
 
-        new_v_elem = build_translation_version_xml(v_elem, translated_map, units_data, ver_title=en_title)
+        new_v_elem = build_translation_version_xml(v_elem, translated_map, units_data, ver_title=tr_title, target_language=target_language, lang_code=lang_code)
         new_versions.append(new_v_elem)
 
     for nv in new_versions:
@@ -244,16 +255,20 @@ def process_file(xml_path, batch_size=50):
     with open(xml_path, 'w', encoding='utf-8') as f:
         f.write(cleaned_xml)
 
-    print(f"  Successfully updated {xml_path} with {len(new_versions)} English version(s).")
+    print(f"  Successfully updated {xml_path} with {len(new_versions)} {target_language} version(s).")
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print("Usage: python3 scripts/generate_translations.py <path_to_xml> [...]")
-        sys.exit(1)
+    import argparse
 
-    for p in sys.argv[1:]:
+    parser = argparse.ArgumentParser(description="Generate OCP parallel translations in a target language.")
+    parser.add_argument("xml_files", nargs="+", help="Path(s) to OCP XML edition files")
+    parser.add_argument("--language", default=DEFAULT_LANGUAGE, help=f"Target language (default: {DEFAULT_LANGUAGE})")
+    parser.add_argument("--batch-size", type=int, default=50)
+    args = parser.parse_args()
+
+    for p in args.xml_files:
         try:
-            process_file(p)
+            process_file(p, batch_size=args.batch_size, target_language=args.language)
         except Exception as e:
             print(f"Error processing {p}: {e}", file=sys.stderr)
