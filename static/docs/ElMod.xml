@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE book [
     <!ELEMENT book (version)+>
 <!ATTLIST book filename CDATA #REQUIRED>
@@ -47,62 +47,86 @@
 <!ATTLIST w lang CDATA #IMPLIED>
 ]>
 <book filename="ElMod" title="Eldad and Modad" textStructure="fragmentary">
-    <version title="Shepherd of Hermas" author="Anonymous" language="Greek" fragment="1">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Chapter" delimiter=":"/>
-            <division label="Verse"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Whittaker" language="Greek" show="yes">
-                <name>
+  <version title="Shepherd of Hermas" author="Anonymous" language="Greek" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Whittaker" language="Greek" show="yes">
+        <name>
                     Whittaker
                 </name>
-                <bibliography>
+        <bibliography>
                     text: Molly Whittaker, Der Hirt des Hermas (2d ed.; vol 1 of Die Apostolischen Väter; GCS 48; Berlin: Akademie, 1967 [1st ed. 1956]), 7, line 3. [Shepherd of Hermas, Visions 2.3.4] (cf. Num 11:26).
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="Visions 2">
-                <div number="3">
-                    <div number="4">
-                        <unit id="1" group="0" parallel="">
-                            <reading option="0" mss="Whittaker ">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Visions 2">
+        <div number="3">
+          <div number="4">
+            <unit id="1" group="0" parallel="">
+              <reading option="0" mss="Whittaker ">
                                 “Ἐγγὺς κύριος τοῖς ἐπιστρεφομένοις,” ὡς γέγραπται ἐν τῷ Ἐλδὰδ καὶ Μωδάτ, τοῖς προφητεύσασιν ἐν τῇ ἐρήμῳ τῷ λαῷ.
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
-    <version title="English" author="OCP" language="English" fragment="1">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Chapter" delimiter=":"/>
-            <division label="Verse"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="OCP-Trans" language="English" show="yes">
-                <name>OCP Translation</name>
-                <bibliography>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="English" author="OCP" language="English" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>
                     English translation based on the Greek text of Shepherd of Hermas, Visions 2.3.4 (cf. Num 11:26).
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="Visions 2">
-                <div number="3">
-                    <div number="4">
-                        <unit id="en_1" group="0" parallel="">
-                            <reading option="0" mss="OCP-Trans">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Visions 2">
+        <div number="3">
+          <div number="4">
+            <unit id="en_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
                                 “The Lord is near to those who turn to him,” as it is written in Eldad and Modat, who prophesied to the people in the wilderness.
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Shepherd of Hermas (French)" author="OCP" language="French" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Shepherd of Hermas (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Visions 2">
+        <div number="3">
+          <div number="4">
+            <unit id="fr_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Le Seigneur est proche de ceux qui reviennent à lui », comme il est écrit dans Eldad et Modat, qui ont prophétisé au peuple dans le désert.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
 </book>
