@@ -1,7 +1,8 @@
 # Online Critical Pseudepigrapha (OCP)
 
 [![Website](https://img.shields.io/badge/Website-pseudepigrapha.org-gold.svg)](https://pseudepigrapha.org)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/Software-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY 4.0](https://img.shields.io/badge/Texts-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Open Access](https://img.shields.io/badge/Open%20Access-TEI%20XML-green.svg)](https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha/tree/master/static/docs)
 
 The mandate of the **Online Critical Pseudepigrapha (OCP)** is to develop and publish electronic editions of the best critical texts of the "Old Testament" Pseudepigrapha and related literature, complete with textual variants and manuscript witnesses.
@@ -91,4 +92,9 @@ When citing specific editions, please include the individual editor named in the
 
 ## ⚖️ License
 
-The textual editions and source code are released under the [GNU General Public License v3.0](LICENSE) as free, open-source software for scholarship and research.
+This repository carries two licenses, matching the two kinds of material it holds:
+
+- **Software and reader interface** (the Grammateus3 application, web2py controllers/views, JavaScript, CSS, build scripts) — [GNU General Public License v3.0](LICENSE.GPL) (© Ian W. Scott 2012–2013).
+- **Text editions and TEI XML files** in [`static/docs/`](static/docs) — [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE.CC-BY-4.0). You are free to share and adapt these editions, including producing translations and parallel displays, with attribution to the Online Critical Pseudepigrapha and the individual editor named in each document's header metadata.
+
+This dual structure follows the FSF's recommendation against applying software copyleft to non-software works, and brings the repository in line with other open scholarly editions such as the OSHB and SBLGNT (CC BY). The clarification was prompted by issue #34.
