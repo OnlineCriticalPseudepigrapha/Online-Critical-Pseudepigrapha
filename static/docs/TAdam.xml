@@ -1,86 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE book [
-
-<!ELEMENT book (version+)>
-<!ATTLIST book
- filename CDATA #REQUIRED
- title CDATA #REQUIRED
- textStructure CDATA #IMPLIED
->
-
-<!ELEMENT version (divisions, resources*, manuscripts+, text)>
-<!ATTLIST version
- language CDATA #REQUIRED
- title CDATA #REQUIRED
- author CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT divisions (division)+>
-
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division
- label CDATA #REQUIRED
- delimiter CDATA #IMPLIED
->
-
-<!ELEMENT resources (resource+)>
-<!ELEMENT resource (info+, URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-
-<!ELEMENT info (#PCDATA)>
-
-<!ELEMENT URL (#PCDATA)>
-
-<!ELEMENT manuscripts (ms+)>
-
-<!ELEMENT ms (name, bibliography*)>
-<!ATTLIST ms
- abbrev CDATA #REQUIRED
- language CDATA #REQUIRED
- show CDATA #REQUIRED
->
-
-<!ELEMENT name (#PCDATA | sup)*>
-
-<!ELEMENT sup (#PCDATA)>
-
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-
-<!ELEMENT booktitle (#PCDATA)>
-
-<!ELEMENT text (div+)>
-
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div
- number CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT unit (reading+)>
-<!ATTLIST unit
- id CDATA #REQUIRED
- group CDATA "0"
- parallel CDATA #REQUIRED
->
-
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading
- option CDATA #REQUIRED
- mss CDATA #REQUIRED
- linebreak CDATA #IMPLIED
- indent CDATA #IMPLIED
->
-
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w
- morph CDATA #IMPLIED
- lex CDATA #IMPLIED
- style CDATA #IMPLIED
- lang CDATA #IMPLIED
->
-
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="TAdam" title="Testament of Adam" textStructure="criticalApparatus">
   <version title="Syriac" author="Anonymous" language="Syriac">
     <divisions>
@@ -90,693 +8,693 @@
     <manuscripts>
       <ms abbrev="A" language="Syriac" show="yes">
         <name>BM Add. 14,624 (folios 8b-10a)</name>
-        <bibliography></bibliography>
+        <bibliography/>
       </ms>
     </manuscripts>
     <text>
       <div number="1">
         <div number="1">
           <unit id="1" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܬܘܒ ܕܝܬܝܩܐ ܕܐܒܘܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܬܘܒ ܕܝܬܝܩܐ ܕܐܒܘܢ</reading>
           </unit>
           <unit id="2" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܕܡ. ܫܥܬܐ ܩܕܡܝܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܕܡ. ܫܥܬܐ ܩܕܡܝܬܐ</reading>
           </unit>
           <unit id="3" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܠܠܝܐ: ܬܘܕܝܬܐ ܕܫܐܕܐ̈</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܠܠܝܐ: ܬܘܕܝܬܐ ܕܫܐܕܐ̈</reading>
           </unit>
           <unit id="4" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܒܗ̇ܝ ܫܥܬܐ ܠܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܒܗ̇ܝ ܫܥܬܐ ܠܐ</reading>
           </unit>
           <unit id="5" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܣܖ̈ܚܝܢ ܘܠܐ ܡ̇ܟܝܢ ܡܕܡ</reading>
+            <reading option="0" mss="A " linebreak="following">ܣܖ̈ܚܝܢ ܘܠܐ ܡ̇ܟܝܢ ܡܕܡ</reading>
           </unit>
           <unit id="6" group="0" parallel="">
-              <reading option="0" mss="A " >ܠܐܢܫܐ:</reading>
+            <reading option="0" mss="A ">ܠܐܢܫܐ:</reading>
           </unit>
         </div>
         <div number="2">
           <unit id="7" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܖ̈ܬܝܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܖ̈ܬܝܢ</reading>
           </unit>
           <unit id="8" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܬܘܕܝܬܐ ܕܝ̈ܘܢܐ…</reading>
+            <reading option="0" mss="A " linebreak="following">ܬܘܕܝܬܐ ܕܝ̈ܘܢܐ…</reading>
           </unit>
         </div>
         <div number="3">
           <unit id="9" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܠܬ ܬܘܕܝܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܠܬ ܬܘܕܝܬܐ</reading>
           </unit>
           <unit id="10" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܢܘ̈[ܢ‍]ܐ ܘܕܢܘܪܐ ܘܕܟܠܗܘ[ܢ]</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܢܘ̈[ܢ‍]ܐ ܘܕܢܘܪܐ ܘܕܟܠܗܘ[ܢ]</reading>
           </unit>
           <unit id="11" group="0" parallel="">
-              <reading option="0" mss="A " >ܬܗ̈ܘܡܐ ܬܚ̈ܬܝܐ</reading>
+            <reading option="0" mss="A ">ܬܗ̈ܘܡܐ ܬܚ̈ܬܝܐ</reading>
           </unit>
         </div>
         <div number="4">
           <unit id="12" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
           </unit>
           <unit id="13" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܐܖ̈ܒܥ ܩܘ݁[ܕ]ܫܐ ܕܣܖ̈ܦܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܐܖ̈ܒܥ ܩܘ݁[ܕ]ܫܐ ܕܣܖ̈ܦܐ</reading>
           </unit>
           <unit id="14" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܗܟܢܐ ܫ̇ܡܥ ܗܘܝܬ</reading>
+            <reading option="0" mss="A " linebreak="following">ܗܟܢܐ ܫ̇ܡܥ ܗܘܝܬ</reading>
           </unit>
           <unit id="15" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܥܕ ܠܐ ܐ̇ܚܛܐ ܩܠ</reading>
+            <reading option="0" mss="A " linebreak="following">ܥܕ ܠܐ ܐ̇ܚܛܐ ܩܠ</reading>
           </unit>
           <unit id="16" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܓܦܝ̈ܗܘܢ ܒܦܪܕܝܣܐ. ܟܕ</reading>
+            <reading option="0" mss="A " linebreak="following">ܓܦܝ̈ܗܘܢ ܒܦܪܕܝܣܐ. ܟܕ</reading>
           </unit>
           <unit id="17" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܢܩ̇ܫܝܢ ܕܝܢ ܣܖ̈ܦܐ ܒܩܠܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܢܩ̇ܫܝܢ ܕܝܢ ܣܖ̈ܦܐ ܒܩܠܐ</reading>
           </unit>
           <unit id="18" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܩ̈ܘܕܫܝܗܘܢ̇ ܘܡܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܩ̈ܘܕܫܝܗܘܢ̇ ܘܡܢ</reading>
           </unit>
           <unit id="19" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܥ݁ܒܪܬ ܥܠ ܢܡܘܣܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܥ݁ܒܪܬ ܥܠ ܢܡܘܣܐ</reading>
           </unit>
           <unit id="20" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܐ ܫ݁ܡܥܬ ܗܘ݁ ܩܠܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܠܐ ܫ݁ܡܥܬ ܗܘ݁ ܩܠܐ.</reading>
           </unit>
         </div>
         <div number="5">
           <unit id="21" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܚܡܫ ܬܘܕܝܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܚܡܫ ܬܘܕܝܬܐ</reading>
           </unit>
           <unit id="22" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܡ̈ܝܐ ܕܠܥܠ ܡܢ ܫܡܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܡ̈ܝܐ ܕܠܥܠ ܡܢ ܫܡܝܐ</reading>
           </unit>
           <unit id="23" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܗܟܢܐ ܫ̇ܡܥ ܗܘ݁ܝܬ ܐܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܗܟܢܐ ܫ̇ܡܥ ܗܘ݁ܝܬ ܐܢܐ</reading>
           </unit>
           <unit id="24" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܘܡܠܐ̈ܟܐ ܩܠܐ ܕܓ̈ܠܠܐ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܘܡܠܐ̈ܟܐ ܩܠܐ ܕܓ̈ܠܠܐ</reading>
           </unit>
           <unit id="25" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܬܩ̈ܝܦܐ:  ܕܡܪܗܒ</reading>
+            <reading option="0" mss="A " linebreak="following">ܬܩ̈ܝܦܐ:  ܕܡܪܗܒ</reading>
           </unit>
           <unit id="26" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܗܘ̣ܐ ܠܗܘܢ ܪܡܙܐ ܕܢܬܠܘܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܗܘ̣ܐ ܠܗܘܢ ܪܡܙܐ ܕܢܬܠܘܢ</reading>
           </unit>
           <unit id="27" group="0" parallel="">
-              <reading option="0" mss="A " >ܫܘܒܚܐ ܠܒܪܘܝܐ</reading>
+            <reading option="0" mss="A ">ܫܘܒܚܐ ܠܒܪܘܝܐ</reading>
           </unit>
         </div>
         <div number="6">
           <unit id="28" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
           </unit>
           <unit id="29" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܫܬ:  ܪܘܟܒܐ ܕܥ̈ܢܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܫܬ:  ܪܘܟܒܐ ܕܥ̈ܢܢܐ</reading>
           </unit>
           <unit id="30" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܕܚܠܬܐ ܪܒܬܐ ܕܗܘܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܕܚܠܬܐ ܪܒܬܐ ܕܗܘܝܐ</reading>
           </unit>
           <unit id="31" group="0" parallel="">
-              <reading option="0" mss="A " >ܒܦܠܓܗ ܕܠܠܝܐ</reading>
+            <reading option="0" mss="A ">ܒܦܠܓܗ ܕܠܠܝܐ</reading>
           </unit>
         </div>
         <div number="7">
           <unit id="32" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following"> ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following"> ܫܥܬܐ</reading>
           </unit>
           <unit id="33" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܫܒܥ ܚܙܝܐ ܕܝܠܗܘܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܫܒܥ ܚܙܝܐ ܕܝܠܗܘܢ</reading>
           </unit>
           <unit id="34" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܚܝܠܘܬܐ:  ܡܐ ܕܕܡ̈ܟܝܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܚܝܠܘܬܐ:  ܡܐ ܕܕܡ̈ܟܝܢ</reading>
           </unit>
           <unit id="35" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡ̈ܝܐ.  (ܘ?) ܒܗ̇ܝ ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡ̈ܝܐ.  (ܘ?) ܒܗ̇ܝ ܫܥܬܐ</reading>
           </unit>
           <unit id="36" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܡ̈ܬܚܛܦܝܢ ܡ̈ܝܐ.  ܘܚ̇ܠܛ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܡ̈ܬܚܛܦܝܢ ܡ̈ܝܐ.  ܘܚ̇ܠܛ</reading>
           </unit>
           <unit id="37" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܒܗܘܢ ܟܗܢܐ ܕܐܠܗܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܒܗܘܢ ܟܗܢܐ ܕܐܠܗܐ</reading>
           </unit>
           <unit id="38" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܫܚܐ ܕܩܘܕ݁ܫܐ ܘܡ݁ܫܚ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܫܚܐ ܕܩܘܕ݁ܫܐ ܘܡ݁ܫܚ</reading>
           </unit>
           <unit id="39" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">‫ܠܐܝܠܝܢ ܕܐ̈ܠܝܨܝܢ ܘܢܝ̈ܚܝܢ.‬</reading>
+            <reading option="0" mss="A " linebreak="following">‫ܠܐܝܠܝܢ ܕܐ̈ܠܝܨܝܢ ܘܢܝ̈ܚܝܢ.‬</reading>
           </unit>
         </div>
         <div number="8">
           <unit id="40" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܡܢܐ ܡ̈ܦܩܢ̄ܘ[ܬܐ]</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܡܢܐ ܡ̈ܦܩܢ̄ܘ[ܬܐ]</reading>
           </unit>
           <unit id="41" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܥܣܒܐ̇ ܕܐܪܥܐ.  ܡܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܥܣܒܐ̇ ܕܐܪܥܐ.  ܡܐ</reading>
           </unit>
           <unit id="42" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܢܚ̇ܬ ܛ݂ܠܐ ܡܢ ܫܡܝܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܢܚ̇ܬ ܛ݂ܠܐ ܡܢ ܫܡܝܐ.</reading>
           </unit>
         </div>
         <div number="9">
           <unit id="43" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܫܥ ܬܕܘܝܬܐ̇</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܫܥ ܬܕܘܝܬܐ̇</reading>
           </unit>
           <unit id="44" group="0" parallel="">
-              <reading option="0" mss="A " >ܕܟܖ̈ܘܒܐ</reading>
+            <reading option="0" mss="A ">ܕܟܖ̈ܘܒܐ</reading>
           </unit>
         </div>
         <div number="10">
           <unit id="45" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܥܣܖ̈ </reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܥܣܖ̈ </reading>
           </unit>
           <unit id="46" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܬܘܕܝܬܐ ܕܒ̈ܢܝܢܫܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܬܘܕܝܬܐ ܕܒ̈ܢܝܢܫܐ.</reading>
           </unit>
           <unit id="47" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܦܬܚ̇ ܬܪܥܐ ܕܫܡܝܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܦܬܚ̇ ܬܪܥܐ ܕܫܡܝܐ.</reading>
           </unit>
           <unit id="48" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܥܐ̈ܠܢ ܨ̈ܠܘܬܐ ܕܟܠ ܕܚܝ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܥܐ̈ܠܢ ܨ̈ܠܘܬܐ ܕܟܠ ܕܚܝ</reading>
           </unit>
           <unit id="49" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܣ̈ܓܕܢ ܘܢܦܩ̈ܢ. ܘܒܗ̇ܝ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܣ̈ܓܕܢ ܘܢܦܩ̈ܢ. ܘܒܗ̇ܝ</reading>
           </unit>
           <unit id="50" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܟܠܡܕܡ ܕܢܫܐܠ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܟܠܡܕܡ ܕܢܫܐܠ</reading>
           </unit>
           <unit id="51" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܢܫ ܡܢ ܐܠܗܐ ܡܬܝܗܒ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܢܫ ܡܢ ܐܠܗܐ ܡܬܝܗܒ</reading>
           </unit>
           <unit id="52" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܗ ܡܐ ܕܢܩܫ̇ ܓܦܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܠܗ ܡܐ ܕܢܩܫ̇ ܓܦܐ</reading>
           </unit>
           <unit id="53" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܕܣܖ̈ܦܐ ܘܕܬܖ̈ܢܓܠܐ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܕܣܖ̈ܦܐ ܘܕܬܖ̈ܢܓܠܐ</reading>
           </unit>
         </div>
         <div number="11">
           <unit id="54" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܚܕܥܣܖ̈ܐ ܚܕܘܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܚܕܥܣܖ̈ܐ ܚܕܘܬܐ</reading>
           </unit>
           <unit id="55" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܒܟܠܗ̈ ܐܪܥܐ ܡܐ ܕܣ̇ܠܩ</reading>
+            <reading option="0" mss="A " linebreak="following">ܒܟܠܗ̈ ܐܪܥܐ ܡܐ ܕܣ̇ܠܩ</reading>
           </unit>
           <unit id="56" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܡܫܐ ܡܢ ܦܪܕܝܣܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܡܫܐ ܡܢ ܦܪܕܝܣܐ</reading>
           </unit>
           <unit id="57" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܕܢܚ̇ ܥܠ ܒܖ̈ܝܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܕܢܚ̇ ܥܠ ܒܖ̈ܝܬܐ</reading>
           </unit>
         </div>
         <div number="12">
           <unit id="58" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܖ̈ܬܥܣܖ̈ܐ ܣܘܟܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܖ̈ܬܥܣܖ̈ܐ ܣܘܟܝܐ</reading>
           </unit>
           <unit id="59" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕ[ܒܣܡ‍]ܐ.  ܘ[ܫ]ܬܘܐ ܕܪܡܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕ[ܒܣܡ‍]ܐ.  ܘ[ܫ]ܬܘܐ ܕܪܡܐ</reading>
           </unit>
           <unit id="60" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">[ܥܠ] ܟܠܗܘܢ ܣܕܖ̈ܐ ܕܢܘܪܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">[ܥܠ] ܟܠܗܘܢ ܣܕܖ̈ܐ ܕܢܘܪܐ.</reading>
           </unit>
           <unit id="61" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">[ܘܕܪܘܚ‍]‍ܐ. ܟܕܡܐ ܕܣܝ̈ܡܝܢ</reading>
+            <reading option="0" mss="A " linebreak="following">[ܘܕܪܘܚ‍]‍ܐ. ܟܕܡܐ ܕܣܝ̈ܡܝܢ</reading>
           </unit>
           <unit id="62" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">[ܟܠܗܘ]ܢ ܟܗ̈ܢܐ ܒܣܡ̈ܐ</reading>
+            <reading option="0" mss="A " linebreak="following">[ܟܠܗܘ]ܢ ܟܗ̈ܢܐ ܒܣܡ̈ܐ</reading>
           </unit>
           <unit id="63" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">[ܠܐ]ܠܗܘܬܗ.  ܘܗܝܕܝܢ</reading>
+            <reading option="0" mss="A " linebreak="following">[ܠܐ]ܠܗܘܬܗ.  ܘܗܝܕܝܢ</reading>
           </unit>
           <unit id="64" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܟܠܗܘܢ ܚ̈ܝܠܘܬܐ ܕܫ̈ܡܝܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܟܠܗܘܢ ܚ̈ܝܠܘܬܐ ܕܫ̈ܡܝܢܐ</reading>
           </unit>
           <unit id="65" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܡ̣ܫܬܖ̈ܝܢ.  ܫܠܡ ܫܥܐ ܕܠܠܝܐ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܡ̣ܫܬܖ̈ܝܢ.  ܫܠܡ ܫܥܐ ܕܠܠܝܐ</reading>
           </unit>
         </div>
       </div>
       <div number="2">
         <div number="1">
           <unit id="66" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܬܘܒ ܫ̈ܥܐ ܕܐܝܡܡܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܬܘܒ ܫ̈ܥܐ ܕܐܝܡܡܐ</reading>
           </unit>
           <unit id="67" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܩܕܡܝܬܐ ܕܐܝܡܡܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܩܕܡܝܬܐ ܕܐܝܡܡܐ</reading>
           </unit>
           <unit id="68" group="0" parallel="">
-              <reading option="0" mss="A " >ܒܥܘܬܐ ܕܫܡܝܢܐ</reading>
+            <reading option="0" mss="A ">ܒܥܘܬܐ ܕܫܡܝܢܐ</reading>
           </unit>
         </div>
         <div number="2">
           <unit id="69" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
           </unit>
           <unit id="70" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܕܬܪܬܝܢ ܨܠܘܬܐ ܕܡܠܐܟܐ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܕܬܪܬܝܢ ܨܠܘܬܐ ܕܡܠܐܟܐ</reading>
           </unit>
         </div>
         <div number="3">
           <unit id="71" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܠܬ ܬܘܕܝܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܠܬ ܬܘܕܝܬܐ</reading>
           </unit>
           <unit id="72" group="0" parallel="">
-              <reading option="0" mss="A " >ܕܦܪܚܬܐ</reading>
+            <reading option="0" mss="A ">ܕܦܪܚܬܐ</reading>
           </unit>
         </div>
         <div number="4">
           <unit id="73" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܐܪܒܥ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܐܪܒܥ</reading>
           </unit>
           <unit id="74" group="0" parallel="">
-              <reading option="0" mss="A " >ܬܘܕܝܬܐ ܕܚ̈ܝܘܬܐ</reading>
+            <reading option="0" mss="A ">ܬܘܕܝܬܐ ܕܚ̈ܝܘܬܐ</reading>
           </unit>
         </div>
         <div number="5">
           <unit id="75" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
           </unit>
           <unit id="76" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܚܡܫ ܬܘܕܝܬܐ ܕܠܥܠ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܚܡܫ ܬܘܕܝܬܐ ܕܠܥܠ</reading>
           </unit>
           <unit id="77" group="0" parallel="">
-              <reading option="0" mss="A " >ܡܢ ܫܡܝܐ. </reading>
+            <reading option="0" mss="A ">ܡܢ ܫܡܝܐ. </reading>
           </unit>
         </div>
         <div number="6">
           <unit id="78" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܫܬ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܫܬ.</reading>
           </unit>
           <unit id="79" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܬܘܕܝܬܐ ܕܟܖ̈ܘܒܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܬܘܕܝܬܐ ܕܟܖ̈ܘܒܐ</reading>
           </unit>
           <unit id="80" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܡܦܝܣܝܢ ܥܠ ܥܘ̣ܠܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܡܦܝܣܝܢ ܥܠ ܥܘ̣ܠܐ</reading>
           </unit>
           <unit id="81" group="0" parallel="">
-              <reading option="0" mss="A " >ܕܐܢܫܘܬܢ̇ </reading>
+            <reading option="0" mss="A ">ܕܐܢܫܘܬܢ̇ </reading>
           </unit>
         </div>
         <div number="7">
           <unit id="82" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܫܒܥ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܫܒܥ</reading>
           </unit>
           <unit id="83" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܥܠܐ ܘܡܦܩܐ ܕܠܘܬ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܥܠܐ ܘܡܦܩܐ ܕܠܘܬ</reading>
           </unit>
           <unit id="84" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܠܗܐ.  ܕܥܐ̈ܠܢ ܨ̈ܠܘܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܠܗܐ.  ܕܥܐ̈ܠܢ ܨ̈ܠܘܬܐ</reading>
           </unit>
           <unit id="85" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܕܟܠ ܕܚܝ.  ܘܣ̈ܓܕܢ ܘܢܦܩ̈ܢ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܕܟܠ ܕܚܝ.  ܘܣ̈ܓܕܢ ܘܢܦܩ̈ܢ</reading>
           </unit>
         </div>
         <div number="8">
           <unit id="86" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܡܢܐ ܬܘ̇ܕܝܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܬܡܢܐ ܬܘ̇ܕܝܬܐ</reading>
           </unit>
           <unit id="87" group="0" parallel="">
-              <reading option="0" mss="A " >ܕܢܘܪܐ ܘܕܡ̈ܝܐ. </reading>
+            <reading option="0" mss="A ">ܕܢܘܪܐ ܘܕܡ̈ܝܐ. </reading>
           </unit>
         </div>
         <div number="9">
           <unit id="88" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
           </unit>
           <unit id="89" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܬܫܥ ܬܟܫܦܬܐ ܕܡܠܐܟ̇ܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܬܫܥ ܬܟܫܦܬܐ ܕܡܠܐܟ̇ܐ</reading>
           </unit>
           <unit id="90" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܗܠܝܢ ܕܩܝܡܝܢ ܩܕܡ</reading>
+            <reading option="0" mss="A " linebreak="following">ܗܠܝܢ ܕܩܝܡܝܢ ܩܕܡ</reading>
           </unit>
           <unit id="91" group="0" parallel="">
-              <reading option="0" mss="A " >ܟܘܪܣܝܐ ܕܪܒܘܬܐ. </reading>
+            <reading option="0" mss="A ">ܟܘܪܣܝܐ ܕܪܒܘܬܐ. </reading>
           </unit>
         </div>
         <div number="10">
           <unit id="92" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
           </unit>
           <unit id="93" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܥܣܖ̈.  ܣܥ̣ܘܪܘܬܐ ܕܡ̇ܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܥܣܖ̈.  ܣܥ̣ܘܪܘܬܐ ܕܡ̇ܝܐ</reading>
           </unit>
           <unit id="94" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܢܚܬܐ ܪܘܚܐ ܘܡܪܚܦܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܢܚܬܐ ܪܘܚܐ ܘܡܪܚܦܐ</reading>
           </unit>
           <unit id="95" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܥܠ ܡ̈ܝܐ ܘܥܠ ܡܒܘܥܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܥܠ ܡ̈ܝܐ ܘܥܠ ܡܒܘܥܐ</reading>
           </unit>
           <unit id="96" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܐܠܘ ܪܘܚܗ ܕܡܪܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܐܠܘ ܪܘܚܗ ܕܡܪܝܐ</reading>
           </unit>
           <unit id="97" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܢܚܬܐ ܗܘܬ ܘܡܪܚܦܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܢܚܬܐ ܗܘܬ ܘܡܪܚܦܐ</reading>
           </unit>
           <unit id="98" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܥܠ ܡ̈ܝܐ ܘܥܠ ܡܒܘܥܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܥܠ ܡ̈ܝܐ ܘܥܠ ܡܒܘܥܐ</reading>
           </unit>
           <unit id="99" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܣܬܖ̈ܚܝܢ ܗܘܘ ܒܢ̈ܝܢܫܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܣܬܖ̈ܚܝܢ ܗܘܘ ܒܢ̈ܝܢܫܐ</reading>
           </unit>
           <unit id="100" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܟܠ ܕܚ̈ܙܝܢ ܗܘܘ ܫܐܕܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܟܠ ܕܚ̈ܙܝܢ ܗܘܘ ܫܐܕܐ</reading>
           </unit>
           <unit id="101" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܣܖ̈ܚܝܢ ܗܘܘ ܠܗܘܢ̇ ܘܒܗܝ</reading>
+            <reading option="0" mss="A " linebreak="following">ܣܖ̈ܚܝܢ ܗܘܘ ܠܗܘܢ̇ ܘܒܗܝ</reading>
           </unit>
           <unit id="102" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܡܬܚܛܦܝܢ ܡܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܡܬܚܛܦܝܢ ܡܝܐ</reading>
           </unit>
           <unit id="103" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܚ̇ܠܛ ܒܗܘܢ ܟܗܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܚ̇ܠܛ ܒܗܘܢ ܟܗܢܐ</reading>
           </unit>
           <unit id="104" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܐܠܗܐ ܡܫܚܐ ܕܩܘ̣ܕܫܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܐܠܗܐ ܡܫܚܐ ܕܩܘ̣ܕܫܐ</reading>
           </unit>
           <unit id="105" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܡ̇ܫܚ ܠܐܝܠܝܢ ܕܐܠܝܨܝܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܡ̇ܫܚ ܠܐܝܠܝܢ ܕܐܠܝܨܝܢ</reading>
           </unit>
           <unit id="106" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܡܬܐܣܝܢ ܘܡ̇ܬܚܠܡܝܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܡܬܐܣܝܢ ܘܡ̇ܬܚܠܡܝܢ</reading>
           </unit>
         </div>
         <div number="11">
           <unit id="107" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܚܕܥܣܖ̈ܐ ܕܝܨܐ </reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ ܕܚܕܥܣܖ̈ܐ ܕܝܨܐ </reading>
           </unit>
           <unit id="108" group="0" parallel="">
-              <reading option="0" mss="A " >ܘܚܕܘܬܐ ܕܙܕܝ̈ܩܐ</reading>
+            <reading option="0" mss="A ">ܘܚܕܘܬܐ ܕܙܕܝ̈ܩܐ</reading>
           </unit>
         </div>
         <div number="12">
           <unit id="109" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܥܬܐ</reading>
           </unit>
           <unit id="110" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following"> ܕܬܪܬܥܣܪܐ ܗܝ ܕܪܡܫܐ</reading>
+            <reading option="0" mss="A " linebreak="following"> ܕܬܪܬܥܣܪܐ ܗܝ ܕܪܡܫܐ</reading>
           </unit>
           <unit id="111" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܬܟܫܦܬܐ ܕܒ̈ܢܝܢܫܐ ܠܨܒܝܢܐ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܬܟܫܦܬܐ ܕܒ̈ܢܝܢܫܐ ܠܨܒܝܢܐ</reading>
           </unit>
           <unit id="112" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܩܒܠܐ ܕܠܘܬ ܐܠܗܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܩܒܠܐ ܕܠܘܬ ܐܠܗܐ</reading>
           </unit>
           <unit id="113" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܡܪܐ ܟܠ܀</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܡܪܐ ܟܠ܀</reading>
           </unit>
         </div>
       </div>
       <div number="3">
         <div number="1">
           <unit id="114" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܡ̣ܪ ܐܕܡ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܡ̣ܪ ܐܕܡ</reading>
           </unit>
           <unit id="115" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܫܝܬ ܒܪܗ. ܫܡܥ̣ܬ ܒܪܝ</reading>
+            <reading option="0" mss="A " linebreak="following">ܠܫܝܬ ܒܪܗ. ܫܡܥ̣ܬ ܒܪܝ</reading>
           </unit>
           <unit id="116" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܐ̇ܬܐ ܐܠܗܐ ܠܥܠܡܐ ܡܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܐ̇ܬܐ ܐܠܗܐ ܠܥܠܡܐ ܡܢ</reading>
           </unit>
           <unit id="117" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܒܬܪ ܙܒ̈ܢܐ ܀ ܘܡܢ ܒܬܘܠܬܐ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܒܬܪ ܙܒ̈ܢܐ ܀ ܘܡܢ ܒܬܘܠܬܐ</reading>
           </unit>
           <unit id="118" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܬܒܛܢ.  ܘܠܒ̇ܫ ܦܓܪܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܬܒܛܢ.  ܘܠܒ̇ܫ ܦܓܪܐ</reading>
           </unit>
           <unit id="119" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܡ̇ܬܝܠܕ ܐܝܟ ܒܪܢܫܐ.  ܘܖ̈ܒܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܡ̇ܬܝܠܕ ܐܝܟ ܒܪܢܫܐ.  ܘܖ̈ܒܐ</reading>
           </unit>
           <unit id="120" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܝܟ ܝܠܘܕܐ ܀܀ ܘܥ݁ܒܕ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܝܟ ܝܠܘܕܐ ܀܀ ܘܥ݁ܒܕ</reading>
           </unit>
           <unit id="121" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐ̇ܬܘܬܐ ܘܬܕܡܖ̈ܬܐ ܥܠ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐ̇ܬܘܬܐ ܘܬܕܡܖ̈ܬܐ ܥܠ</reading>
           </unit>
           <unit id="122" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܪܥܐ ܀ ܡ̇ܗܠܟ ܥܠ ܓ̈ܠܠܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܪܥܐ ܀ ܡ̇ܗܠܟ ܥܠ ܓ̈ܠܠܐ</reading>
           </unit>
           <unit id="123" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܝܡܐ. ܀ ܟܐܐ ܒܖ̈ܘܚܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܝܡܐ. ܀ ܟܐܐ ܒܖ̈ܘܚܐ</reading>
           </unit>
           <unit id="124" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܫ̈ܠܝܢ ܀ ܪܡ̇ܙ ܠܓ̈ܠܠܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܫ̈ܠܝܢ ܀ ܪܡ̇ܙ ܠܓ̈ܠܠܐ</reading>
           </unit>
           <unit id="125" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܩ̈ܝܡܝܢ ܀ ܡܦܬܚ ܣܡ̈ܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܩ̈ܝܡܝܢ ܀ ܡܦܬܚ ܣܡ̈ܝܐ</reading>
           </unit>
           <unit id="126" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">܀ ܡܕܟܐ ܓܖ̈ܒܐ܀ ܡ̇ܫܡܥ</reading>
+            <reading option="0" mss="A " linebreak="following">܀ ܡܕܟܐ ܓܖ̈ܒܐ܀ ܡ̇ܫܡܥ</reading>
           </unit>
           <unit id="127" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܚܖ̈ܫܐ ܀ ܦܐ̈ܩܐ ܡܡܠܠܝܢ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܠܚܖ̈ܫܐ ܀ ܦܐ̈ܩܐ ܡܡܠܠܝܢ.</reading>
           </unit>
           <unit id="128" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">܀ ܟ̈ܦܝܦܐ ܡ̇ܬܪܨ܀ ܡܫܖ̈ܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">܀ ܟ̈ܦܝܦܐ ܡ̇ܬܪܨ܀ ܡܫܖ̈ܝܐ</reading>
           </unit>
           <unit id="129" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡ̇ܚܝܨ ܀ ܠܐ̈ܒܝܕܐ ܡܫܟܚ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡ̇ܚܝܨ ܀ ܠܐ̈ܒܝܕܐ ܡܫܟܚ</reading>
           </unit>
           <unit id="130" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">܀ ܛܪܕ ܠܕܝ̈ܘܐ ܀ ܡ̇ܦܩ</reading>
+            <reading option="0" mss="A " linebreak="following">܀ ܛܪܕ ܠܕܝ̈ܘܐ ܀ ܡ̇ܦܩ</reading>
           </unit>
           <unit id="131" group="0" parallel="">
-              <reading option="0" mss="A " >ܠܫܐ̈ܕܐ ܀</reading>
+            <reading option="0" mss="A ">ܠܫܐ̈ܕܐ ܀</reading>
           </unit>
         </div>
         <div number="2">
           <unit id="132" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܛܠ ܕܗ̣ܘ ܐ̇ܡܪ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܛܠ ܕܗ̣ܘ ܐ̇ܡܪ</reading>
           </unit>
           <unit id="133" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܗܘ݂ܐ ܠܝ ܒܦܪܕܝܣܐ ܟܕ</reading>
+            <reading option="0" mss="A " linebreak="following">ܗܘ݂ܐ ܠܝ ܒܦܪܕܝܣܐ ܟܕ</reading>
           </unit>
           <unit id="134" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܩ̇ܛܦܬ ܡܢ ܦܐܪܐ ܕܟܣܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܩ̇ܛܦܬ ܡܢ ܦܐܪܐ ܕܟܣܐ</reading>
           </unit>
           <unit id="135" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܗ̣ܘܐ ܒܗ ܡܘܬܐ.  ܐܕܡ</reading>
+            <reading option="0" mss="A " linebreak="following">ܗ̣ܘܐ ܒܗ ܡܘܬܐ.  ܐܕܡ</reading>
           </unit>
           <unit id="136" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܕܡ ܠܐ ܬܕܚܠ.  ܨ݂ܒܝܬ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܕܡ ܠܐ ܬܕܚܠ.  ܨ݂ܒܝܬ</reading>
           </unit>
           <unit id="137" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܬܗܘܐ ܐܠܗܐ.  ܐܠܗܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܬܗܘܐ ܐܠܗܐ.  ܐܠܗܐ</reading>
           </unit>
           <unit id="138" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܥ̇ܒܕ ܐܢܐ ܠܟ.  ܠܘ ܓܝܪ ܗܫܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܥ̇ܒܕ ܐܢܐ ܠܟ.  ܠܘ ܓܝܪ ܗܫܐ</reading>
           </unit>
           <unit id="139" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܠܐ ܒܬܪ ܙܒܢܐ ܣܓܝܐܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܠܐ ܒܬܪ ܙܒܢܐ ܣܓܝܐܐ</reading>
           </unit>
           <unit id="140" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܫ̈ܢܝܐ.  ܠܡܘܬܐ ܡ̇ܫܠܡ ܐܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܫ̈ܢܝܐ.  ܠܡܘܬܐ ܡ̇ܫܠܡ ܐܢܐ</reading>
           </unit>
           <unit id="141" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܟ.  ܘܐܟܠܐ ܠܗ ܣܣܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܠܟ.  ܘܐܟܠܐ ܠܗ ܣܣܐ</reading>
           </unit>
           <unit id="142" group="0" parallel="">
-              <reading option="0" mss="A " >ܘܪܡܬܐ ܠܦܓܪܟ ܀ </reading>
+            <reading option="0" mss="A ">ܘܪܡܬܐ ܠܦܓܪܟ ܀ </reading>
           </unit>
         </div>
         <div number="3">
           <unit id="143" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܥ݁ܢܝܬ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܥ݁ܢܝܬ</reading>
           </unit>
           <unit id="144" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܐܡ̇ܪܬ ܠܗ.  ܥܠ ܡܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܐܡ̇ܪܬ ܠܗ.  ܥܠ ܡܢܐ</reading>
           </unit>
           <unit id="145" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܪܝ ܀ ܘܐܡܪ ܠܝ ܥܠ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܪܝ ܀ ܘܐܡܪ ܠܝ ܥܠ</reading>
           </unit>
           <unit id="146" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܫܡܥ݂ܬ ܡ̈ܠܝ ܚܘܝܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܫܡܥ݂ܬ ܡ̈ܠܝ ܚܘܝܐ</reading>
           </unit>
           <unit id="147" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܐܟܘܠܬܟ ܠܚܘܝܐ ܬܗܘ݁ܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܐܟܘܠܬܟ ܠܚܘܝܐ ܬܗܘ݁ܐ</reading>
           </unit>
           <unit id="148" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܝ̈ܠܕܝܟ. ܘܒܬܪ ܙܒܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܝ̈ܠܕܝܟ. ܘܒܬܪ ܙܒܢܐ</reading>
           </unit>
           <unit id="149" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܩܠܝܠ ܗ̈ܘܝܢ ܥܠܝܟ ܖ̈ܚ݂ܡܐ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܩܠܝܠ ܗ̈ܘܝܢ ܥܠܝܟ ܖ̈ܚ݂ܡܐ</reading>
           </unit>
           <unit id="150" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܛܠ ܕܒܨܠܡܝ ܐܬܒ̣ܪܝ݂ܬ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܛܠ ܕܒܨܠܡܝ ܐܬܒ̣ܪܝ݂ܬ</reading>
           </unit>
           <unit id="151" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܠܐ ܫ̇ܒܩ ܐܢܐ ܠܟ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܠܐ ܫ̇ܒܩ ܐܢܐ ܠܟ</reading>
           </unit>
           <unit id="152" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܬܒܠܐ ܒܫܝ̇ܘܠ ܀ ܡܛܠܬܟ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܬܒܠܐ ܒܫܝ̇ܘܠ ܀ ܡܛܠܬܟ</reading>
           </unit>
           <unit id="153" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܢ  ܡܪܝܡ ܒܬܘܠܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܢ  ܡܪܝܡ ܒܬܘܠܬܐ</reading>
           </unit>
           <unit id="154" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܬܝܠܕ ܐܢܐ ܀ ܡܛܠܬܟ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܬܝܠܕ ܐܢܐ ܀ ܡܛܠܬܟ</reading>
           </unit>
           <unit id="155" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܘܬܐ ܛ݁ܥܡ ܐܢܐ:  ܘܠܒܝܬ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܘܬܐ ܛ݁ܥܡ ܐܢܐ:  ܘܠܒܝܬ</reading>
           </unit>
           <unit id="156" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡ̈ܝܬܐ ܥܐ̇ܠ ܐܢܐ ܀܀</reading>
+            <reading option="0" mss="A " linebreak="following">ܡ̈ܝܬܐ ܥܐ̇ܠ ܐܢܐ ܀܀</reading>
           </unit>
           <unit id="157" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܛܠܬܟ ܫܡܝܐ ܚܕܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܛܠܬܟ ܫܡܝܐ ܚܕܬܐ</reading>
           </unit>
           <unit id="158" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܥ݁ܒܕ ܐܢܐ ܘܝ̈ܠܕܝܟ.  ܡܫܠܛ </reading>
+            <reading option="0" mss="A " linebreak="following">ܥ݁ܒܕ ܐܢܐ ܘܝ̈ܠܕܝܟ.  ܡܫܠܛ </reading>
           </unit>
           <unit id="159" group="0" parallel="">
-              <reading option="0" mss="A " >ܐܢܐ ܒܗܘܢ̇ ܀ </reading>
+            <reading option="0" mss="A ">ܐܢܐ ܒܗܘܢ̇ ܀ </reading>
           </unit>
         </div>
         <div number="4">
           <unit id="160" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܒܬܪ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܒܬܪ</reading>
           </unit>
           <unit id="161" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܬܠܬܐ ܝ̈ܘܡܝܢ ܕܗ̇ܘܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܬܠܬܐ ܝ̈ܘܡܝܢ ܕܗ̇ܘܐ</reading>
           </unit>
           <unit id="162" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܢܐ ܒܓܘ ܩܒܪܐ ܀܀</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܢܐ ܒܓܘ ܩܒܪܐ ܀܀</reading>
           </unit>
           <unit id="163" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡ̇ܢܚܡ ܐܢܐ ܠܦܓܪܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡ̇ܢܚܡ ܐܢܐ ܠܦܓܪܐ</reading>
           </unit>
           <unit id="164" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܠܒܫ̇ܬ ܡܢܟ.  ܘܡܘܬܒ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܠܒܫ̇ܬ ܡܢܟ.  ܘܡܘܬܒ</reading>
           </unit>
           <unit id="165" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܢܐ ܠܟ ܡܢ ܝܡܝܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܢܐ ܠܟ ܡܢ ܝܡܝܢܐ</reading>
           </unit>
           <unit id="166" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܐܠܗܘܬܝ.  ܘܥ݁[ܒܕ  ܐ]ܢܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܐܠܗܘܬܝ.  ܘܥ݁[ܒܕ  ܐ]ܢܐ</reading>
           </unit>
           <unit id="167" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܠܗܐ ܐܝܟ ܕܨ݂[ܒܝܬ]</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܠܗܐ ܐܝܟ ܕܨ݂[ܒܝܬ]</reading>
           </unit>
           <unit id="168" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܢܣ̇ܒ ܐܢܐ ܡܢ ܐ[ܝܠܢܐ]</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܢܣ̇ܒ ܐܢܐ ܡܢ ܐ[ܝܠܢܐ]</reading>
           </unit>
           <unit id="169" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܘܗܒܬܐ ܘܡܦ[ܢܐ ܐܢܐ]</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܘܗܒܬܐ ܘܡܦ[ܢܐ ܐܢܐ]</reading>
           </unit>
           <unit id="170" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܟ ܘܠܝܠܕܝ̈ܟ ܕܐܝܬܘܗ̇[ܝ]</reading>
+            <reading option="0" mss="A " linebreak="following">ܠܟ ܘܠܝܠܕܝ̈ܟ ܕܐܝܬܘܗ̇[ܝ]</reading>
           </unit>
           <unit id="171" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܟܐܢܘܬܐ ܕܫܡܝܐ ܀</reading>
+            <reading option="0" mss="A " linebreak="following">ܟܐܢܘܬܐ ܕܫܡܝܐ ܀</reading>
           </unit>
         </div>
         <div number="5">
           <unit id="172" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܡܥ̣ܬ ܒܪܝ ܫܝܬ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܡܥ̣ܬ ܒܪܝ ܫܝܬ.</reading>
           </unit>
           <unit id="173" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܢܐܬܐ ܛܘܦܢܐ ܘܢܫܝܓ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܢܐܬܐ ܛܘܦܢܐ ܘܢܫܝܓ</reading>
           </unit>
           <unit id="174" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܟܠܗ ̇ܐܪܥܐ ܡܛܠ </reading>
+            <reading option="0" mss="A " linebreak="following">ܠܟܠܗ ̇ܐܪܥܐ ܡܛܠ </reading>
           </unit>
           <unit id="175" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܒܢ̈ܬ ܩܐܝܢ ܐܚܘܟ</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܒܢ̈ܬ ܩܐܝܢ ܐܚܘܟ</reading>
           </unit>
           <unit id="176" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܡܛܠ ܛܢܢܐ ܕܠܒ̇ܘܕܐ ܚܬܟ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܡܛܠ ܛܢܢܐ ܕܠܒ̇ܘܕܐ ܚܬܟ</reading>
           </unit>
           <unit id="177" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܩ̣ܛܠܗ ܠܗܒܝܠ ܐܚܘܟ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܩ̣ܛܠܗ ܠܗܒܝܠ ܐܚܘܟ.</reading>
           </unit>
           <unit id="178" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܒܗ̇ܝ ܕܡܢ ܐܡܟ</reading>
+            <reading option="0" mss="A " linebreak="following">ܒܗ̇ܝ ܕܡܢ ܐܡܟ</reading>
           </unit>
           <unit id="179" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܚ̇ܘܐ ܐܬܒ̣ܖ̈ܝܘ ܚ̈ܛܗܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܚ̇ܘܐ ܐܬܒ̣ܖ̈ܝܘ ܚ̈ܛܗܐ.</reading>
           </unit>
           <unit id="180" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܒܬܪ ܛܘܦܢܐ ܢ̈ܗܘܝܢ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܒܬܪ ܛܘܦܢܐ ܢ̈ܗܘܝܢ</reading>
           </unit>
           <unit id="181" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫ̈ܢܝܐ ܠܚܙܘܗ ܕܥܠܡܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܫ̈ܢܝܐ ܠܚܙܘܗ ܕܥܠܡܐ.</reading>
           </unit>
           <unit id="182" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܬܐ ܐ̈ܠܦܝܢ ܕܫ̈ܢܝܐ ܀ </reading>
+            <reading option="0" mss="A " linebreak="following">ܫܬܐ ܐ̈ܠܦܝܢ ܕܫ̈ܢܝܐ ܀ </reading>
           </unit>
           <unit id="183" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܗܝܕܝܢ ܢܗ̇ܘܐ ܣܘܦܗ ܀</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܗܝܕܝܢ ܢܗ̇ܘܐ ܣܘܦܗ ܀</reading>
           </unit>
         </div>
         <div number="6">
           <unit id="184" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܐܢܐ ܫܝܬ ܟ̇ܬܒܬ ܕܝܬܝܩܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܐܢܐ ܫܝܬ ܟ̇ܬܒܬ ܕܝܬܝܩܐ</reading>
           </unit>
           <unit id="185" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܗܕܐ.  ܘܡܝ̣ܬ ܐܒܝ</reading>
+            <reading option="0" mss="A " linebreak="following">ܗܕܐ.  ܘܡܝ̣ܬ ܐܒܝ</reading>
           </unit>
           <unit id="186" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܩܒܪܘܗܝ ܡܢ ܡ̈ܕܢܚܝ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܩܒܪܘܗܝ ܡܢ ܡ̈ܕܢܚܝ</reading>
           </unit>
           <unit id="187" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܦܪܕܝܣܐ ܠܘܩܒܠ ܩܪܝܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܦܪܕܝܣܐ ܠܘܩܒܠ ܩܪܝܬܐ</reading>
           </unit>
           <unit id="188" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܩܕܡܝܬܐ ܕܐܬܒܢ̣ܝܬ</reading>
+            <reading option="0" mss="A " linebreak="following">ܩܕܡܝܬܐ ܕܐܬܒܢ̣ܝܬ</reading>
           </unit>
           <unit id="189" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܥܠ ܐܪܥܐ ܕܫܡܗ</reading>
+            <reading option="0" mss="A " linebreak="following">ܥܠ ܐܪܥܐ ܕܫܡܗ</reading>
           </unit>
           <unit id="190" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܚܢܘܟ.  ܘܐܬܠܘܝ ܐܕܡ</reading>
+            <reading option="0" mss="A " linebreak="following">ܚܢܘܟ.  ܘܐܬܠܘܝ ܐܕܡ</reading>
           </unit>
           <unit id="191" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܡܢ ܡܠܐ̈ܟܐ ܘܚ̈ܝܠܘܬܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܡܢ ܡܠܐ̈ܟܐ ܘܚ̈ܝܠܘܬܐ</reading>
           </unit>
           <unit id="192" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܫܡܝܐ ܡܛܠ ܕܒܨܠܡܗ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܫܡܝܐ ܡܛܠ ܕܒܨܠܡܗ</reading>
           </unit>
           <unit id="193" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܐܠܗܐ ܐܬܒ̣ܪܝ.  ܘܚ̣ܫܟ</reading>
+            <reading option="0" mss="A " linebreak="following">ܕܐܠܗܐ ܐܬܒ̣ܪܝ.  ܘܚ̣ܫܟ</reading>
           </unit>
           <unit id="194" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܫܡܫܐ ܘܣܗܪܐ.  ܘܗ̣ܘܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܫܡܫܐ ܘܣܗܪܐ.  ܘܗ̣ܘܐ</reading>
           </unit>
           <unit id="195" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܥ݁ܡܛܢܐ ܫܒܥܐ ܝܘ̈ܡܬܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܥ݁ܡܛܢܐ ܫܒܥܐ ܝܘ̈ܡܬܐ.</reading>
           </unit>
         </div>
         <div number="7">
           <unit id="196" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܚܬܡܢܗ̇ ܠܕܝܬܝܩܐ.</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܚܬܡܢܗ̇ ܠܕܝܬܝܩܐ.</reading>
           </unit>
           <unit id="197" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܣܡܢܗ̇ ܒܡܥܪܬ ܓܙ̈ܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܣܡܢܗ̇ ܒܡܥܪܬ ܓܙ̈ܐ</reading>
           </unit>
           <unit id="198" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܥܡ ܩܘܖ̈ܒܢܐ ܕܐܦܩ̣</reading>
+            <reading option="0" mss="A " linebreak="following">ܥܡ ܩܘܖ̈ܒܢܐ ܕܐܦܩ̣</reading>
           </unit>
           <unit id="199" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܐܕܡ ܡܢ ܦܪܕܝܣܐ ܕܗܒܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܐܕܡ ܡܢ ܦܪܕܝܣܐ ܕܗܒܐ</reading>
           </unit>
           <unit id="200" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܡܘܪܐ ܘܠܒܘܢܬܐ ܀</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܡܘܪܐ ܘܠܒܘܢܬܐ ܀</reading>
           </unit>
           <unit id="201" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܐ̈ܬܝܢ ܒ̈ܢܝ ܡ̈ܠܟܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܐ̈ܬܝܢ ܒ̈ܢܝ ܡ̈ܠܟܐ</reading>
           </unit>
           <unit id="202" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="doubleFollowing">ܡ̈ܓܘܫܐ ܘܫ̇ܩܠܝܢ ܠܗܘܢ̇</reading>
+            <reading option="0" mss="A " linebreak="doubleFollowing">ܡ̈ܓܘܫܐ ܘܫ̇ܩܠܝܢ ܠܗܘܢ̇</reading>
           </unit>
           <unit id="203" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܘܡ̈ܝܬܝܢ ܠܗܘܢ ܠܒܪ ܐܠܗܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܘܡ̈ܝܬܝܢ ܠܗܘܢ ܠܒܪ ܐܠܗܐ</reading>
           </unit>
           <unit id="204" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܒܝܬ ܠܚܡ ܕܝܗܘܕܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܠܒܝܬ ܠܚܡ ܕܝܗܘܕܐ</reading>
           </unit>
           <unit id="205" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܠܡܥܪܬܐ:  ܫܠܡ‍[ܬ] ܕܝܬܝܩܐ</reading>
+            <reading option="0" mss="A " linebreak="following">ܠܡܥܪܬܐ:  ܫܠܡ‍[ܬ] ܕܝܬܝܩܐ</reading>
           </unit>
           <unit id="206" group="0" parallel="">
-              <reading option="0" mss="A " linebreak="following">ܕܐܒܘܢ ܐܕܡ܀ </reading>
+            <reading option="0" mss="A " linebreak="following">ܕܐܒܘܢ ܐܕܡ܀ </reading>
           </unit>
         </div>
       </div>
@@ -938,6 +856,1682 @@
           <unit id="24" group="0" parallel="">
             <reading option="0" mss="PCod.Gr.2419 "> ὥρα ιβ´ . . . ἐν ᾗ ἀναπαύονται τὰ πύρινα τάγματα. αὗταί εἰσιν αἱ ὀνομασίαι τῶν ὡρῶν· τῷ οὖν καλῶς ταῦτα νοήσαντι οὐδὲν . . . τοιούτων ἀποκρυβήσεται ἀλλὰ πάντα ὑποταγήσονται.
 </reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Syriac (English)" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Syriac (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Again, the Testament of our father</reading>
+          </unit>
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Adam: The first hour</reading>
+          </unit>
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the night: The confession of the demons,</reading>
+          </unit>
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and at that hour they do not</reading>
+          </unit>
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">err or harm anyone</reading>
+          </unit>
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">among people.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The second hour:</reading>
+          </unit>
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The confession of the doves…</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The third hour: The confession</reading>
+          </unit>
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of fish and of fire and of all</reading>
+          </unit>
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the lower abysses.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The</reading>
+          </unit>
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">fourth hour: The sanctification of the seraphim.</reading>
+          </unit>
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Thus I used to hear</reading>
+          </unit>
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">before I sinned, the sound</reading>
+          </unit>
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of their wings in Paradise. But when</reading>
+          </unit>
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the seraphim beat with the sound</reading>
+          </unit>
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of their sanctifications, and when</reading>
+          </unit>
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I transgressed the law,</reading>
+          </unit>
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I did not hear the sound.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fifth hour: The confession</reading>
+          </unit>
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the waters that are above the heavens.</reading>
+          </unit>
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Thus I and the angels used to hear</reading>
+          </unit>
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the sound of mighty hailstones</reading>
+          </unit>
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">that were alarmed</reading>
+          </unit>
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">by a sign to give</reading>
+          </unit>
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">glory to the Creator.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The</reading>
+          </unit>
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">sixth hour: The assembly of clouds,</reading>
+          </unit>
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and the great fear that occurs</reading>
+          </unit>
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">in the middle of the night.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The</reading>
+          </unit>
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">seventh hour: The vision of the powers,</reading>
+          </unit>
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">when the waters are asleep. (And?) at that hour</reading>
+          </unit>
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[...]</reading>
+          </unit>
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">waters are drawn, and the priest of God mixes</reading>
+          </unit>
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">in them the priest of God</reading>
+          </unit>
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the oil of holiness, and anoints</reading>
+          </unit>
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">those who are distressed and at rest.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eighth hour: the emergence of</reading>
+          </unit>
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the herb of the earth, when</reading>
+          </unit>
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the dew descends from heaven.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The ninth hour: the lamentation</reading>
+          </unit>
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the cherubim.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The tenth hour:</reading>
+          </unit>
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the confession of human beings.</reading>
+          </unit>
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the gate of heaven opens,</reading>
+          </unit>
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">so that the prayers of everyone who is alive may enter</reading>
+          </unit>
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and worship and go forth. And in that</reading>
+          </unit>
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">hour, whatever anyone asks</reading>
+          </unit>
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">from God is given</reading>
+          </unit>
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to him, when the wing of the seraphim</reading>
+          </unit>
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and of the roosters flaps.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eleventh hour: joy</reading>
+          </unit>
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">in all the earth, when the sun rises</reading>
+          </unit>
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">from Paradise</reading>
+          </unit>
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and shines upon the creatures.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twelfth hour: the offering</reading>
+          </unit>
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of [incen]se, and the drink-offering that ascends</reading>
+          </unit>
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[upon] all the ranks of fire</reading>
+          </unit>
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[and of spir]it, when all</reading>
+          </unit>
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the priests place incense</reading>
+          </unit>
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">before his divinity. And then</reading>
+          </unit>
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">all the heavenly hosts</reading>
+          </unit>
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">are released. The hours of the night are completed.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Again, the hours of the day.</reading>
+          </unit>
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The first hour of the day:</reading>
+          </unit>
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the petition of the heavenly beings.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The hour</reading>
+          </unit>
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the second: the prayer of the angels.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The third hour, the glorification</reading>
+          </unit>
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the birds.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fourth hour,</reading>
+          </unit>
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the glorification of the wild beasts.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The hour</reading>
+          </unit>
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the fifth glorification from</reading>
+          </unit>
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">heaven.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The sixth hour,</reading>
+          </unit>
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the glorification of the Cherubim,</reading>
+          </unit>
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">who intercede for the iniquity</reading>
+          </unit>
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of our humanity.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The seventh hour,</reading>
+          </unit>
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the ascent and descent to</reading>
+          </unit>
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">God, when the prayers of</reading>
+          </unit>
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">all who are living enter and prostrate themselves and go out.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eighth hour, the glorification</reading>
+          </unit>
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of fire and water.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The hour</reading>
+          </unit>
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the ninth, the supplication of the angels,</reading>
+          </unit>
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">those who stand before</reading>
+          </unit>
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the throne of majesty.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The hour</reading>
+          </unit>
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the tenth, the working of the waters,</reading>
+          </unit>
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">when the Spirit descends and hovers</reading>
+          </unit>
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">over the waters and over the springs.</reading>
+          </unit>
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And if the Spirit of the Lord</reading>
+          </unit>
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">had not descended and hovered</reading>
+          </unit>
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">over the waters and over the springs,</reading>
+          </unit>
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">human beings would decay,</reading>
+          </unit>
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and all who saw would become demons,</reading>
+          </unit>
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">they would decay for them. And in that</reading>
+          </unit>
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">hour the waters are seized,</reading>
+          </unit>
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and the priest of God mixes into them</reading>
+          </unit>
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the oil of holiness,</reading>
+          </unit>
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and anoints those who are afflicted.</reading>
+          </unit>
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">they are healed and recover.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eleventh hour is that of striving</reading>
+          </unit>
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and the joy of the righteous.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The hour,</reading>
+          </unit>
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the twelfth, is that of evening,</reading>
+          </unit>
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the petition of humans according to the will</reading>
+          </unit>
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">accepted by God,</reading>
+          </unit>
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the Lord of all.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Adam said</reading>
+          </unit>
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to Seth his son: Hear, my son,</reading>
+          </unit>
+          <unit id="en_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">that God will come into the world after</reading>
+          </unit>
+          <unit id="en_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">times. And he will be conceived by a virgin,</reading>
+          </unit>
+          <unit id="en_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and he will take on a body</reading>
+          </unit>
+          <unit id="en_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and be born as a human, and grow up</reading>
+          </unit>
+          <unit id="en_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">like a child. And he will perform</reading>
+          </unit>
+          <unit id="en_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">signs and wonders on</reading>
+          </unit>
+          <unit id="en_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the earth. He will walk on the waves</reading>
+          </unit>
+          <unit id="en_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of the sea. He will rebuke the winds</reading>
+          </unit>
+          <unit id="en_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and they will be still. He will signal to the waves</reading>
+          </unit>
+          <unit id="en_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and they will stand still. He will open the eyes of the blind,</reading>
+          </unit>
+          <unit id="en_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">cleanse lepers, make the deaf hear,</reading>
+          </unit>
+          <unit id="en_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the dumb speak,</reading>
+          </unit>
+          <unit id="en_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">straighten the bent, strengthen the paralyzed,</reading>
+          </unit>
+          <unit id="en_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">find the lost, cast out demons,</reading>
+          </unit>
+          <unit id="en_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">expel evil spirits.</reading>
+          </unit>
+          <unit id="en_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">expel evil spirits.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Because he spoke</reading>
+          </unit>
+          <unit id="en_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to me in Paradise when</reading>
+          </unit>
+          <unit id="en_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I plucked from the fruit of the tree,</reading>
+          </unit>
+          <unit id="en_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and death occurred in it, “Adam,</reading>
+          </unit>
+          <unit id="en_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Adam, do not be afraid. I wanted</reading>
+          </unit>
+          <unit id="en_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">you to be God. I will make you God.</reading>
+          </unit>
+          <unit id="en_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For not now,</reading>
+          </unit>
+          <unit id="en_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">but after many years,</reading>
+          </unit>
+          <unit id="en_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I will deliver him to death.”</reading>
+          </unit>
+          <unit id="en_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to you, and the worm eats</reading>
+          </unit>
+          <unit id="en_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and consumes your body.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I answered</reading>
+          </unit>
+          <unit id="en_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and said to him, “Why,</reading>
+          </unit>
+          <unit id="en_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">my Lord?” And he said to me, “Because</reading>
+          </unit>
+          <unit id="en_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">you listened to the words of the serpent.</reading>
+          </unit>
+          <unit id="en_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Your food will be for the serpent</reading>
+          </unit>
+          <unit id="en_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and your children. And after a little while,</reading>
+          </unit>
+          <unit id="en_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">mercy will come upon you</reading>
+          </unit>
+          <unit id="en_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">because you were created in my image,</reading>
+          </unit>
+          <unit id="en_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and I will not allow you</reading>
+          </unit>
+          <unit id="en_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to be consumed in Sheol. For your sake,</reading>
+          </unit>
+          <unit id="en_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I will be born from the Virgin Mary.</reading>
+          </unit>
+          <unit id="en_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For your sake,</reading>
+          </unit>
+          <unit id="en_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I will taste death and enter into</reading>
+          </unit>
+          <unit id="en_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the house of the dead.</reading>
+          </unit>
+          <unit id="en_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For your sake, I will make a new heaven</reading>
+          </unit>
+          <unit id="en_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and your children. I will have authority</reading>
+          </unit>
+          <unit id="en_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">over them.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after</reading>
+          </unit>
+          <unit id="en_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">three days when I am</reading>
+          </unit>
+          <unit id="en_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">in the tomb,</reading>
+          </unit>
+          <unit id="en_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">I will comfort the body</reading>
+          </unit>
+          <unit id="en_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">that I clothed from you, and I will seat</reading>
+          </unit>
+          <unit id="en_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">you at the right hand</reading>
+          </unit>
+          <unit id="en_166" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of my divinity, and I will [make]</reading>
+          </unit>
+          <unit id="en_167" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">a god as [you desired],</reading>
+          </unit>
+          <unit id="en_168" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and I will take a gift from the [tree]</reading>
+          </unit>
+          <unit id="en_169" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and I will restore [it]</reading>
+          </unit>
+          <unit id="en_170" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to you and your children, which</reading>
+          </unit>
+          <unit id="en_171" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">is the righteousness of heaven.”</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_172" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Hear, my son Seth,</reading>
+          </unit>
+          <unit id="en_173" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">that the flood will come and cleanse</reading>
+          </unit>
+          <unit id="en_174" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the whole earth because of</reading>
+          </unit>
+          <unit id="en_175" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">the daughters of Cain, your brother.</reading>
+          </unit>
+          <unit id="en_176" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">because of the jealousy of your brother Cain,</reading>
+          </unit>
+          <unit id="en_177" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">he killed your brother Abel.</reading>
+          </unit>
+          <unit id="en_178" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">It was because from your mother</reading>
+          </unit>
+          <unit id="en_179" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Eve sins were created.</reading>
+          </unit>
+          <unit id="en_180" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And after the flood there will be</reading>
+          </unit>
+          <unit id="en_181" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">years for the appearance of the world:</reading>
+          </unit>
+          <unit id="en_182" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">six thousand years.</reading>
+          </unit>
+          <unit id="en_183" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And then will be its end.”</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_184" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I, Seth, wrote this testament.</reading>
+          </unit>
+          <unit id="en_185" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And my father died,</reading>
+          </unit>
+          <unit id="en_186" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and they buried him to the east</reading>
+          </unit>
+          <unit id="en_187" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of Paradise, opposite the first</reading>
+          </unit>
+          <unit id="en_188" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">city that was built</reading>
+          </unit>
+          <unit id="en_189" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">on the earth, whose name</reading>
+          </unit>
+          <unit id="en_190" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">is Enoch. And Adam was escorted</reading>
+          </unit>
+          <unit id="en_191" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">by angels and powers</reading>
+          </unit>
+          <unit id="en_192" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of heaven because he was created in the image</reading>
+          </unit>
+          <unit id="en_193" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of God. And the sun and moon became dark,</reading>
+          </unit>
+          <unit id="en_194" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and there was</reading>
+          </unit>
+          <unit id="en_195" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">gloom for seven days.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_196" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And I sealed the testament,</reading>
+          </unit>
+          <unit id="en_197" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and I placed it in the Cave of Treasures</reading>
+          </unit>
+          <unit id="en_198" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">with the offerings that Adam brought</reading>
+          </unit>
+          <unit id="en_199" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">from Paradise: gold,</reading>
+          </unit>
+          <unit id="en_200" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">myrrh, and frankincense.</reading>
+          </unit>
+          <unit id="en_201" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the sons of the Magian kings will come</reading>
+          </unit>
+          <unit id="en_202" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and take them,</reading>
+          </unit>
+          <unit id="en_203" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and they will bring them to the Son of God</reading>
+          </unit>
+          <unit id="en_204" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">in Bethlehem of Judea,</reading>
+          </unit>
+          <unit id="en_205" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">to the cave. The Testament</reading>
+          </unit>
+          <unit id="en_206" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">of our father Adam is finished.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Greek (English)" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Greek (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The first hour is called איאהכ, in which it is good to pray.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The second hour is called נַכוּת, in which are the prayers and hymns of the angels.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The third hour is called ףַרַש, in which the birds give thanks to God; in this very hour every element is brought to completion.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fourth hour is called . . . , in which all the creatures of God give thanks, in which . . . and all venomous creatures are formed.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fifth hour is called . . . , in which every living creature praises God; in which every . . . is brought to completion.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The sixth hour is called . . . , in which the cherubim intercede with God on behalf of humans.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The seventh hour is called . . . , in which the ranks of angels and those standing before God praise.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eighth hour is called ן׳כַנ.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The ninth hour is called . . . , in which is the prayer of humans; or χα παυρουν, in which nothing is completed.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The tenth hour is . . . , in which the waters praise, and the spirit of God, descending, hovers over them and sanctifies them; for if it were not so, the evil demons would harm humans; in this hour, if a person takes נֵרונ (water) and mixes it with holy oil, it heals every נושׂמַ (sickness); and it purifies those possessed by demons and drives out demons.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eleventh hour is . . . , in which the elect of God rejoice.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twelfth hour is . . . , in which the prayers of humans are acceptable.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The first hour is . . . , in which the demons, praising God, neither harm nor punish.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The second hour is . . . , in which the fish praise God, and the depth of the fire; in which results into dragons and . . . and fire ought to be formed.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The third hour is . . . , in which serpents and dogs and fire praise.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fourth hour is . . . , in which demons pass through the tombs, and one who goes there will be harmed and will receive fear and trembling from the vision of the demons; in which results . . . and of every magical thing ought to be formed.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The fifth hour is . . . , in which the waters praise the God of heaven.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The sixth hour is . . . , when it is necessary to be quiet and rest, because it has fear.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The seventh hour is . . . , in which all these animals rest. If a pure person snatches נַרונ (water) and the priest pours it and mixes it with oil and sanctifies it and anoints with it a sick person who is awake, he will immediately be freed from the illness.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eighth hour is . . . , and in which we form an element concerning . . . and all kinds of plants.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The ninth hour is . . . , in which nothing is completed.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">----</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The eleventh hour is . . . , in which the gates of heaven are opened and a person who is in contrition will be heard; in this hour the angels and cherubim and seraphim fly with their wings with a sound; and there is joy in heaven and on earth; and the sun also rises from Eden.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The twelfth hour is . . . , in which the fiery ranks rest. These are the names of the hours; therefore, to him who understands these things well, nothing . . . of such things will be hidden, but all will be subjected.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Syriac (French)" author="OCP" language="French">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Syriac (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="fr_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">De nouveau, le Testament de notre père</reading>
+          </unit>
+          <unit id="fr_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Adam. La première heure</reading>
+          </unit>
+          <unit id="fr_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de la nuit : la louange des démons ;</reading>
+          </unit>
+          <unit id="fr_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et en cette heure-là, ils ne</reading>
+          </unit>
+          <unit id="fr_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">font point de mal et ne nuisent en rien</reading>
+          </unit>
+          <unit id="fr_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">aux hommes.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La deuxième heure :</reading>
+          </unit>
+          <unit id="fr_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la louange des colombes...</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La troisième heure : la louange</reading>
+          </unit>
+          <unit id="fr_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des poissons, du feu et de tous</reading>
+          </unit>
+          <unit id="fr_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">les abîmes inférieurs.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La</reading>
+          </unit>
+          <unit id="fr_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">quatrième heure : la sanctification des séraphins.</reading>
+          </unit>
+          <unit id="fr_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ainsi j'entendais,</reading>
+          </unit>
+          <unit id="fr_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">avant de pécher, le bruit</reading>
+          </unit>
+          <unit id="fr_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de leurs ailes dans le paradis, quand</reading>
+          </unit>
+          <unit id="fr_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">les séraphins battent des ailes au son</reading>
+          </unit>
+          <unit id="fr_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de leurs saintes louanges ; mais depuis</reading>
+          </unit>
+          <unit id="fr_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">que j'ai transgressé la loi,</reading>
+          </unit>
+          <unit id="fr_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">je n'ai plus entendu cette voix.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La cinquième heure : la louange</reading>
+          </unit>
+          <unit id="fr_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des eaux qui sont au-dessus du ciel.</reading>
+          </unit>
+          <unit id="fr_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ainsi j'entendais, moi</reading>
+          </unit>
+          <unit id="fr_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et les anges, la voix des flots</reading>
+          </unit>
+          <unit id="fr_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">puissants, que pressait</reading>
+          </unit>
+          <unit id="fr_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">le signe [divin] de rendre</reading>
+          </unit>
+          <unit id="fr_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">gloire au Créateur.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La</reading>
+          </unit>
+          <unit id="fr_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">sixième heure : l'assemblage des nuées</reading>
+          </unit>
+          <unit id="fr_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et la grande frayeur qui survient</reading>
+          </unit>
+          <unit id="fr_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">au milieu de la nuit.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La</reading>
+          </unit>
+          <unit id="fr_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">septième heure : la contemplation</reading>
+          </unit>
+          <unit id="fr_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des puissances, lorsque reposent</reading>
+          </unit>
+          <unit id="fr_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">les eaux ; et en cette heure-là,</reading>
+          </unit>
+          <unit id="fr_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">les eaux sont puisées, et le prêtre</reading>
+          </unit>
+          <unit id="fr_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de Dieu y mêle</reading>
+          </unit>
+          <unit id="fr_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">l'huile sainte et oint</reading>
+          </unit>
+          <unit id="fr_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">ceux qui sont affligés, et ils trouvent le soulagement.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La huitième heure : la pousse</reading>
+          </unit>
+          <unit id="fr_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de l'herbe de la terre, quand</reading>
+          </unit>
+          <unit id="fr_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la rosée descend du ciel.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La neuvième heure : la louange</reading>
+          </unit>
+          <unit id="fr_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des chérubins.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="fr_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La dixième heure :</reading>
+          </unit>
+          <unit id="fr_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la louange des êtres humains,</reading>
+          </unit>
+          <unit id="fr_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et l'ouverture de la porte du ciel,</reading>
+          </unit>
+          <unit id="fr_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">pour que pénètrent les prières de tout vivant,</reading>
+          </unit>
+          <unit id="fr_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">se prosternent et sortent ; et en cette</reading>
+          </unit>
+          <unit id="fr_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">heure, tout ce que demandera</reading>
+          </unit>
+          <unit id="fr_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">par Dieu, cela lui est accordé</reading>
+          </unit>
+          <unit id="fr_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">lorsque battent les ailes</reading>
+          </unit>
+          <unit id="fr_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des séraphins et des coqs.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="fr_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La onzième heure : la joie</reading>
+          </unit>
+          <unit id="fr_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">sur toute la terre, lorsque monte</reading>
+          </unit>
+          <unit id="fr_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">le soleil depuis le Paradis</reading>
+          </unit>
+          <unit id="fr_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et brille sur les créatures.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="fr_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La douzième heure : l'attente</reading>
+          </unit>
+          <unit id="fr_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des [encens], et le silence qui s'abat</reading>
+          </unit>
+          <unit id="fr_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[sur] tous les ordres de feu</reading>
+          </unit>
+          <unit id="fr_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[et d'esprit], tandis que déposent</reading>
+          </unit>
+          <unit id="fr_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[tou]s les prêtres l'encens</reading>
+          </unit>
+          <unit id="fr_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">[devant sa] divinité. Et alors,</reading>
+          </unit>
+          <unit id="fr_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">toutes les puissances célestes</reading>
+          </unit>
+          <unit id="fr_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">sont congédiées. Fin des heures de la nuit.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="fr_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ensuite, les heures du jour :</reading>
+          </unit>
+          <unit id="fr_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La première heure du jour :</reading>
+          </unit>
+          <unit id="fr_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la supplication des célestes.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La</reading>
+          </unit>
+          <unit id="fr_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">deuxième heure : la prière des anges.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La troisième heure : la louange</reading>
+          </unit>
+          <unit id="fr_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des oiseaux.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La quatrième heure :</reading>
+          </unit>
+          <unit id="fr_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la louange des animaux.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La</reading>
+          </unit>
+          <unit id="fr_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">cinquième heure : la louange de ce qui est au-dessus</reading>
+          </unit>
+          <unit id="fr_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des cieux.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La sixième heure :</reading>
+          </unit>
+          <unit id="fr_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la louange des chérubins</reading>
+          </unit>
+          <unit id="fr_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">qui intercèdent pour l'iniquité</reading>
+          </unit>
+          <unit id="fr_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de notre humanité.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La septième heure :</reading>
+          </unit>
+          <unit id="fr_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">l'entrée et la sortie auprès de</reading>
+          </unit>
+          <unit id="fr_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Dieu, lorsque les prières entrent</reading>
+          </unit>
+          <unit id="fr_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de tout vivant, se prosternent et sortent.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La huitième heure : la louange</reading>
+          </unit>
+          <unit id="fr_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">du feu et des eaux.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La</reading>
+          </unit>
+          <unit id="fr_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">neuvième heure : la supplication des anges</reading>
+          </unit>
+          <unit id="fr_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">qui se tiennent devant</reading>
+          </unit>
+          <unit id="fr_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">le trône de la Majesté.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="fr_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La</reading>
+          </unit>
+          <unit id="fr_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">dixième heure : la visitation des eaux,</reading>
+          </unit>
+          <unit id="fr_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">lorsque l'Esprit descend et plane</reading>
+          </unit>
+          <unit id="fr_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">sur les eaux et sur les sources.</reading>
+          </unit>
+          <unit id="fr_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et si l'Esprit du Seigneur</reading>
+          </unit>
+          <unit id="fr_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">ne descendait pas et ne planait pas</reading>
+          </unit>
+          <unit id="fr_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">sur les eaux et sur les sources,</reading>
+          </unit>
+          <unit id="fr_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">les êtres humains seraient détruits,</reading>
+          </unit>
+          <unit id="fr_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et chaque fois que les démons verraient</reading>
+          </unit>
+          <unit id="fr_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">ils seraient anéantis. Et en cette</reading>
+          </unit>
+          <unit id="fr_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">heure, on puise de l'eau,</reading>
+          </unit>
+          <unit id="fr_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et le prêtre</reading>
+          </unit>
+          <unit id="fr_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de Dieu y mêle l'huile sainte,</reading>
+          </unit>
+          <unit id="fr_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et il en oint ceux qui souffrent,</reading>
+          </unit>
+          <unit id="fr_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et ils sont guéris et rétablis.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="fr_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La onzième heure : l'allégresse</reading>
+          </unit>
+          <unit id="fr_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et la joie des justes.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="fr_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La</reading>
+          </unit>
+          <unit id="fr_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">douzième heure, celle du soir :</reading>
+          </unit>
+          <unit id="fr_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la supplication des hommes pour un accueil favorable</reading>
+          </unit>
+          <unit id="fr_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">auprès de Dieu,</reading>
+          </unit>
+          <unit id="fr_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">le Seigneur de tout.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="fr_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Adam dit</reading>
+          </unit>
+          <unit id="fr_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">à Seth son fils : « J'ai entendu, mon fils,</reading>
+          </unit>
+          <unit id="fr_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">que Dieu viendra dans le monde après</reading>
+          </unit>
+          <unit id="fr_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des temps ; et d'une vierge</reading>
+          </unit>
+          <unit id="fr_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">il est conçu, et il revêt un corps,</reading>
+          </unit>
+          <unit id="fr_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et il naît comme un homme, et il grandit</reading>
+          </unit>
+          <unit id="fr_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">comme un enfant ; et il accomplit</reading>
+          </unit>
+          <unit id="fr_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des signes et des prodiges sur</reading>
+          </unit>
+          <unit id="fr_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la terre : il marche sur les flots</reading>
+          </unit>
+          <unit id="fr_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de la mer ; il menace les vents</reading>
+          </unit>
+          <unit id="fr_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et ils s'apaisent ; il fait signe aux vagues</reading>
+          </unit>
+          <unit id="fr_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et elles se calment ; il ouvre les yeux des aveugles ;</reading>
+          </unit>
+          <unit id="fr_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">il purifie les lépreux ; il fait entendre</reading>
+          </unit>
+          <unit id="fr_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">les sourds ; les muets parlent ;</reading>
+          </unit>
+          <unit id="fr_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">il redresse les courbés ; les paralytiques,</reading>
+          </unit>
+          <unit id="fr_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">il les affermit ; il retrouve ceux qui sont perdus ;</reading>
+          </unit>
+          <unit id="fr_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">il chasse les démons ; il expulse</reading>
+          </unit>
+          <unit id="fr_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">les esprits impurs.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Car lui-même me disait</reading>
+          </unit>
+          <unit id="fr_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">dans le Paradis, lorsque</reading>
+          </unit>
+          <unit id="fr_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">j'ai cueilli du fruit dans lequel était cachée</reading>
+          </unit>
+          <unit id="fr_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la mort : “Adam,</reading>
+          </unit>
+          <unit id="fr_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Adam, ne crains pas. Tu as voulu</reading>
+          </unit>
+          <unit id="fr_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">devenir Dieu ; Dieu,</reading>
+          </unit>
+          <unit id="fr_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">je te ferai. Non pas maintenant,</reading>
+          </unit>
+          <unit id="fr_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">mais après un long délai</reading>
+          </unit>
+          <unit id="fr_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">d'années. Je te livre à la mort,</reading>
+          </unit>
+          <unit id="fr_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et la teigne</reading>
+          </unit>
+          <unit id="fr_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et les vers dévoreront ton corps.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et je répondis</reading>
+          </unit>
+          <unit id="fr_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et lui dis : « Pourquoi,</reading>
+          </unit>
+          <unit id="fr_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Seigneur ? » Et il me dit : « Parce</reading>
+          </unit>
+          <unit id="fr_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">que tu as écouté les paroles du serpent,</reading>
+          </unit>
+          <unit id="fr_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">tu seras la nourriture du serpent,</reading>
+          </unit>
+          <unit id="fr_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">ainsi que tes enfants. Mais après un</reading>
+          </unit>
+          <unit id="fr_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">court laps de temps, j'aurai pitié de toi,</reading>
+          </unit>
+          <unit id="fr_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">parce que tu as été créé à mon image. »</reading>
+          </unit>
+          <unit id="fr_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et je ne te laisserai pas</reading>
+          </unit>
+          <unit id="fr_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">te consumer dans le Shéol. À cause de toi,</reading>
+          </unit>
+          <unit id="fr_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de la vierge Marie</reading>
+          </unit>
+          <unit id="fr_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">je naîtrai. À cause de toi,</reading>
+          </unit>
+          <unit id="fr_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">je goûterai la mort et dans le séjour</reading>
+          </unit>
+          <unit id="fr_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des morts j'entrerai.</reading>
+          </unit>
+          <unit id="fr_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">À cause de toi, un ciel nouveau</reading>
+          </unit>
+          <unit id="fr_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">je ferai, et tes enfants, je les y</reading>
+          </unit>
+          <unit id="fr_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">établirai comme maîtres.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et après</reading>
+          </unit>
+          <unit id="fr_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">trois jours que j'aurai passés</reading>
+          </unit>
+          <unit id="fr_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">au sein du tombeau,</reading>
+          </unit>
+          <unit id="fr_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">je ressusciterai le corps</reading>
+          </unit>
+          <unit id="fr_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">que j'ai revêtu de toi, et je t'assiérai</reading>
+          </unit>
+          <unit id="fr_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">à la droite</reading>
+          </unit>
+          <unit id="fr_166" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de ma divinité. Et je te ferai</reading>
+          </unit>
+          <unit id="fr_167" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">dieu, comme tu l'avais désiré,</reading>
+          </unit>
+          <unit id="fr_168" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et je prendrai de l'arbre</reading>
+          </unit>
+          <unit id="fr_169" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">le don et je le rendrai</reading>
+          </unit>
+          <unit id="fr_170" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">à toi et à tes enfants, c'est-à-dire</reading>
+          </unit>
+          <unit id="fr_171" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la justice du ciel.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_172" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Tu as entendu, mon fils Seth,</reading>
+          </unit>
+          <unit id="fr_173" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">que le déluge viendra et lavera</reading>
+          </unit>
+          <unit id="fr_174" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">toute la terre à cause</reading>
+          </unit>
+          <unit id="fr_175" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des filles de Caïn, ton frère,</reading>
+          </unit>
+          <unit id="fr_176" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">qui, par jalousie pour Lebuda, ta sœur,</reading>
+          </unit>
+          <unit id="fr_177" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">a tué Abel, ton frère.</reading>
+          </unit>
+          <unit id="fr_178" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Car c'est par ta mère</reading>
+          </unit>
+          <unit id="fr_179" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ève que les péchés furent créés.</reading>
+          </unit>
+          <unit id="fr_180" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et après le déluge, il y aura</reading>
+          </unit>
+          <unit id="fr_181" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des années pour la durée de ce monde :</reading>
+          </unit>
+          <unit id="fr_182" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">six mille ans.</reading>
+          </unit>
+          <unit id="fr_183" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et alors viendra sa fin.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_184" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et moi, Seth, j'ai écrit ce testament.</reading>
+          </unit>
+          <unit id="fr_185" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et mon père mourut,</reading>
+          </unit>
+          <unit id="fr_186" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et on l'ensevelit à l'orient</reading>
+          </unit>
+          <unit id="fr_187" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">du Paradis, en face de la première</reading>
+          </unit>
+          <unit id="fr_188" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">ville qui fut bâtie</reading>
+          </unit>
+          <unit id="fr_189" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">sur la terre, dont le nom est</reading>
+          </unit>
+          <unit id="fr_190" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Hénoch. Et Adam fut escorté</reading>
+          </unit>
+          <unit id="fr_191" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">par les anges et les puissances</reading>
+          </unit>
+          <unit id="fr_192" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">du ciel, parce qu'à l'image</reading>
+          </unit>
+          <unit id="fr_193" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de Dieu il avait été créé. Et s'obscurcirent</reading>
+          </unit>
+          <unit id="fr_194" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">le soleil et la lune, et il y eut</reading>
+          </unit>
+          <unit id="fr_195" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des ténèbres pendant sept jours.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_196" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et nous scellâmes le testament,</reading>
+          </unit>
+          <unit id="fr_197" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et nous le déposâmes dans la Caverne des Trésors</reading>
+          </unit>
+          <unit id="fr_198" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">avec les offrandes qu'Adam</reading>
+          </unit>
+          <unit id="fr_199" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">avait emportées du Paradis : l'or,</reading>
+          </unit>
+          <unit id="fr_200" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">la myrrhe et l'encens.</reading>
+          </unit>
+          <unit id="fr_201" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et viendront des fils de rois,</reading>
+          </unit>
+          <unit id="fr_202" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">des mages, et ils les prendront</reading>
+          </unit>
+          <unit id="fr_203" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et les apporteront au Fils de Dieu,</reading>
+          </unit>
+          <unit id="fr_204" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">à Bethléem de Juda,</reading>
+          </unit>
+          <unit id="fr_205" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">dans la grotte. Est achevé le testament</reading>
+          </unit>
+          <unit id="fr_206" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">de notre père Adam.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Greek (French)" author="OCP" language="French">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Greek (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="fr_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La première heure est appelée איאהכ, pendant laquelle il est bon de prier.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La deuxième heure est appelée נַכוּת, pendant laquelle ont lieu les prières et les hymnes des anges.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La troisième heure est appelée ףַרַש, pendant laquelle les oiseaux rendent grâce à Dieu ; à cette heure même s'accomplit tout élément.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La quatrième heure est appelée pendant laquelle toutes les créatures de Dieu rendent grâce, pendant laquelle sont conjurés et tous les animaux venimeux.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La cinquième heure est appelée pendant laquelle tout être vivant loue Dieu ; pendant laquelle s'accomplit tout</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La sixième heure est appelée pendant laquelle les chérubins implorent Dieu pour les hommes.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La septième heure est appelée pendant laquelle louent les ordres des anges qui se tiennent devant Dieu.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La huitième heure est appelée ן׳כַנ.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La neuvième heure est appelée pendant laquelle est la prière des hommes ; ou cha pauroun, pendant laquelle rien ne s'accomplit.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="fr_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La dixième heure pendant laquelle les eaux louent, et l'Esprit de Dieu descendant plane sur elles et les sanctifie ; car s'il n'en était pas ainsi, les démons mauvais nuiraient aux hommes ; pendant laquelle si un homme prend de l'eau (נֵרונ, néron) et la mélange avec de l'huile sainte, toute maladie (נושׂמַ, nosêma) est guérie ; et cela purifie les possédés et chasse les démons.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="fr_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La onzième heure pendant laquelle se réjouissent les élus de Dieu.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="fr_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La douzième heure pendant laquelle les prières des hommes sont agréables.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="fr_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La première heure pendant laquelle les démons, en louant Dieu, ne font de mal ni ne tourmentent.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La deuxième heure pendant laquelle les poissons louent Dieu, ainsi que l'abîme du feu ; pendant laquelle on doit accomplir des opérations magiques contre les dragons et et le feu.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La troisième heure pendant laquelle les serpents, les chiens et le feu louent.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La quatrième heure pendant laquelle les démons rôdent dans les tombeaux, et quiconque s'y rend subira du tort et éprouvera de la peur et de l'effroi en raison des apparitions des démons ; pendant laquelle on doit accomplir des opérations magiques et de toute pratique de sorcellerie.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La cinquième heure pendant laquelle les eaux louent le Dieu du ciel.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La sixième heure où il convient de garder le silence et de se reposer, parce qu'il y a de la crainte.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La septième heure pendant laquelle tous ces êtres vivants se reposent. Si un homme pur prend de l'eau (נַרונ, néron), que le prêtre la verse, la mélange avec de l'huile, la sanctifie et en oigne un malade souffrant d'insomnie, il sera aussitôt délivré de la maladie.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La huitième heure pendant laquelle nous accomplissons une opération magique concernant et toutes sortes de plantes.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La neuvième heure pendant laquelle rien ne s'accomplit.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="fr_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans "/>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="fr_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La onzième heure pendant laquelle s'ouvrent les portes du ciel, et l'homme qui est dans la componction sera exaucé ; en cette heure, les anges, les chérubins et les séraphins volent de leurs ailes avec grand bruit ; et il y a de la joie au ciel et sur la terre ; et le soleil se lève depuis l'Éden.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="fr_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La douzième heure pendant laquelle se reposent les ordres de feu. Tels sont les noms des heures ; pour celui donc qui a bien compris ces choses, rien de tel ne sera caché, mais tout lui sera soumis.</reading>
           </unit>
         </div>
       </div>

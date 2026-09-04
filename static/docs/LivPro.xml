@@ -1,86 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-
-<!ELEMENT book (version+)>
-<!ATTLIST book
- filename CDATA #REQUIRED
- title CDATA #REQUIRED
- textStructure CDATA #IMPLIED
->
-
-<!ELEMENT version (divisions, resources*, manuscripts+, text)>
-<!ATTLIST version
- language CDATA #REQUIRED
- title CDATA #REQUIRED
- author CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT divisions (division)+>
-
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division
- label CDATA #REQUIRED
- delimiter CDATA #IMPLIED
->
-
-<!ELEMENT resources (resource+)>
-<!ELEMENT resource (info+, URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-
-<!ELEMENT info (#PCDATA)>
-
-<!ELEMENT URL (#PCDATA)>
-
-<!ELEMENT manuscripts (ms+)>
-
-<!ELEMENT ms (name, bibliography*)>
-<!ATTLIST ms
- abbrev CDATA #REQUIRED
- language CDATA #REQUIRED
- show CDATA #REQUIRED
->
-
-<!ELEMENT name (#PCDATA | sup)*>
-
-<!ELEMENT sup (#PCDATA)>
-
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-
-<!ELEMENT booktitle (#PCDATA)>
-
-<!ELEMENT text (div+)>
-
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div
- number CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT unit (reading+)>
-<!ATTLIST unit
- id CDATA #REQUIRED
- group CDATA "0"
- parallel CDATA #REQUIRED
->
-
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading
- option CDATA #REQUIRED
- mss CDATA #REQUIRED
- linebreak CDATA #IMPLIED
- indent CDATA #IMPLIED
->
-
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w
- morph CDATA #IMPLIED
- lex CDATA #IMPLIED
- style CDATA #IMPLIED
- lang CDATA #IMPLIED
->
-
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="LivPro" title="Lives of the Prophets">
   <version title="Greek" author="" language="Greek">
     <divisions>
@@ -964,6 +882,1780 @@
         <div number="4">
           <unit id="165" group="0" parallel="">
             <reading option="0" mss="Torrey ">καὶ θανὼν ἐτάφη ἐν Σαμαρείᾳ.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="English" author="OCP" language="English">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of English based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Title">
+        <div number="0">
+          <unit id="en_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Names of the prophets, and from where they came, and where and how they died, and where they are laid.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="1">
+        <div number="0">
+          <unit id="en_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Isaiah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from Jerusalem. He died, sawn in two by Manasseh, and was laid beneath the oak of Rogel, adjacent to the passage of the waters which Hezekiah had diverted by stopping them up.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And God performed the sign of Siloam through the prophet; for before he died, having neglected [to drink], he prayed to drink water, and immediately it was sent to him from it. For this reason it was called Siloam, which is interpreted “sent.”</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the time of Hezekiah, before he made the cisterns and the pools, at the prayer of Isaiah, a small amount of water emerged, because the people were besieged by foreigners and so that the city would not be destroyed as if it had no water.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For the enemies kept asking where they drank, and they sat down by Siloam, having surrounded the city. Therefore, if the Jews came, water would emerge; but if foreigners, no. For this reason, even to this day, it emerges suddenly, so that the mystery might be shown.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And since this happened through Isaiah, for the sake of remembrance, the people buried him carefully and gloriously nearby, so that through his prayers, even after his death, they might likewise have the enjoyment of the water, because an oracle concerning him was also given to them.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">His tomb is adjacent to the tomb of the kings, behind the tomb of the priests, on the side toward the south.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For Solomon made the tombs, with David having designed them, to the east of Zion, which has an entrance from Gabaon, twenty stadia distant from the city, and he made a winding, unsuspected construction; and it remains unknown to many of the priests even to this day, and indeed to all the people.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">There the king kept the gold from Ethiopia and the aromatics.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And because Hezekiah showed the nations the mystery of David and Solomon and defiled the bones of his fathers, for this reason God cursed his offspring to be in servitude to his enemies, and God made him barren from that day.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="0">
+          <unit id="en_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Jeremiah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from Anathoth and died in Taphanes of Egypt, stoned by the people.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He is laid in the dwelling place of Pharaoh, because the Egyptians honored him, having been benefited by him.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he prayed, and the asps (which the Egyptians call 'ephot') left them.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And as many as are faithful to God pray in that place even to this day and, taking some of the soil of the place, they heal asp bites.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But we heard from the old men, servants of Antigonus and Ptolemy, that Alexander the Macedonian, coming to the prophet’s place and recognizing his mysteries, transferred his remains to Alexandria, depositing them with glory all around.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the race of asps was restrained from the land, and in this way he introduced the snakes called 'argolas,' which are snake-fighters.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This Jeremiah gave a sign to the priests of Egypt that their idols must be shaken and all their handmade images fall down when a virgin giving birth with a godlike infant enters Egypt.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For this reason, even now they honor a virgin giving birth and, placing an infant in a manger, they worship; and when King Ptolemy inquired the reason, they said that it is a paternal tradition, a mystery handed down to our fathers by a holy prophet, and we await the fulfillment, he says, of his mystery.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This prophet, before the capture of the temple, seized the ark of the law and what was in it, and caused them to be swallowed up in a rock, and he said to those standing by:</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“The Lord has departed from Sinai to heaven, and he will come again in power, and a sign of his coming will be for you when all the nations worship wood.”</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But he said that no one will bring forth this ark except Aaron, and no one will again open the tablets in it, neither priests nor prophets, except Moses, the elect of God.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And in the resurrection, the ark will be the first to rise and will come forth from the rock and will be placed on Mount Sinai, and all the saints will be gathered there to it, awaiting the Lord and fleeing the enemy who wishes to kill them.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">On the rock he sealed with his finger the name of God, and the impression became like an engraving of iron, and a cloud covered the name, and no one comprehends the place or can read it until today and until the consummation.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the rock is in the wilderness, where the ark first appeared between the two mountains where Moses and Aaron lie, and at night a cloud appears like fire according to the ancient pattern, because the glory of God will not cease from his law.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And God gave Jeremiah grace so that he himself would bring about the fulfillment of his mystery, so that he might become a fellow participant with Moses, and they are together until today.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="0">
+          <unit id="en_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ezekiel</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He is from the land of Sarira, one of the priests, and he died in the land of the Chaldeans during the captivity, having prophesied many things to those in Judea.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The leader of the people of Israel there killed him, being rebuked by him for worshipping idols.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And they buried him in the field of Maur in the tomb of Shem and Arphaxad, the fathers of Abraham.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the tomb is a double cave, for Abraham also made Sarah's tomb in Hebron in imitation of it.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">It is called double because it is winding, and there is a hidden upper chamber on the ground, hanging in a rock.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This prophet gave a sign to the people to pay attention to the river Chebar:</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">when it dries up, to expect the sickle of desolation to the ends of the earth, and when it overflows, the return to Jerusalem.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For the holy one lived there, and many gathered to him.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And once, when a crowd was with him, the Chaldeans feared that they might rise up, and they came against them to destroy them.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he made the water stand still, so that they might escape by getting to the other side; and those of the enemies who dared to pursue them were drowned.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one, through prayer, automatically provided them with an abundant supply of fish and implored God to bring life to many who were failing.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one, when the people were perishing by their enemies, approached the leaders, and being terrified by his wonders, they ceased.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he said to them, “Have we become disunited? Has our hope perished?” And by a wonder of the dry bones, he persuaded them that there would be hope for Israel, both here and in the future.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one, while there, showed the people of Israel what was happening in Jerusalem and in the temple.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one was snatched from there and came to Jerusalem to rebuke the unbelievers.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one, like Moses, saw the pattern of the temple, and the wall and the wide outer wall, just as Daniel also said that it would be built.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one judged in Babylon the tribe of Dan and Gad, because they were impious towards the Lord by persecuting those who kept the Law,</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and he performed a great wonder for them, that snakes consumed their infants and all their cattle,</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">and he foretold that because of them the people would not return to their land, but would be in Media until the completion of their error.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And from among them was the one who killed him; for they opposed him all the days of his life.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="0">
+          <unit id="en_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Daniel</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one was from the tribe of Judah, of the lineage of those who excelled in royal service, but while still an infant, he was brought from Judea to the land of the Chaldeans; and he was born in Beth-Horon the Upper.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was a prudent man, so that the Judeans thought him to be a eunuch.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one mourned much for the city, and in fastings, he abstained from all desirable food, and he was a man lean in appearance, but beautiful in the grace of the Most High.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one prayed much for Nebuchadnezzar, at the request of his son Beltashazzar, when he became a wild beast and an animal, so that he might not perish.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">His foreparts were like an ox with its head, and his feet with his hindparts were like a lion.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The holy one was enlightened about this mystery, that he became an animal because of his love of pleasure and his stiff-neckedness.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And rulers will have these things in their youth, for they become like an ox under the yoke of Belial, but in the end they become wild beasts, plundering, destroying, killing, and striking.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The holy one knew through God that he ate grass like an ox, and human food became his.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Because of this, Nebuchadnezzar, after his digestion, having a human heart, wept and implored the Lord forty times every day and night in supplication.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">A beast's heart came upon him, and he did not know that he had become human.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">His tongue was taken away so that he could not speak; and perceiving, he immediately wept, and his eyes were like raw flesh from crying.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For many going out of the city saw him; Daniel alone did not wish to see him, because he was in prayer concerning him all the time of his transformation.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He said that he would become human again; and they disbelieved him.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Daniel made the seven years, which he spoke of as seven times, become seven months.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="en_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">The mystery of the seven times was fulfilled in him, for he was restored in seven months, and for six years and six months he submitted to the Lord and confessed his impiety; and after the forgiveness of his lawlessness, he restored the kingdom to him.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="en_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He neither ate bread nor meat, nor drank wine while confessing, because Daniel commanded him to appease the Lord with soaked vegetables and greens.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="en_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Therefore, he called him Beltashazzar, because he wished to make him co-heir with his children.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="en_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But the holy one said, “May it be far from me to leave the inheritance of my fathers and cling to the inheritances of the uncircumcised.”</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="en_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And to the other kings of the Persians, he performed many wonders, as many as they did not write down.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="en_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">There he died and was gloriously buried alone in the royal cave.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="en_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he himself gave a sign in the mountains above Babylon, that when the smoke from the north appears, the end of Babylon will come; but when it burns as in fire, it is the end of all the earth; and if the waters in the south flow, the people will return to their land, and if blood flows, there will be slaughter of Belial in all the earth.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="en_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the holy one slept in peace.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="0">
+          <unit id="en_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Hosea</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from Belemoth, of the tribe of Issachar, and he was buried in his own land in peace.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he gave a sign, that the Lord would come upon the earth if the oak in Shiloh should be divided from itself and become twelve oaks.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="0">
+          <unit id="en_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Micah the Morasthite</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from the tribe of Ephraim. After having done many things for Ahab, he was killed by Jehoram his son, being thrown from a cliff, because he rebuked him for the impieties of his fathers.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was buried in his own land, alone, near the burial place of the Enakim.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="0">
+          <unit id="en_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Amos</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from Tekoa. Amaziah repeatedly beat him, and finally his son also killed him by striking his temple with a club.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And while still breathing, he came to his own land, and after some days he died and was buried there.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="0">
+          <unit id="en_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Joel</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from the land of Reuben, in the field of Bethmaon. He died in peace and was buried there.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="0">
+          <unit id="en_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Obadiah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from the land of Shechem, the field of Beth-Haccerem.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This man was a disciple of Elijah, and having endured many things because of him, he was saved.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This was the third captain of fifty, whom Elijah spared and went down to Ahaziah.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">After these things, he left the king's service, prophesied, and died, being buried with his fathers.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="0">
+          <unit id="en_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Jonah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from the land of Kariathmaous near the Greek city of Azotus by the sea.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having been spewed out by the whale and gone to Nineveh, upon returning he did not remain in his own land, but taking his mother, he settled in the land of Sour, a foreign territory.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For he said, “Thus I will remove my reproach, because I lied by prophesying against Nineveh, the great city.”</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">At that time, Elijah was rebuking the house of Ahab, and having called a famine upon the land, he fled and came and found the widow with her son, for he could not remain with the uncircumcised.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he blessed her. And when her son died, God again raised him from the dead through Elijah, for he wanted to show him that he could not escape God.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having arisen after the famine, he came into the land of Judah. And when his mother died on the road, he buried her next to the oak of Deborah.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having lived in the land of Saraar, he died and was buried in a cave of the Kenazite, who had become a judge of one tribe in the days of anarchy.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he gave a sign concerning Jerusalem and all the land, that when they see a stone crying piteously, the end is near; and when they see all the nations in Jerusalem, that the city will be destroyed to its foundations.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="0">
+          <unit id="en_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Nahum</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from Elkosh, beyond the [mountain] to Bethgabrin, of the tribe of Simeon.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This man, after Jonah, gave a sign to Nineveh, that it would perish by sweet waters and subterranean fire, which also happened.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">For the lake surrounding it inundated it in an earthquake, and fire from the desert came and burned its higher part.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He died in peace and was buried in his own land.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="0">
+          <unit id="en_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Habakkuk</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from the tribe of Simeon, from the field of Bethzuchar.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This man saw concerning the capture of Jerusalem before the captivity and mourned exceedingly.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when Nebuchadnezzar came to Jerusalem, he fled to Ostracine and settled in the land of Ishmael.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But when the Chaldeans returned, and the remaining ones who were in Jerusalem went down to Egypt, he was sojourning in their land.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he served the reapers of his field.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When he received the food, he prophesied to his own people, saying, “I am going to a distant land and will return quickly. But if I delay, take it to the reapers.”</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="en_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having arrived in Babylon and given the breakfast to Daniel, he stood by the reapers who were eating and told no one what had happened.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="en_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He understood that the people would quickly return from Babylon.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="en_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he died two years before the return. And he was buried alone in his own field.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="en_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He gave a sign to those in Judea: that they would see a light in the temple, and thus they would see the glory of the temple.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="en_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And concerning the completion of the temple, he foretold that it would come about by a western nation.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="en_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">“Then,” he said, “the covering of the Holy of Holies will be torn into small pieces, and the capitals of the two pillars will be removed, and no one will know where they will be.”</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="en_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">But they will be carried away by angels into the wilderness, where the Tent of Testimony was first pitched.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="en_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And through them the Lord will be known at the end, for they will enlighten those pursued by the serpent in darkness, as from the beginning.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="0">
+          <unit id="en_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Zephaniah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was from the tribe of Simeon, from the field of Sabaratha.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He prophesied concerning the city and concerning the end of the nations and the shame of the impious.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having died, he was buried in his field.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="0">
+          <unit id="en_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Haggai</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He came, perhaps young, from Babylon to Jerusalem and openly prophesied concerning the return of the people, and he saw a part of the building of the temple.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And having died, he was honorably buried near the tomb of the priests, like them.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="0">
+          <unit id="en_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Zechariah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He came from Chaldea already advanced in years, and there he prophesied many things to the people; and he gave signs as proof.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one said to Jehozadak that he would bear a son and he would serve as priest in Jerusalem.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one also blessed Shealtiel concerning a son and gave him the name Zerubbabel.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And under Cyrus, he gave a sign for victory, and he foretold concerning his ministry which he would perform in Jerusalem, and he blessed him greatly.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he set forth the matters of prophecy in Jerusalem, and concerning the end of the nations and Israel and the temple and the idleness of prophets and priests, and concerning a double judgment.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="en_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he died in great old age, and having passed away, he was buried near Haggai.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="0">
+          <unit id="en_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Malachi</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This one was born after the return, in Sophas, and when very young, he had a good life.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And since all the people honored him as holy and gentle, they called him Malachi, which is interpreted “angel”; for he was also handsome to behold.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Moreover, all that he said in prophecy, on that very day, an angel of God appeared and confirmed, as it happened in the days of anarchy, as it is written in Spharphōtim, that is, in the Book of Judges.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And while still young, he was gathered to his fathers in his field.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="0">
+          <unit id="en_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Nathan</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He was David’s prophet from Gibeon, from the tribe of Ehōh. And he himself was the one who taught him the law of the Lord.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he saw that David would transgress with Bathsheba, and as he hurried to go to tell him, Belial hindered him, because he found a dead man lying naked and slain along the road.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he remained there, and that night he knew that he had committed the sin; and he returned mourning.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And when he had killed her husband, the Lord sent to reprove him.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he died after becoming very old, and he was buried in his land.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="0">
+          <unit id="en_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ahijah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">from Shiloh, where the tent was of old, from the city of Heli.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">This man spoke concerning Solomon, that he would offend the Lord.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he rebuked Jeroboam, because he walked deceptively with the Lord. He saw a pair of oxen trampling the people and running against the priests.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">He also foretold to Solomon that his wives would turn him away and all his offspring.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="en_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he died and was buried near the oak of Shiloh.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="0">
+          <unit id="en_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ijoel</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">was from the land of Samareim. This is the one whom the lion struck and he died, when he rebuked Jeroboam concerning the calves.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he was buried in Bethel near the false prophet who misled him.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="0">
+          <unit id="en_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Azariah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">was from the land of Sybatha, who brought back the captivity of Judah from Israel.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And dying, he was buried in his field.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="21">
+        <div number="0">
+          <unit id="en_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Zechariah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">from Jerusalem, the son of Jehoiada the priest, whom Joash the king of Judah killed beside the altar, and the house of David poured out his blood in the midst, at the aisle; and the priests took him and buried him with his father.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">From that time wonders of apparitions occurred in the temple, and the priests were unable to see visions of angels of God, nor to give oracles from the inner sanctuary, nor to inquire by means of the ephod, nor to respond to the people through the Urim as before.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="0">
+          <unit id="en_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Elijah</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Elijah the Tishbite was from the land of the Arabs, of the tribe of Aaron, dwelling in Gilead, because Tishbe was a gift to the priests.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">When he was about to be born, Sobacha his father saw that men in white raiment greeted him, and that they swaddled him in fire and gave him a flame of fire to eat.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And he came and reported in Jerusalem, and the oracle said to him: “Do not be afraid; for his dwelling will be light and his word a judgment, and he will judge Israel with sword and with fire.”</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="23">
+        <div number="0">
+          <unit id="en_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Elisha</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="en_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Elisha was from Abel-meholah of the land of Reuben.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="en_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And a wonder occurred concerning him, that when the golden calf was born in Gilgal, it cried out sharply, so that it was heard in Jerusalem.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="en_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And the priest said through the Urim, that a prophet was born to Israel, who would cast down their carved images and their molten images.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="en_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">And dying, he was buried in Samaria.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Greek (French)" author="OCP" language="French">
+    <divisions>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Greek (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="Title">
+        <div number="0">
+          <unit id="fr_1" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Noms des prophètes, d'où ils viennent, où ils sont morts, comment et où ils reposent.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="1">
+        <div number="0">
+          <unit id="fr_2" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ésaïe</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_3" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était de Jérusalem. Il mourut sous Manassé, scié en deux, et fut déposé sous le chêne de Rogel, près du passage des eaux qu'Ézéchias avait fait disparaître en les comblant.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_4" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et Dieu fit le signe de Siloé à cause du prophète ; car avant de mourir, défaillant, il pria pour boire de l'eau, et aussitôt elle lui fut envoyée de cette source ; c'est pourquoi elle fut appelée Siloé, ce qui se traduit par « Envoyé ».</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_5" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et au temps d'Ézéchias, avant qu'il ne fît les citernes et les réservoirs, à la prière d'Ésaïe un peu d'eau jaillit, parce que le peuple était assiégé par les étrangers, et afin que la ville ne pérît pas faute d'eau.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_6" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Car les ennemis demandaient d'où ils buvaient et, assiégeant la ville, ils s'assirent près de Siloé. Si donc les Juifs venaient, l'eau jaillissait ; mais si c'étaient des étrangers, non. C'est pourquoi, jusqu'à aujourd'hui, elle jaillit soudainement, afin que le mystère soit manifesté.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_7" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et puisque cela était arrivé par Ésaïe, en mémoire de cela le peuple l'enterra aussi tout près avec soin et avec honneur, afin que par ses prières, même après sa mort, ils puissent de même jouir de l'eau, car un oracle leur avait aussi été donné à son sujet.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_8" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">La tombe se trouve près de la tombe des rois, derrière la tombe des prêtres, du côté sud.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_9" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Car Salomon fit les tombes, selon le tracé de David, à l'est de Sion, qui a une entrée venant de Gabaon, à vingt stades de distance de la ville, et il fit une structure tortueuse et insoupçonnable ; et elle demeure jusqu'à ce jour ignorée de la plupart des prêtres et de tout le peuple.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_10" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">C'est là que le roi conservait l'or d'Éthiopie et les aromates.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_11" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et parce qu'Ézéchias montra aux nations le secret de David et de Salomon et profana les ossements de ses pères, pour cette raison Dieu maudit sa descendance afin qu'elle soit en servitude pour ses ennemis, et Dieu le rendit stérile à partir de ce jour-là.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="0">
+          <unit id="fr_12" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Jérémie</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_13" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était d'Anathoth, et à Taphnas en Égypte, lapidé par le peuple, il mourut.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_14" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il repose dans le lieu de la demeure de Pharaon, car les Égyptiens l'honorèrent, ayant été comblés de bienfaits par lui.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_15" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Car il pria, et les aspics — que les Égyptiens appellent éphôth — les laissèrent en paix.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_16" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et tous ceux qui sont fidèles à Dieu prient jusqu'à ce jour en ce lieu et, prenant de la poussière du lieu, guérissent les morsures d'aspics.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_17" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Mais nous avons appris des enfants d'Antigone et de Ptolémée, des vieillards, qu'Alexandre le Macédonien, s'étant rendu sur le lieu du prophète et ayant reconnu ses mystères, transféra ses reliques à Alexandrie, les disposant tout autour avec honneur ;</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_18" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et la race des aspics fut chassée de ce pays ; et il y introduisit ainsi les serpents appelés argoles, c'est-à-dire combattants de serpents.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_19" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ce Jérémie donna un signe aux prêtres d'Égypte : que leurs idoles devaient être ébranlées et que tous les ouvrages faits de main d'homme devaient s'écrouler lorsqu'une vierge enfanterait en Égypte avec un enfant semblable à Dieu.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_20" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">C'est pourquoi, jusqu'à présent, ils honorent une vierge qui enfante et, plaçant un nourrisson dans une crèche, ils l'adorent ; et au roi Ptolémée qui en demandait la raison, ils disaient : « C'est un mystère transmis par nos pères, confié à nos pères par un saint prophète, et nous attendons l'accomplissement de son mystère. »</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_21" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ce prophète, avant la prise du Temple, s'empara de l'arche de la Loi et de ce qu'elle contenait, et fit en sorte qu'elles fussent englouties dans un rocher, et dit à ceux qui se tenaient là :</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="fr_22" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">« Le Seigneur est parti du Sinaï vers le ciel, et il reviendra avec puissance ; et ce sera pour vous le signe de sa venue, lorsque toutes les nations se prosterneront devant un bois. »</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="fr_23" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il dit que personne ne ferait sortir cette arche, sinon Aaron, et que nul parmi les prêtres ou les prophètes ne déploierait plus les tables qui s'y trouvent, sinon Moïse, l'élu de Dieu.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="fr_24" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et lors de la résurrection, l'arche se lèvera la première, sortira du rocher et sera placée sur le mont Sinaï, et tous les saints se rassembleront près d'elle là-bas, attendant le Seigneur et fuyant l'ennemi qui veut les anéantir.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="fr_25" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Sur le rocher, il scella de son doigt le nom de Dieu, et l'empreinte devint comme une gravure de fer ; une nuée couvrit le nom, et personne ne connaît le lieu ni ne peut le lire jusqu'à ce jour et jusqu'à la fin des temps.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="fr_26" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et le rocher est dans le désert, là où l'arche fut d'abord faite, entre les deux montagnes où reposent Moïse et Aaron ; et la nuit, une nuée devient comme du feu selon le modèle ancien, car la gloire de Dieu ne s'éloignera point de sa Loi.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="fr_27" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et Dieu accorda à Jérémie la grâce d'accomplir lui-même la fin de son mystère, afin qu'il devînt le compagnon de Moïse, et ils sont ensemble jusqu'à ce jour.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="0">
+          <unit id="fr_28" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ézéchiel</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_29" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Celui-ci était du pays de Sarira, de la lignée des prêtres, et il mourut au pays des Chaldéens durant la captivité, après avoir beaucoup prophétisé à ceux de Judée.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_30" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Le chef du peuple d'Israël là-bas le mit à mort, parce qu'il était repris par lui au sujet du culte des idoles.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_31" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et ils l'enterrèrent dans le champ de Maur, dans la tombe de Sem et d'Arphaxad, ancêtres d'Abraham.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_32" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et la tombe est une caverne double, car Abraham aussi, à Hébron, fit la tombe de Sara à sa ressemblance.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_33" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Elle est dite double parce qu'elle est tortueuse, et c'est une chambre haute cachée, surélevée par rapport au sol, suspendue dans le roc.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_34" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ce prophète donna un prodige au peuple, afin qu'il prêtât attention au fleuve Kebar :</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_35" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">lorsqu'il tarirait, ils devaient attendre la faucille de la désolation jusqu'au bout de la terre, et lorsqu'il déborderait, le retour à Jérusalem.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_36" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Car le saint homme habitait là et beaucoup se rassemblaient auprès de lui.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_37" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et une fois, une foule étant réunie avec lui, les Chaldéens craignirent qu'ils ne se soulevassent et marchèrent contre eux pour les massacrer.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="fr_38" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il fit s'arrêter l'eau pour qu'ils s'enfuient en passant sur l'autre rive ; et ceux des ennemis qui osèrent les poursuivre furent engloutis.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="fr_39" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Par sa prière, il leur procura spontanément une nourriture abondante de poissons et, pour beaucoup qui défaillaient, il pria Dieu de leur redonner vie.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="fr_40" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Comme le peuple périssait sous les coups des ennemis, il s'approcha des chefs et, effrayés par des prodiges, ils cessèrent.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="fr_41" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il leur disait : « Avons-nous péri ? Notre espérance est-elle anéantie ? » Et par le prodige des ossements des morts, il les convainquit qu'il y aurait une espérance pour Israël, tant ici-bas que dans le monde à venir.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="fr_42" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Bien qu'étant là-bas, il montrait au peuple d'Israël ce qui se passait à Jérusalem et dans le Temple.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="fr_43" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il fut ravi de là et vint à Jérusalem pour confondre les incrédules.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="fr_44" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Tout comme Moïse, il vit le modèle du Temple, ainsi que le mur et un large avant-mur, tout comme Daniel dit aussi qu'il serait bâti.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="fr_45" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il jugea à Babylone la tribu de Dan et celle de Gad, parce qu'elles commettaient l'impiété envers le Seigneur en persécutant ceux qui gardaient la Loi,</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="fr_46" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et il fit contre elles un grand prodige : des serpents dévoraient leurs nourrissons et tout leur bétail,</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="fr_47" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et il prédit qu'à cause d'elles le peuple ne retournerait pas dans son pays, mais qu'ils resteraient en Médie jusqu'à la fin de leur égarement.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="fr_48" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et c'est de leur nombre qu'était celui qui le tua ; car ils s'opposèrent à lui tous les jours de sa vie.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="0">
+          <unit id="fr_49" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Daniel</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_50" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Celui-ci était de la tribu de Juda, issu de la lignée des notables au service royal ; mais, encore enfant, il fut emmené de Judée au pays des Chaldéens. Il était né à Beth-Horon la Haute.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_51" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et c'était un homme chaste, au point que les Juifs pensaient qu'il était eunuque.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_52" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il mena grand deuil sur la ville et s'exerça dans les jeûnes, s'abstenant de toute nourriture désirable ; il était d'aspect desséché, mais beau par la grâce du Très-Haut.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_53" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Celui-ci pria beaucoup pour Nabuchodonosor, à la prière de son fils Balthasar, lorsqu'il fut transformé en bête féroce et en bétail, afin qu'il ne pérît point.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_54" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">L'avant de son corps, avec la tête, était comme un bœuf, et ses pattes, avec l'arrière-train, comme un lion.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_55" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il fut révélé au saint homme, au sujet de ce mystère, qu'il était devenu une bête à cause de son amour du plaisir et de son obstination.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_56" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et c'est ce qu'éprouvent les puissants dans leur jeunesse, car ils se mettent comme un bœuf sous le joug de Béliar, et à la fin ils deviennent des bêtes féroces, ravissant, détruisant, mettant à mort et frappant.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_57" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Le saint sut par Dieu qu'il mangeait de l'herbe comme un bœuf et que celle-ci devenait pour lui une nourriture propre à la nature humaine.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_58" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">C'est pourquoi Nabuchodonosor aussi, après la digestion, retrouvant un cœur d'homme, pleurait et implorait le Seigneur, priant quarante fois chaque jour et chaque nuit.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="fr_59" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Un cœur de bête le reprenait, et il oubliait qu'il avait été un être humain ;</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="fr_60" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">sa langue lui fut retirée pour qu'il ne pût parler ; et dès qu'il reprenait conscience, il versait des larmes, et ses yeux étaient comme de la chair crue à force de pleurer.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="fr_61" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Car beaucoup de ceux qui sortaient de la ville le voyaient ; seul Daniel refusa de le voir, parce que pendant tout le temps de sa métamorphose, il était en prière pour lui ;</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="fr_62" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">il disait qu'il redeviendrait un être humain, mais ils ne le croyaient pas.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="fr_63" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Daniel fit en sorte que les sept années, qu'il avait appelées sept temps, devinssent sept mois.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="fr_64" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Le mystère des sept temps s'accomplit sur lui, car il fut rétabli en sept mois ; pendant six ans et six mois, il se prosternait devant le Seigneur et confessait son impiété ; et après le pardon de son iniquité, il lui rendit la royauté.</reading>
+          </unit>
+        </div>
+        <div number="16">
+          <unit id="fr_65" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il ne mangea ni pain ni viande, et ne but point de vin tout en faisant pénitence, car Daniel lui avait ordonné d'apaiser le Seigneur avec des légumes trempés et des herbes.</reading>
+          </unit>
+        </div>
+        <div number="17">
+          <unit id="fr_66" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">C'est pour cela qu'il l'appela Balthasar, car il voulut l'établir cohéritier de ses enfants.</reading>
+          </unit>
+        </div>
+        <div number="18">
+          <unit id="fr_67" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Mais le saint homme dit : « À Dieu ne plaise que j'abandonne l'héritage de mes pères pour m'attacher aux héritages des incirconcis ! »</reading>
+          </unit>
+        </div>
+        <div number="19">
+          <unit id="fr_68" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et pour les autres rois des Perses, il accomplit de nombreux prodiges qui n'ont pas été mis par écrit.</reading>
+          </unit>
+        </div>
+        <div number="20">
+          <unit id="fr_69" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il mourut là-bas et fut enseveli seul, avec honneur, dans le tombeau royal.</reading>
+          </unit>
+        </div>
+        <div number="21">
+          <unit id="fr_70" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il donna lui-même un signe dans les montagnes situées au-dessus de Babylone : lorsque celle du nord sera fumante, la fin de Babylone viendra ; mais lorsqu'elle brûlera comme par le feu, ce sera la fin de toute la terre ; et si celle du midi fait couler des eaux, le peuple retournera dans son pays, et si elle fait couler du sang, il y aura un carnage de Béliar sur toute la terre.</reading>
+          </unit>
+        </div>
+        <div number="22">
+          <unit id="fr_71" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et le saint homme s'endormit dans la paix.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="0">
+          <unit id="fr_72" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Osée</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_73" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Celui-ci était de Belemoth, de la tribu d'Issachar, et il fut enseveli dans sa patrie en paix.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_74" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il donna un signe : le Seigneur viendra sur la terre si le chêne qui est à Silo se divise de lui-même pour devenir douze chênes.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="0">
+          <unit id="fr_75" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Michée le Morasthite</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_76" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était de la tribu d'Éphraïm. Après avoir fait beaucoup de choses contre Achab, il fut mis à mort par Joram, son fils, en étant précipité d'une falaise, parce qu'il le reprenait pour les impiétés de ses pères.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_77" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il fut enseveli seul dans sa patrie, près de la fosse commune des Enakim.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="0">
+          <unit id="fr_78" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Amos</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_79" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était de Tékoé. Après qu'Amasias l'eut souvent fait battre, finalement son fils le tua en le frappant à la tempe avec une massue ;</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_80" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">et respirant encore, il parvint dans son pays, mourut quelques jours plus tard et y fut enseveli.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="0">
+          <unit id="fr_81" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Joël</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_82" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était du pays de Ruben, du domaine de Beth-Méon. Il mourut en paix et y fut enseveli.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="0">
+          <unit id="fr_83" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Abdias</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_84" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était du pays de Sichem, du domaine de Beth-Acaram.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_85" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Celui-ci était un disciple d'Élie et, ayant beaucoup enduré à cause de lui, il fut préservé.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_86" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">C'était le troisième chef de cinquante hommes qu'Élie épargna et avec lequel il descendit vers Ochozias.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_87" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Après cela, ayant quitté le service du roi, il prophétisa, mourut et fut enseveli avec ses pères.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="0">
+          <unit id="fr_88" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Jonas</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_89" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était du pays de Qiryath-Maous, près de la ville grecque d'Azot, sur le littoral.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_90" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Après avoir été rejeté par le monstre marin et être allé à Ninive, à son retour il ne resta pas dans son pays, mais prit sa mère et s'établit à Sour, pays des Philistins ;</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_91" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">car il disait : « C'est ainsi que j'ôterai mon opprobre, ayant menti en prophétisant contre Ninive, la grande ville. »</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_92" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">En ce temps-là, Élie reprenait la maison d'Achab et, ayant appelé la famine sur le pays, il s'enfuit ; et à son arrivée, il trouva la veuve avec son fils, car il ne pouvait demeurer auprès des incirconcis.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_93" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il la bénit ; et son fils étant mort, Dieu le ressuscita des morts par l'intermédiaire d'Élie, car il voulut lui montrer qu'on ne peut fuir loin de Dieu.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_94" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et s'étant levé après la famine, il vint dans le pays de Juda ; et sa mère étant morte en chemin, il l'ensevelit près du chêne de Débora.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_95" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et ayant habité dans le pays de Saraar, il mourut et fut enseveli dans la grotte de Kenaz, qui avait été juge d'une seule tribu aux jours de l'anarchie.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_96" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il donna un signe concernant Jérusalem et toute la terre : quand ils verront une pierre crier plaintivement, la fin sera proche ; et quand ils verront toutes les nations dans Jérusalem, la ville sera détruite de fond en comble.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="0">
+          <unit id="fr_97" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Nahum</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_98" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était d'Elkosh, au-delà de la montagne vers Beth-Gabrîn, de la tribu de Siméon.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_99" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Après Jonas, celui-ci donna un signe pour Ninive : qu'elle périrait par des eaux douces et un feu souterrain, ce qui arriva.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_100" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Car le lac qui l'entourait l'inonda lors d'un tremblement de terre, et un feu venu du désert embrasa sa partie la plus élevée.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_101" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il mourut en paix et fut enseveli dans sa terre.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="0">
+          <unit id="fr_102" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Habacuc</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_103" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était de la tribu de Siméon, du domaine de Bethzoukhar.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_104" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Avant la déportation, il eut une vision touchant la prise de Jérusalem et mena un grand deuil.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_105" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et lorsque Nabuchodonosor vint à Jérusalem, il s'enfuit à Ostracine et séjourna au pays d'Ismaël.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_106" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Mais quand les Chaldéens s'en retournèrent et que le reste de ceux qui étaient à Jérusalem descendit en Égypte, il revint habiter dans sa terre.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_107" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il servait les moissonneurs de son champ.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_108" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ayant pris la nourriture, il prophétisa aux siens en disant : « Je vais dans un pays lointain et je reviendrai promptement ; mais si je tarde, portez-la vous-mêmes aux moissonneurs. »</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="fr_109" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et s'étant rendu à Babylone et ayant donné le repas à Daniel, il se retrouva auprès des moissonneurs pendant qu'ils mangeaient, et il ne raconta à personne ce qui était arrivé.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="fr_110" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il comprit que le peuple reviendrait bientôt de Babylone.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="fr_111" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il mourut deux ans avant le retour, et il fut enseveli seul dans son propre champ.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="fr_112" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il donna un prodige à ceux de Judée : ils verraient une lumière dans le Temple, et contempleraient ainsi la gloire du Temple.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="fr_113" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et au sujet de la fin du Temple, il prédit qu'elle adviendrait par une nation occidentale.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="fr_114" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">« Alors », dit-il, « le voile du Debir sera déchiré en petits morceaux, et les chapiteaux des deux colonnes seront enlevés, et nul ne saura où ils seront ;</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="fr_115" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">mais ils seront transportés au désert par des anges, là où, au commencement, la Tente du Témoignage fut dressée.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="fr_116" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et par eux, le Seigneur sera reconnu à la fin, car ils éclaireront ceux qui sont poursuivis par le serpent dans les ténèbres, comme dès le commencement. »</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="13">
+        <div number="0">
+          <unit id="fr_117" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Sophonie</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_118" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était de la tribu de Siméon, du domaine de Sabaratha.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_119" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il prophétisa touchant la ville, la fin des nations et la honte des impies.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_120" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et étant mort, il fut enseveli dans son champ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="14">
+        <div number="0">
+          <unit id="fr_121" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Aggée</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_122" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il vint encore jeune de Babylone à Jérusalem, prophétisa ouvertement sur le retour du peuple et vit en partie la reconstruction du Temple.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_123" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et étant mort, il fut enseveli près du tombeau des prêtres, avec les mêmes honneurs qu'eux.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="15">
+        <div number="0">
+          <unit id="fr_124" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Zacharie</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_125" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il vint de Chaldée déjà avancé en âge, et là-bas il prophétisa beaucoup pour le peuple et donna des prodiges en guise de preuve.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_126" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">C'est lui qui dit à Josedec qu'il engendrerait un fils et qu'il exercerait la prêtrise à Jérusalem ;</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_127" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">c'est lui aussi qui bénit Salathiel pour son fils et lui donna le nom de Zorobabel.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_128" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et sous Cyrus, il donna un prodige en signe de victoire, prédit le service qu'il accomplirait à l'égard de Jérusalem et le bénit grandement.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_129" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il exposa ses prophéties à Jérusalem touchant la fin des nations, d'Israël et du Temple, la cessation des prophètes et des prêtres, et le double jugement.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="fr_130" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il mourut dans une extrême vieillesse, et ayant expiré, il fut enseveli près d'Aggée.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="16">
+        <div number="0">
+          <unit id="fr_131" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Malachie</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_132" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il naquit à Sopha après le retour, et dès son jeune âge mena une vie exemplaire.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_133" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et comme tout le peuple le vénérait comme un homme saint et doux, on l'appela Malachi, ce qui s'interprète « ange », car il était aussi beau d'aspect.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_134" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">De plus, tout ce qu'il prononçait en prophétie, un ange de Dieu apparaissait le jour même pour le répéter, comme cela s'était produit aux jours de l'anarchie, ainsi qu'il est écrit dans Spharphotim, c'est-à-dire dans le livre des Juges.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_135" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et encore jeune, il fut réuni à ses pères dans son champ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="17">
+        <div number="0">
+          <unit id="fr_136" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Nathan</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_137" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était le prophète de David, originaire de Gabaon, de la tribu d'Éôé. C'est lui qui lui enseigna la Loi du Seigneur.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_138" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il vit que David pécherait avec Bethsabée ; mais alors qu'il se hâtait d'aller l'avertir, Béliar l'en empêcha, car il trouva sur son chemin un cadavre gisant nu, égorgé.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_139" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il s'attarda là, et cette nuit-là il sut que David avait commis le péché ; et il s'en retourna en pleurant.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_140" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et quand David eut fait périr le mari de celle-ci, le Seigneur envoya Nathan pour le reprendre.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_141" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et étant devenu très vieux, il mourut et fut enseveli dans sa terre.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="18">
+        <div number="0">
+          <unit id="fr_142" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Ahiyya</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_143" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était de Silo, où se trouvait autrefois la Tente, de la ville d'Éli.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_144" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">C'est lui qui dit au sujet de Salomon qu'il offenserait le Seigneur.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_145" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il reprit Jéroboam parce qu'il marchait avec fourberie envers le Seigneur ; il vit une paire de génisses qui piétinait le peuple et se précipitait contre les prêtres.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_146" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il prédit aussi à Salomon que ses femmes le séduiraient, ainsi que toute sa lignée.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="fr_147" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il mourut et fut enseveli près du chêne de Silo.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="19">
+        <div number="0">
+          <unit id="fr_148" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Joëd</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_149" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était du pays de Samarie. C'est lui que le lion tua et qui mourut lorsqu'il eut repris Jéroboam au sujet des génisses.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_150" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et il fut enseveli à Béthel près du faux prophète qui l'avait égaré.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="20">
+        <div number="0">
+          <unit id="fr_151" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Azarias</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_152" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était du pays de Sybatha, lui qui fit revenir d'Israël les captifs de Juda.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_153" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et lorsqu'il mourut, il fut enseveli dans son champ.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="21">
+        <div number="0">
+          <unit id="fr_154" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Zacharie</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_155" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Il était de Jérusalem, fils du prêtre Joïada, que Joas, roi de Juda, tua près de l'autel ; et la maison de David répandit son sang au milieu, sur le portique. Les prêtres le prirent et l'ensevelirent avec son père.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_156" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Dès lors, il y eut dans le Temple des prodiges d'apparitions, et les prêtres ne purent plus avoir de vision des anges de Dieu, ni donner d'oracles depuis le Dévir, ni consulter par l'éphod, ni répondre au peuple par les Ourim comme auparavant.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="22">
+        <div number="0">
+          <unit id="fr_157" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Élie</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_158" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">C'était un Thesbite du pays des Arabes, de la tribu d'Aaron, habitant en Galaad, car Thesbi avait été donnée aux prêtres.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_159" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Lorsqu'il était sur le point de naître, son père Sobakha vit que des hommes vêtus de blanc le saluaient, qu'ils l'emmaillotaient de feu et lui donnaient à manger une flamme de feu.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_160" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Étant allé à Jérusalem, il le rapporta, et l'oracle lui dit : « Ne crains point, car sa demeure sera lumière et sa parole jugement, et il jugera Israël par l'épée et par le feu. »</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="23">
+        <div number="0">
+          <unit id="fr_161" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Élisée</reading>
+          </unit>
+        </div>
+        <div number="1">
+          <unit id="fr_162" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Élisée était d'Abel-Méhula, du pays de Ruben.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="fr_163" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et à son sujet se produisit un prodige : lorsqu'il naquit, à Guilgal la génisse d'or poussa un cri perçant, au point qu'on l'entendit à Jérusalem.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="fr_164" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et le prêtre déclara par les oracles : « Un prophète est né pour Israël, qui renversera leurs sculptures et leurs idoles de fonte. »</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="fr_165" group="0" parallel="">
+            <reading option="0" mss="OCP-Trans ">Et lorsqu'il mourut, il fut enseveli à Samarie.</reading>
           </unit>
         </div>
       </div>

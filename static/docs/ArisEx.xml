@@ -1,56 +1,157 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book SYSTEM "grammateus.dtd">
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="ArisEx" title="Aristeas the Exegete" textStructure="fragmentary">
- <version title="Praep. Evang." author="Eusebius" fragment="1" language="Greek">
-  <divisions>
-   <division label="Book" delimiter="." />
-   <division label="Chapter" delimiter="." />
-   <division label="Line" />
-  </divisions>
-  <manuscripts>
-    <ms abbrev="Evans" language="Greek" show="yes">
-      <name>Evans</name>
-      <bibliography>Eusebius, Praep. Evang. 9.24.1-9.25.4</bibliography>
-    </ms>
-  </manuscripts>
-  <text>
-    <div number="9">
-     <div number="24">
-      <div number="1">
-        <unit id="0" group="0" parallel="">
-          <reading option="0" mss="Evans " linebreak="following">. . . Ἄκουε δὲ οἷα καὶ περὶ τοῦ Ἰὼβ ὁ αὐτὸς ἱστορεῖ·</reading>
-        </unit>
-      </div>
-     </div>
-     <div number="25">
-      <div number="heading">
-        <unit id="1" group="0" parallel="">
-          <reading option="0" mss="Evans " linebreak="following">κεʹ. ΑΡΙΣΤΕΟΥ ΠΕΡΙ ΤΟΥ ΙΩΒ ΟΜΟΙΩΣ </reading>
-        </unit>
-      </div>
-      <div number="1">
-        <unit id="2" group="0" parallel="">
-          <reading option="0" mss="Evans ">“Ἀριστέας δέ φησιν ἐν τῷ Περὶ Ἰουδαίων τὸν Ἠσαῦ γήμαντα Βασσάραν υἱὸν ἐν Ἐδὼμ γεννῆσαι Ἰώβ· κατοικεῖν δὲ τοῦτον ἐν τῇ Αὐσίτιδι χώρᾳ ἐπὶ τοῖς ὅροις τῆς Ἰδουμαίας καὶ Ἀραβίας. </reading>
-        </unit>
-      </div>
-      <div number="2">
-        <unit id="3" group="0" parallel="">
-          <reading option="0" mss="Evans ">γενέσθαι δ᾽ αὐτὸν δίκαιον καὶ πολύκτηνον· κτήσασθαι γὰρ αὐτὸν πρόβατα μὲν ἑπτακισχίλια, καμήλους δὲ τρισχιλίας, ζεύγη βοῶν πεντακόσια, ὄνους θηλείας νομάδας πεντακοσίας· εἶχε δὲ καὶ γεωργίας ἱκανάς. </reading>
-        </unit>
-      </div>
-      <div number="3">
-        <unit id="4" group="0" parallel="">
-          <reading option="0" mss="Evans ">τοῦτον δὲ τὸν Ἰὼβ πρότερον Ἰωβὰβ ὀνομάζεσθαι. πειράζοντα δ᾽ αὐτὸν τὸν θεὸν ἐμμεῖναι, μεγάλαις δὲ περιβαλεῖν αὐτὸν ἀτυχίαις. πρῶτον μὲν γὰρ αὐτοῦ τούς τε ὄνους καὶ τοὺς βοῦς ὑπὸ λῃστῶν ἀπολέσθαι, εἶτα τὰ πρόβατα ὑπὸ πυρὸς ἐκ τοῦ οὐρανοῦ πεσόντος κατακαῆναι σὺν τοῖς ποιμέσι· μετ᾽ οὐ πολὺ δὲ καὶ τὰς καμήλους ὑπὸ λῃστῶν ἀπελαθῆναι· εἶτα τὰ τέκνα αὐτοῦ ἀποθανεῖν, πεσούσης τῆς οἰκίας· αὐθημερὸν δὲ αὐτοῦ καὶ τὸ σῶμα ἑλκῶσαι. </reading>
-        </unit>
-      </div>
-      <div number="4">
-        <unit id="5" group="0" parallel="">
-          <reading option="0" mss="Evans ">φαύλως δὲ αὐτοῦ διακειμένου ἐλθεῖν εἰς ἐπίσκεψιν Ἐλίφαν τὸν Θαιμανιτῶν βασιλέα καὶ Βαλδὰδ τὸν Σαυχαίων τύραννον καὶ Σωφὰρ τὸν Μινναίων βασιλέα, ἐλθεῖν δὲ καὶ Ἐλιοῦν τὸν Βαραχιὴλ τὸν Ζωβίτην· παρακαλούμενον δὲ φάναι καὶ χωρὶς παρακλήσεως ἐμμενεῖν αὑτὸν ἔν τε τῇ εὐσεβείᾳ καὶ τοῖς δεινοῖς. τὸν δὲ θεὸν ἀγασθέντα τὴν εὐψυχίαν αὐτοῦ τῆς τε νόσου αὐτὸν ἀπολῦσαι καὶ πολλῶν κύριον ὑπάρξεων ποιῆσαι.”
+  <version title="Praep. Evang." author="Eusebius" fragment="1" language="Greek">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Line"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Evans" language="Greek" show="yes">
+        <name>Evans</name>
+        <bibliography>Eusebius, Praep. Evang. 9.24.1-9.25.4</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="24">
+          <div number="1">
+            <unit id="0" group="0" parallel="">
+              <reading option="0" mss="Evans " linebreak="following">. . . Ἄκουε δὲ οἷα καὶ περὶ τοῦ Ἰὼβ ὁ αὐτὸς ἱστορεῖ·</reading>
+            </unit>
+          </div>
+        </div>
+        <div number="25">
+          <div number="heading">
+            <unit id="1" group="0" parallel="">
+              <reading option="0" mss="Evans " linebreak="following">κεʹ. ΑΡΙΣΤΕΟΥ ΠΕΡΙ ΤΟΥ ΙΩΒ ΟΜΟΙΩΣ </reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="2" group="0" parallel="">
+              <reading option="0" mss="Evans ">“Ἀριστέας δέ φησιν ἐν τῷ Περὶ Ἰουδαίων τὸν Ἠσαῦ γήμαντα Βασσάραν υἱὸν ἐν Ἐδὼμ γεννῆσαι Ἰώβ· κατοικεῖν δὲ τοῦτον ἐν τῇ Αὐσίτιδι χώρᾳ ἐπὶ τοῖς ὅροις τῆς Ἰδουμαίας καὶ Ἀραβίας. </reading>
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="3" group="0" parallel="">
+              <reading option="0" mss="Evans ">γενέσθαι δ᾽ αὐτὸν δίκαιον καὶ πολύκτηνον· κτήσασθαι γὰρ αὐτὸν πρόβατα μὲν ἑπτακισχίλια, καμήλους δὲ τρισχιλίας, ζεύγη βοῶν πεντακόσια, ὄνους θηλείας νομάδας πεντακοσίας· εἶχε δὲ καὶ γεωργίας ἱκανάς. </reading>
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="4" group="0" parallel="">
+              <reading option="0" mss="Evans ">τοῦτον δὲ τὸν Ἰὼβ πρότερον Ἰωβὰβ ὀνομάζεσθαι. πειράζοντα δ᾽ αὐτὸν τὸν θεὸν ἐμμεῖναι, μεγάλαις δὲ περιβαλεῖν αὐτὸν ἀτυχίαις. πρῶτον μὲν γὰρ αὐτοῦ τούς τε ὄνους καὶ τοὺς βοῦς ὑπὸ λῃστῶν ἀπολέσθαι, εἶτα τὰ πρόβατα ὑπὸ πυρὸς ἐκ τοῦ οὐρανοῦ πεσόντος κατακαῆναι σὺν τοῖς ποιμέσι· μετ᾽ οὐ πολὺ δὲ καὶ τὰς καμήλους ὑπὸ λῃστῶν ἀπελαθῆναι· εἶτα τὰ τέκνα αὐτοῦ ἀποθανεῖν, πεσούσης τῆς οἰκίας· αὐθημερὸν δὲ αὐτοῦ καὶ τὸ σῶμα ἑλκῶσαι. </reading>
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="5" group="0" parallel="">
+              <reading option="0" mss="Evans ">φαύλως δὲ αὐτοῦ διακειμένου ἐλθεῖν εἰς ἐπίσκεψιν Ἐλίφαν τὸν Θαιμανιτῶν βασιλέα καὶ Βαλδὰδ τὸν Σαυχαίων τύραννον καὶ Σωφὰρ τὸν Μινναίων βασιλέα, ἐλθεῖν δὲ καὶ Ἐλιοῦν τὸν Βαραχιὴλ τὸν Ζωβίτην· παρακαλούμενον δὲ φάναι καὶ χωρὶς παρακλήσεως ἐμμενεῖν αὑτὸν ἔν τε τῇ εὐσεβείᾳ καὶ τοῖς δεινοῖς. τὸν δὲ θεὸν ἀγασθέντα τὴν εὐψυχίαν αὐτοῦ τῆς τε νόσου αὐτὸν ἀπολῦσαι καὶ πολλῶν κύριον ὑπάρξεων ποιῆσαι.”
  Τοσαῦτα καὶ περὶ τούτων ὁ Πολυΐστωρ. . . .</reading>
-        </unit>
+            </unit>
+          </div>
+        </div>
       </div>
-     </div>
-    </div>
-  </text>
- </version>
+    </text>
+  </version>
+  <version title="English" author="OCP" fragment="1" language="English">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Line"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation based on the Greek text of Eusebius, Praep. Evang. 9.24.1-9.25.4 (Craig A. Evans edition).</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="24">
+          <div number="1">
+            <unit id="en_0" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans" linebreak="following">. . . And hear what the same author also relates concerning Job:</reading>
+            </unit>
+          </div>
+        </div>
+        <div number="25">
+          <div number="heading">
+            <unit id="en_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans" linebreak="following">25. Likewise of Aristeas Concerning Job</reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="en_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">“And Aristeas says in his book Concerning the Jews that Esau, having married Bassara, begot a son in Edom named Job; and that he lived in the land of Ausitis, on the borders of Idumea and Arabia.</reading>
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="en_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">And that he was righteous and rich in possessions; for he acquired seven thousand sheep, three thousand camels, five hundred yoke of oxen, and five hundred she-asses feeding at pasture; and he had also extensive farming lands.</reading>
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="en_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">And that this Job was formerly called Jobab. But when God tried him, he persevered, though he was encompassed with great misfortunes. For first his asses and oxen were carried off by robbers, then the sheep were burned up with fire that fell from heaven along with the shepherds; not long after, the camels were also driven off by robbers; then his children died when the house collapsed; and on the very same day his body was covered with sores.</reading>
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="en_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">And when he was in a wretched plight, there came to visit him Eliphas, king of the Temanites, and Baldad, ruler of the Shuhites, and Sophar, king of the Minaioi; and there came also Elihu, son of Barachiel the Zobite. And when they exhorted him, he said that even without exhortation he remained steadfast in his piety and through his afflictions. And God, admiring his courage, released him from his disease and made him master of manifold possessions.” Such is the account of Polyhistor concerning these matters. . . .</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (French)" author="OCP" language="French" fragment="1">
+    <divisions>
+      <division label="Book" delimiter="."/>
+      <division label="Chapter" delimiter="."/>
+      <division label="Line"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="24">
+          <div number="1">
+            <unit id="fr_0" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">... Écoute aussi ce que le même auteur rapporte au sujet de Job :</reading>
+            </unit>
+          </div>
+        </div>
+        <div number="25">
+          <div number="heading">
+            <unit id="fr_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">XXV. D'Aristée sur Job, de même.</reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="fr_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Aristée dit, dans son traité Sur les Juifs, qu'Ésaü, ayant épousé Bassara, engendra en Édom un fils, Job ; et que celui-ci habitait dans le pays d'Ausitis, aux confins de l'Idumée et de l'Arabie.</reading>
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="fr_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Il devint un homme juste et très riche en biens ; car il acquit sept mille brebis, trois mille chameaux, cinq cents paires de bœufs et cinq cents ânesses au pâturage ; il possédait aussi de vastes terres cultivées.</reading>
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="fr_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Ce Job s'appelait auparavant Jobab. Dieu, pour éprouver s'il demeurerait ferme, l'accabla de grands malheurs. D'abord, en effet, ses ânes et ses bœufs furent enlevés par des brigands, puis ses brebis furent consumées avec les bergers par un feu tombé du ciel ; peu après, ses chameaux furent aussi emmenés par des brigands ; ensuite ses enfants périrent dans l'effondrement de la maison ; et le jour même, son corps fut couvert d'ulcères.</reading>
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="fr_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Comme il se trouvait dans un état misérable, Éliphas, roi des Thémanites, Baldad, souverain des Sauchéens, et Sophar, roi des Minéens, vinrent lui rendre visite ; Élihou, fils de Barachiel, le Zobite, vint également. Alors qu'on cherchait à le consoler, Job déclara que, même sans consolation, il persévérerait dans la piété au milieu des épreuves. Dieu, ayant admiré son courage, le délivra de sa maladie et le rendit possesseur de nombreux biens. » Voilà ce que rapporte aussi Polyhistor à ces sujets...</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
 </book>

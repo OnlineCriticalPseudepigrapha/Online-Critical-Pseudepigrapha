@@ -1,51 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-    <!ELEMENT book (version)+>
-<!ATTLIST book filename CDATA #REQUIRED>
-<!ATTLIST book title CDATA #REQUIRED>
-<!ATTLIST book textStructure CDATA #IMPLIED>
-    <!ELEMENT version (divisions,resources*,manuscripts+,text)>
-<!ATTLIST version title CDATA #REQUIRED>
-<!ATTLIST version author CDATA #REQUIRED>
-<!ATTLIST version fragment CDATA #IMPLIED>
-<!ATTLIST version language CDATA #IMPLIED>
-    <!ELEMENT divisions (division)+>
-    <!ELEMENT division (#PCDATA)>
-<!ATTLIST division label CDATA #REQUIRED>
-<!ATTLIST division delimiter CDATA #IMPLIED>
-    <!ELEMENT resources (resource)+>
-    <!ELEMENT resource (info+,URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-    <!ELEMENT info (#PCDATA)>
-    <!ELEMENT URL (#PCDATA)>
-    <!ELEMENT manuscripts (ms)+>
-    <!ELEMENT ms (name,bibliography*)>
-<!ATTLIST ms abbrev CDATA #REQUIRED>
-<!ATTLIST ms language CDATA #REQUIRED>
-<!ATTLIST ms show CDATA #REQUIRED>
-    <!ELEMENT name (#PCDATA|sup)*>
-    <!ELEMENT sup (#PCDATA)>
-    <!ELEMENT bibliography (#PCDATA|booktitle)*>
-    <!ELEMENT booktitle (#PCDATA)>
-    <!ELEMENT text (div)+>
-    <!ELEMENT div (div|unit)*>
-<!ATTLIST div number CDATA #REQUIRED>
-<!ATTLIST div fragment CDATA #IMPLIED>
-    <!ELEMENT unit (reading)+>
-<!ATTLIST unit id CDATA #REQUIRED>
-<!ATTLIST unit group CDATA "0">
-<!ATTLIST unit parallel CDATA #IMPLIED>
-    <!ELEMENT reading (#PCDATA|w)*>
-<!ATTLIST reading option CDATA #REQUIRED>
-<!ATTLIST reading mss CDATA #REQUIRED>
-<!ATTLIST reading linebreak CDATA #IMPLIED>
-<!ATTLIST reading indent CDATA #IMPLIED>
-    <!ELEMENT w (#PCDATA)>
-<!ATTLIST w morph CDATA #IMPLIED>
-<!ATTLIST w lex CDATA #IMPLIED>
-<!ATTLIST w style CDATA #IMPLIED>
-<!ATTLIST w lang CDATA #IMPLIED>
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="PhEPoet" title="Philo the Epic Poet" textStructure="fragmentary">
   <version title="Praep. Evang. (Frag. 1)" author="Eusebius" fragment="1" language="Greek">
     <divisions>
@@ -62,18 +15,18 @@
     </manuscripts>
     <text>
       <div number="9">
-      <div number="20">
-        <div number="1">
-          <unit id="1" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">"Φησὶ δὲ περὶ τούτου καὶ Φίλων ἐν τῷ πρώτῳ τῶν Περὶ Ἱεροσόλυμα·
+        <div number="20">
+          <div number="1">
+            <unit id="1" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">&quot;Φησὶ δὲ περὶ τούτου καὶ Φίλων ἐν τῷ πρώτῳ τῶν Περὶ Ἱεροσόλυμα·
 </reading>
-          </unit>
-          <unit id="2" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΟΥ ΑΥΤΟΥ
+            </unit>
+            <unit id="2" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΟΥ ΑΥΤΟΥ
 </reading>
-          </unit>
-          <unit id="3" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="3" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
 	'Ἔκλυον ἀρχεγόνοισι τὸ μηρίον ὥς ποτε θεσμοῖς, 
       Ἁβραὰμ κλυτοηχὲς ὑπερτέρῳ ἅμματι δεσμῶν, 
       παμφαές, πλήμμυρε μεγαυχήτοισι λογισμοῖς, 
@@ -82,17 +35,17 @@
       ἀθάνατον ποίησεν ἑὴν φάτιν, ἐξότε κείνου 
       ἔκγονος αἰνογόνοιο πολύμνιον ἔλλαχε κῦδος,'
 </reading>
-          </unit>
-          <unit id="4" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς·"
+            </unit>
+            <unit id="4" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς·&quot;
 </reading>
-          </unit>
+            </unit>
           </div>
-          </div>
-          </div>
-          </text>
-          </version>
-<version title="Praep. Evang. (Frag. 2)" author="Eusebius" fragment="2" language="Greek">
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2)" author="Eusebius" fragment="2" language="Greek">
     <divisions>
       <division label="Book" delimiter=":"/>
       <division label="Chapter" delimiter=":"/>
@@ -109,33 +62,33 @@
       <div number="9">
         <div number="20">
           <div number="1">
-          <unit id="5" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">"οἷς μετ᾽ ὀλίγα ἐπιφέρει·
+            <unit id="5" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">&quot;οἷς μετ᾽ ὀλίγα ἐπιφέρει·
 </reading>
-          </unit>
-          <unit id="6" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="6" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
 	'Ἀρτίχερος θηκτοῖο ξιφηφόρον ἐντύνοντος 
       λήματι καὶ σφαράγοιο παρακλιδὸν ἀθροισθέντος· 
       | ἀλλ᾽ ὁ μὲν ἐν χείρεσσι κερασφόρον ὤπασε κριόν,' 
 </reading>
-          </unit>
-          <unit id="7" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ τούτοις ἑπόμενα." 
+            </unit>
+            <unit id="7" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ τούτοις ἑπόμενα.&quot; 
 </reading>
-          </unit>
-        </div>
-        <div number="2">
-          <unit id="8" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">Ταῦτα μὲν δὴ ἀπὸ τῆς προειρημένης τοῦ Πολυΐστορος γραφῆς.
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="8" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">Ταῦτα μὲν δὴ ἀπὸ τῆς προειρημένης τοῦ Πολυΐστορος γραφῆς.
 </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-      </div>
-</text>
-</version>
-<version title="Praep. Evang. (Frag. 3)" author="Eusebius" fragment="3" language="Greek">
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 3)" author="Eusebius" fragment="3" language="Greek">
     <divisions>
       <division label="Book" delimiter=":"/>
       <division label="Chapter" delimiter=":"/>
@@ -150,21 +103,21 @@
     </manuscripts>
     <text>
       <div number="9">
-      <div number="24">
-        <div number="Heading">
-          <unit id="9" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΟΥ ΙΩΣΗΦ· ΑΠΟ ΤΗΣ ΑΥΤΗΣ ΓΡΑΦΗΣ
+        <div number="24">
+          <div number="Heading">
+            <unit id="9" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΟΥ ΙΩΣΗΦ· ΑΠΟ ΤΗΣ ΑΥΤΗΣ ΓΡΑΦΗΣ
 </reading>
-          </unit>
-        </div>
-        <div number="1">
-          <unit id="10" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">"Μαρτυρεῖ δὲ ταῖς ἱεραῖς βίβλοις καὶ Φίλων ἐν τῇ ιδ᾽ τῶν Περὶ Ἱεροσόλυμα, 
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="10" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">&quot;Μαρτυρεῖ δὲ ταῖς ἱεραῖς βίβλοις καὶ Φίλων ἐν τῇ ιδ᾽ τῶν Περὶ Ἱεροσόλυμα, 
 λέγων οὕτως·
 </reading>
-          </unit>
-          <unit id="11" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="11" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
       'Τοῖσιν ἕδος μακαριστὸν ὅλης μέγας ἔκτισεν 
 	ἄκτωρ 
       ὕψιστος καὶ πρόσθεν ἀφ᾽ Ἁβραάμοιο καὶ Ἰσὰκ 
@@ -172,17 +125,17 @@
       θεσπιστὴς σκηπτοῦχος ἐν Αἰγύπτοιο θρόνοισι, 
       δινεύσας λαθραῖα χρόνου πλημμυρίδι μοίρης', 
 </reading>
-          </unit>
-          <unit id="12" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς.  ταῦτα καὶ περὶ τοῦ Ἰωσήφ." 
+            </unit>
+            <unit id="12" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς.  ταῦτα καὶ περὶ τοῦ Ἰωσήφ.&quot; 
 </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-      </div>
-      </text>
-      </version>
-<version title="Praep. Evang. (Frag. 4)" author="Eusebius" fragment="4" language="Greek">
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 4)" author="Eusebius" fragment="4" language="Greek">
     <divisions>
       <division label="Book" delimiter=":"/>
       <division label="Chapter" delimiter=":"/>
@@ -196,36 +149,36 @@
       </ms>
     </manuscripts>
     <text>
-      <div number="9">      
-      <div number="37">
-        <div number="Heading">
-          <unit id="13" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΩΝ ΕΝ ΙΕΡΟΣΟΛΥΜΟΙΣ ΨΔΑΤΩΝ
+      <div number="9">
+        <div number="37">
+          <div number="Heading">
+            <unit id="13" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">ΦΙΛΩΝΟΣ ΠΕΡΙ ΤΩΝ ΕΝ ΙΕΡΟΣΟΛΥΜΟΙΣ ΨΔΑΤΩΝ
 </reading>
-          </unit>
-        </div>
-        <div number="1">
-          <unit id="14" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">"Φησὶ δὲ ὁ Φίλων ἐν τοῖς Περὶ Ἱεροσολύμων κρήνην εἶναι, ταύτην δὲ ἐν | μὲν τῷ χειμῶνι ξηραίνεσθαι, ἐν δὲ τῷ θέρει πληροῦσθαι. λέγει δὲ ἐν τῇ πρώτῃ οὕτως· 
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="14" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">&quot;Φησὶ δὲ ὁ Φίλων ἐν τοῖς Περὶ Ἱεροσολύμων κρήνην εἶναι, ταύτην δὲ ἐν | μὲν τῷ χειμῶνι ξηραίνεσθαι, ἐν δὲ τῷ θέρει πληροῦσθαι. λέγει δὲ ἐν τῇ πρώτῃ οὕτως· 
 </reading>
-          </unit>
-          <unit id="15" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="15" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
 	'Νηχόμενος δ᾽ ἐφύπερθε τὸ θαμβηέστατον ἄλλο 
       δέρκηθρον· συναοιδὰ μεγιστούχοιο λοετροῖς 
       ῥεύματος ἐμπίπλησι βαθὺν ῥόον ἐξανιείσης,'
 </reading>
-          </unit>
-          <unit id="16" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς." 
+            </unit>
+            <unit id="16" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ ἑξῆς.&quot; 
 </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
-        </div>
-        </div>
-        </text>
-        </version>
-<version title="Praep. Evang. (Frag. 5)" author="Eusebius" fragment="5" language="Greek">
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 5)" author="Eusebius" fragment="5" language="Greek">
     <divisions>
       <division label="Book" delimiter=":"/>
       <division label="Chapter" delimiter=":"/>
@@ -239,31 +192,31 @@
       </ms>
     </manuscripts>
     <text>
-      <div number="9">        
+      <div number="9">
         <div number="37">
-        <div number="2">
-          <unit id="17" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">"οἷς πάλιν ὑποβὰς περὶ τῆς πληρώσεως ἐπιλέγει·
+          <div number="2">
+            <unit id="17" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">&quot;οἷς πάλιν ὑποβὰς περὶ τῆς πληρώσεως ἐπιλέγει·
 </reading>
-          </unit>
-          <unit id="18" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="18" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
       'Ῥεῦμα γὰρ ὑψιφάεννον, ἐν ὑετίοις νιφετοῖσιν 
       ἱέμενον, πολυγηθές, ὑπαὶ πύργοις συνόροισιν 
       στρωφᾶται, καὶ ξηρὰ πέδῳ κεκονιμένα κρήνης 
       τηλεφαῆ δείκνυσιν ὑπέρτατα θάμβεα λαῶν,'
 </reading>
-          </unit>
-          <unit id="19" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ τούτοις ἀκόλουθα."
+            </unit>
+            <unit id="19" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ τὰ τούτοις ἀκόλουθα.&quot;
 </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
-        </div>
-        </div>
-        </text>
-        </version>
-<version title="Praep. Evang. (Frag. 6)" author="Eusebius" fragment="6" language="Greek">
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 6)" author="Eusebius" fragment="6" language="Greek">
     <divisions>
       <division label="Book" delimiter=":"/>
       <division label="Chapter" delimiter=":"/>
@@ -277,29 +230,431 @@
       </ms>
     </manuscripts>
     <text>
-      <div number="9">        
-        <div number="37">        
-        <div number="3">
-          <unit id="20" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">"εἶτα πάλιν περὶ τῆς τοῦ ἀρχιερέως κρήνης καὶ τῆς ἀποχετεύσεως διέξεισιν οὕτως· 
+      <div number="9">
+        <div number="37">
+          <div number="3">
+            <unit id="20" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">&quot;εἶτα πάλιν περὶ τῆς τοῦ ἀρχιερέως κρήνης καὶ τῆς ἀποχετεύσεως διέξεισιν οὕτως· 
 </reading>
-          </unit>
-          <unit id="21" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">
+            </unit>
+            <unit id="21" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">
 	'Αἰπὺ δ᾽ ἄρ᾽ ἐκπτύουσι διὰ χθονὸς ὑδροχόοισι σωλῆνες,'
  </reading>
-          </unit>
-          <unit id="22" group="0" parallel="">
-            <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ ὅσα ἄλλα τούτοις ἕπεται." 
+            </unit>
+            <unit id="22" group="0" parallel="">
+              <reading option="0" mss="Mras " linebreak="doubleFollowing">καὶ ὅσα ἄλλα τούτοις ἕπεται.&quot; 
 </reading>
-          </unit>
-          <unit id="23" group="0" parallel="">
-            <reading option="0" mss="Mras ">
+            </unit>
+            <unit id="23" group="0" parallel="">
+              <reading option="0" mss="Mras ">
 	Τοσαῦτα μὲν δὴ τὰ ἀπὸ τῶν Ἀλεξάνδρου τοῦ Πολυΐστοπος.
 </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 1) (English)" author="OCP" language="English" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 1) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="20">
+          <div number="1">
+            <unit id="en_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Philo also says concerning this in the first book of his work *On Jerusalem*:</reading>
+            </unit>
+            <unit id="en_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">FROM PHILO, CONCERNING THE SAME.</reading>
+            </unit>
+            <unit id="en_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“I heard how once, according to ancient customs, the thigh was unbound, Abraham, famous for his loud cry, with a superior bond of chains, all-shining, overflowing with boastful reasonings, and divine-loving charms. For having left the glorious enclosure, a terrible burning of wondrous plants, the much-speaking praiseworthy one, holding back, made his own fame immortal, since his descendant received much-sung glory from the wondrous offspring.”</reading>
+            </unit>
+            <unit id="en_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">and what follows.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2) (English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 2) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="20">
+          <div number="1">
+            <unit id="en_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">&quot;To which he adds a little later:</reading>
+            </unit>
+            <unit id="en_6" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">'While the sharpened blade of Articheres was making its assault with courage and a roar was gathered askance; | but he gave a horned ram into his hands,'</reading>
+            </unit>
+            <unit id="en_7" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">and the lines that follow.&quot;</reading>
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="en_8" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">These indeed are from the aforementioned writing of Polyhistor.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 3) (English)" author="OCP" language="English" fragment="3">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 3) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="24">
+          <div number="Heading">
+            <unit id="en_9" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">PHILO CONCERNING JOSEPH; FROM THE SAME WRITING.</reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="en_10" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Philo also testifies to the sacred books in the fourteenth book of his On Jerusalem, speaking thus:</reading>
+            </unit>
+            <unit id="en_11" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">'For them a blessed dwelling the great, highest creator built for all, and before from Abraham and Isaac and Jacob of the good children, from whom Joseph, interpreter of dreams, scepter-bearer on the thrones of Egypt, having secretly revolved by the flood of fate’s time,'</reading>
+            </unit>
+            <unit id="en_12" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">and what follows. These things also concern Joseph.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 4) (English)" author="OCP" language="English" fragment="4">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 4) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="37">
+          <div number="Heading">
+            <unit id="en_13" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Philo on the Waters in Jerusalem</reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="en_14" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">&quot;Philo says in his On Jerusalem that there is a spring, and this dries up in winter but fills up in summer. He says thus in the first book:</reading>
+            </unit>
+            <unit id="en_15" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">'And swimming above, one beholds another most amazing sight; in harmony with the baths of the great one, it fills the deep stream as it sends forth its flow,'</reading>
+            </unit>
+            <unit id="en_16" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">and what follows.&quot;</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 5) (English)" author="OCP" language="English" fragment="5">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 5) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="37">
+          <div number="2">
+            <unit id="en_17" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">&quot;Again, he adds concerning the fulfillment, stepping in after these things:</reading>
+            </unit>
+            <unit id="en_18" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">'For a high-shining stream, rushing forth in rainy snows, greatly rejoicing, wanders among the bordering towers, and shows the dry places on the ground, powdered with dust, the far-shining highest wonders of the peoples,'</reading>
+            </unit>
+            <unit id="en_19" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">and the things that follow these.&quot;</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 6) (English)" author="OCP" language="English" fragment="6">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 6) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="37">
+          <div number="3">
+            <unit id="en_20" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“Then again, he discusses the High Priest’s fountain and the drainage thus:</reading>
+            </unit>
+            <unit id="en_21" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">‘And steeply through the earth, water-bearing pipes spit out,’</reading>
+            </unit>
+            <unit id="en_22" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">and all the other things that follow these.”</reading>
+            </unit>
+            <unit id="en_23" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">So much, then, from Alexander Polyhistor.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 1) (French)" author="OCP" language="French" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 1) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="20">
+          <div number="1">
+            <unit id="fr_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Philon parle également de cela dans le premier livre de son ouvrage Sur Jérusalem :</reading>
+            </unit>
+            <unit id="fr_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">DE PHILON SUR LE MÊME SUJET</reading>
+            </unit>
+            <unit id="fr_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« J'ai appris autrefois, selon les décrets ancestraux, comment la cuisse d'Abraham au renom éclatant, toute resplendissante par le lien supérieur des entraves, déborda de pensées glorieuses, charmes chers à Dieu. Car, lorsqu'il quitta le splendide enclos, le Dieu à la voix puissante et loué, retenant le brasier des créatures redoutables, rendit immortelle sa propre parole, depuis que la descendance de cet illustre ancêtre a obtenu une gloire célébrée par de nombreux hymnes »,</reading>
+            </unit>
+            <unit id="fr_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">et la suite. »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2) (French)" author="OCP" language="French" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 2) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="20">
+          <div number="1">
+            <unit id="fr_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« auquel il ajoute peu après :</reading>
+            </unit>
+            <unit id="fr_6" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“Tandis que, d’une main assurée, il préparait avec résolution le glaive aiguisé, et que [la victime] était liée et ployée sur le côté ; mais Lui mit entre ses mains un bélier portant des cornes”,</reading>
+            </unit>
+            <unit id="fr_7" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">et ce qui suit. »</reading>
+            </unit>
+          </div>
+          <div number="2">
+            <unit id="fr_8" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Voilà ce qui est tiré de l’écrit susmentionné de Polyhistor.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 3) (French)" author="OCP" language="French" fragment="3">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 3) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="24">
+          <div number="Heading">
+            <unit id="fr_9" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">DE PHILON, SUR JOSEPH ; TIRÉ DU MÊME ÉCRIT</reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="fr_10" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Philon rend lui aussi témoignage aux livres sacrés dans le quatorzième livre de son ouvrage *Sur Jérusalem*, en s'exprimant ainsi :</reading>
+            </unit>
+            <unit id="fr_11" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">‹ Pour eux, le grand et très-haut guide fonda jadis une demeure bienheureuse, depuis Abraham et Isaac et Jacob aux beaux enfants, d'où est issu Joseph, interprète des songes, porteur de sceptre sur les trônes d'Égypte, qui scruta les mystères cachés dans le flot du destin du temps ›,</reading>
+            </unit>
+            <unit id="fr_12" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">et la suite. Voilà ce qui concerne aussi Joseph. »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 4) (French)" author="OCP" language="French" fragment="4">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 4) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="37">
+          <div number="Heading">
+            <unit id="fr_13" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">DE PHILON : SUR LES EAUX DE JÉRUSALEM</reading>
+            </unit>
+          </div>
+          <div number="1">
+            <unit id="fr_14" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Philon dit, dans son traité Sur Jérusalem, qu'il existe une source, et que celle-ci s'assèche en hiver mais se remplit en été. Il s'exprime ainsi dans le premier livre :</reading>
+            </unit>
+            <unit id="fr_15" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Nageant par-dessus, un autre spectacle des plus admirables s'offre aux regards : en harmonie avec les ablutions du Très-Haut, le cours jaillissant emplit le profond lit du flot »,</reading>
+            </unit>
+            <unit id="fr_16" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">et la suite. »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 5) (French)" author="OCP" language="French" fragment="5">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 5) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="37">
+          <div number="2">
+            <unit id="fr_17" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">À cela, il ajoute un peu plus bas, au sujet du remplissage :</reading>
+            </unit>
+            <unit id="fr_18" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Car un flot brillant dans les hauteurs, se précipitant dans des ondées pluvieuses, plein d'allégresse, tourbillonne sous les tours adjacentes, et montre au loin, jaillissant de la source, la terre desséchée et poudreuse, suprême merveille pour les peuples »,</reading>
+            </unit>
+            <unit id="fr_19" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">et la suite.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 6) (French)" author="OCP" language="French" fragment="6">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 6) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="37">
+          <div number="3">
+            <unit id="fr_20" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Puis, il traite de nouveau de la source du grand prêtre et de la canalisation en ces termes :</reading>
+            </unit>
+            <unit id="fr_21" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“Et d'en haut, à travers la terre, les tuyaux la crachent dans les conduits d'eau,”</reading>
+            </unit>
+            <unit id="fr_22" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">et tout ce qui s'ensuit. »</reading>
+            </unit>
+            <unit id="fr_23" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Voilà pour ce qui provient des écrits d'Alexandre Polyhistor.</reading>
+            </unit>
+          </div>
+        </div>
       </div>
     </text>
   </version>

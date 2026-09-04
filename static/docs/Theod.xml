@@ -1,86 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!DOCTYPE book [
-
-<!ELEMENT book (version+)>
-<!ATTLIST book
- filename CDATA #REQUIRED
- title CDATA #REQUIRED
- textStructure CDATA #IMPLIED
->
-
-<!ELEMENT version (divisions, resources*, manuscripts+, text)>
-<!ATTLIST version
- language CDATA #REQUIRED
- title CDATA #REQUIRED
- author CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT divisions (division)+>
-
-<!ELEMENT division (#PCDATA)>
-<!ATTLIST division
- label CDATA #REQUIRED
- delimiter CDATA #IMPLIED
->
-
-<!ELEMENT resources (resource+)>
-<!ELEMENT resource (info+, URL?)>
-<!ATTLIST resource name CDATA #REQUIRED>
-
-<!ELEMENT info (#PCDATA)>
-
-<!ELEMENT URL (#PCDATA)>
-
-<!ELEMENT manuscripts (ms+)>
-
-<!ELEMENT ms (name, bibliography*)>
-<!ATTLIST ms
- abbrev CDATA #REQUIRED
- language CDATA #REQUIRED
- show CDATA #REQUIRED
->
-
-<!ELEMENT name (#PCDATA | sup)*>
-
-<!ELEMENT sup (#PCDATA)>
-
-<!ELEMENT bibliography (#PCDATA | booktitle)*>
-
-<!ELEMENT booktitle (#PCDATA)>
-
-<!ELEMENT text (div+)>
-
-<!ELEMENT div (div | unit)*>
-<!ATTLIST div
- number CDATA #REQUIRED
- fragment CDATA #IMPLIED
->
-
-<!ELEMENT unit (reading+)>
-<!ATTLIST unit
- id CDATA #REQUIRED
- group CDATA "0"
- parallel CDATA #REQUIRED
->
-
-<!ELEMENT reading (#PCDATA | w)*>
-<!ATTLIST reading
- option CDATA #REQUIRED
- mss CDATA #REQUIRED
- linebreak CDATA #IMPLIED
- indent CDATA #IMPLIED
->
-
-<!ELEMENT w (#PCDATA)>
-<!ATTLIST w
- morph CDATA #IMPLIED
- lex CDATA #IMPLIED
- style CDATA #IMPLIED
- lang CDATA #IMPLIED
->
-
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <book filename="Theod" title="Theodotus" textStructure="fragmentary">
   <version title="Praep. Evang. (Frag. 1)" author="Eusebius" language="Greek" fragment="1">
     <divisions>
@@ -103,11 +21,11 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       </ms>
     </manuscripts>
     <text>
-    <div number="9">
-      <div number="22">
-        <div number="1">
-          <unit id="1" group="0" parallel="">
-            <reading option="0" mss="Mras ">κβʹ. ΘΕΟΔΟΤΟΥ ΠΕΡΙ ΤΟΥ ΙΑΚΩΒ     
+      <div number="9">
+        <div number="22">
+          <div number="1">
+            <unit id="1" group="0" parallel="">
+              <reading option="0" mss="Mras ">κβʹ. ΘΕΟΔΟΤΟΥ ΠΕΡΙ ΤΟΥ ΙΑΚΩΒ     
 “Τὰ δὲ Σίκιμά φησι Θεόδοτος ἐν τῷ περὶ Ἰουδαίων ἀπὸ Σικιμίου τοῦ Ἑρμοῦ λαβεῖν τὴν ὀνομασίαν· τοῦτον γὰρ καὶ κτίσαι τὴν πόλιν· κεῖσθαι δ᾽ αὐτήν 
 φησιν ἐν τῇ {περὶ} Ἰουδαίων οὕτως· 
       ‘Ἡ δ᾽ ἄρ᾽ ἔην ἀγαθή τε καὶ αἰγινόμος καὶ ὑδρηλή, 
@@ -119,12 +37,12 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       ἡ διερὴ Σικίμων καταφαίνεται, ἱερὸν ἄστυ, 
       νέρθεν ὑπὸ ῥίζῃ δεδμημένον, ἀμφὶ δὲ τεῖχος 
       λισσὸν ὑπώρειαν ὑποδέδρομεν αἰπύθεν ἕρκος.’” </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-			</div>
-  </text>
-	</version>
+    </text>
+  </version>
   <version title="Praep. Evang. (Frag. 2)" author="Eusebius" language="Greek" fragment="2">
     <divisions>
       <division label="Book" delimiter=":"/>
@@ -146,20 +64,20 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       </ms>
     </manuscripts>
     <text>
-			<div number="9">
-      <div number="22">
-        <div number="2">
-          <unit id="2" group="0" parallel="">
-            <reading option="0" mss="Mras ">“ὕστερον δέ φησιν αὐτὴν ὑπὸ Ἑβραίων κατασχεθῆναι, δυναστεύοντος Ἐμμώρ· τὸν γὰρ Ἐμμὼρ υἱὸν γεννῆσαι Συχέμ. φησὶ δέ· 
+      <div number="9">
+        <div number="22">
+          <div number="2">
+            <unit id="2" group="0" parallel="">
+              <reading option="0" mss="Mras ">“ὕστερον δέ φησιν αὐτὴν ὑπὸ Ἑβραίων κατασχεθῆναι, δυναστεύοντος Ἐμμώρ· τὸν γὰρ Ἐμμὼρ υἱὸν γεννῆσαι Συχέμ. φησὶ δέ· 
       ‘Ἐνθένδε, ξένε, ποιμενόφι πτόλιν ἤλυθ᾽ Ἰακὼβ 
       εὐρεῖαν Σικίμων· ἐπὶ δ᾽ ἀνδράσι τοῖσιν ἔτῃσιν 
       ἀρχὸς Ἐμὼρ σὺν παιδὶ Συχέμ, μάλ᾽ ἀτειρέε φῶτε.’” </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-    </div>
-		</text>
-		</version>
+    </text>
+  </version>
   <version title="Praep. Evang. (Frag. 3)" author="Eusebius" language="Greek" fragment="3">
     <divisions>
       <division label="Book" delimiter=":"/>
@@ -181,11 +99,11 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       </ms>
     </manuscripts>
     <text>
-    	<div number="9">
-      <div number="22">
-        <div number="3">
-          <unit id="3" group="0" parallel="">
-            <reading option="0" mss="Mras ">“εἶτα περὶ Ἰακὼβ καὶ τὴν εἰς Μεσοποταμίαν αὐτοῦ παρουσίαν καὶ τὸν τῶν δύο γυναικῶν γάμον καὶ τὴν τῶν τέκνων γένεσιν καὶ τὴν παρουσίαν τὴν ἐκ Μεσοποταμίας ἐπὶ τὰ Σίκιμα. εἶπε δέ· 
+      <div number="9">
+        <div number="22">
+          <div number="3">
+            <unit id="3" group="0" parallel="">
+              <reading option="0" mss="Mras ">“εἶτα περὶ Ἰακὼβ καὶ τὴν εἰς Μεσοποταμίαν αὐτοῦ παρουσίαν καὶ τὸν τῶν δύο γυναικῶν γάμον καὶ τὴν τῶν τέκνων γένεσιν καὶ τὴν παρουσίαν τὴν ἐκ Μεσοποταμίας ἐπὶ τὰ Σίκιμα. εἶπε δέ· 
       ‘Ἰακὼβ Συρίην κτηνοτρόφον ἷκτο καὶ εὐρὺ 
       ῥεῖθρον Ἐϋφρήταο λίπεν ποταμοῦ κελάδοντος. 
       ἤλυθε γὰρ κἀκεῖθι λιπὼν δριμεῖαν ἐνιπὴν 
@@ -201,13 +119,13 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       τῷ δ᾽ υἱεῖς ἐγένοντο νόῳ πεπνυμένοι αἰνῶς 
       ἕνδεκα καὶ κούρη Δείνα περικαλλὲς ἔχουσα 
       εἶδος, ἐπίστρεπτον δὲ δέμας καὶ ἀμύμονα θυμόν.’” </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-			</div>
-		</text>
-		</version>
-	  <version title="Praep. Evang. (Frag. 4)" author="Eusebius" language="Greek" fragment="4">
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 4)" author="Eusebius" language="Greek" fragment="4">
     <divisions>
       <division label="Book" delimiter=":"/>
       <division label="Chapter" delimiter=":"/>
@@ -228,29 +146,29 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       </ms>
     </manuscripts>
     <text>
-    	<div number="9">
-      <div number="22">
-        <div number="4">
-          <unit id="4" group="0" parallel="">
-            <reading option="0" mss="Mras ">“ἀπὸ δὲ τοῦ Εὐφράτου φησὶ τὸν Ἰακὼβ ἐλθεῖν εἰς τὰ Σίκιμα πρὸς Ἐμμώρ· τὸν δὲ ὑποδέξασθαι αὐτὸν καὶ μέρος τι τῆς χώρας δοῦναι. καὶ αὐτὸν μὲν τὸν Ἰακὼβ γεωμορεῖν, τοὺς δὲ υἱοὺς αὐτοῦ ἕνδεκα τὸν ἀριθμὸν ὄντας ποιμαίνειν, τὴν δὲ θυγατέρα Δείναν καὶ τὰς γυναῖκας ἐριουργεῖν. καὶ τὴν Δείναν παρθένον οὖσαν εἰς τὰ Σίκιμα ἐλθεῖν πανηγύρεως οὔσης βουλομένην θεάσασθαι τὴν πόλιν· Συχὲμ δὲ τὸν τοῦ Ἐμμὼρ υἱὸν ἰδόντα ἐρασθῆναι αὐτῆς καὶ ἁρπάσαντα ὡς ἑαυτὸν διακομίσαι καὶ φθεῖραι αὐτήν. </reading>
-          </unit>
-        </div>
-        <div number="5">
-          <unit id="5" group="0" parallel="">
-            <reading option="0" mss="Mras ">αὖθις δὲ σὺν τῷ πατρὶ ἐλθόντα πρὸς τὸν Ἰακὼβ αἰτεῖν αὐτὴν πρὸς γάμου κοινωνίαν· τὸν δὲ οὐ φάναι δώσειν, πρὶν ἂν ἢ πάντας τοὺς οἰκοῦντας τὰ Σίκιμα περιτεμνομένους Ἰουδαΐσαι· τὸν δὲ Ἐμμὼρ φάναι πείσειν αὐτούς. φησὶ δὲ περὶ τοῦ δεῖν περιτέμνεσθαι αὐτοὺς ὁ Ἰακώβ· </reading>
-          </unit>
-        </div>
-        <div number="6">
-          <unit id="6" group="0" parallel="">
-            <reading option="0" mss="Mras ">‘Οὐ γὰρ δὴ θεμιτόν γε τόδ᾽ Ἑβραίοισι τέτυκται, 
+      <div number="9">
+        <div number="22">
+          <div number="4">
+            <unit id="4" group="0" parallel="">
+              <reading option="0" mss="Mras ">“ἀπὸ δὲ τοῦ Εὐφράτου φησὶ τὸν Ἰακὼβ ἐλθεῖν εἰς τὰ Σίκιμα πρὸς Ἐμμώρ· τὸν δὲ ὑποδέξασθαι αὐτὸν καὶ μέρος τι τῆς χώρας δοῦναι. καὶ αὐτὸν μὲν τὸν Ἰακὼβ γεωμορεῖν, τοὺς δὲ υἱοὺς αὐτοῦ ἕνδεκα τὸν ἀριθμὸν ὄντας ποιμαίνειν, τὴν δὲ θυγατέρα Δείναν καὶ τὰς γυναῖκας ἐριουργεῖν. καὶ τὴν Δείναν παρθένον οὖσαν εἰς τὰ Σίκιμα ἐλθεῖν πανηγύρεως οὔσης βουλομένην θεάσασθαι τὴν πόλιν· Συχὲμ δὲ τὸν τοῦ Ἐμμὼρ υἱὸν ἰδόντα ἐρασθῆναι αὐτῆς καὶ ἁρπάσαντα ὡς ἑαυτὸν διακομίσαι καὶ φθεῖραι αὐτήν. </reading>
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="5" group="0" parallel="">
+              <reading option="0" mss="Mras ">αὖθις δὲ σὺν τῷ πατρὶ ἐλθόντα πρὸς τὸν Ἰακὼβ αἰτεῖν αὐτὴν πρὸς γάμου κοινωνίαν· τὸν δὲ οὐ φάναι δώσειν, πρὶν ἂν ἢ πάντας τοὺς οἰκοῦντας τὰ Σίκιμα περιτεμνομένους Ἰουδαΐσαι· τὸν δὲ Ἐμμὼρ φάναι πείσειν αὐτούς. φησὶ δὲ περὶ τοῦ δεῖν περιτέμνεσθαι αὐτοὺς ὁ Ἰακώβ· </reading>
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="6" group="0" parallel="">
+              <reading option="0" mss="Mras ">‘Οὐ γὰρ δὴ θεμιτόν γε τόδ᾽ Ἑβραίοισι τέτυκται, 
       γαμβροὺς ἄλλοθεν εἴς γε νυούς τ᾽ ἀγέμεν ποτὶ δῶμα, 
       ἀλλ᾽ ὅστις γενεῆς ἐξεύχεται εἶναι ὁμοίης.’” </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-			</div>
-			</text>
-			</version>
+    </text>
+  </version>
   <version title="Praep. Evang. (Frag. 5)" author="Eusebius" language="Greek" fragment="5">
     <divisions>
       <division label="Book" delimiter=":"/>
@@ -272,21 +190,21 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       </ms>
     </manuscripts>
     <text>
-    	<div number="9">			
-      <div number="22">
-        <div number="7">
-          <unit id="7" group="0" parallel="">
-            <reading option="0" mss="Mras ">“εἶτα ὑποβὰς περὶ τῆς περιτομῆς· 
+      <div number="9">
+        <div number="22">
+          <div number="7">
+            <unit id="7" group="0" parallel="">
+              <reading option="0" mss="Mras ">“εἶτα ὑποβὰς περὶ τῆς περιτομῆς· 
       ‘Ὅς ποτ᾽, ἐπεὶ πάτρης ἐξήγαγε δῖον Ἀβραάμ, 
       αὐτὸς ἀπ᾽ οὐρανόθεν κάλεσ’ ἀνέρα παντὶ σὺν οἴκῳ 
       σάρκ᾽ ἀποσυλῆσαι πόσθης ἄπο, καί ῥ᾽ ἐτέλεσσεν· 
       ἀστεμφὲς δὲ τέτυκται, ἐπεὶ θεὸς αὐτὸς ἔειπε.’” </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-			</div>
-			</text>
-			</version>
+    </text>
+  </version>
   <version title="Praep. Evang. (Frag. 6)" author="Eusebius" language="Greek" fragment="6">
     <divisions>
       <division label="Book" delimiter=":"/>
@@ -307,25 +225,25 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
 </bibliography>
       </ms>
     </manuscripts>
-    <text>			
-    <div number="9">
-      <div number="22">
-        <div number="8">
-          <unit id="8" group="0" parallel="">
-            <reading option="0" mss="Mras ">“πορευθέντος οὖν εἰς τὴν πόλιν τοῦ Ἐμμὼρ καὶ τοὺς ὑποτασσομένους παρακαλοῦντος περιτέμνεσθαι, ἕνα τῶν Ἰακὼβ υἱῶν τὸ ὄνομα Συμεῶνα διαγνῶναι τόν τε Ἐμμὼρ καὶ τὸν Συχὲμ ἀνελεῖν, τὴν ὕβριν τῆς ἀδελφῆς μὴ βουληθέντα πολιτικῶς ἐνεγκεῖν· ταῦτα δὲ διαγνόντα Λευὶν τῷ ἀδελφῷ κοινώσασθαι· λαβόντα δ᾽ αὐτὸν συγκάταινον ἐπὶ τὴν πρᾶξιν παρορμῆσαι, λόγιον προφερόμενον τὸν θεὸν ἀνελεῖν φάμενον τοῖς Ἁβραὰμ ἀπογόνοις δέκα ἔθνη δώσειν. </reading>
-          </unit>
-        </div>
-        <div number="9a">
-          <unit id="9" group="0" parallel="">
-            <reading option="0" mss="Mras ">φησὶ δὲ οὕτως ὁ Συμεὼν πρὸς τὸν Λευίν· 
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="8">
+            <unit id="8" group="0" parallel="">
+              <reading option="0" mss="Mras ">“πορευθέντος οὖν εἰς τὴν πόλιν τοῦ Ἐμμὼρ καὶ τοὺς ὑποτασσομένους παρακαλοῦντος περιτέμνεσθαι, ἕνα τῶν Ἰακὼβ υἱῶν τὸ ὄνομα Συμεῶνα διαγνῶναι τόν τε Ἐμμὼρ καὶ τὸν Συχὲμ ἀνελεῖν, τὴν ὕβριν τῆς ἀδελφῆς μὴ βουληθέντα πολιτικῶς ἐνεγκεῖν· ταῦτα δὲ διαγνόντα Λευὶν τῷ ἀδελφῷ κοινώσασθαι· λαβόντα δ᾽ αὐτὸν συγκάταινον ἐπὶ τὴν πρᾶξιν παρορμῆσαι, λόγιον προφερόμενον τὸν θεὸν ἀνελεῖν φάμενον τοῖς Ἁβραὰμ ἀπογόνοις δέκα ἔθνη δώσειν. </reading>
+            </unit>
+          </div>
+          <div number="9a">
+            <unit id="9" group="0" parallel="">
+              <reading option="0" mss="Mras ">φησὶ δὲ οὕτως ὁ Συμεὼν πρὸς τὸν Λευίν· 
       ‘Εὖ γὰρ ἐγὼ μῦθόν &lt;γε&gt; πεπυσμένος εἰμὶ θεοῖο· 
       δώσειν γάρ ποτ᾽ ἔφησε δέκ᾽ ἔθνεα παισὶν Ἁβραάμ.’” </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-			</div>
-			</text>
-			</version>
+    </text>
+  </version>
   <version title="Praep. Evang. (Frag. 7)" author="Eusebius" language="Greek" fragment="7">
     <divisions>
       <division label="Book" delimiter=":"/>
@@ -347,21 +265,21 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       </ms>
     </manuscripts>
     <text>
-    	<div number="9">			
-      <div number="22">
-        <div number="9b">
-          <unit id="10" group="0" parallel="">
-            <reading option="0" mss="Mras ">“τὸν δὲ θεὸν αὐτοῖς τοῦτον τὸν νοῦν ἐμβαλεῖν διὰ τὸ τοὺς ἐν Σικίμοις ἀσεβεῖς εἶναι. φησὶ δέ· 
+      <div number="9">
+        <div number="22">
+          <div number="9b">
+            <unit id="10" group="0" parallel="">
+              <reading option="0" mss="Mras ">“τὸν δὲ θεὸν αὐτοῖς τοῦτον τὸν νοῦν ἐμβαλεῖν διὰ τὸ τοὺς ἐν Σικίμοις ἀσεβεῖς εἶναι. φησὶ δέ· 
       ‘Βλάπτε θεὸς Σικίμων οἰκήτορας, οὐ γὰρ ἔτιον 
       εἰς αὐτοὺς ὅστις κε μόλῃ κακὸς οὐδὲ μὲν ἐσθλός· 
       οὐδὲ δίκας ἐδίκαζον ἀνὰ πτόλιν οὐδὲ θέμιστας· 
       λοίγια δ᾽ ὠρώρει τοῖσιν μεμελημένα ἔργα.’” </reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-			</div>
-			</text>
-			</version>
+    </text>
+  </version>
   <version title="Praep. Evang. (Frag. 8)" author="Eusebius" language="Greek" fragment="8">
     <divisions>
       <division label="Book" delimiter=":"/>
@@ -382,17 +300,17 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
 </bibliography>
       </ms>
     </manuscripts>
-    <text>		
-		<div number="9">
-      <div number="22">
-        <div number="10">
-          <unit id="11" group="0" parallel="">
-            <reading option="0" mss="Mras ">“τὸν οὖν Λευὶν καὶ τὸν Συμεῶνα εἰς τὴν πόλιν καθωπλισμένους ἐλθεῖν καὶ πρῶτα μὲν τοὺς ἐντυγχάνοντας ἀναιρεῖν, ἔπειτα δὲ καὶ τὸν Ἐμμὼρ καὶ τὸν Συχὲμ φονεῦσαι. </reading>
-          </unit>
-        </div>
-        <div number="11">
-          <unit id="12" group="0" parallel="">
-            <reading option="0" mss="Mras ">λέγει δὲ περὶ τῆς ἀναιρέσεως αὐτῶν οὕτως· 
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="10">
+            <unit id="11" group="0" parallel="">
+              <reading option="0" mss="Mras ">“τὸν οὖν Λευὶν καὶ τὸν Συμεῶνα εἰς τὴν πόλιν καθωπλισμένους ἐλθεῖν καὶ πρῶτα μὲν τοὺς ἐντυγχάνοντας ἀναιρεῖν, ἔπειτα δὲ καὶ τὸν Ἐμμὼρ καὶ τὸν Συχὲμ φονεῦσαι. </reading>
+            </unit>
+          </div>
+          <div number="11">
+            <unit id="12" group="0" parallel="">
+              <reading option="0" mss="Mras ">λέγει δὲ περὶ τῆς ἀναιρέσεως αὐτῶν οὕτως· 
       ‘Ὣς τότε δὴ Συμεὼν μὲν Ἐμὼρ ὤρουσεν ἐπ᾽ αὐτὸν 
       πλῆξέ τέ οἱ κεφαλήν, δειρὴν δ᾽ ἕλεν ἐν χερὶ λαιῇ, 
       λεῖψε δ᾽ ἔτι σπαίρουσαν, ἐπεὶ πόνος ἄλλος ὀρώρει. 
@@ -401,10 +319,434 @@ Fragment 8: Alexander Polyhistor, “On the Jews,” as cited by Eusebius, Praep
       ἤλασε δὲ κληϊδα μέσην, δῦ δὲ ξίφος ὀξὺ 
       σπλάγχνα διὰ στέρνων, λίπε δὲ ψυχὴ δέμας εὐθύς.’ 
 πυθομένους δὲ καὶ τοὺς ἑτέρους ἀδελφοὺς τὴν πρᾶξιν αὐτῶν ἐπιβοηθῆσαι καὶ τὴν πόλιν ἐκπορθῆσαι καὶ τὴν ἀδελφὴν ἀναρρυσαμένους μετὰ τῶν αἰχμαλώτων εἰς τὴν πατρῴαν ἔπαυλιν διακομίσαι.” Τούτοις καὶ τὰ ἑξῆς περὶ τοῦ Ἰωσὴφ ἐκ τῆς αὐτῆς τοῦ Πολυΐστορος γραφῆς ἐπισυνήφθω·</reading>
-          </unit>
+            </unit>
+          </div>
         </div>
       </div>
-			</div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 1) (English)" author="OCP" language="English" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 1) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="1">
+            <unit id="en_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">XXII. THEODOTUS CONCERNING JACOB. Theodotus says in his work concerning the Jews that Shechem received its name from Sicimius, son of Hermes; for he founded the city. He describes its location in his work concerning the Jews as follows: ‘And indeed it was good, with many goats and well-watered. Nor was there a long journey to reach the city from the countryside. Nor do shaggy oaks ever toil there. Very near it, two mighty mountains appeared, full of grass and wood. And between them, a narrow path was cut through. And on the other side, moist Shechem appears, a sacred city, built below the root, and a smooth wall ran around the base, a steep enclosure from above.’</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2) (English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 2) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="2">
+            <unit id="en_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“Later,” he says, “it was seized by the Hebrews, during the reign of Hamor; for Hamor begat a son, Shechem.” He says: “From there, stranger, Jacob came to the shepherd-loving, broad city of Shechem; and over the local men were the ruler Hamor with his son Shechem, two very formidable men.”</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 3) (English)" author="OCP" language="English" fragment="3">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 3) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="3">
+            <unit id="en_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“Then concerning Jacob and his arrival in Mesopotamia, and the marriage to two women, and the birth of the children, and the arrival from Mesopotamia to Shechem. And he said: ‘Jacob came to pastoral Syria and left the wide, murmuring stream of the Euphrates river. For he came there, having left the sharp rebuke of his own brother; Laban, who was indeed his kinsman, welcomed him hospitably to his home, but he alone at that time ruled Syria, being called a fresh descendant by birth. And he promised him marriage to his youngest daughter and assented; yet he was not at all eager to fulfill it, but he devised a trick and sent Leah, who was older than he, to the man’s bed. Nor did it escape him entirely, but he perceived the evil plot and received the other daughter, and he mingled with both of his blood-relatives. And to him were born eleven sons, exceedingly wise in mind, and a daughter, Dinah, possessing very beautiful form, and a striking figure, and a blameless spirit.’”</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 4) (English)" author="OCP" language="English" fragment="4">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 4) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="4">
+            <unit id="en_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“And he says that Jacob came from the Euphrates to Shechem to Hamor. Hamor welcomed him and gave him a portion of the land. Jacob himself farmed, and his eleven sons were shepherds, while his daughter Dinah and his wives did wool-work. And Dinah, being a virgin, went to Shechem when there was a festival, wanting to see the city. Shechem, the son of Hamor, saw her and fell in love with her, and he abducted her and brought her to himself and violated her.</reading>
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="en_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Again, coming with his father to Jacob, he asked for her in marriage. But Jacob said he would not give her until all those inhabiting Shechem were circumcised and Judaized. Hamor said he would persuade them. And Jacob said concerning the necessity of their being circumcised:</reading>
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="en_6" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">‘For this is surely not lawful for the Hebrews, to bring in sons-in-law from elsewhere, or daughters-in-law to the house, but only whoever claims to be of the same lineage.’”</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 5) (English)" author="OCP" language="English" fragment="5">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 5) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="7">
+            <unit id="en_7" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“Then, proceeding to speak about circumcision: ‘When [God] led out divine Abraham from his homeland, he himself called the man from heaven with his whole household to strip away the flesh from the penis, and he completed it. And it has been established immovably, because God himself spoke it.’”</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 6) (English)" author="OCP" language="English" fragment="6">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 6) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="8">
+            <unit id="en_8" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“When Hamor went into the city and urged those subject to him to be circumcised, one of Jacob’s sons, named Simeon, decided to kill both Hamor and Shechem, because he was unwilling to endure his sister’s disgrace in a civilized manner. Having made this decision, he shared it with his brother Levi. Having obtained his consent for the deed, he incited him to action, bringing forth an oracle which said that God would kill, claiming that God would give ten nations to the descendants of Abraham.</reading>
+            </unit>
+          </div>
+          <div number="9a">
+            <unit id="en_9" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Simeon spoke thus to Levi: ‘For I have heard well the word of God; for he once said that he would give ten nations to the children of Abraham.’”</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 7) (English)" author="OCP" language="English" fragment="7">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 7) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="9b">
+            <unit id="en_10" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“God put this thought in them because those in Shechem were impious. He says: ‘God harms the inhabitants of Shechem, for they did not honor anyone who might come to them, neither wicked nor good; nor did they administer justice throughout the city, nor sacred laws; but destructive deeds concerned to them arose.’”</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 8) (English)" author="OCP" language="English" fragment="8">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>English translation of Praep. Evang. (Frag. 8) (English) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="10">
+            <unit id="en_11" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">“Then Levi and Symeon went into the city armed. First, they killed those they encountered, and then they murdered both Emmor and Sychem.</reading>
+            </unit>
+          </div>
+          <div number="11">
+            <unit id="en_12" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">And he says concerning their killing thus: ‘Then indeed Symeon rushed upon Emmor and struck him on the head. He seized him by the neck with his left hand, and left him still twitching, for another task was urgent. Meanwhile, boundless rage seized Levi as Sychem, greatly enraged, clung to his knees. He struck him in the middle of his collarbone, and the sharp sword passed through his vitals, through his breast, and his soul immediately left his body.’ And when the other brothers learned of their action, they came to their aid and sacked the city. They rescued their sister and brought her back to their ancestral dwelling place with the captives.” To these accounts, the following about Joseph from the same writing of Polyhistor should be appended:</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 1) (French)" author="OCP" language="French" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 1) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="1">
+            <unit id="fr_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">22. DE THÉODOTE SUR JACOB. « Théodote dit, dans son ouvrage Sur les Juifs, que Sichem tire son nom de Sichimios, fils d'Hermès, car c'est lui qui fonda la ville. Il la décrit située dans la terre des Juifs en ces termes : “Elle était bonne, propice aux chèvres et bien arrosée, et le chemin n'était point long pour parvenir à la ville depuis la campagne ; jamais ils ne peinent à travers d'épais taillis. Tout près d'elle s'élèvent deux montagnes escarpées, riches en herbe et en bois ; entre les deux est frayé un étroit sentier ; de l'autre côté apparaît la verdoyante Sichem, cité sainte, bâtie en contrebas, sous le pied de la montagne, et tout autour un mur lisse court au bas du versant, rempart abrupt.” »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2) (French)" author="OCP" language="French" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 2) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="2">
+            <unit id="fr_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Plus tard, dit-il, elle fut occupée par les Hébreux, alors qu'Emmôr régnait ; car Emmôr avait engendré un fils, Sychem. Et il dit : “De là, étranger, Jacob avec ses troupeaux vint à la vaste cité de Sichem ; et sur ces hommes, leurs concitoyens, régnait le chef Émôr avec son fils Sychem, deux hommes tout à fait indomptables.” »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 3) (French)" author="OCP" language="French" fragment="3">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 3) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="3">
+            <unit id="fr_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Ensuite, [il traite] de Jacob, de son arrivée en Mésopotamie, du mariage avec les deux femmes, de la naissance des enfants et de son retour de Mésopotamie vers Sichem. Et il dit : « Jacob parvint en Syrie, nourricière de troupeaux, et laissa derrière lui le large flot du retentissant fleuve Euphrate. Car il était venu là-bas en fuyant la rude menace de son propre frère. Laban l'accueillit avec bienveillance dans sa demeure, lui qui était son parent, mais régnait alors seul sur la Syrie, ayant reçu en partage un sang noble. Il lui promit et accorda la main de sa plus jeune fille ; pourtant, il ne cherchait nullement à accomplir sa promesse, mais trama une ruse et envoya dans la couche de l'homme Léa, qui était l'aînée. Cela ne lui échappa point, mais il reconnut la fourberie et reçut l'autre jeune fille, et il s'unit aux deux sœurs. Il eut onze fils doués d'une admirable intelligence et une fille, Dina, d'une beauté éclatante, à la stature remarquable et au cœur irréprochable. »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 4) (French)" author="OCP" language="French" fragment="4">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 4) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="4">
+            <unit id="fr_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Il dit que Jacob vint de l'Euphrate à Sichem auprès d'Emmor ; celui-ci l'accueillit et lui donna une portion de terre. Jacob lui-même cultivait la terre, tandis que ses fils, au nombre de onze, faisaient paître les troupeaux, et que sa fille Dina et les femmes travaillaient la laine. Dina, qui était vierge, vint à Sichem lors d'une fête, désireuse de voir la ville ; mais Sychem, le fils d'Emmor, l'ayant vue, s'éprit d'elle, l'enleva, la transporta chez lui et la déshonora.</reading>
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="fr_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Puis, étant venu de nouveau avec son père vers Jacob, il la demanda en mariage ; mais Jacob déclara qu'il ne la donnerait pas avant que tous les habitants de Sichem n'aient embrassé les coutumes juives en se faisant circoncire ; et Emmor déclara qu'il les persuaderait. Et Jacob dit, au sujet de la nécessité pour eux d'être circoncis :</reading>
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="fr_6" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Car il n'est certes pas permis aux Hébreux de faire entrer dans leur maison des gendres ou des brus venus d'ailleurs, mais seulement quiconque peut se prévaloir d'être de la même race. »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 5) (French)" author="OCP" language="French" fragment="5">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 5) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="7">
+            <unit id="fr_7" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Puis, poursuivant au sujet de la circoncision : “Lui qui jadis, après avoir fait sortir de sa patrie le divin Abraham, appela lui-même du haut du ciel l'homme, avec toute sa maison, à retrancher la chair du prépuce ; et il l'accomplit ; et cela demeure inébranlable, puisque Dieu lui-même l'a dit.” »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 6) (French)" author="OCP" language="French" fragment="6">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 6) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="8">
+            <unit id="fr_8" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Emmor s'étant donc rendu dans la ville et exhortant ses sujets à se faire circoncire, l'un des fils de Jacob, nommé Siméon, résolut de tuer Emmor et Sichem, ne voulant point supporter pacifiquement l'outrage fait à sa sœur ; ayant pris cette décision, il en fit part à son frère Lévi ; et l'ayant trouvé consentant, il l'incita à l'action en invoquant un oracle selon lequel Dieu avait déclaré qu'il détruirait dix nations pour les donner aux descendants d'Abraham.</reading>
+            </unit>
+          </div>
+          <div number="9a">
+            <unit id="fr_9" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Et Siméon parla ainsi à Lévi : « Car je connais bien la parole de Dieu : Il a dit en effet qu'un jour Il donnerait dix nations aux enfants d'Abraham. »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 7) (French)" author="OCP" language="French" fragment="7">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 7) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="9b">
+            <unit id="fr_10" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Mais Dieu leur inspira cette résolution parce que les habitants de Sichem étaient impies. Il dit en effet : “Dieu frappa d'égarement les habitants de Sichem, car ils n'honoraient quiconque venait chez eux, fût-il méchant ou homme de bien ; ils ne rendaient pas non plus la justice dans la ville, ni ne respectaient les lois coutumières ; et des actes funestes s'étaient élevés, qui faisaient tout leur souci.” »</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 8) (French)" author="OCP" language="French" fragment="8">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Chapter" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 8) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="22">
+          <div number="10">
+            <unit id="fr_11" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">« Lévi et Siméon entrèrent donc armés dans la ville ; ils tuèrent d'abord ceux qu'ils rencontraient, puis massacrèrent aussi Emmôr et Sichem.</reading>
+            </unit>
+          </div>
+          <div number="11">
+            <unit id="fr_12" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Et il parle ainsi de leur mise à mort : “Alors Siméon s'élança contre Emmôr lui-même, lui frappa la tête et saisit son cou de la main gauche, puis le laissa palpitant encore, car une autre tâche avait surgi. Pendant ce temps, Lévi, d'une fureur invincible, saisit par la chevelure Sichem qui lui touchait les genoux dans un délire effréné ; il le frappa au milieu de la clavicule, et l'épée acérée s'enfonça dans les entrailles à travers la poitrine, et aussitôt son âme quitta son corps.” Et quand les autres frères apprirent leur action, ils vinrent en renfort, mirent la ville à sac et, ayant délivré leur sœur, la ramenèrent avec les captifs au domaine paternel. » Qu'on joigne à cela ce qui suit concernant Joseph, tiré du même écrit de Polyhistor :</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
     </text>
   </version>
 </book>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE book [
     <!ELEMENT book (version)+>
 <!ATTLIST book filename CDATA #REQUIRED>
@@ -47,113 +47,301 @@
 <!ATTLIST w lang CDATA #IMPLIED>
 ]>
 <book filename="Ps-Eup" title="Pseudo-Eupolemus" textStructure="fragmentary">
-    <version title="Praep. Evang. (Frag. 1)" author="Eusebius" language="Greek" fragment="1">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Mras" show="yes">
-                <name>
+  <version title="Praep. Evang. (Frag. 1)" author="Eusebius" language="Greek" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" show="yes">
+        <name>
                     Mras
                 </name>
-                <bibliography>
+        <bibliography>
                     Fragment §1: Eusebius, Praep. Evang. 9.17.2-9; Fragment §2: Eusebius, Praep. Evang. 9.18.2
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-            <div number="9">
-                <div number="17">
-                    <div number="2">
-                        <unit id="1" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="17">
+          <div number="2">
+            <unit id="1" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 Εὐπόλεμος δὲ ἐν τῷ περὶ Ἰουδαίων τῆς Ἀσσυρίας φησὶ πόλιν Βαβυλῶνα πρῶτον μὲν κτισθῆναι ὑπὸ τῶν διασωθέντων ἐκ τοῦ κατακλυσμοῦ· εἶναι δὲ αὐτοὺς γίγαντας, οἰκοδομεῖν δὲ τὸν ἱστορούμενον πύργον.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="3">
-                        <unit id="2" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="2" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 πεσόντος δὲ τούτου ὑπὸ τῆς τοῦ θεοῦ ἐνεργείας τοὺς γίγαντας διασπαρῆναι καθ᾽ ὅλην τὴν γῆν. δεκάτῃ δὲ γενεᾷ, φησίν, ἐν πόλει τῆς Βαβυλωνίας Καμαρίνῃ, ἥν τινας λέγειν πόλιν Οὐρίην (εἶναι δὲ μεθερμηνευομένην Χαλδαίων πόλιν), {ἢ}ἐν τρισκαιδεκάτῃ γενέσθαι Ἁβραὰμ γενεᾷ, εὐγενείᾳ καὶ σοφίᾳ πάντας ὑπερβεβηκότα, ὃν δὴ καὶ τὴν ἀστρολογίαν καὶ Χαλδαϊκὴν εὑρεῖν ἐπί τε τὴν εὐσέβειαν ὁρμήσαντα εὐαρεστῆσαι τῷ θεῷ.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="4">
-                        <unit id="3" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="3" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 τοῦτον δὲ διὰ τὰ προστάγματα τοῦ θεοῦ εἰς Φοινίκην ἐλθόντα κατοικῆσαι, καὶ τροπὰς ἡλίου καὶ σελήνης καὶ τὰ ἄλλα πάντα διδάξαντα τοὺς Φοίνικας εὐαρεστῆσαι τῷ βασιλεῖ αὐτῶν. ὕστερον δὲ Ἀρμενίους ἐπιστρατεῦσαι τοῖς Φοίνιξι· νικησάντων δὲ καὶ αἰχμαλωτισαμένων τὸν ἀδελφιδοῦν αὐτοῦ τὸν Ἁβραὰμ μετὰ οἰκετῶν βοηθήσαντα ἐγκρατῆ γενέσθαι τῶν αἰχμαλωτισαμένων καὶ τῶν πολεμίων αἰχμαλωτίσαι τέκνα καὶ γυναῖκας.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="5">
-                        <unit id="4" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="4" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 πρέσβεων δὲ παραγενομένων πρὸς αὐτὸν ὅπως χρήματα λαβὼν ἀπολυτρώσῃ ταῦτα, μὴ προελέσθαι τοῖς δυστυχοῦσιν ἐπεμβαίνειν, ἀλλὰ τὰς τροφὰς λαβόντα τῶν νεανίσκων ἀποδοῦναι τὰ αἰχμάλωτα ξενισθῆναί τε αὐτὸν ὑπὸ πόλεως ἱερὸν Ἀργαριζίν, ὃ εἶναι μεθερμηνευόμενον ὄρος ὑψίστου·
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="6">
-                        <unit id="5" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="5" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 παρὰ δὲ τοῦ Μελχισεδὲκ ἱερέως ὄντος τοῦ θεοῦ καὶ βασιλεύοντος λαβεῖν δῶρα. λιμοῦ δὲ γενομένου τὸν Ἁβραὰμ ἀπαλλαγῆναι εἰς Αἴγυπτον πανοικίᾳ κἀκεῖ κατοικεῖν τήν τε γυναῖκα αὐτοῦ τὸν βασιλέα τῶν Αἰγυπτίων γῆμαι, φάντος αὐτοῦ ἀδελφὴν εἶναι.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="7">
-                        <unit id="6" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="6" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 περισσότερον δ᾽ ἱστόρησεν ὅτι οὐκ ἠδύνατο αὐτῇ συγγενέσθαι καὶ ὅτι συνέβη φθείρεσθαι αὐτοῦ τὸν λαὸν καὶ τὸν οἶκον, μάντεις δὲ αὐτοῦ καλέσαντος τούτους φάναι μὴ εἶναι χήραν τὴν γυναῖκα· τὸν δὲ βασιλέα τῶν Αἰγυπτίων οὕτως ἐπιγνῶναι ὅτι γυνὴ ἦν τοῦ Ἁβραὰμ καὶ ἀποδοῦναι αὐτὴν τῷ ἀνδρί.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="8">
-                        <unit id="7" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="7" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 συζήσαντα δὲ τὸν Ἁβραὰμ ἐν Ἡλιουπόλει τοῖς Αἰγυπτίων ἱερεῦσι πολλὰ μεταδιδάξαι αὐτοὺς καὶ τὴν ἀστρολογίαν καὶ τὰ λοιπὰ τοῦτον αὐτοῖς εἰσηγήσασθαι, φάμενον Βαβυλωνίους ταῦτα καὶ αὑτὸν εὑρηκέναι, τὴν δὲ εὕρεσιν αὐτῶν εἰς Ἐνὼχ ἀναπέμπειν, καὶ τοῦτον εὑρηκέναι πρῶτον τὴν ἀστρολογίαν, οὐκ Αἰγυπτίους.
                             </reading>
-                        </unit>
-                    </div>
-                    <div number="9">
-                        <unit id="8" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+            </unit>
+          </div>
+          <div number="9">
+            <unit id="8" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 Βαβυλωνίους γὰρ λέγειν πρῶτον γενέσθαι Βῆλον, ὃν εἶναι Κρόνον· ἐκ τούτου δὲ γενέσθαι Βῆλον καὶ Χαναάν, τοῦτον δὲ τὸν Χαναὰν γεννῆσαι τὸν πατέρα τῶν Φοινίκων, τούτου δὲ Χοὺμ υἱὸν γενέσθαι, ὃν ὑπὸ τῶν Ἑλλήνων λέγεσθαι Ἄσβολον, πατέρα δὲ Αἰθιόπων, ἀδελφὸν δὲ τοῦ Μεστραείμ, πατρὸς Αἰγυπτίων· Ἕλληνας δὲ λέγειν τὸν Ἄτλαντα εὑρηκέναι ἀστρολογίαν, εἶναι δὲ τὸν Ἄτλαντα τὸν αὐτὸν καὶ Ἐνώχ· τοῦ δὲ Ἐνὼχ γενέσθαι υἱὸν Μαθουσάλαν, ὃν πάντα δι᾽ ἀγγέλων θεοῦ γνῶναι καὶ ἡμᾶς οὕτως ἐπιγνῶναι.
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-              </div>
-            </text>
-            </version>
-<version title="Praep. Evang. (Frag. 2)" author="Eusebius" language="Greek" fragment="2">
-        <divisions>
-            <division label="Book" delimiter=":"/>
-            <division label="Section" delimiter=":"/>
-            <division label="Paragraph"/>
-        </divisions>
-        <manuscripts>
-            <ms abbrev="Mras" show="yes">
-                <name>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2)" author="Eusebius" language="Greek" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mras" show="yes">
+        <name>
                     Mras
                 </name>
-                <bibliography>
+        <bibliography>
                     Fragment §1: Eusebius, Praep. Evang. 9.17.2-9; Fragment §2: Eusebius, Praep. Evang. 9.18.2
                 </bibliography>
-            </ms>
-        </manuscripts>
-        <text>
-          <div number="9">
-                <div number="18">
-                    <div number="2">
-                        <unit id="9" group="0" parallel="">
-                            <reading option="0" mss="Mras ">
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="18">
+          <div number="2">
+            <unit id="9" group="0" parallel="">
+              <reading option="0" mss="Mras ">
                                 ἐν δὲ ἀδεσπότοις εὕρομεν τὸν Ἁβραὰμ ἀναφέροντα εἰς τοὺς γίγαντας, τούτους δὲ οἰκοῦντας ἐν τῇ Βαβυλωνίᾳ διὰ τὴν ἀσέβειαν ὑπὸ τῶν θεῶν ἀναιρεθῆναι, ὧν ἕνα Βῆλον ἐκφεύγοντα τὸν θάνατον ἐν Βαβυλῶνι κατοικῆσαι πύργον τε κατασκευάσαντα ἐν αὐτῷ διαιτᾶσθαι, ὃν δὴ ἀπὸ τοῦ κατασκευάσαντος Βήλου Βῆλον ὀνομασθῆναι. τὸν δὲ Ἅβραμον τὴν ἀστρολογικὴν ἐπιστήμην παιδευθέντα πρῶτον μὲν ἐλθεῖν εἰς Φοινίκην καὶ τοὺς Φοίνικας ἀστρολογίαν διδάξαι, ὕστερον δὲ εἰς Αἴγυπτον παραγενέσθαι.
                             </reading>
-                        </unit>
-                    </div>
-                </div>
-            </div>
-        </text>
-    </version>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 1, English)" author="OCP" language="English" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>
+                    English translation based on Eusebius, Praeparatio Evangelica 9.17.2-9.
+                </bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="17">
+          <div number="2">
+            <unit id="en_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                Eupolemus in his book Concerning the Jews of Assyria says that the city of Babylon was first founded by those who escaped from the flood; and that they were giants, and built the tower celebrated in history.
+                            </reading>
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="en_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                And when this was thrown down by the act of God, the giants were scattered over the whole earth. And in the tenth generation, he says (or in the thirteenth), in the city of Babylonia called Camarina, which some call the city of Uria (which is interpreted, the city of the Chaldaeans), Abraham was born, who in nobility of birth and wisdom surpassed all, and who also discovered astrology and the Chaldaean arts, and having set out upon piety, was well-pleasing to God.
+                            </reading>
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="en_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                And by the commandments of God he came into Phoenicia and dwelt there, and having taught the Phoenicians the turnings of the sun and moon and all other things, he was well-pleasing to their king. Afterwards the Armenians made war against the Phoenicians; and when they had conquered and taken captive his nephew, Abraham with his household servants came to the rescue and overcame the captors, taking captive the wives and children of the enemy.
+                            </reading>
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="en_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                And when ambassadors came to him to ransom them for money, he did not choose to take advantage of the unfortunate, but having accepted provisions for his young men, restored the captives; and he was hospitably received at the temple of the city Argarizin, which is interpreted 'mountain of the Most High';
+                            </reading>
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="en_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                and from Melchizedek, who was priest of God and king, he received gifts. But when a famine occurred, Abraham departed into Egypt with all his household, and dwelt there; and the king of the Egyptians married his wife, since he said that she was his sister.
+                            </reading>
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="en_6" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                He related further that he was not able to consummate the marriage with her, and that it happened that his people and his house were plagued; and when he called diviners, they said that the woman was not a widow; and thus the king of the Egyptians recognized that she was the wife of Abraham, and gave her back to her husband.
+                            </reading>
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="en_7" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                And Abraham, having lived together with the Egyptian priests at Heliopolis, taught them many things and introduced astrology and the rest to them, saying that the Babylonians and he himself had discovered these things, but tracing their discovery back to Enoch, and that he was the first to discover astrology, and not the Egyptians.
+                            </reading>
+            </unit>
+          </div>
+          <div number="9">
+            <unit id="en_8" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                For the Babylonians say that first Belus was born, who is Kronos; and from him was born Belus and Canaan, and this Canaan begot the father of the Phoenicians, and from him was born a son Choum, who by the Greeks is called Asbolos, father of the Ethiopians, and brother of Mestraeim, father of the Egyptians; and the Greeks say that Atlas discovered astrology, and Atlas is the same as Enoch; and of Enoch was born a son Methuselah, who learned all things through angels of God, and thus we have come to know them.
+                            </reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2, English)" author="OCP" language="English" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="English" show="yes">
+        <name>OCP Translation</name>
+        <bibliography>
+                    English translation based on Eusebius, Praeparatio Evangelica 9.18.2.
+                </bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="18">
+          <div number="2">
+            <unit id="en_9" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans">
+                                In anonymous works we found Abraham traced back to the giants; and that these, dwelling in Babylonia, were destroyed on account of their impiety by the gods, of whom one, Belus, having escaped death, settled in Babylon and built a tower, living in it, which was named Belus after Belus who built it. And Abraham, having been educated in the science of astrology, first came into Phoenicia and taught the Phoenicians astrology, and afterwards went into Egypt.
+                            </reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 1) (French)" author="OCP" language="French" fragment="1">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 1) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="17">
+          <div number="2">
+            <unit id="fr_1" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Eupoleme, dans son ouvrage Sur les Juifs d'Assyrie, dit que la ville de Babylone fut d'abord fondée par ceux qui avaient échappé au déluge ; qu'ils étaient des géants et qu'ils bâtirent la tour dont parle l'histoire.</reading>
+            </unit>
+          </div>
+          <div number="3">
+            <unit id="fr_2" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Lorsque celle-ci s'écroula sous l'action de Dieu, les géants furent dispersés sur toute la terre. À la dixième génération, dit-il, dans la ville babylonienne de Camarine — que certains appellent la ville d'Urie, ce qui se traduit par « ville des Chaldéens » —, ou à la treizième génération, naquit Abraham, surpassant tous les hommes par la noblesse et la sagesse ; c'est lui qui découvrit l'astrologie et la science chaldéenne et qui, s'étant tourné vers la piété, plut à Dieu.</reading>
+            </unit>
+          </div>
+          <div number="4">
+            <unit id="fr_3" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Celui-ci, sur les ordres de Dieu, vint s'établir en Phénicie et, ayant enseigné aux Phéniciens les révolutions du soleil et de la lune ainsi que toutes les autres sciences, il plut à leur roi. Plus tard, les Arméniens firent une expédition militaire contre les Phéniciens ; après avoir vaincu et fait captif son neveu, Abraham vint à son secours avec ses serviteurs, se rendit maître des ravisseurs et captura les femmes et les enfants des ennemis.</reading>
+            </unit>
+          </div>
+          <div number="5">
+            <unit id="fr_4" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Des ambassadeurs étant venus auprès de lui pour qu'il les libère contre rançon, il ne voulut pas accabler les malheureux, mais, ayant seulement accepté la nourriture des jeunes gens, il rendit les captifs et fut reçu comme hôte près de la ville au sanctuaire d'Argarizin, ce qui se traduit par « montagne du Très-Haut » ;</reading>
+            </unit>
+          </div>
+          <div number="6">
+            <unit id="fr_5" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">et il reçut des dons de Melchisédek, qui était prêtre de Dieu et régnait comme roi. Une famine étant survenue, Abraham partit pour l'Égypte avec toute sa maison et y séjourna ; et le roi des Égyptiens épousa sa femme, car il avait affirmé qu'elle était sa sœur.</reading>
+            </unit>
+          </div>
+          <div number="7">
+            <unit id="fr_6" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Il rapporte en outre que le roi ne put avoir de rapports avec elle et qu'il arriva que son peuple et sa maison furent frappés de fléaux ; ayant convoqué des devins, ceux-ci déclarèrent que la femme n'était pas veuve. Le roi des Égyptiens reconnut ainsi qu'elle était la femme d'Abraham et la rendit à son mari.</reading>
+            </unit>
+          </div>
+          <div number="8">
+            <unit id="fr_7" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Abraham, ayant vécu à Héliopolis avec les prêtres des Égyptiens, leur transmit de nombreux enseignements et les initia à l'astrologie ainsi qu'au reste, déclarant que les Babyloniens et lui-même avaient découvert ces choses, mais faisant remonter leur découverte à Hénoc, et affirmant que c'était celui-ci, et non les Égyptiens, qui avait découvert le premier l'astrologie.</reading>
+            </unit>
+          </div>
+          <div number="9">
+            <unit id="fr_8" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Car les Babyloniens disent que Bel fut le premier, et qu'il est Cronos ; de lui naquirent Bel et Chanaan ; ce Chanaan engendra le père des Phéniciens, et de celui-ci naquit un fils, Choum, que les Grecs appellent Asbolos, père des Éthiopiens et frère de Mestraïm, père des Égyptiens. Les Grecs disent pour leur part qu'Atlas découvrit l'astrologie, et qu'Atlas est la même personne qu'Hénoc. D'Hénoc naquit un fils, Mathusalem, qui apprit toutes choses par les anges de Dieu, et c'est ainsi que nous-mêmes en avons eu connaissance.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
+  <version title="Praep. Evang. (Frag. 2) (French)" author="OCP" language="French" fragment="2">
+    <divisions>
+      <division label="Book" delimiter=":"/>
+      <division label="Section" delimiter=":"/>
+      <division label="Paragraph"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="OCP-Trans" language="French" show="yes">
+        <name>OCP French Translation</name>
+        <bibliography>French translation of Praep. Evang. (Frag. 2) (French) based on the OCP critical edition.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="9">
+        <div number="18">
+          <div number="2">
+            <unit id="fr_9" group="0" parallel="">
+              <reading option="0" mss="OCP-Trans ">Or, dans des écrits anonymes, nous avons trouvé qu'Abraham faisait remonter son ascendance aux Géants, et que ceux-ci, qui habitaient en Babylonie, furent détruits par les dieux à cause de leur impiété ; l'un d'eux, Bélos, ayant échappé à la mort, s'établit à Babylone, construisit une tour et y demeura, laquelle fut précisément nommée Bélos d'après Bélos qui l'avait construite. Quant à Abraham, ayant été instruit dans la science astrologique, il vint d'abord en Phénicie et enseigna l'astrologie aux Phéniciens, puis il se rendit plus tard en Égypte.</reading>
+            </unit>
+          </div>
+        </div>
+      </div>
+    </text>
+  </version>
 </book>
