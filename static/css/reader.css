@@ -433,6 +433,10 @@ body {
   font-size: 0.75rem;
   font-style: italic;
 }
+.ocp-unit.is-indented {
+  display: inline-block;
+  padding-left: 2rem;
+}
 
 /* Ancient Script Specific Classes */
 .script-greek {

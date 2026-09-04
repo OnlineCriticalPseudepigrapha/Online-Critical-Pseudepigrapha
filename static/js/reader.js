@@ -189,9 +189,16 @@ class OcpReaderApp {
 
       this.book = OcpTeiParser.parseBook(xmlText);
 
+      // Find which version contains targetRef if targetRef is specified
+      let primaryVersionIdx = 0;
+      if (targetRef) {
+        const foundIdx = this.book.versions.findIndex(v => v.references && v.references.includes(targetRef));
+        if (foundIdx !== -1) primaryVersionIdx = foundIdx;
+      }
+
       // Populate navigation dropdowns
-      const firstVersion = this.book.versions[0];
-      const refs = (firstVersion && firstVersion.references) || [];
+      const primaryVersion = this.book.versions[primaryVersionIdx] || this.book.versions[0];
+      const refs = (primaryVersion && primaryVersion.references) || [];
 
       this.fromRefSelect.innerHTML = refs.map(r => `<option value="${r}">${r}</option>`).join('');
       this.toRefSelect.innerHTML = refs.map(r => `<option value="${r}">${r}</option>`).join('');
@@ -215,15 +222,25 @@ class OcpReaderApp {
       // Add primary pane (critical edition / base version)
       this.panes.push({
         id: this.nextPaneId++,
-        versionIdx: 0,
+        versionIdx: primaryVersionIdx,
         selectedMs: '__eclectic__',
         activeUnitId: null
       });
 
       // If document has an English translation or other parallel versions, automatically add second pane
       if (this.book.versions.length > 1) {
-        const englishIdx = this.book.versions.findIndex(v => (v.language || '').toLowerCase().includes('english'));
-        const secondaryIdx = (englishIdx !== -1 && englishIdx !== 0) ? englishIdx : 1;
+        const primaryFrag = primaryVersion ? primaryVersion.fragment : null;
+        let englishIdx = this.book.versions.findIndex((v, idx) => 
+          idx !== primaryVersionIdx &&
+          (v.language || '').toLowerCase().includes('english') &&
+          (!primaryFrag || v.fragment === primaryFrag)
+        );
+        if (englishIdx === -1) {
+          englishIdx = this.book.versions.findIndex((v, idx) => 
+            idx !== primaryVersionIdx && (v.language || '').toLowerCase().includes('english')
+          );
+        }
+        const secondaryIdx = englishIdx !== -1 ? englishIdx : (primaryVersionIdx === 0 ? 1 : 0);
         this.panes.push({
           id: this.nextPaneId++,
           versionIdx: secondaryIdx,
@@ -289,8 +306,21 @@ class OcpReaderApp {
   refreshAllPanes() {
     if (!this.book) return;
 
-    this.panesContainer.innerHTML = '';
     const firstVersionIdx = this.panes[0] ? this.panes[0].versionIdx : 0;
+    const firstVersion = this.book.versions[firstVersionIdx] || this.book.versions[0];
+    const refs = (firstVersion && firstVersion.references) || [];
+
+    // Ensure currentFromRef and currentToRef are valid for the active primary version
+    if (refs.length > 0 && (!this.currentFromRef || !refs.includes(this.currentFromRef))) {
+      this.currentFromRef = refs[0];
+      this.currentToRef = refs[Math.min(refs.length - 1, 4)];
+      this.fromRefSelect.innerHTML = refs.map(r => `<option value="${r}">${r}</option>`).join('');
+      this.toRefSelect.innerHTML = refs.map(r => `<option value="${r}">${r}</option>`).join('');
+      this.fromRefSelect.value = this.currentFromRef;
+      this.toRefSelect.value = this.currentToRef;
+    }
+
+    this.panesContainer.innerHTML = '';
     this.activePassage = this.book.getPassage(firstVersionIdx, this.currentFromRef, this.currentToRef, '__eclectic__');
 
     this.activeRangeBadge.textContent = `${this.book.title} ${this.activePassage.refRange}`;
@@ -399,12 +429,20 @@ class OcpReaderApp {
           'ocp-unit',
           u.hasVariants ? 'has-variants' : '',
           isActive ? 'active' : '',
-          u.isOmitted ? 'is-omitted' : ''
+          u.isOmitted ? 'is-omitted' : '',
+          u.indent ? 'is-indented' : ''
         ].filter(Boolean).join(' ');
 
+        if (u.linebreak === 'before' || u.linebreak === 'both') {
+          html += `<br/>`;
+        }
         const displayText = u.isOmitted ? '\u2E06' : u.readingText;
         html += `<span class="${classes}" data-unit="${u.id}" data-ref="${u.ref}">${displayText}</span> `;
-        if (u.linebreak) html += `<br/>`;
+        if (u.linebreak === 'doubleFollowing') {
+          html += `<br/><br/>`;
+        } else if (u.linebreak === 'following' || u.linebreak === 'both' || u.linebreak === true || u.linebreak === 'yes') {
+          html += `<br/>`;
+        }
       });
       html += `<br/>`;
     });

@@ -96,6 +96,9 @@
           const hasVariants = u.readings.length > 1;
           const isOmitted = !chosenReading || !chosenReading.text || chosenReading.text.trim() === '';
 
+          const unitLinebreak = (chosenReading && chosenReading.linebreak) || (u.readings.find(r => r.linebreak) ? u.readings.find(r => r.linebreak).linebreak : false);
+          const unitIndent = (chosenReading && chosenReading.indent) || (u.readings.find(r => r.indent) ? u.readings.find(r => r.indent).indent : false);
+
           renderedUnits.push({
             id: u.id,
             ref: u.ref,
@@ -103,8 +106,8 @@
             readingText: chosenReading ? chosenReading.text : '',
             chosenOption: chosenReading ? chosenReading.option : '0',
             chosenMss: chosenReading ? chosenReading.mss : [],
-            linebreak: chosenReading ? chosenReading.linebreak : false,
-            indent: chosenReading ? chosenReading.indent : false,
+            linebreak: unitLinebreak,
+            indent: unitIndent,
             hasVariants: hasVariants,
             isOmitted: isOmitted,
             allReadings: u.readings
@@ -348,7 +351,8 @@
         const opt = r.getAttribute('option') !== null ? r.getAttribute('option') : rIdx.toString();
         const mssStr = r.getAttribute('mss') || '';
         const mss = mssStr.trim().split(/\s+/).filter(Boolean);
-        const lb = r.getAttribute('linebreak') === 'yes';
+        const lbAttr = (r.getAttribute('linebreak') || '').trim();
+        const lb = (lbAttr && lbAttr !== 'no') ? (lbAttr === 'yes' ? 'following' : lbAttr) : false;
         const ind = r.getAttribute('indent') === 'yes';
 
         // Words / Tokens if present
