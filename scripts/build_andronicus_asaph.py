@@ -81,30 +81,47 @@ VERSES = [
 ]
 
 def build_grammateus_xml():
+    bib = "Alphonse Mingana, Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 32-35, 62-64 (MS Cod. Syr. 44)."
     lines = [
         '<?xml version="1.0" encoding="utf-8"?>',
-        '<!DOCTYPE document SYSTEM "document.dtd">',
-        '<document id="AndronAsaph">',
-        '    <header>',
-        '        <title>Fragment of Andronicus and Asaph the Historian of the Hebrews</title>',
-        '        <author>Andronicus / Asaph (Pseudepigraphon)</author>',
-        '        <editor>Alphonse Mingana (1917)</editor>',
-        '        <description>Syriac text and English translation from Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 32-35, 62-64. Ancient discourse on the twelve stoicheia of the Zodiac correlating the Greek astrological figures with the twelve sons of Jacob / tribes of Israel according to Asaph the Hebrew historian.</description>',
-        '    </header>',
-        '    <body>'
+        '<!DOCTYPE book SYSTEM "grammateus.dtd">',
+        '<book filename="AndronAsaph" title="Andronicus and Asaph (Zodiac of the Patriarchs)">',
+        '  <version author="Mingana 1917" language="Syriac" title="Syriac and English">',
+        '    <divisions>',
+        '      <division delimiter="." label="Chapter"/>',
+        '      <division label="Verse"/>',
+        '    </divisions>',
+        '    <manuscripts>',
+        '      <ms abbrev="Mingana" language="Syriac" show="yes">',
+        '        <name>Mingana 1917 (MS Rylands Syr. 44)</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '      <ms abbrev="Trans" language="English" show="yes">',
+        '        <name>Mingana English Translation (1917)</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '    </manuscripts>',
+        '    <text>',
+        '      <div number="1">'
     ]
     for v_num, (syr, en) in enumerate(VERSES, 1):
-        lines.append(f'        <div c="1" v="{v_num}">')
-        lines.append(f'            <line lang="syr">{syr}</line>')
-        lines.append(f'            <line lang="en">{en}</line>')
+        clean_syr = syr.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        clean_en = en.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        lines.append(f'        <div number="{v_num}">')
+        lines.append(f'          <unit id="{v_num-1}">')
+        lines.append(f'            <reading option="0" mss="Mingana ">{clean_syr}</reading>')
+        lines.append(f'            <reading option="1" mss="Trans ">{clean_en}</reading>')
+        lines.append('          </unit>')
         lines.append('        </div>')
-    lines.append('    </body>')
-    lines.append('</document>\n')
+    lines.append('      </div>')
+    lines.append('    </text>')
+    lines.append('  </version>')
+    lines.append('</book>\n')
     
     out_path = 'static/docs/AndronAsaph.xml'
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
-    print(f'Wrote Grammateus XML: {out_path}')
+    print(f'Wrote Grammateus XML: {out_path} ({len(VERSES)} units)')
 
 def build_tei_p5_xml():
     lines = [

@@ -158,32 +158,51 @@ CHAPTERS = [
 ]
 
 def build_grammateus_xml():
+    bib = "Felix Jacoby, Fragmente der griechischen Historiker (FGrH 264 F 21-24); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 161-174. CAVT 84 / CANT 28."
     lines = [
         '<?xml version="1.0" encoding="utf-8"?>',
-        '<!DOCTYPE document SYSTEM "document.dtd">',
-        '<document id="PsHecat">',
-        '    <header>',
-        '        <title>Fragments of Pseudo-Hecataeus (De Iudaeis / De Abrahamo)</title>',
-        '        <author>Pseudo-Hecataeus</author>',
-        '        <editor>Felix Jacoby (FGrH 264 F 21-24); Albert-Marie Denis (PVTG 3, 1970)</editor>',
-        '        <description>Greek text and English translation of the fragments of Pseudo-Hecataeus preserved in Flavius Josephus (Contra Apionem I.183-205; II.43; Antiquitates I.159; XII.38) and Clement of Alexandria (Stromata V.113.1-2). CAVT 84 / CANT 28.</description>',
-        '    </header>',
-        '    <body>'
+        '<!DOCTYPE book SYSTEM "grammateus.dtd">',
+        '<book filename="PsHecat" title="Fragments of Pseudo-Hecataeus">',
+        '  <version author="Jacoby / Denis" language="Greek" title="Greek and English">',
+        '    <divisions>',
+        '      <division delimiter="." label="Chapter"/>',
+        '      <division label="Verse"/>',
+        '    </divisions>',
+        '    <manuscripts>',
+        '      <ms abbrev="Jacoby" language="Greek" show="yes">',
+        '        <name>Jacoby FGrH 264 / Denis PVTG 3</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '      <ms abbrev="Trans" language="English" show="yes">',
+        '        <name>English Translation (OCP)</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '    </manuscripts>',
+        '    <text>'
     ]
+    unit_id = 0
     for ch in CHAPTERS:
         c_num = ch["num"]
+        lines.append(f'      <div number="{c_num}">')
         for v_num, (grc, en) in enumerate(ch["verses"], 1):
-            lines.append(f'        <div c="{c_num}" v="{v_num}">')
-            lines.append(f'            <line lang="grc">{grc}</line>')
-            lines.append(f'            <line lang="en">{en}</line>')
+            clean_grc = grc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+            clean_en = en.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+            lines.append(f'        <div number="{v_num}">')
+            lines.append(f'          <unit id="{unit_id}">')
+            lines.append(f'            <reading option="0" mss="Jacoby ">{clean_grc}</reading>')
+            lines.append(f'            <reading option="1" mss="Trans ">{clean_en}</reading>')
+            lines.append('          </unit>')
             lines.append('        </div>')
-    lines.append('    </body>')
-    lines.append('</document>\n')
+            unit_id += 1
+        lines.append('      </div>')
+    lines.append('    </text>')
+    lines.append('  </version>')
+    lines.append('</book>\n')
     
     out_path = 'static/docs/PsHecat.xml'
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
-    print(f'Wrote Grammateus XML: {out_path}')
+    print(f'Wrote Grammateus XML: {out_path} ({unit_id} units)')
 
 def build_tei_p5_xml():
     lines = [

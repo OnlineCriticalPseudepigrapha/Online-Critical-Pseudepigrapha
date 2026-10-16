@@ -1,120 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE document SYSTEM "document.dtd">
-<document id="PsHecat">
-    <header>
-        <title>Fragments of Pseudo-Hecataeus (De Iudaeis / De Abrahamo)</title>
-        <author>Pseudo-Hecataeus</author>
-        <editor>Felix Jacoby (FGrH 264 F 21-24); Albert-Marie Denis (PVTG 3, 1970)</editor>
-        <description>Greek text and English translation of the fragments of Pseudo-Hecataeus preserved in Flavius Josephus (Contra Apionem I.183-205; II.43; Antiquitates I.159; XII.38) and Clement of Alexandria (Stromata V.113.1-2). CAVT 84 / CANT 28.</description>
-    </header>
-    <body>
-        <div c="1" v="1">
-            <line lang="grc">Ἑκαταῖος δὲ ὁ Ἀβδηρίτης, ἀνὴρ φιλόσοφος ἅμα καὶ περὶ τὰς πράξεις ἱκανώτατος, Ἀλεξάνδρῳ τῷ βασιλεῖ συνακμάσας καὶ Πτολεμαίῳ τῷ Λάγου συγγενόμενος, οὐ παρέργως ἀλλὰ περὶ αὐτῶν Ἰουδαίων συγγέγραφε βιβλίον, ἐξ οὗ βούλομαι κεφαλαιωδῶς ἐπιδραμεῖν ἔνια τῶν εἰρημένων.</line>
-            <line lang="en">Hecataeus of Abdera, both a philosopher and an exceedingly capable man of affairs, who flourished under King Alexander and was associated with Ptolemy son of Lagus, did not write casually, but composed a book specifically about the Jews, from which I wish briefly to summarize some points.</line>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="PsHecat" title="Fragments of Pseudo-Hecataeus">
+  <version author="Jacoby / Denis" language="Greek" title="Greek and English">
+    <divisions>
+      <division delimiter="." label="Chapter"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Jacoby" language="Greek" show="yes">
+        <name>Jacoby FGrH 264 / Denis PVTG 3</name>
+        <bibliography>Felix Jacoby, Fragmente der griechischen Historiker (FGrH 264 F 21-24); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 161-174. CAVT 84 / CANT 28.</bibliography>
+      </ms>
+      <ms abbrev="Trans" language="English" show="yes">
+        <name>English Translation (OCP)</name>
+        <bibliography>Felix Jacoby, Fragmente der griechischen Historiker (FGrH 264 F 21-24); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 161-174. CAVT 84 / CANT 28.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="0">
+            <reading option="0" mss="Jacoby ">Ἑκαταῖος δὲ ὁ Ἀβδηρίτης, ἀνὴρ φιλόσοφος ἅμα καὶ περὶ τὰς πράξεις ἱκανώτατος, Ἀλεξάνδρῳ τῷ βασιλεῖ συνακμάσας καὶ Πτολεμαίῳ τῷ Λάγου συγγενόμενος, οὐ παρέργως ἀλλὰ περὶ αὐτῶν Ἰουδαίων συγγέγραφε βιβλίον, ἐξ οὗ βούλομαι κεφαλαιωδῶς ἐπιδραμεῖν ἔνια τῶν εἰρημένων.</reading>
+            <reading option="1" mss="Trans ">Hecataeus of Abdera, both a philosopher and an exceedingly capable man of affairs, who flourished under King Alexander and was associated with Ptolemy son of Lagus, did not write casually, but composed a book specifically about the Jews, from which I wish briefly to summarize some points.</reading>
+          </unit>
         </div>
-        <div c="1" v="2">
-            <line lang="grc">καὶ πρῶτον ἐπιδείξω τὸν χρόνον· μνημονεύει γὰρ τῆς Πτολεμαίου περὶ Γάζαν πρὸς Δημήτριον μάχης· αὕτη δὲ γέγονεν ἑνδεκάτῳ μὲν ἔτει τῆς Ἀλεξάνδρου τελευτῆς, ἐπὶ δὲ ὀλυμπιάδος ἑβδόμης καὶ δεκάτης καὶ ἑκατοστῆς, ὡς ἱστορεῖ Κάστωρ.</line>
-            <line lang="en">And first I will establish the date; for he mentions the battle fought at Gaza by Ptolemy against Demetrius, which took place in the eleventh year after Alexander's death, in the 117th Olympiad, as Castor relates.</line>
+        <div number="2">
+          <unit id="1">
+            <reading option="0" mss="Jacoby ">καὶ πρῶτον ἐπιδείξω τὸν χρόνον· μνημονεύει γὰρ τῆς Πτολεμαίου περὶ Γάζαν πρὸς Δημήτριον μάχης· αὕτη δὲ γέγονεν ἑνδεκάτῳ μὲν ἔτει τῆς Ἀλεξάνδρου τελευτῆς, ἐπὶ δὲ ὀλυμπιάδος ἑβδόμης καὶ δεκάτης καὶ ἑκατοστῆς, ὡς ἱστορεῖ Κάστωρ.</reading>
+            <reading option="1" mss="Trans ">And first I will establish the date; for he mentions the battle fought at Gaza by Ptolemy against Demetrius, which took place in the eleventh year after Alexander's death, in the 117th Olympiad, as Castor relates.</reading>
+          </unit>
         </div>
-        <div c="1" v="3">
-            <line lang="grc">προσθεὶς γὰρ ταύτην τὴν ὀλυμπιάδα φησίν· ἐπὶ ταύτης Πτολεμαῖος ὁ Λάγου ἐνίκα κατὰ Γάζαν μάχῃ Δημήτριον τὸν Ἀντιγόνου τὸν ἐπικληθέντα Πολιορκητήν. Ἀλέξανδρον δὲ τεθνάναι πάντες ὁμολογοῦσιν ἐπὶ τῆς ἑκατοστῆς τεσσαρεσκαιδεκάτης ὀλυμπιάδος. δῆλον οὖν, ὅτι καὶ κατʼ ἐκεῖνον καὶ κατὰ Ἀλέξανδρον ἤκμαζεν ἡμῶν τὸ ἔθνος.</line>
-            <line lang="en">For recording this Olympiad he says: 'In this Olympiad Ptolemy son of Lagus defeated in battle at Gaza Demetrius son of Antigonus, surnamed the Besieger.' And all agree that Alexander died in the 114th Olympiad. It is clear, therefore, that both in his time and under Alexander our nation flourished.</line>
+        <div number="3">
+          <unit id="2">
+            <reading option="0" mss="Jacoby ">προσθεὶς γὰρ ταύτην τὴν ὀλυμπιάδα φησίν· ἐπὶ ταύτης Πτολεμαῖος ὁ Λάγου ἐνίκα κατὰ Γάζαν μάχῃ Δημήτριον τὸν Ἀντιγόνου τὸν ἐπικληθέντα Πολιορκητήν. Ἀλέξανδρον δὲ τεθνάναι πάντες ὁμολογοῦσιν ἐπὶ τῆς ἑκατοστῆς τεσσαρεσκαιδεκάτης ὀλυμπιάδος. δῆλον οὖν, ὅτι καὶ κατʼ ἐκεῖνον καὶ κατὰ Ἀλέξανδρον ἤκμαζεν ἡμῶν τὸ ἔθνος.</reading>
+            <reading option="1" mss="Trans ">For recording this Olympiad he says: 'In this Olympiad Ptolemy son of Lagus defeated in battle at Gaza Demetrius son of Antigonus, surnamed the Besieger.' And all agree that Alexander died in the 114th Olympiad. It is clear, therefore, that both in his time and under Alexander our nation flourished.</reading>
+          </unit>
         </div>
-        <div c="1" v="4">
-            <line lang="grc">λέγει τοίνυν ὁ Ἑκαταῖος πάλιν τάδε, ὅτι μετὰ τὴν ἐν Γάζῃ μάχην ὁ Πτολεμαῖος ἐγένετο τῶν περὶ Συρίαν τόπων ἐγκρατής, καὶ πολλοὶ τῶν ἀνθρώπων πυνθανόμενοι τὴν ἠπιότητα καὶ φιλανθρωπίαν τοῦ Πτολεμαίου συναπαίρειν εἰς Αἴγυπτον ἠβουλήθησαν αὐτῷ καὶ τῶν πραγμάτων κοινωνεῖν.</line>
-            <line lang="en">Hecataeus then says this: that after the battle at Gaza Ptolemy became master of the places about Syria, and many of the inhabitants, learning of the mildness and humanity of Ptolemy, wished to depart with him to Egypt and share in his affairs.</line>
+        <div number="4">
+          <unit id="3">
+            <reading option="0" mss="Jacoby ">λέγει τοίνυν ὁ Ἑκαταῖος πάλιν τάδε, ὅτι μετὰ τὴν ἐν Γάζῃ μάχην ὁ Πτολεμαῖος ἐγένετο τῶν περὶ Συρίαν τόπων ἐγκρατής, καὶ πολλοὶ τῶν ἀνθρώπων πυνθανόμενοι τὴν ἠπιότητα καὶ φιλανθρωπίαν τοῦ Πτολεμαίου συναπαίρειν εἰς Αἴγυπτον ἠβουλήθησαν αὐτῷ καὶ τῶν πραγμάτων κοινωνεῖν.</reading>
+            <reading option="1" mss="Trans ">Hecataeus then says this: that after the battle at Gaza Ptolemy became master of the places about Syria, and many of the inhabitants, learning of the mildness and humanity of Ptolemy, wished to depart with him to Egypt and share in his affairs.</reading>
+          </unit>
         </div>
-        <div c="1" v="5">
-            <line lang="grc">ὧν εἷς ἦν Ἑζεκίας, φησίν, ἀρχιερεὺς τῶν Ἰουδαίων, ἄνθρωπος τὴν μὲν ἡλικίαν ὡς ἑξήκοντα καὶ ἓξ ἐτῶν, τῷ δʼ ἀξιώματι τῷ παρὰ τοῖς ὁμοέθνοις μέγας καὶ τὴν ψυχὴν οὐκ ἀνόητος, ἔτι δὲ καὶ λέγειν δυνατὸς καὶ τοῖς περὶ τῶν πραγμάτων, εἴπερ τις ἄλλος, ἐμπειρότατος.</line>
-            <line lang="en">'Among these,' he says, 'was Hezekiah, a high priest of the Jews, a man about sixty-six years of age, held in great honor by his compatriots, not deficient in intellect, and moreover powerful in speech and thoroughly experienced in affairs, if ever anyone was.'</line>
+        <div number="5">
+          <unit id="4">
+            <reading option="0" mss="Jacoby ">ὧν εἷς ἦν Ἑζεκίας, φησίν, ἀρχιερεὺς τῶν Ἰουδαίων, ἄνθρωπος τὴν μὲν ἡλικίαν ὡς ἑξήκοντα καὶ ἓξ ἐτῶν, τῷ δʼ ἀξιώματι τῷ παρὰ τοῖς ὁμοέθνοις μέγας καὶ τὴν ψυχὴν οὐκ ἀνόητος, ἔτι δὲ καὶ λέγειν δυνατὸς καὶ τοῖς περὶ τῶν πραγμάτων, εἴπερ τις ἄλλος, ἐμπειρότατος.</reading>
+            <reading option="1" mss="Trans ">'Among these,' he says, 'was Hezekiah, a high priest of the Jews, a man about sixty-six years of age, held in great honor by his compatriots, not deficient in intellect, and moreover powerful in speech and thoroughly experienced in affairs, if ever anyone was.'</reading>
+          </unit>
         </div>
-        <div c="1" v="6">
-            <line lang="grc">καίτοι, φησίν, οἱ πάντες Ἰουδαίων ἱερεῖς οἱ τὴν δεκάτην τῶν γινομένων λαμβάνοντες καὶ τὰ κοινὰ διοικοῦντες ὕστερον περὶ χιλίους καὶ πεντακοσίους μάλιστά εἰσιν.</line>
-            <line lang="en">'Yet,' he says, 'all the priests of the Jews who receive the tithe of the produce and administer public affairs are about fifteen hundred in all.'</line>
+        <div number="6">
+          <unit id="5">
+            <reading option="0" mss="Jacoby ">καίτοι, φησίν, οἱ πάντες Ἰουδαίων ἱερεῖς οἱ τὴν δεκάτην τῶν γινομένων λαμβάνοντες καὶ τὰ κοινὰ διοικοῦντες ὕστερον περὶ χιλίους καὶ πεντακοσίους μάλιστά εἰσιν.</reading>
+            <reading option="1" mss="Trans ">'Yet,' he says, 'all the priests of the Jews who receive the tithe of the produce and administer public affairs are about fifteen hundred in all.'</reading>
+          </unit>
         </div>
-        <div c="1" v="7">
-            <line lang="grc">πάλιν δὲ τοῦ προειρημένου μνημονεύων ἀνδρός, οὗτος οὖν, φησίν, ὁ ἄνθρωπος τυχὼν ταύτης τῆς τιμῆς καὶ συνήθης ἡμῖν γενόμενος παραλαβών τινας τῶν μεθʼ ἑαυτοῦ πάντας ἀνέγνω τὴν διαφορὰν αὐτοῖς· εἶχεν γὰρ τὴν κατοίκησιν αὐτῶν καὶ τὴν πολιτείαν γεγραμμένην.</line>
-            <line lang="en">Mentioning again the aforesaid man: 'This man then, having obtained this honor and become familiar with us, gathered together some of his followers and read to them all the charter; for he had their settlement and constitution in writing.'</line>
+        <div number="7">
+          <unit id="6">
+            <reading option="0" mss="Jacoby ">πάλιν δὲ τοῦ προειρημένου μνημονεύων ἀνδρός, οὗτος οὖν, φησίν, ὁ ἄνθρωπος τυχὼν ταύτης τῆς τιμῆς καὶ συνήθης ἡμῖν γενόμενος παραλαβών τινας τῶν μεθʼ ἑαυτοῦ πάντας ἀνέγνω τὴν διαφορὰν αὐτοῖς· εἶχεν γὰρ τὴν κατοίκησιν αὐτῶν καὶ τὴν πολιτείαν γεγραμμένην.</reading>
+            <reading option="1" mss="Trans ">Mentioning again the aforesaid man: 'This man then, having obtained this honor and become familiar with us, gathered together some of his followers and read to them all the charter; for he had their settlement and constitution in writing.'</reading>
+          </unit>
         </div>
-        <div c="2" v="1">
-            <line lang="grc">εἶτα Ἑκαταῖος δηλοῖ πάλιν, πῶς ἔχομεν πρὸς τοὺς νόμους, ὅτι πάντα πάσχειν ὑπὲρ τοῦ μὴ παραβῆναι τούτους προῃρήμεθα καὶ καλὸν εἶναι νομίζομεν.</line>
-            <line lang="en">Then Hecataeus shows again our attitude toward our laws, that we choose to suffer everything rather than transgress them, and consider this honorable.</line>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="7">
+            <reading option="0" mss="Jacoby ">εἶτα Ἑκαταῖος δηλοῖ πάλιν, πῶς ἔχομεν πρὸς τοὺς νόμους, ὅτι πάντα πάσχειν ὑπὲρ τοῦ μὴ παραβῆναι τούτους προῃρήμεθα καὶ καλὸν εἶναι νομίζομεν.</reading>
+            <reading option="1" mss="Trans ">Then Hecataeus shows again our attitude toward our laws, that we choose to suffer everything rather than transgress them, and consider this honorable.</reading>
+          </unit>
         </div>
-        <div c="2" v="2">
-            <line lang="grc">τοιγαροῦν, φησί, καὶ κακῶς ἀκούοντες ὑπὸ τῶν ἀστυγειτόνων καὶ προπηλακιζόμενοι πάντες οἵ τε Περσῶν βασιλεῖς καὶ οἱ σατράπαι οὐ δύνανται μεταπεῖσαι τὴν γνώμην, ἀλλὰ γυμνοὶ περὶ τούτων αἰκίας καὶ θανάτους πάντων μάλιστα δεινοτάτους ὑπομένουσι μὴ ἀρνούμενοι τὰ πάτρια.</line>
-            <line lang="en">'Therefore,' he says, 'even though spoken ill of by their neighbors and insulted by all, neither the kings of Persia nor their satraps have been able to change their resolve; but defenseless they endure tortures and the most terrible deaths of all on behalf of these, refusing to renounce the customs of their fathers.'</line>
+        <div number="2">
+          <unit id="8">
+            <reading option="0" mss="Jacoby ">τοιγαροῦν, φησί, καὶ κακῶς ἀκούοντες ὑπὸ τῶν ἀστυγειτόνων καὶ προπηλακιζόμενοι πάντες οἵ τε Περσῶν βασιλεῖς καὶ οἱ σατράπαι οὐ δύνανται μεταπεῖσαι τὴν γνώμην, ἀλλὰ γυμνοὶ περὶ τούτων αἰκίας καὶ θανάτους πάντων μάλιστα δεινοτάτους ὑπομένουσι μὴ ἀρνούμενοι τὰ πάτρια.</reading>
+            <reading option="1" mss="Trans ">'Therefore,' he says, 'even though spoken ill of by their neighbors and insulted by all, neither the kings of Persia nor their satraps have been able to change their resolve; but defenseless they endure tortures and the most terrible deaths of all on behalf of these, refusing to renounce the customs of their fathers.'</reading>
+          </unit>
         </div>
-        <div c="2" v="3">
-            <line lang="grc">παρέχεται δὲ καὶ τεκμήρια τῆς ἰσχυρογνωμοσύνης τῆς περὶ τοὺς νόμους. Ἀλεξάνδρου γάρ, φησίν, ἐν Βαβυλῶνι γενομένου καὶ προελομένου τὸ τοῦ Βήλου συμπεπτωκὸς ἱερὸν ἀνακαθᾶραι, καὶ πάντων αὐτῷ τῶν στρατιωτῶν χοῦν συμφερόντων μόνοι οἱ Ἰουδαῖοι προσέχειν οὐχ ὑπέμειναν, ἀλλὰ καὶ πολλὰς ὑπέστησαν πληγὰς καὶ μεγάλας ἀποτίσεις ἐζημιώθησαν, ἕως αὐτοῖς συγγνώμην ὁ βασιλεὺς ἔδωκεν καὶ καθαιρέσεως ἔτυχον.</line>
-            <line lang="en">He also provides proofs of their steadfastness regarding the laws. 'For when Alexander,' he says, 'was in Babylon and chose to restore the fallen temple of Belus, and all his soldiers were carrying earth, the Jews alone refused to participate, but endured many blows and were fined severe penalties, until the king granted them pardon and they were excused from the demolition.'</line>
+        <div number="3">
+          <unit id="9">
+            <reading option="0" mss="Jacoby ">παρέχεται δὲ καὶ τεκμήρια τῆς ἰσχυρογνωμοσύνης τῆς περὶ τοὺς νόμους. Ἀλεξάνδρου γάρ, φησίν, ἐν Βαβυλῶνι γενομένου καὶ προελομένου τὸ τοῦ Βήλου συμπεπτωκὸς ἱερὸν ἀνακαθᾶραι, καὶ πάντων αὐτῷ τῶν στρατιωτῶν χοῦν συμφερόντων μόνοι οἱ Ἰουδαῖοι προσέχειν οὐχ ὑπέμειναν, ἀλλὰ καὶ πολλὰς ὑπέστησαν πληγὰς καὶ μεγάλας ἀποτίσεις ἐζημιώθησαν, ἕως αὐτοῖς συγγνώμην ὁ βασιλεὺς ἔδωκεν καὶ καθαιρέσεως ἔτυχον.</reading>
+            <reading option="1" mss="Trans ">He also provides proofs of their steadfastness regarding the laws. 'For when Alexander,' he says, 'was in Babylon and chose to restore the fallen temple of Belus, and all his soldiers were carrying earth, the Jews alone refused to participate, but endured many blows and were fined severe penalties, until the king granted them pardon and they were excused from the demolition.'</reading>
+          </unit>
         </div>
-        <div c="2" v="4">
-            <line lang="grc">ἔτι γε μὴν ὡς εἰς τὴν χώραν αὐτῶν παραγενομένων τῶν πρότερον νεὼς καὶ βωμοὺς κατασκευασάντων ἅπαντα κατέσκαψαν, καὶ τῶν μὲν ζημίαν ἐξέτεισαν τοῖς σατράπαις, περὶ ὧν δὲ συγγνώμης ἔτυχον.</line>
-            <line lang="en">'Furthermore, when newcomers arrived in their country and built temples and altars, they demolished all of them; and for some they paid fines to the satraps, while for others they obtained pardon.'</line>
+        <div number="4">
+          <unit id="10">
+            <reading option="0" mss="Jacoby ">ἔτι γε μὴν ὡς εἰς τὴν χώραν αὐτῶν παραγενομένων τῶν πρότερον νεὼς καὶ βωμοὺς κατασκευασάντων ἅπαντα κατέσκαψαν, καὶ τῶν μὲν ζημίαν ἐξέτεισαν τοῖς σατράπαις, περὶ ὧν δὲ συγγνώμης ἔτυχον.</reading>
+            <reading option="1" mss="Trans ">'Furthermore, when newcomers arrived in their country and built temples and altars, they demolished all of them; and for some they paid fines to the satraps, while for others they obtained pardon.'</reading>
+          </unit>
         </div>
-        <div c="2" v="5">
-            <line lang="grc">καὶ προστίθησιν, ὅτι δίκαιόν ἐστιν ἐπὶ τούτοις αὐτοὺς θαυμάζειν.</line>
-            <line lang="en">And he adds that it is just to admire them for these things.</line>
+        <div number="5">
+          <unit id="11">
+            <reading option="0" mss="Jacoby ">καὶ προστίθησιν, ὅτι δίκαιόν ἐστιν ἐπὶ τούτοις αὐτοὺς θαυμάζειν.</reading>
+            <reading option="1" mss="Trans ">And he adds that it is just to admire them for these things.</reading>
+          </unit>
         </div>
-        <div c="3" v="1">
-            <line lang="grc">ὁ δὲ αὐτὸς οὗτος ἀνὴρ καὶ τὸ μέγεθος τῆς χώρας ἣν κατοικοῦμεν καὶ τὸ κάλλος ἱστόρηκεν· τριακοσίας γὰρ αὐτὴν μυριάδας ἀρουρῶν ἀρίστης καὶ παμφορωτάτης γῆς εἶναί φησιν· τοσαύτη γάρ ἐστιν ἡ Ἰουδαία.</line>
-            <line lang="en">The same author has also described the extent and beauty of the land we inhabit; for he says it comprises three million arourae of the best and most fertile soil; such indeed is the size of Judaea.</line>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="12">
+            <reading option="0" mss="Jacoby ">ὁ δὲ αὐτὸς οὗτος ἀνὴρ καὶ τὸ μέγεθος τῆς χώρας ἣν κατοικοῦμεν καὶ τὸ κάλλος ἱστόρηκεν· τριακοσίας γὰρ αὐτὴν μυριάδας ἀρουρῶν ἀρίστης καὶ παμφορωτάτης γῆς εἶναί φησιν· τοσαύτη γάρ ἐστιν ἡ Ἰουδαία.</reading>
+            <reading option="1" mss="Trans ">The same author has also described the extent and beauty of the land we inhabit; for he says it comprises three million arourae of the best and most fertile soil; such indeed is the size of Judaea.</reading>
+          </unit>
         </div>
-        <div c="3" v="2">
-            <line lang="grc">ἔτι γε μὴν ὡς αὐτὴν τὴν Ἱεροσολύμων πόλιν, ὅτι καὶ μεγίστην καὶ καλλίστην ἐκ παλαιοτάτου νέμονται, καὶ περὶ πλήθους ἀνθρώπων καὶ περὶ τῆς τοῦ νεὼ κατασκευῆς οὕτως διηγεῖται.</line>
-            <line lang="en">Moreover, concerning the city of Jerusalem itself, that from most ancient times they have inhabited it as a very great and beautiful city, he describes the multitude of people and the structure of the Temple as follows:</line>
+        <div number="2">
+          <unit id="13">
+            <reading option="0" mss="Jacoby ">ἔτι γε μὴν ὡς αὐτὴν τὴν Ἱεροσολύμων πόλιν, ὅτι καὶ μεγίστην καὶ καλλίστην ἐκ παλαιοτάτου νέμονται, καὶ περὶ πλήθους ἀνθρώπων καὶ περὶ τῆς τοῦ νεὼ κατασκευῆς οὕτως διηγεῖται.</reading>
+            <reading option="1" mss="Trans ">Moreover, concerning the city of Jerusalem itself, that from most ancient times they have inhabited it as a very great and beautiful city, he describes the multitude of people and the structure of the Temple as follows:</reading>
+          </unit>
         </div>
-        <div c="3" v="3">
-            <line lang="grc">ἔστι γὰρ τῶν Ἰουδαίων τὰ μὲν πολλὰ φρούρια κατὰ τὴν χώραν καὶ κῶμαι, μία δὲ πόλις ὀχυρά, πεντήκοντα μάλιστα σταδίων τὴν περίμετρον, ἣν οἰκοῦσι μὲν ἀνθρώπων περὶ δώδεκα μυριάδες, καλοῦσι δʼ αὐτὴν Ἱεροσόλυμα.</line>
-            <line lang="en">'There are among the Jews many fortresses throughout the country and villages, but one fortified city, about fifty stades in circumference, inhabited by about one hundred and twenty thousand men, and they call it Jerusalem.'</line>
+        <div number="3">
+          <unit id="14">
+            <reading option="0" mss="Jacoby ">ἔστι γὰρ τῶν Ἰουδαίων τὰ μὲν πολλὰ φρούρια κατὰ τὴν χώραν καὶ κῶμαι, μία δὲ πόλις ὀχυρά, πεντήκοντα μάλιστα σταδίων τὴν περίμετρον, ἣν οἰκοῦσι μὲν ἀνθρώπων περὶ δώδεκα μυριάδες, καλοῦσι δʼ αὐτὴν Ἱεροσόλυμα.</reading>
+            <reading option="1" mss="Trans ">'There are among the Jews many fortresses throughout the country and villages, but one fortified city, about fifty stades in circumference, inhabited by about one hundred and twenty thousand men, and they call it Jerusalem.'</reading>
+          </unit>
         </div>
-        <div c="3" v="4">
-            <line lang="grc">ἐνταῦθα δʼ ἐστὶ κατὰ μέσον μάλιστα τῆς πόλεως περίβολος λίθινος, μῆκος ὡς πεντάπλεθρος, εὖρος δὲ πηχῶν ἑκατόν, ἔχων διπλᾶς πύλας, ἐν ᾧ βωμός ἐστι τετράγωνος, ἀτμήτων συλλέκτων ἀργῶν λίθων συμπεπηγώς, εἴκοσι μὲν πηχῶν τὸ πλάτος, τὸ δὲ ὕψος ἔχων πηχῶν δέκα, καὶ παρʼ αὐτὸν οἴκημα μέγα, οὗ βωμός ἐστι καὶ λυχνία, χρυσᾶ μὲν ἀμφότερα, σταθμὸν ἔχοντα ταλάντων δύο.</line>
-            <line lang="en">'Here almost in the middle of the city is a stone enclosure, about five plethra in length and one hundred cubits wide, having double gates; within it is a square altar, built of uncut, gathered unhewn stones, twenty cubits in breadth and ten cubits in height; and beside it a great building, in which are an altar and a lampstand, both of gold, weighing two talents.'</line>
+        <div number="4">
+          <unit id="15">
+            <reading option="0" mss="Jacoby ">ἐνταῦθα δʼ ἐστὶ κατὰ μέσον μάλιστα τῆς πόλεως περίβολος λίθινος, μῆκος ὡς πεντάπλεθρος, εὖρος δὲ πηχῶν ἑκατόν, ἔχων διπλᾶς πύλας, ἐν ᾧ βωμός ἐστι τετράγωνος, ἀτμήτων συλλέκτων ἀργῶν λίθων συμπεπηγώς, εἴκοσι μὲν πηχῶν τὸ πλάτος, τὸ δὲ ὕψος ἔχων πηχῶν δέκα, καὶ παρʼ αὐτὸν οἴκημα μέγα, οὗ βωμός ἐστι καὶ λυχνία, χρυσᾶ μὲν ἀμφότερα, σταθμὸν ἔχοντα ταλάντων δύο.</reading>
+            <reading option="1" mss="Trans ">'Here almost in the middle of the city is a stone enclosure, about five plethra in length and one hundred cubits wide, having double gates; within it is a square altar, built of uncut, gathered unhewn stones, twenty cubits in breadth and ten cubits in height; and beside it a great building, in which are an altar and a lampstand, both of gold, weighing two talents.'</reading>
+          </unit>
         </div>
-        <div c="3" v="5">
-            <line lang="grc">ἐπὶ δὲ τούτων φῶς ἐστιν ἀκοίμητον καὶ τὰς νύκτας καὶ τὰς ἡμέρας. ἄγαλμα δὲ οὐκ ἔστιν οὐδὲ ἀνάθημα τὸ παράπαν οὐδὲ φύτευμα παντελῶς οὐδέν, οἷον ἄλσος ἢ τὸ τοιοῦτον.</line>
-            <line lang="en">'Upon these is an unquenched light both night and day. But image or dedication there is none at all, nor any planting whatsoever, such as a grove or the like.'</line>
+        <div number="5">
+          <unit id="16">
+            <reading option="0" mss="Jacoby ">ἐπὶ δὲ τούτων φῶς ἐστιν ἀκοίμητον καὶ τὰς νύκτας καὶ τὰς ἡμέρας. ἄγαλμα δὲ οὐκ ἔστιν οὐδὲ ἀνάθημα τὸ παράπαν οὐδὲ φύτευμα παντελῶς οὐδέν, οἷον ἄλσος ἢ τὸ τοιοῦτον.</reading>
+            <reading option="1" mss="Trans ">'Upon these is an unquenched light both night and day. But image or dedication there is none at all, nor any planting whatsoever, such as a grove or the like.'</reading>
+          </unit>
         </div>
-        <div c="3" v="6">
-            <line lang="grc">διατρίβουσι δʼ ἐν αὐτῷ καὶ τὰς νύκτας καὶ τὰς ἡμέρας ἱερεῖς ἁγνείας τινὰς ἁγνεύοντες καὶ τὸ παράπαν οἶνον οὐ πίνοντες ἐν τῷ ἱερῷ.</line>
-            <line lang="en">'And priests reside in it both night and day, performing certain purifications and drinking no wine at all in the Temple.'</line>
+        <div number="6">
+          <unit id="17">
+            <reading option="0" mss="Jacoby ">διατρίβουσι δʼ ἐν αὐτῷ καὶ τὰς νύκτας καὶ τὰς ἡμέρας ἱερεῖς ἁγνείας τινὰς ἁγνεύοντες καὶ τὸ παράπαν οἶνον οὐ πίνοντες ἐν τῷ ἱερῷ.</reading>
+            <reading option="1" mss="Trans ">'And priests reside in it both night and day, performing certain purifications and drinking no wine at all in the Temple.'</reading>
+          </unit>
         </div>
-        <div c="4" v="1">
-            <line lang="grc">ἔτι δὲ καὶ ὅτι Ἀλεξάνδρῳ τῷ βασιλεῖ συνεστρατεύσαντο καὶ μετὰ ταῦτα τοῖς διαδόχοις αὐτοῦ, κατόπιν ἱστόρηκεν. οἷς δʼ αὐτὸς παρατυχεῖν φησιν ὑπʼ ἀνδρὸς Ἰουδαίου κατὰ τὴν στρατείαν γενομένοις, τοῦτο παραθήσομαι.</line>
-            <line lang="en">Furthermore, he has recorded below that they served in the army with King Alexander and afterwards with his successors. What he states took place in his presence on campaign through a Jewish man, I will here relate.</line>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="18">
+            <reading option="0" mss="Jacoby ">ἔτι δὲ καὶ ὅτι Ἀλεξάνδρῳ τῷ βασιλεῖ συνεστρατεύσαντο καὶ μετὰ ταῦτα τοῖς διαδόχοις αὐτοῦ, κατόπιν ἱστόρηκεν. οἷς δʼ αὐτὸς παρατυχεῖν φησιν ὑπʼ ἀνδρὸς Ἰουδαίου κατὰ τὴν στρατείαν γενομένοις, τοῦτο παραθήσομαι.</reading>
+            <reading option="1" mss="Trans ">Furthermore, he has recorded below that they served in the army with King Alexander and afterwards with his successors. What he states took place in his presence on campaign through a Jewish man, I will here relate.</reading>
+          </unit>
         </div>
-        <div c="4" v="2">
-            <line lang="grc">λέγει δʼ οὕτως· ἐμοῦ γοῦν ἐπὶ τὴν Ἐρυθρὰν θάλασσαν βαδίζοντος συνηκολούθει τις μετὰ τῶν ἄλλων τῶν παραπεμπόντων ἡμᾶς ἱππέων Ἰουδαίων ὄνομα Μοσόλλαμος, ἀνὴρ ψυχῇ τε ἱκανὸς καὶ τὸ σῶμα κράτιστος καὶ τοξότης ὁμολογουμένως παρά τε τοῖς Ἕλλησι καὶ τοῖς βαρβάροις ἄριστος.</line>
-            <line lang="en">He speaks thus: 'As I was marching toward the Red Sea, there accompanied us among the other Jewish cavalry escorting us one named Mosollamus, a man of stout heart, physically very strong, and confessedly the best archer among both Greeks and barbarians.'</line>
+        <div number="2">
+          <unit id="19">
+            <reading option="0" mss="Jacoby ">λέγει δʼ οὕτως· ἐμοῦ γοῦν ἐπὶ τὴν Ἐρυθρὰν θάλασσαν βαδίζοντος συνηκολούθει τις μετὰ τῶν ἄλλων τῶν παραπεμπόντων ἡμᾶς ἱππέων Ἰουδαίων ὄνομα Μοσόλλαμος, ἀνὴρ ψυχῇ τε ἱκανὸς καὶ τὸ σῶμα κράτιστος καὶ τοξότης ὁμολογουμένως παρά τε τοῖς Ἕλλησι καὶ τοῖς βαρβάροις ἄριστος.</reading>
+            <reading option="1" mss="Trans ">He speaks thus: 'As I was marching toward the Red Sea, there accompanied us among the other Jewish cavalry escorting us one named Mosollamus, a man of stout heart, physically very strong, and confessedly the best archer among both Greeks and barbarians.'</reading>
+          </unit>
         </div>
-        <div c="4" v="3">
-            <line lang="grc">προϊόντων δὲ πολλῶν κατὰ τὴν ὁδὸν καὶ μάντεώς τινος ὀρνιθευομένου καὶ πάντας ἐπισχεῖν ἀξιοῦντος, ἠρώτησε διὰ τί προσμένουσι.</line>
-            <line lang="en">'As many were advancing along the road and a certain augur was taking auspices from a bird and requiring everyone to halt, he asked why they were waiting.'</line>
+        <div number="3">
+          <unit id="20">
+            <reading option="0" mss="Jacoby ">προϊόντων δὲ πολλῶν κατὰ τὴν ὁδὸν καὶ μάντεώς τινος ὀρνιθευομένου καὶ πάντας ἐπισχεῖν ἀξιοῦντος, ἠρώτησε διὰ τί προσμένουσι.</reading>
+            <reading option="1" mss="Trans ">'As many were advancing along the road and a certain augur was taking auspices from a bird and requiring everyone to halt, he asked why they were waiting.'</reading>
+          </unit>
         </div>
-        <div c="4" v="4">
-            <line lang="grc">δείξαντος δὲ τοῦ μάντεως αὐτῷ τὸν ὄρνιθα καὶ φήσαντος, ἐὰν μὲν αὐτοῦ μένῃ, προσμένειν συμφέρειν πᾶσιν, ἐὰν δʼ ἀναπτὰς εἰς τοὔμπροσθεν πέτηται, προάγειν, ἐὰν δὲ εἰς τοὐπίσω, πάλιν ἀναχωρεῖν, σιωπήσας καὶ διατείνας τὸ τόξον εἴλκυσε καὶ πατάξας τὸν ὄρνιθα ἀπέκτεινεν.</line>
-            <line lang="en">'When the augur showed him the bird and said that if it stayed there, it was advantageous for all to wait, but if it flew forward, to advance, and if backward, to retreat, he said nothing, but drawing his bow, shot and struck the bird and killed it.'</line>
+        <div number="4">
+          <unit id="21">
+            <reading option="0" mss="Jacoby ">δείξαντος δὲ τοῦ μάντεως αὐτῷ τὸν ὄρνιθα καὶ φήσαντος, ἐὰν μὲν αὐτοῦ μένῃ, προσμένειν συμφέρειν πᾶσιν, ἐὰν δʼ ἀναπτὰς εἰς τοὔμπροσθεν πέτηται, προάγειν, ἐὰν δὲ εἰς τοὐπίσω, πάλιν ἀναχωρεῖν, σιωπήσας καὶ διατείνας τὸ τόξον εἴλκυσε καὶ πατάξας τὸν ὄρνιθα ἀπέκτεινεν.</reading>
+            <reading option="1" mss="Trans ">'When the augur showed him the bird and said that if it stayed there, it was advantageous for all to wait, but if it flew forward, to advance, and if backward, to retreat, he said nothing, but drawing his bow, shot and struck the bird and killed it.'</reading>
+          </unit>
         </div>
-        <div c="4" v="5">
-            <line lang="grc">ἀγανακτούντων δὲ τοῦ τε μάντεως καί τινων ἄλλων καὶ καταρωμένων αὐτῷ, τί μαίνεσθε, ἔφη, ταλαίπωροι; καὶ λαβὼν τὸν ὄρνιθα εἰς τὰς χεῖρας, πῶς γάρ, ἔφη, περὶ τῆς ἡμετέρας πορείας οὗτος ἂν ὑγιές τι προεδήλωσεν ἡμῖν, ὃς τὴν ἑαυτοῦ σωτηρίαν οὐ προεῖδεν; εἰ γὰρ ἠδύνατο προγινώσκειν τὸ μέλλον, οὐκ ἂν ἦλθεν εἰς τοῦτον τὸν τόπον, φοβούμενος μὴ τοξευθεὶς ὑπὸ Μοσολλάμου τοῦ Ἰουδαίου τελευτήσῃ.</line>
-            <line lang="en">'When the augur and certain others were indignant and cursed him, he said: Why are you raving, miserable men? And taking the bird in his hands, he said: How could this creature give us any sound advice about our march, when it could not foresee its own safety? For if it had been able to foresee the future, it would not have come to this spot, fearing lest it be shot and killed by Mosollamus the Jew.'</line>
+        <div number="5">
+          <unit id="22">
+            <reading option="0" mss="Jacoby ">ἀγανακτούντων δὲ τοῦ τε μάντεως καί τινων ἄλλων καὶ καταρωμένων αὐτῷ, τί μαίνεσθε, ἔφη, ταλαίπωροι; καὶ λαβὼν τὸν ὄρνιθα εἰς τὰς χεῖρας, πῶς γάρ, ἔφη, περὶ τῆς ἡμετέρας πορείας οὗτος ἂν ὑγιές τι προεδήλωσεν ἡμῖν, ὃς τὴν ἑαυτοῦ σωτηρίαν οὐ προεῖδεν; εἰ γὰρ ἠδύνατο προγινώσκειν τὸ μέλλον, οὐκ ἂν ἦλθεν εἰς τοῦτον τὸν τόπον, φοβούμενος μὴ τοξευθεὶς ὑπὸ Μοσολλάμου τοῦ Ἰουδαίου τελευτήσῃ.</reading>
+            <reading option="1" mss="Trans ">'When the augur and certain others were indignant and cursed him, he said: Why are you raving, miserable men? And taking the bird in his hands, he said: How could this creature give us any sound advice about our march, when it could not foresee its own safety? For if it had been able to foresee the future, it would not have come to this spot, fearing lest it be shot and killed by Mosollamus the Jew.'</reading>
+          </unit>
         </div>
-        <div c="5" v="1">
-            <line lang="grc">ἐτίμα γὰρ ἡμῶν τὸ ἔθνος [Ἀλέξανδρος], ὡς καί φησιν Ἑκαταῖος περὶ ἡμῶν, ὅτι διὰ τὴν ἐπιείκειαν καὶ πίστιν, ἣν αὐτῷ παρέσχον Ἰουδαῖοι, τὴν Σαμαρεῖτιν χώραν προσέθηκεν ἔχειν αὐτοῖς ἀφορολόγητον. (Contra Apionem II.43)</line>
-            <line lang="en">[Alexander] honored our nation, as Hecataeus also says concerning us, that because of the equity and loyalty which the Jews rendered him, he added the district of Samaria to them to hold free of tribute. (Contra Apionem II.43)</line>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="23">
+            <reading option="0" mss="Jacoby ">ἐτίμα γὰρ ἡμῶν τὸ ἔθνος [Ἀλέξανδρος], ὡς καί φησιν Ἑκαταῖος περὶ ἡμῶν, ὅτι διὰ τὴν ἐπιείκειαν καὶ πίστιν, ἣν αὐτῷ παρέσχον Ἰουδαῖοι, τὴν Σαμαρεῖτιν χώραν προσέθηκεν ἔχειν αὐτοῖς ἀφορολόγητον. (Contra Apionem II.43)</reading>
+            <reading option="1" mss="Trans ">[Alexander] honored our nation, as Hecataeus also says concerning us, that because of the equity and loyalty which the Jews rendered him, he added the district of Samaria to them to hold free of tribute. (Contra Apionem II.43)</reading>
+          </unit>
         </div>
-        <div c="5" v="2">
-            <line lang="grc">Ἑκαταῖος δὲ καὶ τοῦ μνησθῆναι πλέον τι πεποίηκε· βιβλίον γὰρ περὶ αὐτοῦ [Ἀβράμου] συνταξάμενος κατέλιπε. (Antiquitates Iudaicae I.159)</line>
-            <line lang="en">Hecataeus did more than merely mention him; for he composed and left behind a book about him [Abraham]. (Antiquitates Iudaicae I.159)</line>
+        <div number="2">
+          <unit id="24">
+            <reading option="0" mss="Jacoby ">Ἑκαταῖος δὲ καὶ τοῦ μνησθῆναι πλέον τι πεποίηκε· βιβλίον γὰρ περὶ αὐτοῦ [Ἀβράμου] συνταξάμενος κατέλιπε. (Antiquitates Iudaicae I.159)</reading>
+            <reading option="1" mss="Trans ">Hecataeus did more than merely mention him; for he composed and left behind a book about him [Abraham]. (Antiquitates Iudaicae I.159)</reading>
+          </unit>
         </div>
-        <div c="5" v="3">
-            <line lang="grc">διὸ καὶ τοὺς ποιητὰς αὐτῆς καὶ τοὺς συγγραφεῖς τῶν ἱστοριῶν οὐκ ἐπιμνησθῆναί φησιν Ἑκαταῖος ὁ Ἀβδηρίτης οὐδὲ τῶν κατʼ αὐτὴν πολιτευσαμένων ἀνδρῶν, ὡς ἁγνῆς οὔσης καὶ μὴ δέον αὐτὴν βεβήλοις στόμασιν διασαφεῖσθαι. (Antiquitates Iudaicae XII.38 / Epist. Aristeae 31)</line>
-            <line lang="en">Wherefore Hecataeus of Abdera says that the poets and historians made no mention of the [divine Law] nor of the men who lived according to it, because it is holy and not to be published through profane mouths. (Antiquitates XII.38 / Ep. Arist. 31)</line>
+        <div number="3">
+          <unit id="25">
+            <reading option="0" mss="Jacoby ">διὸ καὶ τοὺς ποιητὰς αὐτῆς καὶ τοὺς συγγραφεῖς τῶν ἱστοριῶν οὐκ ἐπιμνησθῆναί φησιν Ἑκαταῖος ὁ Ἀβδηρίτης οὐδὲ τῶν κατʼ αὐτὴν πολιτευσαμένων ἀνδρῶν, ὡς ἁγνῆς οὔσης καὶ μὴ δέον αὐτὴν βεβήλοις στόμασιν διασαφεῖσθαι. (Antiquitates Iudaicae XII.38 / Epist. Aristeae 31)</reading>
+            <reading option="1" mss="Trans ">Wherefore Hecataeus of Abdera says that the poets and historians made no mention of the [divine Law] nor of the men who lived according to it, because it is holy and not to be published through profane mouths. (Antiquitates XII.38 / Ep. Arist. 31)</reading>
+          </unit>
         </div>
-        <div c="5" v="4">
-            <line lang="grc">Ἑκαταῖος ὁ τὰς Αἰγυπτιακὰς ἱστορίας συνταξάμενος ἐν τῷ κατʼ Ἀβραὰμ βιβλίῳ μέμνηται ὡς ἑνὸς ὄντος τοῦ θεοῦ καὶ πάντων δημιουργοῦ. (Clemens Alex., Stromata V.113.1-2)</line>
-            <line lang="en">Hecataeus, who composed the Egyptian histories, in his book on Abraham mentions that God is One and Creator of all. (Stromata V.113.1-2)</line>
+        <div number="4">
+          <unit id="26">
+            <reading option="0" mss="Jacoby ">Ἑκαταῖος ὁ τὰς Αἰγυπτιακὰς ἱστορίας συνταξάμενος ἐν τῷ κατʼ Ἀβραὰμ βιβλίῳ μέμνηται ὡς ἑνὸς ὄντος τοῦ θεοῦ καὶ πάντων δημιουργοῦ. (Clemens Alex., Stromata V.113.1-2)</reading>
+            <reading option="1" mss="Trans ">Hecataeus, who composed the Egyptian histories, in his book on Abraham mentions that God is One and Creator of all. (Stromata V.113.1-2)</reading>
+          </unit>
         </div>
-    </body>
-</document>
+      </div>
+    </text>
+  </version>
+</book>

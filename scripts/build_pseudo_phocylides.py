@@ -248,22 +248,33 @@ VERSES_GREEK = [
 def build_grammateus_xml():
     lines = [
         '<?xml version="1.0" encoding="utf-8"?>',
-        '<!DOCTYPE document SYSTEM "document.dtd">',
-        '<document id="PsPhoc">',
-        '    <header>',
-        '        <title>Sentences of Pseudo-Phocylides</title>',
-        '        <author>Pseudo-Phocylides</author>',
-        '        <editor>Theodor Bergk (1882)</editor>',
-        '        <description>Greek text from Poetae Lyrici Graeci, 4th ed., Vol. 2 (Leipzig: Teubner, 1882), pp. 361-373. Didactic wisdom poem in 230 dactylic hexameters (CAVT 182 / CANT 35).</description>',
-        '    </header>',
-        '    <body>'
+        '<!DOCTYPE book SYSTEM "grammateus.dtd">',
+        '<book filename="PsPhoc" title="Sentences of Pseudo-Phocylides">',
+        '  <version author="Bergk 1882" language="Greek" title="Greek">',
+        '    <divisions>',
+        '      <division delimiter="." label="Chapter"/>',
+        '      <division label="Verse"/>',
+        '    </divisions>',
+        '    <manuscripts>',
+        '      <ms abbrev="Bergk" language="Greek" show="yes">',
+        '        <name>Bergk 1882 (Poetae Lyrici Graeci)</name>',
+        '        <bibliography>Theodor Bergk, Poetae Lyrici Graeci, 4th ed., Vol. 2 (Leipzig: Teubner, 1882), pp. 361-373. CAVT 182 / CANT 35.</bibliography>',
+        '      </ms>',
+        '    </manuscripts>',
+        '    <text>',
+        '      <div number="1">'
     ]
     for i, v in enumerate(VERSES_GREEK, 1):
-        lines.append(f'        <div c="1" v="{i}">')
-        lines.append(f'            <line lang="grc">{v}</line>')
+        clean_v = v.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        lines.append(f'        <div number="{i}">')
+        lines.append(f'          <unit id="{i-1}">')
+        lines.append(f'            <reading option="0" mss="Bergk ">{clean_v}</reading>')
+        lines.append('          </unit>')
         lines.append('        </div>')
-    lines.append('    </body>')
-    lines.append('</document>\n')
+    lines.append('      </div>')
+    lines.append('    </text>')
+    lines.append('  </version>')
+    lines.append('</book>\n')
     
     out_path = 'static/docs/PsPhoc.xml'
     with open(out_path, 'w', encoding='utf-8') as f:

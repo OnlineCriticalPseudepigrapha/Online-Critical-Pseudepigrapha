@@ -1,0 +1,1217 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="id_3Macc">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>3 Maccabees</title>
+        <editor role="editor">Miller, David M., Ken M. Penner</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Rahlfs">
+            <abbr type="siglum">Rahlfs</abbr>
+            <name>Rahlfs Septuaginta (1935)</name>
+            <bibl>Alfred Rahlfs, Septuaginta: id est Vetus Testamentum graece iuxta LXX interpretes (Stuttgart: Privilegierte Württembergische Bibelanstalt, 1935). Text of 3 Maccabees (Maccabaeorum liber III).</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="1" xml:id="id_3Macc.ver_Greek.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="id_3Macc.ver_Greek.1.1">
+            <app xml:id="u0_ver_Greek">
+              <lem wit="#Rahlfs">Ὁ δὲ Φιλοπάτωρ παρὰ τῶν ἀνακομισθέντων μαθὼν τὴν γενομένην τῶν ὑπ’ αὐτοῦ κρατουμένων τόπων ἀφαίρεσιν ὑπὸ Ἀντιόχου παραγγείλας ταῖς πάσαις δυνάμεσιν πεζικαῖς τε καὶ ἱππικαῖς καὶ τὴν ἀδελφὴν Ἀρσινόην συμπαραλαβὼν ἐξώρμησεν μέχρι τῶν κατὰ Ῥαφίαν τόπων, ὅπου παρεμβεβλήκεισαν οἱ περὶ Ἀντίοχον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Macc.ver_Greek.1.2">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#Rahlfs">Θεόδοτος δέ τις ἐκπληρῶσαι τὴν ἐπιβουλὴν διανοηθεὶς παραλαβὼν τῶν προυποτεταγμένων αὐτῷ ὅπλων Πτολεμαικῶν τὰ κράτιστα διεκομίσθη νύκτωρ ἐπὶ τὴν τοῦ Πτολεμαίου σκηνὴν ὡς μόνος κτεῖναι αὐτὸν καὶ ἐν τούτῳ διαλῦσαι τὸν πόλεμον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Macc.ver_Greek.1.3">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#Rahlfs">τοῦτον δὲ διαγαγὼν Δοσίθεος ὁ Δριμύλου λεγόμενος, τὸ γένος Ιουδαῖος, ὕστερον δὲ μεταβαλὼν τὰ νόμιμα καὶ τῶν πατρίων δογμάτων ἀπηλλοτριωμένος, ἄσημόν τινα κατέκλινεν ἐν τῇ σκηνῇ, ὃν συνέβη κομίσασθαι τὴν ἐκείνου κόλασιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Macc.ver_Greek.1.4">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#Rahlfs">γενομένης δὲ καρτερᾶς μάχης καὶ τῶν πραγμάτων μᾶλλον ἐρρωμένων τῷ Ἀντιόχῳ ἱκανῶς ἡ Ἀρσινόη ἐπιπορευσαμένη τὰς δυνάμεις παρεκάλει μετὰ οἴκτου καὶ δακρύων τοὺς πλοκάμους λελυμένη βοηθεῖν ἑαυτοῖς τε καὶ τοῖς τέκνοις καὶ γυναιξὶν θαρραλέως ἐπαγγελλομένη δώσειν νικήσασιν ἑκάστῳ δύο μνᾶς χρυσίου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Macc.ver_Greek.1.5">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#Rahlfs">καὶ οὕτως συνέβη τοὺς ἀντιπάλους ἐν χειρονομίαις διαφθαρῆναι, πολλοὺς δὲ καὶ δοριαλώτους συλλημφθῆναι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Macc.ver_Greek.1.6">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#Rahlfs">κατακρατήσας δὲ τῆς ἐπιβουλῆς ἔκρινεν τὰς πλησίον πόλεις ἐπελθὼν παρακαλέσαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Macc.ver_Greek.1.7">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#Rahlfs">ποιήσας δὲ τοῦτο καὶ τοῖς τεμένεσι δωρεὰς ἀπονείμας εὐθαρσεῖς τοὺς ὑποτεταγμένους κατέστησεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Macc.ver_Greek.1.8">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#Rahlfs">Τῶν δὲ Ιουδαίων διαπεμψαμένων πρὸς αὐτὸν ἀπὸ τῆς γερουσίας καὶ τῶν πρεσβυτέρων τοὺς ἀσπασομένους αὐτὸν καὶ ξένια κομιοῦντας καὶ ἐπὶ τοῖς συμβεβηκόσιν χαρισομένους συνέβη μᾶλλον αὐτὸν προθυμηθῆναι ὡς τάχιστα πρὸς αὐτοὺς παραγενέσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Macc.ver_Greek.1.9">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#Rahlfs">διακομισθεὶς δὲ εἰς Ιεροσόλυμα καὶ θύσας τῷ μεγίστῳ θεῷ καὶ χάριτας ἀποδοὺς καὶ τῶν ἑξῆς τι τῷ τόπῳ ποιήσας καὶ δὴ παραγενόμενος εἰς τὸν τόπον καὶ τῇ σπουδαιότητι καὶ εὐπρεπείᾳ καταπλαγείς,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Macc.ver_Greek.1.10">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#Rahlfs">θαυμάσας δὲ καὶ τὴν τοῦ ἱεροῦ εὐταξίαν ἐνεθυμήθη βουλεύσασθαι εἰς τὸν ναὸν εἰσελθεῖν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Macc.ver_Greek.1.11">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#Rahlfs">τῶν δὲ εἰπόντων μὴ καθήκειν γίνεσθαι τοῦτο διὰ τὸ μηδὲ τοῖς ἐκ τοῦ ἔθνους ἐξεῖναι εἰσιέναι μηδὲ πᾶσιν τοῖς ἱερεῦσιν, ἀλλ’ ἢ μόνῳ τῷ προηγουμένῳ πάντων ἀρχιερεῖ, καὶ τούτῳ κατ’ ἐνιαυτὸν ἅπαξ, ὁ δὲ οὐδαμῶς ἐπείθετο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Macc.ver_Greek.1.12">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#Rahlfs">τοῦ τε νόμου παραναγνωσθέντος οὐδ’ ὧς ἀπέλιπεν προφερόμενος ἑαυτὸν δεῖν εἰσελθεῖν λέγων Καὶ εἰ ἐκεῖνοι ἐστέρηνται ταύτης τῆς τιμῆς, ἐμὲ δὲ οὐ δεῖ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Macc.ver_Greek.1.13">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#Rahlfs">καὶ ἐπυνθάνετο διὰ τίνα αἰτίαν εἰσερχόμενον αὐτὸν εἰς πᾶν τέμενος οὐθεὶς ἐκώλυσεν τῶν παρόντων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Macc.ver_Greek.1.14">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#Rahlfs">καί τις ἀπρονοήτως ἔφη κακῶς αὐτὸ τοῦτο τερατεύεσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Macc.ver_Greek.1.15">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#Rahlfs">γενομένου δέ, φησιν, τούτου διά τινα αἰτίαν, οὐχὶ πάντως εἰσελεύσεσθαι καὶ θελόντων αὐτῶν καὶ μή;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Macc.ver_Greek.1.16">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#Rahlfs">τῶν δὲ ἱερέων ἐν πάσαις ταῖς ἐσθήσεσιν προσπεσόντων καὶ δεομένων τοῦ μεγίστου θεοῦ βοηθεῖν τοῖς ἐνεστῶσιν καὶ τὴν ὁρμὴν τοῦ κακῶς ἐπιβαλλομένου μεταθεῖναι κραυγῆς τε μετὰ δακρύων τὸ ἱερὸν ἐμπλησάντων</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Macc.ver_Greek.1.17">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#Rahlfs">οἱ κατὰ τὴν πόλιν ἀπολειπόμενοι ταραχθέντες ἐξεπήδησαν ἄδηλον τιθέμενοι τὸ γινόμενον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_3Macc.ver_Greek.1.18">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#Rahlfs">αἵ τε κατάκλειστοι παρθένοι ἐν θαλάμοις σὺν ταῖς τεκούσαις ἐξώρμησαν καὶ ἀπέδωκαν κόνει τὰς κόμας πασάμεναι γόου τε καὶ στεναγμῶν ἐνεπίμπλων τὰς πλατείας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_3Macc.ver_Greek.1.19">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#Rahlfs">αἱ δὲ καὶ προσαρτίως ἐσταλμέναι τοὺς πρὸς ἀπάντησιν διατεταγμένους παστοὺς καὶ τὴν ἁρμόζουσαν αἰδὼ παραλείπουσαι δρόμον ἄτακτον ἐν τῇ πόλει συνίσταντο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_3Macc.ver_Greek.1.20">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#Rahlfs">τὰ δὲ νεογνὰ τῶν τέκνων αἱ πρὸς τούτοις μητέρες καὶ τιθηνοὶ παραλείπουσαι ἄλλως καὶ ἄλλως, αἱ μὲν κατ’ οἴκους, αἱ δὲ κατὰ τὰς ἀγυιάς, ἀνεπιστρέπτως εἰς τὸ πανυπέρτατον ἱερὸν ἠθροίζοντο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_3Macc.ver_Greek.1.21">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#Rahlfs">ποικίλη δὲ ἦν τῶν εἰς τοῦτο συλλεγέντων ἡ δέησις ἐπὶ τοῖς ἀνοσίως ὑπ’ ἐκείνου κατεγχειρουμένοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_3Macc.ver_Greek.1.22">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#Rahlfs">σύν τε τούτοις οἱ περὶ τῶν πολιτῶν θρασυνθέντες οὐκ ἠνείχοντο τέλεον αὐτοῦ ἐπικειμένου καὶ τὸ τῆς προθέσεως ἐκπληροῦν διανοουμένου,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_3Macc.ver_Greek.1.23">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#Rahlfs">φωνήσαντες δὲ τὴν ὁρμὴν ἐπὶ τὰ ὅπλα ποιήσασθαι καὶ θαρραλέως ὑπὲρ τοῦ πατρῴου νόμου τελευτᾶν ἱκανὴν ἐποίησαν ἐν τῷ τόπῳ τραχύτητα, μόλις δὲ ὑπό τε τῶν γεραιῶν καὶ τῶν πρεσβυτέρων ἀποτραπέντες ἐπὶ τὴν αὐτὴν τῆς δεήσεως παρῆσαν στάσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_3Macc.ver_Greek.1.24">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#Rahlfs">καὶ τὸ μὲν πλῆθος ὡς ἔμπροσθεν ἐν τούτοις ἀνεστρέφετο δεόμενον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_3Macc.ver_Greek.1.25">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ περὶ τὸν βασιλέα πρεσβύτεροι πολλαχῶς ἐπειρῶντο τὸν ἀγέρωχον αὐτοῦ νοῦν ἐξιστάνειν τῆς ἐντεθυμημένης ἐπιβουλῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_3Macc.ver_Greek.1.26">
+            <app xml:id="u25_ver_Greek">
+              <lem wit="#Rahlfs">θρασυνθεὶς δὲ καὶ πάντα παραπέμψας ἤδη καὶ πρόσβασιν ἐποιεῖτο τέλος ἐπιθήσειν δοκῶν τῷ προειρημένῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_3Macc.ver_Greek.1.27">
+            <app xml:id="u26_ver_Greek">
+              <lem wit="#Rahlfs">ταῦτα οὖν καὶ οἱ περὶ αὐτὸν ὄντες θεωροῦντες ἐτράπησαν εἰς τὸ σὺν τοῖς ἡμετέροις ἐπικαλεῖσθαι τὸν πᾶν κράτος ἔχοντα τοῖς παροῦσιν ἐπαμῦναι μὴ παριδόντα τὴν ἄνομον καὶ ὑπερήφανον πρᾶξιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_3Macc.ver_Greek.1.28">
+            <app xml:id="u27_ver_Greek">
+              <lem wit="#Rahlfs">ἐκ δὲ τῆς πυκνοτάτης τε καὶ ἐμπόνου τῶν ὄχλων συναγομένης κραυγῆς ἀνείκαστός τις ἦν βοή·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_3Macc.ver_Greek.1.29">
+            <app xml:id="u28_ver_Greek">
+              <lem wit="#Rahlfs">δοκεῖν γὰρ ἦν μὴ μόνον τοὺς ἀνθρώπους, ἀλλὰ καὶ τὰ τείχη καὶ τὸ πᾶν ἔδαφος ἠχεῖν ἅτε δὴ τῶν πάντων τότε θάνατον ἀλλασσομένων ἀντὶ τῆς τοῦ τόπου βεβηλώσεως.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="id_3Macc.ver_Greek.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="id_3Macc.ver_Greek.2.1">
+            <app xml:id="u29_ver_Greek">
+              <lem wit="#Rahlfs">Ὁ μὲν οὖν ἀρχιερεὺς Σιμων ἐξ ἐναντίας τοῦ ναοῦ κάμψας τὰ γόνατα καὶ τὰς χεῖρας προτείνας εὐτάκτως ἐποιήσατο τὴν δέησιν τοιαύτην</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Macc.ver_Greek.2.2">
+            <app xml:id="u30_ver_Greek">
+              <lem wit="#Rahlfs">Κύριε κύριε, βασιλεῦ τῶν οὐρανῶν καὶ δέσποτα πάσης κτίσεως, ἅγιε ἐν ἁγίοις, μόναρχε, παντοκράτωρ, πρόσχες ἡμῖν καταπονουμένοις ὑπὸ ἀνοσίου καὶ βεβήλου θράσει καὶ σθένει πεφρυαγμένου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Macc.ver_Greek.2.3">
+            <app xml:id="u31_ver_Greek">
+              <lem wit="#Rahlfs">σὺ γὰρ ὁ κτίσας τὰ πάντα καὶ τῶν ὅλων ἐπικρατῶν δυνάστης δίκαιος εἶ καὶ τοὺς ὕβρει καὶ ἀγερωχίᾳ τι πράσσοντας κρίνεις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Macc.ver_Greek.2.4">
+            <app xml:id="u32_ver_Greek">
+              <lem wit="#Rahlfs">σὺ τοὺς ἔμπροσθεν ἀδικίαν ποιήσαντας, ἐν οἷς καὶ γίγαντες ἦσαν ῥώμῃ καὶ θράσει πεποιθότες, διέφθειρας ἐπαγαγὼν αὐτοῖς ἀμέτρητον ὕδωρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Macc.ver_Greek.2.5">
+            <app xml:id="u33_ver_Greek">
+              <lem wit="#Rahlfs">σὺ τοὺς ὑπερηφανίαν ἐργαζομένους Σοδομίτας διαδήλους ταῖς κακίαις γενομένους πυρὶ καὶ θείῳ κατέφλεξας παράδειγμα τοῖς ἐπιγινομένοις καταστήσας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Macc.ver_Greek.2.6">
+            <app xml:id="u34_ver_Greek">
+              <lem wit="#Rahlfs">σὺ τὸν θρασὺν Φαραω καταδουλωσάμενον τὸν λαόν σου τὸν ἅγιον Ισραηλ ποικίλαις καὶ πολλαῖς δοκιμάσας τιμωρίαις ἐγνώρισας τὴν σὴν δύναμιν, ἐφ’ οἷς ἐγνώρισας τὸ μέγα σου κράτος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Macc.ver_Greek.2.7">
+            <app xml:id="u35_ver_Greek">
+              <lem wit="#Rahlfs">καὶ ἐπιδιώξαντα αὐτὸν σὺν ἅρμασιν καὶ ὄχλων πλήθει ἐπέκλυσας βάθει θαλάσσης, τοὺς δὲ ἐμπιστεύσαντας ἐπὶ σοὶ τῷ τῆς ἁπάσης κτίσεως δυναστεύοντι σώους διεκόμισας,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Macc.ver_Greek.2.8">
+            <app xml:id="u36_ver_Greek">
+              <lem wit="#Rahlfs">οἳ καὶ συνιδόντες ἔργα σῆς χειρὸς ᾔνεσάν σε τὸν παντοκράτορα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Macc.ver_Greek.2.9">
+            <app xml:id="u37_ver_Greek">
+              <lem wit="#Rahlfs">σύ, βασιλεῦ, κτίσας τὴν ἀπέραντον καὶ ἀμέτρητον γῆν ἐξελέξω τὴν πόλιν ταύτην καὶ ἡγίασας τὸν τόπον τοῦτον εἰς ὄνομά σοι τῷ τῶν ἁπάντων ἀπροσδεεῖ καὶ παρεδόξασας ἐν ἐπιφανείᾳ μεγαλοπρεπεῖ σύστασιν ποιησάμενος αὐτοῦ πρὸς δόξαν τοῦ μεγάλου καὶ ἐντίμου ὀνόματός σου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Macc.ver_Greek.2.10">
+            <app xml:id="u38_ver_Greek">
+              <lem wit="#Rahlfs">καὶ ἀγαπῶν τὸν οἶκον τοῦ Ισραηλ ἐπηγγείλω διότι, ἐὰν γένηται ἡμῶν ἀποστροφὴ καὶ καταλάβῃ ἡμᾶς στενοχωρία καὶ ἐλθόντες εἰς τὸν τόπον τοῦτον δεηθῶμεν, εἰσακούσῃ τῆς δεήσεως ἡμῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Macc.ver_Greek.2.11">
+            <app xml:id="u39_ver_Greek">
+              <lem wit="#Rahlfs">καὶ δὴ πιστὸς εἶ καὶ ἀληθινός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Macc.ver_Greek.2.12">
+            <app xml:id="u40_ver_Greek">
+              <lem wit="#Rahlfs">ἐπεὶ δὲ πλεονάκις θλιβέντων τῶν πατέρων ἡμῶν ἐβοήθησας αὐτοῖς ἐν τῇ ταπεινώσει καὶ ἐρρύσω αὐτοὺς ἐκ μεγάλων κακῶν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Macc.ver_Greek.2.13">
+            <app xml:id="u41_ver_Greek">
+              <lem wit="#Rahlfs">ἰδοὺ δὲ νῦν, ἅγιε βασιλεῦ, διὰ τὰς πολλὰς καὶ μεγάλας ἡμῶν ἁμαρτίας καταπονούμεθα καὶ ὑπετάγημεν τοῖς ἐχθροῖς ἡμῶν καὶ παρείμεθα ἐν ἀδυναμίαις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Macc.ver_Greek.2.14">
+            <app xml:id="u42_ver_Greek">
+              <lem wit="#Rahlfs">ἐν δὲ τῇ ἡμετέρᾳ καταπτώσει ὁ θρασὺς καὶ βέβηλος οὗτος ἐπιτηδεύει καθυβρίσαι τὸν ἐπὶ τῆς γῆς ἀναδεδειγμένον τῷ ὀνόματι τῆς δόξης σου ἅγιον τόπον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Macc.ver_Greek.2.15">
+            <app xml:id="u43_ver_Greek">
+              <lem wit="#Rahlfs">τὸ μὲν γὰρ κατοικητήριόν σου οὐρανὸς τοῦ οὐρανοῦ ἀνέφικτος ἀνθρώποις ἐστίν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Macc.ver_Greek.2.16">
+            <app xml:id="u44_ver_Greek">
+              <lem wit="#Rahlfs">ἀλλὰ ἐπεὶ εὐδοκήσας τὴν δόξαν σου ἐν τῷ λαῷ σου Ισραηλ ἡγίασας τὸν τόπον τοῦτον,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Macc.ver_Greek.2.17">
+            <app xml:id="u45_ver_Greek">
+              <lem wit="#Rahlfs">μὴ ἐκδικήσῃς ἡμᾶς ἐν τῇ τούτων ἀκαθαρσίᾳ μηδὲ εὐθύνῃς ἡμᾶς ἐν βεβηλώσει, ἵνα μὴ καυχήσωνται οἱ παράνομοι ἐν θυμῷ αὐτῶν μηδὲ ἀγαλλιάσωνται ἐν ὑπερηφανίᾳ γλώσσης αὐτῶν λέγοντες</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_3Macc.ver_Greek.2.18">
+            <app xml:id="u46_ver_Greek">
+              <lem wit="#Rahlfs">Ἡμεῖς κατεπατήσαμεν τὸν οἶκον τοῦ ἁγιασμοῦ, ὡς καταπατοῦνται οἱ οἶκοι τῶν προσοχθισμάτων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_3Macc.ver_Greek.2.19">
+            <app xml:id="u47_ver_Greek">
+              <lem wit="#Rahlfs">ἀπάλειψον τὰς ἁμαρτίας ἡμῶν καὶ διασκέδασον τὰς ἀμβλακίας ἡμῶν καὶ ἐπίφανον τὸ ἔλεός σου κατὰ τὴν ὥραν ταύτην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_3Macc.ver_Greek.2.20">
+            <app xml:id="u48_ver_Greek">
+              <lem wit="#Rahlfs">ταχὺ προκαταλαβέτωσαν ἡμᾶς οἱ οἰκτιρμοί σου, καὶ δὸς αἰνέσεις ἐν τῷ στόματι τῶν καταπεπτωκότων καὶ συντετριμμένων τὰς ψυχὰς ποιήσας ἡμῖν εἰρήνην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_3Macc.ver_Greek.2.21">
+            <app xml:id="u49_ver_Greek">
+              <lem wit="#Rahlfs">Ἐνταῦθα ὁ πάντων ἐπόπτης θεὸς καὶ προπάτωρ ἅγιος ἐν ἁγίοις εἰσακούσας τῆς ἐνθέσμου λιτανείας, τὸν ὕβρει καὶ θράσει μεγάλως ἐπηρμένον ἐμάστιξεν αὐτὸν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_3Macc.ver_Greek.2.22">
+            <app xml:id="u50_ver_Greek">
+              <lem wit="#Rahlfs">ἔνθεν καὶ ἔνθεν κραδάνας αὐτὸν ὡς κάλαμον ὑπὸ ἀνέμου ὥστε κατ’ ἐδάφους ἄπρακτον, ἔτι καὶ τοῖς μέλεσιν παραλελυμένον μηδὲ φωνῆσαι δύνασθαι δικαίᾳ περιπεπληγμένον κρίσει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_3Macc.ver_Greek.2.23">
+            <app xml:id="u51_ver_Greek">
+              <lem wit="#Rahlfs">ὅθεν οἵ τε φίλοι καὶ σωματοφύλακες ὀξεῖαν ἰδόντες τὴν καταλαβοῦσαν αὐτὸν εὔθυναν φοβούμενοι μὴ καὶ τὸ ζῆν ἐκλείπῃ, ταχέως αὐτὸν ἐξείλκυσαν ὑπερβάλλοντι καταπεπληγμένοι φόβῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_3Macc.ver_Greek.2.24">
+            <app xml:id="u52_ver_Greek">
+              <lem wit="#Rahlfs">ἐν χρόνῳ δὲ ὕστερον ἀναλεξάμενος αὑτὸν οὐδαμῶς εἰς μετάμελον ἦλθεν ἐπιτιμηθείς, ἀπειλὰς δὲ πικρὰς θέμενος ἀνέλυσεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_3Macc.ver_Greek.2.25">
+            <app xml:id="u53_ver_Greek">
+              <lem wit="#Rahlfs">Διακομισθεὶς δὲ εἰς τὴν Αἴγυπτον καὶ τὰ τῆς κακίας ἐπαύξων διά τε τῶν προαποδεδειγμένων συμποτῶν καὶ ἑταίρων τοῦ παντὸς δικαίου κεχωρισμένων</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_3Macc.ver_Greek.2.26">
+            <app xml:id="u54_ver_Greek">
+              <lem wit="#Rahlfs">οὐ μόνον ταῖς ἀναριθμήτοις ἀσελγείαις διηρκέσθη, ἀλλὰ καὶ ἐπὶ τοσοῦτον θράσους προῆλθεν ὥστε δυσφημίας ἐν τοῖς τόποις συνίστασθαι καὶ πολλοὺς τῶν φίλων ἀτενίζοντας εἰς τὴν τοῦ βασιλέως πρόθεσιν καὶ αὐτοὺς ἕπεσθαι τῇ ἐκείνου θελήσει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_3Macc.ver_Greek.2.27">
+            <app xml:id="u55_ver_Greek">
+              <lem wit="#Rahlfs">προέθετο δημοσίᾳ κατὰ τοῦ ἔθνους διαδοῦναι ψόγον· ἐπὶ τοῦ κατὰ τὴν αὐλὴν πύργου στήλην ἀναστήσας ἐκόλαψεν γραφὴν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_3Macc.ver_Greek.2.28">
+            <app xml:id="u56_ver_Greek">
+              <lem wit="#Rahlfs">μηδένα τῶν μὴ θυόντων εἰς τὰ ἱερὰ αὐτῶν εἰσιέναι, πάντας δὲ τοὺς Ιουδαίους εἰς λαογραφίαν καὶ οἰκετικὴν διάθεσιν ἀχθῆναι, τοὺς δὲ ἀντιλέγοντας βίᾳ φερομένους τοῦ ζῆν μεταστῆσαι,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_3Macc.ver_Greek.2.29">
+            <app xml:id="u57_ver_Greek">
+              <lem wit="#Rahlfs">τούς τε ἀπογραφομένους χαράσσεσθαι καὶ διὰ πυρὸς εἰς τὸ σῶμα παρασήμῳ Διονύσου κισσοφύλλῳ, οὓς καὶ καταχωρίσαι εἰς τὴν προσυνεσταλμένην αὐθεντίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="id_3Macc.ver_Greek.2.30">
+            <app xml:id="u58_ver_Greek">
+              <lem wit="#Rahlfs">ἵνα δὲ μὴ τοῖς πᾶσιν ἀπεχθόμενος φαίνηται, ὑπέγραψεν Ἐὰν δέ τινες ἐξ αὐτῶν προαιρῶνται ἐν τοῖς κατὰ τὰς τελετὰς μεμυημένοις ἀναστρέφεσθαι, τούτους ἰσοπολίτας Ἀλεξανδρεῦσιν εἶναι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="id_3Macc.ver_Greek.2.31">
+            <app xml:id="u59_ver_Greek">
+              <lem wit="#Rahlfs">Ἔνιοι μὲν οὖν ἐπιπολαίως τὰς τῆς πόλεως εὐσεβείας ἐπιβάθρας στυγοῦντες εὐχερῶς ἑαυτοὺς ἐδίδοσαν ὡς μεγάλης τινὸς κοινωνήσοντες εὐκλείας ἀπὸ τῆς ἐσομένης τῷ βασιλεῖ συναναστροφῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="id_3Macc.ver_Greek.2.32">
+            <app xml:id="u60_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ πλεῖστοι γενναίᾳ ψυχῇ ἐνίσχυσαν καὶ οὐ διέστησαν τῆς εὐσεβείας τά τε χρήματα περὶ τοῦ ζῆν ἀντικαταλλασσόμενοι ἀδεῶς ἐπειρῶντο ἑαυτοὺς ῥύσασθαι ἐκ τῶν ἀπογραφῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="id_3Macc.ver_Greek.2.33">
+            <app xml:id="u61_ver_Greek">
+              <lem wit="#Rahlfs">εὐέλπιδές τε καθειστήκεισαν ἀντιλήμψεως τεύξασθαι καὶ τοὺς ἀποχωροῦντας ἐξ αὐτῶν ἐβδελύσσοντο καὶ ὡς πολεμίους τοῦ ἔθνους ἔκρινον καὶ τῆς κοινῆς συναναστροφῆς καὶ εὐχρηστίας ἐστέρουν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="id_3Macc.ver_Greek.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="id_3Macc.ver_Greek.3.1">
+            <app xml:id="u62_ver_Greek">
+              <lem wit="#Rahlfs">Ἃ καὶ μεταλαμβάνων ὁ δυσσεβὴς ἐπὶ τοσοῦτον ἐξεχόλησεν ὥστε οὐ μόνον τοῖς κατὰ Ἀλεξάνδρειαν διοργίζεσθαι, ἀλλὰ καὶ τοῖς ἐν τῇ χώρᾳ βαρυτέρως ἐναντιωθῆναι καὶ προστάξαι σπεύσαντας συναγαγεῖν πάντας ἐπὶ τὸ αὐτὸ καὶ χειρίστῳ μόρῳ τοῦ ζῆν μεταστῆσαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Macc.ver_Greek.3.2">
+            <app xml:id="u63_ver_Greek">
+              <lem wit="#Rahlfs">τούτων δὲ οἰκονομουμένων φήμη δυσμενὴς ἐξηχεῖτο κατὰ τοῦ γένους ἀνθρώποις συμφρονοῦσιν εἰς κακοποίησιν ἀφορμῆς διδομένης εἰς διάθεσιν ὡς ἂν ἀπὸ τῶν νομίμων αὐτοὺς κωλυόντων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Macc.ver_Greek.3.3">
+            <app xml:id="u64_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ Ιουδαῖοι τὴν μὲν πρὸς τοὺς βασιλεῖς εὔνοιαν καὶ πίστιν ἀδιάστροφον ἦσαν φυλάσσοντες,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Macc.ver_Greek.3.4">
+            <app xml:id="u65_ver_Greek">
+              <lem wit="#Rahlfs">σεβόμενοι δὲ τὸν θεὸν καὶ τῷ τούτου νόμῳ πολιτευόμενοι χωρισμὸν ἐποίουν ἐπὶ τῷ κατὰ τὰς τροφάς, δι’ ἣν αἰτίαν ἐνίοις ἀπεχθεῖς ἐφαίνοντο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Macc.ver_Greek.3.5">
+            <app xml:id="u66_ver_Greek">
+              <lem wit="#Rahlfs">τῇ δὲ τῶν δικαίων εὐπραξίᾳ κοσμοῦντες τὴν συναναστροφὴν ἅπασιν ἀνθρώποις εὐδόκιμοι καθειστήκεισαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Macc.ver_Greek.3.6">
+            <app xml:id="u67_ver_Greek">
+              <lem wit="#Rahlfs">τὴν μὲν οὖν περὶ τοῦ γένους ἐν πᾶσιν θρυλουμένην εὐπραξίαν οἱ ἀλλόφυλοι οὐδαμῶς διηριθμήσαντο,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Macc.ver_Greek.3.7">
+            <app xml:id="u68_ver_Greek">
+              <lem wit="#Rahlfs">τὴν δὲ περὶ τῶν προσκυνήσεων καὶ τροφῶν διάστασιν ἐθρύλουν φάσκοντες μήτε τῷ βασιλεῖ μήτε ταῖς δυνάμεσιν ὁμοσπόνδους τοὺς ἀνθρώπους γίνεσθαι, δυσμενεῖς δὲ εἶναι καὶ μέγα τι τοῖς πράγμασιν ἐναντιουμένους· καὶ οὐ τῷ τυχόντι περιῆψαν ψόγῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Macc.ver_Greek.3.8">
+            <app xml:id="u69_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ κατὰ τὴν πόλιν Ἕλληνες οὐδὲν ἠδικημένοι ταραχὴν ἀπροσδόκητον περὶ τοὺς ἀνθρώπους θεωροῦντες καὶ συνδρομὰς ἀπροσκόπους γινομένας βοηθεῖν μὲν οὐκ ἔσθενον, τυραννικὴ γὰρ ἦν ἡ διάθεσις, παρεκάλουν δὲ καὶ δυσφόρως εἶχον καὶ μεταπεσεῖσθαι ταῦτα ὑπελάμβανον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Macc.ver_Greek.3.9">
+            <app xml:id="u70_ver_Greek">
+              <lem wit="#Rahlfs">μὴ γὰρ οὕτω παροραθήσεσθαι τηλικοῦτο σύστεμα μηδὲν ἠγνοηκός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Macc.ver_Greek.3.10">
+            <app xml:id="u71_ver_Greek">
+              <lem wit="#Rahlfs">ἤδη δὲ καί τινες γείτονές τε καὶ φίλοι καὶ συμπραγματευόμενοι μυστικῶς τινας ἐπισπώμενοι πίστεις ἐδίδουν συνασπιεῖν καὶ πᾶν ἐκτενὲς προσοίσεσθαι πρὸς ἀντίλημψιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Macc.ver_Greek.3.11">
+            <app xml:id="u72_ver_Greek">
+              <lem wit="#Rahlfs">Ἐκεῖνος μὲν οὖν τῇ κατὰ τὸ παρὸν εὐημερίᾳ γεγαυρωμένος καὶ οὐ καθορῶν τὸ τοῦ μεγίστου θεοῦ κράτος, ὑπολαμβάνων δὲ διηνεκῶς ἐν τῇ αὐτῇ διαμενεῖν βουλῇ, ἔγραψεν κατ’ αὐτῶν ἐπιστολὴν τήνδε</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Macc.ver_Greek.3.12">
+            <app xml:id="u73_ver_Greek">
+              <lem wit="#Rahlfs">Βασιλεὺς Πτολεμαῖος Φιλοπάτωρ τοῖς κατ’ Αἴγυπτον καὶ κατὰ τόπον στρατηγοῖς καὶ στρατιώταις χαίρειν καὶ ἐρρῶσθαι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Macc.ver_Greek.3.13">
+            <app xml:id="u74_ver_Greek">
+              <lem wit="#Rahlfs">ἔρρωμαι δὲ καὶ αὐτὸς ἐγὼ καὶ τὰ πράγματα ἡμῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Macc.ver_Greek.3.14">
+            <app xml:id="u75_ver_Greek">
+              <lem wit="#Rahlfs">τῆς εἰς τὴν Ἀσίαν γενομένης ἡμῖν ἐπιστρατείας, ἧς ἴστε καὶ αὐτοί, τῇ τῶν θεῶν ἀπροπτώτῳ συμμαχίᾳ κατὰ λόγον ἐπὶ τέλος ἀχθείσης</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Macc.ver_Greek.3.15">
+            <app xml:id="u76_ver_Greek">
+              <lem wit="#Rahlfs">ἡγησάμεθα μὴ βίᾳ δόρατος, ἐπιεικείᾳ δὲ καὶ πολλῇ φιλανθρωπίᾳ τιθηνήσασθαι τὰ κατοικοῦντα Κοίλην Συρίαν καὶ Φοινίκην ἔθνη εὖ ποιῆσαί τε ἀσμένως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Macc.ver_Greek.3.16">
+            <app xml:id="u77_ver_Greek">
+              <lem wit="#Rahlfs">καὶ τοῖς κατὰ πόλιν ἱεροῖς ἀπονείμαντες προσόδους πλείστας προήχθημεν καὶ εἰς τὰ Ιεροσόλυμα ἀναβάντες τιμῆσαι τὸ ἱερὸν τῶν ἀλιτηρίων καὶ μηδέποτε ληγόντων τῆς ἀνοίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Macc.ver_Greek.3.17">
+            <app xml:id="u78_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ λόγῳ μὲν τὴν ἡμετέραν ἀποδεξάμενοι παρουσίαν, τῷ δὲ πράγματι νόθως, προθυμηθέντων ἡμῶν εἰσελθεῖν εἰς τὸν ναὸν αὐτῶν καὶ τοῖς ἐκπρεπέσιν καὶ καλλίστοις ἀναθήμασιν τιμῆσαι</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_3Macc.ver_Greek.3.18">
+            <app xml:id="u79_ver_Greek">
+              <lem wit="#Rahlfs">τύφοις φερόμενοι παλαιοτέροις εἶρξαν ἡμᾶς τῆς εἰσόδου λειπόμενοι τῆς ἡμετέρας ἀλκῆς δι’ ἣν ἔχομεν πρὸς ἅπαντας ἀνθρώπους φιλανθρωπίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_3Macc.ver_Greek.3.19">
+            <app xml:id="u80_ver_Greek">
+              <lem wit="#Rahlfs">τὴν δὲ αὐτῶν εἰς ἡμᾶς δυσμένειαν ἔκδηλον καθιστάντες ὡς μονώτατοι τῶν ἐθνῶν βασιλεῦσιν καὶ τοῖς ἑαυτῶν εὐεργέταις ὑψαυχενοῦντες οὐδὲν γνήσιον βούλονται φέρειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_3Macc.ver_Greek.3.20">
+            <app xml:id="u81_ver_Greek">
+              <lem wit="#Rahlfs">ἡμεῖς δὲ τῇ τούτων ἀνοίᾳ συμπεριενεχθέντες καὶ μετὰ νίκης διακομισθέντες εἰς τὴν Αἴγυπτον τοῖς πᾶσιν ἔθνεσιν φιλανθρώπως ἀπαντήσαντες καθὼς ἔπρεπεν ἐποιήσαμεν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_3Macc.ver_Greek.3.21">
+            <app xml:id="u82_ver_Greek">
+              <lem wit="#Rahlfs">ἐν δὲ τούτοις πρὸς τοὺς ὁμοφύλους αὐτῶν ἀμνησικακίαν ἅπασιν γνωρίζοντες· διά τε τὴν συμμαχίαν καὶ τὰ πεπιστευμένα μετὰ ἁπλότητος αὐτοῖς ἀρχῆθεν μύρια πράγματα τολμήσαντες ἐξαλλοιῶσαι ἐβουλήθημεν καὶ πολιτείας αὐτοὺς Ἀλεξανδρέων καταξιῶσαι καὶ μετόχους τῶν ἀεὶ ἱερῶν καταστῆσαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_3Macc.ver_Greek.3.22">
+            <app xml:id="u83_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ τοὐναντίον ἐκδεχόμενοι καὶ τῇ συμφύτῳ κακοηθείᾳ τὸ καλὸν ἀπωσάμενοι, διηνεκῶς δὲ εἰς τὸ φαῦλον ἐκνεύοντες</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_3Macc.ver_Greek.3.23">
+            <app xml:id="u84_ver_Greek">
+              <lem wit="#Rahlfs">οὐ μόνον ἀπεστρέψαντο τὴν ἀτίμητον πολιτείαν, ἀλλὰ καὶ βδελύσσονται λόγῳ τε καὶ σιγῇ τοὺς ἐν αὐτοῖς ὀλίγους πρὸς ἡμᾶς γνησίως διακειμένους παρ’ ἕκαστα ὑφορώμενοι μετὰ τῆς δυσκλεεστάτης ἐμβιώσεως διὰ τάχους ἡμᾶς καταστρέψαι τὰ πράγματα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_3Macc.ver_Greek.3.24">
+            <app xml:id="u85_ver_Greek">
+              <lem wit="#Rahlfs">διὸ καὶ τεκμηρίοις καλῶς πεπεισμένοι τούτους κατὰ πάντα δυσνοεῖν ἡμῖν τρόπον καὶ προνοούμενοι μήποτε αἰφνιδίου μετέπειτα ταραχῆς ἐνστάσης ἡμῖν τοὺς δυσσεβεῖς τούτους κατὰ νώτου προδότας καὶ βαρβάρους ἔχωμεν πολεμίους</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_3Macc.ver_Greek.3.25">
+            <app xml:id="u86_ver_Greek">
+              <lem wit="#Rahlfs">προστετάχαμεν ἅμα τῷ προσπεσεῖν τὴν ἐπιστολὴν τήνδε αὐθωρὶ τοὺς ἐννεμομένους σὺν γυναιξὶ καὶ τέκνοις μετὰ ὕβρεων καὶ σκυλμῶν ἀποστεῖλαι πρὸς ἡμᾶς ἐν δεσμοῖς σιδηροῖς πάντοθεν κατακεκλεισμένους, εἰς ἀνήκεστον καὶ δυσκλεῆ πρέποντα δυσμενέσι φόνον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_3Macc.ver_Greek.3.26">
+            <app xml:id="u87_ver_Greek">
+              <lem wit="#Rahlfs">τούτων γὰρ ὁμοῦ κολασθέντων διειλήφαμεν εἰς τὸν ἐπίλοιπον χρόνον τελείως ἡμῖν τὰ πράγματα ἐν εὐσταθείᾳ καὶ τῇ βελτίστῃ διαθέσει κατασταθήσεσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_3Macc.ver_Greek.3.27">
+            <app xml:id="u88_ver_Greek">
+              <lem wit="#Rahlfs">ὃς δ’ ἂν σκεπάσῃ τινὰ τῶν Ιουδαίων ἀπὸ γεραιοῦ μέχρι νηπίου καὶ μέχρι τῶν ὑπομαστιδίων, αἰσχίσταις βασάνοις ἀποτυμπανισθήσεται πανοικίᾳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_3Macc.ver_Greek.3.28">
+            <app xml:id="u89_ver_Greek">
+              <lem wit="#Rahlfs">μηνύειν δὲ τὸν βουλόμενον, ἐφ’ ᾧ τὴν οὐσίαν τοῦ ἐμπίπτοντος ὑπὸ τὴν εὔθυναν λήμψεται καὶ ἐκ τοῦ βασιλικοῦ ἀργυρίου δραχμὰς δισχιλίας καὶ τῇ ἐλευθερίᾳ στεφανωθήσεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_3Macc.ver_Greek.3.29">
+            <app xml:id="u90_ver_Greek">
+              <lem wit="#Rahlfs">πᾶς δὲ τόπος, οὗ ἐὰν φωραθῇ τὸ σύνολον σκεπαζόμενος Ιουδαῖος, ἄβατος καὶ πυριφλεγὴς γινέσθω καὶ πάσῃ θνητῇ φύσει καθ’ ἅπαν ἄχρηστος φανήσεται εἰς τὸν ἀεὶ χρόνον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="id_3Macc.ver_Greek.3.30">
+            <app xml:id="u91_ver_Greek">
+              <lem wit="#Rahlfs">Καὶ ὁ μὲν τῆς ἐπιστολῆς τύπος οὕτως ἐγέγραπτο.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="id_3Macc.ver_Greek.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="id_3Macc.ver_Greek.4.1">
+            <app xml:id="u92_ver_Greek">
+              <lem wit="#Rahlfs">Πάντῃ δέ, ὅπου προσέπιπτεν τοῦτο τὸ πρόσταγμα, δημοτελὴς συνίστατο τοῖς ἔθνεσιν εὐωχία μετὰ ἀλαλαγμῶν καὶ χαρᾶς ὡς ἂν τῆς προκατεσκιρωμένης αὐτοῖς πάλαι κατὰ διάνοιαν μετὰ παρρησίας νῦν ἐκφαινομένης ἀπεχθείας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Macc.ver_Greek.4.2">
+            <app xml:id="u93_ver_Greek">
+              <lem wit="#Rahlfs">τοῖς δὲ Ιουδαίοις ἄληκτον πένθος ἦν καὶ πανόδυρτος μετὰ δακρύων βοὴ στεναγμοῖς πεπυρωμένης πάντοθεν αὐτῶν τῆς καρδίας ὀλοφυρομένων τὴν ἀπροσδόκητον ἐξαίφνης αὐτοῖς ἐπικριθεῖσαν ὀλεθρίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Macc.ver_Greek.4.3">
+            <app xml:id="u94_ver_Greek">
+              <lem wit="#Rahlfs">τίς νομὸς ἢ πόλις ἢ τίς τὸ σύνολον οἰκητὸς τόπος ἢ τίνες ἀγυιαὶ κοπετοῦ καὶ γόων ἐπ’ αὐτοῖς οὐκ ἐνεπιπλῶντο;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Macc.ver_Greek.4.4">
+            <app xml:id="u95_ver_Greek">
+              <lem wit="#Rahlfs">οὕτως γὰρ μετὰ πικρίας ἀνοίκτου ψυχῆς ὑπὸ τῶν κατὰ πόλιν στρατηγῶν ὁμοθυμαδὸν ἐξαπεστέλλοντο ὥστε ἐπὶ ταῖς ἐξάλλοις τιμωρίαις καί τινας τῶν ἐχθρῶν λαμβάνοντας πρὸ τῶν ὀφθαλμῶν τὸν κοινὸν ἔλεον καὶ λογιζομένους τὴν ἄδηλον τοῦ βίου καταστροφὴν δακρύειν αὐτῶν τὴν δυσάθλιον ἐξαποστολήν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Macc.ver_Greek.4.5">
+            <app xml:id="u96_ver_Greek">
+              <lem wit="#Rahlfs">ἤγετο γὰρ γεραιῶν πλῆθος πολιᾷ πεπυκασμένων, τὴν ἐκ τοῦ γήρως νωθρότητα ποδῶν ἐπίκυφον ἀνατροπῆς ὁρμῇ βιαίας ἁπάσης αἰδοῦς ἄνευ πρὸς ὀξεῖαν καταχρωμένων πορείαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Macc.ver_Greek.4.6">
+            <app xml:id="u97_ver_Greek">
+              <lem wit="#Rahlfs">αἱ δὲ ἄρτι πρὸς βίου κοινωνίαν γαμικὸν ὑπεληλυθυῖαι παστὸν νεάνιδες ἀντὶ τέρψεως μεταλαβοῦσαι γόους καὶ κόνει τὴν μυροβρεχῆ πεφυρμέναι κόμην, ἀκαλύπτως δὲ ἀγόμεναι θρῆνον ἀνθ’ ὑμεναίων ὁμοθυμαδὸν ἐξῆρχον ὡς ἐσπαραγμέναι σκυλμοῖς ἀλλοεθνέσιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Macc.ver_Greek.4.7">
+            <app xml:id="u98_ver_Greek">
+              <lem wit="#Rahlfs">δέσμιαι δὲ δημοσίᾳ μέχρι τῆς εἰς τὸ πλοῖον ἐμβολῆς εἵλκοντο μετὰ βίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Macc.ver_Greek.4.8">
+            <app xml:id="u99_ver_Greek">
+              <lem wit="#Rahlfs">οἵ τε τούτων συνζυγεῖς βρόχοις ἀντὶ στεφέων τοὺς αὐχένας περιπεπλεγμένοι μετὰ ἀκμαίας νεανικῆς ἡλικίας ἀντὶ εὐωχίας καὶ νεωτερικῆς ῥᾳθυμίας τὰς ἐπιλοίπους τῶν γάμων ἡμέρας ἐν θρήνοις διῆγον παρὰ πόδας ἤδη τὸν ᾅδην ὁρῶντες κείμενον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Macc.ver_Greek.4.9">
+            <app xml:id="u100_ver_Greek">
+              <lem wit="#Rahlfs">κατήχθησαν δὲ θηρίων τρόπον ἀγόμενοι σιδηροδέσμοις ἀνάγκαις, οἱ μὲν τοῖς ζυγοῖς τῶν πλοίων προσηλωμένοι τοὺς τραχήλους, οἱ δὲ τοὺς πόδας ἀρρήκτοις κατησφαλισμένοι πέδαις,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Macc.ver_Greek.4.10">
+            <app xml:id="u101_ver_Greek">
+              <lem wit="#Rahlfs">ἔτι καὶ τῷ καθύπερθε πυκνῷ σανιδώματι διακειμένῳ, ὅπως πάντοθεν ἐσκοτισμένοι τοὺς ὀφθαλμοὺς ἀγωγὴν ἐπιβούλων ἐν παντὶ τῷ κατάπλῳ λαμβάνωσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Macc.ver_Greek.4.11">
+            <app xml:id="u102_ver_Greek">
+              <lem wit="#Rahlfs">Τούτων δὲ ἐπὶ τὴν λεγομένην Σχεδίαν ἀχθέντων καὶ τοῦ παράπλου περανθέντος, καθὼς ἦν δεδογματισμένον τῷ βασιλεῖ, προσέταξεν αὐτοὺς ἐν τῷ πρὸ τῆς πόλεως ἱπποδρόμῳ παρεμβαλεῖν ἀπλάτῳ καθεστῶτι περιμέτρῳ καὶ πρὸς παραδειγματισμὸν ἄγαν εὐκαιροτάτῳ καθεστῶτι πᾶσι τοῖς καταπορευομένοις εἰς τὴν πόλιν καὶ τοῖς ἐκ τούτων εἰς τὴν χώραν στελλομένοις πρὸς ἐκδημίαν πρὸς τὸ μηδὲ ταῖς δυνάμεσιν αὐτοῦ κοινωνεῖν μηδὲ τὸ σύνολον καταξιῶσαι περιβόλων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Macc.ver_Greek.4.12">
+            <app xml:id="u103_ver_Greek">
+              <lem wit="#Rahlfs">ὡς δὲ τοῦτο ἐγενήθη, ἀκούσας τοὺς ἐκ τῆς πόλεως ὁμοεθνεῖς κρυβῇ ἐκπορευομένους πυκνότερον ἀποδύρεσθαι τὴν ἀκλεῆ τῶν ἀδελφῶν ταλαιπωρίαν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Macc.ver_Greek.4.13">
+            <app xml:id="u104_ver_Greek">
+              <lem wit="#Rahlfs">διοργισθεὶς προσέταξεν καὶ τούτοις ὁμοῦ τὸν αὐτὸν τρόπον ἐπιμελῶς ὡς ἐκείνοις ποιῆσαι μὴ λειπομένοις κατὰ μηδένα τρόπον τῆς ἐκείνων τιμωρίας,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Macc.ver_Greek.4.14">
+            <app xml:id="u105_ver_Greek">
+              <lem wit="#Rahlfs">ἀπογραφῆναι δὲ πᾶν τὸ φῦλον ἐξ ὀνόματος, οὐκ εἰς τὴν ἔμπροσθεν βραχεῖ προδεδηλωμένην τῶν ἔργων κατάπονον λατρείαν, στρεβλωθέντας δὲ ταῖς παρηγγελμέναις αἰκίαις τὸ τέλος ἀφανίσαι μιᾶς ὑπὸ καιρὸν ἡμέρας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Macc.ver_Greek.4.15">
+            <app xml:id="u106_ver_Greek">
+              <lem wit="#Rahlfs">ἐγίνετο μὲν οὖν ἡ τούτων ἀπογραφὴ μετὰ πικρᾶς σπουδῆς καὶ φιλοτίμου προσεδρείας ἀπὸ ἀνατολῶν ἡλίου μέχρι δυσμῶν ἀνήνυτον λαμβάνουσα τὸ τέλος ἐπὶ ἡμέρας τεσσαράκοντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Macc.ver_Greek.4.16">
+            <app xml:id="u107_ver_Greek">
+              <lem wit="#Rahlfs">Μεγάλως δὲ καὶ διηνεκῶς ὁ βασιλεὺς χαρᾷ πεπληρωμένος συμπόσια ἐπὶ πάντων τῶν εἰδώλων συνιστάμενος πεπλανημένῃ πόρρω τῆς ἀληθείας φρενὶ καὶ βεβήλῳ στόματι τὰ μὲν κωφὰ καὶ μὴ δυνάμενα αὐτοῖς λαλεῖν ἢ ἀρήγειν ἐπαινῶν, εἰς δὲ τὸν μέγιστον θεὸν τὰ μὴ καθήκοντα λαλῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Macc.ver_Greek.4.17">
+            <app xml:id="u108_ver_Greek">
+              <lem wit="#Rahlfs">μετὰ δὲ τὸ προειρημένον τοῦ χρόνου διάστημα προσηνέγκαντο οἱ γραμματεῖς τῷ βασιλεῖ μηκέτι ἰσχύειν τὴν τῶν Ιουδαίων ἀπογραφὴν ποιεῖσθαι διὰ τὴν ἀμέτρητον αὐτῶν πληθὺν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_3Macc.ver_Greek.4.18">
+            <app xml:id="u109_ver_Greek">
+              <lem wit="#Rahlfs">καίπερ ὄντων ἔτι κατὰ τὴν χώραν τῶν πλειόνων, τῶν μὲν κατὰ τὰς οἰκίας ἔτι συνεστηκότων, τῶν δὲ καὶ κατὰ τόπον, ὡς ἀδυνάτου καθεστῶτος πᾶσιν τοῖς ἐπ’ Αἴγυπτον στρατηγοῖς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_3Macc.ver_Greek.4.19">
+            <app xml:id="u110_ver_Greek">
+              <lem wit="#Rahlfs">ἀπειλήσαντος δὲ αὐτοῖς σκληρότερον ὡς δεδωροκοπημένοις εἰς μηχανὴν τῆς ἐκφυγῆς συνέβη σαφῶς αὐτὸν περὶ τούτου πιστωθῆναι</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_3Macc.ver_Greek.4.20">
+            <app xml:id="u111_ver_Greek">
+              <lem wit="#Rahlfs">λεγόντων μετὰ ἀποδείξεως καὶ τὴν χαρτηρίαν ἤδη καὶ τοὺς γραφικοὺς καλάμους, ἐν οἷς ἐχρῶντο, ἐκλελοιπέναι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_3Macc.ver_Greek.4.21">
+            <app xml:id="u112_ver_Greek">
+              <lem wit="#Rahlfs">τοῦτο δὲ ἦν ἐνέργεια τῆς τοῦ βοηθοῦντος τοῖς Ιουδαίοις ἐξ οὐρανοῦ προνοίας ἀνικήτου.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="id_3Macc.ver_Greek.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="id_3Macc.ver_Greek.5.1">
+            <app xml:id="u113_ver_Greek">
+              <lem wit="#Rahlfs">Τότε προσκαλεσάμενος Ἕρμωνα τὸν πρὸς τῇ τῶν ἐλεφάντων ἐπιμελείᾳ βαρείᾳ μεμεστωμένος ὀργῇ καὶ χόλῳ κατὰ πᾶν ἀμετάθετος</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Macc.ver_Greek.5.2">
+            <app xml:id="u114_ver_Greek">
+              <lem wit="#Rahlfs">ἐκέλευσεν ὑπὸ τὴν ἐπερχομένην ἡμέραν δαψιλέσι δράκεσι λιβανωτοῦ καὶ οἴνῳ πλείονι ἀκράτῳ ἅπαντας τοὺς ἐλέφαντας ποτίσαι ὄντας τὸν ἀριθμὸν πεντακοσίους καὶ ἀγριωθέντας τῇ τοῦ πόματος ἀφθόνῳ χορηγίᾳ εἰσαγαγεῖν πρὸς συνάντησιν τοῦ μόρου τῶν Ιουδαίων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Macc.ver_Greek.5.3">
+            <app xml:id="u115_ver_Greek">
+              <lem wit="#Rahlfs">ὁ μὲν τάδε προστάσσων ἐτρέπετο πρὸς τὴν εὐωχίαν συναγαγὼν τοὺς μάλιστα τῶν φίλων καὶ τῆς στρατιᾶς ἀπεχθῶς ἔχοντας πρὸς τοὺς Ιουδαίους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Macc.ver_Greek.5.4">
+            <app xml:id="u116_ver_Greek">
+              <lem wit="#Rahlfs">ὁ δὲ ἐλεφαντάρχης τὸ προσταγὲν ἀραρότως Ἕρμων συνετέλει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Macc.ver_Greek.5.5">
+            <app xml:id="u117_ver_Greek">
+              <lem wit="#Rahlfs">οἵ τε πρὸς τούτοις λειτουργοὶ κατὰ τὴν ἑσπέραν ἐξιόντες τὰς τῶν ταλαιπωρούντων ἐδέσμευον χεῖρας τήν τε λοιπὴν ἐμηχανῶντο περὶ αὐτοὺς ἀσφάλειαν ἔννυχον δόξαντες ὁμοῦ λήμψεσθαι τὸ φῦλον πέρας τῆς ὀλεθρίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Macc.ver_Greek.5.6">
+            <app xml:id="u118_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ πάσης σκέπης ἔρημοι δοκοῦντες εἶναι τοῖς ἔθνεσιν Ιουδαῖοι διὰ τὴν πάντοθεν περιέχουσαν αὐτοὺς μετὰ δεσμῶν ἀνάγκην</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Macc.ver_Greek.5.7">
+            <app xml:id="u119_ver_Greek">
+              <lem wit="#Rahlfs">τὸν παντοκράτορα κύριον καὶ πάσης δυνάμεως δυναστεύοντα, ἐλεήμονα θεὸν αὐτῶν καὶ πατέρα, δυσκαταπαύστῳ βοῇ πάντες μετὰ δακρύων ἐπεκαλέσαντο δεόμενοι</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Macc.ver_Greek.5.8">
+            <app xml:id="u120_ver_Greek">
+              <lem wit="#Rahlfs">τὴν κατ’ αὐτῶν μεταστρέψαι βουλὴν ἀνοσίαν καὶ ῥύσασθαι αὐτοὺς μετὰ μεγαλομεροῦς ἐπιφανείας ἐκ τοῦ παρὰ πόδας ἐν ἑτοίμῳ μόρου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Macc.ver_Greek.5.9">
+            <app xml:id="u121_ver_Greek">
+              <lem wit="#Rahlfs">τούτων μὲν οὖν ἐκτενῶς ἡ λιτανεία ἀνέβαινεν εἰς τὸν οὐρανόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Macc.ver_Greek.5.10">
+            <app xml:id="u122_ver_Greek">
+              <lem wit="#Rahlfs">Ὁ δὲ Ἕρμων τοὺς ἀνηλεεῖς ἐλέφαντας ποτίσας πεπληρωμένους τῆς τοῦ οἴνου πολλῆς χορηγίας καὶ τοῦ λιβάνου μεμεστωμένους ὄρθριος ἐπὶ τὴν αὐλὴν παρῆν περὶ τούτων προσαγγεῖλαι τῷ βασιλεῖ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Macc.ver_Greek.5.11">
+            <app xml:id="u123_ver_Greek">
+              <lem wit="#Rahlfs">τὸ δὲ ἀπ’ αἰῶνος χρόνου κτίσμα καλὸν ἐν νυκτὶ καὶ ἡμέρᾳ ἐπιβαλλόμενον ὑπὸ τοῦ χαριζομένου πᾶσιν, οἷς ἂν αὐτὸς θελήσῃ, ὕπνου μέρος ἀπέστειλεν εἰς τὸν βασιλέα,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Macc.ver_Greek.5.12">
+            <app xml:id="u124_ver_Greek">
+              <lem wit="#Rahlfs">καὶ ἡδίστῳ καὶ βαθεῖ κατεσχέθη τῇ ἐνεργείᾳ τοῦ δεσπότου τῆς ἀθέσμου μὲν προθέσεως πολὺ διεσφαλμένος, τοῦ δὲ ἀμεταθέτου λογισμοῦ μεγάλως διεψευσμένος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Macc.ver_Greek.5.13">
+            <app xml:id="u125_ver_Greek">
+              <lem wit="#Rahlfs">οἵ τε Ιουδαῖοι τὴν προσημανθεῖσαν ὥραν διαφυγόντες τὸν ἅγιον ᾔνουν θεὸν αὐτῶν καὶ πάλιν ἠξίουν τὸν εὐκατάλλακτον δεῖξαι μεγαλοσθενοῦς ἑαυτοῦ χειρὸς κράτος ἔθνεσιν ὑπερηφάνοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Macc.ver_Greek.5.14">
+            <app xml:id="u126_ver_Greek">
+              <lem wit="#Rahlfs">μεσούσης δὲ ἤδη δεκάτης ὥρας σχεδὸν ὁ πρὸς ταῖς κλήσεσιν τεταγμένος ἀθρόους τοὺς κλητοὺς ἰδὼν ἔνυξεν προσελθὼν τὸν βασιλέα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Macc.ver_Greek.5.15">
+            <app xml:id="u127_ver_Greek">
+              <lem wit="#Rahlfs">καὶ μόλις διεγείρας ὑπέδειξε τὸν τῆς συμποσίας καιρὸν ἤδη παρατρέχοντα τὸν περὶ τούτων λόγον ποιούμενος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Macc.ver_Greek.5.16">
+            <app xml:id="u128_ver_Greek">
+              <lem wit="#Rahlfs">ὃν ὁ βασιλεὺς λογισάμενος καὶ τραπεὶς εἰς τὸν πότον ἐκέλευσεν τοὺς παραγεγονότας ἐπὶ τὴν συμποσίαν ἄντικρυς ἀνακλῖναι αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Macc.ver_Greek.5.17">
+            <app xml:id="u129_ver_Greek">
+              <lem wit="#Rahlfs">οὗ καὶ γενομένου παρῄνει εἰς εὐωχίαν δόντας ἑαυτοὺς τὸ παρὸν τῆς συμποσίας ἐπὶ πολὺ γεραιρομένους εἰς εὐφροσύνην καταθέσθαι μέρος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_3Macc.ver_Greek.5.18">
+            <app xml:id="u130_ver_Greek">
+              <lem wit="#Rahlfs">ἐπὶ πλεῖον δὲ προβαινούσης τῆς ὁμιλίας τὸν Ἕρμωνα προσκαλεσάμενος ὁ βασιλεὺς μετὰ πικρᾶς ἀπειλῆς ἐπυνθάνετο, τίνος ἕνεκεν αἰτίας εἰάθησαν οἱ Ιουδαῖοι τὴν περιοῦσαν ἡμέραν περιβεβιωκότες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_3Macc.ver_Greek.5.19">
+            <app xml:id="u131_ver_Greek">
+              <lem wit="#Rahlfs">τοῦ δὲ ὑποδείξαντος ἔτι νυκτὸς τὸ προσταγὲν ἐπὶ τέλος ἀγειοχέναι καὶ τῶν φίλων αὐτῷ προσμαρτυρησάντων</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_3Macc.ver_Greek.5.20">
+            <app xml:id="u132_ver_Greek">
+              <lem wit="#Rahlfs">τὴν ὠμότητα χείρονα Φαλάριδος ἐσχηκὼς ἔφη τῷ τῆς σήμερον ὕπνῳ χάριν ἔχειν αὐτούς· ἀνυπερθέτως δὲ εἰς τὴν ἐπιτελοῦσαν ἡμέραν κατὰ τὸ ὅμοιον ἑτοίμασον τοὺς ἐλέφαντας ἐπὶ τὸν τῶν ἀθεμίτων Ιουδαίων ἀφανισμόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_3Macc.ver_Greek.5.21">
+            <app xml:id="u133_ver_Greek">
+              <lem wit="#Rahlfs">εἰπόντος δὲ τοῦ βασιλέως ἀσμένως πάντες μετὰ χαρᾶς οἱ παρόντες ὁμοῦ συναινέσαντες εἰς τὸν ἴδιον οἶκον ἕκαστος ἀνέλυσεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_3Macc.ver_Greek.5.22">
+            <app xml:id="u134_ver_Greek">
+              <lem wit="#Rahlfs">καὶ οὐχ οὕτως εἰς ὕπνον κατεχρήσαντο τὸν χρόνον τῆς νυκτός, ὡς εἰς τὸ παντοίους μηχανᾶσθαι τοῖς ταλαιπώροις δοκοῦσιν ἐμπαιγμούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_3Macc.ver_Greek.5.23">
+            <app xml:id="u135_ver_Greek">
+              <lem wit="#Rahlfs">Ἄρτι δὲ ἀλεκτρυὼν ἐκέκραγεν ὄρθριος, καὶ τὰ θηρία καθωπλικὼς ὁ Ἕρμων ἐν τῷ μεγάλῳ περιστύλῳ διεκίνει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_3Macc.ver_Greek.5.24">
+            <app xml:id="u136_ver_Greek">
+              <lem wit="#Rahlfs">τὰ δὲ κατὰ τὴν πόλιν πλήθη συνήθροιστο πρὸς τὴν οἰκτροτάτην θεωρίαν προσδοκῶντα τὴν πρωίαν μετὰ σπουδῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_3Macc.ver_Greek.5.25">
+            <app xml:id="u137_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ Ιουδαῖοι κατὰ τὸν ἀμερῆ ψυχουλκούμενοι χρόνον πολύδακρυν ἱκετείαν ἐν μέλεσιν γοεροῖς τείνοντες τὰς χεῖρας εἰς τὸν οὐρανὸν ἐδέοντο τοῦ μεγίστου θεοῦ πάλιν αὐτοῖς βοηθῆσαι συντόμως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_3Macc.ver_Greek.5.26">
+            <app xml:id="u138_ver_Greek">
+              <lem wit="#Rahlfs">οὔπω δὲ ἡλίου βολαὶ κατεσπείροντο, καὶ τοῦ βασιλέως τοὺς φίλους ἐκδεχομένου ὁ Ἕρμων παραστὰς ἐκάλει πρὸς τὴν ἔξοδον ὑποδεικνύων τὸ πρόθυμον τοῦ βασιλέως ἐν ἑτοίμῳ κεῖσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_3Macc.ver_Greek.5.27">
+            <app xml:id="u139_ver_Greek">
+              <lem wit="#Rahlfs">τοῦ δὲ ἀποδεξαμένου καὶ καταπλαγέντος ἐπὶ τῇ παρανόμῳ ἐξόδῳ κατὰ πᾶν ἀγνωσίᾳ κεκρατημένος ἐπυνθάνετο, τί τὸ πρᾶγμα, ἐφ’ οὗ τοῦτο αὐτῷ μετὰ σπουδῆς τετέλεσται·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_3Macc.ver_Greek.5.28">
+            <app xml:id="u140_ver_Greek">
+              <lem wit="#Rahlfs">τοῦτο δὲ ἦν ἡ ἐνέργεια τοῦ πάντα δεσποτεύοντος θεοῦ τῶν πρὶν αὐτῷ μεμηχανημένων λήθην κατὰ διάνοιαν ἐντεθεικότος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_3Macc.ver_Greek.5.29">
+            <app xml:id="u141_ver_Greek">
+              <lem wit="#Rahlfs">ὑπεδείκνυεν ὁ Ἕρμων καὶ πάντες οἱ φίλοι τὰ θηρία καὶ τὰς δυνάμεις ἡτοιμάσθαι, βασιλεῦ, κατὰ τὴν σὴν ἐκτενῆ πρόθεσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="id_3Macc.ver_Greek.5.30">
+            <app xml:id="u142_ver_Greek">
+              <lem wit="#Rahlfs">ὁ δὲ ἐπὶ τοῖς ῥηθεῖσιν πληρωθεὶς βαρεῖ χόλῳ διὰ τὸ περὶ τούτων προνοίᾳ θεοῦ διεσκεδάσθαι πᾶν αὐτοῦ τὸ νόημα ἐνατενίσας μετὰ ἀπειλῆς εἶπεν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="id_3Macc.ver_Greek.5.31">
+            <app xml:id="u143_ver_Greek">
+              <lem wit="#Rahlfs">Ὅσοι γονεῖς παρῆσαν ἢ παίδων γόνοι, τήνδε θηρσὶν ἀγρίοις ἐσκεύασα ἂν δαψιλῆ θοῖναν ἀντὶ τῶν ἀνεγκλήτων ἐμοὶ καὶ προγόνοις ἐμοῖς ἀποδεδειγμένων ὁλοσχερῆ βεβαίαν πίστιν ἐξόχως Ιουδαίων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="id_3Macc.ver_Greek.5.32">
+            <app xml:id="u144_ver_Greek">
+              <lem wit="#Rahlfs">καίπερ εἰ μὴ διὰ τὴν τῆς συντροφίας στοργὴν καὶ τῆς χρείας, τὸ ζῆν ἀντὶ τούτων ἐστερήθης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="id_3Macc.ver_Greek.5.33">
+            <app xml:id="u145_ver_Greek">
+              <lem wit="#Rahlfs">οὕτως ὁ Ἕρμων ἀπροσδόκητον ἐπικίνδυνον ὑπήνεγκεν ἀπειλὴν καὶ τῇ ὁράσει καὶ τῷ προσώπῳ συνεστάλη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="id_3Macc.ver_Greek.5.34">
+            <app xml:id="u146_ver_Greek">
+              <lem wit="#Rahlfs">ὁ καθεῖς δὲ τῶν φίλων σκυθρωπῶς ὑπεκρέων τοὺς συνηθροισμένους ἀπέλυσαν ἕκαστον ἐπὶ τὴν ἰδίαν ἀσχολίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="id_3Macc.ver_Greek.5.35">
+            <app xml:id="u147_ver_Greek">
+              <lem wit="#Rahlfs">οἵ τε Ιουδαῖοι τὰ παρὰ τοῦ βασιλέως ἀκούσαντες τὸν ἐπιφανῆ θεὸν κύριον βασιλέα τῶν βασιλέων ᾔνουν καὶ τῆσδε τῆς βοηθείας αὐτοῦ τετευχότες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="id_3Macc.ver_Greek.5.36">
+            <app xml:id="u148_ver_Greek">
+              <lem wit="#Rahlfs">Κατὰ δὲ τοὺς αὐτοὺς νόμους ὁ βασιλεὺς συστησάμενος πᾶν τὸ συμπόσιον εἰς εὐφροσύνην τραπῆναι παρεκάλει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="id_3Macc.ver_Greek.5.37">
+            <app xml:id="u149_ver_Greek">
+              <lem wit="#Rahlfs">τὸν δὲ Ἕρμωνα προσκαλεσάμενος μετὰ ἀπειλῆς εἶπεν Ποσάκις δὲ δεῖ σοι περὶ τούτων αὐτῶν προστάττειν, ἀθλιώτατε;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="id_3Macc.ver_Greek.5.38">
+            <app xml:id="u150_ver_Greek">
+              <lem wit="#Rahlfs">τοὺς ἐλέφαντας ἔτι καὶ νῦν καθόπλισον εἰς τὴν αὔριον ἐπὶ τὸν τῶν Ιουδαίων ἀφανισμόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="id_3Macc.ver_Greek.5.39">
+            <app xml:id="u151_ver_Greek">
+              <lem wit="#Rahlfs">οἱ δὲ συνανακείμενοι συγγενεῖς τὴν ἀσταθῆ διάνοιαν αὐτοῦ θαυμάζοντες προεφέροντο τάδε</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="id_3Macc.ver_Greek.5.40">
+            <app xml:id="u152_ver_Greek">
+              <lem wit="#Rahlfs">Βασιλεῦ, μέχρι τίνος ὡς ἀλόγους ἡμᾶς διαπειράζεις προστάσσων ἤδη τρίτον αὐτοὺς ἀφανίσαι καὶ πάλιν ἐπὶ τῶν πραγμάτων ἐκ μεταβολῆς ἀναλύων τὰ σοὶ δεδογμένα;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="id_3Macc.ver_Greek.5.41">
+            <app xml:id="u153_ver_Greek">
+              <lem wit="#Rahlfs">ὧν χάριν ἡ πόλις διὰ τὴν προσδοκίαν ὀχλεῖ καὶ πληθύουσα συστροφαῖς ἤδη καὶ κινδυνεύει πολλάκις διαρπασθῆναι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="42" xml:id="id_3Macc.ver_Greek.5.42">
+            <app xml:id="u154_ver_Greek">
+              <lem wit="#Rahlfs">ὅθεν ὁ κατὰ πάντα Φάλαρις βασιλεὺς ἐμπληθυνθεὶς ἀλογιστίας καὶ τὰς γινομένας πρὸς ἐπισκοπὴν τῶν Ιουδαίων ἐν αὐτῷ μεταβολὰς τῆς ψυχῆς παρ’ οὐδὲν ἡγούμενος ἀτελέστατον βεβαίως ὅρκον ὁρισάμενος τούτους μὲν ἀνυπερθέτως πέμψειν εἰς ᾅδην ἐν γόνασιν καὶ ποσὶν θηρίων ᾐκισμένους,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="id_3Macc.ver_Greek.5.43">
+            <app xml:id="u155_ver_Greek">
+              <lem wit="#Rahlfs">ἐπιστρατεύσαντα δὲ ἐπὶ τὴν Ιουδαίαν ἰσόπεδον πυρὶ καὶ δόρατι θήσεσθαι διὰ τάχους καὶ τὸν ἄβατον ἡμῖν αὐτῶν ναὸν πυρὶ πρηνέα ἐν τάχει τῶν συντελούντων ἐκεῖ θυσίας ἔρημον εἰς τὸν ἅπαντα χρόνον καταστήσειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="id_3Macc.ver_Greek.5.44">
+            <app xml:id="u156_ver_Greek">
+              <lem wit="#Rahlfs">τότε περιχαρεῖς ἀναλύσαντες οἱ φίλοι καὶ συγγενεῖς μετὰ πίστεως διέτασσον τὰς δυνάμεις ἐπὶ τοὺς εὐκαιροτάτους τόπους τῆς πόλεως πρὸς τὴν τήρησιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="id_3Macc.ver_Greek.5.45">
+            <app xml:id="u157_ver_Greek">
+              <lem wit="#Rahlfs">ὁ δὲ ἐλεφαντάρχης τὰ θηρία σχεδὸν ὡς εἰπεῖν εἰς κατάστεμα μανιῶδες ἀγειοχὼς εὐωδεστάτοις πόμασιν οἴνου λελιβανωμένου φοβερῶς κεκοσμημένα κατασκευαῖς</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="id_3Macc.ver_Greek.5.46">
+            <app xml:id="u158_ver_Greek">
+              <lem wit="#Rahlfs">περὶ τὴν ἕω τῆς πόλεως ἤδη πλήθεσιν ἀναριθμήτοις κατὰ τοῦ ἱπποδρόμου καταμεμεστωμένης εἰσελθὼν εἰς τὴν αὐλὴν ἐπὶ τὸ προκείμενον ὤτρυνε τὸν βασιλέα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="id_3Macc.ver_Greek.5.47">
+            <app xml:id="u159_ver_Greek">
+              <lem wit="#Rahlfs">ὁ δὲ ὀργῇ βαρείᾳ γεμίσας δυσσεβῆ φρένα παντὶ τῷ βάρει σὺν τοῖς θηρίοις ἐξώρμησε βουλόμενος ἀτρώτῳ καρδίᾳ καὶ κόραις ὀφθαλμῶν θεάσασθαι τὴν ἐπίπονον καὶ ταλαίπωρον τῶν προσεσημαμμένων καταστροφήν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="id_3Macc.ver_Greek.5.48">
+            <app xml:id="u160_ver_Greek">
+              <lem wit="#Rahlfs">ὡς δὲ τῶν ἐλεφάντων ἐξιόντων περὶ πύλην καὶ τῆς συνεπομένης ἐνόπλου δυνάμεως τῆς τε τοῦ πλήθους πορείας κονιορτὸν ἰδόντες καὶ βαρυηχῆ θόρυβον ἀκούσαντες οἱ Ιουδαῖοι</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="49" xml:id="id_3Macc.ver_Greek.5.49">
+            <app xml:id="u161_ver_Greek">
+              <lem wit="#Rahlfs">ὑστάτην βίου ῥοπὴν αὐτοῖς ἐκείνην δόξαντες εἶναι τὸ τέλος τῆς ἀθλιωτάτης προσδοκίας εἰς οἶκτον καὶ γόους τραπέντες κατεφίλουν ἀλλήλους περιπλεκόμενοι τοῖς συγγενέσιν ἐπὶ τοὺς τραχήλους ἐπιπίπτοντες, γονεῖς παισὶν καὶ μητέρες νεάνισιν, ἕτεραι δὲ νεογνὰ πρὸς μαστοὺς ἔχουσαι βρέφη τελευταῖον ἕλκοντα γάλα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="50" xml:id="id_3Macc.ver_Greek.5.50">
+            <app xml:id="u162_ver_Greek">
+              <lem wit="#Rahlfs">οὐ μὴν δὲ ἀλλὰ καὶ τὰς ἔμπροσθεν αὐτῶν γεγενημένας ἀντιλήμψεις ἐξ οὐρανοῦ συνιδόντες πρηνεῖς ὁμοθυμαδὸν ῥίψαντες ἑαυτοὺς καὶ τὰ νήπια χωρίσαντες τῶν μαστῶν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="51" xml:id="id_3Macc.ver_Greek.5.51">
+            <app xml:id="u163_ver_Greek">
+              <lem wit="#Rahlfs">ἀνεβόησαν φωνῇ μεγάλῃ σφόδρα τὸν τῆς ἁπάσης δυνάμεως δυνάστην ἱκετεύοντες οἰκτῖραι μετὰ ἐπιφανείας αὐτοὺς ἤδη πρὸς πύλαις ᾅδου καθεστῶτας.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="id_3Macc.ver_Greek.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="id_3Macc.ver_Greek.6.1">
+            <app xml:id="u164_ver_Greek">
+              <lem wit="#Rahlfs">Ελεαζαρος δέ τις ἀνὴρ ἐπίσημος τῶν ἀπὸ τῆς χώρας ἱερέων, ἐν πρεσβείῳ τὴν ἡλικίαν ἤδη λελογχὼς καὶ πάσῃ τῇ κατὰ τὸν βίον ἀρετῇ κεκοσμημένος, τοὺς περὶ αὐτὸν καταστείλας πρεσβυτέρους ἐπικαλεῖσθαι τὸν ἅγιον θεὸν προσηύξατο τάδε</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Macc.ver_Greek.6.2">
+            <app xml:id="u165_ver_Greek">
+              <lem wit="#Rahlfs">Βασιλεῦ μεγαλοκράτωρ, ὕψιστε παντοκράτωρ θεὲ τὴν πᾶσαν διακυβερνῶν ἐν οἰκτιρμοῖς κτίσιν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Macc.ver_Greek.6.3">
+            <app xml:id="u166_ver_Greek">
+              <lem wit="#Rahlfs">ἔπιδε ἐπὶ Αβρααμ σπέρμα, ἐπὶ ἡγιασμένου τέκνα Ιακωβ, μερίδος ἡγιασμένης σου λαὸν ἐν ξένῃ γῇ ξένον ἀδίκως ἀπολλύμενον, πάτερ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Macc.ver_Greek.6.4">
+            <app xml:id="u167_ver_Greek">
+              <lem wit="#Rahlfs">σὺ Φαραω πληθύνοντα ἅρμασιν, τὸν πρὶν Αἰγύπτου ταύτης δυνάστην, ἐπαρθέντα ἀνόμῳ θράσει καὶ γλώσσῃ μεγαλορρήμονι, σὺν τῇ ὑπερηφάνῳ στρατιᾷ ποντοβρόχους ἀπώλεσας φέγγος ἐπιφάνας ἐλέους Ισραηλ γένει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Macc.ver_Greek.6.5">
+            <app xml:id="u168_ver_Greek">
+              <lem wit="#Rahlfs">σὺ τὸν ἀναριθμήτοις δυνάμεσιν γαυρωθέντα Σενναχηριμ, βαρὺν Ἀσσυρίων βασιλέα, δόρατι τὴν πᾶσαν ὑποχείριον ἤδη λαβόντα γῆν καὶ μετεωρισθέντα ἐπὶ τὴν ἁγίαν σου πόλιν, βαρέα λαλοῦντα κόμπῳ καὶ θράσει σύ, δέσποτα, ἔθραυσας ἔκδηλον δεικνὺς ἔθνεσιν πολλοῖς τὸ σὸν κράτος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Macc.ver_Greek.6.6">
+            <app xml:id="u169_ver_Greek">
+              <lem wit="#Rahlfs">σὺ τοὺς κατὰ τὴν Βαβυλωνίαν τρεῖς ἑταίρους πυρὶ τὴν ψυχὴν αὐθαιρέτως δεδωκότας εἰς τὸ μὴ λατρεῦσαι τοῖς κενοῖς διάπυρον δροσίσας κάμινον ἐρρύσω μέχρι τριχὸς ἀπημάντους φλόγα πᾶσιν ἐπιπέμψας τοῖς ὑπεναντίοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Macc.ver_Greek.6.7">
+            <app xml:id="u170_ver_Greek">
+              <lem wit="#Rahlfs">σὺ τὸν διαβολαῖς φθόνου λέουσι κατὰ γῆς ῥιφέντα θηρσὶν βορὰν Δανιηλ εἰς φῶς ἀνήγαγες ἀσινῆ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Macc.ver_Greek.6.8">
+            <app xml:id="u171_ver_Greek">
+              <lem wit="#Rahlfs">τόν τε βυθοτρεφοῦς ἐν γαστρὶ κήτους Ιωναν τηκόμενον ἀφιδὼν ἀπήμαντον πᾶσιν οἰκείοις ἀνέδειξας, πάτερ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Macc.ver_Greek.6.9">
+            <app xml:id="u172_ver_Greek">
+              <lem wit="#Rahlfs">καὶ νῦν, μίσυβρι πολυέλεε τῶν ὅλων σκεπαστά, τὸ τάχος ἐπιφάνηθι τοῖς ἀπὸ Ισραηλ γένους ὑπὸ ἐβδελυγμένων ἀνόμων ἐθνῶν ὑβριζομένοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Macc.ver_Greek.6.10">
+            <app xml:id="u173_ver_Greek">
+              <lem wit="#Rahlfs">εἰ δὲ ἀσεβείαις κατὰ τὴν ἀποικίαν ὁ βίος ἡμῶν ἐνέσχηται, ῥυσάμενος ἡμᾶς ἀπὸ ἐχθρῶν χειρός, ᾧ προαιρῇ, δέσποτα, ἀπόλεσον ἡμᾶς μόρῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Macc.ver_Greek.6.11">
+            <app xml:id="u174_ver_Greek">
+              <lem wit="#Rahlfs">μὴ τοῖς ματαίοις οἱ ματαιόφρονες εὐλογησάτωσαν ἐπὶ τῇ τῶν ἠγαπημένων σου ἀπωλείᾳ λέγοντες Οὐδὲ ὁ θεὸς αὐτῶν ἐρρύσατο αὐτούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Macc.ver_Greek.6.12">
+            <app xml:id="u175_ver_Greek">
+              <lem wit="#Rahlfs">σὺ δέ, ὁ πᾶσαν ἀλκὴν καὶ δυναστείαν ἔχων ἅπασαν αἰώνιε, νῦν ἔπιδε· ἐλέησον ἡμᾶς τοὺς καθ’ ὕβριν ἀνόμων ἀλόγιστον ἐκ τοῦ ζῆν μεθισταμένους ἐν ἐπιβούλων τρόπῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Macc.ver_Greek.6.13">
+            <app xml:id="u176_ver_Greek">
+              <lem wit="#Rahlfs">πτηξάτω δὲ ἔθνη σὴν δύναμιν ἀνίκητον σήμερον, ἔντιμε δύναμιν ἔχων ἐπὶ σωτηρίᾳ Ιακωβ γένους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Macc.ver_Greek.6.14">
+            <app xml:id="u177_ver_Greek">
+              <lem wit="#Rahlfs">ἱκετεύει σε τὸ πᾶν πλῆθος τῶν νηπίων καὶ οἱ τούτων γονεῖς μετὰ δακρύων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Macc.ver_Greek.6.15">
+            <app xml:id="u178_ver_Greek">
+              <lem wit="#Rahlfs">δειχθήτω πᾶσιν ἔθνεσιν ὅτι μεθ’ ἡμῶν εἶ, κύριε, καὶ οὐκ ἀπέστρεψας τὸ πρόσωπόν σου ἀφ’ ἡμῶν, ἀλλὰ καθὼς εἶπας ὅτι Οὐδὲ ἐν τῇ γῇ τῶν ἐχθρῶν αὐτῶν ὄντων ὑπερεῖδον αὐτούς, οὕτως ἐπιτέλεσον, κύριε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Macc.ver_Greek.6.16">
+            <app xml:id="u179_ver_Greek">
+              <lem wit="#Rahlfs">Τοῦ δὲ Ελεαζαρου λήγοντος ἄρτι τῆς προσευχῆς ὁ βασιλεὺς σὺν τοῖς θηρίοις καὶ παντὶ τῷ τῆς δυνάμεως φρυάγματι κατὰ τὸν ἱππόδρομον παρῆγεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Macc.ver_Greek.6.17">
+            <app xml:id="u180_ver_Greek">
+              <lem wit="#Rahlfs">καὶ θεωρήσαντες οἱ Ιουδαῖοι μέγα εἰς οὐρανὸν ἀνέκραξαν ὥστε καὶ τοὺς παρακειμένους αὐλῶνας συνηχήσαντας ἀκατάσχετον πτόην ποιῆσαι παντὶ τῷ στρατοπέδῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_3Macc.ver_Greek.6.18">
+            <app xml:id="u181_ver_Greek">
+              <lem wit="#Rahlfs">τότε ὁ μεγαλόδοξος παντοκράτωρ καὶ ἀληθινὸς θεὸς ἐπιφάνας τὸ ἅγιον αὐτοῦ πρόσωπον ἠνέῳξεν τὰς οὐρανίους πύλας, ἐξ ὧν δεδοξασμένοι δύο φοβεροειδεῖς ἄγγελοι κατέβησαν φανεροὶ πᾶσιν πλὴν τοῖς Ιουδαίοις</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_3Macc.ver_Greek.6.19">
+            <app xml:id="u182_ver_Greek">
+              <lem wit="#Rahlfs">καὶ ἀντέστησαν καὶ τὴν δύναμιν τῶν ὑπεναντίων ἐπλήρωσαν ταραχῆς καὶ δειλίας καὶ ἀκινήτοις ἔδησαν πέδαις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_3Macc.ver_Greek.6.20">
+            <app xml:id="u183_ver_Greek">
+              <lem wit="#Rahlfs">καὶ ὑπόφρικον καὶ τὸ τοῦ βασιλέως σῶμα ἐγενήθη, καὶ λήθη τὸ θράσος αὐτοῦ τὸ βαρύθυμον ἔλαβεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_3Macc.ver_Greek.6.21">
+            <app xml:id="u184_ver_Greek">
+              <lem wit="#Rahlfs">καὶ ἀπέστρεψαν τὰ θηρία ἐπὶ τὰς συνεπομένας ἐνόπλους δυνάμεις καὶ κατεπάτουν αὐτὰς καὶ ὠλέθρευον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_3Macc.ver_Greek.6.22">
+            <app xml:id="u185_ver_Greek">
+              <lem wit="#Rahlfs">Καὶ μετεστράφη τοῦ βασιλέως ἡ ὀργὴ εἰς οἶκτον καὶ δάκρυα ὑπὲρ τῶν ἔμπροσθεν αὐτῷ μεμηχανευμένων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_3Macc.ver_Greek.6.23">
+            <app xml:id="u186_ver_Greek">
+              <lem wit="#Rahlfs">ἀκούσας γὰρ τῆς κραυγῆς καὶ συνιδὼν πρηνεῖς ἅπαντας εἰς τὴν ἀπώλειαν δακρύσας μετ’ ὀργῆς τοῖς φίλοις διηπειλεῖτο λέγων</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_3Macc.ver_Greek.6.24">
+            <app xml:id="u187_ver_Greek">
+              <lem wit="#Rahlfs">Παραβασιλεύετε καὶ τυράννους ὑπερβεβήκατε ὠμότητι καὶ ἐμὲ αὐτὸν τὸν ὑμῶν εὐεργέτην ἐπιχειρεῖτε τῆς ἀρχῆς ἤδη καὶ τοῦ πνεύματος μεθιστᾶν λάθρᾳ μηχανώμενοι τὰ μὴ συμφέροντα τῇ βασιλείᾳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_3Macc.ver_Greek.6.25">
+            <app xml:id="u188_ver_Greek">
+              <lem wit="#Rahlfs">τίς τοὺς κρατήσαντας ἡμῶν ἐν πίστει τὰ τῆς χώρας ὀχυρώματα τῆς οἰκίας ἀποστήσας ἕκαστον ἀλόγως ἤθροισεν ἐνθάδε;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_3Macc.ver_Greek.6.26">
+            <app xml:id="u189_ver_Greek">
+              <lem wit="#Rahlfs">τίς τοὺς ἐξ ἀρχῆς εὐνοίᾳ πρὸς ἡμᾶς κατὰ πάντα διαφέροντας πάντων ἐθνῶν καὶ τοὺς χειρίστους πλεονάκις ἀνθρώπων ἐπιδεδεγμένους κινδύνους οὕτως ἀθέσμως περιέβαλεν αἰκίαις;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_3Macc.ver_Greek.6.27">
+            <app xml:id="u190_ver_Greek">
+              <lem wit="#Rahlfs">λύσατε ἐκλύσατε ἄδικα δεσμά· εἰς τὰ ἴδια μετ’ εἰρήνης ἐξαποστείλατε τὰ προπεπραγμένα παραιτησάμενοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_3Macc.ver_Greek.6.28">
+            <app xml:id="u191_ver_Greek">
+              <lem wit="#Rahlfs">ἀπολύσατε τοὺς υἱοὺς τοῦ παντοκράτορος ἐπουρανίου θεοῦ ζῶντος, ὃς ἀφ’ ἡμετέρων μέχρι τοῦ νῦν προγόνων ἀπαραπόδιστον μετὰ δόξης εὐστάθειαν παρέχει τοῖς ἡμετέροις πράγμασιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_3Macc.ver_Greek.6.29">
+            <app xml:id="u192_ver_Greek">
+              <lem wit="#Rahlfs">ὁ μὲν οὖν ταῦτα ἔλεξεν· οἱ δὲ ἐν ἀμερεῖ χρόνῳ λυθέντες τὸν ἅγιον σωτῆρα θεὸν αὐτῶν εὐλόγουν ἄρτι τὸν θάνατον ἐκπεφευγότες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="id_3Macc.ver_Greek.6.30">
+            <app xml:id="u193_ver_Greek">
+              <lem wit="#Rahlfs">Εἶτα ὁ βασιλεὺς εἰς τὴν πόλιν ἀπαλλαγεὶς τὸν ἐπὶ τῶν προσόδων προσκαλεσάμενος ἐκέλευσεν οἴνους τε καὶ τὰ λοιπὰ πρὸς εὐωχίαν ἐπιτήδεια τοῖς Ιουδαίοις χορηγεῖν ἐπὶ ἡμέρας ἑπτὰ κρίνας αὐτοὺς ἐν ᾧ τόπῳ ἔδοξαν τὸν ὄλεθρον ἀναλαμβάνειν, ἐν τούτῳ ἐν εὐφροσύνῃ πάσῃ σωτήρια ἀγαγεῖν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="id_3Macc.ver_Greek.6.31">
+            <app xml:id="u194_ver_Greek">
+              <lem wit="#Rahlfs">τότε οἱ τὸ πρὶν ἐπονείδιστοι καὶ πλησίον τοῦ ᾅδου, μᾶλλον δὲ ἐπ’ αὐτῷ βεβηκότες ἀντὶ πικροῦ καὶ δυσαιάκτου μόρου κώθωνα σωτήριον συστησάμενοι τὸν εἰς πτῶσιν αὐτοῖς καὶ τάφον ἡτοιμασμένον τόπον κλισίαις κατεμερίσαντο πλήρεις χαρμονῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="id_3Macc.ver_Greek.6.32">
+            <app xml:id="u195_ver_Greek">
+              <lem wit="#Rahlfs">καταλήξαντες δὲ θρήνων πανόδυρτον μέλος ἀνέλαβον ᾠδὴν πάτριον τὸν σωτῆρα καὶ τερατοποιὸν αἰνοῦντες θεόν· οἰμωγήν τε πᾶσαν καὶ κωκυτὸν ἀπωσάμενοι χοροὺς συνίσταντο εὐφροσύνης εἰρηνικῆς σημεῖον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="id_3Macc.ver_Greek.6.33">
+            <app xml:id="u196_ver_Greek">
+              <lem wit="#Rahlfs">ὡσαύτως δὲ καὶ ὁ βασιλεὺς περὶ τούτων συμπόσιον βαρὺ συναγαγὼν ἀδιαλείπτως εἰς οὐρανὸν ἀνθωμολογεῖτο μεγαλομερῶς ἐπὶ τῇ παραδόξῳ γενηθείσῃ αὐτῷ σωτηρίᾳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="id_3Macc.ver_Greek.6.34">
+            <app xml:id="u197_ver_Greek">
+              <lem wit="#Rahlfs">οἵ τε πρὶν εἰς ὄλεθρον καὶ οἰωνοβρώτους αὐτοὺς ἔσεσθαι τιθέμενοι καὶ μετὰ χαρᾶς ἀπογραψάμενοι κατεστέναξαν αἰσχύνην ἐφ’ ἑαυτοῖς περιβαλόμενοι καὶ τὴν πυρόπνουν τόλμαν ἀκλεῶς ἐσβεσμένοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="id_3Macc.ver_Greek.6.35">
+            <app xml:id="u198_ver_Greek">
+              <lem wit="#Rahlfs">οἵ τε Ιουδαῖοι, καθὼς προειρήκαμεν, συστησάμενοι τὸν προειρημένον χορὸν μετ’ εὐωχίας ἐν ἐξομολογήσεσιν ἱλαραῖς καὶ ψαλμοῖς διῆγον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="id_3Macc.ver_Greek.6.36">
+            <app xml:id="u199_ver_Greek">
+              <lem wit="#Rahlfs">καὶ κοινὸν ὁρισάμενοι περὶ τούτων θεσμὸν ἐπὶ πᾶσαν τὴν παροικίαν αὐτῶν εἰς γενεὰς τὰς προειρημένας ἡμέρας ἄγειν ἔστησαν εὐφροσύνους, οὐ πότου χάριν καὶ λιχνείας, σωτηρίας δὲ τῆς διὰ θεὸν γενομένης αὐτοῖς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="id_3Macc.ver_Greek.6.37">
+            <app xml:id="u200_ver_Greek">
+              <lem wit="#Rahlfs">ἐνέτυχον δὲ τῷ βασιλεῖ τὴν ἀπόλυσιν αὐτῶν εἰς τὰ ἴδια αἰτούμενοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="id_3Macc.ver_Greek.6.38">
+            <app xml:id="u201_ver_Greek">
+              <lem wit="#Rahlfs">ἀπογράφονται δὲ αὐτοὺς ἀπὸ πέμπτης καὶ εἰκάδος τοῦ Παχων ἕως τῆς τετάρτης τοῦ Επιφι ἐπὶ ἡμέρας τεσσαράκοντα, συνίστανται δὲ αὐτῶν τὴν ἀπώλειαν ἀπὸ πέμπτης τοῦ Επιφι ἕως ἑβδόμης ἡμέραις τρισίν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="id_3Macc.ver_Greek.6.39">
+            <app xml:id="u202_ver_Greek">
+              <lem wit="#Rahlfs">ἐν αἷς καὶ μεγαλοδόξως ἐπιφάνας τὸ ἔλεος αὐτοῦ ὁ τῶν πάντων δυνάστης ἀπταίστους αὐτοὺς ἐρρύσατο ὁμοθυμαδόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="id_3Macc.ver_Greek.6.40">
+            <app xml:id="u203_ver_Greek">
+              <lem wit="#Rahlfs">εὐωχοῦντο δὲ πάνθ ὑπὸ τοῦ βασιλέως χορηγούμενοι μέχρι τῆς τεσσαρεσκαιδεκάτης, ἐν ᾗ καὶ τὴν ἐντυχίαν ἐποιήσαντο περὶ τῆς ἀπολύσεως αὐτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="id_3Macc.ver_Greek.6.41">
+            <app xml:id="u204_ver_Greek">
+              <lem wit="#Rahlfs">συναινέσας δὲ αὐτοῖς ὁ βασιλεὺς ἔγραψεν αὐτοῖς τὴν ὑπογεγραμμένην ἐπιστολὴν πρὸς τοὺς κατὰ πόλιν στρατηγοὺς μεγαλοψύχως τὴν ἐκτενίαν ἔχουσαν</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="id_3Macc.ver_Greek.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="id_3Macc.ver_Greek.7.1">
+            <app xml:id="u205_ver_Greek">
+              <lem wit="#Rahlfs">Βασιλεὺς Πτολεμαῖος Φιλοπάτωρ τοῖς κατ’ Αἴγυπτον στρατηγοῖς καὶ πᾶσιν τοῖς τεταγμένοις ἐπὶ πραγμάτων χαίρειν καὶ ἐρρῶσθαι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Macc.ver_Greek.7.2">
+            <app xml:id="u206_ver_Greek">
+              <lem wit="#Rahlfs">ἐρρώμεθα δὲ καὶ αὐτοὶ καὶ τὰ τέκνα ἡμῶν κατευθύναντος ἡμῖν τοῦ μεγάλου θεοῦ τὰ πράγματα, καθὼς προαιρούμεθα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Macc.ver_Greek.7.3">
+            <app xml:id="u207_ver_Greek">
+              <lem wit="#Rahlfs">τῶν φίλων τινὲς κατὰ κακοήθειαν πυκνότερον ἡμῖν παρακείμενοι συνέπεισαν ἡμᾶς εἰς τὸ τοὺς ὑπὸ τὴν βασιλείαν Ιουδαίους συναθροίσαντας σύστημα κολάσασθαι ξενιζούσαις ἀποστατῶν τιμωρίαις</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Macc.ver_Greek.7.4">
+            <app xml:id="u208_ver_Greek">
+              <lem wit="#Rahlfs">προφερόμενοι μηδέποτε εὐσταθήσειν τὰ πράγματα ἡμῶν δι’ ἣν ἔχουσιν οὗτοι πρὸς πάντα τὰ ἔθνη δυσμένειαν, μέχρι ἂν συντελεσθῇ τοῦτο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Macc.ver_Greek.7.5">
+            <app xml:id="u209_ver_Greek">
+              <lem wit="#Rahlfs">οἳ καὶ δεσμίους καταγαγόντες αὐτοὺς μετὰ σκυλμῶν ὡς ἀνδράποδα, μᾶλλον δὲ ὡς ἐπιβούλους, ἄνευ πάσης ἀνακρίσεως καὶ ἐξετάσεως ἐπεχείρησαν ἀνελεῖν νόμου Σκυθῶν ἀγριωτέραν ἐμπεπορπημένοι ὠμότητα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Macc.ver_Greek.7.6">
+            <app xml:id="u210_ver_Greek">
+              <lem wit="#Rahlfs">ἡμεῖς δὲ ἐπὶ τούτοις σκληρότερον διαπειλησάμενοι καθ’ ἣν ἔχομεν πρὸς ἅπαντας ἀνθρώπους ἐπιείκειαν μόγις τὸ ζῆν αὐτοῖς χαρισάμενοι καὶ τὸν ἐπουράνιον θεὸν ἐγνωκότες ἀσφαλῶς ὑπερησπικότα τῶν Ιουδαίων ὡς πατέρα ὑπὲρ υἱῶν διὰ παντὸς συμμαχοῦντα</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Macc.ver_Greek.7.7">
+            <app xml:id="u211_ver_Greek">
+              <lem wit="#Rahlfs">τήν τε τοῦ φίλου ἣν ἔχουσιν βεβαίαν πρὸς ἡμᾶς καὶ τοὺς προγόνους ἡμῶν εὔνοιαν ἀναλογισάμενοι δικαίως ἀπολελύκαμεν πάσης καθ’ ὁντινοῦν αἰτίας τρόπον</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Macc.ver_Greek.7.8">
+            <app xml:id="u212_ver_Greek">
+              <lem wit="#Rahlfs">καὶ προστετάχαμεν ἑκάστῳ πάντας εἰς τὰ ἴδια ἐπιστρέφειν ἐν παντὶ τόπῳ μηθενὸς αὐτοὺς τὸ σύνολον καταβλάπτοντος μήτε ὀνειδίζειν περὶ τῶν γεγενημένων παρὰ λόγον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Macc.ver_Greek.7.9">
+            <app xml:id="u213_ver_Greek">
+              <lem wit="#Rahlfs">γινώσκετε γὰρ ὅτι κατὰ τούτων ἐάν τι κακοτεχνήσωμεν πονηρὸν ἢ ἐπιλυπήσωμεν αὐτοὺς τὸ σύνολον, οὐκ ἄνθρωπον, ἀλλὰ τὸν πάσης δεσπόζοντα δυνάμεως θεὸν ὕψιστον ἀντικείμενον ἡμῖν ἐπ’ ἐκδικήσει τῶν πραγμάτων κατὰ πᾶν ἀφεύκτως διὰ παντὸς ἕξομεν. ἔρρωσθε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Macc.ver_Greek.7.10">
+            <app xml:id="u214_ver_Greek">
+              <lem wit="#Rahlfs">Λαβόντες δὲ τὴν ἐπιστολὴν ταύτην οὐκ ἐσπούδασαν εὐθέως γενέσθαι περὶ τὴν ἄφοδον, ἀλλὰ τὸν βασιλέα προσηξίωσαν τοὺς ἐκ τοῦ γένους τῶν Ιουδαίων τὸν ἅγιον θεὸν αὐθαιρέτως παραβεβηκότας καὶ τοῦ θεοῦ τὸν νόμον τυχεῖν δι’ αὐτῶν τῆς ὀφειλομένης κολάσεως</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Macc.ver_Greek.7.11">
+            <app xml:id="u215_ver_Greek">
+              <lem wit="#Rahlfs">προφερόμενοι τοὺς γαστρὸς ἕνεκεν τὰ θεῖα παραβεβηκότας προστάγματα μηδέποτε εὐνοήσειν μηδὲ τοῖς τοῦ βασιλέως πράγμασιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Macc.ver_Greek.7.12">
+            <app xml:id="u216_ver_Greek">
+              <lem wit="#Rahlfs">ὁ δὲ τἀληθὲς αὐτοὺς λέγειν παραδεξάμενος καὶ παραινέσας ἔδωκεν αὐτοῖς ἄδειαν πάντων, ὅπως τοὺς παραβεβηκότας τοῦ θεοῦ τὸν νόμον ἐξολεθρεύσωσιν κατὰ πάντα τὸν ὑπὸ τὴν βασιλείαν αὐτοῦ τόπον μετὰ παρρησίας ἄνευ πάσης βασιλικῆς ἐξουσίας καὶ ἐπισκέψεως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Macc.ver_Greek.7.13">
+            <app xml:id="u217_ver_Greek">
+              <lem wit="#Rahlfs">τότε κατευφημήσαντες αὐτόν, ὡς πρέπον ἦν, οἱ τούτων ἱερεῖς καὶ πᾶν τὸ πλῆθος ἐπιφωνήσαντες τὸ αλληλουια μετὰ χαρᾶς ἀνέλυσαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Macc.ver_Greek.7.14">
+            <app xml:id="u218_ver_Greek">
+              <lem wit="#Rahlfs">οὕτως τε τὸν ἐμπεσόντα τῶν μεμιαμμένων ὁμοεθνῆ κατὰ τὴν ὁδὸν ἐκολάζοντο καὶ μετὰ παραδειγματισμῶν ἀνῄρουν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Macc.ver_Greek.7.15">
+            <app xml:id="u219_ver_Greek">
+              <lem wit="#Rahlfs">ἐκείνῃ δὲ τῇ ἡμέρᾳ ἀνεῖλον ὑπὲρ τοὺς τριακοσίους ἄνδρας, ἣν καὶ ἤγαγον εὐφροσύνην μετὰ χαρᾶς βεβήλους χειρωσάμενοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Macc.ver_Greek.7.16">
+            <app xml:id="u220_ver_Greek">
+              <lem wit="#Rahlfs">αὐτοὶ δὲ οἱ μέχρι θανάτου τὸν θεὸν ἐσχηκότες παντελῆ σωτηρίας ἀπόλαυσιν εἰληφότες ἀνέζευξαν ἐκ τῆς πόλεως παντοίοις εὐωδεστάτοις ἄνθεσιν κατεστεμμένοι μετ’ εὐφροσύνης καὶ βοῆς ἐν αἴνοις καὶ παμμελέσιν ὕμνοις εὐχαριστοῦντες τῷ θεῷ τῶν πατέρων αὐτῶν αἰωνίῳ σωτῆρι τοῦ Ισραηλ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Macc.ver_Greek.7.17">
+            <app xml:id="u221_ver_Greek">
+              <lem wit="#Rahlfs">Παραγενηθέντες δὲ εἰς Πτολεμαίδα τὴν ὀνομαζομένην διὰ τὴν τοῦ τόπου ἰδιότητα ῥοδοφόρον, ἐν ᾗ προσέμεινεν αὐτοὺς ὁ στόλος κατὰ κοινὴν αὐτῶν βουλὴν ἡμέρας ἑπτά,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_3Macc.ver_Greek.7.18">
+            <app xml:id="u222_ver_Greek">
+              <lem wit="#Rahlfs">ἐκεῖ ἐποίησαν πότον σωτήριον τοῦ βασιλέως χορηγήσαντος αὐτοῖς εὐψύχως τὰ πρὸς τὴν ἄφιξιν πάντα ἑκάστῳ ἕως εἰς τὴν ἰδίαν οἰκίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_3Macc.ver_Greek.7.19">
+            <app xml:id="u223_ver_Greek">
+              <lem wit="#Rahlfs">καταχθέντες δὲ μετ’ εἰρήνης ἐν ταῖς πρεπούσαις ἐξομολογήσεσιν ὡσαύτως κἀκεῖ ἔστησαν καὶ ταύτας ἄγειν τὰς ἡμέρας ἐπὶ τὸν τῆς παροικίας αὐτῶν χρόνον εὐφροσύνους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_3Macc.ver_Greek.7.20">
+            <app xml:id="u224_ver_Greek">
+              <lem wit="#Rahlfs">ἃς καὶ ἀνιερώσαντες ἐν στήλῃ κατὰ τὸν τῆς συμποσίας τόπον προσευχῆς καθιδρύσαντες ἀνέλυσαν ἀσινεῖς, ἐλεύθεροι, ὑπερχαρεῖς, διά τε γῆς καὶ θαλάσσης καὶ ποταμοῦ ἀνασῳζόμενοι τῇ τοῦ βασιλέως ἐπιταγῇ, ἕκαστος εἰς τὴν ἰδίαν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_3Macc.ver_Greek.7.21">
+            <app xml:id="u225_ver_Greek">
+              <lem wit="#Rahlfs">καὶ πλείστην ἢ ἔμπροσθεν ἐν τοῖς ἐχθροῖς ἐξουσίαν ἐσχηκότες μετὰ δόξης καὶ φόβου, τὸ σύνολον ὑπὸ μηδενὸς διασεισθέντες τῶν ὑπαρχόντων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_3Macc.ver_Greek.7.22">
+            <app xml:id="u226_ver_Greek">
+              <lem wit="#Rahlfs">καὶ πάντα τὰ ἑαυτῶν πάντες ἐκομίσαντο ἐξ ἀπογραφῆς ὥστε τοὺς ἔχοντάς τι μετὰ φόβου μεγίστου ἀποδοῦναι αὐτοῖς, τὰ μεγαλεῖα τοῦ μεγίστου θεοῦ ποιήσαντος τελείως ἐπὶ σωτηρίᾳ αὐτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_3Macc.ver_Greek.7.23">
+            <app xml:id="u227_ver_Greek">
+              <lem wit="#Rahlfs">εὐλογητὸς ὁ ῥύστης Ισραηλ εἰς τοὺς ἀεὶ χρόνους. αμην. Μακκαβαιων Γ' (Rahlfs)</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

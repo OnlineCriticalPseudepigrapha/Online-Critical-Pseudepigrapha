@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE document SYSTEM "document.dtd">
-<document id="Theoph">
-    <header>
-        <title>Fragments of Theophilus</title>
-        <author>Theophilus</author>
-        <editor>Felix Jacoby (FGrH 733); Albert-Marie Denis (PVTG 3, 1970)</editor>
-        <description>Greek text and English translation of the fragment of Theophilus preserved in Alexander Polyhistor ap. Eusebius (Praeparatio Evangelica IX.34.19).</description>
-    </header>
-    <body>
-        <div c="1" v="1">
-            <line lang="grc">Θεόφιλος δὲ ἱστορεῖ Σολομῶνα τὸν βασιλέα πέμψαι τῷ Τυρίων βασιλεῖ εἰκόνα χρυσῆν, ἀνθʼ ἧς ἐκεῖνον περιθεῖναι τῷ ναῷ κίονα χρυσοῦν, ὃν καὶ ἐπικληθῆναι Χρυσοῦν Κίονα. (Alexander Polyhistor ap. Euseb. Praep. Evang. IX.34.19)</line>
-            <line lang="en">Theophilus relates that King Solomon sent to the king of the Tyrians a golden image, in return for which the latter overlaid a pillar for the Temple with gold, which was also named the Golden Pillar. (Alexander Polyhistor ap. Eusebius, Praep. Evang. IX.34.19)</line>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="Theoph" title="Fragments of Theophilus">
+  <version author="Jacoby / Denis" language="Greek" title="Greek and English">
+    <divisions>
+      <division delimiter="." label="Chapter"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Denis" language="Greek" show="yes">
+        <name>Denis 1970 (PVTG 3) / Jacoby FGrH 733</name>
+        <bibliography>Felix Jacoby, Fragmente der griechischen Historiker (FGrH 733); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 203-207.</bibliography>
+      </ms>
+      <ms abbrev="Trans" language="English" show="yes">
+        <name>English Translation (OCP)</name>
+        <bibliography>Felix Jacoby, Fragmente der griechischen Historiker (FGrH 733); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 203-207.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="0">
+            <reading option="0" mss="Denis ">Θεόφιλος δὲ ἱστορεῖ Σολομῶνα τὸν βασιλέα πέμψαι τῷ Τυρίων βασιλεῖ εἰκόνα χρυσῆν, ἀνθʼ ἧς ἐκεῖνον περιθεῖναι τῷ ναῷ κίονα χρυσοῦν, ὃν καὶ ἐπικληθῆναι Χρυσοῦν Κίονα. (Alexander Polyhistor ap. Euseb. Praep. Evang. IX.34.19)</reading>
+            <reading option="1" mss="Trans ">Theophilus relates that King Solomon sent to the king of the Tyrians a golden image, in return for which the latter overlaid a pillar for the Temple with gold, which was also named the Golden Pillar. (Alexander Polyhistor ap. Eusebius, Praep. Evang. IX.34.19)</reading>
+          </unit>
         </div>
-    </body>
-</document>
+      </div>
+    </text>
+  </version>
+</book>

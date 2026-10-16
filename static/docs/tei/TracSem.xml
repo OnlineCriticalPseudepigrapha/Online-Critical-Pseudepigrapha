@@ -1,832 +1,864 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TracSem">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Treatise of Shem</title>
-        <author>Shem son of Noah (Pseudepigraphon)</author>
-        <editor>Alphonse Mingana</editor>
+        <editor role="editor">Penner, Ken M.</editor>
         <respStmt>
-          <resp>TEI P5 Parallel Segmentation edition for Online Critical Pseudepigrapha</resp>
-          <name>Ken M. Penner</name>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
         </respStmt>
       </titleStmt>
       <publicationStmt>
-        <publisher>Online Critical Pseudepigrapha</publisher>
-        <pubPlace>St. Francis Xavier University, Antigonish, NS</pubPlace>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <biblStruct type="book">
-          <monogr>
-            <title level="m">Some Early Judæo-Christian Documents in the John Rylands Library</title>
-            <editor>Alphonse Mingana</editor>
-            <imprint>
-              <publisher>The University Press</publisher>
-              <pubPlace>Manchester</pubPlace>
-              <date when="1917">1917</date>
-              <biblScope unit="page">24-29, 54-61</biblScope>
-            </imprint>
-          </monogr>
-        </biblStruct>
+        <listWit>
+          <witness xml:id="Mingana">
+            <abbr type="siglum">Mingana</abbr>
+            <name>Mingana 1917 (MS Rylands Syr. 44)</name>
+            <bibl>Alphonse Mingana, Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 24-29, 54-61 (MS Cod. Syr. 44). CAVT 85.</bibl>
+          </witness>
+          <witness xml:id="Trans">
+            <abbr type="siglum">Trans</abbr>
+            <name>Mingana English Translation (1917)</name>
+            <bibl>Alphonse Mingana, Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 24-29, 54-61 (MS Cod. Syr. 44). CAVT 85.</bibl>
+          </witness>
+        </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="syr">syr</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
-  <text>
+  <text xml:lang="syr">
     <body>
-      <div type="chapter" n="1">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܬܘܒ ܡܡܠܠܐ ܕܣܝܡ ܠܫܝܡ ܒܪ ܢܘܚ ܥܠ ܡܘܠܕܐ ܕܫܢ݇ܬܐ ܘܟܠܡܐ ܕܗܿܘܐ ܒܗ:</rdg>
-            <rdg type="translation" xml:lang="en">Discourse written by Shem son of Noah about the beginning of the year and all that happens in it.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܐܢ ܒܐܡܪܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ, ܫܢ݇ܬܐ ܩܛܝܢܬܐ ܬܗܘܐ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Aries: The year will be hard.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܖ̇ܒܥܬ ܪ̈ܓܠܝܗܿ ܬܡܘܬ.</rdg>
-            <rdg type="translation" xml:lang="en">The quadrupeds will die.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܥܢ̈ܢܐ ܣܓܝ̈ܐܬܐ ܠܐ ܢܬܚ̈ܙܝܢ ܘܠܐ ܢܗ̈ܘܝܢ.</rdg>
-            <rdg type="translation" xml:lang="en">There will not be many clouds.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܙܪܥܐ ܩܘܡܬܐ ܠܐ ܗܘܿܝܐ ܠܗ: ܘܦܪ݇ܕܬܗ ܕܝܢ ܬܗܘܐ ܘܬܫܡܢ.</rdg>
-            <rdg type="translation" xml:lang="en">The standing corn will not have good size, but it will have fat grains.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܗܪܿܐ ܕܢܝܠܘܣ ܡܣܩܐ ܫܦܝܪ ܢܣܩ.</rdg>
-            <rdg type="translation" xml:lang="en">The river Nile will overflow well.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܠܟܐ ܕܪ̈ܗ݇ܘܡܝܐ ܠܐ ܢܩܘܐ ܒܚܕܐ ܕܘܟܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">The king of the Romans will not remain in one place.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܘܟ̈ܒܐ ܕܫܡܝܐ ܢܬܒܕܪܘܢ ܐܝܟ ܙܠܝ̈ܩܐ ܕܢܘܪܐ.</rdg>
-            <rdg type="translation" xml:lang="en">The stars of heaven will be scattered like rays of fire.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܣܗܪܐ ܢܚܫܟ.</rdg>
-            <rdg type="translation" xml:lang="en">The moon will suffer eclipse.</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܙܪܥܐ ܩܕܡܝܐ ܢܐܒܕ: ܘܙܪܥܐ ܐ݇ܚܪܝܐ ܢܬܚܡܘܠ.</rdg>
-            <rdg type="translation" xml:lang="en">The first crops will perish, and the second will be ingathered.</rdg>
-          </app>
-        </p>
-        <p n="11">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܡܢ ܦܨܚܐ ܥܒܘܪܿܐ ܝܪܩܢܐ ܗܘܐ ܠܗ.</rdg>
-            <rdg type="translation" xml:lang="en">From Passover corn will be mildewed.</rdg>
-          </app>
-        </p>
-        <p n="12">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܫܢ݇ܬܐ ܒܝܫܬܐ ܐܝܬܝܗܿ ܕܩܖܒܐ ܪܒܐ ܘܫܚܩܐ ܒܟܠܗܿ ܐܪܥܐ: ܘܝܬܝܪܐܝܬ ܒܐܪܥܐ ܕܡܨܪܝܢ.</rdg>
-            <rdg type="translation" xml:lang="en">The year will be bad, with severe war and distress over all the earth, especially over the land of Egypt.</rdg>
-          </app>
-        </p>
-        <p n="13">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܬܬܒܪ̈ܢ ܐܠܦ̈ܐ ܣܓܝܐܬܐ ܡܐ ܕܸܒܚܿܫ ܝܡܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Many ships will break up when the sea is rough.</rdg>
-          </app>
-        </p>
-        <p n="14">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܫܚܐ ܢܫܘܐ ܒܐܦܪܝܩܝ: ܘܚܛ̈ܐ ܢܙܥܪ̈ܢ: ܒܕܪܡܣܘܩ ܘܒܚܘܪܢ ܘܒܦܠܣܛܝܢܝ ܢܫܘ̈ܝܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Oil will be at a moderate price in Africa, and wheat will be at a low price; in Damascus, Hauran, and Palestine it will be at a moderate price.</rdg>
-          </app>
-        </p>
-        <p n="15">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܘܪ̈ܗܢܐ ܡܫܚ̈ܠܦܐ ܘܡ̈ܚܘܬܐ ܘܙܘܥܐ ܢܗܘܐ ܒܗܿ: ܘܡܬܦܠܛܐ ܡܢܗܿ ܘܬܫܬܘܙܒ.</rdg>
-            <rdg type="translation" xml:lang="en">(Palestine) will have different kinds of diseases, plagues, and earthquake, but it will be delivered from them and saved.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="2">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܡܬܝܠܕܐ ܫܢ݇ܬܐ ܒܬܘܪܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܒܝܬ ܐܘ ܝܘܕ ܐܘ ܟܦ ܢܬܟܪܗ: ܐܘ ܢܒܠܥ ܒܦܪܙܠܐ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Taurus: Anyone having in his name (the letters) Beith, Yodh, or Koph will be ill, or will be killed with iron weapons.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܗܘܐ ܙܘܥܐ.</rdg>
-            <rdg type="translation" xml:lang="en">There will be earthquake.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܬܦܘܩ ܡ̣ܢ ܡܨܪܝܢ ܪܘܚܐ ܘܬܡܠܝܗ̇ ܠܟܠܗ̇ ܐܪܥܐ.</rdg>
-            <rdg type="translation" xml:lang="en">A wind will start from Egypt and spread over all the earth.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܗ̈ܘ̈ܝܢ ܒܗܿ ܚ̈ܛܐ ܘܡܛܪܐ ܪܽܘ̈ܪܒܐ: ܘܖܘܪ̈ܒܢܐ ܕܐܪܥܐ ܘܕܼܐܬܪ̈ܘܬܐ ܕܚܕܪ̈ܝܗܘܢ ܢܘܒܕܘܢ ܐܢܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">The year will be rich in wheat and abundant rains, but the chiefs of the land and of the surrounding places will destroy that (wheat).</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܛܪܿܐ ܕܫܢ݇ܬܐ ܢܬܚܣܟ ܬܠܬܐ ܝܪ̈ܚܝܢ: ܘܡ̣ܢ ܒܬܖܿܟܢ ܥܒܘܪܿܐ ܢܐܩܪ ܒܢܣܝܘܢܐ ܝܘ̈ܡܬܐ ܬܠܬܝܢ ܘܫܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">The yearly rain will fail during three months, and then corn will be very dear during thirty-six days;</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܡܘܬܘܢ ܐܢܫܐ ܣܓܝܐܐ ܡ̣ܢ ܟܘܪ̈ܗܢܐ ܕܓܪܓܪܬܐ: ܘܩܛܝܢܘܬܐ ܬܐܒܕܼ.</rdg>
-            <rdg type="translation" xml:lang="en">many people will die from diseases of the throat, and then tribulation will cease.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܙܪܥܐ ܩܕܡܝܐ ܢܐܒܕܼ ܗܟܢܐ: ܘܙܪܥܐ ܐ݇ܚܪܝܐ ܢܐܠ: ܘܣܥܪ̈ܐ ܘܕܼܩ̈ܐ ܢܐܠܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">The first crops (of wheat) will perish, but as (above), the second crops will be ingathered, and barley with the watered cereals will be ingathered also.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܕܼܝܘ̈ܐ ܥܠ ܒܢܝ̈ܢܫܐ ܢܦܠܘܢ: ܘܡܕܡ ܠܐ ܢܚܣܪܘܢ ܐܢܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">The devils will attack the sons of men, but they will not harm them in anything.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡ̈ܠܟܐ ܬܪܶܝܢ ܢܩܘܡܘܢ ܥܠ ܚܕܕܵܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Two kings will rise against each other.</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܝܠܘܣ ܢܗܖܿܐ ܪܒܐ ܢܣܩ ܠܥܠ ܡ̣ܢ ܡܫܘܚܬܗ.</rdg>
-            <rdg type="translation" xml:lang="en">The great river Nile will overflow above its normal rate.</rdg>
-          </app>
-        </p>
-        <p n="11">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܗܠܝܢ ܕܐܝܬܝܗܘܢ ܒܐܠܦܐ ܒܓܘ ܝܡܐ ܘܐ݇ܢܫܐ ܕܼܐܝܬ ܒܝܡܐ ܢܗܘܘܢ ܒܫܚܩܐ ܩܫܝܐ: ܘܒܚܪܬܗ̇ ܕܫܢ݇ܬܐ ܒܘܪܟܬܐ ܣܓܝܐܬܐ ܬܗܘܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Those who are on board a ship in the sea, and those who are on the sea will be in great distress. At the end of the year there will be great blessing.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="3">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܬܪܝܢ ܨܠܡ̈ܐ ܡܬܝܠܕܐ ܫܢܵܬܐ: ܢܗܘܐ ܣܗܪܶܐ ܫܦܝܪ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Gemini (the Two Figures): The moon will be good.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܬܫܒ ܪܽܘܚܐ ܕܬܝܡܢܐ ܘܡܢܗ̇ܿ ܢܗܘܐ ܡܛܪܐ.</rdg>
-            <rdg type="translation" xml:lang="en">A South wind will blow, from which rain will come.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܬܘ ܐܘ ܚܝܬ ܐܘ ܡܝܡ ܢܗܘܐ ܒܦܪܨܘܦܗ ܓܪܳܒܐ ܐܘ ܫܘܚܢܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Anyone having in his name the letters Taw, Heth, or Mim will have tumours and boils in his face.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܗܘܐ ܒܫܘܪܝܗܿ ܕܸܫܢ݇ܬܐ ܩܖܒܐ ܩܫܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">At the beginning of the year there will be a severe war.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܛܪ̈ܐ ܪܒܝܥܝܐ ܢܗܘܘܢ: ܘܙܪܥܐ ܢܫܦܖܿ: ܘܝܬܝܪܐܝܬ ܙܪܥܐ ܕܫܩܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">There will be early rains, and the standing corn will be good, especially in the watered places.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܥܘܩܒܪ̈ܬܐ ܢܣܓܝܢ ܒܐܪܥܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Mice will abound in the earth.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘ̈ܪܗ݇ܘܡܝܐ ܘܦܪ̈ܣܝܐ ܢܥܒܕܘܢ ܩܖܒܐ ܩܫܝܐ ܥܡ ܚܕ̈ܕܐ: ܘܢܦܩܘܢ ܪܗ݇ܘܡܝܐ ܒܐܠܦ̈ܐ ܒܝܡܐ: ܘܢܥܒܕܘܢ ܩܪܒܐ ܘܢܘܒܕܘܢ ܐܢܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">The Romans and the Persians will wage a severe war against one another, and the Romans will come forth by ships on the sea, will fight and destroy them.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܦܩܘܢ ܒܥܠܡܐ ܗܢܐ ܐܢܫܐ ܒܝ̈ܫܐ ܘܢܥܒܕܘܢ ܒܝܫܬܐ: ܘܢܗܘܐ ܪܢܝܐ ܘܫܚܩܐ ܩܫܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Malicious people will rise in the world, who will do mischief, and there will be great anxiety and distress.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܠܡܗ̇ ܕܸܫܢ݇ܬܐ ܬܗܘܐ ܛܒܬܐ: ܘܢܝܠܘܣ ܢܗܪܐ ܢܣܩ ܫܦܝܪ.</rdg>
-            <rdg type="translation" xml:lang="en">Good will come at the end of the year and the river Nile will overflow well.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="4">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܣܪܛܢܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܬܗܘܐ݀ ܒܫܘܪܝܗܿ ܕܫܢ݇ܬܐ ܫܘܝܘܬܐ ܕܥܒܘ̇ܪܿܐ: ܘܢܗܘܘܢ ܐ݇ܢܫܐ ܛܠܒܐܝܬ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Cancer: At the beginning of the year corn will be at a moderate price, and people will be comfortable.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܝܠܘܣ ܢܣܩ ܦܠܓܗ ܕܡܣܩܗ.</rdg>
-            <rdg type="translation" xml:lang="en">The Nile will overflow at half its normal rate.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܠܟܣܢܕܪܝܐ ܬܬܐܠܨ ܘܢܗܘܐ ܒܗܿ ܫܚܩܐ ܡ̣ܢ ܡܘܬܢܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Alexandria will be besieged, and distress will be in it from pest.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܨܡܚܘܢ ܟܘܟܒ̈ܐ ܪܽܘܪܒܐܝܬ: ܘܣܗܪܐ ܢܚܫܟ.</rdg>
-            <rdg type="translation" xml:lang="en">Stars will shine very brightly, and the moon will suffer eclipse.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܠܦ̈ܐ ܣܓܝ̈ܐܬܐ ܢܬܬܒܪ̈ܢ ܒܝܡܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Many ships will break up in the sea.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܪܝܗܿ ܕܫܢ݇ܬܐ ܢܐܩܪ̈ܢ ܚܛܐ ܘܣܥܪ̈ܐ.</rdg>
-            <rdg type="translation" xml:lang="en">At the beginning of the year wheat and barley will be dear.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܪ̈ܘܚܐ ܢܣܓܝܢ: ܘܐܢܫܐ ܣܓܝ̈ܐܐ ܢܬܟܪܗܘܢ ܡ̣ܢ ܚܨܐ ܘܡܼ̣ܢ ܫܥܠܐ ܘܪ̈ܓܠܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Winds will abound, and many people will suffer from backaches, coughs, and soreness of the feet and eyes.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܚܡܪܿܐ ܢܣܓܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Wine will be abundant.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܬܘܪ̈ܐ ܘܥ̈ܢܐ ܘܩ̈ܛܝܢܬܐ ܢܐܒܕܘܢ: ܘܕܼܩ̈ܐ ܢܐܒܕܘܢ: ܘܡܫܚܐ ܢܫܘܐ ܐܢܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Oxen, sheep, and small cattle will perish; and cereals will also perish, but oil will make up for them.</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܬܐܩܪ ܝܥܠܬܐ ܬܫܥܐ ܝܘ̈ܡܬܐ: ܘܒܬܪ̇ܟܢ ܢܗܘܐ ܡܛܪܐ: ܘܬܗܘܐ ܒܗܿ ܒܘܪܟܬܐ ܣܓܝܐܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">At the end of the year corn will be dear for nine days, and then there will be rain, and (the year) will have much blessing.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="5">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܐܪܝܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܢܗܘܐ ܡܛܪܐ ܪܰܒܝܥܝܐ: ܘܐܖܿܥܐ ܬܐܒܕܼ ܡ̣ܢ ܪ̈ܘܚܐ ܕܓܖܶܒܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Leo: There will be early rains, but the soil will be scorched by North winds;</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܙܪܥܐ ܢܬܪܚܡ: ܘܐܦ ܡܐܟܘܠܬܐ ܕܝܢ ܕܒܢܝ̈ܢܫܐ ܬܛܐܒ.</rdg>
-            <rdg type="translation" xml:lang="en">corn will not be injured and the food of mankind will be good.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܐܩܪ̈ܢ ܚܛ̈ܐ ܘܪܽܘܙܐ ܘܕܩܐ: ܘܢܫܩ̈ܝܢ ܚܛܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Wheat, rice, and cereals will be dear, and wheat will have to be watered.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܫܚܬܐ ܘܬܡܪ̈ܐ ܢܐܩܪܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Oil and dates will be dear.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܘܪ̈ܗܢܐ ܒܒܢܝ̈ܢܫܐ ܢܗܘܐ: ܘܒܛ̈ܢܬܐ ܘܩܛ̈ܝܢܬܐ ܢܐܒ̈ܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">There will be diseases in sons of men and the pregnant animals will perish as well as small cattle.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܠܟܐ ܢܬܟܬܫ ܥܡ ܡܠܟܐ.</rdg>
-            <rdg type="translation" xml:lang="en">A king will fight against a king.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܩܡܨܐ ܪܒܐ ܢܐܬܐ: ܘܠܐ ܢܒܨܪ ܐܠܐ ܩܠܝܠ ܡܕܡ.</rdg>
-            <rdg type="translation" xml:lang="en">A considerable number of locusts will make their appearance and their number will decrease but slightly.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܣܩ ܢܝܠܘܣ ܢܗܪܿܐ ܡܣܩܗ ܥܠܝܐ: ܘܢܗܘܐ ܟܐܒܐ ܕܪܫܐ ܠܐܢ݇ܫܐ: ܘܒܫܘܠܡܗ̇ ܕܫܢ݇ܬܐ ܢܗܘܐ ܡܛܪܐ ܣܓܝܐܐ.</rdg>
-            <rdg type="translation" xml:lang="en">The river Nile will overflow to its highest rate. People will have headache. At the end of the year there will be much rain.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="6">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܫܒܠܬܐ ܡܬܝܠܕܼܐ ܫܢܵ݇ܬܐ: ܟܠ ܡܢ ܕܐܝܬܘܗܝ ܫܡܗ ܝܘܕܼ ܐܘ ܣܡܟܬ ܘܒܝܬ ܘܢܘܢ ܢܗܘܐ ܟܪܝܗ: ܘܢܬܒܙܙ ܘܢܥܖ̇ܘܩ ܡ̣ܢ ܒܝܬܗ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Virgo: Anyone having in his name (the letters) Yodh, Semkath, Beith, or Nun will be ill, will be plundered, and will flee from his house.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܗܘܐ ܒܫܘܪܶܝܗܿ ܕܸܫܢ݇ܬܐ ܚܣܝܪܘܬ ܡܝ̈ܐ ܒܕܘܟܐ ܕܘܟܐ: ܘܙܪܥܐ ܩܕܡܝܐ ܠܐ ܢܟܫܪ.</rdg>
-            <rdg type="translation" xml:lang="en">At the beginning of the year there will be shortage of water in various places, and the first crops will not succeed.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐ݇ܢܫܐ ܫܚܝܩܐ ܢܗܘܘܢ: ܒܣܬܘܐ ܘܒܩܝܛܐ ܢܬܟܪܗܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">People will be distressed: in winter and in summer they will be ill.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܥܒܘܪܐ ܢܐܩܪ ܒܚܘܪܢ ܘܒܬܕܡܘܪ.</rdg>
-            <rdg type="translation" xml:lang="en">Corn will be dear in Hauran and in Palmyra.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܠܡܗ̇ ܕܫܢ݇ܬܐ ܢܫ̈ܘܝܢ ܩܠܝܠ: ܘܚܡܪܐ ܢܗܘܐ ܙܥܘܪ ܘܒܣܝܡ.</rdg>
-            <rdg type="translation" xml:lang="en">At the end of the year prices will be slightly moderate, and wine will be scarce and sweet.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܬܡܪ̈ܐ ܢܣܓܘܢ: ܘܡܫܚܐ ܢܐܩܪ: ܘܚܛ̈ܐ ܘܣܥܪ̈ܐ ܢܫ̈ܘܝܢ: ܘܕܩܐ ܢܙܥܪ.</rdg>
-            <rdg type="translation" xml:lang="en">Dates will abound, oil will be dear, wheat and barley will be at a moderate price, and cereals will be scarce.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܛܪܿܐ ܢܬܟܠܐ: ܘܠܐ ܢܚܘܬ ܥܠ ܐܪܥܐ ܬܠܬܝܢ ܝܘ̈ܡܝܢ ܥܕܡܐ ܠܦܨܚܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Rain will fail and will not fall upon the earth during thirty days down to the time of Passover.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܠܟܐ ܢܬܟܬܫ ܥܡ ܡܠܟܐ ܘܢܩܛܠܝܘܗܝ.</rdg>
-            <rdg type="translation" xml:lang="en">The king will fight against another king and will kill him.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܠܟܣܢܕܪܝܐ ܬܐܒܕ: ܘܢܝܠܘܣ ܠܐ ܢܣܩ ܛܒܐܝܬ.</rdg>
-            <rdg type="translation" xml:lang="en">Living in Alexandria will be dear. The Nile will not overflow well.</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܬܬܒܪ̈ܢ ܐܠܦ̈ܐ ܣܓܝ̈ܐܬܐ: ܘܒܫܘܠܡ ܫܢܬܐ ܗܘܿܝܐ ܫܘܝܘܬܐ ܕܟܠ ܡܕܡ.</rdg>
-            <rdg type="translation" xml:lang="en">Many ships will break up. At the end of the year there will be moderation in everything.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="7">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܡܣܐܬܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ: ܡܛܪ̈ܐ ܪ̈ܒܝܥܝܐ ܢܗܘܘܢ: ܘܫܢ݇ܬܐ ܬܬܗܦܟ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Libra: There will be early rains, and the (order of the) year will be inverted.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܚܘܢ ܐ݀ܢܫܐ ܡ̣ܢ ܪܘܚ ܕܡܕܢܚܐ.</rdg>
-            <rdg type="translation" xml:lang="en">People will be secure from the East wind.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܬܐܢ̈ܐ ܠܐ ܢܗܘܐ ܒܗܘܢ ܦܐܪ̈ܐ: ܘܬܡܖܪ̈ܐ ܘܡܫܚܐ ܢܣܓܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Fig-trees will not bear fruit. Dates and oil will abound.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܚܡܪܐ ܢܐܩܪ: ܘܚܛ̈ܐ ܢܫܘ̈ܝܢ ܣܓܝ.</rdg>
-            <rdg type="translation" xml:lang="en">Wine will be dear. Wheat will be at a very moderate price.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܩܡܨܐ ܢܬܚܕܬ.</rdg>
-            <rdg type="translation" xml:lang="en">Locusts will appear.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܦܪܺܝܩܝ ܢܗܘܐ ܒܗܿ ܩܪܒܐ ܩܫܝܐ: ܘܟܘܪ̈ܗܢܐ ܩܫܝ̈ܐ ܒܒܢܝ̈ܢܫܐ ܢܗܘܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">In Africa there will be a great and severe war. People will have acute diseases.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܡܨܥܬܗܿ ܕܫܢܵܬܐ ܢܬܟܠܐ ܡܛܪܐ ܝܘܡܝ̈ܢ ܥܣܪܝܢ.</rdg>
-            <rdg type="translation" xml:lang="en">In the middle of the year rain will fail during twenty days.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܪ̈ܥܬܐ ܟܠܗܝܢ ܢܛ̈ܐܒܢ.</rdg>
-            <rdg type="translation" xml:lang="en">All fields will be good.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܝܘܕ ܐܘ ܒܝܬ ܢܬܟܪܗ: ܘܢܗܘܐ ܠܗ ܪܥܝܐ: ܘܢܐܙܠ ܒܓܠܘܬܐ ܡ̣ܢ ܐܪܥܗ.</rdg>
-            <rdg type="translation" xml:lang="en">Anyone having in his name (the letters) Yodh or Beith will be ill, will have anxiety, and will emigrate from his country.</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܚܡܪܐ ܢܬܚܒܠ: ܘܓܘܪܐ ܢܣܓܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Wine will be spoiled, and adultery will increase with the increase of foul desires.</rdg>
-          </app>
-        </p>
-        <p n="11">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܠܟܐ ܢܟܬܪ ܒܚܕܐ ܕܘܟܬܐ: ܘܢܐܙܠ ܫܘܠܛܢܐ ܡ̣ܢ ܐܪܥܐ.</rdg>
-            <rdg type="translation" xml:lang="en">The king will remain in one place, and power will cease in the earth,</rdg>
-          </app>
-        </p>
-        <p n="12">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܖܽܘ̈ܪܒܢܐ ܢܥܪܩܘܢ ܒܝܡܐ: ܘܢܗܘܐ ܒܝܢܬܗܘܢ ܩܪܒܐ ܩܫܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">and high officials will flee into the sea, and there will be between (them) a severe war.</rdg>
-          </app>
-        </p>
-        <p n="13">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܗܘܐ ܒܓܠܝܠܐ ܙܘܥܐ ܩܫܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">In Galilee there will be a violent earthquake.</rdg>
-          </app>
-        </p>
-        <p n="14">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܠܣ̈ܛܝܐ ܢܦܩܘܢ ܒܚܘܪܢ ܘܒܕܪܡܣܘܩ.</rdg>
-            <rdg type="translation" xml:lang="en">Marauders will appear in Hauran and in Damascus.</rdg>
-          </app>
-        </p>
-        <p n="15">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܝܠܘܣ ܢܗܪܐ ܢܣܩ ܟܠܗ ܡܣܩܗ: ܘܢܗܘܐ ܒܡܨܪܝܢ ܫܪܥܘܛܐ ܩܫܝܐ: ܘܢܫܬܚܩܘܢ ܐ݇ܢܫܐ ܡܼܛܠ ܡܛܪܿܐ.</rdg>
-            <rdg type="translation" xml:lang="en">The river Nile will overflow to its highest rate. In Egypt there will be a cruel pest. People will be in distress because of the shortage of rain.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="8">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܥܩܪܒܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܬܫܒ ܪܽܘܚܐ ܕܓܪܒܝܐ ܒܫܘܪܝܗ̇ ܕܫܢ݇ܬܐ: ܘܢܗܘܘܢ ܡܛܪ̈ܐ ܣܓܝ̈ܐܐ ܪ̈ܒܝܥܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Scorpio: A North wind will blow at the beginning of the year, and there will be many early rains.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܢܐܩܪ ܟܠ ܡܕܡ: ܘܡܛܪܐ ܢܙܥܪ: ܥܕܡܐ ܕܼܢܦܩܘܢ ܐ݇ܢܫܐ ܒܒܥܘܬܐ ܘܨܠܘܬܐ ܘܙܕܩ̈ܬܐ ܢܒܥܘܢ ܡ̣ܢ ܐܠܗܐ ܚܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">At the end of the year everything will be dear, and rain will be so scarce that people will address prayers and supplications to the living God, for the sake of food.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܘܪܗܢܐ ܢܗܘܐ ܒܢܫ̈ܐ ܕܒܛ̈ܢܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Pregnant women will have diseases.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܣܓܝ̈ܐܐ ܡ̣ܢ ܒܢ̈ܝ̈ܢܫܐ ܢܫܢܘܢ ܡ̣ܢ ܐܬܪ̈ܘܬܗܘܢ ܡ̣ܢ ܐܘܠܨܢܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Many people will emigrate from their countries out of distress.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܚܛ̈ܐ ܘܣܥܪ̈ܐ ܥ̈ܐܠܢ ܩܠܝܠ: ܘܕܩܐ ܢܐܠ.</rdg>
-            <rdg type="translation" xml:lang="en">Wheat and barley will be ingathered, but only in small quantity; cereals will be ingathered.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܚܡܪܐ ܘܡܫܚܐ ܢܗܘܐ.</rdg>
-            <rdg type="translation" xml:lang="en">There will be wine and oil.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܫܘܚ̈ܢܐ ܢܦܩܘܢ ܒܓܘܫ̈ܡܐ ܕܒܢܝ̈ܢܫܐ: ܘܠܐ ܢܚܣܪܘܢ ܐܢܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Boils will spring forth in the bodies of people but they will do no harm.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܝܠܘܣ ܢܣܩ ܦܠܓܗ ܕܡܣܩܐ.</rdg>
-            <rdg type="translation" xml:lang="en">The Nile will overflow half of its normal rate.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܬܘ ܐܘ ܝܘܕ ܢܬܟܪܗ ܘܢܬܚܠܡ.</rdg>
-            <rdg type="translation" xml:lang="en">Anyone having in his name (the letters) Taw, or Yodh, will be ill, but will recover.</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܠ ܕܡܬܝܠܕ ܒܥܩܪܒܐ ܚܝܿܐ: ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܡܬܩܛܠ.</rdg>
-            <rdg type="translation" xml:lang="en">Anyone born in Scorpio will live, but will be killed at the end of the year.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="9">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܩܫܬܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܒܝܬ ܐܘ ܦܐ ܢܗܘܐ ܠܗ ܫܚܩܐ ܘܟܘܪܗܢܐ ܩܫܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Sagittarius: Anyone having in his name (the letters) Beith, or Pe, will have severe illness and distress,</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܪܝܗܿ ܕܸܫܢ݇ܬܐ ܢܬܩܫܐ: ܘܢܫܬܚܩܘܢ ܒܢܝ̈ܢܫܐ ܒܕܘܟ̈ܬܐ ܣܓܝ̈ܐܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">which will be aggravated at the beginning of the year. People will be in distress in many places.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܪܥܐ ܕܡܨܪܝܢ ܠܐ ܢܙܪܥܘܢ ܒܗܿ ܡܕܡ ܐܠܐ ܩܠܝܠ.</rdg>
-            <rdg type="translation" xml:lang="en">Little will be sown in the land of Egypt.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܡܨܥܬ ܫܢ݇ܬܐ ܢܗܘܐ ܡܛܪܿܐ ܣܿܓܝܐܐ.</rdg>
-            <rdg type="translation" xml:lang="en">In the middle of the year there will be much rain.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܚܡܠܘܢ ܒܢܝ̈ܢܫܐ ܥܒܘܪܐ ܒܒܝܬ ܐܘܨܪ̈ܐ ܡܸܛܠ ܙܥܘܪܘܬ ܡܛܪܐ.</rdg>
-            <rdg type="translation" xml:lang="en">People will store corn in the barns because of the shortage of rain.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܙܪܥܐ ܠܐ ܢܗܘܐ ܫܦܝܪ: ܘܫܘܠܡܗܿ̇ ܕܸܫܢ݇ܬܐ ܠܐ ܢܛܐܒ.</rdg>
-            <rdg type="translation" xml:lang="en">Crops will not be good, so also will be the case at the end of the year.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܚܡܪܐ ܘܡܫܚܐ ܢܫܘܘܢ ܣܓܝ.</rdg>
-            <rdg type="translation" xml:lang="en">Wine and oil will be at a very moderate price.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܓܘܪܐ ܢܣܓܐ: ܘܩܛܝܢܬܐ ܬܐܒܕܼ.</rdg>
-            <rdg type="translation" xml:lang="en">Adultery will increase, and small cattle will perish.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="10">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܓܕܝܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܩܘܦ ܢܬܟܪܗ ܘܢܬܒܙܙ ܘܢܒܠܥ ܒܣܝܦܐ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Capricornus: Anyone having in his name (the letters) Koph will be ill, will be plundered, and will be struck with sword.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܪܘܚܐ ܡܕܢܚܝܬܐ ܡܕܼܒܪܐ ܠܗܿ ܠܫܢ݇ܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">An East wind will dominate the year.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܠ ܕܩܕܸܡ ܙܪܿܥ ܢܟܫܪ: ܐ݇ܚܪܝܐ ܠܐ ܢܟܫܪ.</rdg>
-            <rdg type="translation" xml:lang="en">Everyone should sow earlier; the last in sowing will not succeed.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܪܝܐ ܕܸܫܢ݇ܬܐ ܢܐܩܪ ܥܒܘܪܐ: ܘܢܣܓܘܢ ܓܠ̈ܠܐ ܘܡܚ̈ܫܘܠܐ: ܘܐܠܦܐ ܢܐܒܕܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">At the beginning of the year corn will be dear. Waves and billows will increase. Ships will perish.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܡܨܥܬܗܿ ܕܫܢ݇ܬܐ ܢܐܩܪ ܥܒܘܪܿܐ.</rdg>
-            <rdg type="translation" xml:lang="en">In the middle of the year corn will be dear.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܣܓܘܢ ܓܢܒ̈ܐ: ܘܦܠܚ̈ܘܗܝ ܕܫܘܠܛܢܐ ܒܝܫܝܢ ܢܗܘܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Thieves will increase. The officials of the state will be bad.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܕܒܘܪ̈ܐ ܘܫܪܨܗܿ ܕܐܪܥܐ ܢܣܓܘܢ: ܘܢܒܐܫܘܢ ܐ݀ܢܫܐ ܣܓܝ̈ܐܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Wasps and reptiles of the earth will multiply and injure many people.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐ݇ܢܫܐ ܣܓܝ̈ܐܐ ܢܫܢܘܢ ܡ̣ܢ ܕܘܟܐ ܠܕܘܟܐ ܡܢ ܩܪܒܐ ܕܗܿܘܐ: ܘܢܣܓܘܢ ܩܪ̈ܒܐ ܒܐܪܥܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Many people will move from one place to another because of the war which will take place. Wars will increase in the earth.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܠܡܗܿ ܕܫܢܵܬܐ ܢܙܥܪ ܡܛܪܐ.</rdg>
-            <rdg type="translation" xml:lang="en">At the end of the year rain will be scarce.</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܕܘܟܝ̈ܬܐ ܢܐܠ ܙܪܥܐ: ܘܒܕܘܟ̈ܬܐ ܢܐܒܕܼ ܙܪܥܐ.</rdg>
-            <rdg type="translation" xml:lang="en">In some places the standing corn will yield something, and in others it will perish.</rdg>
-          </app>
-        </p>
-        <p n="11">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܟܘܪܗܢܐ ܒܕܪܡܣܘܩ ܢܗܘܐ ܘܒܚܘܪܢ: ܘܟܦܢܐ ܒܣܦܪ ܝܡܐ.</rdg>
-            <rdg type="translation" xml:lang="en">There will be pest in Damascus and in Hauran, and famine in the littoral of the sea.</rdg>
-          </app>
-        </p>
-        <p n="12">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܓܘܪܐ ܢܣܓܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Adultery will increase.</rdg>
-          </app>
-        </p>
-        <p n="13">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐ݇ܢܫܐ ܢܣܩܘܢ ܒܥܘܬܐ ܘܨ̈ܠܘܬܐ ܘܨܘܡܐ ܘܙܕܩ̈ܬܐ ܡܸܛܠ ܡܛܪܐ: ܘܙܪܥܐ ܕܫܩܝܐ ܛܒ ܢܗܘܐ.</rdg>
-            <rdg type="translation" xml:lang="en">People will offer prayers and supplications, will fast and give alms for the sake of rain. The watered cereals will be normal.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="11">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܐܡܬܝ ܕܡܬܝܠܕܐ ܫܢ݇ܬܐ ܒܕܘܠܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܠܡܕ ܐܘ ܦܐ ܢܬܟܪܗ: ܐܘ ܢܥܩܪ ܡ̣ܢ ܒܙܘܙܝܐ.</rdg>
-            <rdg type="translation" xml:lang="en">When the year begins in Aquarius: Anyone having in his name (the letters) Lamadh or Pe will be ill, or will be uprooted through pillage.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܪܿܝܗܿ ܕܸܫܢ݇ܬܐ ܢܕܥܪ ܡܛܪܐ: ܘܢܝܠܘܣ ܢܣܩ ܟܠܗ ܡܣܩܗ.</rdg>
-            <rdg type="translation" xml:lang="en">At the beginning of the year rain will be scarce, and the Nile will overflow to its highest rate.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܨܪܿܝܢ ܥܠ ܦܠܣܛܝܢܝ ܬܥܠ.</rdg>
-            <rdg type="translation" xml:lang="en">Egypt will invade Palestine.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܡܪ̈ܐ ܘܥܙ̈ܐ ܢܟܫܪܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Lambs and goats will prosper.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܪܽܘܚܐ ܡܥܪܒܝܬܐ ܗܝِ ܡܕܒܪܐ ܠܫܢ݇ܬܐ ܗܝܿ.</rdg>
-            <rdg type="translation" xml:lang="en">A West wind will dominate that year.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܠܟܐ ܢܩܪܒ ܥܡ ܡܠܟܐ.</rdg>
-            <rdg type="translation" xml:lang="en">A king will fight against a king.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܙܪܥܐ ܩܕܝܡ ܢܟܫܪ: ܘܕܩܐ ܠܐ ܢܫܘܚ ܣܓܝ ܐܠܐ ܥܿܐܠ.</rdg>
-            <rdg type="translation" xml:lang="en">Early crops will succeed, and cereals will not be plentiful, but normal.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܬܓܪ̈ܐ ܢܒܥܘܢ ܡܥܕܪܢܘܬܐ ܡ̣ܢ ܐܠܗܐ ܚܝܐ: ܘܟܘܪ̈ܗܢܐ ܢܣܓܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Merchants will seek help from the living God, and illnesses will multiply.</rdg>
-          </app>
-        </p>
-      </div>
-      <div type="chapter" n="12">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܐܢ ܒܢܘܢ̈ܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܟܦ ܐܘ ܡܝܡ ܢܬܟܪܗ ܘܢܬܒܙܙ.</rdg>
-            <rdg type="translation" xml:lang="en">If the year begins in Pisces: Anyone having in his name (the letters) Koph or Mim will be ill, and will be plundered.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܫܢ݇ܬܐ ܛܒܬܐ ܬܗܘܐ: ܘܙܪܥܐ ܛܒ ܘܫܦܝܪ: ܘܡܛܪ̈ܐ ܪ̈ܒܝܥܝܐ ܢܗܘܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">The year will be good, crops will be very good, and there will be early rains.</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܝܡܐ ܢܣܓܐ ܨܝܕܗ: ܘܡܐ ܕܒܚܳܫ ܐܠܦܐ ܢܬܬܒܪ̈ܢ.</rdg>
-            <rdg type="translation" xml:lang="en">The sea will yield abundant fishing, but when it is rough ships will break up.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܚܡܪܐ ܘܡܫܚܐ ܘܚܛ̈ܐ ܟܠܗܘܢ ܢܫܦܪܘܢ: ܘܙܪ̈ܥܐ ܛܒ ܢܣܓܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">Wine, oil, and wheat will all be good, and standing crops will be very plentiful.</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܕ̈ܝ̈ܢܬܐ ܢܗܘܐ ܒܗܘܢ ܩܪ̈ܒܐ ܘܚܪܒܐ ܩܛܝܢܐ: ܘܩܘܪ̈ܝܐ ܬܐܒܕܢ: ܘܢܫܢܘܢ ܡ̣ܢ ܕܘܟܐ ܠܕܘܟܐ.</rdg>
-            <rdg type="translation" xml:lang="en">In the cities there will be wars and cruel devastation; villages will be destroyed, and people will move from place to place.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܦܩܘܢ ܠܣ̈ܛܝܐ ܡܼܢ ܦܠܣܛܝܢܐ: ܘܢܡܚܘܢ ܩܪܒܐ ܪܒܐ ܥܡ ܬܠܬ ܡܕܼܝ̈ܢܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Brigands will go forth from Palestine, and will wage a great battle against three cities.</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܪ̈ܗ݇ܘܡܝܐ ܙܟܝܢ ܘܡܙܕܟܝܢ: ܘܟܘܪܗܢܐ ܪܒܐ ܢܗܘܐ ܒܒܢܝ̈ܢܫܐ.</rdg>
-            <rdg type="translation" xml:lang="en">The Romans will conquer and be conquered, and there will be great illness among the sons of men.</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܢܦܘܩ ܓܒܪܿܐ ܐܘܟܡܐ ܕܒܥܐ ܡܠܟܘܬܐ: ܘܒܝܬܐ ܕܡܠܟܘܬܐ ܢܐܒܕ.</rdg>
-            <rdg type="translation" xml:lang="en">A dark-complexioned man will come forth seeking the kingdom, and the royal house will perish.</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡܠܟܐ ܒܝܫܐ ܢܫܡܥ ܡܢܘ ܐܡܪܿܝܢ ܒܢ̈ܝܢܫܐ: ܘܡܚܪܒ ܡܕܝ̈ܢܬܐ ܣܓܝ̈ܐܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">A wicked king will listen to gossip, and will lay waste many cities.</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܠܝܬ ܐܢܫ ܕܡܫܟܚ ܕܢܟܠܝܘܗܝ: ܘܕܚܠܬܐ ܕܐܠܗܐ ܘܪ̈ܚܡܘܗܝ ܦܪܝܩܝܢ ܡܢܗ.</rdg>
-            <rdg type="translation" xml:lang="en">There will be no one able to stop him, and the fear of God and His mercy will be far from him.</rdg>
-          </app>
-        </p>
-        <p n="11">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܫܘܠܡܗܿ ܕܫܢ݇ܬܐ ܢܗܘܐ ܫܝܢܐ ܘܫܠܡܐ ܒܒܢܝ̈ܢܫܐ: ܘܚܘܒܐ ܘܐܘܝܘܬܐ ܬܗܘܐ ܒܝܢܬ ܟܠܗܘܢ ܡܠܟ̈ܐ ܕܐܝܬ ܒܟܠܗ̇ ܐܪܥܐ.</rdg>
-            <rdg type="translation" xml:lang="en">At the end of the year there will be peace and tranquillity among men, and love and harmony will prevail among all the kings of the whole earth.</rdg>
-          </app>
-        </p>
+      <div type="translation" n="Syriac and English" xml:lang="syr" xml:id="ver_Syriac_and_English">
+        <head>Syriac and English</head>
+        <div type="chapter" n="1" xml:id="TracSem.ver_Syriac_and_English.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.1.1">
+            <app xml:id="u0_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܬܘܒ ܡܡܠܠܐ ܕܣܝܡ ܠܫܝܡ ܒܪ ܢܘܚ ܥܠ ܡܘܠܕܐ ܕܫܢ݇ܬܐ ܘܟܠܡܐ ܕܗܿܘܐ ܒܗ:</lem>
+              <rdg wit="#Trans" n="1">Discourse written by Shem son of Noah about the beginning of the year and all that happens in it.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.1.2">
+            <app xml:id="u1_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܐܢ ܒܐܡܪܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ, ܫܢ݇ܬܐ ܩܛܝܢܬܐ ܬܗܘܐ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Aries: The year will be hard.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.1.3">
+            <app xml:id="u2_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܖ̇ܒܥܬ ܪ̈ܓܠܝܗܿ ܬܡܘܬ.</lem>
+              <rdg wit="#Trans" n="1">The quadrupeds will die.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.1.4">
+            <app xml:id="u3_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܥܢ̈ܢܐ ܣܓܝ̈ܐܬܐ ܠܐ ܢܬܚ̈ܙܝܢ ܘܠܐ ܢܗ̈ܘܝܢ.</lem>
+              <rdg wit="#Trans" n="1">There will not be many clouds.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.1.5">
+            <app xml:id="u4_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܙܪܥܐ ܩܘܡܬܐ ܠܐ ܗܘܿܝܐ ܠܗ: ܘܦܪ݇ܕܬܗ ܕܝܢ ܬܗܘܐ ܘܬܫܡܢ.</lem>
+              <rdg wit="#Trans" n="1">The standing corn will not have good size, but it will have fat grains.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.1.6">
+            <app xml:id="u5_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܗܪܿܐ ܕܢܝܠܘܣ ܡܣܩܐ ܫܦܝܪ ܢܣܩ.</lem>
+              <rdg wit="#Trans" n="1">The river Nile will overflow well.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.1.7">
+            <app xml:id="u6_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܠܟܐ ܕܪ̈ܗ݇ܘܡܝܐ ܠܐ ܢܩܘܐ ܒܚܕܐ ܕܘܟܬܐ.</lem>
+              <rdg wit="#Trans" n="1">The king of the Romans will not remain in one place.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.1.8">
+            <app xml:id="u7_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܘܟ̈ܒܐ ܕܫܡܝܐ ܢܬܒܕܪܘܢ ܐܝܟ ܙܠܝ̈ܩܐ ܕܢܘܪܐ.</lem>
+              <rdg wit="#Trans" n="1">The stars of heaven will be scattered like rays of fire.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.1.9">
+            <app xml:id="u8_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܣܗܪܐ ܢܚܫܟ.</lem>
+              <rdg wit="#Trans" n="1">The moon will suffer eclipse.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TracSem.ver_Syriac_and_English.1.10">
+            <app xml:id="u9_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܙܪܥܐ ܩܕܡܝܐ ܢܐܒܕ: ܘܙܪܥܐ ܐ݇ܚܪܝܐ ܢܬܚܡܘܠ.</lem>
+              <rdg wit="#Trans" n="1">The first crops will perish, and the second will be ingathered.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TracSem.ver_Syriac_and_English.1.11">
+            <app xml:id="u10_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܡܢ ܦܨܚܐ ܥܒܘܪܿܐ ܝܪܩܢܐ ܗܘܐ ܠܗ.</lem>
+              <rdg wit="#Trans" n="1">From Passover corn will be mildewed.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TracSem.ver_Syriac_and_English.1.12">
+            <app xml:id="u11_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܫܢ݇ܬܐ ܒܝܫܬܐ ܐܝܬܝܗܿ ܕܩܖܒܐ ܪܒܐ ܘܫܚܩܐ ܒܟܠܗܿ ܐܪܥܐ: ܘܝܬܝܪܐܝܬ ܒܐܪܥܐ ܕܡܨܪܝܢ.</lem>
+              <rdg wit="#Trans" n="1">The year will be bad, with severe war and distress over all the earth, especially over the land of Egypt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TracSem.ver_Syriac_and_English.1.13">
+            <app xml:id="u12_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܬܬܒܪ̈ܢ ܐܠܦ̈ܐ ܣܓܝܐܬܐ ܡܐ ܕܸܒܚܿܫ ܝܡܐ.</lem>
+              <rdg wit="#Trans" n="1">Many ships will break up when the sea is rough.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TracSem.ver_Syriac_and_English.1.14">
+            <app xml:id="u13_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܫܚܐ ܢܫܘܐ ܒܐܦܪܝܩܝ: ܘܚܛ̈ܐ ܢܙܥܪ̈ܢ: ܒܕܪܡܣܘܩ ܘܒܚܘܪܢ ܘܒܦܠܣܛܝܢܝ ܢܫܘ̈ܝܢ.</lem>
+              <rdg wit="#Trans" n="1">Oil will be at a moderate price in Africa, and wheat will be at a low price; in Damascus, Hauran, and Palestine it will be at a moderate price.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TracSem.ver_Syriac_and_English.1.15">
+            <app xml:id="u14_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܘܪ̈ܗܢܐ ܡܫܚ̈ܠܦܐ ܘܡ̈ܚܘܬܐ ܘܙܘܥܐ ܢܗܘܐ ܒܗܿ: ܘܡܬܦܠܛܐ ܡܢܗܿ ܘܬܫܬܘܙܒ.</lem>
+              <rdg wit="#Trans" n="1">(Palestine) will have different kinds of diseases, plagues, and earthquake, but it will be delivered from them and saved.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TracSem.ver_Syriac_and_English.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.2.1">
+            <app xml:id="u15_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܡܬܝܠܕܐ ܫܢ݇ܬܐ ܒܬܘܪܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܒܝܬ ܐܘ ܝܘܕ ܐܘ ܟܦ ܢܬܟܪܗ: ܐܘ ܢܒܠܥ ܒܦܪܙܠܐ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Taurus: Anyone having in his name (the letters) Beith, Yodh, or Koph will be ill, or will be killed with iron weapons.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.2.2">
+            <app xml:id="u16_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܗܘܐ ܙܘܥܐ.</lem>
+              <rdg wit="#Trans" n="1">There will be earthquake.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.2.3">
+            <app xml:id="u17_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܬܦܘܩ ܡ̣ܢ ܡܨܪܝܢ ܪܘܚܐ ܘܬܡܠܝܗ̇ ܠܟܠܗ̇ ܐܪܥܐ.</lem>
+              <rdg wit="#Trans" n="1">A wind will start from Egypt and spread over all the earth.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.2.4">
+            <app xml:id="u18_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܗ̈ܘ̈ܝܢ ܒܗܿ ܚ̈ܛܐ ܘܡܛܪܐ ܪܽܘ̈ܪܒܐ: ܘܖܘܪ̈ܒܢܐ ܕܐܪܥܐ ܘܕܼܐܬܪ̈ܘܬܐ ܕܚܕܪ̈ܝܗܘܢ ܢܘܒܕܘܢ ܐܢܘܢ.</lem>
+              <rdg wit="#Trans" n="1">The year will be rich in wheat and abundant rains, but the chiefs of the land and of the surrounding places will destroy that (wheat).</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.2.5">
+            <app xml:id="u19_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܛܪܿܐ ܕܫܢ݇ܬܐ ܢܬܚܣܟ ܬܠܬܐ ܝܪ̈ܚܝܢ: ܘܡ̣ܢ ܒܬܖܿܟܢ ܥܒܘܪܿܐ ܢܐܩܪ ܒܢܣܝܘܢܐ ܝܘ̈ܡܬܐ ܬܠܬܝܢ ܘܫܬܐ.</lem>
+              <rdg wit="#Trans" n="1">The yearly rain will fail during three months, and then corn will be very dear during thirty-six days;</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.2.6">
+            <app xml:id="u20_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܡܘܬܘܢ ܐܢܫܐ ܣܓܝܐܐ ܡ̣ܢ ܟܘܪ̈ܗܢܐ ܕܓܪܓܪܬܐ: ܘܩܛܝܢܘܬܐ ܬܐܒܕܼ.</lem>
+              <rdg wit="#Trans" n="1">many people will die from diseases of the throat, and then tribulation will cease.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.2.7">
+            <app xml:id="u21_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܙܪܥܐ ܩܕܡܝܐ ܢܐܒܕܼ ܗܟܢܐ: ܘܙܪܥܐ ܐ݇ܚܪܝܐ ܢܐܠ: ܘܣܥܪ̈ܐ ܘܕܼܩ̈ܐ ܢܐܠܘܢ.</lem>
+              <rdg wit="#Trans" n="1">The first crops (of wheat) will perish, but as (above), the second crops will be ingathered, and barley with the watered cereals will be ingathered also.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.2.8">
+            <app xml:id="u22_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܕܼܝܘ̈ܐ ܥܠ ܒܢܝ̈ܢܫܐ ܢܦܠܘܢ: ܘܡܕܡ ܠܐ ܢܚܣܪܘܢ ܐܢܘܢ.</lem>
+              <rdg wit="#Trans" n="1">The devils will attack the sons of men, but they will not harm them in anything.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.2.9">
+            <app xml:id="u23_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡ̈ܠܟܐ ܬܪܶܝܢ ܢܩܘܡܘܢ ܥܠ ܚܕܕܵܐ.</lem>
+              <rdg wit="#Trans" n="1">Two kings will rise against each other.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TracSem.ver_Syriac_and_English.2.10">
+            <app xml:id="u24_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܝܠܘܣ ܢܗܖܿܐ ܪܒܐ ܢܣܩ ܠܥܠ ܡ̣ܢ ܡܫܘܚܬܗ.</lem>
+              <rdg wit="#Trans" n="1">The great river Nile will overflow above its normal rate.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TracSem.ver_Syriac_and_English.2.11">
+            <app xml:id="u25_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܗܠܝܢ ܕܐܝܬܝܗܘܢ ܒܐܠܦܐ ܒܓܘ ܝܡܐ ܘܐ݇ܢܫܐ ܕܼܐܝܬ ܒܝܡܐ ܢܗܘܘܢ ܒܫܚܩܐ ܩܫܝܐ: ܘܒܚܪܬܗ̇ ܕܫܢ݇ܬܐ ܒܘܪܟܬܐ ܣܓܝܐܬܐ ܬܗܘܐ.</lem>
+              <rdg wit="#Trans" n="1">Those who are on board a ship in the sea, and those who are on the sea will be in great distress. At the end of the year there will be great blessing.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="TracSem.ver_Syriac_and_English.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.3.1">
+            <app xml:id="u26_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܬܪܝܢ ܨܠܡ̈ܐ ܡܬܝܠܕܐ ܫܢܵܬܐ: ܢܗܘܐ ܣܗܪܶܐ ܫܦܝܪ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Gemini (the Two Figures): The moon will be good.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.3.2">
+            <app xml:id="u27_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܬܫܒ ܪܽܘܚܐ ܕܬܝܡܢܐ ܘܡܢܗ̇ܿ ܢܗܘܐ ܡܛܪܐ.</lem>
+              <rdg wit="#Trans" n="1">A South wind will blow, from which rain will come.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.3.3">
+            <app xml:id="u28_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܬܘ ܐܘ ܚܝܬ ܐܘ ܡܝܡ ܢܗܘܐ ܒܦܪܨܘܦܗ ܓܪܳܒܐ ܐܘ ܫܘܚܢܐ.</lem>
+              <rdg wit="#Trans" n="1">Anyone having in his name the letters Taw, Heth, or Mim will have tumours and boils in his face.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.3.4">
+            <app xml:id="u29_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܗܘܐ ܒܫܘܪܝܗܿ ܕܸܫܢ݇ܬܐ ܩܖܒܐ ܩܫܝܐ.</lem>
+              <rdg wit="#Trans" n="1">At the beginning of the year there will be a severe war.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.3.5">
+            <app xml:id="u30_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܛܪ̈ܐ ܪܒܝܥܝܐ ܢܗܘܘܢ: ܘܙܪܥܐ ܢܫܦܖܿ: ܘܝܬܝܪܐܝܬ ܙܪܥܐ ܕܫܩܝܐ.</lem>
+              <rdg wit="#Trans" n="1">There will be early rains, and the standing corn will be good, especially in the watered places.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.3.6">
+            <app xml:id="u31_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܥܘܩܒܪ̈ܬܐ ܢܣܓܝܢ ܒܐܪܥܐ.</lem>
+              <rdg wit="#Trans" n="1">Mice will abound in the earth.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.3.7">
+            <app xml:id="u32_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘ̈ܪܗ݇ܘܡܝܐ ܘܦܪ̈ܣܝܐ ܢܥܒܕܘܢ ܩܖܒܐ ܩܫܝܐ ܥܡ ܚܕ̈ܕܐ: ܘܢܦܩܘܢ ܪܗ݇ܘܡܝܐ ܒܐܠܦ̈ܐ ܒܝܡܐ: ܘܢܥܒܕܘܢ ܩܪܒܐ ܘܢܘܒܕܘܢ ܐܢܘܢ.</lem>
+              <rdg wit="#Trans" n="1">The Romans and the Persians will wage a severe war against one another, and the Romans will come forth by ships on the sea, will fight and destroy them.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.3.8">
+            <app xml:id="u33_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܦܩܘܢ ܒܥܠܡܐ ܗܢܐ ܐܢܫܐ ܒܝ̈ܫܐ ܘܢܥܒܕܘܢ ܒܝܫܬܐ: ܘܢܗܘܐ ܪܢܝܐ ܘܫܚܩܐ ܩܫܝܐ.</lem>
+              <rdg wit="#Trans" n="1">Malicious people will rise in the world, who will do mischief, and there will be great anxiety and distress.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.3.9">
+            <app xml:id="u34_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܠܡܗ̇ ܕܸܫܢ݇ܬܐ ܬܗܘܐ ܛܒܬܐ: ܘܢܝܠܘܣ ܢܗܪܐ ܢܣܩ ܫܦܝܪ.</lem>
+              <rdg wit="#Trans" n="1">Good will come at the end of the year and the river Nile will overflow well.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="TracSem.ver_Syriac_and_English.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.4.1">
+            <app xml:id="u35_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܣܪܛܢܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܬܗܘܐ݀ ܒܫܘܪܝܗܿ ܕܫܢ݇ܬܐ ܫܘܝܘܬܐ ܕܥܒܘ̇ܪܿܐ: ܘܢܗܘܘܢ ܐ݇ܢܫܐ ܛܠܒܐܝܬ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Cancer: At the beginning of the year corn will be at a moderate price, and people will be comfortable.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.4.2">
+            <app xml:id="u36_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܝܠܘܣ ܢܣܩ ܦܠܓܗ ܕܡܣܩܗ.</lem>
+              <rdg wit="#Trans" n="1">The Nile will overflow at half its normal rate.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.4.3">
+            <app xml:id="u37_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܠܟܣܢܕܪܝܐ ܬܬܐܠܨ ܘܢܗܘܐ ܒܗܿ ܫܚܩܐ ܡ̣ܢ ܡܘܬܢܐ.</lem>
+              <rdg wit="#Trans" n="1">Alexandria will be besieged, and distress will be in it from pest.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.4.4">
+            <app xml:id="u38_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܨܡܚܘܢ ܟܘܟܒ̈ܐ ܪܽܘܪܒܐܝܬ: ܘܣܗܪܐ ܢܚܫܟ.</lem>
+              <rdg wit="#Trans" n="1">Stars will shine very brightly, and the moon will suffer eclipse.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.4.5">
+            <app xml:id="u39_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܠܦ̈ܐ ܣܓܝ̈ܐܬܐ ܢܬܬܒܪ̈ܢ ܒܝܡܐ.</lem>
+              <rdg wit="#Trans" n="1">Many ships will break up in the sea.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.4.6">
+            <app xml:id="u40_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܪܝܗܿ ܕܫܢ݇ܬܐ ܢܐܩܪ̈ܢ ܚܛܐ ܘܣܥܪ̈ܐ.</lem>
+              <rdg wit="#Trans" n="1">At the beginning of the year wheat and barley will be dear.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.4.7">
+            <app xml:id="u41_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܪ̈ܘܚܐ ܢܣܓܝܢ: ܘܐܢܫܐ ܣܓܝ̈ܐܐ ܢܬܟܪܗܘܢ ܡ̣ܢ ܚܨܐ ܘܡܼ̣ܢ ܫܥܠܐ ܘܪ̈ܓܠܐ.</lem>
+              <rdg wit="#Trans" n="1">Winds will abound, and many people will suffer from backaches, coughs, and soreness of the feet and eyes.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.4.8">
+            <app xml:id="u42_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܚܡܪܿܐ ܢܣܓܐ.</lem>
+              <rdg wit="#Trans" n="1">Wine will be abundant.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.4.9">
+            <app xml:id="u43_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܬܘܪ̈ܐ ܘܥ̈ܢܐ ܘܩ̈ܛܝܢܬܐ ܢܐܒܕܘܢ: ܘܕܼܩ̈ܐ ܢܐܒܕܘܢ: ܘܡܫܚܐ ܢܫܘܐ ܐܢܘܢ.</lem>
+              <rdg wit="#Trans" n="1">Oxen, sheep, and small cattle will perish; and cereals will also perish, but oil will make up for them.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TracSem.ver_Syriac_and_English.4.10">
+            <app xml:id="u44_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܬܐܩܪ ܝܥܠܬܐ ܬܫܥܐ ܝܘ̈ܡܬܐ: ܘܒܬܪ̇ܟܢ ܢܗܘܐ ܡܛܪܐ: ܘܬܗܘܐ ܒܗܿ ܒܘܪܟܬܐ ܣܓܝܐܬܐ.</lem>
+              <rdg wit="#Trans" n="1">At the end of the year corn will be dear for nine days, and then there will be rain, and (the year) will have much blessing.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="TracSem.ver_Syriac_and_English.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.5.1">
+            <app xml:id="u45_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܐܪܝܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܢܗܘܐ ܡܛܪܐ ܪܰܒܝܥܝܐ: ܘܐܖܿܥܐ ܬܐܒܕܼ ܡ̣ܢ ܪ̈ܘܚܐ ܕܓܖܶܒܝܐ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Leo: There will be early rains, but the soil will be scorched by North winds;</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.5.2">
+            <app xml:id="u46_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܙܪܥܐ ܢܬܪܚܡ: ܘܐܦ ܡܐܟܘܠܬܐ ܕܝܢ ܕܒܢܝ̈ܢܫܐ ܬܛܐܒ.</lem>
+              <rdg wit="#Trans" n="1">corn will not be injured and the food of mankind will be good.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.5.3">
+            <app xml:id="u47_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܐܩܪ̈ܢ ܚܛ̈ܐ ܘܪܽܘܙܐ ܘܕܩܐ: ܘܢܫܩ̈ܝܢ ܚܛܐ.</lem>
+              <rdg wit="#Trans" n="1">Wheat, rice, and cereals will be dear, and wheat will have to be watered.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.5.4">
+            <app xml:id="u48_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܫܚܬܐ ܘܬܡܪ̈ܐ ܢܐܩܪܘܢ.</lem>
+              <rdg wit="#Trans" n="1">Oil and dates will be dear.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.5.5">
+            <app xml:id="u49_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܘܪ̈ܗܢܐ ܒܒܢܝ̈ܢܫܐ ܢܗܘܐ: ܘܒܛ̈ܢܬܐ ܘܩܛ̈ܝܢܬܐ ܢܐܒ̈ܘܢ.</lem>
+              <rdg wit="#Trans" n="1">There will be diseases in sons of men and the pregnant animals will perish as well as small cattle.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.5.6">
+            <app xml:id="u50_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܠܟܐ ܢܬܟܬܫ ܥܡ ܡܠܟܐ.</lem>
+              <rdg wit="#Trans" n="1">A king will fight against a king.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.5.7">
+            <app xml:id="u51_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܩܡܨܐ ܪܒܐ ܢܐܬܐ: ܘܠܐ ܢܒܨܪ ܐܠܐ ܩܠܝܠ ܡܕܡ.</lem>
+              <rdg wit="#Trans" n="1">A considerable number of locusts will make their appearance and their number will decrease but slightly.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.5.8">
+            <app xml:id="u52_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܣܩ ܢܝܠܘܣ ܢܗܪܿܐ ܡܣܩܗ ܥܠܝܐ: ܘܢܗܘܐ ܟܐܒܐ ܕܪܫܐ ܠܐܢ݇ܫܐ: ܘܒܫܘܠܡܗ̇ ܕܫܢ݇ܬܐ ܢܗܘܐ ܡܛܪܐ ܣܓܝܐܐ.</lem>
+              <rdg wit="#Trans" n="1">The river Nile will overflow to its highest rate. People will have headache. At the end of the year there will be much rain.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="TracSem.ver_Syriac_and_English.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.6.1">
+            <app xml:id="u53_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܫܒܠܬܐ ܡܬܝܠܕܼܐ ܫܢܵ݇ܬܐ: ܟܠ ܡܢ ܕܐܝܬܘܗܝ ܫܡܗ ܝܘܕܼ ܐܘ ܣܡܟܬ ܘܒܝܬ ܘܢܘܢ ܢܗܘܐ ܟܪܝܗ: ܘܢܬܒܙܙ ܘܢܥܖ̇ܘܩ ܡ̣ܢ ܒܝܬܗ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Virgo: Anyone having in his name (the letters) Yodh, Semkath, Beith, or Nun will be ill, will be plundered, and will flee from his house.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.6.2">
+            <app xml:id="u54_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܗܘܐ ܒܫܘܪܶܝܗܿ ܕܸܫܢ݇ܬܐ ܚܣܝܪܘܬ ܡܝ̈ܐ ܒܕܘܟܐ ܕܘܟܐ: ܘܙܪܥܐ ܩܕܡܝܐ ܠܐ ܢܟܫܪ.</lem>
+              <rdg wit="#Trans" n="1">At the beginning of the year there will be shortage of water in various places, and the first crops will not succeed.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.6.3">
+            <app xml:id="u55_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐ݇ܢܫܐ ܫܚܝܩܐ ܢܗܘܘܢ: ܒܣܬܘܐ ܘܒܩܝܛܐ ܢܬܟܪܗܘܢ.</lem>
+              <rdg wit="#Trans" n="1">People will be distressed: in winter and in summer they will be ill.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.6.4">
+            <app xml:id="u56_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܥܒܘܪܐ ܢܐܩܪ ܒܚܘܪܢ ܘܒܬܕܡܘܪ.</lem>
+              <rdg wit="#Trans" n="1">Corn will be dear in Hauran and in Palmyra.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.6.5">
+            <app xml:id="u57_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܠܡܗ̇ ܕܫܢ݇ܬܐ ܢܫ̈ܘܝܢ ܩܠܝܠ: ܘܚܡܪܐ ܢܗܘܐ ܙܥܘܪ ܘܒܣܝܡ.</lem>
+              <rdg wit="#Trans" n="1">At the end of the year prices will be slightly moderate, and wine will be scarce and sweet.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.6.6">
+            <app xml:id="u58_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܬܡܪ̈ܐ ܢܣܓܘܢ: ܘܡܫܚܐ ܢܐܩܪ: ܘܚܛ̈ܐ ܘܣܥܪ̈ܐ ܢܫ̈ܘܝܢ: ܘܕܩܐ ܢܙܥܪ.</lem>
+              <rdg wit="#Trans" n="1">Dates will abound, oil will be dear, wheat and barley will be at a moderate price, and cereals will be scarce.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.6.7">
+            <app xml:id="u59_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܛܪܿܐ ܢܬܟܠܐ: ܘܠܐ ܢܚܘܬ ܥܠ ܐܪܥܐ ܬܠܬܝܢ ܝܘ̈ܡܝܢ ܥܕܡܐ ܠܦܨܚܐ.</lem>
+              <rdg wit="#Trans" n="1">Rain will fail and will not fall upon the earth during thirty days down to the time of Passover.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.6.8">
+            <app xml:id="u60_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܠܟܐ ܢܬܟܬܫ ܥܡ ܡܠܟܐ ܘܢܩܛܠܝܘܗܝ.</lem>
+              <rdg wit="#Trans" n="1">The king will fight against another king and will kill him.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.6.9">
+            <app xml:id="u61_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܠܟܣܢܕܪܝܐ ܬܐܒܕ: ܘܢܝܠܘܣ ܠܐ ܢܣܩ ܛܒܐܝܬ.</lem>
+              <rdg wit="#Trans" n="1">Living in Alexandria will be dear. The Nile will not overflow well.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TracSem.ver_Syriac_and_English.6.10">
+            <app xml:id="u62_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܬܬܒܪ̈ܢ ܐܠܦ̈ܐ ܣܓܝ̈ܐܬܐ: ܘܒܫܘܠܡ ܫܢܬܐ ܗܘܿܝܐ ܫܘܝܘܬܐ ܕܟܠ ܡܕܡ.</lem>
+              <rdg wit="#Trans" n="1">Many ships will break up. At the end of the year there will be moderation in everything.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="TracSem.ver_Syriac_and_English.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.7.1">
+            <app xml:id="u63_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܡܣܐܬܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ: ܡܛܪ̈ܐ ܪ̈ܒܝܥܝܐ ܢܗܘܘܢ: ܘܫܢ݇ܬܐ ܬܬܗܦܟ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Libra: There will be early rains, and the (order of the) year will be inverted.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.7.2">
+            <app xml:id="u64_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܚܘܢ ܐ݀ܢܫܐ ܡ̣ܢ ܪܘܚ ܕܡܕܢܚܐ.</lem>
+              <rdg wit="#Trans" n="1">People will be secure from the East wind.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.7.3">
+            <app xml:id="u65_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܬܐܢ̈ܐ ܠܐ ܢܗܘܐ ܒܗܘܢ ܦܐܪ̈ܐ: ܘܬܡܖܪ̈ܐ ܘܡܫܚܐ ܢܣܓܘܢ.</lem>
+              <rdg wit="#Trans" n="1">Fig-trees will not bear fruit. Dates and oil will abound.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.7.4">
+            <app xml:id="u66_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܚܡܪܐ ܢܐܩܪ: ܘܚܛ̈ܐ ܢܫܘ̈ܝܢ ܣܓܝ.</lem>
+              <rdg wit="#Trans" n="1">Wine will be dear. Wheat will be at a very moderate price.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.7.5">
+            <app xml:id="u67_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܩܡܨܐ ܢܬܚܕܬ.</lem>
+              <rdg wit="#Trans" n="1">Locusts will appear.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.7.6">
+            <app xml:id="u68_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܦܪܺܝܩܝ ܢܗܘܐ ܒܗܿ ܩܪܒܐ ܩܫܝܐ: ܘܟܘܪ̈ܗܢܐ ܩܫܝ̈ܐ ܒܒܢܝ̈ܢܫܐ ܢܗܘܘܢ.</lem>
+              <rdg wit="#Trans" n="1">In Africa there will be a great and severe war. People will have acute diseases.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.7.7">
+            <app xml:id="u69_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܡܨܥܬܗܿ ܕܫܢܵܬܐ ܢܬܟܠܐ ܡܛܪܐ ܝܘܡܝ̈ܢ ܥܣܪܝܢ.</lem>
+              <rdg wit="#Trans" n="1">In the middle of the year rain will fail during twenty days.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.7.8">
+            <app xml:id="u70_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܪ̈ܥܬܐ ܟܠܗܝܢ ܢܛ̈ܐܒܢ.</lem>
+              <rdg wit="#Trans" n="1">All fields will be good.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.7.9">
+            <app xml:id="u71_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܝܘܕ ܐܘ ܒܝܬ ܢܬܟܪܗ: ܘܢܗܘܐ ܠܗ ܪܥܝܐ: ܘܢܐܙܠ ܒܓܠܘܬܐ ܡ̣ܢ ܐܪܥܗ.</lem>
+              <rdg wit="#Trans" n="1">Anyone having in his name (the letters) Yodh or Beith will be ill, will have anxiety, and will emigrate from his country.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TracSem.ver_Syriac_and_English.7.10">
+            <app xml:id="u72_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܚܡܪܐ ܢܬܚܒܠ: ܘܓܘܪܐ ܢܣܓܐ.</lem>
+              <rdg wit="#Trans" n="1">Wine will be spoiled, and adultery will increase with the increase of foul desires.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TracSem.ver_Syriac_and_English.7.11">
+            <app xml:id="u73_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܠܟܐ ܢܟܬܪ ܒܚܕܐ ܕܘܟܬܐ: ܘܢܐܙܠ ܫܘܠܛܢܐ ܡ̣ܢ ܐܪܥܐ.</lem>
+              <rdg wit="#Trans" n="1">The king will remain in one place, and power will cease in the earth,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TracSem.ver_Syriac_and_English.7.12">
+            <app xml:id="u74_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܖܽܘ̈ܪܒܢܐ ܢܥܪܩܘܢ ܒܝܡܐ: ܘܢܗܘܐ ܒܝܢܬܗܘܢ ܩܪܒܐ ܩܫܝܐ.</lem>
+              <rdg wit="#Trans" n="1">and high officials will flee into the sea, and there will be between (them) a severe war.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TracSem.ver_Syriac_and_English.7.13">
+            <app xml:id="u75_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܗܘܐ ܒܓܠܝܠܐ ܙܘܥܐ ܩܫܝܐ.</lem>
+              <rdg wit="#Trans" n="1">In Galilee there will be a violent earthquake.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TracSem.ver_Syriac_and_English.7.14">
+            <app xml:id="u76_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܠܣ̈ܛܝܐ ܢܦܩܘܢ ܒܚܘܪܢ ܘܒܕܪܡܣܘܩ.</lem>
+              <rdg wit="#Trans" n="1">Marauders will appear in Hauran and in Damascus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TracSem.ver_Syriac_and_English.7.15">
+            <app xml:id="u77_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܝܠܘܣ ܢܗܪܐ ܢܣܩ ܟܠܗ ܡܣܩܗ: ܘܢܗܘܐ ܒܡܨܪܝܢ ܫܪܥܘܛܐ ܩܫܝܐ: ܘܢܫܬܚܩܘܢ ܐ݇ܢܫܐ ܡܼܛܠ ܡܛܪܿܐ.</lem>
+              <rdg wit="#Trans" n="1">The river Nile will overflow to its highest rate. In Egypt there will be a cruel pest. People will be in distress because of the shortage of rain.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="TracSem.ver_Syriac_and_English.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.8.1">
+            <app xml:id="u78_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܥܩܪܒܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܬܫܒ ܪܽܘܚܐ ܕܓܪܒܝܐ ܒܫܘܪܝܗ̇ ܕܫܢ݇ܬܐ: ܘܢܗܘܘܢ ܡܛܪ̈ܐ ܣܓܝ̈ܐܐ ܪ̈ܒܝܥܝܐ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Scorpio: A North wind will blow at the beginning of the year, and there will be many early rains.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.8.2">
+            <app xml:id="u79_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܢܐܩܪ ܟܠ ܡܕܡ: ܘܡܛܪܐ ܢܙܥܪ: ܥܕܡܐ ܕܼܢܦܩܘܢ ܐ݇ܢܫܐ ܒܒܥܘܬܐ ܘܨܠܘܬܐ ܘܙܕܩ̈ܬܐ ܢܒܥܘܢ ܡ̣ܢ ܐܠܗܐ ܚܝܐ.</lem>
+              <rdg wit="#Trans" n="1">At the end of the year everything will be dear, and rain will be so scarce that people will address prayers and supplications to the living God, for the sake of food.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.8.3">
+            <app xml:id="u80_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܘܪܗܢܐ ܢܗܘܐ ܒܢܫ̈ܐ ܕܒܛ̈ܢܢ.</lem>
+              <rdg wit="#Trans" n="1">Pregnant women will have diseases.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.8.4">
+            <app xml:id="u81_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܣܓܝ̈ܐܐ ܡ̣ܢ ܒܢ̈ܝ̈ܢܫܐ ܢܫܢܘܢ ܡ̣ܢ ܐܬܪ̈ܘܬܗܘܢ ܡ̣ܢ ܐܘܠܨܢܐ.</lem>
+              <rdg wit="#Trans" n="1">Many people will emigrate from their countries out of distress.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.8.5">
+            <app xml:id="u82_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܚܛ̈ܐ ܘܣܥܪ̈ܐ ܥ̈ܐܠܢ ܩܠܝܠ: ܘܕܩܐ ܢܐܠ.</lem>
+              <rdg wit="#Trans" n="1">Wheat and barley will be ingathered, but only in small quantity; cereals will be ingathered.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.8.6">
+            <app xml:id="u83_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܚܡܪܐ ܘܡܫܚܐ ܢܗܘܐ.</lem>
+              <rdg wit="#Trans" n="1">There will be wine and oil.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.8.7">
+            <app xml:id="u84_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܫܘܚ̈ܢܐ ܢܦܩܘܢ ܒܓܘܫ̈ܡܐ ܕܒܢܝ̈ܢܫܐ: ܘܠܐ ܢܚܣܪܘܢ ܐܢܘܢ.</lem>
+              <rdg wit="#Trans" n="1">Boils will spring forth in the bodies of people but they will do no harm.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.8.8">
+            <app xml:id="u85_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܝܠܘܣ ܢܣܩ ܦܠܓܗ ܕܡܣܩܐ.</lem>
+              <rdg wit="#Trans" n="1">The Nile will overflow half of its normal rate.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.8.9">
+            <app xml:id="u86_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܬܘ ܐܘ ܝܘܕ ܢܬܟܪܗ ܘܢܬܚܠܡ.</lem>
+              <rdg wit="#Trans" n="1">Anyone having in his name (the letters) Taw, or Yodh, will be ill, but will recover.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TracSem.ver_Syriac_and_English.8.10">
+            <app xml:id="u87_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܠ ܕܡܬܝܠܕ ܒܥܩܪܒܐ ܚܝܿܐ: ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܡܬܩܛܠ.</lem>
+              <rdg wit="#Trans" n="1">Anyone born in Scorpio will live, but will be killed at the end of the year.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="TracSem.ver_Syriac_and_English.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.9.1">
+            <app xml:id="u88_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܩܫܬܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܒܝܬ ܐܘ ܦܐ ܢܗܘܐ ܠܗ ܫܚܩܐ ܘܟܘܪܗܢܐ ܩܫܝܐ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Sagittarius: Anyone having in his name (the letters) Beith, or Pe, will have severe illness and distress,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.9.2">
+            <app xml:id="u89_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܪܝܗܿ ܕܸܫܢ݇ܬܐ ܢܬܩܫܐ: ܘܢܫܬܚܩܘܢ ܒܢܝ̈ܢܫܐ ܒܕܘܟ̈ܬܐ ܣܓܝ̈ܐܬܐ.</lem>
+              <rdg wit="#Trans" n="1">which will be aggravated at the beginning of the year. People will be in distress in many places.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.9.3">
+            <app xml:id="u90_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܪܥܐ ܕܡܨܪܝܢ ܠܐ ܢܙܪܥܘܢ ܒܗܿ ܡܕܡ ܐܠܐ ܩܠܝܠ.</lem>
+              <rdg wit="#Trans" n="1">Little will be sown in the land of Egypt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.9.4">
+            <app xml:id="u91_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܡܨܥܬ ܫܢ݇ܬܐ ܢܗܘܐ ܡܛܪܿܐ ܣܿܓܝܐܐ.</lem>
+              <rdg wit="#Trans" n="1">In the middle of the year there will be much rain.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.9.5">
+            <app xml:id="u92_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܚܡܠܘܢ ܒܢܝ̈ܢܫܐ ܥܒܘܪܐ ܒܒܝܬ ܐܘܨܪ̈ܐ ܡܸܛܠ ܙܥܘܪܘܬ ܡܛܪܐ.</lem>
+              <rdg wit="#Trans" n="1">People will store corn in the barns because of the shortage of rain.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.9.6">
+            <app xml:id="u93_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܙܪܥܐ ܠܐ ܢܗܘܐ ܫܦܝܪ: ܘܫܘܠܡܗܿ̇ ܕܸܫܢ݇ܬܐ ܠܐ ܢܛܐܒ.</lem>
+              <rdg wit="#Trans" n="1">Crops will not be good, so also will be the case at the end of the year.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.9.7">
+            <app xml:id="u94_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܚܡܪܐ ܘܡܫܚܐ ܢܫܘܘܢ ܣܓܝ.</lem>
+              <rdg wit="#Trans" n="1">Wine and oil will be at a very moderate price.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.9.8">
+            <app xml:id="u95_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܓܘܪܐ ܢܣܓܐ: ܘܩܛܝܢܬܐ ܬܐܒܕܼ.</lem>
+              <rdg wit="#Trans" n="1">Adultery will increase, and small cattle will perish.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="TracSem.ver_Syriac_and_English.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.10.1">
+            <app xml:id="u96_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܓܕܝܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܩܘܦ ܢܬܟܪܗ ܘܢܬܒܙܙ ܘܢܒܠܥ ܒܣܝܦܐ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Capricornus: Anyone having in his name (the letters) Koph will be ill, will be plundered, and will be struck with sword.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.10.2">
+            <app xml:id="u97_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܪܘܚܐ ܡܕܢܚܝܬܐ ܡܕܼܒܪܐ ܠܗܿ ܠܫܢ݇ܬܐ.</lem>
+              <rdg wit="#Trans" n="1">An East wind will dominate the year.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.10.3">
+            <app xml:id="u98_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܠ ܕܩܕܸܡ ܙܪܿܥ ܢܟܫܪ: ܐ݇ܚܪܝܐ ܠܐ ܢܟܫܪ.</lem>
+              <rdg wit="#Trans" n="1">Everyone should sow earlier; the last in sowing will not succeed.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.10.4">
+            <app xml:id="u99_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܪܝܐ ܕܸܫܢ݇ܬܐ ܢܐܩܪ ܥܒܘܪܐ: ܘܢܣܓܘܢ ܓܠ̈ܠܐ ܘܡܚ̈ܫܘܠܐ: ܘܐܠܦܐ ܢܐܒܕܘܢ.</lem>
+              <rdg wit="#Trans" n="1">At the beginning of the year corn will be dear. Waves and billows will increase. Ships will perish.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.10.5">
+            <app xml:id="u100_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܡܨܥܬܗܿ ܕܫܢ݇ܬܐ ܢܐܩܪ ܥܒܘܪܿܐ.</lem>
+              <rdg wit="#Trans" n="1">In the middle of the year corn will be dear.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.10.6">
+            <app xml:id="u101_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܣܓܘܢ ܓܢܒ̈ܐ: ܘܦܠܚ̈ܘܗܝ ܕܫܘܠܛܢܐ ܒܝܫܝܢ ܢܗܘܘܢ.</lem>
+              <rdg wit="#Trans" n="1">Thieves will increase. The officials of the state will be bad.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.10.7">
+            <app xml:id="u102_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܕܒܘܪ̈ܐ ܘܫܪܨܗܿ ܕܐܪܥܐ ܢܣܓܘܢ: ܘܢܒܐܫܘܢ ܐ݀ܢܫܐ ܣܓܝ̈ܐܐ.</lem>
+              <rdg wit="#Trans" n="1">Wasps and reptiles of the earth will multiply and injure many people.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.10.8">
+            <app xml:id="u103_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐ݇ܢܫܐ ܣܓܝ̈ܐܐ ܢܫܢܘܢ ܡ̣ܢ ܕܘܟܐ ܠܕܘܟܐ ܡܢ ܩܪܒܐ ܕܗܿܘܐ: ܘܢܣܓܘܢ ܩܪ̈ܒܐ ܒܐܪܥܐ.</lem>
+              <rdg wit="#Trans" n="1">Many people will move from one place to another because of the war which will take place. Wars will increase in the earth.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.10.9">
+            <app xml:id="u104_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܠܡܗܿ ܕܫܢܵܬܐ ܢܙܥܪ ܡܛܪܐ.</lem>
+              <rdg wit="#Trans" n="1">At the end of the year rain will be scarce.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TracSem.ver_Syriac_and_English.10.10">
+            <app xml:id="u105_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܕܘܟܝ̈ܬܐ ܢܐܠ ܙܪܥܐ: ܘܒܕܘܟ̈ܬܐ ܢܐܒܕܼ ܙܪܥܐ.</lem>
+              <rdg wit="#Trans" n="1">In some places the standing corn will yield something, and in others it will perish.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TracSem.ver_Syriac_and_English.10.11">
+            <app xml:id="u106_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܟܘܪܗܢܐ ܒܕܪܡܣܘܩ ܢܗܘܐ ܘܒܚܘܪܢ: ܘܟܦܢܐ ܒܣܦܪ ܝܡܐ.</lem>
+              <rdg wit="#Trans" n="1">There will be pest in Damascus and in Hauran, and famine in the littoral of the sea.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TracSem.ver_Syriac_and_English.10.12">
+            <app xml:id="u107_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܓܘܪܐ ܢܣܓܐ.</lem>
+              <rdg wit="#Trans" n="1">Adultery will increase.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TracSem.ver_Syriac_and_English.10.13">
+            <app xml:id="u108_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐ݇ܢܫܐ ܢܣܩܘܢ ܒܥܘܬܐ ܘܨ̈ܠܘܬܐ ܘܨܘܡܐ ܘܙܕܩ̈ܬܐ ܡܸܛܠ ܡܛܪܐ: ܘܙܪܥܐ ܕܫܩܝܐ ܛܒ ܢܗܘܐ.</lem>
+              <rdg wit="#Trans" n="1">People will offer prayers and supplications, will fast and give alms for the sake of rain. The watered cereals will be normal.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="TracSem.ver_Syriac_and_English.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.11.1">
+            <app xml:id="u109_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܐܡܬܝ ܕܡܬܝܠܕܐ ܫܢ݇ܬܐ ܒܕܘܠܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܠܡܕ ܐܘ ܦܐ ܢܬܟܪܗ: ܐܘ ܢܥܩܪ ܡ̣ܢ ܒܙܘܙܝܐ.</lem>
+              <rdg wit="#Trans" n="1">When the year begins in Aquarius: Anyone having in his name (the letters) Lamadh or Pe will be ill, or will be uprooted through pillage.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.11.2">
+            <app xml:id="u110_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܪܿܝܗܿ ܕܸܫܢ݇ܬܐ ܢܕܥܪ ܡܛܪܐ: ܘܢܝܠܘܣ ܢܣܩ ܟܠܗ ܡܣܩܗ.</lem>
+              <rdg wit="#Trans" n="1">At the beginning of the year rain will be scarce, and the Nile will overflow to its highest rate.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.11.3">
+            <app xml:id="u111_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܨܪܿܝܢ ܥܠ ܦܠܣܛܝܢܝ ܬܥܠ.</lem>
+              <rdg wit="#Trans" n="1">Egypt will invade Palestine.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.11.4">
+            <app xml:id="u112_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܡܪ̈ܐ ܘܥܙ̈ܐ ܢܟܫܪܘܢ.</lem>
+              <rdg wit="#Trans" n="1">Lambs and goats will prosper.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.11.5">
+            <app xml:id="u113_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܪܽܘܚܐ ܡܥܪܒܝܬܐ ܗܝِ ܡܕܒܪܐ ܠܫܢ݇ܬܐ ܗܝܿ.</lem>
+              <rdg wit="#Trans" n="1">A West wind will dominate that year.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.11.6">
+            <app xml:id="u114_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܠܟܐ ܢܩܪܒ ܥܡ ܡܠܟܐ.</lem>
+              <rdg wit="#Trans" n="1">A king will fight against a king.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.11.7">
+            <app xml:id="u115_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܙܪܥܐ ܩܕܝܡ ܢܟܫܪ: ܘܕܩܐ ܠܐ ܢܫܘܚ ܣܓܝ ܐܠܐ ܥܿܐܠ.</lem>
+              <rdg wit="#Trans" n="1">Early crops will succeed, and cereals will not be plentiful, but normal.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.11.8">
+            <app xml:id="u116_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܬܓܪ̈ܐ ܢܒܥܘܢ ܡܥܕܪܢܘܬܐ ܡ̣ܢ ܐܠܗܐ ܚܝܐ: ܘܟܘܪ̈ܗܢܐ ܢܣܓܘܢ.</lem>
+              <rdg wit="#Trans" n="1">Merchants will seek help from the living God, and illnesses will multiply.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="TracSem.ver_Syriac_and_English.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="TracSem.ver_Syriac_and_English.12.1">
+            <app xml:id="u117_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܐܢ ܒܢܘܢ̈ܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܟܦ ܐܘ ܡܝܡ ܢܬܟܪܗ ܘܢܬܒܙܙ.</lem>
+              <rdg wit="#Trans" n="1">If the year begins in Pisces: Anyone having in his name (the letters) Koph or Mim will be ill, and will be plundered.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TracSem.ver_Syriac_and_English.12.2">
+            <app xml:id="u118_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܫܢ݇ܬܐ ܛܒܬܐ ܬܗܘܐ: ܘܙܪܥܐ ܛܒ ܘܫܦܝܪ: ܘܡܛܪ̈ܐ ܪ̈ܒܝܥܝܐ ܢܗܘܘܢ.</lem>
+              <rdg wit="#Trans" n="1">The year will be good, crops will be very good, and there will be early rains.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TracSem.ver_Syriac_and_English.12.3">
+            <app xml:id="u119_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܝܡܐ ܢܣܓܐ ܨܝܕܗ: ܘܡܐ ܕܒܚܳܫ ܐܠܦܐ ܢܬܬܒܪ̈ܢ.</lem>
+              <rdg wit="#Trans" n="1">The sea will yield abundant fishing, but when it is rough ships will break up.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TracSem.ver_Syriac_and_English.12.4">
+            <app xml:id="u120_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܚܡܪܐ ܘܡܫܚܐ ܘܚܛ̈ܐ ܟܠܗܘܢ ܢܫܦܪܘܢ: ܘܙܪ̈ܥܐ ܛܒ ܢܣܓܘܢ.</lem>
+              <rdg wit="#Trans" n="1">Wine, oil, and wheat will all be good, and standing crops will be very plentiful.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TracSem.ver_Syriac_and_English.12.5">
+            <app xml:id="u121_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܕ̈ܝ̈ܢܬܐ ܢܗܘܐ ܒܗܘܢ ܩܪ̈ܒܐ ܘܚܪܒܐ ܩܛܝܢܐ: ܘܩܘܪ̈ܝܐ ܬܐܒܕܢ: ܘܢܫܢܘܢ ܡ̣ܢ ܕܘܟܐ ܠܕܘܟܐ.</lem>
+              <rdg wit="#Trans" n="1">In the cities there will be wars and cruel devastation; villages will be destroyed, and people will move from place to place.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TracSem.ver_Syriac_and_English.12.6">
+            <app xml:id="u122_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܦܩܘܢ ܠܣ̈ܛܝܐ ܡܼܢ ܦܠܣܛܝܢܐ: ܘܢܡܚܘܢ ܩܪܒܐ ܪܒܐ ܥܡ ܬܠܬ ܡܕܼܝ̈ܢܬܐ.</lem>
+              <rdg wit="#Trans" n="1">Brigands will go forth from Palestine, and will wage a great battle against three cities.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TracSem.ver_Syriac_and_English.12.7">
+            <app xml:id="u123_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܪ̈ܗ݇ܘܡܝܐ ܙܟܝܢ ܘܡܙܕܟܝܢ: ܘܟܘܪܗܢܐ ܪܒܐ ܢܗܘܐ ܒܒܢܝ̈ܢܫܐ.</lem>
+              <rdg wit="#Trans" n="1">The Romans will conquer and be conquered, and there will be great illness among the sons of men.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TracSem.ver_Syriac_and_English.12.8">
+            <app xml:id="u124_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܢܦܘܩ ܓܒܪܿܐ ܐܘܟܡܐ ܕܒܥܐ ܡܠܟܘܬܐ: ܘܒܝܬܐ ܕܡܠܟܘܬܐ ܢܐܒܕ.</lem>
+              <rdg wit="#Trans" n="1">A dark-complexioned man will come forth seeking the kingdom, and the royal house will perish.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TracSem.ver_Syriac_and_English.12.9">
+            <app xml:id="u125_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡܠܟܐ ܒܝܫܐ ܢܫܡܥ ܡܢܘ ܐܡܪܿܝܢ ܒܢ̈ܝܢܫܐ: ܘܡܚܪܒ ܡܕܝ̈ܢܬܐ ܣܓܝ̈ܐܬܐ.</lem>
+              <rdg wit="#Trans" n="1">A wicked king will listen to gossip, and will lay waste many cities.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TracSem.ver_Syriac_and_English.12.10">
+            <app xml:id="u126_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܠܝܬ ܐܢܫ ܕܡܫܟܚ ܕܢܟܠܝܘܗܝ: ܘܕܚܠܬܐ ܕܐܠܗܐ ܘܪ̈ܚܡܘܗܝ ܦܪܝܩܝܢ ܡܢܗ.</lem>
+              <rdg wit="#Trans" n="1">There will be no one able to stop him, and the fear of God and His mercy will be far from him.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TracSem.ver_Syriac_and_English.12.11">
+            <app xml:id="u127_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܫܘܠܡܗܿ ܕܫܢ݇ܬܐ ܢܗܘܐ ܫܝܢܐ ܘܫܠܡܐ ܒܒܢܝ̈ܢܫܐ: ܘܚܘܒܐ ܘܐܘܝܘܬܐ ܬܗܘܐ ܒܝܢܬ ܟܠܗܘܢ ܡܠܟ̈ܐ ܕܐܝܬ ܒܟܠܗ̇ ܐܪܥܐ.</lem>
+              <rdg wit="#Trans" n="1">At the end of the year there will be peace and tranquillity among men, and love and harmony will prevail among all the kings of the whole earth.</rdg>
+            </app>
+          </ab>
+        </div>
       </div>
     </body>
   </text>

@@ -1,524 +1,814 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE document SYSTEM "document.dtd">
-<document id="TracSem">
-    <header>
-        <title>Treatise of Shem</title>
-        <author>Shem son of Noah (Pseudepigraphon)</author>
-        <editor>Alphonse Mingana (1917)</editor>
-        <description>Syriac text and English translation from Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 24-29, 54-61 (MS Cod. Syr. 44). Astrological/calendrical work in 12 chapters corresponding to the signs of the Zodiac (CAVT 85).</description>
-    </header>
-    <body>
-        <div c="1" v="1">
-            <line lang="syr">ܬܘܒ ܡܡܠܠܐ ܕܣܝܡ ܠܫܝܡ ܒܪ ܢܘܚ ܥܠ ܡܘܠܕܐ ܕܫܢ݇ܬܐ ܘܟܠܡܐ ܕܗܿܘܐ ܒܗ:</line>
-            <line lang="en">Discourse written by Shem son of Noah about the beginning of the year and all that happens in it.</line>
-        </div>
-        <div c="1" v="2">
-            <line lang="syr">ܐܢ ܒܐܡܪܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ, ܫܢ݇ܬܐ ܩܛܝܢܬܐ ܬܗܘܐ.</line>
-            <line lang="en">If the year begins in Aries: The year will be hard.</line>
-        </div>
-        <div c="1" v="3">
-            <line lang="syr">ܘܐܖ̇ܒܥܬ ܪ̈ܓܠܝܗܿ ܬܡܘܬ.</line>
-            <line lang="en">The quadrupeds will die.</line>
-        </div>
-        <div c="1" v="4">
-            <line lang="syr">ܘܥܢ̈ܢܐ ܣܓܝ̈ܐܬܐ ܠܐ ܢܬܚ̈ܙܝܢ ܘܠܐ ܢܗ̈ܘܝܢ.</line>
-            <line lang="en">There will not be many clouds.</line>
-        </div>
-        <div c="1" v="5">
-            <line lang="syr">ܘܙܪܥܐ ܩܘܡܬܐ ܠܐ ܗܘܿܝܐ ܠܗ: ܘܦܪ݇ܕܬܗ ܕܝܢ ܬܗܘܐ ܘܬܫܡܢ.</line>
-            <line lang="en">The standing corn will not have good size, but it will have fat grains.</line>
-        </div>
-        <div c="1" v="6">
-            <line lang="syr">ܘܢܗܪܿܐ ܕܢܝܠܘܣ ܡܣܩܐ ܫܦܝܪ ܢܣܩ.</line>
-            <line lang="en">The river Nile will overflow well.</line>
-        </div>
-        <div c="1" v="7">
-            <line lang="syr">ܘܡܠܟܐ ܕܪ̈ܗ݇ܘܡܝܐ ܠܐ ܢܩܘܐ ܒܚܕܐ ܕܘܟܬܐ.</line>
-            <line lang="en">The king of the Romans will not remain in one place.</line>
-        </div>
-        <div c="1" v="8">
-            <line lang="syr">ܘܟܘܟ̈ܒܐ ܕܫܡܝܐ ܢܬܒܕܪܘܢ ܐܝܟ ܙܠܝ̈ܩܐ ܕܢܘܪܐ.</line>
-            <line lang="en">The stars of heaven will be scattered like rays of fire.</line>
-        </div>
-        <div c="1" v="9">
-            <line lang="syr">ܘܣܗܪܐ ܢܚܫܟ.</line>
-            <line lang="en">The moon will suffer eclipse.</line>
-        </div>
-        <div c="1" v="10">
-            <line lang="syr">ܘܙܪܥܐ ܩܕܡܝܐ ܢܐܒܕ: ܘܙܪܥܐ ܐ݇ܚܪܝܐ ܢܬܚܡܘܠ.</line>
-            <line lang="en">The first crops will perish, and the second will be ingathered.</line>
-        </div>
-        <div c="1" v="11">
-            <line lang="syr">ܡܢ ܦܨܚܐ ܥܒܘܪܿܐ ܝܪܩܢܐ ܗܘܐ ܠܗ.</line>
-            <line lang="en">From Passover corn will be mildewed.</line>
-        </div>
-        <div c="1" v="12">
-            <line lang="syr">ܘܫܢ݇ܬܐ ܒܝܫܬܐ ܐܝܬܝܗܿ ܕܩܖܒܐ ܪܒܐ ܘܫܚܩܐ ܒܟܠܗܿ ܐܪܥܐ: ܘܝܬܝܪܐܝܬ ܒܐܪܥܐ ܕܡܨܪܝܢ.</line>
-            <line lang="en">The year will be bad, with severe war and distress over all the earth, especially over the land of Egypt.</line>
-        </div>
-        <div c="1" v="13">
-            <line lang="syr">ܘܢܬܬܒܪ̈ܢ ܐܠܦ̈ܐ ܣܓܝܐܬܐ ܡܐ ܕܸܒܚܿܫ ܝܡܐ.</line>
-            <line lang="en">Many ships will break up when the sea is rough.</line>
-        </div>
-        <div c="1" v="14">
-            <line lang="syr">ܘܡܫܚܐ ܢܫܘܐ ܒܐܦܪܝܩܝ: ܘܚܛ̈ܐ ܢܙܥܪ̈ܢ: ܒܕܪܡܣܘܩ ܘܒܚܘܪܢ ܘܒܦܠܣܛܝܢܝ ܢܫܘ̈ܝܢ.</line>
-            <line lang="en">Oil will be at a moderate price in Africa, and wheat will be at a low price; in Damascus, Hauran, and Palestine it will be at a moderate price.</line>
-        </div>
-        <div c="1" v="15">
-            <line lang="syr">ܘܟܘܪ̈ܗܢܐ ܡܫܚ̈ܠܦܐ ܘܡ̈ܚܘܬܐ ܘܙܘܥܐ ܢܗܘܐ ܒܗܿ: ܘܡܬܦܠܛܐ ܡܢܗܿ ܘܬܫܬܘܙܒ.</line>
-            <line lang="en">(Palestine) will have different kinds of diseases, plagues, and earthquake, but it will be delivered from them and saved.</line>
-        </div>
-        <div c="2" v="1">
-            <line lang="syr">ܘܐܢ ܡܬܝܠܕܐ ܫܢ݇ܬܐ ܒܬܘܪܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܒܝܬ ܐܘ ܝܘܕ ܐܘ ܟܦ ܢܬܟܪܗ: ܐܘ ܢܒܠܥ ܒܦܪܙܠܐ.</line>
-            <line lang="en">If the year begins in Taurus: Anyone having in his name (the letters) Beith, Yodh, or Koph will be ill, or will be killed with iron weapons.</line>
-        </div>
-        <div c="2" v="2">
-            <line lang="syr">ܘܢܗܘܐ ܙܘܥܐ.</line>
-            <line lang="en">There will be earthquake.</line>
-        </div>
-        <div c="2" v="3">
-            <line lang="syr">ܘܬܦܘܩ ܡ̣ܢ ܡܨܪܝܢ ܪܘܚܐ ܘܬܡܠܝܗ̇ ܠܟܠܗ̇ ܐܪܥܐ.</line>
-            <line lang="en">A wind will start from Egypt and spread over all the earth.</line>
-        </div>
-        <div c="2" v="4">
-            <line lang="syr">ܘܢܗ̈ܘ̈ܝܢ ܒܗܿ ܚ̈ܛܐ ܘܡܛܪܐ ܪܽܘ̈ܪܒܐ: ܘܖܘܪ̈ܒܢܐ ܕܐܪܥܐ ܘܕܼܐܬܪ̈ܘܬܐ ܕܚܕܪ̈ܝܗܘܢ ܢܘܒܕܘܢ ܐܢܘܢ.</line>
-            <line lang="en">The year will be rich in wheat and abundant rains, but the chiefs of the land and of the surrounding places will destroy that (wheat).</line>
-        </div>
-        <div c="2" v="5">
-            <line lang="syr">ܘܡܛܪܿܐ ܕܫܢ݇ܬܐ ܢܬܚܣܟ ܬܠܬܐ ܝܪ̈ܚܝܢ: ܘܡ̣ܢ ܒܬܖܿܟܢ ܥܒܘܪܿܐ ܢܐܩܪ ܒܢܣܝܘܢܐ ܝܘ̈ܡܬܐ ܬܠܬܝܢ ܘܫܬܐ.</line>
-            <line lang="en">The yearly rain will fail during three months, and then corn will be very dear during thirty-six days;</line>
-        </div>
-        <div c="2" v="6">
-            <line lang="syr">ܘܢܡܘܬܘܢ ܐܢܫܐ ܣܓܝܐܐ ܡ̣ܢ ܟܘܪ̈ܗܢܐ ܕܓܪܓܪܬܐ: ܘܩܛܝܢܘܬܐ ܬܐܒܕܼ.</line>
-            <line lang="en">many people will die from diseases of the throat, and then tribulation will cease.</line>
-        </div>
-        <div c="2" v="7">
-            <line lang="syr">ܘܙܪܥܐ ܩܕܡܝܐ ܢܐܒܕܼ ܗܟܢܐ: ܘܙܪܥܐ ܐ݇ܚܪܝܐ ܢܐܠ: ܘܣܥܪ̈ܐ ܘܕܼܩ̈ܐ ܢܐܠܘܢ.</line>
-            <line lang="en">The first crops (of wheat) will perish, but as (above), the second crops will be ingathered, and barley with the watered cereals will be ingathered also.</line>
-        </div>
-        <div c="2" v="8">
-            <line lang="syr">ܘܕܼܝܘ̈ܐ ܥܠ ܒܢܝ̈ܢܫܐ ܢܦܠܘܢ: ܘܡܕܡ ܠܐ ܢܚܣܪܘܢ ܐܢܘܢ.</line>
-            <line lang="en">The devils will attack the sons of men, but they will not harm them in anything.</line>
-        </div>
-        <div c="2" v="9">
-            <line lang="syr">ܘܡ̈ܠܟܐ ܬܪܶܝܢ ܢܩܘܡܘܢ ܥܠ ܚܕܕܵܐ.</line>
-            <line lang="en">Two kings will rise against each other.</line>
-        </div>
-        <div c="2" v="10">
-            <line lang="syr">ܘܢܝܠܘܣ ܢܗܖܿܐ ܪܒܐ ܢܣܩ ܠܥܠ ܡ̣ܢ ܡܫܘܚܬܗ.</line>
-            <line lang="en">The great river Nile will overflow above its normal rate.</line>
-        </div>
-        <div c="2" v="11">
-            <line lang="syr">ܗܠܝܢ ܕܐܝܬܝܗܘܢ ܒܐܠܦܐ ܒܓܘ ܝܡܐ ܘܐ݇ܢܫܐ ܕܼܐܝܬ ܒܝܡܐ ܢܗܘܘܢ ܒܫܚܩܐ ܩܫܝܐ: ܘܒܚܪܬܗ̇ ܕܫܢ݇ܬܐ ܒܘܪܟܬܐ ܣܓܝܐܬܐ ܬܗܘܐ.</line>
-            <line lang="en">Those who are on board a ship in the sea, and those who are on the sea will be in great distress. At the end of the year there will be great blessing.</line>
-        </div>
-        <div c="3" v="1">
-            <line lang="syr">ܘܐܢ ܒܬܪܝܢ ܨܠܡ̈ܐ ܡܬܝܠܕܐ ܫܢܵܬܐ: ܢܗܘܐ ܣܗܪܶܐ ܫܦܝܪ.</line>
-            <line lang="en">If the year begins in Gemini (the Two Figures): The moon will be good.</line>
-        </div>
-        <div c="3" v="2">
-            <line lang="syr">ܘܬܫܒ ܪܽܘܚܐ ܕܬܝܡܢܐ ܘܡܢܗ̇ܿ ܢܗܘܐ ܡܛܪܐ.</line>
-            <line lang="en">A South wind will blow, from which rain will come.</line>
-        </div>
-        <div c="3" v="3">
-            <line lang="syr">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܬܘ ܐܘ ܚܝܬ ܐܘ ܡܝܡ ܢܗܘܐ ܒܦܪܨܘܦܗ ܓܪܳܒܐ ܐܘ ܫܘܚܢܐ.</line>
-            <line lang="en">Anyone having in his name the letters Taw, Heth, or Mim will have tumours and boils in his face.</line>
-        </div>
-        <div c="3" v="4">
-            <line lang="syr">ܘܢܗܘܐ ܒܫܘܪܝܗܿ ܕܸܫܢ݇ܬܐ ܩܖܒܐ ܩܫܝܐ.</line>
-            <line lang="en">At the beginning of the year there will be a severe war.</line>
-        </div>
-        <div c="3" v="5">
-            <line lang="syr">ܘܡܛܪ̈ܐ ܪܒܝܥܝܐ ܢܗܘܘܢ: ܘܙܪܥܐ ܢܫܦܖܿ: ܘܝܬܝܪܐܝܬ ܙܪܥܐ ܕܫܩܝܐ.</line>
-            <line lang="en">There will be early rains, and the standing corn will be good, especially in the watered places.</line>
-        </div>
-        <div c="3" v="6">
-            <line lang="syr">ܘܥܘܩܒܪ̈ܬܐ ܢܣܓܝܢ ܒܐܪܥܐ.</line>
-            <line lang="en">Mice will abound in the earth.</line>
-        </div>
-        <div c="3" v="7">
-            <line lang="syr">ܘ̈ܪܗ݇ܘܡܝܐ ܘܦܪ̈ܣܝܐ ܢܥܒܕܘܢ ܩܖܒܐ ܩܫܝܐ ܥܡ ܚܕ̈ܕܐ: ܘܢܦܩܘܢ ܪܗ݇ܘܡܝܐ ܒܐܠܦ̈ܐ ܒܝܡܐ: ܘܢܥܒܕܘܢ ܩܪܒܐ ܘܢܘܒܕܘܢ ܐܢܘܢ.</line>
-            <line lang="en">The Romans and the Persians will wage a severe war against one another, and the Romans will come forth by ships on the sea, will fight and destroy them.</line>
-        </div>
-        <div c="3" v="8">
-            <line lang="syr">ܘܢܦܩܘܢ ܒܥܠܡܐ ܗܢܐ ܐܢܫܐ ܒܝ̈ܫܐ ܘܢܥܒܕܘܢ ܒܝܫܬܐ: ܘܢܗܘܐ ܪܢܝܐ ܘܫܚܩܐ ܩܫܝܐ.</line>
-            <line lang="en">Malicious people will rise in the world, who will do mischief, and there will be great anxiety and distress.</line>
-        </div>
-        <div c="3" v="9">
-            <line lang="syr">ܘܒܫܘܠܡܗ̇ ܕܸܫܢ݇ܬܐ ܬܗܘܐ ܛܒܬܐ: ܘܢܝܠܘܣ ܢܗܪܐ ܢܣܩ ܫܦܝܪ.</line>
-            <line lang="en">Good will come at the end of the year and the river Nile will overflow well.</line>
-        </div>
-        <div c="4" v="1">
-            <line lang="syr">ܘܐܢ ܒܣܪܛܢܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܬܗܘܐ݀ ܒܫܘܪܝܗܿ ܕܫܢ݇ܬܐ ܫܘܝܘܬܐ ܕܥܒܘ̇ܪܿܐ: ܘܢܗܘܘܢ ܐ݇ܢܫܐ ܛܠܒܐܝܬ.</line>
-            <line lang="en">If the year begins in Cancer: At the beginning of the year corn will be at a moderate price, and people will be comfortable.</line>
-        </div>
-        <div c="4" v="2">
-            <line lang="syr">ܘܢܝܠܘܣ ܢܣܩ ܦܠܓܗ ܕܡܣܩܗ.</line>
-            <line lang="en">The Nile will overflow at half its normal rate.</line>
-        </div>
-        <div c="4" v="3">
-            <line lang="syr">ܘܐܠܟܣܢܕܪܝܐ ܬܬܐܠܨ ܘܢܗܘܐ ܒܗܿ ܫܚܩܐ ܡ̣ܢ ܡܘܬܢܐ.</line>
-            <line lang="en">Alexandria will be besieged, and distress will be in it from pest.</line>
-        </div>
-        <div c="4" v="4">
-            <line lang="syr">ܘܢܨܡܚܘܢ ܟܘܟܒ̈ܐ ܪܽܘܪܒܐܝܬ: ܘܣܗܪܐ ܢܚܫܟ.</line>
-            <line lang="en">Stars will shine very brightly, and the moon will suffer eclipse.</line>
-        </div>
-        <div c="4" v="5">
-            <line lang="syr">ܘܐܠܦ̈ܐ ܣܓܝ̈ܐܬܐ ܢܬܬܒܪ̈ܢ ܒܝܡܐ.</line>
-            <line lang="en">Many ships will break up in the sea.</line>
-        </div>
-        <div c="4" v="6">
-            <line lang="syr">ܘܒܫܘܪܝܗܿ ܕܫܢ݇ܬܐ ܢܐܩܪ̈ܢ ܚܛܐ ܘܣܥܪ̈ܐ.</line>
-            <line lang="en">At the beginning of the year wheat and barley will be dear.</line>
-        </div>
-        <div c="4" v="7">
-            <line lang="syr">ܘܪ̈ܘܚܐ ܢܣܓܝܢ: ܘܐܢܫܐ ܣܓܝ̈ܐܐ ܢܬܟܪܗܘܢ ܡ̣ܢ ܚܨܐ ܘܡܼ̣ܢ ܫܥܠܐ ܘܪ̈ܓܠܐ.</line>
-            <line lang="en">Winds will abound, and many people will suffer from backaches, coughs, and soreness of the feet and eyes.</line>
-        </div>
-        <div c="4" v="8">
-            <line lang="syr">ܘܚܡܪܿܐ ܢܣܓܐ.</line>
-            <line lang="en">Wine will be abundant.</line>
-        </div>
-        <div c="4" v="9">
-            <line lang="syr">ܘܬܘܪ̈ܐ ܘܥ̈ܢܐ ܘܩ̈ܛܝܢܬܐ ܢܐܒܕܘܢ: ܘܕܼܩ̈ܐ ܢܐܒܕܘܢ: ܘܡܫܚܐ ܢܫܘܐ ܐܢܘܢ.</line>
-            <line lang="en">Oxen, sheep, and small cattle will perish; and cereals will also perish, but oil will make up for them.</line>
-        </div>
-        <div c="4" v="10">
-            <line lang="syr">ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܬܐܩܪ ܝܥܠܬܐ ܬܫܥܐ ܝܘ̈ܡܬܐ: ܘܒܬܪ̇ܟܢ ܢܗܘܐ ܡܛܪܐ: ܘܬܗܘܐ ܒܗܿ ܒܘܪܟܬܐ ܣܓܝܐܬܐ.</line>
-            <line lang="en">At the end of the year corn will be dear for nine days, and then there will be rain, and (the year) will have much blessing.</line>
-        </div>
-        <div c="5" v="1">
-            <line lang="syr">ܘܐܢ ܒܐܪܝܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܢܗܘܐ ܡܛܪܐ ܪܰܒܝܥܝܐ: ܘܐܖܿܥܐ ܬܐܒܕܼ ܡ̣ܢ ܪ̈ܘܚܐ ܕܓܖܶܒܝܐ.</line>
-            <line lang="en">If the year begins in Leo: There will be early rains, but the soil will be scorched by North winds;</line>
-        </div>
-        <div c="5" v="2">
-            <line lang="syr">ܘܙܪܥܐ ܢܬܪܚܡ: ܘܐܦ ܡܐܟܘܠܬܐ ܕܝܢ ܕܒܢܝ̈ܢܫܐ ܬܛܐܒ.</line>
-            <line lang="en">corn will not be injured and the food of mankind will be good.</line>
-        </div>
-        <div c="5" v="3">
-            <line lang="syr">ܘܢܐܩܪ̈ܢ ܚܛ̈ܐ ܘܪܽܘܙܐ ܘܕܩܐ: ܘܢܫܩ̈ܝܢ ܚܛܐ.</line>
-            <line lang="en">Wheat, rice, and cereals will be dear, and wheat will have to be watered.</line>
-        </div>
-        <div c="5" v="4">
-            <line lang="syr">ܘܡܫܚܬܐ ܘܬܡܪ̈ܐ ܢܐܩܪܘܢ.</line>
-            <line lang="en">Oil and dates will be dear.</line>
-        </div>
-        <div c="5" v="5">
-            <line lang="syr">ܘܟܘܪ̈ܗܢܐ ܒܒܢܝ̈ܢܫܐ ܢܗܘܐ: ܘܒܛ̈ܢܬܐ ܘܩܛ̈ܝܢܬܐ ܢܐܒ̈ܘܢ.</line>
-            <line lang="en">There will be diseases in sons of men and the pregnant animals will perish as well as small cattle.</line>
-        </div>
-        <div c="5" v="6">
-            <line lang="syr">ܘܡܠܟܐ ܢܬܟܬܫ ܥܡ ܡܠܟܐ.</line>
-            <line lang="en">A king will fight against a king.</line>
-        </div>
-        <div c="5" v="7">
-            <line lang="syr">ܘܩܡܨܐ ܪܒܐ ܢܐܬܐ: ܘܠܐ ܢܒܨܪ ܐܠܐ ܩܠܝܠ ܡܕܡ.</line>
-            <line lang="en">A considerable number of locusts will make their appearance and their number will decrease but slightly.</line>
-        </div>
-        <div c="5" v="8">
-            <line lang="syr">ܘܢܣܩ ܢܝܠܘܣ ܢܗܪܿܐ ܡܣܩܗ ܥܠܝܐ: ܘܢܗܘܐ ܟܐܒܐ ܕܪܫܐ ܠܐܢ݇ܫܐ: ܘܒܫܘܠܡܗ̇ ܕܫܢ݇ܬܐ ܢܗܘܐ ܡܛܪܐ ܣܓܝܐܐ.</line>
-            <line lang="en">The river Nile will overflow to its highest rate. People will have headache. At the end of the year there will be much rain.</line>
-        </div>
-        <div c="6" v="1">
-            <line lang="syr">ܘܐܢ ܒܫܒܠܬܐ ܡܬܝܠܕܼܐ ܫܢܵ݇ܬܐ: ܟܠ ܡܢ ܕܐܝܬܘܗܝ ܫܡܗ ܝܘܕܼ ܐܘ ܣܡܟܬ ܘܒܝܬ ܘܢܘܢ ܢܗܘܐ ܟܪܝܗ: ܘܢܬܒܙܙ ܘܢܥܖ̇ܘܩ ܡ̣ܢ ܒܝܬܗ.</line>
-            <line lang="en">If the year begins in Virgo: Anyone having in his name (the letters) Yodh, Semkath, Beith, or Nun will be ill, will be plundered, and will flee from his house.</line>
-        </div>
-        <div c="6" v="2">
-            <line lang="syr">ܘܢܗܘܐ ܒܫܘܪܶܝܗܿ ܕܸܫܢ݇ܬܐ ܚܣܝܪܘܬ ܡܝ̈ܐ ܒܕܘܟܐ ܕܘܟܐ: ܘܙܪܥܐ ܩܕܡܝܐ ܠܐ ܢܟܫܪ.</line>
-            <line lang="en">At the beginning of the year there will be shortage of water in various places, and the first crops will not succeed.</line>
-        </div>
-        <div c="6" v="3">
-            <line lang="syr">ܘܐ݇ܢܫܐ ܫܚܝܩܐ ܢܗܘܘܢ: ܒܣܬܘܐ ܘܒܩܝܛܐ ܢܬܟܪܗܘܢ.</line>
-            <line lang="en">People will be distressed: in winter and in summer they will be ill.</line>
-        </div>
-        <div c="6" v="4">
-            <line lang="syr">ܘܥܒܘܪܐ ܢܐܩܪ ܒܚܘܪܢ ܘܒܬܕܡܘܪ.</line>
-            <line lang="en">Corn will be dear in Hauran and in Palmyra.</line>
-        </div>
-        <div c="6" v="5">
-            <line lang="syr">ܘܒܫܘܠܡܗ̇ ܕܫܢ݇ܬܐ ܢܫ̈ܘܝܢ ܩܠܝܠ: ܘܚܡܪܐ ܢܗܘܐ ܙܥܘܪ ܘܒܣܝܡ.</line>
-            <line lang="en">At the end of the year prices will be slightly moderate, and wine will be scarce and sweet.</line>
-        </div>
-        <div c="6" v="6">
-            <line lang="syr">ܘܬܡܪ̈ܐ ܢܣܓܘܢ: ܘܡܫܚܐ ܢܐܩܪ: ܘܚܛ̈ܐ ܘܣܥܪ̈ܐ ܢܫ̈ܘܝܢ: ܘܕܩܐ ܢܙܥܪ.</line>
-            <line lang="en">Dates will abound, oil will be dear, wheat and barley will be at a moderate price, and cereals will be scarce.</line>
-        </div>
-        <div c="6" v="7">
-            <line lang="syr">ܘܡܛܪܿܐ ܢܬܟܠܐ: ܘܠܐ ܢܚܘܬ ܥܠ ܐܪܥܐ ܬܠܬܝܢ ܝܘ̈ܡܝܢ ܥܕܡܐ ܠܦܨܚܐ.</line>
-            <line lang="en">Rain will fail and will not fall upon the earth during thirty days down to the time of Passover.</line>
-        </div>
-        <div c="6" v="8">
-            <line lang="syr">ܘܡܠܟܐ ܢܬܟܬܫ ܥܡ ܡܠܟܐ ܘܢܩܛܠܝܘܗܝ.</line>
-            <line lang="en">The king will fight against another king and will kill him.</line>
-        </div>
-        <div c="6" v="9">
-            <line lang="syr">ܘܐܠܟܣܢܕܪܝܐ ܬܐܒܕ: ܘܢܝܠܘܣ ܠܐ ܢܣܩ ܛܒܐܝܬ.</line>
-            <line lang="en">Living in Alexandria will be dear. The Nile will not overflow well.</line>
-        </div>
-        <div c="6" v="10">
-            <line lang="syr">ܘܢܬܬܒܪ̈ܢ ܐܠܦ̈ܐ ܣܓܝ̈ܐܬܐ: ܘܒܫܘܠܡ ܫܢܬܐ ܗܘܿܝܐ ܫܘܝܘܬܐ ܕܟܠ ܡܕܡ.</line>
-            <line lang="en">Many ships will break up. At the end of the year there will be moderation in everything.</line>
-        </div>
-        <div c="7" v="1">
-            <line lang="syr">ܘܐܢ ܒܡܣܐܬܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ: ܡܛܪ̈ܐ ܪ̈ܒܝܥܝܐ ܢܗܘܘܢ: ܘܫܢ݇ܬܐ ܬܬܗܦܟ.</line>
-            <line lang="en">If the year begins in Libra: There will be early rains, and the (order of the) year will be inverted.</line>
-        </div>
-        <div c="7" v="2">
-            <line lang="syr">ܘܢܚܘܢ ܐ݀ܢܫܐ ܡ̣ܢ ܪܘܚ ܕܡܕܢܚܐ.</line>
-            <line lang="en">People will be secure from the East wind.</line>
-        </div>
-        <div c="7" v="3">
-            <line lang="syr">ܘܬܐܢ̈ܐ ܠܐ ܢܗܘܐ ܒܗܘܢ ܦܐܪ̈ܐ: ܘܬܡܖܪ̈ܐ ܘܡܫܚܐ ܢܣܓܘܢ.</line>
-            <line lang="en">Fig-trees will not bear fruit. Dates and oil will abound.</line>
-        </div>
-        <div c="7" v="4">
-            <line lang="syr">ܘܚܡܪܐ ܢܐܩܪ: ܘܚܛ̈ܐ ܢܫܘ̈ܝܢ ܣܓܝ.</line>
-            <line lang="en">Wine will be dear. Wheat will be at a very moderate price.</line>
-        </div>
-        <div c="7" v="5">
-            <line lang="syr">ܘܩܡܨܐ ܢܬܚܕܬ.</line>
-            <line lang="en">Locusts will appear.</line>
-        </div>
-        <div c="7" v="6">
-            <line lang="syr">ܘܐܦܪܺܝܩܝ ܢܗܘܐ ܒܗܿ ܩܪܒܐ ܩܫܝܐ: ܘܟܘܪ̈ܗܢܐ ܩܫܝ̈ܐ ܒܒܢܝ̈ܢܫܐ ܢܗܘܘܢ.</line>
-            <line lang="en">In Africa there will be a great and severe war. People will have acute diseases.</line>
-        </div>
-        <div c="7" v="7">
-            <line lang="syr">ܘܒܡܨܥܬܗܿ ܕܫܢܵܬܐ ܢܬܟܠܐ ܡܛܪܐ ܝܘܡܝ̈ܢ ܥܣܪܝܢ.</line>
-            <line lang="en">In the middle of the year rain will fail during twenty days.</line>
-        </div>
-        <div c="7" v="8">
-            <line lang="syr">ܘܐܪ̈ܥܬܐ ܟܠܗܝܢ ܢܛ̈ܐܒܢ.</line>
-            <line lang="en">All fields will be good.</line>
-        </div>
-        <div c="7" v="9">
-            <line lang="syr">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܝܘܕ ܐܘ ܒܝܬ ܢܬܟܪܗ: ܘܢܗܘܐ ܠܗ ܪܥܝܐ: ܘܢܐܙܠ ܒܓܠܘܬܐ ܡ̣ܢ ܐܪܥܗ.</line>
-            <line lang="en">Anyone having in his name (the letters) Yodh or Beith will be ill, will have anxiety, and will emigrate from his country.</line>
-        </div>
-        <div c="7" v="10">
-            <line lang="syr">ܘܚܡܪܐ ܢܬܚܒܠ: ܘܓܘܪܐ ܢܣܓܐ.</line>
-            <line lang="en">Wine will be spoiled, and adultery will increase with the increase of foul desires.</line>
-        </div>
-        <div c="7" v="11">
-            <line lang="syr">ܘܡܠܟܐ ܢܟܬܪ ܒܚܕܐ ܕܘܟܬܐ: ܘܢܐܙܠ ܫܘܠܛܢܐ ܡ̣ܢ ܐܪܥܐ.</line>
-            <line lang="en">The king will remain in one place, and power will cease in the earth,</line>
-        </div>
-        <div c="7" v="12">
-            <line lang="syr">ܘܖܽܘ̈ܪܒܢܐ ܢܥܪܩܘܢ ܒܝܡܐ: ܘܢܗܘܐ ܒܝܢܬܗܘܢ ܩܪܒܐ ܩܫܝܐ.</line>
-            <line lang="en">and high officials will flee into the sea, and there will be between (them) a severe war.</line>
-        </div>
-        <div c="7" v="13">
-            <line lang="syr">ܘܢܗܘܐ ܒܓܠܝܠܐ ܙܘܥܐ ܩܫܝܐ.</line>
-            <line lang="en">In Galilee there will be a violent earthquake.</line>
-        </div>
-        <div c="7" v="14">
-            <line lang="syr">ܘܠܣ̈ܛܝܐ ܢܦܩܘܢ ܒܚܘܪܢ ܘܒܕܪܡܣܘܩ.</line>
-            <line lang="en">Marauders will appear in Hauran and in Damascus.</line>
-        </div>
-        <div c="7" v="15">
-            <line lang="syr">ܘܢܝܠܘܣ ܢܗܪܐ ܢܣܩ ܟܠܗ ܡܣܩܗ: ܘܢܗܘܐ ܒܡܨܪܝܢ ܫܪܥܘܛܐ ܩܫܝܐ: ܘܢܫܬܚܩܘܢ ܐ݇ܢܫܐ ܡܼܛܠ ܡܛܪܿܐ.</line>
-            <line lang="en">The river Nile will overflow to its highest rate. In Egypt there will be a cruel pest. People will be in distress because of the shortage of rain.</line>
-        </div>
-        <div c="8" v="1">
-            <line lang="syr">ܘܐܢ ܒܥܩܪܒܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܬܫܒ ܪܽܘܚܐ ܕܓܪܒܝܐ ܒܫܘܪܝܗ̇ ܕܫܢ݇ܬܐ: ܘܢܗܘܘܢ ܡܛܪ̈ܐ ܣܓܝ̈ܐܐ ܪ̈ܒܝܥܝܐ.</line>
-            <line lang="en">If the year begins in Scorpio: A North wind will blow at the beginning of the year, and there will be many early rains.</line>
-        </div>
-        <div c="8" v="2">
-            <line lang="syr">ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܢܐܩܪ ܟܠ ܡܕܡ: ܘܡܛܪܐ ܢܙܥܪ: ܥܕܡܐ ܕܼܢܦܩܘܢ ܐ݇ܢܫܐ ܒܒܥܘܬܐ ܘܨܠܘܬܐ ܘܙܕܩ̈ܬܐ ܢܒܥܘܢ ܡ̣ܢ ܐܠܗܐ ܚܝܐ.</line>
-            <line lang="en">At the end of the year everything will be dear, and rain will be so scarce that people will address prayers and supplications to the living God, for the sake of food.</line>
-        </div>
-        <div c="8" v="3">
-            <line lang="syr">ܘܟܘܪܗܢܐ ܢܗܘܐ ܒܢܫ̈ܐ ܕܒܛ̈ܢܢ.</line>
-            <line lang="en">Pregnant women will have diseases.</line>
-        </div>
-        <div c="8" v="4">
-            <line lang="syr">ܘܣܓܝ̈ܐܐ ܡ̣ܢ ܒܢ̈ܝ̈ܢܫܐ ܢܫܢܘܢ ܡ̣ܢ ܐܬܪ̈ܘܬܗܘܢ ܡ̣ܢ ܐܘܠܨܢܐ.</line>
-            <line lang="en">Many people will emigrate from their countries out of distress.</line>
-        </div>
-        <div c="8" v="5">
-            <line lang="syr">ܘܚܛ̈ܐ ܘܣܥܪ̈ܐ ܥ̈ܐܠܢ ܩܠܝܠ: ܘܕܩܐ ܢܐܠ.</line>
-            <line lang="en">Wheat and barley will be ingathered, but only in small quantity; cereals will be ingathered.</line>
-        </div>
-        <div c="8" v="6">
-            <line lang="syr">ܘܚܡܪܐ ܘܡܫܚܐ ܢܗܘܐ.</line>
-            <line lang="en">There will be wine and oil.</line>
-        </div>
-        <div c="8" v="7">
-            <line lang="syr">ܘܫܘܚ̈ܢܐ ܢܦܩܘܢ ܒܓܘܫ̈ܡܐ ܕܒܢܝ̈ܢܫܐ: ܘܠܐ ܢܚܣܪܘܢ ܐܢܘܢ.</line>
-            <line lang="en">Boils will spring forth in the bodies of people but they will do no harm.</line>
-        </div>
-        <div c="8" v="8">
-            <line lang="syr">ܘܢܝܠܘܣ ܢܣܩ ܦܠܓܗ ܕܡܣܩܐ.</line>
-            <line lang="en">The Nile will overflow half of its normal rate.</line>
-        </div>
-        <div c="8" v="9">
-            <line lang="syr">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܬܘ ܐܘ ܝܘܕ ܢܬܟܪܗ ܘܢܬܚܠܡ.</line>
-            <line lang="en">Anyone having in his name (the letters) Taw, or Yodh, will be ill, but will recover.</line>
-        </div>
-        <div c="8" v="10">
-            <line lang="syr">ܘܟܠ ܕܡܬܝܠܕ ܒܥܩܪܒܐ ܚܝܿܐ: ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܡܬܩܛܠ.</line>
-            <line lang="en">Anyone born in Scorpio will live, but will be killed at the end of the year.</line>
-        </div>
-        <div c="9" v="1">
-            <line lang="syr">ܘܐܢ ܒܩܫܬܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܒܝܬ ܐܘ ܦܐ ܢܗܘܐ ܠܗ ܫܚܩܐ ܘܟܘܪܗܢܐ ܩܫܝܐ.</line>
-            <line lang="en">If the year begins in Sagittarius: Anyone having in his name (the letters) Beith, or Pe, will have severe illness and distress,</line>
-        </div>
-        <div c="9" v="2">
-            <line lang="syr">ܘܒܫܘܪܝܗܿ ܕܸܫܢ݇ܬܐ ܢܬܩܫܐ: ܘܢܫܬܚܩܘܢ ܒܢܝ̈ܢܫܐ ܒܕܘܟ̈ܬܐ ܣܓܝ̈ܐܬܐ.</line>
-            <line lang="en">which will be aggravated at the beginning of the year. People will be in distress in many places.</line>
-        </div>
-        <div c="9" v="3">
-            <line lang="syr">ܘܐܪܥܐ ܕܡܨܪܝܢ ܠܐ ܢܙܪܥܘܢ ܒܗܿ ܡܕܡ ܐܠܐ ܩܠܝܠ.</line>
-            <line lang="en">Little will be sown in the land of Egypt.</line>
-        </div>
-        <div c="9" v="4">
-            <line lang="syr">ܘܒܡܨܥܬ ܫܢ݇ܬܐ ܢܗܘܐ ܡܛܪܿܐ ܣܿܓܝܐܐ.</line>
-            <line lang="en">In the middle of the year there will be much rain.</line>
-        </div>
-        <div c="9" v="5">
-            <line lang="syr">ܘܢܚܡܠܘܢ ܒܢܝ̈ܢܫܐ ܥܒܘܪܐ ܒܒܝܬ ܐܘܨܪ̈ܐ ܡܸܛܠ ܙܥܘܪܘܬ ܡܛܪܐ.</line>
-            <line lang="en">People will store corn in the barns because of the shortage of rain.</line>
-        </div>
-        <div c="9" v="6">
-            <line lang="syr">ܘܙܪܥܐ ܠܐ ܢܗܘܐ ܫܦܝܪ: ܘܫܘܠܡܗܿ̇ ܕܸܫܢ݇ܬܐ ܠܐ ܢܛܐܒ.</line>
-            <line lang="en">Crops will not be good, so also will be the case at the end of the year.</line>
-        </div>
-        <div c="9" v="7">
-            <line lang="syr">ܘܚܡܪܐ ܘܡܫܚܐ ܢܫܘܘܢ ܣܓܝ.</line>
-            <line lang="en">Wine and oil will be at a very moderate price.</line>
-        </div>
-        <div c="9" v="8">
-            <line lang="syr">ܘܓܘܪܐ ܢܣܓܐ: ܘܩܛܝܢܬܐ ܬܐܒܕܼ.</line>
-            <line lang="en">Adultery will increase, and small cattle will perish.</line>
-        </div>
-        <div c="10" v="1">
-            <line lang="syr">ܘܐܢ ܒܓܕܝܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܩܘܦ ܢܬܟܪܗ ܘܢܬܒܙܙ ܘܢܒܠܥ ܒܣܝܦܐ.</line>
-            <line lang="en">If the year begins in Capricornus: Anyone having in his name (the letters) Koph will be ill, will be plundered, and will be struck with sword.</line>
-        </div>
-        <div c="10" v="2">
-            <line lang="syr">ܘܪܘܚܐ ܡܕܢܚܝܬܐ ܡܕܼܒܪܐ ܠܗܿ ܠܫܢ݇ܬܐ.</line>
-            <line lang="en">An East wind will dominate the year.</line>
-        </div>
-        <div c="10" v="3">
-            <line lang="syr">ܘܟܠ ܕܩܕܸܡ ܙܪܿܥ ܢܟܫܪ: ܐ݇ܚܪܝܐ ܠܐ ܢܟܫܪ.</line>
-            <line lang="en">Everyone should sow earlier; the last in sowing will not succeed.</line>
-        </div>
-        <div c="10" v="4">
-            <line lang="syr">ܘܒܫܘܪܝܐ ܕܸܫܢ݇ܬܐ ܢܐܩܪ ܥܒܘܪܐ: ܘܢܣܓܘܢ ܓܠ̈ܠܐ ܘܡܚ̈ܫܘܠܐ: ܘܐܠܦܐ ܢܐܒܕܘܢ.</line>
-            <line lang="en">At the beginning of the year corn will be dear. Waves and billows will increase. Ships will perish.</line>
-        </div>
-        <div c="10" v="5">
-            <line lang="syr">ܘܒܡܨܥܬܗܿ ܕܫܢ݇ܬܐ ܢܐܩܪ ܥܒܘܪܿܐ.</line>
-            <line lang="en">In the middle of the year corn will be dear.</line>
-        </div>
-        <div c="10" v="6">
-            <line lang="syr">ܘܢܣܓܘܢ ܓܢܒ̈ܐ: ܘܦܠܚ̈ܘܗܝ ܕܫܘܠܛܢܐ ܒܝܫܝܢ ܢܗܘܘܢ.</line>
-            <line lang="en">Thieves will increase. The officials of the state will be bad.</line>
-        </div>
-        <div c="10" v="7">
-            <line lang="syr">ܘܕܒܘܪ̈ܐ ܘܫܪܨܗܿ ܕܐܪܥܐ ܢܣܓܘܢ: ܘܢܒܐܫܘܢ ܐ݀ܢܫܐ ܣܓܝ̈ܐܐ.</line>
-            <line lang="en">Wasps and reptiles of the earth will multiply and injure many people.</line>
-        </div>
-        <div c="10" v="8">
-            <line lang="syr">ܘܐ݇ܢܫܐ ܣܓܝ̈ܐܐ ܢܫܢܘܢ ܡ̣ܢ ܕܘܟܐ ܠܕܘܟܐ ܡܢ ܩܪܒܐ ܕܗܿܘܐ: ܘܢܣܓܘܢ ܩܪ̈ܒܐ ܒܐܪܥܐ.</line>
-            <line lang="en">Many people will move from one place to another because of the war which will take place. Wars will increase in the earth.</line>
-        </div>
-        <div c="10" v="9">
-            <line lang="syr">ܘܒܫܘܠܡܗܿ ܕܫܢܵܬܐ ܢܙܥܪ ܡܛܪܐ.</line>
-            <line lang="en">At the end of the year rain will be scarce.</line>
-        </div>
-        <div c="10" v="10">
-            <line lang="syr">ܘܒܕܘܟܝ̈ܬܐ ܢܐܠ ܙܪܥܐ: ܘܒܕܘܟ̈ܬܐ ܢܐܒܕܼ ܙܪܥܐ.</line>
-            <line lang="en">In some places the standing corn will yield something, and in others it will perish.</line>
-        </div>
-        <div c="10" v="11">
-            <line lang="syr">ܘܟܘܪܗܢܐ ܒܕܪܡܣܘܩ ܢܗܘܐ ܘܒܚܘܪܢ: ܘܟܦܢܐ ܒܣܦܪ ܝܡܐ.</line>
-            <line lang="en">There will be pest in Damascus and in Hauran, and famine in the littoral of the sea.</line>
-        </div>
-        <div c="10" v="12">
-            <line lang="syr">ܘܓܘܪܐ ܢܣܓܐ.</line>
-            <line lang="en">Adultery will increase.</line>
-        </div>
-        <div c="10" v="13">
-            <line lang="syr">ܘܐ݇ܢܫܐ ܢܣܩܘܢ ܒܥܘܬܐ ܘܨ̈ܠܘܬܐ ܘܨܘܡܐ ܘܙܕܩ̈ܬܐ ܡܸܛܠ ܡܛܪܐ: ܘܙܪܥܐ ܕܫܩܝܐ ܛܒ ܢܗܘܐ.</line>
-            <line lang="en">People will offer prayers and supplications, will fast and give alms for the sake of rain. The watered cereals will be normal.</line>
-        </div>
-        <div c="11" v="1">
-            <line lang="syr">ܐܡܬܝ ܕܡܬܝܠܕܐ ܫܢ݇ܬܐ ܒܕܘܠܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܠܡܕ ܐܘ ܦܐ ܢܬܟܪܗ: ܐܘ ܢܥܩܪ ܡ̣ܢ ܒܙܘܙܝܐ.</line>
-            <line lang="en">When the year begins in Aquarius: Anyone having in his name (the letters) Lamadh or Pe will be ill, or will be uprooted through pillage.</line>
-        </div>
-        <div c="11" v="2">
-            <line lang="syr">ܘܒܫܘܪܿܝܗܿ ܕܸܫܢ݇ܬܐ ܢܕܥܪ ܡܛܪܐ: ܘܢܝܠܘܣ ܢܣܩ ܟܠܗ ܡܣܩܗ.</line>
-            <line lang="en">At the beginning of the year rain will be scarce, and the Nile will overflow to its highest rate.</line>
-        </div>
-        <div c="11" v="3">
-            <line lang="syr">ܘܡܨܪܿܝܢ ܥܠ ܦܠܣܛܝܢܝ ܬܥܠ.</line>
-            <line lang="en">Egypt will invade Palestine.</line>
-        </div>
-        <div c="11" v="4">
-            <line lang="syr">ܘܐܡܪ̈ܐ ܘܥܙ̈ܐ ܢܟܫܪܘܢ.</line>
-            <line lang="en">Lambs and goats will prosper.</line>
-        </div>
-        <div c="11" v="5">
-            <line lang="syr">ܘܪܽܘܚܐ ܡܥܪܒܝܬܐ ܗܝِ ܡܕܒܪܐ ܠܫܢ݇ܬܐ ܗܝܿ.</line>
-            <line lang="en">A West wind will dominate that year.</line>
-        </div>
-        <div c="11" v="6">
-            <line lang="syr">ܘܡܠܟܐ ܢܩܪܒ ܥܡ ܡܠܟܐ.</line>
-            <line lang="en">A king will fight against a king.</line>
-        </div>
-        <div c="11" v="7">
-            <line lang="syr">ܘܙܪܥܐ ܩܕܝܡ ܢܟܫܪ: ܘܕܩܐ ܠܐ ܢܫܘܚ ܣܓܝ ܐܠܐ ܥܿܐܠ.</line>
-            <line lang="en">Early crops will succeed, and cereals will not be plentiful, but normal.</line>
-        </div>
-        <div c="11" v="8">
-            <line lang="syr">ܘܬܓܪ̈ܐ ܢܒܥܘܢ ܡܥܕܪܢܘܬܐ ܡ̣ܢ ܐܠܗܐ ܚܝܐ: ܘܟܘܪ̈ܗܢܐ ܢܣܓܘܢ.</line>
-            <line lang="en">Merchants will seek help from the living God, and illnesses will multiply.</line>
-        </div>
-        <div c="12" v="1">
-            <line lang="syr">ܘܐܢ ܒܢܘܢ̈ܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܟܦ ܐܘ ܡܝܡ ܢܬܟܪܗ ܘܢܬܒܙܙ.</line>
-            <line lang="en">If the year begins in Pisces: Anyone having in his name (the letters) Koph or Mim will be ill, and will be plundered.</line>
-        </div>
-        <div c="12" v="2">
-            <line lang="syr">ܫܢ݇ܬܐ ܛܒܬܐ ܬܗܘܐ: ܘܙܪܥܐ ܛܒ ܘܫܦܝܪ: ܘܡܛܪ̈ܐ ܪ̈ܒܝܥܝܐ ܢܗܘܘܢ.</line>
-            <line lang="en">The year will be good, crops will be very good, and there will be early rains.</line>
-        </div>
-        <div c="12" v="3">
-            <line lang="syr">ܘܝܡܐ ܢܣܓܐ ܨܝܕܗ: ܘܡܐ ܕܒܚܳܫ ܐܠܦܐ ܢܬܬܒܪ̈ܢ.</line>
-            <line lang="en">The sea will yield abundant fishing, but when it is rough ships will break up.</line>
-        </div>
-        <div c="12" v="4">
-            <line lang="syr">ܘܚܡܪܐ ܘܡܫܚܐ ܘܚܛ̈ܐ ܟܠܗܘܢ ܢܫܦܪܘܢ: ܘܙܪ̈ܥܐ ܛܒ ܢܣܓܘܢ.</line>
-            <line lang="en">Wine, oil, and wheat will all be good, and standing crops will be very plentiful.</line>
-        </div>
-        <div c="12" v="5">
-            <line lang="syr">ܘܡܕ̈ܝ̈ܢܬܐ ܢܗܘܐ ܒܗܘܢ ܩܪ̈ܒܐ ܘܚܪܒܐ ܩܛܝܢܐ: ܘܩܘܪ̈ܝܐ ܬܐܒܕܢ: ܘܢܫܢܘܢ ܡ̣ܢ ܕܘܟܐ ܠܕܘܟܐ.</line>
-            <line lang="en">In the cities there will be wars and cruel devastation; villages will be destroyed, and people will move from place to place.</line>
-        </div>
-        <div c="12" v="6">
-            <line lang="syr">ܘܢܦܩܘܢ ܠܣ̈ܛܝܐ ܡܼܢ ܦܠܣܛܝܢܐ: ܘܢܡܚܘܢ ܩܪܒܐ ܪܒܐ ܥܡ ܬܠܬ ܡܕܼܝ̈ܢܬܐ.</line>
-            <line lang="en">Brigands will go forth from Palestine, and will wage a great battle against three cities.</line>
-        </div>
-        <div c="12" v="7">
-            <line lang="syr">ܘܪ̈ܗ݇ܘܡܝܐ ܙܟܝܢ ܘܡܙܕܟܝܢ: ܘܟܘܪܗܢܐ ܪܒܐ ܢܗܘܐ ܒܒܢܝ̈ܢܫܐ.</line>
-            <line lang="en">The Romans will conquer and be conquered, and there will be great illness among the sons of men.</line>
-        </div>
-        <div c="12" v="8">
-            <line lang="syr">ܘܢܦܘܩ ܓܒܪܿܐ ܐܘܟܡܐ ܕܒܥܐ ܡܠܟܘܬܐ: ܘܒܝܬܐ ܕܡܠܟܘܬܐ ܢܐܒܕ.</line>
-            <line lang="en">A dark-complexioned man will come forth seeking the kingdom, and the royal house will perish.</line>
-        </div>
-        <div c="12" v="9">
-            <line lang="syr">ܘܡܠܟܐ ܒܝܫܐ ܢܫܡܥ ܡܢܘ ܐܡܪܿܝܢ ܒܢ̈ܝܢܫܐ: ܘܡܚܪܒ ܡܕܝ̈ܢܬܐ ܣܓܝ̈ܐܬܐ.</line>
-            <line lang="en">A wicked king will listen to gossip, and will lay waste many cities.</line>
-        </div>
-        <div c="12" v="10">
-            <line lang="syr">ܘܠܝܬ ܐܢܫ ܕܡܫܟܚ ܕܢܟܠܝܘܗܝ: ܘܕܚܠܬܐ ܕܐܠܗܐ ܘܪ̈ܚܡܘܗܝ ܦܪܝܩܝܢ ܡܢܗ.</line>
-            <line lang="en">There will be no one able to stop him, and the fear of God and His mercy will be far from him.</line>
-        </div>
-        <div c="12" v="11">
-            <line lang="syr">ܘܒܫܘܠܡܗܿ ܕܫܢ݇ܬܐ ܢܗܘܐ ܫܝܢܐ ܘܫܠܡܐ ܒܒܢܝ̈ܢܫܐ: ܘܚܘܒܐ ܘܐܘܝܘܬܐ ܬܗܘܐ ܒܝܢܬ ܟܠܗܘܢ ܡܠܟ̈ܐ ܕܐܝܬ ܒܟܠܗ̇ ܐܪܥܐ.</line>
-            <line lang="en">At the end of the year there will be peace and tranquillity among men, and love and harmony will prevail among all the kings of the whole earth.</line>
-        </div>
-    </body>
-</document>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="TracSem" title="Treatise of Shem">
+  <version author="Mingana 1917" language="Syriac" title="Syriac and English">
+    <divisions>
+      <division delimiter="." label="Chapter"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Mingana" language="Syriac" show="yes">
+        <name>Mingana 1917 (MS Rylands Syr. 44)</name>
+        <bibliography>Alphonse Mingana, Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 24-29, 54-61 (MS Cod. Syr. 44). CAVT 85.</bibliography>
+      </ms>
+      <ms abbrev="Trans" language="English" show="yes">
+        <name>Mingana English Translation (1917)</name>
+        <bibliography>Alphonse Mingana, Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 24-29, 54-61 (MS Cod. Syr. 44). CAVT 85.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="0">
+            <reading option="0" mss="Mingana ">ܬܘܒ ܡܡܠܠܐ ܕܣܝܡ ܠܫܝܡ ܒܪ ܢܘܚ ܥܠ ܡܘܠܕܐ ܕܫܢ݇ܬܐ ܘܟܠܡܐ ܕܗܿܘܐ ܒܗ:</reading>
+            <reading option="1" mss="Trans ">Discourse written by Shem son of Noah about the beginning of the year and all that happens in it.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="1">
+            <reading option="0" mss="Mingana ">ܐܢ ܒܐܡܪܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ, ܫܢ݇ܬܐ ܩܛܝܢܬܐ ܬܗܘܐ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Aries: The year will be hard.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="2">
+            <reading option="0" mss="Mingana ">ܘܐܖ̇ܒܥܬ ܪ̈ܓܠܝܗܿ ܬܡܘܬ.</reading>
+            <reading option="1" mss="Trans ">The quadrupeds will die.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="3">
+            <reading option="0" mss="Mingana ">ܘܥܢ̈ܢܐ ܣܓܝ̈ܐܬܐ ܠܐ ܢܬܚ̈ܙܝܢ ܘܠܐ ܢܗ̈ܘܝܢ.</reading>
+            <reading option="1" mss="Trans ">There will not be many clouds.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="4">
+            <reading option="0" mss="Mingana ">ܘܙܪܥܐ ܩܘܡܬܐ ܠܐ ܗܘܿܝܐ ܠܗ: ܘܦܪ݇ܕܬܗ ܕܝܢ ܬܗܘܐ ܘܬܫܡܢ.</reading>
+            <reading option="1" mss="Trans ">The standing corn will not have good size, but it will have fat grains.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="5">
+            <reading option="0" mss="Mingana ">ܘܢܗܪܿܐ ܕܢܝܠܘܣ ܡܣܩܐ ܫܦܝܪ ܢܣܩ.</reading>
+            <reading option="1" mss="Trans ">The river Nile will overflow well.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="6">
+            <reading option="0" mss="Mingana ">ܘܡܠܟܐ ܕܪ̈ܗ݇ܘܡܝܐ ܠܐ ܢܩܘܐ ܒܚܕܐ ܕܘܟܬܐ.</reading>
+            <reading option="1" mss="Trans ">The king of the Romans will not remain in one place.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="7">
+            <reading option="0" mss="Mingana ">ܘܟܘܟ̈ܒܐ ܕܫܡܝܐ ܢܬܒܕܪܘܢ ܐܝܟ ܙܠܝ̈ܩܐ ܕܢܘܪܐ.</reading>
+            <reading option="1" mss="Trans ">The stars of heaven will be scattered like rays of fire.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="8">
+            <reading option="0" mss="Mingana ">ܘܣܗܪܐ ܢܚܫܟ.</reading>
+            <reading option="1" mss="Trans ">The moon will suffer eclipse.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="9">
+            <reading option="0" mss="Mingana ">ܘܙܪܥܐ ܩܕܡܝܐ ܢܐܒܕ: ܘܙܪܥܐ ܐ݇ܚܪܝܐ ܢܬܚܡܘܠ.</reading>
+            <reading option="1" mss="Trans ">The first crops will perish, and the second will be ingathered.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="10">
+            <reading option="0" mss="Mingana ">ܡܢ ܦܨܚܐ ܥܒܘܪܿܐ ܝܪܩܢܐ ܗܘܐ ܠܗ.</reading>
+            <reading option="1" mss="Trans ">From Passover corn will be mildewed.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="11">
+            <reading option="0" mss="Mingana ">ܘܫܢ݇ܬܐ ܒܝܫܬܐ ܐܝܬܝܗܿ ܕܩܖܒܐ ܪܒܐ ܘܫܚܩܐ ܒܟܠܗܿ ܐܪܥܐ: ܘܝܬܝܪܐܝܬ ܒܐܪܥܐ ܕܡܨܪܝܢ.</reading>
+            <reading option="1" mss="Trans ">The year will be bad, with severe war and distress over all the earth, especially over the land of Egypt.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="12">
+            <reading option="0" mss="Mingana ">ܘܢܬܬܒܪ̈ܢ ܐܠܦ̈ܐ ܣܓܝܐܬܐ ܡܐ ܕܸܒܚܿܫ ܝܡܐ.</reading>
+            <reading option="1" mss="Trans ">Many ships will break up when the sea is rough.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="13">
+            <reading option="0" mss="Mingana ">ܘܡܫܚܐ ܢܫܘܐ ܒܐܦܪܝܩܝ: ܘܚܛ̈ܐ ܢܙܥܪ̈ܢ: ܒܕܪܡܣܘܩ ܘܒܚܘܪܢ ܘܒܦܠܣܛܝܢܝ ܢܫܘ̈ܝܢ.</reading>
+            <reading option="1" mss="Trans ">Oil will be at a moderate price in Africa, and wheat will be at a low price; in Damascus, Hauran, and Palestine it will be at a moderate price.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="14">
+            <reading option="0" mss="Mingana ">ܘܟܘܪ̈ܗܢܐ ܡܫܚ̈ܠܦܐ ܘܡ̈ܚܘܬܐ ܘܙܘܥܐ ܢܗܘܐ ܒܗܿ: ܘܡܬܦܠܛܐ ܡܢܗܿ ܘܬܫܬܘܙܒ.</reading>
+            <reading option="1" mss="Trans ">(Palestine) will have different kinds of diseases, plagues, and earthquake, but it will be delivered from them and saved.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="15">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܡܬܝܠܕܐ ܫܢ݇ܬܐ ܒܬܘܪܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܒܝܬ ܐܘ ܝܘܕ ܐܘ ܟܦ ܢܬܟܪܗ: ܐܘ ܢܒܠܥ ܒܦܪܙܠܐ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Taurus: Anyone having in his name (the letters) Beith, Yodh, or Koph will be ill, or will be killed with iron weapons.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="16">
+            <reading option="0" mss="Mingana ">ܘܢܗܘܐ ܙܘܥܐ.</reading>
+            <reading option="1" mss="Trans ">There will be earthquake.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="17">
+            <reading option="0" mss="Mingana ">ܘܬܦܘܩ ܡ̣ܢ ܡܨܪܝܢ ܪܘܚܐ ܘܬܡܠܝܗ̇ ܠܟܠܗ̇ ܐܪܥܐ.</reading>
+            <reading option="1" mss="Trans ">A wind will start from Egypt and spread over all the earth.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="18">
+            <reading option="0" mss="Mingana ">ܘܢܗ̈ܘ̈ܝܢ ܒܗܿ ܚ̈ܛܐ ܘܡܛܪܐ ܪܽܘ̈ܪܒܐ: ܘܖܘܪ̈ܒܢܐ ܕܐܪܥܐ ܘܕܼܐܬܪ̈ܘܬܐ ܕܚܕܪ̈ܝܗܘܢ ܢܘܒܕܘܢ ܐܢܘܢ.</reading>
+            <reading option="1" mss="Trans ">The year will be rich in wheat and abundant rains, but the chiefs of the land and of the surrounding places will destroy that (wheat).</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="19">
+            <reading option="0" mss="Mingana ">ܘܡܛܪܿܐ ܕܫܢ݇ܬܐ ܢܬܚܣܟ ܬܠܬܐ ܝܪ̈ܚܝܢ: ܘܡ̣ܢ ܒܬܖܿܟܢ ܥܒܘܪܿܐ ܢܐܩܪ ܒܢܣܝܘܢܐ ܝܘ̈ܡܬܐ ܬܠܬܝܢ ܘܫܬܐ.</reading>
+            <reading option="1" mss="Trans ">The yearly rain will fail during three months, and then corn will be very dear during thirty-six days;</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="20">
+            <reading option="0" mss="Mingana ">ܘܢܡܘܬܘܢ ܐܢܫܐ ܣܓܝܐܐ ܡ̣ܢ ܟܘܪ̈ܗܢܐ ܕܓܪܓܪܬܐ: ܘܩܛܝܢܘܬܐ ܬܐܒܕܼ.</reading>
+            <reading option="1" mss="Trans ">many people will die from diseases of the throat, and then tribulation will cease.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="21">
+            <reading option="0" mss="Mingana ">ܘܙܪܥܐ ܩܕܡܝܐ ܢܐܒܕܼ ܗܟܢܐ: ܘܙܪܥܐ ܐ݇ܚܪܝܐ ܢܐܠ: ܘܣܥܪ̈ܐ ܘܕܼܩ̈ܐ ܢܐܠܘܢ.</reading>
+            <reading option="1" mss="Trans ">The first crops (of wheat) will perish, but as (above), the second crops will be ingathered, and barley with the watered cereals will be ingathered also.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="22">
+            <reading option="0" mss="Mingana ">ܘܕܼܝܘ̈ܐ ܥܠ ܒܢܝ̈ܢܫܐ ܢܦܠܘܢ: ܘܡܕܡ ܠܐ ܢܚܣܪܘܢ ܐܢܘܢ.</reading>
+            <reading option="1" mss="Trans ">The devils will attack the sons of men, but they will not harm them in anything.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="23">
+            <reading option="0" mss="Mingana ">ܘܡ̈ܠܟܐ ܬܪܶܝܢ ܢܩܘܡܘܢ ܥܠ ܚܕܕܵܐ.</reading>
+            <reading option="1" mss="Trans ">Two kings will rise against each other.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="24">
+            <reading option="0" mss="Mingana ">ܘܢܝܠܘܣ ܢܗܖܿܐ ܪܒܐ ܢܣܩ ܠܥܠ ܡ̣ܢ ܡܫܘܚܬܗ.</reading>
+            <reading option="1" mss="Trans ">The great river Nile will overflow above its normal rate.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="25">
+            <reading option="0" mss="Mingana ">ܗܠܝܢ ܕܐܝܬܝܗܘܢ ܒܐܠܦܐ ܒܓܘ ܝܡܐ ܘܐ݇ܢܫܐ ܕܼܐܝܬ ܒܝܡܐ ܢܗܘܘܢ ܒܫܚܩܐ ܩܫܝܐ: ܘܒܚܪܬܗ̇ ܕܫܢ݇ܬܐ ܒܘܪܟܬܐ ܣܓܝܐܬܐ ܬܗܘܐ.</reading>
+            <reading option="1" mss="Trans ">Those who are on board a ship in the sea, and those who are on the sea will be in great distress. At the end of the year there will be great blessing.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="26">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܬܪܝܢ ܨܠܡ̈ܐ ܡܬܝܠܕܐ ܫܢܵܬܐ: ܢܗܘܐ ܣܗܪܶܐ ܫܦܝܪ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Gemini (the Two Figures): The moon will be good.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="27">
+            <reading option="0" mss="Mingana ">ܘܬܫܒ ܪܽܘܚܐ ܕܬܝܡܢܐ ܘܡܢܗ̇ܿ ܢܗܘܐ ܡܛܪܐ.</reading>
+            <reading option="1" mss="Trans ">A South wind will blow, from which rain will come.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="28">
+            <reading option="0" mss="Mingana ">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܬܘ ܐܘ ܚܝܬ ܐܘ ܡܝܡ ܢܗܘܐ ܒܦܪܨܘܦܗ ܓܪܳܒܐ ܐܘ ܫܘܚܢܐ.</reading>
+            <reading option="1" mss="Trans ">Anyone having in his name the letters Taw, Heth, or Mim will have tumours and boils in his face.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="29">
+            <reading option="0" mss="Mingana ">ܘܢܗܘܐ ܒܫܘܪܝܗܿ ܕܸܫܢ݇ܬܐ ܩܖܒܐ ܩܫܝܐ.</reading>
+            <reading option="1" mss="Trans ">At the beginning of the year there will be a severe war.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="30">
+            <reading option="0" mss="Mingana ">ܘܡܛܪ̈ܐ ܪܒܝܥܝܐ ܢܗܘܘܢ: ܘܙܪܥܐ ܢܫܦܖܿ: ܘܝܬܝܪܐܝܬ ܙܪܥܐ ܕܫܩܝܐ.</reading>
+            <reading option="1" mss="Trans ">There will be early rains, and the standing corn will be good, especially in the watered places.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="31">
+            <reading option="0" mss="Mingana ">ܘܥܘܩܒܪ̈ܬܐ ܢܣܓܝܢ ܒܐܪܥܐ.</reading>
+            <reading option="1" mss="Trans ">Mice will abound in the earth.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="32">
+            <reading option="0" mss="Mingana ">ܘ̈ܪܗ݇ܘܡܝܐ ܘܦܪ̈ܣܝܐ ܢܥܒܕܘܢ ܩܖܒܐ ܩܫܝܐ ܥܡ ܚܕ̈ܕܐ: ܘܢܦܩܘܢ ܪܗ݇ܘܡܝܐ ܒܐܠܦ̈ܐ ܒܝܡܐ: ܘܢܥܒܕܘܢ ܩܪܒܐ ܘܢܘܒܕܘܢ ܐܢܘܢ.</reading>
+            <reading option="1" mss="Trans ">The Romans and the Persians will wage a severe war against one another, and the Romans will come forth by ships on the sea, will fight and destroy them.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="33">
+            <reading option="0" mss="Mingana ">ܘܢܦܩܘܢ ܒܥܠܡܐ ܗܢܐ ܐܢܫܐ ܒܝ̈ܫܐ ܘܢܥܒܕܘܢ ܒܝܫܬܐ: ܘܢܗܘܐ ܪܢܝܐ ܘܫܚܩܐ ܩܫܝܐ.</reading>
+            <reading option="1" mss="Trans ">Malicious people will rise in the world, who will do mischief, and there will be great anxiety and distress.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="34">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܠܡܗ̇ ܕܸܫܢ݇ܬܐ ܬܗܘܐ ܛܒܬܐ: ܘܢܝܠܘܣ ܢܗܪܐ ܢܣܩ ܫܦܝܪ.</reading>
+            <reading option="1" mss="Trans ">Good will come at the end of the year and the river Nile will overflow well.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="4">
+        <div number="1">
+          <unit id="35">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܣܪܛܢܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܬܗܘܐ݀ ܒܫܘܪܝܗܿ ܕܫܢ݇ܬܐ ܫܘܝܘܬܐ ܕܥܒܘ̇ܪܿܐ: ܘܢܗܘܘܢ ܐ݇ܢܫܐ ܛܠܒܐܝܬ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Cancer: At the beginning of the year corn will be at a moderate price, and people will be comfortable.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="36">
+            <reading option="0" mss="Mingana ">ܘܢܝܠܘܣ ܢܣܩ ܦܠܓܗ ܕܡܣܩܗ.</reading>
+            <reading option="1" mss="Trans ">The Nile will overflow at half its normal rate.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="37">
+            <reading option="0" mss="Mingana ">ܘܐܠܟܣܢܕܪܝܐ ܬܬܐܠܨ ܘܢܗܘܐ ܒܗܿ ܫܚܩܐ ܡ̣ܢ ܡܘܬܢܐ.</reading>
+            <reading option="1" mss="Trans ">Alexandria will be besieged, and distress will be in it from pest.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="38">
+            <reading option="0" mss="Mingana ">ܘܢܨܡܚܘܢ ܟܘܟܒ̈ܐ ܪܽܘܪܒܐܝܬ: ܘܣܗܪܐ ܢܚܫܟ.</reading>
+            <reading option="1" mss="Trans ">Stars will shine very brightly, and the moon will suffer eclipse.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="39">
+            <reading option="0" mss="Mingana ">ܘܐܠܦ̈ܐ ܣܓܝ̈ܐܬܐ ܢܬܬܒܪ̈ܢ ܒܝܡܐ.</reading>
+            <reading option="1" mss="Trans ">Many ships will break up in the sea.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="40">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܪܝܗܿ ܕܫܢ݇ܬܐ ܢܐܩܪ̈ܢ ܚܛܐ ܘܣܥܪ̈ܐ.</reading>
+            <reading option="1" mss="Trans ">At the beginning of the year wheat and barley will be dear.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="41">
+            <reading option="0" mss="Mingana ">ܘܪ̈ܘܚܐ ܢܣܓܝܢ: ܘܐܢܫܐ ܣܓܝ̈ܐܐ ܢܬܟܪܗܘܢ ܡ̣ܢ ܚܨܐ ܘܡܼ̣ܢ ܫܥܠܐ ܘܪ̈ܓܠܐ.</reading>
+            <reading option="1" mss="Trans ">Winds will abound, and many people will suffer from backaches, coughs, and soreness of the feet and eyes.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="42">
+            <reading option="0" mss="Mingana ">ܘܚܡܪܿܐ ܢܣܓܐ.</reading>
+            <reading option="1" mss="Trans ">Wine will be abundant.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="43">
+            <reading option="0" mss="Mingana ">ܘܬܘܪ̈ܐ ܘܥ̈ܢܐ ܘܩ̈ܛܝܢܬܐ ܢܐܒܕܘܢ: ܘܕܼܩ̈ܐ ܢܐܒܕܘܢ: ܘܡܫܚܐ ܢܫܘܐ ܐܢܘܢ.</reading>
+            <reading option="1" mss="Trans ">Oxen, sheep, and small cattle will perish; and cereals will also perish, but oil will make up for them.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="44">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܬܐܩܪ ܝܥܠܬܐ ܬܫܥܐ ܝܘ̈ܡܬܐ: ܘܒܬܪ̇ܟܢ ܢܗܘܐ ܡܛܪܐ: ܘܬܗܘܐ ܒܗܿ ܒܘܪܟܬܐ ܣܓܝܐܬܐ.</reading>
+            <reading option="1" mss="Trans ">At the end of the year corn will be dear for nine days, and then there will be rain, and (the year) will have much blessing.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="5">
+        <div number="1">
+          <unit id="45">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܐܪܝܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܢܗܘܐ ܡܛܪܐ ܪܰܒܝܥܝܐ: ܘܐܖܿܥܐ ܬܐܒܕܼ ܡ̣ܢ ܪ̈ܘܚܐ ܕܓܖܶܒܝܐ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Leo: There will be early rains, but the soil will be scorched by North winds;</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="46">
+            <reading option="0" mss="Mingana ">ܘܙܪܥܐ ܢܬܪܚܡ: ܘܐܦ ܡܐܟܘܠܬܐ ܕܝܢ ܕܒܢܝ̈ܢܫܐ ܬܛܐܒ.</reading>
+            <reading option="1" mss="Trans ">corn will not be injured and the food of mankind will be good.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="47">
+            <reading option="0" mss="Mingana ">ܘܢܐܩܪ̈ܢ ܚܛ̈ܐ ܘܪܽܘܙܐ ܘܕܩܐ: ܘܢܫܩ̈ܝܢ ܚܛܐ.</reading>
+            <reading option="1" mss="Trans ">Wheat, rice, and cereals will be dear, and wheat will have to be watered.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="48">
+            <reading option="0" mss="Mingana ">ܘܡܫܚܬܐ ܘܬܡܪ̈ܐ ܢܐܩܪܘܢ.</reading>
+            <reading option="1" mss="Trans ">Oil and dates will be dear.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="49">
+            <reading option="0" mss="Mingana ">ܘܟܘܪ̈ܗܢܐ ܒܒܢܝ̈ܢܫܐ ܢܗܘܐ: ܘܒܛ̈ܢܬܐ ܘܩܛ̈ܝܢܬܐ ܢܐܒ̈ܘܢ.</reading>
+            <reading option="1" mss="Trans ">There will be diseases in sons of men and the pregnant animals will perish as well as small cattle.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="50">
+            <reading option="0" mss="Mingana ">ܘܡܠܟܐ ܢܬܟܬܫ ܥܡ ܡܠܟܐ.</reading>
+            <reading option="1" mss="Trans ">A king will fight against a king.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="51">
+            <reading option="0" mss="Mingana ">ܘܩܡܨܐ ܪܒܐ ܢܐܬܐ: ܘܠܐ ܢܒܨܪ ܐܠܐ ܩܠܝܠ ܡܕܡ.</reading>
+            <reading option="1" mss="Trans ">A considerable number of locusts will make their appearance and their number will decrease but slightly.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="52">
+            <reading option="0" mss="Mingana ">ܘܢܣܩ ܢܝܠܘܣ ܢܗܪܿܐ ܡܣܩܗ ܥܠܝܐ: ܘܢܗܘܐ ܟܐܒܐ ܕܪܫܐ ܠܐܢ݇ܫܐ: ܘܒܫܘܠܡܗ̇ ܕܫܢ݇ܬܐ ܢܗܘܐ ܡܛܪܐ ܣܓܝܐܐ.</reading>
+            <reading option="1" mss="Trans ">The river Nile will overflow to its highest rate. People will have headache. At the end of the year there will be much rain.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="6">
+        <div number="1">
+          <unit id="53">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܫܒܠܬܐ ܡܬܝܠܕܼܐ ܫܢܵ݇ܬܐ: ܟܠ ܡܢ ܕܐܝܬܘܗܝ ܫܡܗ ܝܘܕܼ ܐܘ ܣܡܟܬ ܘܒܝܬ ܘܢܘܢ ܢܗܘܐ ܟܪܝܗ: ܘܢܬܒܙܙ ܘܢܥܖ̇ܘܩ ܡ̣ܢ ܒܝܬܗ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Virgo: Anyone having in his name (the letters) Yodh, Semkath, Beith, or Nun will be ill, will be plundered, and will flee from his house.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="54">
+            <reading option="0" mss="Mingana ">ܘܢܗܘܐ ܒܫܘܪܶܝܗܿ ܕܸܫܢ݇ܬܐ ܚܣܝܪܘܬ ܡܝ̈ܐ ܒܕܘܟܐ ܕܘܟܐ: ܘܙܪܥܐ ܩܕܡܝܐ ܠܐ ܢܟܫܪ.</reading>
+            <reading option="1" mss="Trans ">At the beginning of the year there will be shortage of water in various places, and the first crops will not succeed.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="55">
+            <reading option="0" mss="Mingana ">ܘܐ݇ܢܫܐ ܫܚܝܩܐ ܢܗܘܘܢ: ܒܣܬܘܐ ܘܒܩܝܛܐ ܢܬܟܪܗܘܢ.</reading>
+            <reading option="1" mss="Trans ">People will be distressed: in winter and in summer they will be ill.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="56">
+            <reading option="0" mss="Mingana ">ܘܥܒܘܪܐ ܢܐܩܪ ܒܚܘܪܢ ܘܒܬܕܡܘܪ.</reading>
+            <reading option="1" mss="Trans ">Corn will be dear in Hauran and in Palmyra.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="57">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܠܡܗ̇ ܕܫܢ݇ܬܐ ܢܫ̈ܘܝܢ ܩܠܝܠ: ܘܚܡܪܐ ܢܗܘܐ ܙܥܘܪ ܘܒܣܝܡ.</reading>
+            <reading option="1" mss="Trans ">At the end of the year prices will be slightly moderate, and wine will be scarce and sweet.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="58">
+            <reading option="0" mss="Mingana ">ܘܬܡܪ̈ܐ ܢܣܓܘܢ: ܘܡܫܚܐ ܢܐܩܪ: ܘܚܛ̈ܐ ܘܣܥܪ̈ܐ ܢܫ̈ܘܝܢ: ܘܕܩܐ ܢܙܥܪ.</reading>
+            <reading option="1" mss="Trans ">Dates will abound, oil will be dear, wheat and barley will be at a moderate price, and cereals will be scarce.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="59">
+            <reading option="0" mss="Mingana ">ܘܡܛܪܿܐ ܢܬܟܠܐ: ܘܠܐ ܢܚܘܬ ܥܠ ܐܪܥܐ ܬܠܬܝܢ ܝܘ̈ܡܝܢ ܥܕܡܐ ܠܦܨܚܐ.</reading>
+            <reading option="1" mss="Trans ">Rain will fail and will not fall upon the earth during thirty days down to the time of Passover.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="60">
+            <reading option="0" mss="Mingana ">ܘܡܠܟܐ ܢܬܟܬܫ ܥܡ ܡܠܟܐ ܘܢܩܛܠܝܘܗܝ.</reading>
+            <reading option="1" mss="Trans ">The king will fight against another king and will kill him.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="61">
+            <reading option="0" mss="Mingana ">ܘܐܠܟܣܢܕܪܝܐ ܬܐܒܕ: ܘܢܝܠܘܣ ܠܐ ܢܣܩ ܛܒܐܝܬ.</reading>
+            <reading option="1" mss="Trans ">Living in Alexandria will be dear. The Nile will not overflow well.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="62">
+            <reading option="0" mss="Mingana ">ܘܢܬܬܒܪ̈ܢ ܐܠܦ̈ܐ ܣܓܝ̈ܐܬܐ: ܘܒܫܘܠܡ ܫܢܬܐ ܗܘܿܝܐ ܫܘܝܘܬܐ ܕܟܠ ܡܕܡ.</reading>
+            <reading option="1" mss="Trans ">Many ships will break up. At the end of the year there will be moderation in everything.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="7">
+        <div number="1">
+          <unit id="63">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܡܣܐܬܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ: ܡܛܪ̈ܐ ܪ̈ܒܝܥܝܐ ܢܗܘܘܢ: ܘܫܢ݇ܬܐ ܬܬܗܦܟ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Libra: There will be early rains, and the (order of the) year will be inverted.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="64">
+            <reading option="0" mss="Mingana ">ܘܢܚܘܢ ܐ݀ܢܫܐ ܡ̣ܢ ܪܘܚ ܕܡܕܢܚܐ.</reading>
+            <reading option="1" mss="Trans ">People will be secure from the East wind.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="65">
+            <reading option="0" mss="Mingana ">ܘܬܐܢ̈ܐ ܠܐ ܢܗܘܐ ܒܗܘܢ ܦܐܪ̈ܐ: ܘܬܡܖܪ̈ܐ ܘܡܫܚܐ ܢܣܓܘܢ.</reading>
+            <reading option="1" mss="Trans ">Fig-trees will not bear fruit. Dates and oil will abound.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="66">
+            <reading option="0" mss="Mingana ">ܘܚܡܪܐ ܢܐܩܪ: ܘܚܛ̈ܐ ܢܫܘ̈ܝܢ ܣܓܝ.</reading>
+            <reading option="1" mss="Trans ">Wine will be dear. Wheat will be at a very moderate price.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="67">
+            <reading option="0" mss="Mingana ">ܘܩܡܨܐ ܢܬܚܕܬ.</reading>
+            <reading option="1" mss="Trans ">Locusts will appear.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="68">
+            <reading option="0" mss="Mingana ">ܘܐܦܪܺܝܩܝ ܢܗܘܐ ܒܗܿ ܩܪܒܐ ܩܫܝܐ: ܘܟܘܪ̈ܗܢܐ ܩܫܝ̈ܐ ܒܒܢܝ̈ܢܫܐ ܢܗܘܘܢ.</reading>
+            <reading option="1" mss="Trans ">In Africa there will be a great and severe war. People will have acute diseases.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="69">
+            <reading option="0" mss="Mingana ">ܘܒܡܨܥܬܗܿ ܕܫܢܵܬܐ ܢܬܟܠܐ ܡܛܪܐ ܝܘܡܝ̈ܢ ܥܣܪܝܢ.</reading>
+            <reading option="1" mss="Trans ">In the middle of the year rain will fail during twenty days.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="70">
+            <reading option="0" mss="Mingana ">ܘܐܪ̈ܥܬܐ ܟܠܗܝܢ ܢܛ̈ܐܒܢ.</reading>
+            <reading option="1" mss="Trans ">All fields will be good.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="71">
+            <reading option="0" mss="Mingana ">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܝܘܕ ܐܘ ܒܝܬ ܢܬܟܪܗ: ܘܢܗܘܐ ܠܗ ܪܥܝܐ: ܘܢܐܙܠ ܒܓܠܘܬܐ ܡ̣ܢ ܐܪܥܗ.</reading>
+            <reading option="1" mss="Trans ">Anyone having in his name (the letters) Yodh or Beith will be ill, will have anxiety, and will emigrate from his country.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="72">
+            <reading option="0" mss="Mingana ">ܘܚܡܪܐ ܢܬܚܒܠ: ܘܓܘܪܐ ܢܣܓܐ.</reading>
+            <reading option="1" mss="Trans ">Wine will be spoiled, and adultery will increase with the increase of foul desires.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="73">
+            <reading option="0" mss="Mingana ">ܘܡܠܟܐ ܢܟܬܪ ܒܚܕܐ ܕܘܟܬܐ: ܘܢܐܙܠ ܫܘܠܛܢܐ ܡ̣ܢ ܐܪܥܐ.</reading>
+            <reading option="1" mss="Trans ">The king will remain in one place, and power will cease in the earth,</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="74">
+            <reading option="0" mss="Mingana ">ܘܖܽܘ̈ܪܒܢܐ ܢܥܪܩܘܢ ܒܝܡܐ: ܘܢܗܘܐ ܒܝܢܬܗܘܢ ܩܪܒܐ ܩܫܝܐ.</reading>
+            <reading option="1" mss="Trans ">and high officials will flee into the sea, and there will be between (them) a severe war.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="75">
+            <reading option="0" mss="Mingana ">ܘܢܗܘܐ ܒܓܠܝܠܐ ܙܘܥܐ ܩܫܝܐ.</reading>
+            <reading option="1" mss="Trans ">In Galilee there will be a violent earthquake.</reading>
+          </unit>
+        </div>
+        <div number="14">
+          <unit id="76">
+            <reading option="0" mss="Mingana ">ܘܠܣ̈ܛܝܐ ܢܦܩܘܢ ܒܚܘܪܢ ܘܒܕܪܡܣܘܩ.</reading>
+            <reading option="1" mss="Trans ">Marauders will appear in Hauran and in Damascus.</reading>
+          </unit>
+        </div>
+        <div number="15">
+          <unit id="77">
+            <reading option="0" mss="Mingana ">ܘܢܝܠܘܣ ܢܗܪܐ ܢܣܩ ܟܠܗ ܡܣܩܗ: ܘܢܗܘܐ ܒܡܨܪܝܢ ܫܪܥܘܛܐ ܩܫܝܐ: ܘܢܫܬܚܩܘܢ ܐ݇ܢܫܐ ܡܼܛܠ ܡܛܪܿܐ.</reading>
+            <reading option="1" mss="Trans ">The river Nile will overflow to its highest rate. In Egypt there will be a cruel pest. People will be in distress because of the shortage of rain.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="8">
+        <div number="1">
+          <unit id="78">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܥܩܪܒܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܬܫܒ ܪܽܘܚܐ ܕܓܪܒܝܐ ܒܫܘܪܝܗ̇ ܕܫܢ݇ܬܐ: ܘܢܗܘܘܢ ܡܛܪ̈ܐ ܣܓܝ̈ܐܐ ܪ̈ܒܝܥܝܐ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Scorpio: A North wind will blow at the beginning of the year, and there will be many early rains.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="79">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܢܐܩܪ ܟܠ ܡܕܡ: ܘܡܛܪܐ ܢܙܥܪ: ܥܕܡܐ ܕܼܢܦܩܘܢ ܐ݇ܢܫܐ ܒܒܥܘܬܐ ܘܨܠܘܬܐ ܘܙܕܩ̈ܬܐ ܢܒܥܘܢ ܡ̣ܢ ܐܠܗܐ ܚܝܐ.</reading>
+            <reading option="1" mss="Trans ">At the end of the year everything will be dear, and rain will be so scarce that people will address prayers and supplications to the living God, for the sake of food.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="80">
+            <reading option="0" mss="Mingana ">ܘܟܘܪܗܢܐ ܢܗܘܐ ܒܢܫ̈ܐ ܕܒܛ̈ܢܢ.</reading>
+            <reading option="1" mss="Trans ">Pregnant women will have diseases.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="81">
+            <reading option="0" mss="Mingana ">ܘܣܓܝ̈ܐܐ ܡ̣ܢ ܒܢ̈ܝ̈ܢܫܐ ܢܫܢܘܢ ܡ̣ܢ ܐܬܪ̈ܘܬܗܘܢ ܡ̣ܢ ܐܘܠܨܢܐ.</reading>
+            <reading option="1" mss="Trans ">Many people will emigrate from their countries out of distress.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="82">
+            <reading option="0" mss="Mingana ">ܘܚܛ̈ܐ ܘܣܥܪ̈ܐ ܥ̈ܐܠܢ ܩܠܝܠ: ܘܕܩܐ ܢܐܠ.</reading>
+            <reading option="1" mss="Trans ">Wheat and barley will be ingathered, but only in small quantity; cereals will be ingathered.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="83">
+            <reading option="0" mss="Mingana ">ܘܚܡܪܐ ܘܡܫܚܐ ܢܗܘܐ.</reading>
+            <reading option="1" mss="Trans ">There will be wine and oil.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="84">
+            <reading option="0" mss="Mingana ">ܘܫܘܚ̈ܢܐ ܢܦܩܘܢ ܒܓܘܫ̈ܡܐ ܕܒܢܝ̈ܢܫܐ: ܘܠܐ ܢܚܣܪܘܢ ܐܢܘܢ.</reading>
+            <reading option="1" mss="Trans ">Boils will spring forth in the bodies of people but they will do no harm.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="85">
+            <reading option="0" mss="Mingana ">ܘܢܝܠܘܣ ܢܣܩ ܦܠܓܗ ܕܡܣܩܐ.</reading>
+            <reading option="1" mss="Trans ">The Nile will overflow half of its normal rate.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="86">
+            <reading option="0" mss="Mingana ">ܘܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܬܘ ܐܘ ܝܘܕ ܢܬܟܪܗ ܘܢܬܚܠܡ.</reading>
+            <reading option="1" mss="Trans ">Anyone having in his name (the letters) Taw, or Yodh, will be ill, but will recover.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="87">
+            <reading option="0" mss="Mingana ">ܘܟܠ ܕܡܬܝܠܕ ܒܥܩܪܒܐ ܚܝܿܐ: ܘܒܫܘܠܡܗܿ ܕܸܫܢ݇ܬܐ ܡܬܩܛܠ.</reading>
+            <reading option="1" mss="Trans ">Anyone born in Scorpio will live, but will be killed at the end of the year.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="9">
+        <div number="1">
+          <unit id="88">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܩܫܬܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܒܝܬ ܐܘ ܦܐ ܢܗܘܐ ܠܗ ܫܚܩܐ ܘܟܘܪܗܢܐ ܩܫܝܐ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Sagittarius: Anyone having in his name (the letters) Beith, or Pe, will have severe illness and distress,</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="89">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܪܝܗܿ ܕܸܫܢ݇ܬܐ ܢܬܩܫܐ: ܘܢܫܬܚܩܘܢ ܒܢܝ̈ܢܫܐ ܒܕܘܟ̈ܬܐ ܣܓܝ̈ܐܬܐ.</reading>
+            <reading option="1" mss="Trans ">which will be aggravated at the beginning of the year. People will be in distress in many places.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="90">
+            <reading option="0" mss="Mingana ">ܘܐܪܥܐ ܕܡܨܪܝܢ ܠܐ ܢܙܪܥܘܢ ܒܗܿ ܡܕܡ ܐܠܐ ܩܠܝܠ.</reading>
+            <reading option="1" mss="Trans ">Little will be sown in the land of Egypt.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="91">
+            <reading option="0" mss="Mingana ">ܘܒܡܨܥܬ ܫܢ݇ܬܐ ܢܗܘܐ ܡܛܪܿܐ ܣܿܓܝܐܐ.</reading>
+            <reading option="1" mss="Trans ">In the middle of the year there will be much rain.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="92">
+            <reading option="0" mss="Mingana ">ܘܢܚܡܠܘܢ ܒܢܝ̈ܢܫܐ ܥܒܘܪܐ ܒܒܝܬ ܐܘܨܪ̈ܐ ܡܸܛܠ ܙܥܘܪܘܬ ܡܛܪܐ.</reading>
+            <reading option="1" mss="Trans ">People will store corn in the barns because of the shortage of rain.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="93">
+            <reading option="0" mss="Mingana ">ܘܙܪܥܐ ܠܐ ܢܗܘܐ ܫܦܝܪ: ܘܫܘܠܡܗܿ̇ ܕܸܫܢ݇ܬܐ ܠܐ ܢܛܐܒ.</reading>
+            <reading option="1" mss="Trans ">Crops will not be good, so also will be the case at the end of the year.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="94">
+            <reading option="0" mss="Mingana ">ܘܚܡܪܐ ܘܡܫܚܐ ܢܫܘܘܢ ܣܓܝ.</reading>
+            <reading option="1" mss="Trans ">Wine and oil will be at a very moderate price.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="95">
+            <reading option="0" mss="Mingana ">ܘܓܘܪܐ ܢܣܓܐ: ܘܩܛܝܢܬܐ ܬܐܒܕܼ.</reading>
+            <reading option="1" mss="Trans ">Adultery will increase, and small cattle will perish.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="10">
+        <div number="1">
+          <unit id="96">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܓܕܝܐ ܡܬܝܠܕܐ ܫܢܵ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܩܘܦ ܢܬܟܪܗ ܘܢܬܒܙܙ ܘܢܒܠܥ ܒܣܝܦܐ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Capricornus: Anyone having in his name (the letters) Koph will be ill, will be plundered, and will be struck with sword.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="97">
+            <reading option="0" mss="Mingana ">ܘܪܘܚܐ ܡܕܢܚܝܬܐ ܡܕܼܒܪܐ ܠܗܿ ܠܫܢ݇ܬܐ.</reading>
+            <reading option="1" mss="Trans ">An East wind will dominate the year.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="98">
+            <reading option="0" mss="Mingana ">ܘܟܠ ܕܩܕܸܡ ܙܪܿܥ ܢܟܫܪ: ܐ݇ܚܪܝܐ ܠܐ ܢܟܫܪ.</reading>
+            <reading option="1" mss="Trans ">Everyone should sow earlier; the last in sowing will not succeed.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="99">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܪܝܐ ܕܸܫܢ݇ܬܐ ܢܐܩܪ ܥܒܘܪܐ: ܘܢܣܓܘܢ ܓܠ̈ܠܐ ܘܡܚ̈ܫܘܠܐ: ܘܐܠܦܐ ܢܐܒܕܘܢ.</reading>
+            <reading option="1" mss="Trans ">At the beginning of the year corn will be dear. Waves and billows will increase. Ships will perish.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="100">
+            <reading option="0" mss="Mingana ">ܘܒܡܨܥܬܗܿ ܕܫܢ݇ܬܐ ܢܐܩܪ ܥܒܘܪܿܐ.</reading>
+            <reading option="1" mss="Trans ">In the middle of the year corn will be dear.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="101">
+            <reading option="0" mss="Mingana ">ܘܢܣܓܘܢ ܓܢܒ̈ܐ: ܘܦܠܚ̈ܘܗܝ ܕܫܘܠܛܢܐ ܒܝܫܝܢ ܢܗܘܘܢ.</reading>
+            <reading option="1" mss="Trans ">Thieves will increase. The officials of the state will be bad.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="102">
+            <reading option="0" mss="Mingana ">ܘܕܒܘܪ̈ܐ ܘܫܪܨܗܿ ܕܐܪܥܐ ܢܣܓܘܢ: ܘܢܒܐܫܘܢ ܐ݀ܢܫܐ ܣܓܝ̈ܐܐ.</reading>
+            <reading option="1" mss="Trans ">Wasps and reptiles of the earth will multiply and injure many people.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="103">
+            <reading option="0" mss="Mingana ">ܘܐ݇ܢܫܐ ܣܓܝ̈ܐܐ ܢܫܢܘܢ ܡ̣ܢ ܕܘܟܐ ܠܕܘܟܐ ܡܢ ܩܪܒܐ ܕܗܿܘܐ: ܘܢܣܓܘܢ ܩܪ̈ܒܐ ܒܐܪܥܐ.</reading>
+            <reading option="1" mss="Trans ">Many people will move from one place to another because of the war which will take place. Wars will increase in the earth.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="104">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܠܡܗܿ ܕܫܢܵܬܐ ܢܙܥܪ ܡܛܪܐ.</reading>
+            <reading option="1" mss="Trans ">At the end of the year rain will be scarce.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="105">
+            <reading option="0" mss="Mingana ">ܘܒܕܘܟܝ̈ܬܐ ܢܐܠ ܙܪܥܐ: ܘܒܕܘܟ̈ܬܐ ܢܐܒܕܼ ܙܪܥܐ.</reading>
+            <reading option="1" mss="Trans ">In some places the standing corn will yield something, and in others it will perish.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="106">
+            <reading option="0" mss="Mingana ">ܘܟܘܪܗܢܐ ܒܕܪܡܣܘܩ ܢܗܘܐ ܘܒܚܘܪܢ: ܘܟܦܢܐ ܒܣܦܪ ܝܡܐ.</reading>
+            <reading option="1" mss="Trans ">There will be pest in Damascus and in Hauran, and famine in the littoral of the sea.</reading>
+          </unit>
+        </div>
+        <div number="12">
+          <unit id="107">
+            <reading option="0" mss="Mingana ">ܘܓܘܪܐ ܢܣܓܐ.</reading>
+            <reading option="1" mss="Trans ">Adultery will increase.</reading>
+          </unit>
+        </div>
+        <div number="13">
+          <unit id="108">
+            <reading option="0" mss="Mingana ">ܘܐ݇ܢܫܐ ܢܣܩܘܢ ܒܥܘܬܐ ܘܨ̈ܠܘܬܐ ܘܨܘܡܐ ܘܙܕܩ̈ܬܐ ܡܸܛܠ ܡܛܪܐ: ܘܙܪܥܐ ܕܫܩܝܐ ܛܒ ܢܗܘܐ.</reading>
+            <reading option="1" mss="Trans ">People will offer prayers and supplications, will fast and give alms for the sake of rain. The watered cereals will be normal.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="11">
+        <div number="1">
+          <unit id="109">
+            <reading option="0" mss="Mingana ">ܐܡܬܝ ܕܡܬܝܠܕܐ ܫܢ݇ܬܐ ܒܕܘܠܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܠܡܕ ܐܘ ܦܐ ܢܬܟܪܗ: ܐܘ ܢܥܩܪ ܡ̣ܢ ܒܙܘܙܝܐ.</reading>
+            <reading option="1" mss="Trans ">When the year begins in Aquarius: Anyone having in his name (the letters) Lamadh or Pe will be ill, or will be uprooted through pillage.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="110">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܪܿܝܗܿ ܕܸܫܢ݇ܬܐ ܢܕܥܪ ܡܛܪܐ: ܘܢܝܠܘܣ ܢܣܩ ܟܠܗ ܡܣܩܗ.</reading>
+            <reading option="1" mss="Trans ">At the beginning of the year rain will be scarce, and the Nile will overflow to its highest rate.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="111">
+            <reading option="0" mss="Mingana ">ܘܡܨܪܿܝܢ ܥܠ ܦܠܣܛܝܢܝ ܬܥܠ.</reading>
+            <reading option="1" mss="Trans ">Egypt will invade Palestine.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="112">
+            <reading option="0" mss="Mingana ">ܘܐܡܪ̈ܐ ܘܥܙ̈ܐ ܢܟܫܪܘܢ.</reading>
+            <reading option="1" mss="Trans ">Lambs and goats will prosper.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="113">
+            <reading option="0" mss="Mingana ">ܘܪܽܘܚܐ ܡܥܪܒܝܬܐ ܗܝِ ܡܕܒܪܐ ܠܫܢ݇ܬܐ ܗܝܿ.</reading>
+            <reading option="1" mss="Trans ">A West wind will dominate that year.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="114">
+            <reading option="0" mss="Mingana ">ܘܡܠܟܐ ܢܩܪܒ ܥܡ ܡܠܟܐ.</reading>
+            <reading option="1" mss="Trans ">A king will fight against a king.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="115">
+            <reading option="0" mss="Mingana ">ܘܙܪܥܐ ܩܕܝܡ ܢܟܫܪ: ܘܕܩܐ ܠܐ ܢܫܘܚ ܣܓܝ ܐܠܐ ܥܿܐܠ.</reading>
+            <reading option="1" mss="Trans ">Early crops will succeed, and cereals will not be plentiful, but normal.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="116">
+            <reading option="0" mss="Mingana ">ܘܬܓܪ̈ܐ ܢܒܥܘܢ ܡܥܕܪܢܘܬܐ ܡ̣ܢ ܐܠܗܐ ܚܝܐ: ܘܟܘܪ̈ܗܢܐ ܢܣܓܘܢ.</reading>
+            <reading option="1" mss="Trans ">Merchants will seek help from the living God, and illnesses will multiply.</reading>
+          </unit>
+        </div>
+      </div>
+      <div number="12">
+        <div number="1">
+          <unit id="117">
+            <reading option="0" mss="Mingana ">ܘܐܢ ܒܢܘܢ̈ܐ ܡܬܝܠܕܐ ܫܢ݇ܬܐ: ܟܠ ܕܐܝܬܘܗܝ ܫܡܗ ܟܦ ܐܘ ܡܝܡ ܢܬܟܪܗ ܘܢܬܒܙܙ.</reading>
+            <reading option="1" mss="Trans ">If the year begins in Pisces: Anyone having in his name (the letters) Koph or Mim will be ill, and will be plundered.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="118">
+            <reading option="0" mss="Mingana ">ܫܢ݇ܬܐ ܛܒܬܐ ܬܗܘܐ: ܘܙܪܥܐ ܛܒ ܘܫܦܝܪ: ܘܡܛܪ̈ܐ ܪ̈ܒܝܥܝܐ ܢܗܘܘܢ.</reading>
+            <reading option="1" mss="Trans ">The year will be good, crops will be very good, and there will be early rains.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="119">
+            <reading option="0" mss="Mingana ">ܘܝܡܐ ܢܣܓܐ ܨܝܕܗ: ܘܡܐ ܕܒܚܳܫ ܐܠܦܐ ܢܬܬܒܪ̈ܢ.</reading>
+            <reading option="1" mss="Trans ">The sea will yield abundant fishing, but when it is rough ships will break up.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="120">
+            <reading option="0" mss="Mingana ">ܘܚܡܪܐ ܘܡܫܚܐ ܘܚܛ̈ܐ ܟܠܗܘܢ ܢܫܦܪܘܢ: ܘܙܪ̈ܥܐ ܛܒ ܢܣܓܘܢ.</reading>
+            <reading option="1" mss="Trans ">Wine, oil, and wheat will all be good, and standing crops will be very plentiful.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="121">
+            <reading option="0" mss="Mingana ">ܘܡܕ̈ܝ̈ܢܬܐ ܢܗܘܐ ܒܗܘܢ ܩܪ̈ܒܐ ܘܚܪܒܐ ܩܛܝܢܐ: ܘܩܘܪ̈ܝܐ ܬܐܒܕܢ: ܘܢܫܢܘܢ ܡ̣ܢ ܕܘܟܐ ܠܕܘܟܐ.</reading>
+            <reading option="1" mss="Trans ">In the cities there will be wars and cruel devastation; villages will be destroyed, and people will move from place to place.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="122">
+            <reading option="0" mss="Mingana ">ܘܢܦܩܘܢ ܠܣ̈ܛܝܐ ܡܼܢ ܦܠܣܛܝܢܐ: ܘܢܡܚܘܢ ܩܪܒܐ ܪܒܐ ܥܡ ܬܠܬ ܡܕܼܝ̈ܢܬܐ.</reading>
+            <reading option="1" mss="Trans ">Brigands will go forth from Palestine, and will wage a great battle against three cities.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="123">
+            <reading option="0" mss="Mingana ">ܘܪ̈ܗ݇ܘܡܝܐ ܙܟܝܢ ܘܡܙܕܟܝܢ: ܘܟܘܪܗܢܐ ܪܒܐ ܢܗܘܐ ܒܒܢܝ̈ܢܫܐ.</reading>
+            <reading option="1" mss="Trans ">The Romans will conquer and be conquered, and there will be great illness among the sons of men.</reading>
+          </unit>
+        </div>
+        <div number="8">
+          <unit id="124">
+            <reading option="0" mss="Mingana ">ܘܢܦܘܩ ܓܒܪܿܐ ܐܘܟܡܐ ܕܒܥܐ ܡܠܟܘܬܐ: ܘܒܝܬܐ ܕܡܠܟܘܬܐ ܢܐܒܕ.</reading>
+            <reading option="1" mss="Trans ">A dark-complexioned man will come forth seeking the kingdom, and the royal house will perish.</reading>
+          </unit>
+        </div>
+        <div number="9">
+          <unit id="125">
+            <reading option="0" mss="Mingana ">ܘܡܠܟܐ ܒܝܫܐ ܢܫܡܥ ܡܢܘ ܐܡܪܿܝܢ ܒܢ̈ܝܢܫܐ: ܘܡܚܪܒ ܡܕܝ̈ܢܬܐ ܣܓܝ̈ܐܬܐ.</reading>
+            <reading option="1" mss="Trans ">A wicked king will listen to gossip, and will lay waste many cities.</reading>
+          </unit>
+        </div>
+        <div number="10">
+          <unit id="126">
+            <reading option="0" mss="Mingana ">ܘܠܝܬ ܐܢܫ ܕܡܫܟܚ ܕܢܟܠܝܘܗܝ: ܘܕܚܠܬܐ ܕܐܠܗܐ ܘܪ̈ܚܡܘܗܝ ܦܪܝܩܝܢ ܡܢܗ.</reading>
+            <reading option="1" mss="Trans ">There will be no one able to stop him, and the fear of God and His mercy will be far from him.</reading>
+          </unit>
+        </div>
+        <div number="11">
+          <unit id="127">
+            <reading option="0" mss="Mingana ">ܘܒܫܘܠܡܗܿ ܕܫܢ݇ܬܐ ܢܗܘܐ ܫܝܢܐ ܘܫܠܡܐ ܒܒܢܝ̈ܢܫܐ: ܘܚܘܒܐ ܘܐܘܝܘܬܐ ܬܗܘܐ ܒܝܢܬ ܟܠܗܘܢ ܡܠܟ̈ܐ ܕܐܝܬ ܒܟܠܗ̇ ܐܪܥܐ.</reading>
+            <reading option="1" mss="Trans ">At the end of the year there will be peace and tranquillity among men, and love and harmony will prevail among all the kings of the whole earth.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

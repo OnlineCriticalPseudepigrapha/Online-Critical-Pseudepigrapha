@@ -1,1193 +1,1208 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PsPhoc">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Sentences of Pseudo-Phocylides</title>
-        <author>Pseudo-Phocylides</author>
-        <editor>Theodor Bergk</editor>
+        <editor role="editor">Penner, Ken M.</editor>
         <respStmt>
-          <resp>TEI P5 Parallel Segmentation edition for Online Critical Pseudepigrapha</resp>
-          <name>Ken M. Penner</name>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
         </respStmt>
       </titleStmt>
       <publicationStmt>
-        <publisher>Online Critical Pseudepigrapha</publisher>
-        <pubPlace>St. Francis Xavier University, Antigonish, NS</pubPlace>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <biblStruct type="book">
-          <monogr>
-            <title level="m">Poetae Lyrici Graeci</title>
-            <editor>Theodorus Bergk</editor>
-            <imprint>
-              <publisher>B. G. Teubner</publisher>
-              <pubPlace>Lipsiae</pubPlace>
-              <date when="1882">1882</date>
-              <biblScope unit="volume">2</biblScope>
-              <biblScope unit="page">361-373</biblScope>
-            </imprint>
-          </monogr>
-        </biblStruct>
+        <listWit>
+          <witness xml:id="Bergk">
+            <abbr type="siglum">Bergk</abbr>
+            <name>Bergk 1882 (Poetae Lyrici Graeci)</name>
+            <bibl>Theodor Bergk, Poetae Lyrici Graeci, 4th ed., Vol. 2 (Leipzig: Teubner, 1882), pp. 361-373. CAVT 182 / CANT 35.</bibl>
+          </witness>
+        </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
-  <text>
+  <text xml:lang="grc">
     <body>
-      <div type="poem" n="1">
-        <l n="1">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ταῦτα δίκης ὁσίῃσι θεοῦ βουλεύματα φαίνει</rdg>
-          </app>
-        </l>
-        <l n="2">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Φωκυλίδης ἀνδρῶν ὁ σοφώτατος ὄλβια δῶρα.</rdg>
-          </app>
-        </l>
-        <l n="3">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μήτε γαμοκλοπέειν, μήτ᾽ ἄρσενα Κύπριν ὀρίνειν,</rdg>
-          </app>
-        </l>
-        <l n="4">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μήτε δόλους ῥάπτειν, μήθ᾽ αἵματι χεῖρα μιαίνειν.</rdg>
-          </app>
-        </l>
-        <l n="5">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ πλουτεῖν ἀδίκως, ἀλλ᾽ ἐξ ὁσίων βιοτεύειν.</rdg>
-          </app>
-        </l>
-        <l n="6">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἀρκεῖσθαι παρεοῦσι καὶ ἀλλοτρίων ἀπέχεσθαι.</rdg>
-          </app>
-        </l>
-        <l n="7">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ψεύδεα μὴ βάζειν, τὰ δ᾽ ἐτήτυμα πάντ᾽ ἀγορεύειν.</rdg>
-          </app>
-        </l>
-        <l n="8">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Πρῶτα θεὸν τίμα, μετέπειτα δὲ σεῖο γονῆας.</rdg>
-          </app>
-        </l>
-        <l n="9">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πάντα δίκαια νέμειν, μηδὲ κρίσιν ἐς χάριν ἕλκε.</rdg>
-          </app>
-        </l>
-        <l n="10">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ ῥέψῃς πενίην ἀδίκως· μὴ κρῖνε πρόσωπον·</rdg>
-          </app>
-        </l>
-        <l n="11">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢν σὺ κακῶς διχάσῃς, σὲ θεὸς μετέπειτα δικάσσει.</rdg>
-          </app>
-        </l>
-        <l n="12">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μαρτυρίην ψευδῆ φεύγειν, τὰ δίκαια βραβεύειν.</rdg>
-          </app>
-        </l>
-        <l n="13">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">παρθενίην τηρεῖν, πίστιν δ᾽ ἐπὶ πᾶσι φυλάσσειν.</rdg>
-          </app>
-        </l>
-        <l n="14">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μέτρα νέμειν τὰ δίκαια, καλὸν δέ τι μέτρον ἁπάντων.</rdg>
-          </app>
-        </l>
-        <l n="15">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">σταθμὸν μὴ κρούειν ἑτερόζυγον, ἀλλ᾽ ἴσον ἕλκειν.</rdg>
-          </app>
-        </l>
-        <l n="16">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ ἐπιορκήσῃς μήτ᾽ ἀγνὼς μήτ᾽ ἐθέλοντι.</rdg>
-          </app>
-        </l>
-        <l n="17">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ψεύδορκον στυγέει θεὸς ἄμβροτος ὅστις ὀμόσσῃ.</rdg>
-          </app>
-        </l>
-        <l n="18">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">σπέρματα μὴ κλέπτειν· ἐπαράσιμος ὅστις ἕληται.</rdg>
-          </app>
-        </l>
-        <l n="19">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μισθὸν μοχθήσαντι δίδου· μὴ θλῖβε πένητα.</rdg>
-          </app>
-        </l>
-        <l n="20">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">γλώσσῃ νοῦν ἐχέμεν· κρυπτὸν λόγον ἐν φρεσὶν ἴσχειν.</rdg>
-          </app>
-        </l>
-        <l n="21">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μήτ᾽ ἀδικεῖν ἐθέλοις, μήτ᾽ οὖν ἀδικοῦντας ἐάσῃς.</rdg>
-          </app>
-        </l>
-        <l n="22">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πτωχῷ δ᾽ εὐθὺ δίδου, μηδ᾽ αὔριον ἐλθέμεν εἴπῃς.</rdg>
-          </app>
-        </l>
-        <l n="23">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πληρώσας σέο χεῖρ᾽ ἔλεον χρήζοντι παράσχου.</rdg>
-          </app>
-        </l>
-        <l n="24">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἄστεγον εἰς οἶκον δέξαι καὶ τυφλὸν ὁδήγει.</rdg>
-          </app>
-        </l>
-        <l n="25">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ναυηγοὺς οἴκτειρον, ἐπεὶ πλόος ἐστὶν ἄδηλος.</rdg>
-          </app>
-        </l>
-        <l n="26">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">χεῖρα πεσόντι δίδου· σῶσον δ᾽ ἀπερίστατον ἄνδρα.</rdg>
-          </app>
-        </l>
-        <l n="27">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">κοινὰ πάθη πάντων· ὁ βίος τροχός· ἄστατος ὄλβος.</rdg>
-          </app>
-        </l>
-        <l n="28">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πλοῦτον ἔχων σὴν χεῖρα πενητεύουσιν ὄρεξον·</rdg>
-          </app>
-        </l>
-        <l n="29">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ὧν τοι ἔδωκε θεός, τούτων χρήζουσι παράσχου.</rdg>
-          </app>
-        </l>
-        <l n="30">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἔστω κοινὸς ἅπας ὁ βίος καὶ ὁμόφρονα πάντα.</rdg>
-          </app>
-        </l>
-        <l n="31">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Τὸ ξίφος ἀμφιβαλοῦ μὴ πρὸς φόνον, ἀλλ᾽ ἐς ἄμυναν·</rdg>
-          </app>
-        </l>
-        <l n="32">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">[αἷμα δὲ μὴ φαγέειν, εἰδωλοθύτων ἀπέχεσθαι.]</rdg>
-          </app>
-        </l>
-        <l n="33">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">εἴθε δὲ μὴ χρήζοις μήτ᾽ ἔκνομα μήτε δικαίως·</rdg>
-          </app>
-        </l>
-        <l n="34">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢν γὰρ ἀποκτείνῃς ἐχθρόν, σέο χεῖρα μιαίνεις.</rdg>
-          </app>
-        </l>
-        <l n="35">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ἀγροῦ γειτονέοντος ἀπόσχεο, μηδ᾽ ἄρ᾽ ὑπερβῇς.</rdg>
-          </app>
-        </l>
-        <l n="36">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πάντων μέτρον ἄριστον, ὑπερβασίαι δ᾽ ἀλεγειναί.</rdg>
-          </app>
-        </l>
-        <l n="37">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">χρηστὸς ὀνήσιμός ἐστι, φίλος δ᾽ ἀδικῶν ἀνόνητος.</rdg>
-          </app>
-        </l>
-        <l n="38">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδέ τιν᾽ αὐξόμενον καρπὸν λωβήσῃ ἀρούρης.</rdg>
-          </app>
-        </l>
-        <l n="39">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ἔστωσαν δ᾽ ὁμότιμοι ἐπήλυδες ἐν πολιήταις·</rdg>
-          </app>
-        </l>
-        <l n="40">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πάντες γὰρ πενίης πειρώμεθα τῆς πολυπλάγκτου·</rdg>
-          </app>
-        </l>
-        <l n="41">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">χώρη δ᾽ οὔ τι βέβαιον ἔχει πέδον ἀνθρώποισιν.</rdg>
-          </app>
-        </l>
-        <l n="42">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ἡ φιλοχρημοσύνη μήτηρ κακότητος ἁπάσης.</rdg>
-          </app>
-        </l>
-        <l n="43">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">χρυσὸς ἀεὶ δόλος ἐστὶ καὶ ἄργυρος ἀνθρώποισιν.</rdg>
-          </app>
-        </l>
-        <l n="44">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">χρυσέ, κακῶν ἀρχηγέ, βιοφθόρε, πάντα χαλέπτων,</rdg>
-          </app>
-        </l>
-        <l n="45">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">εἴθε σε μὴ θνητοῖσι γενέσθαι πῆμα ποθεινόν.</rdg>
-          </app>
-        </l>
-        <l n="46">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">σεῦ γὰρ ἕκητι μάχαι τε, λεηλασίαι τε, φόνοι τε,</rdg>
-          </app>
-        </l>
-        <l n="47">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἐχθρὰ δὲ τέκνα γονεῦσιν, ἀδελφειοί τε συναίμοις.</rdg>
-          </app>
-        </l>
-        <l n="48">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μηδ᾽ ἕτερον κεύθοις κραδίῃ νόον, ἄλλ᾽ ἀγορεύων·</rdg>
-          </app>
-        </l>
-        <l n="49">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽, ὡς πετροφυὴς πολύπους, κατὰ χῶρον ἀμείβου.</rdg>
-          </app>
-        </l>
-        <l n="50">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πᾶσιν δ᾽ ἁπλόος ἴσθι, τὰ δ᾽ ἐκ ψυχῆς ἀγόρευε.</rdg>
-          </app>
-        </l>
-        <l n="51">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ὅστις ἑκὼν ἀδικεῖ, κακὸς ἀνήρ· εἰ δ᾽ ὑπ᾽ ἀνάγκης,</rdg>
-          </app>
-        </l>
-        <l n="52">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐχ ἐρέω τὸ τέλος· βουλὴ δ᾽ εὐθύνεθ᾽ ἑκάστου.</rdg>
-          </app>
-        </l>
-        <l n="53">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μὴ γαυροῦ σοφίῃ, μήτ᾽ ἀλκῇ, μήτ᾽ ἐπὶ πλούτῳ.</rdg>
-          </app>
-        </l>
-        <l n="54">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">εἷς θεός ἐστι σοφός, δυνατός θ᾽ ἅμα καὶ πολύολβος.</rdg>
-          </app>
-        </l>
-        <l n="55">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδὲ παροιχομένοισι κακοῖς τρύχου τεὸν ἧπαρ·</rdg>
-          </app>
-        </l>
-        <l n="56">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐχ ἔτι γὰρ δύναται τὸ τετυγμένον εἶναι ἄτυκτον.</rdg>
-          </app>
-        </l>
-        <l n="57">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μὴ προπετὴς ἐς χεῖρα, χαλίνου δ᾽ ἄγριον ἄρην.</rdg>
-          </app>
-        </l>
-        <l n="58">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πολλάκι γὰρ πλήξας ἀέκων φόνον ἐξετέλεσσεν.</rdg>
-          </app>
-        </l>
-        <l n="59">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ἔστω κοινὰ πάθη· μηδὲν μέγα μηδ᾽ ὑπέροπλον.</rdg>
-          </app>
-        </l>
-        <l n="60">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐκ ἀγαθὸν πλεονάζον ἔφυ θνητοῖσιν ὄνειαρ·</rdg>
-          </app>
-        </l>
-        <l n="61">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἡ πολλὴ δὲ τρυφὴ πρὸς ἀσέμνους ἕλκετ᾽ ἔρωτας·</rdg>
-          </app>
-        </l>
-        <l n="62">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ὑψαυχεῖ δ᾽ ὁ πολὺς πλοῦτος καὶ ἐς ὕβριν ἀέξει.</rdg>
-          </app>
-        </l>
-        <l n="63">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Θυμὸς ὑπερχόμενος μανίην ὀλοόφρονα τίκτει.</rdg>
-          </app>
-        </l>
-        <l n="64">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ὀργὴ δ᾽ ἐστὶν ὄρεξις, ὑπερβαίνουσα δὲ μῆνις.</rdg>
-          </app>
-        </l>
-        <l n="65">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ζῆλος τῶν ἐσθλῶν ἀγαθός, φαύλων δ᾽ ἀΐδηλος.</rdg>
-          </app>
-        </l>
-        <l n="66">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">τόλμα κακῶν ὀλοή· μέγα δ᾽ ὠφελεῖ ἐσθλὰ πονεῦντα.</rdg>
-          </app>
-        </l>
-        <l n="67">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">σεμνὸς ἔρως ἀρετῆς· ὁ δὲ Κύπριδος αἶσχος ὀφέλλει.</rdg>
-          </app>
-        </l>
-        <l n="68">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἡδυεπὴς ἄγαν ἄφρων κικλήσκεται ἐν πολιήταις.</rdg>
-          </app>
-        </l>
-        <l n="69">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μέτρῳ ἔδειν, μέτρῳ δὲ πιεῖν καὶ μυθολογεύειν.</rdg>
-          </app>
-        </l>
-        <l n="70">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μὴ φθονέοις ἀγαθῶν ἑτάροις, μὴ μῶμον ἀνάψῃς·</rdg>
-          </app>
-        </l>
-        <l n="71">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἄφθονοι Οὐρανίδαι καὶ ἐν ἀλλήλοις τελέθουσιν.</rdg>
-          </app>
-        </l>
-        <l n="72">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ φθονέει μήνη πολὺ κρείσσοσιν ἡλίου αὐγαῖς·</rdg>
-          </app>
-        </l>
-        <l n="73">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ χθὼν οὐρανίοις ὑψώμασι νέρθεν ἐοῦσα·</rdg>
-          </app>
-        </l>
-        <l n="74">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ ποταμοὶ πελάγεσσιν· ἀεὶ δ᾽ ὁμόνοιαν ἔχουσιν.</rdg>
-          </app>
-        </l>
-        <l n="75">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">εἰ γὰρ ἔρις μακάρεσσιν ἔην, οὐκ ἂν πόλος ἔστη.</rdg>
-          </app>
-        </l>
-        <l n="76">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Σωφροσύνην ἀσκεῖν, αἰσχρῶν δ᾽ ἔργων ἀπέχεσθαι.</rdg>
-          </app>
-        </l>
-        <l n="77">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ μιμοῦ κακότητα, Δίκῃ δ᾽ ἀπόλειψον ἄμυναν.</rdg>
-          </app>
-        </l>
-        <l n="78">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πειθὼ μὲν γὰρ ὄνειαρ, ἔρις δ᾽ ἔριν ἀντιφυτεύει.</rdg>
-          </app>
-        </l>
-        <l n="79">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ πίστευε τάχιστα, πρὶν ἀτρεκέως πέρας ὄψει.</rdg>
-          </app>
-        </l>
-        <l n="80">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">νικᾶν δ᾽ εὖ ἔρδοντας ἐπὶ πλεόνεσσι καθήκει.</rdg>
-          </app>
-        </l>
-        <l n="81">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Καλὸν ξεινίζειν ταχέως λιταῖσι τραπέζαις,</rdg>
-          </app>
-        </l>
-        <l n="82">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢ πλείσταις θαλίαισι βραδυνούσαις παρὰ καιρόν.</rdg>
-          </app>
-        </l>
-        <l n="83">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μηδέποτε χρήστης πικρὸς γένῃ ἀνδρὶ πένητι.</rdg>
-          </app>
-        </l>
-        <l n="84">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδέ τις ὄρνιθας καλιῆς ἅμα πάντας ἐλέσθω·</rdg>
-          </app>
-        </l>
-        <l n="85">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μητέρα δ᾽ ἐκπρολίποις, ἵν᾽ ἔχῃς αὖ τῆσδε νεοσσούς.</rdg>
-          </app>
-        </l>
-        <l n="86">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μηδέποτε κρίνειν ἀδαήμονας ἄνδρας ἐάσῃς·</rdg>
-          </app>
-        </l>
-        <l n="87">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδὲ δίκην δικάσῃς, πρὶν ἄμφω μῦθον ἀκούσῃς.</rdg>
-          </app>
-        </l>
-        <l n="88">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">τὴν σοφίην σοφὸς ἰθύνει, τέχνας δ᾽ ὁμότεχνος.</rdg>
-          </app>
-        </l>
-        <l n="89">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ χωρεῖ μεγάλην διδαχὴν ἀδίδακτος ἀκουή·</rdg>
-          </app>
-        </l>
-        <l n="90">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ γὰρ δὴ νοέουσ᾽ οἱ μηδέποτ᾽ ἐσθλὰ μαθόντες.</rdg>
-          </app>
-        </l>
-        <l n="91">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μηδὲ τραπεζοκόρους κόλακας ποιεῖσθαι ἑταίρους.</rdg>
-          </app>
-        </l>
-        <l n="92">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πολλοὶ γὰρ πόσιος καὶ βρώσιός εἰσιν ἑταῖροι,</rdg>
-          </app>
-        </l>
-        <l n="93">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">καιρὸν θωπεύοντες, ἐπὴν κορέσασθαι ἔχωσιν·</rdg>
-          </app>
-        </l>
-        <l n="94">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἀχθόμενοι δ᾽ ὀλίγοις καὶ πολλοῖς πάντες ἄπληστοι.</rdg>
-          </app>
-        </l>
-        <l n="95">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Λαῷ μὴ πίστευε· πολύτροπός ἐστιν ὅμιλος.</rdg>
-          </app>
-        </l>
-        <l n="96">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">λαός τοι, καὶ ὕδωρ, καὶ πῦρ ἀκατάσχετα πάντα.</rdg>
-          </app>
-        </l>
-        <l n="97">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μηδὲ μάτην ἐπὶ πῦρ καθίσας μινύθοις φίλον ἦτορ.</rdg>
-          </app>
-        </l>
-        <l n="98">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μέτρα δὲ τεῦχε θεοῖσι· τὸ γὰρ μέτρον ἐστὶν ἄριστον.</rdg>
-          </app>
-        </l>
-        <l n="99">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Γαῖαν ἐπιμοιρᾶσθαι ἀταρχύτοις νεκύεσσιν.</rdg>
-          </app>
-        </l>
-        <l n="100">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ τύμβον φθιμένων ἀνορύξῃς, μηδ᾽ ἀθέατα</rdg>
-          </app>
-        </l>
-        <l n="101">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">δείξῃς ἠελίῳ, καὶ δαιμόνιον χόλον ὄρσῃς·</rdg>
-          </app>
-        </l>
-        <l n="102">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ καλὸν ἁρμονίην ἀναλύεμεν ἀνθρώποιο.</rdg>
-          </app>
-        </l>
-        <l n="103">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">καὶ τάχα δ᾽ ἐκ γαίης ἐλπίζομεν ἐς φάος ἐλθεῖν</rdg>
-          </app>
-        </l>
-        <l n="104">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">λείψαν᾽ ἀποιχομένων· ὀπίσω δὲ θεοὶ τελέθονται.</rdg>
-          </app>
-        </l>
-        <l n="105">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ψυχαὶ γὰρ μέμνουσιν ἀκήριοι ἐν φθιμένοισιν.</rdg>
-          </app>
-        </l>
-        <l n="106">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πνεῦμα γάρ ἐστι θεοῦ χρῆσις θνητοῖσι καὶ εἰκών·</rdg>
-          </app>
-        </l>
-        <l n="107">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">σῶμα γὰρ ἐκ γαίης ἔχομεν, κἄπειτα πρὸς αὖ γῆν</rdg>
-          </app>
-        </l>
-        <l n="108">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">λυόμενοι κόνις ἐσμέν· ἀὴρ δ᾽ ἀνὰ πνεῦμα δέδεκται.</rdg>
-          </app>
-        </l>
-        <l n="109">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Πλούτου μὴ φείδου· μέμνησ᾽ ὅτι θνητὸς ὑπάρχεις.</rdg>
-          </app>
-        </l>
-        <l n="110">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐκ ἔστ᾽ εἰς Ἀΐδην ὄλβον καὶ χρήματ᾽ ἄγεσθαι.</rdg>
-          </app>
-        </l>
-        <l n="111">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">κοινὰ μέλαθρα δόμων αἰώνια, καὶ πατρὶς Ἅιδης·</rdg>
-          </app>
-        </l>
-        <l n="112">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πάντες ἴσον νέκυες· ψυχῶν δὲ θεὸς βασιλεύει.</rdg>
-          </app>
-        </l>
-        <l n="113">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ξυνὸς χῶρος ἅπασι, πένησί τε καὶ βασιλεῦσιν.</rdg>
-          </app>
-        </l>
-        <l n="114">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ πολὺν ἄνθρωποι ζῶμεν χρόνον, ἀλλ᾽ ἐπὶ καιρόν·</rdg>
-          </app>
-        </l>
-        <l n="115">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ψυχὴ δ᾽ ἀθάνατος καὶ ἀγήρως ζῇ διὰ παντός.</rdg>
-          </app>
-        </l>
-        <l n="116">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐδεὶς γινώσκει, τί μεταύριον ἢ τί μεθ᾽ ὥραν.</rdg>
-          </app>
-        </l>
-        <l n="117">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἄσκοπός ἐστι βροτῶν θάνατος, τὸ δὲ μέλλον ἄδηλον.</rdg>
-          </app>
-        </l>
-        <l n="118">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μήτε κακοῖς ἄχθου, μήτ᾽ οὖν ἐπαγάλλεο χάρμῃς·</rdg>
-          </app>
-        </l>
-        <l n="119">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πολλάκις ἐν βιότῳ καὶ θαρσαλέοισιν ἄπιστον</rdg>
-          </app>
-        </l>
-        <l n="120">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πῆμα, καὶ ἀχθομένοισι κακοῦ λύσις ἤλυθεν αἴφνης.</rdg>
-          </app>
-        </l>
-        <l n="121">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">καιρῷ λατρεύειν, μηδ᾽ ἀντιπνέειν ἀνέμοισιν.</rdg>
-          </app>
-        </l>
-        <l n="122">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μὴ μεγαληγορίῃ φυσῶν φρένα λισσωθείης·</rdg>
-          </app>
-        </l>
-        <l n="123">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">εὐεπίην ἀσκεῖν, ἥ τις μάλα πάντας ὀνήσει.</rdg>
-          </app>
-        </l>
-        <l n="124">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ὅπλον τοι λόγος ἀνδρὶ τομώτερόν ἐστι σιδήρου.</rdg>
-          </app>
-        </l>
-        <l n="125">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ὅπλον ἑκάστῳ νεῖμε θεός· φύσιν ἠερόφοιτον</rdg>
-          </app>
-        </l>
-        <l n="126">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ὄρνισιν, πώλοις ταχυτῆτ᾽, ἀλκὴν δὲ λέουσιν·</rdg>
-          </app>
-        </l>
-        <l n="127">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ταύροις δ᾽ αὐτοχύτοις κεράεσσιν· κέντρα μελίσσαις,</rdg>
-          </app>
-        </l>
-        <l n="128">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἔμφυτον ἄλκαρ, ἔδωκε, λόγον δ᾽ ἔρυμ᾽ ἀνθρώποισιν·</rdg>
-          </app>
-        </l>
-        <l n="129">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">τῆς δὲ θεοπνεύστου σοφίης λόγος ἐστὶν ἄριστος·</rdg>
-          </app>
-        </l>
-        <l n="130">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">βέλτερος ἀλκήεντος ἔφυ σεσοφισμένος ἀνήρ.</rdg>
-          </app>
-        </l>
-        <l n="131">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἀγροὺς καὶ πόλιας σοφίη καὶ νῆα κυβερνᾷ.</rdg>
-          </app>
-        </l>
-        <l n="132">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Οὐχ ὅσιον κρύπτειν τὸν ἀτάσθαλον ἄνδρ᾽ ἀνέλεγκτον·</rdg>
-          </app>
-        </l>
-        <l n="133">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἀλλὰ χρὴ κακοεργὸν ἀποτροπάασθαι ἀνάγκῃ.</rdg>
-          </app>
-        </l>
-        <l n="134">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πολλάκι συνθνήσκουσι κακοῖς οἱ συμπαρεόντες.</rdg>
-          </app>
-        </l>
-        <l n="135">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Φωρῶν μὴ δέξῃ κλοπίμην ἀδίκων παραθήκην·</rdg>
-          </app>
-        </l>
-        <l n="136">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἀμφότεροι κλῶπες, καὶ ὁ δεξάμενος καὶ ὁ κλέψας.</rdg>
-          </app>
-        </l>
-        <l n="137">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μοῖραν πᾶσι νέμειν· ἰσότης δ᾽ ἐν πᾶσιν ἄριστον.</rdg>
-          </app>
-        </l>
-        <l n="138">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ἀρχόμενος φείδου πάντων, μὴ τέρμ᾽ ἐπιδεύῃ.</rdg>
-          </app>
-        </l>
-        <l n="139">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ κτήνους θνητοῖο βορὴν κατὰ μέτρον ἕληαι.</rdg>
-          </app>
-        </l>
-        <l n="140">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Κτῆνος κἢν ἐχθροῖο πέσῃ καθ᾽ ὁδόν, συνέγειρε.</rdg>
-          </app>
-        </l>
-        <l n="141">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πλαζόμενον δὲ βροτὸν καὶ ἀλήμονα μήποτ᾽ ἐλέγξῃς·</rdg>
-          </app>
-        </l>
-        <l n="142">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">βέλτερον ἀντ᾽ ἐχθροῖο τυχεῖν φίλου εὐμενέοντος.</rdg>
-          </app>
-        </l>
-        <l n="143">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἀρχόμενον τὸ κακὸν κόπτειν, ἕλκος τ᾽ ἀκέσασθαι.</rdg>
-          </app>
-        </l>
-        <l n="144">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἐξ ὀλίγου σπινθῆρος ἀθέσφατος αἴθεται ὕλη·</rdg>
-          </app>
-        </l>
-        <l n="145">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ἐγκρατὲς ἦτορ ἔχειν, τῶν λωβητῶν δ᾽ ἀπέχεσθαι.</rdg>
-          </app>
-        </l>
-        <l n="146">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">φεῦγε κακὴν φήμην, φεῦγ᾽ ἀνθρώπους ἀθεμίστους.</rdg>
-          </app>
-        </l>
-        <l n="147">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδέ τε θηρόβορον δαίσῃ κρέας· ἀργίποσιν δὲ</rdg>
-          </app>
-        </l>
-        <l n="148">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">λείψανα λεῖπε κυσίν· θῆρες δ᾽ ἀπὸ θηρὸς ἔδονται.</rdg>
-          </app>
-        </l>
-        <l n="149">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">φάρμακα μὴ τεύχειν· μαγικῶν βίβλων ἀπέχεσθαι.</rdg>
-          </app>
-        </l>
-        <l n="150">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">νηπιάχοις ἀταλοὺς μὴ μάρψῃς χειρὶ βιαίως.</rdg>
-          </app>
-        </l>
-        <l n="151">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">φεῦγε διχοστασίην καὶ ἔριν, πολέμου προσιόντος.</rdg>
-          </app>
-        </l>
-        <l n="152">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ κακὸν εὖ ἔρξῃς· σπείρειν ἴσον ἔστ᾽ ἐνὶ πόντῳ.</rdg>
-          </app>
-        </l>
-        <l n="153">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ἐργάζευ, μοχθῶν ὡς ἐξ ἰδίων βιοτεύῃς.</rdg>
-          </app>
-        </l>
-        <l n="154">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πᾶς γὰρ ἀεργὸς ἀνὴρ ζώει κλοπίμων ἀπὸ χειρῶν.</rdg>
-          </app>
-        </l>
-        <l n="155">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἡ δὲ τέχνη τοι τρέφει ἄνδρας· ἀεργὸν δ᾽ ἔψατο λιμός.</rdg>
-          </app>
-        </l>
-        <l n="156">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ ἄλλου παρὰ δαιτὸς ἔδοις σκυβάλισμα τραπέζης·</rdg>
-          </app>
-        </l>
-        <l n="157">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἀλλ᾽ ἀπὸ τῶν ἰδίων βίοτον διάγοις ἀνυβρίστως.</rdg>
-          </app>
-        </l>
-        <l n="158">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">εἰ δέ τις οὐ δεδάηκε τέχνην, σκάπτοιτο δικέλλῃ.</rdg>
-          </app>
-        </l>
-        <l n="159">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἔστι βίος πᾶν ἔργον, ἐπὴν μοχθεῖν ἐθέλῃσθα.</rdg>
-          </app>
-        </l>
-        <l n="160">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ναύτιλος εἰ πλώειν ἐθέλεις, εὐρεῖα θάλασσα·</rdg>
-          </app>
-        </l>
-        <l n="161">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">εἰ δὲ γεηπονίην μεθέπειν, μακραί τοι ἄρουραι.</rdg>
-          </app>
-        </l>
-        <l n="162">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐδὲν ἄνευ καμάτου πέλει ἀνδράσιν εὐπετὲς ἔργον,</rdg>
-          </app>
-        </l>
-        <l n="163">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐδ᾽ αὐτοῖς μακάρεσσι· πόνος δ᾽ ἀρετὴν μέγ᾽ ὀφέλλει.</rdg>
-          </app>
-        </l>
-        <l n="164">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μύρμηκες, γαίης μυχατοὺς προλιπόντες οἴκους,</rdg>
-          </app>
-        </l>
-        <l n="165">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">εὐθὺ ἔρχονται βιότου κεχρημένοι, ὁππότ᾽ ἄρουραι</rdg>
-          </app>
-        </l>
-        <l n="166">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">λήϊα κειράμεναι καρπῶν πλήθωσιν ἁλωάς·</rdg>
-          </app>
-        </l>
-        <l n="167">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οἱ δ᾽ αὐτοὶ πυροῖο νεοτριβὲς ἄχθος ἔχουσιν,</rdg>
-          </app>
-        </l>
-        <l n="168">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢ κριθῶν· αἰεὶ δὲ φέρων φορέοντα διώκει,</rdg>
-          </app>
-        </l>
-        <l n="169">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἐκ θέρεος ποτὶ χεῖμα βορὴν σφετέρην συνάγοντες</rdg>
-          </app>
-        </l>
-        <l n="170">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἄτρυτοι· φῦλον δ᾽ ὀλίγον τελέθει πολύμοχθον.</rdg>
-          </app>
-        </l>
-        <l n="171">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">κάμνει δ᾽ ἠεροφοῖτις ἀριστοπόνος τε μέλισσα</rdg>
-          </app>
-        </l>
-        <l n="172">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢ πέτρης κοίλης κατὰ χηραμὸν ἢ δονάκεσσιν</rdg>
-          </app>
-        </l>
-        <l n="173">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢ δρυὸς ὠγυγίης κατὰ κοιλάδος ἔνδοθε σίμβλων</rdg>
-          </app>
-        </l>
-        <l n="174">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">σμήνεσι μυριότρητα κατ᾽ ἄνθεα κηροδομοῦσα.</rdg>
-          </app>
-        </l>
-        <l n="175">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μὴ μείνῃς ἄγαμος, μή πως νώνυμνος ὄληαι.</rdg>
-          </app>
-        </l>
-        <l n="176">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">δός τι φύσει καὐτός· τέκε δ᾽ ἔμπαλιν, ὡς ἐλοχεύθης.</rdg>
-          </app>
-        </l>
-        <l n="177">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μὴ προαγωγεύσῃς ἄλοχον, σέο τέκνα μιαίνων·</rdg>
-          </app>
-        </l>
-        <l n="178">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ γὰρ τίκτει παῖδας ὁμοίους μοιχικὰ λέκτρα.</rdg>
-          </app>
-        </l>
-        <l n="179">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μητρυιῆς μὴ ψαῦε τὰ δεύτερα λέκτρα γονῆος·</rdg>
-          </app>
-        </l>
-        <l n="180">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μητέρα δ᾽ ὡς τίμα τὴν μητέρος ἴχνια βᾶσαν.</rdg>
-          </app>
-        </l>
-        <l n="181">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδὲ κασιγνήτης ἐς ἀπότροπον ἐλθέμεν εὐνήν.</rdg>
-          </app>
-        </l>
-        <l n="182">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ ἐπὶ παλλακίσιν πατρὸς λεχέεσσι μιγείης.</rdg>
-          </app>
-        </l>
-        <l n="183">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδὲ γυνὴ φθείροι βρέφος ἔμβρυον ἔνδοθι γαστρός,</rdg>
-          </app>
-        </l>
-        <l n="184">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδὲ τεκοῦσα κυσὶν ῥίψῃ καὶ γυψὶν ἕλωρα.</rdg>
-          </app>
-        </l>
-        <l n="185">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ ἐπὶ σῇ ἀλόχῳ ἐγκύμονι χεῖρα βάληαι.</rdg>
-          </app>
-        </l>
-        <l n="186">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ αὖ παιδογόνον τέμνειν φύσιν ἄρσενα κούρου·</rdg>
-          </app>
-        </l>
-        <l n="187">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ ἀλόγοις ζώοισι βατήριον ἐς λέχος ἐλθεῖν·</rdg>
-          </app>
-        </l>
-        <l n="188">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ ὕβριζε γυναῖχ᾽ αἰσχυντηροῖς ἐπέεσσιν.</rdg>
-          </app>
-        </l>
-        <l n="189">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ παραβῇς εὐνὰς φύσεως ἐς κύπριν ἄθεσμον·</rdg>
-          </app>
-        </l>
-        <l n="190">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐδ᾽ αὐτοῖς θήρεσσι συνεύαδον ἄρσενες εὐναί.</rdg>
-          </app>
-        </l>
-        <l n="191">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδέ τι θηλύτεραι λέχος ἀνδρῶν μιμήσαιντο.</rdg>
-          </app>
-        </l>
-        <l n="192">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ ἐς ἔρωτα γυναικὸς ἅπας ῥεύσῃς ἀκάθεκτος.</rdg>
-          </app>
-        </l>
-        <l n="193">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐ γὰρ ἔρως θεός ἐστι, πάθος δ᾽ ἀΐδηλον ἁπάντων.</rdg>
-          </app>
-        </l>
-        <l n="194">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδὲ κασιγνήτων ἀλόχων ἐπὶ δέμνια βαίνειν.</rdg>
-          </app>
-        </l>
-        <l n="195">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">στέργε τεὴν ἄλοχον· τί γὰρ ἡδύτερον καὶ ἄρειον,</rdg>
-          </app>
-        </l>
-        <l n="196">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢ ὅταν ἀνδρὶ γυνὴ φρονέῃ φίλα γήραος ἄχρις,</rdg>
-          </app>
-        </l>
-        <l n="197">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">καὶ πόσις ᾗ ἀλόχῳ, μηδ᾽ ἐμπέσῃ ἄνδιχα νεῖκος;</rdg>
-          </app>
-        </l>
-        <l n="198">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδέ τις ἀμνήστευτα βίῃ κούρῃσι μιγείη.</rdg>
-          </app>
-        </l>
-        <l n="199">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μηδὲ γυναῖκα κακὴν πολυχρήματον οἴκαδ᾽ ἄγεσθαι·</rdg>
-          </app>
-        </l>
-        <l n="200">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">λατρεύσεις ἀλόχῳ λυγρῆς χάριν εἵνεκα φερνῆς.</rdg>
-          </app>
-        </l>
-        <l n="201">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἵπποις εὐγενέας διζήμεθα γειαρότας τε</rdg>
-          </app>
-        </l>
-        <l n="202">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ταύρους ὑψιτένοντας, ἀτὰρ σκυλάκων ταναγρῆας·</rdg>
-          </app>
-        </l>
-        <l n="203">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">γῆμαι δ᾽ οὐκ ἀγαθὴν ἐριδαίνομεν ἀφρονέοντες·</rdg>
-          </app>
-        </l>
-        <l n="204">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">οὐδὲ γυνὴ κακὸν ἄνδρ᾽ ἀπαναίνεται ἀφνεὸν ὄντα.</rdg>
-          </app>
-        </l>
-        <l n="205">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδὲ γάμῳ γάμον ἄλλον ἄγοις ἐπὶ πήματι πῆμα·</rdg>
-          </app>
-        </l>
-        <l n="206">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδ᾽ ἀμφὶ κτεάνων συνομαίμοσιν εἰς ἔριν ἔλθῃς.</rdg>
-          </app>
-        </l>
-        <l n="207">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Παισὶν μὴ χαλέπαινε τεοῖς, ἀλλ᾽ ἤπιος εἴης.</rdg>
-          </app>
-        </l>
-        <l n="208">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢν δέ τι παῖς ἀλίτῃ σε, κολουέτω υἱέα μήτηρ,</rdg>
-          </app>
-        </l>
-        <l n="209">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἢ καὶ πρεσβύτατοι γενεῆς, ἢ δημογέροντες.</rdg>
-          </app>
-        </l>
-        <l n="210">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Μὴ μὲν ἐπ᾽ ἄρσενι παιδὶ τρέφειν πλοκαμηΐδα χαίτην·</rdg>
-          </app>
-        </l>
-        <l n="211">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μὴ κορυφὴν πλέξῃς μήθ᾽ ἅμματα λοξὰ κορύμβων·</rdg>
-          </app>
-        </l>
-        <l n="212">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἄρσεσιν οὐκ ἐπέοικε κομᾶν, χλιδαὶ δὲ γυναιξίν.</rdg>
-          </app>
-        </l>
-        <l n="213">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Παιδὸς δ᾽ εὐμόρφου φρουρεῖν νεοτήσιον ὥρην·</rdg>
-          </app>
-        </l>
-        <l n="214">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πολλοὶ γὰρ λισσῶσι πρὸς ἄρσενα μῖξιν ἔρωτος.</rdg>
-          </app>
-        </l>
-        <l n="215">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">παρθενικὴν δὲ φύλασσε πολυκλείστοις θαλάμοισιν·</rdg>
-          </app>
-        </l>
-        <l n="216">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">μηδέ μιν ἄχρι γάμων πρὸ δόμων ὀφθῆμεν ἐάσῃς.</rdg>
-          </app>
-        </l>
-        <l n="217">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">κάλλος δυστήρητον ἔφυ παίδων τοκέεσσιν.</rdg>
-          </app>
-        </l>
-        <l n="218">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Στέργε φίλοις ἄχρις θανάτου, πίστις γὰρ ἀμείνων.</rdg>
-          </app>
-        </l>
-        <l n="219">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">συγγενέσιν φιλότητα νέμοις ὁσίην θ᾽ ὁμόνοιαν.</rdg>
-          </app>
-        </l>
-        <l n="220">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">αἰδεῖσθαι πολιοκροτάφους, εἴκειν δὲ γέρουσιν</rdg>
-          </app>
-        </l>
-        <l n="221">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ἕδρης καὶ γεράων πάντων· γενεῇ δ᾽ ἀτάλαντον</rdg>
-          </app>
-        </l>
-        <l n="222">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">πρέσβυν ὁμήλικα πατρὸς ἴσαις τιμαῖσι γέραιρε.</rdg>
-          </app>
-        </l>
-        <l n="223">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Γαστρὸς ὀφειλόμενον δασμὸν παρέχου θεράπουσιν.</rdg>
-          </app>
-        </l>
-        <l n="224">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">δούλῳ τακτὰ νέμοις, ἵνα τοι καταθύμιος εἴη.</rdg>
-          </app>
-        </l>
-        <l n="225">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">στίγματα μὴ γράψῃς, ἐπονειδίζων θεράποντα.</rdg>
-          </app>
-        </l>
-        <l n="226">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">δοῦλον μὴ βλάψῃς τι, κακηγορέων παρ᾽ ἄνακτι.</rdg>
-          </app>
-        </l>
-        <l n="227">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">λάμβανε καὶ βουλὴν παρὰ οἰκέτου εὖ φρονέοντος.</rdg>
-          </app>
-        </l>
-        <l n="228">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ἁγνείη ψυχῆς, οὐ σώματός εἰσι καθαρμοί.</rdg>
-          </app>
-        </l>
-        <l n="229">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">Ταῦτα δικαιοσύνης μυστήρια, τοῖα βιεῦντες</rdg>
-          </app>
-        </l>
-        <l n="230">
-          <app>
-            <rdg wit="#Bergk1882" xml:lang="grc">ζωὴν ἐκτελέοιτ’ ἀγαθὴν μέχρι γήραος οὐδοῦ.</rdg>
-          </app>
-        </l>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="1" xml:id="PsPhoc.ver_Greek.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="PsPhoc.ver_Greek.1.1">
+            <app xml:id="u0_ver_Greek">
+              <lem wit="#Bergk">Ταῦτα δίκης ὁσίῃσι θεοῦ βουλεύματα φαίνει</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="PsPhoc.ver_Greek.1.2">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#Bergk">Φωκυλίδης ἀνδρῶν ὁ σοφώτατος ὄλβια δῶρα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="PsPhoc.ver_Greek.1.3">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#Bergk">Μήτε γαμοκλοπέειν, μήτ᾽ ἄρσενα Κύπριν ὀρίνειν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="PsPhoc.ver_Greek.1.4">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#Bergk">μήτε δόλους ῥάπτειν, μήθ᾽ αἵματι χεῖρα μιαίνειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="PsPhoc.ver_Greek.1.5">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#Bergk">μὴ πλουτεῖν ἀδίκως, ἀλλ᾽ ἐξ ὁσίων βιοτεύειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="PsPhoc.ver_Greek.1.6">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#Bergk">ἀρκεῖσθαι παρεοῦσι καὶ ἀλλοτρίων ἀπέχεσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="PsPhoc.ver_Greek.1.7">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#Bergk">ψεύδεα μὴ βάζειν, τὰ δ᾽ ἐτήτυμα πάντ᾽ ἀγορεύειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="PsPhoc.ver_Greek.1.8">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#Bergk">Πρῶτα θεὸν τίμα, μετέπειτα δὲ σεῖο γονῆας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="PsPhoc.ver_Greek.1.9">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#Bergk">πάντα δίκαια νέμειν, μηδὲ κρίσιν ἐς χάριν ἕλκε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="PsPhoc.ver_Greek.1.10">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#Bergk">μὴ ῥέψῃς πενίην ἀδίκως· μὴ κρῖνε πρόσωπον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="PsPhoc.ver_Greek.1.11">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#Bergk">ἢν σὺ κακῶς διχάσῃς, σὲ θεὸς μετέπειτα δικάσσει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="PsPhoc.ver_Greek.1.12">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#Bergk">μαρτυρίην ψευδῆ φεύγειν, τὰ δίκαια βραβεύειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="PsPhoc.ver_Greek.1.13">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#Bergk">παρθενίην τηρεῖν, πίστιν δ᾽ ἐπὶ πᾶσι φυλάσσειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="PsPhoc.ver_Greek.1.14">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#Bergk">μέτρα νέμειν τὰ δίκαια, καλὸν δέ τι μέτρον ἁπάντων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="PsPhoc.ver_Greek.1.15">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#Bergk">σταθμὸν μὴ κρούειν ἑτερόζυγον, ἀλλ᾽ ἴσον ἕλκειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="PsPhoc.ver_Greek.1.16">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ ἐπιορκήσῃς μήτ᾽ ἀγνὼς μήτ᾽ ἐθέλοντι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="PsPhoc.ver_Greek.1.17">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#Bergk">ψεύδορκον στυγέει θεὸς ἄμβροτος ὅστις ὀμόσσῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="PsPhoc.ver_Greek.1.18">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#Bergk">σπέρματα μὴ κλέπτειν· ἐπαράσιμος ὅστις ἕληται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="PsPhoc.ver_Greek.1.19">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#Bergk">μισθὸν μοχθήσαντι δίδου· μὴ θλῖβε πένητα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="PsPhoc.ver_Greek.1.20">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#Bergk">γλώσσῃ νοῦν ἐχέμεν· κρυπτὸν λόγον ἐν φρεσὶν ἴσχειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="PsPhoc.ver_Greek.1.21">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#Bergk">μήτ᾽ ἀδικεῖν ἐθέλοις, μήτ᾽ οὖν ἀδικοῦντας ἐάσῃς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="PsPhoc.ver_Greek.1.22">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#Bergk">πτωχῷ δ᾽ εὐθὺ δίδου, μηδ᾽ αὔριον ἐλθέμεν εἴπῃς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="PsPhoc.ver_Greek.1.23">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#Bergk">πληρώσας σέο χεῖρ᾽ ἔλεον χρήζοντι παράσχου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="PsPhoc.ver_Greek.1.24">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#Bergk">ἄστεγον εἰς οἶκον δέξαι καὶ τυφλὸν ὁδήγει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="PsPhoc.ver_Greek.1.25">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#Bergk">ναυηγοὺς οἴκτειρον, ἐπεὶ πλόος ἐστὶν ἄδηλος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="PsPhoc.ver_Greek.1.26">
+            <app xml:id="u25_ver_Greek">
+              <lem wit="#Bergk">χεῖρα πεσόντι δίδου· σῶσον δ᾽ ἀπερίστατον ἄνδρα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="PsPhoc.ver_Greek.1.27">
+            <app xml:id="u26_ver_Greek">
+              <lem wit="#Bergk">κοινὰ πάθη πάντων· ὁ βίος τροχός· ἄστατος ὄλβος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="PsPhoc.ver_Greek.1.28">
+            <app xml:id="u27_ver_Greek">
+              <lem wit="#Bergk">πλοῦτον ἔχων σὴν χεῖρα πενητεύουσιν ὄρεξον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="PsPhoc.ver_Greek.1.29">
+            <app xml:id="u28_ver_Greek">
+              <lem wit="#Bergk">ὧν τοι ἔδωκε θεός, τούτων χρήζουσι παράσχου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="PsPhoc.ver_Greek.1.30">
+            <app xml:id="u29_ver_Greek">
+              <lem wit="#Bergk">ἔστω κοινὸς ἅπας ὁ βίος καὶ ὁμόφρονα πάντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="PsPhoc.ver_Greek.1.31">
+            <app xml:id="u30_ver_Greek">
+              <lem wit="#Bergk">Τὸ ξίφος ἀμφιβαλοῦ μὴ πρὸς φόνον, ἀλλ᾽ ἐς ἄμυναν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="PsPhoc.ver_Greek.1.32">
+            <app xml:id="u31_ver_Greek">
+              <lem wit="#Bergk">[αἷμα δὲ μὴ φαγέειν, εἰδωλοθύτων ἀπέχεσθαι.]</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="PsPhoc.ver_Greek.1.33">
+            <app xml:id="u32_ver_Greek">
+              <lem wit="#Bergk">εἴθε δὲ μὴ χρήζοις μήτ᾽ ἔκνομα μήτε δικαίως·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="PsPhoc.ver_Greek.1.34">
+            <app xml:id="u33_ver_Greek">
+              <lem wit="#Bergk">ἢν γὰρ ἀποκτείνῃς ἐχθρόν, σέο χεῖρα μιαίνεις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="PsPhoc.ver_Greek.1.35">
+            <app xml:id="u34_ver_Greek">
+              <lem wit="#Bergk">Ἀγροῦ γειτονέοντος ἀπόσχεο, μηδ᾽ ἄρ᾽ ὑπερβῇς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="PsPhoc.ver_Greek.1.36">
+            <app xml:id="u35_ver_Greek">
+              <lem wit="#Bergk">πάντων μέτρον ἄριστον, ὑπερβασίαι δ᾽ ἀλεγειναί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="PsPhoc.ver_Greek.1.37">
+            <app xml:id="u36_ver_Greek">
+              <lem wit="#Bergk">χρηστὸς ὀνήσιμός ἐστι, φίλος δ᾽ ἀδικῶν ἀνόνητος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="PsPhoc.ver_Greek.1.38">
+            <app xml:id="u37_ver_Greek">
+              <lem wit="#Bergk">μηδέ τιν᾽ αὐξόμενον καρπὸν λωβήσῃ ἀρούρης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="PsPhoc.ver_Greek.1.39">
+            <app xml:id="u38_ver_Greek">
+              <lem wit="#Bergk">Ἔστωσαν δ᾽ ὁμότιμοι ἐπήλυδες ἐν πολιήταις·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="PsPhoc.ver_Greek.1.40">
+            <app xml:id="u39_ver_Greek">
+              <lem wit="#Bergk">πάντες γὰρ πενίης πειρώμεθα τῆς πολυπλάγκτου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="PsPhoc.ver_Greek.1.41">
+            <app xml:id="u40_ver_Greek">
+              <lem wit="#Bergk">χώρη δ᾽ οὔ τι βέβαιον ἔχει πέδον ἀνθρώποισιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="42" xml:id="PsPhoc.ver_Greek.1.42">
+            <app xml:id="u41_ver_Greek">
+              <lem wit="#Bergk">Ἡ φιλοχρημοσύνη μήτηρ κακότητος ἁπάσης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="PsPhoc.ver_Greek.1.43">
+            <app xml:id="u42_ver_Greek">
+              <lem wit="#Bergk">χρυσὸς ἀεὶ δόλος ἐστὶ καὶ ἄργυρος ἀνθρώποισιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="PsPhoc.ver_Greek.1.44">
+            <app xml:id="u43_ver_Greek">
+              <lem wit="#Bergk">χρυσέ, κακῶν ἀρχηγέ, βιοφθόρε, πάντα χαλέπτων,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="PsPhoc.ver_Greek.1.45">
+            <app xml:id="u44_ver_Greek">
+              <lem wit="#Bergk">εἴθε σε μὴ θνητοῖσι γενέσθαι πῆμα ποθεινόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="PsPhoc.ver_Greek.1.46">
+            <app xml:id="u45_ver_Greek">
+              <lem wit="#Bergk">σεῦ γὰρ ἕκητι μάχαι τε, λεηλασίαι τε, φόνοι τε,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="PsPhoc.ver_Greek.1.47">
+            <app xml:id="u46_ver_Greek">
+              <lem wit="#Bergk">ἐχθρὰ δὲ τέκνα γονεῦσιν, ἀδελφειοί τε συναίμοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="PsPhoc.ver_Greek.1.48">
+            <app xml:id="u47_ver_Greek">
+              <lem wit="#Bergk">Μηδ᾽ ἕτερον κεύθοις κραδίῃ νόον, ἄλλ᾽ ἀγορεύων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="49" xml:id="PsPhoc.ver_Greek.1.49">
+            <app xml:id="u48_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽, ὡς πετροφυὴς πολύπους, κατὰ χῶρον ἀμείβου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="50" xml:id="PsPhoc.ver_Greek.1.50">
+            <app xml:id="u49_ver_Greek">
+              <lem wit="#Bergk">πᾶσιν δ᾽ ἁπλόος ἴσθι, τὰ δ᾽ ἐκ ψυχῆς ἀγόρευε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="51" xml:id="PsPhoc.ver_Greek.1.51">
+            <app xml:id="u50_ver_Greek">
+              <lem wit="#Bergk">Ὅστις ἑκὼν ἀδικεῖ, κακὸς ἀνήρ· εἰ δ᾽ ὑπ᾽ ἀνάγκης,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="52" xml:id="PsPhoc.ver_Greek.1.52">
+            <app xml:id="u51_ver_Greek">
+              <lem wit="#Bergk">οὐχ ἐρέω τὸ τέλος· βουλὴ δ᾽ εὐθύνεθ᾽ ἑκάστου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="53" xml:id="PsPhoc.ver_Greek.1.53">
+            <app xml:id="u52_ver_Greek">
+              <lem wit="#Bergk">Μὴ γαυροῦ σοφίῃ, μήτ᾽ ἀλκῇ, μήτ᾽ ἐπὶ πλούτῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="54" xml:id="PsPhoc.ver_Greek.1.54">
+            <app xml:id="u53_ver_Greek">
+              <lem wit="#Bergk">εἷς θεός ἐστι σοφός, δυνατός θ᾽ ἅμα καὶ πολύολβος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="55" xml:id="PsPhoc.ver_Greek.1.55">
+            <app xml:id="u54_ver_Greek">
+              <lem wit="#Bergk">μηδὲ παροιχομένοισι κακοῖς τρύχου τεὸν ἧπαρ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="56" xml:id="PsPhoc.ver_Greek.1.56">
+            <app xml:id="u55_ver_Greek">
+              <lem wit="#Bergk">οὐχ ἔτι γὰρ δύναται τὸ τετυγμένον εἶναι ἄτυκτον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="57" xml:id="PsPhoc.ver_Greek.1.57">
+            <app xml:id="u56_ver_Greek">
+              <lem wit="#Bergk">Μὴ προπετὴς ἐς χεῖρα, χαλίνου δ᾽ ἄγριον ἄρην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="58" xml:id="PsPhoc.ver_Greek.1.58">
+            <app xml:id="u57_ver_Greek">
+              <lem wit="#Bergk">πολλάκι γὰρ πλήξας ἀέκων φόνον ἐξετέλεσσεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="59" xml:id="PsPhoc.ver_Greek.1.59">
+            <app xml:id="u58_ver_Greek">
+              <lem wit="#Bergk">Ἔστω κοινὰ πάθη· μηδὲν μέγα μηδ᾽ ὑπέροπλον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="60" xml:id="PsPhoc.ver_Greek.1.60">
+            <app xml:id="u59_ver_Greek">
+              <lem wit="#Bergk">οὐκ ἀγαθὸν πλεονάζον ἔφυ θνητοῖσιν ὄνειαρ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="61" xml:id="PsPhoc.ver_Greek.1.61">
+            <app xml:id="u60_ver_Greek">
+              <lem wit="#Bergk">ἡ πολλὴ δὲ τρυφὴ πρὸς ἀσέμνους ἕλκετ᾽ ἔρωτας·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="62" xml:id="PsPhoc.ver_Greek.1.62">
+            <app xml:id="u61_ver_Greek">
+              <lem wit="#Bergk">ὑψαυχεῖ δ᾽ ὁ πολὺς πλοῦτος καὶ ἐς ὕβριν ἀέξει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="63" xml:id="PsPhoc.ver_Greek.1.63">
+            <app xml:id="u62_ver_Greek">
+              <lem wit="#Bergk">Θυμὸς ὑπερχόμενος μανίην ὀλοόφρονα τίκτει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="64" xml:id="PsPhoc.ver_Greek.1.64">
+            <app xml:id="u63_ver_Greek">
+              <lem wit="#Bergk">ὀργὴ δ᾽ ἐστὶν ὄρεξις, ὑπερβαίνουσα δὲ μῆνις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="65" xml:id="PsPhoc.ver_Greek.1.65">
+            <app xml:id="u64_ver_Greek">
+              <lem wit="#Bergk">Ζῆλος τῶν ἐσθλῶν ἀγαθός, φαύλων δ᾽ ἀΐδηλος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="66" xml:id="PsPhoc.ver_Greek.1.66">
+            <app xml:id="u65_ver_Greek">
+              <lem wit="#Bergk">τόλμα κακῶν ὀλοή· μέγα δ᾽ ὠφελεῖ ἐσθλὰ πονεῦντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="67" xml:id="PsPhoc.ver_Greek.1.67">
+            <app xml:id="u66_ver_Greek">
+              <lem wit="#Bergk">σεμνὸς ἔρως ἀρετῆς· ὁ δὲ Κύπριδος αἶσχος ὀφέλλει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="68" xml:id="PsPhoc.ver_Greek.1.68">
+            <app xml:id="u67_ver_Greek">
+              <lem wit="#Bergk">ἡδυεπὴς ἄγαν ἄφρων κικλήσκεται ἐν πολιήταις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="69" xml:id="PsPhoc.ver_Greek.1.69">
+            <app xml:id="u68_ver_Greek">
+              <lem wit="#Bergk">μέτρῳ ἔδειν, μέτρῳ δὲ πιεῖν καὶ μυθολογεύειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="70" xml:id="PsPhoc.ver_Greek.1.70">
+            <app xml:id="u69_ver_Greek">
+              <lem wit="#Bergk">Μὴ φθονέοις ἀγαθῶν ἑτάροις, μὴ μῶμον ἀνάψῃς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="71" xml:id="PsPhoc.ver_Greek.1.71">
+            <app xml:id="u70_ver_Greek">
+              <lem wit="#Bergk">ἄφθονοι Οὐρανίδαι καὶ ἐν ἀλλήλοις τελέθουσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="72" xml:id="PsPhoc.ver_Greek.1.72">
+            <app xml:id="u71_ver_Greek">
+              <lem wit="#Bergk">οὐ φθονέει μήνη πολὺ κρείσσοσιν ἡλίου αὐγαῖς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="73" xml:id="PsPhoc.ver_Greek.1.73">
+            <app xml:id="u72_ver_Greek">
+              <lem wit="#Bergk">οὐ χθὼν οὐρανίοις ὑψώμασι νέρθεν ἐοῦσα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="74" xml:id="PsPhoc.ver_Greek.1.74">
+            <app xml:id="u73_ver_Greek">
+              <lem wit="#Bergk">οὐ ποταμοὶ πελάγεσσιν· ἀεὶ δ᾽ ὁμόνοιαν ἔχουσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="75" xml:id="PsPhoc.ver_Greek.1.75">
+            <app xml:id="u74_ver_Greek">
+              <lem wit="#Bergk">εἰ γὰρ ἔρις μακάρεσσιν ἔην, οὐκ ἂν πόλος ἔστη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="76" xml:id="PsPhoc.ver_Greek.1.76">
+            <app xml:id="u75_ver_Greek">
+              <lem wit="#Bergk">Σωφροσύνην ἀσκεῖν, αἰσχρῶν δ᾽ ἔργων ἀπέχεσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="77" xml:id="PsPhoc.ver_Greek.1.77">
+            <app xml:id="u76_ver_Greek">
+              <lem wit="#Bergk">μὴ μιμοῦ κακότητα, Δίκῃ δ᾽ ἀπόλειψον ἄμυναν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="78" xml:id="PsPhoc.ver_Greek.1.78">
+            <app xml:id="u77_ver_Greek">
+              <lem wit="#Bergk">πειθὼ μὲν γὰρ ὄνειαρ, ἔρις δ᾽ ἔριν ἀντιφυτεύει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="79" xml:id="PsPhoc.ver_Greek.1.79">
+            <app xml:id="u78_ver_Greek">
+              <lem wit="#Bergk">μὴ πίστευε τάχιστα, πρὶν ἀτρεκέως πέρας ὄψει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="80" xml:id="PsPhoc.ver_Greek.1.80">
+            <app xml:id="u79_ver_Greek">
+              <lem wit="#Bergk">νικᾶν δ᾽ εὖ ἔρδοντας ἐπὶ πλεόνεσσι καθήκει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="81" xml:id="PsPhoc.ver_Greek.1.81">
+            <app xml:id="u80_ver_Greek">
+              <lem wit="#Bergk">Καλὸν ξεινίζειν ταχέως λιταῖσι τραπέζαις,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="82" xml:id="PsPhoc.ver_Greek.1.82">
+            <app xml:id="u81_ver_Greek">
+              <lem wit="#Bergk">ἢ πλείσταις θαλίαισι βραδυνούσαις παρὰ καιρόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="83" xml:id="PsPhoc.ver_Greek.1.83">
+            <app xml:id="u82_ver_Greek">
+              <lem wit="#Bergk">Μηδέποτε χρήστης πικρὸς γένῃ ἀνδρὶ πένητι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="84" xml:id="PsPhoc.ver_Greek.1.84">
+            <app xml:id="u83_ver_Greek">
+              <lem wit="#Bergk">μηδέ τις ὄρνιθας καλιῆς ἅμα πάντας ἐλέσθω·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="85" xml:id="PsPhoc.ver_Greek.1.85">
+            <app xml:id="u84_ver_Greek">
+              <lem wit="#Bergk">μητέρα δ᾽ ἐκπρολίποις, ἵν᾽ ἔχῃς αὖ τῆσδε νεοσσούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="86" xml:id="PsPhoc.ver_Greek.1.86">
+            <app xml:id="u85_ver_Greek">
+              <lem wit="#Bergk">Μηδέποτε κρίνειν ἀδαήμονας ἄνδρας ἐάσῃς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="87" xml:id="PsPhoc.ver_Greek.1.87">
+            <app xml:id="u86_ver_Greek">
+              <lem wit="#Bergk">μηδὲ δίκην δικάσῃς, πρὶν ἄμφω μῦθον ἀκούσῃς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="88" xml:id="PsPhoc.ver_Greek.1.88">
+            <app xml:id="u87_ver_Greek">
+              <lem wit="#Bergk">τὴν σοφίην σοφὸς ἰθύνει, τέχνας δ᾽ ὁμότεχνος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="89" xml:id="PsPhoc.ver_Greek.1.89">
+            <app xml:id="u88_ver_Greek">
+              <lem wit="#Bergk">οὐ χωρεῖ μεγάλην διδαχὴν ἀδίδακτος ἀκουή·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="90" xml:id="PsPhoc.ver_Greek.1.90">
+            <app xml:id="u89_ver_Greek">
+              <lem wit="#Bergk">οὐ γὰρ δὴ νοέουσ᾽ οἱ μηδέποτ᾽ ἐσθλὰ μαθόντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="91" xml:id="PsPhoc.ver_Greek.1.91">
+            <app xml:id="u90_ver_Greek">
+              <lem wit="#Bergk">Μηδὲ τραπεζοκόρους κόλακας ποιεῖσθαι ἑταίρους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="92" xml:id="PsPhoc.ver_Greek.1.92">
+            <app xml:id="u91_ver_Greek">
+              <lem wit="#Bergk">πολλοὶ γὰρ πόσιος καὶ βρώσιός εἰσιν ἑταῖροι,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="93" xml:id="PsPhoc.ver_Greek.1.93">
+            <app xml:id="u92_ver_Greek">
+              <lem wit="#Bergk">καιρὸν θωπεύοντες, ἐπὴν κορέσασθαι ἔχωσιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="94" xml:id="PsPhoc.ver_Greek.1.94">
+            <app xml:id="u93_ver_Greek">
+              <lem wit="#Bergk">ἀχθόμενοι δ᾽ ὀλίγοις καὶ πολλοῖς πάντες ἄπληστοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="95" xml:id="PsPhoc.ver_Greek.1.95">
+            <app xml:id="u94_ver_Greek">
+              <lem wit="#Bergk">Λαῷ μὴ πίστευε· πολύτροπός ἐστιν ὅμιλος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="96" xml:id="PsPhoc.ver_Greek.1.96">
+            <app xml:id="u95_ver_Greek">
+              <lem wit="#Bergk">λαός τοι, καὶ ὕδωρ, καὶ πῦρ ἀκατάσχετα πάντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="97" xml:id="PsPhoc.ver_Greek.1.97">
+            <app xml:id="u96_ver_Greek">
+              <lem wit="#Bergk">Μηδὲ μάτην ἐπὶ πῦρ καθίσας μινύθοις φίλον ἦτορ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="98" xml:id="PsPhoc.ver_Greek.1.98">
+            <app xml:id="u97_ver_Greek">
+              <lem wit="#Bergk">μέτρα δὲ τεῦχε θεοῖσι· τὸ γὰρ μέτρον ἐστὶν ἄριστον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="99" xml:id="PsPhoc.ver_Greek.1.99">
+            <app xml:id="u98_ver_Greek">
+              <lem wit="#Bergk">Γαῖαν ἐπιμοιρᾶσθαι ἀταρχύτοις νεκύεσσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="100" xml:id="PsPhoc.ver_Greek.1.100">
+            <app xml:id="u99_ver_Greek">
+              <lem wit="#Bergk">μὴ τύμβον φθιμένων ἀνορύξῃς, μηδ᾽ ἀθέατα</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="101" xml:id="PsPhoc.ver_Greek.1.101">
+            <app xml:id="u100_ver_Greek">
+              <lem wit="#Bergk">δείξῃς ἠελίῳ, καὶ δαιμόνιον χόλον ὄρσῃς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="102" xml:id="PsPhoc.ver_Greek.1.102">
+            <app xml:id="u101_ver_Greek">
+              <lem wit="#Bergk">οὐ καλὸν ἁρμονίην ἀναλύεμεν ἀνθρώποιο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="103" xml:id="PsPhoc.ver_Greek.1.103">
+            <app xml:id="u102_ver_Greek">
+              <lem wit="#Bergk">καὶ τάχα δ᾽ ἐκ γαίης ἐλπίζομεν ἐς φάος ἐλθεῖν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="104" xml:id="PsPhoc.ver_Greek.1.104">
+            <app xml:id="u103_ver_Greek">
+              <lem wit="#Bergk">λείψαν᾽ ἀποιχομένων· ὀπίσω δὲ θεοὶ τελέθονται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="105" xml:id="PsPhoc.ver_Greek.1.105">
+            <app xml:id="u104_ver_Greek">
+              <lem wit="#Bergk">ψυχαὶ γὰρ μέμνουσιν ἀκήριοι ἐν φθιμένοισιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="106" xml:id="PsPhoc.ver_Greek.1.106">
+            <app xml:id="u105_ver_Greek">
+              <lem wit="#Bergk">πνεῦμα γάρ ἐστι θεοῦ χρῆσις θνητοῖσι καὶ εἰκών·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="107" xml:id="PsPhoc.ver_Greek.1.107">
+            <app xml:id="u106_ver_Greek">
+              <lem wit="#Bergk">σῶμα γὰρ ἐκ γαίης ἔχομεν, κἄπειτα πρὸς αὖ γῆν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="108" xml:id="PsPhoc.ver_Greek.1.108">
+            <app xml:id="u107_ver_Greek">
+              <lem wit="#Bergk">λυόμενοι κόνις ἐσμέν· ἀὴρ δ᾽ ἀνὰ πνεῦμα δέδεκται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="109" xml:id="PsPhoc.ver_Greek.1.109">
+            <app xml:id="u108_ver_Greek">
+              <lem wit="#Bergk">Πλούτου μὴ φείδου· μέμνησ᾽ ὅτι θνητὸς ὑπάρχεις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="110" xml:id="PsPhoc.ver_Greek.1.110">
+            <app xml:id="u109_ver_Greek">
+              <lem wit="#Bergk">οὐκ ἔστ᾽ εἰς Ἀΐδην ὄλβον καὶ χρήματ᾽ ἄγεσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="111" xml:id="PsPhoc.ver_Greek.1.111">
+            <app xml:id="u110_ver_Greek">
+              <lem wit="#Bergk">κοινὰ μέλαθρα δόμων αἰώνια, καὶ πατρὶς Ἅιδης·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="112" xml:id="PsPhoc.ver_Greek.1.112">
+            <app xml:id="u111_ver_Greek">
+              <lem wit="#Bergk">πάντες ἴσον νέκυες· ψυχῶν δὲ θεὸς βασιλεύει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="113" xml:id="PsPhoc.ver_Greek.1.113">
+            <app xml:id="u112_ver_Greek">
+              <lem wit="#Bergk">ξυνὸς χῶρος ἅπασι, πένησί τε καὶ βασιλεῦσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="114" xml:id="PsPhoc.ver_Greek.1.114">
+            <app xml:id="u113_ver_Greek">
+              <lem wit="#Bergk">οὐ πολὺν ἄνθρωποι ζῶμεν χρόνον, ἀλλ᾽ ἐπὶ καιρόν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="115" xml:id="PsPhoc.ver_Greek.1.115">
+            <app xml:id="u114_ver_Greek">
+              <lem wit="#Bergk">ψυχὴ δ᾽ ἀθάνατος καὶ ἀγήρως ζῇ διὰ παντός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="116" xml:id="PsPhoc.ver_Greek.1.116">
+            <app xml:id="u115_ver_Greek">
+              <lem wit="#Bergk">οὐδεὶς γινώσκει, τί μεταύριον ἢ τί μεθ᾽ ὥραν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="117" xml:id="PsPhoc.ver_Greek.1.117">
+            <app xml:id="u116_ver_Greek">
+              <lem wit="#Bergk">ἄσκοπός ἐστι βροτῶν θάνατος, τὸ δὲ μέλλον ἄδηλον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="118" xml:id="PsPhoc.ver_Greek.1.118">
+            <app xml:id="u117_ver_Greek">
+              <lem wit="#Bergk">Μήτε κακοῖς ἄχθου, μήτ᾽ οὖν ἐπαγάλλεο χάρμῃς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="119" xml:id="PsPhoc.ver_Greek.1.119">
+            <app xml:id="u118_ver_Greek">
+              <lem wit="#Bergk">πολλάκις ἐν βιότῳ καὶ θαρσαλέοισιν ἄπιστον</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="120" xml:id="PsPhoc.ver_Greek.1.120">
+            <app xml:id="u119_ver_Greek">
+              <lem wit="#Bergk">πῆμα, καὶ ἀχθομένοισι κακοῦ λύσις ἤλυθεν αἴφνης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="121" xml:id="PsPhoc.ver_Greek.1.121">
+            <app xml:id="u120_ver_Greek">
+              <lem wit="#Bergk">καιρῷ λατρεύειν, μηδ᾽ ἀντιπνέειν ἀνέμοισιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="122" xml:id="PsPhoc.ver_Greek.1.122">
+            <app xml:id="u121_ver_Greek">
+              <lem wit="#Bergk">Μὴ μεγαληγορίῃ φυσῶν φρένα λισσωθείης·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="123" xml:id="PsPhoc.ver_Greek.1.123">
+            <app xml:id="u122_ver_Greek">
+              <lem wit="#Bergk">εὐεπίην ἀσκεῖν, ἥ τις μάλα πάντας ὀνήσει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="124" xml:id="PsPhoc.ver_Greek.1.124">
+            <app xml:id="u123_ver_Greek">
+              <lem wit="#Bergk">ὅπλον τοι λόγος ἀνδρὶ τομώτερόν ἐστι σιδήρου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="125" xml:id="PsPhoc.ver_Greek.1.125">
+            <app xml:id="u124_ver_Greek">
+              <lem wit="#Bergk">ὅπλον ἑκάστῳ νεῖμε θεός· φύσιν ἠερόφοιτον</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="126" xml:id="PsPhoc.ver_Greek.1.126">
+            <app xml:id="u125_ver_Greek">
+              <lem wit="#Bergk">ὄρνισιν, πώλοις ταχυτῆτ᾽, ἀλκὴν δὲ λέουσιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="127" xml:id="PsPhoc.ver_Greek.1.127">
+            <app xml:id="u126_ver_Greek">
+              <lem wit="#Bergk">ταύροις δ᾽ αὐτοχύτοις κεράεσσιν· κέντρα μελίσσαις,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="128" xml:id="PsPhoc.ver_Greek.1.128">
+            <app xml:id="u127_ver_Greek">
+              <lem wit="#Bergk">ἔμφυτον ἄλκαρ, ἔδωκε, λόγον δ᾽ ἔρυμ᾽ ἀνθρώποισιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="129" xml:id="PsPhoc.ver_Greek.1.129">
+            <app xml:id="u128_ver_Greek">
+              <lem wit="#Bergk">τῆς δὲ θεοπνεύστου σοφίης λόγος ἐστὶν ἄριστος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="130" xml:id="PsPhoc.ver_Greek.1.130">
+            <app xml:id="u129_ver_Greek">
+              <lem wit="#Bergk">βέλτερος ἀλκήεντος ἔφυ σεσοφισμένος ἀνήρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="131" xml:id="PsPhoc.ver_Greek.1.131">
+            <app xml:id="u130_ver_Greek">
+              <lem wit="#Bergk">ἀγροὺς καὶ πόλιας σοφίη καὶ νῆα κυβερνᾷ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="132" xml:id="PsPhoc.ver_Greek.1.132">
+            <app xml:id="u131_ver_Greek">
+              <lem wit="#Bergk">Οὐχ ὅσιον κρύπτειν τὸν ἀτάσθαλον ἄνδρ᾽ ἀνέλεγκτον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="133" xml:id="PsPhoc.ver_Greek.1.133">
+            <app xml:id="u132_ver_Greek">
+              <lem wit="#Bergk">ἀλλὰ χρὴ κακοεργὸν ἀποτροπάασθαι ἀνάγκῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="134" xml:id="PsPhoc.ver_Greek.1.134">
+            <app xml:id="u133_ver_Greek">
+              <lem wit="#Bergk">πολλάκι συνθνήσκουσι κακοῖς οἱ συμπαρεόντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="135" xml:id="PsPhoc.ver_Greek.1.135">
+            <app xml:id="u134_ver_Greek">
+              <lem wit="#Bergk">Φωρῶν μὴ δέξῃ κλοπίμην ἀδίκων παραθήκην·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="136" xml:id="PsPhoc.ver_Greek.1.136">
+            <app xml:id="u135_ver_Greek">
+              <lem wit="#Bergk">ἀμφότεροι κλῶπες, καὶ ὁ δεξάμενος καὶ ὁ κλέψας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="137" xml:id="PsPhoc.ver_Greek.1.137">
+            <app xml:id="u136_ver_Greek">
+              <lem wit="#Bergk">Μοῖραν πᾶσι νέμειν· ἰσότης δ᾽ ἐν πᾶσιν ἄριστον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="138" xml:id="PsPhoc.ver_Greek.1.138">
+            <app xml:id="u137_ver_Greek">
+              <lem wit="#Bergk">Ἀρχόμενος φείδου πάντων, μὴ τέρμ᾽ ἐπιδεύῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="139" xml:id="PsPhoc.ver_Greek.1.139">
+            <app xml:id="u138_ver_Greek">
+              <lem wit="#Bergk">μὴ κτήνους θνητοῖο βορὴν κατὰ μέτρον ἕληαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="140" xml:id="PsPhoc.ver_Greek.1.140">
+            <app xml:id="u139_ver_Greek">
+              <lem wit="#Bergk">Κτῆνος κἢν ἐχθροῖο πέσῃ καθ᾽ ὁδόν, συνέγειρε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="141" xml:id="PsPhoc.ver_Greek.1.141">
+            <app xml:id="u140_ver_Greek">
+              <lem wit="#Bergk">πλαζόμενον δὲ βροτὸν καὶ ἀλήμονα μήποτ᾽ ἐλέγξῃς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="142" xml:id="PsPhoc.ver_Greek.1.142">
+            <app xml:id="u141_ver_Greek">
+              <lem wit="#Bergk">βέλτερον ἀντ᾽ ἐχθροῖο τυχεῖν φίλου εὐμενέοντος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="143" xml:id="PsPhoc.ver_Greek.1.143">
+            <app xml:id="u142_ver_Greek">
+              <lem wit="#Bergk">ἀρχόμενον τὸ κακὸν κόπτειν, ἕλκος τ᾽ ἀκέσασθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="144" xml:id="PsPhoc.ver_Greek.1.144">
+            <app xml:id="u143_ver_Greek">
+              <lem wit="#Bergk">ἐξ ὀλίγου σπινθῆρος ἀθέσφατος αἴθεται ὕλη·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="145" xml:id="PsPhoc.ver_Greek.1.145">
+            <app xml:id="u144_ver_Greek">
+              <lem wit="#Bergk">Ἐγκρατὲς ἦτορ ἔχειν, τῶν λωβητῶν δ᾽ ἀπέχεσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="146" xml:id="PsPhoc.ver_Greek.1.146">
+            <app xml:id="u145_ver_Greek">
+              <lem wit="#Bergk">φεῦγε κακὴν φήμην, φεῦγ᾽ ἀνθρώπους ἀθεμίστους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="147" xml:id="PsPhoc.ver_Greek.1.147">
+            <app xml:id="u146_ver_Greek">
+              <lem wit="#Bergk">μηδέ τε θηρόβορον δαίσῃ κρέας· ἀργίποσιν δὲ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="148" xml:id="PsPhoc.ver_Greek.1.148">
+            <app xml:id="u147_ver_Greek">
+              <lem wit="#Bergk">λείψανα λεῖπε κυσίν· θῆρες δ᾽ ἀπὸ θηρὸς ἔδονται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="149" xml:id="PsPhoc.ver_Greek.1.149">
+            <app xml:id="u148_ver_Greek">
+              <lem wit="#Bergk">φάρμακα μὴ τεύχειν· μαγικῶν βίβλων ἀπέχεσθαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="150" xml:id="PsPhoc.ver_Greek.1.150">
+            <app xml:id="u149_ver_Greek">
+              <lem wit="#Bergk">νηπιάχοις ἀταλοὺς μὴ μάρψῃς χειρὶ βιαίως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="151" xml:id="PsPhoc.ver_Greek.1.151">
+            <app xml:id="u150_ver_Greek">
+              <lem wit="#Bergk">φεῦγε διχοστασίην καὶ ἔριν, πολέμου προσιόντος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="152" xml:id="PsPhoc.ver_Greek.1.152">
+            <app xml:id="u151_ver_Greek">
+              <lem wit="#Bergk">μὴ κακὸν εὖ ἔρξῃς· σπείρειν ἴσον ἔστ᾽ ἐνὶ πόντῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="153" xml:id="PsPhoc.ver_Greek.1.153">
+            <app xml:id="u152_ver_Greek">
+              <lem wit="#Bergk">Ἐργάζευ, μοχθῶν ὡς ἐξ ἰδίων βιοτεύῃς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="154" xml:id="PsPhoc.ver_Greek.1.154">
+            <app xml:id="u153_ver_Greek">
+              <lem wit="#Bergk">πᾶς γὰρ ἀεργὸς ἀνὴρ ζώει κλοπίμων ἀπὸ χειρῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="155" xml:id="PsPhoc.ver_Greek.1.155">
+            <app xml:id="u154_ver_Greek">
+              <lem wit="#Bergk">ἡ δὲ τέχνη τοι τρέφει ἄνδρας· ἀεργὸν δ᾽ ἔψατο λιμός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="156" xml:id="PsPhoc.ver_Greek.1.156">
+            <app xml:id="u155_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ ἄλλου παρὰ δαιτὸς ἔδοις σκυβάλισμα τραπέζης·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="157" xml:id="PsPhoc.ver_Greek.1.157">
+            <app xml:id="u156_ver_Greek">
+              <lem wit="#Bergk">ἀλλ᾽ ἀπὸ τῶν ἰδίων βίοτον διάγοις ἀνυβρίστως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="158" xml:id="PsPhoc.ver_Greek.1.158">
+            <app xml:id="u157_ver_Greek">
+              <lem wit="#Bergk">εἰ δέ τις οὐ δεδάηκε τέχνην, σκάπτοιτο δικέλλῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="159" xml:id="PsPhoc.ver_Greek.1.159">
+            <app xml:id="u158_ver_Greek">
+              <lem wit="#Bergk">ἔστι βίος πᾶν ἔργον, ἐπὴν μοχθεῖν ἐθέλῃσθα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="160" xml:id="PsPhoc.ver_Greek.1.160">
+            <app xml:id="u159_ver_Greek">
+              <lem wit="#Bergk">ναύτιλος εἰ πλώειν ἐθέλεις, εὐρεῖα θάλασσα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="161" xml:id="PsPhoc.ver_Greek.1.161">
+            <app xml:id="u160_ver_Greek">
+              <lem wit="#Bergk">εἰ δὲ γεηπονίην μεθέπειν, μακραί τοι ἄρουραι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="162" xml:id="PsPhoc.ver_Greek.1.162">
+            <app xml:id="u161_ver_Greek">
+              <lem wit="#Bergk">οὐδὲν ἄνευ καμάτου πέλει ἀνδράσιν εὐπετὲς ἔργον,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="163" xml:id="PsPhoc.ver_Greek.1.163">
+            <app xml:id="u162_ver_Greek">
+              <lem wit="#Bergk">οὐδ᾽ αὐτοῖς μακάρεσσι· πόνος δ᾽ ἀρετὴν μέγ᾽ ὀφέλλει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="164" xml:id="PsPhoc.ver_Greek.1.164">
+            <app xml:id="u163_ver_Greek">
+              <lem wit="#Bergk">μύρμηκες, γαίης μυχατοὺς προλιπόντες οἴκους,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="165" xml:id="PsPhoc.ver_Greek.1.165">
+            <app xml:id="u164_ver_Greek">
+              <lem wit="#Bergk">εὐθὺ ἔρχονται βιότου κεχρημένοι, ὁππότ᾽ ἄρουραι</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="166" xml:id="PsPhoc.ver_Greek.1.166">
+            <app xml:id="u165_ver_Greek">
+              <lem wit="#Bergk">λήϊα κειράμεναι καρπῶν πλήθωσιν ἁλωάς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="167" xml:id="PsPhoc.ver_Greek.1.167">
+            <app xml:id="u166_ver_Greek">
+              <lem wit="#Bergk">οἱ δ᾽ αὐτοὶ πυροῖο νεοτριβὲς ἄχθος ἔχουσιν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="168" xml:id="PsPhoc.ver_Greek.1.168">
+            <app xml:id="u167_ver_Greek">
+              <lem wit="#Bergk">ἢ κριθῶν· αἰεὶ δὲ φέρων φορέοντα διώκει,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="169" xml:id="PsPhoc.ver_Greek.1.169">
+            <app xml:id="u168_ver_Greek">
+              <lem wit="#Bergk">ἐκ θέρεος ποτὶ χεῖμα βορὴν σφετέρην συνάγοντες</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="170" xml:id="PsPhoc.ver_Greek.1.170">
+            <app xml:id="u169_ver_Greek">
+              <lem wit="#Bergk">ἄτρυτοι· φῦλον δ᾽ ὀλίγον τελέθει πολύμοχθον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="171" xml:id="PsPhoc.ver_Greek.1.171">
+            <app xml:id="u170_ver_Greek">
+              <lem wit="#Bergk">κάμνει δ᾽ ἠεροφοῖτις ἀριστοπόνος τε μέλισσα</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="172" xml:id="PsPhoc.ver_Greek.1.172">
+            <app xml:id="u171_ver_Greek">
+              <lem wit="#Bergk">ἢ πέτρης κοίλης κατὰ χηραμὸν ἢ δονάκεσσιν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="173" xml:id="PsPhoc.ver_Greek.1.173">
+            <app xml:id="u172_ver_Greek">
+              <lem wit="#Bergk">ἢ δρυὸς ὠγυγίης κατὰ κοιλάδος ἔνδοθε σίμβλων</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="174" xml:id="PsPhoc.ver_Greek.1.174">
+            <app xml:id="u173_ver_Greek">
+              <lem wit="#Bergk">σμήνεσι μυριότρητα κατ᾽ ἄνθεα κηροδομοῦσα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="175" xml:id="PsPhoc.ver_Greek.1.175">
+            <app xml:id="u174_ver_Greek">
+              <lem wit="#Bergk">Μὴ μείνῃς ἄγαμος, μή πως νώνυμνος ὄληαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="176" xml:id="PsPhoc.ver_Greek.1.176">
+            <app xml:id="u175_ver_Greek">
+              <lem wit="#Bergk">δός τι φύσει καὐτός· τέκε δ᾽ ἔμπαλιν, ὡς ἐλοχεύθης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="177" xml:id="PsPhoc.ver_Greek.1.177">
+            <app xml:id="u176_ver_Greek">
+              <lem wit="#Bergk">Μὴ προαγωγεύσῃς ἄλοχον, σέο τέκνα μιαίνων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="178" xml:id="PsPhoc.ver_Greek.1.178">
+            <app xml:id="u177_ver_Greek">
+              <lem wit="#Bergk">οὐ γὰρ τίκτει παῖδας ὁμοίους μοιχικὰ λέκτρα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="179" xml:id="PsPhoc.ver_Greek.1.179">
+            <app xml:id="u178_ver_Greek">
+              <lem wit="#Bergk">μητρυιῆς μὴ ψαῦε τὰ δεύτερα λέκτρα γονῆος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="180" xml:id="PsPhoc.ver_Greek.1.180">
+            <app xml:id="u179_ver_Greek">
+              <lem wit="#Bergk">μητέρα δ᾽ ὡς τίμα τὴν μητέρος ἴχνια βᾶσαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="181" xml:id="PsPhoc.ver_Greek.1.181">
+            <app xml:id="u180_ver_Greek">
+              <lem wit="#Bergk">μηδὲ κασιγνήτης ἐς ἀπότροπον ἐλθέμεν εὐνήν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="182" xml:id="PsPhoc.ver_Greek.1.182">
+            <app xml:id="u181_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ ἐπὶ παλλακίσιν πατρὸς λεχέεσσι μιγείης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="183" xml:id="PsPhoc.ver_Greek.1.183">
+            <app xml:id="u182_ver_Greek">
+              <lem wit="#Bergk">μηδὲ γυνὴ φθείροι βρέφος ἔμβρυον ἔνδοθι γαστρός,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="184" xml:id="PsPhoc.ver_Greek.1.184">
+            <app xml:id="u183_ver_Greek">
+              <lem wit="#Bergk">μηδὲ τεκοῦσα κυσὶν ῥίψῃ καὶ γυψὶν ἕλωρα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="185" xml:id="PsPhoc.ver_Greek.1.185">
+            <app xml:id="u184_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ ἐπὶ σῇ ἀλόχῳ ἐγκύμονι χεῖρα βάληαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="186" xml:id="PsPhoc.ver_Greek.1.186">
+            <app xml:id="u185_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ αὖ παιδογόνον τέμνειν φύσιν ἄρσενα κούρου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="187" xml:id="PsPhoc.ver_Greek.1.187">
+            <app xml:id="u186_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ ἀλόγοις ζώοισι βατήριον ἐς λέχος ἐλθεῖν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="188" xml:id="PsPhoc.ver_Greek.1.188">
+            <app xml:id="u187_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ ὕβριζε γυναῖχ᾽ αἰσχυντηροῖς ἐπέεσσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="189" xml:id="PsPhoc.ver_Greek.1.189">
+            <app xml:id="u188_ver_Greek">
+              <lem wit="#Bergk">μὴ παραβῇς εὐνὰς φύσεως ἐς κύπριν ἄθεσμον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="190" xml:id="PsPhoc.ver_Greek.1.190">
+            <app xml:id="u189_ver_Greek">
+              <lem wit="#Bergk">οὐδ᾽ αὐτοῖς θήρεσσι συνεύαδον ἄρσενες εὐναί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="191" xml:id="PsPhoc.ver_Greek.1.191">
+            <app xml:id="u190_ver_Greek">
+              <lem wit="#Bergk">μηδέ τι θηλύτεραι λέχος ἀνδρῶν μιμήσαιντο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="192" xml:id="PsPhoc.ver_Greek.1.192">
+            <app xml:id="u191_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ ἐς ἔρωτα γυναικὸς ἅπας ῥεύσῃς ἀκάθεκτος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="193" xml:id="PsPhoc.ver_Greek.1.193">
+            <app xml:id="u192_ver_Greek">
+              <lem wit="#Bergk">οὐ γὰρ ἔρως θεός ἐστι, πάθος δ᾽ ἀΐδηλον ἁπάντων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="194" xml:id="PsPhoc.ver_Greek.1.194">
+            <app xml:id="u193_ver_Greek">
+              <lem wit="#Bergk">μηδὲ κασιγνήτων ἀλόχων ἐπὶ δέμνια βαίνειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="195" xml:id="PsPhoc.ver_Greek.1.195">
+            <app xml:id="u194_ver_Greek">
+              <lem wit="#Bergk">στέργε τεὴν ἄλοχον· τί γὰρ ἡδύτερον καὶ ἄρειον,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="196" xml:id="PsPhoc.ver_Greek.1.196">
+            <app xml:id="u195_ver_Greek">
+              <lem wit="#Bergk">ἢ ὅταν ἀνδρὶ γυνὴ φρονέῃ φίλα γήραος ἄχρις,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="197" xml:id="PsPhoc.ver_Greek.1.197">
+            <app xml:id="u196_ver_Greek">
+              <lem wit="#Bergk">καὶ πόσις ᾗ ἀλόχῳ, μηδ᾽ ἐμπέσῃ ἄνδιχα νεῖκος;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="198" xml:id="PsPhoc.ver_Greek.1.198">
+            <app xml:id="u197_ver_Greek">
+              <lem wit="#Bergk">μηδέ τις ἀμνήστευτα βίῃ κούρῃσι μιγείη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="199" xml:id="PsPhoc.ver_Greek.1.199">
+            <app xml:id="u198_ver_Greek">
+              <lem wit="#Bergk">Μηδὲ γυναῖκα κακὴν πολυχρήματον οἴκαδ᾽ ἄγεσθαι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="200" xml:id="PsPhoc.ver_Greek.1.200">
+            <app xml:id="u199_ver_Greek">
+              <lem wit="#Bergk">λατρεύσεις ἀλόχῳ λυγρῆς χάριν εἵνεκα φερνῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="201" xml:id="PsPhoc.ver_Greek.1.201">
+            <app xml:id="u200_ver_Greek">
+              <lem wit="#Bergk">ἵπποις εὐγενέας διζήμεθα γειαρότας τε</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="202" xml:id="PsPhoc.ver_Greek.1.202">
+            <app xml:id="u201_ver_Greek">
+              <lem wit="#Bergk">ταύρους ὑψιτένοντας, ἀτὰρ σκυλάκων ταναγρῆας·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="203" xml:id="PsPhoc.ver_Greek.1.203">
+            <app xml:id="u202_ver_Greek">
+              <lem wit="#Bergk">γῆμαι δ᾽ οὐκ ἀγαθὴν ἐριδαίνομεν ἀφρονέοντες·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="204" xml:id="PsPhoc.ver_Greek.1.204">
+            <app xml:id="u203_ver_Greek">
+              <lem wit="#Bergk">οὐδὲ γυνὴ κακὸν ἄνδρ᾽ ἀπαναίνεται ἀφνεὸν ὄντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="205" xml:id="PsPhoc.ver_Greek.1.205">
+            <app xml:id="u204_ver_Greek">
+              <lem wit="#Bergk">μηδὲ γάμῳ γάμον ἄλλον ἄγοις ἐπὶ πήματι πῆμα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="206" xml:id="PsPhoc.ver_Greek.1.206">
+            <app xml:id="u205_ver_Greek">
+              <lem wit="#Bergk">μηδ᾽ ἀμφὶ κτεάνων συνομαίμοσιν εἰς ἔριν ἔλθῃς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="207" xml:id="PsPhoc.ver_Greek.1.207">
+            <app xml:id="u206_ver_Greek">
+              <lem wit="#Bergk">Παισὶν μὴ χαλέπαινε τεοῖς, ἀλλ᾽ ἤπιος εἴης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="208" xml:id="PsPhoc.ver_Greek.1.208">
+            <app xml:id="u207_ver_Greek">
+              <lem wit="#Bergk">ἢν δέ τι παῖς ἀλίτῃ σε, κολουέτω υἱέα μήτηρ,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="209" xml:id="PsPhoc.ver_Greek.1.209">
+            <app xml:id="u208_ver_Greek">
+              <lem wit="#Bergk">ἢ καὶ πρεσβύτατοι γενεῆς, ἢ δημογέροντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="210" xml:id="PsPhoc.ver_Greek.1.210">
+            <app xml:id="u209_ver_Greek">
+              <lem wit="#Bergk">Μὴ μὲν ἐπ᾽ ἄρσενι παιδὶ τρέφειν πλοκαμηΐδα χαίτην·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="211" xml:id="PsPhoc.ver_Greek.1.211">
+            <app xml:id="u210_ver_Greek">
+              <lem wit="#Bergk">μὴ κορυφὴν πλέξῃς μήθ᾽ ἅμματα λοξὰ κορύμβων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="212" xml:id="PsPhoc.ver_Greek.1.212">
+            <app xml:id="u211_ver_Greek">
+              <lem wit="#Bergk">ἄρσεσιν οὐκ ἐπέοικε κομᾶν, χλιδαὶ δὲ γυναιξίν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="213" xml:id="PsPhoc.ver_Greek.1.213">
+            <app xml:id="u212_ver_Greek">
+              <lem wit="#Bergk">Παιδὸς δ᾽ εὐμόρφου φρουρεῖν νεοτήσιον ὥρην·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="214" xml:id="PsPhoc.ver_Greek.1.214">
+            <app xml:id="u213_ver_Greek">
+              <lem wit="#Bergk">πολλοὶ γὰρ λισσῶσι πρὸς ἄρσενα μῖξιν ἔρωτος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="215" xml:id="PsPhoc.ver_Greek.1.215">
+            <app xml:id="u214_ver_Greek">
+              <lem wit="#Bergk">παρθενικὴν δὲ φύλασσε πολυκλείστοις θαλάμοισιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="216" xml:id="PsPhoc.ver_Greek.1.216">
+            <app xml:id="u215_ver_Greek">
+              <lem wit="#Bergk">μηδέ μιν ἄχρι γάμων πρὸ δόμων ὀφθῆμεν ἐάσῃς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="217" xml:id="PsPhoc.ver_Greek.1.217">
+            <app xml:id="u216_ver_Greek">
+              <lem wit="#Bergk">κάλλος δυστήρητον ἔφυ παίδων τοκέεσσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="218" xml:id="PsPhoc.ver_Greek.1.218">
+            <app xml:id="u217_ver_Greek">
+              <lem wit="#Bergk">Στέργε φίλοις ἄχρις θανάτου, πίστις γὰρ ἀμείνων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="219" xml:id="PsPhoc.ver_Greek.1.219">
+            <app xml:id="u218_ver_Greek">
+              <lem wit="#Bergk">συγγενέσιν φιλότητα νέμοις ὁσίην θ᾽ ὁμόνοιαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="220" xml:id="PsPhoc.ver_Greek.1.220">
+            <app xml:id="u219_ver_Greek">
+              <lem wit="#Bergk">αἰδεῖσθαι πολιοκροτάφους, εἴκειν δὲ γέρουσιν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="221" xml:id="PsPhoc.ver_Greek.1.221">
+            <app xml:id="u220_ver_Greek">
+              <lem wit="#Bergk">ἕδρης καὶ γεράων πάντων· γενεῇ δ᾽ ἀτάλαντον</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="222" xml:id="PsPhoc.ver_Greek.1.222">
+            <app xml:id="u221_ver_Greek">
+              <lem wit="#Bergk">πρέσβυν ὁμήλικα πατρὸς ἴσαις τιμαῖσι γέραιρε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="223" xml:id="PsPhoc.ver_Greek.1.223">
+            <app xml:id="u222_ver_Greek">
+              <lem wit="#Bergk">Γαστρὸς ὀφειλόμενον δασμὸν παρέχου θεράπουσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="224" xml:id="PsPhoc.ver_Greek.1.224">
+            <app xml:id="u223_ver_Greek">
+              <lem wit="#Bergk">δούλῳ τακτὰ νέμοις, ἵνα τοι καταθύμιος εἴη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="225" xml:id="PsPhoc.ver_Greek.1.225">
+            <app xml:id="u224_ver_Greek">
+              <lem wit="#Bergk">στίγματα μὴ γράψῃς, ἐπονειδίζων θεράποντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="226" xml:id="PsPhoc.ver_Greek.1.226">
+            <app xml:id="u225_ver_Greek">
+              <lem wit="#Bergk">δοῦλον μὴ βλάψῃς τι, κακηγορέων παρ᾽ ἄνακτι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="227" xml:id="PsPhoc.ver_Greek.1.227">
+            <app xml:id="u226_ver_Greek">
+              <lem wit="#Bergk">λάμβανε καὶ βουλὴν παρὰ οἰκέτου εὖ φρονέοντος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="228" xml:id="PsPhoc.ver_Greek.1.228">
+            <app xml:id="u227_ver_Greek">
+              <lem wit="#Bergk">Ἁγνείη ψυχῆς, οὐ σώματός εἰσι καθαρμοί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="229" xml:id="PsPhoc.ver_Greek.1.229">
+            <app xml:id="u228_ver_Greek">
+              <lem wit="#Bergk">Ταῦτα δικαιοσύνης μυστήρια, τοῖα βιεῦντες</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="230" xml:id="PsPhoc.ver_Greek.1.230">
+            <app xml:id="u229_ver_Greek">
+              <lem wit="#Bergk">ζωὴν ἐκτελέοιτ’ ἀγαθὴν μέχρι γήραος οὐδοῦ.</lem>
+            </app>
+          </ab>
+        </div>
       </div>
     </body>
   </text>

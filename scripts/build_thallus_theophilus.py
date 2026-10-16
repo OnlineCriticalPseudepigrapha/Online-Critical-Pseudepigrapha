@@ -50,30 +50,55 @@ THEOPHILUS_FRAGMENTS = [
 ]
 
 def build_thallus():
+    bib = "Felix Jacoby, Fragmente der griechischen Historiker (FGrH 256); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 261-267."
     # Grammateus
     lines = [
         '<?xml version="1.0" encoding="utf-8"?>',
-        '<!DOCTYPE document SYSTEM "document.dtd">',
-        '<document id="Thallus">',
-        '    <header>',
-        '        <title>Fragments of Thallus the Chronographer</title>',
-        '        <author>Thallus</author>',
-        '        <editor>Felix Jacoby (FGrH 256); Albert-Marie Denis (PVTG 3, 1970)</editor>',
-        '        <description>Greek text and English translation of the fragments of Thallus preserved in Julius Africanus (Chronogr. fr. 50 ap. Syncell. 610), Theophilus of Antioch (Ad Autolycum III.29), and Flavius Josephus (Antiquitates XVIII.167).</description>',
-        '    </header>',
-        '    <body>'
+        '<!DOCTYPE book SYSTEM "grammateus.dtd">',
+        '<book filename="Thallus" title="Fragments of Thallus the Chronographer">',
+        '  <version author="Jacoby / Denis" language="Greek" title="Greek and English">',
+        '    <divisions>',
+        '      <division delimiter="." label="Chapter"/>',
+        '      <division label="Verse"/>',
+        '    </divisions>',
+        '    <manuscripts>',
+        '      <ms abbrev="Denis" language="Greek" show="yes">',
+        '        <name>Denis 1970 (PVTG 3) / Jacoby FGrH 256</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '      <ms abbrev="Trans" language="English" show="yes">',
+        '        <name>English Translation (OCP)</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '    </manuscripts>',
+        '    <text>'
     ]
+    # Group by chapter
+    ch_map = {}
     for frag in THALLUS_FRAGMENTS:
-        lines.append(f'        <div c="{frag["c"]}" v="{frag["v"]}">')
-        lines.append(f'            <line lang="grc">{frag["grc"]}</line>')
-        lines.append(f'            <line lang="en">{frag["en"]}</line>')
-        lines.append('        </div>')
-    lines.append('    </body>')
-    lines.append('</document>\n')
+        ch_map.setdefault(frag["c"], []).append(frag)
+    
+    unit_id = 0
+    for c in sorted(ch_map.keys()):
+        lines.append(f'      <div number="{c}">')
+        for frag in ch_map[c]:
+            clean_grc = frag["grc"].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+            clean_en = frag["en"].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+            lines.append(f'        <div number="{frag["v"]}">')
+            lines.append(f'          <unit id="{unit_id}">')
+            lines.append(f'            <reading option="0" mss="Denis ">{clean_grc}</reading>')
+            lines.append(f'            <reading option="1" mss="Trans ">{clean_en}</reading>')
+            lines.append('          </unit>')
+            lines.append('        </div>')
+            unit_id += 1
+        lines.append('      </div>')
+    lines.append('    </text>')
+    lines.append('  </version>')
+    lines.append('</book>\n')
     
     with open('static/docs/Thallus.xml', 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
-    print('Wrote static/docs/Thallus.xml')
+    print(f'Wrote static/docs/Thallus.xml ({unit_id} units)')
 
     # TEI P5
     tei_lines = [
@@ -140,30 +165,47 @@ def build_thallus():
     print('Wrote static/docs/tei/Thallus.xml')
 
 def build_theophilus():
+    bib = "Felix Jacoby, Fragmente der griechischen Historiker (FGrH 733); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 203-207."
     # Grammateus
     lines = [
         '<?xml version="1.0" encoding="utf-8"?>',
-        '<!DOCTYPE document SYSTEM "document.dtd">',
-        '<document id="Theoph">',
-        '    <header>',
-        '        <title>Fragments of Theophilus</title>',
-        '        <author>Theophilus</author>',
-        '        <editor>Felix Jacoby (FGrH 733); Albert-Marie Denis (PVTG 3, 1970)</editor>',
-        '        <description>Greek text and English translation of the fragment of Theophilus preserved in Alexander Polyhistor ap. Eusebius (Praeparatio Evangelica IX.34.19).</description>',
-        '    </header>',
-        '    <body>'
+        '<!DOCTYPE book SYSTEM "grammateus.dtd">',
+        '<book filename="Theoph" title="Fragments of Theophilus">',
+        '  <version author="Jacoby / Denis" language="Greek" title="Greek and English">',
+        '    <divisions>',
+        '      <division delimiter="." label="Chapter"/>',
+        '      <division label="Verse"/>',
+        '    </divisions>',
+        '    <manuscripts>',
+        '      <ms abbrev="Denis" language="Greek" show="yes">',
+        '        <name>Denis 1970 (PVTG 3) / Jacoby FGrH 733</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '      <ms abbrev="Trans" language="English" show="yes">',
+        '        <name>English Translation (OCP)</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '    </manuscripts>',
+        '    <text>',
+        '      <div number="1">'
     ]
-    for frag in THEOPHILUS_FRAGMENTS:
-        lines.append(f'        <div c="{frag["c"]}" v="{frag["v"]}">')
-        lines.append(f'            <line lang="grc">{frag["grc"]}</line>')
-        lines.append(f'            <line lang="en">{frag["en"]}</line>')
+    for v_num, frag in enumerate(THEOPHILUS_FRAGMENTS, 1):
+        clean_grc = frag["grc"].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        clean_en = frag["en"].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        lines.append(f'        <div number="{frag["v"]}">')
+        lines.append(f'          <unit id="{v_num-1}">')
+        lines.append(f'            <reading option="0" mss="Denis ">{clean_grc}</reading>')
+        lines.append(f'            <reading option="1" mss="Trans ">{clean_en}</reading>')
+        lines.append('          </unit>')
         lines.append('        </div>')
-    lines.append('    </body>')
-    lines.append('</document>\n')
+    lines.append('      </div>')
+    lines.append('    </text>')
+    lines.append('  </version>')
+    lines.append('</book>\n')
     
     with open('static/docs/Theoph.xml', 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
-    print('Wrote static/docs/Theoph.xml')
+    print(f'Wrote static/docs/Theoph.xml ({len(THEOPHILUS_FRAGMENTS)} units)')
 
     # TEI P5
     tei_lines = [

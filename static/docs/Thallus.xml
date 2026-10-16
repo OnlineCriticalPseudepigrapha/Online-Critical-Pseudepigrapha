@@ -1,32 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE document SYSTEM "document.dtd">
-<document id="Thallus">
-    <header>
-        <title>Fragments of Thallus the Chronographer</title>
-        <author>Thallus</author>
-        <editor>Felix Jacoby (FGrH 256); Albert-Marie Denis (PVTG 3, 1970)</editor>
-        <description>Greek text and English translation of the fragments of Thallus preserved in Julius Africanus (Chronogr. fr. 50 ap. Syncell. 610), Theophilus of Antioch (Ad Autolycum III.29), and Flavius Josephus (Antiquitates XVIII.167).</description>
-    </header>
-    <body>
-        <div c="1" v="1">
-            <line lang="grc">καθ᾽ ὅλου τοῦ κόσμου σκοτία ἐγένετο φοβερωτάτη, σεισμῷ τε αἱ πέτραι διερρήγνυντο, καὶ τὰ πολλὰ Ἰουδαίας καὶ τῆς ἄλλης γῆς κατερρίφη. τοῦτο τὸ σκότος ἔκλειψιν ἡλίου Θάλλος ἀποκαλεῖ ἐν τρίτῃ τῶν ἱστοριῶν, ὡς ἐμοὶ δοκεῖ, ἀλόγως.</line>
-            <line lang="en">Over the whole world there fell a most terrible darkness, and by earthquake rocks were rent, and much of Judaea and the rest of the earth was thrown down. This darkness Thallus calls an eclipse of the sun in the third book of his Histories, without reason, as it seems to me.</line>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="Thallus" title="Fragments of Thallus the Chronographer">
+  <version author="Jacoby / Denis" language="Greek" title="Greek and English">
+    <divisions>
+      <division delimiter="." label="Chapter"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="Denis" language="Greek" show="yes">
+        <name>Denis 1970 (PVTG 3) / Jacoby FGrH 256</name>
+        <bibliography>Felix Jacoby, Fragmente der griechischen Historiker (FGrH 256); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 261-267.</bibliography>
+      </ms>
+      <ms abbrev="Trans" language="English" show="yes">
+        <name>English Translation (OCP)</name>
+        <bibliography>Felix Jacoby, Fragmente der griechischen Historiker (FGrH 256); Albert-Marie Denis, Fragmenta Pseudepigraphorum quae supersunt Graeca (PVTG 3; Leiden: Brill, 1970), pp. 261-267.</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="0">
+            <reading option="0" mss="Denis ">καθ᾽ ὅλου τοῦ κόσμου σκοτία ἐγένετο φοβερωτάτη, σεισμῷ τε αἱ πέτραι διερρήγνυντο, καὶ τὰ πολλὰ Ἰουδαίας καὶ τῆς ἄλλης γῆς κατερρίφη. τοῦτο τὸ σκότος ἔκλειψιν ἡλίου Θάλλος ἀποκαλεῖ ἐν τρίτῃ τῶν ἱστοριῶν, ὡς ἐμοὶ δοκεῖ, ἀλόγως.</reading>
+            <reading option="1" mss="Trans ">Over the whole world there fell a most terrible darkness, and by earthquake rocks were rent, and much of Judaea and the rest of the earth was thrown down. This darkness Thallus calls an eclipse of the sun in the third book of his Histories, without reason, as it seems to me.</reading>
+          </unit>
         </div>
-        <div c="1" v="2">
-            <line lang="grc">Ἑβραῖοι γὰρ ἄγουσι τὸ πάσχα κατὰ σελήνην ιδʹ, τὰ δὲ περὶ τὸ πάθος τοῦ σωτῆρος πρὸ μιᾶς τοῦ πάσχα συμβαίνει· ἔκλειψις δὲ ἡλίου οὐκ ἂν ἄλλως γένοιτο, εἰ μὴ κατὰ σύνοδον σελήνης πρὸς ἥλιον· πῶς δὲ κατὰ διάμετρον οὔσης τῆς σελήνης ἔκλειψις νομισθείη; (Iulius Africanus, Chronogr. fr. 50 ap. Georg. Syncell. 610)</line>
-            <line lang="en">For the Hebrews celebrate the Passover on the fourteenth day of the moon, and the events of the Passion of the Savior occurred on the eve of the Passover; but an eclipse of the sun cannot happen except at the conjunction of the moon with the sun; how then could an eclipse be supposed to happen when the moon is diametrically opposed to the sun? (Julius Africanus, Chronogr. fr. 50)</line>
+        <div number="2">
+          <unit id="1">
+            <reading option="0" mss="Denis ">Ἑβραῖοι γὰρ ἄγουσι τὸ πάσχα κατὰ σελήνην ιδʹ, τὰ δὲ περὶ τὸ πάθος τοῦ σωτῆρος πρὸ μιᾶς τοῦ πάσχα συμβαίνει· ἔκλειψις δὲ ἡλίου οὐκ ἂν ἄλλως γένοιτο, εἰ μὴ κατὰ σύνοδον σελήνης πρὸς ἥλιον· πῶς δὲ κατὰ διάμετρον οὔσης τῆς σελήνης ἔκλειψις νομισθείη; (Iulius Africanus, Chronogr. fr. 50 ap. Georg. Syncell. 610)</reading>
+            <reading option="1" mss="Trans ">For the Hebrews celebrate the Passover on the fourteenth day of the moon, and the events of the Passion of the Savior occurred on the eve of the Passover; but an eclipse of the sun cannot happen except at the conjunction of the moon with the sun; how then could an eclipse be supposed to happen when the moon is diametrically opposed to the sun? (Julius Africanus, Chronogr. fr. 50)</reading>
+          </unit>
         </div>
-        <div c="2" v="1">
-            <line lang="grc">Θάλλος δὲ μέμνηται Βήλου τοῦ Ἀσσυρίων βασιλεύσαντος καὶ Κρόνου τοῦ Τιτᾶνος, φάσκων τὸν Βῆλον συμπεπολεμηκέναι τοῖς Τιτᾶσι πρὸς Δία καὶ τοὺς σὺν αὐτῷ θεούς, οὓς ἐπικαλεῖ, λέγων· καὶ Ὤγυγος ἡττηθεὶς ἔφυγεν εἰς Ἀκτὴν τότε καλουμένην, νῦν δὲ Ἀττικὴν προσαγορευομένην, ἧς ἐκράτησεν. (Theophilus Antiochenus, Ad Autolycum III.29)</line>
-            <line lang="en">Thallus mentions Belus the king of the Assyrians and Cronus the Titan, asserting that Belus fought along with the Titans against Zeus and the gods with him, whom he invokes, saying: 'And Ogygus, being defeated, fled to Acte then so-called, now named Attica, which he possessed.' (Theophilus of Antioch, Ad Autolycum III.29)</line>
+      </div>
+      <div number="2">
+        <div number="1">
+          <unit id="2">
+            <reading option="0" mss="Denis ">Θάλλος δὲ μέμνηται Βήλου τοῦ Ἀσσυρίων βασιλεύσαντος καὶ Κρόνου τοῦ Τιτᾶνος, φάσκων τὸν Βῆλον συμπεπολεμηκέναι τοῖς Τιτᾶσι πρὸς Δία καὶ τοὺς σὺν αὐτῷ θεούς, οὓς ἐπικαλεῖ, λέγων· καὶ Ὤγυγος ἡττηθεὶς ἔφυγεν εἰς Ἀκτὴν τότε καλουμένην, νῦν δὲ Ἀττικὴν προσαγορευομένην, ἧς ἐκράτησεν. (Theophilus Antiochenus, Ad Autolycum III.29)</reading>
+            <reading option="1" mss="Trans ">Thallus mentions Belus the king of the Assyrians and Cronus the Titan, asserting that Belus fought along with the Titans against Zeus and the gods with him, whom he invokes, saying: 'And Ogygus, being defeated, fled to Acte then so-called, now named Attica, which he possessed.' (Theophilus of Antioch, Ad Autolycum III.29)</reading>
+          </unit>
         </div>
-        <div c="2" v="2">
-            <line lang="grc">καὶ τῶν λοιπῶν δὲ βασιλέων ὧν τὰ ὀνόματα καὶ αἱ κατὰ μέρος πράξεις ἀναγεγραμμέναι εἰσίν, πολλοῖς ἔτεσιν προάγει ὁ κατὰ τὸν Ὤγυγον κατακλυσμός. (Theophilus Antiochenus, Ad Autolycum III.29)</line>
-            <line lang="en">And of the remaining kings whose names and detailed deeds are recorded, the flood in the time of Ogygus antedates them by many years. (Theophilus of Antioch, Ad Autolycum III.29)</line>
+        <div number="2">
+          <unit id="3">
+            <reading option="0" mss="Denis ">καὶ τῶν λοιπῶν δὲ βασιλέων ὧν τὰ ὀνόματα καὶ αἱ κατὰ μέρος πράξεις ἀναγεγραμμέναι εἰσίν, πολλοῖς ἔτεσιν προάγει ὁ κατὰ τὸν Ὤγυγον κατακλυσμός. (Theophilus Antiochenus, Ad Autolycum III.29)</reading>
+            <reading option="1" mss="Trans ">And of the remaining kings whose names and detailed deeds are recorded, the flood in the time of Ogygus antedates them by many years. (Theophilus of Antioch, Ad Autolycum III.29)</reading>
+          </unit>
         </div>
-        <div c="3" v="1">
-            <line lang="grc">ἦν δὲ καὶ Θάλλος σαμαρεὺς γένος, Καίσαρος δὲ ἀπελεύθερος, παρʼ οὗ δανείζεται ἑκατὸν μυριάδας, καὶ διαλύει τῇ Ἀντωνίᾳ τὸ χρέος, ταῖς δὲ λοιπαῖς θεραπεύει τὸν Γάϊον, οὐ μετρίως δυνατὸς ὢν ἤδη διὰ τὴν ἐκείνου τιμήν. (Flavius Josephus, Antiquitates Iudaicae XVIII.167)</line>
-            <line lang="en">Now there was also Thallus, a Samaritan by birth and a freedman of Caesar, from whom [Agrippa] borrowed a million drachmae, and repaid his debt to Antonia, and with the remainder paid court to Gaius, being already not a little influential through his favor. (Josephus, Antiquities XVIII.167)</line>
+      </div>
+      <div number="3">
+        <div number="1">
+          <unit id="4">
+            <reading option="0" mss="Denis ">ἦν δὲ καὶ Θάλλος σαμαρεὺς γένος, Καίσαρος δὲ ἀπελεύθερος, παρʼ οὗ δανείζεται ἑκατὸν μυριάδας, καὶ διαλύει τῇ Ἀντωνίᾳ τὸ χρέος, ταῖς δὲ λοιπαῖς θεραπεύει τὸν Γάϊον, οὐ μετρίως δυνατὸς ὢν ἤδη διὰ τὴν ἐκείνου τιμήν. (Flavius Josephus, Antiquitates Iudaicae XVIII.167)</reading>
+            <reading option="1" mss="Trans ">Now there was also Thallus, a Samaritan by birth and a freedman of Caesar, from whom [Agrippa] borrowed a million drachmae, and repaid his debt to Antonia, and with the remainder paid court to Gaius, being already not a little influential through his favor. (Josephus, Antiquities XVIII.167)</reading>
+          </unit>
         </div>
-    </body>
-</document>
+      </div>
+    </text>
+  </version>
+</book>

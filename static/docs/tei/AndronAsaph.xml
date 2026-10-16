@@ -1,144 +1,165 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AndronAsaph">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Fragment of Andronicus and Asaph the Historian of the Hebrews</title>
-        <author>Andronicus / Asaph (Pseudepigraphon)</author>
-        <editor>Alphonse Mingana</editor>
+        <title>Andronicus and Asaph the Historian (Zodiac of the Patriarchs)</title>
+        <editor role="editor">Penner, Ken M.</editor>
         <respStmt>
-          <resp>TEI P5 Parallel Segmentation edition for Online Critical Pseudepigrapha</resp>
-          <name>Ken M. Penner</name>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
         </respStmt>
       </titleStmt>
       <publicationStmt>
-        <publisher>Online Critical Pseudepigrapha</publisher>
-        <pubPlace>St. Francis Xavier University, Antigonish, NS</pubPlace>
-        <availability>
-          <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <biblStruct type="book">
-          <monogr>
-            <title level="m">Some Early Judæo-Christian Documents in the John Rylands Library</title>
-            <editor>Alphonse Mingana</editor>
-            <imprint>
-              <publisher>The University Press</publisher>
-              <pubPlace>Manchester</pubPlace>
-              <date when="1917">1917</date>
-              <biblScope unit="page">32-35, 62-64</biblScope>
-            </imprint>
-          </monogr>
-        </biblStruct>
+        <listWit>
+          <witness xml:id="Mingana">
+            <abbr type="siglum">Mingana</abbr>
+            <name>Mingana 1917 (MS Rylands Syr. 44)</name>
+            <bibl>Alphonse Mingana, Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 32-35, 62-64 (MS Cod. Syr. 44).</bibl>
+          </witness>
+          <witness xml:id="Trans">
+            <abbr type="siglum">Trans</abbr>
+            <name>Mingana English Translation (1917)</name>
+            <bibl>Alphonse Mingana, Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 32-35, 62-64 (MS Cod. Syr. 44).</bibl>
+          </witness>
+        </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="syr">syr</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
-  <text>
+  <text xml:lang="syr">
     <body>
-      <div type="fragment" n="1">
-        <p n="1">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܬܘܒ ܡܡܠܠܐ ܕܥܠ ܝܒ ܣܛܘܟܣ̈ܐ ܕܫܡܫܐ ܕܥܒܝܕ ܠܐܢܕܪܘܢܝܩܘܣ ܚܟܝܡܐ ܘܦܝܠܣܘܦܐ ܘܡܗܝܪܐ.</rdg>
-            <rdg type="translation" xml:lang="en">Again a discourse upon the twelve stoicheia of the sun, written by Andronicus the Wise, the Philosopher and the learned.</rdg>
-          </app>
-        </p>
-        <p n="2">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܡܛܠ ܕܝܢ ܕܙܕܩ ܕܒܟܠܙܒܢ ܢܬܥܗܕܘܢ ܘܢܣܬܟܠܘܢ ܪ̈ܚܡܝ ܫܪܪܐ ܒܐܝܠܝܢ ܕܫܦܝܪ̈ܢ ܘܡܝܬܪ̈ܢ: ܐܦ ܡܢܗܪ̈ܢ ܬܪܥܝܬܐ ܕܐܝܠܝܢ ܕܒܥܝܢ ܠܗܝܢ: ܐܬܒܛܠ ܠܢ ܐܚ̈ܝ ܠܡܚܘܝܘ ܩܕܡܝܟܘܢ ܐܦ ܗܕܐ ܕܐܝܬܝܗ̇ ܒܥܬܐ ܡܝܬܪܬܐ ܒܪܗܛܐ ܕܕܘܒܪܗ.</rdg>
-            <rdg type="translation" xml:lang="en">Because the lovers of truth must always remember and understand the good and prominent things which enlighten the mind of those who seek after them, I have been anxious, my brethren, to lay down before you the prominent question of the evolution of the course of (the sun),</rdg>
-          </app>
-        </p>
-        <p n="3">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܗܢܘ ܕܝܢ ܬܚܘܡܐ ܘܙܒܢܐ ܘܪܗܛܐ ܟܠܗ ܕܝܘܒܠܗ: ܘܣܗܪܐ ܒܟܠܗܘܢ ܝܘ̈ܡܘܗܝ: ܘܡܥܒܕܢܘܬܐ ܕܬܪܥܣܪ ܣܛܘܟܣ̈ܐ ܗܿܢܘܢ ܕܟܪܟܝܢ ܒܡܢܝܢܐ ܕܬܪܥܣܪ ܝܪ̈ܚܝܢ ܕܫܢ݇ܬܐ: ܘܡܩܕܡܝܢ ܘܡܘܕܥܝܢ ܥܠ ܐܝܠܝܢ ܕܥܬܝܕܢ ܠܡܗܘܐ ܠܘܬܢ ܒܦܘܩܕܢ ܐܠܗܐ ܥܒܘܕܐ ܕܟܠ.</rdg>
-            <rdg type="translation" xml:lang="en">that is to say the limits, the times and all the course of its succession with the days of the moon and the influence of the twelve stoicheia which gravitate circuitously in the number of the twelve months of the year, and which foretell events which happen to us by order of God, creator of everything.</rdg>
-          </app>
-        </p>
-        <p n="4">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܟܕ ܡܬܕܠܝܢ ܡܢ ܠܗܿܢܘܢ ܣܛܘܟܣ̈ܐ ܒܝܬ ܝܘܢܝ̈ܐ: ܕܫܡܗ̈ܝܗܘܢ ܘܩܢܘܡ̈ܝܗܘܢ ܬܚܡܘ ܘܣܡܘ ܘܚܘܝܘ: ܟܕ ܟܢܝܘ ܐܢܘܢ ܥܠ ܫܡܗ̈ܐ ܕܐܠܗ̈ܝܗܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">In investigating these stoicheia the Greeks have defined and shown their names and their entities. They have called them by the names of their gods,</rdg>
-          </app>
-        </p>
-        <p n="5">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܪܕܝܢ ܚܕ ܒܬܪ ܚܕ ܒܛܘܟܣܗܘܢ ܕܗܠܝܢ ܩܢܘܢܣ ܕܡܢܝܢܐ ܕܝܢ ܕܝܘ̈ܡܬܐ ܕܝܪ̈ܚܐ: ܗܢܘ ܕܝܢ ܒܚܘܫܒܢܐ ܕܣܗܪܐ.</rdg>
-            <rdg type="translation" xml:lang="en">and they follow one another in the order of the canones of the numbers of the days of the months, that is to say according to the lunar computation.</rdg>
-          </app>
-        </p>
-        <p n="6">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܟܕ ܡܫܪܝܢ ܩܕܡܝܐ ܡܢ ܕܝܘܣ ܒܪ ܩܪܢܘܣ ܘܩܪܝܢ ܠܗ ܕܟܪܐ: ܘܒܬܪܗ ܦܘܣܝܕܘܢ ܐܚܘܗܝ ܘܩܪܝܢ ܠܗ ܢܘܢ̈ܐ: ܘܒܬܪܗ ܕܗܢܐ ܐܡܪܝܢ ܐܦܠܘܢ ܘܒܬܪܗ ܕܘܠܐ.</rdg>
-            <rdg type="translation" xml:lang="en">They begin with Dios son of Cronus, and they call him Aries (the Ram). After him comes Poseidon his brother whom they call Pisces (the Fish). After him they say Apollo, and after him Aquarius (the Water-carrier).</rdg>
-          </app>
-        </p>
-        <p n="7">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܬܪܗ ܕܗܢܐ ܣܝܡܝܢ ܐܪܝܣ ܘܩܪܝܢ ܠܗ ܟܠܒܐ ܕܡܝ̈ܐ: ܒܕܝܠܢ ܕܝܢ ܐܝܠܐ ܗ݇ܘܼ: ܘܡ̣ܢ ܒܬܪܗ ܐܡܪܝܢ ܐܪܡܝܣ ܘܠܗ ܩܪܝܢ ܟܝܪܘܢ.</rdg>
-            <rdg type="translation" xml:lang="en">After this they put Ares, whom they call 'Dog of Water,' but with us it is Capricornus (the Goat). After him they say Hermes, whom they call Chiron (Sagittarius).</rdg>
-          </app>
-        </p>
-        <p n="8">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܬܪ ܗܢܐ ܐܡܪܝܢ ܦܠܘܛܘܢ ܘܩܪܝܢ ܠܗ ܥܩܪܒܐ: ܘܒܬܪ ܗܢܐ ܐܡܪܝܢ ܐܬܢܐ ܘܩܪܝܢ ܠܗ ܡܣܐܬܐ: ܘܒܬܪ ܗܢܐ ܣܝܡܝܢ ܐܦܪܘܕܝܛܝ ܘܩܪܝܢ ܠܗ̇ ܒܬܘܠܬܐ ܐܘ ܫܒܠܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">After this they say Pluto, whom they call Scorpio. After this they say Athena, whom they call Libra (the Balance). After this they put Aphrodite, whom they call Virgo who is Spica (the Ear of Corn).</rdg>
-          </app>
-        </p>
-        <p n="9">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡ̣ܢ ܒܬܪܗ ܐܡܪܝܢ ܐܪܛܡܝܣ ܘܠܗ̇ ܡܟܢܝܢ ܐܪܝܐ: ܘܡ̣ܢ ܒܬܪܗ̇ ܐܡܪܝܢ ܕܝܘܢܘܣܝܘܣ ܘܩܪܝܢ ܠܗ ܣܪܛܢܐ.</rdg>
-            <rdg type="translation" xml:lang="en">After this they say Artemis, whom they call Leo (the Lion). After this they say Dionysus, whom they call Cancer (the Crab).</rdg>
-          </app>
-        </p>
-        <p n="10">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܬܪܗ ܕܝܣܩܘܪܘ ܘܠܗ ܩܪܝܢ ܩܐܣܛܘܪ ܘܦܘܠܘܕܘܟܣ ܕܐܝܬܝܗܘܢ ܒܢܝ̈ ܙܐܘܣ ܡ̣ܢ ܠܝܕܐ ܘܩܪܝܢ ܠܗܘܢ ܬܐܘܡ̈ܐ: ܘܒܬܪܗܘܢ ܗܪܩܠܝܣ: ܘܠܗܢܐ ܩܪܝܢ ܬܘܪܐ.</rdg>
-            <rdg type="translation" xml:lang="en">After this come the Dioscuri, called Castor and Pollux, sons of Zeus by Leda, and they call them Gemini (the Twins). After them comes Hercules, and this they call Taurus (the Bull).</rdg>
-          </app>
-        </p>
-        <p n="11">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܬܫܥܝܬܗܘܢ ܕܗܠܝܢ ܢܗܝܪܐܝܬ ܡܦܫܩ ܐܦ ܡܠܦ ܐܣܦ ܣܦܪܐ ܡܥܗܕܢܐ ܕܥܒܪ̈ܝܐ: ܟܕ ܠܐ ܗ݇ܘܼܐ ܒܫܡܗ̈ܐ ܕܝܘܢܝ̈ܐ ܪܫܡ ܘܡܚܘܐ: ܐܠܐ ܥܠ ܡܢܝܢܐ ܕܫܡܗ̈ܐ ܕܒܢܝ̈ ܝܥܩܘܒ.</rdg>
-            <rdg type="translation" xml:lang="en">Asaph the writer and the historian of the Hebrews explains and teaches clearly the history of all these, but does not write and show them with Greek names, but according to the names of the sons of Jacob.</rdg>
-          </app>
-        </p>
-        <p n="12">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܓܒܘܪܘܬܐ ܕܝܢ ܘܟܠܗ̇ ܡܥܒܕܢܘܬܗܘܢ ܕܝܠܗܘܢ ܕܣܛܘܟܣ̈ܐ ܗܠܝܢ ܫܘܝܐܝܬ ܐܡܪ ܐܦ ܗܘܼ: ܟܕ ܡܕܡ ܠܐ ܡܘܣܦ ܐܘ ܡܒܨܪ: ܐܠܐ ܐܢ ܟܕ ܡܫܚܠܦ ܫܡܗ̈ܝܗܘܢ ܠܕܐܒܗ̈ܬܐ ܒܡܠܬܐ ܓܠܝܬܐ.</rdg>
-            <rdg type="translation" xml:lang="en">As to the effects and influences of these stoicheia he, too, enumerates them fully without adding or diminishing anything, but in simply changing in a clear language their names into those of the Patriarchs.</rdg>
-          </app>
-        </p>
-        <p n="13">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܟܕ ܡܫܪܐ ܐܦ ܗܘܼ ܐܪܡܐܝܬ: ܘܣܐܡ ܒܪܫܐ ܬܘܪܐ ܘܡܫܡܗ ܪܘܒܝܠ: ܘܒܬܪܗ ܐܡܪܐ ܘܩܪܝܢ ܠܗ ܫܡܥܘܢ: ܘܒܬܪܗ ܢܘܢ̈ܐ ܘܩܪܝܢ ܠܗ ܠܘܝ: ܘܒܬܪܗ ܕܘܠܐ ܘܩܪܝܢ ܠܗ ܐܝܣܟܪ.</rdg>
-            <rdg type="translation" xml:lang="en">He begins them in the Aramaic language and puts at the head Taurus, which he calls 'Reuben'. After it comes Aries, which they call 'Simeon'. After it comes Pisces, which they call 'Levi'. After it comes Aquarius, which they call 'Issachar'.</rdg>
-          </app>
-        </p>
-        <p n="14">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܒܬܪܗ ܣܝܡ ܓܕܝܐ ܘܠܗ ܩܪܝܢ ܢܦܬܠܝ: ܘܡ̣ܢ ܒܬܪܗ ܪܫܡ ܪܟܒܐ ܟܕ ܩܫܝܕ ܘܩܪܐ ܠܗ ܓܕ: ܘܗܢܘ ܕܝܢ ܟܝܪܘܢ ܕܝܘܢܝ̈ܐ.</rdg>
-            <rdg type="translation" xml:lang="en">After it he puts Capricornus, which they call 'Naphtali'. After it he sketches a rider while shooting, and calls him 'Gad,' and he is the Chiron of the Greeks.</rdg>
-          </app>
-        </p>
-        <p n="15">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܘܡ̣ܢ ܒܬܪܗ ܥܩܪܒܐ ܘܠܗ ܩܪܐ ܕܢ: ܡ̣ܢ ܒܬܪܗ ܐܡܪ ܡܣܐܬܐ ܘܩܪܐ ܠܗ̇ ܐܫܝܪ: ܘܬܘܒ ܐܡܪ ܒܬܘܠܬܐ ܘܩܪܐ ܠܗ̇ ܕܝܢܐ: ܘܒܬܪܗ̇ ܐܪܝܐ ܘܩܪܐ ܠܗ ܝܗܘܕܐ: ܘܬܘܒ ܪܫܡ ܣܪܛܢܐ ܘܩܪܐ ܠܗ ܙܒܘܠܘܢ: ܘܒܬܪ ܗܢܐ ܐܡܪ ܬܐܡܐ ܘܩܪܐ ܠܗܘܢ ܐܦܪܝܡ ܘܡܢܫܐ.</rdg>
-            <rdg type="translation" xml:lang="en">After it comes Scorpio, which he calls 'Dan'. After it he mentions Libra, which he calls 'Asher'. After it he mentions Virgo, whom he calls 'Dinah'. After it comes Leo, which he calls 'Judah'. Then he sketches Cancer, which he calls 'Zebulun'. After this he mentions Gemini, whom he calls 'Ephraim' and 'Manasseh'.</rdg>
-          </app>
-        </p>
-        <p n="16">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܟܕ ܗܟܝܠ ܒܗܠܝܢ ܕܗܟܢ ܐܬܟܢܝܘ ܒܡܢܝܢܐ ܕܝܘ̈ܡܬܐ ܬܫܟܚܘܢ ܘܬܣܬܟܠܘܢ ܐܝܟ ܪ̈ܚܡܝ ܫܪܪܐ: ܐܡܪ ܐܢܐ ܕܐܢܗܘܼ ܘܐܦ ܢܣܬܩܒܠ ܘܩܠܐ ܕܪܥܡܐ ܢܫܬܡܥ.</rdg>
-            <rdg type="translation" xml:lang="en">As lovers of truth you will see and understand that these (stoicheia) have been named according to the number of days (of lunar computation). I say this, even if it happens that the peal of thunder is heard (in them).</rdg>
-          </app>
-        </p>
-        <p n="17">
-          <app>
-            <rdg wit="#Mingana1917" xml:lang="syr">ܒܟܠ ܝܪܚ ܫܢ݇ܬܐ ܒܟܠ ܚܕ ܡ̣ܢ ܣܛܘܟܣ̈ܐ: ܟܕ ܟܪܟܝܢ ܒܓܘ ܩܢܘܢܣ ܕܝܠܗܘܢ ܕܝܪ̈ܚܐ: ܘܪܗܛܝܢ ܒܡܢܝܢܗ ܕܣܗܪܐ: ܘܡܫܬܡܫܝܢ ܟܠ ܚܕ ܡܢܗܘܢ ܒܬܠܬܐ ܩܢܘܢܣ ܕܝܘܒܠܗ ܕܝܠܗ ܕܣܗܪܐ: ܕܗܕܐ ܗܝ ܬܚܘܝܬܗܘܢ ܘܛܘܟܣܗܘܢ ܘܟܠܗ̇ ܣܝܡܬܕܘܟܬܗܘܢ ܗܝ ܕܡܘܕܥܐ ܠܘܬܢ.</rdg>
-            <rdg type="translation" xml:lang="en">At each month of the year, each one of the stoicheia turns circuitously according to the canones of the months and gravitates according to the number of the moons, each one of them having been brought about by the three canones of the evolution of the moon. This is their exposition, their order, and all their influence of which we are aware.</rdg>
-          </app>
-        </p>
+      <div type="translation" n="Syriac and English" xml:lang="syr" xml:id="ver_Syriac_and_English">
+        <head>Syriac and English</head>
+        <div type="chapter" n="1" xml:id="AndronAsaph.ver_Syriac_and_English.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="AndronAsaph.ver_Syriac_and_English.1.1">
+            <app xml:id="u0_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܬܘܒ ܡܡܠܠܐ ܕܥܠ ܝܒ ܣܛܘܟܣ̈ܐ ܕܫܡܫܐ ܕܥܒܝܕ ܠܐܢܕܪܘܢܝܩܘܣ ܚܟܝܡܐ ܘܦܝܠܣܘܦܐ ܘܡܗܝܪܐ.</lem>
+              <rdg wit="#Trans" n="1">Again a discourse upon the twelve stoicheia of the sun, written by Andronicus the Wise, the Philosopher and the learned.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="AndronAsaph.ver_Syriac_and_English.1.2">
+            <app xml:id="u1_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܡܛܠ ܕܝܢ ܕܙܕܩ ܕܒܟܠܙܒܢ ܢܬܥܗܕܘܢ ܘܢܣܬܟܠܘܢ ܪ̈ܚܡܝ ܫܪܪܐ ܒܐܝܠܝܢ ܕܫܦܝܪ̈ܢ ܘܡܝܬܪ̈ܢ: ܐܦ ܡܢܗܪ̈ܢ ܬܪܥܝܬܐ ܕܐܝܠܝܢ ܕܒܥܝܢ ܠܗܝܢ: ܐܬܒܛܠ ܠܢ ܐܚ̈ܝ ܠܡܚܘܝܘ ܩܕܡܝܟܘܢ ܐܦ ܗܕܐ ܕܐܝܬܝܗ̇ ܒܥܬܐ ܡܝܬܪܬܐ ܒܪܗܛܐ ܕܕܘܒܪܗ.</lem>
+              <rdg wit="#Trans" n="1">Because the lovers of truth must always remember and understand the good and prominent things which enlighten the mind of those who seek after them, I have been anxious, my brethren, to lay down before you the prominent question of the evolution of the course of (the sun),</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="AndronAsaph.ver_Syriac_and_English.1.3">
+            <app xml:id="u2_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܗܢܘ ܕܝܢ ܬܚܘܡܐ ܘܙܒܢܐ ܘܪܗܛܐ ܟܠܗ ܕܝܘܒܠܗ: ܘܣܗܪܐ ܒܟܠܗܘܢ ܝܘ̈ܡܘܗܝ: ܘܡܥܒܕܢܘܬܐ ܕܬܪܥܣܪ ܣܛܘܟܣ̈ܐ ܗܿܢܘܢ ܕܟܪܟܝܢ ܒܡܢܝܢܐ ܕܬܪܥܣܪ ܝܪ̈ܚܝܢ ܕܫܢ݇ܬܐ: ܘܡܩܕܡܝܢ ܘܡܘܕܥܝܢ ܥܠ ܐܝܠܝܢ ܕܥܬܝܕܢ ܠܡܗܘܐ ܠܘܬܢ ܒܦܘܩܕܢ ܐܠܗܐ ܥܒܘܕܐ ܕܟܠ.</lem>
+              <rdg wit="#Trans" n="1">that is to say the limits, the times and all the course of its succession with the days of the moon and the influence of the twelve stoicheia which gravitate circuitously in the number of the twelve months of the year, and which foretell events which happen to us by order of God, creator of everything.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="AndronAsaph.ver_Syriac_and_English.1.4">
+            <app xml:id="u3_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܟܕ ܡܬܕܠܝܢ ܡܢ ܠܗܿܢܘܢ ܣܛܘܟܣ̈ܐ ܒܝܬ ܝܘܢܝ̈ܐ: ܕܫܡܗ̈ܝܗܘܢ ܘܩܢܘܡ̈ܝܗܘܢ ܬܚܡܘ ܘܣܡܘ ܘܚܘܝܘ: ܟܕ ܟܢܝܘ ܐܢܘܢ ܥܠ ܫܡܗ̈ܐ ܕܐܠܗ̈ܝܗܘܢ.</lem>
+              <rdg wit="#Trans" n="1">In investigating these stoicheia the Greeks have defined and shown their names and their entities. They have called them by the names of their gods,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="AndronAsaph.ver_Syriac_and_English.1.5">
+            <app xml:id="u4_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܪܕܝܢ ܚܕ ܒܬܪ ܚܕ ܒܛܘܟܣܗܘܢ ܕܗܠܝܢ ܩܢܘܢܣ ܕܡܢܝܢܐ ܕܝܢ ܕܝܘ̈ܡܬܐ ܕܝܪ̈ܚܐ: ܗܢܘ ܕܝܢ ܒܚܘܫܒܢܐ ܕܣܗܪܐ.</lem>
+              <rdg wit="#Trans" n="1">and they follow one another in the order of the canones of the numbers of the days of the months, that is to say according to the lunar computation.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="AndronAsaph.ver_Syriac_and_English.1.6">
+            <app xml:id="u5_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܟܕ ܡܫܪܝܢ ܩܕܡܝܐ ܡܢ ܕܝܘܣ ܒܪ ܩܪܢܘܣ ܘܩܪܝܢ ܠܗ ܕܟܪܐ: ܘܒܬܪܗ ܦܘܣܝܕܘܢ ܐܚܘܗܝ ܘܩܪܝܢ ܠܗ ܢܘܢ̈ܐ: ܘܒܬܪܗ ܕܗܢܐ ܐܡܪܝܢ ܐܦܠܘܢ ܘܒܬܪܗ ܕܘܠܐ.</lem>
+              <rdg wit="#Trans" n="1">They begin with Dios son of Cronus, and they call him Aries (the Ram). After him comes Poseidon his brother whom they call Pisces (the Fish). After him they say Apollo, and after him Aquarius (the Water-carrier).</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="AndronAsaph.ver_Syriac_and_English.1.7">
+            <app xml:id="u6_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܬܪܗ ܕܗܢܐ ܣܝܡܝܢ ܐܪܝܣ ܘܩܪܝܢ ܠܗ ܟܠܒܐ ܕܡܝ̈ܐ: ܒܕܝܠܢ ܕܝܢ ܐܝܠܐ ܗ݇ܘܼ: ܘܡ̣ܢ ܒܬܪܗ ܐܡܪܝܢ ܐܪܡܝܣ ܘܠܗ ܩܪܝܢ ܟܝܪܘܢ.</lem>
+              <rdg wit="#Trans" n="1">After this they put Ares, whom they call 'Dog of Water,' but with us it is Capricornus (the Goat). After him they say Hermes, whom they call Chiron (Sagittarius).</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="AndronAsaph.ver_Syriac_and_English.1.8">
+            <app xml:id="u7_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܬܪ ܗܢܐ ܐܡܪܝܢ ܦܠܘܛܘܢ ܘܩܪܝܢ ܠܗ ܥܩܪܒܐ: ܘܒܬܪ ܗܢܐ ܐܡܪܝܢ ܐܬܢܐ ܘܩܪܝܢ ܠܗ ܡܣܐܬܐ: ܘܒܬܪ ܗܢܐ ܣܝܡܝܢ ܐܦܪܘܕܝܛܝ ܘܩܪܝܢ ܠܗ̇ ܒܬܘܠܬܐ ܐܘ ܫܒܠܬܐ.</lem>
+              <rdg wit="#Trans" n="1">After this they say Pluto, whom they call Scorpio. After this they say Athena, whom they call Libra (the Balance). After this they put Aphrodite, whom they call Virgo who is Spica (the Ear of Corn).</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="AndronAsaph.ver_Syriac_and_English.1.9">
+            <app xml:id="u8_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡ̣ܢ ܒܬܪܗ ܐܡܪܝܢ ܐܪܛܡܝܣ ܘܠܗ̇ ܡܟܢܝܢ ܐܪܝܐ: ܘܡ̣ܢ ܒܬܪܗ̇ ܐܡܪܝܢ ܕܝܘܢܘܣܝܘܣ ܘܩܪܝܢ ܠܗ ܣܪܛܢܐ.</lem>
+              <rdg wit="#Trans" n="1">After this they say Artemis, whom they call Leo (the Lion). After this they say Dionysus, whom they call Cancer (the Crab).</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="AndronAsaph.ver_Syriac_and_English.1.10">
+            <app xml:id="u9_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܬܪܗ ܕܝܣܩܘܪܘ ܘܠܗ ܩܪܝܢ ܩܐܣܛܘܪ ܘܦܘܠܘܕܘܟܣ ܕܐܝܬܝܗܘܢ ܒܢܝ̈ ܙܐܘܣ ܡ̣ܢ ܠܝܕܐ ܘܩܪܝܢ ܠܗܘܢ ܬܐܘܡ̈ܐ: ܘܒܬܪܗܘܢ ܗܪܩܠܝܣ: ܘܠܗܢܐ ܩܪܝܢ ܬܘܪܐ.</lem>
+              <rdg wit="#Trans" n="1">After this come the Dioscuri, called Castor and Pollux, sons of Zeus by Leda, and they call them Gemini (the Twins). After them comes Hercules, and this they call Taurus (the Bull).</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="AndronAsaph.ver_Syriac_and_English.1.11">
+            <app xml:id="u10_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܬܫܥܝܬܗܘܢ ܕܗܠܝܢ ܢܗܝܪܐܝܬ ܡܦܫܩ ܐܦ ܡܠܦ ܐܣܦ ܣܦܪܐ ܡܥܗܕܢܐ ܕܥܒܪ̈ܝܐ: ܟܕ ܠܐ ܗ݇ܘܼܐ ܒܫܡܗ̈ܐ ܕܝܘܢܝ̈ܐ ܪܫܡ ܘܡܚܘܐ: ܐܠܐ ܥܠ ܡܢܝܢܐ ܕܫܡܗ̈ܐ ܕܒܢܝ̈ ܝܥܩܘܒ.</lem>
+              <rdg wit="#Trans" n="1">Asaph the writer and the historian of the Hebrews explains and teaches clearly the history of all these, but does not write and show them with Greek names, but according to the names of the sons of Jacob.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="AndronAsaph.ver_Syriac_and_English.1.12">
+            <app xml:id="u11_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܓܒܘܪܘܬܐ ܕܝܢ ܘܟܠܗ̇ ܡܥܒܕܢܘܬܗܘܢ ܕܝܠܗܘܢ ܕܣܛܘܟܣ̈ܐ ܗܠܝܢ ܫܘܝܐܝܬ ܐܡܪ ܐܦ ܗܘܼ: ܟܕ ܡܕܡ ܠܐ ܡܘܣܦ ܐܘ ܡܒܨܪ: ܐܠܐ ܐܢ ܟܕ ܡܫܚܠܦ ܫܡܗ̈ܝܗܘܢ ܠܕܐܒܗ̈ܬܐ ܒܡܠܬܐ ܓܠܝܬܐ.</lem>
+              <rdg wit="#Trans" n="1">As to the effects and influences of these stoicheia he, too, enumerates them fully without adding or diminishing anything, but in simply changing in a clear language their names into those of the Patriarchs.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="AndronAsaph.ver_Syriac_and_English.1.13">
+            <app xml:id="u12_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܟܕ ܡܫܪܐ ܐܦ ܗܘܼ ܐܪܡܐܝܬ: ܘܣܐܡ ܒܪܫܐ ܬܘܪܐ ܘܡܫܡܗ ܪܘܒܝܠ: ܘܒܬܪܗ ܐܡܪܐ ܘܩܪܝܢ ܠܗ ܫܡܥܘܢ: ܘܒܬܪܗ ܢܘܢ̈ܐ ܘܩܪܝܢ ܠܗ ܠܘܝ: ܘܒܬܪܗ ܕܘܠܐ ܘܩܪܝܢ ܠܗ ܐܝܣܟܪ.</lem>
+              <rdg wit="#Trans" n="1">He begins them in the Aramaic language and puts at the head Taurus, which he calls 'Reuben'. After it comes Aries, which they call 'Simeon'. After it comes Pisces, which they call 'Levi'. After it comes Aquarius, which they call 'Issachar'.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="AndronAsaph.ver_Syriac_and_English.1.14">
+            <app xml:id="u13_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܒܬܪܗ ܣܝܡ ܓܕܝܐ ܘܠܗ ܩܪܝܢ ܢܦܬܠܝ: ܘܡ̣ܢ ܒܬܪܗ ܪܫܡ ܪܟܒܐ ܟܕ ܩܫܝܕ ܘܩܪܐ ܠܗ ܓܕ: ܘܗܢܘ ܕܝܢ ܟܝܪܘܢ ܕܝܘܢܝ̈ܐ.</lem>
+              <rdg wit="#Trans" n="1">After it he puts Capricornus, which they call 'Naphtali'. After it he sketches a rider while shooting, and calls him 'Gad,' and he is the Chiron of the Greeks.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="AndronAsaph.ver_Syriac_and_English.1.15">
+            <app xml:id="u14_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܘܡ̣ܢ ܒܬܪܗ ܥܩܪܒܐ ܘܠܗ ܩܪܐ ܕܢ: ܡ̣ܢ ܒܬܪܗ ܐܡܪ ܡܣܐܬܐ ܘܩܪܐ ܠܗ̇ ܐܫܝܪ: ܘܬܘܒ ܐܡܪ ܒܬܘܠܬܐ ܘܩܪܐ ܠܗ̇ ܕܝܢܐ: ܘܒܬܪܗ̇ ܐܪܝܐ ܘܩܪܐ ܠܗ ܝܗܘܕܐ: ܘܬܘܒ ܪܫܡ ܣܪܛܢܐ ܘܩܪܐ ܠܗ ܙܒܘܠܘܢ: ܘܒܬܪ ܗܢܐ ܐܡܪ ܬܐܡܐ ܘܩܪܐ ܠܗܘܢ ܐܦܪܝܡ ܘܡܢܫܐ.</lem>
+              <rdg wit="#Trans" n="1">After it comes Scorpio, which he calls 'Dan'. After it he mentions Libra, which he calls 'Asher'. After it he mentions Virgo, whom he calls 'Dinah'. After it comes Leo, which he calls 'Judah'. Then he sketches Cancer, which he calls 'Zebulun'. After this he mentions Gemini, whom he calls 'Ephraim' and 'Manasseh'.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="AndronAsaph.ver_Syriac_and_English.1.16">
+            <app xml:id="u15_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܟܕ ܗܟܝܠ ܒܗܠܝܢ ܕܗܟܢ ܐܬܟܢܝܘ ܒܡܢܝܢܐ ܕܝܘ̈ܡܬܐ ܬܫܟܚܘܢ ܘܬܣܬܟܠܘܢ ܐܝܟ ܪ̈ܚܡܝ ܫܪܪܐ: ܐܡܪ ܐܢܐ ܕܐܢܗܘܼ ܘܐܦ ܢܣܬܩܒܠ ܘܩܠܐ ܕܪܥܡܐ ܢܫܬܡܥ.</lem>
+              <rdg wit="#Trans" n="1">As lovers of truth you will see and understand that these (stoicheia) have been named according to the number of days (of lunar computation). I say this, even if it happens that the peal of thunder is heard (in them).</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="AndronAsaph.ver_Syriac_and_English.1.17">
+            <app xml:id="u16_ver_Syriac_and_English">
+              <lem wit="#Mingana">ܒܟܠ ܝܪܚ ܫܢ݇ܬܐ ܒܟܠ ܚܕ ܡ̣ܢ ܣܛܘܟܣ̈ܐ: ܟܕ ܟܪܟܝܢ ܒܓܘ ܩܢܘܢܣ ܕܝܠܗܘܢ ܕܝܪ̈ܚܐ: ܘܪܗܛܝܢ ܒܡܢܝܢܗ ܕܣܗܪܐ: ܘܡܫܬܡܫܝܢ ܟܠ ܚܕ ܡܢܗܘܢ ܒܬܠܬܐ ܩܢܘܢܣ ܕܝܘܒܠܗ ܕܝܠܗ ܕܣܗܪܐ: ܕܗܕܐ ܗܝ ܬܚܘܝܬܗܘܢ ܘܛܘܟܣܗܘܢ ܘܟܠܗ̇ ܣܝܡܬܕܘܟܬܗܘܢ ܗܝ ܕܡܘܕܥܐ ܠܘܬܢ.</lem>
+              <rdg wit="#Trans" n="1">At each month of the year, each one of the stoicheia turns circuitously according to the canones of the months and gravitates according to the number of the moons, each one of them having been brought about by the three canones of the evolution of the moon. This is their exposition, their order, and all their influence of which we are aware.</rdg>
+            </app>
+          </ab>
+        </div>
       </div>
     </body>
   </text>

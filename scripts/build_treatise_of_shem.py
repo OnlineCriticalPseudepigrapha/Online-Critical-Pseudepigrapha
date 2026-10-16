@@ -230,32 +230,51 @@ CHAPTERS = [
 ]
 
 def build_grammateus_xml():
+    bib = "Alphonse Mingana, Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 24-29, 54-61 (MS Cod. Syr. 44). CAVT 85."
     lines = [
         '<?xml version="1.0" encoding="utf-8"?>',
-        '<!DOCTYPE document SYSTEM "document.dtd">',
-        '<document id="TracSem">',
-        '    <header>',
-        '        <title>Treatise of Shem</title>',
-        '        <author>Shem son of Noah (Pseudepigraphon)</author>',
-        '        <editor>Alphonse Mingana (1917)</editor>',
-        '        <description>Syriac text and English translation from Some Early Judæo-Christian Documents in the John Rylands Library (Manchester: The University Press, 1917), pp. 24-29, 54-61 (MS Cod. Syr. 44). Astrological/calendrical work in 12 chapters corresponding to the signs of the Zodiac (CAVT 85).</description>',
-        '    </header>',
-        '    <body>'
+        '<!DOCTYPE book SYSTEM "grammateus.dtd">',
+        '<book filename="TracSem" title="Treatise of Shem">',
+        '  <version author="Mingana 1917" language="Syriac" title="Syriac and English">',
+        '    <divisions>',
+        '      <division delimiter="." label="Chapter"/>',
+        '      <division label="Verse"/>',
+        '    </divisions>',
+        '    <manuscripts>',
+        '      <ms abbrev="Mingana" language="Syriac" show="yes">',
+        '        <name>Mingana 1917 (MS Rylands Syr. 44)</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '      <ms abbrev="Trans" language="English" show="yes">',
+        '        <name>Mingana English Translation (1917)</name>',
+        f'        <bibliography>{bib}</bibliography>',
+        '      </ms>',
+        '    </manuscripts>',
+        '    <text>'
     ]
+    unit_id = 0
     for ch in CHAPTERS:
         c_num = ch["num"]
+        lines.append(f'      <div number="{c_num}">')
         for v_num, (syr, en) in enumerate(ch["verses"], 1):
-            lines.append(f'        <div c="{c_num}" v="{v_num}">')
-            lines.append(f'            <line lang="syr">{syr}</line>')
-            lines.append(f'            <line lang="en">{en}</line>')
+            clean_syr = syr.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+            clean_en = en.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+            lines.append(f'        <div number="{v_num}">')
+            lines.append(f'          <unit id="{unit_id}">')
+            lines.append(f'            <reading option="0" mss="Mingana ">{clean_syr}</reading>')
+            lines.append(f'            <reading option="1" mss="Trans ">{clean_en}</reading>')
+            lines.append('          </unit>')
             lines.append('        </div>')
-    lines.append('    </body>')
-    lines.append('</document>\n')
+            unit_id += 1
+        lines.append('      </div>')
+    lines.append('    </text>')
+    lines.append('  </version>')
+    lines.append('</book>\n')
     
     out_path = 'static/docs/TracSem.xml'
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
-    print(f'Wrote Grammateus XML: {out_path}')
+    print(f'Wrote Grammateus XML: {out_path} ({unit_id} units)')
 
 def build_tei_p5_xml():
     lines = [
