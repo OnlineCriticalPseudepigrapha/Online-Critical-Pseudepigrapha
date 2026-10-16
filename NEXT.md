@@ -35,4 +35,8 @@ See `GMAIL-INDEX.md` in this folder.
   - Enriched master CSV `raw/cavt/cavt_entries.csv` with `ditommaso_ch`, `ditommaso_dossier`, and `ditommaso_title` across all 277 CAVT entries (113 CAVT entries directly linked).
   - Regenerated `CAVT_GAPS.md`: all active OCP editions mapped to CAVT/DiTommaso; added dedicated crosswalk table for 18 Judaeo-Hellenistic and sapiential works outside CAVT; mapped and ranked 226 CAVT gap entries across Tier A (105), Tier B (69), and Tier C (52).
   - Resolved text ambiguities: `TSol.xml` = CAVT 162 (*Testamentum Salomonis*); `Esdl.xml` = CAVT 184.iii (*Visio beati Esdrae*, Barberini lat. 2318; ed. Bogaert 1984 / Denis 1993).
+  - Ingested Tier A Greek Apocalypses of the Ezra-Sedrach visionary complex:
+    - `static/docs/ApEzra.xml` & `static/docs/tei/ApEzra.xml`: *Greek Apocalypse of Ezra* (CAVT 184.i / CANT 343; Tischendorf 1866; 7 chapters, 220 verses).
+    - `static/docs/Sedrach.xml` & `static/docs/tei/Sedrach.xml`: *Apocalypse of Sedrach* (CAVT 184.ii / CANT 344; James 1893; 16 chapters, 133 verses).
+    - Updated `static/js/reader.js` and `CAVT_GAPS.md` with active editions.
 

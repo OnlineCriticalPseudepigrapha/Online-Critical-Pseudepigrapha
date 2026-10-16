@@ -67,3 +67,19 @@ Zotero: the 2nd and 3rd batches are not yet added. ~/.config/zotero/config.json 
 - Verse starts fixed by hand: `MAIN_STARTS`/`C_STARTS` in `scripts/bensly_extract.py`, plus `carry_openers()` (a trailing "Et/Qui/Certe" moves to the next verse).
 - Result: 5 Ezra 88/88, 6 Ezra 141/141; 0 empty C verses apart from 5 Ezra 1:1-3, which C lacks. Both TEI files validate.
 - Remaining "approx" flags on C mostly mean "boundary from margin number", not doubtful text.
+
+## Apocalypsis Esdrae & Sedrach (2026-10-16)
+- **CAVT 184.i (Greek Apocalypse of Ezra)**:
+  - Source: Constantin von Tischendorf, *Apocalypses apocryphae* (Leipzig: Hermann Mendelssohn, 1866), pp. 24–33 (Paris, BnF MS gr. 929).
+  - High-res plates: 10 pages extracted to `raw/editions/tischendorf_esdrae/`.
+  - Cleaned, apparatus stripped, hyphenations resolved, and structured into 7 standard chapters (220 verses):
+    - `static/docs/ApEzra.xml` (Grammateus XML)
+    - `static/docs/tei/ApEzra.xml` (Valid TEI P5)
+- **CAVT 184.ii (Apocalypse of Sedrach)**:
+  - Source: Montague Rhodes James, *Apocrypha Anecdota* (Texts & Studies 2.3; Cambridge, 1893), pp. 127–137 (Oxford Bodleian MS Misc. Gr. 56).
+  - High-res plates: 8 pages extracted to `raw/editions/james_sedrach/`.
+  - Marginal line numbers (5, 10, 15...) and apparatus notes isolated; structured into 16 standard chapters (133 verses):
+    - `static/docs/Sedrach.xml` (Grammateus XML)
+    - `static/docs/tei/Sedrach.xml` (Valid TEI P5)
+- Both documents added to `OCP_DOCUMENTS` in `static/js/reader.js` and mapped in `CAVT_GAPS.md`.
+

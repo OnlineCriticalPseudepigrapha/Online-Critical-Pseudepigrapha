@@ -1,0 +1,771 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Sedrach">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Apocalypse of Sedrach</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="James">
+            <abbr type="siglum">James</abbr>
+            <name>James 1893 (Texts &amp; Studies 2.3)</name>
+            <bibl>Montague Rhodes James, Apocrypha Anecdota: A Collection of Thirteen Apocryphal Books and Fragments (Texts and Studies 2.3; Cambridge: Cambridge University Press, 1893), pp. 127-137. Critical Greek text from Oxford Bodleian MS Misc. Gr. 56 (Auct. T. 2. 26).</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="1" xml:id="Sedrach.ver_Greek.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.1.1">
+            <app xml:id="u0_ver_Greek">
+              <lem wit="#James">a.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.1.2">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#James">ΝΥ δὲ , λ Ν Aa &gt; ί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.1.3">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#James">;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.1.4">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#James">γαπητοὶ, μηδὲν προτιμήσωμεν πλὴν τῆς avuTroKpl- του ἀγάπης" πολλὰ γὰρ πταίομεν καθ᾽ ἑκάστην ἡμέραν καὶ νύκτα καὶ ὥραν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.1.5">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#James">καὶ διὰ τοῦτο τὴν ἀγάπην κτησώμεθα, 2 \ A ͵ a ε a, , \ \o»” αὐτὴ yap καλύπτει πλῆθος ἁμαρτιῶν" τί γὰρ τὸ ὄφελος, τέκνα μου, ἐὰν τὰ πάντα ἔχωμεν, τὴν δὲ σώζουσαν ἀγάπην 3 ΕΝ οὐκ ἔχωμεν";</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.1.6">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#James">.....</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.1.7">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#James">ἮὮΔ μακαρία ἀγάπη, yopnyé πάντων ἀγαθῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.1.8">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#James">μακάριος ἄνθρωπος ὁ τὴν ἀληθινὴν πίστιν καὶ ἀνυπόκριτον κτησά- ᾽ , \ 53 «ες , va , lal μενος ἀγάπην, καθὼς εἶπεν ὁ δεσπότης ὅτι Μειζότερον τῆς 9 ’ ’ / ᾽ ivf \ \ A, 6 \ Lal ἀγάπης οὐδέν ἐστιν iva τις THY ψυχὴν θῇ ὑπὲρ τῶν φίλων αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="Sedrach.ver_Greek.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.2.1">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#James">Il.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.2.2">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#James">Kat φωνὴν ἀοράτως ἐδέξατο ἐν ταῖς ἀκοαῖς αὐτοῦ" Ὧωηδε, Σεδράχ, ὅτε βούλῃ καὶ ἐπιθυμεῖς ὁμιλῆσαι σὺν θεῷ Ε 7, A &gt; ᾽ a ὑἃ &gt; , &gt; an ὦ , καὶ αἰτῆσαι παρ᾽ αὐτοῦ iva ἀποκαλύψῃ αὐτῷ ἅπερ βούλῃ &gt; a ee;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.2.3">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#James">Cra Ns he ν 4 ἐρωτᾶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.2.4">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#James">καὶ εἶπεν Σεδράχ᾽ Τί, κύριέ μου;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.2.5">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#James">καὶ εἶπεν αὐτῷ ἡ φωνή" ᾿Εγὼ ἀπεστάλην πρός σε ἵνα ἀναβάσω σε 2 ἢ vy Y nv πρ ο 3 «ς wv ὧδε εἰς τὸν οὐρανόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.2.6">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#James">ὁ δὲ εἶπεν" "Ἤθελον λαλῆσαι στόμα ὑπὸ στίματος θεοῦ" οὐκ εἰμὶ ἱκανὸς, κύριε, τοῦ ἀνελθεῖν εἰς τοὺς οὐρανούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.2.7">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#James">καὶ ἐκτείνας ταῖς πτερυξὶν αὐτοῦ ἔλαβεν O Yacht ἧς x, A θ &gt; \ ᾽ \ ᾽ &gt; \ \ , αὐτὸν καὶ ἀνῆλθεν εἰς τοὺς οὐρανοὺς εἰς αὐτὴν THY φλόγα, καὶ ἔστησεν αὐτὸν ἕως τρίτου οὐρανοῦ, καὶ ἔστη ἐν αὐτῷ ἡ φλοξ τῆς θεότητος.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="Sedrach.ver_Greek.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.3.1">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#James">Καὶ λέγει αὐτὸν ὁ κύριος" Καλῶς ἦλθες, ἀγαπητέ ὃ ne , ὃ J \ \ \ &amp; ͵ , μου Σεδράχ" τί δίκην ἔχεις πρὸς τὸν θεὸν τὸν πλάσαντα “ &gt; fal σε, ὅτι εἶπας Ἤθελον λαλῆσαι πρὸς στόματος θεοῦ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.3.2">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#James">λέγει τῶ Σεδράν" Ναὶ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.3.3">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#James">ἔ ἡ υἱὸς δί Apt aN pe 2, ee 4 αὐτῷ XcOpay’ Nai, ἔχε:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.3.4">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#James">ὁ vids δίκην μὲ τὸν πατέρα᾽ κύριέ μου, διὰ τί ἐποίησας τὴν γῆν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.3.5">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#James">λέγει αὐτῷ ὁ κύριος" Διὰ τὸν ἄνθρωπον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.3.6">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#James">λέγει Σεδράχ᾽ Καὶ διὰ τί ἐποίησας τὴν θάλασσαν ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.3.7">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#James">διὰ τί ἔσπειρας πᾶν ἀγαθὸν ἐπὶ τῆς γῆς;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.3.8">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#James">λέγει ὁ κύριος: Διὰ τὸν ἄνθρωπον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Sedrach.ver_Greek.3.9">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#James">λέγει αὐτῷ Σεδράχ" 5 Εἰ ταῦτα ἐποίησας, διὰ τί ἀπώλεσας αὐτόν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Sedrach.ver_Greek.3.10">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#James">εἶπεν δὲ 6 κύριος" Ὃ ἄνθρωπος ἔργον μου ἐστὶν καὶ πλάσμα τῶν χειρῶν μου, καὶ παιδεύω αὐτὸν καθὼς εὑρίσκω.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="Sedrach.ver_Greek.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.4.1">
+            <app xml:id="u25_ver_Greek">
+              <lem wit="#James">I</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="Sedrach.ver_Greek.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.5.1">
+            <app xml:id="u26_ver_Greek">
+              <lem wit="#James">Λέγει αὐτῷ Σεδράχ: Κόλασις καὶ πῦρ ἐστιν ἡ παίδευσίς σου" πικροί εἰσιν, κύριέ μου καλὸν ἦν τῷ ιο ἀνθρώπῳ εἰ οὐκ ἐγεννήθη" τί τάχα ἐποίησας, κύριέ μου ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.5.2">
+            <app xml:id="u27_ver_Greek">
+              <lem wit="#James">διὰ τί ἐκοπίασας τὰς ἀχράντους σοῦ χεῖρας καὶ ἔπλασας τὸν ἄνθρωπον, ἐπεὶ οὐκ ἤθελες ἐλεῆσαι αὐτόν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.5.3">
+            <app xml:id="u28_ver_Greek">
+              <lem wit="#James">λέγει αὐτὸν ὁ θεός" ᾿Εγὼ ἐποίησα τὸν πρωτόπλαστον ᾿Αδὰμ καὶ ἔθηκα αὐτὸν ἐν τῷ παραδείσῳ ἐν μέσῳ τοῦ φυτοῦ τῆς ζωῆς, καὶ ιβ εἶπα αὐτῷ" ᾿Απὸ πάντων τῶν καρπῶν φάγε, μόνον τὸ ξύλον τῆς ζωῆς φύλαξον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.5.4">
+            <app xml:id="u29_ver_Greek">
+              <lem wit="#James">ἐὰν γὰρ φάγης ἀπ᾽ αὐτοῦ, θανάτῳ ἀποθανεῖ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.5.5">
+            <app xml:id="u30_ver_Greek">
+              <lem wit="#James">αὐτὸς δὲ παρήκουσέ μου τὴν ἐντολὴν καὶ ὑπὸ τοῦ διαβόλου ἀπατηθεὶς ἔφαγεν ἀπὸ τοῦ ξύλου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.5.6">
+            <app xml:id="u31_ver_Greek">
+              <lem wit="#James">V.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.5.7">
+            <app xml:id="u32_ver_Greek">
+              <lem wit="#James">Λέγει αὐτῷ Σεδράχ' Σοῦ θελήματος ἠπατήθη, δέ- οσποτά μου, 6 ᾿Αδάμ᾽ av ἐκέλευσας τοὺς ἀγγέλους σου τὸν ᾿Αδὰμ προσκυνεῖν, αὐτὸς δὲ ὁ πρῶτος τῶν ἀγγέλων παρή- κουσέν σου τὸ πρίσταγμα καὶ οὐ προσεκύνησεν αὐτὸν, καὶ σὺ ἐξώρισας αὐτὸν, διότι παρέβη τὸ πρόσταγμά σου καὶ οὐ προσῆλθεν τῶν χειρῶν σου τὸ πλαστούργημα" ἐὰν τὸν 25 ἄνθρωπον ἠγάπησας, τὸν διάβολον διὰ τί οὐκ ἐφόνευσας τὸν τεχνίτην τῆς ἀδικίας ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.5.8">
+            <app xml:id="u33_ver_Greek">
+              <lem wit="#James">τίς δύναται πολεμεῖν ἀθεώρητον πνεῦμα;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Sedrach.ver_Greek.5.9">
+            <app xml:id="u34_ver_Greek">
+              <lem wit="#James">αὐτὸς δὲ ὡς καπνὸς εἰσέρχεται εἰς τὰς καρδίας τῶν ἀνθρώπων «καὶ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Sedrach.ver_Greek.5.10">
+            <app xml:id="u35_ver_Greek">
+              <lem wit="#James">διδάσκει αὐτοὺς πᾶσαν ἁμαρτίαν" αὐτός σε τὸν ἀθάνατον θεὸν πολεμεῖ, ὁ δὲ ἐλεεινὸς ἄνθρω- 3ο πος τί ἄρα ἔχει ποιῆσαι αὐτῷ ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Sedrach.ver_Greek.5.11">
+            <app xml:id="u36_ver_Greek">
+              <lem wit="#James">ἀλλὰ ἐλέησον, δέσποτα, καὶ ἀνάλυσον τὰς κολάσεις" εἰ δὲ μὴ, δέξαι καὶ ἐμὲ μὲ τοὺς ἁμαρτωλούς" ἐὰν τοὺς ἁμαρτωλοὺς οὐκ ἐλεήσῃς, ποῦ εἰσιν τὰ ἐλέη σου, ποῦ ἡ εὐσπλαγχνία σου, κύριε ;</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="Sedrach.ver_Greek.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.6.1">
+            <app xml:id="u37_ver_Greek">
+              <lem wit="#James">Λέγει αὐτὸν ὁ θεός" Γνωστὸν ἔστω σοι ὅτι πάντα 38 εὐδιάλλακτα ἐπέταξα αὐτόν᾽ ἐποίησα αὐτὸν φρόνιμον καὶ κληρονόμον οὐρανοῦ καὶ γῆς, καὶ πάντα αὐτῷ ὑπέταξα, καὶ πᾶν ξῷον φεύγει ἀπ᾽ αὐτοῦ καὶ ἀπὸ προσώπου αὐτοῦ" ἀλλ᾽ αὐτὸς τὰ ἐμὰ λαβὼν ἀλλότριος ἐγένετο μοιχαλὶς καὶ 9-- e “-“ -“ ca ἁμαρτωλός" ποῖος πατὴρ προικίσας, εἰπέ μοι, τῷ υἱῷ »“"- / \ \ la αὐτοῦ, καὶ λαβὼν τὴν οὐσίαν καταλιπὼν τὸν πατέρα &gt; ψ, A ἀπῆλθεν καὶ ἐγένετο ἀλλέτριος Kal δουλεύει ἀλλοτρίῳ, καὶ &gt; \ ¢ \ ae 2 oN ¢ e\ / ‘ ἰδὼν ὁ πατὴρ ὅτι ἐγκατέλιπεν αὐτὸν ὁ υἱὸς καπνίζεται τὴν ͵ .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.6.2">
+            <app xml:id="u38_ver_Greek">
+              <lem wit="#James">a \ ΕΣ \ ς \ , \ “ ,ὔ καρδίαν αὐτοῦ, καὶ ἀπελθὼν ὁ πατὴρ λαμβάνει τὴν οὐσίαν 9 Ὁ“ Ν &gt; , &gt; \ ΟῚ “ i 5 a / 3 αὐτοῦ καὶ ἐξορίζει αὐτὸν ἐκ τῆς δόξης αὐτοῦ διότι ἐγκατέ- ‘J r aA A .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.6.3">
+            <app xml:id="u39_ver_Greek">
+              <lem wit="#James">λιπεν τὸν πατέρα αὐτοῦ ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.6.4">
+            <app xml:id="u40_ver_Greek">
+              <lem wit="#James">πῶς δὲ ἐγὼ ὁ θαυμαστὸς Kat , ΕῚ a \ ζηλωτὴς θεὸς τὰ πάντα δέδωκα αὐτῷ, Kai αὐτὸς λαβὼν “ , ‘ [ ͵ ταῦτα ἐγένετο μοιχαλὶς καὶ ἁμαρτωλός;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.6.5">
+            <app xml:id="u41_ver_Greek">
+              <lem wit="#James">’ A \ »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="Sedrach.ver_Greek.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.7.1">
+            <app xml:id="u42_ver_Greek">
+              <lem wit="#James">Λέγει αὐτῷ Σεδράχ᾽ Σὺ, δέσποτα, ἔπλασας ᾿ 3 - a 3 a τὸν ἄνθρωπον᾽ oldas ποταπῆς βουλῆς ἣν καὶ ποταπῆς x , » ’ \ γνώσεώς ἐσμεν, Kal προφασίζεις τὸν ἄνθρωπον εἰς τὴν 45 ᾽ ’ Μ 3 , ‘ \ ᾽ Χ ν᾿ ’ κόλασιν ἀλλ᾽ ἔκβαλον αὐτὸν" μὴ yap ἐγὼ pmovos γεμίσω \ \ \ » a f ᾿ τὰ ἐπουράνια;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.7.2">
+            <app xml:id="u43_ver_Greek">
+              <lem wit="#James">«εἰ δὲ μὴ;, καὶ τὸν ἄνθρωπον σῶσον, κύριε A t “ bs \ ” , σοῦ θελήματος ἥμαρτεν, κύριε, ἐλεεινὸὲὸ ἄνθρωπος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.7.3">
+            <app xml:id="u44_ver_Greek">
+              <lem wit="#James">Τὶ / ᾿ , » \ ’ \ ἀπέβαλες λόγους πρός με, Σεδράχ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.7.4">
+            <app xml:id="u45_ver_Greek">
+              <lem wit="#James">ἐγὼ ἔπλασα Tov’ Adap an a “ 3 A “ καὶ τὴν γυναῖκα αὐτοῦ καὶ τὸν ἥλιον καὶ εἶπα" Ἴδετε , a , “- ’ ἀλλήλους ποῖός ἐστιν φωτοειδής᾽ ἡ δὲ γυνὴ τοῦ “Addy A “ , A A φωτεινοτέρα ἐστὶν ἐν τῷ κάλλει τῆς σελήνης, καὶ THY ζωὴν ἐχαρίσατο αὐτῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.7.5">
+            <app xml:id="u46_ver_Greek">
+              <lem wit="#James">λέγει Σεδράχ᾽ Καὶ τί ὠφελοῦν τὰ κάλλη ἐὰν εἰς γῆν μαραίνωνται;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.7.6">
+            <app xml:id="u47_ver_Greek">
+              <lem wit="#James">πῶς εἶπας, κύριε, Κακὸν ἀντὶ fal \ na ae κακοῦ μὴ ἀποδώσῃς ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.7.7">
+            <app xml:id="u48_ver_Greek">
+              <lem wit="#James">πῶς ἐστιν, δέσποτα ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.7.8">
+            <app xml:id="u49_ver_Greek">
+              <lem wit="#James">τῆς θεότητός ’ σου ὁ λόγος οὐδέποτε ψεύδεται, Kal διὰ τί ἀποδίδως τὸν Μ Ὰ 7 / Ν &gt; \ fol ’ \ &gt; va ἄνθρωπον ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Sedrach.ver_Greek.7.9">
+            <app xml:id="u50_ver_Greek">
+              <lem wit="#James">ἢ ov θέλεις κακὸν ἀντὶ KaKOU;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Sedrach.ver_Greek.7.10">
+            <app xml:id="u51_ver_Greek">
+              <lem wit="#James">ἐγὼ οἶδα OTL wv ‘ [2 ¢ » ἄλογόν ἐστιν κακότεχνον ἡμίονος εἰς Ta τετραποδα--- ΝΜ &gt; wv ’ \ a δὴ ͵ Ul ἄλλον οὐκ ἐστιν αλλὰ τῆς PETA χαλιναριον κύώπτομεν Zoe SMNG ἢ Coun τῆς , A \ Q τῇ ᾽ , ΛΚ ἢ αὐτὸ ὅταν ἡμεῖς θέλωμεν᾽ σὺ δὲ ἔχεις ἀγγέλους ὠπό- r ἢ ’ \ Als τον , © ot στείλον TOD φυλάξαι αὐτοὺς, καὶ ὅταν κινήσῃ ὁ ἄνθρωπος \ Ν € , a \ ¢ ΄ ‘ πρὸς τὴν ἁμαρτίαν, τὸν πόδα αὐτοῦ τὸν ἕνα κρατήσαι καὶ \ ov μὴ πορεύεται ὅπου δὲ θέλει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Sedrach.ver_Greek.7.11">
+            <app xml:id="u52_ver_Greek">
+              <lem wit="#James">, " - ε a] Lal</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="Sedrach.ver_Greek.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.8.1">
+            <app xml:id="u53_ver_Greek">
+              <lem wit="#James">Λέγει αὐτῷ ὁ θεός" ᾿Εἰὼν κρατήσω αὐτοῦ τὸν ἠὃ / “ O &gt; &gt; 7, , / 2 .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.8.2">
+            <app xml:id="u54_ver_Greek">
+              <lem wit="#James">, πόδα, Neyer OTL Οὐκ ἐποίησάς μοι χάριν εἰς τὸν κόσμον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.8.3">
+            <app xml:id="u55_ver_Greek">
+              <lem wit="#James">&gt; A ᾽ “Ὁ ’ ‘ ἀλλὰ ἀφῆκα αὐτὸν εἰς τὸ θέλημα του ὅτι ἠγάπησα αὐτόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.8.4">
+            <app xml:id="u56_ver_Greek">
+              <lem wit="#James">, \ , ? .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.8.5">
+            <app xml:id="u57_ver_Greek">
+              <lem wit="#James">a διότι τοὺς δικαίους μου ἀγγέλους ἀπέστειλα τοῦ φυλάσσειν “σι 20 τὸ se 30 ᾽ Ν &gt; \ ‘ αὐτὸν ἐν νυκτὶ καὶ ἡμέρᾳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.8.6">
+            <app xml:id="u58_ver_Greek">
+              <lem wit="#James">λέγει Ledpay’ Οἶδα, δέσποτα, iad &gt; Ν ΄ ‘ Cal ’ \ » OTL εἰς τὰ κτήματώ σου πρῶτον ἠγάπησας τὸν ἄνθρωπον, » \ , Ν ‘ .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.8.7">
+            <app xml:id="u59_ver_Greek">
+              <lem wit="#James">εἰς τὰ τετράποδα TO πρόβατον, εἰς Ta ξύλα τὴν ἐλαίαν, εἰς \ Ν \ - &gt; \ τοὺς καρποὺς TO κλῆμα, εἰς TA πετόμενα TO μελίσσιον, εἰς τοὺς ποταμοὺς Tov ‘lopdavny, εἰς Tas πόλεις τὴν ᾿Ιερουσα- λήμ' καὶ ταῦτα πάντα ἀγαπᾷ καὶ ὁ ἄνθρωπος, δέσποτά μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.8.8">
+            <app xml:id="u60_ver_Greek">
+              <lem wit="#James">λέγει ὁ θεὸς τὸν Σεδράχ᾽ Ἐρωτῶώ σε ἕνα λόγον, Σεδράχ᾽ ἐάν μοι εἴπῃς, καλῶς με συμαχᾶ σε, εἰ καί τινος 5 ἐπείραζες τὸν πλάσαντά σε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Sedrach.ver_Greek.8.9">
+            <app xml:id="u61_ver_Greek">
+              <lem wit="#James">λέγει Σεδράχ᾽ Εἰπέ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Sedrach.ver_Greek.8.10">
+            <app xml:id="u62_ver_Greek">
+              <lem wit="#James">«λέγει» κύριος ὁ θεός" ᾿Αφ᾽ ἧς ἐποίησα τὰ πάντα πόσοι ἄνθρωποι ἐγεννήθησαν, καὶ πόσοι ἀπέθανον, καὶ πόσοι θέλουν ἀπο- θανεῖν, καὶ πόσας τρίχας ἔχουσιν ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Sedrach.ver_Greek.8.11">
+            <app xml:id="u63_ver_Greek">
+              <lem wit="#James">εἰπέ μοι, Σεδρὰχ, ad’ οὗ ἐκτίσθη ὁ οὐρανὸς καὶ ἡ γῆ πόσα δένδρα ἐγένοντο εἰς 10 τὸν κόσμον, καὶ πόσα ἔπεσον, καὶ πόσα θέλουν πεσεῖν, καὶ πόσα θέλουν γενηθῆναι, καὶ πόσα φύλλα ἔχουσιν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Sedrach.ver_Greek.8.12">
+            <app xml:id="u64_ver_Greek">
+              <lem wit="#James">εἰπέ μοι, Σεδρὰχ, ἀφ᾽ οὗ ἐποίησα τὴν θάλασσαν πόσα κύματα ἤγειραν, καὶ πόσα ὑποδιέβησαν, καὶ πόσα μέλλουν ἐγεῖραι, καὶ πόσοι ἄνεμοι πνέουσιν παρὰ τὸ χεῖλος τῆς θαλάσσης ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Sedrach.ver_Greek.8.13">
+            <app xml:id="u65_ver_Greek">
+              <lem wit="#James">15 εἰπέ μοι, Σεδρὰχ, ἀπὸ κτίσεως κόσμου τῶν αἰώνων βρέχοντος τοῦ ἀέρος πόσα σταλάγματα ἔπεσον εἰς τὸν κόσμον, καὶ πόσα μέλλουν πεσεῖν ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Sedrach.ver_Greek.8.14">
+            <app xml:id="u66_ver_Greek">
+              <lem wit="#James">καὶ εἶπεν Σεδράχ" Μόνος σὺ γινώσκεις ταῦτα πάντα, κύριε" μόνος σὺ ἐπίστα- σαι ταῦτα πάντα" μόνον δέομαί σου ἐλευθέρωσον τὸν ἄνθρω- 20 πον ἐκ τὴν κόλασιν, καὶ οὐ χωρίζομαι ἀπὸ τὸ γένος ἡμῶν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="Sedrach.ver_Greek.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.9.1">
+            <app xml:id="u67_ver_Greek">
+              <lem wit="#James">Καὶ εἶπεν ὁ θεὸς τὸν υἱὸν αὐτοῦ τὸν μονογενῆ" Ὕπαγε, λαβὲ τὴν ψυχὴν τοῦ ἠγαπημένου μου Σεδράχ, καὶ ἀποθοῦ αὐτὴν ἐν τῷ παραδείσῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.9.2">
+            <app xml:id="u68_ver_Greek">
+              <lem wit="#James">λέγει ὁ μονογενὴς υἱὸς τὸν Σεδράχ᾽ «Δός μοι τὴν παρακαταθήκην;»" ἣν παρέθετο ὁ 25 πατὴρ ἡμῶν ἐν τῇ κοιλίᾳ τῆς μητρός σου ἐν τῷ ἁγίῳ σου σκηνώματι ἐκ βρέφους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.9.3">
+            <app xml:id="u69_ver_Greek">
+              <lem wit="#James">λέγει Σεδράχ᾽ Οὐ δίδωμί σοι τὴν ψυχήν μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.9.4">
+            <app xml:id="u70_ver_Greek">
+              <lem wit="#James">λέγει αὐτὸν ὁ θεός" Καὶ διὰ τί ἀπεστάλην ἐγὼ καὶ ἦλθα ὧδε, σὺ δέ μοι προφασίζεις ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.9.5">
+            <app xml:id="u71_ver_Greek">
+              <lem wit="#James">ἐγὼ γὰρ παρηγ- γέλθην παρὰ τοῦ πατρός μου μὴ ἀναισχύντως λάβω τὴν 30 ψυχήν cov’ εἰ «δὲ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.9.6">
+            <app xml:id="u72_ver_Greek">
+              <lem wit="#James">μὴ, δός μοι τὴν ποθεινοτάτην ψυχήν σου.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="Sedrach.ver_Greek.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.10.1">
+            <app xml:id="u73_ver_Greek">
+              <lem wit="#James">Καὶ εἶπεν Σεδρὰχ τὸν θεόν:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.10.2">
+            <app xml:id="u74_ver_Greek">
+              <lem wit="#James">Καὶ πόθεν μέλλεις λαβεῖν τὴν ψυχήν μου, καὶ ἐκ ποιοῦ μέλους ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.10.3">
+            <app xml:id="u75_ver_Greek">
+              <lem wit="#James">καὶ λέγει αὐτὸν ὁ θεός:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.10.4">
+            <app xml:id="u76_ver_Greek">
+              <lem wit="#James">Οὐκ οἶδας ὅτι χορηγεῖται ἐν μέσῳ τῶν 35 πνευμόνων σου καὶ τῆς καρδίας σου «καί» ἐστι διεσπο- ρισμένη εἰς πάντα τὰ μέλη σου;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.10.5">
+            <app xml:id="u77_ver_Greek">
+              <lem wit="#James">ἀναφέρνεται διὰ φάρυγγος καὶ λάρυγγος καὶ τοῦ στόματος" καὶ οἵαν ὥραν μέλλει 4.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.10.6">
+            <app xml:id="u78_ver_Greek">
+              <lem wit="#James">1 Supplied from Esdr.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.10.7">
+            <app xml:id="u79_ver_Greek">
+              <lem wit="#James">(p.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.10.8">
+            <app xml:id="u80_ver_Greek">
+              <lem wit="#James">31.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Sedrach.ver_Greek.10.9">
+            <app xml:id="u81_ver_Greek">
+              <lem wit="#James">Tischendorf).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Sedrach.ver_Greek.10.10">
+            <app xml:id="u82_ver_Greek">
+              <lem wit="#James">ἐξέρχεσθαι ἀρχὴν σπάρναται καὶ συνάζεται ἀπὸ τῶν ἀκρονύχων καὶ ἀπὸ πάντων μελῶν, καί ἐστι μεγάλη ἀνάγκη τοῦ χωρισθῆναι ἀπὸ τοῦ σώματος καὶ ἀποσπασ- θῆναι τῆς καρδίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Sedrach.ver_Greek.10.11">
+            <app xml:id="u83_ver_Greek">
+              <lem wit="#James">ταῦτα πάντα ἀκούσας ὁ Σεδρὰχ καὶ ἐνθυμηθεὶς τοῦ θανάτου τὴν μνήμην ἐξέστη λίαν, καὶ εἶπεν Σεδρὰχ τὸν θεόν᾽ Δός μοι, κύριε, ἴασιν ὀλίγην, ἵνα κλαύσω, ὅτι ἤκουσα «ὅτι» πολλὰ δύνανται τὰ δάκρυα καὶ ἴαμα πολὺ γίνεται τοῦ ταπεινοῦ σώματος τοῦ πλάσματός σου. ‘</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="Sedrach.ver_Greek.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.11.1">
+            <app xml:id="u84_ver_Greek">
+              <lem wit="#James">Καὶ ἤρξατο κλαίων καὶ ὀδυρόμενος λέγειν" Ὦ κεφαλὴ παράδοξε οὐρανοκόσμητε" ὦ ἡλιοφώτιστε οὐρανοῦ καὶ γῆς" γνωσταὶ αἱ τρίχες σον ἀπὸ Θαιμὰν, οἱ ὀφθαλμοί σου ἀπὸ Βοσόρ, αἱ ἀκοαί σου ἐκ βροντῆς, ἡ γλῶσσά σου ἐκ σάλπιγγος, καὶ ὁ ἐγκέφαλός σου ἐστὶν μικρὸν κτίσμα, κεφαλὴ ὅλου τοῦ σώματος κίνησις" καλοπιστεῖ καὶ καλ- λίστατε ἀπὸ πάντων φιλούμενον, καὶ ἄρτι πεσὼν εἰς τὴν γῆν ἄγνωστος γίνεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.11.2">
+            <app xml:id="u85_ver_Greek">
+              <lem wit="#James">ὦ χεῖρες εὔκρατοι καλοδιδακτοὶ καματηροὶ δι’ ἃς τὸ σκεῦος τρέφεται" ὦ χεῖρες εὔστοχοι ἀπὸ πάντων οἱ σωρεύοντες τοὺς οἴκους ἐστολίσατε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.11.3">
+            <app xml:id="u86_ver_Greek">
+              <lem wit="#James">ὦ δάκτυλοι καλλωπισμένοι καὶ ὑπὸ τῶν χρυσῶν καὶ ἀργυρῶν ἐστολισμένοι" καὶ μέγαλα κτίσματα ὑπὸ τῶν δακτύλων ἄγονται᾽ Tas παλαμὰᾶς ἁπλονοῦσιν οἱ τρεῖς ἁρμοὶ, καὶ τὰ κάλλη σωρεύουν" καὶ ἄρτι πάροικοι γίνεσθε τοῦ κόσμου τούτου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.11.4">
+            <app xml:id="u87_ver_Greek">
+              <lem wit="#James">ὦ πόδες καλοπεριπατητοὶ αὐτόδρομοι ταχύτατοι λίαν ἀνικητοί᾽ ὦ γόνατα συνηρμοσμένα ὅτι πλήν σου τὸ σκεῦος οὐ κινεῖται" οἱ πόδες συντρέχουσιν τὸν ἥλιον καὶ τὴν σελήνην ἐν νυκτὶ καὶ ἐν ἡμέρᾳ τὰ πάντα σωρεύοντες, Tas τρυφὰς καὶ τὰς πόσεις, καὶ τὸ σκεῦος διατρέφοντες" ὦ πόδες ὠκύτατοι καὶ καλόδρομοι, ἐπὶ προσώπου τῆς γῆς ταρασσόμενοι, τοὺς οἴκους εὐτρεπίζοντες παντὸς ἀγαθοῦ" ὦ πόδες ὅλον τὸ σῶμα βαστάζοντες, εἰς τοὺς ναοὺς ἀνα- τρέχοντες, μετανοίας ποιοῦντες καὶ παρακαλοῦντες τοὺς ἁγίους, καὶ ἄρτι ἀκίνητοι μένετε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.11.5">
+            <app xml:id="u88_ver_Greek">
+              <lem wit="#James">ὦ κεφαλὴ καὶ χεῖρες καὶ “πόδες, ἕως ἄρτι colo σας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.11.6">
+            <app xml:id="u89_ver_Greek">
+              <lem wit="#James">ὦ ψυχὴ, τί γάρ σε ἐνέβαλεν εἰς τὸ ταπεινὸν καὶ ταλαίπωρον σῶμα ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.11.7">
+            <app xml:id="u90_ver_Greek">
+              <lem wit="#James">καὶ ἄρτι χωρι- ζομένη ἀπ᾽ αὐτοῦ [καὶ] ἀνερχέσαι ἔνθα καλεῖ σε ὁ κύριος, καὶ τὸ σώμα τὸ ταλαίπωρον ἀπέρχεται εἰς κρίσιν" ὦ σῶμα καλλωπισμένον, τρίχες ἀστερόχαιται, κεφαλὴ οὐρανο- κόσμητε ἐστολισμένον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.11.8">
+            <app xml:id="u91_ver_Greek">
+              <lem wit="#James">ὦ πρόσωπον καλομύριστον, ὀφ- 5 -- ο 20 25 30 35 θαλμοὶ φωταγωγοί, φωνὴ σάλπιγγος ἦχος, γλῶσσα εὐδιάλλακτε, γένειον καλλωπισμένον, τρίχες ἀστερόμορφοι, κεφαλὴ οὐρανομῆκες, ἐστολισμένον σῶμα, τὸ φωταγωγὸν γλεύφορον πάγγνωστον καὶ ἄρτι πεσὸν εἰς τὴν γῆν, ὑπὸ 5 γῆς κάλλος σου ἀφανὲς γίνεται.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="Sedrach.ver_Greek.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.12.1">
+            <app xml:id="u92_ver_Greek">
+              <lem wit="#James">ΧΙ].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.12.2">
+            <app xml:id="u93_ver_Greek">
+              <lem wit="#James">Λέγει αὐτὸν ὁ Χριστός" Παῦσον, Σεδράχ᾽ ἕως πότε δακρύζεις καὶ στενάζεις ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.12.3">
+            <app xml:id="u94_ver_Greek">
+              <lem wit="#James">ὁ παράδεισός σοι ἠνοίγη καὶ ἀποθανὼν ζήσεις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.12.4">
+            <app xml:id="u95_ver_Greek">
+              <lem wit="#James">λέγει αὐτῷ Σεδράχ᾽ "Ere ἅπαξ λαλήσω σοι, κύριε ἕως πότε ζῶ πρὶν ἀποθανεῖν με;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.12.5">
+            <app xml:id="u96_ver_Greek">
+              <lem wit="#James">καὶ μὴ παρα- 10 κούσῃς τῆς αἰτήσεώς μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.12.6">
+            <app xml:id="u97_ver_Greek">
+              <lem wit="#James">λέγει αὐτῷ ὁ κύριος" Λέγε, ὦ Σεδράχ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.12.7">
+            <app xml:id="u98_ver_Greek">
+              <lem wit="#James">«λέγει ὁ Ledpay'&gt;”Ern ὀγδοήκοντα ἢ ἐνενήκοντα ἐὰν ζήσῃ ἄνθρωπος ἢ ἑκατὸν, καὶ ζήσῃ αὐτοὺς ἐν ἁμαρτίαις, καὶ πάλιν ἐπιστρέψῃ καὶ ζήσῃ ἄνθρωπος ἐν μετανοίᾳ, πόσας ἡμέρας ἀφίεις αὐτοῦ τὰς ἁμαρτίας ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.12.8">
+            <app xml:id="u99_ver_Greek">
+              <lem wit="#James">λέγει αὐτὸν ὁ 15 θεός" ᾿Εὰν ἐπιστρέψας ζῶν τὰ ἑκατὸν «ἢ» ὀγδοήκοντα μετανοήσας τρία ἔτη καὶ ποιήσῃ καρπὸν δικαιοσύνης καὶ φθάσῃ ὁ θάνατος, οὐ μὴ μνησθῶ πάσας τὰς ἁμαρτίας αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="Sedrach.ver_Greek.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.13.1">
+            <app xml:id="u100_ver_Greek">
+              <lem wit="#James">Λέγει αὐτῷ Σεδράχ᾽ Πολλά εἰσιν τὰ τρία ἔτη, 20 κύριέ μου, μὴ φθάσῃ ὁ θάνατος αὐτοῦ καὶ οὐ πληρώσῃ τὴν μετάνοιαν αὐτοῦ" ἐλέησον, κύριε, τὴν εἰκόνα σου καὶ σπλαγχνίσθητι, ὅτι πολλά εἰσιν τὰ τρία ἔτη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.13.2">
+            <app xml:id="u101_ver_Greek">
+              <lem wit="#James">λέγει αὐτὸν ὁ θεός:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.13.3">
+            <app xml:id="u102_ver_Greek">
+              <lem wit="#James">᾿Εὰν μετὰ ἑκατὸν ἔτη ζήσῃ ἄνθρωπος καὶ μνησθῇ τὸν θάνατον αὐτοῦ καὶ ὁμολογήσῃ ἔμπροσθεν τῶν ἀνθρώ- 25 πὼν καὶ εὕρω αὐτὸν, μετὰ χρόνον ἀφίω πάσας τὰς ἁμαρτίας αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.13.4">
+            <app xml:id="u103_ver_Greek">
+              <lem wit="#James">λέγει πάλιν ὁ Σεδράχ᾽ Κύριε, τὴν εὐσπλαγχνίαν σου καὶ πάλιν παρακαλῶ «διὰ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.13.5">
+            <app xml:id="u104_ver_Greek">
+              <lem wit="#James">τὸ πλάσμα σου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.13.6">
+            <app xml:id="u105_ver_Greek">
+              <lem wit="#James">πολύς ἐστιν ὁ χρόνος μὴ ὁ θάνατος αὐτοῦ φθάσῃ καὶ ἁρπάσῃ αὐτὸν συντόμως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.13.7">
+            <app xml:id="u106_ver_Greek">
+              <lem wit="#James">λέγει αὐτὸν ὁ σωτήρ' "Epwr@ σε ἕνα 3ο λόγον, Σεδρὰχ, ἀγαπητέ μου, εἴτα ἀναιτήσεις pe’ ἐὰν μετανοήσῃ ὁ ἁμαρτωλὸς εἰς ἡμέρας τεσσαράκοντα, οὐ μὴ μνησθῶ πάσας τὰς ἁμαρτίας αὐτοῦ ἃς ἐποίησεν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="Sedrach.ver_Greek.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.14.1">
+            <app xml:id="u107_ver_Greek">
+              <lem wit="#James">Καὶ λέγει Σεδρὰχ πρὸς τὸν ἀρχάγγελον Μιχαήλ" πάκουσόν μου, πρόστατα δυνατὲ, καὶ βοήθει μοι καὶ 35 πρεσβεύσαι ἵνα ἐλεήσῃ ὁ θεὸς τὸν κόσμον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.14.2">
+            <app xml:id="u108_ver_Greek">
+              <lem wit="#James">καὶ πεσόντες ἐπὶ πρόσωπον παρεκάλουν τὸν θεὸν καὶ εἶπον" Κύριε, δίδαξον ἡμᾶς πῶς δεῖ καὶ ἐν ποίᾳ μετανοίᾳ σωθήσεται ὁ ἄνθρωπος, ἢ ἐν ποίῳ κόπῳ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.14.3">
+            <app xml:id="u109_ver_Greek">
+              <lem wit="#James">«λέγει ὁ θεός""» ᾿Εν μετανοίαις, ἐν παρωκλήσεσιν, ἐν λειτουργίαις, ἐν δάκρυσιν ὀχετοῦ, ἐν Lal a ¢ , στεναγμοῖς θερμοῖς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.14.4">
+            <app xml:id="u110_ver_Greek">
+              <lem wit="#James">οὐκ οἶδας ὅτι ὁ προφήτης μου Δανεὶδ &gt; / \ € \ 9 4 &gt; / &gt; ae a ἐκ δακρύων, καὶ of λοιποὶ οἶδας ὅτι ἐσώθησαν ἐν μιᾷ ῥοπῇ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.14.5">
+            <app xml:id="u111_ver_Greek">
+              <lem wit="#James">i οἷδας, Σεδρὰχ, ὅτι εἰσὶν ἔθνη τὰ μὴ νόμον ἔχοντα « καὶ τὰ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.14.6">
+            <app xml:id="u112_ver_Greek">
+              <lem wit="#James">τοῦ νόμου ποιοῦσιν" ὅτι &lt;el&gt; εἰσιν ἀβάπτιστοι καὶ J -“ a ἐνέβη τὸ θεῖόν μου πνεῦμα εἰς αὐτοὺς καὶ ἐπιστρέφονται ’ 3 A a πρὸς τὸ ἐμὸν βάπτισμα καὶ δέχομαι αὐτοὺς peta τῶν , 2 Pas) oe Ni 3) γ᾿ € δικαίων μου ἐν κολποῖς ᾿Αβραάμ᾽ καὶ εἰσίν τινες οἱ βαπ- al τισθέντες τὸ ἐμὸν βάπτισμα καὶ τὸ θεῖόν μου μέρος μερισθέντες καὶ γίνονται ἀπογνώστοι τὴν τέλειαν ἀπό- το a A &gt; 4 γνωσιν καὶ οὐ μέλλουσιν μεταγνώναι᾽ καὶ ἀναμένω αὐτοὺς μετὰ πολλῆς εὐσπλαγχνίας καὶ πολλοῦ ἐλέους καὶ πλούτους ἵνα μετανοήσωσιν, ἀλλὰ ποιοῦσιν ἃ μισεῖ μου « A , ἡ θεότης, καὶ οὐκ ἤκουσαν τὸν σοφὸν ἐρωτῶντα λέγων " La) &gt; a e / Ὁ 3 sg “ Δικαιοῦμεν οὐδαμῶς ἁμαρτωλόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.14.7">
+            <app xml:id="u113_ver_Greek">
+              <lem wit="#James">παντελῶς οὐκ οἶδας ὅτι γέγραπται Kai οἱ μετανοήσαντες οὐ μὴ ἴδουν τὴν κόλασιν ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.14.8">
+            <app xml:id="u114_ver_Greek">
+              <lem wit="#James">καὶ «οὐκ ἤκουσαν» ἀποστόλων οὔτε ἐμοῦ λόγου ἐν τοῖς εὐαγγελίοις καὶ λυποῦσιν τοὺς ἀγγέλους μου, καὶ ἦ μὴν ἐν ταῖς συνάξεσιν καὶ ἐν ταῖς λειτουργίαις μου οὐ προσέχουσιν τὸν ἄγγελόν μου καὶ οὐχ ἵστανται ἐν ταῖς ἁγίαις μου ’ / ? 7 © Ν ᾽ [οἱ » / ἐκκλησίαις, GAN ἵστανται καὶ ov προσκυνοῦσιν ἐν φόβῳ Ν , &gt; Ν a “Δ ’ , &gt; \ + καὶ τρόμῳ ἀλλὰ μεγαλορημονοῦσιν ἃ ov δέχομαι ἐγὼ οὔτε οἱ ἄγγελοί μου. ͵ 4</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="Sedrach.ver_Greek.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.15.1">
+            <app xml:id="u115_ver_Greek">
+              <lem wit="#James">Λέγει Σεδρὰχ πρὸς τὸν θεόν" Κύριε, σὺ μόνος ei C \ A ἀναμάρτητος καὶ πολὺ εὔσπλαγχνος, ὁ ἁμαρτωλοὺς ἐλεῶν ’ καὶ οἰκτείρων, ἀλλ᾽ ἡ σὴ θεότης εἶπεν Οὐκ ἦλθον δικαίους / ᾽ \ « &gt; U \ 3 ¢ καλέσαι ἄλλα ἁμαρτωλοὺς εἰς μετανοίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.15.2">
+            <app xml:id="u116_ver_Greek">
+              <lem wit="#James">καὶ ELTTEY O κύριος τὸν Σεδράχ᾽ Οὐκ οἶδας, Σεδρὰχ, τὸν λήστην, μιᾷ ῥοπῇ ἐσώθη μεταγνῶναι ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.15.3">
+            <app xml:id="u117_ver_Greek">
+              <lem wit="#James">οὐκ οἶδας ὅτι «ὁ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.15.4">
+            <app xml:id="u118_ver_Greek">
+              <lem wit="#James">ἀπόστολος μου καὶ εὐαγγελιστὴς ἐν μιᾷ ῥοπῇ ἐσώθη;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.15.5">
+            <app xml:id="u119_ver_Greek">
+              <lem wit="#James">&lt;...peccatores autem non saluantur&gt;, ὅτι εἰσὶν αἱ καρδίαι αὐτῶν ὡς λίθος σαθρός" οὗτοί εἰσιν οἱ πορεύοντες ἀσεβέσιν ὁδοῖς καὶ &gt; 1 \ Awl? a ΄ Doe , , ἀπολόμενοι META TOD ἀντιχριστοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.15.6">
+            <app xml:id="u120_ver_Greek">
+              <lem wit="#James">λέγει Σεδράχ᾽ Κύριέ δι, Ὁ ¢ \ al a aes, » Qe μου, καὶ εἶπας ὅτι To θεῖόν μου πνεῦμα ἐνέβη εἰς τὰ ἔθνη “ΝΜ \ a a a ἃ μὴ νόμον ἔχοντα Ta τοῦ νόμου ποιοῦσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.15.7">
+            <app xml:id="u121_ver_Greek">
+              <lem wit="#James">ὁμῶς δὲ Kal ὁ , Sea '9 , \ &gt; MN ‘ e XN e ANTTHS καὶ O ἀπόστολος καὶ εὐαγγελιστὴς καὶ οἱ λοιποὶ οἱ φθάσαντες εἰς τὴν βασίλειάν σου, κύὐριέ μου" οὕτως καὶ \ &gt; TOUS ἐπ᾽ ἐσχάτων ἁμαρτήσαντάς σοι συγχώρησον, κύριε" “ «ς , ᾽ ὅτι ὁ βίος πολύμοχθός ἐστιν καὶ ἀμετανόητος.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="Sedrach.ver_Greek.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="1" xml:id="Sedrach.ver_Greek.16.1">
+            <app xml:id="u122_ver_Greek">
+              <lem wit="#James">Λέγει κύριος τὸν Σεδράχ᾽ ᾿ποίησα τὸν avOpw- πον τρισὶ τάξεσιν᾽ ὅτε ἐστὶν νεὸς, ὡς νεοῦ αὐτοῦ ἐπαρά- ‘ , fal ᾽ βλεπον ta πταίσματα αὐτοῦ" ὅτε δὲ πάλιν ἀνὴρ, ἐτήρουν ? rn \ a αὐτοῦ τὴν διάνοιαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Sedrach.ver_Greek.16.2">
+            <app xml:id="u123_ver_Greek">
+              <lem wit="#James">ὅταν δὲ πάλιν γηράσῃ, καὶ τηρῶ eed ͵ , vow ͵ \ a 8 αὐτὸν ὅπως μετανοήσῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Sedrach.ver_Greek.16.3">
+            <app xml:id="u124_ver_Greek">
+              <lem wit="#James">λέγει Σεδράχ᾽ Κύριε, σὺ ταῦτα , 2 Σ a πάντα οἶδας καὶ ἐπίστασαι" μόνον συμπαθήσαι τοῖς apap- lal / τωλοῖς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Sedrach.ver_Greek.16.4">
+            <app xml:id="u125_ver_Greek">
+              <lem wit="#James">λέγει αὐτὸν ὃ κύριος" Ledpay, ἀγαπητέ μου, € ‘ a ὑπόσχομαι συμπαθῆσαι καὶ κάτωθεν τῶν τεσσαράκοντα « ΄ a -“ ἡμερῶν ἕως εἴκοσι᾽ καὶ ὅστις μνησθῆ τοῦ ὀνόματός σου οὐ \w / ’ RE \ a ΄ ᾽ ‘ 10 μὴ ἔδῃ κολαστήριον ἀλλὰ ἔσται μετὰ τῶν δικαίων ἐν τόπῳ ἀναψύξεως καὶ ἀναπαύσεως" καὶ εἴ τις συγγράψει τὸν λόγον τοῦτον τὸν θαυμαστὸν οὐ μὴ λογισθῇ ἁμαρτία αὐτοῦ ᾽ \ 2A A ts V4 2 ῬΦῊΣ ͵ iy εἰς TOV αἰῶνα τοῦ αἰῶνος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Sedrach.ver_Greek.16.5">
+            <app xml:id="u126_ver_Greek">
+              <lem wit="#James">καὶ λέγει Σεδράχ᾽ Κύριε, καὶ εἴ τις ποιήσει φωταγωγίαν τῷ δούλῳ σου, ῥύσαι αὐτὸν, κύριε, pee \ a ‘ ΄ ς fal a a ᾿ς 15 ἀπὸ παντὸς κακοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Sedrach.ver_Greek.16.6">
+            <app xml:id="u127_ver_Greek">
+              <lem wit="#James">καὶ λέγει ὁ δοῦλος τοῦ θεοῦ Σεδράχ , / ΜΝ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Sedrach.ver_Greek.16.7">
+            <app xml:id="u128_ver_Greek">
+              <lem wit="#James">ἼΑρτι λαβὲ τὴν ψυχήν μου, δέσποτα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Sedrach.ver_Greek.16.8">
+            <app xml:id="u129_ver_Greek">
+              <lem wit="#James">καὶ ἔλαβεν αὐτὸν “ ° eh ὁ θεὸς καὶ ἔθηκεν αὐτὸν ἐν τῷ παραδείσῳ μετὰ τῶν ἑγίων ἁπάντων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Sedrach.ver_Greek.16.9">
+            <app xml:id="u130_ver_Greek">
+              <lem wit="#James">ᾧ ἡ δόξα καὶ τὸ κράτος εἰς τοὺς αἰῶνας τῶν 2 ell ’ αἰώνων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Sedrach.ver_Greek.16.10">
+            <app xml:id="u131_ver_Greek">
+              <lem wit="#James">᾿Αμήν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Sedrach.ver_Greek.16.11">
+            <app xml:id="u132_ver_Greek">
+              <lem wit="#James">A FRAGMENT OF THE</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -33,6 +33,8 @@ OCP_TO_CAVT = {
     "5Ezra.xml": (180, "5 Ezra (4 Ezra 1-2)"),
     "6Ezra.xml": (180, "6 Ezra (4 Ezra 15-16)"),
     "Esdr.xml": (180, "Latin 4 Ezra"),
+    "ApEzra.xml": (184, "Greek Apocalypse of Ezra (CAVT 184.i, Tischendorf 1866)"),
+    "Sedrach.xml": (184, "Apocalypse of Sedrach (CAVT 184.ii, James 1893)"),
     "Esdl.xml": (184, "Visio beati Esdrae (latine, CAVT 184.iii, Bogaert 1984 / Denis 1993)"),
     "3Macc.xml": (198, "3 Maccabees (LXX)"),
     "4Macc.xml": (199, "4 Maccabees (LXX)"),
