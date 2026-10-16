@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="Ps151" title="Psalm 151 (Hebrew, Greek, Latin)">
+  <version author="Qumran, Septuagint, Vulgate" language="Hebrew" title="Polyglot (Hebrew, Greek, Latin)">
+    <divisions>
+      <division delimiter="." label="Chapter"/>
+      <division label="Verse"/>
+    </divisions>
+    <manuscripts>
+      <ms abbrev="11Q5" language="Hebrew" show="yes">
+        <name>11QPs-a (Qumran Cave 11)</name>
+        <bibliography>11QPs-a (11Q5) Col. xxviii 3-14: J. A. Sanders, The Psalms Scroll of Qumrân Cave 11 (11QPs-a) (DJD IV; Oxford: Clarendon Press, 1965), pp. 53-64.</bibliography>
+      </ms>
+      <ms abbrev="LXX" language="Greek" show="yes">
+        <name>Septuaginta (Rahlfs / Swete)</name>
+        <bibliography>Septuaginta: Alfred Rahlfs, Septuaginta (Stuttgart: Privilegierte Württembergische Bibelanstalt, 1935); H. B. Swete, The Old Testament in Greek according to the Septuagint, Vol. II (Cambridge: Cambridge University Press, 1896).</bibliography>
+      </ms>
+      <ms abbrev="Vulg" language="Latin" show="yes">
+        <name>Biblia Sacra Vulgata (Clementina)</name>
+        <bibliography>Biblia Sacra Vulgata (Clementina), Appendix: Psalmus CLI.</bibliography>
+      </ms>
+      <ms abbrev="Trans" language="English" show="yes">
+        <name>English Translation (OCP)</name>
+        <bibliography>Septuaginta: Alfred Rahlfs, Septuaginta (Stuttgart: Privilegierte Württembergische Bibelanstalt, 1935); H. B. Swete, The Old Testament in Greek according to the Septuagint, Vol. II (Cambridge: Cambridge University Press, 1896).</bibliography>
+      </ms>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <div number="1">
+          <unit id="0">
+            <reading option="0" mss="11Q5 ">הללויה לדויד בן ישי. קטן הייתי מן אחי וצעיר מבני אבי, וישימני רועה לצונו ומושל בגדיותיו.</reading>
+            <reading option="1" mss="LXX ">Οὗτος ὁ ψαλμὸς ἰδιόγραφος εἰς Δαυιδ καὶ ἔξωθεν τοῦ ἀριθμοῦ· ὅτε ἐμονομάχησεν τῷ Γολιαδ. Μικρὸς ἤμην ἐν τοῖς ἀδελφοῖς μου καὶ νεώτερος ἐν τῷ οἴκῳ τοῦ πατρός μου· ἐποίμαινον τὰ πρόβατα τοῦ πατρός μου.</reading>
+            <reading option="2" mss="Vulg ">Hic psalmus proprie scriptus est David, et extra numerum, cum pugnavit cum Goliath. Pusillus eram inter fratres meos, et adolescentior in domo patris mei: pascebam oves patris mei.</reading>
+            <reading option="3" mss="Trans ">This psalm is a genuine one of David, though an extra, composed when he fought in single combat with Goliath. I was small among my brothers, and the youngest in my father's house; I tended my father's sheep.</reading>
+          </unit>
+        </div>
+        <div number="2">
+          <unit id="1">
+            <reading option="0" mss="11Q5 ">ידי עשו עוגב ואצבעותי כנור, ואשימה ליהוה כבוד אמרתי אני בנפשי.</reading>
+            <reading option="1" mss="LXX ">αἱ χεῖρές μου ἐποίησαν ὄργανον, οἱ δάκτυλοί μου ἥρμοσαν ψαλτήριον.</reading>
+            <reading option="2" mss="Vulg ">Manus meae fecerunt organum: et digiti mei aptaverunt psalterium.</reading>
+            <reading option="3" mss="Trans ">My hands made an instrument, and my fingers fashioned a lyre.</reading>
+          </unit>
+        </div>
+        <div number="3">
+          <unit id="2">
+            <reading option="0" mss="11Q5 ">ההרים לוא יעידו לו והגבעות לוא יגידו, העצים את דברי והצואן את מעשי. כי מי יגיד ומי ידבר ומי יספר את מעשי? אדון הכול ראה, אלוה הכול הוא שמע והוא האזין.</reading>
+            <reading option="1" mss="LXX ">καὶ τίς ἀναγγελεῖ τῷ κυρίῳ μου; αὐτὸς κύριος, αὐτὸς εἰσακούει.</reading>
+            <reading option="2" mss="Vulg ">Et quis annuntiabit Domino meo? Ipse Dominus, ipse omnium exaudit.</reading>
+            <reading option="3" mss="Trans ">And who will declare it to my Lord? The Lord himself, he hears.</reading>
+          </unit>
+        </div>
+        <div number="4">
+          <unit id="3">
+            <reading option="0" mss="11Q5 ">שלח נביאו למושחני, את שמואל לגדלני. וישלח ויקחני מאחר הצואן, וימשחני בשמן הקודש, וישימני נגיד לעמו ומושל בבני בריתו.</reading>
+            <reading option="1" mss="LXX ">αὐτὸς ἐξαπέστειλεν τὸν ἄγγελον αὐτοῦ καὶ ἦρέν με ἐκ τῶν προβάτων τοῦ πατρός μου καὶ ἔχρισέν με ἐν τῷ ἐλαίῳ τῆς χρίσεως αὐτοῦ.</reading>
+            <reading option="2" mss="Vulg ">Ipse misit angelum suum, et tulit me de ovibus patris mei, et unxit me in misericordia unctionis suae.</reading>
+            <reading option="3" mss="Trans ">He sent forth his angel and took me from my father's sheep, and anointed me with the oil of his anointing.</reading>
+          </unit>
+        </div>
+        <div number="5">
+          <unit id="4">
+            <reading option="0" mss="11Q5 ">יצאו אחי לקראתו יפי התואר ויפי המראה, הגבהים בקומתם היפים בשערם: לוא בחר יהוה אלוהים בם.</reading>
+            <reading option="1" mss="LXX ">οἱ ἀδελφοί μου καλοὶ καὶ μεγάλοι, καὶ οὐκ εὐδόκησεν ἐν αὐτοῖς κύριος.</reading>
+            <reading option="2" mss="Vulg ">Fratres mei boni, et magni: et non fuit beneplacitum in eis Domino.</reading>
+            <reading option="3" mss="Trans ">My brothers were handsome and tall, but the Lord took no pleasure in them.</reading>
+          </unit>
+        </div>
+        <div number="6">
+          <unit id="5">
+            <reading option="0" mss="11Q5 ">תחלת גבורה לדויד משמשחו נביא אלוהים: אז ראיתי פלשתי מחרף מערכות ישראל, יצאתי לקראתו והוא קללני באליליו.</reading>
+            <reading option="1" mss="LXX ">ἐξῆλθον εἰς συνάντησιν τῷ ἀλλοφύλῳ, καὶ ἐπικατηράσατό με ἐν τοῖς εἰδώλοις αὐτοῦ·</reading>
+            <reading option="2" mss="Vulg ">Exivi obviam alienigenae, et maledixit mihi in simulacris suis.</reading>
+            <reading option="3" mss="Trans ">I went out to meet the Philistine, and he cursed me by his idols.</reading>
+          </unit>
+        </div>
+        <div number="7">
+          <unit id="6">
+            <reading option="0" mss="11Q5 ">ואנוכי שלפתי את חרבו מלפניו, ואכרות את ראשו, ואסיר חרפה מבני ישראל.</reading>
+            <reading option="1" mss="LXX ">ἐγὼ δὲ σπασάμενος τὴν παρ’ αὐτοῦ μάχαιραν ἀπεκεφάλισα αὐτὸν καὶ ἦρα ὄνειδος ἐξ υἱῶν Ισραηλ.</reading>
+            <reading option="2" mss="Vulg ">Ego autem evaginato gladio ipsius, decapitavi eum, et abstuli opprobrium de filiis Israel.</reading>
+            <reading option="3" mss="Trans ">But I, drawing his own sword, beheaded him, and removed the reproach from the sons of Israel.</reading>
+          </unit>
+        </div>
+      </div>
+    </text>
+  </version>
+</book>

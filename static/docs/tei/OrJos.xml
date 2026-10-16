@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OrJos">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Prayer of Joseph</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Orig">
+            <abbr type="siglum">Orig</abbr>
+            <name>Patristic Citations (Origen / Eusebius)</name>
+            <bibl>Origen, Commentarius in Johannem II.31.188-190 (ed. E. Preuschen, GCS 10, 1903, pp. 88-89); Philocalia XXIII.15, 19 (ed. J. A. Robinson, 1893, pp. 204, 208); Eusebius, Praeparatio Evangelica VI.11.64 (ed. K. Mras, 1954). CAVT 107 / CANT 351.</bibl>
+          </witness>
+          <witness xml:id="Trans">
+            <abbr type="siglum">Trans</abbr>
+            <name>English Translation (OCP)</name>
+            <bibl>Origen, Commentarius in Johannem II.31.188-190 (ed. E. Preuschen, GCS 10, 1903, pp. 88-89); Philocalia XXIII.15, 19 (ed. J. A. Robinson, 1893, pp. 204, 208); Eusebius, Praeparatio Evangelica VI.11.64 (ed. K. Mras, 1954). CAVT 107 / CANT 351.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="fragment" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="translation" n="Greek and English" xml:lang="grc" xml:id="ver_Greek_and_English">
+        <head>Greek and English</head>
+        <div type="fragment" n="1" xml:id="OrJos.ver_Greek_and_English.1">
+          <head>Fragment 1</head>
+          <ab type="verse" n="1" xml:id="OrJos.ver_Greek_and_English.1.1">
+            <app xml:id="u0_ver_Greek_and_English">
+              <lem wit="#Orig">Ὁ γὰρ λαλῶν πρὸς ὑμᾶς ἐγὼ Ἰακὼβ καὶ Ἰσραήλ, ἄγγελος θεοῦ εἰμι ἐγὼ καὶ πνεῦμα ἀρχικόν, καὶ Ἀβραὰμ καὶ Ἰσαὰκ προεκτίσθησαν πρὸ παντὸς ἔργου.</lem>
+              <rdg wit="#Trans" n="1">For I, Jacob, who speak to you, and Israel, I am an angel of God and a principal spirit, and Abraham and Isaac were created before every work.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="OrJos.ver_Greek_and_English.1.2">
+            <app xml:id="u1_ver_Greek_and_English">
+              <lem wit="#Orig">ἐγὼ δὲ Ἰακώβ, ὁ κληθεὶς ὑπὸ ἀνθρώπων Ἰακώβ, τὸ δὲ ὄνομά μου Ἰσραήλ, ὁ κληθεὶς ὑπὸ θεοῦ Ἰσραήλ, ἀνὴρ ὁρῶν θεόν, ὅτι ἐγὼ πρωτόγονος παντὸς ζῴου ζωουμένου ὑπὸ θεοῦ.</lem>
+              <rdg wit="#Trans" n="1">And I, Jacob, whom men call Jacob, but my name is Israel, called by God Israel, a man seeing God, because I am the firstborn of every creature animated by God.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="OrJos.ver_Greek_and_English.1.3">
+            <app xml:id="u2_ver_Greek_and_English">
+              <lem wit="#Orig">Ἐγὼ δὲ ὅτε ἠρχόμην ἀπὸ Μεσοποταμίας τῆς Συρίας, ἐξῆλθεν Οὐριὴλ ὁ ἄγγελος τοῦ θεοῦ, καὶ εἶπεν ὅτι κατέβην ἐπὶ τὴν γῆν καὶ κατεσκήνωσα ἐν ἀνθρώποις, καὶ ὅτι ἐκλήθην ὀνόματι Ἰακώβ.</lem>
+              <rdg wit="#Trans" n="1">And when I was coming from Mesopotamia of Syria, Uriel the angel of God came forth and said that I had descended to earth and tabernacled among men, and that I was called by the name of Jacob.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="OrJos.ver_Greek_and_English.1.4">
+            <app xml:id="u3_ver_Greek_and_English">
+              <lem wit="#Orig">ἐζήλωσε καὶ ἐμαχέσατό μοι, καὶ ἐπάλαιε πρός με, λέγων προτερήσειν ἐπάνω τοῦ ὀνόματός μου τὸ ὄνομα αὐτοῦ καὶ τοῦ πρὸ παντὸς ἀγγέλου.</lem>
+              <rdg wit="#Trans" n="1">He envied me and fought with me and wrestled against me, asserting that his name should have precedence over my name and over the angel before all.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="OrJos.ver_Greek_and_English.1.5">
+            <app xml:id="u4_ver_Greek_and_English">
+              <lem wit="#Orig">καὶ εἶπα αὐτῷ τὸ ὄνομα αὐτοῦ καὶ πόσος ἐστὶν ἐν υἱοῖς θεοῦ· Οὐχὶ σὺ Οὐριὴλ ὄγδοος ἐμοῦ, κἀγὼ Ἰσραὴλ ἀρχάγγελος δυνάμεως κυρίου καὶ ἀρχιχιλίαρχός εἰμι ἐν υἱοῖς θεοῦ;</lem>
+              <rdg wit="#Trans" n="1">And I told him his name and how great he was among the sons of God: Are you not Uriel, the eighth after me? And am I not Israel, an archangel of the power of the Lord and a chief captain among the sons of God?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="OrJos.ver_Greek_and_English.1.6">
+            <app xml:id="u5_ver_Greek_and_English">
+              <lem wit="#Orig">οὐχὶ ἐγὼ Ἰσραὴλ ὁ ἐν προσώπῳ θεοῦ λειτουργὸς πρῶτος, καὶ ἐπεκαλεσάμην ἐν ὀνόματι ἀσβέστῳ τὸν θεόν μου;</lem>
+              <rdg wit="#Trans" n="1">Am I not Israel, the first minister before the face of God, and did I not invoke my God by an inextinguishable name?</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="2" xml:id="OrJos.ver_Greek_and_English.2">
+          <head>Fragment 2</head>
+          <ab type="verse" n="1" xml:id="OrJos.ver_Greek_and_English.2.1">
+            <app xml:id="u6_ver_Greek_and_English">
+              <lem wit="#Orig">Διόπερ ἐν τῇ Προσευχῇ τοῦ Ἰωσὴφ δύναται οὕτω νοεῖσθαι τὸ λεγόμενον ὑπὸ τοῦ Ἰακώβ· Ἀνέγνων γὰρ ἐν ταῖς πλαξὶ τοῦ οὐρανοῦ ὅσα συμβήσεται ὑμῖν καὶ τοῖς υἱοῖς ὑμῶν.</lem>
+              <rdg wit="#Trans" n="1">Wherefore in the Prayer of Joseph that which is spoken by Jacob can be understood thus: 'For I read in the tablets of heaven whatsoever shall befall you and your sons.'</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="3" xml:id="OrJos.ver_Greek_and_English.3">
+          <head>Fragment 3</head>
+          <ab type="verse" n="1" xml:id="OrJos.ver_Greek_and_English.3.1">
+            <app xml:id="u7_ver_Greek_and_English">
+              <lem wit="#Orig">Καὶ ἄλλως δὲ ὁ Ἰακὼβ μείζων ἢ κατὰ ἄνθρωπον ἦν, πτερνίζων τὸν ἀδελφὸν αὐτοῦ, καὶ ὁμολογῶν ἐν αὐτῇ ταύτῃ τῇ βίβλῳ ἀφ’ ἧς παρεθέμεθα τό· Ἀνέγνων ἐν ταῖς πλαξὶ τοῦ οὐρανοῦ· εἶναι ἀρχιχιλίαρχος δυνάμεως κυρίου, καὶ ὄνομα πάλαι κεκτημένος Ἰσραήλ· ὅπερ ἐν σώματι λειτουργῶν ἀναγνωρίζει, ὑπομιμνήσκοντος αὐτὸν τοῦ ἀρχαγγέλου Οὐριήλ.</lem>
+              <rdg wit="#Trans" n="1">Moreover, Jacob was greater than a mere human being, supplanting his brother and confessing in this very book from which we cited, 'I read in the tablets of heaven,' that he was a chief captain of the power of the Lord, and having of old acquired the name Israel, which while serving in the body he recognized, when the archangel Uriel reminded him.</rdg>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

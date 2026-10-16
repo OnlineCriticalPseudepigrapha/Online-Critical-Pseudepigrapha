@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ConfEsdr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Confessio Esdrae (Oratio Esdrae)</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Bensly">
+            <abbr type="siglum">Bensly</abbr>
+            <name>Bensly 1895 (Latin Vulgate tradition)</name>
+            <bibl>R. L. Bensly &amp; M. R. James, The Fourth Book of Ezra (Texts and Studies III.2; Cambridge, 1895), pp. 38-41; Biblia Sacra Vulgata (Clementina), 4 Esdrae 8:20-36. CAVT 181.</bibl>
+          </witness>
+          <witness xml:id="Trans">
+            <abbr type="siglum">Trans</abbr>
+            <name>English Translation (OCP)</name>
+            <bibl>R. L. Bensly &amp; M. R. James, The Fourth Book of Ezra (Texts and Studies III.2; Cambridge, 1895), pp. 38-41; Biblia Sacra Vulgata (Clementina), 4 Esdrae 8:20-36. CAVT 181.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="la">la</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="la">
+    <body>
+      <div type="translation" n="Latin and English" xml:lang="la" xml:id="ver_Latin_and_English">
+        <head>Latin and English</head>
+        <div type="chapter" n="8" xml:id="ConfEsdr.ver_Latin_and_English.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="20" xml:id="ConfEsdr.ver_Latin_and_English.8.20">
+            <app xml:id="u0_ver_Latin_and_English">
+              <lem wit="#Bensly">Initium verborum Esdrae priusquam assumeretur: et dixi, Domine, qui inhabitas saeculum, cuius oculi elevati in superna et aëre,</lem>
+              <rdg wit="#Trans" n="1">The beginning of the words of Ezra, before he was taken up. And I said: O Lord, who inhabitest eternity, whose eyes are exalted toward the heights and the air,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="ConfEsdr.ver_Latin_and_English.8.21">
+            <app xml:id="u1_ver_Latin_and_English">
+              <lem wit="#Bensly">et cuius thronus inaestimabilis, et gloria incomprehensibilis, cui astat exercitus angelorum cum tremore,</lem>
+              <rdg wit="#Trans" n="1">and whose throne is beyond estimation, and whose glory is incomprehensible, before whom the host of angels stands with trembling,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="ConfEsdr.ver_Latin_and_English.8.22">
+            <app xml:id="u2_ver_Latin_and_English">
+              <lem wit="#Bensly">quorum servatio in vento et igni convertitur; cuius verbum verum, et dicta perseverantia;</lem>
+              <rdg wit="#Trans" n="1">whose service is turned into wind and fire; whose word is true, and whose sayings endure;</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="ConfEsdr.ver_Latin_and_English.8.23">
+            <app xml:id="u3_ver_Latin_and_English">
+              <lem wit="#Bensly">cuius iussio fortis, et dispositio terribilis; cuius aspectus arefacit abyssos, et indignatio tabescere facit montes, et veritas testificatur:</lem>
+              <rdg wit="#Trans" n="1">whose command is strong, and whose ordinance is fearful; whose look drieth up the depths, and whose indignation maketh the mountains to melt, and whose truth beareth witness:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="ConfEsdr.ver_Latin_and_English.8.24">
+            <app xml:id="u4_ver_Latin_and_English">
+              <lem wit="#Bensly">exaudi orationem servi tui, et auribus percipe precationem figmenti tui.</lem>
+              <rdg wit="#Trans" n="1">hearken unto the prayer of thy servant, and give ear to the supplication of thy creature.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="ConfEsdr.ver_Latin_and_English.8.25">
+            <app xml:id="u5_ver_Latin_and_English">
+              <lem wit="#Bensly">Dum enim vivo, loquar, et dum sapio, respondebo.</lem>
+              <rdg wit="#Trans" n="1">For while I live I will speak, and while I have understanding I will answer.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="ConfEsdr.ver_Latin_and_English.8.26">
+            <app xml:id="u6_ver_Latin_and_English">
+              <lem wit="#Bensly">Nec respicias populi tui delicta, sed qui tibi in veritate serviunt.</lem>
+              <rdg wit="#Trans" n="1">O look not upon the sins of thy people, but on those who serve thee in truth.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="ConfEsdr.ver_Latin_and_English.8.27">
+            <app xml:id="u7_ver_Latin_and_English">
+              <lem wit="#Bensly">Nec intendas impia gentium studia, sed qui tua testimonia cum doloribus custodierunt.</lem>
+              <rdg wit="#Trans" n="1">Regard not the impious endeavors of the heathen, but of those who have kept thy testimonies with afflictions.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="ConfEsdr.ver_Latin_and_English.8.28">
+            <app xml:id="u8_ver_Latin_and_English">
+              <lem wit="#Bensly">Nec cogites qui in conspectu tuo false conversati sunt, sed memorare qui ex voluntate tua timorem cognoverunt.</lem>
+              <rdg wit="#Trans" n="1">Think not upon those that have walked feignedly before thee, but remember those who according to thy will have acknowledged thy fear.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="ConfEsdr.ver_Latin_and_English.8.29">
+            <app xml:id="u9_ver_Latin_and_English">
+              <lem wit="#Bensly">Neque volueris perdere qui pecudum mores habuerunt, sed respicias eos qui legem tuam splendide docuerunt.</lem>
+              <rdg wit="#Trans" n="1">Desire not to destroy those that have lived like beasts, but look upon those who have clearly taught thy law.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="ConfEsdr.ver_Latin_and_English.8.30">
+            <app xml:id="u10_ver_Latin_and_English">
+              <lem wit="#Bensly">Nec indigneris eis qui bestiis peiores iudicati sunt, sed diligas eos qui semper in tua iustitia et gloria confidunt.</lem>
+              <rdg wit="#Trans" n="1">Take not indignation at those who are deemed worse than beasts, but love those who always put their trust in thy righteousness and glory.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="ConfEsdr.ver_Latin_and_English.8.31">
+            <app xml:id="u11_ver_Latin_and_English">
+              <lem wit="#Bensly">Quoniam nos et patres nostri talibus languoribus morimur; tu autem propter nos peccatores misericors vocaberis.</lem>
+              <rdg wit="#Trans" n="1">For we and our fathers have languished through such diseases; but because of us sinners thou shalt be called merciful.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="ConfEsdr.ver_Latin_and_English.8.32">
+            <app xml:id="u12_ver_Latin_and_English">
+              <lem wit="#Bensly">Si enim desideraveris nobis misereri, tunc misericors vocaberis, nobis non habentibus opera iustitiae.</lem>
+              <rdg wit="#Trans" n="1">For if thou hast a desire to have mercy upon us, then shalt thou be called merciful, unto us, namely, who have no works of righteousness.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="ConfEsdr.ver_Latin_and_English.8.33">
+            <app xml:id="u13_ver_Latin_and_English">
+              <lem wit="#Bensly">Iusti enim, quibus sunt opera multa reposita, ex propriis operibus recipient mercedem.</lem>
+              <rdg wit="#Trans" n="1">For the righteous, who have many works laid up with thee, shall out of their own deeds receive reward.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="ConfEsdr.ver_Latin_and_English.8.34">
+            <app xml:id="u14_ver_Latin_and_English">
+              <lem wit="#Bensly">Quid enim est homo, ut ei indigneris? vel genus corruptibile, ut ita amariceris de eo?</lem>
+              <rdg wit="#Trans" n="1">For what is man, that thou shouldest take displeasure at him? or what is a corruptible race, that thou shouldest be so bitter toward it?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="ConfEsdr.ver_Latin_and_English.8.35">
+            <app xml:id="u15_ver_Latin_and_English">
+              <lem wit="#Bensly">In veritate enim nemo est de genitis qui non impie fecerit, et de confitentibus qui non deliquerit.</lem>
+              <rdg wit="#Trans" n="1">For in truth there is none among those born who hath not done wickedly, and among those who confess thee none who hath not transgressed.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="ConfEsdr.ver_Latin_and_English.8.36">
+            <app xml:id="u16_ver_Latin_and_English">
+              <lem wit="#Bensly">In hoc enim praedicabitur iustitia tua et bonitas tua, Domine, cum misertus fueris his qui non habent substantiam bonorum operum.</lem>
+              <rdg wit="#Trans" n="1">For in this thy righteousness and thy goodness shall be declared, O Lord, when thou art merciful unto those who have no substance of good works.</rdg>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

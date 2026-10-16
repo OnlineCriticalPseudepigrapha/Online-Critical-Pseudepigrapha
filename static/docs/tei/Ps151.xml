@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Ps151">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Psalm 151 (Hebrew, Greek, Latin)</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="wit-11Q5">
+            <abbr type="siglum">11Q5</abbr>
+            <name>11QPs-a (Qumran Cave 11)</name>
+            <bibl>11QPs-a (11Q5) Col. xxviii 3-14: J. A. Sanders, The Psalms Scroll of Qumrân Cave 11 (11QPs-a) (DJD IV; Oxford: Clarendon Press, 1965), pp. 53-64.</bibl>
+          </witness>
+          <witness xml:id="LXX">
+            <abbr type="siglum">LXX</abbr>
+            <name>Septuaginta (Rahlfs / Swete)</name>
+            <bibl>Septuaginta: Alfred Rahlfs, Septuaginta (Stuttgart: Privilegierte Württembergische Bibelanstalt, 1935); H. B. Swete, The Old Testament in Greek according to the Septuagint, Vol. II (Cambridge: Cambridge University Press, 1896).</bibl>
+          </witness>
+          <witness xml:id="Vulg">
+            <abbr type="siglum">Vulg</abbr>
+            <name>Biblia Sacra Vulgata (Clementina)</name>
+            <bibl>Biblia Sacra Vulgata (Clementina), Appendix: Psalmus CLI.</bibl>
+          </witness>
+          <witness xml:id="Trans">
+            <abbr type="siglum">Trans</abbr>
+            <name>English Translation (OCP)</name>
+            <bibl>Septuaginta: Alfred Rahlfs, Septuaginta (Stuttgart: Privilegierte Württembergische Bibelanstalt, 1935); H. B. Swete, The Old Testament in Greek according to the Septuagint, Vol. II (Cambridge: Cambridge University Press, 1896).</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="he">he</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="he">
+    <body>
+      <div type="edition" n="Polyglot (Hebrew, Greek, Latin)" xml:lang="he" xml:id="ver_Polyglot__Hebrew__Greek__Latin_">
+        <head>Polyglot (Hebrew, Greek, Latin)</head>
+        <div type="chapter" n="1" xml:id="Ps151.ver_Polyglot__Hebrew__Greek__Latin_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="Ps151.ver_Polyglot__Hebrew__Greek__Latin_.1.1">
+            <app xml:id="u0_ver_Polyglot__Hebrew__Greek__Latin_">
+              <lem wit="#wit-11Q5">הללויה לדויד בן ישי. קטן הייתי מן אחי וצעיר מבני אבי, וישימני רועה לצונו ומושל בגדיותיו.</lem>
+              <rdg wit="#LXX" n="1">Οὗτος ὁ ψαλμὸς ἰδιόγραφος εἰς Δαυιδ καὶ ἔξωθεν τοῦ ἀριθμοῦ· ὅτε ἐμονομάχησεν τῷ Γολιαδ. Μικρὸς ἤμην ἐν τοῖς ἀδελφοῖς μου καὶ νεώτερος ἐν τῷ οἴκῳ τοῦ πατρός μου· ἐποίμαινον τὰ πρόβατα τοῦ πατρός μου.</rdg>
+              <rdg wit="#Vulg" n="2">Hic psalmus proprie scriptus est David, et extra numerum, cum pugnavit cum Goliath. Pusillus eram inter fratres meos, et adolescentior in domo patris mei: pascebam oves patris mei.</rdg>
+              <rdg wit="#Trans" n="3">This psalm is a genuine one of David, though an extra, composed when he fought in single combat with Goliath. I was small among my brothers, and the youngest in my father's house; I tended my father's sheep.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Ps151.ver_Polyglot__Hebrew__Greek__Latin_.1.2">
+            <app xml:id="u1_ver_Polyglot__Hebrew__Greek__Latin_">
+              <lem wit="#wit-11Q5">ידי עשו עוגב ואצבעותי כנור, ואשימה ליהוה כבוד אמרתי אני בנפשי.</lem>
+              <rdg wit="#LXX" n="1">αἱ χεῖρές μου ἐποίησαν ὄργανον, οἱ δάκτυλοί μου ἥρμοσαν ψαλτήριον.</rdg>
+              <rdg wit="#Vulg" n="2">Manus meae fecerunt organum: et digiti mei aptaverunt psalterium.</rdg>
+              <rdg wit="#Trans" n="3">My hands made an instrument, and my fingers fashioned a lyre.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Ps151.ver_Polyglot__Hebrew__Greek__Latin_.1.3">
+            <app xml:id="u2_ver_Polyglot__Hebrew__Greek__Latin_">
+              <lem wit="#wit-11Q5">ההרים לוא יעידו לו והגבעות לוא יגידו, העצים את דברי והצואן את מעשי. כי מי יגיד ומי ידבר ומי יספר את מעשי? אדון הכול ראה, אלוה הכול הוא שמע והוא האזין.</lem>
+              <rdg wit="#LXX" n="1">καὶ τίς ἀναγγελεῖ τῷ κυρίῳ μου; αὐτὸς κύριος, αὐτὸς εἰσακούει.</rdg>
+              <rdg wit="#Vulg" n="2">Et quis annuntiabit Domino meo? Ipse Dominus, ipse omnium exaudit.</rdg>
+              <rdg wit="#Trans" n="3">And who will declare it to my Lord? The Lord himself, he hears.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Ps151.ver_Polyglot__Hebrew__Greek__Latin_.1.4">
+            <app xml:id="u3_ver_Polyglot__Hebrew__Greek__Latin_">
+              <lem wit="#wit-11Q5">שלח נביאו למושחני, את שמואל לגדלני. וישלח ויקחני מאחר הצואן, וימשחני בשמן הקודש, וישימני נגיד לעמו ומושל בבני בריתו.</lem>
+              <rdg wit="#LXX" n="1">αὐτὸς ἐξαπέστειλεν τὸν ἄγγελον αὐτοῦ καὶ ἦρέν με ἐκ τῶν προβάτων τοῦ πατρός μου καὶ ἔχρισέν με ἐν τῷ ἐλαίῳ τῆς χρίσεως αὐτοῦ.</rdg>
+              <rdg wit="#Vulg" n="2">Ipse misit angelum suum, et tulit me de ovibus patris mei, et unxit me in misericordia unctionis suae.</rdg>
+              <rdg wit="#Trans" n="3">He sent forth his angel and took me from my father's sheep, and anointed me with the oil of his anointing.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Ps151.ver_Polyglot__Hebrew__Greek__Latin_.1.5">
+            <app xml:id="u4_ver_Polyglot__Hebrew__Greek__Latin_">
+              <lem wit="#wit-11Q5">יצאו אחי לקראתו יפי התואר ויפי המראה, הגבהים בקומתם היפים בשערם: לוא בחר יהוה אלוהים בם.</lem>
+              <rdg wit="#LXX" n="1">οἱ ἀδελφοί μου καλοὶ καὶ μεγάλοι, καὶ οὐκ εὐδόκησεν ἐν αὐτοῖς κύριος.</rdg>
+              <rdg wit="#Vulg" n="2">Fratres mei boni, et magni: et non fuit beneplacitum in eis Domino.</rdg>
+              <rdg wit="#Trans" n="3">My brothers were handsome and tall, but the Lord took no pleasure in them.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Ps151.ver_Polyglot__Hebrew__Greek__Latin_.1.6">
+            <app xml:id="u5_ver_Polyglot__Hebrew__Greek__Latin_">
+              <lem wit="#wit-11Q5">תחלת גבורה לדויד משמשחו נביא אלוהים: אז ראיתי פלשתי מחרף מערכות ישראל, יצאתי לקראתו והוא קללני באליליו.</lem>
+              <rdg wit="#LXX" n="1">ἐξῆλθον εἰς συνάντησιν τῷ ἀλλοφύλῳ, καὶ ἐπικατηράσατό με ἐν τοῖς εἰδώλοις αὐτοῦ·</rdg>
+              <rdg wit="#Vulg" n="2">Exivi obviam alienigenae, et maledixit mihi in simulacris suis.</rdg>
+              <rdg wit="#Trans" n="3">I went out to meet the Philistine, and he cursed me by his idols.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Ps151.ver_Polyglot__Hebrew__Greek__Latin_.1.7">
+            <app xml:id="u6_ver_Polyglot__Hebrew__Greek__Latin_">
+              <lem wit="#wit-11Q5">ואנוכי שלפתי את חרבו מלפניו, ואכרות את ראשו, ואסיר חרפה מבני ישראל.</lem>
+              <rdg wit="#LXX" n="1">ἐγὼ δὲ σπασάμενος τὴν παρ’ αὐτοῦ μάχαιραν ἀπεκεφάλισα αὐτὸν καὶ ἦρα ὄνειδος ἐξ υἱῶν Ισραηλ.</rdg>
+              <rdg wit="#Vulg" n="2">Ego autem evaginato gladio ipsius, decapitavi eum, et abstuli opprobrium de filiis Israel.</rdg>
+              <rdg wit="#Trans" n="3">But I, drawing his own sword, beheaded him, and removed the reproach from the sons of Israel.</rdg>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
