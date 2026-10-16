@@ -1,0 +1,2190 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="id_3Bar">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>3 (Greek Apocalypse of) Baruch</title>
+        <editor role="editor">Ken M. Penner David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Picard">
+            <abbr type="siglum">Picard</abbr>
+            <name>Picard</name>
+            <bibl>Text: J.-C. Picard (ed.), Apocalypsis Baruchi Graece (PVTG 2; Leiden: Brill, 1967) 81-96.</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of English based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Greek">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Greek__French_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="Prologue" xml:id="id_3Bar.ver_Greek.Prologue">
+          <head>Chapter Prologue</head>
+          <ab type="verse" n="Title" xml:id="id_3Bar.ver_Greek.Prologue.Title">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#Picard">ΑΠΟΚΑΛΥΨΙΣ ΒΑΡΟΥΧ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.Prologue.1">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#Picard">Διήγησις καὶ ἀποκάλυψις Βαροὺχ περὶ ὧν κελεύματι θεοῦ ἀρρήτων εἶδεν. Εὐλόγησον δέσποτα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.Prologue.2">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#Picard">Ἀποκάλυψις Βαροὺχ, ὃς ἔστιν ἐπὶ ποταμοῦ Γέλ., κλαίων ὑπὲρ τῆς αἰχμαλωσίας Ἱερουσαλήμ, ὅτε καὶ Ἀβιμελὲχ ἐπὶ Ἀγροίππα τὸ χωρίον τῇ χειρὶ θεοῦ διεφυλάχθη· καὶ οὗτος ἐκάθητο ἐπὶ τὰς ὡραίας πύλας, ὅπου ἔκειτο τὰ τῶν ἁγίων ἅγια.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="id_3Bar.ver_Greek.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.1.1">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#Picard">Οἷ νῦν ἐγώ, Βαρούχ, κλαίων ἐν τῇ συνέσει μου καὶ ἔχων περὶ τοῦ λαοῦ, καὶ ὅπως συνεχωρήθη Ναβουχοδονόσωρ ὁ βασιλεὺς ὑπὸ θεοῦ πορθῆσαι τὴν πόλιν αὐτοῦ, λέγων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.1.2">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#Picard">Κύριε, ἵνα τί ἐξέκαυσας τὸν ἀμπελῶνά σου καὶ ἠρήμωσας αὐτόν; τί ἐποίησας τοῦτο; καὶ ἵνα τί, Κύριε, οὐκ ἀπέδωκας ἡμᾶς ἐν ἄλλῃ παιδείᾳ, ἀλλὰ παρέδωκας ἡμᾶς εἰς ἔθνη τοιαῦτα, ὅπως ὀνειδίζοντες λέγουσιν· Ποῦ ἐστιν ὁ θεὸς αὐτῶν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.1.3">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#Picard">Καὶ ἰδοὺ ἐν τῷ κλαίειν με καὶ λέγειν τοιαῦτα, ὁρῶ ἄγγελον Κυρίου ἐλθόντα καὶ λέγοντά μοι· Σύνες, ὦ ἄνθρωπε, ἄνερ ἐπιθυμιῶν, καὶ μὴ τοσοῦτόν σε μέλῃ περὶ τῆς σωτηρίας Ἱερουσαλήμ, ὅτι τάδε λέγει Κύριος ὁ θεὸς ὁ παντοκράτωρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.1.4">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#Picard">Ἀπέστειλε γάρ με πρὸ προσώπου σου ὅπως ἀναγγείλω καὶ ὑποδείξω σοι πάντα τοῦ θεοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.1.5">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#Picard">Ἡ γὰρ δέησίς σου ἠκούσθη ἐνώπιον αὐτοῦ καὶ εἰσῆλθεν εἰς τὰ ὦτα Κυρίου τοῦ θεοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.1.6">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#Picard">Καὶ ταῦτα εἰπών μοι, ἡσύχασα. Καὶ λέγει μοι ὁ ἄγγελος· Παῦσον τὸν θεὸν παροξύνειν, καὶ ὑποδείξω σοι ἄλλα μυστήρια τούτων μείζονα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.1.7">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγὼ Βαρούχ· Ζῇ Κύριος ὁ θεὸς ὅτι ἐὰν ὑποδείξῃς μοι καὶ ἀκούσω παρά σου λόγον, οὐ μὴ προσθήσω ἔτι λαλῆσαι· προσθήσει ὁ θεὸς ἐν τῇ ἡμέρᾳ τῆς κρίσεως κρίσιν ἐμοί, ἐὰν λαλήσω τοῦ λοιποῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek.1.8">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ὁ ἄγγελος τῶν δυνάμεων· Δεῦρο καὶ ὑποδείξω σοι τὰ μυστήρια τοῦ θεοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="id_3Bar.ver_Greek.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.2.1">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#Picard">Καὶ λαβών με ἤγαγέν με ὅπου ἐστήρικται ὁ οὐρανός, καὶ ὅπου ἦν ποταμὸς ὃν οὐδεὶς δύναται περᾶσαι αὐτόν, οὐδὲ ξένη πνοὴ ἐκ πασῶν ὧν ἔθετο ὁ θεός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.2.2">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#Picard">Καὶ λαβών με ἤγαγέν με ἐπὶ τὸν πρῶτον οὐρανόν, καὶ ἔδειξέ μοι θύραν παμμεγέθη. Καὶ εἶπέν μοι· Εἰσέλθωμεν δι᾽ αὐτῆς. Καὶ εἰσήλθομεν ὡς ἐν πτέρυξιν ὡσεὶ πορείας ὁδοῦ ἡμερῶν τριάκοντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.2.3">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#Picard">Καὶ ὑπέδειξέν μοι ἔνδον τοῦ οὐρανοῦ πεδίον. Καὶ ἦσαν ἄνθρωποι κατοικοῦντες ἐν αὐτῷ, ὧν τὰ πρόσωπα βοῶν, τὰ δὲ κέρατα ἐλάφων, οἱ δὲ πόδες αἰγῶν, αἱ δὲ ὁσφύες ἀρνῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.2.4">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#Picard">Καὶ ἠρώτησα ἐγὼ Βαροὺχ τὸν ἄγγελον· Ἀνάγγειλόν μοι, δέομαί σου, τί ἐστιν τὸ πάχος τοῦ οὐρανοῦ ἐν ᾧ ὡδεύσαμεν, ἢ τί τὸ διάστημα αὐτοῦ, ἢ τί τὸ πεδίον; ἵνα κἀγὼ ἀπαγγείλω τοῖς υἱοῖς τῶν ἀνθρώπων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.2.5">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ὁ ἄγγελος, οὗ τὸ ὄνομα αὐτοῦ Φαμαήλ· Ἡ θύρα αὕτη ἣν ὁρᾷς ἐστὶν τοῦ οὐρανοῦ, καὶ ὅσον διαφέρει ἀπὸ τῆς γῆς ἕως τοῦ οὐρανοῦ, τοσοῦτόν ἐστιν καὶ τὸ πάχος αὐτοῦ· καὶ ὅσον πάλιν ἐστὶ καὶ τὸ τοῦ πεδίου μῆκος οὗ εἶδας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.2.6">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#Picard">Καὶ πάλιν λέγει μοι ὁ ἄγγελος τῶν δυνάμεων· Δεῦρο καὶ ὑποδείξω σοι μείζονα μυστήρια.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.2.7">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#Picard">Εἶπον δὲ ἐγώ· Δέομαί σου, δεῖξόν μοι τί εἰσιν οἱ ἄνθρωποι οὗτοι; Καὶ εἶπέν μοι· Οὗτοί εἰσιν οἱ τὸν πύργον τῆς θεομαχίας οἰκοδομήσαντες· καὶ ἐξετόπησεν αὐτοὺς ὁ Κύριος.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="id_3Bar.ver_Greek.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.3.1">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#Picard">Καὶ λαβών με ὁ ἄγγελος Κυρίου ἤγαγέν με εἰς δεύτερον οὐρανόν. Καὶ ὑπέδειξέν μοι [ἐν] κἀκεῖ θύραν ὁμοίαν τῆς πρώτης. Καὶ εἶπεν· Εἰσέλθωμεν δι᾽ αὐτῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.3.2">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#Picard">Καὶ εἰσήλθομεν ἀναπτερωμένοι ὡσεὶ πορείας ὁδοῦ ἡμερῶν ἑξήκοντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.3.3">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#Picard">Καὶ ἔδειξέν μοι κἀκεῖ πεδίον, καὶ ἦν πλῆρες ἀνθρώπων· ἡ δὲ θεωρία αὐτῶν ὁμοία κυνῶν, οἱ δὲ πόδες ἐλάφων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.3.4">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#Picard">Καὶ ἠρώτησα τὸν ἄγγελον· Δέομαί σου, Κύριε, εἰπέ μοι τίνες εἰσὶν οὗτοι;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.3.5">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν· Οὗτοι εἰσιν οἱ τὴν συμβούλην δόντες τοῦ ποιῆσαι τὸν πύργον. Αὐτοὶ γὰρ οὓς ὁρᾷς ἐξέβαλλον πλήθη ἀνδρῶν τε καὶ γυναικῶν εἰς τὸ πλινθεύειν. Ἐν οἷς μία γυνὴ πλινθεύουσα ἐν τῇ ὥρᾳ τοῦ τεκεῖν αὐτὴν οὐ συνεχωρήθη ἀπολυθῆναι, ἀλλὰ πλινθεύουσα ἔτεκεν· καὶ τὸ τέκνον αὐτῆς ἐν τῷ λεντίῳ ἐβάσταζεν, καὶ ἐπλίνθευεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.3.6">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#Picard">Καὶ ὀφθεὶς αὐτοῖς ὁ Κύριος ἐνήλλαξεν αὐτῶν τὰς γλώσσας, ἀφ᾽ οὗ τὸν πύργον [ὡς] ᾠκοδόμησαν ἐπὶ πήχεις τετρακοσίας ἑξήκοντα τρεῖς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.3.7">
+            <app xml:id="u25_ver_Greek">
+              <lem wit="#Picard">Καὶ λαβόντες τρύπανον ἔσπευδον τρυπῆσαι τὸν οὐρανόν, λέγοντες· Ἴδωμεν ὀστράκινός ἐστιν ὁ οὐρανὸς ἢ χαλκοῦς ἢ σιδηροῦς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek.3.8">
+            <app xml:id="u26_ver_Greek">
+              <lem wit="#Picard">Ταῦτα ἰδὼν ὁ θεὸς οὐ συνεχώρησεν αὐτούς, ἀλλ᾽ ἐπάταξεν αὐτοὺς ἐν ἀορασίᾳ καὶ ἐν γλωσσαλλαγῇ, καὶ κατέστησεν αὐτοὺς ὡς ὁρᾷς.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="id_3Bar.ver_Greek.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.4.1">
+            <app xml:id="u27_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγὼ Βαρούχ· Ἰδού, Κύριε, μεγάλα καὶ θαυμαστὰ ἔδειξάς μοι· καὶ νῦν δεῖξόν μοι πάντα διὰ τὸν Κύριον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.4.2">
+            <app xml:id="u28_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ἄγγελος· Δεῦρο διέλθωμεν &lt;. . .&gt; μετὰ τοῦ ἀγγέλου ἀπὸ τοῦ τόπου ἐκείνου ὡσεὶ πορείας ἡμερῶν ἑκατὸν ὀγδοήκοντα πέντε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.4.3">
+            <app xml:id="u29_ver_Greek">
+              <lem wit="#Picard">Καὶ ἔδειξέν μοι τὸν Ἅͺδην, καὶ ἦν ἡ εἰδέα αὐτοῦ ζοφώδης καὶ βέβηλος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.4.4">
+            <app xml:id="u30_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον· Τίς ἐστιν ὁ δράκων οὗτος; καὶ τίς ὁ περὶ αὐτὸν ἀπηνής;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.4.5">
+            <app xml:id="u31_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν ὁ ἄγγελος· Ὁ μὲν δράκων ἐστὶν ὁ τὰ σώματα τῶν κακῶς τὸν βίον μετερχομένων ἐσθίων· καὶ ὑπ᾽ αὐτῶν τρέφεται·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.4.6">
+            <app xml:id="u32_ver_Greek">
+              <lem wit="#Picard">καὶ οὗτός ἐστιν ὁ Ἅͺδης, ὅστις καὶ αὐτὸς παρόμοιός ἐστιν αὐτοῦ, ἐν ᾧ καὶ πίνει ἀπὸ τῆς θαλάσσης ὡσεὶ πῆχυν μίαν· καὶ οὐκ ἐκλείπει ἀπ᾽ αὐτῆς τι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.4.7">
+            <app xml:id="u33_ver_Greek">
+              <lem wit="#Picard">Ὁ βαροὺχ εἶπεν· Καὶ πῶς; Καὶ εἶπεν ὁ ἄγγελος· Ἄκουσον· Κύριος ὁ θεὸς ἐποίησεν τριακοσίους ἑξήκοντα ποταμούς, ὧν οἱ πρῶτοι πάντων Ἀλφίας καὶ Ἄβυρος καὶ ὁ Γηρικός· καὶ ἀπὸ τούτων οὐκ ἐκλείπει ἡ θάλασσα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek.4.8">
+            <app xml:id="u34_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγώ· Δέομαί σου, δεῖξόν μοι τί τὸ ξύλον τὸ πλανῆσαν τὸν Ἀδάμ;</lem>
+            </app>
+            <app xml:id="u35_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν ὁ ἄγγελος· Ἠ ἄμπελός ἐστιν, ἣν ἐφύτευσεν ὁ ἄγγελος Σαμαὴλ ὅτινα ὠργίσθη Κύριος ὁ θεὸς· καὶ ἐκατηράσατο αὐτὸν καὶ τὴν φυτείαν αὐτοῦ. Ἐν ᾧ καὶ διὰ τοῦτο οὐ συνεχώρησεν τὸν Ἀδὰμ ἅψασθαι αὐτοῦ. Καὶ διὰ τοῦτο φθονήσας ὁ διάβολος ἠπάτησεν αὐτὸν διὰ τῆς ἀμπέλου αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_Greek.4.9">
+            <app xml:id="u36_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγὼ Βαρούχ· Καὶ ἐπεὶ τοσούτου κακοῦ αἰτία γέγονεν ἡ ἄμπελος, καὶ κατάρας ὑπόδικος παρὰ θεοῦ καὶ τοῦ πρωτοπλάστου ἀναίρεσις, πῶς ἄρτι εἰς τοσαύτην χρείαν ἐστίν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_Greek.4.10">
+            <app xml:id="u37_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν ὁ ἄγγελος· Ὀρθῶς ἐρωτᾷς· ὅτε ἐποίησεν ὁ θεὸς τὸν κατακλυσμὸν ἐπὶ τῆς γῆς, καὶ ἀπώλεσε πᾶσαν σάρκα καὶ τὰς τετρακοσίας ἐννέα χιλιάδας τῶν γιγάντων, καὶ ἀνῆλθεν τὸ ὕδωρ ἐπάνω τῶν ὑψηλῶν ἐπὶ πήχεις δεκάπεντε, εἰσῆλθε τὸ ὕδωρ εἰς παράδεισον, καὶ ᾖρεν πᾶν ἄνθος· τὸ δὲ κλῆμα τῆς ἀμπέλου ἐξώρισεν εἰς τὸ παντελὲς καὶ ἐξέβαλεν ἐξω.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Bar.ver_Greek.4.11">
+            <app xml:id="u38_ver_Greek">
+              <lem wit="#Picard">Καὶ ὅταν ἐφάνη ἡ γῆ ἀπὸ τοῦ ὕδατος καὶ ἐξῆλθε Νῶε τῆς κιβωτοῦ, ἤρξατο φυτεύειν ἐκ τῶν εὑρισκομένων φυτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Bar.ver_Greek.4.12">
+            <app xml:id="u39_ver_Greek">
+              <lem wit="#Picard">Εὗρε δὲ καὶ τὸ κλῆμα, καὶ λαβὼν ἐλογίζετο ἐν ἑαυτῷ τί ἄρα ἐστίν. Καὶ ἐλθὼν ἐγὼ εἶπον αὐτῷ τὰ περὶ ἐκείνου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Bar.ver_Greek.4.13">
+            <app xml:id="u40_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν· Ἆρα φυτεύσω αὐτὸ ἢ τί; ἐπεὶ Ἀδὰμ δι᾽ αὐτοῦ ἀπώλετο· μὴ καὶ αὐτὸς ὀργῆς θεοῦ ἐπιτύχω δι᾽ αὐτοῦ. Καὶ ταῦτα λέγων προσηύξατο ὅπως ἀποκαλύψῃ αὐτῷ ὁ θεὸς περὶ αὐτοῦ τί ποιήσει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Bar.ver_Greek.4.14">
+            <app xml:id="u41_ver_Greek">
+              <lem wit="#Picard">Καὶ τεσσαράκοντα ἡμέρας τὴν εὐχὴν ἐκτελέσαντος, καὶ πολλὰ δεηθεὶς καὶ κλαύσας εἶπεν· Κύριε, παρακαλῶ ὅπως ἀποκαλύψῃς μοι τί ποιήσω περὶ τοῦ φυτοῦ τούτου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Bar.ver_Greek.4.15">
+            <app xml:id="u42_ver_Greek">
+              <lem wit="#Picard">Ἀπέστειλε δὲ ὁ θεὸς τὸν ἄγγελον τὸν Σαρασαήλ, καὶ εἶπεν αὐτῷ· Ἀναστάς, Νῶε, φύτευσον τὸ κλῆμα, ὅτι τάδε λέγει Κύριος· Τὸ πικρὸν τούτου μεταβληθήσεται εἰς γλυκύ, καὶ ἡ κατάρα αὐτοῦ γενήσεται εἰς εὐλογίαν, καὶ τὸ παρ᾽ αὐτοῦ γεννώμενον γενήσεται αἷμα θεοῦ, καὶ ὥσπερ ὑπ᾽ αὐτοῦ τὴν καταδίκην ἔλαβεν τὸ γένος τῶν ἀνθρώπων, πάλιν διὰ Ἰησοῦ Χριστοῦ τοῦ Ἐμμανουὴλ ἐν αὐτῷ μέλλουσιν τὴν ἀνάκλησιν προσλαβεῖν, καὶ τὴν εἰς παράδεισον εἴσοδον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Bar.ver_Greek.4.16">
+            <app xml:id="u43_ver_Greek">
+              <lem wit="#Picard">Γίνωσκε τοιγαροῦν, ὦ Βαρούχ, ὅτι ὥσπερ ὁ Ἀδὰμ δι᾽ αὐτοῦ τοῦ ξύλου τὴν καταδίκην ἔλαβεν καὶ τῆς δόξης θεοῦ ἐγυμνώθη, οὕτως καὶ οἱ νῦν ἄνθρωποι τὸν ἐξ αὐτοῦ γεννώμενον οἶνον ἀπλήστως δρῶντες χεῖρον τοῦ Ἀδὰμ τὴν παράβασιν ἀπεργάζονται, καὶ τῆς τοῦ θεοῦ δόξης μακρὰν γίνονται, καὶ τῷ αἰωνίῳ πυρὶ ἑαυτοὺς προξενοῦσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Bar.ver_Greek.4.17">
+            <app xml:id="u44_ver_Greek">
+              <lem wit="#Picard">Πᾶν γὰρ ἀγαθὸν δι᾽ αὐτοῦ γίνεται. Ταῦτα γὰρ ποιοῦσιν οἱ τοῦτον εἰς κόρον πίνοντες· οὔτε ἀδελφὸς ἀδελφὸν ἐλεεῖ, οὔτε πατὴρ υἱόν, οὔ&lt;τε&gt; τέκνα γονεῖς, ἀλλὰ διὰ τῆς πτώσεως τοῦ οἴνου πάντα γίνονται οἷον φόνοι, μοιχεῖαι, πορνεῖαι, ἐπιορκεῖαι, κλοπαί, καὶ τὰ τούτων ὅμοια. Καὶ οὐδὲν ἀγαθὸν δι᾽ αὐτοῦ κατορθοῦται.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="id_3Bar.ver_Greek.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.5.1">
+            <app xml:id="u45_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγὼ Βαροὺχ πρὸς τὸν ἄγγελον· Ἐπερωτῶ σε ἕνα λόγον, Κύριε·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.5.2">
+            <app xml:id="u46_ver_Greek">
+              <lem wit="#Picard">ἐπειδὴ εἶπές μοι ὅτι πίνει ὁ δράκων ἐκ τῆς θαλάσσης πῆχυν μίαν, εἰπέ μοι καὶ πόση ἐστὶν ἡ κοιλία αὐτοῦ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.5.3">
+            <app xml:id="u47_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν ὁ ἄγγελος· Ἡ κοιλία τούτου ὁ Ἅͺδης ἐστίν. Καὶ ὅσον ἀνδρῶν τριακοσίων μόλιβδος ἀκοντίζεται, τοσαύτη ἐστὶν ἡ κοιλία αὐτοῦ. Ἐλθὲ οὖν ὅπως δείξω σοι καὶ μείζονα τούτων ἔργα.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="id_3Bar.ver_Greek.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.6.1">
+            <app xml:id="u48_ver_Greek">
+              <lem wit="#Picard">Καὶ λαβών με ἤγαγέν με ὅπου ὁ ἥλιος ἐκπορεύεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.6.2">
+            <app xml:id="u49_ver_Greek">
+              <lem wit="#Picard">Καὶ ἔδειξέ μοι ἅρμα τετραέλαστον ὃ ἦν ὑπόπυρον. Καὶ ἐπὶ τοῦ ἅρματος ἄνθρωπος καθήμενος φορῶν στέφανον πυρός, ἐλαυνόμενον τὸ ἅρμα ὑπ᾽ ἀγγέλων τεσσαράκοντα. Καὶ ἰδοὺ ὄρνεον περιτρέχον ἔμπροσθεν τοῦ ἡλίου, ὡς ὄρη ἐννέα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.6.3">
+            <app xml:id="u50_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον τὸν ἄγγελον· Τί ἐστι τὸ ὄρνεον τοῦτο; Καὶ λέγει μοι· Τοῦτο ἔστιν ὁ φύλαξ τῆς οἰκουμένης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.6.4">
+            <app xml:id="u51_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον· Κύριε, πῶς ἐστὶν φύλαξ τῆς οἰκουμένης; δίδαξόν με.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.6.5">
+            <app xml:id="u52_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ὁ ἄγγελος· Τοῦτο τὸ ὄρνεον παρατρέχει τῷ ἡλίῳ, καὶ τὰς πτέρυγας ἐφαπλῶν δέχεται τὰς πυριμόρφους ἀκτῖνας αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.6.6">
+            <app xml:id="u53_ver_Greek">
+              <lem wit="#Picard">εἰ μὴ γὰρ ταύτας ἐδέχετο, οὐκ ἂν τῶν ἀνθρώπων γένος ἐσώζετο, οὔτε ἕτερόν τι ζῷον· ἀλλὰ προσέταξεν ὁ θεὸς τοῦτο τὸ ὄρνεον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.6.7">
+            <app xml:id="u54_ver_Greek">
+              <lem wit="#Picard">Καὶ ἥπλωσε τὰς πτέρυγας αὐτοῦ, καὶ εἶδον εἰς τὸ δεξιὸν πτερὸν αὐτοῦ γράμματα παμμεγέθη ὡς ἅλωνος τόπον ἔχων μέτρον ὡσεὶ μοδίων τετρακισχιλίων· καὶ ἦσαν γράμματα χρυσᾶ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek.6.8">
+            <app xml:id="u55_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ὁ ἄγγελος· Ἀνάγνωθι ταῦτα. Καὶ ἀνέγνων. Καὶ ἔλεγον οὕτως· Οὔτε γῆ με τίκτει οὔτε οὐρανός, ἀλλὰ τίκτουσί με πτέρυγες πυρός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_Greek.6.9">
+            <app xml:id="u56_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον· Κύριε, τί ἐστι τὸ ὄρνεον τοῦτο, καὶ τί τὸ ὄνομα αὐτοῦ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_Greek.6.10">
+            <app xml:id="u57_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ὁ ἄγγελος· Φοῖνιξ καλεῖται τὸ ὄνομα αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Bar.ver_Greek.6.11">
+            <app xml:id="u58_ver_Greek">
+              <lem wit="#Picard">Καὶ τί ἐσθίει; Καὶ εἶπέν μοι· Τὸ μάννα τοῦ οὐρανοῦ καὶ τὴν δρόσον τῆς γῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Bar.ver_Greek.6.12">
+            <app xml:id="u59_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον· Ἀφοδεύει τὸ ὄρνεον; Καὶ εἶπέν μοι· Ἀφοδεύει σκώληκα, καὶ τὸ τοῦ σκώληκος ἀφόδευμα γίνεται κινάμωμον, ᾧπερ χρῶνται βασιλεῖς καὶ ἄρχοντες. Μεῖνον δέ, καὶ ὄψει δόξαν θεοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Bar.ver_Greek.6.13">
+            <app xml:id="u60_ver_Greek">
+              <lem wit="#Picard">Καὶ ἐν τῷ ὁμιλεῖν αὐτὸν ἐγένετο βροντὴ ὡς ἦχος βροντῆς, καὶ ἐσαλεύθη ὁ τόπος ἐν ᾧ ἱστάμεθα. Καὶ ἠρώτησα τὸν ἄγγελον· Κύριέ μου τί ἐστιν ἡ φωνὴ αὕτη; Καὶ εἶπέν μοι ὁ ἄγγελος· Ἄρτι ἀνοίγουσιν οἱ ἄγγελοι τὰς τριακοσίας ἑξήκοντα πέντε πύλας τοῦ οὐρανοῦ, καὶ διαχωρίζεται τὸ φῶς ἀπὸ τοῦ σκότους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Bar.ver_Greek.6.14">
+            <app xml:id="u61_ver_Greek">
+              <lem wit="#Picard">Καὶ ἦλθεν φωνὴ λέγουσα· Φωτόδοτα, δὸς τῷ κόσμῳ τὸ φέγγος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Bar.ver_Greek.6.15">
+            <app xml:id="u62_ver_Greek">
+              <lem wit="#Picard">Καὶ ἀκούσας τὸν κτύπον τοῦ ὀρνέου, εἶπον· Κύριε, τί ἐστιν ὁ κτύπος οὗτος;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Bar.ver_Greek.6.16">
+            <app xml:id="u63_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν· Τοῦτο ἔστι τὸ ἐξυπνίζον τοὺς ἐπὶ γῆς ἀλέκτορας· ὡς γὰρ τὰ δίστομα, οὕτως καὶ ὁ ἀλέκτωρ μηνύει τοῖς ἐν τῷ κόσμῳ κατὰ τὴν ἰδίαν λαλίαν. Ὁ ἥλιος γὰρ ἑτοιμάζεται ὑπὸ τῶν ἀγγέλων, καὶ φωνεῖ ὁ ἀλέκτωρ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="id_3Bar.ver_Greek.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.7.1">
+            <app xml:id="u64_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγώ· Καὶ ποῦ ἀποσχολεῖται ὁ ἥλιος ἀφ᾽ οὗ ὁ ἀλέκτωρ φωνεῖ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.7.2">
+            <app xml:id="u65_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ὁ ἄγγελος· Ἄκουσον, Βαρούχ· πάντα ὅσα ἔδειξά σοι ἐν τῷ πρώτῳ καὶ δευτέρῳ οὐρανῷ εἰσίν· καὶ ἐν τῷ τρίτῳ οὐρανῷ διέρχεται ὁ ἥλιος καὶ διδοῖ τῷ κόσμῳ τὸ φέγγος. Ἀλλ᾽ ἔκδεξαι καὶ ὄψει δόξαν θεοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.7.3">
+            <app xml:id="u66_ver_Greek">
+              <lem wit="#Picard">Καὶ ἐν τῷ ὁμιλεῖν με αὐτῷ, ὁρῶ τὸ ὄρνεον καὶ ἀνεφάνη ἔμπροσθεν, καὶ πρὸς μικρὸν μικρὸν ηὔξανε, καὶ ἀνεπληροῦτο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.7.4">
+            <app xml:id="u67_ver_Greek">
+              <lem wit="#Picard">Καὶ ὄπισθεν τούτου τὸν ἥλιον ἐξαστράπτοντα καὶ τοὺς ἀγγέλους μετ᾽ αὐτοῦ φέροντας καὶ στέφανον ἐπὶ τὴν κεφαλὴν αὐτοῦ, οὗ τὴν θέαν οὐκ ἠδυνήθημεν ἀντοφθαλμῆσαι καὶ ἰδεῖν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.7.5">
+            <app xml:id="u68_ver_Greek">
+              <lem wit="#Picard">Καὶ ἅμα τῷ λάμψαι τὸν ἥλιον ἐξέτεινε καὶ ὁ φοῖνιξ τὰς αὐτοῦ πτέρυγας. Ἐγὼ δὲ ἰδὼν τὴν τοιαύτην δόξαν ἐταπεινώθην φόβῳ μεγάλῳ, καὶ ἐξέφυγον καὶ ὑπεκρύβην ἐν ταῖς πτέρυξι τοῦ ἀγγέλου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.7.6">
+            <app xml:id="u69_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ὁ ἄγγελος· Μὴ φοβοῦ, Βαρούχ, ἀλλ᾽ ἔκδεξαι, καὶ ὄψει καὶ τὴν δύσιν αὐτῶν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="id_3Bar.ver_Greek.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.8.1">
+            <app xml:id="u70_ver_Greek">
+              <lem wit="#Picard">Καὶ λαβών με ἤγαγέν με ἐπὶ δυσμάς. Καὶ ὅταν ἦλθεν ὁ καιρὸς τοῦ δῦσαι, ὁρῶ πάλιν ἔμπροσθεν τὸ ὄρνεον ἐρχόμενον καὶ τὸν ἥλιον μετὰ τῶν ἀγγέλων ἐρχόμενον. Καὶ ἅμα τῷ ἐλθεῖν αὐτόν, ὁρῶ τοὺς ἀγγέλους, καὶ ᾖραν τὸν στέφανον ἀπὸ τῆς κορυφῆς αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.8.2">
+            <app xml:id="u71_ver_Greek">
+              <lem wit="#Picard">Τὸ δὲ ὄρνεον ἔστη τεταπεινωμένον καὶ συστέλλον τὰς πτέρυγας αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.8.3">
+            <app xml:id="u72_ver_Greek">
+              <lem wit="#Picard">Καὶ ταῦτα ἰδῶν ἐγὼ εἶπον· Κύριε, διὰ τί ᾖραν τὸν στέφανον ἀπὸ τῆς κεφαλῆς τοῦ ἡλίου, καὶ διὰ τί ἐστι τὸ ὄρνεον τοσοῦτον τεταπεινωμένον;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.8.4">
+            <app xml:id="u73_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι ὁ ἄγγελος· Ὁ στέφανος τοῦ ἡλίου, ὅταν τὴν ἡμέραν διαδράμῃ, λαμβάνουσι τέσσαρες ἄγγελοι τοῦτον καὶ ἀναφέρουσιν εἰς τὸν οὐρανὸν καὶ ἀνακαινίζουσιν αὐτόν, διὰ τὸ μεμολύνθαι αὐτὸν καὶ τὰς ἀκτῖνας αὐτοῦ ἐπὶ τῆς γῆς. Καὶ λοιπὸν καθ᾽ ἑκάστην ἡμέραν οὕτως ἀνακαινίζεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.8.5">
+            <app xml:id="u74_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγὼ Βαρούχ· Κύριε, καὶ διὰ τί μολύνονται αἱ ἀκτῖνες αὐτοῦ ἐπὶ τῆς γῆς; Καὶ εἶπέν μοι ὁ ἄγγελος· θεωρῶν τὰς ἀνομίας καὶ τὰς ἀδικίας τῶν ἀνθρώπων, ἤγουν πορνείας, μοιχείας, κλοπάς, ἁρπαγάς, εἰδωλολατρείας, μέθας, φόνους, ἔρεις, ζήλη, καταλαλίας, γογγυσμούς, ψιθυρισμούς, μαντείας, καὶ τὰ τούτων ὅμοια, ἅτινα οὔκ εἰσι τῷ θεῷ ἀρεστά· διὰ ταῦτα μολύνεται καὶ διὰ τοῦτο ἀνακαινίζεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.8.6">
+            <app xml:id="u75_ver_Greek">
+              <lem wit="#Picard">Περὶ δὲ τοῦ ὀρνέου, τὸ πῶς ἐταπεινώθη· ἐπεὶ διὰ τὸ κατέχειν τὰς τοῦ ἡλίου ἀκτῖνας, διὰ τοῦ πυρὸς καὶ τῆς ὁλοημέρου καύσεως, ὡς δι᾽ αὐτοῦ ταπεινοῦται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.8.7">
+            <app xml:id="u76_ver_Greek">
+              <lem wit="#Picard">Εἰ μὴ γὰρ αἱ τούτου πτέρυγες, ὡς προείπομεν, περιέσκεπον τὰς τοῦ ἡλίου ἀκτῖνας οὐκ ἂν ἐσώθη πνοή.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="id_3Bar.ver_Greek.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.9.1">
+            <app xml:id="u77_ver_Greek">
+              <lem wit="#Picard">Καὶ τούτων συσταλέντων καὶ ἡ νὺξ κατέλαβεν καὶ ἅμα ταύτῃ μετὰ καὶ τῆς σελήνης καὶ μετὰ τῶν ἀστέρων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.9.2">
+            <app xml:id="u78_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγὼ Βαρούχ· Κύριε, δεἶξόν μοι καὶ ταύτην, παρακαλῶ· πῶς ἐξέρχεται; καὶ ποῦ ἀπέρχεται; καὶ ἐν ποίῳ σχήματι περιπατεῖ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.9.3">
+            <app xml:id="u79_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν ὁ ἄγγελος· Ἀνάμεινον, καὶ ὄψει καὶ ταύτην ὡς μετ᾽ ὀλίγον. καὶ τῇ ἐπαύριον ὁρῶ καὶ ταύτην ἐν σχήματι γυναικὸς καὶ καθημένην ἐπὶ ἅρματος τροχοῦ. Καὶ ἦσαν ἔμπροσθεν αὐτῆς βόες, καὶ ἀμνοὶ ἐν τῷ ἅρματι, καὶ πλῆθος ἀγγέλων ὁμοίως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.9.4">
+            <app xml:id="u80_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον· Κύριε, τί εἰσιν οἱ βόες καὶ οἱ ἀμνοί; Καὶ εἶπέν μοι· Ἄγγελοί εἰσι καὶ αὐτοί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.9.5">
+            <app xml:id="u81_ver_Greek">
+              <lem wit="#Picard">Καὶ πάλιν ἠρώτησα· Καὶ τί ἐστιν ὅτι ποτὲ μὲν αὔξει, ποτὲ δὲ λήγει;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.9.6">
+            <app xml:id="u82_ver_Greek">
+              <lem wit="#Picard">Ἄκουσον, ὦ Βαρούχ· ταύτην ἣν βλέπεις ὡραία ἦν γεγραμμένη ὑπὸ θεοῦ ὡς οὐκ ἄλλη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.9.7">
+            <app xml:id="u83_ver_Greek">
+              <lem wit="#Picard">Καὶ ἐν τῇ παραβάσει τοῦ πρώτου Ἀδὰμ παρῆψε τῷ Σαμαὴλ ὅτε τὸν ὄφιν ἔλαβεν ἔνδυμα· οὐκ ἀπεκρύβη ἀλλὰ παρηύξησε. Καὶ ὠργίσθη αὐτῇ ὁ θεός, καὶ ἔθλιψεν αὐτήν, καὶ ἐκολόβωσεν τὰς ἡμέρας αὐτῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek.9.8">
+            <app xml:id="u84_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον· Καὶ πῶς οὐ λάμπει καὶ ἐν παντί, ἀλλ᾽ ἐν τῇ νυκτὶ μόνον; Καὶ εἶπεν ὁ ἄγγελος· Ἄκουσον· ὥσπερ ἐνώπιον βασιλέως οὐ δύνανται οἰκέται παρρησιασθῆναι, οὕτως οὐδὲ ἐνώπιον τοῦ ἡλίου δύνανται ἡ σελήνη καὶ ἀστέρες αὐγάσαι. Ἀεὶ γὰρ οἱ ἀστέρες κρέμανται, ἀλλ᾽ ὑπὸ τοῦ ἡλίου σκεδάζονται. Καὶ ἡ σελήνη σῴα οὖσα ὑπὸ τῆς τοῦ ἡλίου θερμῆς ἐκδαπανᾶται.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="id_3Bar.ver_Greek.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.10.1">
+            <app xml:id="u85_ver_Greek">
+              <lem wit="#Picard">Καὶ ταῦτα πάντα μαθὼν παρὰ τοῦ ἀρχαγγέλου, λαβὼν ἤγαγέν με εἰς τρίτον οὐρανόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.10.2">
+            <app xml:id="u86_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶδον πεδίον ἁπλοῦν, καὶ ἐν μέσῳ αὐτοῦ λίμνην ὑδάτων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.10.3">
+            <app xml:id="u87_ver_Greek">
+              <lem wit="#Picard">Καὶ ἦσαν ἐν αὐτῷ πλήθη ὀρνέων ἐκ πασῶν γενεῶν· ἀλλ᾽ οὐχ ὅμοια τῶν ἐνταῦθα. Ἀλλ᾽ ἴδον τὸν γέρανον ὡς βόας μεγάλους. Καὶ πάντα μεγάλα ὑπερέχοντα τῶν ἐν κόσμῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.10.4">
+            <app xml:id="u88_ver_Greek">
+              <lem wit="#Picard">Καὶ ἠρώτησα τὸν ἄγγελον· Τί ἐστι τὸ πεδίον, καὶ τίς ἡ λίμνη, καὶ τί τὸ περὶ αὐτὴν πλῆθος τῶν ὀρνέων;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.10.5">
+            <app xml:id="u89_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν ὁ ἄγγελος· Ἄκουσον, Βαρούχ· τὸ μὲν πεδίον ἐστι τὸ περιέχον τὴν λίμνην καὶ ἀλλὰ θαυμαστὰ ἐν αὐτῷ, οὗπερ ἔρχονται αἱ ψυχαὶ τῶν δικαίων ὅταν ὁμιλῶσι συνδιάγοντες χοροὶ χοροί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.10.6">
+            <app xml:id="u90_ver_Greek">
+              <lem wit="#Picard">Τὸ δὲ ὕδωρ ἐστὶν ὅπερ τὰ νέφη λαμβάνοντα βρέχουσιν ἐπὶ τῆς γῆς, καὶ αὐξάνουσιν οἱ καρποί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.10.7">
+            <app xml:id="u91_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον πάλιν τὸν ἄγγελον Κυρίου· Τὰ δὲ ὄρνεα; Καὶ εἶπέν μοι· Αὐτά εἰσιν ἃ διαπαντὸς ἀνυμνοῦσι τὸν Κυρίον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek.10.8">
+            <app xml:id="u92_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον ἐγὼ Βαρούχ· Κύριε, καὶ πῶς λέγουσιν οἱ ἄνθρωποι ὅτι ἀπὸ τῆς θαλάσσης ἐστὶ τὸ ὕδωρ ὅπερ βρέχει;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_Greek.10.9">
+            <app xml:id="u93_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν ὁ ἄγγελος· Τὸ μὲν βρέχον ἀπὸ τῆς θαλάσσης καὶ τῶν ἐπὶ γῆς ὑδάτων καὶ τοῦτο ἔστιν· τὸ δὲ τὸ τοὺς καρποὺς ἐνεργοῦν ἐκ τούτου ἐστίν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_Greek.10.10">
+            <app xml:id="u94_ver_Greek">
+              <lem wit="#Picard">Ἴσθι οὖν τοῦ λοιποῦ ὅτι ἐκ τούτου ἐστὶν ὃ λέγεται δρόσος τοῦ οὐρανοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="id_3Bar.ver_Greek.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.11.1">
+            <app xml:id="u95_ver_Greek">
+              <lem wit="#Picard">Καὶ ἀπὸ τούτου λαβών με ὁ ἄγγελος ἤγαγέν με εἰς πέμπτον οὐρανόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.11.2">
+            <app xml:id="u96_ver_Greek">
+              <lem wit="#Picard">Καὶ ἦν ἡ πύλη κεκλεισμένη. Καὶ εἶπον· Κύριε, οὐκ ἀνοίγεται ὁ πυλὼν οὗτος ὅπως εἰσέλθωμεν; Καὶ εἶπέν μοι ὁ ἄγγελος· Οὐ δυνάμεθα εἰσελθεῖν ἕως ἔλθῃ Μιχαὴλ ὁ κλειδοῦχος τῆς βασιλείας τῶν οὐρανῶν. Ἀλλ᾽ ἀνάμεινον καὶ ὄψει τὴν δόξαν τοῦ θεοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.11.3">
+            <app xml:id="u97_ver_Greek">
+              <lem wit="#Picard">Καὶ ἐγένετο φωνὴ μεγάλη ὡς βροντή. Καὶ εἶπον· Κύριε, τί ἐστιν ἡ φωνὴ αὕτη;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.11.4">
+            <app xml:id="u98_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι· Ἄρτι κατέρχεται ὁ ἀρχιστράτηγος Μιχαὴλ ἵνα δέξηται τὰς δεήσεις τῶν ἀνθρώπων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.11.5">
+            <app xml:id="u99_ver_Greek">
+              <lem wit="#Picard">Καὶ ἰδοὺ ἦλθεν φωνή· Ἀνοιγήτωσαν αἱ πύλαι.</lem>
+            </app>
+            <app xml:id="u100_ver_Greek">
+              <lem wit="#Picard">Καὶ ἤνοιξαν· καὶ ἐγένετο τρισμὸς ὡς βροντῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.11.6">
+            <app xml:id="u101_ver_Greek">
+              <lem wit="#Picard">Kαὶ ἦλθεν Μιχαήλ, καὶ συνήντησεν αὐτῷ ὁ ἄγγελος ὁ ὢν μετ᾽ ἐμοῦ, καὶ προσεκύνησεν αὐτόν, καὶ εἶπεν· Χαίροις, ὁ ἐμὸς ἀρχιστράτηγος καὶ παντὸς τοῦ ἡμετέρου τάγματος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.11.7">
+            <app xml:id="u102_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν ὁ ἀρχιστράτηγος Μιχαήλ· Χαίροις καὶ σύ, ὁ ἡμέτερος ἀδελφὸς καὶ ὁ τὰς ἀποκαλύψεις διερμηνεύων τοῖς καλῶς τὸν βίον διερχομένοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek.11.8">
+            <app xml:id="u103_ver_Greek">
+              <lem wit="#Picard">Καὶ οὕτως ἀλλήλους κατασπασάμενοι ἔστησαν. Καὶ ἴδον τὸν ἀρχιστράτηγον Μιχαὴλ κρατοῦντα φιάλην μεγάλην σφόδρα· τὸ βάθος αὐτῆς ὅσον ἀπὸ οὐρανοῦ ἕως τῆς γῆς, καὶ τὸ πλάτος ὅσον ἀπὸ βορρᾶ ἕως νότου. Καὶ εἶπον· Κύριε, τί ἐστιν ὃ κρατεῖ Μιχαὴλ ὁ ἀρχιστράτηγος;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_Greek.11.9">
+            <app xml:id="u104_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι· Τοῦτο ἔστιν ἔνθα προσέρχονται αἱ ἀρεταὶ τῶν δικαίων καὶ ὅσα ἐργάζονται ἀγαθά, ἅτινα δι᾽ αὐτοῦ ἀποκομίζονται ἔμπροσθεν τοῦ ἐπουρανίου θεοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="id_3Bar.ver_Greek.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.12.1">
+            <app xml:id="u105_ver_Greek">
+              <lem wit="#Picard">Καὶ ἐν τῷ ὁμιλεῖν με αὐτοῖς, ἰδοὺ ἦλθον ἄγγελοι φέροντες κανίσκια γέμοντα ἀνθῶν· καὶ ἔδωκαν αὐτὰ πρὸς τὸν Μιχαήλ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.12.2">
+            <app xml:id="u106_ver_Greek">
+              <lem wit="#Picard">Καὶ ἠρώτησα τὸν ἄγγελον· Κύριε, τίνες εἰσὶν οὗτοι, καὶ τί τὰ προσκομιζόμενα παρ᾽ αὐτῶν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.12.3">
+            <app xml:id="u107_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπέν μοι· Οὗτοι εἰσὶν ἄγγελοι ἐπὶ τῶν ἐξουσιῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.12.4">
+            <app xml:id="u108_ver_Greek">
+              <lem wit="#Picard">Καὶ λαβὼν ὁ ἀρχάγγελος τοὺς κανίσκους ἔβαλεν αὐτοὺς εἰς τὴν φιάλην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.12.5">
+            <app xml:id="u109_ver_Greek">
+              <lem wit="#Picard">Καὶ λέγει μοι ὁ ἄγγελος· Ταῦτα τὰ ἄνωθέν εἰσιν αἱ ἀρεταὶ τῶν δικαίων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek.12.6">
+            <app xml:id="u110_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶδον ἑτέρους ἀγγέλους φέροντας κανίσκια κενὰ οὐ γέμοντα. Καὶ ἤρχοντο λυπούμενοι, καὶ οὐκ ἐτόλμησαν ἐγγίσαι, διότι οὐκ εἶχον τέλεια τὰ βραβεῖα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek.12.7">
+            <app xml:id="u111_ver_Greek">
+              <lem wit="#Picard">Καὶ ἐβόησε Μιχαὴλ λέγων· Δεῦτε καὶ ὑμεῖς, ἄγγελοι, φέρετε ὃ ἠνέγκατε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek.12.8">
+            <app xml:id="u112_ver_Greek">
+              <lem wit="#Picard">Καὶ ἐλυπήθη Μιχαὴλ σφόδρα, καὶ ὁ μετ᾽ ἐμοῦ ἄγγελος, διό οὐκ ἐγέμισαν τὴν φιάλην.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="id_3Bar.ver_Greek.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.13.1">
+            <app xml:id="u113_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶθ᾽ οὕτως ἦλθον ἕτεροι ἄγγελοι κλαίοντες καὶ ὀδυρόμενοι καὶ μετὰ φόβου λέγοντες· Ἴδε ἡμᾶς μεμελανωμένοις, Κύριε, ὅτι πονηροῖς ἀνθρώποις παρεδόθημεν, καὶ θέλομεν ὑποχωρῆσαι ὑπ᾽ αὐτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.13.2">
+            <app xml:id="u114_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν Μιχαήλ· Οὐ δύνασθε ὑποχωρεῖν ὑπ᾽ αὐτῶν, ἵνα μὴ εἰς τέλος κυριεύσῃ ὁ Ἐχθρός· ἀλλ᾽ εἴπατέ μοι τί αἰτεῖσθε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.13.3">
+            <app xml:id="u115_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπον· Δεόμεθά σου, Μιχαήλ, ὁ ἀρχιστράτηγος ἡμῶν, μεταθὲς ἡμᾶς ἀπ᾽ αὐτῶν, ὅτι οὐ δυνάμεθα ἀνθρώποις πονηροῖς καὶ ἄφροσι προσμένειν, ὅτι οὐκ ἔστιν ἐν αὐτοῖς οὐδὲν ἀγαθόν, ἀλλὰ πᾶσα ἀδικία καὶ πλεονεξία.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.13.4">
+            <app xml:id="u116_ver_Greek">
+              <lem wit="#Picard">Οὐ γὰρ εἴδομεν αὐτοὺς εἰσελθεῖν ἐν ἐκκλησίᾳ ποτέ, οὐδὲ εἰς πνευματικοὺς πατέρας, οὐδὲ εἰς ἀγαθὸν ἕν. Ἀλλ᾽ ὅπου φόνος, καὶ αὐτοὶ ἐν μέσῳ ἐκεῖ, καὶ ὅπου πορνεῖαι, μοιχεῖαι, κλεψίαι, καταλαλίαι, ἐπιορκίαι, φθόνοι, μέθαι, ἔρεις, ζῆλος, γογγυσμός, ψιθυρισμός, εἰδωλολατρισμός, μαντεία, καὶ τὰ τούτοις ὅμοια, ἐκεῖ εἰσιν ἐργάται τῶν τοιούτων καὶ ἑτέρων χειρόνων. Διὸ δεόμεθα ἐξελθεῖν ἡμᾶς ἀπ᾽ αὐτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek.13.5">
+            <app xml:id="u117_ver_Greek">
+              <lem wit="#Picard">Καὶ εἶπεν Μιχαὴλ τοὺς ἀγγέλους· Ἐκδέξασθε ἕως οὗ μάθω παρὰ Κυρίου τὸ τί γένηται.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="id_3Bar.ver_Greek.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.14.1">
+            <app xml:id="u118_ver_Greek">
+              <lem wit="#Picard">Καὶ αὐτῇ τῇ ὥρᾳ ἀπῆλθεν ὁ Μιχαήλ, καὶ ἐκλείσθησαν αἱ θύραι. Kαὶ ἐγένετο φωνὴ ὡς βροντή.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.14.2">
+            <app xml:id="u119_ver_Greek">
+              <lem wit="#Picard">Kαὶ ἠρώτησα τὸν ἄγγελον· Τί ἐστιν ἡ φωνή; Kαὶ εἶπέν μοι· Ἄρτι προσφέρει Μιχαὴλ τὰς τῶν ἀνθρώπων ἀρετὰς τῷ θεῷ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="id_3Bar.ver_Greek.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.15.1">
+            <app xml:id="u120_ver_Greek">
+              <lem wit="#Picard">Καὶ αὐτῇ τῇ ὥρᾳ κατῆλθεν ὁ Μιχαήλ, καὶ ἠνοίγη ἡ πύλη· καὶ ἤνεγκεν ἔλαιον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.15.2">
+            <app xml:id="u121_ver_Greek">
+              <lem wit="#Picard">Καὶ τοὺς ἀγγέλους τοὺς ἐνεγκόντες τὰ κανίσκια πλήρη ἐπλήρωσεν αὐτὰ ἐλαίῳ λέγων· Ἀπενέγκατε, δότε ἑκατονταπλασίονα τὸν μισθὸν τοῖς φίλοις ἡμῶν καὶ τοῖς ἐμπόνως ἐργασαμένοις τὰ καλὰ ἔργα. Οἱ γὰρ καλῶς σπείραντες καὶ καλῶς ἐπισυνάγουσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.15.3">
+            <app xml:id="u122_ver_Greek">
+              <lem wit="#Picard">Καὶ λέγει καὶ τοὺς ἀποκένους φέροντας τοὺς κανίσκους· Δεῦτε καὶ ὑμεῖς, ἀπολάβετε τὸν μισθὸν καθὼς ἠνέγκατε, καὶ ἀπόδοτε τοῖς υἱοῖς τῶν ἀνθρώπων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.15.4">
+            <app xml:id="u123_ver_Greek">
+              <lem wit="#Picard">Εἶτα λέγει καὶ τοῖς τὰ γέμοντα ἐνεγκοῦσι καὶ τοῖς τὰ ἀπόκενα· Πορευθέντες εὐλογήσατε τοὺς φίλους ἡμῶν, καὶ εἴπατε αὐτοῖς ὅτι τάδε λέγει Κύριος· Ἐπὶ ὀλίγῃ ἐστὲ πιστοί, ἐπὶ πολλῶν ὑμᾶς καταστήσει· εἰσέλθατε εἰς τὴν χαρὰν τοῦ Κυρίου ἡμῶν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="id_3Bar.ver_Greek.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.16.1">
+            <app xml:id="u124_ver_Greek">
+              <lem wit="#Picard">Καὶ στραφεὶς λέγει καὶ τοῖς μηδὲν ἐνεγκοῦσιν· Τάδε λέγει Κύριος· Μή ἐστε σκυθρωποί, καὶ μὴ κλαίετε, μηδὲ ἐάσατε τοὺς υἱοὺς τῶν ἀνθρώπων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.16.2">
+            <app xml:id="u125_ver_Greek">
+              <lem wit="#Picard">Ἀλλ᾽ ἐπειδὴ παρώργισάν με ἐν τοῖς ἔργοις αὐτῶν, πορευθέντες, παραζηλώσατε αὐτοὺς καὶ παροργίσατε, καὶ παραπικράνατε ἐπ᾽ οὐκ ἔθνει, ἐπὶ ἔθνει ἀσυνέτῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.16.3">
+            <app xml:id="u126_ver_Greek">
+              <lem wit="#Picard">Ἔτι σὺν τούτοις ἐξαποστείλατε κάμπην καὶ βροῦχον, ἐρυσίβην καὶ ἀκρίδα, χάλαζαν μετ᾽ ἀστραπῶν καὶ ὀργῆς. Καὶ διχοτομήσατε αὐτοὺς ἐν μαχαίρᾳ καὶ ἐν θανάτῳ, καὶ τὰ τέκνα αὐτῶν ἐν δαιμονίοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.16.4">
+            <app xml:id="u127_ver_Greek">
+              <lem wit="#Picard">Ὅτι οὐκ εἰσήκουσαν τῆς φωνῆς μου, οὐδὲ ἐσυνετήρησαν τῶν ἐντολῶν μου, οὐδὲ ἐποίησαν, ἀλλ᾽ ἐγένοντο καταφρονηταὶ τῶν ἐντολῶν μου καὶ τῶν ἐκκλησιῶν μου, καὶ ὑβρισταὶ τῶν ἱερέων τῶν τοὺς λόγους μου κηρυττόντων αὐτοῖς.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="id_3Bar.ver_Greek.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek.17.1">
+            <app xml:id="u128_ver_Greek">
+              <lem wit="#Picard">Καὶ ἅμα τῷ λόγῳ ἐκλείσθη ἡ θύρα, καὶ ἡμεῖς ἀνεχωρήσαμεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek.17.2">
+            <app xml:id="u129_ver_Greek">
+              <lem wit="#Picard">καὶ λαβών με ὁ ἄγγελος ἀπεκατέστησέν με εἰς τὸ ἀπ᾽ ἀρχῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek.17.3">
+            <app xml:id="u130_ver_Greek">
+              <lem wit="#Picard">Καὶ εἰς ἑαυτὸν ἐλθὼν δόξαν ἔφερον τῷ θεῷ τῷ ἀξιώσαντί με τοιούτου ἀξιώματος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek.17.4">
+            <app xml:id="u131_ver_Greek">
+              <lem wit="#Picard">Ὦ καὶ ὑμεῖς, ἀδελφοί, οἱ τυχόντες τῆς τοιαύτης ἀποκαλύψεως, δοξάσατε καὶ αὐτοὶ τὸν θεόν, ὅπως καὶ αὐτὸς δοξάσῃ ἡμᾶς νῦν, καὶ ἀεί, καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων. Ἀμήν.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="chapter" n="Prologue" xml:id="id_3Bar.ver_English.Prologue">
+          <head>Chapter Prologue</head>
+          <ab type="verse" n="Title" xml:id="id_3Bar.ver_English.Prologue.Title">
+            <app xml:id="uen_1_ver_English">
+              <lem wit="#OCP-Trans">APOCALYPSE OF BARUCH</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.Prologue.1">
+            <app xml:id="uen_2_ver_English">
+              <lem wit="#OCP-Trans">A narrative and revelation of Baruch concerning the unspeakable things he saw by God’s command. Bless me, Master.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.Prologue.2">
+            <app xml:id="uen_3_ver_English">
+              <lem wit="#OCP-Trans">The Apocalypse of Baruch, who was by the Gel River, weeping over the captivity of Jerusalem, at which time Abimelech was protected in the field by the hand of God at the time of Agrippa; and he was sitting at the Beautiful Gate, where the Holy of Holies lay.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="id_3Bar.ver_English.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.1.1">
+            <app xml:id="uen_4_ver_English">
+              <lem wit="#OCP-Trans">Now I, Baruch, weeping in my understanding and being concerned for the people, and how King Nebuchadnezzar was permitted by God to destroy his city, said:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.1.2">
+            <app xml:id="uen_5_ver_English">
+              <lem wit="#OCP-Trans">“Lord, why have you set fire to your vineyard and laid it waste? Why have you done this? And why, Lord, did you not give us over to another discipline, but deliver us to such nations, so that they, mocking, say, ‘Where is their God?’”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.1.3">
+            <app xml:id="uen_6_ver_English">
+              <lem wit="#OCP-Trans">And behold, as I was weeping and saying such things, I saw an angel of the Lord coming and saying to me, “Understand, O man, man of desires, and do not be so concerned about the salvation of Jerusalem, for thus says the Lord God Almighty.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.1.4">
+            <app xml:id="uen_7_ver_English">
+              <lem wit="#OCP-Trans">“For he sent me before you to announce and show you all things of God.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.1.5">
+            <app xml:id="uen_8_ver_English">
+              <lem wit="#OCP-Trans">“For your prayer was heard before him and entered the ears of the Lord God.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.1.6">
+            <app xml:id="uen_9_ver_English">
+              <lem wit="#OCP-Trans">And when he had said these things to me, I was silent. And the angel says to me, “Cease to provoke God, and I will show you other mysteries greater than these.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.1.7">
+            <app xml:id="uen_10_ver_English">
+              <lem wit="#OCP-Trans">And I, Baruch, said, “As the Lord God lives, if you show me and I hear a word from you, I will not speak again; may God add judgment to me on the day of judgment, if I speak hereafter.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_English.1.8">
+            <app xml:id="uen_11_ver_English">
+              <lem wit="#OCP-Trans">And the angel of the powers said to me, “Come and I will show you the mysteries of God.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="id_3Bar.ver_English.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.2.1">
+            <app xml:id="uen_12_ver_English">
+              <lem wit="#OCP-Trans">And taking me, he led me to where heaven is fixed, and where there was a river that no one can cross, nor any strange breath from all that God has established.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.2.2">
+            <app xml:id="uen_13_ver_English">
+              <lem wit="#OCP-Trans">And taking me, he led me to the first heaven, and he showed me a very great door. And he said to me, “Let us enter through it.” And we entered as if on wings, as if traveling a journey of thirty days.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.2.3">
+            <app xml:id="uen_14_ver_English">
+              <lem wit="#OCP-Trans">And he showed me a plain within heaven. And there were people dwelling in it, whose faces were like oxen, their horns like deer, their feet like goats, and their loins like lambs.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.2.4">
+            <app xml:id="uen_15_ver_English">
+              <lem wit="#OCP-Trans">And I, Baruch, asked the angel, “Tell me, I beg you, what is the thickness of the heaven in which we walked, or what its expanse, or what the plain? So that I too may report to the sons of men.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.2.5">
+            <app xml:id="uen_16_ver_English">
+              <lem wit="#OCP-Trans">And the angel, whose name was Phanuel, said to me, “This door which you see is of heaven, and as much as the distance is from the earth to heaven, so much is its thickness; and also as much as is the length of the plain which you saw.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.2.6">
+            <app xml:id="uen_17_ver_English">
+              <lem wit="#OCP-Trans">And again the angel of the powers says to me, “Come, and I will show you greater mysteries.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.2.7">
+            <app xml:id="uen_18_ver_English">
+              <lem wit="#OCP-Trans">And I said, “I beg you, show me who these people are?” And he said to me, “These are those who built the tower of God-defiance; and the Lord displaced them.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="id_3Bar.ver_English.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.3.1">
+            <app xml:id="uen_19_ver_English">
+              <lem wit="#OCP-Trans">And the angel of the Lord took me and led me into a second heaven. And there he showed me a door similar to the first. And he said, “Let us enter through it.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.3.2">
+            <app xml:id="uen_20_ver_English">
+              <lem wit="#OCP-Trans">And we entered, soaring as if traveling a journey of sixty days.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.3.3">
+            <app xml:id="uen_21_ver_English">
+              <lem wit="#OCP-Trans">And there he showed me a plain, and it was full of people; but their appearance was like dogs, and their feet like deer.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.3.4">
+            <app xml:id="uen_22_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel, “I beg you, Lord, tell me who these are?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.3.5">
+            <app xml:id="uen_23_ver_English">
+              <lem wit="#OCP-Trans">And he said, “These are those who gave the counsel to build the tower. For these whom you see cast out multitudes of men and women to make bricks. Among them, one woman, while making bricks, at the hour of giving birth, was not allowed to be released, but she bore while making bricks; and she carried her child in her apron and continued to make bricks.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.3.6">
+            <app xml:id="uen_24_ver_English">
+              <lem wit="#OCP-Trans">And the Lord appeared to them and changed their tongues, from which they built the tower for four hundred and sixty-three cubits.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.3.7">
+            <app xml:id="uen_25_ver_English">
+              <lem wit="#OCP-Trans">And taking a drill, they hastened to drill the heaven, saying, “Let us see if heaven is earthenware or bronze or iron.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_English.3.8">
+            <app xml:id="uen_26_ver_English">
+              <lem wit="#OCP-Trans">God, seeing these things, did not permit them, but struck them with blindness and with a confusion of tongues, and he established them as you see.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="id_3Bar.ver_English.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.4.1">
+            <app xml:id="uen_27_ver_English">
+              <lem wit="#OCP-Trans">And I, Baruch, said, “Behold, Lord, you have shown me great and wonderful things; and now show me everything for the Lord’s sake.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.4.2">
+            <app xml:id="uen_28_ver_English">
+              <lem wit="#OCP-Trans">And the angel said to me, “Come, let us go through &lt;...&gt; with the angel from that place, as if traveling a journey of one hundred and eighty-five days.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.4.3">
+            <app xml:id="uen_29_ver_English">
+              <lem wit="#OCP-Trans">And he showed me Hades, and its appearance was dark and profane.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.4.4">
+            <app xml:id="uen_30_ver_English">
+              <lem wit="#OCP-Trans">And I said, “Who is this dragon? And who is this fierce one around him?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.4.5">
+            <app xml:id="uen_31_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “The dragon is the one who eats the bodies of those who lived their lives evilly; and he is nourished by them.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.4.6">
+            <app xml:id="uen_32_ver_English">
+              <lem wit="#OCP-Trans">“And this is Hades, who is himself similar to him, and from whom he drinks from the sea as if one cubit; and nothing from it diminishes.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.4.7">
+            <app xml:id="uen_33_ver_English">
+              <lem wit="#OCP-Trans">Baruch said, “And how?” And the angel said, “Listen: The Lord God made three hundred and sixty rivers, of which the first of all are Alphias and Abyros and the Gerikos; and from these the sea does not diminish.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_English.4.8">
+            <app xml:id="uen_34_ver_English">
+              <lem wit="#OCP-Trans">And I said, “I beg you, show me what tree it was that deceived Adam?”</lem>
+            </app>
+            <app xml:id="uen_35_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “It is the vine, which the angel Samael planted, with which the Lord God was angered; and he cursed him and his planting. For this reason he did not permit Adam to touch it. And for this reason the devil, being envious, deceived him through his vine.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_English.4.9">
+            <app xml:id="uen_36_ver_English">
+              <lem wit="#OCP-Trans">And I, Baruch, said, “And since the vine has been the cause of so much evil, and is liable to a curse from God, and the destruction of the first-formed human, how is it now of such great utility?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_English.4.10">
+            <app xml:id="uen_37_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “You ask correctly. When God brought the flood upon the earth, and destroyed all flesh and the four hundred nine thousand giants, and the water rose above the high places for fifteen cubits, the water entered into Paradise and carried away every flower. But the vine branch he banished completely and cast it outside.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Bar.ver_English.4.11">
+            <app xml:id="uen_38_ver_English">
+              <lem wit="#OCP-Trans">And when the earth appeared from the water and Noah came out of the ark, he began to plant from the plants that were found.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Bar.ver_English.4.12">
+            <app xml:id="uen_39_ver_English">
+              <lem wit="#OCP-Trans">And he found the vine branch as well, and taking it, he pondered within himself what it might be. And I came and told him about it.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Bar.ver_English.4.13">
+            <app xml:id="uen_40_ver_English">
+              <lem wit="#OCP-Trans">And he said, “Should I plant it, or what? Since Adam perished because of it, lest I also incur the wrath of God because of it.” And saying these things, he prayed that God would reveal to him concerning it what he should do.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Bar.ver_English.4.14">
+            <app xml:id="uen_41_ver_English">
+              <lem wit="#OCP-Trans">And when he had completed his prayer for forty days, and had earnestly pleaded and wept, he said, “Lord, I entreat you to reveal to me what I should do concerning this plant.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Bar.ver_English.4.15">
+            <app xml:id="uen_42_ver_English">
+              <lem wit="#OCP-Trans">And God sent the angel Sarasael and said to him, “Arise, Noah, plant the vine branch, for thus says the Lord: ‘Its bitterness shall be changed into sweetness, and its curse shall become a blessing, and that which is born from it shall become the blood of God, and just as by it the human race received condemnation, again through Jesus Christ, Immanuel, in him they are about to receive recall and entrance into Paradise.’</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Bar.ver_English.4.16">
+            <app xml:id="uen_43_ver_English">
+              <lem wit="#OCP-Trans">Therefore, know, O Baruch, that just as Adam received condemnation through that tree and was stripped of the glory of God, so also now humans, excessively indulging in the wine produced from it, commit a worse transgression than Adam, and become far removed from the glory of God, and prepare themselves for eternal fire.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Bar.ver_English.4.17">
+            <app xml:id="uen_44_ver_English">
+              <lem wit="#OCP-Trans">For every good thing comes about through it. For those who drink it to excess do these things: neither does brother pity brother, nor father son, nor children parents, but through the downfall caused by wine, all things occur, such as murders, adulteries, fornications, perjuries, thefts, and things similar to these. And no good thing is accomplished through it.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="id_3Bar.ver_English.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.5.1">
+            <app xml:id="uen_45_ver_English">
+              <lem wit="#OCP-Trans">And I, Baruch, said to the angel, “I ask you one thing, Lord:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.5.2">
+            <app xml:id="uen_46_ver_English">
+              <lem wit="#OCP-Trans">since you told me that the dragon drinks one cubit from the sea, tell me also how large is its belly?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.5.3">
+            <app xml:id="uen_47_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “Its belly is Hades. And as much lead as three hundred men can throw, so great is its belly. Come, then, that I may show you even greater works than these.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="id_3Bar.ver_English.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.6.1">
+            <app xml:id="uen_48_ver_English">
+              <lem wit="#OCP-Trans">And he took me and led me to where the sun comes out.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.6.2">
+            <app xml:id="uen_49_ver_English">
+              <lem wit="#OCP-Trans">And he showed me a four-horsed chariot, which was fiery. And on the chariot sat a man wearing a crown of fire, the chariot being driven by forty angels. And behold, a bird circling before the sun, like nine mountains.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.6.3">
+            <app xml:id="uen_50_ver_English">
+              <lem wit="#OCP-Trans">And I said to the angel, “What is this bird?” And he said to me, “This is the guardian of the inhabited world.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.6.4">
+            <app xml:id="uen_51_ver_English">
+              <lem wit="#OCP-Trans">And I said, “Lord, how is it the guardian of the inhabited world? Teach me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.6.5">
+            <app xml:id="uen_52_ver_English">
+              <lem wit="#OCP-Trans">And the angel said to me, “This bird runs alongside the sun, and spreading its wings, it receives its fiery rays.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.6.6">
+            <app xml:id="uen_53_ver_English">
+              <lem wit="#OCP-Trans">For if it did not receive them, neither the human race nor any other living creature would be preserved. But God commanded this bird.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.6.7">
+            <app xml:id="uen_54_ver_English">
+              <lem wit="#OCP-Trans">And it spread its wings, and I saw on its right wing letters of immense size, having a measure like a space of about four thousand measures of grain; and the letters were golden.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_English.6.8">
+            <app xml:id="uen_55_ver_English">
+              <lem wit="#OCP-Trans">And the angel said to me, “Read these.” And I read them. And they said thus: “Neither earth nor heaven gives birth to me, but wings of fire give birth to me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_English.6.9">
+            <app xml:id="uen_56_ver_English">
+              <lem wit="#OCP-Trans">And I said, “Lord, what is this bird, and what is its name?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_English.6.10">
+            <app xml:id="uen_57_ver_English">
+              <lem wit="#OCP-Trans">And the angel said to me, “Its name is Phoenix.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Bar.ver_English.6.11">
+            <app xml:id="uen_58_ver_English">
+              <lem wit="#OCP-Trans">“And what does it eat?” And he said to me, “The manna of heaven and the dew of the earth.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Bar.ver_English.6.12">
+            <app xml:id="uen_59_ver_English">
+              <lem wit="#OCP-Trans">And I said, “Does the bird defecate?” And he said to me, “It defecates a worm, and the worm’s defecation becomes cinnamon, which kings and rulers use. But wait, and you will see the glory of God.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Bar.ver_English.6.13">
+            <app xml:id="uen_60_ver_English">
+              <lem wit="#OCP-Trans">And as he was speaking, there was a thunder like the sound of thunder, and the place where we were standing was shaken. And I asked the angel, “My Lord, what is this sound?” And the angel said to me, “Now the angels are opening the three hundred sixty-five gates of heaven, and the light is being separated from the darkness.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Bar.ver_English.6.14">
+            <app xml:id="uen_61_ver_English">
+              <lem wit="#OCP-Trans">And a voice came, saying, “Giver of light, give the world its radiance.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Bar.ver_English.6.15">
+            <app xml:id="uen_62_ver_English">
+              <lem wit="#OCP-Trans">And hearing the sound of the bird, I said, “Lord, what is this sound?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Bar.ver_English.6.16">
+            <app xml:id="uen_63_ver_English">
+              <lem wit="#OCP-Trans">And he said, “This is what awakens the roosters on earth; for just as they are two-mouthed, so also the rooster announces to those in the world in its own language. For the sun is being prepared by the angels, and the rooster crows.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="id_3Bar.ver_English.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.7.1">
+            <app xml:id="uen_64_ver_English">
+              <lem wit="#OCP-Trans">And I said, “And where does the sun delay, from when the rooster crows?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.7.2">
+            <app xml:id="uen_65_ver_English">
+              <lem wit="#OCP-Trans">And the angel said to me, “Listen, Baruch. All that I have shown you is in the first and second heavens; and in the third heaven the sun passes and gives light to the world. But wait and you will see the glory of God.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.7.3">
+            <app xml:id="uen_66_ver_English">
+              <lem wit="#OCP-Trans">And as I was speaking with him, I saw the bird and it appeared before us, and little by little it grew and was filled.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.7.4">
+            <app xml:id="uen_67_ver_English">
+              <lem wit="#OCP-Trans">And behind it, the sun flashing brightly, and the angels with it carrying a crown upon its head, the sight of which we could not endure to gaze upon and see.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.7.5">
+            <app xml:id="uen_68_ver_English">
+              <lem wit="#OCP-Trans">And as soon as the sun shone, the Phoenix also spread its wings. But I, seeing such glory, was humbled with great fear, and fled and hid myself in the wings of the angel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.7.6">
+            <app xml:id="uen_69_ver_English">
+              <lem wit="#OCP-Trans">And the angel said to me, “Do not fear, Baruch, but wait, and you will see their setting as well.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="id_3Bar.ver_English.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.8.1">
+            <app xml:id="uen_70_ver_English">
+              <lem wit="#OCP-Trans">And he took me and led me to the west. And when the time came for it to set, I saw again the bird coming before us, and the sun coming with the angels. And as soon as it came, I saw the angels, and they removed the crown from its head.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.8.2">
+            <app xml:id="uen_71_ver_English">
+              <lem wit="#OCP-Trans">And the bird stood humbled and folding its wings.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.8.3">
+            <app xml:id="uen_72_ver_English">
+              <lem wit="#OCP-Trans">And seeing these things, I said, “Lord, why did they take the crown from the head of the sun, and why is the bird so humbled?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.8.4">
+            <app xml:id="uen_73_ver_English">
+              <lem wit="#OCP-Trans">And the angel said to me, “When the sun completes its course for the day, four angels take its crown and bring it up to heaven and renew it, because it and its rays have been defiled on earth. And so, it is renewed in this way every day.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.8.5">
+            <app xml:id="uen_74_ver_English">
+              <lem wit="#OCP-Trans">And I, Baruch, said, “Lord, and why are its rays defiled on earth?” And the angel said to me, “Seeing the iniquities and injustices of people, that is, acts of prostitution, adultery, thefts, robberies, idolatries, drunken revelries, murders, strife, jealousies, slanders, murmurings, whisperings, divinations, and similar things, which are not pleasing to God; because of these things it is defiled, and for this reason it is renewed.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.8.6">
+            <app xml:id="uen_75_ver_English">
+              <lem wit="#OCP-Trans">“But concerning the bird, how it was humbled: since it restrains the rays of the sun, because of the fire and the burning all day long, it is humbled as if through itself.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.8.7">
+            <app xml:id="uen_76_ver_English">
+              <lem wit="#OCP-Trans">“For if its wings, as we said before, did not cover the sun’s rays, no breath would survive.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="id_3Bar.ver_English.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.9.1">
+            <app xml:id="uen_77_ver_English">
+              <lem wit="#OCP-Trans">And when these things were finished, night came, and with it the moon and the stars.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.9.2">
+            <app xml:id="uen_78_ver_English">
+              <lem wit="#OCP-Trans">And I, Baruch, said, “Lord, show me this too, I pray: how does it come forth? And where does it go? And in what form does it move?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.9.3">
+            <app xml:id="uen_79_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “Wait, and you will see this one too very soon.” And on the next day, I saw this one too, in the form of a woman, seated on a wheeled chariot. And before her were oxen, and lambs in the chariot, and a multitude of angels likewise.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.9.4">
+            <app xml:id="uen_80_ver_English">
+              <lem wit="#OCP-Trans">And I said, “Lord, what are the oxen and the lambs?” And he said to me, “They too are angels.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.9.5">
+            <app xml:id="uen_81_ver_English">
+              <lem wit="#OCP-Trans">And again I asked, “And why is it that sometimes it increases, and sometimes it wanes?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.9.6">
+            <app xml:id="uen_82_ver_English">
+              <lem wit="#OCP-Trans">“Listen, Baruch: this one whom you see was beautifully created by God, like no other.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.9.7">
+            <app xml:id="uen_83_ver_English">
+              <lem wit="#OCP-Trans">“And in the transgression of the first Adam, she joined with Samael when he took the serpent as a garment; she was not hidden but she grew brighter. And God was angry with her, and afflicted her, and shortened her days.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_English.9.8">
+            <app xml:id="uen_84_ver_English">
+              <lem wit="#OCP-Trans">And I said, “And how is it that it does not shine at all times, but only at night?” And the angel said, “Listen: just as servants cannot speak freely before a king, so neither can the moon and stars shine brightly before the sun. For the stars always hang, but they are scattered by the sun. And the moon, being whole, is consumed by the sun's heat.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="id_3Bar.ver_English.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.10.1">
+            <app xml:id="uen_85_ver_English">
+              <lem wit="#OCP-Trans">And having learned all these things from the archangel, he took me and led me into the third heaven.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.10.2">
+            <app xml:id="uen_86_ver_English">
+              <lem wit="#OCP-Trans">And I saw a vast plain, and in its midst a lake of waters.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.10.3">
+            <app xml:id="uen_87_ver_English">
+              <lem wit="#OCP-Trans">And there were in it multitudes of birds of all kinds; but not like those here. But I saw the crane as large oxen. And all were great, surpassing those in the world.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.10.4">
+            <app xml:id="uen_88_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel, “What is the plain, and what is the lake, and what is the multitude of birds around it?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.10.5">
+            <app xml:id="uen_89_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “Listen, Baruch: the plain is that which surrounds the lake, and other wondrous things are in it, where the souls of the righteous come when they converse, living together in choruses upon choruses.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.10.6">
+            <app xml:id="uen_90_ver_English">
+              <lem wit="#OCP-Trans">“And the water is what the clouds take and rain upon the earth, and the fruits grow.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.10.7">
+            <app xml:id="uen_91_ver_English">
+              <lem wit="#OCP-Trans">And I again asked the angel of the Lord, “And the birds?” And he said to me, “They are those who continually hymn the Lord.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_English.10.8">
+            <app xml:id="uen_92_ver_English">
+              <lem wit="#OCP-Trans">And I, Baruch, said, “Lord, and how do people say that the water which rains is from the sea?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_English.10.9">
+            <app xml:id="uen_93_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “That which rains from the sea and the waters on the earth, this also exists; but that which makes the fruits grow is from this [water].”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_English.10.10">
+            <app xml:id="uen_94_ver_English">
+              <lem wit="#OCP-Trans">“Know then for the future that the so-called ‘dew of heaven’ is from this.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="id_3Bar.ver_English.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.11.1">
+            <app xml:id="uen_95_ver_English">
+              <lem wit="#OCP-Trans">And from there the angel took me and led me into the fifth heaven.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.11.2">
+            <app xml:id="uen_96_ver_English">
+              <lem wit="#OCP-Trans">And the gate was shut. And I said, “Lord, will this gate not open so that we may enter?” And the angel said to me, “We cannot enter until Michael, the key-bearer of the kingdom of heaven, comes. But wait and you will see the glory of God.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.11.3">
+            <app xml:id="uen_97_ver_English">
+              <lem wit="#OCP-Trans">And there came a great voice like thunder. And I said, “Lord, what is this voice?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.11.4">
+            <app xml:id="uen_98_ver_English">
+              <lem wit="#OCP-Trans">And he said to me, “Now Michael, the archcommander, is coming down to receive the prayers of humans.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.11.5">
+            <app xml:id="uen_99_ver_English">
+              <lem wit="#OCP-Trans">And behold, a voice came: “Let the gates be opened!”</lem>
+            </app>
+            <app xml:id="uen_100_ver_English">
+              <lem wit="#OCP-Trans">And they opened; and there was a grinding sound like thunder.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.11.6">
+            <app xml:id="uen_101_ver_English">
+              <lem wit="#OCP-Trans">And Michael came, and the angel who was with me met him, and bowed down to him, and said, “Greetings, my archcommander and of all our order.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.11.7">
+            <app xml:id="uen_102_ver_English">
+              <lem wit="#OCP-Trans">And the archcommander Michael said, “Greetings to you too, our brother, and interpreter of revelations to those who live their lives well.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_English.11.8">
+            <app xml:id="uen_103_ver_English">
+              <lem wit="#OCP-Trans">And so, having embraced each other, they stood. And I saw the archcommander Michael holding a very large bowl; its depth as from heaven to earth, and its width as from north to south. And I said, “Lord, what is it that Michael the archcommander holds?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_English.11.9">
+            <app xml:id="uen_104_ver_English">
+              <lem wit="#OCP-Trans">And he said to me, “This is where the virtues of the righteous and all the good works they perform come, which are brought by him before the heavenly God.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="id_3Bar.ver_English.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.12.1">
+            <app xml:id="uen_105_ver_English">
+              <lem wit="#OCP-Trans">And as I was speaking with them, behold, angels came bringing baskets full of flowers; and they gave them to Michael.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.12.2">
+            <app xml:id="uen_106_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel, “Lord, who are these, and what are these things being brought by them?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.12.3">
+            <app xml:id="uen_107_ver_English">
+              <lem wit="#OCP-Trans">And he said to me, “These are angels over the authorities.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.12.4">
+            <app xml:id="uen_108_ver_English">
+              <lem wit="#OCP-Trans">And the archangel took the baskets and poured them into the bowl.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.12.5">
+            <app xml:id="uen_109_ver_English">
+              <lem wit="#OCP-Trans">And the angel says to me, “These things from above are the virtues of the righteous.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_English.12.6">
+            <app xml:id="uen_110_ver_English">
+              <lem wit="#OCP-Trans">And I saw other angels carrying empty baskets, not full. And they came sorrowful, and they did not dare to approach, because they did not have complete rewards.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_English.12.7">
+            <app xml:id="uen_111_ver_English">
+              <lem wit="#OCP-Trans">And Michael cried out, saying, “Come, you too, angels, bring what you have brought.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_English.12.8">
+            <app xml:id="uen_112_ver_English">
+              <lem wit="#OCP-Trans">And Michael was greatly grieved, as was the angel with me, because they did not fill the bowl.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="id_3Bar.ver_English.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.13.1">
+            <app xml:id="uen_113_ver_English">
+              <lem wit="#OCP-Trans">And then other angels came, weeping and lamenting and saying with fear, “Behold us, O Lord, we are blackened, because we have been delivered to wicked men, and we want to withdraw from them.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.13.2">
+            <app xml:id="uen_114_ver_English">
+              <lem wit="#OCP-Trans">And Michael said, “You cannot withdraw from them, lest the Enemy utterly prevail; but tell me what you ask.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.13.3">
+            <app xml:id="uen_115_ver_English">
+              <lem wit="#OCP-Trans">And they said, “We implore you, Michael, our arch-commander, transfer us from them, because we cannot remain with wicked and foolish men, for there is nothing good in them, but all injustice and covetousness.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.13.4">
+            <app xml:id="uen_116_ver_English">
+              <lem wit="#OCP-Trans">“For we have never seen them enter a church, nor (approach) spiritual fathers, nor (do) a single good thing. But wherever there is murder, they are there in the midst, and wherever there are fornications, adulteries, thefts, slanders, perjuries, envy, drunkenness, strife, jealousy, grumbling, whispering, idolatry, divination, and things similar to these, there they are workers of such things and worse ones. Therefore, we implore that we may depart from them.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_English.13.5">
+            <app xml:id="uen_117_ver_English">
+              <lem wit="#OCP-Trans">And Michael said to the angels, “Wait until I learn from the Lord what is to happen.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="id_3Bar.ver_English.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.14.1">
+            <app xml:id="uen_118_ver_English">
+              <lem wit="#OCP-Trans">And at that very hour Michael departed, and the doors were closed. And a sound like thunder occurred.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.14.2">
+            <app xml:id="uen_119_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel, “What is the sound?” And he said to me, “Just now Michael is presenting the virtues of humans to God.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="id_3Bar.ver_English.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.15.1">
+            <app xml:id="uen_120_ver_English">
+              <lem wit="#OCP-Trans">And at that very hour Michael came down, and the gate was opened; and he brought oil.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.15.2">
+            <app xml:id="uen_121_ver_English">
+              <lem wit="#OCP-Trans">And he filled with oil those angels who had brought the full baskets, saying, “Take it away, give a hundredfold reward to our friends and to those who have toiled in good works. For those who sow well also reap well.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.15.3">
+            <app xml:id="uen_122_ver_English">
+              <lem wit="#OCP-Trans">And he says also to those carrying the empty baskets, “Come, you too, receive your reward as you have brought, and give it to the sons of men.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.15.4">
+            <app xml:id="uen_123_ver_English">
+              <lem wit="#OCP-Trans">Then he says to both those who brought the full ones and those who brought the empty ones, “Go and bless our friends, and tell them that thus says the Lord, ‘You have been faithful over a few things; I will set you over many things; enter into the joy of our Lord.’”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="id_3Bar.ver_English.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.16.1">
+            <app xml:id="uen_124_ver_English">
+              <lem wit="#OCP-Trans">And turning, he also says to those who brought nothing, “Thus says the Lord, ‘Do not be sad, and do not weep, nor abandon the sons of men.’”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.16.2">
+            <app xml:id="uen_125_ver_English">
+              <lem wit="#OCP-Trans">“But since they have provoked me with their works, go and provoke them to jealousy and anger, and embitter them with no people, with a senseless nation.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.16.3">
+            <app xml:id="uen_126_ver_English">
+              <lem wit="#OCP-Trans">“Still, with these, send forth cankerworm and devourer, blight and locust, hail with lightning and wrath. And cut them in two with the sword and with death, and their children with demons.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.16.4">
+            <app xml:id="uen_127_ver_English">
+              <lem wit="#OCP-Trans">“For they did not obey my voice, nor observe my commandments, nor did they perform them, but they became despisers of my commandments and my churches, and insolent to the priests who proclaimed my words to them.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="id_3Bar.ver_English.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_English.17.1">
+            <app xml:id="uen_128_ver_English">
+              <lem wit="#OCP-Trans">And with the word, the door was closed, and we withdrew.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_English.17.2">
+            <app xml:id="uen_129_ver_English">
+              <lem wit="#OCP-Trans">And the angel took me and restored me to where I was at the beginning.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_English.17.3">
+            <app xml:id="uen_130_ver_English">
+              <lem wit="#OCP-Trans">And coming to myself, I brought glory to God who deemed me worthy of such honor.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_English.17.4">
+            <app xml:id="uen_131_ver_English">
+              <lem wit="#OCP-Trans">O, and you too, brothers, who have received such a revelation, glorify God yourselves, so that he also may glorify us now, and always, and unto the ages of ages. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Greek (French)" xml:lang="fr" xml:id="ver_Greek__French_">
+        <head>Greek (French)</head>
+        <div type="chapter" n="Prologue" xml:id="id_3Bar.ver_Greek__French_.Prologue">
+          <head>Chapter Prologue</head>
+          <ab type="verse" n="Title" xml:id="id_3Bar.ver_Greek__French_.Prologue.Title">
+            <app xml:id="ufr_1_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Apocalypse de Baruch</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.Prologue.1">
+            <app xml:id="ufr_2_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Récit et apocalypse de Baruch au sujet des mystères ineffables qu'il vit par ordre de Dieu. Bénis, Maître.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.Prologue.2">
+            <app xml:id="ufr_3_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Apocalypse de Baruch, qui se trouvait près du fleuve Gel, pleurant sur la captivité de Jérusalem, à l'époque où Abimélek fut préservé par la main de Dieu dans le domaine d'Agrippa ; et il était assis près de la Belle Porte, où se trouvait le Saint des Saints.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="id_3Bar.ver_Greek__French_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.1.1">
+            <app xml:id="ufr_4_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Voici que moi, Baruch, je pleurais dans mon esprit, affligé au sujet du peuple et de la manière dont le roi Nabuchodonosor avait reçu de Dieu la permission de dévaster sa ville, en disant :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.1.2">
+            <app xml:id="ufr_5_ver_Greek__French_">
+              <lem wit="#OCP-Trans">« Seigneur, pourquoi as-tu brûlé ta vigne et l'as-tu dévastée ? Pourquoi as-tu fait cela ? Et pourquoi, Seigneur, ne nous as-tu pas châtiés par un autre châtiment, mais nous as-tu livrés à de telles nations, de sorte qu'elles disent avec outrage : “Où est leur Dieu ?” »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.1.3">
+            <app xml:id="ufr_6_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et voici que, tandis que je pleurais et disais de telles paroles, je vis un ange du Seigneur qui venait et me disait : « Comprends, ô homme, homme bien-aimé, et ne te tourmente pas à ce point pour le salut de Jérusalem, car ainsi parle le Seigneur Dieu tout-puissant :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.1.4">
+            <app xml:id="ufr_7_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car il m'a envoyé devant toi pour t'annoncer et te montrer toutes les choses de Dieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.1.5">
+            <app xml:id="ufr_8_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car ta prière a été entendue devant lui et elle est parvenue aux oreilles du Seigneur Dieu. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.1.6">
+            <app xml:id="ufr_9_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après qu'il m'eut dit cela, je me calmai. Et l'ange me dit : « Cesse d'irriter Dieu, et je te montrerai d'autres mystères plus grands que ceux-ci. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.1.7">
+            <app xml:id="ufr_10_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Baruch, je dis : « Vive le Seigneur Dieu ! Si tu me montres et que j'entends de toi une parole, je n'ajouterai plus un mot ; que Dieu ajoute un jugement contre moi au jour du jugement si je parle désormais ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek__French_.1.8">
+            <app xml:id="ufr_11_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange des puissances me dit : « Viens, et je te montrerai les mystères de Dieu. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="id_3Bar.ver_Greek__French_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.2.1">
+            <app xml:id="ufr_12_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et m'ayant pris, il me conduisit là où le ciel est affermi, et là où se trouvait un fleuve que nul ne peut traverser, pas même un souffle étranger parmi tous ceux que Dieu a établis.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.2.2">
+            <app xml:id="ufr_13_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et m'ayant pris, il me mena au premier ciel et me montra une porte immense. Et il me dit : « Entrons par elle. » Et nous entrâmes comme sur des ailes, comme une marche d'environ trente jours de route.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.2.3">
+            <app xml:id="ufr_14_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il me montra à l'intérieur du ciel une plaine. Et il y avait des hommes qui y habitaient, dont les visages étaient ceux de bœufs, les cornes celles de cerfs, les pieds ceux de chèvres et les reins ceux d'agneaux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.2.4">
+            <app xml:id="ufr_15_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Baruch, je demandai à l'ange : « Fais-moi savoir, je t'en prie, quelle est l'épaisseur du ciel dans lequel nous avons marché, ou quelle est son étendue, ou ce qu'est cette plaine, afin que moi aussi je l'annonce aux fils des hommes. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.2.5">
+            <app xml:id="ufr_16_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange, dont le nom est Phamaël, me dit : « Cette porte que tu vois est celle du ciel, et autant il y a de distance depuis la terre jusqu'au ciel, telle est aussi son épaisseur, et telle est encore la longueur de la plaine que tu as vue. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.2.6">
+            <app xml:id="ufr_17_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et de nouveau, l'ange des puissances me dit : « Viens, et je te montrerai de plus grands mystères. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.2.7">
+            <app xml:id="ufr_18_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Je t'en prie, montre-moi : qui sont ces hommes ? » Et il me dit : « Ce sont ceux qui ont bâti la tour de la révolte contre Dieu, et le Seigneur les a chassés de leur lieu. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="id_3Bar.ver_Greek__French_.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.3.1">
+            <app xml:id="ufr_19_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange du Seigneur, m'ayant pris, me conduisit au deuxième ciel. Et il me montra là aussi une porte semblable à la première. Et il dit : « Entrons par elle. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.3.2">
+            <app xml:id="ufr_20_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous entrâmes, portés sur des ailes, comme une marche d'environ soixante jours de route.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.3.3">
+            <app xml:id="ufr_21_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il me montra là aussi une plaine, et elle était pleine d'hommes ; leur aspect était semblable à celui des chiens, et leurs pieds à ceux des cerfs.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.3.4">
+            <app xml:id="ufr_22_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je demandai à l'ange : « Je t'en prie, seigneur, dis-moi : qui sont ceux-ci ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.3.5">
+            <app xml:id="ufr_23_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il dit : « Ce sont ceux qui ont donné le conseil de construire la tour. Car ceux-ci mêmes que tu vois contraignaient des multitudes d'hommes et de femmes à mouler des briques. Parmi eux, une femme qui moulait des briques, au moment d'accoucher, ne fut pas autorisée à s'en aller, mais elle enfanta tout en moulant des briques ; et elle portait son enfant dans son tablier et continuait à mouler des briques.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.3.6">
+            <app xml:id="ufr_24_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur, leur étant apparu, confondit leurs langues, après qu'ils eurent bâti la tour jusqu'à quatre cent soixante-trois coudées.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.3.7">
+            <app xml:id="ufr_25_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et prenant une vrille, ils s'efforçaient de percer le ciel, en disant : “Voyons si le ciel est d'argile, de bronze ou de fer.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek__French_.3.8">
+            <app xml:id="ufr_26_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ayant vu cela, Dieu ne le leur permit pas, mais il les frappa de cécité et de confusion des langues, et il les rendit tels que tu les vois. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="id_3Bar.ver_Greek__French_.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.4.1">
+            <app xml:id="ufr_27_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Baruch, je dis : « Voici, seigneur, que tu m'as montré des choses grandes et admirables ; et maintenant montre-moi tout, au nom du Seigneur ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.4.2">
+            <app xml:id="ufr_28_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange me dit : « Viens, traversons... » [et j'avançai] avec l'ange depuis ce lieu-là, environ cent quatre-vingt-cinq jours de marche.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.4.3">
+            <app xml:id="ufr_29_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il me montra l'Hadès, et son aspect était ténébreux et profane.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.4.4">
+            <app xml:id="ufr_30_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Qui est ce dragon, et qui est cet être cruel autour de lui ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.4.5">
+            <app xml:id="ufr_31_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « Le dragon est celui qui mange les corps de ceux qui passent leur vie dans le mal, et il se nourrit d'eux ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.4.6">
+            <app xml:id="ufr_32_ver_Greek__French_">
+              <lem wit="#OCP-Trans">et c'est là l'Hadès, qui lui ressemble lui-même, et il boit de la mer environ une coudée, sans que rien n'en diminue. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.4.7">
+            <app xml:id="ufr_33_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Baruch dit : « Et comment cela ? » Et l'ange dit : « Écoute : le Seigneur Dieu a fait trois cent soixante fleuves, dont les tout premiers sont Alphée, Abyre et le Gérique ; et grâce à ceux-ci, la mer ne diminue pas. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek__French_.4.8">
+            <app xml:id="ufr_34_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Je t'en prie, montre-moi : quel est l'arbre qui a égaré Adam ? »</lem>
+            </app>
+            <app xml:id="ufr_35_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « C'est la vigne que planta l'ange Samaël, contre qui le Seigneur Dieu s'irrita ; et il le maudit, lui et sa plantation. C'est pourquoi aussi il ne permit pas à Adam d'y toucher. Et pour cette raison, le diable, par jalousie, le trompa au moyen de sa vigne. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_Greek__French_.4.9">
+            <app xml:id="ufr_36_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Baruch, je dis : « Puisque la vigne a été la cause d'un si grand mal, passible de malédiction devant Dieu et cause de la ruine du premier homme, pourquoi est-elle maintenant d'un si grand usage ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_Greek__French_.4.10">
+            <app xml:id="ufr_37_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « Tu demandes avec raison. Quand Dieu fit venir le déluge sur la terre et fit périr toute chair ainsi que les quatre cent neuf mille géants, et que l'eau monta de quinze coudées au-dessus des hautes montagnes, l'eau pénétra dans le paradis et emporta toute fleur ; quant au sarment de la vigne, elle le déracina complètement et le rejeta dehors.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Bar.ver_Greek__French_.4.11">
+            <app xml:id="ufr_38_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsque la terre apparut hors de l'eau et que Noé sortit de l'arche, il commença à planter parmi les plantes qu'il trouvait.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Bar.ver_Greek__French_.4.12">
+            <app xml:id="ufr_39_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il trouva aussi le sarment et, l'ayant pris, il se demandait en lui-même ce que c'était. Et moi, étant venu, je lui racontai ce qui le concernait.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Bar.ver_Greek__French_.4.13">
+            <app xml:id="ufr_40_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il dit : “Dois-je donc le planter, ou que faire ? Puisqu'Adam a péri par lui, ne vais-je pas moi aussi encourir la colère de Dieu à cause de lui ?” Et disant cela, il pria pour que Dieu lui révélât ce qu'il devait faire à son sujet.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Bar.ver_Greek__French_.4.14">
+            <app xml:id="ufr_41_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après avoir accompli sa prière pendant quarante jours, ayant beaucoup supplié et pleuré, il dit : “Seigneur, je t'en conjure, révèle-moi ce que je dois faire de cette plante.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Bar.ver_Greek__French_.4.15">
+            <app xml:id="ufr_42_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Dieu envoya alors l'ange Sarasael, qui lui dit : “Lève-toi, Noé, plante le sarment, car ainsi parle le Seigneur : son amertume sera changée en douceur, et sa malédiction se transformera en bénédiction, et ce qui en naîtra deviendra le sang de Dieu ; et de même que par lui le genre humain a reçu la condamnation, de même par Jésus-Christ l'Emmanuel ils recevront en lui le rappel et l'entrée dans le paradis.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Bar.ver_Greek__French_.4.16">
+            <app xml:id="ufr_43_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Sache donc, ô Baruch, que de même qu'Adam a reçu la condamnation par cet arbre et a été dépouillé de la gloire de Dieu, de même les hommes d'aujourd'hui, buvant avec avidité le vin qui en est issu, commettent une transgression pire que celle d'Adam, s'éloignent de la gloire de Dieu et se livrent eux-mêmes au feu éternel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_3Bar.ver_Greek__French_.4.17">
+            <app xml:id="ufr_44_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car aucun bien ne s'accomplit par lui. En effet, voici ce que font ceux qui en boivent jusqu'à satiété : ni le frère n'a pitié de son frère, ni le père de son fils, ni les enfants de leurs parents ; mais par la chute causée par le vin arrivent toutes sortes de maux, tels que meurtres, adultères, débauches, parjures, vols et choses semblables. Et aucun bien ne s'accomplit par lui. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="id_3Bar.ver_Greek__French_.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.5.1">
+            <app xml:id="ufr_45_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Baruch, je dis à l'ange : « Je te poserai une question, seigneur :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.5.2">
+            <app xml:id="ufr_46_ver_Greek__French_">
+              <lem wit="#OCP-Trans">puisque tu m'as dit que le dragon boit une coudée de la mer, dis-moi aussi quelle est la taille de son ventre ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.5.3">
+            <app xml:id="ufr_47_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « Son ventre est l'Hadès. Et aussi loin qu'un plomb lancé par trois cents hommes peut être projeté, telle est la taille de son ventre. Viens donc, afin que je te montre des œuvres encore plus grandes que celles-ci. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="id_3Bar.ver_Greek__French_.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.6.1">
+            <app xml:id="ufr_48_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et m'ayant pris, il me conduisit là où le soleil se lève.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.6.2">
+            <app xml:id="ufr_49_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il me montra un char à quatre chevaux qui était embrasé. Et sur le char était assis un homme portant une couronne de feu, le char étant conduit par quarante anges. Et voici qu'un oiseau courait devant le soleil, grand comme neuf montagnes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.6.3">
+            <app xml:id="ufr_50_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis à l'ange : « Quel est cet oiseau ? » Et il me dit : « C'est le gardien du monde habité. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.6.4">
+            <app xml:id="ufr_51_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Seigneur, comment est-il le gardien du monde ? Enseigne-moi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.6.5">
+            <app xml:id="ufr_52_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange me dit : « Cet oiseau court aux côtés du soleil, et déployant ses ailes, il reçoit ses rayons semblables au feu ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.6.6">
+            <app xml:id="ufr_53_ver_Greek__French_">
+              <lem wit="#OCP-Trans">car s'il ne les recevait pas, le genre humain ne serait pas préservé, ni aucun autre être vivant ; mais Dieu a préposé cet oiseau. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.6.7">
+            <app xml:id="ufr_54_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il déploya ses ailes, et je vis sur son aile droite des lettres immenses, ayant la dimension d'une aire d'environ quatre mille boisseaux ; et c'étaient des lettres d'or.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek__French_.6.8">
+            <app xml:id="ufr_55_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange me dit : « Lis ceci. » Et je lus. Et cela disait ainsi : « Ni la terre ne m'engendre, ni le ciel, mais des ailes de feu m'engendrent. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_Greek__French_.6.9">
+            <app xml:id="ufr_56_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Seigneur, quel est cet oiseau, et quel est son nom ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_Greek__French_.6.10">
+            <app xml:id="ufr_57_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange me dit : « Son nom s'appelle Phénix. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_3Bar.ver_Greek__French_.6.11">
+            <app xml:id="ufr_58_ver_Greek__French_">
+              <lem wit="#OCP-Trans">« Et que mange-t-il ? » Et il me dit : « La manne du ciel et la rosée de la terre. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_3Bar.ver_Greek__French_.6.12">
+            <app xml:id="ufr_59_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis : « L'oiseau fiente-t-il ? » Et il me dit : « Il fiente un ver, et la fiente du ver devient de la cinnamome, dont usent les rois et les princes. Mais attends, et tu verras la gloire de Dieu. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_3Bar.ver_Greek__French_.6.13">
+            <app xml:id="ufr_60_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et tandis qu'il parlait, il y eut un tonnerre semblable au grondement du tonnerre, et le lieu où nous nous tenions fut ébranlé. Et je demandai à l'ange : « Mon seigneur, quel est ce bruit ? » Et l'ange me dit : « À l'instant même, les anges ouvrent les trois cent soixante-cinq portes du ciel, et la lumière est séparée des ténèbres. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_3Bar.ver_Greek__French_.6.14">
+            <app xml:id="ufr_61_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et une voix retentit, disant : « Donateur de lumière, donne au monde la clarté ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_3Bar.ver_Greek__French_.6.15">
+            <app xml:id="ufr_62_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ayant entendu le battement de l'oiseau, je dis : « Seigneur, quel est ce battement ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_3Bar.ver_Greek__French_.6.16">
+            <app xml:id="ufr_63_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il dit : « C'est ce qui réveille les coqs sur la terre ; car tout comme les trompettes, ainsi le coq avertit ceux qui sont dans le monde selon son propre langage. Car le soleil est préparé par les anges, et le coq chante. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="id_3Bar.ver_Greek__French_.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.7.1">
+            <app xml:id="ufr_64_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, je dis : « Et où le soleil s'occupe-t-il depuis que le coq a chanté ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.7.2">
+            <app xml:id="ufr_65_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange me dit : « Écoute, Baruch : tout ce que je t'ai montré se trouve dans le premier et le deuxième ciel ; et dans le troisième ciel, le soleil traverse et donne au monde la clarté. Mais attends, et tu verras la gloire de Dieu. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.7.3">
+            <app xml:id="ufr_66_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et pendant que je parlais avec lui, je vois l'oiseau qui apparut devant lui, et peu à peu il grandissait et s'accomplissait en plénitude.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.7.4">
+            <app xml:id="ufr_67_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et derrière lui, le soleil resplendissant et les anges le portant avec lui, ainsi qu'une couronne sur sa tête, dont nous ne pûmes soutenir le regard et la vue.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.7.5">
+            <app xml:id="ufr_68_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et dès que le soleil brilla, le phénix étendit lui aussi ses ailes. Mais moi, voyant une telle gloire, je fus terrassé d'une grande frayeur, et je m'enfuis et me cachai sous les ailes de l'ange.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.7.6">
+            <app xml:id="ufr_69_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange me dit : « Ne crains pas, Baruch, mais attends, et tu verras aussi leur coucher. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="id_3Bar.ver_Greek__French_.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.8.1">
+            <app xml:id="ufr_70_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et me prenant, il me conduisit vers le couchant. Et quand vint le temps du coucher, je vois de nouveau devant lui l'oiseau qui venait, et le soleil venant avec les anges. Et dès qu'il fut venu, je vois les anges, et ils ôtèrent la couronne de son sommet.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.8.2">
+            <app xml:id="ufr_71_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais l'oiseau se tint là, abattu et repliant ses ailes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.8.3">
+            <app xml:id="ufr_72_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et voyant cela, je dis : « Seigneur, pourquoi ont-ils ôté la couronne de la tête du soleil, et pourquoi l'oiseau est-il si abattu ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.8.4">
+            <app xml:id="ufr_73_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange me dit : « La couronne du soleil, lorsqu'il a parcouru le jour, quatre anges la prennent, la montent au ciel et la renouvellent, parce qu'elle et ses rayons ont été souillés sur la terre. Et c'est ainsi que chaque jour elle est renouvelée. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.8.5">
+            <app xml:id="ufr_74_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Baruch, je dis : « Seigneur, et pourquoi ses rayons sont-ils souillés sur la terre ? » Et l'ange me dit : « En voyant les impiétés et les injustices des hommes, à savoir les fornications, adultères, vols, rapines, idolâtries, ivrogneries, meurtres, querelles, jalousies, médisances, murmures, chuchotements, divinations et les choses semblables à celles-ci, qui ne sont pas agréables à Dieu ; c'est à cause de cela qu'elle est souillée, et c'est pourquoi elle est renouvelée.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.8.6">
+            <app xml:id="ufr_75_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Quant à l'oiseau, comment il a été abattu : c'est parce qu'il retient les rayons du soleil, en raison du feu et de la brûlure de tout le jour, qu'il est ainsi abattu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.8.7">
+            <app xml:id="ufr_76_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car si ses ailes, comme nous l'avons dit précédemment, ne protégeaient pas les rayons du soleil, aucun souffle de vie ne serait sauvé. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="id_3Bar.ver_Greek__French_.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.9.1">
+            <app xml:id="ufr_77_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ceux-ci s'étant retirés, la nuit survint, et avec elle aussi la lune et les étoiles.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.9.2">
+            <app xml:id="ufr_78_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Baruch, je dis : « Seigneur, montre-moi aussi celle-ci, je t'en prie : comment sort-elle ? et où s'en va-t-elle ? et sous quelle forme chemine-t-elle ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.9.3">
+            <app xml:id="ufr_79_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « Attends, et tu la verras d'ici peu. » Et le lendemain, je la vois elle aussi sous la forme d'une femme et assise sur un char à roues. Et il y avait devant elle des bœufs, et des agneaux sur le char, et une multitude d'anges pareillement.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.9.4">
+            <app xml:id="ufr_80_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Seigneur, que sont les bœufs et les agneaux ? » Et il me dit : « Eux aussi sont des anges. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.9.5">
+            <app xml:id="ufr_81_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je demandai de nouveau : « Et pourquoi tantôt croît-elle, et tantôt décroît-elle ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.9.6">
+            <app xml:id="ufr_82_ver_Greek__French_">
+              <lem wit="#OCP-Trans">« Écoute, ô Baruch : celle-ci que tu vois avait été façonnée par Dieu belle comme nulle autre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.9.7">
+            <app xml:id="ufr_83_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lors de la transgression du premier Adam, elle s'attacha à Samaël lorsqu'il prit le serpent pour vêtement ; elle ne se cacha pas, mais crût davantage. Et Dieu s'irrita contre elle, il l'affligea et raccourcit ses jours. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek__French_.9.8">
+            <app xml:id="ufr_84_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Et comment ne brille-t-elle pas en tout temps, mais seulement la nuit ? » Et l'ange dit : « Écoute : de même que devant un roi des serviteurs ne peuvent parler avec assurance, de même devant le soleil la lune et les étoiles ne peuvent rayonner. Car les étoiles sont toujours suspendues, mais elles sont effacées par le soleil. Et la lune, tout en demeurant intacte, est consumée par la chaleur du soleil. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="id_3Bar.ver_Greek__French_.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.10.1">
+            <app xml:id="ufr_85_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après que j'eus appris tout cela de l'archange, il me prit et me conduisit dans le troisième ciel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.10.2">
+            <app xml:id="ufr_86_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je vis une plaine unie, et au milieu d'elle un lac d'eaux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.10.3">
+            <app xml:id="ufr_87_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il y avait en lui des multitudes d'oiseaux de toutes espèces, mais non semblables à ceux d'ici-bas. Car je vis la grue comme de grands bœufs ; et tous étaient immenses, surpassant ceux du monde.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.10.4">
+            <app xml:id="ufr_88_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je demandai à l'ange : « Qu'est-ce que cette plaine, et qu'est-ce que ce lac, et quelle est cette multitude d'oiseaux autour de lui ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.10.5">
+            <app xml:id="ufr_89_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « Écoute, Baruch : la plaine est celle qui entoure le lac ainsi que d'autres merveilles en lui, où viennent les âmes des justes lorsqu'elles s'entretiennent en vivant ensemble en chœurs nombreux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.10.6">
+            <app xml:id="ufr_90_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'eau est celle que les nuages recueillent et font pleuvoir sur la terre, et les fruits croissent. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.10.7">
+            <app xml:id="ufr_91_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je dis de nouveau à l'ange du Seigneur : « Et les oiseaux ? » Et il me dit : « Ce sont eux qui louent sans cesse le Seigneur. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek__French_.10.8">
+            <app xml:id="ufr_92_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Baruch, je dis : « Seigneur, et comment les hommes disent-ils que c'est de la mer que provient l'eau qui pleut ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_Greek__French_.10.9">
+            <app xml:id="ufr_93_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « Ce qui pleut de la mer et des eaux sur la terre existe bien ; mais ce qui fait germer les fruits provient de celle-ci.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_3Bar.ver_Greek__French_.10.10">
+            <app xml:id="ufr_94_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Sache donc désormais que c'est de celle-ci que provient ce que l'on appelle la rosée du ciel. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="id_3Bar.ver_Greek__French_.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.11.1">
+            <app xml:id="ufr_95_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et de là, l'ange me prit et me conduisit dans le cinquième ciel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.11.2">
+            <app xml:id="ufr_96_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et la porte était fermée. Et je dis : « Seigneur, cette porte ne s'ouvre-t-elle pas afin que nous entrions ? » Et l'ange me dit : « Nous ne pouvons entrer jusqu'à ce que vienne Michel, le gardien des clés du royaume des cieux. Mais attends, et tu verras la gloire de Dieu. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.11.3">
+            <app xml:id="ufr_97_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il y eut une grande voix semblable à un tonnerre. Et je dis : « Seigneur, quelle est cette voix ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.11.4">
+            <app xml:id="ufr_98_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il me dit : « À l'instant même descend l'archistratège Michel, afin de recevoir les prières des hommes. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.11.5">
+            <app xml:id="ufr_99_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et voici qu'une voix retentit : « Que les portes soient ouvertes ! »</lem>
+            </app>
+            <app xml:id="ufr_100_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et elles s'ouvrirent ; et il y eut un grincement semblable à un tonnerre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.11.6">
+            <app xml:id="ufr_101_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et Michel vint, et l'ange qui était avec moi le rencontra, se prosterna devant lui et dit : « Salut à toi, mon archistratège et celui de tout notre ordre ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.11.7">
+            <app xml:id="ufr_102_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'archistratège Michel dit : « Salut à toi aussi, notre frère, toi qui interprètes les révélations pour ceux qui mènent une vie droite ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek__French_.11.8">
+            <app xml:id="ufr_103_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après s'être ainsi embrassés, ils s'arrêtèrent. Et je vis l'archistratège Michel tenant une très grande coupe ; sa profondeur était aussi grande que la distance du ciel à la terre, et sa largeur aussi grande que du nord au sud. Et je dis : « Seigneur, qu'est-ce que tient Michel l'archistratège ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_3Bar.ver_Greek__French_.11.9">
+            <app xml:id="ufr_104_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il me dit : « C'est ici que parviennent les vertus des justes et les bonnes œuvres qu'ils accomplissent, lesquelles sont portées par lui devant le Dieu céleste. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="id_3Bar.ver_Greek__French_.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.12.1">
+            <app xml:id="ufr_105_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et tandis que je parlais avec eux, voici que des anges vinrent, portant des corbeilles pleines de fleurs ; et ils les donnèrent à Michel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.12.2">
+            <app xml:id="ufr_106_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je demandai à l'ange : « Seigneur, qui sont-ils, et que sont ces choses qu'ils apportent ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.12.3">
+            <app xml:id="ufr_107_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il me dit : « Ce sont les anges préposés aux puissances. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.12.4">
+            <app xml:id="ufr_108_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'archange, prenant les corbeilles, les versa dans la coupe.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.12.5">
+            <app xml:id="ufr_109_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange me dit : « Ces choses d'en haut sont les vertus des justes. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_3Bar.ver_Greek__French_.12.6">
+            <app xml:id="ufr_110_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je vis d'autres anges portant des corbeilles vides, qui n'étaient pas pleines. Et ils venaient tout tristes, et ils n'osaient pas s'approcher, parce qu'ils n'avaient pas de récompenses complètes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_3Bar.ver_Greek__French_.12.7">
+            <app xml:id="ufr_111_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et Michel s'écria, disant : « Venez, vous aussi, anges, apportez ce que vous avez apporté ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_3Bar.ver_Greek__French_.12.8">
+            <app xml:id="ufr_112_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et Michel fut grandement attristé, ainsi que l'ange qui était avec moi, parce qu'ils n'avaient pas rempli la coupe.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="id_3Bar.ver_Greek__French_.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.13.1">
+            <app xml:id="ufr_113_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ensuite vinrent d'autres anges, pleurant et se lamentant, et disant avec crainte : « Vois-nous assombris, Seigneur, car nous avons été confiés à des hommes mauvais, et nous voulons nous éloigner d'eux ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.13.2">
+            <app xml:id="ufr_114_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et Michel dit : « Vous ne pouvez pas vous éloigner d'eux, de peur que l'Ennemi ne l'emporte définitivement ; mais dites-moi ce que vous demandez. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.13.3">
+            <app xml:id="ufr_115_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ils dirent : « Nous te supplions, Michel, notre archistratège, retire-nous d'auprès d'eux, car nous ne pouvons plus rester auprès d'hommes mauvais et insensés, parce qu'il n'y a en eux aucun bien, mais toute injustice et cupidité.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.13.4">
+            <app xml:id="ufr_116_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car nous ne les avons jamais vus entrer dans une église, ni auprès de pères spirituels, ni dans aucune bonne action. Mais là où il y a un meurtre, ils sont là au milieu ; et là où se trouvent débauches, adultères, vols, calomnies, parjures, jalousies, ivrogneries, querelles, envies, murmures, médisances, idolâtrie, divination et choses semblables, ils sont là les artisans de tels actes et d'autres pires encore. C'est pourquoi nous demandons de nous retirer d'auprès d'eux. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_3Bar.ver_Greek__French_.13.5">
+            <app xml:id="ufr_117_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et Michel dit aux anges : « Attendez jusqu'à ce que j'apprenne du Seigneur ce qui doit arriver. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="id_3Bar.ver_Greek__French_.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.14.1">
+            <app xml:id="ufr_118_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et à cette heure même Michel s'en alla, et les portes furent fermées. Et il y eut une voix semblable au tonnerre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.14.2">
+            <app xml:id="ufr_119_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je demandai à l'ange : « Qu'est-ce que cette voix ? » Et il me dit : « En ce moment même, Michel présente à Dieu les vertus des hommes. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="id_3Bar.ver_Greek__French_.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.15.1">
+            <app xml:id="ufr_120_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et à cette heure même Michel descendit, et la porte s'ouvrit ; et il apportait de l'huile.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.15.2">
+            <app xml:id="ufr_121_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et quant aux anges qui avaient apporté les corbeilles pleines, il les remplit d'huile, disant : « Emportez, donnez une récompense au centuple à nos amis et à ceux qui ont accompli avec peine de bonnes œuvres. Car ceux qui ont bien semé récoltent aussi abondamment. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.15.3">
+            <app xml:id="ufr_122_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il dit aussi à ceux qui portaient les corbeilles à moitié vides : « Venez, vous aussi, recevez la rétribution selon ce que vous avez apporté, et rendez-la aux fils des hommes. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.15.4">
+            <app xml:id="ufr_123_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Puis il dit à la fois à ceux qui avaient apporté les corbeilles pleines et à ceux qui avaient les corbeilles à moitié vides : « Allez, bénissez nos amis et dites-leur : Ainsi parle le Seigneur : Vous avez été fidèles en peu de choses, il vous établira sur beaucoup ; entrez dans la joie de notre Seigneur. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="id_3Bar.ver_Greek__French_.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.16.1">
+            <app xml:id="ufr_124_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et se tournant, il dit aussi à ceux qui n'avaient rien apporté : « Ainsi parle le Seigneur : Ne soyez pas tristes, et ne pleurez pas, et n'abandonnez pas les fils des hommes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.16.2">
+            <app xml:id="ufr_125_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais puisqu'ils m'ont irrité par leurs œuvres, allez, rendez-les jaloux, irritez-les et provoquez leur amertume par une nation qui n'en est pas une, par une nation sans intelligence.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.16.3">
+            <app xml:id="ufr_126_ver_Greek__French_">
+              <lem wit="#OCP-Trans">En outre, envoyez contre eux la chenille et le hanneton, la rouille et la sauterelle, la grêle avec des éclairs et de la fureur. Et frappez-les par l'épée et par la mort, et leurs enfants par des démons.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.16.4">
+            <app xml:id="ufr_127_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car ils n'ont pas écouté ma voix, ils n'ont pas gardé mes commandements, ni ne les ont mis en pratique, mais ils sont devenus des contempteurs de mes commandements et de mes églises, et des offenseurs des prêtres qui leur prêchaient mes paroles. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="id_3Bar.ver_Greek__French_.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="1" xml:id="id_3Bar.ver_Greek__French_.17.1">
+            <app xml:id="ufr_128_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et aussitôt après ces paroles, la porte fut fermée, et nous nous retirâmes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_3Bar.ver_Greek__French_.17.2">
+            <app xml:id="ufr_129_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange, m'ayant pris, me ramena à mon point de départ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_3Bar.ver_Greek__French_.17.3">
+            <app xml:id="ufr_130_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et étant revenu à moi-même, je rendis gloire à Dieu qui m'avait jugé digne d'un tel honneur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_3Bar.ver_Greek__French_.17.4">
+            <app xml:id="ufr_131_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ô vous aussi, frères, qui avez reçu une telle révélation, glorifiez vous-mêmes Dieu, afin qu'il nous glorifie lui aussi, maintenant et toujours, et pour les siècles des siècles. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

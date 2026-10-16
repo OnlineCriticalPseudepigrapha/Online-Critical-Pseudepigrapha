@@ -1,0 +1,2871 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HistRech">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>History of the Rechabites</title>
+        <editor role="editor">Miller, David M.</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Charlesworth">
+            <abbr type="siglum">Charlesworth</abbr>
+            <name>James H. Charlesworth</name>
+            <bibl>James H. Charlesworth, The History of the Rechabites, vol. 1: The Greek Recension (SBLTT 17; Chico, Calif.: Scholars Press, 1982), 14-107.</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of English based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Greek">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Greek__French_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="Title" xml:id="HistRech.ver_Greek.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="HistRech.ver_Greek.Title.0">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#Charlesworth">διήγησις ζωσίμου εἰς τὸν βίον τῶν μακάρων κύριε εὐλόγησον</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="HistRech.ver_Greek.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.1.1">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#Charlesworth">κατ᾽ ἐκεῖνον τὸν καιρὸν ἐκ τῆς ἐρήμου ὑπῆρχεν ἀνήρ τις ὀνόματι ζώσιμος ὅς οὐκ ἔφαγεν ἄρτον ἔτη τεσσαράκοντα καὶ οἶνον οὐκ ἔπιεν· καὶ πρόσωπον ἀνθρώπου οὐχ ἑόρακεν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.1.2">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#Charlesworth">οὗτος ἦν παρακαλῶν τὸν θεὸν ἵνα ἴδῃ τὴν διοίκησιν τῶν μακάρων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.1.3">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἰδοὺ ἄγγελος κυρίου ἀπεστάλη λέγων αὐτῷ· ζώσιμε ἄνθρωπε τοῦ θεοῦ· ἰδοὺ ἀπεστάλην ἀπὸ τοῦ ὑψίστου τοῦ τῶν ὅλων θεοῦ εἰπεῖν σοι ὅτι πεπορεύσῃ εἰς τοὺς μάκαρας· οὐ κατοικήσεις δὲ μετ᾽ αὐτῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.1.4">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#Charlesworth">ἀλλὰ μὴ ὑψώσῃς τὴν καρδίαν σου εἰπών· ἔτη τεσσαράκοντα ἄρτον οὐκ ἔφαγον· ὁ γὰρ λόγος τοῦ θεοῦ ὑπὲρ ἄρτον ἐστιν, καὶ τὸ πνεῦμα τοῦ θεοῦ ὑπὲρ οἶνόν ἐστιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.1.5">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#Charlesworth">τὸ γὰρ &lt;εἰπεῖν σε&gt; πρόσωπον ἀνθρώπου οὐκ εἶδον· ἰδοὺ τὸ πρόσωπον τοῦ μεγάλου βασιλέως, ἐγγύς σου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.1.6">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#Charlesworth">ὁ δὲ ζώσιμος ἔφη· οἶδα ὅτι ὅσα ἂν θέλῃ ὁ κύριος δύναται·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.1.7">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#Charlesworth">ὁ δὲ ἄγγελος εἶπεν πρὸς αὐτόν· γνῶθι καὶ τοῦτο· ὅτι πρὸς ἓν τῶν γευμάτων αὐτῶν οὐκ εἶ ἄξιος· πλὴν ἀναστὰς πορεύου·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="HistRech.ver_Greek.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.2.1">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#Charlesworth">ἐγὼ δὲ ζώσιμος ἐξελθὼν ἐκ τοῦ σπηλαίου μου τοῦ θεοῦ με προάγοντος ἐπορευόμην μὴ ἐπιστάμενος τὴν ὁδὸν ποῦ ἀπέρχομαι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.2.2">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ὁδεύσας ἡμέρας &lt;τεσσαράκοντα ὠλιγοψύχησεν&gt; τὸ πνεῦμά μου καὶ ἐξελύθη τὸ σῶμά μου· καὶ ἀκηδιάσας ἐκαθέσθην καὶ ἤμην προσευχόμενος ἐν τῷ τόπῳ ἐκείνῳ ἐπὶ ἡμέρας τρεῖς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.2.3">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἰδοὺ ἦλθεν ζῶον ἐκ τῆς ἐρήμου ὄνομα αὐτῷ κάμηλος· καὶ θήσας τὰ γόνατα εἰς τὴν γῆν· ἔλαβέν με εἰς τὸν τράχηλον αὐτοῦ· καὶ ἐπορεύθη τὴν ἔρημον καὶ ἀπέθετό με·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.2.4">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἦν ἀλαλαγμὸς τῶν θηρίων ἐκεῖ πολύς· καὶ βρυγμὸς καὶ ἰὸς θανατηφόρος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.2.5">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#Charlesworth">ἔμφοβος δὲ γενόμενος, προσηυξάμην πρὸς κύριον· καὶ ἐγένετο σεισμὸς ἐν τῷ τόπῳ ἐκείνῳ πολὺς μετ᾽ ἠχοῦς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.2.6">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#Charlesworth">καὶ &lt;ἐφύσησεν λαῖλαψ&gt; ἀνέμου· καὶ ἐκίνησέν με ἀπὸ τῆς γῆς καὶ ὕψωσέν με εἰς τὸ πτερύγιον αὐτοῦ· καὶ ἤμην προσευχόμενος καὶ ποευόμενος· καὶ ἔστησέν με ἐπὶ τόπου ποταμώδους· καὶ ὄνομα τῷ ποταμῷ εὐμελής·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.2.7">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἰδοὺ βουλομένου μου· διέρχεσθαι τὸν ποταμόν· ἐβόησέν τις ὡς ἀπὸ τοῦ ὕδατος λέγων· ζώσιμε ἄνθρωπε τοῦ θεοῦ· οὐ δύνασαι διελθεῖν δι᾽ ἐμοῦ· οὐ γὰρ δύναται ὁ ἄνθρωπος τὰ ὕδατά μου διακόψαι· ἀλλ᾽ ἢ κατανόησον ἀπὸ τῶν ὑδάτων ἕως τοῦ οὐρανοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.2.8">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#Charlesworth">καὶ κατανόησας· &lt;εἶδον τεῖχος&gt; νεφέλης κρατοῦν ἀπὸ τῶν ὑδάτων ἕως τοῦ οὐρανοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek.2.9">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#Charlesworth">καὶ εἶπεν ἡ νεφέλη· ζώσιμε ἄνθρωπε τοῦ θεοῦ· δι᾽ ἐμοῦ οὐ διέρχεται πετεινὸν ἐκ τοῦ κόσμου τούτου· οὐδὲ πνοὴ ἀνέμου· οὐδὲ αὐτὸς ὁ ἥλιος· οὐδὲ ὁ πειράζων ἐν τῷ κόσμῳ τούτῳ δύναται διελθεῖν δι᾽ ἐμοῦ·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="HistRech.ver_Greek.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.3.1">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#Charlesworth">ἐγὼ δὲ ἐξέστην ἐπὶ τοῖς ῥήμασιν τούτοις καὶ ἐπὶ τῇ φωνῇ τῇ λεγούσῃ μοι ταῦτα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.3.2">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐμοῦ προσευχομένου ἰδοὺ δύο δένδρα ἀνεφάνησαν ἀπὸ τῆς γῆς καλοείδη καὶ εὐπρεπέστατα· γέμοντα καρπῶν εὐωδίας·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.3.3">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#Charlesworth">καὶ κλιθὲν τὸ δένδρον ἐντεῦθεν· ἔλαβεν με ἐπὶ τὴν κορυφὴν αὐτοῦ καὶ ὑψώθη σφόδρα ἀνάμεσον τοῦ ποταμοῦ· καὶ ὑπήντησεν τὸ ἄλλο δένδρον καὶ ἐδέξατό με ἐν τοῖς κλάδοις αὐτοῦ· καὶ κλιθέν· ἔστησέν με ἐπὶ τὴν γῆν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.3.4">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἀνυψώθησαν τὰ &lt;ἀμφότερα δένδρα·&gt; καὶ ἔστησάν με ἀπὸ τοῦ ποταμοῦ πέραν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.3.5">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἀνεπαυσάμην ἡμέρας τρεῖς ἐν τῷ τόπῳ ἐκείνῳ· καὶ πάλιν ἀναστὰς ἐπορευόμην· ὅπου δ᾽ ἂν οὐκ ἐγίνωσκον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.3.6">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἦν ὁ τόπος ἐκεῖνος πλήρης εὐωδίας πολλῆς· καὶ οὐκ ἦν ὄρος ἔνθα· ἀλλ᾽ ἦν ὁ τόπος ἐκεῖνος πεδινὸς ἄφθορος· ὅλος ἐστεφανωμένος· καὶ πᾶσα ἡ γῆ εὐπρεπής·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="HistRech.ver_Greek.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.4.1">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#Charlesworth">καὶ εἶδον ἐκεῖ ἄνθρωπον γυμνὸν καθήμενον· καὶ εἶπον ἐν ἑαυτῷ· ἆρα μὴ οὕτως ἐστὶν ὁ πειράζων;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.4.2">
+            <app xml:id="u25_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐμνήσθην τῆς φωνῆς τῆς νεφέλης ὅτι εἶπέν μοι· ὅτι οὐ διέρχεται δι᾽ ἐμοῦ οὔτε αὐτὸς ὁ πειράζων ἐν τῷ κόσμῳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.4.3">
+            <app xml:id="u26_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οὕτως θαρρήσας· εἶπον πρὸς αὐτόν· χαίροις ἀδελφέ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.4.4">
+            <app xml:id="u27_ver_Greek">
+              <lem wit="#Charlesworth">καὶ αὐτὸς ἀποκριθεὶς εἶπέν μοι· ἡ χάρις μετά σου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.4.5">
+            <app xml:id="u28_ver_Greek">
+              <lem wit="#Charlesworth">καὶ πάλιν εἶπον πρὸς αὐτόν· εἰπέ μοι ἄνθρωπε τοῦ θεοῦ, τίς εἶ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.4.6">
+            <app xml:id="u29_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἀποκριθεὶς εἶπέν μοι· σὺ γὰρ εἶ; τίς εἶ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.4.7">
+            <app xml:id="u30_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἀποκριθεὶς ἐγὼ εἶπον πάντα τὰ περὶ ἐμοῦ· καὶ ὅτι ηὐξάμην πρὸς κύριον, καὶ ἤνεγκέν με ἐν τῷ τόπῳ τούτῳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.4.8">
+            <app xml:id="u31_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἀποκριθεὶς εἶπέν μοι· κἀγὼ γινώσκω ὅτι ἄνθρωπος τοῦ θεοῦ εἶ σύ· εἶ &lt;δὲ μή&gt; γε· οὐκ ἂν διῆλθες τὴν νεφέλην καὶ τὸν ποταμὸν καὶ &lt;τὸν ἀέρα.&gt;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek.4.9">
+            <app xml:id="u32_ver_Greek">
+              <lem wit="#Charlesworth">τὸ γὰρ πλάτος τοῦ ποταμοῦ· ὡς ἀπὸ μιλίων τριάκοντα· ἡ δὲ νεφέλη ἕως τοῦ οὐρανοῦ· τὸ δὲ βάθος τοῦ ποταμοῦ ἕως τῶν ἀβύσων·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="HistRech.ver_Greek.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.5.1">
+            <app xml:id="u33_ver_Greek">
+              <lem wit="#Charlesworth">καὶ πληρώσας τὸν λόγον τοῦτον ὁ ἄνθρωπος· εἶπεν πάλιν· σὺ ἐκ τῆς ματαιότητος τοῦ κόσμου ἦλθες ὧδε;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.5.2">
+            <app xml:id="u34_ver_Greek">
+              <lem wit="#Charlesworth">ἐγὼ δὲ εἶπον αὐτῷ· διατί γυμνὸς ὑπάρχεις;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.5.3">
+            <app xml:id="u35_ver_Greek">
+              <lem wit="#Charlesworth">καὶ εἶπεν· πόθεν ἔγνως ὅτι γυμνὸς ὑπάρχω; σὺ γὰρ φορῶν δέρματα εκ τῶν προβάτων τῆς γῆς ὑπάρχεις· καὶ αὐτὰ φθειρόμενα σὺν τῷ σώματί σου· ἀλλὰ κατανόησον τῷ ὑψώματι τοῦ οὐρανοῦ καὶ θέασαι τὸ ἔνδυμά μου ποῖόν ἐστιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.5.4">
+            <app xml:id="u36_ver_Greek">
+              <lem wit="#Charlesworth">καὶ θεασάμενος ἐν τῷ οὐρανῷ εἶδον τὸ πρόσωπον αὐτοῦ ὡσεὶ πρόσωπον ἀγγέλου· καὶ τὸ ἔνδυμα αὐτοῦ ὡς ἀστραπὴν ἡ ἐξ ἀνατολῶν εἰς δυσμὰς πορευομένη· καὶ ἐφοβήθην ὅτι υἱὸς θεοῦ ἦν· καὶ ἐγενήθην ἔντρομος πεσὼν ἐπὶ τὴν γῆν·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="HistRech.ver_Greek.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.6.1">
+            <app xml:id="u37_ver_Greek">
+              <lem wit="#Charlesworth">Καὶ &lt;δεδωκὼς χεῖρα&gt; ἀνέστησέν με λέγων· κἀγὼ εἷς εἰμὶ τῶν μακάρων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.6.2">
+            <app xml:id="u38_ver_Greek">
+              <lem wit="#Charlesworth">δεῦρο ὅπως ἄξω σε πρὸς τοὺς πρεσβυτέρους·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.6.3">
+            <app xml:id="u39_ver_Greek">
+              <lem wit="#Charlesworth">καὶ κρατήσας τῆς χειρός μου· συμπεριεπάτησέν μοι· καὶ ἤγαγέν με ἐπί τινα ὄχλον καὶ ἦσαν ἐν τῷ ὄχλῳ ἐκείνῳ πρεσβῦται ὅμοιοι υἱοὶ θεοῦ· καὶ ἦσαν παριστάμενοι νεανίσκοι τοῖς πρεσβυτέροις·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.6.4">
+            <app xml:id="u40_ver_Greek">
+              <lem wit="#Charlesworth">ἀπελθόντος δὲ ἐμοῦ ἔγγιστα αὐτῶν εἶπαν· οὗτος ἐκ τῆς ματαιότητος τοῦ κόσμου ἐλήλυθεν δεῦτε δεηθῶμεν τοῦ κυρίου καὶ φανερώσει ἡμῖν τὸ μυστήριον τοῦτο·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.6.5">
+            <app xml:id="u41_ver_Greek">
+              <lem wit="#Charlesworth">μὴ ἄρα τὸ τέλος ἔφθασεν· ὅτι ἄνθρωπος τῆς ματαιότητος ἦλθεν ὧδε·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.6.6">
+            <app xml:id="u42_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἀναστάντες, ἐδεήθησαν τοῦ κυρίου ὁμοθυμαδόν· καὶ ἰδοὺ ἄγγελοι δύο κατέβησαν ἐκ τῶν οὐρανῶν, καὶ εἶπαν· μὴ φοβήθητε τὸν ἄνδρα· ὅτι ἀπέσταλκεν αὐτὸν ὁ θεὸς ἵνα ποιήσῃ ἑπτὰ ἡμέρας· καὶ λάβῃ τὰς διοικήσεις ὑμῶν· καὶ τότε ἐκπορεύεται· καὶ ἀπελεύσεται ἐν τῷ τόπῳ αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.6.7">
+            <app xml:id="u43_ver_Greek">
+              <lem wit="#Charlesworth">οἱ δὲ ἄγγελοι τοῦ θεοῦ εἰπόντες ταῦτα· ἀνέβησαν εἰς τὸν οὐρανὸν ἐνώπιον τῶν ὀφθαλμῶν ἡμῶν·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="HistRech.ver_Greek.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.7.1">
+            <app xml:id="u44_ver_Greek">
+              <lem wit="#Charlesworth">τότε παρέδωκάν με οἱ πρεσβύτεροι τῶν μακάρων ἕνα τῶν ὑπηρετῶν λέγοντες· φύλαξον αὐτὸν ἕως ἡμερῶν ἑπτά·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.7.2">
+            <app xml:id="u45_ver_Greek">
+              <lem wit="#Charlesworth">παραλαβών με οὖν ὁ ὑπηρέτης· ἀπήγαγέν με εἰς τὸ σπήλαιον αὐτοῦ· καὶ ἤμεθα ὑποκάτω δένδρου διοικούμενοι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.7.3">
+            <app xml:id="u46_ver_Greek">
+              <lem wit="#Charlesworth">ἀπὸ γὰρ ἕκτης ὥρας ἕως ἕκτης τότε ἠσθίομεν· καὶ τὸ ὕδωρ ἐξήρχετο ἀπὸ τοῦ δένδρου γλυκὺ ὑπὲρ τὸ μέλι· καὶ ἐπίνομεν πρὸς τὸν κόρον ἡμῶν, καὶ πάλιν τὸ ὕδωρ ἐδίδυσκεν εἰς τὸν τόπον αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.7.4">
+            <app xml:id="u47_ver_Greek">
+              <lem wit="#Charlesworth">ἤκουσεν δὲ πᾶσα ἡ πατριὰ τῶν ἐκεῖσε περὶ ἐμοῦ· ὅτι ἦλθεν ἄνθρωπος ἐκ τῆς ματαιότητος τοῦ κόσμου ὧδε·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.7.5">
+            <app xml:id="u48_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐσαλεύθη πᾶσα ἡ πατριά· καὶ &lt;ἦλθον ἰδεῖν με&gt; ὅτι ξένον αὐτοῖς ἐφάνη·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.7.6">
+            <app xml:id="u49_ver_Greek">
+              <lem wit="#Charlesworth">ἦσαν οὖν &lt;ἐπερωτῶντές με&gt; πάντα· κἀγὼ ἤμην ἀναγγέλων αὐτοῖς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.7.7">
+            <app xml:id="u50_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ὠλιγοψύχησα τῷ πνεύματι καὶ τῷ σώματί μου· καὶ παρεκάλεσα τὸν ἄνθρωπον τοῦ θεοῦ τὸν ὑπηρετοῦντά μοι καὶ εἶπον· παρακαλῶ σε ἀδελφέ· ἐὰν ἔλθωσίν τινες ἰδεῖν με ἀνάγγειλον αὐτοῖς ὅτι οὐκ ἔστιν ὧδε ἵνα ἀναπαύσωμαι μικρόν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.7.8">
+            <app xml:id="u51_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐβόησεν ὁ ἄνθρωπος τοῦ θεοῦ λέγων· οἴμοι ὅτι ἱστορία τοῦ ἀδὰμ ἐμοὶ ἀνεκεφαλαιώθη· ἐκεῖνον γὰρ διὰ τῆς εὔας ἠπάτησεν ὁ σατανᾶς καὶ ἐμὲ ὁ ἄνθρωπος οὗτος· διὰ τῆς κολακείας, ψεύστην θέλει ἀποκαταστῆσαι· ὄντος αὐτοῦ ὧδε· εἶπέν μοι· ὅτι ψεύσῃ καὶ εἶπε ὅτι οὐκ &lt;ἔστιν ὧδε&gt;·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek.7.9">
+            <app xml:id="u52_ver_Greek">
+              <lem wit="#Charlesworth">&lt;ἀπαγάγετέ με&gt; ἐντεῦθεν, ἐπεί· φεύξομαι &lt;ἀπὸ τῆς κώμης·&gt; ἰδοὺ γὰρ βούλεται κατασπείρειν ἐμοὶ σπέρματα τοῦ κόσμου τῆς ματαιότητος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_Greek.7.10">
+            <app xml:id="u53_ver_Greek">
+              <lem wit="#Charlesworth">καὶ κατεπανέστησάν μου πᾶς ὁ ὄχλος· καὶ οἱ πρεσβύτεροι καὶ εἶπον· ἄπελθε ἀφ᾽ ἡμῶν ἄνθρωπε οὐκ οἴδαμεν πόθεν ἐλήλυθας πρὸς ἡμᾶς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="HistRech.ver_Greek.7.11">
+            <app xml:id="u54_ver_Greek">
+              <lem wit="#Charlesworth">ἐγὼ δὲ ἔκλαυσα κλαυθμῷ μεγάλῳ· καὶ ἀπέστη ἀπ᾽ ἐμοῦ ἡ φρόνησις· καὶ ἐβόησα πρὸς τοὺς πρεσβυτέρους λέγων· συγχωρήσατέ μοι κύριοί μου· καὶ οἱ πρεσβύτεροι καταπαύσαντες· ἡσυχίαν παρέσχον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="HistRech.ver_Greek.7.12">
+            <app xml:id="u55_ver_Greek">
+              <lem wit="#Charlesworth">τότε ἐξηγησάμην αὐτοῖς τὰ ἀπ᾽ ἀρχῆς ἕως δεῦρο· καὶ ὅτι ἐδεήθην τοῦ θεοῦ ἐλθεῖν πρὸς ὑμᾶς· καὶ κατηξίωσέν με·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="HistRech.ver_Greek.7.13">
+            <app xml:id="u56_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οἱ πρεσβύτεροι εἶπον· καὶ νῦν τί &lt;θέλεις ἵνα&gt; ποιήσωμέν σοι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="HistRech.ver_Greek.7.14">
+            <app xml:id="u57_ver_Greek">
+              <lem wit="#Charlesworth">ἐγὼ δὲ εἶπον αὐτοῖς· θέλω λαβεῖν ἐξ ὑμῶν τὰς διοικήσεις ὑμῶν·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="HistRech.ver_Greek.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.8.1">
+            <app xml:id="u58_ver_Greek">
+              <lem wit="#Charlesworth">οἱ δὲ ἐχάρησαν χαρὰν μεγάλην, καὶ ἄραντες πλάκας λιθινάς· κατέγραψαν τοῖς ὄνυξιν αὐτῶν αὐτῶν οὕτως· ἀκούσατε ἀκούσατε υἱοὶ τῶν ἀνθρώπων ἡμῶν τῶν γενομένων μακάρων· ὅτι καὶ ἡμεῖς ἐξ ὑμῶν ἐσμέν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.8.2">
+            <app xml:id="u59_ver_Greek">
+              <lem wit="#Charlesworth">ὅτε γὰρ ἐκήρυξεν ἰερεμίας ὁ προφήτης· ὅτι ἡ πόλις ἰερουσαλὴμ παραδοθήσεται εἰς χεῖρας τῶν ὀλοθρευόντων· διέρρηξεν τὰ ἱμάτια αὐτοῦ· καὶ περιεζώσατο σάκκον περὶ τὴν ὀσφὺν αὐτοῦ· καὶ &lt;κατεπάσατο σποδὸν&gt; ἐπὶ τὴν κεφαλὴν αὐτοῦ· καὶ χοῦν ἔλαβεν ἐπὶ τῆς κοίτης αὐτοῦ· καὶ εἶπεν παντὶ τῷ λαῷ ἀποστραφῆναι ἀπὸ τῆς ὁδοῦ αὐτοῦ τῆς πονηρᾶς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.8.3">
+            <app xml:id="u60_ver_Greek">
+              <lem wit="#Charlesworth">ἤκουσεν δὲ καὶ ὁ πατὴρ ἡμῶν ῥηχὰβ υἱὸς ἀμιναδὰβ καὶ εἶπεν· πρὸς ἡμᾶς· ἀκούσατε υἱοὶ ῥηχὰβ καὶ θυγατέρες τοῦ πατρὸς ὑμῶν· καὶ ἀποδύσασθε τὰ ἱμάτια ὑμῶν ἐκ τοῦ σώματος ὑμῶν καὶ κεράμιον οἴνου οὐ πίεσθε· καὶ ἄρτον ἐκ τοῦ πυρὸς οὐ φάγεσθε· καὶ σίκερα καὶ μέλι οὐ πίεσθε· ἕως τοῦ εἰσακοῦσαι κύριον τῆς δεήσεως ὑμῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.8.4">
+            <app xml:id="u61_ver_Greek">
+              <lem wit="#Charlesworth">ἡμεῖς δὲ εἶπαμεν· ὅτι ἃ ἐνετείλατο ἡμῖν ποιήσωμεν καὶ ἀκουσώμεθα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.8.5">
+            <app xml:id="u62_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἀπερρίψαμεν ἐκ τοῦ σώματος ἡμῶν τὴν περιβολὴν ἡμῶν· καὶ οὐκ ἐφάγομεν ἄρτον ἐκ πυρός· καὶ οὐκ ἐπίομεν κεράμιον οἴνου· οὔτε μέλι οὔτε σίκερα· καὶ ἐκλαύσαμεν κλαυθμῷ μεγάλῳ· καὶ ἐδεήθημεν τοῦ κυρίου</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.8.6">
+            <app xml:id="u63_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἤκουσεν τῆς προσευχῆς ἡμῶν· καὶ ἀπέστρεψεν τὴν ὀργὴν αὐτοῦ ἀπὸ τῆς πόλεως ἰερουσαλήμ· καὶ ἐγενήθη τῇ πόλει ἰερουσαλὴμ ἔλεος παρὰ κυρίου καὶ ἠλέησεν τὸν λαὸν αὐτοῦ· καὶ ἀπέστρεψεν τὴν ὀργὴν αὐτοῦ τὴν θανατηφόρον·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="HistRech.ver_Greek.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.9.1">
+            <app xml:id="u64_ver_Greek">
+              <lem wit="#Charlesworth">καὶ μετὰ ταῦτα ἀπέθανεν ὁ βασιλεὺς τῆς πόλεως ἰερουσαλήμ· καὶ ἀνέστη βασιλεὺς ἕτερος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.9.2">
+            <app xml:id="u65_ver_Greek">
+              <lem wit="#Charlesworth">καὶ συνηθροίσθη πᾶς ὁ λαὸς πρὸς αὐτόν· καὶ κατάδηλον ἐποίησαν πρὸς αὐτὸν περὶ ἡμῶν καὶ εἶπαν· εἰσίν τινες ἐκ τοῦ λαοῦ σου· οἵτινες ἤλλαξαν τὴν ὁδὸν αὐτῶν ἀφ᾽ ἡμῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.9.3">
+            <app xml:id="u66_ver_Greek">
+              <lem wit="#Charlesworth">καλέσας οὖν αὐτοὺς ὁ βασιλεὺς ἐπηρώτησεν αὐτοὺς ἕνεκεν τίνος πεποιήκασιν τοῦτο·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.9.4">
+            <app xml:id="u67_ver_Greek">
+              <lem wit="#Charlesworth">καὶ μετεκαλέσατο ἡμᾶς καὶ ἐπηρώτησεν· &lt;τίνες ἐστὲ&gt; καὶ ποίας θρησκείας ἢ ἐκ ποίας πατρίδος;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.9.5">
+            <app xml:id="u68_ver_Greek">
+              <lem wit="#Charlesworth">καὶ εἴπαμεν αὐτῷ ἡμεῖς· ἐκ τοῦ λαοῦ σού ἐσμεν τῆς πόλεως ἰερουσαλήμ· καὶ εἶπεν ὁ βασιλεύς· τίνος υἱοί ἐστε· καὶ εἴπαμεν αὐτῷ· υἱοί ἐσμεν παιδός σου· πατρὸς δὲ ἡμῶν ῥηχὰβ υἱοῖ ἰωναδάβ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.9.6">
+            <app xml:id="u69_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ὅτε ἐκήρυξεν ἰερεμίας ὁ προφήτης ζῶντος τοῦ πατρός σου τοῦ βασιλέως, ἐκήρυξεν θάνατον τῇ πόλει ἰερουσαλὴμ ὅτι ἔτι τριῶν ἡμερῶν καὶ πᾶσα ἡ πόλις θανατωθήσεται·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.9.7">
+            <app xml:id="u70_ver_Greek">
+              <lem wit="#Charlesworth">ἀκούσας δὲ ὁ βασιλεὺς ὁ πατήρ σου μετέγνω ἐπὶ ταῖς ἁμαρτίαις αὐτοῦ· καὶ ἐξέθετο δόγμα πᾶσιν τοῦ ἀποστρέψαι ἐκ τῆς ὁδοῦ αὐτῶν τῆς πονηρᾶς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.9.8">
+            <app xml:id="u71_ver_Greek">
+              <lem wit="#Charlesworth">ἀκούσας δὲ ὁ πατὴρ ἡμῶν ὁ παῖς σου· ἐνετείλατο ἡμῖν λέγων· κεράμιον οἴνου οὐ πίεσθε· καὶ ἄρτον ἐκ πυρὸς οὐ φάγεσθε· ἕως τοῦ εἰσακοῦσαι κύριον τῆς δεήσεως ὑμῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek.9.9">
+            <app xml:id="u72_ver_Greek">
+              <lem wit="#Charlesworth">ἡμεῖς δὲ ἐπηκούσαμεν τῆς ἐντολῆς τοῦ πατρὸς ἡμῶν· καὶ ἐγυμνώσαμεν τὰ σώματα ἡμῶν· καὶ οἶνον οὐκ ἐπίομεν· καὶ ἄρτον ἐκ πυρὸς οὐκ ἐφάγομεν· καὶ προσηυξάμεθα πρὸς κύριον περὶ τῆς πόλεως ἰερουσαλήμ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_Greek.9.10">
+            <app xml:id="u73_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἠλέησεν κύριος τὸν λαὸν αὐτοῦ· καὶ ἀπέσρεψεν τὴν ὀργὴν αὐτοῦ· καὶ εἴδομεν καὶ ὀνήθη ἡ ψυχὴ ἡμῶν καὶ εἶπαμεν· καλὸν εἶναι ἡμᾶς οὕτως·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="HistRech.ver_Greek.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.10.1">
+            <app xml:id="u74_ver_Greek">
+              <lem wit="#Charlesworth">καὶ εἶπεν πρὸς ἡμᾶς ὁ βασιλεύς· καλῶς πεποιήκατε·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.10.2">
+            <app xml:id="u75_ver_Greek">
+              <lem wit="#Charlesworth">νῦν οὖν καταμίχθητε μετὰ τοῦ λαοῦ μου· καὶ φάγεσθε ἄρτον· καὶ πίεσθε οἶνον· καὶ δοξάσατε τὸν κύριον ὑμῶν· καὶ ἔσεσθε ὑπακούοντες, θεῷ καὶ βασιλεῖ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.10.3">
+            <app xml:id="u76_ver_Greek">
+              <lem wit="#Charlesworth">ἡμεῖς δὲ εἴπαμεν ὅτι οὐ παρακούομεν τὸν θεόν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.10.4">
+            <app xml:id="u77_ver_Greek">
+              <lem wit="#Charlesworth">τότε ὀργισθεὶς ὁ βασιλεύς· ἔθετο ἡμᾶς ἐν φυλακῇ· καὶ ἤμεθα διανυκτερεύοντες τὴν νύκταν ἐκείνην·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.10.5">
+            <app xml:id="u78_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἰδοὺ φῶς ἔλαμψεν ἐν τῷ οἰκήματι· καὶ ἄγγελος ἀπεστέγασεν τὴν φυλακήν· καὶ ἐκράτησεν τῆς κορυφῆς ἡμῶν καὶ ἐξήγαγεν ἡμᾶς ἀπὸ τῆς φυλακῆς· καὶ ἔθετο ἡμᾶς εἰς ἀέρα· καὶ ἤνεγκεν ἡμᾶς πρὸς τὸ ὕδωρ τοῦ ποταμοῦ· καὶ εἶπεν πρὸς ἡμᾶς· ὅπου πορεύεται τὸ ὕδωρ πορεύεσθε καὶ ὑμεῖς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.10.6">
+            <app xml:id="u79_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐβαδίσαμεν σὺν τῷ ὕδατι καὶ σὺν τῷ ἀγγέλῳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.10.7">
+            <app xml:id="u80_ver_Greek">
+              <lem wit="#Charlesworth">ὅτε οὖν ἤνεγκεν ἡμᾶς πρὸς τὸν τόπον τοῦτον· ἐψύγη ὁ ποταμὸς καὶ ἀπώλετο τὸ ὕδωρ· καὶ διερράγη ὁ τόπος· καὶ ἀνῆλθεν ὕδωρ ἀπὸ τῆς ἀβύσσου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.10.8">
+            <app xml:id="u81_ver_Greek">
+              <lem wit="#Charlesworth">καὶ περιετείχισεν τὴν πατρίδα ταύτην· καὶ ἦλθεν τεῖχος νεφέλης καὶ ἐπεσκίασεν ἐπάνω τοῦ ὕδατος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek.10.9">
+            <app xml:id="u82_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οὐ διέστησεν ἡμᾶς ἐπὶ πᾶσαν τὴν γῆν· ἀλλ᾽ ἔδωκεν ἡμῖν τὴν πατρίδα ταύτην·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="HistRech.ver_Greek.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.11.1">
+            <app xml:id="u83_ver_Greek">
+              <lem wit="#Charlesworth">ἀκούσατε ἀκούσατε, υἱοὶ τῶν ἀνθρώπων τὴν διοίκησιν τῶν μακάρων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.11.2">
+            <app xml:id="u84_ver_Greek">
+              <lem wit="#Charlesworth">ἔθετο γὰρ ἡμᾶς ὁ θεὸς ἐπὶ τῆς γῆς ταύτης· καὶ γάρ ἐσμεν εὐσεβεῖς· ἀλλ᾽ οὐκ ἀθάνατοι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.11.3">
+            <app xml:id="u85_ver_Greek">
+              <lem wit="#Charlesworth">ἀνέτειλεν γὰρ ἡ γῆ καρπὸν εὐωδέστατον· καὶ ἐξέρχεται ἐκ τῶν κορμῶν τῶν δένδρων ὕδωρ γλυκὺ ὑπὲρ τὸ μέλι· καὶ ταῦτα ἡμῖν βρῶσις καί πόσις·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.11.4">
+            <app xml:id="u86_ver_Greek">
+              <lem wit="#Charlesworth">ἐσμὲν δὲ καὶ προσευχόμενοι νυκτὸς καὶ ἡμέρας· πᾶσα δὲ ἡ σπουδὴ ἡμῶν τοῦτό ἐστιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.11.5">
+            <app xml:id="u87_ver_Greek">
+              <lem wit="#Charlesworth">ἀκούσατε υἱοὶ τῶν ἀνθρώπων· ὅτι παρ᾽ ἡμῖν ἄμπελος οὐκ ἔστιν· οὔτε ἄρουρα· οὔτε ἔργα ἐκ ξύλου οὔτε σιδήρου· οὔτε οἶκός ἐστιν ἡμῖν· οὔτε οἰκοδομή οὔτε πῦρ οὔτε ξίφος· οὔτε ἀργὸς σίδηρος οὔτε ἐργάσιμος· οὔτε ἀργύριον οὔτε χρυσίον· οὔτε &lt;ἀὴρ βαρύτατος&gt; οὔτε πικρότατος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.11.6">
+            <app xml:id="u88_ver_Greek">
+              <lem wit="#Charlesworth">οὔτε εἰσὶν ἐξ ἡμῶν λαμβάνοντες ἑαυτοῖς γυναῖκας ἕως οὗ ποιήσωσιν δύο τέκνα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.11.7">
+            <app xml:id="u89_ver_Greek">
+              <lem wit="#Charlesworth">καὶ μετὰ τὸ δύο τέκνα ποιῆσαι· ἀφίστανται ἀπ᾽ ἀλλήλων καί εἰσιν ἐν ἁγνείᾳ μὴ γινώσκοντες &lt;ὅτι ἦσάν ποτε ἐν&gt; συνηθείᾳ τοῦ γάμου· ἀλλ᾽ ὡς ὅτι ἀπ᾽ ἀρχῆς ἐν τῇ παρθενίᾳ ὑπάρχοντες·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.11.8">
+            <app xml:id="u90_ver_Greek">
+              <lem wit="#Charlesworth">μένει τὸ ἓν τέκνον εἰς τὸν γάμον· καὶ τὸ ἓν εἰς τὴν παρθενίαν·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="HistRech.ver_Greek.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.12.1">
+            <app xml:id="u91_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οὐκ ἔστιν &lt;ἀριθμὸς χρόνου&gt;· οὔτε ἑβδομάδες οὔτε μῆνες· οὔτε ἐνιαυτός· πᾶσα γὰρ ἡ ἡμέρα ἡμῶν μία ἡμέρα ἐστίν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.12.2">
+            <app xml:id="u92_ver_Greek">
+              <lem wit="#Charlesworth">ἐπὶ δὲ τῶν σπηλαίων ἡμῶν· &lt;ἀπόκειται φύλλα&gt; τῶν δένδρων· καὶ αὕτη ἐστὶν ἡ κοίτη ἡμῶν ὑποκάτω τῶν δένδρων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.12.3">
+            <app xml:id="u93_ver_Greek">
+              <lem wit="#Charlesworth">οὐκ ἐσμὲν δὲ γυμνοὶ τῷ σώματι ὡς δὴ ἀλογίζεσθε ὑμεῖς· ἔχομεν γὰρ τὸ ἔνδυμα τῆς ἀθανασίας καὶ οὐκ αἰσχυνόμεθα ἀλλήλους·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.12.4">
+            <app xml:id="u94_ver_Greek">
+              <lem wit="#Charlesworth">ἐν δὲ τῇ ἕκτῃ ὥρᾳ ἐσθίομεν κατὰ πᾶσαν ἡμέραν· κατέρχεται γὰρ ὁ καρπὸς τοῦ δένδρου ἀφ᾽ ἑαυτοῦ ἐν τῇ ἕκτῃ ὥρᾳ καὶ ἐσθίομεν πρὸς τὸν κόρον ἡμῶν καὶ πίνομεν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.12.5">
+            <app xml:id="u95_ver_Greek">
+              <lem wit="#Charlesworth">καὶ πάλιν τὸ ὕδωρ διδύσκει εἰς τὸν τόπον αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.12.6">
+            <app xml:id="u96_ver_Greek">
+              <lem wit="#Charlesworth">οἴδαμεν δὲ καὶ ὑμᾶς τοὺς ἐν τῷ κόσμῳ &lt;τῷ αὐτόθι&gt; καὶ τοὺς ἐν ἁμαρτίαις ὄντας καὶ τὰ ἔργα ὑμῶν· ὅτι καθ᾽ ἑκάστην ἡμέραν οἱ ἄγγελοι τοῦ θεοῦ ἔρχονται καὶ ἀπαγγέλλουσιν ἡμῖν καὶ τὸν ἀριθμὸν τῶν ἐτῶν ὑμῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.12.7">
+            <app xml:id="u97_ver_Greek">
+              <lem wit="#Charlesworth">ἡμεῖς δὲ εὐχόμεθα ὑπὲρ ὑμῶν πρὸς τὸν κύριον· ὅτι καὶ ἡμεῖς ἐξ ὑμῶν ἐσμὲν καὶ ἐκ τοῦ γένους ὑμῶν ἀλλ᾽ ὅτι καὶ ἐξελέξατο ἡμᾶς ὁ θεός· καὶ ἔθετο ἡμᾶς ὁ θεὸς ἐν τῷ τόπῳ τούτῳ ἀναμαρτήτους·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.12.8">
+            <app xml:id="u98_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οἱ ἄγγελοι τοῦ θεοῦ οἰκοῦσιν μεθ᾽ ἡμῶν κατὰ πᾶσαν ἡμέραν καὶ λέγουσιν ἡμῖν πάντα τὰ περὶ ὑμῶν· καὶ χαίρομεν μετὰ τῶν ἀγγέλων ἕνεκεν τῶν ἔργων τῶν δικαίων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek.12.9">
+            <app xml:id="u99_ver_Greek">
+              <lem wit="#Charlesworth">ἐπὶ δὲ τὰ ἔργα τῶν ἁμαρτωλῶν λυπούμεθα· καὶ κλαίοντες προσευχόμεθα πρὸς κύριον· ἵνα παύσηται ἀπὸ τῆς ὀργῆς καὶ φείσηται τῶν ἁμαρτημάτων ὑμῶν·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="HistRech.ver_Greek.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.13.1">
+            <app xml:id="u100_ver_Greek">
+              <lem wit="#Charlesworth">ὅταν δὲ ἔλθῃ ὁ χρόνος &lt;τῆς τεσσαρακοστῆς&gt; πάντα παύονται τὰ δένδρα ἀπὸ τῶν καρπῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.13.2">
+            <app xml:id="u101_ver_Greek">
+              <lem wit="#Charlesworth">καὶ βρέχει τὸ μάννα ἐκ τοῦ οὐρανοῦ ὅπερ ἔδωκεν τοῖς πατράσιν ἡμῶν· ἔστιν δὲ τὸ μάννα ὑπὲρ τὸ μέλι γλυκύ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.13.3">
+            <app xml:id="u102_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οὕτως γινώσκομεν ὅτι ἐνήλλακται ὁ καιρὸς τοῦ ἐνιαυτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.13.4">
+            <app xml:id="u103_ver_Greek">
+              <lem wit="#Charlesworth">ὅταν δὲ ἔλθῃ ὁ καιρὸς τοῦ ἁγίου πάσχα· τότε πάλιν ἀνατέλλει τὰ δένδρα τὸν καρπὸν τῆς εὐωδίας· καὶ οὕτως γινώσκομεν ὅτι ἀρχὴ ἐνιαυτοῦ ἐστίν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.13.5">
+            <app xml:id="u104_ver_Greek">
+              <lem wit="#Charlesworth">ἡ δὲ ἑορτὴ τῆς ἀναστάσεως τοῦ κυρίου· ἐν πολλῇ ἀγρυπνίᾳ ἐκτελεῖται· ἐσόμεθα γὰρ ἀγρυπνοῦντες ἡμέρας τρεῖς καὶ νύκτας τρεῖς·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="HistRech.ver_Greek.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.14.1">
+            <app xml:id="u105_ver_Greek">
+              <lem wit="#Charlesworth">οἴδαμεν δὲ καὶ τὸν χρόνον ἡμῶν, τῆς τελειώσεως· οὐ γὰρ ἔστιν αἰκισμὸς καὶ βάσανος· οὐδὲ κόπος τῷ σώματι ἡμῶν· οὔτε ἀκηδία· οὔτε ἀρρώστημα· ἀλλ᾽ ἔστιν εἰρήνη καὶ ἀνεκτότης πολλὴ καὶ ἀγάπη·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.14.2">
+            <app xml:id="u106_ver_Greek">
+              <lem wit="#Charlesworth">οὔτε γὰρ ὀχλεῖται ἡ ψυχὴ ἡμῶν ὑπὸ τῶν ἀγγέλων τοῦ ἐξελθεῖν· χαίρουσιν γὰρ οἱ ἄγγελοι ὅταν παραλαμβάνωσιν ἡμῶν τὰς ψυχάς· χαίρουσιν δὲ καὶ αἱ ψυχαὶ ἡμῶν σὺν τοῖς ἀγγέλοις ὅταν βλέπωσιν αὐτούς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.14.3">
+            <app xml:id="u107_ver_Greek">
+              <lem wit="#Charlesworth">ὥσπερ ἐκδέχεται νύμφη τὸν νυμφίον· οὕτως ἐκδέχεται ἡ ψυχὴ ἡμῶν τὸν εὐαγγελισμὸν τῶν ἁγίων ἀγγέλων· οὐδὲν περισσὸν λέγοντες· ἀλλ᾽ ἢ μόνον τοῦτο, καλεῖ σε ὁ κύριος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.14.4">
+            <app xml:id="u108_ver_Greek">
+              <lem wit="#Charlesworth">τότε ἡ ψυχὴ ἐξέρχεται ἐκ τοῦ σώματος, καὶ προσέρχεται τοῖς ἀγγέλοις· καὶ ἰδόντες τὴν ψυχὴν ἄσπιλον ἐξερχομένην, χαίρουσιν οἱ ἄγγελοι καὶ ἁπλώσαντες τὰς στολὰς αὐτῶν δέχονται αὐτήν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.14.5">
+            <app xml:id="u109_ver_Greek">
+              <lem wit="#Charlesworth">τότε μακαριοῦσιν αὐτὴν οἱ ἄγγελοι λέγοντες· μακαρία σὺ ψυχὴ ὅτι ἐπληρώθη τὸ θέλημα τοῦ θεοῦ ἐν σοί·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="HistRech.ver_Greek.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.15.1">
+            <app xml:id="u110_ver_Greek">
+              <lem wit="#Charlesworth">ὁ δὲ χρόνος τῆς ζωῆς ἡμῶν οὗτός ἐστιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.15.2">
+            <app xml:id="u111_ver_Greek">
+              <lem wit="#Charlesworth">εἰ ἐν νεότητι ἐξερχόμενος ἐκ τοῦ σώματος· αἱ ἡμέραι τῆς ζωῆς αὐτοῦ αἱ ἐντεῦθεν ἔτη τριακόσια ἑξήκοντα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.15.3">
+            <app xml:id="u112_ver_Greek">
+              <lem wit="#Charlesworth">ὁ δὲ ἐν τῷ γήρει ἐξερχόμενος ἐκ τοῦ σώματος, αἱ ἡμέραι τῆς ζωῆς αὐτοῦ αἱ ἐντεῦθεν· ἔτη ἑπτακόσια ὀγδοήκοντα ὀκτώ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.15.4">
+            <app xml:id="u113_ver_Greek">
+              <lem wit="#Charlesworth">δεδήλωται δὲ ἡμῖν ἀπὸ τῶν ἀγγέλων· ἡ ἡμέρα τῆς συμπληρώσεως ἡμῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.15.5">
+            <app xml:id="u114_ver_Greek">
+              <lem wit="#Charlesworth">ὅτε δὲ ἔλθωσιν οἱ ἄγγελοι τοῦ θεοῦ λαβεῖν ἡμᾶς πορευόμεθα μετ᾽ αὐτῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.15.6">
+            <app xml:id="u115_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οἱ πρεσβύτεροι ἰδόντες τοὺς ἀγγέλους συνάγουσιν πάντα τὸν λαόν· καὶ ἀπερχόμεθα μετὰ τῶν ἀγγέλων ψάλλοντες· ἕως ἀπέλθωσιν οἱ ἄγγελοι ἐπὶ τὸν τόπον τῆς κατοικίας ἡμῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.15.7">
+            <app xml:id="u116_ver_Greek">
+              <lem wit="#Charlesworth">διὰ δὲ τὸ μὴ ἔχειν ἡμᾶς σκεῦος οἱ ἄγγελοι τοῦ θεοῦ δι᾽ ἑαυτῶν ποιοῦσιν τὴν θήκην τοῦ σώματος ἡμῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.15.8">
+            <app xml:id="u117_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οὕτως κατέρχεται ὁ καλούμενος ὑπὸ τοῦ θεοῦ· πάντες δὲ ἀσπαζόμεθα αὐτὸν ἀπὸ μικροῦ ἕως μεγάλου προπέμποντες καὶ συντασσόμενοι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek.15.9">
+            <app xml:id="u118_ver_Greek">
+              <lem wit="#Charlesworth">καὶ τότε ἡ ψυχὴ ἐξέρχεται ἀπὸ τοῦ σώματος· καὶ ἀσπάζονται αὐτὴν οἱ ἄγγελοι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_Greek.15.10">
+            <app xml:id="u119_ver_Greek">
+              <lem wit="#Charlesworth">ἡμεῖς δὲ θεωροῦμεν τὸ εἶδος τῆς ψυχῆς, ὡς εἶδος φωτὸς πεπληρωμένην καθ᾽ ὅλου τοῦ σώματος χωρὶς τοῦ ἄρσενος καὶ τῆς θηλείας·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="HistRech.ver_Greek.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.16.1">
+            <app xml:id="u120_ver_Greek">
+              <lem wit="#Charlesworth">τότε οἱ ἄγγελοι ἀναλαμβάνοντες· ᾄδουσιν ᾆσμα καὶ ὕμνον ψάλλοντες τῷ θεῷ· καὶ πάλιν ἄλλα τάγματα τῶν ἀγγέλων μετὰ σπουδῆς ὑπαντῶσιν ἀσπαζόμενοι τὴν ψυχὴν τὴν προσερχομένην καὶ εἰσερχομένην εἰς τὰ στερεώματα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.16.2">
+            <app xml:id="u121_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ὅτε ἀπέλθῃ εἰς τὸν τόπον ἐν ᾧ δεῖ προσκυνεῖν τὸν θεόν· αὐτὸς ὁ υἱὸς τοῦ θεοῦ μετὰ τῶν ἀγγέλων δέχεται τὴν ψυχὴν τοῦ μάκαρος· καὶ προσφέρει πρὸς τὸν ἄχραντον πατέρα τῶν αἰώνων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.16.3">
+            <app xml:id="u122_ver_Greek">
+              <lem wit="#Charlesworth">καὶ πάλιν ὅταν ψάλλωσιν οἱ ἄγγελοι ἄνω· ἡμεῖς ὄντες κάτω ὑπακούομεν αὐτῶν· καὶ πάλιν ἡμεῖς ψάλλομεν, καὶ αὐτοὶ ὑπακούουσιν ἐν τῷ οὐρανῷ ἄνω·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.16.4">
+            <app xml:id="u123_ver_Greek">
+              <lem wit="#Charlesworth">καὶ οὕτως ἀνάμεσον ἡμῶν καὶ τῶν ἀγγέλων· ἀνέρχεται ἡ δοξολογία τῆς ὑμνολογίας·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.16.5">
+            <app xml:id="u124_ver_Greek">
+              <lem wit="#Charlesworth">ὅτε δὲ ἡ ψυχὴ τοῦ μάκαρος πεσοῦσα ἐπὶ πρόσωπον προσκυνεῖ τὸν κύριον· τότε καὶ ἡμεῖς πεσόντες προσκυνοῦμεν τῇ αὐτῇ ὥρᾳ τὸν κύριον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.16.6">
+            <app xml:id="u125_ver_Greek">
+              <lem wit="#Charlesworth">ὅτε δὲ ἀναστήσει αὐτὴν ὁ κύριος τότε καὶ ἡμεῖς ἀνιστάμεθα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.16.7">
+            <app xml:id="u126_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ὅτε ἀπέρχεται εἰς τὸν ὡρισμένον τόπον· καὶ ἡμεῖς ἀπερχόμεθα ἐν τῇ ἐκκλησίᾳ· πληροῦντες τὴν εὐχαριστίαν τοῦ κυρίου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.16.8">
+            <app xml:id="u127_ver_Greek">
+              <lem wit="#Charlesworth">ταῦτα γράψαντες· καὶ πᾶσαν τὴν διοίκησιν τῶν μακάρων· ἐδώκαμεν τῷ ἀδελθῷ Ζωσίμῳ· καὶ προεπέμψαμεν αὐτὸν ἕως τοῦ τόπου τῶν δένδρων πρὸς τῷ ποταμῷ τῷ εὐμέλῃ·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="HistRech.ver_Greek.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.17.1">
+            <app xml:id="u128_ver_Greek">
+              <lem wit="#Charlesworth">ἐγὼ δὲ ζώσιμος ἐδεήθην πάλιν τῶν μακάρων· ἵνα δεηθῶσιν ὑπὲρ ἐμοῦ πρὸς τὸν κύριον· ἵνα δέξωνταί με τὰ δένδρα τοῦ περάσαι με·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.17.2">
+            <app xml:id="u129_ver_Greek">
+              <lem wit="#Charlesworth">καὶ κράξαντες πάντες πρὸς κύριον εἶπαν· ὁ θεὸς ὁ &lt;δείξας ἡμῖν&gt; τὰ θαυμάσιά σου καὶ ποιήσας ἐλθεῖν τὸν δοῦλόν σου ζώσιμον πρὸς ἡμᾶς ἐκ τοῦ κόσμου τῆς ματαιότητος· πάλιν ἀποκατάστησον αὐτὸν εἰς τὸν τόπον αὐτοῦ μετ᾽ εἰρήνης·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.17.3">
+            <app xml:id="u130_ver_Greek">
+              <lem wit="#Charlesworth">καὶ κέλευσον κλιθῆναι τὰ δένδρα ταῦτα καὶ ἀναλαβεῖν τὸν δοῦλόν σου, καὶ στῆσαι αὐτὸν εἰς τὸ πέραν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.17.4">
+            <app xml:id="u131_ver_Greek">
+              <lem wit="#Charlesworth">καὶ πληρωσάντων αὐτῶν τὴν εὐχήν· εὐθέως ἐκλίθησαν τὰ δένδρα ἐνώπιον αὐτῶν καὶ ἐδέξαντό με καθὰ καὶ τὸ πρώην·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.17.5">
+            <app xml:id="u132_ver_Greek">
+              <lem wit="#Charlesworth">καὶ σταθεὶς πέραν τοῦ ποταμοῦ, ἔκραξα φωνῇ μεγάλῃ καὶ εἶπον· ἄνθρωποι τῆς δικαιοσύνης· οἱ ὄντες ἀδελφοὶ τῶν ἁγίων ἀγγέλων· δότε μοι ευχὴν μετ᾽ εἰρήνης· ἰδοὺ γὰρ πορεύομαι ἀφ᾽ ὑμῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.17.6">
+            <app xml:id="u133_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ποιήσαντες εὐχὴν, ἔκραξαν πάντες λέγοντες· εἰρήνη εἰρήνη σοι ἀδελφέ·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="18" xml:id="HistRech.ver_Greek.18">
+          <head>Chapter 18</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.18.1">
+            <app xml:id="u134_ver_Greek">
+              <lem wit="#Charlesworth">τότε ηὐξάμην πρὸς κύριον καὶ ἦλθέν μοι λαῖλαψ τοῦ ἀνέμου· καὶ ἔλαβέν με ἐπὶ τῶν πτερύγων αὐτοῦ· καὶ εἵλκυσέν με ἕως τοῦ τόπου οὗ ηὗρέν με καθήμενον· καὶ ἀνέλυσέν μετ᾽ εἰρήνης·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.18.2">
+            <app xml:id="u135_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἄρας φωνήν· εἶπεν πρός με ὁ ἄνεμος· μακάριος εἶ ζώσιμε· ὅτι κατηριθμήθης μετὰ τῶν μακάρων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.18.3">
+            <app xml:id="u136_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἦλθεν τὸ ζῶον ἐκ τῆς ἐρήμου ᾧ ὄνομα κάμηλος· καὶ ἔλαβέν με ἐπὶ τὸν τράχηλον αὐτοῦ· καὶ ἤνεγκέν με ὀγδοήκοντα πέντε μονάς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.18.4">
+            <app xml:id="u137_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἔθηκέν με εἰς τὸν τόπον οὗ ηὗρέν με προσευχόμενον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.18.5">
+            <app xml:id="u138_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἀνέλυσεν ἐν εἰρήνῃ κράζων καὶ λέγων· &lt;μακάριος εἶ&gt; ζώσιμε, ὅτι μετὰ τῶν μακάρων κατηριθμήθης·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="19" xml:id="HistRech.ver_Greek.19">
+          <head>Chapter 19</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.19.1">
+            <app xml:id="u139_ver_Greek">
+              <lem wit="#Charlesworth">ἰδὼν δέ με ἐγκωμιαζόμενον ὁ σατανᾶς· ἠθέλησεν πειράσαι με καὶ ἀκοντίσαι ἀπὸ τῆς μονῆς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.19.2">
+            <app xml:id="u140_ver_Greek">
+              <lem wit="#Charlesworth">ἦλθεν δὲ ἄγγελος τοῦ θεοῦ καὶ εἶπέν μοι· ζώσιμε· ἰδοὺ ἔρχεται ὁ σατανᾶς πειράσαι σε· ἀλλ᾽ ἔσται πολεμῶν ὑπέρ σου ὁ κύριος· ἡ γὰρ δόξα τῆς πίστεώς σου δεῖ σε ἔχειν τὸν σατανᾶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.19.3">
+            <app xml:id="u141_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐφάνη ἄγγελος τοῦ θεοῦ κράζων καὶ λέγων· καλῶς ἐλήλυθας μάκαρ τοῦ χριστοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.19.4">
+            <app xml:id="u142_ver_Greek">
+              <lem wit="#Charlesworth">δεῦρο ἀπάξω σε ἐπὶ τὸ σπήλαιον τὸ γινόμενον κατοικητήριον τοῦ σώματός σου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.19.5">
+            <app xml:id="u143_ver_Greek">
+              <lem wit="#Charlesworth">ἔσται γὰρ τὸ σπήλαιόν σου μαρτύριον τῆς ἐρήμου· ἴασις τῶν προσερχομένων· ἀσθενῶν· πειρατήριον καὶ βάσανος τῶν δαιμόνων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.19.6">
+            <app xml:id="u144_ver_Greek">
+              <lem wit="#Charlesworth">καὶ κρατήσας τῆς χειρός μου· ἐνίσχυσέν με· καὶ διήγαγέν με δι᾽ ἡμερῶν τεσσαράκοντα εἰς τὸ σπήλαιον· ἐν ᾧ ἤμην κατοικῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.19.7">
+            <app xml:id="u145_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐγενήθη τράπεζα δικαιοσύνης· καὶ ἤμην αὐλιζόμενος· μετὰ τῶν ἀγγέλων τοῦ θεοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.19.8">
+            <app xml:id="u146_ver_Greek">
+              <lem wit="#Charlesworth">ἔθηκα δὲ τὰς πλάκας τὰς δοθείσας μοι ἀπὸ τῶν ἁγίων μακάρων ἐπὶ τοῦ βήματος τοῦ θυσιαστηρίου τοῦ ἐν τῷ σπηλαίῳ μου·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="20" xml:id="HistRech.ver_Greek.20">
+          <head>Chapter 20</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.20.1">
+            <app xml:id="u147_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἰδοὺ ἀναβάντων τῶν ἀγγέλων τοῦ θεοῦ· παρεγένετο ὁ διάβολος σχῆμα ἔχων ἄγριον· καὶ θυμοῦ ἀγόμενος καὶ χολῆς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.20.2">
+            <app xml:id="u148_ver_Greek">
+              <lem wit="#Charlesworth">εἶπεν πρός με· ἐγὼ ᾔδειν ὅτι οὕτως ποιῆσαί σε εἶχεν ὁ θεὸς ὡς καὶ τοὺς μάκαρας· καὶ ἔχουσιν εἶναι ἀναμάρτητοι· καὶ εἶναι αὐτοὺς ὑπὲρ τοὺς ἀγγέλους·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.20.3">
+            <app xml:id="u149_ver_Greek">
+              <lem wit="#Charlesworth">καὶ διὰ τοῦτο εἰσήνεγκα διάνοιαν πονηράν· καὶ εἰσῆλθον εἰς τὸ σκεῦος τοῦ ὄφεως πανούργως πρὸς πανοῦργον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.20.4">
+            <app xml:id="u150_ver_Greek">
+              <lem wit="#Charlesworth">καὶ διὰ τοῦτο ἐποίησα παραβῆναι τὸν ἀδὰμ τὸν πρῶτον ἄνθρωπον· γεύσασθαι αὐτὸν ἀπὸ τοῦ ξύλου τῆς ζωῆς· ἐπειδὴ δὲ παρήγγειλεν αὐτὸν ὁ θεὸς μὴ φαγεῖν ἀπ᾽ αὐτοῦ· ἵνα ἔμεινεν ἴσος τῆς δόξης τοῦ θεοῦ καὶ τῶν ἁγίων ἀγγέλων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.20.5">
+            <app xml:id="u151_ver_Greek">
+              <lem wit="#Charlesworth">καὶ σὺ πάλιν ἀπελθὼν ἤνεγκας τὴν ἐντολὴν ταύτην</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.20.6">
+            <app xml:id="u152_ver_Greek">
+              <lem wit="#Charlesworth">ἵνα μὴ ὦσιν ἀναμάρτητοι, ἐγώ σοι δείξω πῶς ἀπολέσω σε· καὶ πάντας τοὺς δεχομένους τὴν ἐντολὴν ταύτην ἵνα μὴ ὦσιν ἀναμάρτητοι καὶ τὴν βίβλον ἣν ἤνεγκας·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="21" xml:id="HistRech.ver_Greek.21">
+          <head>Chapter 21</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.21.1">
+            <app xml:id="u153_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ταῦτα εἰπὼν ὁ διάβολος, ἐπορεύθη ἀπ᾽ ἐμοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.21.2">
+            <app xml:id="u154_ver_Greek">
+              <lem wit="#Charlesworth">καὶ μεθ᾽ ἡμέρας ὀκτώ· συνήγαγεν μεθ᾽ ἑαυτοῦ· χιλίους τριακοσίους ἑξήκοντα δαίμονας· καὶ ἥρπασέν με ἀπὸ τοῦ σπηλαίου προσευχόμενον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.21.3">
+            <app xml:id="u155_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἔτυπτόν με σφαιρίζοντες ἐν ἑαυτοῖς ἡμέρας τεσσαράκοντα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.21.4">
+            <app xml:id="u156_ver_Greek">
+              <lem wit="#Charlesworth">καὶ &lt;μετὰ τὰς τεσσαράκονα&gt; ἡμέρας ἔκλαυσεν ὁ διάβολος ἔμπροσθέν μου καὶ εἶπεν· οὐαί μοι· ὅτι δι᾽ ἕνα ἄνθρωπον τὸν κόσμον ἀπώλεσα· ἐνίκησέν με γὰρ διὰ τῆς προσευχῆς αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.21.5">
+            <app xml:id="u157_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἤρξατο τρέχειν ἀπ᾽ ἐμοῦ· ἐγὼ δὲ κρατήσας αὐτὸν ἔστησα καὶ εἶπον· οὐ μὴ ἀποδράσῃς καὶ φύγῃς ἀπ᾽ ἐμοῦ· ἕως &lt;οὗ ὀμόσῃς&gt; μοι τοῦ μηκέτι ἄνθρωπον πειράσαι:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.21.6">
+            <app xml:id="u158_ver_Greek">
+              <lem wit="#Charlesworth">καὶ κλαύσας κλαυθμῷ μεγάλῳ καὶ βιαίῳ· ὤμοσέν μοι ἐπὶ τῷ στερεώματι τοῦ οὐρανοῦ ἕως οὗ ἡ κατοικία σού ἐστιν καὶ μετά σε οὐ μὴ ἀπέλθω ἐπὶ τὸν τόπον ἐκεῖνον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.21.7">
+            <app xml:id="u159_ver_Greek">
+              <lem wit="#Charlesworth">τότε ἀπέλυσα αὐτὸν ἐκπέμψας εἰς τὸ αἰώνιον πῦρ καὶ τοὺς μετ᾽ αὐτοῦ δαίμονας·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek.21.8">
+            <app xml:id="u160_ver_Greek">
+              <lem wit="#Charlesworth">τότε ἦλθεν ὁ ἄγγελος ὁ συνευδοκήσας μοι ἐπὶ τῆς τραπέζης· καὶ ἤγαγέν με ἐν τῷ σπηλαίῳ μου, μετὰ δόξης πολλῆς·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="22" xml:id="HistRech.ver_Greek.22">
+          <head>Chapter 22</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.22.1">
+            <app xml:id="u161_ver_Greek">
+              <lem wit="#Charlesworth">ἔζησα δὲ μετὰ τοῦτο ἔτη τριάκοντα ἕξ· καὶ διέδωκα τὴν διοίκησιν τῶν μακάρων, τοῖς πατράσιν τοῖς ἐν τῇ ἐρήμῳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.22.2">
+            <app xml:id="u162_ver_Greek">
+              <lem wit="#Charlesworth">ἔκλαυσεν δὲ ὁ διάβολος διὰ τὰς πλάκας τῆς διοικήσεως τῶν μακάρων· ὅτι ἐὰν περιέλθῃ τοῦτο ἐν τῷ κόσμῳ γέγονα κατάγελως· καὶ οὗτοι μένουσιν ἀναμάρτητοι· κἀγὼ μόνος ἐν τῇ μωρίᾳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.22.3">
+            <app xml:id="u163_ver_Greek">
+              <lem wit="#Charlesworth">καὶ μετὰ τὴν συμπλήρωσιν τῶν τριάκοντα ἓξ ἔτῶν· παρεγένοντο οἱ ἄγγελοι τοῦ θεοῦ πρός με καθάπερ καὶ πρὸς τοὺς μάκαρας·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.22.4">
+            <app xml:id="u164_ver_Greek">
+              <lem wit="#Charlesworth">συνήχθησαν δὲ πάντες οἱ μοναχοὶ καὶ πᾶς ὁ ἀκούσας· καὶ ἀνεγνώσθη ἐπὶ πάντων ἡ διαθήκη αὕτη·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.22.5">
+            <app xml:id="u165_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐν τῇ τοιαύτῃ πολιτείᾳ παρέδωκεν τὴν ψυχὴν τῷ θεῷ·</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="23" xml:id="HistRech.ver_Greek.23">
+          <head>Chapter 23</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek.23.1">
+            <app xml:id="u166_ver_Greek">
+              <lem wit="#Charlesworth">ἐγὼ δὲ κρύσεως εἷς ὣν τῶν ἐν τῇ ἐρήμῳ· ἐκβαλὼν ἔδωκα πᾶσιν τοῖς θέλουσιν μανθάνειν καὶ ὠφελεῖσθαι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek.23.2">
+            <app xml:id="u167_ver_Greek">
+              <lem wit="#Charlesworth">οἱ οὖν ἄγγελοι τοῦ θεοῦ συνεκόμισαν τὸ σῶμα τοῦ ἁγίου ζωσίμου ὡς πολύτιμον δῶρον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek.23.3">
+            <app xml:id="u168_ver_Greek">
+              <lem wit="#Charlesworth">καὶ ἐθεασάμεθα τὴν ψυχὴν τοῦ μακαρίου, ὑπὲρ τὸν ἥλιον πεφωτισμένην ἑπταπλασίως·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek.23.4">
+            <app xml:id="u169_ver_Greek">
+              <lem wit="#Charlesworth">ἀνέβησαν δὲ ἐπὶ τὸν τόπον παραχρῆμα φοίνικες ἑπτὰ, καὶ ἐπεσκίασαν τὸ σπήλαιον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek.23.5">
+            <app xml:id="u170_ver_Greek">
+              <lem wit="#Charlesworth">ἀνέβη δὲ καὶ πηγὴ ὕδατος ἐπὶ τοῦ τόπου ἐκείνου ὕδωρ ἅγιον· καὶ ἕως τῆς ἡμέρας ταύτης· ἴασις καὶ σωτηρία πάντων τῶν προσερχομένων ἀσθενῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek.23.6">
+            <app xml:id="u171_ver_Greek">
+              <lem wit="#Charlesworth">εἰρήνη πᾶσιν τοῖς ἀκούουσιν τὴν μνήμην τοῦ ἁγίου ζωσίμου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek.23.7">
+            <app xml:id="u172_ver_Greek">
+              <lem wit="#Charlesworth">ἔστιν δὲ ὁ κύριος συνήγορος καὶ ὄφελος πάντων εἰς τοὺς ἀτελευτήτους αἰῶνας τῶν αἰώνων ἀμήν·</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="chapter" n="Title" xml:id="HistRech.ver_English.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="HistRech.ver_English.Title.0">
+            <app xml:id="uen_1_ver_English">
+              <lem wit="#OCP-Trans">The Narrative of Zosimus concerning the life of the blessed. Lord, bless.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="HistRech.ver_English.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.1.1">
+            <app xml:id="uen_2_ver_English">
+              <lem wit="#OCP-Trans">At that time there was a man named Zosimus from the desert, who had not eaten bread for forty years and had not drunk wine; and he had not seen the face of a human being.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.1.2">
+            <app xml:id="uen_3_ver_English">
+              <lem wit="#OCP-Trans">He was entreating God so that he might see the administration of the blessed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.1.3">
+            <app xml:id="uen_4_ver_English">
+              <lem wit="#OCP-Trans">And behold, an angel of the Lord was sent, saying to him, “Zosimus, man of God, behold, I have been sent from the Most High, the God of all, to tell you that you will go to the blessed; but you will not dwell with them.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.1.4">
+            <app xml:id="uen_5_ver_English">
+              <lem wit="#OCP-Trans">“But do not exalt your heart, saying, ‘For forty years I have not eaten bread.’ For the word of God is greater than bread, and the Spirit of God is greater than wine.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.1.5">
+            <app xml:id="uen_6_ver_English">
+              <lem wit="#OCP-Trans">“For your saying, ‘I have not seen the face of a human being,’ behold, the face of the Great King is near you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.1.6">
+            <app xml:id="uen_7_ver_English">
+              <lem wit="#OCP-Trans">And Zosimus said, “I know that whatever the Lord desires, he is able to do.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.1.7">
+            <app xml:id="uen_8_ver_English">
+              <lem wit="#OCP-Trans">And the angel said to him, “Know this also: that you are not worthy of even one of their meals. Nevertheless, arise and go.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="HistRech.ver_English.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.2.1">
+            <app xml:id="uen_9_ver_English">
+              <lem wit="#OCP-Trans">And I, Zosimus, having left my cave, with God leading me, I was going, not knowing the way where I was going.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.2.2">
+            <app xml:id="uen_10_ver_English">
+              <lem wit="#OCP-Trans">And having traveled for forty days, my spirit failed me and my body became weak. And having despaired, I sat down and was praying in that place for three days.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.2.3">
+            <app xml:id="uen_11_ver_English">
+              <lem wit="#OCP-Trans">And behold, an animal came from the desert, its name was Camel. And having knelt down on the ground, it took me upon its neck. And it went through the desert and set me down.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.2.4">
+            <app xml:id="uen_12_ver_English">
+              <lem wit="#OCP-Trans">And there was a great roaring of wild beasts there, and gnashing, and deadly poison.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.2.5">
+            <app xml:id="uen_13_ver_English">
+              <lem wit="#OCP-Trans">And having become fearful, I prayed to the Lord. And there was a great earthquake in that place with a noise.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.2.6">
+            <app xml:id="uen_14_ver_English">
+              <lem wit="#OCP-Trans">And a whirlwind of wind blew, and it lifted me from the ground and raised me to its wing. And I was praying and going. And it set me down in a riverine place; and the name of the river was Eumelēs.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.2.7">
+            <app xml:id="uen_15_ver_English">
+              <lem wit="#OCP-Trans">And behold, as I was intending to cross the river, someone cried out as if from the water, saying, “Zosimus, man of God, you cannot pass through me; for man cannot cut through my waters. But rather, look from the waters up to the sky.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.2.8">
+            <app xml:id="uen_16_ver_English">
+              <lem wit="#OCP-Trans">And as I looked, I saw a wall of cloud extending from the waters up to the sky.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_English.2.9">
+            <app xml:id="uen_17_ver_English">
+              <lem wit="#OCP-Trans">And the cloud said, “Zosimus, man of God, no bird from this world passes through me, nor breath of wind, nor the sun itself, nor the Tempter in this world can pass through me.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="HistRech.ver_English.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.3.1">
+            <app xml:id="uen_18_ver_English">
+              <lem wit="#OCP-Trans">And I was amazed at these words and at the voice that said these things to me.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.3.2">
+            <app xml:id="uen_19_ver_English">
+              <lem wit="#OCP-Trans">And as I was praying, behold, two beautiful and most fair trees appeared from the earth, laden with fragrant fruits.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.3.3">
+            <app xml:id="uen_20_ver_English">
+              <lem wit="#OCP-Trans">And the tree bent down from here, took me upon its top, and rose very high in the middle of the river. And the other tree met it and received me into its branches. And having bent down, it set me down on the ground.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.3.4">
+            <app xml:id="uen_21_ver_English">
+              <lem wit="#OCP-Trans">And both trees rose up and set me across from the river.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.3.5">
+            <app xml:id="uen_22_ver_English">
+              <lem wit="#OCP-Trans">And I rested for three days in that place. And again, having risen, I was going, though I did not know where.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.3.6">
+            <app xml:id="uen_23_ver_English">
+              <lem wit="#OCP-Trans">And that place was full of much fragrance, and there was no mountain there, but that place was a level, undefiled plain, entirely crowned, and all the land was beautiful.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="HistRech.ver_English.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.4.1">
+            <app xml:id="uen_24_ver_English">
+              <lem wit="#OCP-Trans">And I saw there a naked man sitting. And I said to myself, “Is this perhaps the Tempter?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.4.2">
+            <app xml:id="uen_25_ver_English">
+              <lem wit="#OCP-Trans">And I remembered the voice of the cloud, that it had said to me, “that not even the Tempter himself in the world passes through me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.4.3">
+            <app xml:id="uen_26_ver_English">
+              <lem wit="#OCP-Trans">And thus, having taken courage, I said to him, “Greetings, brother.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.4.4">
+            <app xml:id="uen_27_ver_English">
+              <lem wit="#OCP-Trans">And he, answering, said to me, “Grace be with you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.4.5">
+            <app xml:id="uen_28_ver_English">
+              <lem wit="#OCP-Trans">And again I said to him, “Tell me, man of God, who are you?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.4.6">
+            <app xml:id="uen_29_ver_English">
+              <lem wit="#OCP-Trans">And he, answering, said to me, “And you, who are you?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.4.7">
+            <app xml:id="uen_30_ver_English">
+              <lem wit="#OCP-Trans">And I, answering, told him all about myself, and that I had prayed to the Lord, and he had brought me to this place.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.4.8">
+            <app xml:id="uen_31_ver_English">
+              <lem wit="#OCP-Trans">And he, answering, said to me, “I also know that you are a man of God. If not, you would not have passed through the cloud and the river and the air.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_English.4.9">
+            <app xml:id="uen_32_ver_English">
+              <lem wit="#OCP-Trans">“For the width of the river is about thirty miles; and the cloud reaches to the sky; and the depth of the river reaches to the abysses.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="HistRech.ver_English.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.5.1">
+            <app xml:id="uen_33_ver_English">
+              <lem wit="#OCP-Trans">And having finished this speech, the man said again, “Did you come here from the futility of the world?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.5.2">
+            <app xml:id="uen_34_ver_English">
+              <lem wit="#OCP-Trans">And I said to him, “Why are you naked?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.5.3">
+            <app xml:id="uen_35_ver_English">
+              <lem wit="#OCP-Trans">And he said, “How did you know that I am naked? For you are wearing skins from the sheep of the earth, and they are decaying with your body. But look up to the height of the sky and see what kind of garment is mine.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.5.4">
+            <app xml:id="uen_36_ver_English">
+              <lem wit="#OCP-Trans">And when I looked up to heaven, I saw his face like the face of an angel; and his garment was like lightning, going from east to west; and I was afraid because he was a son of God; and I became trembling, falling to the ground;</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="HistRech.ver_English.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.6.1">
+            <app xml:id="uen_37_ver_English">
+              <lem wit="#OCP-Trans">And &lt;giving his hand&gt;, he raised me, saying, “I am also one of the blessed ones.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.6.2">
+            <app xml:id="uen_38_ver_English">
+              <lem wit="#OCP-Trans">Come, so that I may lead you to the elders.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.6.3">
+            <app xml:id="uen_39_ver_English">
+              <lem wit="#OCP-Trans">And grasping my hand, he walked with me; and he led me to a certain crowd, and in that crowd were elders like sons of God; and young men were standing by the elders.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.6.4">
+            <app xml:id="uen_40_ver_English">
+              <lem wit="#OCP-Trans">And when I drew near to them, they said, “This one has come from the vanity of the world. Come, let us pray to the Lord, and he will reveal this mystery to us.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.6.5">
+            <app xml:id="uen_41_ver_English">
+              <lem wit="#OCP-Trans">“Perhaps the end has arrived, because a man of vanity has come here.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.6.6">
+            <app xml:id="uen_42_ver_English">
+              <lem wit="#OCP-Trans">And standing up, they prayed to the Lord with one accord; and behold, two angels descended from the heavens and said, “Do not fear the man, for God has sent him so that he may spend seven days and receive your administrations, and then he will depart and go to his own place.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.6.7">
+            <app xml:id="uen_43_ver_English">
+              <lem wit="#OCP-Trans">And the angels of God, having said these things, ascended into heaven before our eyes.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="HistRech.ver_English.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.7.1">
+            <app xml:id="uen_44_ver_English">
+              <lem wit="#OCP-Trans">Then the elders of the blessed ones entrusted me to one of the servants, saying, “Guard him for seven days.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.7.2">
+            <app xml:id="uen_45_ver_English">
+              <lem wit="#OCP-Trans">So the servant, taking me, led me to his cave; and we were living beneath a tree, being provided for.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.7.3">
+            <app xml:id="uen_46_ver_English">
+              <lem wit="#OCP-Trans">For from the sixth hour until the sixth hour, then we ate; and the water came out from the tree, sweeter than honey; and we drank to our fill, and again the water returned to its place.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.7.4">
+            <app xml:id="uen_47_ver_English">
+              <lem wit="#OCP-Trans">And all the family who were there heard about me, that a man had come here from the vanity of the world.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.7.5">
+            <app xml:id="uen_48_ver_English">
+              <lem wit="#OCP-Trans">And the whole family was stirred; and &lt;they came to see me&gt; because it seemed strange to them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.7.6">
+            <app xml:id="uen_49_ver_English">
+              <lem wit="#OCP-Trans">So &lt;they were asking me&gt; everything; and I was telling them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.7.7">
+            <app xml:id="uen_50_ver_English">
+              <lem wit="#OCP-Trans">And I was disheartened in my spirit and my body; and I appealed to the man of God who was serving me and said, “I beg you, brother, if anyone comes to see me, tell them that I am not here so that I may rest a little.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.7.8">
+            <app xml:id="uen_51_ver_English">
+              <lem wit="#OCP-Trans">And the man of God cried out, saying, “Alas, for the story of Adam has been repeated for me; for Satan deceived him through Eve, and this man wants to make me a liar through flattery, though he is here. He said to me that you will lie, and he said that I am not here.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_English.7.9">
+            <app xml:id="uen_52_ver_English">
+              <lem wit="#OCP-Trans">&lt;Take me away&gt; from here, otherwise I will flee &lt;from the village&gt;; for behold, he wants to sow in me the seeds of the world of vanity.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_English.7.10">
+            <app xml:id="uen_53_ver_English">
+              <lem wit="#OCP-Trans">And all the crowd and the elders rose up against me and said, “Depart from us, man; we do not know from where you have come to us.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="HistRech.ver_English.7.11">
+            <app xml:id="uen_54_ver_English">
+              <lem wit="#OCP-Trans">But I wept with a great weeping; and understanding departed from me; and I cried out to the elders, saying, “Forgive me, my masters!” And the elders, having stopped, provided silence.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="HistRech.ver_English.7.12">
+            <app xml:id="uen_55_ver_English">
+              <lem wit="#OCP-Trans">Then I explained to them the things from the beginning until now, and that I prayed to God to come to you; and he deemed me worthy.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="HistRech.ver_English.7.13">
+            <app xml:id="uen_56_ver_English">
+              <lem wit="#OCP-Trans">And the elders said, “And now, what &lt;do you want&gt; us to do for you?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="HistRech.ver_English.7.14">
+            <app xml:id="uen_57_ver_English">
+              <lem wit="#OCP-Trans">And I said to them, “I want to receive your administrations from you.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="HistRech.ver_English.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.8.1">
+            <app xml:id="uen_58_ver_English">
+              <lem wit="#OCP-Trans">And they rejoiced with great joy, and taking stone tablets, they inscribed on them with their fingernails, saying, “Hear, hear, sons of our men who have become blessed, for we are also from you.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.8.2">
+            <app xml:id="uen_59_ver_English">
+              <lem wit="#OCP-Trans">For when Jeremiah the prophet proclaimed that the city of Jerusalem would be delivered into the hands of those who destroy, he tore his garments and put on sackcloth around his waist; and he &lt;sprinkled ashes&gt; upon his head; and he took dust on his bed; and he told all the people to turn from their evil way.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.8.3">
+            <app xml:id="uen_60_ver_English">
+              <lem wit="#OCP-Trans">And our father Rechab, son of Aminadab, also heard and said to us, ‘Hear, sons of Rechab and daughters of your father, and take off your garments from your body and you shall not drink a jar of wine; and you shall not eat bread from fire; and you shall not drink strong drink or honey until the Lord hears your prayer.’</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.8.4">
+            <app xml:id="uen_61_ver_English">
+              <lem wit="#OCP-Trans">And we said, “We will do what he commanded us and we will obey.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.8.5">
+            <app xml:id="uen_62_ver_English">
+              <lem wit="#OCP-Trans">And we threw off our outer garment from our body; and we did not eat bread from fire; and we did not drink a jar of wine, nor honey, nor strong drink; and we wept with great weeping; and we prayed to the Lord.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.8.6">
+            <app xml:id="uen_63_ver_English">
+              <lem wit="#OCP-Trans">And he heard our prayer; and he turned his wrath away from the city of Jerusalem; and mercy from the Lord came to the city of Jerusalem, and he had compassion on his people; and he turned away his deadly wrath.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="HistRech.ver_English.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.9.1">
+            <app xml:id="uen_64_ver_English">
+              <lem wit="#OCP-Trans">And after these things the king of the city of Jerusalem died; and another king arose.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.9.2">
+            <app xml:id="uen_65_ver_English">
+              <lem wit="#OCP-Trans">And all the people gathered to him; and they made it known to him about us and said, “There are some among your people who have changed their way from us.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.9.3">
+            <app xml:id="uen_66_ver_English">
+              <lem wit="#OCP-Trans">So the king called them and asked them why they had done this.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.9.4">
+            <app xml:id="uen_67_ver_English">
+              <lem wit="#OCP-Trans">And he summoned us and asked, “&lt;Who are you&gt; and of what religion or from what country?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.9.5">
+            <app xml:id="uen_68_ver_English">
+              <lem wit="#OCP-Trans">And we said to him, “We are from your people of the city of Jerusalem.” And the king said, “Whose sons are you?” And we said to him, “We are sons of your servant, our father Rechab, sons of Jonadab.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.9.6">
+            <app xml:id="uen_69_ver_English">
+              <lem wit="#OCP-Trans">And when Jeremiah the prophet proclaimed, while your father the king was alive, he proclaimed death to the city of Jerusalem, saying that in three more days the whole city would be put to death.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.9.7">
+            <app xml:id="uen_70_ver_English">
+              <lem wit="#OCP-Trans">And your father the king, having heard, repented of his sins; and he issued a decree to all to turn from their evil way.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.9.8">
+            <app xml:id="uen_71_ver_English">
+              <lem wit="#OCP-Trans">But our father, your servant, heard and commanded us, saying: “You shall not drink a jar of wine, nor shall you eat bread made with fire, until the Lord hears your petition.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_English.9.9">
+            <app xml:id="uen_72_ver_English">
+              <lem wit="#OCP-Trans">So we obeyed our father’s command. We bared our bodies, and we did not drink wine, and we did not eat bread made with fire. And we prayed to the Lord concerning the city of Jerusalem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_English.9.10">
+            <app xml:id="uen_73_ver_English">
+              <lem wit="#OCP-Trans">And the Lord had mercy on his people, and he turned away his wrath. And we saw, and our soul was helped, and we said, “It is good for us to be this way.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="HistRech.ver_English.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.10.1">
+            <app xml:id="uen_74_ver_English">
+              <lem wit="#OCP-Trans">And the king said to us, “You have done well.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.10.2">
+            <app xml:id="uen_75_ver_English">
+              <lem wit="#OCP-Trans">Now, therefore, mingle with my people, and eat bread, and drink wine, and glorify your Lord. And you shall be obedient to God and to the king.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.10.3">
+            <app xml:id="uen_76_ver_English">
+              <lem wit="#OCP-Trans">But we said that we would not disobey God.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.10.4">
+            <app xml:id="uen_77_ver_English">
+              <lem wit="#OCP-Trans">Then the king, becoming angry, put us in prison. And we spent that night keeping vigil.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.10.5">
+            <app xml:id="uen_78_ver_English">
+              <lem wit="#OCP-Trans">And behold, a light shone in the dwelling, and an angel uncovered the prison. And he took hold of our heads and led us out of the prison. And he placed us in the air, and brought us to the water of the river. And he said to us, “Where the water goes, you also go.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.10.6">
+            <app xml:id="uen_79_ver_English">
+              <lem wit="#OCP-Trans">And we walked with the water and with the angel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.10.7">
+            <app xml:id="uen_80_ver_English">
+              <lem wit="#OCP-Trans">When, therefore, he brought us to this place, the river became cold, and the water disappeared. And the place was torn open, and water rose from the abyss.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.10.8">
+            <app xml:id="uen_81_ver_English">
+              <lem wit="#OCP-Trans">And he surrounded this homeland with a wall, and a wall of cloud came and overshadowed the water.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_English.10.9">
+            <app xml:id="uen_82_ver_English">
+              <lem wit="#OCP-Trans">And he did not scatter us over all the earth, but he gave us this homeland.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="HistRech.ver_English.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.11.1">
+            <app xml:id="uen_83_ver_English">
+              <lem wit="#OCP-Trans">Hear, hear, sons of men, the administration of the blessed!</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.11.2">
+            <app xml:id="uen_84_ver_English">
+              <lem wit="#OCP-Trans">For God has placed us in this land. For we are pious, but not immortal.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.11.3">
+            <app xml:id="uen_85_ver_English">
+              <lem wit="#OCP-Trans">For the earth brings forth most fragrant fruit, and sweet water, sweeter than honey, flows from the trunks of the trees. And these are our food and drink.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.11.4">
+            <app xml:id="uen_86_ver_English">
+              <lem wit="#OCP-Trans">And we also pray night and day. And all our diligence is this:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.11.5">
+            <app xml:id="uen_87_ver_English">
+              <lem wit="#OCP-Trans">Hear, sons of men, that among us there is no vine, nor cultivated land, nor works of wood or iron, nor is there a house for us, nor a building, nor fire, nor a sword, nor idle iron, nor workable iron, nor silver, nor gold, nor an exceedingly heavy or bitter air.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.11.6">
+            <app xml:id="uen_88_ver_English">
+              <lem wit="#OCP-Trans">Nor are there among us those who take wives for themselves until they have two children.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.11.7">
+            <app xml:id="uen_89_ver_English">
+              <lem wit="#OCP-Trans">And after producing two children, they separate from each other and are in purity, not knowing that they were once accustomed to marriage, but as if from the beginning existing in virginity.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.11.8">
+            <app xml:id="uen_90_ver_English">
+              <lem wit="#OCP-Trans">One child remains for marriage, and one for virginity.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="HistRech.ver_English.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.12.1">
+            <app xml:id="uen_91_ver_English">
+              <lem wit="#OCP-Trans">And there is no count of time among us, neither weeks nor months nor a year. For all our day is one day.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.12.2">
+            <app xml:id="uen_92_ver_English">
+              <lem wit="#OCP-Trans">And on our caves, leaves of trees are laid up, and this is our bed beneath the trees.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.12.3">
+            <app xml:id="uen_93_ver_English">
+              <lem wit="#OCP-Trans">But we are not naked in body, as you indeed suppose. For we have the garment of immortality and we are not ashamed of one another.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.12.4">
+            <app xml:id="uen_94_ver_English">
+              <lem wit="#OCP-Trans">And at the sixth hour we eat every day. For the fruit of the tree descends by itself at the sixth hour, and we eat to our fill and drink.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.12.5">
+            <app xml:id="uen_95_ver_English">
+              <lem wit="#OCP-Trans">And again, the water returns to its place.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.12.6">
+            <app xml:id="uen_96_ver_English">
+              <lem wit="#OCP-Trans">And we also know you who are in the world there and those who are in sins, and your works. For every day the angels of God come and report to us even the number of your years.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.12.7">
+            <app xml:id="uen_97_ver_English">
+              <lem wit="#OCP-Trans">But we pray for you to the Lord, because we also are from you and from your race. But also because God has chosen us and God has placed us in this place without sin.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.12.8">
+            <app xml:id="uen_98_ver_English">
+              <lem wit="#OCP-Trans">And the angels of God dwell with us every day and tell us all things concerning you. And we rejoice with the angels on account of the righteous deeds.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_English.12.9">
+            <app xml:id="uen_99_ver_English">
+              <lem wit="#OCP-Trans">But for the deeds of sinners, we grieve. And weeping, we pray to the Lord, that he might cease from wrath and spare your sins.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="HistRech.ver_English.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.13.1">
+            <app xml:id="uen_100_ver_English">
+              <lem wit="#OCP-Trans">But when the time of the forty days comes, all the trees cease from bearing fruit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.13.2">
+            <app xml:id="uen_101_ver_English">
+              <lem wit="#OCP-Trans">And manna rains from heaven, which he gave to our fathers. And the manna is sweeter than honey.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.13.3">
+            <app xml:id="uen_102_ver_English">
+              <lem wit="#OCP-Trans">And thus we know that the season of the year has changed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.13.4">
+            <app xml:id="uen_103_ver_English">
+              <lem wit="#OCP-Trans">But when the time of the holy Passover comes, then again the trees produce the fragrant fruit. And thus we know that it is the beginning of the year.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.13.5">
+            <app xml:id="uen_104_ver_English">
+              <lem wit="#OCP-Trans">But the feast of the resurrection of the Lord is observed with much vigil. For we shall be watchful for three days and three nights.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="HistRech.ver_English.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.14.1">
+            <app xml:id="uen_105_ver_English">
+              <lem wit="#OCP-Trans">And we also know the time of our completion. For there is no torture and torment, nor toil for our body, nor despondency, nor illness. But there is peace and much endurance and love.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.14.2">
+            <app xml:id="uen_106_ver_English">
+              <lem wit="#OCP-Trans">For our soul is not troubled by the angels to depart; for the angels rejoice when they receive our souls; and our souls also rejoice with the angels when they see them;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.14.3">
+            <app xml:id="uen_107_ver_English">
+              <lem wit="#OCP-Trans">just as a bride awaits the bridegroom, so our soul awaits the good news from the holy angels, saying nothing superfluous but only this: ‘The Lord calls you.’</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.14.4">
+            <app xml:id="uen_108_ver_English">
+              <lem wit="#OCP-Trans">Then the soul departs from the body and approaches the angels. And when they see the soul departing undefiled, the angels rejoice and, spreading out their robes, they receive it.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.14.5">
+            <app xml:id="uen_109_ver_English">
+              <lem wit="#OCP-Trans">Then the angels will bless it, saying, ‘Blessed are you, soul, because the will of God has been fulfilled in you.’</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="HistRech.ver_English.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.15.1">
+            <app xml:id="uen_110_ver_English">
+              <lem wit="#OCP-Trans">Now this is the length of our life:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.15.2">
+            <app xml:id="uen_111_ver_English">
+              <lem wit="#OCP-Trans">if one departs from the body in youth, the remaining days of his life are three hundred sixty years;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.15.3">
+            <app xml:id="uen_112_ver_English">
+              <lem wit="#OCP-Trans">but if one departs from the body in old age, the remaining days of his life are seven hundred eighty-eight years.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.15.4">
+            <app xml:id="uen_113_ver_English">
+              <lem wit="#OCP-Trans">The day of our completion has been revealed to us by the angels.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.15.5">
+            <app xml:id="uen_114_ver_English">
+              <lem wit="#OCP-Trans">When the angels of God come to take us, we go with them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.15.6">
+            <app xml:id="uen_115_ver_English">
+              <lem wit="#OCP-Trans">And the elders, seeing the angels, gather all the people. And we depart with the angels, chanting, until the angels go to the place of our dwelling.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.15.7">
+            <app xml:id="uen_116_ver_English">
+              <lem wit="#OCP-Trans">And because we have no implement, the angels of God make the container for our body themselves.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.15.8">
+            <app xml:id="uen_117_ver_English">
+              <lem wit="#OCP-Trans">And thus, the one called by God descends. And all of us, from the small to the great, greet him, sending him forth and arranging ourselves.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_English.15.9">
+            <app xml:id="uen_118_ver_English">
+              <lem wit="#OCP-Trans">And then the soul departs from the body; and the angels greet it.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_English.15.10">
+            <app xml:id="uen_119_ver_English">
+              <lem wit="#OCP-Trans">And we behold the form of the soul, as a form of light, completely filled throughout the body, without male or female.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="HistRech.ver_English.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.16.1">
+            <app xml:id="uen_120_ver_English">
+              <lem wit="#OCP-Trans">Then the angels, taking it up, sing a song and chant a hymn to God. And again, other orders of angels eagerly meet it, greeting the soul as it approaches and enters the firmaments.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.16.2">
+            <app xml:id="uen_121_ver_English">
+              <lem wit="#OCP-Trans">And when it goes to the place where it must worship God, the Son of God himself, with the angels, receives the soul of the blessed one and brings it to the undefiled Father of the ages.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.16.3">
+            <app xml:id="uen_122_ver_English">
+              <lem wit="#OCP-Trans">And again, when the angels sing above, we who are below listen to them. And again, we sing, and they listen in heaven above.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.16.4">
+            <app xml:id="uen_123_ver_English">
+              <lem wit="#OCP-Trans">And thus, between us and the angels, the doxology of the hymnody ascends.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.16.5">
+            <app xml:id="uen_124_ver_English">
+              <lem wit="#OCP-Trans">But when the soul of the blessed one falls on its face and worships the Lord, then we also fall and worship the Lord at the same hour.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.16.6">
+            <app xml:id="uen_125_ver_English">
+              <lem wit="#OCP-Trans">And when the Lord raises it, then we also rise.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.16.7">
+            <app xml:id="uen_126_ver_English">
+              <lem wit="#OCP-Trans">And when it goes to the appointed place, we also go to the assembly, fulfilling the eucharist of the Lord.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.16.8">
+            <app xml:id="uen_127_ver_English">
+              <lem wit="#OCP-Trans">Having written these things, and all the administration of the blessed ones, we gave them to our brother Zosimus, and we sent him forth to the place of the trees near the river Eumeles.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="HistRech.ver_English.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.17.1">
+            <app xml:id="uen_128_ver_English">
+              <lem wit="#OCP-Trans">But I, Zosimus, again entreated the blessed ones that they might intercede for me with the Lord, that the trees might receive me to cross.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.17.2">
+            <app xml:id="uen_129_ver_English">
+              <lem wit="#OCP-Trans">And all cried out to the Lord, saying, “O God, who has shown us your wonders and caused your servant Zosimus to come to us from the world of vanity, restore him again to his place in peace.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.17.3">
+            <app xml:id="uen_130_ver_English">
+              <lem wit="#OCP-Trans">And command these trees to bend down and take up your servant, and set him on the other side.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.17.4">
+            <app xml:id="uen_131_ver_English">
+              <lem wit="#OCP-Trans">And when they had completed their prayer, immediately the trees bent down before them and received me, just as before.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.17.5">
+            <app xml:id="uen_132_ver_English">
+              <lem wit="#OCP-Trans">And standing on the other side of the river, I cried out with a loud voice and said, “People of righteousness, who are brothers of the holy angels, give me a prayer with peace, for behold, I am departing from you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.17.6">
+            <app xml:id="uen_133_ver_English">
+              <lem wit="#OCP-Trans">And after offering a prayer, they all cried out, saying, “Peace, peace to you, brother.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="18" xml:id="HistRech.ver_English.18">
+          <head>Chapter 18</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.18.1">
+            <app xml:id="uen_134_ver_English">
+              <lem wit="#OCP-Trans">Then I prayed to the Lord, and a whirlwind came to me, and it took me on its wings, and it carried me to the place where it found me sitting, and it released me in peace.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.18.2">
+            <app xml:id="uen_135_ver_English">
+              <lem wit="#OCP-Trans">And raising its voice, the wind said to me, “Blessed are you, Zosimus, because you have been numbered with the blessed ones.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.18.3">
+            <app xml:id="uen_136_ver_English">
+              <lem wit="#OCP-Trans">And the animal from the wilderness came, whose name is Camel, and it took me upon its neck, and it carried me eighty-five stages.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.18.4">
+            <app xml:id="uen_137_ver_English">
+              <lem wit="#OCP-Trans">And it placed me in the place where it found me praying.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.18.5">
+            <app xml:id="uen_138_ver_English">
+              <lem wit="#OCP-Trans">And it departed in peace, crying and saying, “Blessed are you, Zosimus, because you have been numbered with the blessed ones.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="19" xml:id="HistRech.ver_English.19">
+          <head>Chapter 19</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.19.1">
+            <app xml:id="uen_139_ver_English">
+              <lem wit="#OCP-Trans">But when Satan saw me being glorified, he wanted to tempt me and cast me out of the monastery.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.19.2">
+            <app xml:id="uen_140_ver_English">
+              <lem wit="#OCP-Trans">But an angel of God came and said to me, “Zosimus, behold, Satan is coming to tempt you, but the Lord will fight for you. For the glory of your faith requires that you should possess Satan.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.19.3">
+            <app xml:id="uen_141_ver_English">
+              <lem wit="#OCP-Trans">and an angel of God appeared, crying and saying, “You have come well, blessed one of Christ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.19.4">
+            <app xml:id="uen_142_ver_English">
+              <lem wit="#OCP-Trans">Come, I will lead you to the cave that will become the dwelling of your body.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.19.5">
+            <app xml:id="uen_143_ver_English">
+              <lem wit="#OCP-Trans">For your cave will be a witness in the desert, a healing for those who come, for the sick, a place of testing and torment for demons.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.19.6">
+            <app xml:id="uen_144_ver_English">
+              <lem wit="#OCP-Trans">And taking my hand, he strengthened me and led me for forty days to the cave where I was dwelling.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.19.7">
+            <app xml:id="uen_145_ver_English">
+              <lem wit="#OCP-Trans">And a table of righteousness was made, and I was lodging with the angels of God.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.19.8">
+            <app xml:id="uen_146_ver_English">
+              <lem wit="#OCP-Trans">And I placed the tablets given to me by the blessed saints on the altar platform in my cave.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="20" xml:id="HistRech.ver_English.20">
+          <head>Chapter 20</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.20.1">
+            <app xml:id="uen_147_ver_English">
+              <lem wit="#OCP-Trans">And behold, when the angels of God had ascended, the Devil came, having a wild appearance, and driven by wrath and bitterness.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.20.2">
+            <app xml:id="uen_148_ver_English">
+              <lem wit="#OCP-Trans">He said to me, “I knew that God intended to make you like the blessed ones, and that they would be sinless and superior to the angels.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.20.3">
+            <app xml:id="uen_149_ver_English">
+              <lem wit="#OCP-Trans">And for this reason, I introduced an evil thought, and entered the vessel of the serpent cunningly to a cunning one.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.20.4">
+            <app xml:id="uen_150_ver_English">
+              <lem wit="#OCP-Trans">And for this reason, I caused Adam, the first man, to transgress, for him to taste of the tree of life, since God had commanded him not to eat from it, so that he might remain equal in glory to God and the holy angels.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.20.5">
+            <app xml:id="uen_151_ver_English">
+              <lem wit="#OCP-Trans">And you again went and brought this commandment</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.20.6">
+            <app xml:id="uen_152_ver_English">
+              <lem wit="#OCP-Trans">so that they might not be sinless. I will show you how I will destroy you and all who receive this commandment, so that they may not be sinless, and the book that you brought.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="21" xml:id="HistRech.ver_English.21">
+          <head>Chapter 21</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.21.1">
+            <app xml:id="uen_153_ver_English">
+              <lem wit="#OCP-Trans">And after saying these things, the Devil departed from me.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.21.2">
+            <app xml:id="uen_154_ver_English">
+              <lem wit="#OCP-Trans">And after eight days, he gathered with himself one thousand three hundred and sixty demons, and he seized me from the cave while I was praying.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.21.3">
+            <app xml:id="uen_155_ver_English">
+              <lem wit="#OCP-Trans">And they beat me, playing ball among themselves for forty days.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.21.4">
+            <app xml:id="uen_156_ver_English">
+              <lem wit="#OCP-Trans">And after forty days, the Devil wept before me and said, “Woe to me, because for one man I have lost the world! For he has conquered me through his prayer.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.21.5">
+            <app xml:id="uen_157_ver_English">
+              <lem wit="#OCP-Trans">And he began to run from me. But I, grasping him, made him stop and said, “You shall not escape or flee from me until you swear to me that you will no longer tempt humanity.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.21.6">
+            <app xml:id="uen_158_ver_English">
+              <lem wit="#OCP-Trans">And weeping with a great and violent lament, he swore to me by the firmament of heaven, “As long as your dwelling is here, and after you, I will not go to that place.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.21.7">
+            <app xml:id="uen_159_ver_English">
+              <lem wit="#OCP-Trans">Then I released him, casting him and the demons with him into the eternal fire.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_English.21.8">
+            <app xml:id="uen_160_ver_English">
+              <lem wit="#OCP-Trans">Then the angel who had been well-pleased with me at the table came, and led me into my cave with much glory.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="22" xml:id="HistRech.ver_English.22">
+          <head>Chapter 22</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.22.1">
+            <app xml:id="uen_161_ver_English">
+              <lem wit="#OCP-Trans">And after this, I lived thirty-six years, and I distributed the administration of the blessed ones to the fathers in the desert.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.22.2">
+            <app xml:id="uen_162_ver_English">
+              <lem wit="#OCP-Trans">But the Devil wept because of the tablets of the administration of the blessed ones, “Because if this spreads in the world, I will become a laughingstock, and these will remain sinless, and I alone will be in folly.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.22.3">
+            <app xml:id="uen_163_ver_English">
+              <lem wit="#OCP-Trans">And after the completion of the thirty-six years, the angels of God came to me, just as they did to the blessed ones.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.22.4">
+            <app xml:id="uen_164_ver_English">
+              <lem wit="#OCP-Trans">And all the monks and everyone who heard were gathered, and this testament was read before all.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.22.5">
+            <app xml:id="uen_165_ver_English">
+              <lem wit="#OCP-Trans">And in such a way of life, he delivered his soul to God.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="23" xml:id="HistRech.ver_English.23">
+          <head>Chapter 23</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_English.23.1">
+            <app xml:id="uen_166_ver_English">
+              <lem wit="#OCP-Trans">But I, Krouseos, being one of those in the desert, having brought it out, gave it to all who wish to learn and benefit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_English.23.2">
+            <app xml:id="uen_167_ver_English">
+              <lem wit="#OCP-Trans">Therefore, the angels of God gathered the body of Saint Zosimos as a very precious gift.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_English.23.3">
+            <app xml:id="uen_168_ver_English">
+              <lem wit="#OCP-Trans">And we saw the soul of the blessed one, illuminated seven times brighter than the sun.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_English.23.4">
+            <app xml:id="uen_169_ver_English">
+              <lem wit="#OCP-Trans">And immediately seven palm trees grew in that place and overshadowed the cave.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_English.23.5">
+            <app xml:id="uen_170_ver_English">
+              <lem wit="#OCP-Trans">And a spring of water, holy water, also rose in that place, and to this day, it is a healing and salvation for all the sick who approach.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_English.23.6">
+            <app xml:id="uen_171_ver_English">
+              <lem wit="#OCP-Trans">Peace to all who hear the memory of Saint Zosimos.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_English.23.7">
+            <app xml:id="uen_172_ver_English">
+              <lem wit="#OCP-Trans">And the Lord is an advocate and helper to all for the endless ages of ages. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Greek (French)" xml:lang="fr" xml:id="ver_Greek__French_">
+        <head>Greek (French)</head>
+        <div type="chapter" n="Title" xml:id="HistRech.ver_Greek__French_.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="HistRech.ver_Greek__French_.Title.0">
+            <app xml:id="ufr_1_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Récit de Zosime sur la vie des Bienheureux. Seigneur, bénis !</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="HistRech.ver_Greek__French_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.1.1">
+            <app xml:id="ufr_2_ver_Greek__French_">
+              <lem wit="#OCP-Trans">En ce temps-là, il y avait dans le désert un homme nommé Zosime, qui n'avait pas mangé de pain pendant quarante ans et n'avait pas bu de vin ; et il n'avait pas vu le visage d'un homme.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.1.2">
+            <app xml:id="ufr_3_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Celui-ci priait Dieu afin de voir le mode de vie des Bienheureux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.1.3">
+            <app xml:id="ufr_4_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et voici qu'un ange du Seigneur fut envoyé, lui disant : « Zosime, homme de Dieu, voici que j'ai été envoyé par le Très-Haut, le Dieu de l'univers, pour te dire que tu iras vers les Bienheureux, mais tu n'habiteras pas avec eux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.1.4">
+            <app xml:id="ufr_5_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais n'élève pas ton cœur en disant : "Pendant quarante ans je n'ai pas mangé de pain" ; car la parole de Dieu est supérieure au pain, et l'Esprit de Dieu est supérieur au vin.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.1.5">
+            <app xml:id="ufr_6_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car quant à ce que tu as dit : "Je n'ai pas vu le visage d'un homme", voici que le visage du grand Roi est près de toi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.1.6">
+            <app xml:id="ufr_7_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et Zosime dit : « Je sais que tout ce que le Seigneur veut, il le peut. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.1.7">
+            <app xml:id="ufr_8_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'ange lui dit : « Sache aussi ceci : tu n'es pas digne d'un seul de leurs repas ; néanmoins, lève-toi et marche. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="HistRech.ver_Greek__French_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.2.1">
+            <app xml:id="ufr_9_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Moi donc, Zosime, étant sorti de ma caverne, Dieu me guidant, je marchais sans savoir le chemin par où j'allais.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.2.2">
+            <app xml:id="ufr_10_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après avoir marché pendant quarante jours, mon esprit se découragea et mon corps faiblit ; et pris d'abattement, je m'assis et je restai en prière en ce lieu-là pendant trois jours.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.2.3">
+            <app xml:id="ufr_11_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et voici qu'un animal sortit du désert, dont le nom était chameau ; et ayant posé ses genoux à terre, il me prit sur son cou, parcourut le désert et me déposa.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.2.4">
+            <app xml:id="ufr_12_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il y avait là un grand rugissement de bêtes fauves, des grincements et un venin mortel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.2.5">
+            <app xml:id="ufr_13_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Saisi de frayeur, je priai le Seigneur ; et il se produisit en ce lieu un grand tremblement de terre avec un fracas.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.2.6">
+            <app xml:id="ufr_14_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et une tempête de vent souffla ; elle m'arracha de la terre et m'éleva sur son aile ; et j'étais en prière et en marche ; et elle me posa en un lieu baigné par un fleuve, et le nom du fleuve était Eumélès.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.2.7">
+            <app xml:id="ufr_15_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et voici que, comme je voulais traverser le fleuve, une voix cria comme depuis l'eau, disant : « Zosime, homme de Dieu, tu ne peux pas traverser par moi, car l'homme ne peut fendre mes eaux ; mais observe depuis les eaux jusqu'au ciel. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.2.8">
+            <app xml:id="ufr_16_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ayant regardé, je vis un mur de nuée s'étendant depuis les eaux jusqu'au ciel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek__French_.2.9">
+            <app xml:id="ufr_17_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et la nuée dit : « Zosime, homme de Dieu, aucun oiseau de ce monde ne passe à travers moi, ni aucun souffle de vent, ni le soleil lui-même ; et le tentateur dans ce monde ne peut pas non plus passer à travers moi. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="HistRech.ver_Greek__French_.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.3.1">
+            <app xml:id="ufr_18_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, je fus stupéfait de ces paroles et de la voix qui me disait ces choses.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.3.2">
+            <app xml:id="ufr_19_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et tandis que je priais, voici que deux arbres surgirent de la terre, d'un bel aspect et très magnifiques, remplis de fruits suaves.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.3.3">
+            <app xml:id="ufr_20_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'arbre de ce côté s'étant courbé, me prit à son sommet et s'éleva très haut au milieu du fleuve ; et l'autre arbre vint à sa rencontre et me reçut dans ses branches ; et s'étant courbé, il me posa sur la terre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.3.4">
+            <app xml:id="ufr_21_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et les deux arbres se redressèrent, et ils me déposèrent de l'autre côté du fleuve.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.3.5">
+            <app xml:id="ufr_22_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je me reposai trois jours en ce lieu-là ; et m'étant de nouveau levé, je marchais sans savoir où.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.3.6">
+            <app xml:id="ufr_23_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ce lieu était rempli d'un grand parfum ; il n'y avait là aucune montagne, mais ce lieu était une plaine incorruptible, tout entière couronnée, et toute la terre était splendide.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="HistRech.ver_Greek__French_.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.4.1">
+            <app xml:id="ufr_24_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je vis là un homme nu assis ; et je dis en moi-même : « Ne serait-ce pas le tentateur ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.4.2">
+            <app xml:id="ufr_25_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je me souvins de la voix de la nuée qui m'avait dit : « Le tentateur lui-même dans le monde ne passe point à travers moi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.4.3">
+            <app xml:id="ufr_26_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et reprenant ainsi courage, je lui dis : « Salut, frère ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.4.4">
+            <app xml:id="ufr_27_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lui, répondant, me dit : « La grâce soit avec toi ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.4.5">
+            <app xml:id="ufr_28_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et de nouveau je lui dis : « Dis-moi, homme de Dieu, qui es-tu ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.4.6">
+            <app xml:id="ufr_29_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et répondant, il me dit : « Mais toi, qui es-tu ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.4.7">
+            <app xml:id="ufr_30_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et répondant, je racontai tout ce qui me concernait, et que j'avais prié le Seigneur, et qu'il m'avait conduit en ce lieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.4.8">
+            <app xml:id="ufr_31_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et répondant, il me dit : « Moi aussi, je sais que tu es un homme de Dieu ; sinon, tu n'aurais pas traversé la nuée, le fleuve et l'air.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek__French_.4.9">
+            <app xml:id="ufr_32_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car la largeur du fleuve est d'environ trente milles, la nuée monte jusqu'au ciel, et la profondeur du fleuve va jusqu'aux abîmes. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="HistRech.ver_Greek__French_.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.5.1">
+            <app xml:id="ufr_33_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ayant achevé ces paroles, l'homme dit de nouveau : « Es-tu venu ici de la vanité du monde ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.5.2">
+            <app xml:id="ufr_34_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, je lui dis : « Pourquoi es-tu nu ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.5.3">
+            <app xml:id="ufr_35_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il dit : « D'où as-tu su que je suis nu ? Car toi, tu portes des peaux provenant des brebis de la terre, et elles se corrompent avec ton corps ; mais regarde la hauteur du ciel et contemple quel est mon vêtement. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.5.4">
+            <app xml:id="ufr_36_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et regardant vers le ciel, je vis son visage comme un visage d'ange, et son vêtement comme un éclair qui va de l'orient à l'occident ; et je craignis qu'il ne fût un fils de Dieu, et saisi d'effroi, je tombai sur la terre.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="HistRech.ver_Greek__French_.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.6.1">
+            <app xml:id="ufr_37_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et m'ayant tendu la main, il me releva en disant : « Moi aussi, je suis l'un des Bienheureux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.6.2">
+            <app xml:id="ufr_38_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Viens, afin que je te conduise auprès des anciens. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.6.3">
+            <app xml:id="ufr_39_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et me tenant par la main, il marcha avec moi ; et il me conduisit vers une certaine foule, et il y avait dans cette foule des vieillards semblables à des fils de Dieu, et des jeunes gens se tenaient auprès des anciens.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.6.4">
+            <app xml:id="ufr_40_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Or, quand je me fus approché d'eux, ils dirent : « Celui-ci est venu de la vanité du monde ; venez, prions le Seigneur, et il nous révélera ce mystère.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.6.5">
+            <app xml:id="ufr_41_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La fin serait-elle donc arrivée, pour qu'un homme de la vanité soit venu ici ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.6.6">
+            <app xml:id="ufr_42_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et s'étant levés, ils prièrent le Seigneur d'un commun accord ; et voici que deux anges descendirent des cieux et dirent : « Ne craignez point cet homme, car Dieu l'a envoyé pour qu'il reste sept jours et qu'il apprenne votre mode de vie ; et alors il partira et s'en retournera dans son lieu. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.6.7">
+            <app xml:id="ufr_43_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et les anges de Dieu, ayant dit cela, montèrent au ciel sous nos yeux.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="HistRech.ver_Greek__French_.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.7.1">
+            <app xml:id="ufr_44_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors les anciens des Bienheureux me confièrent à l'un des serviteurs, disant : « Garde-le jusqu'à sept jours. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.7.2">
+            <app xml:id="ufr_45_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Le serviteur m'ayant donc pris avec lui, me conduisit dans sa caverne ; et nous vivions sous un arbre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.7.3">
+            <app xml:id="ufr_46_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car de la sixième heure à la sixième heure, c'est alors que nous mangions ; et de l'eau sortait de l'arbre, plus douce que le miel, et nous buvions à satiété, et de nouveau l'eau rentrait dans son lieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.7.4">
+            <app xml:id="ufr_47_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et toute la parenté de là-bas entendit parler de moi, disant : « Un homme est venu ici de la vanité du monde. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.7.5">
+            <app xml:id="ufr_48_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et toute la parenté fut émue, et ils vinrent pour me voir, car cela leur paraissait étrange.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.7.6">
+            <app xml:id="ufr_49_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ils m'interrogeaient donc sur toutes choses, et moi je leur racontais.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.7.7">
+            <app xml:id="ufr_50_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je fus épuisé en mon esprit et en mon corps ; et j'implorai l'homme de Dieu qui me servait et dis : « Je t'en prie, frère, si certains viennent pour me voir, annonce-leur qu'il n'est pas ici, afin que je me repose un peu. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.7.8">
+            <app xml:id="ufr_51_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'homme de Dieu s'écria, disant : « Malheur à moi, car l'histoire d'Adam s'est récapitulée en moi ! En effet, Satan l'a trompé par Ève, et cet homme-ci veut faire de moi un menteur par la flatterie ; alors qu'il est ici, il m'a dit : "Tu as menti", et il a dit qu'il n'était pas ici. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek__French_.7.9">
+            <app xml:id="ufr_52_ver_Greek__French_">
+              <lem wit="#OCP-Trans">« Emmenez-moi loin d'ici, car je fuirai loin du village ; car voici qu'il veut semer en moi les semences du monde de la vanité. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_Greek__French_.7.10">
+            <app xml:id="ufr_53_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et toute la foule ainsi que les anciens se dressèrent contre moi et dirent : « Éloigne-toi de nous, homme ! Nous ne savons pas d'où tu es venu vers nous. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="HistRech.ver_Greek__French_.7.11">
+            <app xml:id="ufr_54_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais moi, je pleurai d'un grand pleur, et la raison s'éloigna de moi ; et je criai vers les anciens en disant : « Pardonnez-moi, mes seigneurs ! » Et les anciens, s'étant apaisés, firent silence.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="HistRech.ver_Greek__French_.7.12">
+            <app xml:id="ufr_55_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors je leur racontai les événements depuis le commencement jusqu'à présent, et comment j'avais prié Dieu de venir vers vous, et qu'il m'en avait jugé digne.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="HistRech.ver_Greek__French_.7.13">
+            <app xml:id="ufr_56_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et les anciens dirent : « Et maintenant, que veux-tu que nous te fassions ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="HistRech.ver_Greek__French_.7.14">
+            <app xml:id="ufr_57_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je leur dis : « Je veux recevoir de vous le récit de votre mode de vie. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="HistRech.ver_Greek__French_.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.8.1">
+            <app xml:id="ufr_58_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ils se réjouirent d'une grande joie, et prenant des tablettes de pierre, ils écrivirent avec leurs ongles de cette manière : « Écoutez, écoutez, fils des hommes, ce qui nous concerne, nous qui sommes devenus bienheureux, car nous aussi, nous sommes issus de vous !</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.8.2">
+            <app xml:id="ufr_59_ver_Greek__French_">
+              <lem wit="#OCP-Trans">En effet, lorsque le prophète Jérémie proclama que la ville de Jérusalem serait livrée aux mains des destructeurs, il déchira ses vêtements, se ceignit les reins d'un sac, répandit de la cendre sur sa tête, mit de la poussière sur sa couche, et dit à tout le peuple de se détourner de sa mauvaise voie.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.8.3">
+            <app xml:id="ufr_60_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et notre père Rékhab, fils d'Aminadab, l'entendit aussi et nous dit : "Écoutez, fils de Rékhab et filles de votre père : dépouillez vos vêtements de votre corps, et vous ne boirez pas une cruche de vin, vous ne mangerez pas de pain cuit au feu, et vous ne boirez ni boisson fermentée ni miel, jusqu'à ce que le Seigneur exauce votre supplication."</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.8.4">
+            <app xml:id="ufr_61_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous dîmes : "Ce qu'il nous a commandé, nous le ferons et nous obéirons."</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.8.5">
+            <app xml:id="ufr_62_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous rejetâmes de notre corps notre vêtement, nous ne mangeâmes point de pain cuit au feu, nous ne bûmes point de cruche de vin, ni miel ni boisson fermentée ; et nous pleurâmes d'un grand pleur, et nous suppliâmes le Seigneur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.8.6">
+            <app xml:id="ufr_63_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il entendit notre prière, et il détourna sa colère de la ville de Jérusalem ; et Jérusalem obtint miséricorde de la part du Seigneur, et il fit grâce à son peuple et détourna sa colère mortelle.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="HistRech.ver_Greek__French_.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.9.1">
+            <app xml:id="ufr_64_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après cela, le roi de la ville de Jérusalem mourut, et un autre roi s'éleva.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.9.2">
+            <app xml:id="ufr_65_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et tout le peuple se rassembla auprès de lui, et on lui fit un rapport à notre sujet en disant : "Il y a des hommes de ton peuple qui ont changé leur conduite par rapport à nous."</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.9.3">
+            <app xml:id="ufr_66_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Le roi les fit donc appeler et leur demanda pour quelle raison ils avaient fait cela.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.9.4">
+            <app xml:id="ufr_67_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il nous fit mander et nous demanda : "Qui êtes-vous, de quel culte et de quelle patrie ?"</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.9.5">
+            <app xml:id="ufr_68_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous lui dîmes : "Nous sommes de ton peuple, de la ville de Jérusalem." Et le roi dit : "De qui êtes-vous les fils ?" Et nous lui dîmes : "Nous sommes les fils de ton serviteur, et notre père est Rékhab, fils de Jonadab."</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.9.6">
+            <app xml:id="ufr_69_ver_Greek__French_">
+              <lem wit="#OCP-Trans">"Et lorsque le prophète Jérémie a prophétisé du vivant de ton père le roi, il a annoncé la mort à la ville de Jérusalem, disant qu'encore trois jours, toute la ville serait mise à mort.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.9.7">
+            <app xml:id="ufr_70_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ayant entendu cela, le roi ton père s'est repenti de ses péchés et a promulgué un décret pour que tous se détournent de leur mauvaise voie.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.9.8">
+            <app xml:id="ufr_71_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et notre père, ton serviteur, ayant entendu cela, nous donna cet ordre en disant : 'Vous ne boirez pas une cruche de vin et vous ne mangerez pas de pain cuit au feu, jusqu'à ce que le Seigneur exauce votre supplication.'</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek__French_.9.9">
+            <app xml:id="ufr_72_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous, nous avons obéi au commandement de notre père : nous avons dévêtu nos corps, nous n'avons pas bu de vin, nous n'avons pas mangé de pain cuit au feu, et nous avons prié le Seigneur au sujet de la ville de Jérusalem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_Greek__French_.9.10">
+            <app xml:id="ufr_73_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur a fait miséricorde à son peuple et a détourné sa colère ; et nous avons vu, notre âme s'en est réjouie, et nous avons dit : 'Il est bon que nous soyons ainsi.'"</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="HistRech.ver_Greek__French_.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.10.1">
+            <app xml:id="ufr_74_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et le roi nous dit : « Vous avez bien fait.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.10.2">
+            <app xml:id="ufr_75_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Maintenant donc, mêlez-vous à mon peuple, mangez du pain, buvez du vin, glorifiez votre Seigneur, et soyez obéissants envers Dieu et envers le roi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.10.3">
+            <app xml:id="ufr_76_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais nous dîmes que nous ne désobéirions pas à Dieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.10.4">
+            <app xml:id="ufr_77_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors le roi, s'étant mis en colère, nous jeta en prison ; et nous y passâmes cette nuit-là.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.10.5">
+            <app xml:id="ufr_78_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et voici qu'une lumière brilla dans le bâtiment, et un ange découvrit le toit de la prison, nous saisit par le sommet de la tête, nous fit sortir de la prison et nous plaça dans les airs ; et il nous porta jusqu'à l'eau du fleuve et nous dit : « Là où va l'eau, allez vous aussi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.10.6">
+            <app xml:id="ufr_79_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous marchâmes avec l'eau et avec l'ange.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.10.7">
+            <app xml:id="ufr_80_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Lors donc qu'il nous eut conduits en ce lieu, le fleuve s'assécha et l'eau disparut ; et le lieu se fendit, et de l'eau monta de l'abîme.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.10.8">
+            <app xml:id="ufr_81_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et elle entoura cette patrie comme une muraille, et une muraille de nuée vint couvrir l'eau de son ombre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek__French_.10.9">
+            <app xml:id="ufr_82_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il ne nous dispersa pas sur toute la terre, mais il nous donna cette patrie.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="HistRech.ver_Greek__French_.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.11.1">
+            <app xml:id="ufr_83_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Écoutez, écoutez, fils des hommes, le mode de vie des bienheureux !</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.11.2">
+            <app xml:id="ufr_84_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car Dieu nous a placés sur cette terre ; nous sommes certes pieux, mais non point immortels.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.11.3">
+            <app xml:id="ufr_85_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car la terre a fait germer un fruit très odorant, et des troncs des arbres sort une eau plus douce que le miel ; et c'est là notre nourriture et notre boisson.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.11.4">
+            <app xml:id="ufr_86_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous sommes aussi en prière jour et nuit ; tout notre zèle consiste en cela.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.11.5">
+            <app xml:id="ufr_87_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Écoutez, fils des hommes : chez nous, il n'y a point de vigne, ni de champ labouré, ni d'ouvrages de bois ou de fer ; nous n'avons ni maison, ni bâtiment, ni feu, ni épée, ni fer brut, ni fer ouvré, ni argent, ni or, ni climat trop lourd, ni trop rigoureux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.11.6">
+            <app xml:id="ufr_88_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nul parmi nous ne prend de femme pour lui-même, si ce n'est jusqu'à ce qu'ils aient engendré deux enfants.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.11.7">
+            <app xml:id="ufr_89_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après avoir engendré deux enfants, ils se séparent l'un de l'autre et demeurent dans la pureté, ne sachant plus qu'ils ont jamais été unis par le mariage, mais vivant comme s'ils avaient été dès le commencement dans la virginité.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.11.8">
+            <app xml:id="ufr_90_ver_Greek__French_">
+              <lem wit="#OCP-Trans">L'un des enfants demeure voué au mariage, et l'autre à la virginité.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="HistRech.ver_Greek__French_.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.12.1">
+            <app xml:id="ufr_91_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il n'y a point de compte du temps : ni semaines, ni mois, ni année, car tous nos jours ne font qu'un seul jour.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.12.2">
+            <app xml:id="ufr_92_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et sur nos grottes reposent les feuilles des arbres, et c'est là notre couche sous les arbres.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.12.3">
+            <app xml:id="ufr_93_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Nous ne sommes point nus de corps comme vous le supposez sottement, car nous portons le vêtement de l'immortalité et nous n'avons pas honte les uns des autres.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.12.4">
+            <app xml:id="ufr_94_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Chaque jour, nous mangeons à la sixième heure ; car le fruit de l'arbre tombe de lui-même à la sixième heure, et nous mangeons à satiété et nous buvons,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.12.5">
+            <app xml:id="ufr_95_ver_Greek__French_">
+              <lem wit="#OCP-Trans">puis de nouveau l'eau retourne en son lieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.12.6">
+            <app xml:id="ufr_96_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous savons aussi ce qui vous concerne, vous qui vivez dans ce monde-là et ceux qui sont dans les péchés, ainsi que vos œuvres ; car chaque jour, les anges de Dieu viennent et nous font connaître jusqu'au nombre de vos années.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.12.7">
+            <app xml:id="ufr_97_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous, nous prions pour vous auprès du Seigneur, parce que nous aussi nous sommes issus de vous et de votre race, mais Dieu nous a choisis et Dieu nous a établis en ce lieu, exempts de péché.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.12.8">
+            <app xml:id="ufr_98_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et les anges de Dieu habitent avec nous chaque jour et nous disent tout ce qui vous concerne ; et nous nous réjouissons avec les anges à cause des œuvres des justes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek__French_.12.9">
+            <app xml:id="ufr_99_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais au sujet des œuvres des pécheurs, nous nous affligeons ; et en pleurant, nous prions le Seigneur afin qu'il mette un terme à sa colère et pardonne vos péchés.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="HistRech.ver_Greek__French_.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.13.1">
+            <app xml:id="ufr_100_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsque vient le temps de la Quarantaine, tous les arbres cessent de porter leurs fruits.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.13.2">
+            <app xml:id="ufr_101_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il fait pleuvoir du ciel la manne qu'il a donnée à nos pères ; or la manne est plus douce que le miel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.13.3">
+            <app xml:id="ufr_102_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et c'est ainsi que nous savons que la saison de l'année a changé.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.13.4">
+            <app xml:id="ufr_103_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et quand vient le temps de la sainte Pâque, alors de nouveau les arbres font germer le fruit de bonne odeur ; et c'est ainsi que nous savons que c'est le commencement de l'année.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.13.5">
+            <app xml:id="ufr_104_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et la fête de la résurrection du Seigneur est célébrée dans une grande veille ; car nous veillons trois jours et trois nuits.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="HistRech.ver_Greek__French_.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.14.1">
+            <app xml:id="ufr_105_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Nous connaissons aussi le moment de notre trépas ; car il n'y a ni tourment ni torture, ni fatigue pour notre corps, ni acédie, ni maladie, mais il y a la paix, une grande endurance et l'amour.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.14.2">
+            <app xml:id="ufr_106_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car notre âme n'est pas troublée par les anges pour sortir ; en effet, les anges se réjouissent lorsqu'ils reçoivent nos âmes, et nos âmes aussi se réjouissent avec les anges lorsqu'elles les voient.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.14.3">
+            <app xml:id="ufr_107_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Tout comme une fiancée attend l'époux, ainsi notre âme attend la bonne nouvelle des saints anges, qui ne disent rien de superflu, sinon ceci seulement : « Le Seigneur t'appelle ».</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.14.4">
+            <app xml:id="ufr_108_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors l'âme sort du corps et s'avance vers les anges ; et voyant l'âme sortir sans tache, les anges se réjouissent et, déployant leurs vêtements, ils l'accueillent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.14.5">
+            <app xml:id="ufr_109_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors les anges la proclament bienheureuse, en disant : « Bienheureuse es-tu, âme, car la volonté de Dieu s'est accomplie en toi ! »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="HistRech.ver_Greek__French_.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.15.1">
+            <app xml:id="ufr_110_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et la durée de notre vie est la suivante :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.15.2">
+            <app xml:id="ufr_111_ver_Greek__French_">
+              <lem wit="#OCP-Trans">si quelqu'un sort du corps dans sa jeunesse, les jours de sa vie d'ici-bas sont de trois cent soixante ans ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.15.3">
+            <app xml:id="ufr_112_ver_Greek__French_">
+              <lem wit="#OCP-Trans">mais celui qui sort du corps dans la vieillesse, les jours de sa vie d'ici-bas sont de sept cent quatre-vingt-huit ans.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.15.4">
+            <app xml:id="ufr_113_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et le jour de notre accomplissement nous est révélé par les anges.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.15.5">
+            <app xml:id="ufr_114_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsque les anges de Dieu viennent pour nous prendre, nous marchons avec eux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.15.6">
+            <app xml:id="ufr_115_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et les anciens, voyant les anges, rassemblent tout le peuple ; et nous partons avec les anges en chantant des psaumes, jusqu'à ce que les anges arrivent au lieu de notre demeure.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.15.7">
+            <app xml:id="ufr_116_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et parce que nous n'avons pas d'outils, les anges de Dieu préparent eux-mêmes la sépulture de notre corps.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.15.8">
+            <app xml:id="ufr_117_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et c'est ainsi que descend celui qui est appelé par Dieu ; et nous tous, du plus petit jusqu'au plus grand, nous l'embrassons pour le reconduire et prendre congé de lui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="HistRech.ver_Greek__French_.15.9">
+            <app xml:id="ufr_118_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et alors l'âme sort du corps, et les anges l'embrassent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="HistRech.ver_Greek__French_.15.10">
+            <app xml:id="ufr_119_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous contemplons la forme de l'âme, comme une forme de lumière remplissant tout le corps, sans distinction de mâle et de femelle.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="HistRech.ver_Greek__French_.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.16.1">
+            <app xml:id="ufr_120_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors les anges, la prenant, entonnent un chant et une hymne en psalmodiant pour Dieu ; et à nouveau, d'autres ordres d'anges viennent en hâte à sa rencontre pour saluer l'âme qui s'avance et entre dans les firmaments.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.16.2">
+            <app xml:id="ufr_121_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsqu'elle arrive au lieu où il faut adorer Dieu, le Fils de Dieu lui-même reçoit avec les anges l'âme du bienheureux, et la présente au Père immaculé des siècles.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.16.3">
+            <app xml:id="ufr_122_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et quand les anges chantent en haut, nous qui sommes en bas nous leur faisons écho ; et quand nous chantons, eux aussi nous répondent là-haut dans le ciel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.16.4">
+            <app xml:id="ufr_123_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ainsi, entre nous et les anges, monte la doxologie de la louange.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.16.5">
+            <app xml:id="ufr_124_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsque l'âme du bienheureux, tombant sur sa face, adore le Seigneur, alors nous aussi, nous prosternant à la même heure, nous adorons le Seigneur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.16.6">
+            <app xml:id="ufr_125_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsque le Seigneur la relève, alors nous nous relevons nous aussi.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.16.7">
+            <app xml:id="ufr_126_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsqu'elle s'en va vers le lieu qui lui est assigné, nous nous rendons aussi à l'église, accomplissant l'action de grâce du Seigneur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.16.8">
+            <app xml:id="ufr_127_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ayant écrit ces choses ainsi que toute la conduite des bienheureux, nous les avons données au frère Zosime ; et nous l'avons reconduit jusqu'au lieu des arbres près du fleuve Eumélès.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="HistRech.ver_Greek__French_.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.17.1">
+            <app xml:id="ufr_128_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Moi, Zosime, je suppliai de nouveau les bienheureux de prier le Seigneur pour moi, afin que les arbres me reçoivent pour me faire traverser.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.17.2">
+            <app xml:id="ufr_129_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et s'écriant tous vers le Seigneur, ils dirent : « Dieu, toi qui nous as montré tes merveilles et qui as fait venir ton serviteur Zosime auprès de nous depuis le monde de la vanité, rétablis-le de nouveau en son lieu dans la paix,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.17.3">
+            <app xml:id="ufr_130_ver_Greek__French_">
+              <lem wit="#OCP-Trans">et ordonne à ces arbres de s'incliner, de prendre ton serviteur et de le déposer sur l'autre rive ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.17.4">
+            <app xml:id="ufr_131_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsqu'ils eurent achevé la prière, aussitôt les arbres s'inclinèrent devant eux et me reçurent comme auparavant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.17.5">
+            <app xml:id="ufr_132_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et me tenant sur l'autre rive du fleuve, je m'écriai d'une voix forte et dis : « Hommes de justice, vous qui êtes les frères des saints anges, donnez-moi une bénédiction dans la paix, car voici que je m'en vais loin de vous ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.17.6">
+            <app xml:id="ufr_133_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ayant fait une prière, ils s'écrièrent tous, disant : « Paix, paix à toi, frère ! »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="18" xml:id="HistRech.ver_Greek__French_.18">
+          <head>Chapter 18</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.18.1">
+            <app xml:id="ufr_134_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors je priai le Seigneur, et une tempête de vent vint à moi ; elle me prit sur ses ailes et me transporta jusqu'au lieu où elle m'avait trouvé assis, et elle s'en retourna en paix.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.18.2">
+            <app xml:id="ufr_135_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et élevant la voix, le vent me dit : « Bienheureux es-tu, Zosime, car tu as été compté parmi les bienheureux ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.18.3">
+            <app xml:id="ufr_136_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et l'animal du désert dont le nom est chameau vint, me prit sur son cou et me porta pendant quatre-vingt-cinq étapes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.18.4">
+            <app xml:id="ufr_137_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il me déposa au lieu où il m'avait trouvé en prière.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.18.5">
+            <app xml:id="ufr_138_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il s'en retourna en paix, criant et disant : « Bienheureux es-tu, Zosime, car tu as été compté parmi les bienheureux ! »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="19" xml:id="HistRech.ver_Greek__French_.19">
+          <head>Chapter 19</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.19.1">
+            <app xml:id="ufr_139_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais Satan, me voyant ainsi loué, voulut me tenter et m'expulser de ma cellule.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.19.2">
+            <app xml:id="ufr_140_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais un ange de Dieu vint et me dit : « Zosime, voici que Satan vient pour te tenter, mais le Seigneur combattra pour toi ; car la gloire de ta foi exige que tu affrontes Satan. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.19.3">
+            <app xml:id="ufr_141_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et un ange de Dieu apparut, criant et disant : « Sois le bienvenu, bienheureux du Christ !</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.19.4">
+            <app xml:id="ufr_142_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Viens, je vais te conduire à la caverne qui deviendra la demeure de ton corps.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.19.5">
+            <app xml:id="ufr_143_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car ta caverne sera un sanctuaire dans le désert, la guérison des malades qui y viendront, une épreuve et un tourment pour les démons. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.19.6">
+            <app xml:id="ufr_144_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et m'ayant pris par la main, il me fortifia et me conduisit pendant quarante jours jusqu'à la caverne où j'habitais.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.19.7">
+            <app xml:id="ufr_145_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il y eut une table de justice, et je demeurais en compagnie des anges de Dieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.19.8">
+            <app xml:id="ufr_146_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et je plaçai les tablettes qui m'avaient été données par les saints bienheureux sur l'estrade de l'autel qui se trouvait dans ma caverne.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="20" xml:id="HistRech.ver_Greek__French_.20">
+          <head>Chapter 20</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.20.1">
+            <app xml:id="ufr_147_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et voici qu'après la remontée des anges de Dieu, le diable survint sous un aspect farouche, animé de fureur et de fiel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.20.2">
+            <app xml:id="ufr_148_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il me dit : « Je savais que Dieu devait te rendre semblable aux bienheureux, et qu'ils doivent être sans péché et supérieurs aux anges.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.20.3">
+            <app xml:id="ufr_149_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et c'est pour cela que j'ai conçu un dessein mauvais et que je suis entré rusé dans l'instrument rusé du serpent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.20.4">
+            <app xml:id="ufr_150_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et c'est pour cela que j'ai fait transgresser Adam, le premier homme, pour qu'il goûte à l'arbre de vie, bien que Dieu lui eût ordonné de ne pas en manger, afin qu'il demeurât égal à la gloire de Dieu et des saints anges. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.20.5">
+            <app xml:id="ufr_151_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et toi, à ton retour, tu as apporté ce commandement,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.20.6">
+            <app xml:id="ufr_152_ver_Greek__French_">
+              <lem wit="#OCP-Trans">afin qu'ils ne soient pas sans péché. Je vais te montrer comment je te détruirai, toi et tous ceux qui reçoivent ce commandement afin qu'ils ne soient pas sans péché, ainsi que le livre que tu as apporté !</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="21" xml:id="HistRech.ver_Greek__French_.21">
+          <head>Chapter 21</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.21.1">
+            <app xml:id="ufr_153_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Après avoir dit cela, le diable s'en alla loin de moi.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.21.2">
+            <app xml:id="ufr_154_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et huit jours plus tard, il rassembla avec lui mille trois cent soixante démons, et il m'arracha de la grotte alors que je priais.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.21.3">
+            <app xml:id="ufr_155_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ils me frappèrent, se renvoyant mon corps comme une balle entre eux pendant quarante jours.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.21.4">
+            <app xml:id="ufr_156_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après ces quarante jours, le diable pleura devant moi et dit : « Malheur à moi, car à cause d'un seul homme j'ai perdu le monde ! Il m'a en effet vaincu par sa prière. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.21.5">
+            <app xml:id="ufr_157_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il se mit à fuir loin de moi. Mais moi, le saisissant, je l'arrêtai et dis : « Tu ne t'enfuiras pas et tu n'échapperas pas loin de moi jusqu'à ce que tu me jures de ne plus jamais tenter un être humain ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.21.6">
+            <app xml:id="ufr_158_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et pleurant d'un pleur grand et violent, il me jura par le firmament du ciel : « Tant que durera ta demeure et après toi, je n'irai pas en ce lieu. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.21.7">
+            <app xml:id="ufr_159_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors je le relâchai, l'expédiant dans le feu éternel, lui et les démons qui étaient avec lui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="HistRech.ver_Greek__French_.21.8">
+            <app xml:id="ufr_160_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Alors vint l'ange qui avait partagé ma table avec bienveillance, et il me conduisit dans ma grotte avec une grande gloire.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="22" xml:id="HistRech.ver_Greek__French_.22">
+          <head>Chapter 22</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.22.1">
+            <app xml:id="ufr_161_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Après cela, je vécus encore trente-six ans, et je transmis le récit de la conduite des Bienheureux aux pères qui sont dans le désert.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.22.2">
+            <app xml:id="ufr_162_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Le diable pleura à cause des tablettes de la conduite des Bienheureux, disant : « Si cela se répand dans le monde, je deviendrai un objet de risée ; ceux-ci demeureront sans péché, et moi seul je resterai dans ma folie. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.22.3">
+            <app xml:id="ufr_163_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et après l'accomplissement des trente-six ans, les anges de Dieu vinrent vers moi, tout comme auprès des Bienheureux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.22.4">
+            <app xml:id="ufr_164_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Tous les moines et quiconque l'avait appris se rassemblèrent, et ce testament fut lu devant tous.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.22.5">
+            <app xml:id="ufr_165_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et c'est dans une telle conduite de vie qu'il rendit son âme à Dieu.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="23" xml:id="HistRech.ver_Greek__French_.23">
+          <head>Chapter 23</head>
+          <ab type="verse" n="1" xml:id="HistRech.ver_Greek__French_.23.1">
+            <app xml:id="ufr_166_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et moi, Chryseos, étant l'un de ceux qui vivent dans le désert, ayant mis ce récit au jour, je l'ai donné à tous ceux qui désirent apprendre et en tirer profit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="HistRech.ver_Greek__French_.23.2">
+            <app xml:id="ufr_167_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Les anges de Dieu ensevelirent donc le corps de saint Zosime comme un présent de grand prix.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="HistRech.ver_Greek__French_.23.3">
+            <app xml:id="ufr_168_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et nous contemplâmes l'âme du bienheureux, illuminée sept fois plus que le soleil.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="HistRech.ver_Greek__French_.23.4">
+            <app xml:id="ufr_169_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Aussitôt surgirent en ce lieu sept palmiers qui ombragèrent la grotte.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="HistRech.ver_Greek__French_.23.5">
+            <app xml:id="ufr_170_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Une source d'eau jaillit aussi en cet endroit, une eau sainte ; et jusqu'à ce jour, elle procure guérison et salut à tous les malades qui s'en approchent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="HistRech.ver_Greek__French_.23.6">
+            <app xml:id="ufr_171_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Paix à tous ceux qui écoutent la mémoire de saint Zosime !</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="HistRech.ver_Greek__French_.23.7">
+            <app xml:id="ufr_172_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Que le Seigneur soit le défenseur et le secours de tous pour les siècles sans fin des siècles. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

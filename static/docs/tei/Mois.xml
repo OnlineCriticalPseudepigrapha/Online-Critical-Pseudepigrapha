@@ -1,0 +1,2193 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Mois">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Assumption of Moses (Testament of Moses)</title>
+        <editor role="editor">Miller, David M.</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Ceriani">
+            <abbr type="siglum">Ceriani</abbr>
+            <name>Ceriani</name>
+            <bibl>A.M. Ceriani, "Fragmenta Assumptionis Mosis," in Fragmenta latina evangelii S. Lucae, Parvae Genesis et Assumptionis Mosis, Baruch, Threni et Epistolae Jeremiae versionis syriaque Pauli Telensis (Monumenta sacra et profana 1; Milano: 1861), 55-64.</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of English based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Latin">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Latin__French_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="la">la</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="la">
+    <body>
+      <div type="edition" n="Latin" xml:lang="la" xml:id="ver_Latin">
+        <head>Latin</head>
+        <div type="chapter" n="1" xml:id="Mois.ver_Latin.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.1.1">
+            <app xml:id="u1_ver_Latin">
+              <lem wit="#Ceriani">..........................................</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.1.2">
+            <app xml:id="u2_ver_Latin">
+              <lem wit="#Ceriani">qui est bis millesimus et quingentesimus annus a creatura orbis terrae</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.1.3">
+            <app xml:id="u3_ver_Latin">
+              <lem wit="#Ceriani">nam secus qui in oriente sunt numerus ... mus et .. mus et .... mus profectionis fynicis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.1.4">
+            <app xml:id="u4_ver_Latin">
+              <lem wit="#Ceriani">cum exiuit plebs post profectionem quae fiebat per mosysen usque amman trans iordanem</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.1.5">
+            <app xml:id="u5_ver_Latin">
+              <lem wit="#Ceriani">profetiae quae facta est a moysen in libro deuteronomio</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.1.6">
+            <app xml:id="u6_ver_Latin">
+              <lem wit="#Ceriani">qui uocauit ad se iesum filium naue hominem probatum domino</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.1.7">
+            <app xml:id="u7_ver_Latin">
+              <lem wit="#Ceriani">ut sit successor plebi et scene testimonii cum omnibus sanctis illius</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.1.8">
+            <app xml:id="u8_ver_Latin">
+              <lem wit="#Ceriani">ut et inducat plebem in terram datam extribus eorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.1.9">
+            <app xml:id="u9_ver_Latin">
+              <lem wit="#Ceriani">ut detur illis per testamentum et per iusiurandum quod locutus est in scenae dare de iesum dicendo ad iesum uerbum hoc</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin.1.10">
+            <app xml:id="u10_ver_Latin">
+              <lem wit="#Ceriani">et promitte secus industriam tuam omnia quae mandata sunt ut facias quemadmodum sine quaerellam est</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin.1.11">
+            <app xml:id="u11_ver_Latin">
+              <lem wit="#Ceriani">ideo haec dicit dominus orbis terrarum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin.1.12">
+            <app xml:id="u12_ver_Latin">
+              <lem wit="#Ceriani">Creauit enim orbem terrarum propter plebem suam</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin.1.13">
+            <app xml:id="u13_ver_Latin">
+              <lem wit="#Ceriani">et non coepit eam inceptionem creaturae et ab initio orbis terrarum palam facere ut in eam gentes arguantur et humiliter inter se disputationibus arguant se</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_Latin.1.14">
+            <app xml:id="u14_ver_Latin">
+              <lem wit="#Ceriani">itaque excogitauit et inuenit me qui ab initio orbis terrarum praeparatus sum ut sim arbiter testamenti illius</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_Latin.1.15">
+            <app xml:id="u15_ver_Latin">
+              <lem wit="#Ceriani">et tunc palam facio tibi quia consummatum est tempus annorum uitae meae et transio in dormitionem patrum meorum et palam omnem plebem</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Mois.ver_Latin.1.16">
+            <app xml:id="u16_ver_Latin">
+              <lem wit="#Ceriani">autem percipe scribturam hanc ad recognoscendam tutationem librorum quos tibi tradam</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="Mois.ver_Latin.1.17">
+            <app xml:id="u17_ver_Latin">
+              <lem wit="#Ceriani">quos ordinabis et chedriabis et reponis in uasis fictilibus in loco quem fecit ab initio creaturae orbis terrarum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Mois.ver_Latin.1.18">
+            <app xml:id="u18_ver_Latin">
+              <lem wit="#Ceriani">ut inuocetur nomen illius usque in diem paenitentiae in respectu quo respicit illos dominus in consummatione exitus dierum</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="Mois.ver_Latin.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.2.1">
+            <app xml:id="u19_ver_Latin">
+              <lem wit="#Ceriani">intrabunt per te in terram quam decreuit et promisit dare patribus eorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.2.2">
+            <app xml:id="u20_ver_Latin">
+              <lem wit="#Ceriani">in qua tu benedicis et dabis unicuique et stabilibis eis sortem in me et constabilibis eis regnum et magisteria locorum dimittes illis secus quod placebit domino eorum in iudicio et iustitia</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.2.3">
+            <app xml:id="u21_ver_Latin">
+              <lem wit="#Ceriani">autem postquam intrabunt in terram suam annos et postea dominabitur a principibus et tyrannis per annos xuiii et xuiiii annos abrumpens tib x nam descendent tribus duae et transferunt scenae testimonium</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.2.4">
+            <app xml:id="u22_ver_Latin">
+              <lem wit="#Ceriani">tunc deus caelestis fecit palam scenae suae et ferrum sanctuarii sui et ponentur duae tribus sanctitatis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.2.5">
+            <app xml:id="u23_ver_Latin">
+              <lem wit="#Ceriani">nam x tribus stabilient sibi secus ordinationes suas regna</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.2.6">
+            <app xml:id="u24_ver_Latin">
+              <lem wit="#Ceriani">et adferent uictimas per annos xx</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.2.7">
+            <app xml:id="u25_ver_Latin">
+              <lem wit="#Ceriani">et uii circumuallabunt muros Et circumibo uiiii et adcedent ad testamentum domini et finem polluent quem fecit dominus cum eis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.2.8">
+            <app xml:id="u26_ver_Latin">
+              <lem wit="#Ceriani">et immolabunt natos suos diis alienis et ponent idola scenae seruientes illis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.2.9">
+            <app xml:id="u27_ver_Latin">
+              <lem wit="#Ceriani">et in domo domini facient sceleste et sculpent omnem animalium idola multa</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="Mois.ver_Latin.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.3.1">
+            <app xml:id="u28_ver_Latin">
+              <lem wit="#Ceriani">illis temporibus ueniet illis ab oriente rex et teget equitatus terram eorum et</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.3.2">
+            <app xml:id="u29_ver_Latin">
+              <lem wit="#Ceriani">incendet colonia eorum igne cum aede sancta domini et sancta uasa omnia tollet</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.3.3">
+            <app xml:id="u30_ver_Latin">
+              <lem wit="#Ceriani">et omnem plebem eiciet et ducet illos in terram patriae suae et duas tribus ducit secum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.3.4">
+            <app xml:id="u31_ver_Latin">
+              <lem wit="#Ceriani">Tunc inuocabunt duae tribus x tribus et ducent se ut liena in campis puluerati esurientes et sitientes cum infantibus nostris</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.3.5">
+            <app xml:id="u32_ver_Latin">
+              <lem wit="#Ceriani">et clamabunt iustus et sanctus dominus quia enim uos peccastis et nos pariter adducti sumus uobiscum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.3.6">
+            <app xml:id="u33_ver_Latin">
+              <lem wit="#Ceriani">tunc plorabunt x tribus audientes inproperia uerborum tribum duarum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.3.7">
+            <app xml:id="u34_ver_Latin">
+              <lem wit="#Ceriani">et dicent quid faciemus uobis fratres nonne in omnem domum istrahel aduenit clibsis haec</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.3.8">
+            <app xml:id="u35_ver_Latin">
+              <lem wit="#Ceriani">et omnes tribus plorabunt clamantes in caelum et dicentes</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.3.9">
+            <app xml:id="u36_ver_Latin">
+              <lem wit="#Ceriani">deus abraham et deus isaac et deus iacob reminiscere testamentum tuum quod factasti cum eis et iusiurandum quod iurasti eis per te ne umquam deficiat semen eorum a terra quam dedisti illis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin.3.10">
+            <app xml:id="u37_ver_Latin">
+              <lem wit="#Ceriani">Tunc reminiscentur me die illo dicentes tribus ad tribum et homo de proximo suo</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin.3.11">
+            <app xml:id="u38_ver_Latin">
+              <lem wit="#Ceriani">nonne hoc est quod testabatur nobis cum moyses in profetis qui multa passus est in aegypto et in mari rubro et in heremo annis xl</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin.3.12">
+            <app xml:id="u39_ver_Latin">
+              <lem wit="#Ceriani">testatus et inuocabat nobis testes caelum et terram ne praeteriremus mandata illius in quibus arbiter fuit nobis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin.3.13">
+            <app xml:id="u40_ver_Latin">
+              <lem wit="#Ceriani">quae aduenerunt nobis de isto secus uerba ipsius et secus adfirmationem ipsius quomodo testatus est nobis temporibus illis et quae conuenerunt usque nos duci captiuos in partem orientis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_Latin.3.14">
+            <app xml:id="u41_ver_Latin">
+              <lem wit="#Ceriani">qui et seruient circa annos lxxvii</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="Mois.ver_Latin.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.4.1">
+            <app xml:id="u42_ver_Latin">
+              <lem wit="#Ceriani">Tunc intrauit unus qui supra eos est et expandit manus et ponit genua sua et orauit pro eis dicens</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.4.2">
+            <app xml:id="u43_ver_Latin">
+              <lem wit="#Ceriani">Domine omnis rex in alta sede qui dominaris saeculo qui uoluisti plebem hanc esse tibi plebem hanc exceptam tunc uoluisti inuocari eorum deus secus testamentum quod fecisti cum patribus eorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.4.3">
+            <app xml:id="u44_ver_Latin">
+              <lem wit="#Ceriani">et ierunt captiui in terram alienam cum uxoribus et natis suis et circa ostium allofilorum et ubi est maiestas magna</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.4.4">
+            <app xml:id="u45_ver_Latin">
+              <lem wit="#Ceriani">respice et miserere eorum domine caelestis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.4.5">
+            <app xml:id="u46_ver_Latin">
+              <lem wit="#Ceriani">Tunc reminiscitur deus eorum propter testamentum quod fecit cum patribus illorum et palam faciet misericordiam suam et temporibus illis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.4.6">
+            <app xml:id="u47_ver_Latin">
+              <lem wit="#Ceriani">et mittit in animam regis ut misereator eorum et dimittit illos in terram eorum et regionem</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.4.7">
+            <app xml:id="u48_ver_Latin">
+              <lem wit="#Ceriani">tunc ascendent aliquae partes tribuum et uenient in locum constitutum suum et circumuallabunt locum renouantes</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.4.8">
+            <app xml:id="u49_ver_Latin">
+              <lem wit="#Ceriani">duae autem tribus permanebunt in praeposita fide sua tristes et gementes quia non poterint referre immolationes domino patruum suorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.4.9">
+            <app xml:id="u50_ver_Latin">
+              <lem wit="#Ceriani">et x tribus crescent et deuenient apud natos in tempore tribum</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="Mois.ver_Latin.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.5.1">
+            <app xml:id="u51_ver_Latin">
+              <lem wit="#Ceriani">et cum adpropiabunt tempora arguendi et uindicta surgit de reges participes scelerum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.5.2">
+            <app xml:id="u52_ver_Latin">
+              <lem wit="#Ceriani">et punientes eos et ipsi diuidentur ad ueritatem propter quod factum fuit</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.5.3">
+            <app xml:id="u53_ver_Latin">
+              <lem wit="#Ceriani">deuitabunt iustitiam et accedent ad iniquitatem et contaminabunt in genationibus domum seruitutis suae et quia fornicabunt post deos alienos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.5.4">
+            <app xml:id="u54_ver_Latin">
+              <lem wit="#Ceriani">non enim sequentur ueritatem dei sed quidam altarium inquinabunt de muneribus quae inponent domino qui non sunt sacerdotes sed serui de seruis nati</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.5.5">
+            <app xml:id="u55_ver_Latin">
+              <lem wit="#Ceriani">qui enim magistri sunt doctores eorum illis temporibus erunt mirantes personas cupiditatum et acceptiones munerum et peruendent iustitias accipiendo poenas</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.5.6">
+            <app xml:id="u56_ver_Latin">
+              <lem wit="#Ceriani">et ideo implebitur colonia et fines habitationis eorum sceleribus et iniquitatibus a deo ut qui facit erunt impii iudices erunt in eam post fines habitationis sceleribus et iniquitatibus a domino qui faciunt erunt impii iudices inerunt in campo iudicare quomodo quisquae uolet</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="Mois.ver_Latin.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.6.1">
+            <app xml:id="u57_ver_Latin">
+              <lem wit="#Ceriani">tunc exurgent illis reges imperantes et in sacerdotes summi dei uocabuntur facient facientes impietatem ab sancto sanctitatis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.6.2">
+            <app xml:id="u58_ver_Latin">
+              <lem wit="#Ceriani">et succedit illis rex petulans qui non erit de genere sacerdotum homo temerarius et improbus et iudicabit illis quomodo digni erunt</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.6.3">
+            <app xml:id="u59_ver_Latin">
+              <lem wit="#Ceriani">qui elidit principales eorum gladio et locis ignotis singuli et corpora illorum ut nemo sciat ubi sint corpora illorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.6.4">
+            <app xml:id="u60_ver_Latin">
+              <lem wit="#Ceriani">occidit maiores natu et iuuenes et non parcet</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.6.5">
+            <app xml:id="u61_ver_Latin">
+              <lem wit="#Ceriani">tunc timor erit illius aceruus in eis in terram eorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.6.6">
+            <app xml:id="u62_ver_Latin">
+              <lem wit="#Ceriani">et faciet in eis iudicia quomodo fecerunt in illis aegypti per xxx et iiii annos et puniunt eos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.6.7">
+            <app xml:id="u63_ver_Latin">
+              <lem wit="#Ceriani">et .. rodincit natos ... ecedentes sibi breuiora tempora donarent</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.6.8">
+            <app xml:id="u64_ver_Latin">
+              <lem wit="#Ceriani">in pares eorum mortis uenient et occidentes rex potens quia expugnabit eos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.6.9">
+            <app xml:id="u65_ver_Latin">
+              <lem wit="#Ceriani">et ducent captiuos et partem aedis ipsorum igni incendit aliquos crucifigit circa coloniam eorum</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="Mois.ver_Latin.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.7.1">
+            <app xml:id="u66_ver_Latin">
+              <lem wit="#Ceriani">ex quo facto finientur tempora momento .... etur cursus a .... horae iiii ueniant</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.7.2">
+            <app xml:id="u67_ver_Latin">
+              <lem wit="#Ceriani">coguntur secun ..... ae .... pos .... initiis tribus ad exitus viiii propter initium tres septimae secunda tria in tertia duae h .. ra .. tae</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.7.3">
+            <app xml:id="u68_ver_Latin">
+              <lem wit="#Ceriani">et regnarunt de his homines pestilentiosi et impii docentes se esse iustos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.7.4">
+            <app xml:id="u69_ver_Latin">
+              <lem wit="#Ceriani">et hi suscitabunt iram animorum suorum qui erunt homines dolosi sibi placentes ficti in omnibus suis et omni hora diei amantes conuiuia deuoratores gulae</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.7.5">
+            <app xml:id="u70_ver_Latin">
+              <lem wit="#Ceriani">s ... n ... ca ......... nus diis ........ omnis ....................... u .... o .... rue ..... elentes</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.7.6">
+            <app xml:id="u71_ver_Latin">
+              <lem wit="#Ceriani">..... rum bonorum comestores dicentes se haec facere propter misericordiam qu ...</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.7.7">
+            <app xml:id="u72_ver_Latin">
+              <lem wit="#Ceriani">se et exterminatores quaeru ... fallaces celantes se ne possent cognosci impii in scelere pleni et iniquitate ab oriente usque ad occidentem</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.7.8">
+            <app xml:id="u73_ver_Latin">
+              <lem wit="#Ceriani">dicentes habebimus discubitiones et luxuriam edentes et bibentes Et putauimus nos tamquam principes erimus</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.7.9">
+            <app xml:id="u74_ver_Latin">
+              <lem wit="#Ceriani">et manus eorum et mentes inmunda tractantes et os eorum loquetur ingentia et super dicent</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin.7.10">
+            <app xml:id="u75_ver_Latin">
+              <lem wit="#Ceriani">noli .... tange ne inquines me loco in quo ... s ...... is d ........ su ..... us ..... in ......... re .... raui .... in plebem quae s .. a .. illis</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="Mois.ver_Latin.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.8.1">
+            <app xml:id="u76_ver_Latin">
+              <lem wit="#Ceriani">et .. ta .. ueniet in eos ultio et ira quae talis non fuit in illis a saeculo usque ad illum tempus in quo suscitauit illis regem regum terrae et potestatem a potentia magna qui confitentes circumcisionem in cruce suspendit</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.8.2">
+            <app xml:id="u77_ver_Latin">
+              <lem wit="#Ceriani">Nam necantes torquebit et tradidit duci uinctos in custodiam</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.8.3">
+            <app xml:id="u78_ver_Latin">
+              <lem wit="#Ceriani">et uxores eorum diis donabuntur gentibus Et filii eorum pueri secabantur a medicis pueri inducere acrosisam illis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.8.4">
+            <app xml:id="u79_ver_Latin">
+              <lem wit="#Ceriani">nam illi in eis punientur in tormentis et igne et ferro et cogentur palam baiulare idola eorum inquinata quomodo sunt pariter continentibus ea</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.8.5">
+            <app xml:id="u80_ver_Latin">
+              <lem wit="#Ceriani">et a torquentibus illos pariter cogentur intrare in abditum locum eorum et cogentur stimulis blasfemare uerbum contumeliose nouissime post haec et leges quod haberent supra altarium suum</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="Mois.ver_Latin.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.9.1">
+            <app xml:id="u81_ver_Latin">
+              <lem wit="#Ceriani">tunc illo dicente hom de tribu leuui cuius nomen erit taxo qui habens vii filios dicens ad eos rogans</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.9.2">
+            <app xml:id="u82_ver_Latin">
+              <lem wit="#Ceriani">uidete filii ecce ultio facta est in plebe altera crudelis inmunda et traductio sine misericordia et eminent principatum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.9.3">
+            <app xml:id="u83_ver_Latin">
+              <lem wit="#Ceriani">quae enim gens aut quae regio aut quis populus impiorum in domum qui multa scelesta fecerunt tanta mala passi sunt quanta nobis contegerunt</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.9.4">
+            <app xml:id="u84_ver_Latin">
+              <lem wit="#Ceriani">Nunc ergo filii audite me uidete enim et scite quia numquam temptans deum nec parentes nec proaui eorum ut praetereant mandata illius</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.9.5">
+            <app xml:id="u85_ver_Latin">
+              <lem wit="#Ceriani">scitis enim quia haec sunt uires nobis et hoc faciemus</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.9.6">
+            <app xml:id="u86_ver_Latin">
+              <lem wit="#Ceriani">ieiunemus triduo et quarto die intremus in spelunca quae in agro est et moriamur potius quam praetereamus mandata domini dominorum dei parentum nostrorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.9.7">
+            <app xml:id="u87_ver_Latin">
+              <lem wit="#Ceriani">hoc enim si faciemus et moriemur sanguis noster uindicauitur coram domino</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="Mois.ver_Latin.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.10.1">
+            <app xml:id="u88_ver_Latin">
+              <lem wit="#Ceriani">Et tunc parebit regnum illius in omni creatura illius Et tunc zabulus finem habebit et tristitiam cum eo adducetur</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.10.2">
+            <app xml:id="u89_ver_Latin">
+              <lem wit="#Ceriani">Tunc implebuntur manus nuntii qui est in summo constitutus qui protinus uindicauit illos ab inimicis eorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.10.3">
+            <app xml:id="u90_ver_Latin">
+              <lem wit="#Ceriani">.....get enim caelestis a sede regni sui et exiet de habitatione sancta sua cum indignationem et iram propter filios suos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.10.4">
+            <app xml:id="u91_ver_Latin">
+              <lem wit="#Ceriani">et tremebit terra usque ad fines suas concutietur et alti montes humiliabuntur et concutientur et conualles cadent</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.10.5">
+            <app xml:id="u92_ver_Latin">
+              <lem wit="#Ceriani">sol non dabit lumen et in tenebris conuertent se cornua lunae et confringentur et tota conuertit se in sanguine et orbis stellarum conturuauitur</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.10.6">
+            <app xml:id="u93_ver_Latin">
+              <lem wit="#Ceriani">et mare usque ad abyssum decedit ad fontes aquarum deficient et flumina expauescent</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.10.7">
+            <app xml:id="u94_ver_Latin">
+              <lem wit="#Ceriani">quia exurgit summus deus aeternus solus et palam ueniet ut uindicet gentes et perdet omnia idola eorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.10.8">
+            <app xml:id="u95_ver_Latin">
+              <lem wit="#Ceriani">Tunc felix eris tu istrahel et ascendes supra ceruices et alas aquilae et inplebuntur</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.10.9">
+            <app xml:id="u96_ver_Latin">
+              <lem wit="#Ceriani">et altauit te deus et faciet te herere caelo stellarum loco habitationis eorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin.10.10">
+            <app xml:id="u97_ver_Latin">
+              <lem wit="#Ceriani">et conspiges a summo et uides inimicos tuos in terram et cognosces illos et gaudebis et agis gratias et confiteberis creatori tuo</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin.10.11">
+            <app xml:id="u98_ver_Latin">
+              <lem wit="#Ceriani">nam tu iesu naue custodi uerba haec et hunc librum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin.10.12">
+            <app xml:id="u99_ver_Latin">
+              <lem wit="#Ceriani">erunt enim a morte receptionem usque ad aduentum illius tempora ccl quae fiunt</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin.10.13">
+            <app xml:id="u100_ver_Latin">
+              <lem wit="#Ceriani">Et hic cursus ... horum quem conueniunt donec consummentur</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_Latin.10.14">
+            <app xml:id="u101_ver_Latin">
+              <lem wit="#Ceriani">Ego autem ad dormitionem patrum meorum eram</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_Latin.10.15">
+            <app xml:id="u102_ver_Latin">
+              <lem wit="#Ceriani">itaque tu iesu naue forma te elegit deus esse mihi successorem eiusdem testamenti</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="Mois.ver_Latin.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.11.1">
+            <app xml:id="u103_ver_Latin">
+              <lem wit="#Ceriani">et cum audisset iesus uerba moysi tam scripta in sua scriptura omnia quae praedixerant scidit sibi uestimenta et procidit ad pedes meos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.11.2">
+            <app xml:id="u104_ver_Latin">
+              <lem wit="#Ceriani">et hortatus est cum monse et plorauit cum eo</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.11.3">
+            <app xml:id="u105_ver_Latin">
+              <lem wit="#Ceriani">Et respondit illi et dixit iesus</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.11.4">
+            <app xml:id="u106_ver_Latin">
+              <lem wit="#Ceriani">quid me celares domine monse et quo genere celabor de qua locutus est uoce acerua que exiuit de ore tuo quae est plena lacrimis et gemitibus quia tu discedis de plebe ist ......</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.11.5">
+            <app xml:id="u107_ver_Latin">
+              <lem wit="#Ceriani">quis locus recipit .... te</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.11.6">
+            <app xml:id="u108_ver_Latin">
+              <lem wit="#Ceriani">aut quod erit monumentum sepulturae</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.11.7">
+            <app xml:id="u109_ver_Latin">
+              <lem wit="#Ceriani">aut quis audeuit corpus tuum transferre in eut homo de loco in locum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.11.8">
+            <app xml:id="u110_ver_Latin">
+              <lem wit="#Ceriani">Omnibus enim morientibus secus aetatem sepulturae suae sunt in terris nam tua sepultura ab oriente sole usque ad occidentem et ab austro usque ad fines aquilonis omnis orbis terrarum sepulcrum est tuum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.11.9">
+            <app xml:id="u111_ver_Latin">
+              <lem wit="#Ceriani">domine abhis Et quis nutrit plebem istam</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin.11.10">
+            <app xml:id="u112_ver_Latin">
+              <lem wit="#Ceriani">aut quis est qui miserebitur illis et quis eis dux erit in uia</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin.11.11">
+            <app xml:id="u113_ver_Latin">
+              <lem wit="#Ceriani">aut quis orabit pro eis nec patiens ne uno quidem diem ut inducam illos in terram araborum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin.11.12">
+            <app xml:id="u114_ver_Latin">
+              <lem wit="#Ceriani">quomodo ergo potero plebem hanc tamquam pater unicum filium aut tamquam filiam dominam uirginem quae paratur tali uiro quae timebat corpus custodiens eius a sole et ne scalciati pedes eius ad currendum supra terram</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin.11.13">
+            <app xml:id="u115_ver_Latin">
+              <lem wit="#Ceriani">..... de uoluntatem eorum praestabo illis ciborum et potui secus uoluntatem uoluntatis eorum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_Latin.11.14">
+            <app xml:id="u116_ver_Latin">
+              <lem wit="#Ceriani">..... enim illorum erant c milia nam isti in tantum qui creuerunt in tuis orationibus domine monse</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_Latin.11.15">
+            <app xml:id="u117_ver_Latin">
+              <lem wit="#Ceriani">et quae est mihi sapientia aut intellectus in domo .... uerbis aut iudicare aut respondere</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Mois.ver_Latin.11.16">
+            <app xml:id="u118_ver_Latin">
+              <lem wit="#Ceriani">sed et reges amorreorum cum audierint expugnare nos credentes iam non esse semet sacrum spiritum dignum domino multiplicem et inconpraehensibilem dominum uerbi fidelem in omnia diuinum per orbem terrarum profetem consummatum in saeculo doctorem iam non esse in eis dicens Eamus ad eos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="Mois.ver_Latin.11.17">
+            <app xml:id="u119_ver_Latin">
+              <lem wit="#Ceriani">si inimici impie fecerunt semel adhuc in dominum suum non est defensor illis qui ferat pro eis praeces domino quomodo monse erat magnus nuntius qui singulis horis diebus et noctibus habebat genua sua infixa in terra orans et intuens hominipotentem orbem terrarum cum misericordia et iustitia reminiscens testamentum parentum et iureiurando placando dominum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Mois.ver_Latin.11.18">
+            <app xml:id="u120_ver_Latin">
+              <lem wit="#Ceriani">dicent enim non est ille cum eis eamus itaque et confundamus eos a faciae terrae</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="Mois.ver_Latin.11.19">
+            <app xml:id="u121_ver_Latin">
+              <lem wit="#Ceriani">quod ergo fiet plebi isti domine monse</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="Mois.ver_Latin.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin.12.1">
+            <app xml:id="u122_ver_Latin">
+              <lem wit="#Ceriani">et postquam finiuit uerba iesus iterum procidit ad pedes monsi</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin.12.2">
+            <app xml:id="u123_ver_Latin">
+              <lem wit="#Ceriani">Et monse prendit manum ipsius et erexit illum in cathedra ante se Et respondit et dixit illi</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin.12.3">
+            <app xml:id="u124_ver_Latin">
+              <lem wit="#Ceriani">iesus et ne contemnas sed praebe te securum et adtende uerbis meis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin.12.4">
+            <app xml:id="u125_ver_Latin">
+              <lem wit="#Ceriani">omnes gentes quae sunt in ore terrarum deus creauit et nos praeuidit illos et nos ab initio creaturae orbis terrarum ut ad exitum saeculi Et nihil est ab eo neglectum usque ad pusillum sed omnia praeuidit et prououit cum eis ..</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin.12.5">
+            <app xml:id="u126_ver_Latin">
+              <lem wit="#Ceriani">dns omnia quae futura essent in hoc orbe terrarum prouidit et ecce aufertur</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin.12.6">
+            <app xml:id="u127_ver_Latin">
+              <lem wit="#Ceriani">......... s me constituit pro eis et pro peccatis eorum .. .... et in .. ccare .. pro eis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin.12.7">
+            <app xml:id="u128_ver_Latin">
+              <lem wit="#Ceriani">non enim propter meam uirtutem aut infirmitatem sed temperantius misericordiae ipsius et patientia contegerunt mihi</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin.12.8">
+            <app xml:id="u129_ver_Latin">
+              <lem wit="#Ceriani">dico enim tibi iesu non propter pietatem plebis huius exterminabis gentes</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin.12.9">
+            <app xml:id="u130_ver_Latin">
+              <lem wit="#Ceriani">omnia caeli firmamenta orbis facta ut prouata a deo et sub nullo dexterae illius sunt</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin.12.10">
+            <app xml:id="u131_ver_Latin">
+              <lem wit="#Ceriani">Facientes itaque et consummantes mandata dei crescunt et bonam uiam exigunt</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin.12.11">
+            <app xml:id="u132_ver_Latin">
+              <lem wit="#Ceriani">nam peccantibus et neglegentibus mandata carere bonam quae praedicta sunt Et punientur a gentibus multis tormentis</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin.12.12">
+            <app xml:id="u133_ver_Latin">
+              <lem wit="#Ceriani">nam in totum exterminet et relinquat eos fieri non potest</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin.12.13">
+            <app xml:id="u134_ver_Latin">
+              <lem wit="#Ceriani">exiuit enim deus qui praeuidit omnia in saecula et stabilitum est testamentum illius et iureiu ando quod</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="chapter" n="1" xml:id="Mois.ver_English.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.1.1">
+            <app xml:id="uen_1_ver_English">
+              <lem wit="#OCP-Trans">...</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.1.2">
+            <app xml:id="uen_2_ver_English">
+              <lem wit="#OCP-Trans">which is the two thousand five hundredth year from the creation of the earth.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.1.3">
+            <app xml:id="uen_3_ver_English">
+              <lem wit="#OCP-Trans">For otherwise, the number of those in the east ... and ... and ... of the departure of the Phoenix</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.1.4">
+            <app xml:id="uen_4_ver_English">
+              <lem wit="#OCP-Trans">when the people went out after the departure that was made by Moses up to Amman across the Jordan,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.1.5">
+            <app xml:id="uen_5_ver_English">
+              <lem wit="#OCP-Trans">of the prophecy that was made by Moses in the book of Deuteronomy.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.1.6">
+            <app xml:id="uen_6_ver_English">
+              <lem wit="#OCP-Trans">who called to himself Jesus, son of Nun, a man approved by the Lord,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.1.7">
+            <app xml:id="uen_7_ver_English">
+              <lem wit="#OCP-Trans">to be a successor to the people and to the tabernacle of testimony with all its holy things,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.1.8">
+            <app xml:id="uen_8_ver_English">
+              <lem wit="#OCP-Trans">so that he might lead the people into the land given to their tribes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.1.9">
+            <app xml:id="uen_9_ver_English">
+              <lem wit="#OCP-Trans">so that it might be given to them by covenant and by oath, which he spoke in the tabernacle, to give concerning Jesus, saying this word to Jesus:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_English.1.10">
+            <app xml:id="uen_10_ver_English">
+              <lem wit="#OCP-Trans">“And promise according to your diligence to do all that has been commanded, as it is without dispute.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_English.1.11">
+            <app xml:id="uen_11_ver_English">
+              <lem wit="#OCP-Trans">Therefore, thus says the Lord of the world:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_English.1.12">
+            <app xml:id="uen_12_ver_English">
+              <lem wit="#OCP-Trans">For he created the world for the sake of his people.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_English.1.13">
+            <app xml:id="uen_13_ver_English">
+              <lem wit="#OCP-Trans">And he did not begin its inception of creation and from the beginning of the world make it manifest, so that the Gentiles might be convicted concerning it and humbly dispute among themselves and convict themselves.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_English.1.14">
+            <app xml:id="uen_14_ver_English">
+              <lem wit="#OCP-Trans">Therefore, he devised and found me, who from the beginning of the world was prepared to be the arbiter of his covenant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_English.1.15">
+            <app xml:id="uen_15_ver_English">
+              <lem wit="#OCP-Trans">And then I make it clear to you that the time of the years of my life is fulfilled, and I pass into the sleep of my fathers and openly to all the people.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Mois.ver_English.1.16">
+            <app xml:id="uen_16_ver_English">
+              <lem wit="#OCP-Trans">However, receive this writing to recognize the safekeeping of the books which I will deliver to you,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="Mois.ver_English.1.17">
+            <app xml:id="uen_17_ver_English">
+              <lem wit="#OCP-Trans">which you shall arrange and bind and place in earthenware vessels in the place which he made from the beginning of the creation of the world,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Mois.ver_English.1.18">
+            <app xml:id="uen_18_ver_English">
+              <lem wit="#OCP-Trans">so that his name may be invoked until the day of repentance, in the regard with which the Lord looks upon them at the consummation of the end of days.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="Mois.ver_English.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.2.1">
+            <app xml:id="uen_19_ver_English">
+              <lem wit="#OCP-Trans">Through you they will enter into the land which he decreed and promised to give to their fathers,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.2.2">
+            <app xml:id="uen_20_ver_English">
+              <lem wit="#OCP-Trans">in which you will bless and give to each one and establish for them a lot in me, and you will confirm for them a kingdom, and you will leave to them the offices of the places according to what will please their Lord in judgment and righteousness.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.2.3">
+            <app xml:id="uen_21_ver_English">
+              <lem wit="#OCP-Trans">However, after they enter into their land, for years, and afterwards it will be ruled by princes and tyrants for eighteen years, and for eighteen years, breaking off from the tribe of x, for two tribes will descend and transfer the tabernacle of testimony.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.2.4">
+            <app xml:id="uen_22_ver_English">
+              <lem wit="#OCP-Trans">Then the God of heaven made manifest his tabernacle and the iron of his sanctuary, and two tribes of holiness will be established.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.2.5">
+            <app xml:id="uen_23_ver_English">
+              <lem wit="#OCP-Trans">For ten tribes will establish kingdoms for themselves according to their ordinances,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.2.6">
+            <app xml:id="uen_24_ver_English">
+              <lem wit="#OCP-Trans">and they will offer sacrifices for twenty years.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.2.7">
+            <app xml:id="uen_25_ver_English">
+              <lem wit="#OCP-Trans">And seven will surround the walls, and I will go around nine, and they will approach the covenant of the Lord and will pollute the boundary which the Lord made with them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.2.8">
+            <app xml:id="uen_26_ver_English">
+              <lem wit="#OCP-Trans">And they will sacrifice their sons to foreign gods, and they will place idols in the tabernacle, serving them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.2.9">
+            <app xml:id="uen_27_ver_English">
+              <lem wit="#OCP-Trans">And in the house of the Lord they will act wickedly and will carve many idols of every animal.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="Mois.ver_English.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.3.1">
+            <app xml:id="uen_28_ver_English">
+              <lem wit="#OCP-Trans">In those times, a king will come to them from the east, and his cavalry will cover their land and</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.3.2">
+            <app xml:id="uen_29_ver_English">
+              <lem wit="#OCP-Trans">he will set fire to their colony with the holy house of the Lord, and he will take all the holy vessels.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.3.3">
+            <app xml:id="uen_30_ver_English">
+              <lem wit="#OCP-Trans">And he will cast out all the people and will lead them into the land of his own country, and he will lead two tribes with him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.3.4">
+            <app xml:id="uen_31_ver_English">
+              <lem wit="#OCP-Trans">Then the two tribes will call out to the ten tribes, and they will lead themselves like lions in the dusty fields, hungry and thirsty with our children.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.3.5">
+            <app xml:id="uen_32_ver_English">
+              <lem wit="#OCP-Trans">And they will cry out, “Righteous and holy is the Lord! For you have sinned, and we likewise have been brought with you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.3.6">
+            <app xml:id="uen_33_ver_English">
+              <lem wit="#OCP-Trans">Then the ten tribes will weep, hearing the reproaches of the words of the two tribes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.3.7">
+            <app xml:id="uen_34_ver_English">
+              <lem wit="#OCP-Trans">and they will say, “What shall we do to you, brothers? Has not this affliction come upon every house of Israel?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.3.8">
+            <app xml:id="uen_35_ver_English">
+              <lem wit="#OCP-Trans">And all the tribes will weep, crying out to heaven and saying,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.3.9">
+            <app xml:id="uen_36_ver_English">
+              <lem wit="#OCP-Trans">O God of Abraham, and God of Isaac, and God of Jacob, remember your covenant which you made with them and the oath which you swore to them by yourself, that their seed would never fail from the land which you gave to them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_English.3.10">
+            <app xml:id="uen_37_ver_English">
+              <lem wit="#OCP-Trans">Then they will remember me on that day, saying, tribe to tribe and a man to his neighbor,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_English.3.11">
+            <app xml:id="uen_38_ver_English">
+              <lem wit="#OCP-Trans">“Is this not what Moses testified to us among the prophets, who suffered many things in Egypt and in the Red Sea and in the wilderness for forty years?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_English.3.12">
+            <app xml:id="uen_39_ver_English">
+              <lem wit="#OCP-Trans">He testified and called heaven and earth as witnesses for us, lest we transgress his commandments in which he was our arbiter.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_English.3.13">
+            <app xml:id="uen_40_ver_English">
+              <lem wit="#OCP-Trans">These things have come upon us according to his words and according to his affirmation, just as he testified to us in those times, and which have come upon us, even to be led captive to the eastern region.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_English.3.14">
+            <app xml:id="uen_41_ver_English">
+              <lem wit="#OCP-Trans">And they will serve for about seventy-seven years.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="Mois.ver_English.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.4.1">
+            <app xml:id="uen_42_ver_English">
+              <lem wit="#OCP-Trans">Then one who is over them entered and spread out his hands and knelt down and prayed for them, saying,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.4.2">
+            <app xml:id="uen_43_ver_English">
+              <lem wit="#OCP-Trans">“Lord, the king of all on high, who rules the world, who willed this people to be your people, this chosen people, then you willed to be called their God, according to the covenant which you made with their fathers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.4.3">
+            <app xml:id="uen_44_ver_English">
+              <lem wit="#OCP-Trans">And they went captive to a foreign land with their wives and children, and near the gate of foreigners and where great majesty is.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.4.4">
+            <app xml:id="uen_45_ver_English">
+              <lem wit="#OCP-Trans">Look and have mercy on them, O heavenly Lord.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.4.5">
+            <app xml:id="uen_46_ver_English">
+              <lem wit="#OCP-Trans">Then their God remembers because of the covenant which he made with their fathers, and he will make known his mercy even in those times.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.4.6">
+            <app xml:id="uen_47_ver_English">
+              <lem wit="#OCP-Trans">And he sends into the heart of the king that he might have mercy on them and dismiss them to their land and region.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.4.7">
+            <app xml:id="uen_48_ver_English">
+              <lem wit="#OCP-Trans">Then some parts of the tribes will ascend and come to their appointed place and will surround the place, renewing it.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.4.8">
+            <app xml:id="uen_49_ver_English">
+              <lem wit="#OCP-Trans">But two tribes will remain steadfast in their appointed faith, sorrowful and groaning, because they will not be able to offer sacrifices to the Lord, the God of their fathers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.4.9">
+            <app xml:id="uen_50_ver_English">
+              <lem wit="#OCP-Trans">And the ten tribes will grow and will come among the children in the time of the tribe.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="Mois.ver_English.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.5.1">
+            <app xml:id="uen_51_ver_English">
+              <lem wit="#OCP-Trans">And when the times of rebuke draw near and vengeance arises from kings, sharers in wickedness,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.5.2">
+            <app xml:id="uen_52_ver_English">
+              <lem wit="#OCP-Trans">and punishing them, and they themselves will be divided against the truth because of what happened.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.5.3">
+            <app xml:id="uen_53_ver_English">
+              <lem wit="#OCP-Trans">They will avoid justice and approach iniquity, and they will defile the house of their servitude through generations, and because they will commit fornication after foreign gods.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.5.4">
+            <app xml:id="uen_54_ver_English">
+              <lem wit="#OCP-Trans">For they will not follow the truth of God, but some will defile the altars with the offerings which they will impose on the Lord, who are not priests but servants born of servants.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.5.5">
+            <app xml:id="uen_55_ver_English">
+              <lem wit="#OCP-Trans">For those who are their masters and teachers in those times will be admiring persons of greed and receivers of gifts, and they will sell justice, receiving penalties.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.5.6">
+            <app xml:id="uen_56_ver_English">
+              <lem wit="#OCP-Trans">And therefore the settlement and the limits of their habitation will be filled with wickedness and iniquities from God, so that those who act will be impious judges; they will be within it after the limits of the habitation with wickedness and iniquities from the Lord. Those who act will be impious judges; they will be in the field to judge as each one wishes.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="Mois.ver_English.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.6.1">
+            <app xml:id="uen_57_ver_English">
+              <lem wit="#OCP-Trans">Then kings ruling over them will arise, and they will be called high priests of God, performing impiety from the holy of holies.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.6.2">
+            <app xml:id="uen_58_ver_English">
+              <lem wit="#OCP-Trans">And a petulant king will succeed them, who will not be of the lineage of priests, a rash and wicked man, and he will judge them as they deserve.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.6.3">
+            <app xml:id="uen_59_ver_English">
+              <lem wit="#OCP-Trans">He will strike down their leaders with the sword, and each one in unknown places, and their bodies, so that no one knows where their bodies are.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.6.4">
+            <app xml:id="uen_60_ver_English">
+              <lem wit="#OCP-Trans">He kills the elders and the young, and he will not spare.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.6.5">
+            <app xml:id="uen_61_ver_English">
+              <lem wit="#OCP-Trans">Then his great terror will be upon them in their land.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.6.6">
+            <app xml:id="uen_62_ver_English">
+              <lem wit="#OCP-Trans">And he will execute judgments upon them as the Egyptians did to them for thirty-four years, and they will punish them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.6.7">
+            <app xml:id="uen_63_ver_English">
+              <lem wit="#OCP-Trans">And he will subdue the children, yielding shorter times to themselves.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.6.8">
+            <app xml:id="uen_64_ver_English">
+              <lem wit="#OCP-Trans">They will come to their peers in death, and a powerful king will kill them because he will conquer them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.6.9">
+            <app xml:id="uen_65_ver_English">
+              <lem wit="#OCP-Trans">And they will lead captives, and he burns a part of their temple with fire; some he crucifies around their settlement.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="Mois.ver_English.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.7.1">
+            <app xml:id="uen_66_ver_English">
+              <lem wit="#OCP-Trans">From this deed, the times will end in a moment. The course will be completed in four hours.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.7.2">
+            <app xml:id="uen_67_ver_English">
+              <lem wit="#OCP-Trans">They are compelled according to the beginnings, three to the ends, nine because of the beginning, three, the seventh, the second, three, in the third, two hours.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.7.3">
+            <app xml:id="uen_68_ver_English">
+              <lem wit="#OCP-Trans">And pestilential and impious men will reign from these, teaching themselves to be righteous.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.7.4">
+            <app xml:id="uen_69_ver_English">
+              <lem wit="#OCP-Trans">And these will stir up the anger of their souls, who will be deceitful men, self-pleasing, feigned in all their ways, and at every hour of the day loving feasts, devourers of gluttony.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.7.5">
+            <app xml:id="uen_70_ver_English">
+              <lem wit="#OCP-Trans">They will despise all divine things.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.7.6">
+            <app xml:id="uen_71_ver_English">
+              <lem wit="#OCP-Trans">... eaters of good things, saying that they do these things out of mercy...</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.7.7">
+            <app xml:id="uen_72_ver_English">
+              <lem wit="#OCP-Trans">themselves and destroyers seeking... deceivers concealing themselves so that they could not be known, impious, full of crime and iniquity from east to west.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.7.8">
+            <app xml:id="uen_73_ver_English">
+              <lem wit="#OCP-Trans">saying, 'We will have banquets and luxury, eating and drinking.' And we thought, 'We will be like princes.'</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.7.9">
+            <app xml:id="uen_74_ver_English">
+              <lem wit="#OCP-Trans">And their hands and minds handle impure things, and their mouth will speak great things, and they will moreover say,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_English.7.10">
+            <app xml:id="uen_75_ver_English">
+              <lem wit="#OCP-Trans">'Do not... touch, lest you defile me, in the place where... s... is d... su... us... in... re... raui... to the people who are to them.'</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="Mois.ver_English.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.8.1">
+            <app xml:id="uen_76_ver_English">
+              <lem wit="#OCP-Trans">And then vengeance and wrath will come upon them, such as has not been upon them from the beginning until that time, in which he raised up for them a king of the kings of the earth and a power from great power, who will crucify those confessing circumcision.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.8.2">
+            <app xml:id="uen_77_ver_English">
+              <lem wit="#OCP-Trans">For he will torture those who kill, and he delivered the bound to the leader into custody.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.8.3">
+            <app xml:id="uen_78_ver_English">
+              <lem wit="#OCP-Trans">And their wives will be given to the gods of the nations. And their children, male infants, will be circumcised by doctors, male infants to induce acrosis on them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.8.4">
+            <app xml:id="uen_79_ver_English">
+              <lem wit="#OCP-Trans">For they will be punished in them with torments and fire and iron, and will be forced to openly carry their defiled idols, just as they are equally holding them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.8.5">
+            <app xml:id="uen_80_ver_English">
+              <lem wit="#OCP-Trans">And by those tormenting them, they will likewise be forced to enter their hidden place, and will be forced by goads to blaspheme the word contemptuously, and finally after these things, even the laws that they had above their altar.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="Mois.ver_English.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.9.1">
+            <app xml:id="uen_81_ver_English">
+              <lem wit="#OCP-Trans">Then, as he spoke, a man from the tribe of Levi, whose name will be Taxo, who had seven sons, speaking to them, imploring,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.9.2">
+            <app xml:id="uen_82_ver_English">
+              <lem wit="#OCP-Trans">'See, sons, behold, vengeance has come upon another people, cruel, impure, and a degradation without mercy, and they hold prominence.'</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.9.3">
+            <app xml:id="uen_83_ver_English">
+              <lem wit="#OCP-Trans">For what nation, or what region, or what people of the impious in a house who committed many wicked deeds have suffered such evils as have befallen us?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.9.4">
+            <app xml:id="uen_84_ver_English">
+              <lem wit="#OCP-Trans">Now therefore, sons, listen to me, for you see and know that neither their parents nor their ancestors ever tempted God to transgress his commandments.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.9.5">
+            <app xml:id="uen_85_ver_English">
+              <lem wit="#OCP-Trans">For you know that these are our strengths, and we will do this.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.9.6">
+            <app xml:id="uen_86_ver_English">
+              <lem wit="#OCP-Trans">Let us fast for three days, and on the fourth day let us enter the cave that is in the field, and let us die rather than transgress the commandments of the Lord of lords, the God of our parents.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.9.7">
+            <app xml:id="uen_87_ver_English">
+              <lem wit="#OCP-Trans">For if we do this and die, our blood will be avenged before the Lord.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="Mois.ver_English.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.10.1">
+            <app xml:id="uen_88_ver_English">
+              <lem wit="#OCP-Trans">And then his kingdom will appear in all his creation. And then the devil will have an end, and sorrow will be brought with him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.10.2">
+            <app xml:id="uen_89_ver_English">
+              <lem wit="#OCP-Trans">Then the hands of the messenger who is appointed on high will be filled, who will immediately avenge them from their enemies.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.10.3">
+            <app xml:id="uen_90_ver_English">
+              <lem wit="#OCP-Trans">For the Heavenly One will... from the throne of his kingdom, and will go forth from his holy dwelling with indignation and wrath because of his sons.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.10.4">
+            <app xml:id="uen_91_ver_English">
+              <lem wit="#OCP-Trans">And the earth will tremble to its ends, it will be shaken, and the high mountains will be humbled and shaken, and the valleys will fall.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.10.5">
+            <app xml:id="uen_92_ver_English">
+              <lem wit="#OCP-Trans">The sun will not give light, and the horns of the moon will turn into darkness and will be broken, and the whole will turn into blood, and the sphere of the stars will be disturbed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.10.6">
+            <app xml:id="uen_93_ver_English">
+              <lem wit="#OCP-Trans">And the sea will recede to the abyss, the sources of the waters will fail, and the rivers will be terrified.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.10.7">
+            <app xml:id="uen_94_ver_English">
+              <lem wit="#OCP-Trans">Because the Most High God, the Eternal One alone, arises, and will come openly to avenge the nations and destroy all their idols.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.10.8">
+            <app xml:id="uen_95_ver_English">
+              <lem wit="#OCP-Trans">Then you, O Israel, will be blessed, and you will ascend upon the necks and wings of the eagle, and you will be filled.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.10.9">
+            <app xml:id="uen_96_ver_English">
+              <lem wit="#OCP-Trans">And God will exalt you and make you inherit the heaven of stars, the place of their dwelling.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_English.10.10">
+            <app xml:id="uen_97_ver_English">
+              <lem wit="#OCP-Trans">And you will look down from on high and see your enemies on the earth, and you will recognize them, and you will rejoice and give thanks and confess your Creator.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_English.10.11">
+            <app xml:id="uen_98_ver_English">
+              <lem wit="#OCP-Trans">For you, Joshua son of Nun, keep these words and this book.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_English.10.12">
+            <app xml:id="uen_99_ver_English">
+              <lem wit="#OCP-Trans">For there will be 250 times from death's reception until his coming, which are accomplished.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_English.10.13">
+            <app xml:id="uen_100_ver_English">
+              <lem wit="#OCP-Trans">And this course... of these which they meet until they are consumed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_English.10.14">
+            <app xml:id="uen_101_ver_English">
+              <lem wit="#OCP-Trans">But I was going to the sleep of my fathers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_English.10.15">
+            <app xml:id="uen_102_ver_English">
+              <lem wit="#OCP-Trans">Therefore, you, Joshua son of Nun, God has chosen you to be my successor of the same covenant.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="Mois.ver_English.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.11.1">
+            <app xml:id="uen_103_ver_English">
+              <lem wit="#OCP-Trans">And when Joshua heard the words of Moses, all that were written in his scripture, all that he had foretold, he tore his garments and fell at my feet.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.11.2">
+            <app xml:id="uen_104_ver_English">
+              <lem wit="#OCP-Trans">And he encouraged Moses and wept with him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.11.3">
+            <app xml:id="uen_105_ver_English">
+              <lem wit="#OCP-Trans">And Joshua answered him and said,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.11.4">
+            <app xml:id="uen_106_ver_English">
+              <lem wit="#OCP-Trans">“Why do you conceal me, Lord Moses? And in what way shall I be concealed? Concerning what did that harsh voice speak, which came out of your mouth, which is full of tears and groans, because you are departing from this people….”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.11.5">
+            <app xml:id="uen_107_ver_English">
+              <lem wit="#OCP-Trans">“What place receives you…?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.11.6">
+            <app xml:id="uen_108_ver_English">
+              <lem wit="#OCP-Trans">“Or what will be the monument of burial?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.11.7">
+            <app xml:id="uen_109_ver_English">
+              <lem wit="#OCP-Trans">“Or who would dare to transfer your body, O man, from place to place?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.11.8">
+            <app xml:id="uen_110_ver_English">
+              <lem wit="#OCP-Trans">“For all who die according to their age have their burial places on the earth. But your burial, from the rising of the sun to its setting, and from the south to the ends of the north, the whole orb of the earth is your sepulchre.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.11.9">
+            <app xml:id="uen_111_ver_English">
+              <lem wit="#OCP-Trans">“Lord, Ah! And who will nourish this people?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_English.11.10">
+            <app xml:id="uen_112_ver_English">
+              <lem wit="#OCP-Trans">“Or who is it who will pity them? And who will be their leader on the way?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_English.11.11">
+            <app xml:id="uen_113_ver_English">
+              <lem wit="#OCP-Trans">“Or who will pray for them, not even enduring for a single day, so that I might lead them into the land of the Arabs?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_English.11.12">
+            <app xml:id="uen_114_ver_English">
+              <lem wit="#OCP-Trans">“How then shall I be able to [care for] this people, like a father his only son, or like a master a virgin daughter who is prepared for such a husband, who guarded her body, fearing the sun, and lest her feet be unshod for running upon the earth?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_English.11.13">
+            <app xml:id="uen_115_ver_English">
+              <lem wit="#OCP-Trans">“... I will provide for them food and drink according to their desire, according to their will.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_English.11.14">
+            <app xml:id="uen_116_ver_English">
+              <lem wit="#OCP-Trans">“... for there were a hundred thousand of them. But these have grown so much through your prayers, Lord Moses.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_English.11.15">
+            <app xml:id="uen_117_ver_English">
+              <lem wit="#OCP-Trans">“And what wisdom or understanding do I have in the house… to speak words or to judge or to answer?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Mois.ver_English.11.16">
+            <app xml:id="uen_118_ver_English">
+              <lem wit="#OCP-Trans">“But also the kings of the Amorites, when they hear, will believe that we have been overcome, saying, ‘There is no longer a sacred spirit worthy of the Lord among them, a multiple and incomprehensible Lord of the word, faithful in all things, a divine prophet perfected throughout the world, a teacher. Let us go to them!’”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="Mois.ver_English.11.17">
+            <app xml:id="uen_119_ver_English">
+              <lem wit="#OCP-Trans">“If the enemies have sinned impiously, once again, against their Lord, there is no defender for them who would offer prayers for them to the Lord, as Moses was a great messenger who, at every hour, day and night, had his knees fixed on the ground, praying and beholding the omnipotent world with mercy and justice, remembering the covenant of the parents and placating the Lord by an oath.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Mois.ver_English.11.18">
+            <app xml:id="uen_120_ver_English">
+              <lem wit="#OCP-Trans">“For they will say, ‘He is not with them. Therefore, let us go and confound them from the face of the earth.’”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="Mois.ver_English.11.19">
+            <app xml:id="uen_121_ver_English">
+              <lem wit="#OCP-Trans">“What then will become of this people, Lord Moses?”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="Mois.ver_English.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_English.12.1">
+            <app xml:id="uen_122_ver_English">
+              <lem wit="#OCP-Trans">And after Jesus finished his words, he again prostrated himself at Moses’ feet.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_English.12.2">
+            <app xml:id="uen_123_ver_English">
+              <lem wit="#OCP-Trans">And Moses took his hand and raised him up to a chair before him. And he answered and said to him,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_English.12.3">
+            <app xml:id="uen_124_ver_English">
+              <lem wit="#OCP-Trans">“Joshua, do not be contemptuous, but show yourself secure and attend to my words.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_English.12.4">
+            <app xml:id="uen_125_ver_English">
+              <lem wit="#OCP-Trans">“All the nations that are on the face of the earth, God created, and He foreknew them and us from the beginning of the creation of the world until the end of the age. And nothing is neglected by Him, not even the smallest thing, but He foreknew and prepared all things with them….”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_English.12.5">
+            <app xml:id="uen_126_ver_English">
+              <lem wit="#OCP-Trans">“The Lord foreknew all things that would happen in this world, and behold, he is taken away.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_English.12.6">
+            <app xml:id="uen_127_ver_English">
+              <lem wit="#OCP-Trans">“……he appointed me for them, and for their sins…. and to… for them.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_English.12.7">
+            <app xml:id="uen_128_ver_English">
+              <lem wit="#OCP-Trans">“For not because of my strength or weakness, but rather His mercy and patience have covered me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_English.12.8">
+            <app xml:id="uen_129_ver_English">
+              <lem wit="#OCP-Trans">“For I say to you, Joshua, not because of the piety of this people will you exterminate the nations.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_English.12.9">
+            <app xml:id="uen_130_ver_English">
+              <lem wit="#OCP-Trans">“All the firmaments of the heavens and the world were made as tried by God, and they are under none other than His right hand.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_English.12.10">
+            <app xml:id="uen_131_ver_English">
+              <lem wit="#OCP-Trans">“Therefore, those who do and fulfill the commandments of God grow and demand a good way.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_English.12.11">
+            <app xml:id="uen_132_ver_English">
+              <lem wit="#OCP-Trans">“But those who sin and neglect the commandments are deprived of the good things that were foretold. And they will be punished by the nations with many torments.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_English.12.12">
+            <app xml:id="uen_133_ver_English">
+              <lem wit="#OCP-Trans">“For it is impossible that he should completely exterminate and abandon them.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_English.12.13">
+            <app xml:id="uen_134_ver_English">
+              <lem wit="#OCP-Trans">“For God, who foreknew all things forever, has gone forth, and His covenant and His oath, which…”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Latin (French)" xml:lang="fr" xml:id="ver_Latin__French_">
+        <head>Latin (French)</head>
+        <div type="chapter" n="1" xml:id="Mois.ver_Latin__French_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.1.1">
+            <app xml:id="ufr_1_ver_Latin__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.1.2">
+            <app xml:id="ufr_2_ver_Latin__French_">
+              <lem wit="#OCP-Trans">qui est la deux mille cinq centième année depuis la création du monde,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.1.3">
+            <app xml:id="ufr_3_ver_Latin__French_">
+              <lem wit="#OCP-Trans">car selon le compte de ceux qui sont en Orient, c'est la ième année du départ de Phénicie,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.1.4">
+            <app xml:id="ufr_4_ver_Latin__French_">
+              <lem wit="#OCP-Trans">lorsque le peuple sortit, après la marche qui s'était faite par Moïse jusqu'à Ammon, au-delà du Jourdain,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.1.5">
+            <app xml:id="ufr_5_ver_Latin__French_">
+              <lem wit="#OCP-Trans">selon la prophétie qui fut faite par Moïse dans le livre du Deutéronome,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.1.6">
+            <app xml:id="ufr_6_ver_Latin__French_">
+              <lem wit="#OCP-Trans">lui qui appela auprès de lui Josué, fils de Noun, un homme éprouvé auprès du Seigneur,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.1.7">
+            <app xml:id="ufr_7_ver_Latin__French_">
+              <lem wit="#OCP-Trans">afin qu'il soit le successeur pour le peuple et pour la tente du témoignage avec tous ses objets sacrés,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.1.8">
+            <app xml:id="ufr_8_ver_Latin__French_">
+              <lem wit="#OCP-Trans">et pour qu'il introduise le peuple dans la terre promise à leurs pères,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.1.9">
+            <app xml:id="ufr_9_ver_Latin__French_">
+              <lem wit="#OCP-Trans">afin qu'elle leur soit donnée selon l'alliance et selon le serment qu'il avait promis dans la tente de donner par Josué, en adressant à Josué cette parole :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin__French_.1.10">
+            <app xml:id="ufr_10_ver_Latin__French_">
+              <lem wit="#OCP-Trans">« Promets, selon toute ton énergie, de faire toutes les choses qui t'ont été commandées, de manière à être irréprochable.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin__French_.1.11">
+            <app xml:id="ufr_11_ver_Latin__French_">
+              <lem wit="#OCP-Trans">C'est pourquoi ainsi parle le Seigneur du monde :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin__French_.1.12">
+            <app xml:id="ufr_12_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car il a créé le monde pour son peuple,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin__French_.1.13">
+            <app xml:id="ufr_13_ver_Latin__French_">
+              <lem wit="#OCP-Trans">mais il n'a pas voulu manifester ce dessein de la création dès le commencement du monde, afin que les nations en soient confondues et que, dans leurs débats, elles se confondent humblement entre elles.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_Latin__French_.1.14">
+            <app xml:id="ufr_14_ver_Latin__French_">
+              <lem wit="#OCP-Trans">C'est pourquoi il m'a conçu et m'a préparé dès le commencement du monde, pour que je sois le médiateur de son alliance.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_Latin__French_.1.15">
+            <app xml:id="ufr_15_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et maintenant, je te le révèle : le temps des années de ma vie est accompli, et je m'en vais vers le sommeil de mes pères, et cela à la vue de tout le peuple.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Mois.ver_Latin__French_.1.16">
+            <app xml:id="ufr_16_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Reçois donc cet écrit pour reconnaître la conservation des livres que je vais te transmettre,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="Mois.ver_Latin__French_.1.17">
+            <app xml:id="ufr_17_ver_Latin__French_">
+              <lem wit="#OCP-Trans">que tu disposeras, enduiras d'huile de cèdre et déposeras dans des vases d'argile, dans le lieu qu'il a préparé dès le commencement de la création du monde,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Mois.ver_Latin__French_.1.18">
+            <app xml:id="ufr_18_ver_Latin__French_">
+              <lem wit="#OCP-Trans">afin que son nom soit invoqué jusqu'au jour de la repentance, lors de la visite où le Seigneur les regardera, à la consommation de la fin des jours.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="Mois.ver_Latin__French_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.2.1">
+            <app xml:id="ufr_19_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Ils entreront par toi dans le pays qu'il a résolu et promis de donner à leurs pères,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.2.2">
+            <app xml:id="ufr_20_ver_Latin__French_">
+              <lem wit="#OCP-Trans">où tu les béniras, tu distribueras à chacun et tu leur fixeras leur part selon moi, tu affermiras pour eux la royauté et tu leur assigneras des magistrats pour chaque lieu, selon ce qui plaira à leur Seigneur en jugement et en justice.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.2.3">
+            <app xml:id="ufr_21_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Mais après qu'ils seront entrés dans leur pays années, ils seront ensuite dominés par des chefs et des tyrans pendant dix-huit ans, et durant dix-neuf ans dix tribus feront sécession ; car deux tribus descendront et transporteront la tente du témoignage.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.2.4">
+            <app xml:id="ufr_22_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors le Dieu céleste établira le parvis de sa tente et la clôture de son sanctuaire, et les deux tribus de sainteté seront établies.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.2.5">
+            <app xml:id="ufr_23_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car les dix tribus s'établiront des royaumes selon leurs propres ordonnances,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.2.6">
+            <app xml:id="ufr_24_ver_Latin__French_">
+              <lem wit="#OCP-Trans">et elles offriront des sacrifices pendant vingt ans.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.2.7">
+            <app xml:id="ufr_25_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et sept d'entre eux fortifieront des murailles, et j'en entourerai neuf ; mais ils violeront l'alliance du Seigneur et souilleront le serment que le Seigneur a conclu avec eux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.2.8">
+            <app xml:id="ufr_26_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et ils immoleront leurs enfants à des dieux étrangers et dresseront des idoles pour la tente, en les servant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.2.9">
+            <app xml:id="ufr_27_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et dans la maison du Seigneur, ils commettront des abominations et sculpteront de nombreuses idoles de toute espèce d'animaux.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="Mois.ver_Latin__French_.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.3.1">
+            <app xml:id="ufr_28_ver_Latin__French_">
+              <lem wit="#OCP-Trans">En ces temps-là, un roi viendra d'Orient contre eux, et sa cavalerie couvrira leur pays, et</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.3.2">
+            <app xml:id="ufr_29_ver_Latin__French_">
+              <lem wit="#OCP-Trans">il brûlera leur ville par le feu avec le saint temple du Seigneur, et il emportera tous les vases sacrés,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.3.3">
+            <app xml:id="ufr_30_ver_Latin__French_">
+              <lem wit="#OCP-Trans">et il chassera tout le peuple et les emmènera dans le pays de sa patrie, et il emmènera avec lui les deux tribus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.3.4">
+            <app xml:id="ufr_31_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors les deux tribus appelleront les dix tribus et marcheront comme une lionne dans les plaines, couvertes de poussière, affamées et assoiffées avec leurs enfants.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.3.5">
+            <app xml:id="ufr_32_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et elles crieront : “Juste et saint est le Seigneur ! Car vous avez péché, et nous aussi nous avons été emmenés captifs avec vous !”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.3.6">
+            <app xml:id="ufr_33_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors les dix tribus pleureront en entendant les reproches des paroles des deux tribus,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.3.7">
+            <app xml:id="ufr_34_ver_Latin__French_">
+              <lem wit="#OCP-Trans">et elles diront : “Que pouvons-nous faire pour vous, frères ? Cette détresse n'est-elle pas venue sur toute la maison d'Israël ?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.3.8">
+            <app xml:id="ufr_35_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et toutes les tribus pleureront, criant vers le ciel et disant :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.3.9">
+            <app xml:id="ufr_36_ver_Latin__French_">
+              <lem wit="#OCP-Trans">“Dieu d'Abraham, Dieu d'Isaac et Dieu de Jacob, souviens-toi de ton alliance que tu as conclue avec eux, et du serment que tu leur as juré par toi-même, afin que leur descendance ne disparaisse jamais du pays que tu leur as donné !”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin__French_.3.10">
+            <app xml:id="ufr_37_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors ils se souviendront de moi en ce jour-là, se disant d'une tribu à l'autre et chacun à son prochain :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin__French_.3.11">
+            <app xml:id="ufr_38_ver_Latin__French_">
+              <lem wit="#OCP-Trans">“N'est-ce pas là ce que nous attestait Moïse dans les prophéties, lui qui a tant souffert en Égypte, à la mer Rouge et dans le désert pendant quarante ans,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin__French_.3.12">
+            <app xml:id="ufr_39_ver_Latin__French_">
+              <lem wit="#OCP-Trans">qui prenait à témoin contre nous le ciel et la terre, afin que nous ne transgressions pas ses commandements dont il fut pour nous le médiateur ?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin__French_.3.13">
+            <app xml:id="ufr_40_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Ces choses nous sont arrivées à ce sujet selon ses paroles et selon son avertissement, comme il nous en avait témoigné en ces temps-là, et elles se sont accomplies jusqu'à ce que nous soyons emmenés captifs vers la région de l'Orient,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_Latin__French_.3.14">
+            <app xml:id="ufr_41_ver_Latin__French_">
+              <lem wit="#OCP-Trans">eux qui serviront pendant environ soixante-dix-sept ans.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="Mois.ver_Latin__French_.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.4.1">
+            <app xml:id="ufr_42_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors entra celui qui est au-dessus d'eux, et il étendit les mains, fléchit les genoux et pria pour eux, disant :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.4.2">
+            <app xml:id="ufr_43_ver_Latin__French_">
+              <lem wit="#OCP-Trans">“Seigneur de tout, Roi sur ton trône élevé, toi qui domines sur le monde, qui as voulu que ce peuple soit ton peuple particulier, et qui as voulu alors être appelé leur Dieu selon l'alliance que tu as conclue avec leurs pères ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.4.3">
+            <app xml:id="ufr_44_ver_Latin__French_">
+              <lem wit="#OCP-Trans">ils sont allés captifs dans une terre étrangère avec leurs femmes et leurs enfants, aux portes des Philistins et là où règne une grande majesté.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.4.4">
+            <app xml:id="ufr_45_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Regarde et aie pitié d'eux, Seigneur céleste !”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.4.5">
+            <app xml:id="ufr_46_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors Dieu se souvint d'eux à cause de l'alliance qu'il avait conclue avec leurs pères, et il manifesta sa miséricorde en ces temps-là.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.4.6">
+            <app xml:id="ufr_47_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et il mit dans le cœur du roi d'avoir compassion d'eux, et il les renvoya dans leur pays et leur contrée.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.4.7">
+            <app xml:id="ufr_48_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors certaines parties des tribus monteront et viendront dans le lieu qui leur avait été assigné, et elles entoureront le lieu de remparts en le restaurant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.4.8">
+            <app xml:id="ufr_49_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Mais les deux tribus demeureront dans la foi qui leur avait été prescrite, tristes et gémissantes, parce qu'elles ne pourront pas offrir de sacrifices au Seigneur de leurs pères.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.4.9">
+            <app xml:id="ufr_50_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et les dix tribus croîtront et se répandront parmi les nations au temps des tribus.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="Mois.ver_Latin__French_.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.5.1">
+            <app xml:id="ufr_51_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et lorsque approcheront les temps du châtiment et que la vengeance s'élèvera par des rois complices de crimes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.5.2">
+            <app xml:id="ufr_52_ver_Latin__French_">
+              <lem wit="#OCP-Trans">et qui les puniront, eux-mêmes se diviseront quant à la vérité, à cause de ce qui est arrivé.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.5.3">
+            <app xml:id="ufr_53_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Ils s'écarteront de la justice et s'approcheront de l'iniquité, et ils souilleront dans leurs générations la maison de leur culte, et ils se prostitueront après des dieux étrangers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.5.4">
+            <app xml:id="ufr_54_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car ils ne suivront pas la vérité de Dieu, mais certains souilleront l'autel par les offrandes qu'ils présenteront au Seigneur, eux qui ne sont pas prêtres, mais esclaves nés d'esclaves.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.5.5">
+            <app xml:id="ufr_55_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car ceux qui sont leurs maîtres et leurs docteurs, en ces temps-là, auront des égards pour les personnes par cupidité, recevront des présents et vendront la justice en acceptant des rétributions.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.5.6">
+            <app xml:id="ufr_56_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et c'est pourquoi la colonie et les limites de leur demeure seront remplies de crimes et d'iniquités contre Dieu ; ceux qui agissent ainsi seront des juges impies en elle, et ils s'avanceront sur la place publique pour juger selon le bon vouloir de chacun.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="Mois.ver_Latin__French_.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.6.1">
+            <app xml:id="ufr_57_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors s'élèveront sur eux des rois qui régneront et se feront appeler prêtres du Dieu Très-Haut ; ils commettront l'impiété dans le Saint des Saints.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.6.2">
+            <app xml:id="ufr_58_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et leur succédera un roi insolent qui ne sera pas de la race des prêtres, un homme téméraire et sans scrupule, et il les jugera comme ils le méritent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.6.3">
+            <app xml:id="ufr_59_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Il frappera leurs notables par l'épée et cachera leurs corps dans des lieux inconnus, afin que personne ne sache où sont leurs corps.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.6.4">
+            <app xml:id="ufr_60_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Il tuera les vieillards et les jeunes gens, et il n'épargnera personne.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.6.5">
+            <app xml:id="ufr_61_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors la crainte qu'il inspirera sera amère au milieu d'eux, dans leur pays.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.6.6">
+            <app xml:id="ufr_62_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et il exercera contre eux des jugements comme en ont exercé les Égyptiens contre eux pendant trente-quatre ans, et il les punira.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.6.7">
+            <app xml:id="ufr_63_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et il engendrera des fils qui lui succéderont et régneront des temps plus courts.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.6.8">
+            <app xml:id="ufr_64_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Sur leurs égaux viendront les cohortes de la mort, et un puissant roi d'Occident viendra qui les vaincra,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.6.9">
+            <app xml:id="ufr_65_ver_Latin__French_">
+              <lem wit="#OCP-Trans">et ils emmèneront des captifs, il brûlera par le feu une partie de leur Temple et crucifiera certains d'entre eux autour de leur colonie.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="Mois.ver_Latin__French_.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.7.1">
+            <app xml:id="ufr_66_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Après cet événement, les temps prendront fin en un instant... la course... jusqu'à ce que viennent les quatre heures.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.7.2">
+            <app xml:id="ufr_67_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Sont comptés... trois commencements jusqu'à neuf fins... à cause du commencement trois septièmes, dans la deuxième trois, dans la troisième deux heures...</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.7.3">
+            <app xml:id="ufr_68_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et régneront parmi eux des hommes pernicieux et impies, prétendant être justes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.7.4">
+            <app xml:id="ufr_69_ver_Latin__French_">
+              <lem wit="#OCP-Trans">et ceux-ci susciteront la colère de leurs passions ; ce seront des hommes fourbes, complaisants envers eux-mêmes, trompeurs en toutes leurs affaires, et aimant les banquets à toute heure du jour, dévorés par la gourmandise,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.7.5">
+            <app xml:id="ufr_70_ver_Latin__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.7.6">
+            <app xml:id="ufr_71_ver_Latin__French_">
+              <lem wit="#OCP-Trans">... dévoreurs des biens des pauvres, disant qu'ils font cela par miséricorde...</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.7.7">
+            <app xml:id="ufr_72_ver_Latin__French_">
+              <lem wit="#OCP-Trans">... et des destructeurs, querelleurs, fourbes, se dissimulant pour ne pas être reconnus, impies pleins de scélératesse et d'iniquité depuis l'orient jusqu'à l'occident,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.7.8">
+            <app xml:id="ufr_73_ver_Latin__French_">
+              <lem wit="#OCP-Trans">disant : « Nous aurons des festins et du luxe, mangeant et buvant, et nous pensions que nous serions comme des princes »,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.7.9">
+            <app xml:id="ufr_74_ver_Latin__French_">
+              <lem wit="#OCP-Trans">leurs mains et leurs esprits touchant à des choses impures, et leur bouche proférera de grandes vantardises, et ils diront en outre :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin__French_.7.10">
+            <app xml:id="ufr_75_ver_Latin__French_">
+              <lem wit="#OCP-Trans">« Ne me touche pas, de peur que tu ne me souilles à la place où... »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="Mois.ver_Latin__French_.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.8.1">
+            <app xml:id="ufr_76_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et viendra sur eux une vengeance et une colère telles qu'il n'y en a point eu parmi eux depuis le commencement jusqu'à ce temps-là, où il suscitera contre eux le roi des rois de la terre et un pouvoir d'une grande puissance, qui crucifiera ceux qui confessent la circoncision.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.8.2">
+            <app xml:id="ufr_77_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car ceux qui la dissimulent, il les torturera et les livrera pour être conduits enchaînés en prison.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.8.3">
+            <app xml:id="ufr_78_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et leurs femmes seront données aux dieux des nations, et leurs jeunes fils seront incisés par des médecins pour leur refaire un prépuce.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.8.4">
+            <app xml:id="ufr_79_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car ils seront punis parmi eux par les tourments, le feu et le fer, et ils seront contraints de porter ouvertement leurs idoles souillées, de la même manière que ceux qui les gardent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.8.5">
+            <app xml:id="ufr_80_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et par leurs bourreaux, ils seront également contraints d'entrer dans leur lieu secret, et ils seront forcés par des aiguillons à blasphémer outrageusement la parole, et finalement, après cela, les lois qu'ils avaient sur leur autel.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="Mois.ver_Latin__French_.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.9.1">
+            <app xml:id="ufr_81_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors, à cette parole, un homme de la tribu de Lévi, dont le nom sera Taxo, ayant sept fils, leur dira en les exhortant :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.9.2">
+            <app xml:id="ufr_82_ver_Latin__French_">
+              <lem wit="#OCP-Trans">« Voyez, mes fils ! Voici qu'une seconde vengeance cruelle et impure s'est abattue sur le peuple, ainsi qu'une humiliation sans pitié qui dépasse toute domination.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.9.3">
+            <app xml:id="ufr_83_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car quelle nation, quelle contrée ou quel peuple d'impies envers le Seigneur, ayant commis tant de crimes, a jamais souffert d'aussi grands maux que ceux qui nous sont arrivés ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.9.4">
+            <app xml:id="ufr_84_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Maintenant donc, mes fils, écoutez-moi ! Voyez en effet et sachez que jamais nos pères ni leurs ancêtres n'ont tenté Dieu en transgressant ses commandements.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.9.5">
+            <app xml:id="ufr_85_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car vous savez que là réside notre force ; et voici ce que nous ferons :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.9.6">
+            <app xml:id="ufr_86_ver_Latin__French_">
+              <lem wit="#OCP-Trans">jeûnons pendant trois jours, et le quatrième jour entrons dans une caverne qui est dans la campagne, et mourons plutôt que de transgresser les commandements du Seigneur des seigneurs, le Dieu de nos pères.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.9.7">
+            <app xml:id="ufr_87_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car si nous faisons cela et que nous mourons, notre sang sera vengé devant le Seigneur. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="Mois.ver_Latin__French_.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.10.1">
+            <app xml:id="ufr_88_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et alors son royaume apparaîtra sur toute sa création, et alors le Diable connaîtra sa fin, et la tristesse sera emportée avec lui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.10.2">
+            <app xml:id="ufr_89_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors les mains de l'ange établi au plus haut des cieux seront remplies d'autorité, lui qui aussitôt les vengera de leurs ennemis.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.10.3">
+            <app xml:id="ufr_90_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car le Céleste se lèvera du trône de son royaume et sortira de sa sainte demeure, avec indignation et colère à cause de ses fils.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.10.4">
+            <app xml:id="ufr_91_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et la terre tremblera jusqu'à ses extrémités et sera ébranlée ; les hautes montagnes seront abaissées et secouées, et les vallées s'effondreront.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.10.5">
+            <app xml:id="ufr_92_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Le soleil ne donnera plus sa lumière, les cornes de la lune se changeront en ténèbres et se briseront, elle se changera tout entière en sang, et le cercle des étoiles sera troublé.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.10.6">
+            <app xml:id="ufr_93_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et la mer se retirera jusque dans l'abîme, les sources d'eau tariront et les fleuves seront saisis d'effroi.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.10.7">
+            <app xml:id="ufr_94_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car le Dieu Très-Haut, l'Éternel, le Seul se lèvera, et il viendra ouvertement pour châtier les nations et détruire toutes leurs idoles.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.10.8">
+            <app xml:id="ufr_95_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Alors tu seras heureux, toi, Israël, et tu monteras sur le cou et les ailes de l'aigle, et ils seront comblés.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.10.9">
+            <app xml:id="ufr_96_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et Dieu t'élèvera, et il te fera demeurer dans le ciel des étoiles, le lieu de leur demeure.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin__French_.10.10">
+            <app xml:id="ufr_97_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et tu regarderas d'en haut, tu verras tes ennemis sur la terre, tu les reconnaîtras, tu te réjouiras, tu rendras grâces et tu loueras ton Créateur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin__French_.10.11">
+            <app xml:id="ufr_98_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Toi donc, Josué fils de Nun, garde ces paroles et ce livre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin__French_.10.12">
+            <app xml:id="ufr_99_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car depuis ma mort et mon assomption jusqu'à son avènement, il y aura deux cent cinquante temps qui s'accompliront.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin__French_.10.13">
+            <app xml:id="ufr_100_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et telle est la course des temps qu'ils traverseront jusqu'à ce qu'ils soient accomplis.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_Latin__French_.10.14">
+            <app xml:id="ufr_101_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Quant à moi, je m'en vais vers le repos de mes pères.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_Latin__French_.10.15">
+            <app xml:id="ufr_102_ver_Latin__French_">
+              <lem wit="#OCP-Trans">C'est pourquoi, toi, Josué fils de Navé, prépare-toi ; Dieu t'a choisi pour être mon successeur dans cette même alliance.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="Mois.ver_Latin__French_.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.11.1">
+            <app xml:id="ufr_103_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et quand Josué eut entendu toutes les paroles de Moïse, telles qu'elles étaient écrites dans son écrit et qu'il les avait prédites, il déchira ses vêtements et tomba à ses pieds.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.11.2">
+            <app xml:id="ufr_104_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et il supplia Moïse et pleura avec lui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.11.3">
+            <app xml:id="ufr_105_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et Josué lui répondit et dit :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.11.4">
+            <app xml:id="ufr_106_ver_Latin__French_">
+              <lem wit="#OCP-Trans">« Pourquoi me consoles-tu, seigneur Moïse ? Et comment serai-je consolé au sujet de cette parole amère qui est sortie de ta bouche, pleine de larmes et de gémissements, parce que tu quittes ce peuple ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.11.5">
+            <app xml:id="ufr_107_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Quel lieu te recevra ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.11.6">
+            <app xml:id="ufr_108_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Ou quel sera le monument de ta sépulture ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.11.7">
+            <app xml:id="ufr_109_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Ou quel être humain osera transporter ton corps d'un lieu à un autre ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.11.8">
+            <app xml:id="ufr_110_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car pour tous les hommes qui meurent selon leur âge, leurs sépultures sont sur la terre ; mais pour toi, ta sépulture s'étend du soleil levant jusqu'au couchant, et du midi jusqu'aux confins du nord : toute la terre habitée est ton tombeau !</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.11.9">
+            <app xml:id="ufr_111_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Seigneur, tu t'en vas, et qui nourrira ce peuple ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin__French_.11.10">
+            <app xml:id="ufr_112_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Ou qui aura pitié d'eux, et qui sera leur guide sur le chemin ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin__French_.11.11">
+            <app xml:id="ufr_113_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Ou qui priera pour eux, ne laissant passer pas même un seul jour, afin que je les introduise dans la terre des pères ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin__French_.11.12">
+            <app xml:id="ufr_114_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Comment donc pourrai-je conduire ce peuple, comme un père garde son fils unique ou comme une maîtresse sa fille vierge préparée pour un époux, veillant sur elle, protégeant son corps du soleil et prenant garde que ses pieds ne soient pas déchaussés pour courir sur le sol ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin__French_.11.13">
+            <app xml:id="ufr_115_ver_Latin__French_">
+              <lem wit="#OCP-Trans">selon leur désir, leur fournirai-je nourriture et boisson selon la volonté de leur cœur ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Mois.ver_Latin__French_.11.14">
+            <app xml:id="ufr_116_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car ils étaient cent mille, mais maintenant ils se sont tellement accrus grâce à tes prières, seigneur Moïse !</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Mois.ver_Latin__French_.11.15">
+            <app xml:id="ufr_117_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et quelle est ma sagesse ou mon intelligence dans la maison pour parler, pour juger ou pour répondre ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Mois.ver_Latin__French_.11.16">
+            <app xml:id="ufr_118_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Mais les rois des Amorrites aussi, quand ils l'apprendront, croyant pouvoir nous vaincre parce que n'est plus parmi nous cet esprit saint, digne du Seigneur, aux dons multiples et insaisissable, maître de la parole, fidèle en tout, prophète divin par toute la terre, docteur parfait pour ce siècle, diront : “Marchons contre eux !</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="Mois.ver_Latin__French_.11.17">
+            <app xml:id="ufr_119_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Si nos ennemis ont agi avec impiété encore une fois envers leur Seigneur, il n'y a plus pour eux de défenseur qui porte pour eux des prières au Seigneur, comme l'était Moïse, le grand messager, qui à chaque heure, jour et nuit, avait les genoux fixés en terre, priant et fixant le Tout-Puissant pour le monde avec miséricorde et justice, rappelant l'alliance des pères et apaisant le Seigneur par serment.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Mois.ver_Latin__French_.11.18">
+            <app xml:id="ufr_120_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car ils diront : “Celui-là n'est plus avec eux ; marchons donc et effaçons-les de la surface de la terre !”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="Mois.ver_Latin__French_.11.19">
+            <app xml:id="ufr_121_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Qu'adviendra-t-il donc de ce peuple, seigneur Moïse ? »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="Mois.ver_Latin__French_.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="Mois.ver_Latin__French_.12.1">
+            <app xml:id="ufr_122_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et après que Josué eut fini de parler, il tomba de nouveau aux pieds de Moïse.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Mois.ver_Latin__French_.12.2">
+            <app xml:id="ufr_123_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Et Moïse lui prit la main, le fit asseoir sur un siège devant lui, et il lui répondit et dit :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Mois.ver_Latin__French_.12.3">
+            <app xml:id="ufr_124_ver_Latin__French_">
+              <lem wit="#OCP-Trans">« Josué, ne te méprise pas toi-même, mais sois rassuré et sois attentif à mes paroles.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Mois.ver_Latin__French_.12.4">
+            <app xml:id="ufr_125_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Dieu a créé toutes les nations qui sont sur la surface de la terre, et il nous a prévus, elles et nous, dès le commencement de la création du monde jusqu'à la fin des siècles ; et rien n'a été négligé par lui, jusqu'au plus petit détail, mais il a tout prévu et tout disposé.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Mois.ver_Latin__French_.12.5">
+            <app xml:id="ufr_126_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Le Seigneur a prévu tout ce qui devait advenir dans ce monde, et voici que cela s'accomplit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Mois.ver_Latin__French_.12.6">
+            <app xml:id="ufr_127_ver_Latin__French_">
+              <lem wit="#OCP-Trans">il m'a établi pour eux et pour leurs péchés et pour prier pour eux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Mois.ver_Latin__French_.12.7">
+            <app xml:id="ufr_128_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car ce n'est pas en raison de ma force ou de ma faiblesse, mais par la mesure de sa miséricorde et de sa patience que ces choses me sont arrivées.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Mois.ver_Latin__French_.12.8">
+            <app xml:id="ufr_129_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car je te le dis, Josué : ce n'est pas à cause de la piété de ce peuple que tu extermineras les nations.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Mois.ver_Latin__French_.12.9">
+            <app xml:id="ufr_130_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Tous les firmaments du ciel et la terre ont été créés et approuvés par Dieu, et ils sont sous le sceau de sa main droite.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Mois.ver_Latin__French_.12.10">
+            <app xml:id="ufr_131_ver_Latin__French_">
+              <lem wit="#OCP-Trans">C'est pourquoi ceux qui accomplissent et mènent à bien les commandements de Dieu grandissent et suivent une bonne voie ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Mois.ver_Latin__French_.12.11">
+            <app xml:id="ufr_132_ver_Latin__French_">
+              <lem wit="#OCP-Trans">mais quant aux pécheurs et à ceux qui négligent les commandements, ils seront privés des biens qui ont été promis et ils seront châtiés par les nations avec de nombreux tourments.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Mois.ver_Latin__French_.12.12">
+            <app xml:id="ufr_133_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Mais qu'il les extermine totalement et les abandonne, cela ne peut arriver.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Mois.ver_Latin__French_.12.13">
+            <app xml:id="ufr_134_ver_Latin__French_">
+              <lem wit="#OCP-Trans">Car Dieu, qui a tout prévu pour les siècles, s'est avancé, et son alliance a été affermie par le serment qu'il a juré »</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

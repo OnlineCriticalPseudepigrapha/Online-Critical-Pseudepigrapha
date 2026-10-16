@@ -1,0 +1,862 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="id_4Q548">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>4Q548 (Dualistic Fragments in Aramaic)</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="PH">
+            <abbr type="siglum">PH</abbr>
+            <name>Perrin-Hama</name>
+          </witness>
+          <witness xml:id="P">
+            <abbr type="siglum">P</abbr>
+            <name>Puech</name>
+          </witness>
+          <witness xml:id="M">
+            <abbr type="siglum">M</abbr>
+            <name>Milik</name>
+          </witness>
+          <witness xml:id="MT">
+            <abbr type="siglum">MT</abbr>
+            <name>Martínez-Tigchelaar</name>
+          </witness>
+          <witness xml:id="D">
+            <abbr type="siglum">D</abbr>
+            <name>Duke</name>
+          </witness>
+          <witness xml:id="B">
+            <abbr type="siglum">B</abbr>
+            <name>Beyer</name>
+          </witness>
+          <witness xml:id="K">
+            <abbr type="siglum">K</abbr>
+            <name>Kobelski</name>
+          </witness>
+          <witness xml:id="FH">
+            <abbr type="siglum">FH</abbr>
+            <name>Fitzmyer-Harrington</name>
+          </witness>
+          <witness xml:id="Perrin">
+            <abbr type="siglum">Perrin</abbr>
+            <name>Perrin</name>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP French Translation</name>
+            <bibl>French translation of Aramaic (French) based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Aramaic">
+        <refState unit="fragment" delim="."/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="fragment" delim="."/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Aramaic__French_">
+        <refState unit="fragment" delim="."/>
+        <refState unit="line"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="arc">arc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="arc">
+    <body>
+      <div type="edition" n="Aramaic" xml:lang="arc" xml:id="ver_Aramaic">
+        <head>Aramaic</head>
+        <div type="fragment" n="1" xml:id="id_4Q548.ver_Aramaic.1">
+          <head>Fragment 1</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_Aramaic.1.1">
+            <app xml:id="u1_ver_Aramaic">
+              <lem wit="#PH #MT #D">]ש̇בטין[<lb/></lem>
+              <rdg wit="#B" n="1">] ושבטין [<lb/></rdg>
+              <rdg wit="#P" n="2">]ו̇שבטי̇ן[<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_Aramaic.1.2">
+            <app xml:id="u2_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">]ותא להון וכל</lem>
+            </app>
+            <app xml:id="u3_ver_Aramaic">
+              <lem wit="#PH #MT #D">ארח[ת<lb/></lem>
+              <rdg wit="#B" n="1">ארח◦[<lb/></rdg>
+              <rdg wit="#P" n="2">ארחת̊[<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_Aramaic.1.3">
+            <app xml:id="u4_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">]אנון מן אסיאנהון [<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_Aramaic.1.4">
+            <app xml:id="u5_ver_Aramaic">
+              <lem wit="#PH #P #D #B">]ן</lem>
+              <rdg wit="#MT" n="1">]ח</rdg>
+            </app>
+            <app xml:id="u6_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">אנון מן מותא ומן א[<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="5" xml:id="id_4Q548.ver_Aramaic.1.5">
+            <app xml:id="u7_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">ע]ליכון בני ברכתא ו̇ש[<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="6" xml:id="id_4Q548.ver_Aramaic.1.6">
+            <app xml:id="u8_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">]כ̊ל דרי ישראל לכל[<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="7" xml:id="id_4Q548.ver_Aramaic.1.7">
+            <app xml:id="u9_ver_Aramaic">
+              <lem wit="#PH #P #D #B">]א̊י</lem>
+              <rdg wit="#MT" n="1">]◦י</rdg>
+            </app>
+            <app xml:id="u10_ver_Aramaic">
+              <lem wit="#PH #MT">חד̇א</lem>
+              <rdg wit="#P" n="1">חר̇א</rdg>
+              <rdg wit="#B #D" n="2">חרא</rdg>
+            </app>
+            <app xml:id="u11_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">בי די בני צ[<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="id_4Q548.ver_Aramaic.1.8">
+            <app xml:id="u12_ver_Aramaic">
+              <lem wit="#PH #MT #D">]כ̇ו̇ן</lem>
+              <rdg wit="#B" n="1">]◦כון</rdg>
+              <rdg wit="#P" n="2">בש]מ̊כון</rdg>
+            </app>
+            <app xml:id="u13_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">בני שקר ולא</lem>
+            </app>
+            <app xml:id="u14_ver_Aramaic">
+              <lem wit="#PH #P #MT #B">ב̇נ̊[י<lb/></lem>
+              <rdg wit="#D" n="1">ב[<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="9" xml:id="id_4Q548.ver_Aramaic.1.9">
+            <app xml:id="u15_ver_Aramaic">
+              <lem wit="#PH">]◦</lem>
+              <rdg wit="#M" n="1">וא]ף̊</rdg>
+              <rdg wit="#FH #K" n="2">וא]ף</rdg>
+              <rdg wit="#B" n="3">דת]א</rdg>
+              <rdg wit="#MT" n="4">ארח]א</rdg>
+              <rdg wit="#P" n="5">ארח]א̇</rdg>
+              <rdg wit="#D" n="6" type="omission"/>
+            </app>
+            <app xml:id="u16_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #K #FH">{י̇}צבתא</lem>
+              <rdg wit="#B" n="1">צבתא</rdg>
+            </app>
+            <app xml:id="u17_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">אנה</lem>
+            </app>
+            <app xml:id="u18_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B #FH">מודע̊</lem>
+              <rdg wit="#M" n="1">מורע̇</rdg>
+              <rdg wit="#K" n="2">מורע</rdg>
+            </app>
+            <app xml:id="u19_ver_Aramaic">
+              <lem wit="#PH #M #MT #K #FH">ל[<lb/></lem>
+              <rdg wit="#B #P" n="1">ל̊כ̊[ון<lb/></rdg>
+              <rdg wit="#D" n="2" type="omission">
+                <lb/>
+              </rdg>
+            </app>
+          </ab>
+          <ab type="line" n="10" xml:id="id_4Q548.ver_Aramaic.1.10">
+            <app xml:id="u20_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">]ח̊ש̊ו̊כא חשיכין</lem>
+            </app>
+            <app xml:id="u21_ver_Aramaic">
+              <lem wit="#PH #M #MT #D #B #K #FH">להוון [<lb/></lem>
+              <rdg wit="#P" n="1">להוון א̊[רו<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="11" xml:id="id_4Q548.ver_Aramaic.1.11">
+            <app xml:id="u22_ver_Aramaic">
+              <lem wit="#PH #P #M #B #K #FH">ל]ה̊וון</lem>
+              <rdg wit="#MT" n="1">לה]וון</rdg>
+              <rdg wit="#D" n="2">]וון</rdg>
+            </app>
+            <app xml:id="u23_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">ו̇ב̇נ̊י̇</lem>
+            </app>
+            <app xml:id="u24_ver_Aramaic">
+              <lem wit="#PH #P #M #D #B #K #FH">חשוכא</lem>
+              <rdg wit="#MT" n="1">חשוכה</rdg>
+            </app>
+            <app xml:id="u25_ver_Aramaic">
+              <lem wit="#PH #P #MT">יתע̊ד̊̊ון[<lb/></lem>
+              <rdg wit="#M" n="1">יתק̊ד̊ון [<lb/></rdg>
+              <rdg wit="#FH #K" n="2">יתקדון [<lb/></rdg>
+              <rdg wit="#B" n="3">יתק̊ר̊ון [<lb/></rdg>
+              <rdg wit="#D" n="4">ית[ע]ד̇ון [<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="12" xml:id="id_4Q548.ver_Aramaic.1.12">
+            <app xml:id="u26_ver_Aramaic">
+              <lem wit="#PH">]י̊</lem>
+              <rdg wit="#M" n="1">חשיכי]ן̊</rdg>
+              <rdg wit="#FH #K #MT" n="2">חשיכי]ן</rdg>
+              <rdg wit="#B" n="3">חשי]ך̊</rdg>
+              <rdg wit="#P" n="4">חשי]ך̇</rdg>
+              <rdg wit="#D" n="5" type="omission"/>
+            </app>
+            <app xml:id="u27_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #B #K #FH">וכל̊[...]ם</lem>
+              <rdg wit="#D" n="1">וכ[...]ם</rdg>
+            </app>
+            <app xml:id="u28_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">ו̇קשיט</lem>
+              <rdg wit="#M #FH #K" n="1">וקשוט</rdg>
+            </app>
+            <app xml:id="u29_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">נהיר[<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="13" xml:id="id_4Q548.ver_Aramaic.1.13">
+            <app xml:id="u30_ver_Aramaic">
+              <lem wit="#PH">]ד̇י◦</lem>
+              <rdg wit="#M" n="1">ולח]ד̇ו̇ת̊[א</rdg>
+              <rdg wit="#FH" n="2">]דות[א</rdg>
+              <rdg wit="#K #MT" n="3">ולח]דות[א</rdg>
+              <rdg wit="#B" n="4">ול]דין̊ [</rdg>
+              <rdg wit="#P" n="5">ב]ד̇ינ̊[א</rdg>
+              <rdg wit="#D" n="6">די[</rdg>
+            </app>
+            <app xml:id="u31_ver_Aramaic">
+              <lem wit="#PH">[...]◦</lem>
+              <rdg wit="#M #B #P" n="1">יהכו]ן̊</rdg>
+              <rdg wit="#FH #K #MT" n="2">יהכו]ן</rdg>
+              <rdg wit="#D" n="3" type="omission"/>
+            </app>
+            <app xml:id="u32_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">וכל בני חש[וכא<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="14" xml:id="id_4Q548.ver_Aramaic.1.14">
+            <app xml:id="u33_ver_Aramaic">
+              <lem wit="#PH #M #B #FH">]◦</lem>
+              <rdg wit="#K #MT #D" n="1" type="omission"/>
+              <rdg wit="#P" n="2">תנה]ר̊</rdg>
+            </app>
+            <app xml:id="u34_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">לעמא נהי̊ר̊ו̇תא</lem>
+            </app>
+            <app xml:id="u35_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">ואחו̇י̇</lem>
+              <rdg wit="#M #FH #K" n="1">[ ואחיו</rdg>
+            </app>
+            <app xml:id="u36_ver_Aramaic">
+              <lem wit="#PH">◦[<lb/></lem>
+              <rdg wit="#M #FH #K #MT #D" n="1" type="omission">
+                <lb/>
+              </rdg>
+              <rdg wit="#B #P" n="2">ל̊[הון<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="15" xml:id="id_4Q548.ver_Aramaic.1.15">
+            <app xml:id="u37_ver_Aramaic">
+              <lem wit="#PH #B">]◦ן</lem>
+              <rdg wit="#MT #D" n="1">]ן</rdg>
+              <rdg wit="#P" n="2">]ו̊ן</rdg>
+            </app>
+            <app xml:id="u38_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">מן</lem>
+            </app>
+            <app xml:id="u39_ver_Aramaic">
+              <lem wit="#PH #P #D #B">חשוכא</lem>
+              <rdg wit="#MT" n="1">חשוכה</rdg>
+            </app>
+            <app xml:id="u40_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">ארו כל [<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="16" xml:id="id_4Q548.ver_Aramaic.1.16">
+            <app xml:id="u41_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">נהורא̇[ ]וכל בני</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="2" xml:id="id_4Q548.ver_Aramaic.2">
+          <head>Fragment 2</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_Aramaic.2.1">
+            <app xml:id="u42_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">]ת̇תק[<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_Aramaic.2.2">
+            <app xml:id="u43_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">אנה</lem>
+            </app>
+            <app xml:id="u44_ver_Aramaic">
+              <lem wit="#PH">◦[...]ה̊</lem>
+              <rdg wit="#M" n="1">מ̊[הו]ד̊ע̊</rdg>
+              <rdg wit="#FH #K" n="2">מ[הו]דע</rdg>
+              <rdg wit="#B" n="3">מ̊[חו]ה</rdg>
+              <rdg wit="#MT" n="4">מ[קר]ה</rdg>
+              <rdg wit="#P" n="5">מ̊[חו]ה̇</rdg>
+              <rdg wit="#D" n="6">[...]</rdg>
+            </app>
+            <app xml:id="u45_ver_Aramaic">
+              <lem wit="#PH">ש̊[<lb/></lem>
+              <rdg wit="#M #FH #K #D" n="1" type="omission">
+                <lb/>
+              </rdg>
+              <rdg wit="#B" n="2">לכ̊[ון<lb/></rdg>
+              <rdg wit="#MT" n="3">לכ[ון<lb/></rdg>
+              <rdg wit="#P" n="4">ל̇כ̊[ון<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_Aramaic.2.3">
+            <app xml:id="u46_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">להוון[ נהירין<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_Aramaic.2.4">
+            <app xml:id="u47_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">ובכל</lem>
+            </app>
+            <app xml:id="u48_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K">מנדעחון[<lb/></lem>
+              <rdg wit="#FH" n="1">מנדעהון[<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="5" xml:id="id_4Q548.ver_Aramaic.2.5">
+            <app xml:id="u49_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">ארו</lem>
+              <rdg wit="#M #FH #K" n="1">ארי</rdg>
+            </app>
+            <app xml:id="u50_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">כל</lem>
+            </app>
+            <app xml:id="u51_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">סכל</lem>
+              <rdg wit="#M #FH #K" n="1">כסל</rdg>
+            </app>
+            <app xml:id="u52_ver_Aramaic">
+              <lem wit="#PH">ורק̊[<lb/></lem>
+              <rdg wit="#M" n="1">ורש̊[ע<lb/></rdg>
+              <rdg wit="#K #FH #MT" n="2">ורש[ע<lb/></rdg>
+              <rdg wit="#B #P" n="3">ורש̊[יע<lb/></rdg>
+              <rdg wit="#D" n="4">ור[<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="6" xml:id="id_4Q548.ver_Aramaic.2.6">
+            <app xml:id="u53_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">לנהורא</lem>
+            </app>
+            <app xml:id="u54_ver_Aramaic">
+              <lem wit="#PH #M #MT #K #FH">לש̊מח̊[ת<lb/></lem>
+              <rdg wit="#B" n="1">ו̊לת̊מי̊מו̊ת̊א̊<lb/></rdg>
+              <rdg wit="#P" n="2">first hand: ל̇{תמימותא}; correction: ל̇נ̊ע̊י̊מ̇ת̊א̊<lb/></rdg>
+              <rdg wit="#D" n="3" type="omission">
+                <lb/>
+              </rdg>
+            </app>
+          </ab>
+          <ab type="line" n="7" xml:id="id_4Q548.ver_Aramaic.2.7">
+            <app xml:id="u55_ver_Aramaic">
+              <lem wit="#PH #P #M #MT #D #B #K #FH">ולאבדנא</lem>
+            </app>
+            <app xml:id="u56_ver_Aramaic">
+              <lem wit="#PH">י̇הכין[<lb/></lem>
+              <rdg wit="#M #FH #K" n="1">יהכון[<lb/></rdg>
+              <rdg wit="#B #MT #D" n="2">יהכון [<lb/></rdg>
+              <rdg wit="#P" n="3">י̇הכון [<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="id_4Q548.ver_Aramaic.2.8">
+            <app xml:id="u57_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">וא[ו]ד̊עו̇[<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="9" xml:id="id_4Q548.ver_Aramaic.2.9">
+            <app xml:id="u58_ver_Aramaic">
+              <lem wit="#PH #P #MT #D #B">בני̇[</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="3" xml:id="id_4Q548.ver_Aramaic.3">
+          <head>Fragment 3</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_Aramaic.3.1">
+            <app xml:id="u59_ver_Aramaic">
+              <lem wit="#PH #P #D">ע̊מדין</lem>
+            </app>
+            <app xml:id="u60_ver_Aramaic">
+              <lem wit="#PH">ד̊[<lb/></lem>
+              <rdg wit="#P" n="1">ח̊[<lb/></rdg>
+              <rdg wit="#D" n="2">ח[...]<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_Aramaic.3.2">
+            <app xml:id="u61_ver_Aramaic">
+              <lem wit="#PH #P #D">ליום מוע̊[ד<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_Aramaic.3.3">
+            <app xml:id="u62_ver_Aramaic">
+              <lem wit="#PH #P">אסות̊[<lb/></lem>
+              <rdg wit="#D" n="1">אסו[...]<lb/></rdg>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_Aramaic.3.4">
+            <app xml:id="u63_ver_Aramaic">
+              <lem wit="#PH #P #D">ה̊[</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="fragment" n="1" xml:id="id_4Q548.ver_English.1">
+          <head>Fragment 1</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_English.1.1">
+            <app xml:id="u64_ver_English">
+              <lem wit="#Perrin">[…]staffs/tribes[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_English.1.2">
+            <app xml:id="u65_ver_English">
+              <lem wit="#Perrin">[…]…to them and all the way[s…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_English.1.3">
+            <app xml:id="u66_ver_English">
+              <lem wit="#Perrin">[…]them from their healer […]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_English.1.4">
+            <app xml:id="u67_ver_English">
+              <lem wit="#Perrin">[…]…them from death and from…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="5" xml:id="id_4Q548.ver_English.1.5">
+            <app xml:id="u68_ver_English">
+              <lem wit="#Perrin">[…up]on you, the sons of blessing, and…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="6" xml:id="id_4Q548.ver_English.1.6">
+            <app xml:id="u69_ver_English">
+              <lem wit="#Perrin">[…]all the generations of Israel to all[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="7" xml:id="id_4Q548.ver_English.1.7">
+            <app xml:id="u70_ver_English">
+              <lem wit="#Perrin">[…]…rejoiced in me that the sons of…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="id_4Q548.ver_English.1.8">
+            <app xml:id="u71_ver_English">
+              <lem wit="#Perrin">[…]you, sons of deceit and not son[s…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="9" xml:id="id_4Q548.ver_English.1.9">
+            <app xml:id="u72_ver_English">
+              <lem wit="#Perrin">[…]…desirable. I will make known to…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="10" xml:id="id_4Q548.ver_English.1.10">
+            <app xml:id="u73_ver_English">
+              <lem wit="#Perrin">[...]darkness will be dark[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="11" xml:id="id_4Q548.ver_English.1.11">
+            <app xml:id="u74_ver_English">
+              <lem wit="#Perrin">[…w]ill be and the sons of darkness will be removed[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="12" xml:id="id_4Q548.ver_English.1.12">
+            <app xml:id="u75_ver_English">
+              <lem wit="#Perrin">[…]…and all[…]…and truth is light[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="13" xml:id="id_4Q548.ver_English.1.13">
+            <app xml:id="u76_ver_English">
+              <lem wit="#Perrin">[…]that[…]…and all [the] sons of dark[ness…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="14" xml:id="id_4Q548.ver_English.1.14">
+            <app xml:id="u77_ver_English">
+              <lem wit="#Perrin">[…]…for the people illumination. And I will declare…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="15" xml:id="id_4Q548.ver_English.1.15">
+            <app xml:id="u78_ver_English">
+              <lem wit="#Perrin">[…]… from the darkness. Behold, all […]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="16" xml:id="id_4Q548.ver_English.1.16">
+            <app xml:id="u79_ver_English">
+              <lem wit="#Perrin">[…]and all the sons of light[…]</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="2" xml:id="id_4Q548.ver_English.2">
+          <head>Fragment 2</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_English.2.1">
+            <app xml:id="u80_ver_English">
+              <lem wit="#Perrin">…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_English.2.2">
+            <app xml:id="u81_ver_English">
+              <lem wit="#Perrin">I …[…]…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_English.2.3">
+            <app xml:id="u82_ver_English">
+              <lem wit="#Perrin">They will be shining[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_English.2.4">
+            <app xml:id="u83_ver_English">
+              <lem wit="#Perrin">and in all their knowledge[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="5" xml:id="id_4Q548.ver_English.2.5">
+            <app xml:id="u84_ver_English">
+              <lem wit="#Perrin">Behold, every fool and…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="6" xml:id="id_4Q548.ver_English.2.6">
+            <app xml:id="u85_ver_English">
+              <lem wit="#Perrin">to the light for gladness[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="7" xml:id="id_4Q548.ver_English.2.7">
+            <app xml:id="u86_ver_English">
+              <lem wit="#Perrin">but they will go to destruction[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="id_4Q548.ver_English.2.8">
+            <app xml:id="u87_ver_English">
+              <lem wit="#Perrin">and ma[k]e known[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="9" xml:id="id_4Q548.ver_English.2.9">
+            <app xml:id="u88_ver_English">
+              <lem wit="#Perrin">sons of[…]</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="3" xml:id="id_4Q548.ver_English.3">
+          <head>Fragment 3</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_English.3.1">
+            <app xml:id="u89_ver_English">
+              <lem wit="#Perrin">standing…[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_English.3.2">
+            <app xml:id="u90_ver_English">
+              <lem wit="#Perrin">at the appoint[ed] day[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_English.3.3">
+            <app xml:id="u91_ver_English">
+              <lem wit="#Perrin">healing[…]<lb/></lem>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_English.3.4">
+            <app xml:id="u92_ver_English">
+              <lem wit="#Perrin">…[…]</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Aramaic (French)" xml:lang="fr" xml:id="ver_Aramaic__French_">
+        <head>Aramaic (French)</head>
+        <div type="fragment" n="1" xml:id="id_4Q548.ver_Aramaic__French_.1">
+          <head>Fragment 1</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_Aramaic__French_.1.1">
+            <app xml:id="ufr_1_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">tribus</lem>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_Aramaic__French_.1.2">
+            <app xml:id="ufr_2_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">à eux, et toutes</lem>
+            </app>
+            <app xml:id="ufr_3_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">les voies</lem>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_Aramaic__French_.1.3">
+            <app xml:id="ufr_4_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">les de leur guérison</lem>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_Aramaic__French_.1.4">
+            <app xml:id="ufr_5_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_6_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">les de la mort et de</lem>
+            </app>
+          </ab>
+          <ab type="line" n="5" xml:id="id_4Q548.ver_Aramaic__French_.1.5">
+            <app xml:id="ufr_7_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">sur vous, fils de bénédiction, et</lem>
+            </app>
+          </ab>
+          <ab type="line" n="6" xml:id="id_4Q548.ver_Aramaic__French_.1.6">
+            <app xml:id="ufr_8_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">toutes les générations d’Israël pour tous</lem>
+            </app>
+          </ab>
+          <ab type="line" n="7" xml:id="id_4Q548.ver_Aramaic__French_.1.7">
+            <app xml:id="ufr_9_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_10_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">une</lem>
+            </app>
+            <app xml:id="ufr_11_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">en moi, car les fils de</lem>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="id_4Q548.ver_Aramaic__French_.1.8">
+            <app xml:id="ufr_12_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_13_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">fils du mensonge et non</lem>
+            </app>
+            <app xml:id="ufr_14_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">fils de</lem>
+            </app>
+          </ab>
+          <ab type="line" n="9" xml:id="id_4Q548.ver_Aramaic__French_.1.9">
+            <app xml:id="ufr_15_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_16_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">la volonté</lem>
+            </app>
+            <app xml:id="ufr_17_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">moi</lem>
+            </app>
+            <app xml:id="ufr_18_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">faisant connaître</lem>
+            </app>
+            <app xml:id="ufr_19_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">à</lem>
+            </app>
+          </ab>
+          <ab type="line" n="10" xml:id="id_4Q548.ver_Aramaic__French_.1.10">
+            <app xml:id="ufr_20_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">ténèbres, obscurs</lem>
+            </app>
+            <app xml:id="ufr_21_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">ils seront</lem>
+            </app>
+          </ab>
+          <ab type="line" n="11" xml:id="id_4Q548.ver_Aramaic__French_.1.11">
+            <app xml:id="ufr_22_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">ils seront</lem>
+            </app>
+            <app xml:id="ufr_23_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et les fils des</lem>
+            </app>
+            <app xml:id="ufr_24_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">ténèbres</lem>
+            </app>
+            <app xml:id="ufr_25_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">seront retranchés</lem>
+            </app>
+          </ab>
+          <ab type="line" n="12" xml:id="id_4Q548.ver_Aramaic__French_.1.12">
+            <app xml:id="ufr_26_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_27_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et tous</lem>
+            </app>
+            <app xml:id="ufr_28_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et la vérité</lem>
+            </app>
+            <app xml:id="ufr_29_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">lumineux</lem>
+            </app>
+          </ab>
+          <ab type="line" n="13" xml:id="id_4Q548.ver_Aramaic__French_.1.13">
+            <app xml:id="ufr_30_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_31_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_32_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et tous les fils des ténèbres</lem>
+            </app>
+          </ab>
+          <ab type="line" n="14" xml:id="id_4Q548.ver_Aramaic__French_.1.14">
+            <app xml:id="ufr_33_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_34_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">au peuple la lumière</lem>
+            </app>
+            <app xml:id="ufr_35_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et je ferai connaître</lem>
+            </app>
+            <app xml:id="ufr_36_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+          <ab type="line" n="15" xml:id="id_4Q548.ver_Aramaic__French_.1.15">
+            <app xml:id="ufr_37_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_38_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">des</lem>
+            </app>
+            <app xml:id="ufr_39_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">ténèbres</lem>
+            </app>
+            <app xml:id="ufr_40_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">car tous</lem>
+            </app>
+          </ab>
+          <ab type="line" n="16" xml:id="id_4Q548.ver_Aramaic__French_.1.16">
+            <app xml:id="ufr_41_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">la lumière, et tous les fils de</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="2" xml:id="id_4Q548.ver_Aramaic__French_.2">
+          <head>Fragment 2</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_Aramaic__French_.2.1">
+            <app xml:id="ufr_42_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_Aramaic__French_.2.2">
+            <app xml:id="ufr_43_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">moi</lem>
+            </app>
+            <app xml:id="ufr_44_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_45_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_Aramaic__French_.2.3">
+            <app xml:id="ufr_46_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">ils seront lumineux</lem>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_Aramaic__French_.2.4">
+            <app xml:id="ufr_47_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et dans toute</lem>
+            </app>
+            <app xml:id="ufr_48_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">leur connaissance</lem>
+            </app>
+          </ab>
+          <ab type="line" n="5" xml:id="id_4Q548.ver_Aramaic__French_.2.5">
+            <app xml:id="ufr_49_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">car</lem>
+            </app>
+            <app xml:id="ufr_50_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">tout</lem>
+            </app>
+            <app xml:id="ufr_51_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">insensé</lem>
+            </app>
+            <app xml:id="ufr_52_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et seulement</lem>
+            </app>
+          </ab>
+          <ab type="line" n="6" xml:id="id_4Q548.ver_Aramaic__French_.2.6">
+            <app xml:id="ufr_53_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">vers la lumière</lem>
+            </app>
+            <app xml:id="ufr_54_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">pour la joie</lem>
+            </app>
+          </ab>
+          <ab type="line" n="7" xml:id="id_4Q548.ver_Aramaic__French_.2.7">
+            <app xml:id="ufr_55_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et à la perdition</lem>
+            </app>
+            <app xml:id="ufr_56_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">ils iront</lem>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="id_4Q548.ver_Aramaic__French_.2.8">
+            <app xml:id="ufr_57_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">et faites savoir</lem>
+            </app>
+          </ab>
+          <ab type="line" n="9" xml:id="id_4Q548.ver_Aramaic__French_.2.9">
+            <app xml:id="ufr_58_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">les fils de</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="3" xml:id="id_4Q548.ver_Aramaic__French_.3">
+          <head>Fragment 3</head>
+          <ab type="line" n="1" xml:id="id_4Q548.ver_Aramaic__French_.3.1">
+            <app xml:id="ufr_59_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">se tenant debout</lem>
+            </app>
+            <app xml:id="ufr_60_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">qui</lem>
+            </app>
+          </ab>
+          <ab type="line" n="2" xml:id="id_4Q548.ver_Aramaic__French_.3.2">
+            <app xml:id="ufr_61_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">pour le jour fixé</lem>
+            </app>
+          </ab>
+          <ab type="line" n="3" xml:id="id_4Q548.ver_Aramaic__French_.3.3">
+            <app xml:id="ufr_62_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans">guérison</lem>
+            </app>
+          </ab>
+          <ab type="line" n="4" xml:id="id_4Q548.ver_Aramaic__French_.3.4">
+            <app xml:id="ufr_63_ver_Aramaic__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

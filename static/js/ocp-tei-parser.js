@@ -193,18 +193,39 @@
       const parser = new DOMParser();
       doc = parser.parseFromString(xmlString, 'text/xml');
     } else {
-      // Node.js fallback using xmldom or lightweight DOM
+      // Node.js fallback using linkedom, jsdom, or xmldom
       try {
-        const { DOMParser: NodeDOMParser } = require('@xmldom/xmldom');
-        doc = new NodeDOMParser().parseFromString(xmlString, 'text/xml');
-      } catch (e) {
-        throw new Error('DOMParser is required to parse XML. In Node.js, install @xmldom/xmldom.');
+        const { DOMParser: LinkeDOMParser } = require('linkedom');
+        doc = new LinkeDOMParser().parseFromString(xmlString, 'text/xml');
+      } catch (e1) {
+        try {
+          const { JSDOM } = require('jsdom');
+          doc = new JSDOM(xmlString, { contentType: 'text/xml' }).window.document;
+        } catch (e2) {
+          try {
+            const { DOMParser: NodeDOMParser } = require('@xmldom/xmldom');
+            doc = new NodeDOMParser().parseFromString(xmlString, 'text/xml');
+          } catch (e3) {
+            throw new Error('DOMParser is required to parse XML. In browser, DOMParser is built-in; in Node.js, install linkedom or jsdom.');
+          }
+        }
       }
     }
 
     const parserError = doc.querySelector('parsererror');
     if (parserError) {
       throw new Error('XML Parse Error: ' + parserError.textContent);
+    }
+
+    const root = doc.documentElement;
+    const isTei = root && (
+      (root.localName || root.tagName).toUpperCase() === 'TEI' ||
+      doc.querySelector('TEI') !== null ||
+      doc.querySelector('teiHeader') !== null
+    );
+
+    if (isTei) {
+      return parseTeiDoc(doc, xmlString);
     }
 
     const bookElem = doc.querySelector('book') || doc.documentElement;
@@ -397,6 +418,387 @@
     }
 
     traverseDiv(textElem, []);
+
+    return { units, unitsById, unitsByRef, references };
+  }
+
+  function parseTeiDoc(doc, xmlString) {
+    const teiElem = doc.querySelector('TEI') || doc.documentElement;
+    const titleStmt = doc.querySelector('teiHeader fileDesc titleStmt');
+    const bookTitle = (titleStmt && titleStmt.querySelector('title') ? titleStmt.querySelector('title').textContent : (teiElem.getAttribute('xml:id') || teiElem.getAttribute('id') || '')).trim();
+    const bookFilename = teiElem.getAttribute('xml:id') || teiElem.getAttribute('id') || '';
+    const textStructure = 'hierarchical';
+
+    // Language
+    const textElem = doc.querySelector('text');
+    let bookLang = '';
+    if (textElem) {
+      bookLang = textElem.getAttribute('xml:lang') || textElem.getAttribute('lang') || '';
+    }
+    if (!bookLang) {
+      const langElem = doc.querySelector('teiHeader profileDesc langUsage language');
+      bookLang = langElem ? (langElem.getAttribute('ident') || langElem.textContent.trim()) : '';
+    }
+
+    // Manuscripts from <sourceDesc> <listWit> <witness>
+    const globalMss = [];
+    const witnessMap = new Map();
+    const witElems = Array.from(doc.querySelectorAll('sourceDesc listWit witness'));
+    witElems.forEach(w => {
+      const wId = w.getAttribute('xml:id') || w.getAttribute('id') || '';
+      const abbrElem = w.querySelector('abbr');
+      const abbrev = (abbrElem ? abbrElem.textContent : (wId.startsWith('wit-') ? wId.slice(4) : wId)).trim();
+      const nameElem = w.querySelector('name');
+      const name = nameElem ? nameElem.textContent.trim() : abbrev;
+      const biblElem = w.querySelector('bibl');
+      const biblio = biblElem ? biblElem.textContent.trim() : '';
+      const lang = w.getAttribute('xml:lang') || w.getAttribute('lang') || '';
+      const show = w.getAttribute('show') || 'yes';
+
+      globalMss.push({
+        abbrev: abbrev,
+        name: name,
+        language: lang,
+        show: show,
+        bibliography: biblio
+      });
+
+      if (wId) {
+        witnessMap.set(wId, abbrev);
+        witnessMap.set('#' + wId, abbrev);
+      }
+      witnessMap.set(abbrev, abbrev);
+      witnessMap.set('#' + abbrev, abbrev);
+    });
+
+    // Body & Versions
+    const bodyElem = doc.querySelector('text > body') || doc.querySelector('body') || doc.documentElement;
+    let versionElems = Array.from(bodyElem.children).filter(c => c.tagName && c.tagName.toLowerCase() === 'div');
+    const hasVersionDivs = versionElems.some(d => {
+      const t = (d.getAttribute('type') || '').toLowerCase();
+      return t === 'edition' || t === 'translation' || t === 'version' || t === 'pseudepigraphon';
+    });
+
+    if (!hasVersionDivs || versionElems.length === 0) {
+      versionElems = [bodyElem];
+    }
+
+    // Read any <refsDecl> in teiHeader
+    const refsDecls = Array.from(doc.querySelectorAll('teiHeader encodingDesc refsDecl'));
+
+    const versions = versionElems.map((vElem, vIdx) => {
+      const headElem = vElem.querySelector(':scope > head');
+      let vTitle = headElem ? headElem.textContent.trim() : '';
+      if (!vTitle) {
+        vTitle = vElem.getAttribute('n') || vElem.getAttribute('title') || (vElem.tagName.toLowerCase() === 'body' ? bookTitle : (versionElems.length > 1 ? `Version ${vIdx + 1}` : bookTitle));
+      }
+      const vLang = vElem.getAttribute('xml:lang') || vElem.getAttribute('lang') || bookLang || '';
+      const vAuthor = vElem.getAttribute('author') || '';
+      const vFragment = vElem.getAttribute('fragment') || '';
+      const vId = vElem.getAttribute('xml:id') || vElem.getAttribute('id') || '';
+
+      // Match refsDecl for this version
+      const vRefsDecl = refsDecls.find(rd => {
+        const corresp = rd.getAttribute('corresp') || '';
+        return vId && (corresp === '#' + vId || corresp === vId);
+      }) || refsDecls[vIdx] || refsDecls[0];
+
+      const divLabels = [];
+      const divDelims = [];
+      if (vRefsDecl) {
+        const refStates = Array.from(vRefsDecl.querySelectorAll('refState'));
+        refStates.forEach(rs => {
+          divLabels.push(rs.getAttribute('unit') || '');
+          divDelims.push(rs.getAttribute('delim') || '');
+        });
+      }
+
+      // Manuscripts for version
+      let vMss = globalMss;
+      const vWitElems = Array.from(vElem.querySelectorAll(':scope > listWit witness'));
+      if (vWitElems.length > 0) {
+        vMss = [];
+        vWitElems.forEach(w => {
+          const wId = w.getAttribute('xml:id') || w.getAttribute('id') || '';
+          const abbrElem = w.querySelector('abbr');
+          const abbrev = (abbrElem ? abbrElem.textContent : (wId.startsWith('wit-') ? wId.slice(4) : wId)).trim();
+          const nameElem = w.querySelector('name');
+          const name = nameElem ? nameElem.textContent.trim() : abbrev;
+          const biblElem = w.querySelector('bibl');
+          const biblio = biblElem ? biblElem.textContent.trim() : '';
+          const lang = w.getAttribute('xml:lang') || w.getAttribute('lang') || '';
+          const show = w.getAttribute('show') || 'yes';
+          vMss.push({ abbrev, name, language: lang, show, bibliography: biblio });
+          if (wId) {
+            witnessMap.set(wId, abbrev);
+            witnessMap.set('#' + wId, abbrev);
+          }
+          witnessMap.set(abbrev, abbrev);
+          witnessMap.set('#' + abbrev, abbrev);
+        });
+      }
+
+      // Extract text units and hierarchy
+      const { units, unitsById, unitsByRef, references } = parseTeiTextHierarchy(
+        vElem, divDelims, divLabels, witnessMap, vMss
+      );
+
+      return {
+        title: vTitle,
+        language: vLang,
+        author: vAuthor,
+        fragment: vFragment,
+        divisionLabels: divLabels,
+        divisionDelimiters: divDelims,
+        manuscripts: vMss,
+        units: units,
+        unitsById: unitsById,
+        unitsByRef: unitsByRef,
+        references: references
+      };
+    });
+
+    return new OcpBook({
+      title: bookTitle,
+      filename: bookFilename,
+      textStructure: textStructure,
+      language: bookLang || (versions[0] ? versions[0].language : ''),
+      manuscripts: globalMss.length > 0 ? globalMss : (versions[0] ? versions[0].manuscripts : []),
+      versions: versions,
+      rawXml: xmlString
+    });
+  }
+
+  function parseTeiTextHierarchy(rootElem, delims, labels, witnessMap, manuscripts) {
+    const units = [];
+    const unitsById = {};
+    const unitsByRef = {};
+    const referencesSet = new Set();
+    const references = [];
+
+    if (!rootElem) return { units, unitsById, unitsByRef, references };
+
+    function getRefStr(path) {
+      if (path.length === 0) return '1';
+      const parts = [];
+      for (let i = 0; i < path.length; i++) {
+        parts.push(path[i]);
+        if (i < path.length - 1) {
+          let delim = (delims && delims[i] !== undefined && delims[i] !== '') ? delims[i] : null;
+          if (delim === null) {
+            if (i === 0 && isNaN(Number(path[i]))) {
+              delim = ' ';
+            } else {
+              delim = ':';
+            }
+          }
+          parts.push(delim);
+        }
+      }
+      return parts.join('');
+    }
+
+    function addReference(refStr) {
+      if (!referencesSet.has(refStr)) {
+        referencesSet.add(refStr);
+        references.push(refStr);
+      }
+    }
+
+    function traverse(elem, path) {
+      const children = Array.from(elem.children);
+      for (const child of children) {
+        const tag = child.tagName.toLowerCase();
+        if (tag === 'head') {
+          continue;
+        } else if (tag === 'div') {
+          const num = child.getAttribute('n') || child.getAttribute('number') || '';
+          const nextPath = num ? path.concat(num) : path;
+          traverse(child, nextPath);
+        } else if (tag === 'ab') {
+          processAb(child, path);
+        } else if (tag === 'app') {
+          processApp(child, path);
+        }
+      }
+    }
+
+    function processAb(abElem, path) {
+      const num = abElem.getAttribute('n') || abElem.getAttribute('number') || '';
+      let abPath = path;
+      if (num) {
+        if (path.length > 0 && (num.startsWith(path[path.length - 1] + '.') || num.startsWith(path[path.length - 1] + ':'))) {
+          const sep = num.includes(':') ? ':' : '.';
+          abPath = path.slice(0, -1).concat(num.split(sep));
+        } else {
+          abPath = path.concat(num);
+        }
+      }
+
+      const refStr = getRefStr(abPath);
+      addReference(refStr);
+
+      const appChildren = Array.from(abElem.querySelectorAll('app'));
+      if (appChildren.length > 0) {
+        appChildren.forEach(app => {
+          processApp(app, abPath, refStr);
+        });
+      } else {
+        processDirectAb(abElem, abPath, refStr);
+      }
+    }
+
+    function processApp(appElem, path, refStr) {
+      if (!refStr) {
+        refStr = getRefStr(path);
+        addReference(refStr);
+      }
+
+      const rawId = appElem.getAttribute('xml:id') || appElem.getAttribute('id') || (units.length + 1).toString();
+      const m = rawId.match(/^u(\d+)(?:_.*)?$/);
+      const unitId = m ? m[1] : rawId;
+
+      const readings = [];
+      const childNodes = Array.from(appElem.children);
+      const readingNodes = childNodes.filter(c => {
+        const tag = c.tagName.toLowerCase();
+        return tag === 'lem' || tag === 'rdg';
+      });
+
+      readingNodes.forEach((rElem, rIdx) => {
+        const isLem = rElem.tagName.toLowerCase() === 'lem';
+        const opt = rElem.getAttribute('n') !== null ? rElem.getAttribute('n') : (isLem ? '0' : rIdx.toString());
+        const witAttr = (rElem.getAttribute('wit') || '').trim();
+        const mss = witAttr ? witAttr.split(/\s+/).map(sig => {
+          const cleanSig = sig.startsWith('#') ? sig.slice(1) : sig;
+          return witnessMap.get(cleanSig) || witnessMap.get(sig) || (cleanSig.startsWith('wit-') ? cleanSig.slice(4) : cleanSig);
+        }) : [];
+
+        const hasLb = rElem.querySelector('lb') !== null;
+        const lbAttr = rElem.getAttribute('linebreak') || (hasLb ? 'following' : false);
+        const lb = (lbAttr && lbAttr !== 'no') ? (lbAttr === 'yes' ? 'following' : lbAttr) : false;
+        const ind = rElem.getAttribute('rend') === 'indent' || rElem.getAttribute('indent') === 'yes';
+
+        const wElems = Array.from(rElem.querySelectorAll('w'));
+        const words = [];
+        if (wElems.length > 0) {
+          wElems.forEach(w => {
+            words.push({
+              text: w.textContent,
+              lex: w.getAttribute('lemma') || w.getAttribute('lex') || '',
+              morph: w.getAttribute('msd') || w.getAttribute('morph') || '',
+              style: w.getAttribute('pos') || w.getAttribute('style') || '',
+              lang: w.getAttribute('xml:lang') || w.getAttribute('lang') || ''
+            });
+          });
+        }
+
+        const isOmission = rElem.getAttribute('type') === 'omission';
+        let readingText = '';
+        if (!isOmission) {
+          readingText = rElem.textContent.trim();
+        }
+
+        readings.push({
+          option: opt,
+          mss: mss,
+          text: readingText,
+          words: words,
+          linebreak: lb,
+          indent: ind
+        });
+      });
+
+      if (readings.length === 0) {
+        readings.push({
+          option: '0',
+          mss: [],
+          text: appElem.textContent.trim(),
+          words: [],
+          linebreak: false,
+          indent: false
+        });
+      }
+
+      const unitObj = {
+        id: unitId,
+        ref: refStr,
+        divPath: path,
+        readings: readings
+      };
+
+      units.push(unitObj);
+      unitsById[unitId] = unitObj;
+      if (!unitsByRef[refStr]) {
+        unitsByRef[refStr] = [];
+      }
+      unitsByRef[refStr].push(unitObj);
+    }
+
+    function processDirectAb(abElem, path, refStr) {
+      const rawId = abElem.getAttribute('xml:id') || abElem.getAttribute('id') || (units.length + 1).toString();
+      const m = rawId.match(/^u(\d+)(?:_.*)?$/);
+      const unitId = m ? m[1] : rawId;
+
+      const wElems = Array.from(abElem.querySelectorAll('w'));
+      const words = [];
+      if (wElems.length > 0) {
+        wElems.forEach(w => {
+          words.push({
+            text: w.textContent,
+            lex: w.getAttribute('lemma') || w.getAttribute('lex') || '',
+            morph: w.getAttribute('msd') || w.getAttribute('morph') || '',
+            style: w.getAttribute('pos') || w.getAttribute('style') || '',
+            lang: w.getAttribute('xml:lang') || w.getAttribute('lang') || ''
+          });
+        });
+      }
+
+      let text = '';
+      if (wElems.length > 0) {
+        const tokens = [];
+        Array.from(abElem.childNodes).forEach(node => {
+          if (node.nodeType === 1) {
+            tokens.push(node.textContent.trim());
+          }
+        });
+        tokens.forEach((tok, idx) => {
+          if (idx === 0 || /^[,.:;·?!]/.test(tok)) {
+            text += tok;
+          } else {
+            text += ' ' + tok;
+          }
+        });
+      } else {
+        text = abElem.textContent.trim();
+      }
+
+      const defaultMss = manuscripts.map(m => m.abbrev);
+      const readings = [{
+        option: '0',
+        mss: defaultMss,
+        text: text,
+        words: words,
+        linebreak: 'following',
+        indent: false
+      }];
+
+      const unitObj = {
+        id: unitId,
+        ref: refStr,
+        divPath: path,
+        readings: readings
+      };
+
+      units.push(unitObj);
+      unitsById[unitId] = unitObj;
+      if (!unitsByRef[refStr]) {
+        unitsByRef[refStr] = [];
+      }
+      unitsByRef[refStr].push(unitObj);
+    }
+
+    traverse(rootElem, []);
 
     return { units, unitsById, unitsByRef, references };
   }

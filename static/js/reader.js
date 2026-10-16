@@ -14,6 +14,7 @@ const OCP_DOCUMENTS = [
   { filename: '4Q548.xml', title: '4Q548 (Dead Sea Scrolls)', lang: 'Aramaic' },
   { filename: 'AdamEve.xml', title: 'Life of Adam and Eve', lang: 'Greek' },
   { filename: 'Amram.xml', title: 'Visions of Amram', lang: 'Aramaic' },
+  { filename: 'ApDan.xml', title: 'Apocalypse of Daniel', lang: 'Greek' },
   { filename: 'ApocrEzek.xml', title: 'Apocryphon of Ezekiel', lang: 'Greek' },
   { filename: 'ArisEx.xml', title: 'Aristeas the Exegete', lang: 'Greek' },
   { filename: 'Aristob.xml', title: 'Aristobulus', lang: 'Greek' },
@@ -35,6 +36,7 @@ const OCP_DOCUMENTS = [
   { filename: 'Ps-Eup.xml', title: 'Pseudo-Eupolemus', lang: 'Greek' },
   { filename: 'PssSol.xml', title: 'Psalms of Solomon', lang: 'Greek' },
   { filename: 'SibOr.xml', title: 'Sibylline Oracles', lang: 'Greek' },
+  { filename: 'T12P.xml', title: 'Testaments of the Twelve Patriarchs', lang: 'Greek' },
   { filename: 'TAbA.xml', title: 'Testament of Abraham (Recension A)', lang: 'Greek' },
   { filename: 'TAbB.xml', title: 'Testament of Abraham (Recension B)', lang: 'Greek' },
   { filename: 'TAbr.xml', title: 'Testament of Abraham (Combined)', lang: 'Greek' },
@@ -61,6 +63,7 @@ const INTRO_FIELD_TITLES = {
 class OcpReaderApp {
   constructor() {
     this.activeDoc = 'TJob.xml';
+    this.currentFormat = 'grammateus';
     this.book = null;
     this.panes = [];
     this.nextPaneId = 1;
@@ -76,6 +79,8 @@ class OcpReaderApp {
 
   initElements() {
     this.docSelect = document.getElementById('docSelect');
+    this.formatGrammBtn = document.getElementById('formatGrammBtn');
+    this.formatTeiBtn = document.getElementById('formatTeiBtn');
     this.addPaneBtn = document.getElementById('addPaneBtn');
     this.themeToggle = document.getElementById('themeToggle');
     this.zoomInBtn = document.getElementById('zoomInBtn');
@@ -103,6 +108,14 @@ class OcpReaderApp {
     this.docSelect.addEventListener('change', (e) => {
       this.loadDocument(e.target.value);
     });
+
+    // Format Switcher (Grammateus vs TEI P5)
+    if (this.formatGrammBtn) {
+      this.formatGrammBtn.addEventListener('click', () => this.setFormat('grammateus'));
+    }
+    if (this.formatTeiBtn) {
+      this.formatTeiBtn.addEventListener('click', () => this.setFormat('tei'));
+    }
 
     // Add Parallel Pane
     this.addPaneBtn.addEventListener('click', () => {
@@ -161,10 +174,37 @@ class OcpReaderApp {
     });
   }
 
+  setFormat(format) {
+    if (this.currentFormat === format) return;
+    this.currentFormat = format;
+    this.updateFormatButtons();
+    this.updateUrlState();
+    this.loadDocument(this.activeDoc, this.currentFromRef);
+  }
+
+  updateFormatButtons() {
+    if (this.formatGrammBtn && this.formatTeiBtn) {
+      if (this.currentFormat === 'tei') {
+        this.formatTeiBtn.style.background = 'var(--accent-gold)';
+        this.formatTeiBtn.style.color = '#fff';
+        this.formatGrammBtn.style.background = 'transparent';
+        this.formatGrammBtn.style.color = 'var(--text-muted)';
+      } else {
+        this.formatGrammBtn.style.background = 'var(--accent-gold)';
+        this.formatGrammBtn.style.color = '#fff';
+        this.formatTeiBtn.style.background = 'transparent';
+        this.formatTeiBtn.style.color = 'var(--text-muted)';
+      }
+    }
+  }
+
   loadInitialState() {
     const urlParams = new URLSearchParams(window.location.search);
     let doc = urlParams.get('doc') || 'TJob.xml';
     if (!doc.endsWith('.xml')) doc += '.xml';
+
+    this.currentFormat = (urlParams.get('format') || '').toLowerCase() === 'tei' ? 'tei' : 'grammateus';
+    this.updateFormatButtons();
 
     const match = OCP_DOCUMENTS.find(d => d.filename.toLowerCase() === doc.toLowerCase());
     if (match) {
@@ -183,7 +223,8 @@ class OcpReaderApp {
     this.panesContainer.innerHTML = '<div style="padding:40px; text-align:center; width:100%; color:var(--text-muted);">Loading electronic critical edition...</div>';
 
     try {
-      const res = await fetch(`static/docs/${filename}`);
+      const docPath = this.currentFormat === 'tei' ? `static/docs/tei/${filename}` : `static/docs/${filename}`;
+      const res = await fetch(docPath);
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const xmlText = await res.text();
 
@@ -558,6 +599,11 @@ class OcpReaderApp {
     const url = new URL(window.location);
     url.searchParams.set('doc', this.activeDoc);
     if (this.currentFromRef) url.searchParams.set('ref', `${this.currentFromRef}-${this.currentToRef}`);
+    if (this.currentFormat === 'tei') {
+      url.searchParams.set('format', 'tei');
+    } else {
+      url.searchParams.delete('format');
+    }
     window.history.replaceState({}, '', url);
   }
 
@@ -614,6 +660,7 @@ class OcpReaderApp {
         <h4>Document Information</h4>
         <p><strong>Title:</strong> ${this.book.title}</p>
         <p><strong>Filename:</strong> <code>${this.activeDoc}</code></p>
+        <p><strong>Active Format:</strong> <code>${this.currentFormat === 'tei' ? 'TEI P5 (Parallel Segmentation)' : 'Grammateus DTD'}</code></p>
         <p><strong>Text Structure:</strong> ${this.book.textStructure}</p>
         <p><strong>Versions:</strong> ${this.book.versions.map(v => v.title + ' (' + v.language + ')').join(', ')}</p>
       </div>
@@ -625,8 +672,11 @@ class OcpReaderApp {
         </div>
       </div>
       <div class="drawer-section">
-        <h4>TEI XML Source</h4>
-        <a href="static/docs/${this.activeDoc}" target="_blank" class="btn-header btn-primary-header" style="display:inline-flex;">View Raw TEI XML</a>
+        <h4>XML Source Files</h4>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+          <a href="static/docs/tei/${this.activeDoc}" target="_blank" class="btn-header ${this.currentFormat === 'tei' ? 'btn-primary-header' : ''}" style="display:inline-flex;">View TEI P5 XML</a>
+          <a href="static/docs/${this.activeDoc}" target="_blank" class="btn-header ${this.currentFormat !== 'tei' ? 'btn-primary-header' : ''}" style="display:inline-flex;">View Grammateus XML</a>
+        </div>
       </div>`;
     };
 

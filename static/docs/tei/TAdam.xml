@@ -1,0 +1,2562 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TAdam">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Testament of Adam</title>
+        <editor role="editor">Christensen, Peter, Ken M. Penner, Ian W. Scott</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="A">
+            <abbr type="siglum">A</abbr>
+            <name>BM Add. 14,624 (folios 8b-10a)</name>
+          </witness>
+          <witness xml:id="PCod.Gr.2419">
+            <abbr type="siglum">PCod.Gr.2419</abbr>
+            <name>Paris Codex Gr. 2419, folio 247b</name>
+            <bibl>M. R. James, “A Fragment of the Apocalypse of Adam in Greek,” in Apocrypha Anecdota II (Texts and Studies 2.3; Cambridge: Cambridge University Press, 1893), 138-145.</bibl>
+          </witness>
+          <witness xml:id="Cedrenus">
+            <abbr type="siglum">Cedrenus</abbr>
+            <name>Cedrenus</name>
+            <bibl>M. R. James, “A Fragment of the Apocalypse of Adam in Greek,” in Apocrypha Anecdota II (Texts and Studies 2.3; Cambridge: Cambridge University Press, 1893), 138-145.</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of Syriac (English) based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Syriac">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Greek">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Syriac__English_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Greek__English_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Syriac__French_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Greek__French_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="syr">syr</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="syr">
+    <body>
+      <div type="edition" n="Syriac" xml:lang="syr" xml:id="ver_Syriac">
+        <head>Syriac</head>
+        <div type="chapter" n="1" xml:id="TAdam.ver_Syriac.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac.1.1">
+            <app xml:id="u1_ver_Syriac">
+              <lem wit="#A">ܬܘܒ ܕܝܬܝܩܐ ܕܐܒܘܢ<lb/></lem>
+            </app>
+            <app xml:id="u2_ver_Syriac">
+              <lem wit="#A">ܐܕܡ. ܫܥܬܐ ܩܕܡܝܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u3_ver_Syriac">
+              <lem wit="#A">ܕܠܠܝܐ: ܬܘܕܝܬܐ ܕܫܐܕܐ̈<lb/></lem>
+            </app>
+            <app xml:id="u4_ver_Syriac">
+              <lem wit="#A">ܘܒܗ̇ܝ ܫܥܬܐ ܠܐ<lb/></lem>
+            </app>
+            <app xml:id="u5_ver_Syriac">
+              <lem wit="#A">ܣܖ̈ܚܝܢ ܘܠܐ ܡ̇ܟܝܢ ܡܕܡ<lb/></lem>
+            </app>
+            <app xml:id="u6_ver_Syriac">
+              <lem wit="#A">ܠܐܢܫܐ:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac.1.2">
+            <app xml:id="u7_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܬܖ̈ܬܝܢ<lb/></lem>
+            </app>
+            <app xml:id="u8_ver_Syriac">
+              <lem wit="#A">ܬܘܕܝܬܐ ܕܝ̈ܘܢܐ…<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac.1.3">
+            <app xml:id="u9_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܬܠܬ ܬܘܕܝܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u10_ver_Syriac">
+              <lem wit="#A">ܕܢܘ̈[ܢ‍]ܐ ܘܕܢܘܪܐ ܘܕܟܠܗܘ[ܢ]<lb/></lem>
+            </app>
+            <app xml:id="u11_ver_Syriac">
+              <lem wit="#A">ܬܗ̈ܘܡܐ ܬܚ̈ܬܝܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac.1.4">
+            <app xml:id="u12_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u13_ver_Syriac">
+              <lem wit="#A">ܕܐܖ̈ܒܥ ܩܘ݁[ܕ]ܫܐ ܕܣܖ̈ܦܐ<lb/></lem>
+            </app>
+            <app xml:id="u14_ver_Syriac">
+              <lem wit="#A">ܗܟܢܐ ܫ̇ܡܥ ܗܘܝܬ<lb/></lem>
+            </app>
+            <app xml:id="u15_ver_Syriac">
+              <lem wit="#A">ܥܕ ܠܐ ܐ̇ܚܛܐ ܩܠ<lb/></lem>
+            </app>
+            <app xml:id="u16_ver_Syriac">
+              <lem wit="#A">ܓܦܝ̈ܗܘܢ ܒܦܪܕܝܣܐ. ܟܕ<lb/></lem>
+            </app>
+            <app xml:id="u17_ver_Syriac">
+              <lem wit="#A">ܢܩ̇ܫܝܢ ܕܝܢ ܣܖ̈ܦܐ ܒܩܠܐ<lb/></lem>
+            </app>
+            <app xml:id="u18_ver_Syriac">
+              <lem wit="#A">ܕܩ̈ܘܕܫܝܗܘܢ̇ ܘܡܢ<lb/></lem>
+            </app>
+            <app xml:id="u19_ver_Syriac">
+              <lem wit="#A">ܕܥ݁ܒܪܬ ܥܠ ܢܡܘܣܐ<lb/></lem>
+            </app>
+            <app xml:id="u20_ver_Syriac">
+              <lem wit="#A">ܠܐ ܫ݁ܡܥܬ ܗܘ݁ ܩܠܐ.<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac.1.5">
+            <app xml:id="u21_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܚܡܫ ܬܘܕܝܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u22_ver_Syriac">
+              <lem wit="#A">ܕܡ̈ܝܐ ܕܠܥܠ ܡܢ ܫܡܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u23_ver_Syriac">
+              <lem wit="#A">ܗܟܢܐ ܫ̇ܡܥ ܗܘ݁ܝܬ ܐܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u24_ver_Syriac">
+              <lem wit="#A">ܘܡܠܐ̈ܟܐ ܩܠܐ ܕܓ̈ܠܠܐ</lem>
+            </app>
+            <app xml:id="u25_ver_Syriac">
+              <lem wit="#A">ܬܩ̈ܝܦܐ: ܕܡܪܗܒ<lb/></lem>
+            </app>
+            <app xml:id="u26_ver_Syriac">
+              <lem wit="#A">ܗܘ̣ܐ ܠܗܘܢ ܪܡܙܐ ܕܢܬܠܘܢ<lb/></lem>
+            </app>
+            <app xml:id="u27_ver_Syriac">
+              <lem wit="#A">ܫܘܒܚܐ ܠܒܪܘܝܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac.1.6">
+            <app xml:id="u28_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u29_ver_Syriac">
+              <lem wit="#A">ܕܫܬ: ܪܘܟܒܐ ܕܥ̈ܢܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u30_ver_Syriac">
+              <lem wit="#A">ܘܕܚܠܬܐ ܪܒܬܐ ܕܗܘܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u31_ver_Syriac">
+              <lem wit="#A">ܒܦܠܓܗ ܕܠܠܝܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac.1.7">
+            <app xml:id="u32_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u33_ver_Syriac">
+              <lem wit="#A">ܕܫܒܥ ܚܙܝܐ ܕܝܠܗܘܢ<lb/></lem>
+            </app>
+            <app xml:id="u34_ver_Syriac">
+              <lem wit="#A">ܕܚܝܠܘܬܐ: ܡܐ ܕܕܡ̈ܟܝܢ<lb/></lem>
+            </app>
+            <app xml:id="u35_ver_Syriac">
+              <lem wit="#A">ܡ̈ܝܐ. (ܘ?) ܒܗ̇ܝ ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u36_ver_Syriac">
+              <lem wit="#A">ܡ̈ܬܚܛܦܝܢ ܡ̈ܝܐ. ܘܚ̇ܠܛ</lem>
+            </app>
+            <app xml:id="u37_ver_Syriac">
+              <lem wit="#A">ܒܗܘܢ ܟܗܢܐ ܕܐܠܗܐ<lb/></lem>
+            </app>
+            <app xml:id="u38_ver_Syriac">
+              <lem wit="#A">ܡܫܚܐ ܕܩܘܕ݁ܫܐ ܘܡ݁ܫܚ<lb/></lem>
+            </app>
+            <app xml:id="u39_ver_Syriac">
+              <lem wit="#A">‫ܠܐܝܠܝܢ ܕܐ̈ܠܝܨܝܢ ܘܢܝ̈ܚܝܢ.‬<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Syriac.1.8">
+            <app xml:id="u40_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܬܡܢܐ ܡ̈ܦܩܢ̄ܘ[ܬܐ]<lb/></lem>
+            </app>
+            <app xml:id="u41_ver_Syriac">
+              <lem wit="#A">ܕܥܣܒܐ̇ ܕܐܪܥܐ. ܡܐ<lb/></lem>
+            </app>
+            <app xml:id="u42_ver_Syriac">
+              <lem wit="#A">ܕܢܚ̇ܬ ܛ݂ܠܐ ܡܢ ܫܡܝܐ.<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Syriac.1.9">
+            <app xml:id="u43_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܬܫܥ ܬܕܘܝܬܐ̇<lb/></lem>
+            </app>
+            <app xml:id="u44_ver_Syriac">
+              <lem wit="#A">ܕܟܖ̈ܘܒܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Syriac.1.10">
+            <app xml:id="u45_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܥܣܖ̈<lb/></lem>
+            </app>
+            <app xml:id="u46_ver_Syriac">
+              <lem wit="#A">ܬܘܕܝܬܐ ܕܒ̈ܢܝܢܫܐ.<lb/></lem>
+            </app>
+            <app xml:id="u47_ver_Syriac">
+              <lem wit="#A">ܘܦܬܚ̇ ܬܪܥܐ ܕܫܡܝܐ.<lb/></lem>
+            </app>
+            <app xml:id="u48_ver_Syriac">
+              <lem wit="#A">ܕܥܐ̈ܠܢ ܨ̈ܠܘܬܐ ܕܟܠ ܕܚܝ<lb/></lem>
+            </app>
+            <app xml:id="u49_ver_Syriac">
+              <lem wit="#A">ܘܣ̈ܓܕܢ ܘܢܦܩ̈ܢ. ܘܒܗ̇ܝ<lb/></lem>
+            </app>
+            <app xml:id="u50_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܟܠܡܕܡ ܕܢܫܐܠ<lb/></lem>
+            </app>
+            <app xml:id="u51_ver_Syriac">
+              <lem wit="#A">ܐܢܫ ܡܢ ܐܠܗܐ ܡܬܝܗܒ<lb/></lem>
+            </app>
+            <app xml:id="u52_ver_Syriac">
+              <lem wit="#A">ܠܗ ܡܐ ܕܢܩܫ̇ ܓܦܐ<lb/></lem>
+            </app>
+            <app xml:id="u53_ver_Syriac">
+              <lem wit="#A">ܕܣܖ̈ܦܐ ܘܕܬܖ̈ܢܓܠܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Syriac.1.11">
+            <app xml:id="u54_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܚܕܥܣܖ̈ܐ ܚܕܘܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u55_ver_Syriac">
+              <lem wit="#A">ܒܟܠܗ̈ ܐܪܥܐ ܡܐ ܕܣ̇ܠܩ<lb/></lem>
+            </app>
+            <app xml:id="u56_ver_Syriac">
+              <lem wit="#A">ܫܡܫܐ ܡܢ ܦܪܕܝܣܐ<lb/></lem>
+            </app>
+            <app xml:id="u57_ver_Syriac">
+              <lem wit="#A">ܘܕܢܚ̇ ܥܠ ܒܖ̈ܝܬܐ<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Syriac.1.12">
+            <app xml:id="u58_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܬܖ̈ܬܥܣܖ̈ܐ ܣܘܟܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u59_ver_Syriac">
+              <lem wit="#A">ܕ[ܒܣܡ‍]ܐ. ܘ[ܫ]ܬܘܐ ܕܪܡܐ<lb/></lem>
+            </app>
+            <app xml:id="u60_ver_Syriac">
+              <lem wit="#A">[ܥܠ] ܟܠܗܘܢ ܣܕܖ̈ܐ ܕܢܘܪܐ.<lb/></lem>
+            </app>
+            <app xml:id="u61_ver_Syriac">
+              <lem wit="#A">[ܘܕܪܘܚ‍]‍ܐ. ܟܕܡܐ ܕܣܝ̈ܡܝܢ<lb/></lem>
+            </app>
+            <app xml:id="u62_ver_Syriac">
+              <lem wit="#A">[ܟܠܗܘ]ܢ ܟܗ̈ܢܐ ܒܣܡ̈ܐ<lb/></lem>
+            </app>
+            <app xml:id="u63_ver_Syriac">
+              <lem wit="#A">[ܠܐ]ܠܗܘܬܗ. ܘܗܝܕܝܢ<lb/></lem>
+            </app>
+            <app xml:id="u64_ver_Syriac">
+              <lem wit="#A">ܟܠܗܘܢ ܚ̈ܝܠܘܬܐ ܕܫ̈ܡܝܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u65_ver_Syriac">
+              <lem wit="#A">ܡ̣ܫܬܖ̈ܝܢ. ܫܠܡ ܫܥܐ ܕܠܠܝܐ</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAdam.ver_Syriac.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac.2.1">
+            <app xml:id="u66_ver_Syriac">
+              <lem wit="#A">ܬܘܒ ܫ̈ܥܐ ܕܐܝܡܡܐ<lb/></lem>
+            </app>
+            <app xml:id="u67_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܩܕܡܝܬܐ ܕܐܝܡܡܐ<lb/></lem>
+            </app>
+            <app xml:id="u68_ver_Syriac">
+              <lem wit="#A">ܒܥܘܬܐ ܕܫܡܝܢܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac.2.2">
+            <app xml:id="u69_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u70_ver_Syriac">
+              <lem wit="#A">ܕܬܪܬܝܢ ܨܠܘܬܐ ܕܡܠܐܟܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac.2.3">
+            <app xml:id="u71_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܬܠܬ ܬܘܕܝܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u72_ver_Syriac">
+              <lem wit="#A">ܕܦܪܚܬܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac.2.4">
+            <app xml:id="u73_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܐܪܒܥ<lb/></lem>
+            </app>
+            <app xml:id="u74_ver_Syriac">
+              <lem wit="#A">ܬܘܕܝܬܐ ܕܚ̈ܝܘܬܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac.2.5">
+            <app xml:id="u75_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u76_ver_Syriac">
+              <lem wit="#A">ܕܚܡܫ ܬܘܕܝܬܐ ܕܠܥܠ<lb/></lem>
+            </app>
+            <app xml:id="u77_ver_Syriac">
+              <lem wit="#A">ܡܢ ܫܡܝܐ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac.2.6">
+            <app xml:id="u78_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܫܬ.<lb/></lem>
+            </app>
+            <app xml:id="u79_ver_Syriac">
+              <lem wit="#A">ܬܘܕܝܬܐ ܕܟܖ̈ܘܒܐ<lb/></lem>
+            </app>
+            <app xml:id="u80_ver_Syriac">
+              <lem wit="#A">ܕܡܦܝܣܝܢ ܥܠ ܥܘ̣ܠܐ<lb/></lem>
+            </app>
+            <app xml:id="u81_ver_Syriac">
+              <lem wit="#A">ܕܐܢܫܘܬܢ̇</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac.2.7">
+            <app xml:id="u82_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܫܒܥ<lb/></lem>
+            </app>
+            <app xml:id="u83_ver_Syriac">
+              <lem wit="#A">ܡܥܠܐ ܘܡܦܩܐ ܕܠܘܬ<lb/></lem>
+            </app>
+            <app xml:id="u84_ver_Syriac">
+              <lem wit="#A">ܐܠܗܐ. ܕܥܐ̈ܠܢ ܨ̈ܠܘܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u85_ver_Syriac">
+              <lem wit="#A">ܕܟܠ ܕܚܝ. ܘܣ̈ܓܕܢ ܘܢܦܩ̈ܢ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Syriac.2.8">
+            <app xml:id="u86_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܬܡܢܐ ܬܘ̇ܕܝܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u87_ver_Syriac">
+              <lem wit="#A">ܕܢܘܪܐ ܘܕܡ̈ܝܐ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Syriac.2.9">
+            <app xml:id="u88_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u89_ver_Syriac">
+              <lem wit="#A">ܕܬܫܥ ܬܟܫܦܬܐ ܕܡܠܐܟ̇ܐ<lb/></lem>
+            </app>
+            <app xml:id="u90_ver_Syriac">
+              <lem wit="#A">ܗܠܝܢ ܕܩܝܡܝܢ ܩܕܡ<lb/></lem>
+            </app>
+            <app xml:id="u91_ver_Syriac">
+              <lem wit="#A">ܟܘܪܣܝܐ ܕܪܒܘܬܐ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Syriac.2.10">
+            <app xml:id="u92_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u93_ver_Syriac">
+              <lem wit="#A">ܕܥܣܖ̈. ܣܥ̣ܘܪܘܬܐ ܕܡ̇ܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u94_ver_Syriac">
+              <lem wit="#A">ܕܢܚܬܐ ܪܘܚܐ ܘܡܪܚܦܐ<lb/></lem>
+            </app>
+            <app xml:id="u95_ver_Syriac">
+              <lem wit="#A">ܥܠ ܡ̈ܝܐ ܘܥܠ ܡܒܘܥܐ<lb/></lem>
+            </app>
+            <app xml:id="u96_ver_Syriac">
+              <lem wit="#A">ܘܐܠܘ ܪܘܚܗ ܕܡܪܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u97_ver_Syriac">
+              <lem wit="#A">ܕܢܚܬܐ ܗܘܬ ܘܡܪܚܦܐ<lb/></lem>
+            </app>
+            <app xml:id="u98_ver_Syriac">
+              <lem wit="#A">ܥܠ ܡ̈ܝܐ ܘܥܠ ܡܒܘܥܐ<lb/></lem>
+            </app>
+            <app xml:id="u99_ver_Syriac">
+              <lem wit="#A">ܡܣܬܖ̈ܚܝܢ ܗܘܘ ܒܢ̈ܝܢܫܐ<lb/></lem>
+            </app>
+            <app xml:id="u100_ver_Syriac">
+              <lem wit="#A">ܘܟܠ ܕܚ̈ܙܝܢ ܗܘܘ ܫܐܕܐ<lb/></lem>
+            </app>
+            <app xml:id="u101_ver_Syriac">
+              <lem wit="#A">ܣܖ̈ܚܝܢ ܗܘܘ ܠܗܘܢ̇ ܘܒܗܝ<lb/></lem>
+            </app>
+            <app xml:id="u102_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܡܬܚܛܦܝܢ ܡܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u103_ver_Syriac">
+              <lem wit="#A">ܘܚ̇ܠܛ ܒܗܘܢ ܟܗܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u104_ver_Syriac">
+              <lem wit="#A">ܕܐܠܗܐ ܡܫܚܐ ܕܩܘ̣ܕܫܐ<lb/></lem>
+            </app>
+            <app xml:id="u105_ver_Syriac">
+              <lem wit="#A">ܘܡ̇ܫܚ ܠܐܝܠܝܢ ܕܐܠܝܨܝܢ<lb/></lem>
+            </app>
+            <app xml:id="u106_ver_Syriac">
+              <lem wit="#A">ܘܡܬܐܣܝܢ ܘܡ̇ܬܚܠܡܝܢ<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Syriac.2.11">
+            <app xml:id="u107_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ ܕܚܕܥܣܖ̈ܐ ܕܝܨܐ<lb/></lem>
+            </app>
+            <app xml:id="u108_ver_Syriac">
+              <lem wit="#A">ܘܚܕܘܬܐ ܕܙܕܝ̈ܩܐ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Syriac.2.12">
+            <app xml:id="u109_ver_Syriac">
+              <lem wit="#A">ܫܥܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u110_ver_Syriac">
+              <lem wit="#A">ܕܬܪܬܥܣܪܐ ܗܝ ܕܪܡܫܐ<lb/></lem>
+            </app>
+            <app xml:id="u111_ver_Syriac">
+              <lem wit="#A">ܬܟܫܦܬܐ ܕܒ̈ܢܝܢܫܐ ܠܨܒܝܢܐ</lem>
+            </app>
+            <app xml:id="u112_ver_Syriac">
+              <lem wit="#A">ܡܩܒܠܐ ܕܠܘܬ ܐܠܗܐ<lb/></lem>
+            </app>
+            <app xml:id="u113_ver_Syriac">
+              <lem wit="#A">ܡܪܐ ܟܠ܀</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="TAdam.ver_Syriac.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac.3.1">
+            <app xml:id="u114_ver_Syriac">
+              <lem wit="#A">ܐܡ̣ܪ ܐܕܡ<lb/></lem>
+            </app>
+            <app xml:id="u115_ver_Syriac">
+              <lem wit="#A">ܠܫܝܬ ܒܪܗ. ܫܡܥ̣ܬ ܒܪܝ<lb/></lem>
+            </app>
+            <app xml:id="u116_ver_Syriac">
+              <lem wit="#A">ܕܐ̇ܬܐ ܐܠܗܐ ܠܥܠܡܐ ܡܢ<lb/></lem>
+            </app>
+            <app xml:id="u117_ver_Syriac">
+              <lem wit="#A">ܒܬܪ ܙܒ̈ܢܐ ܀ ܘܡܢ ܒܬܘܠܬܐ</lem>
+            </app>
+            <app xml:id="u118_ver_Syriac">
+              <lem wit="#A">ܡܬܒܛܢ. ܘܠܒ̇ܫ ܦܓܪܐ<lb/></lem>
+            </app>
+            <app xml:id="u119_ver_Syriac">
+              <lem wit="#A">ܘܡ̇ܬܝܠܕ ܐܝܟ ܒܪܢܫܐ. ܘܖ̈ܒܐ<lb/></lem>
+            </app>
+            <app xml:id="u120_ver_Syriac">
+              <lem wit="#A">ܐܝܟ ܝܠܘܕܐ ܀܀ ܘܥ݁ܒܕ<lb/></lem>
+            </app>
+            <app xml:id="u121_ver_Syriac">
+              <lem wit="#A">ܐ̇ܬܘܬܐ ܘܬܕܡܖ̈ܬܐ ܥܠ<lb/></lem>
+            </app>
+            <app xml:id="u122_ver_Syriac">
+              <lem wit="#A">ܐܪܥܐ ܀ ܡ̇ܗܠܟ ܥܠ ܓ̈ܠܠܐ<lb/></lem>
+            </app>
+            <app xml:id="u123_ver_Syriac">
+              <lem wit="#A">ܕܝܡܐ. ܀ ܟܐܐ ܒܖ̈ܘܚܐ<lb/></lem>
+            </app>
+            <app xml:id="u124_ver_Syriac">
+              <lem wit="#A">ܘܫ̈ܠܝܢ ܀ ܪܡ̇ܙ ܠܓ̈ܠܠܐ<lb/></lem>
+            </app>
+            <app xml:id="u125_ver_Syriac">
+              <lem wit="#A">ܘܩ̈ܝܡܝܢ ܀ ܡܦܬܚ ܣܡ̈ܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u126_ver_Syriac">
+              <lem wit="#A">܀ ܡܕܟܐ ܓܖ̈ܒܐ܀ ܡ̇ܫܡܥ<lb/></lem>
+            </app>
+            <app xml:id="u127_ver_Syriac">
+              <lem wit="#A">ܠܚܖ̈ܫܐ ܀ ܦܐ̈ܩܐ ܡܡܠܠܝܢ.<lb/></lem>
+            </app>
+            <app xml:id="u128_ver_Syriac">
+              <lem wit="#A">܀ ܟ̈ܦܝܦܐ ܡ̇ܬܪܨ܀ ܡܫܖ̈ܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u129_ver_Syriac">
+              <lem wit="#A">ܡ̇ܚܝܨ ܀ ܠܐ̈ܒܝܕܐ ܡܫܟܚ<lb/></lem>
+            </app>
+            <app xml:id="u130_ver_Syriac">
+              <lem wit="#A">܀ ܛܪܕ ܠܕܝ̈ܘܐ ܀ ܡ̇ܦܩ<lb/></lem>
+            </app>
+            <app xml:id="u131_ver_Syriac">
+              <lem wit="#A">ܠܫܐ̈ܕܐ ܀</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac.3.2">
+            <app xml:id="u132_ver_Syriac">
+              <lem wit="#A">ܡܛܠ ܕܗ̣ܘ ܐ̇ܡܪ<lb/></lem>
+            </app>
+            <app xml:id="u133_ver_Syriac">
+              <lem wit="#A">ܗܘ݂ܐ ܠܝ ܒܦܪܕܝܣܐ ܟܕ<lb/></lem>
+            </app>
+            <app xml:id="u134_ver_Syriac">
+              <lem wit="#A">ܩ̇ܛܦܬ ܡܢ ܦܐܪܐ ܕܟܣܐ<lb/></lem>
+            </app>
+            <app xml:id="u135_ver_Syriac">
+              <lem wit="#A">ܗ̣ܘܐ ܒܗ ܡܘܬܐ. ܐܕܡ<lb/></lem>
+            </app>
+            <app xml:id="u136_ver_Syriac">
+              <lem wit="#A">ܐܕܡ ܠܐ ܬܕܚܠ. ܨ݂ܒܝܬ<lb/></lem>
+            </app>
+            <app xml:id="u137_ver_Syriac">
+              <lem wit="#A">ܕܬܗܘܐ ܐܠܗܐ. ܐܠܗܐ<lb/></lem>
+            </app>
+            <app xml:id="u138_ver_Syriac">
+              <lem wit="#A">ܥ̇ܒܕ ܐܢܐ ܠܟ. ܠܘ ܓܝܪ ܗܫܐ<lb/></lem>
+            </app>
+            <app xml:id="u139_ver_Syriac">
+              <lem wit="#A">ܐܠܐ ܒܬܪ ܙܒܢܐ ܣܓܝܐܐ<lb/></lem>
+            </app>
+            <app xml:id="u140_ver_Syriac">
+              <lem wit="#A">ܕܫ̈ܢܝܐ. ܠܡܘܬܐ ܡ̇ܫܠܡ ܐܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u141_ver_Syriac">
+              <lem wit="#A">ܠܟ. ܘܐܟܠܐ ܠܗ ܣܣܐ<lb/></lem>
+            </app>
+            <app xml:id="u142_ver_Syriac">
+              <lem wit="#A">ܘܪܡܬܐ ܠܦܓܪܟ ܀</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac.3.3">
+            <app xml:id="u143_ver_Syriac">
+              <lem wit="#A">ܘܥ݁ܢܝܬ<lb/></lem>
+            </app>
+            <app xml:id="u144_ver_Syriac">
+              <lem wit="#A">ܘܐܡ̇ܪܬ ܠܗ. ܥܠ ܡܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u145_ver_Syriac">
+              <lem wit="#A">ܡܪܝ ܀ ܘܐܡܪ ܠܝ ܥܠ<lb/></lem>
+            </app>
+            <app xml:id="u146_ver_Syriac">
+              <lem wit="#A">ܕܫܡܥ݂ܬ ܡ̈ܠܝ ܚܘܝܐ<lb/></lem>
+            </app>
+            <app xml:id="u147_ver_Syriac">
+              <lem wit="#A">ܡܐܟܘܠܬܟ ܠܚܘܝܐ ܬܗܘ݁ܐ<lb/></lem>
+            </app>
+            <app xml:id="u148_ver_Syriac">
+              <lem wit="#A">ܘܝ̈ܠܕܝܟ. ܘܒܬܪ ܙܒܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u149_ver_Syriac">
+              <lem wit="#A">ܩܠܝܠ ܗ̈ܘܝܢ ܥܠܝܟ ܖ̈ܚ݂ܡܐ</lem>
+            </app>
+            <app xml:id="u150_ver_Syriac">
+              <lem wit="#A">ܡܛܠ ܕܒܨܠܡܝ ܐܬܒ̣ܪܝ݂ܬ<lb/></lem>
+            </app>
+            <app xml:id="u151_ver_Syriac">
+              <lem wit="#A">ܘܠܐ ܫ̇ܒܩ ܐܢܐ ܠܟ<lb/></lem>
+            </app>
+            <app xml:id="u152_ver_Syriac">
+              <lem wit="#A">ܕܬܒܠܐ ܒܫܝ̇ܘܠ ܀ ܡܛܠܬܟ<lb/></lem>
+            </app>
+            <app xml:id="u153_ver_Syriac">
+              <lem wit="#A">ܡܢ ܡܪܝܡ ܒܬܘܠܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u154_ver_Syriac">
+              <lem wit="#A">ܡܬܝܠܕ ܐܢܐ ܀ ܡܛܠܬܟ<lb/></lem>
+            </app>
+            <app xml:id="u155_ver_Syriac">
+              <lem wit="#A">ܡܘܬܐ ܛ݁ܥܡ ܐܢܐ: ܘܠܒܝܬ<lb/></lem>
+            </app>
+            <app xml:id="u156_ver_Syriac">
+              <lem wit="#A">ܡ̈ܝܬܐ ܥܐ̇ܠ ܐܢܐ ܀܀<lb/></lem>
+            </app>
+            <app xml:id="u157_ver_Syriac">
+              <lem wit="#A">ܡܛܠܬܟ ܫܡܝܐ ܚܕܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u158_ver_Syriac">
+              <lem wit="#A">ܥ݁ܒܕ ܐܢܐ ܘܝ̈ܠܕܝܟ. ܡܫܠܛ<lb/></lem>
+            </app>
+            <app xml:id="u159_ver_Syriac">
+              <lem wit="#A">ܐܢܐ ܒܗܘܢ̇ ܀</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac.3.4">
+            <app xml:id="u160_ver_Syriac">
+              <lem wit="#A">ܘܒܬܪ<lb/></lem>
+            </app>
+            <app xml:id="u161_ver_Syriac">
+              <lem wit="#A">ܬܠܬܐ ܝ̈ܘܡܝܢ ܕܗ̇ܘܐ<lb/></lem>
+            </app>
+            <app xml:id="u162_ver_Syriac">
+              <lem wit="#A">ܐܢܐ ܒܓܘ ܩܒܪܐ ܀܀<lb/></lem>
+            </app>
+            <app xml:id="u163_ver_Syriac">
+              <lem wit="#A">ܡ̇ܢܚܡ ܐܢܐ ܠܦܓܪܐ<lb/></lem>
+            </app>
+            <app xml:id="u164_ver_Syriac">
+              <lem wit="#A">ܕܠܒܫ̇ܬ ܡܢܟ. ܘܡܘܬܒ<lb/></lem>
+            </app>
+            <app xml:id="u165_ver_Syriac">
+              <lem wit="#A">ܐܢܐ ܠܟ ܡܢ ܝܡܝܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u166_ver_Syriac">
+              <lem wit="#A">ܕܐܠܗܘܬܝ. ܘܥ݁[ܒܕ ܐ]ܢܐ<lb/></lem>
+            </app>
+            <app xml:id="u167_ver_Syriac">
+              <lem wit="#A">ܐܠܗܐ ܐܝܟ ܕܨ݂[ܒܝܬ]<lb/></lem>
+            </app>
+            <app xml:id="u168_ver_Syriac">
+              <lem wit="#A">ܘܢܣ̇ܒ ܐܢܐ ܡܢ ܐ[ܝܠܢܐ]<lb/></lem>
+            </app>
+            <app xml:id="u169_ver_Syriac">
+              <lem wit="#A">ܡܘܗܒܬܐ ܘܡܦ[ܢܐ ܐܢܐ]<lb/></lem>
+            </app>
+            <app xml:id="u170_ver_Syriac">
+              <lem wit="#A">ܠܟ ܘܠܝܠܕܝ̈ܟ ܕܐܝܬܘܗ̇[ܝ]<lb/></lem>
+            </app>
+            <app xml:id="u171_ver_Syriac">
+              <lem wit="#A">ܟܐܢܘܬܐ ܕܫܡܝܐ ܀<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac.3.5">
+            <app xml:id="u172_ver_Syriac">
+              <lem wit="#A">ܫܡܥ̣ܬ ܒܪܝ ܫܝܬ.<lb/></lem>
+            </app>
+            <app xml:id="u173_ver_Syriac">
+              <lem wit="#A">ܕܢܐܬܐ ܛܘܦܢܐ ܘܢܫܝܓ<lb/></lem>
+            </app>
+            <app xml:id="u174_ver_Syriac">
+              <lem wit="#A">ܠܟܠܗ ̇ܐܪܥܐ ܡܛܠ<lb/></lem>
+            </app>
+            <app xml:id="u175_ver_Syriac">
+              <lem wit="#A">ܒܢ̈ܬ ܩܐܝܢ ܐܚܘܟ</lem>
+            </app>
+            <app xml:id="u176_ver_Syriac">
+              <lem wit="#A">ܕܡܛܠ ܛܢܢܐ ܕܠܒ̇ܘܕܐ ܚܬܟ<lb/></lem>
+            </app>
+            <app xml:id="u177_ver_Syriac">
+              <lem wit="#A">ܩ̣ܛܠܗ ܠܗܒܝܠ ܐܚܘܟ.<lb/></lem>
+            </app>
+            <app xml:id="u178_ver_Syriac">
+              <lem wit="#A">ܒܗ̇ܝ ܕܡܢ ܐܡܟ<lb/></lem>
+            </app>
+            <app xml:id="u179_ver_Syriac">
+              <lem wit="#A">ܚ̇ܘܐ ܐܬܒ̣ܖ̈ܝܘ ܚ̈ܛܗܐ.<lb/></lem>
+            </app>
+            <app xml:id="u180_ver_Syriac">
+              <lem wit="#A">ܘܒܬܪ ܛܘܦܢܐ ܢ̈ܗܘܝܢ<lb/></lem>
+            </app>
+            <app xml:id="u181_ver_Syriac">
+              <lem wit="#A">ܫ̈ܢܝܐ ܠܚܙܘܗ ܕܥܠܡܐ.<lb/></lem>
+            </app>
+            <app xml:id="u182_ver_Syriac">
+              <lem wit="#A">ܫܬܐ ܐ̈ܠܦܝܢ ܕܫ̈ܢܝܐ ܀<lb/></lem>
+            </app>
+            <app xml:id="u183_ver_Syriac">
+              <lem wit="#A">ܘܗܝܕܝܢ ܢܗ̇ܘܐ ܣܘܦܗ ܀<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac.3.6">
+            <app xml:id="u184_ver_Syriac">
+              <lem wit="#A">ܘܐܢܐ ܫܝܬ ܟ̇ܬܒܬ ܕܝܬܝܩܐ<lb/></lem>
+            </app>
+            <app xml:id="u185_ver_Syriac">
+              <lem wit="#A">ܗܕܐ. ܘܡܝ̣ܬ ܐܒܝ<lb/></lem>
+            </app>
+            <app xml:id="u186_ver_Syriac">
+              <lem wit="#A">ܘܩܒܪܘܗܝ ܡܢ ܡ̈ܕܢܚܝ<lb/></lem>
+            </app>
+            <app xml:id="u187_ver_Syriac">
+              <lem wit="#A">ܦܪܕܝܣܐ ܠܘܩܒܠ ܩܪܝܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u188_ver_Syriac">
+              <lem wit="#A">ܩܕܡܝܬܐ ܕܐܬܒܢ̣ܝܬ<lb/></lem>
+            </app>
+            <app xml:id="u189_ver_Syriac">
+              <lem wit="#A">ܥܠ ܐܪܥܐ ܕܫܡܗ<lb/></lem>
+            </app>
+            <app xml:id="u190_ver_Syriac">
+              <lem wit="#A">ܚܢܘܟ. ܘܐܬܠܘܝ ܐܕܡ<lb/></lem>
+            </app>
+            <app xml:id="u191_ver_Syriac">
+              <lem wit="#A">ܡܢ ܡܠܐ̈ܟܐ ܘܚ̈ܝܠܘܬܐ<lb/></lem>
+            </app>
+            <app xml:id="u192_ver_Syriac">
+              <lem wit="#A">ܕܫܡܝܐ ܡܛܠ ܕܒܨܠܡܗ<lb/></lem>
+            </app>
+            <app xml:id="u193_ver_Syriac">
+              <lem wit="#A">ܕܐܠܗܐ ܐܬܒ̣ܪܝ. ܘܚ̣ܫܟ<lb/></lem>
+            </app>
+            <app xml:id="u194_ver_Syriac">
+              <lem wit="#A">ܫܡܫܐ ܘܣܗܪܐ. ܘܗ̣ܘܐ<lb/></lem>
+            </app>
+            <app xml:id="u195_ver_Syriac">
+              <lem wit="#A">ܥ݁ܡܛܢܐ ܫܒܥܐ ܝܘ̈ܡܬܐ.<lb/></lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac.3.7">
+            <app xml:id="u196_ver_Syriac">
+              <lem wit="#A">ܘܚܬܡܢܗ̇ ܠܕܝܬܝܩܐ.<lb/></lem>
+            </app>
+            <app xml:id="u197_ver_Syriac">
+              <lem wit="#A">ܘܣܡܢܗ̇ ܒܡܥܪܬ ܓܙ̈ܐ<lb/></lem>
+            </app>
+            <app xml:id="u198_ver_Syriac">
+              <lem wit="#A">ܥܡ ܩܘܖ̈ܒܢܐ ܕܐܦܩ̣<lb/></lem>
+            </app>
+            <app xml:id="u199_ver_Syriac">
+              <lem wit="#A">ܐܕܡ ܡܢ ܦܪܕܝܣܐ ܕܗܒܐ<lb/></lem>
+            </app>
+            <app xml:id="u200_ver_Syriac">
+              <lem wit="#A">ܘܡܘܪܐ ܘܠܒܘܢܬܐ ܀<lb/></lem>
+            </app>
+            <app xml:id="u201_ver_Syriac">
+              <lem wit="#A">ܘܐ̈ܬܝܢ ܒ̈ܢܝ ܡ̈ܠܟܐ<lb/></lem>
+            </app>
+            <app xml:id="u202_ver_Syriac">
+              <lem wit="#A">ܡ̈ܓܘܫܐ ܘܫ̇ܩܠܝܢ ܠܗܘܢ̇</lem>
+            </app>
+            <app xml:id="u203_ver_Syriac">
+              <lem wit="#A">ܘܡ̈ܝܬܝܢ ܠܗܘܢ ܠܒܪ ܐܠܗܐ<lb/></lem>
+            </app>
+            <app xml:id="u204_ver_Syriac">
+              <lem wit="#A">ܠܒܝܬ ܠܚܡ ܕܝܗܘܕܐ<lb/></lem>
+            </app>
+            <app xml:id="u205_ver_Syriac">
+              <lem wit="#A">ܠܡܥܪܬܐ: ܫܠܡ‍[ܬ] ܕܝܬܝܩܐ<lb/></lem>
+            </app>
+            <app xml:id="u206_ver_Syriac">
+              <lem wit="#A">ܕܐܒܘܢ ܐܕܡ܀<lb/></lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="1" xml:id="TAdam.ver_Greek.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Greek.1.1">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα α´ καλεῖται איאהכ ἐν ᾗ ἀγαθόν ἐστιν προσεύχεσθαι.</lem>
+              <rdg wit="#Cedrenus" n="1">ὥρᾳ πρώτῃ ἡμερινῇ πρώτη εὐχὴ ἐπιτελεῖται ἐν τῷ οὐρανῷ.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Greek.1.2">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα β´ καλεῖται נַכוּת ἐν ᾗ εὐχαὶ τῶν ἀγγέλων καὶ ὕμνοι.</lem>
+              <rdg wit="#Cedrenus" n="1">δευτέρᾳ εὐχὴ ἀγγέλων.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Greek.1.3">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα γ´ καλεῖται ףַרַש ἐν ᾗ εὐχαριστοῦσι τὰ πετεινὰ τῷ θεῷ· ἐν αὐτῇ τῇ ὥρᾳ ἀποτελεῖται πᾶν στοιχεῖον.</lem>
+              <rdg wit="#Cedrenus" n="1">τρίτῃ εὐχὴ πτηνῶν.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Greek.1.4">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα δ´ καλεῖται . . . ἐν ᾗ εὐχαριστοῦσιν πάντα τὰ ποιήματα τοῦ θεοῦ, ἐν ᾗ στοιχειοῦνται . . . καὶ πάντα τὰ ἰοβόλα.</lem>
+              <rdg wit="#Cedrenus" n="1">τετάρτῃ εὐχὴ κτηνῶν.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Greek.1.5">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ε´ καλεῖται . . . ἐν ᾗ αἰνεῖ πᾶν ζῶον τὸν θεόν· ἐν ᾗ ἀποτελεῖται πᾶν . . . .</lem>
+              <rdg wit="#Cedrenus" n="1">πεμπτῇ εὐχὴ θηρίων.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Greek.1.6">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ϛ´ καλεῖται . . . {ἐν}ᾗ δυσωποῦσιν τὰ χερουβὶμ τὸν θεόν ὑπὲρ ἀνθρώπων.</lem>
+              <rdg wit="#Cedrenus" n="1">ἕκτῃ ἀγγέλων παράστασις καὶ διάκρισις πάσης κτίσεως.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Greek.1.7">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ζ´ καλεῖται . . . ἐν ᾗ αἰνοῦσιν ἀγγέλων τάγματα καὶ παριστάμενα τῷ θεῷ.</lem>
+              <rdg wit="#Cedrenus" n="1">ἑβδόμῃ ἀγγέλων εἴσοδος πρὸς θεὸν καὶ ἔξοδος ἀγγέλων.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Greek.1.8">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα η´ καλεῖται ן׳כַנ.</lem>
+              <rdg wit="#Cedrenus" n="1">ὀγδόῃ αἴνεσις καὶ θυσίαι ἀγγέλων.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Greek.1.9">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα θ´ καλεῖται . . . {ἐν} ᾗ εὐχὴ ἀνθρώπων· ἤ χα παυρουν ἐν ᾗ οὐδὲν τελεῖται.</lem>
+              <rdg wit="#Cedrenus" n="1">ἐννάτῃ δέησις καῖ λατρεία ἀνθρώπου.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Greek.1.10">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ι´ . . . ἐν ᾗ αἰνοῦσιν τὰ ὕδατα, καὶ πνεῦμα θεοῦ καταβαῖνον ἐπιπολάζει αὐτοῖς καὶ ἁγιάζει αὐτά· εἰ γὰρ μὴ οὕτως ἦν, ἔβλαπτον ἂν οἱ πονηροὶ δαίμονες ἀνθρώπους· ἐν ᾗ ἐ{ὰν} ἄνθρωπος ἄρῃ נֵרונ ( νέρον ) καὶ μίξῃ μετὰ ἁγίου ἐλαίου, πᾶν נושׂמַ ( νόσημα ) ἰᾶται· καὶ δαιμονῶντας καθαίρει καὶ δαίμονας ἀπελαύνει.</lem>
+              <rdg wit="#Cedrenus" n="1">δεκάτῃ ἐπισκοπαὶ ὑδάτων καὶ δεήσεις οὐρανίων καὶ ἐπιγείων.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Greek.1.11">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ια´ . . . ἐν ᾗ εὐφραίνονται οἱ ἐκλεκτοὶ τοῦ θεοῦ.</lem>
+              <rdg wit="#Cedrenus" n="1">ἑνδεκάτῃ ἀνθομολόγησις καὶ ἀγαλλίασις πάντων.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Greek.1.12">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ιβ´ . . . ἐν ᾗ εὐπρόσδεκτοι αἱ τῶν ἀνθρώπων εὐχαί.</lem>
+              <rdg wit="#Cedrenus" n="1">δωδεκάτῃ ἔντευξις ἀνθρώπων εἰς εὐδοκίας.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAdam.ver_Greek.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Greek.2.1">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα α´ . . . ἐν ᾗ οἱ δαίμονες αἰνοῦντες τὸν θεὸν οὔτε ἀδικοῦσιν οὔτε κολάζουσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Greek.2.2">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα β´ . . . ἐν ᾗ ὑμνοῦσιν οἱ ἰχθύες τὸν θεόν, καὶ τὸ τοῦ πυρὸς βάθος· ἐν ᾗ ὀφείλει στοιχειοῦσθαι ἀποτελέσματα εἰς δράκοντας καὶ . . . καὶ πῦρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Greek.2.3">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα γ´ . . . ἐν ᾗ αἰνοῦσιν ὄφεις καὶ κύνεις καὶ πῦρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Greek.2.4">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα δ´ . . . ἐν ᾗ διέρχονται δαίμονες ἐν τοῖς μνήμασιν, καὶ ἐρχόμενος ἐκεῖσε βλαβήσεται καὶ φόβον καὶ φρίκην ἐκ τῆς τῶν δαιμόνων λήψεται φαντασίας· ἐν ᾗ ὀφείλει στοιχειοῦσθαι ἀποτελέσματα . . . καὶ παντὸς γοητικοῦ πράγματος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Greek.2.5">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ε´ . . . ἐν ᾗ αἰνοῦσιν τὰ ὕδατα τὸν θεὸν τοῦ οὐρανοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Greek.2.6">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ϛ´ . . . ὅτε δέον ἡσυχάζειν καὶ ἀναπαῦσαι, διότι ἔχει φόβον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Greek.2.7">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ζ´ . . . ἐν ᾗ ἀναπαύει πάντα {τὰ} ζῶα ταῦτα. ἐάν τις ἄνθρωπος καθαρὸς ἁρπάσῃ נַרונ ( νέρον ) καὶ βάλλει αὐτὸ ὁ ἱερεὺς καὶ μίξῃ μετ᾽ ἐλαίου καὶ ἁγιάσῃ αὐτὸ καὶ ἀλείψῃ ἀπ᾽ αὐτὸ ἀσθενῆ ἀγρυπνοῦντα παρευθὺ τῆς νόσου ἀπαλλαγήσεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Greek.2.8">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα η´ . . . ἐν ᾗ δὲ ἀποτελοῦμεν στοιχεῖον περὶ . . . καὶ παντοίων φυτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Greek.2.9">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα θ´ . . . ἐν ᾗ τελεῖται οὐδέν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Greek.2.10">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#PCod.Gr.2419">----</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Greek.2.11">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ια´ . . . ἐν ᾗ ἀνοίγονται αἱ πύλαι τοῦ οὐρανοῦ καὶ ἄνθρωπος ἐν κατανύξει γενόμενος εὐήκοος γενήσεται· ἐν ταύτῃ πέτονται ταῖς πτέρυξιν σὺν ἤχῳ οἱ ἄγγελοι καὶ χερουμβὶμ καὶ σεραφίμ· καί ἐστιν χαρὰ ἐν οὐρανῷ καὶ γῇ· ἀνατέλλει δὲ καὶ ὁ ἥλιος ἐξ Ἐδέμ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Greek.2.12">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#PCod.Gr.2419">ὥρα ιβ´ . . . ἐν ᾗ ἀναπαύονται τὰ πύρινα τάγματα. αὗταί εἰσιν αἱ ὀνομασίαι τῶν ὡρῶν· τῷ οὖν καλῶς ταῦτα νοήσαντι οὐδὲν . . . τοιούτων ἀποκρυβήσεται ἀλλὰ πάντα ὑποταγήσονται.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Syriac (English)" xml:lang="en" xml:id="ver_Syriac__English_">
+        <head>Syriac (English)</head>
+        <div type="chapter" n="1" xml:id="TAdam.ver_Syriac__English_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac__English_.1.1">
+            <app xml:id="uen_1_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Again, the Testament of our father</lem>
+            </app>
+            <app xml:id="uen_2_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Adam: The first hour</lem>
+            </app>
+            <app xml:id="uen_3_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the night: The confession of the demons,</lem>
+            </app>
+            <app xml:id="uen_4_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and at that hour they do not</lem>
+            </app>
+            <app xml:id="uen_5_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">err or harm anyone</lem>
+            </app>
+            <app xml:id="uen_6_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">among people.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac__English_.1.2">
+            <app xml:id="uen_7_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The second hour:</lem>
+            </app>
+            <app xml:id="uen_8_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The confession of the doves…</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac__English_.1.3">
+            <app xml:id="uen_9_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The third hour: The confession</lem>
+            </app>
+            <app xml:id="uen_10_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of fish and of fire and of all</lem>
+            </app>
+            <app xml:id="uen_11_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the lower abysses.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac__English_.1.4">
+            <app xml:id="uen_12_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The</lem>
+            </app>
+            <app xml:id="uen_13_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">fourth hour: The sanctification of the seraphim.</lem>
+            </app>
+            <app xml:id="uen_14_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Thus I used to hear</lem>
+            </app>
+            <app xml:id="uen_15_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">before I sinned, the sound</lem>
+            </app>
+            <app xml:id="uen_16_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of their wings in Paradise. But when</lem>
+            </app>
+            <app xml:id="uen_17_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the seraphim beat with the sound</lem>
+            </app>
+            <app xml:id="uen_18_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of their sanctifications, and when</lem>
+            </app>
+            <app xml:id="uen_19_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">I transgressed the law,</lem>
+            </app>
+            <app xml:id="uen_20_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">I did not hear the sound.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac__English_.1.5">
+            <app xml:id="uen_21_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The fifth hour: The confession</lem>
+            </app>
+            <app xml:id="uen_22_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the waters that are above the heavens.</lem>
+            </app>
+            <app xml:id="uen_23_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Thus I and the angels used to hear</lem>
+            </app>
+            <app xml:id="uen_24_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the sound of mighty hailstones</lem>
+            </app>
+            <app xml:id="uen_25_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">that were alarmed</lem>
+            </app>
+            <app xml:id="uen_26_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">by a sign to give</lem>
+            </app>
+            <app xml:id="uen_27_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">glory to the Creator.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac__English_.1.6">
+            <app xml:id="uen_28_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The</lem>
+            </app>
+            <app xml:id="uen_29_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">sixth hour: The assembly of clouds,</lem>
+            </app>
+            <app xml:id="uen_30_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and the great fear that occurs</lem>
+            </app>
+            <app xml:id="uen_31_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">in the middle of the night.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac__English_.1.7">
+            <app xml:id="uen_32_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The</lem>
+            </app>
+            <app xml:id="uen_33_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">seventh hour: The vision of the powers,</lem>
+            </app>
+            <app xml:id="uen_34_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">when the waters are asleep. (And?) at that hour</lem>
+            </app>
+            <app xml:id="uen_35_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">[...]</lem>
+            </app>
+            <app xml:id="uen_36_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">waters are drawn, and the priest of God mixes</lem>
+            </app>
+            <app xml:id="uen_37_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">in them the priest of God</lem>
+            </app>
+            <app xml:id="uen_38_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the oil of holiness, and anoints</lem>
+            </app>
+            <app xml:id="uen_39_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">those who are distressed and at rest.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Syriac__English_.1.8">
+            <app xml:id="uen_40_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The eighth hour: the emergence of</lem>
+            </app>
+            <app xml:id="uen_41_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the herb of the earth, when</lem>
+            </app>
+            <app xml:id="uen_42_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the dew descends from heaven.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Syriac__English_.1.9">
+            <app xml:id="uen_43_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The ninth hour: the lamentation</lem>
+            </app>
+            <app xml:id="uen_44_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the cherubim.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Syriac__English_.1.10">
+            <app xml:id="uen_45_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The tenth hour:</lem>
+            </app>
+            <app xml:id="uen_46_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the confession of human beings.</lem>
+            </app>
+            <app xml:id="uen_47_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And the gate of heaven opens,</lem>
+            </app>
+            <app xml:id="uen_48_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">so that the prayers of everyone who is alive may enter</lem>
+            </app>
+            <app xml:id="uen_49_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and worship and go forth. And in that</lem>
+            </app>
+            <app xml:id="uen_50_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">hour, whatever anyone asks</lem>
+            </app>
+            <app xml:id="uen_51_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">from God is given</lem>
+            </app>
+            <app xml:id="uen_52_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">to him, when the wing of the seraphim</lem>
+            </app>
+            <app xml:id="uen_53_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and of the roosters flaps.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Syriac__English_.1.11">
+            <app xml:id="uen_54_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The eleventh hour: joy</lem>
+            </app>
+            <app xml:id="uen_55_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">in all the earth, when the sun rises</lem>
+            </app>
+            <app xml:id="uen_56_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">from Paradise</lem>
+            </app>
+            <app xml:id="uen_57_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and shines upon the creatures.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Syriac__English_.1.12">
+            <app xml:id="uen_58_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The twelfth hour: the offering</lem>
+            </app>
+            <app xml:id="uen_59_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of [incen]se, and the drink-offering that ascends</lem>
+            </app>
+            <app xml:id="uen_60_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">[upon] all the ranks of fire</lem>
+            </app>
+            <app xml:id="uen_61_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">[and of spir]it, when all</lem>
+            </app>
+            <app xml:id="uen_62_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the priests place incense</lem>
+            </app>
+            <app xml:id="uen_63_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">before his divinity. And then</lem>
+            </app>
+            <app xml:id="uen_64_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">all the heavenly hosts</lem>
+            </app>
+            <app xml:id="uen_65_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">are released. The hours of the night are completed.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAdam.ver_Syriac__English_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac__English_.2.1">
+            <app xml:id="uen_66_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Again, the hours of the day.</lem>
+            </app>
+            <app xml:id="uen_67_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The first hour of the day:</lem>
+            </app>
+            <app xml:id="uen_68_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the petition of the heavenly beings.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac__English_.2.2">
+            <app xml:id="uen_69_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The hour</lem>
+            </app>
+            <app xml:id="uen_70_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the second: the prayer of the angels.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac__English_.2.3">
+            <app xml:id="uen_71_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The third hour, the glorification</lem>
+            </app>
+            <app xml:id="uen_72_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the birds.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac__English_.2.4">
+            <app xml:id="uen_73_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The fourth hour,</lem>
+            </app>
+            <app xml:id="uen_74_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the glorification of the wild beasts.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac__English_.2.5">
+            <app xml:id="uen_75_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The hour</lem>
+            </app>
+            <app xml:id="uen_76_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the fifth glorification from</lem>
+            </app>
+            <app xml:id="uen_77_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">heaven.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac__English_.2.6">
+            <app xml:id="uen_78_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The sixth hour,</lem>
+            </app>
+            <app xml:id="uen_79_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the glorification of the Cherubim,</lem>
+            </app>
+            <app xml:id="uen_80_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">who intercede for the iniquity</lem>
+            </app>
+            <app xml:id="uen_81_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of our humanity.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac__English_.2.7">
+            <app xml:id="uen_82_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The seventh hour,</lem>
+            </app>
+            <app xml:id="uen_83_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the ascent and descent to</lem>
+            </app>
+            <app xml:id="uen_84_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">God, when the prayers of</lem>
+            </app>
+            <app xml:id="uen_85_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">all who are living enter and prostrate themselves and go out.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Syriac__English_.2.8">
+            <app xml:id="uen_86_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The eighth hour, the glorification</lem>
+            </app>
+            <app xml:id="uen_87_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of fire and water.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Syriac__English_.2.9">
+            <app xml:id="uen_88_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The hour</lem>
+            </app>
+            <app xml:id="uen_89_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the ninth, the supplication of the angels,</lem>
+            </app>
+            <app xml:id="uen_90_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">those who stand before</lem>
+            </app>
+            <app xml:id="uen_91_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the throne of majesty.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Syriac__English_.2.10">
+            <app xml:id="uen_92_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The hour</lem>
+            </app>
+            <app xml:id="uen_93_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the tenth, the working of the waters,</lem>
+            </app>
+            <app xml:id="uen_94_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">when the Spirit descends and hovers</lem>
+            </app>
+            <app xml:id="uen_95_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">over the waters and over the springs.</lem>
+            </app>
+            <app xml:id="uen_96_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And if the Spirit of the Lord</lem>
+            </app>
+            <app xml:id="uen_97_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">had not descended and hovered</lem>
+            </app>
+            <app xml:id="uen_98_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">over the waters and over the springs,</lem>
+            </app>
+            <app xml:id="uen_99_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">human beings would decay,</lem>
+            </app>
+            <app xml:id="uen_100_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and all who saw would become demons,</lem>
+            </app>
+            <app xml:id="uen_101_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">they would decay for them. And in that</lem>
+            </app>
+            <app xml:id="uen_102_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">hour the waters are seized,</lem>
+            </app>
+            <app xml:id="uen_103_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and the priest of God mixes into them</lem>
+            </app>
+            <app xml:id="uen_104_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the oil of holiness,</lem>
+            </app>
+            <app xml:id="uen_105_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and anoints those who are afflicted.</lem>
+            </app>
+            <app xml:id="uen_106_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">they are healed and recover.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Syriac__English_.2.11">
+            <app xml:id="uen_107_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The eleventh hour is that of striving</lem>
+            </app>
+            <app xml:id="uen_108_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and the joy of the righteous.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Syriac__English_.2.12">
+            <app xml:id="uen_109_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">The hour,</lem>
+            </app>
+            <app xml:id="uen_110_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the twelfth, is that of evening,</lem>
+            </app>
+            <app xml:id="uen_111_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the petition of humans according to the will</lem>
+            </app>
+            <app xml:id="uen_112_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">accepted by God,</lem>
+            </app>
+            <app xml:id="uen_113_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the Lord of all.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="TAdam.ver_Syriac__English_.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac__English_.3.1">
+            <app xml:id="uen_114_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Adam said</lem>
+            </app>
+            <app xml:id="uen_115_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">to Seth his son: Hear, my son,</lem>
+            </app>
+            <app xml:id="uen_116_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">that God will come into the world after</lem>
+            </app>
+            <app xml:id="uen_117_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">times. And he will be conceived by a virgin,</lem>
+            </app>
+            <app xml:id="uen_118_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and he will take on a body</lem>
+            </app>
+            <app xml:id="uen_119_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and be born as a human, and grow up</lem>
+            </app>
+            <app xml:id="uen_120_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">like a child. And he will perform</lem>
+            </app>
+            <app xml:id="uen_121_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">signs and wonders on</lem>
+            </app>
+            <app xml:id="uen_122_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the earth. He will walk on the waves</lem>
+            </app>
+            <app xml:id="uen_123_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of the sea. He will rebuke the winds</lem>
+            </app>
+            <app xml:id="uen_124_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and they will be still. He will signal to the waves</lem>
+            </app>
+            <app xml:id="uen_125_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and they will stand still. He will open the eyes of the blind,</lem>
+            </app>
+            <app xml:id="uen_126_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">cleanse lepers, make the deaf hear,</lem>
+            </app>
+            <app xml:id="uen_127_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the dumb speak,</lem>
+            </app>
+            <app xml:id="uen_128_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">straighten the bent, strengthen the paralyzed,</lem>
+            </app>
+            <app xml:id="uen_129_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">find the lost, cast out demons,</lem>
+            </app>
+            <app xml:id="uen_130_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">expel evil spirits.</lem>
+            </app>
+            <app xml:id="uen_131_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">expel evil spirits.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac__English_.3.2">
+            <app xml:id="uen_132_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Because he spoke</lem>
+            </app>
+            <app xml:id="uen_133_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">to me in Paradise when</lem>
+            </app>
+            <app xml:id="uen_134_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">I plucked from the fruit of the tree,</lem>
+            </app>
+            <app xml:id="uen_135_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and death occurred in it, “Adam,</lem>
+            </app>
+            <app xml:id="uen_136_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Adam, do not be afraid. I wanted</lem>
+            </app>
+            <app xml:id="uen_137_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">you to be God. I will make you God.</lem>
+            </app>
+            <app xml:id="uen_138_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">For not now,</lem>
+            </app>
+            <app xml:id="uen_139_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">but after many years,</lem>
+            </app>
+            <app xml:id="uen_140_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">I will deliver him to death.”</lem>
+            </app>
+            <app xml:id="uen_141_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">to you, and the worm eats</lem>
+            </app>
+            <app xml:id="uen_142_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and consumes your body.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac__English_.3.3">
+            <app xml:id="uen_143_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And I answered</lem>
+            </app>
+            <app xml:id="uen_144_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and said to him, “Why,</lem>
+            </app>
+            <app xml:id="uen_145_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">my Lord?” And he said to me, “Because</lem>
+            </app>
+            <app xml:id="uen_146_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">you listened to the words of the serpent.</lem>
+            </app>
+            <app xml:id="uen_147_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Your food will be for the serpent</lem>
+            </app>
+            <app xml:id="uen_148_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and your children. And after a little while,</lem>
+            </app>
+            <app xml:id="uen_149_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">mercy will come upon you</lem>
+            </app>
+            <app xml:id="uen_150_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">because you were created in my image,</lem>
+            </app>
+            <app xml:id="uen_151_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and I will not allow you</lem>
+            </app>
+            <app xml:id="uen_152_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">to be consumed in Sheol. For your sake,</lem>
+            </app>
+            <app xml:id="uen_153_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">I will be born from the Virgin Mary.</lem>
+            </app>
+            <app xml:id="uen_154_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">For your sake,</lem>
+            </app>
+            <app xml:id="uen_155_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">I will taste death and enter into</lem>
+            </app>
+            <app xml:id="uen_156_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the house of the dead.</lem>
+            </app>
+            <app xml:id="uen_157_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">For your sake, I will make a new heaven</lem>
+            </app>
+            <app xml:id="uen_158_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and your children. I will have authority</lem>
+            </app>
+            <app xml:id="uen_159_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">over them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac__English_.3.4">
+            <app xml:id="uen_160_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And after</lem>
+            </app>
+            <app xml:id="uen_161_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">three days when I am</lem>
+            </app>
+            <app xml:id="uen_162_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">in the tomb,</lem>
+            </app>
+            <app xml:id="uen_163_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">I will comfort the body</lem>
+            </app>
+            <app xml:id="uen_164_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">that I clothed from you, and I will seat</lem>
+            </app>
+            <app xml:id="uen_165_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">you at the right hand</lem>
+            </app>
+            <app xml:id="uen_166_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of my divinity, and I will [make]</lem>
+            </app>
+            <app xml:id="uen_167_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">a god as [you desired],</lem>
+            </app>
+            <app xml:id="uen_168_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and I will take a gift from the [tree]</lem>
+            </app>
+            <app xml:id="uen_169_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and I will restore [it]</lem>
+            </app>
+            <app xml:id="uen_170_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">to you and your children, which</lem>
+            </app>
+            <app xml:id="uen_171_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">is the righteousness of heaven.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac__English_.3.5">
+            <app xml:id="uen_172_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">“Hear, my son Seth,</lem>
+            </app>
+            <app xml:id="uen_173_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">that the flood will come and cleanse</lem>
+            </app>
+            <app xml:id="uen_174_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the whole earth because of</lem>
+            </app>
+            <app xml:id="uen_175_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">the daughters of Cain, your brother.</lem>
+            </app>
+            <app xml:id="uen_176_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">because of the jealousy of your brother Cain,</lem>
+            </app>
+            <app xml:id="uen_177_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">he killed your brother Abel.</lem>
+            </app>
+            <app xml:id="uen_178_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">It was because from your mother</lem>
+            </app>
+            <app xml:id="uen_179_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">Eve sins were created.</lem>
+            </app>
+            <app xml:id="uen_180_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And after the flood there will be</lem>
+            </app>
+            <app xml:id="uen_181_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">years for the appearance of the world:</lem>
+            </app>
+            <app xml:id="uen_182_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">six thousand years.</lem>
+            </app>
+            <app xml:id="uen_183_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And then will be its end.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac__English_.3.6">
+            <app xml:id="uen_184_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And I, Seth, wrote this testament.</lem>
+            </app>
+            <app xml:id="uen_185_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And my father died,</lem>
+            </app>
+            <app xml:id="uen_186_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and they buried him to the east</lem>
+            </app>
+            <app xml:id="uen_187_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of Paradise, opposite the first</lem>
+            </app>
+            <app xml:id="uen_188_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">city that was built</lem>
+            </app>
+            <app xml:id="uen_189_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">on the earth, whose name</lem>
+            </app>
+            <app xml:id="uen_190_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">is Enoch. And Adam was escorted</lem>
+            </app>
+            <app xml:id="uen_191_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">by angels and powers</lem>
+            </app>
+            <app xml:id="uen_192_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of heaven because he was created in the image</lem>
+            </app>
+            <app xml:id="uen_193_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of God. And the sun and moon became dark,</lem>
+            </app>
+            <app xml:id="uen_194_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and there was</lem>
+            </app>
+            <app xml:id="uen_195_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">gloom for seven days.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac__English_.3.7">
+            <app xml:id="uen_196_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And I sealed the testament,</lem>
+            </app>
+            <app xml:id="uen_197_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and I placed it in the Cave of Treasures</lem>
+            </app>
+            <app xml:id="uen_198_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">with the offerings that Adam brought</lem>
+            </app>
+            <app xml:id="uen_199_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">from Paradise: gold,</lem>
+            </app>
+            <app xml:id="uen_200_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">myrrh, and frankincense.</lem>
+            </app>
+            <app xml:id="uen_201_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">And the sons of the Magian kings will come</lem>
+            </app>
+            <app xml:id="uen_202_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and take them,</lem>
+            </app>
+            <app xml:id="uen_203_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">and they will bring them to the Son of God</lem>
+            </app>
+            <app xml:id="uen_204_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">in Bethlehem of Judea,</lem>
+            </app>
+            <app xml:id="uen_205_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">to the cave. The Testament</lem>
+            </app>
+            <app xml:id="uen_206_ver_Syriac__English_">
+              <lem wit="#OCP-Trans">of our father Adam is finished.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Greek (English)" xml:lang="en" xml:id="ver_Greek__English_">
+        <head>Greek (English)</head>
+        <div type="chapter" n="1" xml:id="TAdam.ver_Greek__English_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Greek__English_.1.1">
+            <app xml:id="uen_1_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The first hour is called איאהכ, in which it is good to pray.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Greek__English_.1.2">
+            <app xml:id="uen_2_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The second hour is called נַכוּת, in which are the prayers and hymns of the angels.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Greek__English_.1.3">
+            <app xml:id="uen_3_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The third hour is called ףַרַש, in which the birds give thanks to God; in this very hour every element is brought to completion.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Greek__English_.1.4">
+            <app xml:id="uen_4_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The fourth hour is called . . . , in which all the creatures of God give thanks, in which . . . and all venomous creatures are formed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Greek__English_.1.5">
+            <app xml:id="uen_5_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The fifth hour is called . . . , in which every living creature praises God; in which every . . . is brought to completion.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Greek__English_.1.6">
+            <app xml:id="uen_6_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The sixth hour is called . . . , in which the cherubim intercede with God on behalf of humans.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Greek__English_.1.7">
+            <app xml:id="uen_7_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The seventh hour is called . . . , in which the ranks of angels and those standing before God praise.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Greek__English_.1.8">
+            <app xml:id="uen_8_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The eighth hour is called ן׳כַנ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Greek__English_.1.9">
+            <app xml:id="uen_9_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The ninth hour is called . . . , in which is the prayer of humans; or χα παυρουν, in which nothing is completed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Greek__English_.1.10">
+            <app xml:id="uen_10_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The tenth hour is . . . , in which the waters praise, and the spirit of God, descending, hovers over them and sanctifies them; for if it were not so, the evil demons would harm humans; in this hour, if a person takes נֵרונ (water) and mixes it with holy oil, it heals every נושׂמַ (sickness); and it purifies those possessed by demons and drives out demons.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Greek__English_.1.11">
+            <app xml:id="uen_11_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The eleventh hour is . . . , in which the elect of God rejoice.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Greek__English_.1.12">
+            <app xml:id="uen_12_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The twelfth hour is . . . , in which the prayers of humans are acceptable.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAdam.ver_Greek__English_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Greek__English_.2.1">
+            <app xml:id="uen_13_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The first hour is . . . , in which the demons, praising God, neither harm nor punish.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Greek__English_.2.2">
+            <app xml:id="uen_14_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The second hour is . . . , in which the fish praise God, and the depth of the fire; in which results into dragons and . . . and fire ought to be formed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Greek__English_.2.3">
+            <app xml:id="uen_15_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The third hour is . . . , in which serpents and dogs and fire praise.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Greek__English_.2.4">
+            <app xml:id="uen_16_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The fourth hour is . . . , in which demons pass through the tombs, and one who goes there will be harmed and will receive fear and trembling from the vision of the demons; in which results . . . and of every magical thing ought to be formed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Greek__English_.2.5">
+            <app xml:id="uen_17_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The fifth hour is . . . , in which the waters praise the God of heaven.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Greek__English_.2.6">
+            <app xml:id="uen_18_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The sixth hour is . . . , when it is necessary to be quiet and rest, because it has fear.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Greek__English_.2.7">
+            <app xml:id="uen_19_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The seventh hour is . . . , in which all these animals rest. If a pure person snatches נַרונ (water) and the priest pours it and mixes it with oil and sanctifies it and anoints with it a sick person who is awake, he will immediately be freed from the illness.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Greek__English_.2.8">
+            <app xml:id="uen_20_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The eighth hour is . . . , and in which we form an element concerning . . . and all kinds of plants.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Greek__English_.2.9">
+            <app xml:id="uen_21_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The ninth hour is . . . , in which nothing is completed.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Greek__English_.2.10">
+            <app xml:id="uen_22_ver_Greek__English_">
+              <lem wit="#OCP-Trans">----</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Greek__English_.2.11">
+            <app xml:id="uen_23_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The eleventh hour is . . . , in which the gates of heaven are opened and a person who is in contrition will be heard; in this hour the angels and cherubim and seraphim fly with their wings with a sound; and there is joy in heaven and on earth; and the sun also rises from Eden.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Greek__English_.2.12">
+            <app xml:id="uen_24_ver_Greek__English_">
+              <lem wit="#OCP-Trans">The twelfth hour is . . . , in which the fiery ranks rest. These are the names of the hours; therefore, to him who understands these things well, nothing . . . of such things will be hidden, but all will be subjected.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Syriac (French)" xml:lang="fr" xml:id="ver_Syriac__French_">
+        <head>Syriac (French)</head>
+        <div type="chapter" n="1" xml:id="TAdam.ver_Syriac__French_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac__French_.1.1">
+            <app xml:id="ufr_1_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">De nouveau, le Testament de notre père</lem>
+            </app>
+            <app xml:id="ufr_2_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Adam. La première heure</lem>
+            </app>
+            <app xml:id="ufr_3_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de la nuit : la louange des démons ;</lem>
+            </app>
+            <app xml:id="ufr_4_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et en cette heure-là, ils ne</lem>
+            </app>
+            <app xml:id="ufr_5_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">font point de mal et ne nuisent en rien</lem>
+            </app>
+            <app xml:id="ufr_6_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">aux hommes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac__French_.1.2">
+            <app xml:id="ufr_7_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La deuxième heure :</lem>
+            </app>
+            <app xml:id="ufr_8_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la louange des colombes...</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac__French_.1.3">
+            <app xml:id="ufr_9_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La troisième heure : la louange</lem>
+            </app>
+            <app xml:id="ufr_10_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des poissons, du feu et de tous</lem>
+            </app>
+            <app xml:id="ufr_11_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">les abîmes inférieurs.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac__French_.1.4">
+            <app xml:id="ufr_12_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La</lem>
+            </app>
+            <app xml:id="ufr_13_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">quatrième heure : la sanctification des séraphins.</lem>
+            </app>
+            <app xml:id="ufr_14_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Ainsi j'entendais,</lem>
+            </app>
+            <app xml:id="ufr_15_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">avant de pécher, le bruit</lem>
+            </app>
+            <app xml:id="ufr_16_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de leurs ailes dans le paradis, quand</lem>
+            </app>
+            <app xml:id="ufr_17_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">les séraphins battent des ailes au son</lem>
+            </app>
+            <app xml:id="ufr_18_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de leurs saintes louanges ; mais depuis</lem>
+            </app>
+            <app xml:id="ufr_19_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">que j'ai transgressé la loi,</lem>
+            </app>
+            <app xml:id="ufr_20_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">je n'ai plus entendu cette voix.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac__French_.1.5">
+            <app xml:id="ufr_21_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La cinquième heure : la louange</lem>
+            </app>
+            <app xml:id="ufr_22_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des eaux qui sont au-dessus du ciel.</lem>
+            </app>
+            <app xml:id="ufr_23_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Ainsi j'entendais, moi</lem>
+            </app>
+            <app xml:id="ufr_24_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et les anges, la voix des flots</lem>
+            </app>
+            <app xml:id="ufr_25_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">puissants, que pressait</lem>
+            </app>
+            <app xml:id="ufr_26_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">le signe [divin] de rendre</lem>
+            </app>
+            <app xml:id="ufr_27_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">gloire au Créateur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac__French_.1.6">
+            <app xml:id="ufr_28_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La</lem>
+            </app>
+            <app xml:id="ufr_29_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">sixième heure : l'assemblage des nuées</lem>
+            </app>
+            <app xml:id="ufr_30_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et la grande frayeur qui survient</lem>
+            </app>
+            <app xml:id="ufr_31_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">au milieu de la nuit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac__French_.1.7">
+            <app xml:id="ufr_32_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La</lem>
+            </app>
+            <app xml:id="ufr_33_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">septième heure : la contemplation</lem>
+            </app>
+            <app xml:id="ufr_34_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des puissances, lorsque reposent</lem>
+            </app>
+            <app xml:id="ufr_35_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">les eaux ; et en cette heure-là,</lem>
+            </app>
+            <app xml:id="ufr_36_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">les eaux sont puisées, et le prêtre</lem>
+            </app>
+            <app xml:id="ufr_37_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de Dieu y mêle</lem>
+            </app>
+            <app xml:id="ufr_38_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">l'huile sainte et oint</lem>
+            </app>
+            <app xml:id="ufr_39_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">ceux qui sont affligés, et ils trouvent le soulagement.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Syriac__French_.1.8">
+            <app xml:id="ufr_40_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La huitième heure : la pousse</lem>
+            </app>
+            <app xml:id="ufr_41_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de l'herbe de la terre, quand</lem>
+            </app>
+            <app xml:id="ufr_42_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la rosée descend du ciel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Syriac__French_.1.9">
+            <app xml:id="ufr_43_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La neuvième heure : la louange</lem>
+            </app>
+            <app xml:id="ufr_44_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des chérubins.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Syriac__French_.1.10">
+            <app xml:id="ufr_45_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La dixième heure :</lem>
+            </app>
+            <app xml:id="ufr_46_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la louange des êtres humains,</lem>
+            </app>
+            <app xml:id="ufr_47_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et l'ouverture de la porte du ciel,</lem>
+            </app>
+            <app xml:id="ufr_48_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">pour que pénètrent les prières de tout vivant,</lem>
+            </app>
+            <app xml:id="ufr_49_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">se prosternent et sortent ; et en cette</lem>
+            </app>
+            <app xml:id="ufr_50_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">heure, tout ce que demandera</lem>
+            </app>
+            <app xml:id="ufr_51_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">par Dieu, cela lui est accordé</lem>
+            </app>
+            <app xml:id="ufr_52_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">lorsque battent les ailes</lem>
+            </app>
+            <app xml:id="ufr_53_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des séraphins et des coqs.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Syriac__French_.1.11">
+            <app xml:id="ufr_54_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La onzième heure : la joie</lem>
+            </app>
+            <app xml:id="ufr_55_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">sur toute la terre, lorsque monte</lem>
+            </app>
+            <app xml:id="ufr_56_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">le soleil depuis le Paradis</lem>
+            </app>
+            <app xml:id="ufr_57_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et brille sur les créatures.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Syriac__French_.1.12">
+            <app xml:id="ufr_58_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La douzième heure : l'attente</lem>
+            </app>
+            <app xml:id="ufr_59_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des [encens], et le silence qui s'abat</lem>
+            </app>
+            <app xml:id="ufr_60_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">[sur] tous les ordres de feu</lem>
+            </app>
+            <app xml:id="ufr_61_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">[et d'esprit], tandis que déposent</lem>
+            </app>
+            <app xml:id="ufr_62_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">[tou]s les prêtres l'encens</lem>
+            </app>
+            <app xml:id="ufr_63_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">[devant sa] divinité. Et alors,</lem>
+            </app>
+            <app xml:id="ufr_64_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">toutes les puissances célestes</lem>
+            </app>
+            <app xml:id="ufr_65_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">sont congédiées. Fin des heures de la nuit.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAdam.ver_Syriac__French_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac__French_.2.1">
+            <app xml:id="ufr_66_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Ensuite, les heures du jour :</lem>
+            </app>
+            <app xml:id="ufr_67_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La première heure du jour :</lem>
+            </app>
+            <app xml:id="ufr_68_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la supplication des célestes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac__French_.2.2">
+            <app xml:id="ufr_69_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La</lem>
+            </app>
+            <app xml:id="ufr_70_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">deuxième heure : la prière des anges.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac__French_.2.3">
+            <app xml:id="ufr_71_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La troisième heure : la louange</lem>
+            </app>
+            <app xml:id="ufr_72_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des oiseaux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac__French_.2.4">
+            <app xml:id="ufr_73_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La quatrième heure :</lem>
+            </app>
+            <app xml:id="ufr_74_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la louange des animaux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac__French_.2.5">
+            <app xml:id="ufr_75_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La</lem>
+            </app>
+            <app xml:id="ufr_76_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">cinquième heure : la louange de ce qui est au-dessus</lem>
+            </app>
+            <app xml:id="ufr_77_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des cieux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac__French_.2.6">
+            <app xml:id="ufr_78_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La sixième heure :</lem>
+            </app>
+            <app xml:id="ufr_79_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la louange des chérubins</lem>
+            </app>
+            <app xml:id="ufr_80_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">qui intercèdent pour l'iniquité</lem>
+            </app>
+            <app xml:id="ufr_81_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de notre humanité.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac__French_.2.7">
+            <app xml:id="ufr_82_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La septième heure :</lem>
+            </app>
+            <app xml:id="ufr_83_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">l'entrée et la sortie auprès de</lem>
+            </app>
+            <app xml:id="ufr_84_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Dieu, lorsque les prières entrent</lem>
+            </app>
+            <app xml:id="ufr_85_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de tout vivant, se prosternent et sortent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Syriac__French_.2.8">
+            <app xml:id="ufr_86_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La huitième heure : la louange</lem>
+            </app>
+            <app xml:id="ufr_87_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">du feu et des eaux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Syriac__French_.2.9">
+            <app xml:id="ufr_88_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La</lem>
+            </app>
+            <app xml:id="ufr_89_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">neuvième heure : la supplication des anges</lem>
+            </app>
+            <app xml:id="ufr_90_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">qui se tiennent devant</lem>
+            </app>
+            <app xml:id="ufr_91_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">le trône de la Majesté.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Syriac__French_.2.10">
+            <app xml:id="ufr_92_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La</lem>
+            </app>
+            <app xml:id="ufr_93_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">dixième heure : la visitation des eaux,</lem>
+            </app>
+            <app xml:id="ufr_94_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">lorsque l'Esprit descend et plane</lem>
+            </app>
+            <app xml:id="ufr_95_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">sur les eaux et sur les sources.</lem>
+            </app>
+            <app xml:id="ufr_96_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et si l'Esprit du Seigneur</lem>
+            </app>
+            <app xml:id="ufr_97_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">ne descendait pas et ne planait pas</lem>
+            </app>
+            <app xml:id="ufr_98_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">sur les eaux et sur les sources,</lem>
+            </app>
+            <app xml:id="ufr_99_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">les êtres humains seraient détruits,</lem>
+            </app>
+            <app xml:id="ufr_100_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et chaque fois que les démons verraient</lem>
+            </app>
+            <app xml:id="ufr_101_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">ils seraient anéantis. Et en cette</lem>
+            </app>
+            <app xml:id="ufr_102_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">heure, on puise de l'eau,</lem>
+            </app>
+            <app xml:id="ufr_103_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et le prêtre</lem>
+            </app>
+            <app xml:id="ufr_104_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de Dieu y mêle l'huile sainte,</lem>
+            </app>
+            <app xml:id="ufr_105_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et il en oint ceux qui souffrent,</lem>
+            </app>
+            <app xml:id="ufr_106_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et ils sont guéris et rétablis.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Syriac__French_.2.11">
+            <app xml:id="ufr_107_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La onzième heure : l'allégresse</lem>
+            </app>
+            <app xml:id="ufr_108_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et la joie des justes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Syriac__French_.2.12">
+            <app xml:id="ufr_109_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">La</lem>
+            </app>
+            <app xml:id="ufr_110_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">douzième heure, celle du soir :</lem>
+            </app>
+            <app xml:id="ufr_111_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la supplication des hommes pour un accueil favorable</lem>
+            </app>
+            <app xml:id="ufr_112_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">auprès de Dieu,</lem>
+            </app>
+            <app xml:id="ufr_113_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">le Seigneur de tout.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="TAdam.ver_Syriac__French_.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Syriac__French_.3.1">
+            <app xml:id="ufr_114_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Adam dit</lem>
+            </app>
+            <app xml:id="ufr_115_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">à Seth son fils : « J'ai entendu, mon fils,</lem>
+            </app>
+            <app xml:id="ufr_116_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">que Dieu viendra dans le monde après</lem>
+            </app>
+            <app xml:id="ufr_117_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des temps ; et d'une vierge</lem>
+            </app>
+            <app xml:id="ufr_118_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">il est conçu, et il revêt un corps,</lem>
+            </app>
+            <app xml:id="ufr_119_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et il naît comme un homme, et il grandit</lem>
+            </app>
+            <app xml:id="ufr_120_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">comme un enfant ; et il accomplit</lem>
+            </app>
+            <app xml:id="ufr_121_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des signes et des prodiges sur</lem>
+            </app>
+            <app xml:id="ufr_122_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la terre : il marche sur les flots</lem>
+            </app>
+            <app xml:id="ufr_123_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de la mer ; il menace les vents</lem>
+            </app>
+            <app xml:id="ufr_124_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et ils s'apaisent ; il fait signe aux vagues</lem>
+            </app>
+            <app xml:id="ufr_125_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et elles se calment ; il ouvre les yeux des aveugles ;</lem>
+            </app>
+            <app xml:id="ufr_126_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">il purifie les lépreux ; il fait entendre</lem>
+            </app>
+            <app xml:id="ufr_127_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">les sourds ; les muets parlent ;</lem>
+            </app>
+            <app xml:id="ufr_128_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">il redresse les courbés ; les paralytiques,</lem>
+            </app>
+            <app xml:id="ufr_129_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">il les affermit ; il retrouve ceux qui sont perdus ;</lem>
+            </app>
+            <app xml:id="ufr_130_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">il chasse les démons ; il expulse</lem>
+            </app>
+            <app xml:id="ufr_131_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">les esprits impurs.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Syriac__French_.3.2">
+            <app xml:id="ufr_132_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Car lui-même me disait</lem>
+            </app>
+            <app xml:id="ufr_133_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">dans le Paradis, lorsque</lem>
+            </app>
+            <app xml:id="ufr_134_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">j'ai cueilli du fruit dans lequel était cachée</lem>
+            </app>
+            <app xml:id="ufr_135_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la mort : “Adam,</lem>
+            </app>
+            <app xml:id="ufr_136_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Adam, ne crains pas. Tu as voulu</lem>
+            </app>
+            <app xml:id="ufr_137_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">devenir Dieu ; Dieu,</lem>
+            </app>
+            <app xml:id="ufr_138_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">je te ferai. Non pas maintenant,</lem>
+            </app>
+            <app xml:id="ufr_139_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">mais après un long délai</lem>
+            </app>
+            <app xml:id="ufr_140_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">d'années. Je te livre à la mort,</lem>
+            </app>
+            <app xml:id="ufr_141_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et la teigne</lem>
+            </app>
+            <app xml:id="ufr_142_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et les vers dévoreront ton corps.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Syriac__French_.3.3">
+            <app xml:id="ufr_143_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et je répondis</lem>
+            </app>
+            <app xml:id="ufr_144_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et lui dis : « Pourquoi,</lem>
+            </app>
+            <app xml:id="ufr_145_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Seigneur ? » Et il me dit : « Parce</lem>
+            </app>
+            <app xml:id="ufr_146_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">que tu as écouté les paroles du serpent,</lem>
+            </app>
+            <app xml:id="ufr_147_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">tu seras la nourriture du serpent,</lem>
+            </app>
+            <app xml:id="ufr_148_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">ainsi que tes enfants. Mais après un</lem>
+            </app>
+            <app xml:id="ufr_149_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">court laps de temps, j'aurai pitié de toi,</lem>
+            </app>
+            <app xml:id="ufr_150_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">parce que tu as été créé à mon image. »</lem>
+            </app>
+            <app xml:id="ufr_151_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et je ne te laisserai pas</lem>
+            </app>
+            <app xml:id="ufr_152_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">te consumer dans le Shéol. À cause de toi,</lem>
+            </app>
+            <app xml:id="ufr_153_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de la vierge Marie</lem>
+            </app>
+            <app xml:id="ufr_154_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">je naîtrai. À cause de toi,</lem>
+            </app>
+            <app xml:id="ufr_155_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">je goûterai la mort et dans le séjour</lem>
+            </app>
+            <app xml:id="ufr_156_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des morts j'entrerai.</lem>
+            </app>
+            <app xml:id="ufr_157_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">À cause de toi, un ciel nouveau</lem>
+            </app>
+            <app xml:id="ufr_158_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">je ferai, et tes enfants, je les y</lem>
+            </app>
+            <app xml:id="ufr_159_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">établirai comme maîtres.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Syriac__French_.3.4">
+            <app xml:id="ufr_160_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et après</lem>
+            </app>
+            <app xml:id="ufr_161_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">trois jours que j'aurai passés</lem>
+            </app>
+            <app xml:id="ufr_162_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">au sein du tombeau,</lem>
+            </app>
+            <app xml:id="ufr_163_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">je ressusciterai le corps</lem>
+            </app>
+            <app xml:id="ufr_164_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">que j'ai revêtu de toi, et je t'assiérai</lem>
+            </app>
+            <app xml:id="ufr_165_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">à la droite</lem>
+            </app>
+            <app xml:id="ufr_166_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de ma divinité. Et je te ferai</lem>
+            </app>
+            <app xml:id="ufr_167_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">dieu, comme tu l'avais désiré,</lem>
+            </app>
+            <app xml:id="ufr_168_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et je prendrai de l'arbre</lem>
+            </app>
+            <app xml:id="ufr_169_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">le don et je le rendrai</lem>
+            </app>
+            <app xml:id="ufr_170_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">à toi et à tes enfants, c'est-à-dire</lem>
+            </app>
+            <app xml:id="ufr_171_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la justice du ciel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Syriac__French_.3.5">
+            <app xml:id="ufr_172_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Tu as entendu, mon fils Seth,</lem>
+            </app>
+            <app xml:id="ufr_173_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">que le déluge viendra et lavera</lem>
+            </app>
+            <app xml:id="ufr_174_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">toute la terre à cause</lem>
+            </app>
+            <app xml:id="ufr_175_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des filles de Caïn, ton frère,</lem>
+            </app>
+            <app xml:id="ufr_176_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">qui, par jalousie pour Lebuda, ta sœur,</lem>
+            </app>
+            <app xml:id="ufr_177_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">a tué Abel, ton frère.</lem>
+            </app>
+            <app xml:id="ufr_178_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Car c'est par ta mère</lem>
+            </app>
+            <app xml:id="ufr_179_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Ève que les péchés furent créés.</lem>
+            </app>
+            <app xml:id="ufr_180_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et après le déluge, il y aura</lem>
+            </app>
+            <app xml:id="ufr_181_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des années pour la durée de ce monde :</lem>
+            </app>
+            <app xml:id="ufr_182_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">six mille ans.</lem>
+            </app>
+            <app xml:id="ufr_183_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et alors viendra sa fin.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Syriac__French_.3.6">
+            <app xml:id="ufr_184_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et moi, Seth, j'ai écrit ce testament.</lem>
+            </app>
+            <app xml:id="ufr_185_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et mon père mourut,</lem>
+            </app>
+            <app xml:id="ufr_186_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et on l'ensevelit à l'orient</lem>
+            </app>
+            <app xml:id="ufr_187_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">du Paradis, en face de la première</lem>
+            </app>
+            <app xml:id="ufr_188_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">ville qui fut bâtie</lem>
+            </app>
+            <app xml:id="ufr_189_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">sur la terre, dont le nom est</lem>
+            </app>
+            <app xml:id="ufr_190_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Hénoch. Et Adam fut escorté</lem>
+            </app>
+            <app xml:id="ufr_191_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">par les anges et les puissances</lem>
+            </app>
+            <app xml:id="ufr_192_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">du ciel, parce qu'à l'image</lem>
+            </app>
+            <app xml:id="ufr_193_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de Dieu il avait été créé. Et s'obscurcirent</lem>
+            </app>
+            <app xml:id="ufr_194_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">le soleil et la lune, et il y eut</lem>
+            </app>
+            <app xml:id="ufr_195_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des ténèbres pendant sept jours.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Syriac__French_.3.7">
+            <app xml:id="ufr_196_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et nous scellâmes le testament,</lem>
+            </app>
+            <app xml:id="ufr_197_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et nous le déposâmes dans la Caverne des Trésors</lem>
+            </app>
+            <app xml:id="ufr_198_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">avec les offrandes qu'Adam</lem>
+            </app>
+            <app xml:id="ufr_199_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">avait emportées du Paradis : l'or,</lem>
+            </app>
+            <app xml:id="ufr_200_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">la myrrhe et l'encens.</lem>
+            </app>
+            <app xml:id="ufr_201_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">Et viendront des fils de rois,</lem>
+            </app>
+            <app xml:id="ufr_202_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">des mages, et ils les prendront</lem>
+            </app>
+            <app xml:id="ufr_203_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">et les apporteront au Fils de Dieu,</lem>
+            </app>
+            <app xml:id="ufr_204_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">à Bethléem de Juda,</lem>
+            </app>
+            <app xml:id="ufr_205_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">dans la grotte. Est achevé le testament</lem>
+            </app>
+            <app xml:id="ufr_206_ver_Syriac__French_">
+              <lem wit="#OCP-Trans">de notre père Adam.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Greek (French)" xml:lang="fr" xml:id="ver_Greek__French_">
+        <head>Greek (French)</head>
+        <div type="chapter" n="1" xml:id="TAdam.ver_Greek__French_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Greek__French_.1.1">
+            <app xml:id="ufr_1_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La première heure est appelée איאהכ, pendant laquelle il est bon de prier.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Greek__French_.1.2">
+            <app xml:id="ufr_2_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La deuxième heure est appelée נַכוּת, pendant laquelle ont lieu les prières et les hymnes des anges.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Greek__French_.1.3">
+            <app xml:id="ufr_3_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La troisième heure est appelée ףַרַש, pendant laquelle les oiseaux rendent grâce à Dieu ; à cette heure même s'accomplit tout élément.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Greek__French_.1.4">
+            <app xml:id="ufr_4_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La quatrième heure est appelée pendant laquelle toutes les créatures de Dieu rendent grâce, pendant laquelle sont conjurés et tous les animaux venimeux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Greek__French_.1.5">
+            <app xml:id="ufr_5_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La cinquième heure est appelée pendant laquelle tout être vivant loue Dieu ; pendant laquelle s'accomplit tout</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Greek__French_.1.6">
+            <app xml:id="ufr_6_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La sixième heure est appelée pendant laquelle les chérubins implorent Dieu pour les hommes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Greek__French_.1.7">
+            <app xml:id="ufr_7_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La septième heure est appelée pendant laquelle louent les ordres des anges qui se tiennent devant Dieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Greek__French_.1.8">
+            <app xml:id="ufr_8_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La huitième heure est appelée ן׳כַנ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Greek__French_.1.9">
+            <app xml:id="ufr_9_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La neuvième heure est appelée pendant laquelle est la prière des hommes ; ou cha pauroun, pendant laquelle rien ne s'accomplit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Greek__French_.1.10">
+            <app xml:id="ufr_10_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La dixième heure pendant laquelle les eaux louent, et l'Esprit de Dieu descendant plane sur elles et les sanctifie ; car s'il n'en était pas ainsi, les démons mauvais nuiraient aux hommes ; pendant laquelle si un homme prend de l'eau (נֵרונ, néron) et la mélange avec de l'huile sainte, toute maladie (נושׂמַ, nosêma) est guérie ; et cela purifie les possédés et chasse les démons.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Greek__French_.1.11">
+            <app xml:id="ufr_11_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La onzième heure pendant laquelle se réjouissent les élus de Dieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Greek__French_.1.12">
+            <app xml:id="ufr_12_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La douzième heure pendant laquelle les prières des hommes sont agréables.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAdam.ver_Greek__French_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAdam.ver_Greek__French_.2.1">
+            <app xml:id="ufr_13_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La première heure pendant laquelle les démons, en louant Dieu, ne font de mal ni ne tourmentent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAdam.ver_Greek__French_.2.2">
+            <app xml:id="ufr_14_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La deuxième heure pendant laquelle les poissons louent Dieu, ainsi que l'abîme du feu ; pendant laquelle on doit accomplir des opérations magiques contre les dragons et et le feu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAdam.ver_Greek__French_.2.3">
+            <app xml:id="ufr_15_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La troisième heure pendant laquelle les serpents, les chiens et le feu louent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAdam.ver_Greek__French_.2.4">
+            <app xml:id="ufr_16_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La quatrième heure pendant laquelle les démons rôdent dans les tombeaux, et quiconque s'y rend subira du tort et éprouvera de la peur et de l'effroi en raison des apparitions des démons ; pendant laquelle on doit accomplir des opérations magiques et de toute pratique de sorcellerie.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAdam.ver_Greek__French_.2.5">
+            <app xml:id="ufr_17_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La cinquième heure pendant laquelle les eaux louent le Dieu du ciel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAdam.ver_Greek__French_.2.6">
+            <app xml:id="ufr_18_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La sixième heure où il convient de garder le silence et de se reposer, parce qu'il y a de la crainte.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAdam.ver_Greek__French_.2.7">
+            <app xml:id="ufr_19_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La septième heure pendant laquelle tous ces êtres vivants se reposent. Si un homme pur prend de l'eau (נַרונ, néron), que le prêtre la verse, la mélange avec de l'huile, la sanctifie et en oigne un malade souffrant d'insomnie, il sera aussitôt délivré de la maladie.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAdam.ver_Greek__French_.2.8">
+            <app xml:id="ufr_20_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La huitième heure pendant laquelle nous accomplissons une opération magique concernant et toutes sortes de plantes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAdam.ver_Greek__French_.2.9">
+            <app xml:id="ufr_21_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La neuvième heure pendant laquelle rien ne s'accomplit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAdam.ver_Greek__French_.2.10">
+            <app xml:id="ufr_22_ver_Greek__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAdam.ver_Greek__French_.2.11">
+            <app xml:id="ufr_23_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La onzième heure pendant laquelle s'ouvrent les portes du ciel, et l'homme qui est dans la componction sera exaucé ; en cette heure, les anges, les chérubins et les séraphins volent de leurs ailes avec grand bruit ; et il y a de la joie au ciel et sur la terre ; et le soleil se lève depuis l'Éden.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAdam.ver_Greek__French_.2.12">
+            <app xml:id="ufr_24_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La douzième heure pendant laquelle se reposent les ordres de feu. Tels sont les noms des heures ; pour celui donc qui a bien compris ces choses, rien de tel ne sera caché, mais tout lui sera soumis.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

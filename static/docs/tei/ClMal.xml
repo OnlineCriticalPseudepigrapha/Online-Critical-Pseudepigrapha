@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ClMal">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Cleodemus Malchus</title>
+        <editor role="editor">Penner, Ken M., Ian W. Scott</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Niese">
+            <abbr type="siglum">Niese</abbr>
+            <name>Niese</name>
+            <bibl>Benedictus Niese, ed., Flavii Iosephi Opera (7 vols.; 2d. ed.; Berlin: Widmann, 1955), 1.58-59. Cleodemus Malchus on the sons of Abraham: Josephus, Ant. 1.15.1 §239-241; = Eusebius, Praep. Evang. 9.20.2-4</bibl>
+          </witness>
+          <witness xml:id="Mras">
+            <abbr type="siglum">Mras</abbr>
+            <name>Mras</name>
+            <bibl>Cleodemus Malchus on the sons of Abraham: Josephus, Ant. 1.15.1 §239-241; = Eusebius, Praep. Evang. 9.20.2-4</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation based on Josephus, Antiquities 1.15.1 §239-241.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Jewish_Antiquities">
+        <refState unit="book" delim=":"/>
+        <refState unit="section"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.">
+        <refState unit="book" delim=":"/>
+        <refState unit="section" delim=":"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Jewish_Antiquities__English_">
+        <refState unit="book" delim=":"/>
+        <refState unit="section"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__English_">
+        <refState unit="book" delim=":"/>
+        <refState unit="section" delim=":"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Jewish_Antiquities__French_">
+        <refState unit="book" delim=":"/>
+        <refState unit="section"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__French_">
+        <refState unit="book" delim=":"/>
+        <refState unit="section" delim=":"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Jewish Antiquities" xml:lang="grc" xml:id="ver_Jewish_Antiquities">
+        <head>Jewish Antiquities</head>
+        <div type="book" n="1" xml:id="ClMal.ver_Jewish_Antiquities.1">
+          <head>Book 1</head>
+          <ab type="section" n="239" xml:id="ClMal.ver_Jewish_Antiquities.1.239">
+            <app xml:id="u1_ver_Jewish_Antiquities">
+              <lem wit="#Niese">λέγεται δέ, ὡς οὗτος ὁ Ἑώφρην στρατεύσας ἐπὶ τὴν Λιβύην κατέσχεν αὐτὴν καὶ οἱ υἱωνοὶ αὐτοῦ κατοικήσαντες ἐν αὐτῇ τὴν γῆν ἀπὸ τοῦ ἐκείνου ὀνόματος Ἀφρικὰ προσηγόρευσαν.</lem>
+            </app>
+          </ab>
+          <ab type="section" n="240" xml:id="ClMal.ver_Jewish_Antiquities.1.240">
+            <app xml:id="u2_ver_Jewish_Antiquities">
+              <lem wit="#Niese">μαρτυρεῖ δέ μου τῷ λόγῳ Ἀλέξανδρος ὁ πολυίστωρ λέγων οὕτως· “Κλεόδημος δέ φησιν ὁ προφήτης ὁ καὶ Μάλχος ἱστορῶν τὰ περὶ Ἰουδαίων, καθὼς καὶ Μωυσῆς ἱστόρησεν ὁ νομοθέτης αὐτῶν, ὅτι ἐκ τῆς Κατούρας Ἁβράμῳ ἐγένοντο παῖδες ἱκανοί.</lem>
+            </app>
+          </ab>
+          <ab type="section" n="241" xml:id="ClMal.ver_Jewish_Antiquities.1.241">
+            <app xml:id="u3_ver_Jewish_Antiquities">
+              <lem wit="#Niese">λέγει δὲ αὐτῶν καὶ τὰ ὀνόματα ὀνομάζων τρεῖς Ἰαφέραν Σούρην Ἰαφράν. ἀπὸ Σούρου μὲν τὴν Ἀσσυρίαν κεκλῆσθαι, ἀπὸ δὲ τῶν δύο Ἰαφρᾶ τε καὶ Ἰαφέρου, πόλιν τε Ἐφρᾶν καὶ τὴν χώραν Ἀφρικὰ ὀνομασθῆναι. τούτους γὰρ Ἡρακλεῖ συστρατεῦσαι ἐπὶ Λιβύην καὶ Ἀνταῖον· γήμαντά τε τὴν Ἀφράνου θυγατέρα Ἡρακλέα γεννῆσαι υἱὸν ἐξ αὐτῆς Δίδωρον· τούτου δὲ γενέσθαι Σόφωνα, ἀφ᾽ οὗ τοὺς βαρβάρους Σόφακας λέγεσθαι.”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="edition" n="Praep. Evang." xml:lang="grc" xml:id="ver_Praep._Evang.">
+        <head>Praep. Evang.</head>
+        <div type="book" n="9" xml:id="ClMal.ver_Praep._Evang..9">
+          <head>Book 9</head>
+          <div type="section" n="20" xml:id="ClMal.ver_Praep._Evang..9.20">
+            <head>Section 20</head>
+            <ab type="paragraph" n="2" xml:id="ClMal.ver_Praep._Evang..9.20.2">
+              <app xml:id="u4_ver_Praep._Evang.">
+                <lem wit="#Mras">Ταῦτα μὲν δὴ ἀπὸ τῆς προειρημένης τοῦ Πολυΐστορος γραφῆς. καὶ ὁ Ἰώσηπος δὲ ἐν τῇ πρώτῃ τῆς Ἀρχαιολογίας τοῦ αὐτοῦ μνημονεύει διὰ τούτων· “Λέγεται δὲ ὡς οὗτος ὁ Ἀφρὴν στρατεύσας ἐπὶ τὴν Λιβύην κατέσχεν αὐτὴν καὶ οἱ υἱωνοὶ αὐτοῦ κατοικήσαντες ἐν αὐτῇ τὴν γῆν ἀπὸ τοῦ ἐκείνου ὀνόματος Ἀφρικὰ προσηγόρευσαν.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="3" xml:id="ClMal.ver_Praep._Evang..9.20.3">
+              <app xml:id="u5_ver_Praep._Evang.">
+                <lem wit="#Mras">μαρτυρεῖ δέ μου τῷ λόγῳ Ἀλέξανδρος ὁ Πολυΐστωρ λέγων οὕτως· ‘Κλεόδημος δέ φησιν ὁ προφήτης, ὁ καὶ Μαλχᾶς, ἱστορῶν τὰ περὶ Ἰουδαίων, καθὼς καὶ Μωσῆς ἱστόρηκεν ὁ νομοθέτης αὐτῶν, ὅτι ἐκ τῆς Χεττούρας Ἁβραάμῳ ἐγένοντο παῖδες ἱκανοί· λέγει δὲ αὐτῶν καὶ τὰ ὀνόματα, ὀνομάζων τρεῖς, Ἀφέρ, Ἀσσουρί, Ἀφράν·</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="4" xml:id="ClMal.ver_Praep._Evang..9.20.4">
+              <app xml:id="u6_ver_Praep._Evang.">
+                <lem wit="#Mras">καὶ ἀπὸ Ἀσσουρὶ μὲν τὴν Ἀσσυρίαν, ἀπὸ δὲ τῶν δύο, Ἀφρά τε καὶ Ἀφέρ, πόλιν τε Ἀφρὰν καὶ τὴν χώραν Ἀφρικὰ ὀνομασθῆναι. τούτους δὲ Ἡρακλεῖ συστρατεῦσαι ἐπὶ Λιβύην καὶ Ἀνταῖον· γήμαντα δὲ τὴν Ἀφρὰ θυγατέρα Ἡρακλέα γεννῆσαι υἱὸν ἐξ αὐτῆς Διόδωρον. τούτου δὲ γενέσθαι Σοφωνᾶν, ἀφ᾽ οὗ τοὺς βαρβάρους Σοφὰς λέγεσθαι.’” Τὰ μὲν οὖν περὶ τοῦ Ἀβραὰμ ὡς ἐν ὀλίγοις τοσαῦτα παρακείσθω.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Jewish Antiquities (English)" xml:lang="en" xml:id="ver_Jewish_Antiquities__English_">
+        <head>Jewish Antiquities (English)</head>
+        <div type="book" n="1" xml:id="ClMal.ver_Jewish_Antiquities__English_.1">
+          <head>Book 1</head>
+          <ab type="section" n="239" xml:id="ClMal.ver_Jewish_Antiquities__English_.1.239">
+            <app xml:id="uen_1_ver_Jewish_Antiquities__English_">
+              <lem wit="#OCP-Trans">It is said that this Eophren led an army against Libya and conquered it, and his grandsons, having settled in it, called the land Africa after his name.</lem>
+            </app>
+          </ab>
+          <ab type="section" n="240" xml:id="ClMal.ver_Jewish_Antiquities__English_.1.240">
+            <app xml:id="uen_2_ver_Jewish_Antiquities__English_">
+              <lem wit="#OCP-Trans">Alexander Polyhistor bears witness to my account, speaking thus: “Cleodemus the prophet, who is also called Malchus, relating the history of the Jews just as Moses their lawgiver related it, says that a good number of sons were born to Abraham by Keturah.</lem>
+            </app>
+          </ab>
+          <ab type="section" n="241" xml:id="ClMal.ver_Jewish_Antiquities__English_.1.241">
+            <app xml:id="uen_3_ver_Jewish_Antiquities__English_">
+              <lem wit="#OCP-Trans">He also gives their names, mentioning three: Iaphras, Suris, and Iaphran; and from Suris Assyria was called, and from the two, Iaphras and Iaphran, both the city Ephra and the country of Africa were named. For these campaigned with Heracles against Libya and Antaeus; and Heracles, having married the daughter of Aphranes, begot of her a son, Diodorus; and from him was born Sophon, from whom the barbarians are called Sophakes.”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (English)" xml:lang="en" xml:id="ver_Praep._Evang.__English_">
+        <head>Praep. Evang. (English)</head>
+        <div type="book" n="9" xml:id="ClMal.ver_Praep._Evang.__English_.9">
+          <head>Book 9</head>
+          <div type="section" n="20" xml:id="ClMal.ver_Praep._Evang.__English_.9.20">
+            <head>Section 20</head>
+            <ab type="paragraph" n="2" xml:id="ClMal.ver_Praep._Evang.__English_.9.20.2">
+              <app xml:id="uen_4_ver_Praep._Evang.__English_">
+                <lem wit="#OCP-Trans">Such are the extracts from the aforesaid writing of Polyhistor. And Josephus also in the first book of the Antiquities makes mention of the same in these words: “It is said that this Aphren led an army against Libya and conquered it, and his grandsons, having settled in it, called the land Africa after his name.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="3" xml:id="ClMal.ver_Praep._Evang.__English_.9.20.3">
+              <app xml:id="uen_5_ver_Praep._Evang.__English_">
+                <lem wit="#OCP-Trans">Alexander Polyhistor bears witness to my account, speaking thus: ‘Cleodemus the prophet, who is also called Malchas, relating the history of the Jews just as Moses their lawgiver related it, says that a good number of sons were born to Abraham by Keturah; and he also gives their names, mentioning three: Apher, Assouri, and Aphran;</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="4" xml:id="ClMal.ver_Praep._Evang.__English_.9.20.4">
+              <app xml:id="uen_6_ver_Praep._Evang.__English_">
+                <lem wit="#OCP-Trans">and from Assouri Assyria was named, and from the two, Aphra and Apher, both the city of Aphra and the country of Africa were named. And these campaigned with Heracles against Libya and Antaeus; and Heracles, having married the daughter of Aphra, begot of her a son, Diodorus; and from him was born Sophonan, from whom the barbarians are called Sophas.’” So much then concerning Abraham may suffice in brief.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Jewish Antiquities (French)" xml:lang="fr" xml:id="ver_Jewish_Antiquities__French_">
+        <head>Jewish Antiquities (French)</head>
+        <div type="book" n="1" xml:id="ClMal.ver_Jewish_Antiquities__French_.1">
+          <head>Book 1</head>
+          <ab type="section" n="239" xml:id="ClMal.ver_Jewish_Antiquities__French_.1.239">
+            <app xml:id="ufr_1_ver_Jewish_Antiquities__French_">
+              <lem wit="#OCP-Trans">On rapporte que cet Éphren, ayant fait campagne contre la Libye, s'en empara, et que ses petits-fils, s'y étant établis, donnèrent à cette terre le nom d'Afrique d'après le sien.</lem>
+            </app>
+          </ab>
+          <ab type="section" n="240" xml:id="ClMal.ver_Jewish_Antiquities__French_.1.240">
+            <app xml:id="ufr_2_ver_Jewish_Antiquities__French_">
+              <lem wit="#OCP-Trans">Alexandre Polyhistor confirme mon propos en disant ceci : « Cléodème le prophète, aussi appelé Malchos, racontant l'histoire des Juifs, tout comme Moïse leur législateur l'a rapportée, dit que de Céthoura naquirent plusieurs fils à Abraham.</lem>
+            </app>
+          </ab>
+          <ab type="section" n="241" xml:id="ClMal.ver_Jewish_Antiquities__French_.1.241">
+            <app xml:id="ufr_3_ver_Jewish_Antiquities__French_">
+              <lem wit="#OCP-Trans">Il donne aussi leurs noms, en mentionnant trois : Japhéras, Sourès et Japhran. De Sourès l'Assyrie tire son nom, et des deux autres, Japhran et Japhéras, la ville d'Éphra et le pays d'Afrique furent nommés. Car ils firent campagne avec Héraclès contre la Libye et Antée ; et Héraclès, ayant épousé la fille d'Aphranès, engendra d'elle un fils, Didodore ; de celui-ci naquit Sophon, d'après lequel les barbares sont appelés Sophaces. »</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (French)" xml:lang="fr" xml:id="ver_Praep._Evang.__French_">
+        <head>Praep. Evang. (French)</head>
+        <div type="book" n="9" xml:id="ClMal.ver_Praep._Evang.__French_.9">
+          <head>Book 9</head>
+          <div type="section" n="20" xml:id="ClMal.ver_Praep._Evang.__French_.9.20">
+            <head>Section 20</head>
+            <ab type="paragraph" n="2" xml:id="ClMal.ver_Praep._Evang.__French_.9.20.2">
+              <app xml:id="ufr_4_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">Voici donc ce qui est tiré de l'écrit susmentionné de Polyhistor. Josèphe lui aussi, dans le premier livre des Antiquités, fait mention du même sujet en ces termes : « On raconte que cet Aphrên, ayant mené une expédition contre la Libye, s'en empara, et ses petits-fils, s'y étant établis, donnèrent à cette terre le nom d'Afrique d'après son nom.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="3" xml:id="ClMal.ver_Praep._Evang.__French_.9.20.3">
+              <app xml:id="ufr_5_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">Alexandre Polyhistor rend témoignage à mon propos en s'exprimant ainsi : “Cléodème le prophète, aussi appelé Malchas, racontant l'histoire des Juifs tout comme Moïse, leur législateur, l'a rapportée, affirme que de Kétoura naquirent à Abraham un bon nombre d'enfants ; il cite également leurs noms, en nommant trois d'entre eux : Aphèr, Assouri et Aphran ;</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="4" xml:id="ClMal.ver_Praep._Evang.__French_.9.20.4">
+              <app xml:id="ufr_6_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">et que d'Assouri vint le nom de l'Assyrie, et des deux autres, Aphra et Aphèr, celui de la ville d'Aphra et de la contrée d'Afrique. Ceux-ci auraient combattu aux côtés d'Héraclès contre la Libye et Antée ; et Héraclès, ayant épousé la fille d'Aphra, engendra d'elle un fils nommé Diodore. De ce dernier naquit Sophonas, d'après lequel les barbares sont appelés Sophas.” » Que ces quelques témoignages suffisent donc pour ce qui concerne Abraham.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

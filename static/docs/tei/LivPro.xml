@@ -1,0 +1,2766 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LivPro">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Lives of the Prophets</title>
+        <editor role="editor">Estes, Douglas, with David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Torrey">
+            <abbr type="siglum">Torrey</abbr>
+            <name>Torrey</name>
+            <bibl>C. C. Torrey, The Lives of the Prophets: Greek Text and Translation (JBLMS 1; Philadelphia: SBL, 1946).</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of English based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Greek">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Greek__French_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="Title" xml:id="LivPro.ver_Greek.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.Title.0">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#Torrey">Ὀνόματα προφητῶν καὶ πόθεν εἰσὶ καὶ ποῦ ἀπέθανον καὶ πῶς καὶ ποῦ κεῖνται.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="LivPro.ver_Greek.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.1.0">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#Torrey">Ἡσαΐας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.1.1">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#Torrey">ἦν ἀπὸ Ἱερουσαλήμ. θνήσκει ὑπὸ Μανασσῆ πρισθεὶς εἰς δύο καὶ ἐτέθη ὑποκάτω δρυὸς Ῥωγὴλ ἐχόμενα τῆς διαβάσεως τῶν ὑδάτων ὧν ἀπώλεσεν Ἐζεκίας χῶσας αὐτά.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.1.2">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#Torrey">καὶ ὁ θεὸς τὸ σημεῖον τοῦ Σιλωὰμ διὰ τὸν προφήτην ἐποίησεν· ὅτι πρὸ τοῦ θανεῖν ὀλιγωρήσας ηὔξατο πιεῖν ὕδωρ καὶ εὐθέως ἀπεστάλη αὐτῷ ἐξ αὐτοῦ· διὰ τοῦτο ἐκλήθη Σιλωάμ, ὃ ἑρμηνεύεται ἀπεσταλμένος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.1.3">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#Torrey">Καὶ ἐπὶ τοῦ Ἐζεκία, πρὸ τοῦ ποιῆσαι τοὺς λάκκους καὶ τὰς κολυμβήθρας, ἐπὶ εὐχῇ τοῦ Ἡσαΐου μικρὸν ὕδωρ ἐξελήλυθεν, ὅτι ἦν ὁ λαὸς ἐν συγκλεισμῷ ἀλλοφύλων καὶ ἵνα μὴ διαφθαρῇ ἡ πόλις ὡς μὴ ἔχουσα ὕδωρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.1.4">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#Torrey">ἠρώτων γὰρ οἱ πολέμιοι, πόθεν πίνουσιν, καὶ ἔχοντες τὴν πόλιν παρεκαθέζοντο τῷ Σιλωάμ. ἐὰν οὖν οἱ Ἰουδαῖοι ἤρχοντο, ἐξήρχετο ὕδωρ· ἐὰν δὲ ἀλλόφυλοι, οὔ. διὸ ἕως σήμερον αἰφνιδίως ἐξέρχεται, ἵνα δειχθῇ τὸ μυστήριον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.1.5">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐπειδὴ διὰ τοῦ Ἡσαΐου τοῦτο γέγονεν, μνήμης χάριν καὶ ὁ λαὸς πλησίον αὐτὸν ἐπιμελῶς ἔθαψεν καὶ ἐνδόξως, ἵνα διὰ εὐχῶν αὐτοῦ καὶ μετὰ θάνατον αὐτοῦ ὡσαύτως ἔχωσι τὴν ἀπόλαυσιν τοῦ ὕδατος, ὅτι καὶ χρησμὸς ἐδόθη αὐτοῖς περὶ αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek.1.6">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#Torrey">Ἔστι δὲ ὁ τάφος ἐχόμενα τοῦ τάφου τῶν βασιλέων ὄπισθεν τοῦ τάφου τῶν ἱερέων ἐπὶ τὸ μέρος τὸ πρὸς νότον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek.1.7">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#Torrey">Σαλωμὼν γὰρ ἐποίησε τοὺς τάφους, τοῦ Δαυὶδ διαγράψαντος, κατ᾽ ἀνατολὰς τῆς Σιών, ἥτις ἔχει εἴσοδον ἀπὸ Γαβαὼν μήκοθεν τῆς πόλεως σταδίοις εἴκοσι, καὶ ἐποίησε σκολιὰν σύνθεσιν ἀνυπονόητον· καὶ ἔστιν ἕως τῆς σήμερον τοῖς πολλοῖς τῶν ἱερέων ἀγνοουμένη, ὅλου δὲ τοῦ λαοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek.1.8">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#Torrey">ἐκεῖ εἶχεν ὁ βασιλεὺς τὸ χρυσίον τὸ ἐξ Αἰθιοπίας καὶ τὰ ἀρώματα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek.1.9">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐπειδὴ ὁ Ἐζεκίας ἔδειξεν τοῖς ἔθνεσι τὸ μυστήριον Δαυὶδ καὶ Σαλωμῶνος καὶ ἐμίανεν ὀστᾶ πατέρων αὐτοῦ, διὰ τοῦτο ὁ θεὸς ἐπηράσατο εἰς δουλείαν ἔσεσθαι τὸ σπέρμα αὐτοῦ τοῖς ἐχθροῖς αὐτοῦ, καὶ ἄκαρπον αὐτὸν ἐποίησεν ὁ θεὸς ἀπὸ τῆς ἡμέρας ἐκείνης.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="LivPro.ver_Greek.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.2.0">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#Torrey">Ἱερεμίας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.2.1">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#Torrey">ἦν ἐξ Ἀναθὼθ καὶ ἐν Τάφναις Αἰγύπτου λίθοις βληθεὶς ὑπὸ τοῦ λαοῦ ἀποθνήσκει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.2.2">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#Torrey">κεῖται δὲ ἐν τῷ τόπῳ τῆς οἰκήσεως Φαραώ, ὅτι οἱ Αἰγύπτιοι ἐδόξασαν αὐτὸν εὐεργετηθέντες δι᾽ αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.2.3">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#Torrey">ηὔξατο γὰρ καὶ αἱ ἀσπίδες αὐτοὺς ἔασαν, (ἅς) καλοῦσιν οἱ Αἰγύπτιοι ἐφώθ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.2.4">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#Torrey">καὶ ὅσοι εἰσὶ πιστοὶ θεοῦ ἕως σήμερον εὔχονται ἐν τῷ τόπῳ καὶ λαμβάνοντες τοῦ χοὸς τοῦ τόπου δήγματα ἀσπίδων θεραπεύουσι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.2.5">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#Torrey">ἡμεῖς δὲ ἠκούσαμεν ἐκ τῶν παίδων Ἀντιγόνου καὶ Ρτολεμαίου γερόντων ἀνδρῶν, ὅτι Ἀλέξάνδρος ὁ Μακεδὼν ἐπιστὰς τῷ τόπῳ τοῦ προφήτου καὶ ἐπιγνοὺς αὐτοῦ τὰ μυστήρια εἰς Ἀλεξάνδρειαν μετέστησεν αὐτοῦ τὰ λείψανα, περιθεὶς αὐτὰ ἐνδόξως κύκλῳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek.2.6">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐκωλύθη ἐκ τῆς γῆς τὸ γένος τῶν ἀσπίδων, καὶ οὕτως ἐνέβαλεν τοὺς ὄφεις τοὺς λεγομένους ἀργόλας, ὅ ἐστίν ὀφιομάχους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek.2.7">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#Torrey">Οὗτος ὁ Ἱερεμίας σημεῖον δέδωκε τοῖς ἱερεῦσιν Αἰγύπτου, ὅτι δεῖ σεισθῆναι τὰ εἴδωλα αὐτῶν καὶ συμπεσεῖν τὰ χειροποίητα πάντα ὅταν ἐπιβῇ ἐν Αἰγύπτῳ παρθένος λοχεύουσα σὺν βρέφει θεοειδεῖ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek.2.8">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#Torrey">δι᾽ ὃ καὶ ἕως νῦν τιμῶσι παρθένον λοχὸν καὶ βρέφος ἐν φάτνῃ τιθέντες προσκυνοῦσι, καὶ Πτολεμαίῳ τῷ βασιλεῖ τὴν αἰτίαν πυνθανομένῳ ἔλεγον, ὅτι πατροπαράδοτόν ἐστι μυστήριον ὑπὸ ὁσίου προφήτου, τοῖς πατρᾶσιν ἡμῶν παραδοθέν, καὶ ἐκδεχόμεθα τὸ πέρας, φησίν, τοῦ μυστηρίου αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek.2.9">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#Torrey">Οὗτος ὁ προφήτης πρὸ τῆς ἁλώσεως τοῦ ναοῦ ἥρπαξε τὴν κιβωτὸν τοῦ νόμου καὶ τὰ ἐν αὐτῇ καὶ ἐποίησεν αὐτὰ καταποθῆναι ἐν πέτρᾳ, καὶ εἶπε τοῖς παρεστῶσιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_Greek.2.10">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#Torrey">Ἀπεδήμησεν κύριος ἐκ Σινᾶ εἰς οὐρανὸν καὶ πάλιν ἐλεύσεται ἐν δυνάμει, καὶ σημεῖον ὑμῖν ἔσται τῆς παρουσίας αὐτοῦ, ὅτε ξύλον πάντα τὰ ἔθνη προσκυνοῦσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_Greek.2.11">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#Torrey">εἶπεν δὲ ὅτι τὴν κιβωτὸν ταύτην οὐδεὶς ἐκβάλλει εἰ μὴ Ἀαρών, καὶ τὰς ἐν αὐτῷ πλάκας οὐδεὶς ἀναπτύξει οὐκέτι ἱερέων ἢ προφητῶν εἰ μὴ Μωϋσὴς ὁ ἐκλεκτὸς τοῦ Θεοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_Greek.2.12">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐν τῇ ἀναστάσει πρώτη ἡ κιβωτὸς ἀναστήσεται καὶ ἐξελεύσεται ἐκ τῆς πέτρας καὶ τεθήσεται ἐν ὄρει Σινᾶ, καὶ πάντες οἱ ἅγιοι πρὸς αὐτὴν συναχθήσονται ἐκεῖ ἐκδεχόμενοι κύριον καὶ τὸν ἐχθρὸν φεύγοντες ἀνελεῖν αὐτοὺς θέλοντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_Greek.2.13">
+            <app xml:id="u25_ver_Greek">
+              <lem wit="#Torrey">Ἐν τῇ πέτρᾳ ἐσφράγισε τῷ δακτύλῳ τὸ ὄνομα τοῦ Θεοῦ καὶ γέγονεν ὁ τύπος ὡς γλυφὴ σιδήρου, καὶ νεφέλη ἐσκέπασε τὸ ὄνομα καὶ οὐδεὶς νοεῖ τὸν τόπον οὔτε ἀναγνῶναι αὐτὸν ἕως σήμερον καὶ ἕως συντελείας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_Greek.2.14">
+            <app xml:id="u26_ver_Greek">
+              <lem wit="#Torrey">καὶ ἔστιν ἡ πέτρα ἐν τῇ ἐρήμῳ, ὅπου πρώτως ἡ κιβωτὸς γέγονε μεταξὺ τῶν δύο ὀρέων, ἐν οἷς κεῖνται Μωϋσὴς καὶ Ἀαρών, καὶ ἐν νυκτὶ νεφέλη ὡς πῦρ γίνεται κατὰ τὸν τύπον τὸν ἀρχαῖον, ὅτι οὐ μὴ παύσηται ἡ δόξα τοῦ θεοῦ ἐκ τοῦ νόμου αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_Greek.2.15">
+            <app xml:id="u27_ver_Greek">
+              <lem wit="#Torrey">καὶ ἔδωκεν ὁ θεὸς τῷ Ἱερεμίᾳ χάριν, ἵνα τὸ τέλος τοῦ μυστηρίου αὐτοῦ αὐτὸς ποιήσειεν, ἵνα γένηται συνκοινωνὸς Μωϋσέως, καὶ ὁμοῦ εἰσὶν ἕως σήμερον.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="LivPro.ver_Greek.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.3.0">
+            <app xml:id="u28_ver_Greek">
+              <lem wit="#Torrey">Ἰεζεκιήλ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.3.1">
+            <app xml:id="u29_ver_Greek">
+              <lem wit="#Torrey">Οὗτός ἐστίν ἐκ γῆς Σαρίρα, ἐκ τῶν ἱερέων, καὶ ἀπέθανεν ἐν τῇ γῇ τῶν Χαλδαίων ἐπὶ τῆς αἰχμαλωσίας, πολλὰ προφητεύσας τοῖς ἐν τῇ Ἰουδαίᾳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.3.2">
+            <app xml:id="u30_ver_Greek">
+              <lem wit="#Torrey">ἀπέκτεινε δὲ αὐτὸν ὁ ἡγούμενος τοῦ λαοῦ Ἰσραὴλ ἐκεῖ, ἐλεγχόμενος ὑπ᾽ αὐτοῦ ἐπὶ εἰδώλων σεβάσμασι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.3.3">
+            <app xml:id="u31_ver_Greek">
+              <lem wit="#Torrey">καὶ ἔθαψαν αὐτὸν ἐν ἀγρῷ Μαοὺρ ἐν τάφῳ Σὴμ καὶ Ἀρφάξαδ πατέρων Ἀβραάμ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.3.4">
+            <app xml:id="u32_ver_Greek">
+              <lem wit="#Torrey">καὶ ἔστιν ὁ τάφος σπήλαιον διπλοῦν, ὅτι καὶ Ἀβραὰμ ἐν Χεβρῶν πρὸς τὴν ὁμοιότητα αὐτοῦ ἐποίησε τὸν τάφον Σάῤῥας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.3.5">
+            <app xml:id="u33_ver_Greek">
+              <lem wit="#Torrey">διπλοῦν δὲ λέγεται, ὅτι εἰλικτόν ἐστι, καὶ ἀπόκρυφον ἐξ ἐπιπέδου ὑπερῷόν ἐστι ἐπὶ γῆς ἐν πέτρᾳ κρεμάμενον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek.3.6">
+            <app xml:id="u34_ver_Greek">
+              <lem wit="#Torrey">Οὗτος ὁ προφήτης τέρας ἔδωκε τῷ λαῷ, ὤστε προσέχειν τῷ ποταμῷ Χοβάρ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek.3.7">
+            <app xml:id="u35_ver_Greek">
+              <lem wit="#Torrey">ὅτε ἐκλείποι, ἐπελπίζειν τὸ δρέπανον τῆς ἐρημώσεως εἰς πέρας τῆς γῆς, καὶ ὅτε πλημμυρήσῃ, τὴν εἰς Ἱερουσαλὴμ ἐπάνοδον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek.3.8">
+            <app xml:id="u36_ver_Greek">
+              <lem wit="#Torrey">καὶ γὰρ ἐκεῖ κατῴκει ὁ ὅσιος καὶ πολλοὶ πρὸς αὐτὸν συνεστρέφοντο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek.3.9">
+            <app xml:id="u37_ver_Greek">
+              <lem wit="#Torrey">καὶ ποτὲ πλήθους συνόντος αὐτῷ ἔδεισαν οἱ Χαλδαῖοι, μὴ ἀντάρωσι, καὶ ἐπῆλθον αὐτοῖς εἰς ἀναίρεσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_Greek.3.10">
+            <app xml:id="u38_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐποίησεν στῆναι τὸ ὕδωρ, ἵνα ἐκφύγωσιν εἰς τὸ πέραν γενόμενοι· καὶ οἱ τολμήσαντες τῶν ἐχθρῶν ἐπιδιῶξαι κατεποντίσθησαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_Greek.3.11">
+            <app xml:id="u39_ver_Greek">
+              <lem wit="#Torrey">Οὗτος διὰ προσευχῆς αὐτομάτως αὐτοῖς δαψιλῆ τροφὴν ἰχθύων παρέσχετο καὶ πολλοῖς ἐκλείπουσι ζωὴν ἐλθεῖν ἐκ θεοῦ παρεκάλεσεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_Greek.3.12">
+            <app xml:id="u40_ver_Greek">
+              <lem wit="#Torrey">Οὗτος ἀπολλυμένου τοῦ λαοῦ ὑπὸ τῶν ἐχθρῶν προσῆλθε τοῖς ἡγουμένοις καὶ διὰ τεραστίων φοβηθέντες ἐπαύσαντο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_Greek.3.13">
+            <app xml:id="u41_ver_Greek">
+              <lem wit="#Torrey">τοῦτό τε ἔλεγεν αὐτοῖς, ὅτι Διαπεφωνήκαμεν; ἀπώλετο ἡ ἐλπὶς ἡμῶν; καὶ ἐν τέρατι τῶν ὀστέων τῶν νεκρῶν αὐτοὺς ἔπεισεν, ὅτι ἔσται ἐλπὶς τῷ Ἰσραὴλ καὶ ὧδε καὶ ἐπὶ τοῦ μέλλοντος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_Greek.3.14">
+            <app xml:id="u42_ver_Greek">
+              <lem wit="#Torrey">Οὗτος ἐκεῖ ὢν ἐδείκνυ τῷ λαῷ Ἰσραὴλ τὰ ἐν Ἱερουσαλὴμ καὶ ἐν τῷ ναῷ γινόμενα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_Greek.3.15">
+            <app xml:id="u43_ver_Greek">
+              <lem wit="#Torrey">οὗτος ἡρπάγη ἐκεῖθεν καὶ ἦλθεν εἰς Ἱερουσαλὴμ εἰς ἔλεγχον τῶν ἀπίστων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="LivPro.ver_Greek.3.16">
+            <app xml:id="u44_ver_Greek">
+              <lem wit="#Torrey">Οὗτος κατὰ τὸν Μωϋσὴν εἶδεν τὸν τύπον τοῦ ναοῦ, καὶ τὸ τεῖχος καὶ περίτειχος πλατύ, καθὼς εἶπεν καὶ ὁ Δανιήλ, ὅτι κτισθήσεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="LivPro.ver_Greek.3.17">
+            <app xml:id="u45_ver_Greek">
+              <lem wit="#Torrey">Οὗτος ἔκρινεν ἐν Βαβυλῶνι τὴν φυλὴν Δὰν καὶ τοῦ Γάδ, ὅτι ἠσέβουν εἰς τὸν κύριον διώκοντες τοὺς τὸν νόμον φυλάσσοντας,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="LivPro.ver_Greek.3.18">
+            <app xml:id="u46_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐποίησεν αὐτοῖς τέρας μέγα, ὅτι οἱ ὄφεις ἀνήλισκον τὰ βρέφη αὐτῶν καὶ πάντα τὰ κτήνη αὐτῶν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="LivPro.ver_Greek.3.19">
+            <app xml:id="u47_ver_Greek">
+              <lem wit="#Torrey">καὶ προείρηκεν, ὅτι δι᾽ αὐτοὺς οὐκ ἐπιστρέψει ὁ λαὸς εἰς τὴν γῆν αὐτοῦ, ἀλλ᾽ ἐν Μηδίᾳ ἔσονται ἕως συντελείας πλάνης αὐτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="LivPro.ver_Greek.3.20">
+            <app xml:id="u48_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐξ αὐτῶν ἦν ὁ ἀνελὼν αὐτόν· ἀντέκειντο γὰρ αὐτῷ πάσας τὰς ἡμέρας τῆς ζωῆς αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="LivPro.ver_Greek.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.4.0">
+            <app xml:id="u49_ver_Greek">
+              <lem wit="#Torrey">Δανιήλ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.4.1">
+            <app xml:id="u50_ver_Greek">
+              <lem wit="#Torrey">Οὗτος μὲν ἦν ἐκ φυλῆς Ἰουδά, γένους τῶν ἐξεχόντων τῆς βασιλικῆς ὑπηρεσίας, ἀλλ᾽ ἔτι νήπιος ἤχθη ἐκ τῆς Ἰουδαίας εἰς γῆν Χαλδαίων· ἐγεννήθη δὲ ἐν Βεθωρὼν τῇ ἀνωτέρᾳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.4.2">
+            <app xml:id="u51_ver_Greek">
+              <lem wit="#Torrey">καὶ ἦν ἀνὴρ σώφρων, ὥστε δοκεῖν τοὺς Ἰουδαίους εἶναι αὐτὸν σπάδοντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.4.3">
+            <app xml:id="u52_ver_Greek">
+              <lem wit="#Torrey">Πολλὰ ἐπένθησεν οὗτος ἐπὶ τὴν πόλιν, καὶ ἐν νηστείαις ἤσκησεν ἀπὸ πάσης τροφῆς ἐπιθυμητῆς, καὶ ἦν ἀνὴρ ξηρὸς τὴν ἰδέαν, ἀλλὰ ὡραῖος ἐν χάριτι ὑψίστου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.4.4">
+            <app xml:id="u53_ver_Greek">
+              <lem wit="#Torrey">Οὗτος πολλὰ ηὔξατο ὑπὲρ τοῦ Ναβουχοδονόσορ, παρακαλοῦντος αὐτὸν Βαλτάσαρ τοῦ υἱοῦ αὐτοῦ, ὅτε ἐγένετο θηρίον καὶ κτῆνος, ἵνα μὴ ἀπόληται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.4.5">
+            <app xml:id="u54_ver_Greek">
+              <lem wit="#Torrey">ἦν τὰ ἐμπρόσθια ὡς βοῦς σὺν τῇ κεφαλῇ, καὶ οἱ πόδες σὺν τοῖς ὀπισθίοις ὡς λέων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek.4.6">
+            <app xml:id="u55_ver_Greek">
+              <lem wit="#Torrey">ἀπεκαλύφθη τῷ ὁσίῳ περὶ τοῦ μυστηρίου τούτου, ὅτι κτῆνος γέγονε διὰ τὴν φιληδονίαν καὶ τὸ σκληροτράχηλον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek.4.7">
+            <app xml:id="u56_ver_Greek">
+              <lem wit="#Torrey">καὶ ταῦτα ἔξουσιν οἱ δυνάσται ἐν νεότητι, ὅτι ὡς βοῦς ὑπὸ ζυγὸν γίνονται τοῦ Βελίαρ, ἐπὶ τέλει δὲ θῆρες γίνονται, ἁρπάζοντες, ὀλεθρεύοντες, ἀναιροῦντες καὶ πατάσσοντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek.4.8">
+            <app xml:id="u57_ver_Greek">
+              <lem wit="#Torrey">Ἔγνω διὰ θεοῦ ὁ ἅγιος, ὅτι ὡς βοῦς ἤσθιε χόρτον καὶ ἐγίνετο αὐτῷ ἀνθρωπίνης φύσεως τροφή.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek.4.9">
+            <app xml:id="u58_ver_Greek">
+              <lem wit="#Torrey">διὰ τοῦτο καὶ ὁ Ναβουχοδονόσορ μετὰ τὴν πέψιν ἐν καρδίᾳ ἀνθρωπίνῃ γενόμενος ἔκλαιεν καὶ ἠξίου κύριον πᾶσαν ἡμέραν καὶ νύκτα τεσσαρακοντάκις δεόμενος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_Greek.4.10">
+            <app xml:id="u59_ver_Greek">
+              <lem wit="#Torrey">καρδία κτηνῶν ἐπεγίνετο αὐτῷ καὶ ἐλάνθανεν αὐτὸν ὅτι γέγονεν ἄνθρωπος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_Greek.4.11">
+            <app xml:id="u60_ver_Greek">
+              <lem wit="#Torrey">ἤρθη ἡ γλῶσσα αὐτοῦ τοῦ μὴ λαλεῖν· καὶ νοῶν εὐθέως ἐδάκρυε, καὶ οἱ ὀφθαλμοὶ αὐτοῦ ἦσαν ὡς κρέας ἐκ τοῦ κλαίειν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_Greek.4.12">
+            <app xml:id="u61_ver_Greek">
+              <lem wit="#Torrey">πολλοὶ γὰρ ἐξιόντες ἐκ τῆς πόλεως ἑώρων αὐτόν· ὁ Δανιὴλ μόνος οὐκ ἠθέλησεν αὐτὸν ἰδεῖν, ὅτι πάντα τὸν χρόνον τῆς ἀλλοιώσεως αὐτοῦ ἐν προσευχῇ ἦν περὶ αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_Greek.4.13">
+            <app xml:id="u62_ver_Greek">
+              <lem wit="#Torrey">ἔλεγεν ὅτι πάλιν ἄνθρωπος γενήσεται· καὶ ἠπίστουν αὐτῷ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_Greek.4.14">
+            <app xml:id="u63_ver_Greek">
+              <lem wit="#Torrey">Ὁ Δανιὴλ τὰ ἑπτὰ ἔτη, ἃ εἶπεν ἑπτὰ καιρούς, ἐποίησεν γενέσθαι ἑπτὰ μῆνας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_Greek.4.15">
+            <app xml:id="u64_ver_Greek">
+              <lem wit="#Torrey">τὸ μυστήριον τῶν ἑπτὰ καιρῶν ἐτελέσθη ἐπ᾽ αὐτόν, ὅτι ἀπεκατέστησεν ἐν ἑπτὰ μησί, τὰ ἓξ ἔτη καὶ ἓξ μῆνας ὑπέπιπτε κυρίῳ καὶ ὡμολόγει τὴν ἀσέβειαν αὐτοῦ· καὶ μετὰ ἄφεσιν τῆς ἀνομίας αὐτοῦ ἀπέδωκεν αὐτῷ τὴν βασιλείαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="LivPro.ver_Greek.4.16">
+            <app xml:id="u65_ver_Greek">
+              <lem wit="#Torrey">οὔτε ἄρτον ἢ κρέα ἔφαγεν οὔτε οἶνον ἔπιεν ἐξομολογούμενος, ὅτι ὁ Δανιὴλ αὐτῷ προσέταξεν ἐν ὀσπρίοις βρεκτοῖς καὶ χλόαις ἐξιλεοῦσθαι κύριον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="LivPro.ver_Greek.4.17">
+            <app xml:id="u66_ver_Greek">
+              <lem wit="#Torrey">διὰ τοῦτο ἐκάλεσεν αὐτὸν Βαλτάσαρ, ὅτι ἠθέλησεν αὐτὸν συνκληρόνομον καταστῆσαι τῶν τέκνων αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="LivPro.ver_Greek.4.18">
+            <app xml:id="u67_ver_Greek">
+              <lem wit="#Torrey">ἀλλ᾽ ὁ ὅσιος εἶπεν, ἵλεώς μοι ἀφεῖναι κληρονομίαν πατέρων μου καὶ κολληθῆναι κληρονομίαις ἀπεριτμήτων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="LivPro.ver_Greek.4.19">
+            <app xml:id="u68_ver_Greek">
+              <lem wit="#Torrey">καὶ τοῖς ἄλλοις βασιλεῦσι Περσῶν πολλὰ ἐποίησεν τεράστια, ὅσα οὐκ ἔγραψαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="LivPro.ver_Greek.4.20">
+            <app xml:id="u69_ver_Greek">
+              <lem wit="#Torrey">ἐκεῖ ἀπέθανε καὶ ἐτάφη ἐν τῷ σπηλαίῳ τῷ βασιλικῷ μόνος ἐνδόξως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="LivPro.ver_Greek.4.21">
+            <app xml:id="u70_ver_Greek">
+              <lem wit="#Torrey">Καὶ αὐτὸς ἔδωκε τέρας ἐν ὄρεσι τοῖς ὑπεράνω Βαβυλῶνος, ὅτι, ὅτε καπνισθήσεται τὸ ἐκ βορρᾶ, ἥξει τὸ τὲλος Βαβυλῶνος· ὅτε δὲ ὡς ἐν πυρὶ καίεται, τὸ τέλος πάσης τῆς γῆς· ἐὰν δὲ τὸ ἐν τῷ νότῳ ῥεύσῃ ὕδατα, ἐπιστρέψει ὁ λαὸς εἰς γῆν αὐτοῦ, καὶ ἐὰν αἷμα ῥεύσει, φόνος ἔσται τοῦ Βελίαρ ἐν πάσῃ τῇ γῇ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="LivPro.ver_Greek.4.22">
+            <app xml:id="u71_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐκοιμήθη ἐν εἰρήνῃ ὁ ὅσιος.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="LivPro.ver_Greek.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.5.0">
+            <app xml:id="u72_ver_Greek">
+              <lem wit="#Torrey">Ὡσηέ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.5.1">
+            <app xml:id="u73_ver_Greek">
+              <lem wit="#Torrey">Οὗτος ἦν ἐκ Βελεμὼθ τῆς φυλῆς Ἰσσάχαρ, καὶ ἐτάφη ἐν τῇ γῇ αὐτοῦ ἐν εἰρήνῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.5.2">
+            <app xml:id="u74_ver_Greek">
+              <lem wit="#Torrey">καὶ ἔδωκε τέρας, ἥξειν κύριος ἐπὶ τῆς γῆς, ἐὰν ἡ δρῦς ἡ ἐν Σηλὼμ μερισθῇ ἀφ᾽ ἑαυτῆς καὶ γένωνται δρύες δώδεκα.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="LivPro.ver_Greek.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.6.0">
+            <app xml:id="u75_ver_Greek">
+              <lem wit="#Torrey">Μιχαίας ὁ Μωραθὶ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.6.1">
+            <app xml:id="u76_ver_Greek">
+              <lem wit="#Torrey">ἦν ἐκ φυλῆς Ἐφραίμ. πολλὰ ποιήσας τῷ Ἀχαὰβ ὑπὸ Ἰωρὰμ τοῦ υἱοῦ αὐτοῦ ἀνῃρέθη κρημνωθείς, ὅτι ἤλεγχεν αὐτὸν ἐπὶ ταῖς ἀσεβείαις τῶν πατέρων αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.6.2">
+            <app xml:id="u77_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐτάφη ἐν τῇ γῇ αὐτοῦ μόνος σύνεγγυς πολυανδρίου Ἐνακείμ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="LivPro.ver_Greek.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.7.0">
+            <app xml:id="u78_ver_Greek">
+              <lem wit="#Torrey">Ἀμὼς</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.7.1">
+            <app xml:id="u79_ver_Greek">
+              <lem wit="#Torrey">ἦν ἐκ Θεκουέ. καὶ Ἀμασίας πυκνῶς αὐτὸν τυμπανίσας, τέλος καὶ ἀνεῖλεν αὐτὸν ὁ υἱὸς αὐτοῦ ἐν ῥοπάλῳ πλήξας αὐτοῦ τὸν κρόταφον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.7.2">
+            <app xml:id="u80_ver_Greek">
+              <lem wit="#Torrey">καὶ ἔτι ἐμπνέων ἦλθεν εἰς τὴν γῆν αὐτοῦ καὶ μεθ᾽ ἡμέρας ἀπέθανε καὶ ἐτάφη ἐκεῖ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="LivPro.ver_Greek.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.8.0">
+            <app xml:id="u81_ver_Greek">
+              <lem wit="#Torrey">Ἰωὴλ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.8.1">
+            <app xml:id="u82_ver_Greek">
+              <lem wit="#Torrey">ἦν ἐκ τῆς γῆς τοῦ Ῥουβὴν ἐν ἀγρῷ Βεθμαών. ἐν εἰρήνῃ ἀπέθανε καὶ ἐτάφη ἐκεῖ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="LivPro.ver_Greek.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.9.0">
+            <app xml:id="u83_ver_Greek">
+              <lem wit="#Torrey">Ἀβδιοῦ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.9.1">
+            <app xml:id="u84_ver_Greek">
+              <lem wit="#Torrey">ἦν ἐκ γῆς Συχὲμ ἀγροῦ Βηθαχαράμ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.9.2">
+            <app xml:id="u85_ver_Greek">
+              <lem wit="#Torrey">οὗτος ἦν μαθητὴς Ἠλία καὶ πολλὰ ὑπομείνας δι᾽ αὐτὸν περιεσώζετο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.9.3">
+            <app xml:id="u86_ver_Greek">
+              <lem wit="#Torrey">οὗτος ἦν ὁ τρίτος πεντηκόνταρχος, οὗ ἐφείσατο Ἠλίας καὶ κατέβη πρὸς Ὀχοζίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.9.4">
+            <app xml:id="u87_ver_Greek">
+              <lem wit="#Torrey">μετὰ ταῦτα ἀπολιπὼν τὴν λειτουργίαν τοῦ βασιλέως προεφήτευσε καὶ ἀπέθανε ταφεὶς μετὰ τῶν πατέρων αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="LivPro.ver_Greek.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.10.0">
+            <app xml:id="u88_ver_Greek">
+              <lem wit="#Torrey">Ἰωνᾶς</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.10.1">
+            <app xml:id="u89_ver_Greek">
+              <lem wit="#Torrey">ἦν ἐκ γῆς Καριαθμαοῦς πλησίον πόλεως Ἑλλήνων Ἀζώτου κατὰ θάλασσαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.10.2">
+            <app xml:id="u90_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐκβρασθεὶς ἐκ τοῦ κήτους καὶ ἀπελθὼν ἐν Νινευῇ ἀνακάμψας οὐκ ἔμεινεν εἰς τὴν γῆν αὐτοῦ, ἀλλὰ παραλαβὼν τὴν μητέρα αὐτοῦ παρῴκησε τὴν Σοὺρ χώραν ἀλλοφύλων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.10.3">
+            <app xml:id="u91_ver_Greek">
+              <lem wit="#Torrey">ἔλεγε γὰρ, ὅτι οὕτως ἀφελῶ ὄνειδός μου, ὅτι ἐψευσάμην προφητεύσας κατὰ Νινευὴ τῆς μεγάλης πόλεως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.10.4">
+            <app xml:id="u92_ver_Greek">
+              <lem wit="#Torrey">Ἦν τότε Ἠλίας ἐλέγχων τὸν οἶκον Ἀχαάβ, καὶ καλέσας λιμὸν ἐπὶ τὴν γῆν ἔφυγεν καὶ ἐλθὼν εὗρε τὴν χήραν μετὰ τοῦ υἱοῦ αὐτῆς, οὐ γὰρ ἐδύνατο μένειν μετὰ ἀπεριτμήτων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.10.5">
+            <app xml:id="u93_ver_Greek">
+              <lem wit="#Torrey">καὶ εὐλόγησεν αὐτήν· καὶ θανόντα τὸν υἱὸν αὐτῆς πάλιν ἤγειρεν ἐκ νεκρῶν ὁ θεὸς διὰ τοῦ Ἠλία, ἠθέλησε γὰρ δεῖξαι αὐτῷ, ὅτι οὐ δύναται ἀποδράσαι θεόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek.10.6">
+            <app xml:id="u94_ver_Greek">
+              <lem wit="#Torrey">Καὶ ἀναστὰς μετὰ τὸν λιμὸν ἦλθεν ἐν γῇ Ἰούδα. καὶ ἀποθανοῦσαν τὴν μητέρα αὐτοῦ κατὰ τὴν ὁδὸν ἔθαψεν αὐτὴν ἐχόμενα τῆς βαλάνου Δεββώρας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek.10.7">
+            <app xml:id="u95_ver_Greek">
+              <lem wit="#Torrey">καὶ κατοικήσας ἐν γῇ Σαραὰρ ἀπέθανε καὶ ἐτάφη ἐν σπηλαίῳ τοῦ Κενεζαίου κριτοῦ γενομένου μιᾶς φυλῆς ἐν ἡμέραις τῆς ἀναρχίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek.10.8">
+            <app xml:id="u96_ver_Greek">
+              <lem wit="#Torrey">καὶ ἔδωκε τέρας ἐπὶ Ἱερουσαλὴμ καὶ ὅλην τὴν γῆν, ὅτε ἴδωσι λίθον βοῶντα οἰκτρῶς, ἐγγίζειν τὸ τέλος· καὶ ὅτε ἴδωσιν ἐν Ἱερουσαλὴμ πάντα τὰ ἔθνη, ὅτι ἡ πόλις ἕως ἐδάφους ἀφανισθήσεται.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="LivPro.ver_Greek.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.11.0">
+            <app xml:id="u97_ver_Greek">
+              <lem wit="#Torrey">Ναοὺμ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.11.1">
+            <app xml:id="u98_ver_Greek">
+              <lem wit="#Torrey">ἦν ἀπὸ Ἐλκεσὶ πέραν τοῦ [ὄρους] εἰς Βηθγαβρὶν φυλῆς Συμεών.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.11.2">
+            <app xml:id="u99_ver_Greek">
+              <lem wit="#Torrey">οὗτος μετὰ τὸν Ἰωνᾶν τῇ Νινευῇ τέρας ἔδωκεν, ὅτι ὑπὸ ὑδάτων γλυκίων καὶ πυρὸς ὑπογείου ἀπολεῖται, ὃ καὶ γέγονεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.11.3">
+            <app xml:id="u100_ver_Greek">
+              <lem wit="#Torrey">ἡ γὰρ περιέχουσα αὐτὴν λίμνη κατέκλυσεν αὐτὴν ἐν σεισμῷ, καὶ πῦρ ἐκ τῆς ἐρήμου ἐπελθὸν τὸ ὑψηλότερον αὐτῆς μέρος ἐνέπρησεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.11.4">
+            <app xml:id="u101_ver_Greek">
+              <lem wit="#Torrey">ἀπέθανε δὲ ἐν εἰρήνῃ καὶ ἐτάφη ἐν τῇ γῇ αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="LivPro.ver_Greek.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.12.0">
+            <app xml:id="u102_ver_Greek">
+              <lem wit="#Torrey">Ἀμβακοὺμ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.12.1">
+            <app xml:id="u103_ver_Greek">
+              <lem wit="#Torrey">ἐκ φυλῆς ἦν Συμεὼν ἐξ ἀγροῦ Βηθζουχάρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.12.2">
+            <app xml:id="u104_ver_Greek">
+              <lem wit="#Torrey">οὗτος εἶδε πρὸ τῆς αἰχμαλωσίας περὶ τῆς ἁλώσεως Ἱερουσαλὴμ καὶ ἐπένθησε σφόδρα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.12.3">
+            <app xml:id="u105_ver_Greek">
+              <lem wit="#Torrey">καὶ ὅτε ἦλθε Ναβουχοδονόσορ ἐν Ἱερουσαλήμ, ἔφυγεν εἰς Ὀστρακίνην καὶ παροίκησεν ἐν γῇ Ἰσμαήλ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.12.4">
+            <app xml:id="u106_ver_Greek">
+              <lem wit="#Torrey">ὡς δὲ ἐπέστρεψαν οἱ Χαλδαῖοι, καὶ οἱ κατάλοιποι οἱ ὄντες ἐν Ἱερουσαλὴμ κατέβησαν εἰς Αἴγυπτον, ἦν παροικῶν τὴν γῆν αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.12.5">
+            <app xml:id="u107_ver_Greek">
+              <lem wit="#Torrey">Καὶ ἐλειτούργει θερισταῖς τοῦ ἀγροῦ αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek.12.6">
+            <app xml:id="u108_ver_Greek">
+              <lem wit="#Torrey">ὡς δὲ ἔλαβε τὸ ἔδεσμα, προεφήτευσε τοῖς ἰδίοις εἰπών· πορεύομαι εἰς γῆν μακρὰν καὶ ταχέως ἐλεύσομαι· εἰ δὲ βραδύνω, ἀπενέγκατε τοῖς θερισταῖς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek.12.7">
+            <app xml:id="u109_ver_Greek">
+              <lem wit="#Torrey">καὶ γενόμενος ἐν Βαβυλῶνι καὶ δοὺς τὸ ἄριστον τῷ Δανιὴλ ἐπέστη τοῖς θερισταῖς ἐσθίουσι καὶ οὐδενὶ εἶπεν τὸ γενόμενον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek.12.8">
+            <app xml:id="u110_ver_Greek">
+              <lem wit="#Torrey">Συνῆκεν δὲ ὅτι τάχειον ἐπιστρέψει ὁ λαὸς ἀπὸ Βαβυλῶνος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek.12.9">
+            <app xml:id="u111_ver_Greek">
+              <lem wit="#Torrey">καὶ πρὸ δύο ἐτῶν ἀποθνήσκει τῆς ἐπιστροφῆς. καὶ ἐτάφη ἐν ἀγρῷ ἰδίῳ μόνος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_Greek.12.10">
+            <app xml:id="u112_ver_Greek">
+              <lem wit="#Torrey">Ἔδωκε δὲ τέρας τοῖς ἐν τῇ Ἰουδαίᾳ, ὅτι ὄψονται ἐν τῷ ναῷ φῶς, καὶ οὕτως ἴδωσι τὴν δόξαν τοῦ ναοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_Greek.12.11">
+            <app xml:id="u113_ver_Greek">
+              <lem wit="#Torrey">καὶ περὶ συντελείας τοῦ ναοῦ προεῖπεν, ὅτι ὑπὸ ἔθνους δυτικοῦ γενήσεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_Greek.12.12">
+            <app xml:id="u114_ver_Greek">
+              <lem wit="#Torrey">τότε τὸ ἅπλωμα, φησί, τοῦ δαβεὶρ εἰς μικρὰ ῥαγήσεται, καὶ τὰ ἐπίκρανα τῶν δύο στύλων ἀφαιρεθήσονται καὶ οὐδεὶς γνώσεται, ποῦ ἔσονται·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_Greek.12.13">
+            <app xml:id="u115_ver_Greek">
+              <lem wit="#Torrey">αὐτὰ δὲ ἐν τῇ ἐρήμῳ ἀπενεχθήσονται ὑπὸ ἀγγέλων, ὅπου ἐν ἀρχῇ ἐπάγη ἡ σκηνὴ τοῦ μαρτυρίου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_Greek.12.14">
+            <app xml:id="u116_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐν αὐτοῖς γνωσθήσεται ἐπὶ τέλει κύριος, ὅτι φωτίσουσι τοὺς διωκομένους ὑπὸ τοῦ ὄφεως ἐν σκότει ὡς ἐξ ἀρχῆς.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="LivPro.ver_Greek.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.13.0">
+            <app xml:id="u117_ver_Greek">
+              <lem wit="#Torrey">Σοφονίας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.13.1">
+            <app xml:id="u118_ver_Greek">
+              <lem wit="#Torrey">ἐκ φυλῆς ἦν Συμεὼν ἀγροῦ Σαβαραθά·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.13.2">
+            <app xml:id="u119_ver_Greek">
+              <lem wit="#Torrey">προεφήτευσε περὶ τῆς πόλεως καὶ περὶ τέλους ἐθνῶν καὶ αἰσχύνης ἀσεβῶν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.13.3">
+            <app xml:id="u120_ver_Greek">
+              <lem wit="#Torrey">καὶ θανὼν ἐτάφη ἐν ἀγρῷ αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="LivPro.ver_Greek.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.14.0">
+            <app xml:id="u121_ver_Greek">
+              <lem wit="#Torrey">Ἀγγαῖος</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.14.1">
+            <app xml:id="u122_ver_Greek">
+              <lem wit="#Torrey">τάχα νεός ἦλθεν ἐκ Βαβυλῶνος εἰς Ἱερουσαλὴμ καὶ φανερῶς περὶ τῆς ἐπιστροφῆς τοῦ λαοῦ προεφήτευσε καὶ εἶδεν ἐκ μέρους τὴν οἰκοδομὴν τοῦ ναοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.14.2">
+            <app xml:id="u123_ver_Greek">
+              <lem wit="#Torrey">καὶ θανὼν ἐτάφη πλησίον τοῦ τάφου τῶν ἱερέων ἐνδόξως ὡς αὐτοί.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="LivPro.ver_Greek.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.15.0">
+            <app xml:id="u124_ver_Greek">
+              <lem wit="#Torrey">Ζαχαρίας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.15.1">
+            <app xml:id="u125_ver_Greek">
+              <lem wit="#Torrey">ἦλθεν ἀπὸ Χαλδαίων ἤδη προβεβηκὼς καὶ ἐκεῖ πολλὰ τῷ λαῷ προεφήτευσε· καὶ τέρατα ἔδωκεν εἰς ἀπόδειξιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.15.2">
+            <app xml:id="u126_ver_Greek">
+              <lem wit="#Torrey">οὗτος εἶπε τῷ Ἰωσεδέκ, ὅτι γεννήσει υἱὸν καὶ ἐν Ἱερουσαλὴμ ἱερατεύσει·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.15.3">
+            <app xml:id="u127_ver_Greek">
+              <lem wit="#Torrey">οὗτος καὶ τὸν Σαλαθιὴλ ἐφ᾽ υἱῷ εὐλόγησε καὶ ὄνομα Ζοροβάβελ ἐπέθηκε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.15.4">
+            <app xml:id="u128_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐπὶ Κύρου τέρας ἔδωκεν εἰς νῖκος καὶ περὶ τῆς λειτουργίας αὐτοῦ προηγόρευσεν, ἣν ποιήσει ἐπὶ Ἱερουσαλὴμ, καὶ ηὐλόγησεν αὐτὸν σφόδρα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.15.5">
+            <app xml:id="u129_ver_Greek">
+              <lem wit="#Torrey">τὰ δὲ τῆς προφητείας ἐν Ἱερουσαλὴμ καὶ περὶ τέλους ἐθνῶν καὶ Ἰσραὴλ καὶ τοῦ ναοῦ καὶ ἀργίας προφητῶν καὶ ἱερέων καὶ περὶ διπλῆς κρίσεως ἐξέθετο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek.15.6">
+            <app xml:id="u130_ver_Greek">
+              <lem wit="#Torrey">καὶ ἀπέθανεν ἐν γήρει μακρῷ καὶ ἐκλιπὼν ἐτάφη σύνεγγυς Ἀγγαίου.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="LivPro.ver_Greek.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.16.0">
+            <app xml:id="u131_ver_Greek">
+              <lem wit="#Torrey">Μαλαχίας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.16.1">
+            <app xml:id="u132_ver_Greek">
+              <lem wit="#Torrey">Οὗτος μετὰ τὴν ἐπιστροφὴν τίκτεται ἐν Σωφᾶ, καὶ πάνυ νέος καλὸν βίον ἔσχηκε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.16.2">
+            <app xml:id="u133_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐπειδὴ πᾶς ὁ λαὸς ἐτίμα αὐτὸν ὡς ὅσιον καὶ πρᾳῦν, ἐκάλεσαν αὐτὸν Μαλαχί, ὃ ἑρμηνεύεται ἄγγελος· ἦν γὰρ καὶ τῷ ἰδεῖν εὐπρεπής.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.16.3">
+            <app xml:id="u134_ver_Greek">
+              <lem wit="#Torrey">ἀλλὰ καὶ ὅσα εἶπεν αὐτὸς ἐν προφητείᾳ, αὐτῇ τῇ ἡμέρᾳ ὀφθεὶς ἄγγελος θεοῦ ἐπεδευτέρωσεν, ὡς ἐγένετο ἐν ἡμέραις ἀναρχίας, ὡς γέγραπται ἐν Σφαρφωτίμ, τουτέστιν ἐν βίβλῳ Κριτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.16.4">
+            <app xml:id="u135_ver_Greek">
+              <lem wit="#Torrey">καὶ ἔτι νέος προσετὲθη πρός τοὺς πατέρας αὐτοῦ ἐν ἀγρῷ αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="LivPro.ver_Greek.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.17.0">
+            <app xml:id="u136_ver_Greek">
+              <lem wit="#Torrey">Ναθὰν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.17.1">
+            <app xml:id="u137_ver_Greek">
+              <lem wit="#Torrey">προφήτης Δαυὶδ ἦν ἐκ Γαβαών, ἐκ φυλῆς Ἐωή. καὶ αὐτὸς ἦν ὁ διδάξας αὐτὸν νόμον κυρίου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.17.2">
+            <app xml:id="u138_ver_Greek">
+              <lem wit="#Torrey">καὶ εἶδεν ὅτι Δαυὶδ ἐν τῇ Βηρσαβεὲ παραβήσεται, καὶ σπεύδοντα ἐλθεῖν ἀγγεῖλαι αὐτῷ ἐνεπόδισεν ὁ Βελίαρ, ὅτι κατὰ τὴν ὁδὸν εὗρεν νεκρὸν κείμενον γυμνὸν ἐσφαγμένον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.17.3">
+            <app xml:id="u139_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐπέμεινεν ἐκεῖ καὶ τῇ νυκτὶ ἐκείνῃ ἔγνω, ὅτι ἐποίησε τὴν ἁμαρτίαν· καὶ ὑπέστρεψε πενθῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.17.4">
+            <app xml:id="u140_ver_Greek">
+              <lem wit="#Torrey">καὶ ὡς ἀνεῖλε τὸν ἄνδρα αὐτῆς, ἔπεμψε κύριος ἐλέγξαι αὐτόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.17.5">
+            <app xml:id="u141_ver_Greek">
+              <lem wit="#Torrey">καὶ αὐτὸς πάνυ γηράσας ἀπέθανεν καὶ ἐτάφη εἰς τὴν γῆν αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="18" xml:id="LivPro.ver_Greek.18">
+          <head>Chapter 18</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.18.0">
+            <app xml:id="u142_ver_Greek">
+              <lem wit="#Torrey">Ἀχία</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.18.1">
+            <app xml:id="u143_ver_Greek">
+              <lem wit="#Torrey">ἀπὸ Σηλώμ, ὅπου ἦν ἡ σκηνὴ τὸ παλαιόν, ἐκ πόλεως Ἡλί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.18.2">
+            <app xml:id="u144_ver_Greek">
+              <lem wit="#Torrey">οὗτος εἶπε περὶ Σαλωμών, ὅτι προσκρούσει κυρίῳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.18.3">
+            <app xml:id="u145_ver_Greek">
+              <lem wit="#Torrey">καὶ ἤλεγξε τὸν Ἱεροβοάμ, ὅτι δόλῳ ἐπορεύετο μετὰ κυρίου· εἶδεν ζεῦγος βοῶν πατοῦντα τὸν λαὸν καὶ κατὰ τῶν ἱερέων ἐπιτρέχοντα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.18.4">
+            <app xml:id="u146_ver_Greek">
+              <lem wit="#Torrey">προεἶπε καὶ τῷ Σαλωμών, ὅτι αἱ γυναῖκες αὐτὸν ἐκστήσουσι καὶ πᾶν τὸ γένος αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek.18.5">
+            <app xml:id="u147_ver_Greek">
+              <lem wit="#Torrey">καὶ ἀπέθανε καὶ ἐτάφη σύνεγγυς τῆς δρυὸς Σηλώμ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="19" xml:id="LivPro.ver_Greek.19">
+          <head>Chapter 19</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.19.0">
+            <app xml:id="u148_ver_Greek">
+              <lem wit="#Torrey">Ἰωὴδ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.19.1">
+            <app xml:id="u149_ver_Greek">
+              <lem wit="#Torrey">ἦν ἐκ γῆς Σαμαρείμ. οὗτος ἐστίν, ὃν ἐπάταξεν ὁ λέων καὶ ἀπέθανεν, ὅτε ἤλεγξεν τὸν Ἱεροβοὰμ ἐπὶ ταῖς δαμάλεσι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.19.2">
+            <app xml:id="u150_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐτάφη ἐν Βεθὴλ σύνεγγυς τοῦ ψευδοπροφήτου τοῦ πλανήσαντος αὐτόν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="20" xml:id="LivPro.ver_Greek.20">
+          <head>Chapter 20</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.20.0">
+            <app xml:id="u151_ver_Greek">
+              <lem wit="#Torrey">Ἀζαρίας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.20.1">
+            <app xml:id="u152_ver_Greek">
+              <lem wit="#Torrey">ἦν ἐκ γῆς Συβαθά, ὃς ἐπέστρεψεν ἐξ Ἰσραὴλ τὴν αἰχμαλωσίαν Ἰούδα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.20.2">
+            <app xml:id="u153_ver_Greek">
+              <lem wit="#Torrey">καὶ θανὼν ἐτάφη ἐν ἀγρῷ αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="21" xml:id="LivPro.ver_Greek.21">
+          <head>Chapter 21</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.21.0">
+            <app xml:id="u154_ver_Greek">
+              <lem wit="#Torrey">Ζαχαρίας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.21.1">
+            <app xml:id="u155_ver_Greek">
+              <lem wit="#Torrey">ἐξ Ἱερουσαλὴμ, υἱὸς Ἰωδαὲ τοῦ ἱερέως, ὃν ἀπέκτεινεν Ἰωὰς ὁ βασιλεὺς Ἰούδα ἐχόμενα τοῦ θυσιαστηρίου, καὶ ἐξέχεεν τὸ αἷμα αὐτοῦ ὁ οἶκος Δαυὶδ ἀνὰ μέσον ἐπὶ τοῦ αἰλάμ· καὶ λαβόντες αὐτὸν οἱ ἱερεῖς ἔθαψαν αὐτὸν μετὰ τοῦ πατρὸς αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.21.2">
+            <app xml:id="u156_ver_Greek">
+              <lem wit="#Torrey">ἔκτοτε ἐγένοντο τέρατα ἐν τῷ ναῷ φαντασίας καὶ οὐκ ἴσχυον οἱ ἱερεῖς ἰδεῖν ὀπτασίαν ἀγγέλων θεοῦ οὔτε δοῦναι χρησμοὺς ἐκ τοῦ δαβεὶρ οὔτε ἐρωτῆσαι ἐν τῷ ἐφοὺδ οὔτε διὰ δήλων ἀποκριθῆναι τῷ λαῷ ὡς τὸ πρίν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="22" xml:id="LivPro.ver_Greek.22">
+          <head>Chapter 22</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.22.0">
+            <app xml:id="u157_ver_Greek">
+              <lem wit="#Torrey">Ἠλίας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.22.1">
+            <app xml:id="u158_ver_Greek">
+              <lem wit="#Torrey">Θεσβίτης ἦν ἐκ γῆς Ἀράβων, φυλῆς Ἀαρών, οἰκῶν ἐν Γαλαάδ, ὅτι ἡ Θεσβεὶ δόμα ἦν τοῖς ἱεροῦσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.22.2">
+            <app xml:id="u159_ver_Greek">
+              <lem wit="#Torrey">ὅτε εἶχεν τεχθῆναι, εἶδεν Σοβαχὰ ὁ πατὴρ αὐτοῦ, ὅτι ἄνδρες λευκοφανεῖς αὐτὸν προσηγόρευον, καὶ ὅτι ἐν πυρὶ αὐτὸν ἐσπαργάνουν καὶ φλόγα πυρὸς ἐδίδουν αὐτῷ φαγεῖν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.22.3">
+            <app xml:id="u160_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐλθὼν ἀνήγγειλεν ἐν Ἱερουσαλήμ, καὶ εἶπεν αὐτῷ ὁ χρησμός· μὴ δειλιάσῃς· ἔσται γὰρ ἡ οἴκησις αὐτοῦ φῶς καὶ ὁ λόγος αὐτοῦ ἀπόφασις, καὶ κρινεῖ τὸν Ἰσραὴλ ἐν ῥομφαίᾳ καὶ ἐν πυρί.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="23" xml:id="LivPro.ver_Greek.23">
+          <head>Chapter 23</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek.23.0">
+            <app xml:id="u161_ver_Greek">
+              <lem wit="#Torrey">Ἐλισαῖος</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek.23.1">
+            <app xml:id="u162_ver_Greek">
+              <lem wit="#Torrey">Ἐλισαῖος ἦν ἐξ Ἀβελμαοὺλ γῆς τοῦ Ῥουβήν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek.23.2">
+            <app xml:id="u163_ver_Greek">
+              <lem wit="#Torrey">καὶ ἐπὶ τούτου γέγονε τέρας, ὅτι, ἡνίκα ἐτέχθη ἐν Γαλγάλοις ἡ δάμαλις ἡ χρυσῆ ὀξὺν ἐβόησεν, ὥστε ἀκουσθῆναι εἰς Ἱερουσαλήμ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek.23.3">
+            <app xml:id="u164_ver_Greek">
+              <lem wit="#Torrey">καὶ εἶπεν ὁ ἱερεὺς διὰ τῶν δήλων, ὅτι προφήτης ἐτέχθη Ἰσραήλ, ὃς καθελεῖ τὰ γλυπτὰ αὐτῶν καὶ τὰ χωνευτὰ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek.23.4">
+            <app xml:id="u165_ver_Greek">
+              <lem wit="#Torrey">καὶ θανὼν ἐτάφη ἐν Σαμαρείᾳ.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="chapter" n="Title" xml:id="LivPro.ver_English.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.Title.0">
+            <app xml:id="uen_1_ver_English">
+              <lem wit="#OCP-Trans">Names of the prophets, and from where they came, and where and how they died, and where they are laid.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="LivPro.ver_English.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.1.0">
+            <app xml:id="uen_2_ver_English">
+              <lem wit="#OCP-Trans">Isaiah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.1.1">
+            <app xml:id="uen_3_ver_English">
+              <lem wit="#OCP-Trans">He was from Jerusalem. He died, sawn in two by Manasseh, and was laid beneath the oak of Rogel, adjacent to the passage of the waters which Hezekiah had diverted by stopping them up.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.1.2">
+            <app xml:id="uen_4_ver_English">
+              <lem wit="#OCP-Trans">And God performed the sign of Siloam through the prophet; for before he died, having neglected [to drink], he prayed to drink water, and immediately it was sent to him from it. For this reason it was called Siloam, which is interpreted “sent.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.1.3">
+            <app xml:id="uen_5_ver_English">
+              <lem wit="#OCP-Trans">And in the time of Hezekiah, before he made the cisterns and the pools, at the prayer of Isaiah, a small amount of water emerged, because the people were besieged by foreigners and so that the city would not be destroyed as if it had no water.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.1.4">
+            <app xml:id="uen_6_ver_English">
+              <lem wit="#OCP-Trans">For the enemies kept asking where they drank, and they sat down by Siloam, having surrounded the city. Therefore, if the Jews came, water would emerge; but if foreigners, no. For this reason, even to this day, it emerges suddenly, so that the mystery might be shown.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.1.5">
+            <app xml:id="uen_7_ver_English">
+              <lem wit="#OCP-Trans">And since this happened through Isaiah, for the sake of remembrance, the people buried him carefully and gloriously nearby, so that through his prayers, even after his death, they might likewise have the enjoyment of the water, because an oracle concerning him was also given to them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_English.1.6">
+            <app xml:id="uen_8_ver_English">
+              <lem wit="#OCP-Trans">His tomb is adjacent to the tomb of the kings, behind the tomb of the priests, on the side toward the south.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_English.1.7">
+            <app xml:id="uen_9_ver_English">
+              <lem wit="#OCP-Trans">For Solomon made the tombs, with David having designed them, to the east of Zion, which has an entrance from Gabaon, twenty stadia distant from the city, and he made a winding, unsuspected construction; and it remains unknown to many of the priests even to this day, and indeed to all the people.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_English.1.8">
+            <app xml:id="uen_10_ver_English">
+              <lem wit="#OCP-Trans">There the king kept the gold from Ethiopia and the aromatics.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_English.1.9">
+            <app xml:id="uen_11_ver_English">
+              <lem wit="#OCP-Trans">And because Hezekiah showed the nations the mystery of David and Solomon and defiled the bones of his fathers, for this reason God cursed his offspring to be in servitude to his enemies, and God made him barren from that day.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="LivPro.ver_English.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.2.0">
+            <app xml:id="uen_12_ver_English">
+              <lem wit="#OCP-Trans">Jeremiah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.2.1">
+            <app xml:id="uen_13_ver_English">
+              <lem wit="#OCP-Trans">He was from Anathoth and died in Taphanes of Egypt, stoned by the people.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.2.2">
+            <app xml:id="uen_14_ver_English">
+              <lem wit="#OCP-Trans">He is laid in the dwelling place of Pharaoh, because the Egyptians honored him, having been benefited by him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.2.3">
+            <app xml:id="uen_15_ver_English">
+              <lem wit="#OCP-Trans">For he prayed, and the asps (which the Egyptians call 'ephot') left them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.2.4">
+            <app xml:id="uen_16_ver_English">
+              <lem wit="#OCP-Trans">And as many as are faithful to God pray in that place even to this day and, taking some of the soil of the place, they heal asp bites.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.2.5">
+            <app xml:id="uen_17_ver_English">
+              <lem wit="#OCP-Trans">But we heard from the old men, servants of Antigonus and Ptolemy, that Alexander the Macedonian, coming to the prophet’s place and recognizing his mysteries, transferred his remains to Alexandria, depositing them with glory all around.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_English.2.6">
+            <app xml:id="uen_18_ver_English">
+              <lem wit="#OCP-Trans">And the race of asps was restrained from the land, and in this way he introduced the snakes called 'argolas,' which are snake-fighters.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_English.2.7">
+            <app xml:id="uen_19_ver_English">
+              <lem wit="#OCP-Trans">This Jeremiah gave a sign to the priests of Egypt that their idols must be shaken and all their handmade images fall down when a virgin giving birth with a godlike infant enters Egypt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_English.2.8">
+            <app xml:id="uen_20_ver_English">
+              <lem wit="#OCP-Trans">For this reason, even now they honor a virgin giving birth and, placing an infant in a manger, they worship; and when King Ptolemy inquired the reason, they said that it is a paternal tradition, a mystery handed down to our fathers by a holy prophet, and we await the fulfillment, he says, of his mystery.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_English.2.9">
+            <app xml:id="uen_21_ver_English">
+              <lem wit="#OCP-Trans">This prophet, before the capture of the temple, seized the ark of the law and what was in it, and caused them to be swallowed up in a rock, and he said to those standing by:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_English.2.10">
+            <app xml:id="uen_22_ver_English">
+              <lem wit="#OCP-Trans">“The Lord has departed from Sinai to heaven, and he will come again in power, and a sign of his coming will be for you when all the nations worship wood.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_English.2.11">
+            <app xml:id="uen_23_ver_English">
+              <lem wit="#OCP-Trans">But he said that no one will bring forth this ark except Aaron, and no one will again open the tablets in it, neither priests nor prophets, except Moses, the elect of God.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_English.2.12">
+            <app xml:id="uen_24_ver_English">
+              <lem wit="#OCP-Trans">And in the resurrection, the ark will be the first to rise and will come forth from the rock and will be placed on Mount Sinai, and all the saints will be gathered there to it, awaiting the Lord and fleeing the enemy who wishes to kill them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_English.2.13">
+            <app xml:id="uen_25_ver_English">
+              <lem wit="#OCP-Trans">On the rock he sealed with his finger the name of God, and the impression became like an engraving of iron, and a cloud covered the name, and no one comprehends the place or can read it until today and until the consummation.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_English.2.14">
+            <app xml:id="uen_26_ver_English">
+              <lem wit="#OCP-Trans">And the rock is in the wilderness, where the ark first appeared between the two mountains where Moses and Aaron lie, and at night a cloud appears like fire according to the ancient pattern, because the glory of God will not cease from his law.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_English.2.15">
+            <app xml:id="uen_27_ver_English">
+              <lem wit="#OCP-Trans">And God gave Jeremiah grace so that he himself would bring about the fulfillment of his mystery, so that he might become a fellow participant with Moses, and they are together until today.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="LivPro.ver_English.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.3.0">
+            <app xml:id="uen_28_ver_English">
+              <lem wit="#OCP-Trans">Ezekiel</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.3.1">
+            <app xml:id="uen_29_ver_English">
+              <lem wit="#OCP-Trans">He is from the land of Sarira, one of the priests, and he died in the land of the Chaldeans during the captivity, having prophesied many things to those in Judea.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.3.2">
+            <app xml:id="uen_30_ver_English">
+              <lem wit="#OCP-Trans">The leader of the people of Israel there killed him, being rebuked by him for worshipping idols.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.3.3">
+            <app xml:id="uen_31_ver_English">
+              <lem wit="#OCP-Trans">And they buried him in the field of Maur in the tomb of Shem and Arphaxad, the fathers of Abraham.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.3.4">
+            <app xml:id="uen_32_ver_English">
+              <lem wit="#OCP-Trans">And the tomb is a double cave, for Abraham also made Sarah's tomb in Hebron in imitation of it.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.3.5">
+            <app xml:id="uen_33_ver_English">
+              <lem wit="#OCP-Trans">It is called double because it is winding, and there is a hidden upper chamber on the ground, hanging in a rock.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_English.3.6">
+            <app xml:id="uen_34_ver_English">
+              <lem wit="#OCP-Trans">This prophet gave a sign to the people to pay attention to the river Chebar:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_English.3.7">
+            <app xml:id="uen_35_ver_English">
+              <lem wit="#OCP-Trans">when it dries up, to expect the sickle of desolation to the ends of the earth, and when it overflows, the return to Jerusalem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_English.3.8">
+            <app xml:id="uen_36_ver_English">
+              <lem wit="#OCP-Trans">For the holy one lived there, and many gathered to him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_English.3.9">
+            <app xml:id="uen_37_ver_English">
+              <lem wit="#OCP-Trans">And once, when a crowd was with him, the Chaldeans feared that they might rise up, and they came against them to destroy them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_English.3.10">
+            <app xml:id="uen_38_ver_English">
+              <lem wit="#OCP-Trans">And he made the water stand still, so that they might escape by getting to the other side; and those of the enemies who dared to pursue them were drowned.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_English.3.11">
+            <app xml:id="uen_39_ver_English">
+              <lem wit="#OCP-Trans">This one, through prayer, automatically provided them with an abundant supply of fish and implored God to bring life to many who were failing.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_English.3.12">
+            <app xml:id="uen_40_ver_English">
+              <lem wit="#OCP-Trans">This one, when the people were perishing by their enemies, approached the leaders, and being terrified by his wonders, they ceased.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_English.3.13">
+            <app xml:id="uen_41_ver_English">
+              <lem wit="#OCP-Trans">And he said to them, “Have we become disunited? Has our hope perished?” And by a wonder of the dry bones, he persuaded them that there would be hope for Israel, both here and in the future.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_English.3.14">
+            <app xml:id="uen_42_ver_English">
+              <lem wit="#OCP-Trans">This one, while there, showed the people of Israel what was happening in Jerusalem and in the temple.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_English.3.15">
+            <app xml:id="uen_43_ver_English">
+              <lem wit="#OCP-Trans">This one was snatched from there and came to Jerusalem to rebuke the unbelievers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="LivPro.ver_English.3.16">
+            <app xml:id="uen_44_ver_English">
+              <lem wit="#OCP-Trans">This one, like Moses, saw the pattern of the temple, and the wall and the wide outer wall, just as Daniel also said that it would be built.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="LivPro.ver_English.3.17">
+            <app xml:id="uen_45_ver_English">
+              <lem wit="#OCP-Trans">This one judged in Babylon the tribe of Dan and Gad, because they were impious towards the Lord by persecuting those who kept the Law,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="LivPro.ver_English.3.18">
+            <app xml:id="uen_46_ver_English">
+              <lem wit="#OCP-Trans">and he performed a great wonder for them, that snakes consumed their infants and all their cattle,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="LivPro.ver_English.3.19">
+            <app xml:id="uen_47_ver_English">
+              <lem wit="#OCP-Trans">and he foretold that because of them the people would not return to their land, but would be in Media until the completion of their error.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="LivPro.ver_English.3.20">
+            <app xml:id="uen_48_ver_English">
+              <lem wit="#OCP-Trans">And from among them was the one who killed him; for they opposed him all the days of his life.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="LivPro.ver_English.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.4.0">
+            <app xml:id="uen_49_ver_English">
+              <lem wit="#OCP-Trans">Daniel</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.4.1">
+            <app xml:id="uen_50_ver_English">
+              <lem wit="#OCP-Trans">This one was from the tribe of Judah, of the lineage of those who excelled in royal service, but while still an infant, he was brought from Judea to the land of the Chaldeans; and he was born in Beth-Horon the Upper.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.4.2">
+            <app xml:id="uen_51_ver_English">
+              <lem wit="#OCP-Trans">And he was a prudent man, so that the Judeans thought him to be a eunuch.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.4.3">
+            <app xml:id="uen_52_ver_English">
+              <lem wit="#OCP-Trans">This one mourned much for the city, and in fastings, he abstained from all desirable food, and he was a man lean in appearance, but beautiful in the grace of the Most High.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.4.4">
+            <app xml:id="uen_53_ver_English">
+              <lem wit="#OCP-Trans">This one prayed much for Nebuchadnezzar, at the request of his son Beltashazzar, when he became a wild beast and an animal, so that he might not perish.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.4.5">
+            <app xml:id="uen_54_ver_English">
+              <lem wit="#OCP-Trans">His foreparts were like an ox with its head, and his feet with his hindparts were like a lion.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_English.4.6">
+            <app xml:id="uen_55_ver_English">
+              <lem wit="#OCP-Trans">The holy one was enlightened about this mystery, that he became an animal because of his love of pleasure and his stiff-neckedness.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_English.4.7">
+            <app xml:id="uen_56_ver_English">
+              <lem wit="#OCP-Trans">And rulers will have these things in their youth, for they become like an ox under the yoke of Belial, but in the end they become wild beasts, plundering, destroying, killing, and striking.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_English.4.8">
+            <app xml:id="uen_57_ver_English">
+              <lem wit="#OCP-Trans">The holy one knew through God that he ate grass like an ox, and human food became his.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_English.4.9">
+            <app xml:id="uen_58_ver_English">
+              <lem wit="#OCP-Trans">Because of this, Nebuchadnezzar, after his digestion, having a human heart, wept and implored the Lord forty times every day and night in supplication.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_English.4.10">
+            <app xml:id="uen_59_ver_English">
+              <lem wit="#OCP-Trans">A beast's heart came upon him, and he did not know that he had become human.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_English.4.11">
+            <app xml:id="uen_60_ver_English">
+              <lem wit="#OCP-Trans">His tongue was taken away so that he could not speak; and perceiving, he immediately wept, and his eyes were like raw flesh from crying.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_English.4.12">
+            <app xml:id="uen_61_ver_English">
+              <lem wit="#OCP-Trans">For many going out of the city saw him; Daniel alone did not wish to see him, because he was in prayer concerning him all the time of his transformation.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_English.4.13">
+            <app xml:id="uen_62_ver_English">
+              <lem wit="#OCP-Trans">He said that he would become human again; and they disbelieved him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_English.4.14">
+            <app xml:id="uen_63_ver_English">
+              <lem wit="#OCP-Trans">Daniel made the seven years, which he spoke of as seven times, become seven months.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_English.4.15">
+            <app xml:id="uen_64_ver_English">
+              <lem wit="#OCP-Trans">The mystery of the seven times was fulfilled in him, for he was restored in seven months, and for six years and six months he submitted to the Lord and confessed his impiety; and after the forgiveness of his lawlessness, he restored the kingdom to him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="LivPro.ver_English.4.16">
+            <app xml:id="uen_65_ver_English">
+              <lem wit="#OCP-Trans">He neither ate bread nor meat, nor drank wine while confessing, because Daniel commanded him to appease the Lord with soaked vegetables and greens.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="LivPro.ver_English.4.17">
+            <app xml:id="uen_66_ver_English">
+              <lem wit="#OCP-Trans">Therefore, he called him Beltashazzar, because he wished to make him co-heir with his children.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="LivPro.ver_English.4.18">
+            <app xml:id="uen_67_ver_English">
+              <lem wit="#OCP-Trans">But the holy one said, “May it be far from me to leave the inheritance of my fathers and cling to the inheritances of the uncircumcised.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="LivPro.ver_English.4.19">
+            <app xml:id="uen_68_ver_English">
+              <lem wit="#OCP-Trans">And to the other kings of the Persians, he performed many wonders, as many as they did not write down.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="LivPro.ver_English.4.20">
+            <app xml:id="uen_69_ver_English">
+              <lem wit="#OCP-Trans">There he died and was gloriously buried alone in the royal cave.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="LivPro.ver_English.4.21">
+            <app xml:id="uen_70_ver_English">
+              <lem wit="#OCP-Trans">And he himself gave a sign in the mountains above Babylon, that when the smoke from the north appears, the end of Babylon will come; but when it burns as in fire, it is the end of all the earth; and if the waters in the south flow, the people will return to their land, and if blood flows, there will be slaughter of Belial in all the earth.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="LivPro.ver_English.4.22">
+            <app xml:id="uen_71_ver_English">
+              <lem wit="#OCP-Trans">And the holy one slept in peace.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="LivPro.ver_English.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.5.0">
+            <app xml:id="uen_72_ver_English">
+              <lem wit="#OCP-Trans">Hosea</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.5.1">
+            <app xml:id="uen_73_ver_English">
+              <lem wit="#OCP-Trans">He was from Belemoth, of the tribe of Issachar, and he was buried in his own land in peace.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.5.2">
+            <app xml:id="uen_74_ver_English">
+              <lem wit="#OCP-Trans">And he gave a sign, that the Lord would come upon the earth if the oak in Shiloh should be divided from itself and become twelve oaks.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="LivPro.ver_English.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.6.0">
+            <app xml:id="uen_75_ver_English">
+              <lem wit="#OCP-Trans">Micah the Morasthite</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.6.1">
+            <app xml:id="uen_76_ver_English">
+              <lem wit="#OCP-Trans">He was from the tribe of Ephraim. After having done many things for Ahab, he was killed by Jehoram his son, being thrown from a cliff, because he rebuked him for the impieties of his fathers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.6.2">
+            <app xml:id="uen_77_ver_English">
+              <lem wit="#OCP-Trans">And he was buried in his own land, alone, near the burial place of the Enakim.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="LivPro.ver_English.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.7.0">
+            <app xml:id="uen_78_ver_English">
+              <lem wit="#OCP-Trans">Amos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.7.1">
+            <app xml:id="uen_79_ver_English">
+              <lem wit="#OCP-Trans">He was from Tekoa. Amaziah repeatedly beat him, and finally his son also killed him by striking his temple with a club.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.7.2">
+            <app xml:id="uen_80_ver_English">
+              <lem wit="#OCP-Trans">And while still breathing, he came to his own land, and after some days he died and was buried there.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="LivPro.ver_English.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.8.0">
+            <app xml:id="uen_81_ver_English">
+              <lem wit="#OCP-Trans">Joel</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.8.1">
+            <app xml:id="uen_82_ver_English">
+              <lem wit="#OCP-Trans">He was from the land of Reuben, in the field of Bethmaon. He died in peace and was buried there.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="LivPro.ver_English.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.9.0">
+            <app xml:id="uen_83_ver_English">
+              <lem wit="#OCP-Trans">Obadiah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.9.1">
+            <app xml:id="uen_84_ver_English">
+              <lem wit="#OCP-Trans">He was from the land of Shechem, the field of Beth-Haccerem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.9.2">
+            <app xml:id="uen_85_ver_English">
+              <lem wit="#OCP-Trans">This man was a disciple of Elijah, and having endured many things because of him, he was saved.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.9.3">
+            <app xml:id="uen_86_ver_English">
+              <lem wit="#OCP-Trans">This was the third captain of fifty, whom Elijah spared and went down to Ahaziah.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.9.4">
+            <app xml:id="uen_87_ver_English">
+              <lem wit="#OCP-Trans">After these things, he left the king's service, prophesied, and died, being buried with his fathers.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="LivPro.ver_English.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.10.0">
+            <app xml:id="uen_88_ver_English">
+              <lem wit="#OCP-Trans">Jonah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.10.1">
+            <app xml:id="uen_89_ver_English">
+              <lem wit="#OCP-Trans">He was from the land of Kariathmaous near the Greek city of Azotus by the sea.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.10.2">
+            <app xml:id="uen_90_ver_English">
+              <lem wit="#OCP-Trans">And having been spewed out by the whale and gone to Nineveh, upon returning he did not remain in his own land, but taking his mother, he settled in the land of Sour, a foreign territory.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.10.3">
+            <app xml:id="uen_91_ver_English">
+              <lem wit="#OCP-Trans">For he said, “Thus I will remove my reproach, because I lied by prophesying against Nineveh, the great city.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.10.4">
+            <app xml:id="uen_92_ver_English">
+              <lem wit="#OCP-Trans">At that time, Elijah was rebuking the house of Ahab, and having called a famine upon the land, he fled and came and found the widow with her son, for he could not remain with the uncircumcised.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.10.5">
+            <app xml:id="uen_93_ver_English">
+              <lem wit="#OCP-Trans">And he blessed her. And when her son died, God again raised him from the dead through Elijah, for he wanted to show him that he could not escape God.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_English.10.6">
+            <app xml:id="uen_94_ver_English">
+              <lem wit="#OCP-Trans">And having arisen after the famine, he came into the land of Judah. And when his mother died on the road, he buried her next to the oak of Deborah.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_English.10.7">
+            <app xml:id="uen_95_ver_English">
+              <lem wit="#OCP-Trans">And having lived in the land of Saraar, he died and was buried in a cave of the Kenazite, who had become a judge of one tribe in the days of anarchy.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_English.10.8">
+            <app xml:id="uen_96_ver_English">
+              <lem wit="#OCP-Trans">And he gave a sign concerning Jerusalem and all the land, that when they see a stone crying piteously, the end is near; and when they see all the nations in Jerusalem, that the city will be destroyed to its foundations.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="LivPro.ver_English.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.11.0">
+            <app xml:id="uen_97_ver_English">
+              <lem wit="#OCP-Trans">Nahum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.11.1">
+            <app xml:id="uen_98_ver_English">
+              <lem wit="#OCP-Trans">He was from Elkosh, beyond the [mountain] to Bethgabrin, of the tribe of Simeon.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.11.2">
+            <app xml:id="uen_99_ver_English">
+              <lem wit="#OCP-Trans">This man, after Jonah, gave a sign to Nineveh, that it would perish by sweet waters and subterranean fire, which also happened.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.11.3">
+            <app xml:id="uen_100_ver_English">
+              <lem wit="#OCP-Trans">For the lake surrounding it inundated it in an earthquake, and fire from the desert came and burned its higher part.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.11.4">
+            <app xml:id="uen_101_ver_English">
+              <lem wit="#OCP-Trans">He died in peace and was buried in his own land.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="LivPro.ver_English.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.12.0">
+            <app xml:id="uen_102_ver_English">
+              <lem wit="#OCP-Trans">Habakkuk</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.12.1">
+            <app xml:id="uen_103_ver_English">
+              <lem wit="#OCP-Trans">He was from the tribe of Simeon, from the field of Bethzuchar.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.12.2">
+            <app xml:id="uen_104_ver_English">
+              <lem wit="#OCP-Trans">This man saw concerning the capture of Jerusalem before the captivity and mourned exceedingly.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.12.3">
+            <app xml:id="uen_105_ver_English">
+              <lem wit="#OCP-Trans">And when Nebuchadnezzar came to Jerusalem, he fled to Ostracine and settled in the land of Ishmael.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.12.4">
+            <app xml:id="uen_106_ver_English">
+              <lem wit="#OCP-Trans">But when the Chaldeans returned, and the remaining ones who were in Jerusalem went down to Egypt, he was sojourning in their land.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.12.5">
+            <app xml:id="uen_107_ver_English">
+              <lem wit="#OCP-Trans">And he served the reapers of his field.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_English.12.6">
+            <app xml:id="uen_108_ver_English">
+              <lem wit="#OCP-Trans">When he received the food, he prophesied to his own people, saying, “I am going to a distant land and will return quickly. But if I delay, take it to the reapers.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_English.12.7">
+            <app xml:id="uen_109_ver_English">
+              <lem wit="#OCP-Trans">And having arrived in Babylon and given the breakfast to Daniel, he stood by the reapers who were eating and told no one what had happened.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_English.12.8">
+            <app xml:id="uen_110_ver_English">
+              <lem wit="#OCP-Trans">He understood that the people would quickly return from Babylon.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_English.12.9">
+            <app xml:id="uen_111_ver_English">
+              <lem wit="#OCP-Trans">And he died two years before the return. And he was buried alone in his own field.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_English.12.10">
+            <app xml:id="uen_112_ver_English">
+              <lem wit="#OCP-Trans">He gave a sign to those in Judea: that they would see a light in the temple, and thus they would see the glory of the temple.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_English.12.11">
+            <app xml:id="uen_113_ver_English">
+              <lem wit="#OCP-Trans">And concerning the completion of the temple, he foretold that it would come about by a western nation.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_English.12.12">
+            <app xml:id="uen_114_ver_English">
+              <lem wit="#OCP-Trans">“Then,” he said, “the covering of the Holy of Holies will be torn into small pieces, and the capitals of the two pillars will be removed, and no one will know where they will be.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_English.12.13">
+            <app xml:id="uen_115_ver_English">
+              <lem wit="#OCP-Trans">But they will be carried away by angels into the wilderness, where the Tent of Testimony was first pitched.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_English.12.14">
+            <app xml:id="uen_116_ver_English">
+              <lem wit="#OCP-Trans">And through them the Lord will be known at the end, for they will enlighten those pursued by the serpent in darkness, as from the beginning.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="LivPro.ver_English.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.13.0">
+            <app xml:id="uen_117_ver_English">
+              <lem wit="#OCP-Trans">Zephaniah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.13.1">
+            <app xml:id="uen_118_ver_English">
+              <lem wit="#OCP-Trans">He was from the tribe of Simeon, from the field of Sabaratha.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.13.2">
+            <app xml:id="uen_119_ver_English">
+              <lem wit="#OCP-Trans">He prophesied concerning the city and concerning the end of the nations and the shame of the impious.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.13.3">
+            <app xml:id="uen_120_ver_English">
+              <lem wit="#OCP-Trans">And having died, he was buried in his field.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="LivPro.ver_English.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.14.0">
+            <app xml:id="uen_121_ver_English">
+              <lem wit="#OCP-Trans">Haggai</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.14.1">
+            <app xml:id="uen_122_ver_English">
+              <lem wit="#OCP-Trans">He came, perhaps young, from Babylon to Jerusalem and openly prophesied concerning the return of the people, and he saw a part of the building of the temple.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.14.2">
+            <app xml:id="uen_123_ver_English">
+              <lem wit="#OCP-Trans">And having died, he was honorably buried near the tomb of the priests, like them.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="LivPro.ver_English.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.15.0">
+            <app xml:id="uen_124_ver_English">
+              <lem wit="#OCP-Trans">Zechariah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.15.1">
+            <app xml:id="uen_125_ver_English">
+              <lem wit="#OCP-Trans">He came from Chaldea already advanced in years, and there he prophesied many things to the people; and he gave signs as proof.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.15.2">
+            <app xml:id="uen_126_ver_English">
+              <lem wit="#OCP-Trans">This one said to Jehozadak that he would bear a son and he would serve as priest in Jerusalem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.15.3">
+            <app xml:id="uen_127_ver_English">
+              <lem wit="#OCP-Trans">This one also blessed Shealtiel concerning a son and gave him the name Zerubbabel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.15.4">
+            <app xml:id="uen_128_ver_English">
+              <lem wit="#OCP-Trans">And under Cyrus, he gave a sign for victory, and he foretold concerning his ministry which he would perform in Jerusalem, and he blessed him greatly.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.15.5">
+            <app xml:id="uen_129_ver_English">
+              <lem wit="#OCP-Trans">And he set forth the matters of prophecy in Jerusalem, and concerning the end of the nations and Israel and the temple and the idleness of prophets and priests, and concerning a double judgment.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_English.15.6">
+            <app xml:id="uen_130_ver_English">
+              <lem wit="#OCP-Trans">And he died in great old age, and having passed away, he was buried near Haggai.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="LivPro.ver_English.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.16.0">
+            <app xml:id="uen_131_ver_English">
+              <lem wit="#OCP-Trans">Malachi</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.16.1">
+            <app xml:id="uen_132_ver_English">
+              <lem wit="#OCP-Trans">This one was born after the return, in Sophas, and when very young, he had a good life.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.16.2">
+            <app xml:id="uen_133_ver_English">
+              <lem wit="#OCP-Trans">And since all the people honored him as holy and gentle, they called him Malachi, which is interpreted “angel”; for he was also handsome to behold.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.16.3">
+            <app xml:id="uen_134_ver_English">
+              <lem wit="#OCP-Trans">Moreover, all that he said in prophecy, on that very day, an angel of God appeared and confirmed, as it happened in the days of anarchy, as it is written in Spharphōtim, that is, in the Book of Judges.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.16.4">
+            <app xml:id="uen_135_ver_English">
+              <lem wit="#OCP-Trans">And while still young, he was gathered to his fathers in his field.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="LivPro.ver_English.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.17.0">
+            <app xml:id="uen_136_ver_English">
+              <lem wit="#OCP-Trans">Nathan</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.17.1">
+            <app xml:id="uen_137_ver_English">
+              <lem wit="#OCP-Trans">He was David’s prophet from Gibeon, from the tribe of Ehōh. And he himself was the one who taught him the law of the Lord.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.17.2">
+            <app xml:id="uen_138_ver_English">
+              <lem wit="#OCP-Trans">And he saw that David would transgress with Bathsheba, and as he hurried to go to tell him, Belial hindered him, because he found a dead man lying naked and slain along the road.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.17.3">
+            <app xml:id="uen_139_ver_English">
+              <lem wit="#OCP-Trans">And he remained there, and that night he knew that he had committed the sin; and he returned mourning.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.17.4">
+            <app xml:id="uen_140_ver_English">
+              <lem wit="#OCP-Trans">And when he had killed her husband, the Lord sent to reprove him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.17.5">
+            <app xml:id="uen_141_ver_English">
+              <lem wit="#OCP-Trans">And he died after becoming very old, and he was buried in his land.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="18" xml:id="LivPro.ver_English.18">
+          <head>Chapter 18</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.18.0">
+            <app xml:id="uen_142_ver_English">
+              <lem wit="#OCP-Trans">Ahijah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.18.1">
+            <app xml:id="uen_143_ver_English">
+              <lem wit="#OCP-Trans">from Shiloh, where the tent was of old, from the city of Heli.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.18.2">
+            <app xml:id="uen_144_ver_English">
+              <lem wit="#OCP-Trans">This man spoke concerning Solomon, that he would offend the Lord.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.18.3">
+            <app xml:id="uen_145_ver_English">
+              <lem wit="#OCP-Trans">And he rebuked Jeroboam, because he walked deceptively with the Lord. He saw a pair of oxen trampling the people and running against the priests.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.18.4">
+            <app xml:id="uen_146_ver_English">
+              <lem wit="#OCP-Trans">He also foretold to Solomon that his wives would turn him away and all his offspring.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_English.18.5">
+            <app xml:id="uen_147_ver_English">
+              <lem wit="#OCP-Trans">And he died and was buried near the oak of Shiloh.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="19" xml:id="LivPro.ver_English.19">
+          <head>Chapter 19</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.19.0">
+            <app xml:id="uen_148_ver_English">
+              <lem wit="#OCP-Trans">Ijoel</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.19.1">
+            <app xml:id="uen_149_ver_English">
+              <lem wit="#OCP-Trans">was from the land of Samareim. This is the one whom the lion struck and he died, when he rebuked Jeroboam concerning the calves.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.19.2">
+            <app xml:id="uen_150_ver_English">
+              <lem wit="#OCP-Trans">And he was buried in Bethel near the false prophet who misled him.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="20" xml:id="LivPro.ver_English.20">
+          <head>Chapter 20</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.20.0">
+            <app xml:id="uen_151_ver_English">
+              <lem wit="#OCP-Trans">Azariah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.20.1">
+            <app xml:id="uen_152_ver_English">
+              <lem wit="#OCP-Trans">was from the land of Sybatha, who brought back the captivity of Judah from Israel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.20.2">
+            <app xml:id="uen_153_ver_English">
+              <lem wit="#OCP-Trans">And dying, he was buried in his field.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="21" xml:id="LivPro.ver_English.21">
+          <head>Chapter 21</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.21.0">
+            <app xml:id="uen_154_ver_English">
+              <lem wit="#OCP-Trans">Zechariah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.21.1">
+            <app xml:id="uen_155_ver_English">
+              <lem wit="#OCP-Trans">from Jerusalem, the son of Jehoiada the priest, whom Joash the king of Judah killed beside the altar, and the house of David poured out his blood in the midst, at the aisle; and the priests took him and buried him with his father.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.21.2">
+            <app xml:id="uen_156_ver_English">
+              <lem wit="#OCP-Trans">From that time wonders of apparitions occurred in the temple, and the priests were unable to see visions of angels of God, nor to give oracles from the inner sanctuary, nor to inquire by means of the ephod, nor to respond to the people through the Urim as before.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="22" xml:id="LivPro.ver_English.22">
+          <head>Chapter 22</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.22.0">
+            <app xml:id="uen_157_ver_English">
+              <lem wit="#OCP-Trans">Elijah</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.22.1">
+            <app xml:id="uen_158_ver_English">
+              <lem wit="#OCP-Trans">Elijah the Tishbite was from the land of the Arabs, of the tribe of Aaron, dwelling in Gilead, because Tishbe was a gift to the priests.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.22.2">
+            <app xml:id="uen_159_ver_English">
+              <lem wit="#OCP-Trans">When he was about to be born, Sobacha his father saw that men in white raiment greeted him, and that they swaddled him in fire and gave him a flame of fire to eat.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.22.3">
+            <app xml:id="uen_160_ver_English">
+              <lem wit="#OCP-Trans">And he came and reported in Jerusalem, and the oracle said to him: “Do not be afraid; for his dwelling will be light and his word a judgment, and he will judge Israel with sword and with fire.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="23" xml:id="LivPro.ver_English.23">
+          <head>Chapter 23</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_English.23.0">
+            <app xml:id="uen_161_ver_English">
+              <lem wit="#OCP-Trans">Elisha</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_English.23.1">
+            <app xml:id="uen_162_ver_English">
+              <lem wit="#OCP-Trans">Elisha was from Abel-meholah of the land of Reuben.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_English.23.2">
+            <app xml:id="uen_163_ver_English">
+              <lem wit="#OCP-Trans">And a wonder occurred concerning him, that when the golden calf was born in Gilgal, it cried out sharply, so that it was heard in Jerusalem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_English.23.3">
+            <app xml:id="uen_164_ver_English">
+              <lem wit="#OCP-Trans">And the priest said through the Urim, that a prophet was born to Israel, who would cast down their carved images and their molten images.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_English.23.4">
+            <app xml:id="uen_165_ver_English">
+              <lem wit="#OCP-Trans">And dying, he was buried in Samaria.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Greek (French)" xml:lang="fr" xml:id="ver_Greek__French_">
+        <head>Greek (French)</head>
+        <div type="chapter" n="Title" xml:id="LivPro.ver_Greek__French_.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.Title.0">
+            <app xml:id="ufr_1_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Noms des prophètes, d'où ils viennent, où ils sont morts, comment et où ils reposent.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="1" xml:id="LivPro.ver_Greek__French_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.1.0">
+            <app xml:id="ufr_2_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ésaïe</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.1.1">
+            <app xml:id="ufr_3_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était de Jérusalem. Il mourut sous Manassé, scié en deux, et fut déposé sous le chêne de Rogel, près du passage des eaux qu'Ézéchias avait fait disparaître en les comblant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.1.2">
+            <app xml:id="ufr_4_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et Dieu fit le signe de Siloé à cause du prophète ; car avant de mourir, défaillant, il pria pour boire de l'eau, et aussitôt elle lui fut envoyée de cette source ; c'est pourquoi elle fut appelée Siloé, ce qui se traduit par « Envoyé ».</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.1.3">
+            <app xml:id="ufr_5_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et au temps d'Ézéchias, avant qu'il ne fît les citernes et les réservoirs, à la prière d'Ésaïe un peu d'eau jaillit, parce que le peuple était assiégé par les étrangers, et afin que la ville ne pérît pas faute d'eau.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.1.4">
+            <app xml:id="ufr_6_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car les ennemis demandaient d'où ils buvaient et, assiégeant la ville, ils s'assirent près de Siloé. Si donc les Juifs venaient, l'eau jaillissait ; mais si c'étaient des étrangers, non. C'est pourquoi, jusqu'à aujourd'hui, elle jaillit soudainement, afin que le mystère soit manifesté.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.1.5">
+            <app xml:id="ufr_7_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et puisque cela était arrivé par Ésaïe, en mémoire de cela le peuple l'enterra aussi tout près avec soin et avec honneur, afin que par ses prières, même après sa mort, ils puissent de même jouir de l'eau, car un oracle leur avait aussi été donné à son sujet.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek__French_.1.6">
+            <app xml:id="ufr_8_ver_Greek__French_">
+              <lem wit="#OCP-Trans">La tombe se trouve près de la tombe des rois, derrière la tombe des prêtres, du côté sud.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek__French_.1.7">
+            <app xml:id="ufr_9_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car Salomon fit les tombes, selon le tracé de David, à l'est de Sion, qui a une entrée venant de Gabaon, à vingt stades de distance de la ville, et il fit une structure tortueuse et insoupçonnable ; et elle demeure jusqu'à ce jour ignorée de la plupart des prêtres et de tout le peuple.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek__French_.1.8">
+            <app xml:id="ufr_10_ver_Greek__French_">
+              <lem wit="#OCP-Trans">C'est là que le roi conservait l'or d'Éthiopie et les aromates.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek__French_.1.9">
+            <app xml:id="ufr_11_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et parce qu'Ézéchias montra aux nations le secret de David et de Salomon et profana les ossements de ses pères, pour cette raison Dieu maudit sa descendance afin qu'elle soit en servitude pour ses ennemis, et Dieu le rendit stérile à partir de ce jour-là.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="LivPro.ver_Greek__French_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.2.0">
+            <app xml:id="ufr_12_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Jérémie</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.2.1">
+            <app xml:id="ufr_13_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était d'Anathoth, et à Taphnas en Égypte, lapidé par le peuple, il mourut.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.2.2">
+            <app xml:id="ufr_14_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il repose dans le lieu de la demeure de Pharaon, car les Égyptiens l'honorèrent, ayant été comblés de bienfaits par lui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.2.3">
+            <app xml:id="ufr_15_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car il pria, et les aspics — que les Égyptiens appellent éphôth — les laissèrent en paix.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.2.4">
+            <app xml:id="ufr_16_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et tous ceux qui sont fidèles à Dieu prient jusqu'à ce jour en ce lieu et, prenant de la poussière du lieu, guérissent les morsures d'aspics.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.2.5">
+            <app xml:id="ufr_17_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais nous avons appris des enfants d'Antigone et de Ptolémée, des vieillards, qu'Alexandre le Macédonien, s'étant rendu sur le lieu du prophète et ayant reconnu ses mystères, transféra ses reliques à Alexandrie, les disposant tout autour avec honneur ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek__French_.2.6">
+            <app xml:id="ufr_18_ver_Greek__French_">
+              <lem wit="#OCP-Trans">et la race des aspics fut chassée de ce pays ; et il y introduisit ainsi les serpents appelés argoles, c'est-à-dire combattants de serpents.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek__French_.2.7">
+            <app xml:id="ufr_19_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ce Jérémie donna un signe aux prêtres d'Égypte : que leurs idoles devaient être ébranlées et que tous les ouvrages faits de main d'homme devaient s'écrouler lorsqu'une vierge enfanterait en Égypte avec un enfant semblable à Dieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek__French_.2.8">
+            <app xml:id="ufr_20_ver_Greek__French_">
+              <lem wit="#OCP-Trans">C'est pourquoi, jusqu'à présent, ils honorent une vierge qui enfante et, plaçant un nourrisson dans une crèche, ils l'adorent ; et au roi Ptolémée qui en demandait la raison, ils disaient : « C'est un mystère transmis par nos pères, confié à nos pères par un saint prophète, et nous attendons l'accomplissement de son mystère. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek__French_.2.9">
+            <app xml:id="ufr_21_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ce prophète, avant la prise du Temple, s'empara de l'arche de la Loi et de ce qu'elle contenait, et fit en sorte qu'elles fussent englouties dans un rocher, et dit à ceux qui se tenaient là :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_Greek__French_.2.10">
+            <app xml:id="ufr_22_ver_Greek__French_">
+              <lem wit="#OCP-Trans">« Le Seigneur est parti du Sinaï vers le ciel, et il reviendra avec puissance ; et ce sera pour vous le signe de sa venue, lorsque toutes les nations se prosterneront devant un bois. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_Greek__French_.2.11">
+            <app xml:id="ufr_23_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il dit que personne ne ferait sortir cette arche, sinon Aaron, et que nul parmi les prêtres ou les prophètes ne déploierait plus les tables qui s'y trouvent, sinon Moïse, l'élu de Dieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_Greek__French_.2.12">
+            <app xml:id="ufr_24_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lors de la résurrection, l'arche se lèvera la première, sortira du rocher et sera placée sur le mont Sinaï, et tous les saints se rassembleront près d'elle là-bas, attendant le Seigneur et fuyant l'ennemi qui veut les anéantir.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_Greek__French_.2.13">
+            <app xml:id="ufr_25_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Sur le rocher, il scella de son doigt le nom de Dieu, et l'empreinte devint comme une gravure de fer ; une nuée couvrit le nom, et personne ne connaît le lieu ni ne peut le lire jusqu'à ce jour et jusqu'à la fin des temps.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_Greek__French_.2.14">
+            <app xml:id="ufr_26_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et le rocher est dans le désert, là où l'arche fut d'abord faite, entre les deux montagnes où reposent Moïse et Aaron ; et la nuit, une nuée devient comme du feu selon le modèle ancien, car la gloire de Dieu ne s'éloignera point de sa Loi.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_Greek__French_.2.15">
+            <app xml:id="ufr_27_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et Dieu accorda à Jérémie la grâce d'accomplir lui-même la fin de son mystère, afin qu'il devînt le compagnon de Moïse, et ils sont ensemble jusqu'à ce jour.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="LivPro.ver_Greek__French_.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.3.0">
+            <app xml:id="ufr_28_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ézéchiel</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.3.1">
+            <app xml:id="ufr_29_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Celui-ci était du pays de Sarira, de la lignée des prêtres, et il mourut au pays des Chaldéens durant la captivité, après avoir beaucoup prophétisé à ceux de Judée.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.3.2">
+            <app xml:id="ufr_30_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Le chef du peuple d'Israël là-bas le mit à mort, parce qu'il était repris par lui au sujet du culte des idoles.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.3.3">
+            <app xml:id="ufr_31_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ils l'enterrèrent dans le champ de Maur, dans la tombe de Sem et d'Arphaxad, ancêtres d'Abraham.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.3.4">
+            <app xml:id="ufr_32_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et la tombe est une caverne double, car Abraham aussi, à Hébron, fit la tombe de Sara à sa ressemblance.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.3.5">
+            <app xml:id="ufr_33_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Elle est dite double parce qu'elle est tortueuse, et c'est une chambre haute cachée, surélevée par rapport au sol, suspendue dans le roc.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek__French_.3.6">
+            <app xml:id="ufr_34_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ce prophète donna un prodige au peuple, afin qu'il prêtât attention au fleuve Kebar :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek__French_.3.7">
+            <app xml:id="ufr_35_ver_Greek__French_">
+              <lem wit="#OCP-Trans">lorsqu'il tarirait, ils devaient attendre la faucille de la désolation jusqu'au bout de la terre, et lorsqu'il déborderait, le retour à Jérusalem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek__French_.3.8">
+            <app xml:id="ufr_36_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car le saint homme habitait là et beaucoup se rassemblaient auprès de lui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek__French_.3.9">
+            <app xml:id="ufr_37_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et une fois, une foule étant réunie avec lui, les Chaldéens craignirent qu'ils ne se soulevassent et marchèrent contre eux pour les massacrer.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_Greek__French_.3.10">
+            <app xml:id="ufr_38_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il fit s'arrêter l'eau pour qu'ils s'enfuient en passant sur l'autre rive ; et ceux des ennemis qui osèrent les poursuivre furent engloutis.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_Greek__French_.3.11">
+            <app xml:id="ufr_39_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Par sa prière, il leur procura spontanément une nourriture abondante de poissons et, pour beaucoup qui défaillaient, il pria Dieu de leur redonner vie.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_Greek__French_.3.12">
+            <app xml:id="ufr_40_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Comme le peuple périssait sous les coups des ennemis, il s'approcha des chefs et, effrayés par des prodiges, ils cessèrent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_Greek__French_.3.13">
+            <app xml:id="ufr_41_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il leur disait : « Avons-nous péri ? Notre espérance est-elle anéantie ? » Et par le prodige des ossements des morts, il les convainquit qu'il y aurait une espérance pour Israël, tant ici-bas que dans le monde à venir.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_Greek__French_.3.14">
+            <app xml:id="ufr_42_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Bien qu'étant là-bas, il montrait au peuple d'Israël ce qui se passait à Jérusalem et dans le Temple.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_Greek__French_.3.15">
+            <app xml:id="ufr_43_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il fut ravi de là et vint à Jérusalem pour confondre les incrédules.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="LivPro.ver_Greek__French_.3.16">
+            <app xml:id="ufr_44_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Tout comme Moïse, il vit le modèle du Temple, ainsi que le mur et un large avant-mur, tout comme Daniel dit aussi qu'il serait bâti.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="LivPro.ver_Greek__French_.3.17">
+            <app xml:id="ufr_45_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il jugea à Babylone la tribu de Dan et celle de Gad, parce qu'elles commettaient l'impiété envers le Seigneur en persécutant ceux qui gardaient la Loi,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="LivPro.ver_Greek__French_.3.18">
+            <app xml:id="ufr_46_ver_Greek__French_">
+              <lem wit="#OCP-Trans">et il fit contre elles un grand prodige : des serpents dévoraient leurs nourrissons et tout leur bétail,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="LivPro.ver_Greek__French_.3.19">
+            <app xml:id="ufr_47_ver_Greek__French_">
+              <lem wit="#OCP-Trans">et il prédit qu'à cause d'elles le peuple ne retournerait pas dans son pays, mais qu'ils resteraient en Médie jusqu'à la fin de leur égarement.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="LivPro.ver_Greek__French_.3.20">
+            <app xml:id="ufr_48_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et c'est de leur nombre qu'était celui qui le tua ; car ils s'opposèrent à lui tous les jours de sa vie.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="LivPro.ver_Greek__French_.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.4.0">
+            <app xml:id="ufr_49_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Daniel</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.4.1">
+            <app xml:id="ufr_50_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Celui-ci était de la tribu de Juda, issu de la lignée des notables au service royal ; mais, encore enfant, il fut emmené de Judée au pays des Chaldéens. Il était né à Beth-Horon la Haute.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.4.2">
+            <app xml:id="ufr_51_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et c'était un homme chaste, au point que les Juifs pensaient qu'il était eunuque.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.4.3">
+            <app xml:id="ufr_52_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il mena grand deuil sur la ville et s'exerça dans les jeûnes, s'abstenant de toute nourriture désirable ; il était d'aspect desséché, mais beau par la grâce du Très-Haut.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.4.4">
+            <app xml:id="ufr_53_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Celui-ci pria beaucoup pour Nabuchodonosor, à la prière de son fils Balthasar, lorsqu'il fut transformé en bête féroce et en bétail, afin qu'il ne pérît point.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.4.5">
+            <app xml:id="ufr_54_ver_Greek__French_">
+              <lem wit="#OCP-Trans">L'avant de son corps, avec la tête, était comme un bœuf, et ses pattes, avec l'arrière-train, comme un lion.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek__French_.4.6">
+            <app xml:id="ufr_55_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il fut révélé au saint homme, au sujet de ce mystère, qu'il était devenu une bête à cause de son amour du plaisir et de son obstination.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek__French_.4.7">
+            <app xml:id="ufr_56_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et c'est ce qu'éprouvent les puissants dans leur jeunesse, car ils se mettent comme un bœuf sous le joug de Béliar, et à la fin ils deviennent des bêtes féroces, ravissant, détruisant, mettant à mort et frappant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek__French_.4.8">
+            <app xml:id="ufr_57_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Le saint sut par Dieu qu'il mangeait de l'herbe comme un bœuf et que celle-ci devenait pour lui une nourriture propre à la nature humaine.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek__French_.4.9">
+            <app xml:id="ufr_58_ver_Greek__French_">
+              <lem wit="#OCP-Trans">C'est pourquoi Nabuchodonosor aussi, après la digestion, retrouvant un cœur d'homme, pleurait et implorait le Seigneur, priant quarante fois chaque jour et chaque nuit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_Greek__French_.4.10">
+            <app xml:id="ufr_59_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Un cœur de bête le reprenait, et il oubliait qu'il avait été un être humain ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_Greek__French_.4.11">
+            <app xml:id="ufr_60_ver_Greek__French_">
+              <lem wit="#OCP-Trans">sa langue lui fut retirée pour qu'il ne pût parler ; et dès qu'il reprenait conscience, il versait des larmes, et ses yeux étaient comme de la chair crue à force de pleurer.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_Greek__French_.4.12">
+            <app xml:id="ufr_61_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car beaucoup de ceux qui sortaient de la ville le voyaient ; seul Daniel refusa de le voir, parce que pendant tout le temps de sa métamorphose, il était en prière pour lui ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_Greek__French_.4.13">
+            <app xml:id="ufr_62_ver_Greek__French_">
+              <lem wit="#OCP-Trans">il disait qu'il redeviendrait un être humain, mais ils ne le croyaient pas.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_Greek__French_.4.14">
+            <app xml:id="ufr_63_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Daniel fit en sorte que les sept années, qu'il avait appelées sept temps, devinssent sept mois.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="LivPro.ver_Greek__French_.4.15">
+            <app xml:id="ufr_64_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Le mystère des sept temps s'accomplit sur lui, car il fut rétabli en sept mois ; pendant six ans et six mois, il se prosternait devant le Seigneur et confessait son impiété ; et après le pardon de son iniquité, il lui rendit la royauté.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="LivPro.ver_Greek__French_.4.16">
+            <app xml:id="ufr_65_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il ne mangea ni pain ni viande, et ne but point de vin tout en faisant pénitence, car Daniel lui avait ordonné d'apaiser le Seigneur avec des légumes trempés et des herbes.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="LivPro.ver_Greek__French_.4.17">
+            <app xml:id="ufr_66_ver_Greek__French_">
+              <lem wit="#OCP-Trans">C'est pour cela qu'il l'appela Balthasar, car il voulut l'établir cohéritier de ses enfants.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="LivPro.ver_Greek__French_.4.18">
+            <app xml:id="ufr_67_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais le saint homme dit : « À Dieu ne plaise que j'abandonne l'héritage de mes pères pour m'attacher aux héritages des incirconcis ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="LivPro.ver_Greek__French_.4.19">
+            <app xml:id="ufr_68_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et pour les autres rois des Perses, il accomplit de nombreux prodiges qui n'ont pas été mis par écrit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="LivPro.ver_Greek__French_.4.20">
+            <app xml:id="ufr_69_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il mourut là-bas et fut enseveli seul, avec honneur, dans le tombeau royal.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="LivPro.ver_Greek__French_.4.21">
+            <app xml:id="ufr_70_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il donna lui-même un signe dans les montagnes situées au-dessus de Babylone : lorsque celle du nord sera fumante, la fin de Babylone viendra ; mais lorsqu'elle brûlera comme par le feu, ce sera la fin de toute la terre ; et si celle du midi fait couler des eaux, le peuple retournera dans son pays, et si elle fait couler du sang, il y aura un carnage de Béliar sur toute la terre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="LivPro.ver_Greek__French_.4.22">
+            <app xml:id="ufr_71_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et le saint homme s'endormit dans la paix.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="LivPro.ver_Greek__French_.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.5.0">
+            <app xml:id="ufr_72_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Osée</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.5.1">
+            <app xml:id="ufr_73_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Celui-ci était de Belemoth, de la tribu d'Issachar, et il fut enseveli dans sa patrie en paix.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.5.2">
+            <app xml:id="ufr_74_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il donna un signe : le Seigneur viendra sur la terre si le chêne qui est à Silo se divise de lui-même pour devenir douze chênes.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="LivPro.ver_Greek__French_.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.6.0">
+            <app xml:id="ufr_75_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Michée le Morasthite</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.6.1">
+            <app xml:id="ufr_76_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était de la tribu d'Éphraïm. Après avoir fait beaucoup de choses contre Achab, il fut mis à mort par Joram, son fils, en étant précipité d'une falaise, parce qu'il le reprenait pour les impiétés de ses pères.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.6.2">
+            <app xml:id="ufr_77_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il fut enseveli seul dans sa patrie, près de la fosse commune des Enakim.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="LivPro.ver_Greek__French_.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.7.0">
+            <app xml:id="ufr_78_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Amos</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.7.1">
+            <app xml:id="ufr_79_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était de Tékoé. Après qu'Amasias l'eut souvent fait battre, finalement son fils le tua en le frappant à la tempe avec une massue ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.7.2">
+            <app xml:id="ufr_80_ver_Greek__French_">
+              <lem wit="#OCP-Trans">et respirant encore, il parvint dans son pays, mourut quelques jours plus tard et y fut enseveli.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="LivPro.ver_Greek__French_.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.8.0">
+            <app xml:id="ufr_81_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Joël</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.8.1">
+            <app xml:id="ufr_82_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était du pays de Ruben, du domaine de Beth-Méon. Il mourut en paix et y fut enseveli.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="LivPro.ver_Greek__French_.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.9.0">
+            <app xml:id="ufr_83_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Abdias</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.9.1">
+            <app xml:id="ufr_84_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était du pays de Sichem, du domaine de Beth-Acaram.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.9.2">
+            <app xml:id="ufr_85_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Celui-ci était un disciple d'Élie et, ayant beaucoup enduré à cause de lui, il fut préservé.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.9.3">
+            <app xml:id="ufr_86_ver_Greek__French_">
+              <lem wit="#OCP-Trans">C'était le troisième chef de cinquante hommes qu'Élie épargna et avec lequel il descendit vers Ochozias.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.9.4">
+            <app xml:id="ufr_87_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Après cela, ayant quitté le service du roi, il prophétisa, mourut et fut enseveli avec ses pères.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="LivPro.ver_Greek__French_.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.10.0">
+            <app xml:id="ufr_88_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Jonas</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.10.1">
+            <app xml:id="ufr_89_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était du pays de Qiryath-Maous, près de la ville grecque d'Azot, sur le littoral.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.10.2">
+            <app xml:id="ufr_90_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Après avoir été rejeté par le monstre marin et être allé à Ninive, à son retour il ne resta pas dans son pays, mais prit sa mère et s'établit à Sour, pays des Philistins ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.10.3">
+            <app xml:id="ufr_91_ver_Greek__French_">
+              <lem wit="#OCP-Trans">car il disait : « C'est ainsi que j'ôterai mon opprobre, ayant menti en prophétisant contre Ninive, la grande ville. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.10.4">
+            <app xml:id="ufr_92_ver_Greek__French_">
+              <lem wit="#OCP-Trans">En ce temps-là, Élie reprenait la maison d'Achab et, ayant appelé la famine sur le pays, il s'enfuit ; et à son arrivée, il trouva la veuve avec son fils, car il ne pouvait demeurer auprès des incirconcis.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.10.5">
+            <app xml:id="ufr_93_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il la bénit ; et son fils étant mort, Dieu le ressuscita des morts par l'intermédiaire d'Élie, car il voulut lui montrer qu'on ne peut fuir loin de Dieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek__French_.10.6">
+            <app xml:id="ufr_94_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et s'étant levé après la famine, il vint dans le pays de Juda ; et sa mère étant morte en chemin, il l'ensevelit près du chêne de Débora.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek__French_.10.7">
+            <app xml:id="ufr_95_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et ayant habité dans le pays de Saraar, il mourut et fut enseveli dans la grotte de Kenaz, qui avait été juge d'une seule tribu aux jours de l'anarchie.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek__French_.10.8">
+            <app xml:id="ufr_96_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il donna un signe concernant Jérusalem et toute la terre : quand ils verront une pierre crier plaintivement, la fin sera proche ; et quand ils verront toutes les nations dans Jérusalem, la ville sera détruite de fond en comble.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="LivPro.ver_Greek__French_.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.11.0">
+            <app xml:id="ufr_97_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Nahum</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.11.1">
+            <app xml:id="ufr_98_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était d'Elkosh, au-delà de la montagne vers Beth-Gabrîn, de la tribu de Siméon.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.11.2">
+            <app xml:id="ufr_99_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Après Jonas, celui-ci donna un signe pour Ninive : qu'elle périrait par des eaux douces et un feu souterrain, ce qui arriva.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.11.3">
+            <app xml:id="ufr_100_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Car le lac qui l'entourait l'inonda lors d'un tremblement de terre, et un feu venu du désert embrasa sa partie la plus élevée.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.11.4">
+            <app xml:id="ufr_101_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il mourut en paix et fut enseveli dans sa terre.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="LivPro.ver_Greek__French_.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.12.0">
+            <app xml:id="ufr_102_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Habacuc</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.12.1">
+            <app xml:id="ufr_103_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était de la tribu de Siméon, du domaine de Bethzoukhar.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.12.2">
+            <app xml:id="ufr_104_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Avant la déportation, il eut une vision touchant la prise de Jérusalem et mena un grand deuil.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.12.3">
+            <app xml:id="ufr_105_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsque Nabuchodonosor vint à Jérusalem, il s'enfuit à Ostracine et séjourna au pays d'Ismaël.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.12.4">
+            <app xml:id="ufr_106_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Mais quand les Chaldéens s'en retournèrent et que le reste de ceux qui étaient à Jérusalem descendit en Égypte, il revint habiter dans sa terre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.12.5">
+            <app xml:id="ufr_107_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il servait les moissonneurs de son champ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek__French_.12.6">
+            <app xml:id="ufr_108_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ayant pris la nourriture, il prophétisa aux siens en disant : « Je vais dans un pays lointain et je reviendrai promptement ; mais si je tarde, portez-la vous-mêmes aux moissonneurs. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="LivPro.ver_Greek__French_.12.7">
+            <app xml:id="ufr_109_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et s'étant rendu à Babylone et ayant donné le repas à Daniel, il se retrouva auprès des moissonneurs pendant qu'ils mangeaient, et il ne raconta à personne ce qui était arrivé.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="LivPro.ver_Greek__French_.12.8">
+            <app xml:id="ufr_110_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il comprit que le peuple reviendrait bientôt de Babylone.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="LivPro.ver_Greek__French_.12.9">
+            <app xml:id="ufr_111_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il mourut deux ans avant le retour, et il fut enseveli seul dans son propre champ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="LivPro.ver_Greek__French_.12.10">
+            <app xml:id="ufr_112_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il donna un prodige à ceux de Judée : ils verraient une lumière dans le Temple, et contempleraient ainsi la gloire du Temple.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="LivPro.ver_Greek__French_.12.11">
+            <app xml:id="ufr_113_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et au sujet de la fin du Temple, il prédit qu'elle adviendrait par une nation occidentale.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="LivPro.ver_Greek__French_.12.12">
+            <app xml:id="ufr_114_ver_Greek__French_">
+              <lem wit="#OCP-Trans">« Alors », dit-il, « le voile du Debir sera déchiré en petits morceaux, et les chapiteaux des deux colonnes seront enlevés, et nul ne saura où ils seront ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="LivPro.ver_Greek__French_.12.13">
+            <app xml:id="ufr_115_ver_Greek__French_">
+              <lem wit="#OCP-Trans">mais ils seront transportés au désert par des anges, là où, au commencement, la Tente du Témoignage fut dressée.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="LivPro.ver_Greek__French_.12.14">
+            <app xml:id="ufr_116_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et par eux, le Seigneur sera reconnu à la fin, car ils éclaireront ceux qui sont poursuivis par le serpent dans les ténèbres, comme dès le commencement. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="LivPro.ver_Greek__French_.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.13.0">
+            <app xml:id="ufr_117_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Sophonie</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.13.1">
+            <app xml:id="ufr_118_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était de la tribu de Siméon, du domaine de Sabaratha.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.13.2">
+            <app xml:id="ufr_119_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il prophétisa touchant la ville, la fin des nations et la honte des impies.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.13.3">
+            <app xml:id="ufr_120_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et étant mort, il fut enseveli dans son champ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="LivPro.ver_Greek__French_.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.14.0">
+            <app xml:id="ufr_121_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Aggée</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.14.1">
+            <app xml:id="ufr_122_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il vint encore jeune de Babylone à Jérusalem, prophétisa ouvertement sur le retour du peuple et vit en partie la reconstruction du Temple.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.14.2">
+            <app xml:id="ufr_123_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et étant mort, il fut enseveli près du tombeau des prêtres, avec les mêmes honneurs qu'eux.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="15" xml:id="LivPro.ver_Greek__French_.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.15.0">
+            <app xml:id="ufr_124_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Zacharie</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.15.1">
+            <app xml:id="ufr_125_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il vint de Chaldée déjà avancé en âge, et là-bas il prophétisa beaucoup pour le peuple et donna des prodiges en guise de preuve.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.15.2">
+            <app xml:id="ufr_126_ver_Greek__French_">
+              <lem wit="#OCP-Trans">C'est lui qui dit à Josedec qu'il engendrerait un fils et qu'il exercerait la prêtrise à Jérusalem ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.15.3">
+            <app xml:id="ufr_127_ver_Greek__French_">
+              <lem wit="#OCP-Trans">c'est lui aussi qui bénit Salathiel pour son fils et lui donna le nom de Zorobabel.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.15.4">
+            <app xml:id="ufr_128_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et sous Cyrus, il donna un prodige en signe de victoire, prédit le service qu'il accomplirait à l'égard de Jérusalem et le bénit grandement.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.15.5">
+            <app xml:id="ufr_129_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il exposa ses prophéties à Jérusalem touchant la fin des nations, d'Israël et du Temple, la cessation des prophètes et des prêtres, et le double jugement.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="LivPro.ver_Greek__French_.15.6">
+            <app xml:id="ufr_130_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il mourut dans une extrême vieillesse, et ayant expiré, il fut enseveli près d'Aggée.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="LivPro.ver_Greek__French_.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.16.0">
+            <app xml:id="ufr_131_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Malachie</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.16.1">
+            <app xml:id="ufr_132_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il naquit à Sopha après le retour, et dès son jeune âge mena une vie exemplaire.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.16.2">
+            <app xml:id="ufr_133_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et comme tout le peuple le vénérait comme un homme saint et doux, on l'appela Malachi, ce qui s'interprète « ange », car il était aussi beau d'aspect.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.16.3">
+            <app xml:id="ufr_134_ver_Greek__French_">
+              <lem wit="#OCP-Trans">De plus, tout ce qu'il prononçait en prophétie, un ange de Dieu apparaissait le jour même pour le répéter, comme cela s'était produit aux jours de l'anarchie, ainsi qu'il est écrit dans Spharphotim, c'est-à-dire dans le livre des Juges.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.16.4">
+            <app xml:id="ufr_135_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et encore jeune, il fut réuni à ses pères dans son champ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="17" xml:id="LivPro.ver_Greek__French_.17">
+          <head>Chapter 17</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.17.0">
+            <app xml:id="ufr_136_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Nathan</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.17.1">
+            <app xml:id="ufr_137_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était le prophète de David, originaire de Gabaon, de la tribu d'Éôé. C'est lui qui lui enseigna la Loi du Seigneur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.17.2">
+            <app xml:id="ufr_138_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il vit que David pécherait avec Bethsabée ; mais alors qu'il se hâtait d'aller l'avertir, Béliar l'en empêcha, car il trouva sur son chemin un cadavre gisant nu, égorgé.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.17.3">
+            <app xml:id="ufr_139_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il s'attarda là, et cette nuit-là il sut que David avait commis le péché ; et il s'en retourna en pleurant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.17.4">
+            <app xml:id="ufr_140_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et quand David eut fait périr le mari de celle-ci, le Seigneur envoya Nathan pour le reprendre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.17.5">
+            <app xml:id="ufr_141_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et étant devenu très vieux, il mourut et fut enseveli dans sa terre.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="18" xml:id="LivPro.ver_Greek__French_.18">
+          <head>Chapter 18</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.18.0">
+            <app xml:id="ufr_142_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Ahiyya</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.18.1">
+            <app xml:id="ufr_143_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était de Silo, où se trouvait autrefois la Tente, de la ville d'Éli.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.18.2">
+            <app xml:id="ufr_144_ver_Greek__French_">
+              <lem wit="#OCP-Trans">C'est lui qui dit au sujet de Salomon qu'il offenserait le Seigneur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.18.3">
+            <app xml:id="ufr_145_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il reprit Jéroboam parce qu'il marchait avec fourberie envers le Seigneur ; il vit une paire de génisses qui piétinait le peuple et se précipitait contre les prêtres.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.18.4">
+            <app xml:id="ufr_146_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il prédit aussi à Salomon que ses femmes le séduiraient, ainsi que toute sa lignée.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="LivPro.ver_Greek__French_.18.5">
+            <app xml:id="ufr_147_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il mourut et fut enseveli près du chêne de Silo.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="19" xml:id="LivPro.ver_Greek__French_.19">
+          <head>Chapter 19</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.19.0">
+            <app xml:id="ufr_148_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Joëd</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.19.1">
+            <app xml:id="ufr_149_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était du pays de Samarie. C'est lui que le lion tua et qui mourut lorsqu'il eut repris Jéroboam au sujet des génisses.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.19.2">
+            <app xml:id="ufr_150_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et il fut enseveli à Béthel près du faux prophète qui l'avait égaré.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="20" xml:id="LivPro.ver_Greek__French_.20">
+          <head>Chapter 20</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.20.0">
+            <app xml:id="ufr_151_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Azarias</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.20.1">
+            <app xml:id="ufr_152_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était du pays de Sybatha, lui qui fit revenir d'Israël les captifs de Juda.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.20.2">
+            <app xml:id="ufr_153_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsqu'il mourut, il fut enseveli dans son champ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="21" xml:id="LivPro.ver_Greek__French_.21">
+          <head>Chapter 21</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.21.0">
+            <app xml:id="ufr_154_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Zacharie</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.21.1">
+            <app xml:id="ufr_155_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Il était de Jérusalem, fils du prêtre Joïada, que Joas, roi de Juda, tua près de l'autel ; et la maison de David répandit son sang au milieu, sur le portique. Les prêtres le prirent et l'ensevelirent avec son père.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.21.2">
+            <app xml:id="ufr_156_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Dès lors, il y eut dans le Temple des prodiges d'apparitions, et les prêtres ne purent plus avoir de vision des anges de Dieu, ni donner d'oracles depuis le Dévir, ni consulter par l'éphod, ni répondre au peuple par les Ourim comme auparavant.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="22" xml:id="LivPro.ver_Greek__French_.22">
+          <head>Chapter 22</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.22.0">
+            <app xml:id="ufr_157_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Élie</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.22.1">
+            <app xml:id="ufr_158_ver_Greek__French_">
+              <lem wit="#OCP-Trans">C'était un Thesbite du pays des Arabes, de la tribu d'Aaron, habitant en Galaad, car Thesbi avait été donnée aux prêtres.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.22.2">
+            <app xml:id="ufr_159_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Lorsqu'il était sur le point de naître, son père Sobakha vit que des hommes vêtus de blanc le saluaient, qu'ils l'emmaillotaient de feu et lui donnaient à manger une flamme de feu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.22.3">
+            <app xml:id="ufr_160_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Étant allé à Jérusalem, il le rapporta, et l'oracle lui dit : « Ne crains point, car sa demeure sera lumière et sa parole jugement, et il jugera Israël par l'épée et par le feu. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="23" xml:id="LivPro.ver_Greek__French_.23">
+          <head>Chapter 23</head>
+          <ab type="verse" n="0" xml:id="LivPro.ver_Greek__French_.23.0">
+            <app xml:id="ufr_161_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Élisée</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="1" xml:id="LivPro.ver_Greek__French_.23.1">
+            <app xml:id="ufr_162_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Élisée était d'Abel-Méhula, du pays de Ruben.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="LivPro.ver_Greek__French_.23.2">
+            <app xml:id="ufr_163_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et à son sujet se produisit un prodige : lorsqu'il naquit, à Guilgal la génisse d'or poussa un cri perçant, au point qu'on l'entendit à Jérusalem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="LivPro.ver_Greek__French_.23.3">
+            <app xml:id="ufr_164_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et le prêtre déclara par les oracles : « Un prophète est né pour Israël, qui renversera leurs sculptures et leurs idoles de fonte. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="LivPro.ver_Greek__French_.23.4">
+            <app xml:id="ufr_165_ver_Greek__French_">
+              <lem wit="#OCP-Trans">Et lorsqu'il mourut, il fut enseveli à Samarie.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

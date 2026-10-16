@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ElMod">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Eldad and Modad (Fragment)</title>
+        <editor role="editor">Penner, Ken M., Ian W. Scott</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Whittaker">
+            <abbr type="siglum">Whittaker</abbr>
+            <name>Whittaker</name>
+            <bibl>text: Molly Whittaker, Der Hirt des Hermas (2d ed.; vol 1 of Die Apostolischen Väter; GCS 48; Berlin: Akademie, 1967 [1st ed. 1956]), 7, line 3. [Shepherd of Hermas, Visions 2.3.4] (cf. Num 11:26).</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation based on the Greek text of Shepherd of Hermas, Visions 2.3.4 (cf. Num 11:26).</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Shepherd_of_Hermas">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Shepherd_of_Hermas__French_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Shepherd of Hermas" xml:lang="grc" xml:id="ver_Shepherd_of_Hermas">
+        <head>Shepherd of Hermas</head>
+        <div type="book" n="Visions 2" xml:id="ElMod.ver_Shepherd_of_Hermas.Visions_2">
+          <head>Book Visions 2</head>
+          <div type="chapter" n="3" xml:id="ElMod.ver_Shepherd_of_Hermas.Visions_2.3">
+            <head>Chapter 3</head>
+            <ab type="verse" n="4" xml:id="ElMod.ver_Shepherd_of_Hermas.Visions_2.3.4">
+              <app xml:id="u1_ver_Shepherd_of_Hermas">
+                <lem wit="#Whittaker">“Ἐγγὺς κύριος τοῖς ἐπιστρεφομένοις,” ὡς γέγραπται ἐν τῷ Ἐλδὰδ καὶ Μωδάτ, τοῖς προφητεύσασιν ἐν τῇ ἐρήμῳ τῷ λαῷ.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="book" n="Visions 2" xml:id="ElMod.ver_English.Visions_2">
+          <head>Book Visions 2</head>
+          <div type="chapter" n="3" xml:id="ElMod.ver_English.Visions_2.3">
+            <head>Chapter 3</head>
+            <ab type="verse" n="4" xml:id="ElMod.ver_English.Visions_2.3.4">
+              <app xml:id="uen_1_ver_English">
+                <lem wit="#OCP-Trans">“The Lord is near to those who turn to him,” as it is written in Eldad and Modat, who prophesied to the people in the wilderness.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Shepherd of Hermas (French)" xml:lang="fr" xml:id="ver_Shepherd_of_Hermas__French_">
+        <head>Shepherd of Hermas (French)</head>
+        <div type="book" n="Visions 2" xml:id="ElMod.ver_Shepherd_of_Hermas__French_.Visions_2">
+          <head>Book Visions 2</head>
+          <div type="chapter" n="3" xml:id="ElMod.ver_Shepherd_of_Hermas__French_.Visions_2.3">
+            <head>Chapter 3</head>
+            <ab type="verse" n="4" xml:id="ElMod.ver_Shepherd_of_Hermas__French_.Visions_2.3.4">
+              <app xml:id="ufr_1_ver_Shepherd_of_Hermas__French_">
+                <lem wit="#OCP-Trans">« Le Seigneur est proche de ceux qui reviennent à lui », comme il est écrit dans Eldad et Modat, qui ont prophétisé au peuple dans le désert.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

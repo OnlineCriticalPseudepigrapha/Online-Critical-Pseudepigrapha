@@ -1,0 +1,915 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="id_6Ezra">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>6 Ezra</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Bensly">
+            <abbr type="siglum">Bensly</abbr>
+            <name>Bensly 1895</name>
+            <bibl>R. L. Bensly, The Fourth Book of Ezra: The Latin Version Edited from the MSS, with an introduction by M. R. James (Texts and Studies 3.2; Cambridge: Cambridge University Press, 1895), Bensly 1895, cc. XV-XVI (= 4 Esdras 15-16 Vulg.), pp. 72-82. Text from OCR (tesseract), verse division aligned to the Clementine Vulgate; not yet proofread.</bibl>
+          </witness>
+          <witness xml:id="C">
+            <abbr type="siglum">C</abbr>
+            <name>Codex C (Spanish recension)</name>
+            <bibl>R. L. Bensly, The Fourth Book of Ezra: The Latin Version Edited from the MSS, with an introduction by M. R. James (Texts and Studies 3.2; Cambridge: Cambridge University Press, 1895), Appendix I, pp. 83-92: text of C (Codex Complutensis) as printed by Bensly; the variants of M are not included. OCR, verse division from Bensly's margin numbers and alignment; not yet proofread.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="la">la</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="la">
+    <body>
+      <div type="edition" n="6 Ezra" xml:lang="la" xml:id="ver_id_6_Ezra">
+        <head>6 Ezra</head>
+        <div type="chapter" n="15" xml:id="id_6Ezra.ver_id_6_Ezra.15">
+          <head>Chapter 15</head>
+          <ab type="verse" n="1" xml:id="id_6Ezra.ver_id_6_Ezra.15.1">
+            <app xml:id="u1_ver_id_6_Ezra">
+              <lem wit="#Bensly">Ecce loquere in aures plebi meae sermones prophetiae quos inmisero in os tuum, dicit dominus,</lem>
+              <rdg wit="#C" n="1">Ecce loquere in auribus populi mei sermones profetie, quos inmisero in os tuum, dicit dominus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_6Ezra.ver_id_6_Ezra.15.2">
+            <app xml:id="u1_ver_id_6_Ezra_2">
+              <lem wit="#Bensly">Et fac ut in carta scribantur, quoniam fideles et ueri sunt.</lem>
+              <rdg wit="#C" n="1">Et fac ut in carta scribantur quoniam fideles et ueri sunt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_6Ezra.ver_id_6_Ezra.15.3">
+            <app xml:id="u1_ver_id_6_Ezra_3">
+              <lem wit="#Bensly">Ne timeas a cogitationibus aduersum te, nec turbent te incredulitates contradicentium.</lem>
+              <rdg wit="#C" n="1">Ne timeas a cogitationibus eorum aduersum te ne turbent te incredulitates dicentium.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_6Ezra.ver_id_6_Ezra.15.4">
+            <app xml:id="u1_ver_id_6_Ezra_4">
+              <lem wit="#Bensly">Quoniam omnis incredulus in incredulitate sua morietur.</lem>
+              <rdg wit="#C" n="1">Quoniam omnis incredulus in incredulitate sua morietur, et omnis qui credit fide sua saluus erit.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_6Ezra.ver_id_6_Ezra.15.5">
+            <app xml:id="u1_ver_id_6_Ezra_5">
+              <lem wit="#Bensly">Ecce ego induco, dicit dominus, super orbem terrarum mala, gladium et famem et mortem et interitum,</lem>
+              <rdg wit="#C" n="1">Ecce, dicit dominus, induco super orbem terrarum mala, gladium, famem, mortem et interitum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_6Ezra.ver_id_6_Ezra.15.6">
+            <app xml:id="u1_ver_id_6_Ezra_6">
+              <lem wit="#Bensly">Propter quod superposuit iniquitas omnem terram, et adimpleta sunt opera nociua illorum.</lem>
+              <rdg wit="#C" n="1">Propter quod superposuit iniquitas omnem terram, et adinpleta sunt opera nociba illorum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_6Ezra.ver_id_6_Ezra.15.7">
+            <app xml:id="u1_ver_id_6_Ezra_7">
+              <lem wit="#Bensly">Propterea dicit dominus:</lem>
+              <rdg wit="#C" n="1">Propterea dicit dominus:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_6Ezra.ver_id_6_Ezra.15.8">
+            <app xml:id="u1_ver_id_6_Ezra_8">
+              <lem wit="#Bensly">Iam non silebo in impietatibus eorum quae inreligiose agunt, nec sustinebo in his quae inique exercent. ecce sanguis innoxius et iustus clamat ad me, et animae iustorum clamant perseueranter.</lem>
+              <rdg wit="#C" n="1">Iam non silebo in inpietatibus eorum que inreligiose agunt, neque sustinebo in his que inique exercescent, ecce sanguis innocuus et iustus proclamat ad me et animae iustorum proclamant perseuerantes.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_6Ezra.ver_id_6_Ezra.15.9">
+            <app xml:id="u1_ver_id_6_Ezra_9">
+              <lem wit="#Bensly">Vindicans uindicabo illos, dicit dominus, et accipiam omnem sanguinem innoxium ex illis ad me.</lem>
+              <rdg wit="#C" n="1">Vindicans uindicabo illos, dicit dominus, et accipiam omnem sanguinem innocuum ex illis ad me.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_6Ezra.ver_id_6_Ezra.15.10">
+            <app xml:id="u1_ver_id_6_Ezra_10">
+              <lem wit="#Bensly">Ecce populus meus quasi grex ad occisionem ducitur; iam non patiar illum habitare in terra Aegypti,</lem>
+              <rdg wit="#C" n="1">Ecce populus meus quasi grex ad occisionem ducitur iam non patiar illum habitare in terra Egypti aduenam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_6Ezra.ver_id_6_Ezra.15.11">
+            <app xml:id="u1_ver_id_6_Ezra_11">
+              <lem wit="#Bensly">Sed educam eum in manu potenti et brachio excelso, et percutiam Aegyptum plaga sicut prius, et corrumpam omnem terram eius.</lem>
+              <rdg wit="#C" n="1">Sed educam illum in manu potenti et bracio excelso et percutiam Egyptum plagis sicut prius et conrumpam omnem terram eius.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_6Ezra.ver_id_6_Ezra.15.12">
+            <app xml:id="u1_ver_id_6_Ezra_12">
+              <lem wit="#Bensly">Lugeat Aegyptus et fundamenta eius a plaga uerberationis et castigationis quam inducit dominus.</lem>
+              <rdg wit="#C" n="1">Lugeat Egyptus et fundamenta eius a plaga uerberum et castigationis quam inducet deus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_6Ezra.ver_id_6_Ezra.15.13">
+            <app xml:id="u1_ver_id_6_Ezra_13">
+              <lem wit="#Bensly">Lugeant cultores operantes terram, quoniam deficient semina eorum, et uastabuntur ligna eorum ab uredine et grandine et a sidus terribile.</lem>
+              <rdg wit="#C" n="1">Lugeant cultores terrae, quoniam deficient semina eorum, et uastabuntur ligna illorum ab gine et grandine et a sidus terribile.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_6Ezra.ver_id_6_Ezra.15.14">
+            <app xml:id="u1_ver_id_6_Ezra_14">
+              <lem wit="#Bensly">Vae saeculo et qui inhabitant in eum!</lem>
+              <rdg wit="#C" n="1">Vę seculo et qui habitant in eo,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_6Ezra.ver_id_6_Ezra.15.15">
+            <app xml:id="u1_ver_id_6_Ezra_15">
+              <lem wit="#Bensly">Quia adpropinquauit gladius et contritio eorum, et exsurget gens super gentem ad pugnam, et rumphea in manibus eorum.</lem>
+              <rdg wit="#C" n="1">Quia adpropinquabit gladius et contritio illorum, et exurget gens super gentem ad pugnam, et romfea in manibus eorum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_6Ezra.ver_id_6_Ezra.15.16">
+            <app xml:id="u1_ver_id_6_Ezra_16">
+              <lem wit="#Bensly">Erit enim inconstabilitio hominibus; alii aliis inualescentes non curabunt regem suum et principem megestanorum suorum in potentia sua.</lem>
+              <rdg wit="#C" n="1">Erit enim inconstabilitio in hominibus, aliis alii inualescentes non curabunt regem suum et principem egestanorum suorum inpotentia sua.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_6Ezra.ver_id_6_Ezra.15.17">
+            <app xml:id="u1_ver_id_6_Ezra_17">
+              <lem wit="#Bensly">Concupiscet enim homo in ciuitatem ire et non poterit.</lem>
+              <rdg wit="#C" n="1">Concupiscet enim homo in ciuitatem ire et non poterit.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_6Ezra.ver_id_6_Ezra.15.18">
+            <app xml:id="u1_ver_id_6_Ezra_18">
+              <lem wit="#Bensly">Propter superbiam enim eorum ciuitates turbabuntur, domus exterentur, homines metuent.</lem>
+              <rdg wit="#C" n="1">Propter superuia enim eorum ciuitates turbabuntur domos exterrentur, homines metuent.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_6Ezra.ver_id_6_Ezra.15.19">
+            <app xml:id="u1_ver_id_6_Ezra_19">
+              <lem wit="#Bensly">Non miserebitur homo proximum suum ad impetum faciendum in domos eorum in gladium, ad diripiendas substantias eorum propter famem panis et tribulationem multam.</lem>
+              <rdg wit="#C" n="1">Non miserebitur homo proximo suo ad irritum faciendum in domos eorum gladium ad diripiendam substantiam illorum propter famem panis et tribulationem multam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_6Ezra.ver_id_6_Ezra.15.20">
+            <app xml:id="u1_ver_id_6_Ezra_20">
+              <lem wit="#Bensly">Ecce ego conuoco, dicit deus, omnes reges terrae ad me uerendum ab oriente et ab austro, ab euro et a libano, ad conuertendos se et reddere quae dederunt illis.</lem>
+              <rdg wit="#C" n="1">Ecce ego conuoco dicit dominus deus omnes reges terre ad mobendum qui sunt ab oriente et austro, et ab euro et libie ad conuertendos in se et reddere que dederunt illis.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_6Ezra.ver_id_6_Ezra.15.21">
+            <app xml:id="u1_ver_id_6_Ezra_21">
+              <lem wit="#Bensly">Sicut faciunt usque hodie electis meis, sic faciam et reddam in sinu eorum. haec dicit dominus deus:</lem>
+              <rdg wit="#C" n="1">Sicut faciunt usque odie electis meis, sic faciam et reddam in sinum ipsorum, hęc dicit dominus deus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_6Ezra.ver_id_6_Ezra.15.22">
+            <app xml:id="u1_ver_id_6_Ezra_22">
+              <lem wit="#Bensly">Non parcet dextera mea super peccantes, nec cessabit rumphea super effundentes sanguinem innocuum super terram.</lem>
+              <rdg wit="#C" n="1">Non parcet dextera mea super peccantes, nec cessabit rumfea mea super effundentes sanguinem innocuum super terram.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_6Ezra.ver_id_6_Ezra.15.23">
+            <app xml:id="u1_ver_id_6_Ezra_23">
+              <lem wit="#Bensly">Et exiit ignis ab ira eius et deuorauit fundamenta terrae et peccatores quasi stramen incensum.</lem>
+              <rdg wit="#C" n="1">Et exiet ignis ab ira illius et deforabit fundamenta terre et peccatores quasi stramen incendentur.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_6Ezra.ver_id_6_Ezra.15.24">
+            <app xml:id="u1_ver_id_6_Ezra_24">
+              <lem wit="#Bensly">Vae eis qui peccant et non obseruant mandata mea, dicit dominus;</lem>
+              <rdg wit="#C" n="1">Vę eis qui peccant et non custodiunt mandata mea, dicit dominus deus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_6Ezra.ver_id_6_Ezra.15.25">
+            <app xml:id="u1_ver_id_6_Ezra_25">
+              <lem wit="#Bensly">Non parcam illis. discedite filii apostatae, nolite contaminare sanctificationem meam.</lem>
+              <rdg wit="#C" n="1">Non parcam illis, discedite filii apostate, nolite contaminare sanctificationem meam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_6Ezra.ver_id_6_Ezra.15.26">
+            <app xml:id="u1_ver_id_6_Ezra_26">
+              <lem wit="#Bensly">Quoniam nouit dominus omnes qui derelinquunt in illum, propterea tradidit eos in mortem et in occisionem.</lem>
+              <rdg wit="#C" n="1">Quoniam nobit dominus omnes qui delincunt in illum, propter hoc tradet illos in mortem et in occisionem.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_6Ezra.ver_id_6_Ezra.15.27">
+            <app xml:id="u1_ver_id_6_Ezra_27">
+              <lem wit="#Bensly">Iam enim uenerunt super orbem terrarum mala, et manebitis in illis, non enim liberabit uos deus propter quod peccastis in eum.</lem>
+              <rdg wit="#C" n="1">Ecce enim uenerunt in orbem terrarum, mala multa manebit in illis, non ęnim liberabit uos dominus propter quod peccastis in illum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_6Ezra.ver_id_6_Ezra.15.28">
+            <app xml:id="u1_ver_id_6_Ezra_28">
+              <lem wit="#Bensly">Ecce uisio horribilis, et facies illius ab oriente!</lem>
+              <rdg wit="#C" n="1">Ecce uisio orribilis et facies eius ad</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_6Ezra.ver_id_6_Ezra.15.29">
+            <app xml:id="u1_ver_id_6_Ezra_29">
+              <lem wit="#Bensly">Et exient nationes draconum Arabum in curris multis, et sibilatus eorum a die itineris fertur super terram, ut etiam timeant et trepidentur omnes, qui illos audient.</lem>
+              <rdg wit="#C" n="1">orientem Exient nationes Arabum in curros multos, et ibi planctus ipsorum a die itineris fertur super terram, sic enim timent et formidant omnes qui audiunt illos.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="id_6Ezra.ver_id_6_Ezra.15.30">
+            <app xml:id="u1_ver_id_6_Ezra_30">
+              <lem wit="#Bensly">Carmonii insanientes in ira exient ut apri de silua et aduenient in uirtute magna et constabunt in pugnam cum illis et uastabunt portionem terrae Assyriorum in dentibus suis.</lem>
+              <rdg wit="#C" n="1">Carmonii insanientes. in iram exient de silba, et uenient in uirtutem magnam, et constabunt in pugna cum illis et uastabunt partem terre Assyriorum dentibus suis.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="id_6Ezra.ver_id_6_Ezra.15.31">
+            <app xml:id="u1_ver_id_6_Ezra_31">
+              <lem wit="#Bensly">Et post haec superualescent dracones natiuitatis memores suae, et si conuerterint se conspirantes in uirtute magna ad persequendos eos,</lem>
+              <rdg wit="#C" n="1">Et post hec conualescet draco natiuitatis memor sue, et si conuerterint se conspirantur in uirtute magna ad persequendos illos.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="id_6Ezra.ver_id_6_Ezra.15.32">
+            <app xml:id="u1_ver_id_6_Ezra_32">
+              <lem wit="#Bensly">Et isti turbabuntur et silebunt in uirtute illorum et conuertent pedes suos in fugam,</lem>
+              <rdg wit="#C" n="1">Isti turbabuntur et timebunt uim illorum, et conuertens pedes suos in fugam,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="id_6Ezra.ver_id_6_Ezra.15.33">
+            <app xml:id="u1_ver_id_6_Ezra_33">
+              <lem wit="#Bensly">Et a territorio Assyriorum subsessor obsidebit illos et consumet unum ex illis, et erit timor et tremor in exercitum illorum et inconstantia in reges ipsorum.</lem>
+              <rdg wit="#C" n="1">et faciem suam ad aquilonem. Et in terra Assyriorum obsessor obsidebit illos et consumet unum ex ipsis, et erit timor et tremor in exercitu illorum et inconstantia in reges ipsorum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="id_6Ezra.ver_id_6_Ezra.15.34">
+            <app xml:id="u1_ver_id_6_Ezra_34">
+              <lem wit="#Bensly">Ecce nubs ab oriente et a septentrione usque ad meridianum et facies illorum horrida ualde, plena irae et procellae;</lem>
+              <rdg wit="#C" n="1">Ecce nubes ab orienti et ab occidenti et a septentrione usque ad meridianum et facies illorum orrida ualde, plena ire et procelle.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="id_6Ezra.ver_id_6_Ezra.15.35">
+            <app xml:id="u1_ver_id_6_Ezra_35">
+              <lem wit="#Bensly">Et conlident se inuicem et effundent sidus copiosum super terram et sidus illorum, et erit sanguis a gladio usque ad uentrem equi</lem>
+              <rdg wit="#C" n="1">Et conlident se inuicem et effundent sydus copiosum super terram. Et erit sanguis a gladio usque ad uentrem</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="id_6Ezra.ver_id_6_Ezra.15.36">
+            <app xml:id="u1_ver_id_6_Ezra_36">
+              <lem wit="#Bensly">Et femur hominis et suffraginem cameli, et erit timor et tremor multus super terram,</lem>
+              <rdg wit="#C" n="1">et equi femur hominis in cameli poblites: et erit timor et tremor multus super terram.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="id_6Ezra.ver_id_6_Ezra.15.37">
+            <app xml:id="u1_ver_id_6_Ezra_37">
+              <lem wit="#Bensly">Et horrebunt qui uidebunt iram illam, et tremor adprehendit illos. et post haec mouebuntur nimbi copiosi</lem>
+              <rdg wit="#C" n="1">Et orrebunt omnes qui uidebunt iram illam, et tremor adprehendet illos, et post hęc mobebuntur nimbi copiosi,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="id_6Ezra.ver_id_6_Ezra.15.38">
+            <app xml:id="u1_ver_id_6_Ezra_38">
+              <lem wit="#Bensly">A meridiano et septentrione et portio alia ab occidente.</lem>
+              <rdg wit="#C" n="1">A meridiano et a septentrione, et portio alia ab occidente.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="id_6Ezra.ver_id_6_Ezra.15.39">
+            <app xml:id="u1_ver_id_6_Ezra_39">
+              <lem wit="#Bensly">Et superinualescent uenti ab oriente et recludent eum et nubem quam suscitauit in ira, et sidus ad faciendam exteritionem ab orientalem notum et occidentem uiolabitur.</lem>
+              <rdg wit="#C" n="1">Et superinualescent uenti ab oriente, et repellent illum et nubem suscitabit in iram, et sydus ad faciendas strages ab oriente uero natum et occidente uiolabitur.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="id_6Ezra.ver_id_6_Ezra.15.40">
+            <app xml:id="u1_ver_id_6_Ezra_40">
+              <lem wit="#Bensly">Et exaltabuntur nubes magnae et ualidae plenae irae et sidus, ut exterant omnem terram et inhabitantes eam, et fundent super omnem altum et eminentem sidus terribile,</lem>
+              <rdg wit="#C" n="1">Et exaltabuntur nubes magne et ualide plene ire et calaginis, ut exterminent omnem terram et qui inhabitant illa, et effundent super omne altum et excelsum sydus terribile.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="id_6Ezra.ver_id_6_Ezra.15.41">
+            <app xml:id="u1_ver_id_6_Ezra_41">
+              <lem wit="#Bensly">Ignem et grandinem et rumpheas uolantes et aquas multas, ut etiam impleantur omnes campi et omnes riui plenitudine aquarum illarum.</lem>
+              <rdg wit="#C" n="1">Ignem et grandinem, gladios uolantes, et aquas multas, ita ut impleantur omnes campi et omnes riui a multitudine aquarum illarum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="42" xml:id="id_6Ezra.ver_id_6_Ezra.15.42">
+            <app xml:id="u1_ver_id_6_Ezra_42">
+              <lem wit="#Bensly">Et demolient ciuitates et muros et montes et colles et ligna siluarum et fena pratorum et frumenta eorum.</lem>
+              <rdg wit="#C" n="1">Et demolient ciuitates et muros, montes et colles et ligna siluarum, erbas camporum, et tritticum ipsorum. Et pertransient constanter usque in Babiloniam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="id_6Ezra.ver_id_6_Ezra.15.43">
+            <app xml:id="u1_ver_id_6_Ezra_43">
+              <lem wit="#Bensly">Et transibunt constanter usque Babylonem et exterent eam.</lem>
+              <rdg wit="#C" n="1">et exterrent illam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="id_6Ezra.ver_id_6_Ezra.15.44">
+            <app xml:id="u1_ver_id_6_Ezra_44">
+              <lem wit="#Bensly">Conuenient ad ipsam et circuibunt eam et effundent sidus et omnem iram super eam, et subibit puluis et fumus usque ad caelum, et omnes in circuitu lugebunt eam.</lem>
+              <rdg wit="#C" n="1">Conuenient enim in unum et circumcingent illam, et effundent omnem iram et sydus super eam, donec funditus eradicent illam. et ascendet puluis et fumus eius usque ad cęlum, et omnes in circuitu lugebunt eam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="id_6Ezra.ver_id_6_Ezra.15.45">
+            <app xml:id="u1_ver_id_6_Ezra_45">
+              <lem wit="#Bensly">Et qui subremanserint seruient his qui eam exteruerunt.</lem>
+              <rdg wit="#C" n="1">Et ceteri qui remanserint seruient illis, qui exterrent eam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="id_6Ezra.ver_id_6_Ezra.15.46">
+            <app xml:id="u1_ver_id_6_Ezra_46">
+              <lem wit="#Bensly">Et tu Asia consors in specie Babylonis et gloria personae eius,</lem>
+              <rdg wit="#C" n="1">Et tu Asia consors in specie Babilonis et gloria personae eius.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="id_6Ezra.ver_id_6_Ezra.15.47">
+            <app xml:id="u1_ver_id_6_Ezra_47">
+              <lem wit="#Bensly">Vae tibi, misera, propter quod adsimilasti ei, ornasti filias tuas in fornicatione ad placendum et gloriandum in amatoribus tuis qui te cupierunt semper.</lem>
+              <rdg wit="#C" n="1">Vae tibi, misera, qui similis facta es illius, ornando filias tuas ad q͛estū ut placeas et sis gloriosa. penes amatores tuos qui te cupierunt semper.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="id_6Ezra.ver_id_6_Ezra.15.48">
+            <app xml:id="u1_ver_id_6_Ezra_48">
+              <lem wit="#Bensly">Fornicariam odibilem imitata es in omnibus operibus eius et adinuentionibus eius; propterea dicit deus:</lem>
+              <rdg wit="#C" n="1">Imitata es fornicariam odibilem in omnibus operibus eius et in aduentionibus eius secuta es illā placitura potentibus et principibus eius. et ut gloriosa fias et placeas in fornicationibus eius. propterea dicit dn̄s.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="49" xml:id="id_6Ezra.ver_id_6_Ezra.15.49">
+            <app xml:id="u1_ver_id_6_Ezra_49">
+              <lem wit="#Bensly">Inmittam tibi mala, uiduitatem, paupertatem et famem et gladium et pestem ad deuastandas domus tuas, ad uiolationem et mortem.</lem>
+              <rdg wit="#C" n="1">Inmittam tibi mala, uiduitatem, paupertatem famem gladium et pestilentiam ad deuastandas domos tuas. et gloria uultus tui.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="50" xml:id="id_6Ezra.ver_id_6_Ezra.15.50">
+            <app xml:id="u1_ver_id_6_Ezra_50">
+              <lem wit="#Bensly">Et gloria uirtutis tuae sicut flos siccabitur, cum exsurget ardor qui emissus est super te.</lem>
+              <rdg wit="#C" n="1">Sicut flos siccabitur, qu͛m exurget ardor qui missus est super te.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="51" xml:id="id_6Ezra.ver_id_6_Ezra.15.51">
+            <app xml:id="u1_ver_id_6_Ezra_51">
+              <lem wit="#Bensly">Et infirmaberis et paupera a plaga et mastigata a uulneribus, ut non possis tuos suscipere potentes et amatores.</lem>
+              <rdg wit="#C" n="1">Et infirmeris. et pauper a flagellis et plaga. ita ut non possis suscipere potentes amatores tuos.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="52" xml:id="id_6Ezra.ver_id_6_Ezra.15.52">
+            <app xml:id="u1_ver_id_6_Ezra_52">
+              <lem wit="#Bensly">Numquid ego sic zelabo te, dicit dominus,</lem>
+              <rdg wit="#C" n="1">Numquid ergo sic zelassem te dicit dn̄s:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="53" xml:id="id_6Ezra.ver_id_6_Ezra.15.53">
+            <app xml:id="u1_ver_id_6_Ezra_53">
+              <lem wit="#Bensly">Nisi occidisses electos meos in omni tempore, exultans percussione manuum et dicens super mortem eorum cum inebriata es?</lem>
+              <rdg wit="#C" n="1">Nisi occidisses electos meos semper exultans in percussione manuum et deridens in morte ipsorum ebria facta.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="54" xml:id="id_6Ezra.ver_id_6_Ezra.15.54">
+            <app xml:id="u1_ver_id_6_Ezra_54">
+              <lem wit="#Bensly">Exorna speciem uultus tui!</lem>
+              <rdg wit="#C" n="1">Exornans speciem uultus tui.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="55" xml:id="id_6Ezra.ver_id_6_Ezra.15.55">
+            <app xml:id="u1_ver_id_6_Ezra_55">
+              <lem wit="#Bensly">Merces fornicariae in sinus tuos, propterea redditionem recipies.</lem>
+              <rdg wit="#C" n="1">Et merces in sinu tuo est. propterea secundū facta tua recipies in sinus tuos.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="56" xml:id="id_6Ezra.ver_id_6_Ezra.15.56">
+            <app xml:id="u1_ver_id_6_Ezra_56">
+              <lem wit="#Bensly">Sicut facies electis meis, dicit dominus, sic faciet tibi deus et tradet te in malis.</lem>
+              <rdg wit="#C" n="1">Sicut facis electis meis, dicit dominus, sic faciet tibi deus et tradent te in mala.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="57" xml:id="id_6Ezra.ver_id_6_Ezra.15.57">
+            <app xml:id="u1_ver_id_6_Ezra_57">
+              <lem wit="#Bensly">Et nati tui fame interient, et tu rumphea cades, et ciuitates tuae conterentur, et omnes tui in campo gladio cadent;</lem>
+              <rdg wit="#C" n="1">Et filii tui fame interient et tu ipse gladio cades, et ciuitates tue subuertentur, et om̄s tui in campum gladio cadent.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="58" xml:id="id_6Ezra.ver_id_6_Ezra.15.58">
+            <app xml:id="u1_ver_id_6_Ezra_58">
+              <lem wit="#Bensly">Et qui sunt in montibus fame peribunt, et manducabunt carnes suas et sanguinem bibent a fame panis et siti aquae.</lem>
+              <rdg wit="#C" n="1">Et qui sunt in montibus fame disperient. et carnes suas manducabunt et sanguinem suum bibent a fame panis et siti aquae.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="59" xml:id="id_6Ezra.ver_id_6_Ezra.15.59">
+            <app xml:id="u1_ver_id_6_Ezra_59">
+              <lem wit="#Bensly">Infelix primaria uenies, et rursum accipies mala.</lem>
+              <rdg wit="#C" n="1">Infelix, primaria uenies. et rursum accipies mala.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="60" xml:id="id_6Ezra.ver_id_6_Ezra.15.60">
+            <app xml:id="u1_ver_id_6_Ezra_60">
+              <lem wit="#Bensly">Et in transitu allident ciuitatem otiosam et exterent aliquam portionem terrae tuae et partem gloriae tuae exterminabunt rursum reuertentes a Babylonia subuersa.</lem>
+              <rdg wit="#C" n="1">Et in transitu allident ciuitatem odiosam. et exterrent aliquam portionem terrae tue. exterminabunt rursum reuertentes a Babilonia: subuersa</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="61" xml:id="id_6Ezra.ver_id_6_Ezra.15.61">
+            <app xml:id="u1_ver_id_6_Ezra_61">
+              <lem wit="#Bensly">Et demolita eris illis pro stipula et ipsi erunt tibi ignis.</lem>
+              <rdg wit="#C" n="1">Et demolita eris illis pro stipula, et ipsi erunt tibi ignis,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="62" xml:id="id_6Ezra.ver_id_6_Ezra.15.62">
+            <app xml:id="u1_ver_id_6_Ezra_62">
+              <lem wit="#Bensly">Et deuorabunt te et ciuitates tuas, terram tuam et montes tuos, omnes siluas tuas et lignum fructiferum igni conburent.</lem>
+              <rdg wit="#C" n="1">Et deforabunt te et ciuitates tuas, terram tuam et montes tuos, omnes siluas tuas et lignum tuum. igni comburent.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="63" xml:id="id_6Ezra.ver_id_6_Ezra.15.63">
+            <app xml:id="u1_ver_id_6_Ezra_63">
+              <lem wit="#Bensly">Filios tuos captiuos ducent et censum tuum praeda habebunt et gloriam faciei tuae exterminabunt.</lem>
+              <rdg wit="#C" n="1">Filios tuos captiuos ducent, et censum tuum preda habebunt, et gloriam faciei tuae exterminabunt.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="16" xml:id="id_6Ezra.ver_id_6_Ezra.16">
+          <head>Chapter 16</head>
+          <ab type="verse" n="1" xml:id="id_6Ezra.ver_id_6_Ezra.16.1">
+            <app xml:id="u1_ver_id_6_Ezra_64">
+              <lem wit="#Bensly">Vae tibi, Babylon et Asia, uae tibi, Aegypte et Syria!</lem>
+              <rdg wit="#C" n="1">Vę uobis Babilon et Asia, uę uobis Egypte et Syria.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_6Ezra.ver_id_6_Ezra.16.2">
+            <app xml:id="u1_ver_id_6_Ezra_65">
+              <lem wit="#Bensly">Praecingite uos saccis et ciliciis et plangite filios uestros et dolete eos, quoniam adpropinquauit contritio uestra.</lem>
+              <rdg wit="#C" n="1">Precingite uos saccis et plangite filios uestros et dolete eos quoniam adpropinquabit contritio uestra.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_6Ezra.ver_id_6_Ezra.16.3">
+            <app xml:id="u1_ver_id_6_Ezra_66">
+              <lem wit="#Bensly">Inmissus est uobis gladius, et quis est qui auertat illum?</lem>
+              <rdg wit="#C" n="1">Missus est uobis gladius et quis est qui auertat illum?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_6Ezra.ver_id_6_Ezra.16.4">
+            <app xml:id="u1_ver_id_6_Ezra_67">
+              <lem wit="#Bensly">Inmissus est uobis ignis, et quis est qui extinguat illum?</lem>
+              <rdg wit="#C" n="1">Missus est uobis ignis et qui extinguet illum?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_6Ezra.ver_id_6_Ezra.16.5">
+            <app xml:id="u1_ver_id_6_Ezra_68">
+              <lem wit="#Bensly">Inmissa sunt uobis mala, et quis est qui repellat ea?</lem>
+              <rdg wit="#C" n="1">Missa sunt uobis mala, et quis repellet ea?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_6Ezra.ver_id_6_Ezra.16.6">
+            <app xml:id="u1_ver_id_6_Ezra_69">
+              <lem wit="#Bensly">Numquid repellet aliquis leonem esurientem in silua, aut extinguet ignem in stipula mox quae coeperit ardere?</lem>
+              <rdg wit="#C" n="1">Numquid repellet aliquis leonem esurientem in silua aut extinguet ignem in stipula mox ceperit ardere?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_6Ezra.ver_id_6_Ezra.16.7">
+            <app xml:id="u1_ver_id_6_Ezra_70">
+              <lem wit="#Bensly">Numquid aliquis repellet sagittam a sagittario forti missam?</lem>
+              <rdg wit="#C" n="1">Numquid aliquis repellet sagittam a sagittario forti missam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_6Ezra.ver_id_6_Ezra.16.8">
+            <app xml:id="u1_ver_id_6_Ezra_71">
+              <lem wit="#Bensly">Dominus deus mittit mala, et quis repellet ea?</lem>
+              <rdg wit="#C" n="1">Dominus deus mittit mala et quis repellet ea?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_6Ezra.ver_id_6_Ezra.16.9">
+            <app xml:id="u1_ver_id_6_Ezra_72">
+              <lem wit="#Bensly">Exiet ignis ex iracundia eius, et quis est qui extinguat eum?</lem>
+              <rdg wit="#C" n="1">Exiet ignis ex iracundia eius, et quis est qui extinguat eum?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_6Ezra.ver_id_6_Ezra.16.10">
+            <app xml:id="u1_ver_id_6_Ezra_73">
+              <lem wit="#Bensly">Coruscabit, et quis non timebit? tonabit, et quis non horrebit?</lem>
+              <rdg wit="#C" n="1">Coruscabit et quis non timebit eum? tonabit et quis non orrebit?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_6Ezra.ver_id_6_Ezra.16.11">
+            <app xml:id="u1_ver_id_6_Ezra_74">
+              <lem wit="#Bensly">Dominus comminabitur, et quis non funditus conteretur a facie ipsius?</lem>
+              <rdg wit="#C" n="1">Dominus comminatur et quis non funditus conteretur a facie ipsius?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_6Ezra.ver_id_6_Ezra.16.12">
+            <app xml:id="u1_ver_id_6_Ezra_75">
+              <lem wit="#Bensly">Terra tremuit et fundamenta eius, mare fluctuatur de profundo, et fluctus eius disturbabuntur et pisces eius a facie domini et a gloria uirtutis eius.</lem>
+              <rdg wit="#C" n="1">Terra tremit et fundamenta eius, mare fluctuat de profundo; et fluctus eius turbabuntur et pisces eius a facie domini et a gloria uirtutis eius.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_6Ezra.ver_id_6_Ezra.16.13">
+            <app xml:id="u1_ver_id_6_Ezra_76">
+              <lem wit="#Bensly">Quoniam fortis dextera eius quae arcum tendit: sagittae eius acutae quae ab ipso mittuntur, non deficient cum coeperint mitti in fines terrae.</lem>
+              <rdg wit="#C" n="1">Quoniam fortis dextera eius que arcum tendet, et sagitte eius acute, que ab ipso mittuntur, non deficient cum ceperint mitti in fines terre.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_6Ezra.ver_id_6_Ezra.16.14">
+            <app xml:id="u1_ver_id_6_Ezra_77">
+              <lem wit="#Bensly">Ecce mittuntur mala et non reuertentur, donec ueniant super terram.</lem>
+              <rdg wit="#C" n="1">Ecce mittuntur mala et non reuertentur, donec ueniant super terram.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_6Ezra.ver_id_6_Ezra.16.15">
+            <app xml:id="u1_ver_id_6_Ezra_78">
+              <lem wit="#Bensly">Ignis succenditur et non extinguetur, donec consumat fundamenta terrae.</lem>
+              <rdg wit="#C" n="1">Ignis succenditur et non extinguetur, donec consumat fundamenta terrae.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_6Ezra.ver_id_6_Ezra.16.16">
+            <app xml:id="u1_ver_id_6_Ezra_79">
+              <lem wit="#Bensly">Quemadmodum non redit sagitta missa a sagittario ualido, sic non reuertentur mala quae missa fuerint in terram.</lem>
+              <rdg wit="#C" n="1">Quemadmodum non redit sagitta missa a sagittario ualido sic non reuertentur mala quae missa fuerint in terram.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_6Ezra.ver_id_6_Ezra.16.17">
+            <app xml:id="u1_ver_id_6_Ezra_80">
+              <lem wit="#Bensly">Vae mihi, uae mihi! quis me liberabit in illis diebus?</lem>
+              <rdg wit="#C" n="1">Vę mici, uę mici, quis me liberabit in illis diebus?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_6Ezra.ver_id_6_Ezra.16.18">
+            <app xml:id="u1_ver_id_6_Ezra_81">
+              <lem wit="#Bensly">Initium dolorum et multi gemitus, initium famis et multi interient, initium bellorum et formidabunt potestates, initium malorum et trepidabunt omnes.</lem>
+              <rdg wit="#C" n="1">Initium dolorum et multi gemitus, initium famis et multi interient, initium bellorum et formidabunt potestates, initium malorum et trepidabunt omnes.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_6Ezra.ver_id_6_Ezra.16.19">
+            <app xml:id="u1_ver_id_6_Ezra_82">
+              <lem wit="#Bensly">In his quid facient, cum uenerint mala?</lem>
+              <rdg wit="#C" n="1">In his quid facient cum uenerint mala?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_6Ezra.ver_id_6_Ezra.16.20">
+            <app xml:id="u1_ver_id_6_Ezra_83">
+              <lem wit="#Bensly">Ecce fames et plaga et tribulatio et angustia missa sunt flagella in emendatione.</lem>
+              <rdg wit="#C" n="1">Ecce famis et plaga et tribulatio et angustia; missa sunt flagella in emendationem.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_6Ezra.ver_id_6_Ezra.16.21">
+            <app xml:id="u1_ver_id_6_Ezra_84">
+              <lem wit="#Bensly">Et in his omnibus se non conuertent ab iniquitatibus suis, neque flagellorum memores erunt semper.</lem>
+              <rdg wit="#C" n="1">Et in his omnibus non se conuertunt ab iniquitatibus suis neque flagellorum memores erunt semper.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_6Ezra.ver_id_6_Ezra.16.22">
+            <app xml:id="u1_ver_id_6_Ezra_85">
+              <lem wit="#Bensly">Ecce erit annonae uilitas super terram sic ut putent sibi esse directam pacem, et tunc germinabunt mala super terram, gladius, fames et magna confusio.</lem>
+              <rdg wit="#C" n="1">Ecce erit annonae uilitas super terram, sicut putent sibi esse directam pacem, et tunc germinabunt mala super terram, gladius famis et magna confusio.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_6Ezra.ver_id_6_Ezra.16.23">
+            <app xml:id="u1_ver_id_6_Ezra_86">
+              <lem wit="#Bensly">A fame enim plurimi qui inhabitant terram interient, et gladius perdet ceteros qui superauerint a fame;</lem>
+              <rdg wit="#C" n="1">A fame enim plurimi qui inhabitant terram interient et gladius disperdet ceteros qui superaberint a fame.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_6Ezra.ver_id_6_Ezra.16.24">
+            <app xml:id="u1_ver_id_6_Ezra_87">
+              <lem wit="#Bensly">Et mortui tamquam stercora proicientur, et non erit qui consoletur eos; derelinquetur enim terra deserta, et ciuitates eius deicientur.</lem>
+              <rdg wit="#C" n="1">Et mortui tamquam stercora proicientur, et non erit qui consoletur eos, derelinquetur enim terra deserta et ciuitates eius deicientur.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_6Ezra.ver_id_6_Ezra.16.25">
+            <app xml:id="u1_ver_id_6_Ezra_88">
+              <lem wit="#Bensly">Non derelinquetur qui colat terram et qui seminet eam.</lem>
+              <rdg wit="#C" n="1">Non relinquetur agricola qui colat terram, et qui seminet eam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_6Ezra.ver_id_6_Ezra.16.26">
+            <app xml:id="u1_ver_id_6_Ezra_89">
+              <lem wit="#Bensly">Ligna dabunt fructus, et quis uindemiabit illa?</lem>
+              <rdg wit="#C" n="1">Ligna dabunt fructus suos, et quis uindemiabit illam. Vba matura fiet, et quis calcabit illam?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_6Ezra.ver_id_6_Ezra.16.27">
+            <app xml:id="u1_ver_id_6_Ezra_90">
+              <lem wit="#Bensly">Vua matura fiet, et quis calcabit illam? erit enim in locis magna desertio;</lem>
+              <rdg wit="#C" n="1">erit enim in locis magna desertatio.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_6Ezra.ver_id_6_Ezra.16.28">
+            <app xml:id="u1_ver_id_6_Ezra_91">
+              <lem wit="#Bensly">Cupiet enim homo hominem uidere uel uocem eius audire;</lem>
+              <rdg wit="#C" n="1">Cupiet enim homo hominem uidere, uel uocem eius audire.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_6Ezra.ver_id_6_Ezra.16.29">
+            <app xml:id="u1_ver_id_6_Ezra_92">
+              <lem wit="#Bensly">Relinquentur enim de ciuitate decem, et duo de agro qui absconderint se in densis nemoribus et fissuris petrarum.</lem>
+              <rdg wit="#C" n="1">Relinquentur enim de ciuitate decem, et duo ex agro qui absconderint se in densis nemoribus et in fissuris petrarum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="id_6Ezra.ver_id_6_Ezra.16.30">
+            <app xml:id="u1_ver_id_6_Ezra_93">
+              <lem wit="#Bensly">Quemadmodum relinquentur in oliueto in singulis arboribus tres aut quattuor oliuae,</lem>
+              <rdg wit="#C" n="1">Quemadmodum relinquetur in olibeto in singulis arboribus tres uel quattuor olibe.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="id_6Ezra.ver_id_6_Ezra.16.31">
+            <app xml:id="u1_ver_id_6_Ezra_94">
+              <lem wit="#Bensly">Aut sicut in uinea uindemiata racemi relinquentur ab his qui diligenter uineam scrutantur;</lem>
+              <rdg wit="#C" n="1">Aut sicut in uinea uindemiata racemi relincuntur ab his qui minus diligentur uineam scrutantur.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="id_6Ezra.ver_id_6_Ezra.16.32">
+            <app xml:id="u1_ver_id_6_Ezra_95">
+              <lem wit="#Bensly">Sic relinquentur in diebus illis tres aut quattuor ab scrutantibus domus eorum in rumpheam.</lem>
+              <rdg wit="#C" n="1">Sic relinquentur in illis diebus, uel tres uel quattuor ab his qui domos eorum scrutabunt a gladio.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="id_6Ezra.ver_id_6_Ezra.16.33">
+            <app xml:id="u1_ver_id_6_Ezra_96">
+              <lem wit="#Bensly">Et relinquetur deserta terra, et agri eius in uepres erunt, et uiae eius et omnes semitae germinabunt spinas, eo quod non transient oues per eam.</lem>
+              <rdg wit="#C" n="1">Et relinquetur terra deserta, et agri eius in uepre erunt, simul et uiae et semitae spinas germinabunt eo quod oues non sint transiture per illas.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="id_6Ezra.ver_id_6_Ezra.16.34">
+            <app xml:id="u1_ver_id_6_Ezra_97">
+              <lem wit="#Bensly">Lugebunt uirgines non habentes sponsos, lugebunt mulieres non habentes uiros, lugebunt filiae earum non habentes adiutorium.</lem>
+              <rdg wit="#C" n="1">Lugebunt uirgines non habentes sponsos, lugebunt mulieres non habentes uiros lugebunt filie ipsarum non habentes adiutoria.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="id_6Ezra.ver_id_6_Ezra.16.35">
+            <app xml:id="u1_ver_id_6_Ezra_98">
+              <lem wit="#Bensly">Sponsi earum in bello consumentur, et uiri earum in fame exterentur.</lem>
+              <rdg wit="#C" n="1">Sponsi ipsarum in bello consumentur, et uiri illarum fame interient.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="id_6Ezra.ver_id_6_Ezra.16.36">
+            <app xml:id="u1_ver_id_6_Ezra_99">
+              <lem wit="#Bensly">Audite uero ista et cognoscite ea, serui domini.</lem>
+              <rdg wit="#C" n="1">Audite igitur hec et intelligite serui domini,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="id_6Ezra.ver_id_6_Ezra.16.37">
+            <app xml:id="u1_ver_id_6_Ezra_100">
+              <lem wit="#Bensly">Ecce uerbum domini, excipite eum, ne discredatis de quibus dicit dominus:</lem>
+              <rdg wit="#C" n="1">Ecce sermo domini, sumite illum ne discedatis a domino, et nolite increduli esse his que dicit dominus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="id_6Ezra.ver_id_6_Ezra.16.38">
+            <app xml:id="u1_ver_id_6_Ezra_101">
+              <lem wit="#Bensly">Ecce adpropinquant mala et non tardantur.</lem>
+              <rdg wit="#C" n="1">Ecce protinus uenient mala, et non tardabunt,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="id_6Ezra.ver_id_6_Ezra.16.39">
+            <app xml:id="u1_ver_id_6_Ezra_102">
+              <lem wit="#Bensly">Quemadmodum praegnans in nono mense filium suum, adpropinquante hora partus eius, ante horas duas uel tres gementes dolores circum uentrem eius, et prodiente infante de uentre non tardabit uno puncto,</lem>
+              <rdg wit="#C" n="1">Quemadmodum mulier praegnans infantem suum in utero mensibus nobem habens, ubi ceperit h͛ora partus eius adpropinquare, ante duas horas uel tres dolores circa uentrem patitur et prodeunte infante de uentre non tardabit uno puncto.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="id_6Ezra.ver_id_6_Ezra.16.40">
+            <app xml:id="u1_ver_id_6_Ezra_103">
+              <lem wit="#Bensly">Sic non morabuntur mala ad prodiendum super terram, et saeculum gemet et dolores circumtenent illum.</lem>
+              <rdg wit="#C" n="1">Sic non tardabitur mala ad prodeundum super terram et seculum parturit et dolores circumcingunt illum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="id_6Ezra.ver_id_6_Ezra.16.41">
+            <app xml:id="u1_ver_id_6_Ezra_104">
+              <lem wit="#Bensly">Audite uerbum, plebs mea, parate uos in pugnam et in malis sic estote quasi aduenae terrae;</lem>
+              <rdg wit="#C" n="1">Audite uerbum domini, populus meus, parati estote ad bellum, abtate uos ad mala, sic estote quasi incole terre.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="42" xml:id="id_6Ezra.ver_id_6_Ezra.16.42">
+            <app xml:id="u1_ver_id_6_Ezra_105">
+              <lem wit="#Bensly">Qui uendit, quasi qui fugiet; et qui emit, quasi qui perditurus;</lem>
+              <rdg wit="#C" n="1">Qui uendit quasi qui fugiat, et qui emit quasi perditurus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="id_6Ezra.ver_id_6_Ezra.16.43">
+            <app xml:id="u1_ver_id_6_Ezra_106">
+              <lem wit="#Bensly">Qui mercatur, quasi qui fructum non capiat; et qui aedificat, quasi non habitaturus;</lem>
+              <rdg wit="#C" n="1">Qui mercatur quasi qui fructum non capiat, et qui hedificat quasi non habitaturus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="id_6Ezra.ver_id_6_Ezra.16.44">
+            <app xml:id="u1_ver_id_6_Ezra_107">
+              <lem wit="#Bensly">Qui seminat, quasi qui non metat; sic et qui putat, quasi non uindemiaturus;</lem>
+              <rdg wit="#C" n="1">Qui seminat, quasi qui non secet, qui potat quasi non uindemiaturus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="id_6Ezra.ver_id_6_Ezra.16.45">
+            <app xml:id="u1_ver_id_6_Ezra_108">
+              <lem wit="#Bensly">Qui nubunt, sic quasi filios non facturi, et qui non nubunt, sic quasi uidui:</lem>
+              <rdg wit="#C" n="1">Qui nubtias faciunt, quasi filios non habituri, et qui nubtias non faciunt, quasi uiduitatem seruaturi.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="id_6Ezra.ver_id_6_Ezra.16.46">
+            <app xml:id="u1_ver_id_6_Ezra_109">
+              <lem wit="#Bensly">Propter quod qui laborant sine causa laborant;</lem>
+              <rdg wit="#C" n="1">Propter quod qui laborant sine causa laborant.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="id_6Ezra.ver_id_6_Ezra.16.47">
+            <app xml:id="u1_ver_id_6_Ezra_110">
+              <lem wit="#Bensly">Fructus enim illorum alienigenae metent et substantiam illorum rapient et domus euertent et filios eorum captiuabunt, quia in captiuitate et fame generant natos suos.</lem>
+              <rdg wit="#C" n="1">Fructus enim illorum exteri manducabunt et substantiam eorum rapient, domos ipsorum euertent et filios ipsorum captiuos ducent. ideo sciant qui nubunt quoniam in captiuitate et fame filios generabunt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="id_6Ezra.ver_id_6_Ezra.16.48">
+            <app xml:id="u1_ver_id_6_Ezra_111">
+              <lem wit="#Bensly">Et qui negociantur negociantur in rapina, quamdiu exornant ciuitates et domus suas et possessiones et personas suas;</lem>
+              <rdg wit="#C" n="1">Et qui mercantur, ad rapina mercantes. in quantum enim ornant ciuitates, domos et possessiones suas et faciem suam,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="49" xml:id="id_6Ezra.ver_id_6_Ezra.16.49">
+            <app xml:id="u1_ver_id_6_Ezra_112">
+              <lem wit="#Bensly">Tanto magis adzelabor eos super peccata, dicit dominus.</lem>
+              <rdg wit="#C" n="1">In tantum magis zelabo illos zelo in peccatis dicit dominus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="50" xml:id="id_6Ezra.ver_id_6_Ezra.16.50">
+            <app xml:id="u1_ver_id_6_Ezra_113">
+              <lem wit="#Bensly">Quomodo zelatur fornicariam mulierem idonea et bona ualde,</lem>
+              <rdg wit="#C" n="1">Quemadmodum zelat fornicaria mulierem idoneam et bonam ualde,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="51" xml:id="id_6Ezra.ver_id_6_Ezra.16.51">
+            <app xml:id="u1_ver_id_6_Ezra_114">
+              <lem wit="#Bensly">Sic zelabitur iusticia iniquitatem cum exornat se, et accusat eam in faciem, cum uenerit qui defendat exquirentem omnem peccatum super terram.</lem>
+              <rdg wit="#C" n="1">Sic zelabit iustitia iniquitatem cum exornat se et accusat illam in facie cum uenerit qui defendat, querens omnem peccatum in terra.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="52" xml:id="id_6Ezra.ver_id_6_Ezra.16.52">
+            <app xml:id="u1_ver_id_6_Ezra_115">
+              <lem wit="#Bensly">Propterea nolite similari eam nec operibus eius.</lem>
+              <rdg wit="#C" n="1">Ideo nolite illius similes esse, neque factis eius neque malis cogitationibus eius.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="53" xml:id="id_6Ezra.ver_id_6_Ezra.16.53">
+            <app xml:id="u1_ver_id_6_Ezra_116">
+              <lem wit="#Bensly">Quoniam ecce adhuc pusillum et tolletur iniquitas a terra, et iusticia regnabit in nos.</lem>
+              <rdg wit="#C" n="1">Quoniam adhuc pusillum et tolletur iniquitas a terra et iustitia regnabit in nobis.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="54" xml:id="id_6Ezra.ver_id_6_Ezra.16.54">
+            <app xml:id="u1_ver_id_6_Ezra_117">
+              <lem wit="#Bensly">Non dicat peccator non se peccasse, quoniam carbones ignis comburet super caput eius qui dicit: non peccaui coram deo et gloria ipsius.</lem>
+              <rdg wit="#C" n="1">Non dicat peccator se non peccasse, neque iniustus iniustitiam fecisse quoniam carbones ignis conburet super caput suum, qui dicit non peccabi coram domino et gloria eius.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="55" xml:id="id_6Ezra.ver_id_6_Ezra.16.55">
+            <app xml:id="u1_ver_id_6_Ezra_118">
+              <lem wit="#Bensly">Ecce dominus cognoscit omnia opera hominis et adinuentiones illorum et cogitatum illorum et corda illorum.</lem>
+              <rdg wit="#C" n="1">Ecce dominus deus nobit omnia facta hominum et corda eorum, adinuentiones et cogitationes eorum malas. Qui dixit:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="56" xml:id="id_6Ezra.ver_id_6_Ezra.16.56">
+            <app xml:id="u1_ver_id_6_Ezra_119">
+              <lem wit="#Bensly">Qui dixit: fiat terra, et facta est: fiat caelum, et factum est:</lem>
+              <rdg wit="#C" n="1">fiat cęlum et factum est, fiat terra et facta est.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="57" xml:id="id_6Ezra.ver_id_6_Ezra.16.57">
+            <app xml:id="u1_ver_id_6_Ezra_120">
+              <lem wit="#Bensly">Et in uerbo illius stellae fundatae sunt, et nouit numerum stellarum;</lem>
+              <rdg wit="#C" n="1">Et in sermone eius stelle facte sunt et numerum ipsarum nobit.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="58" xml:id="id_6Ezra.ver_id_6_Ezra.16.58">
+            <app xml:id="u1_ver_id_6_Ezra_121">
+              <lem wit="#Bensly">Qui scrutat abyssum et thesauros illorum, qui metitus est mare et conceptum eius;</lem>
+              <rdg wit="#C" n="1">Qui scrutatur abyssos et tesauros eorum, qui mensus est mare et fundamenta eius.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="59" xml:id="id_6Ezra.ver_id_6_Ezra.16.59">
+            <app xml:id="u1_ver_id_6_Ezra_122">
+              <lem wit="#Bensly">Qui conclusit mare in medio aquarum et suspendit terram super aquam uerbo suo;</lem>
+              <rdg wit="#C" n="1">Qui conclusit seculum inter aquas et aquas et suspendit terram super aquam uerbo suo.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="60" xml:id="id_6Ezra.ver_id_6_Ezra.16.60">
+            <app xml:id="u1_ver_id_6_Ezra_123">
+              <lem wit="#Bensly">Qui extendit caelum quasi cameram et super aquas fundauit eum;</lem>
+              <rdg wit="#C" n="1">Qui extendit cęlum ut cameram, et super aquas fundabit illut.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="61" xml:id="id_6Ezra.ver_id_6_Ezra.16.61">
+            <app xml:id="u1_ver_id_6_Ezra_124">
+              <lem wit="#Bensly">Qui posuit in deserto fontes aquarum et super uertices montium lacus ad emittendum flumina ab eminenti ut potaret terra;</lem>
+              <rdg wit="#C" n="1">Qui posuit in deserto fontes aquarum, et super uertices montium lacus. ad emittenda flumina a cacumine, ut potaret terra.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="62" xml:id="id_6Ezra.ver_id_6_Ezra.16.62">
+            <app xml:id="u1_ver_id_6_Ezra_125">
+              <lem wit="#Bensly">Qui finxit hominem, et posuit cor in medio corporis, et misit ei spiritum et uitam et intellectum,</lem>
+              <rdg wit="#C" n="1">Qui finxit hominem et cor illi inposuit in medio corpore eius, et dedit illi spiritum et intellectum uite.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="63" xml:id="id_6Ezra.ver_id_6_Ezra.16.63">
+            <app xml:id="u1_ver_id_6_Ezra_126">
+              <lem wit="#Bensly">Et spiramentum dei omnipotentis, qui fecit omnia et scrutinat absconsa in absconsis.</lem>
+              <rdg wit="#C" n="1">Et a spirationem dominus omnipotens scit qui omnia fecit et scrutatur abscondita, et in absconditis certa.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="64" xml:id="id_6Ezra.ver_id_6_Ezra.16.64">
+            <app xml:id="u1_ver_id_6_Ezra_127">
+              <lem wit="#Bensly">Certe hic nouit adinuentionem uestram et quae cogitatis in cordibus uestris. uae peccantibus et uolentibus occultare peccata sua.</lem>
+              <rdg wit="#C" n="1">Hic nobit adinuentiones uestras et que cogitatis in cordibus uestris. uę omnibus qui peccant ei qui uolunt peccata sua celare.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="65" xml:id="id_6Ezra.ver_id_6_Ezra.16.65">
+            <app xml:id="u1_ver_id_6_Ezra_128">
+              <lem wit="#Bensly">Propter quod dominus scrutinando scrutinabit omnia opera eorum et traducet uos omnes.</lem>
+              <rdg wit="#C" n="1">Propter quod dominus scrutabit omnia facta ipsorum et transducet uos omnes in illa.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="66" xml:id="id_6Ezra.ver_id_6_Ezra.16.66">
+            <app xml:id="u1_ver_id_6_Ezra_129">
+              <lem wit="#Bensly">Et uos confusi eritis, cum processerint peccata uestra coram hominibus, et iniquitates erint quae accusatores stabunt in die illo.</lem>
+              <rdg wit="#C" n="1">Et confundemini cum processerint peccata uestra coram hominibus et iniquitas tanquam accusator stabit in illa die</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="67" xml:id="id_6Ezra.ver_id_6_Ezra.16.67">
+            <app xml:id="u1_ver_id_6_Ezra_130">
+              <lem wit="#Bensly">Quid facietis? aut quomodo abscondetis peccata uestra coram deo et angelis eius?</lem>
+              <rdg wit="#C" n="1">Quid facietis et quomodo abscondetis peccata uestra ante dominum et gloria eius.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="68" xml:id="id_6Ezra.ver_id_6_Ezra.16.68">
+            <app xml:id="u1_ver_id_6_Ezra_131">
+              <lem wit="#Bensly">Ecce iudex deus, timete eum; desinite a peccatis uestris et obliuiscimini iniquitates uestras iam agere eas sempiterno, et deus educabit uos et liberabit de omni tribulatione.</lem>
+              <rdg wit="#C" n="1">Ecce iudex dominus, timete illum et desinite a peccatis uestris et oblibiscimini iniquitates uestras ut non faciatis hec semper et dominus uos deducet et liberabit ab omni pressura.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="69" xml:id="id_6Ezra.ver_id_6_Ezra.16.69">
+            <app xml:id="u1_ver_id_6_Ezra_132">
+              <lem wit="#Bensly">Ecce enim incenditur ardor super uos turbae copiosae, et rapient quosdam ex uobis et cibabunt idolis occisam.</lem>
+              <rdg wit="#C" n="1">Ecce enim succenditur super uos ardor, et turbabunt uos multi populi, et diripient res uestras, et sument quosdam ex uobis, et cibabunt uos de sacrificio.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="70" xml:id="id_6Ezra.ver_id_6_Ezra.16.70">
+            <app xml:id="u1_ver_id_6_Ezra_133">
+              <lem wit="#Bensly">Et qui consenserint eis, erint illis in derisum et in inproperium et in conculcationem;</lem>
+              <rdg wit="#C" n="1">Et qui consenserint eis erunt illis in derisu, et in inproperio et in conculcationem.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="71" xml:id="id_6Ezra.ver_id_6_Ezra.16.71">
+            <app xml:id="u1_ver_id_6_Ezra_134">
+              <lem wit="#Bensly">Erit enim locis locus et in uicinas ciuitates exsurrectio multa super timentes dominum.</lem>
+              <rdg wit="#C" n="1">Erit enim locis per uicinas ciuitates insurrectio multa supra hos qui timent deum. Aporiati enim homines, a malis suis</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="72" xml:id="id_6Ezra.ver_id_6_Ezra.16.72">
+            <app xml:id="u1_ver_id_6_Ezra_135">
+              <lem wit="#Bensly">Erint quasi insani neminem parcentes ad diripiendum et deuastandum adhuc timentes dominum,</lem>
+              <rdg wit="#C" n="1">erunt tanquam insani, nemini parcentes ad diripiendum et exportandum, adhuc etiam horum qui metuunt deum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="73" xml:id="id_6Ezra.ver_id_6_Ezra.16.73">
+            <app xml:id="u1_ver_id_6_Ezra_136">
+              <lem wit="#Bensly">Quia deuastabunt et diripient substantias eorum et de domos suas eos eicient.</lem>
+              <rdg wit="#C" n="1">Deuastabunt res et de domibus suis expellent illos.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="74" xml:id="id_6Ezra.ver_id_6_Ezra.16.74">
+            <app xml:id="u1_ver_id_6_Ezra_137">
+              <lem wit="#Bensly">Tunc parebit probatio electorum meorum, ut aurum quod probatur ab igne.</lem>
+              <rdg wit="#C" n="1">Et tunc parebit probatio electorum meorum. et tolerantia ipsorum, quemadmodum aurum quod per ignem probatur.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="75" xml:id="id_6Ezra.ver_id_6_Ezra.16.75">
+            <app xml:id="u1_ver_id_6_Ezra_138">
+              <lem wit="#Bensly">Audite, electi mei, dicit dominus, ecce adsunt dies tribulationis, et de his liberabo uos.</lem>
+              <rdg wit="#C" n="1">Audite electi mei dicit dominus ecce adsunt dies tribulationis et de ipsis liberabo uos</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="76" xml:id="id_6Ezra.ver_id_6_Ezra.16.76">
+            <app xml:id="u1_ver_id_6_Ezra_139">
+              <lem wit="#Bensly">Ne timeatis nec haesitemini, quoniam deus dux uester est.</lem>
+              <rdg wit="#C" n="1">Ne timeatis neque formidetis, quoniam dominus dux uester est.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="77" xml:id="id_6Ezra.ver_id_6_Ezra.16.77">
+            <app xml:id="u1_ver_id_6_Ezra_140">
+              <lem wit="#Bensly">Et qui seruatis mandata et praecepta mea, dicit dominus deus, ne praeponderent uos peccata uestra, nec supereleuent iniquitates uestrae.</lem>
+              <rdg wit="#C" n="1">Qui seruatis mandata et precepta mea dicit dominus, non preponderent uos peccata uestra, nec extollant iniquitates uestre.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="78" xml:id="id_6Ezra.ver_id_6_Ezra.16.78">
+            <app xml:id="u1_ver_id_6_Ezra_141">
+              <lem wit="#Bensly">Vae qui constringuntur a peccatis suis et obteguntur ab iniquitatibus suis, quemadmodum ager constringitur a silua et spinis tegitur semina eius, per quem non transit homo, et excluditur et mittitur ad deuorationem ignis.</lem>
+              <rdg wit="#C" n="1">Vę qui constringuntur a peccatis suis et cooperiuntur ab iniquitatibus suis quemadmodum ager conclusus a silua et spinis coperitur semita eius per quam non transibit homo excluditur et fit in deforatione ignis.</rdg>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

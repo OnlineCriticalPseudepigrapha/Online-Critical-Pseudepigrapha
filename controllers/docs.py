@@ -103,6 +103,8 @@ DOC_ALIASES = {
                'pseupolemos', 'ps-eupolemus', 'pseupolemus'],
     'SibOr': ['sibyllineoracles', 'sibor', 'sib-or', 'sibylline-oracles',
               'sibyllineor', 'sibylline-or', 'siboracles', 'sib-oracles'],
+    'T12P': ['t12p', 'testxii', 'testxiipatr', 'testamentsofthetwelvepatriarchs',
+             'twelvepatriarchs', 'test12patr', 't-12-p', 'tpatr'],
     'TAbr': ['tabr', 'tabraham', 'testabr', 'tab', 'testab', 'testabraham',
              'testamentabraham', 'testamentofabraham', 't-ab', 't-abr',
              't-abraham', 'test-abr', 'test-ab', 'test-abraham',

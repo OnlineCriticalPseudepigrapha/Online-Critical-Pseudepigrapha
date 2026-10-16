@@ -1,0 +1,1829 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Esdl">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Vision of Ezra</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Bogaert">
+            <abbr type="siglum">Bogaert</abbr>
+            <name>Bogaert Concordance</name>
+            <bibl>P.-M. Bogaert, "Une vision longue inédite de la 'Visio Beati Esdrae' dans la légendier de Teano (Barberini lat. 2318)," Revue Bénédictine 94 (1984): 50-70.</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of English based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Version_1">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Vision_of_Ezra__French_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Latin" xml:lang="la" xml:id="ver_Version_1">
+        <head>Latin</head>
+        <div type="chapter" n="Title" xml:id="Esdl.ver_Version_1.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="Esdl.ver_Version_1.Title.0">
+            <app xml:id="u1_ver_Version_1">
+              <lem wit="#Bogaert">LEGENDA BEATI EXDRAE PROPHETAE</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="Document Body" xml:id="Esdl.ver_Version_1.Document_Body">
+          <head>Chapter Document Body</head>
+          <ab type="verse" n="1" xml:id="Esdl.ver_Version_1.Document_Body.1">
+            <app xml:id="u2_ver_Version_1">
+              <lem wit="#Bogaert">Cum orasset Exdra ad dominum Ihesum Christum dixit: Domine, dona mihi fiduciam ut non timeam dum uideo iudicia peccatorum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Esdl.ver_Version_1.Document_Body.2">
+            <app xml:id="u3_ver_Version_1">
+              <lem wit="#Bogaert">Et dati sunt mihi septem angeli *tartar[uci]* et eleuauerunt me deorsum sex milia septingentos gradus in infemum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Esdl.ver_Version_1.Document_Body.3">
+            <app xml:id="u4_ver_Version_1">
+              <lem wit="#Bogaert">Et uidi ibi portam igneam et egrediebatur per eam flamma fortissima septingentos et duos pedes et foras portas iacebant dragones et leones et canes nigri quorum de ore et aure ac oculis egrediebatur flamma fortissima.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Esdl.ver_Version_1.Document_Body.4">
+            <app xml:id="u5_ver_Version_1">
+              <lem wit="#Bogaert">Veniebant uiri iusti et transiebant cum gaudio.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Esdl.ver_Version_1.Document_Body.5">
+            <app xml:id="u6_ver_Version_1">
+              <lem wit="#Bogaert">Et interrogaui angelum qui me ducebat: Qui sunt isti, domine, qui cum tanto gaudio procedunt?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Esdl.ver_Version_1.Document_Body.6">
+            <app xml:id="u7_ver_Version_1">
+              <lem wit="#Bogaert">Dixit mihi: Isti sunt uiri sancti et timorati, quorum elemosina eleuata est in caelis,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Esdl.ver_Version_1.Document_Body.7">
+            <app xml:id="u8_ver_Version_1">
+              <lem wit="#Bogaert">isti sunt qui elemosinas multas fecerunt, nudos uestierunt, esurientes saciauerunt, sitientibus dederunt bibere.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Esdl.ver_Version_1.Document_Body.8">
+            <app xml:id="u9_ver_Version_1">
+              <lem wit="#Bogaert">Et ueniebant peccatores ut ingrederentur per ipsam portam. Dragones et canes percuciebant eos et ignis incendebat eos. Dicebant: Domine, miserere, et non miserebatur .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Esdl.ver_Version_1.Document_Body.9">
+            <app xml:id="u10_ver_Version_1">
+              <lem wit="#Bogaert">Et interrogaui angelum qui me ducebat: Domine, qui sunt isti qui in tanta poena instituti sunt? Et dixit mihi:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Esdl.ver_Version_1.Document_Body.10">
+            <app xml:id="u11_ver_Version_1">
+              <lem wit="#Bogaert">Isti sunt qui negauerunt dominum et in die dominico manserunt cum mulieribus, et ideo sunt in tormenta.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Esdl.ver_Version_1.Document_Body.11">
+            <app xml:id="u12_ver_Version_1">
+              <lem wit="#Bogaert">- Domine, parce peccatoribus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Esdl.ver_Version_1.Document_Body.12">
+            <app xml:id="u13_ver_Version_1">
+              <lem wit="#Bogaert">Et tulerunt me deorsum et demerserunt me septingentos gradus in infernum. Et uidi ibi homines manus ligatos deorsum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Esdl.ver_Version_1.Document_Body.13">
+            <app xml:id="u14_ver_Version_1">
+              <lem wit="#Bogaert">Alii dyaboli ignem ministrabant, alii cum fuste de igne percutiebant eos.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Esdl.ver_Version_1.Document_Body.14">
+            <app xml:id="u15_ver_Version_1">
+              <lem wit="#Bogaert">Et interpellabat terra dicens: Caedite et nolite parcere eis, quia super me multa mala fecerunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Esdl.ver_Version_1.Document_Body.15">
+            <app xml:id="u16_ver_Version_1">
+              <lem wit="#Bogaert">Et interrogaui angelum: Domine, qui sunt isti qui in tanta poena sunt instituti?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Esdl.ver_Version_1.Document_Body.16">
+            <app xml:id="u17_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit mihi: Isti sunt qui cum mulieribus maritatis fornicauerunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Esdl.ver_Version_1.Document_Body.18">
+            <app xml:id="u18_ver_Version_1">
+              <lem wit="#Bogaert">- Domine, parce peccatoribus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="Esdl.ver_Version_1.Document_Body.19">
+            <app xml:id="u19_ver_Version_1">
+              <lem wit="#Bogaert">Et tulerunt me deorsum et posuerunt me ad meridianum. Et uidi ibi homines per palpebras de oculis super ignem *pendentes* mulieres et barones, et quatuor dyaboli *tartaruci* cum ignea fuste percuciebant eos.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="Esdl.ver_Version_1.Document_Body.20">
+            <app xml:id="u20_ver_Version_1">
+              <lem wit="#Bogaert">Et dixi ad angelum: Qui sunt isti qui in tanta mala constituti sunt?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="Esdl.ver_Version_1.Document_Body.21">
+            <app xml:id="u21_ver_Version_1">
+              <lem wit="#Bogaert">Dixit mihi: Isti sunt qui mala ad patrem et matrem fecerunt et malum desiderium semper optauerunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="Esdl.ver_Version_1.Document_Body.22">
+            <app xml:id="u22_ver_Version_1">
+              <lem wit="#Bogaert">- Domine, parce peccatoribus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="Esdl.ver_Version_1.Document_Body.23">
+            <app xml:id="u23_ver_Version_1">
+              <lem wit="#Bogaert">Et assumpserunt me deorsum duo milia quingentos gradus in infemum. Et uidi ibi lebetem quae interpretatur caccabus non magnus, latitudo eius cubitis duodecim. Ibi uidebant sulphur picis et resinae et uidebatur duodecim cubita altior uelud unda maris.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="Esdl.ver_Version_1.Document_Body.24">
+            <app xml:id="u24_ver_Version_1">
+              <lem wit="#Bogaert">Et uenerunt iusti et ingressi sunt per medium eius ambulantes super undas ignis collaudantes dominum, tamquam si ambularent super rorem et aquam frigidam.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="Esdl.ver_Version_1.Document_Body.25">
+            <app xml:id="u25_ver_Version_1">
+              <lem wit="#Bogaert">Et interrogaui angelum et dixi: Domine, qui sunt isti qui cum tanto gaudio procedunt?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="Esdl.ver_Version_1.Document_Body.26">
+            <app xml:id="u26_ver_Version_1">
+              <lem wit="#Bogaert">- Isti sunt qui elemosinas multas fecerunt, nudos uestierunt et calciauerunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="Esdl.ver_Version_1.Document_Body.27">
+            <app xml:id="u27_ver_Version_1">
+              <lem wit="#Bogaert">Et uenerunt peccatores, et deponebant eos in igne angeli satanae et igneas *furcas* in ceruices eorum premebant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="Esdl.ver_Version_1.Document_Body.28">
+            <app xml:id="u28_ver_Version_1">
+              <lem wit="#Bogaert">Et clamabant: Domine, miserere mei, et non miserebatur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="Esdl.ver_Version_1.Document_Body.29">
+            <app xml:id="u29_ver_Version_1">
+              <lem wit="#Bogaert">Mox autem audiebatur, caro eorum non uidebatur per ignem et tormenta.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="Esdl.ver_Version_1.Document_Body.30">
+            <app xml:id="u30_ver_Version_1">
+              <lem wit="#Bogaert">Et dixi ad angelum: Qui sunt isti?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="Esdl.ver_Version_1.Document_Body.31">
+            <app xml:id="u31_ver_Version_1">
+              <lem wit="#Bogaert">- Qui fuerunt cupidi, raptores, auari omnibus diebus uitae suae, qui pauperes et ospites non receperunt in domum suam,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="Esdl.ver_Version_1.Document_Body.32">
+            <app xml:id="u32_ver_Version_1">
+              <lem wit="#Bogaert">et perierunt ipsi et totae diuitiae ipsorum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="Esdl.ver_Version_1.Document_Body.33">
+            <app xml:id="u33_ver_Version_1">
+              <lem wit="#Bogaert">- Domine, parce peccatoribus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="Esdl.ver_Version_1.Document_Body.34">
+            <app xml:id="u34_ver_Version_1">
+              <lem wit="#Bogaert">Et ambulaui in oscuro loco et uidi ibi uermes *inexstinguibiles* longitudo et altitudo extimari non potest, longitudo eorum fertur habere septingentos *cubitos.*</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="Esdl.ver_Version_1.Document_Body.35">
+            <app xml:id="u35_ver_Version_1">
+              <lem wit="#Bogaert">Et ante orem eius stabant multae animae peccatorum, et cum recipiebant flatum ingrediebantur in eo duodecim milia animae, sicut muscas, et dum respirarent exiebant omnes *distincti* *coloris.*</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="Esdl.ver_Version_1.Document_Body.36">
+            <app xml:id="u36_ver_Version_1">
+              <lem wit="#Bogaert">Et dixi ad angelum: Domine, qui sunt isti? Et dixit mihi: Isti sunt qui fuerunt repleti ex omni malo. Et ambulaui in antea et uidi ibi flumen igneum et erat pons mangnus super eum. Latitudo eius *quam* unde possint transire quatraginta paria boum. Et cum uenissent iusti transiebant cum gaudio et laetitia. Et iterum ueniebant peccatores et transiebant usque ad medium, et tantum *reuertebatur* in eo subtilitas quod usque ad filum staminis erat. Et demergebant in flumine et multi serpentes et scorpiones qui iacebant recipiebant animas mulierum uiduarum et hominum. Et petebant misericordiam, et nemo eis miserebatur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="Esdl.ver_Version_1.Document_Body.37">
+            <app xml:id="u37_ver_Version_1">
+              <lem wit="#Bogaert">Et ambulaui in antea et uidi uirum sedentem in cathedra ignea, et angeli satanae ignem ministrabant ex omni parte et consiliatores eius circa eum stabant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="Esdl.ver_Version_1.Document_Body.38">
+            <app xml:id="u38_ver_Version_1">
+              <lem wit="#Bogaert">Et dixi ad angelum: Domine, quis est iste? Et dixit mihi: Iste est rex Herodes qui multos pueros propter dominum interfecit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="Esdl.ver_Version_1.Document_Body.39">
+            <app xml:id="u39_ver_Version_1">
+              <lem wit="#Bogaert">Dixit que ego: Domine, qui rectum iudicium iudicasti.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="Esdl.ver_Version_1.Document_Body.40">
+            <app xml:id="u40_ver_Version_1">
+              <lem wit="#Bogaert">Et ambulaui in antea, et uidi ibi homines alligatos et angeli *tartaruci* cum spinis oculos suos pungebant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="Esdl.ver_Version_1.Document_Body.41">
+            <app xml:id="u41_ver_Version_1">
+              <lem wit="#Bogaert">Et interrogaui angelum qui essent isti. Et dixit: Isti sunt qui uias alienas monstrauerunt *itinerantibus.*</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="Esdl.ver_Version_1.Document_Body.43">
+            <app xml:id="u42_ver_Version_1">
+              <lem wit="#Bogaert">Et uidi ibi uirgines cum bogias igneas libras quingentas *clamando* uenire ad *occidianum.* Et dixi ad angelum: Domine, quae sunt istae?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="Esdl.ver_Version_1.Document_Body.44">
+            <app xml:id="u43_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit mihi: Istae sunt quae ante nupcias uirginitatem corruperunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="Esdl.ver_Version_1.Document_Body.45">
+            <app xml:id="u44_ver_Version_1">
+              <lem wit="#Bogaert">Et ambulaui in antea et uidi ibi multos homines et multa milia ferri et plumbi ardentes super eos. Et interrogaui angelum quid hoc esset.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="Esdl.ver_Version_1.Document_Body.46">
+            <app xml:id="u45_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit mihi: Isti sunt derisores et *corruptores* legis et ideo iudicantur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="Esdl.ver_Version_1.Document_Body.47">
+            <app xml:id="u46_ver_Version_1">
+              <lem wit="#Bogaert">- Domine, parce peccatoribus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="Esdl.ver_Version_1.Document_Body.48">
+            <app xml:id="u47_ver_Version_1">
+              <lem wit="#Bogaert">Et ambulaui in antea ad occasum solis. Et uidi ibi reges et principes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="49" xml:id="Esdl.ver_Version_1.Document_Body.49">
+            <app xml:id="u48_ver_Version_1">
+              <lem wit="#Bogaert">et pauperes ibi stantes et interpellantes: Domine, isti sunt qui potestatem nostram totam abstulerunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="50" xml:id="Esdl.ver_Version_1.Document_Body.50">
+            <app xml:id="u49_ver_Version_1">
+              <lem wit="#Bogaert">Et uidi ibi aliam fornacem et ardebat ibi sulphur picis et alia ligna quae tracte sum de die dominico. Et mittebantur ibi filii qui patribus suis manum miserunt et qui dominum suum negauerunt, et qui mercennario suo de iusta mercede fraudem fecerunt similiter mittebantur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="51" xml:id="Esdl.ver_Version_1.Document_Body.51">
+            <app xml:id="u50_ver_Version_1">
+              <lem wit="#Bogaert">Et uidi in oscuro loco aliam fornacem, et ibi mittebantur mulieres quae ibidem erant. Et dixi ad angelum: Domine, quae sunt?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="52" xml:id="Esdl.ver_Version_1.Document_Body.52">
+            <app xml:id="u51_ver_Version_1">
+              <lem wit="#Bogaert">- Istae sunt quae *filios* *suos* de adulterio abuerunt et *necauerunt* eos.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="53" xml:id="Esdl.ver_Version_1.Document_Body.53">
+            <app xml:id="u52_ver_Version_1">
+              <lem wit="#Bogaert">Et paruuli ipsi interpellabant dicentes: Domine, animam quam tu dedisti nobis, istae tulerunt nobis. Et ibidem uidi alias mulieres pendentes per *crines* capitum earum et serpentes circa colla bibebant mammillas earum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="54" xml:id="Esdl.ver_Version_1.Document_Body.54">
+            <app xml:id="u53_ver_Version_1">
+              <lem wit="#Bogaert">Dixi: Domine quae sum? - Istae sunt quae paruulis et orphanis mammillas earum non praestauerunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="55" xml:id="Esdl.ver_Version_1.Document_Body.55">
+            <app xml:id="u54_ver_Version_1">
+              <lem wit="#Bogaert">- Domine, parce peccatoribus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="56" xml:id="Esdl.ver_Version_1.Document_Body.56">
+            <app xml:id="u55_ver_Version_1">
+              <lem wit="#Bogaert">Tunc uenerum Michael et Gabriel et dixerunt mihi: Exdra, ueni in caelo ut faciamus pasca.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="57" xml:id="Esdl.ver_Version_1.Document_Body.57">
+            <app xml:id="u56_ver_Version_1">
+              <lem wit="#Bogaert">Et dixi: Viuit dominus, nisi dum uideo iudicia peccatorum non uenio. Et ambulaui in antea et uidi homines *quos bestiae disrumpebant,* et dixi: Qui sum isti? Et dixit angelus: Isti sunt qui terminum mutauerum et falsum testimonium dixerunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="58" xml:id="Esdl.ver_Version_1.Document_Body.58">
+            <app xml:id="u57_ver_Version_1">
+              <lem wit="#Bogaert">Et deposuerum me deorsum quatuor milia nonaginta gradus in infernum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="59" xml:id="Esdl.ver_Version_1.Document_Body.59">
+            <app xml:id="u58_ver_Version_1">
+              <lem wit="#Bogaert">Et uidi ibi multos, et habitacio eorum erat splendida. Et omni tempore ibi lux erat Gaudium et laeticiam habebant quia super terram multa bona fecerunt, et tristitia in eis non erat. In caeleste *manna* gaudebant, quia multam caritatem et multas elemosinas fecerunt. Sunt autem qui non bene fecerunt eo quod non habuerunt unde facerent. Apparuerunt et ipsis tribulantes uerbum consolationis dixerunt: Firmetur in lucem sicut et illi qui multa bona fecerunt et iustitiam dilexerunt. Et ambulaui in antea et uidi foueam altam mille quingentos pedes et mulutudo +modia uictuali+ ibi ardebat sicut cera, et peccatores ibi incendebantur. Et dixi: Domine, qui sunt isu? Et dixit angelus: Isti sunt qui usuram receperunt et nullam pietatem super ipsos homines habuerunt.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="60" xml:id="Esdl.ver_Version_1.Document_Body.60">
+            <app xml:id="u59_ver_Version_1">
+              <lem wit="#Bogaert">Et cum omnia iudicia inferni quae circa se erant uiderunt, uenerunt angeli Michahel, Gabriel, Raphahel et posuerunt me in nubem flammeam et eleuauerunt me super caelum unum, non super septimum. Et uenerunt congregationes angelorum et interrogantes me quae essent iudicia peccatorum. Et dixi: Flectite et *orate* pro peccatoribus. Et eleuauerunt me in aliud caelo. Et uenerunt prophetae ecclesiarum interrogantes me similiter, et dixi: Flectite et orate pro peccatoribus. Et eleuauerunt me in sepumo caelo ad dorsum domini, unde aliud uidere non merui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="61" xml:id="Esdl.ver_Version_1.Document_Body.61">
+            <app xml:id="u60_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit: Exdra, ego reddam tibi secundum opera tua. Et dixi:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="62" xml:id="Esdl.ver_Version_1.Document_Body.62">
+            <app xml:id="u61_ver_Version_1">
+              <lem wit="#Bogaert">Domine, animalia quae herbam pascunt meliora fecisti quam homines, quoniam laudes tibi non referunt, moriuntur et peccatum non habent, nos autem miseri uiui et mortui cruciati sumus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="63" xml:id="Esdl.ver_Version_1.Document_Body.63">
+            <app xml:id="u62_ver_Version_1">
+              <lem wit="#Bogaert">Et respondit dominus: Exdra, ad imaginem meam feci hominem et feminam et mandaui ut non peccarent, et peccauerunt, et ideo sunt in tormenta.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="64" xml:id="Esdl.ver_Version_1.Document_Body.64">
+            <app xml:id="u63_ver_Version_1">
+              <lem wit="#Bogaert">Et alii sunt qui rogauerunt me et non fecerunt praecepta mea, et similiter non sunt electi in regno meo.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="67" xml:id="Esdl.ver_Version_1.Document_Body.67">
+            <app xml:id="u64_ver_Version_1">
+              <lem wit="#Bogaert">- Quoniam tu iustus, quoniam tu omnipotens, quoniam tu misericors decore.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="68" xml:id="Esdl.ver_Version_1.Document_Body.68">
+            <app xml:id="u65_ver_Version_1">
+              <lem wit="#Bogaert">- Exdra, sunt qui malis operibus corripuit eos in extremum diem.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="69" xml:id="Esdl.ver_Version_1.Document_Body.69">
+            <app xml:id="u66_ver_Version_1">
+              <lem wit="#Bogaert">Et sol in sanguinem eius corruet, conuertetur et recumbet, et tenebrae fient et stellae cadent in terra, et septuaginta cubitis ardebit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="70" xml:id="Esdl.ver_Version_1.Document_Body.70">
+            <app xml:id="u67_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Caelum quid peccauit? Et dixit dominus: Caelum istum malicias hominum aspicit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="71" xml:id="Esdl.ver_Version_1.Document_Body.71">
+            <app xml:id="u68_ver_Version_1">
+              <lem wit="#Bogaert">Ante paruum soluitur Antechristum cum maerore ac temptacionem populi et dicet se praedicare in nomine meo.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="72" xml:id="Esdl.ver_Version_1.Document_Body.72">
+            <app xml:id="u69_ver_Version_1">
+              <lem wit="#Bogaert">Et exiet unus christianus et dicit se certare pro genere humano, et dicit: Si tu es Christus filius dei, transfer hunc montem. Et facere habet et reuocare non potest.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="73" xml:id="Esdl.ver_Version_1.Document_Body.73">
+            <app xml:id="u70_ver_Version_1">
+              <lem wit="#Bogaert">Et iterum dicit: Fac tempestatem ut ueniant pluuia. Et non uenit. De serpente facit piscem, de petra panem, de arena aquam.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="74" xml:id="Esdl.ver_Version_1.Document_Body.74">
+            <app xml:id="u71_ver_Version_1">
+              <lem wit="#Bogaert">Et qui in inum crediderit semper *esuriet* et siuet et numquam fuerit satiatus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="75" xml:id="Esdl.ver_Version_1.Document_Body.75">
+            <app xml:id="u72_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Quam similitudinem habet ipse Antechristus ut annuntiem filiis hominim?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="76" xml:id="Esdl.ver_Version_1.Document_Body.76">
+            <app xml:id="u73_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit dominus: Frons illius alta est multum, caput longum habet, super cilia pilos habebit in unum, oculi eius sicut lucifer, nasus illius baratrum erit, laber eius desuper subtilior, genuculum non habebit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="77" xml:id="Esdl.ver_Version_1.Document_Body.77">
+            <app xml:id="u74_ver_Version_1">
+              <lem wit="#Bogaert">Et dicet unus christianus: Si tu es Christus filius dei, flecte genua tua et *ora.* Et ipse inclinare non potest.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="78" xml:id="Esdl.ver_Version_1.Document_Body.78">
+            <app xml:id="u75_ver_Version_1">
+              <lem wit="#Bogaert">Cum autem uenit ad diem iudicii, ibit unus christianus qui in illum crediderit ad montem Synay et dicet: Coniuro te per preciosum nomen domini, mons et petra, cadite super me et coperite me.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="79" xml:id="Esdl.ver_Version_1.Document_Body.79">
+            <app xml:id="u76_ver_Version_1">
+              <lem wit="#Bogaert">Mons autem ut audierit nomen domini liquabitur et eruet super eum et remanebit in campo duro.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="80" xml:id="Esdl.ver_Version_1.Document_Body.80">
+            <app xml:id="u77_ver_Version_1">
+              <lem wit="#Bogaert">Et dicet: Domine, ubi fugiam? Si uado ad infernum, ubi inuenio requiem? Si descendo ad oceanum maris, tu ibi es. Fugire te non possum, quia peccata mea me tradent ante faciem tuam.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="81" xml:id="Esdl.ver_Version_1.Document_Body.81">
+            <app xml:id="u78_ver_Version_1">
+              <lem wit="#Bogaert">Set te deprecor, dominator domine, leua te de sede tua, et dicamus iudicium.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="82" xml:id="Esdl.ver_Version_1.Document_Body.82">
+            <app xml:id="u79_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit dominus: Qui nos audiet?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="83" xml:id="Esdl.ver_Version_1.Document_Body.83">
+            <app xml:id="u80_ver_Version_1">
+              <lem wit="#Bogaert">Respondit Exdra: Audit nos filius tuus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="84" xml:id="Esdl.ver_Version_1.Document_Body.84">
+            <app xml:id="u81_ver_Version_1">
+              <lem wit="#Bogaert">- Filius meus qui de uoce mea natus est quomodo non audiet? dixit dominus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="85" xml:id="Esdl.ver_Version_1.Document_Body.85">
+            <app xml:id="u82_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Audiat nos sacerdos tuus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="86" xml:id="Esdl.ver_Version_1.Document_Body.86">
+            <app xml:id="u83_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit dominus: Vade et interroga sacerdotem meum, me cum potest dicere iudicium.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="87" xml:id="Esdl.ver_Version_1.Document_Body.87">
+            <app xml:id="u84_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Viuit dominus quia iudico contra te iudicium propter omnes homines qui locum non habent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="88" xml:id="Esdl.ver_Version_1.Document_Body.88">
+            <app xml:id="u85_ver_Version_1">
+              <lem wit="#Bogaert">- Tu cum prophetis meis electus eris.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="89" xml:id="Esdl.ver_Version_1.Document_Body.89">
+            <app xml:id="u86_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Peccatores qui plasmauit? Et respondit dominus: Ego. Et dixit Exdra: Si peccatores et me tu creasti, melius est perdere me quam totum mundum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="90" xml:id="Esdl.ver_Version_1.Document_Body.90">
+            <app xml:id="u87_ver_Version_1">
+              <lem wit="#Bogaert">Et respondit dominus: Peccatores ab ora nona sabbati usque ad secundam feriam sunt in requiem, aliis uero diebus de peccatis suis paeniteant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="91" xml:id="Esdl.ver_Version_1.Document_Body.91">
+            <app xml:id="u88_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Sit quod tibi placet.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="92" xml:id="Esdl.ver_Version_1.Document_Body.92">
+            <app xml:id="u89_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit dominus: Exdra, uade in pace et ambula cum prophetis meis. Ubi iusti sunt, et tu ibi eris.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="93" xml:id="Esdl.ver_Version_1.Document_Body.93">
+            <app xml:id="u90_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit dominus ad Michahelem: Vade et reuoca animam Exdrae dilecti mei.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="94" xml:id="Esdl.ver_Version_1.Document_Body.94">
+            <app xml:id="u91_ver_Version_1">
+              <lem wit="#Bogaert">Et Michahel dixit: Exdra, da animam tuam.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="95" xml:id="Esdl.ver_Version_1.Document_Body.95">
+            <app xml:id="u92_ver_Version_1">
+              <lem wit="#Bogaert">Et respondit Exdra: Deprecor te ut qualiscumque homo librum meum comparauerit aut scribere fecerit, quantos denario dederit et comparauerit librum meum, tantas libras aureas habeat ualutas adiutores et consolacionem ac uitam aeternam.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="96" xml:id="Esdl.ver_Version_1.Document_Body.96">
+            <app xml:id="u93_ver_Version_1">
+              <lem wit="#Bogaert">Et uenit spiritus et dixit: Exdra, ex audita est oratio tua sicut petisti, et omnia data sunt tibi.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="97" xml:id="Esdl.ver_Version_1.Document_Body.97">
+            <app xml:id="u94_ver_Version_1">
+              <lem wit="#Bogaert">Venit angelus ad Ex dram et dixit: Da animam tuam.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="98" xml:id="Esdl.ver_Version_1.Document_Body.98">
+            <app xml:id="u95_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Vnde egredietur anima mea?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="99" xml:id="Esdl.ver_Version_1.Document_Body.99">
+            <app xml:id="u96_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit angelus: Per os tuum. Respondit Exdra: Os meum laudem domini annunciauit, non reddo animam meam per os meum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="100" xml:id="Esdl.ver_Version_1.Document_Body.100">
+            <app xml:id="u97_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit angelus: Per oculum tuum. - Oculi mei dorsum domini uiderunt, non reddo animam meam per oculos meos.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="101" xml:id="Esdl.ver_Version_1.Document_Body.101">
+            <app xml:id="u98_ver_Version_1">
+              <lem wit="#Bogaert">- Per nares tuos. - Nares mei aromatum domini *oluerunt,* non reddo animam meam per nares meos.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="102" xml:id="Esdl.ver_Version_1.Document_Body.102">
+            <app xml:id="u99_ver_Version_1">
+              <lem wit="#Bogaert">- Per uerticem capitis tui. - Verticem capitis mei uncxit Aaron sanctus domini de oleo sanctificato, non egredietur anima mea per uerticem capitis mei.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="103" xml:id="Esdl.ver_Version_1.Document_Body.103">
+            <app xml:id="u100_ver_Version_1">
+              <lem wit="#Bogaert">- Per manus tuas. - Manus meae psalterium domini tenuerunt, non egredietur anima mea per manus meas.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="104" xml:id="Esdl.ver_Version_1.Document_Body.104">
+            <app xml:id="u101_ver_Version_1">
+              <lem wit="#Bogaert">- Per pedes tuos. - Pedes mei ante dominum steterunt, non reddo animam meam per pedes meos.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="105" xml:id="Esdl.ver_Version_1.Document_Body.105">
+            <app xml:id="u102_ver_Version_1">
+              <lem wit="#Bogaert">Venit Michahel ad dominum et annunciauit ei omnia quae uiderat.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="106" xml:id="Esdl.ver_Version_1.Document_Body.106">
+            <app xml:id="u103_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit dominus: Ego descendam cum angelis meis et adducam animam eius.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="107" xml:id="Esdl.ver_Version_1.Document_Body.107">
+            <app xml:id="u104_ver_Version_1">
+              <lem wit="#Bogaert">Descendit que dominus et dixit: Exdra, da animam tuam.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="108" xml:id="Esdl.ver_Version_1.Document_Body.108">
+            <app xml:id="u105_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Domine, exaudi orationem meam et clamor meus ad te perueniat. Domine deus omnipotens, te deprecor ut qui librum passionis meae memoriam fecerit nullum peccatum eum incuruat set omnia dimittantur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="109" xml:id="Esdl.ver_Version_1.Document_Body.109">
+            <app xml:id="u106_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit dominus: Ego omnia concedo ut petisti, set tantum da animam tuam.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="110" xml:id="Esdl.ver_Version_1.Document_Body.110">
+            <app xml:id="u107_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit Exdra: Domine, timeo mortem. Et respondit dominus: Ego mortuus fui et crucifixus et resurrexi et modo sedeo ad dexteram et mortem non timeo.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="111" xml:id="Esdl.ver_Version_1.Document_Body.111">
+            <app xml:id="u108_ver_Version_1">
+              <lem wit="#Bogaert">Respondit Exdra: Si tu mortem non timuisti, cur dissisti: Tristis est anima mea usque ad mortem?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="112" xml:id="Esdl.ver_Version_1.Document_Body.112">
+            <app xml:id="u109_ver_Version_1">
+              <lem wit="#Bogaert">Respondit dominus: lam multum loqueris, da animam tuam quia non morieris. Corpus uadit unde uenit, anima reddit ad patrem qui eam dedit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="113" xml:id="Esdl.ver_Version_1.Document_Body.113">
+            <app xml:id="u110_ver_Version_1">
+              <lem wit="#Bogaert">Dixit que iterum Exdra post angelos: Plangite me, boni angeli et archangeli, prophetae, apostoli, martires, confexores et uirgines, et postea sepellite me.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="114" xml:id="Esdl.ver_Version_1.Document_Body.114">
+            <app xml:id="u111_ver_Version_1">
+              <lem wit="#Bogaert">Et dixit iterum Exdra: Domine Ihesu Christe, non me derelinquere quando anima mea de corpore meo exibit, non occurant mihi angeli satanae et nullam laesionem mihi faciant.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="115" xml:id="Esdl.ver_Version_1.Document_Body.115">
+            <app xml:id="u112_ver_Version_1">
+              <lem wit="#Bogaert">Dixit que angelus Michahel: Quod tibi commendauit pater meus.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="116" xml:id="Esdl.ver_Version_1.Document_Body.116">
+            <app xml:id="u113_ver_Version_1">
+              <lem wit="#Bogaert">Mons contremuit, et *reddidit* spiritum nono die intrante mense iulio.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="117" xml:id="Esdl.ver_Version_1.Document_Body.117">
+            <app xml:id="u114_ver_Version_1">
+              <lem wit="#Bogaert">Quicumque uero celebrauerit festiuitatem et memoriam beati Exdrae prophetae habeat partem cum domino meo Ihesu Christo et cum beata dei genitrice Maria et cum beato Michahel archangelo tuo. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="Explicit" xml:id="Esdl.ver_Version_1.Explicit">
+          <head>Chapter Explicit</head>
+          <ab type="verse" n="0" xml:id="Esdl.ver_Version_1.Explicit.0">
+            <app xml:id="u115_ver_Version_1">
+              <lem wit="#Bogaert">EXPLICIT LEGENDA BEATI EXDRAE PROPHETAE</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="chapter" n="Title" xml:id="Esdl.ver_English.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="Esdl.ver_English.Title.0">
+            <app xml:id="uen_1_ver_English">
+              <lem wit="#OCP-Trans">The Legend of the Blessed Prophet Ezra</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="Document Body" xml:id="Esdl.ver_English.Document_Body">
+          <head>Chapter Document Body</head>
+          <ab type="verse" n="1" xml:id="Esdl.ver_English.Document_Body.1">
+            <app xml:id="uen_2_ver_English">
+              <lem wit="#OCP-Trans">When Ezra prayed to the Lord Jesus Christ, he said: “Lord, grant me confidence so that I may not fear when I see the judgments of sinners.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Esdl.ver_English.Document_Body.2">
+            <app xml:id="uen_3_ver_English">
+              <lem wit="#OCP-Trans">And seven angels *of Tartarus* were given to me, and they lowered me six thousand seven hundred steps down into Hades.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Esdl.ver_English.Document_Body.3">
+            <app xml:id="uen_4_ver_English">
+              <lem wit="#OCP-Trans">And there I saw a gate of fire, and from it issued a very strong flame, seven hundred and two feet high. And outside the gate lay dragons and lions and black dogs, from whose mouths and ears and eyes issued a very strong flame.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Esdl.ver_English.Document_Body.4">
+            <app xml:id="uen_5_ver_English">
+              <lem wit="#OCP-Trans">Righteous men came and passed through with joy.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Esdl.ver_English.Document_Body.5">
+            <app xml:id="uen_6_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel who was leading me: “Who are these, Lord, who proceed with such great joy?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Esdl.ver_English.Document_Body.6">
+            <app xml:id="uen_7_ver_English">
+              <lem wit="#OCP-Trans">He said to me: “These are holy and God-fearing men, whose alms have been lifted up into the heavens.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Esdl.ver_English.Document_Body.7">
+            <app xml:id="uen_8_ver_English">
+              <lem wit="#OCP-Trans">These are those who performed many acts of charity, clothed the naked, satisfied the hungry, and gave drink to the thirsty.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Esdl.ver_English.Document_Body.8">
+            <app xml:id="uen_9_ver_English">
+              <lem wit="#OCP-Trans">And sinners came to enter through that very gate. Dragons and dogs struck them, and fire consumed them. They said: “Lord, have mercy,” but no mercy was shown.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Esdl.ver_English.Document_Body.9">
+            <app xml:id="uen_10_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel who was leading me: “Lord, who are these who are set in such great punishment?” And he said to me:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Esdl.ver_English.Document_Body.10">
+            <app xml:id="uen_11_ver_English">
+              <lem wit="#OCP-Trans">“These are those who denied the Lord and on the Lord’s Day remained with women, and therefore they are in torments.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Esdl.ver_English.Document_Body.11">
+            <app xml:id="uen_12_ver_English">
+              <lem wit="#OCP-Trans">“Lord, spare the sinners.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Esdl.ver_English.Document_Body.12">
+            <app xml:id="uen_13_ver_English">
+              <lem wit="#OCP-Trans">And they took me down and plunged me seven hundred steps into Hades. And there I saw men with their hands bound downwards.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Esdl.ver_English.Document_Body.13">
+            <app xml:id="uen_14_ver_English">
+              <lem wit="#OCP-Trans">Some devils were supplying fire, others were striking them with fiery clubs.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Esdl.ver_English.Document_Body.14">
+            <app xml:id="uen_15_ver_English">
+              <lem wit="#OCP-Trans">And the earth interceded, saying: “Strike them and do not spare them, for they have committed many evils upon me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Esdl.ver_English.Document_Body.15">
+            <app xml:id="uen_16_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel: “Lord, who are these who are set in such great punishment?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Esdl.ver_English.Document_Body.16">
+            <app xml:id="uen_17_ver_English">
+              <lem wit="#OCP-Trans">And he said to me: “These are those who committed fornication with married women.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Esdl.ver_English.Document_Body.18">
+            <app xml:id="uen_18_ver_English">
+              <lem wit="#OCP-Trans">“Lord, spare the sinners.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="Esdl.ver_English.Document_Body.19">
+            <app xml:id="uen_19_ver_English">
+              <lem wit="#OCP-Trans">And they took me down and placed me to the south. And there I saw men and women hanging by the eyelids of their eyes over fire, and four *Tartarean* devils were striking them with a fiery club.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="Esdl.ver_English.Document_Body.20">
+            <app xml:id="uen_20_ver_English">
+              <lem wit="#OCP-Trans">And I said to the angel: “Who are these who are set in such great evil?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="Esdl.ver_English.Document_Body.21">
+            <app xml:id="uen_21_ver_English">
+              <lem wit="#OCP-Trans">He said to me: “These are those who did evil to father and mother and always desired evil desires.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="Esdl.ver_English.Document_Body.22">
+            <app xml:id="uen_22_ver_English">
+              <lem wit="#OCP-Trans">“Lord, spare the sinners.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="Esdl.ver_English.Document_Body.23">
+            <app xml:id="uen_23_ver_English">
+              <lem wit="#OCP-Trans">And they brought me down two thousand five hundred steps into Hades. And there I saw a cauldron, which is interpreted as a kettle, not large, its width twelve cubits. There one could see sulfur, pitch, and resin, and it appeared twelve cubits high like a wave of the sea.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="Esdl.ver_English.Document_Body.24">
+            <app xml:id="uen_24_ver_English">
+              <lem wit="#OCP-Trans">And the righteous came and entered through its midst, walking upon the waves of fire, praising the Lord, as if they were walking upon dew and cold water.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="Esdl.ver_English.Document_Body.25">
+            <app xml:id="uen_25_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel and said: “Lord, who are these who proceed with such great joy?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="Esdl.ver_English.Document_Body.26">
+            <app xml:id="uen_26_ver_English">
+              <lem wit="#OCP-Trans">“These are those who performed many acts of charity, clothed and shod the naked.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="Esdl.ver_English.Document_Body.27">
+            <app xml:id="uen_27_ver_English">
+              <lem wit="#OCP-Trans">And the sinners came, and the angels of Satan cast them into the fire and pressed fiery *forks* upon their necks.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="Esdl.ver_English.Document_Body.28">
+            <app xml:id="uen_28_ver_English">
+              <lem wit="#OCP-Trans">And they cried out: “Lord, have mercy on me,” but no mercy was shown.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="Esdl.ver_English.Document_Body.29">
+            <app xml:id="uen_29_ver_English">
+              <lem wit="#OCP-Trans">As soon as it was heard, their flesh was no longer visible through the fire and torments.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="Esdl.ver_English.Document_Body.30">
+            <app xml:id="uen_30_ver_English">
+              <lem wit="#OCP-Trans">And I said to the angel: “Who are these?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="Esdl.ver_English.Document_Body.31">
+            <app xml:id="uen_31_ver_English">
+              <lem wit="#OCP-Trans">“Those who were greedy, robbers, avaricious all the days of their lives, who did not receive the poor and strangers into their house,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="Esdl.ver_English.Document_Body.32">
+            <app xml:id="uen_32_ver_English">
+              <lem wit="#OCP-Trans">and they and all their riches perished.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="Esdl.ver_English.Document_Body.33">
+            <app xml:id="uen_33_ver_English">
+              <lem wit="#OCP-Trans">“Lord, spare the sinners.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="Esdl.ver_English.Document_Body.34">
+            <app xml:id="uen_34_ver_English">
+              <lem wit="#OCP-Trans">And I walked in a dark place and there I saw *unquenchable* worms, whose length and height cannot be estimated; their length is said to be seven hundred *cubits*.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="Esdl.ver_English.Document_Body.35">
+            <app xml:id="uen_35_ver_English">
+              <lem wit="#OCP-Trans">And before its mouth stood many souls of sinners, and when it inhaled, twelve thousand souls entered into it, like flies, and when it exhaled, they all came out *of different colors*.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="Esdl.ver_English.Document_Body.36">
+            <app xml:id="uen_36_ver_English">
+              <lem wit="#OCP-Trans">And I said to the angel, “Lord, who are these?” And he said to me, “These are those who were filled with all evil.” And I went forward and saw there a fiery river, and there was a great bridge over it. Its width was such that forty pairs of oxen could cross. And when the righteous came, they crossed with joy and gladness. And again, sinners came and crossed up to the middle, and then its narrowness returned such that it was as thin as a thread of yarn. And they were submerged in the river, and many serpents and scorpions that lay there received the souls of widowed women and men. And they begged for mercy, and no one pitied them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="Esdl.ver_English.Document_Body.37">
+            <app xml:id="uen_37_ver_English">
+              <lem wit="#OCP-Trans">And I went forward and saw a man sitting on a fiery throne, and angels of Satan ministered fire from every side, and his counselors stood around him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="Esdl.ver_English.Document_Body.38">
+            <app xml:id="uen_38_ver_English">
+              <lem wit="#OCP-Trans">And I said to the angel, “Lord, who is this?” And he said to me, “This is King Herod, who killed many boys because of the Lord.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="Esdl.ver_English.Document_Body.39">
+            <app xml:id="uen_39_ver_English">
+              <lem wit="#OCP-Trans">And I said, “Lord, you have judged a righteous judgment.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="Esdl.ver_English.Document_Body.40">
+            <app xml:id="uen_40_ver_English">
+              <lem wit="#OCP-Trans">And I went forward, and I saw there men bound, and the angels of Tartarus were piercing their eyes with thorns.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="Esdl.ver_English.Document_Body.41">
+            <app xml:id="uen_41_ver_English">
+              <lem wit="#OCP-Trans">And I asked the angel who these were. And he said, “These are those who showed strange paths to travelers.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="Esdl.ver_English.Document_Body.43">
+            <app xml:id="uen_42_ver_English">
+              <lem wit="#OCP-Trans">And I saw there virgins with fiery torches weighing five hundred pounds, coming with cries to the west. And I said to the angel, “Lord, who are these?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="Esdl.ver_English.Document_Body.44">
+            <app xml:id="uen_43_ver_English">
+              <lem wit="#OCP-Trans">And he said to me, “These are those who corrupted their virginity before marriage.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="Esdl.ver_English.Document_Body.45">
+            <app xml:id="uen_44_ver_English">
+              <lem wit="#OCP-Trans">And I went forward and saw there many men, and many thousands of burning iron and lead upon them. And I asked the angel what this was.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="Esdl.ver_English.Document_Body.46">
+            <app xml:id="uen_45_ver_English">
+              <lem wit="#OCP-Trans">And he said to me, “These are mockers and corruptors of the law, and therefore they are judged.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="Esdl.ver_English.Document_Body.47">
+            <app xml:id="uen_46_ver_English">
+              <lem wit="#OCP-Trans">—Lord, spare the sinners.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="Esdl.ver_English.Document_Body.48">
+            <app xml:id="uen_47_ver_English">
+              <lem wit="#OCP-Trans">And I went forward to the setting of the sun. And I saw there kings and princes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="49" xml:id="Esdl.ver_English.Document_Body.49">
+            <app xml:id="uen_48_ver_English">
+              <lem wit="#OCP-Trans">and poor people standing there and appealing: “Lord, these are those who took away all our power.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="50" xml:id="Esdl.ver_English.Document_Body.50">
+            <app xml:id="uen_49_ver_English">
+              <lem wit="#OCP-Trans">And I saw there another furnace, and sulfur pitch and other woods drawn from the Lord’s day were burning there. And children who laid hands on their parents and who denied their Lord, and who defrauded their hired worker of a just wage, were likewise cast in there.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="51" xml:id="Esdl.ver_English.Document_Body.51">
+            <app xml:id="uen_50_ver_English">
+              <lem wit="#OCP-Trans">And I saw in a dark place another furnace, and women who were there were cast in there. And I said to the angel, “Lord, who are these?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="52" xml:id="Esdl.ver_English.Document_Body.52">
+            <app xml:id="uen_51_ver_English">
+              <lem wit="#OCP-Trans">—These are those who had children from adultery and killed them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="53" xml:id="Esdl.ver_English.Document_Body.53">
+            <app xml:id="uen_52_ver_English">
+              <lem wit="#OCP-Trans">And the infants themselves appealed, saying, “Lord, the life that you gave us, these took away from us.” And there I saw other women hanging by the hairs of their heads, and serpents were drinking from their breasts around their necks.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="54" xml:id="Esdl.ver_English.Document_Body.54">
+            <app xml:id="uen_53_ver_English">
+              <lem wit="#OCP-Trans">I said, “Lord, who are these?” —These are those who did not offer their breasts to infants and orphans.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="55" xml:id="Esdl.ver_English.Document_Body.55">
+            <app xml:id="uen_54_ver_English">
+              <lem wit="#OCP-Trans">—Lord, spare the sinners.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="56" xml:id="Esdl.ver_English.Document_Body.56">
+            <app xml:id="uen_55_ver_English">
+              <lem wit="#OCP-Trans">Then Michael and Gabriel came and said to me, “Ezra, come to heaven so that we may make the Passover.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="57" xml:id="Esdl.ver_English.Document_Body.57">
+            <app xml:id="uen_56_ver_English">
+              <lem wit="#OCP-Trans">And I said, “As the Lord lives, I will not come unless I see the judgments of sinners.” And I went forward and saw men whom beasts were tearing apart, and I said, “Who are these?” And the angel said, “These are those who moved boundaries and spoke false testimony.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="58" xml:id="Esdl.ver_English.Document_Body.58">
+            <app xml:id="uen_57_ver_English">
+              <lem wit="#OCP-Trans">And they brought me down four thousand ninety steps into Hades.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="59" xml:id="Esdl.ver_English.Document_Body.59">
+            <app xml:id="uen_58_ver_English">
+              <lem wit="#OCP-Trans">And I saw many there, and their dwelling was splendid. And there was light there at all times. They had joy and gladness because they had done many good deeds on earth, and there was no sadness in them. They rejoiced in heavenly manna, because they had shown much charity and given many alms. There are also those who did not do well because they did not have the means to do so. Those in tribulation also appeared, and they were told words of comfort: “Let them be strengthened in light, just like those who did many good deeds and loved righteousness.” And I went forward and saw a pit a thousand five hundred feet deep, and a multitude of measures of food were burning there like wax, and sinners were being consumed there. And I said, “Lord, who are these?” And the angel said, “These are those who received usury and had no pity on those people.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="60" xml:id="Esdl.ver_English.Document_Body.60">
+            <app xml:id="uen_59_ver_English">
+              <lem wit="#OCP-Trans">And when they saw all the judgments of Hades that were around them, the angels Michael, Gabriel, Raphael came and placed me in a fiery cloud and lifted me up to one heaven, not to the seventh. And congregations of angels came asking me what the judgments of sinners were. And I said, “Bow down and pray for sinners.” And they lifted me to another heaven. And prophets of the churches came asking me similarly, and I said, “Bow down and pray for sinners.” And they lifted me to the seventh heaven to the back of the Lord, from which I was not worthy to see anything else.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="61" xml:id="Esdl.ver_English.Document_Body.61">
+            <app xml:id="uen_60_ver_English">
+              <lem wit="#OCP-Trans">And He said, “Ezra, I will repay you according to your works.” And I said:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="62" xml:id="Esdl.ver_English.Document_Body.62">
+            <app xml:id="uen_61_ver_English">
+              <lem wit="#OCP-Trans">“Lord, you have made the animals that graze on grass better than humans, because they do not give praise to you, they die and have no sin, but we miserable ones, living and dead, are tormented.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="63" xml:id="Esdl.ver_English.Document_Body.63">
+            <app xml:id="uen_62_ver_English">
+              <lem wit="#OCP-Trans">And the Lord answered, “Ezra, I made man and woman in my image and commanded them not to sin, and they sinned, and therefore they are in torments.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="64" xml:id="Esdl.ver_English.Document_Body.64">
+            <app xml:id="uen_63_ver_English">
+              <lem wit="#OCP-Trans">“And there are others who begged me and did not do my precepts, and similarly are not chosen in my kingdom.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="67" xml:id="Esdl.ver_English.Document_Body.67">
+            <app xml:id="uen_64_ver_English">
+              <lem wit="#OCP-Trans">—Because you are righteous, because you are almighty, because you are merciful in splendor.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="68" xml:id="Esdl.ver_English.Document_Body.68">
+            <app xml:id="uen_65_ver_English">
+              <lem wit="#OCP-Trans">—Ezra, there are those whom wicked works will seize on the last day.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="69" xml:id="Esdl.ver_English.Document_Body.69">
+            <app xml:id="uen_66_ver_English">
+              <lem wit="#OCP-Trans">And the sun will fall into its blood, it will turn and recline, and darkness will come and the stars will fall to earth, and it will burn for seventy cubits.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="70" xml:id="Esdl.ver_English.Document_Body.70">
+            <app xml:id="uen_67_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “What has heaven sinned?” And the Lord said, “Heaven looks upon the wickedness of men.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="71" xml:id="Esdl.ver_English.Document_Body.71">
+            <app xml:id="uen_68_ver_English">
+              <lem wit="#OCP-Trans">Before long, Antichrist will be loosed with sorrow and temptation for the people, and he will say that he preaches in my name.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="72" xml:id="Esdl.ver_English.Document_Body.72">
+            <app xml:id="uen_69_ver_English">
+              <lem wit="#OCP-Trans">And a Christian will come forth and say that he fights for the human race, and he says, “If you are Christ, the Son of God, move this mountain.” And he will be able to do it and cannot recall it.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="73" xml:id="Esdl.ver_English.Document_Body.73">
+            <app xml:id="uen_70_ver_English">
+              <lem wit="#OCP-Trans">And again he says, “Cause a storm so that rain may come.” And it does not come. He makes fish from a serpent, bread from a stone, water from sand.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="74" xml:id="Esdl.ver_English.Document_Body.74">
+            <app xml:id="uen_71_ver_English">
+              <lem wit="#OCP-Trans">And whoever believes in him will always hunger and thirst and will never be satisfied.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="75" xml:id="Esdl.ver_English.Document_Body.75">
+            <app xml:id="uen_72_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “What form does this Antichrist have, that I may announce it to the children of men?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="76" xml:id="Esdl.ver_English.Document_Body.76">
+            <app xml:id="uen_73_ver_English">
+              <lem wit="#OCP-Trans">And the Lord said, “His forehead is very high, he has a long head, he will have hairs on his eyebrows gathered together, his eyes are like the morning star, his nose will be a chasm, his upper lip is thinner, he will have no knee.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="77" xml:id="Esdl.ver_English.Document_Body.77">
+            <app xml:id="uen_74_ver_English">
+              <lem wit="#OCP-Trans">And one Christian will say, “If you are Christ, the Son of God, bend your knees and pray.” And he will not be able to bend.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="78" xml:id="Esdl.ver_English.Document_Body.78">
+            <app xml:id="uen_75_ver_English">
+              <lem wit="#OCP-Trans">But when the day of judgment comes, a Christian who believed in him will go to Mount Sinai and say, “I adjure you by the precious name of the Lord, O mountain and rock, fall upon me and cover me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="79" xml:id="Esdl.ver_English.Document_Body.79">
+            <app xml:id="uen_76_ver_English">
+              <lem wit="#OCP-Trans">But when the mountain hears the name of the Lord, it will melt and flow over him, and he will remain on hard ground.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="80" xml:id="Esdl.ver_English.Document_Body.80">
+            <app xml:id="uen_77_ver_English">
+              <lem wit="#OCP-Trans">And he will say, “Lord, where shall I flee? If I go to hell, where will I find rest? If I descend to the ocean of the sea, You are there. I cannot flee from You, because my sins will deliver me before Your face.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="81" xml:id="Esdl.ver_English.Document_Body.81">
+            <app xml:id="uen_78_ver_English">
+              <lem wit="#OCP-Trans">But I beg You, O Lord and Master, rise from Your seat, and let us pronounce judgment.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="82" xml:id="Esdl.ver_English.Document_Body.82">
+            <app xml:id="uen_79_ver_English">
+              <lem wit="#OCP-Trans">And the Lord said, “Who will hear us?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="83" xml:id="Esdl.ver_English.Document_Body.83">
+            <app xml:id="uen_80_ver_English">
+              <lem wit="#OCP-Trans">Ezra answered, “Your Son hears us.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="84" xml:id="Esdl.ver_English.Document_Body.84">
+            <app xml:id="uen_81_ver_English">
+              <lem wit="#OCP-Trans">“How will My Son, who was born from My voice, not hear?” said the Lord.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="85" xml:id="Esdl.ver_English.Document_Body.85">
+            <app xml:id="uen_82_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “Let Your priest hear us.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="86" xml:id="Esdl.ver_English.Document_Body.86">
+            <app xml:id="uen_83_ver_English">
+              <lem wit="#OCP-Trans">And the Lord said, “Go and ask My priest if he can pronounce judgment with Me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="87" xml:id="Esdl.ver_English.Document_Body.87">
+            <app xml:id="uen_84_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “As the Lord lives, I judge against You because of all people who have no place.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="88" xml:id="Esdl.ver_English.Document_Body.88">
+            <app xml:id="uen_85_ver_English">
+              <lem wit="#OCP-Trans">“You will be chosen with My prophets.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="89" xml:id="Esdl.ver_English.Document_Body.89">
+            <app xml:id="uen_86_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “Who created sinners?” And the Lord answered, “I did.” And Ezra said, “If You created sinners and me, it is better to destroy me than the whole world.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="90" xml:id="Esdl.ver_English.Document_Body.90">
+            <app xml:id="uen_87_ver_English">
+              <lem wit="#OCP-Trans">And the Lord answered, “Sinners are at rest from the ninth hour of the Sabbath until Monday; on other days, however, let them repent of their sins.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="91" xml:id="Esdl.ver_English.Document_Body.91">
+            <app xml:id="uen_88_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “May it be as You please.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="92" xml:id="Esdl.ver_English.Document_Body.92">
+            <app xml:id="uen_89_ver_English">
+              <lem wit="#OCP-Trans">And the Lord said, “Ezra, go in peace and walk with My prophets. Where the righteous are, there you will also be.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="93" xml:id="Esdl.ver_English.Document_Body.93">
+            <app xml:id="uen_90_ver_English">
+              <lem wit="#OCP-Trans">And the Lord said to Michael, “Go and recall the soul of Ezra, My beloved.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="94" xml:id="Esdl.ver_English.Document_Body.94">
+            <app xml:id="uen_91_ver_English">
+              <lem wit="#OCP-Trans">And Michael said, “Ezra, give your soul.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="95" xml:id="Esdl.ver_English.Document_Body.95">
+            <app xml:id="uen_92_ver_English">
+              <lem wit="#OCP-Trans">And Ezra answered, “I beseech You that whoever buys my book or has it written, as many denarii as he gives and buys my book, may he have so many pounds of gold as helpers and consolation and eternal life.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="96" xml:id="Esdl.ver_English.Document_Body.96">
+            <app xml:id="uen_93_ver_English">
+              <lem wit="#OCP-Trans">And a spirit came and said, “Ezra, your prayer has been heard just as you requested, and all things have been given to you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="97" xml:id="Esdl.ver_English.Document_Body.97">
+            <app xml:id="uen_94_ver_English">
+              <lem wit="#OCP-Trans">An angel came to Ezra and said, “Give your soul.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="98" xml:id="Esdl.ver_English.Document_Body.98">
+            <app xml:id="uen_95_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “From where will my soul depart?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="99" xml:id="Esdl.ver_English.Document_Body.99">
+            <app xml:id="uen_96_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “Through your mouth.” Ezra answered, “My mouth announced the praise of the Lord; I will not yield my soul through my mouth.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="100" xml:id="Esdl.ver_English.Document_Body.100">
+            <app xml:id="uen_97_ver_English">
+              <lem wit="#OCP-Trans">And the angel said, “Through your eye.” “My eyes saw the back of the Lord; I will not yield my soul through my eyes.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="101" xml:id="Esdl.ver_English.Document_Body.101">
+            <app xml:id="uen_98_ver_English">
+              <lem wit="#OCP-Trans">“Through your nostrils.” “My nostrils smelled the Lord’s aromas; I will not yield my soul through my nostrils.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="102" xml:id="Esdl.ver_English.Document_Body.102">
+            <app xml:id="uen_99_ver_English">
+              <lem wit="#OCP-Trans">“Through the crown of your head.” “The crown of my head was anointed by Aaron, the holy one of the Lord, with sanctified oil; my soul will not depart through the crown of my head.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="103" xml:id="Esdl.ver_English.Document_Body.103">
+            <app xml:id="uen_100_ver_English">
+              <lem wit="#OCP-Trans">“Through your hands.” “My hands held the psaltery of the Lord; my soul will not depart through my hands.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="104" xml:id="Esdl.ver_English.Document_Body.104">
+            <app xml:id="uen_101_ver_English">
+              <lem wit="#OCP-Trans">“Through your feet.” “My feet stood before the Lord; I will not yield my soul through my feet.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="105" xml:id="Esdl.ver_English.Document_Body.105">
+            <app xml:id="uen_102_ver_English">
+              <lem wit="#OCP-Trans">Michael came to the Lord and announced to Him all that he had seen.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="106" xml:id="Esdl.ver_English.Document_Body.106">
+            <app xml:id="uen_103_ver_English">
+              <lem wit="#OCP-Trans">And the Lord said, “I will descend with My angels and bring his soul.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="107" xml:id="Esdl.ver_English.Document_Body.107">
+            <app xml:id="uen_104_ver_English">
+              <lem wit="#OCP-Trans">And the Lord descended and said, “Ezra, give your soul.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="108" xml:id="Esdl.ver_English.Document_Body.108">
+            <app xml:id="uen_105_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “Lord, hear my prayer and let my cry come to You. Lord God Almighty, I beseech You that whoever commemorates the book of my passion, may no sin afflict him, but may all be forgiven.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="109" xml:id="Esdl.ver_English.Document_Body.109">
+            <app xml:id="uen_106_ver_English">
+              <lem wit="#OCP-Trans">And the Lord said, “I grant everything you have requested, but only give your soul.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="110" xml:id="Esdl.ver_English.Document_Body.110">
+            <app xml:id="uen_107_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said, “Lord, I fear death.” And the Lord answered, “I died and was crucified and rose again, and now I sit at the right hand, and I do not fear death.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="111" xml:id="Esdl.ver_English.Document_Body.111">
+            <app xml:id="uen_108_ver_English">
+              <lem wit="#OCP-Trans">Ezra answered, “If you did not fear death, why did you say, ‘My soul is sorrowful, even unto death’?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="112" xml:id="Esdl.ver_English.Document_Body.112">
+            <app xml:id="uen_109_ver_English">
+              <lem wit="#OCP-Trans">The Lord answered, “You are speaking too much; give your soul, for you will not die. The body goes whence it came, the soul returns to the Father who gave it.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="113" xml:id="Esdl.ver_English.Document_Body.113">
+            <app xml:id="uen_110_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said again to the angels, “Mourn for me, good angels and archangels, prophets, apostles, martyrs, confessors, and virgins, and afterwards bury me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="114" xml:id="Esdl.ver_English.Document_Body.114">
+            <app xml:id="uen_111_ver_English">
+              <lem wit="#OCP-Trans">And Ezra said again, “Lord Jesus Christ, do not abandon me when my soul departs from my body; may the angels of Satan not meet me and do me no harm.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="115" xml:id="Esdl.ver_English.Document_Body.115">
+            <app xml:id="uen_112_ver_English">
+              <lem wit="#OCP-Trans">And the angel Michael said, “That which my Father commended to you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="116" xml:id="Esdl.ver_English.Document_Body.116">
+            <app xml:id="uen_113_ver_English">
+              <lem wit="#OCP-Trans">The mountain trembled, and he gave up his spirit on the ninth day, as the month of July began.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="117" xml:id="Esdl.ver_English.Document_Body.117">
+            <app xml:id="uen_114_ver_English">
+              <lem wit="#OCP-Trans">Whoever celebrates the feast and memory of the blessed prophet Ezra shall have a share with my Lord Jesus Christ and with the blessed God-bearer Mary and with your blessed Archangel Michael. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="Explicit" xml:id="Esdl.ver_English.Explicit">
+          <head>Chapter Explicit</head>
+          <ab type="verse" n="0" xml:id="Esdl.ver_English.Explicit.0">
+            <app xml:id="uen_115_ver_English">
+              <lem wit="#OCP-Trans">HERE ENDS THE LEGEND OF THE BLESSED PROPHET EZRA</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Vision of Ezra (French)" xml:lang="fr" xml:id="ver_Vision_of_Ezra__French_">
+        <head>Vision of Ezra (French)</head>
+        <div type="chapter" n="Title" xml:id="Esdl.ver_Vision_of_Ezra__French_.Title">
+          <head>Chapter Title</head>
+          <ab type="verse" n="0" xml:id="Esdl.ver_Vision_of_Ezra__French_.Title.0">
+            <app xml:id="ufr_1_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Légende du bienheureux prophète Esdras</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="Document Body" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body">
+          <head>Chapter Document Body</head>
+          <ab type="verse" n="1" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.1">
+            <app xml:id="ufr_2_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Après qu'Esdras eut prié le Seigneur Jésus-Christ, il dit : « Seigneur, donne-moi l'assurance afin que je ne craigne point lorsque je verrai les jugements des pécheurs. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.2">
+            <app xml:id="ufr_3_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et me furent donnés sept anges tartaruques, et ils me descendirent de six mille sept cents degrés dans l'enfer.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.3">
+            <app xml:id="ufr_4_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'y vis une porte de feu d'où sortait une flamme très violente de sept cent deux pieds, et dehors, devant les portes, gisaient des dragons, des lions et des chiens noirs de la gueule, des oreilles et des yeux desquels sortait une flamme très violente.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.4">
+            <app xml:id="ufr_5_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Des hommes justes venaient et passaient avec joie.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.5">
+            <app xml:id="ufr_6_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'interrogeai l'ange qui me guidait : « Qui sont ceux-ci, seigneur, qui s'avancent avec tant de joie ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.6">
+            <app xml:id="ufr_7_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Il me dit : « Ce sont les hommes saints et craignant Dieu, dont l'aumône s'est élevée dans les cieux ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.7">
+            <app xml:id="ufr_8_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">ce sont ceux qui ont fait de nombreuses aumônes, ont vêtu ceux qui étaient nus, ont rassasié ceux qui avaient faim, ont donné à boire à ceux qui avaient soif. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.8">
+            <app xml:id="ufr_9_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et venaient des pécheurs pour entrer par cette même porte. Les dragons et les chiens les frappaient et le feu les brûlait. Ils disaient : « Seigneur, aie pitié ! », mais on n'avait point pitié d'eux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.9">
+            <app xml:id="ufr_10_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'interrogeai l'ange qui me guidait : « Seigneur, qui sont ceux-ci qui sont établis dans un si grand châtiment ? » Et il me dit :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.10">
+            <app xml:id="ufr_11_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« Ce sont ceux qui ont renié le Seigneur et qui, le jour du Seigneur, ont couché avec des femmes ; c'est pourquoi ils sont dans les tourments. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.11">
+            <app xml:id="ufr_12_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« — Seigneur, épargne les pécheurs ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.12">
+            <app xml:id="ufr_13_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et ils m'emmenèrent vers le bas et me firent descendre de sept cents degrés dans l'enfer. Et j'y vis des hommes ayant les mains liées derrière le dos.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.13">
+            <app xml:id="ufr_14_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Certains démons attisaient le feu, d'autres les frappaient avec un bâton de feu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.14">
+            <app xml:id="ufr_15_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et la terre s'écriait en disant : « Frappez et ne les épargnez point, car sur moi ils ont commis beaucoup de mal ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.15">
+            <app xml:id="ufr_16_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'interrogeai l'ange : « Seigneur, qui sont ceux-ci qui sont établis dans un si grand châtiment ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.16">
+            <app xml:id="ufr_17_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et il me dit : « Ce sont ceux qui ont commis l'adultère avec des femmes mariées. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.18">
+            <app xml:id="ufr_18_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« — Seigneur, épargne les pécheurs ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.19">
+            <app xml:id="ufr_19_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et ils m'emmenèrent vers le bas et me placèrent vers le midi. Et j'y vis des êtres humains suspendus au-dessus du feu par les paupières des yeux, femmes et hommes, et quatre démons tartaruques les frappaient avec un bâton de feu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.20">
+            <app xml:id="ufr_20_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je dis à l'ange : « Qui sont ceux-ci qui sont placés dans de si grands maux ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.21">
+            <app xml:id="ufr_21_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Il me dit : « Ce sont ceux qui ont fait du mal à leur père et à leur mère et qui ont toujours nourri de mauvais désirs. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.22">
+            <app xml:id="ufr_22_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« — Seigneur, épargne les pécheurs ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.23">
+            <app xml:id="ufr_23_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et ils me transportèrent vers le bas de deux mille cinq cents degrés dans l'enfer. Et j'y vis une chaudière — c'est-à-dire une marmite — qui n'était pas grande, d'une largeur de douze coudées. On y voyait du soufre de poix et de la résine, et elle semblait s'élever de douze coudées comme une vague de la mer.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.24">
+            <app xml:id="ufr_24_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et les justes vinrent et entrèrent au milieu d'elle, marchant sur les flots de feu en louant le Seigneur, comme s'ils marchaient sur la rosée et l'eau fraîche.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.25">
+            <app xml:id="ufr_25_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'interrogeai l'ange et dis : « Seigneur, qui sont ceux-ci qui s'avancent avec tant de joie ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.26">
+            <app xml:id="ufr_26_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« — Ce sont ceux qui ont fait de nombreuses aumônes, ont vêtu et chaussé ceux qui étaient nus. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.27">
+            <app xml:id="ufr_27_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et vinrent les pécheurs, et les anges de Satan les précipitaient dans le feu et enfonçaient des fourches de feu dans leur cou.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.28">
+            <app xml:id="ufr_28_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et ils criaient : « Seigneur, aie pitié de moi ! », mais on n'avait point pitié d'eux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.29">
+            <app xml:id="ufr_29_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Bientôt, on les entendait, mais leur chair n'était plus visible à cause du feu et des tourments.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.30">
+            <app xml:id="ufr_30_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je dis à l'ange : « Qui sont ceux-ci ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.31">
+            <app xml:id="ufr_31_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« — Ceux qui ont été cupides, voleurs, avares tous les jours de leur vie, qui n'ont point accueilli les pauvres et les hôtes dans leur maison,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.32">
+            <app xml:id="ufr_32_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">et ils ont péri, eux et toutes leurs richesses. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.33">
+            <app xml:id="ufr_33_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« — Seigneur, épargne les pécheurs ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.34">
+            <app xml:id="ufr_34_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je marchai dans un lieu obscur et j'y vis des vers inextinguibles dont la longueur et la hauteur ne peuvent être estimées ; leur longueur, dit-on, atteint sept cents coudées.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.35">
+            <app xml:id="ufr_35_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et devant sa gueule se tenaient de nombreuses âmes de pécheurs, et lorsqu'il aspirait son souffle, douze mille âmes y pénétraient comme des mouches, et lorsqu'il expirait, elles ressortaient toutes de couleurs bigarrées.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.36">
+            <app xml:id="ufr_36_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je dis à l'ange : « Seigneur, qui sont ceux-ci ? » Et il me dit : « Ce sont ceux qui ont été remplis de toute espèce de mal. » Et je marchai plus avant et j'y vis un fleuve de feu, et il y avait un grand pont au-dessus de lui, d'une largeur telle que quarante paires de bœufs pouvaient y passer. Et lorsque venaient les justes, ils le traversaient avec joie et allégresse. Et de nouveau venaient les pécheurs et ils traversaient jusqu'au milieu, et le pont devenait si mince qu'il n'avait que l'épaisseur d'un fil de trame. Et ils plongeaient dans le fleuve, et de nombreux serpents et scorpions qui s'y trouvaient saisissaient les âmes des femmes veuves et des hommes. Et ils imploraient miséricorde, et nul n'avait pitié d'eux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.37">
+            <app xml:id="ufr_37_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je marchai plus avant et je vis un homme assis sur un siège de feu, et les anges de Satan attisaient le feu de toutes parts, et ses conseillers se tenaient autour de lui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.38">
+            <app xml:id="ufr_38_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je dis à l'ange : « Seigneur, qui est celui-ci ? » Et il me dit : « C'est le roi Hérode, qui a tué de nombreux enfants à cause du Seigneur. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.39">
+            <app xml:id="ufr_39_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Seigneur, toi qui as rendu un juste jugement ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.40">
+            <app xml:id="ufr_40_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je marchai plus avant, et j'y vis des hommes ligotés, et des anges tartaruques leur perçaient les yeux avec des épines.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.41">
+            <app xml:id="ufr_41_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'interrogeai l'ange pour savoir qui ils étaient. Et il dit : « Ce sont ceux qui ont indiqué de mauvais chemins aux voyageurs. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.43">
+            <app xml:id="ufr_42_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'y vis des vierges portant des chaînes de feu de cinq cents livres, qui venaient en criant vers l'occident. Et je dis à l'ange : « Seigneur, qui sont celles-ci ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.44">
+            <app xml:id="ufr_43_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et il me dit : « Ce sont celles qui ont perdu leur virginité avant les noces. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.45">
+            <app xml:id="ufr_44_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je marchai plus avant et j'y vis beaucoup d'hommes, et plusieurs milliers de livres de fer et de plomb brûlants sur eux. Et j'interrogeai l'ange pour savoir ce que c'était.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.46">
+            <app xml:id="ufr_45_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et il me dit : « Ce sont les moqueurs et les corrupteurs de la Loi, et c'est pour cela qu'ils sont jugés. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.47">
+            <app xml:id="ufr_46_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« — Seigneur, épargne les pécheurs ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.48">
+            <app xml:id="ufr_47_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je marchai plus avant vers le coucher du soleil. Et j'y vis des rois et des princes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="49" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.49">
+            <app xml:id="ufr_48_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">et des pauvres qui se tenaient là et s'écriaient : « Seigneur, ce sont ceux qui nous ont ravi tout notre pouvoir ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="50" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.50">
+            <app xml:id="ufr_49_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'y vis une autre fournaise où brûlaient du soufre de poix et d'autres bois qui avaient été ramassés le jour du Seigneur. Et y étaient jetés les fils qui avaient porté la main sur leurs pères et ceux qui avaient renié leur Seigneur ; et ceux qui avaient frustré leur mercenaire de son juste salaire y étaient jetés de même.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="51" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.51">
+            <app xml:id="ufr_50_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je vis dans un lieu obscur une autre fournaise, et là étaient jetées des femmes qui s'y trouvaient. Et je dis à l'ange : « Seigneur, qui sont-elles ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="52" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.52">
+            <app xml:id="ufr_51_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« Ce sont celles qui ont eu des fils issus de l'adultère et les ont tués. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="53" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.53">
+            <app xml:id="ufr_52_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et les petits enfants eux-mêmes réclamaient en disant : « Seigneur, l'âme que tu nous as donnée, celles-ci nous l'ont ôtée. » Et là-même, je vis d'autres femmes suspendues par les cheveux de leur tête, et des serpents autour de leur cou suçaient leurs seins.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="54" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.54">
+            <app xml:id="ufr_53_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Je dis : « Seigneur, qui sont-elles ? » — « Ce sont celles qui n'ont pas offert leurs seins aux petits enfants et aux orphelins. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="55" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.55">
+            <app xml:id="ufr_54_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— « Seigneur, pardonne aux pécheurs ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="56" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.56">
+            <app xml:id="ufr_55_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Alors vinrent Michel et Gabriel, et ils me dirent : « Esdras, viens au ciel afin que nous célébrions la Pâque. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="57" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.57">
+            <app xml:id="ufr_56_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et je dis : « Aussi vrai que le Seigneur est vivant, tant que je n'aurai pas vu les jugements des pécheurs, je ne viendrai pas. » Et j'avançai plus loin, et je vis des hommes que des bêtes sauvages déchiraient, et je dis : « Qui sont ceux-ci ? » Et l'ange dit : « Ce sont ceux qui ont déplacé les bornes et porté de faux témoignages. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="58" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.58">
+            <app xml:id="ufr_57_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et ils me firent descendre de quatre mille quatre-vingt-dix degrés dans l'enfer.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="59" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.59">
+            <app xml:id="ufr_58_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et j'y vis une multitude, et leur demeure était splendide. Et en tout temps il y avait là de la lumière ; ils étaient dans la joie et l'allégresse parce qu'ils avaient fait beaucoup de bien sur la terre, et il n'y avait point de tristesse en eux. Ils jouissaient de la manne céleste parce qu'ils avaient fait preuve de beaucoup de charité et de nombreuses aumônes. Il y en a d'autres, cependant, qui n'ont pas fait le bien parce qu'ils n'en avaient pas les moyens. On leur apparut aussi, et à ces affligés on adressa une parole de consolation : « Qu'il soit affermi dans la lumière, tout comme ceux qui ont fait beaucoup de bien et aimé la justice ! » Et j'avançai plus loin, et je vis une fosse profonde de mille cinq cents pieds, et une multitude y brûlait comme de la cire, et les pécheurs y étaient consumés par le feu. Et je dis : « Seigneur, qui sont ceux-ci ? » Et l'ange dit : « Ce sont ceux qui ont perçu l'usure et n'ont eu aucune pitié envers les hommes. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="60" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.60">
+            <app xml:id="ufr_59_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et lorsqu'ils eurent vu tous les jugements de l'enfer qui les entouraient, les anges Michel, Gabriel et Raphaël vinrent, me placèrent sur une nuée de flamme et m'élevèrent au-dessus d'un ciel, et non au-dessus du septième. Et les assemblées des anges vinrent et me demandèrent quels étaient les jugements des pécheurs. Et je dis : « Fléchissez les genoux et priez pour les pécheurs. » Et ils m'élevèrent dans un autre ciel. Et les prophètes des Églises vinrent m'interroger de même, et je dis : « Fléchissez les genoux et priez pour les pécheurs. » Et ils m'élevèrent au septième ciel, derrière le Seigneur, d'où je ne méritai rien de voir d'autre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="61" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.61">
+            <app xml:id="ufr_60_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et il dit : « Esdras, je te rendrai selon tes œuvres. » Et je dis :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="62" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.62">
+            <app xml:id="ufr_61_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« Seigneur, tu as fait les animaux qui paissent l'herbe meilleurs que les hommes, car ils ne te rendent pas de louanges, ils meurent et n'ont point de péché ; mais nous, misérables, nous sommes tourmentés vivants et morts. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="63" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.63">
+            <app xml:id="ufr_62_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur répondit : « Esdras, j'ai fait l'homme et la femme à mon image et je leur ai commandé de ne pas pécher ; mais ils ont péché, et c'est pourquoi ils sont dans les tourments. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="64" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.64">
+            <app xml:id="ufr_63_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« Et il y en a d'autres qui m'ont imploré et n'ont pas accompli mes préceptes, et de même ils ne sont pas choisis dans mon royaume. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="67" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.67">
+            <app xml:id="ufr_64_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— « Car tu es juste, car tu es tout-puissant, car tu es miséricordieux dans ta beauté. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="68" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.68">
+            <app xml:id="ufr_65_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— « Esdras, il en est que leurs mauvaises œuvres ont saisis au dernier jour. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="69" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.69">
+            <app xml:id="ufr_66_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le soleil s'effondrera en son sang, il se changera et se couchera, et les ténèbres se feront, et les étoiles tomberont sur la terre, et elle brûlera sur soixante-dix coudées.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="70" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.70">
+            <app xml:id="ufr_67_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « En quoi le ciel a-t-il péché ? » Et le Seigneur dit : « Ce ciel contemple les méchancetés des hommes. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="71" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.71">
+            <app xml:id="ufr_68_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Peu de temps avant, l'Antéchrist sera délié avec affliction et épreuve pour le peuple, et il dira qu'il prêche en mon nom.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="72" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.72">
+            <app xml:id="ufr_69_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et un chrétien s'avancera et dira lutter pour le genre humain, et il dira : « Si tu es le Christ, le Fils de Dieu, déplace cette montagne. » Et il le fera, mais ne pourra pas la faire revenir.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="73" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.73">
+            <app xml:id="ufr_70_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et il dira de nouveau : « Fais venir une tempête pour qu'il pleuve. » Mais elle ne viendra pas. D'un serpent il fera un poisson, d'une pierre du pain, du sable de l'eau.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="74" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.74">
+            <app xml:id="ufr_71_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et quiconque aura cru en lui aura toujours faim et soif, et ne sera jamais rassasié.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="75" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.75">
+            <app xml:id="ufr_72_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « Quelle apparence cet Antéchrist a-t-il, afin que je l'annonce aux fils des hommes ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="76" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.76">
+            <app xml:id="ufr_73_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit : « Son front est très haut, il a la tête allongée, ses sourcils seront joints en un seul, ses yeux sont comme l'étoile du matin, son nez sera un abîme, sa lèvre supérieure sera plus mince, il n'aura point de genou. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="77" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.77">
+            <app xml:id="ufr_74_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et un chrétien dira : « Si tu es le Christ, le Fils de Dieu, fléchis les genoux et prie. » Mais lui ne pourra pas s'incliner.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="78" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.78">
+            <app xml:id="ufr_75_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Mais quand viendra le jour du jugement, un chrétien qui aura cru en lui ira vers le mont Sinaï et dira : « Je vous en conjure par le nom précieux du Seigneur, montagne et rocher, tombez sur moi et couvrez-moi ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="79" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.79">
+            <app xml:id="ufr_76_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Mais la montagne, dès qu'elle aura entendu le nom du Seigneur, se liquéfiera et s'écroulera sur lui, et il restera dans une plaine aride.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="80" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.80">
+            <app xml:id="ufr_77_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et il dira : « Seigneur, où fuirai-je ? Si je vais en enfer, où trouverai-je le repos ? Si je descends jusqu'à l'océan de la mer, tu y es. Je ne puis te fuir, car mes péchés me livrent devant ta face. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="81" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.81">
+            <app xml:id="ufr_78_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">« Mais je t'en supplie, Seigneur Souverain, lève-toi de ton trône, et tenons jugement. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="82" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.82">
+            <app xml:id="ufr_79_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit : « Qui nous entendra ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="83" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.83">
+            <app xml:id="ufr_80_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Esdras répondit : « Ton Fils nous entend. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="84" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.84">
+            <app xml:id="ufr_81_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— « Mon Fils qui est né de ma parole, comment n'entendrait-il pas ? » dit le Seigneur.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="85" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.85">
+            <app xml:id="ufr_82_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « Que ton prêtre nous entende. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="86" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.86">
+            <app xml:id="ufr_83_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit : « Va et interroge mon prêtre, s'il peut tenir jugement avec moi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="87" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.87">
+            <app xml:id="ufr_84_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « Aussi vrai que le Seigneur est vivant, j'intente un procès contre toi en faveur de tous les hommes qui n'ont pas de refuge. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="88" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.88">
+            <app xml:id="ufr_85_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— « Tu seras choisi avec mes prophètes. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="89" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.89">
+            <app xml:id="ufr_86_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « Qui a façonné les pécheurs ? » Et le Seigneur répondit : « Moi. » Et Esdras dit : « Si c'est toi qui as créé les pécheurs et moi-même, il vaut mieux me perdre plutôt que le monde entier. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="90" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.90">
+            <app xml:id="ufr_87_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur répondit : « Les pécheurs jouissent du repos depuis la neuvième heure du sabbat jusqu'au lundi ; mais les autres jours, qu'ils fassent pénitence pour leurs péchés. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="91" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.91">
+            <app xml:id="ufr_88_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « Qu'il en soit selon ton bon plaisir. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="92" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.92">
+            <app xml:id="ufr_89_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit : « Esdras, va en paix et marche avec mes prophètes. Là où sont les justes, toi aussi tu seras. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="93" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.93">
+            <app xml:id="ufr_90_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit à Michel : « Va et rappelle l'âme d'Esdras, mon bien-aimé. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="94" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.94">
+            <app xml:id="ufr_91_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Michel dit : « Esdras, remets ton âme. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="95" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.95">
+            <app xml:id="ufr_92_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras répondit : « Je te prie : quel que soit l'homme qui aura acheté mon livre ou l'aura fait transcrire, pour autant de deniers qu'il aura donnés pour acheter mon livre, qu'il reçoive en équivalence autant de livres d'or d'assistance, de consolation et de vie éternelle. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="96" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.96">
+            <app xml:id="ufr_93_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et l'esprit vint et dit : « Esdras, ta prière a été exaucée comme tu l'as demandé, et tout t'a été accordé. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="97" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.97">
+            <app xml:id="ufr_94_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">L'ange vint auprès d'Esdras et dit : « Remets ton âme. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="98" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.98">
+            <app xml:id="ufr_95_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « Par où mon âme sortira-t-elle ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="99" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.99">
+            <app xml:id="ufr_96_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « Par ta bouche. » Esdras répondit : « Ma bouche a proclamé la louange du Seigneur ; je ne rendrai pas mon âme par ma bouche. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="100" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.100">
+            <app xml:id="ufr_97_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et l'ange dit : « Par ton œil. » — « Mes yeux ont vu le dos du Seigneur ; je ne rendrai pas mon âme par mes yeux. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="101" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.101">
+            <app xml:id="ufr_98_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— « Par tes narines. » — « Mes narines ont respiré les aromates du Seigneur ; je ne rendrai pas mon âme par mes narines. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="102" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.102">
+            <app xml:id="ufr_99_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— « Par le sommet de ta tête. » — « Le sommet de ma tête, Aaron, le saint du Seigneur, l'a oint d'une huile consacrée ; mon âme ne sortira point par le sommet de ma tête. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="103" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.103">
+            <app xml:id="ufr_100_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— « Par tes mains. » — « Mes mains ont tenu le psautier du Seigneur ; mon âme ne sortira point par mes mains. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="104" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.104">
+            <app xml:id="ufr_101_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">— Par tes pieds. — Mes pieds se sont tenus devant le Seigneur, je ne rendrai pas mon âme par mes pieds.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="105" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.105">
+            <app xml:id="ufr_102_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Michel vint vers le Seigneur et lui annonça tout ce qu'il avait vu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="106" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.106">
+            <app xml:id="ufr_103_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit : « Je descendrai moi-même avec mes anges et j'emporterai son âme. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="107" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.107">
+            <app xml:id="ufr_104_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Le Seigneur descendit donc et dit : « Esdras, donne ton âme. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="108" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.108">
+            <app xml:id="ufr_105_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « Seigneur, exauce ma prière et que mon cri parvienne jusqu'à toi. Seigneur Dieu tout-puissant, je te supplie que quiconque fera mémoire du livre de ma passion ne soit accablé par aucun péché, mais que tous lui soient remis. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="109" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.109">
+            <app xml:id="ufr_106_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit : « J'accorde tout comme tu l'as demandé, mais donne seulement ton âme. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="110" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.110">
+            <app xml:id="ufr_107_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit : « Seigneur, je crains la mort. » Et le Seigneur répondit : « J'ai été mort, j'ai été crucifié, je suis ressuscité et je siège désormais à la droite, et je ne crains pas la mort. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="111" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.111">
+            <app xml:id="ufr_108_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Esdras répondit : « Si tu n'as pas craint la mort, pourquoi as-tu dit : "Mon âme est triste jusqu'à la mort" ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="112" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.112">
+            <app xml:id="ufr_109_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Le Seigneur répondit : « Tu parles trop désormais ; donne ton âme, car tu ne mourras pas. Le corps va d'où il est venu, l'âme retourne au Père qui l'a donnée. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="113" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.113">
+            <app xml:id="ufr_110_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit encore aux anges : « Pleurez sur moi, bons anges et archanges, prophètes, apôtres, martyrs, confesseurs et vierges, et ensuite ensevelissez-moi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="114" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.114">
+            <app xml:id="ufr_111_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et Esdras dit encore : « Seigneur Jésus-Christ, ne m'abandonne pas lorsque mon âme sortira de mon corps ; que les anges de Satan ne viennent pas à ma rencontre et ne me fassent aucun mal. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="115" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.115">
+            <app xml:id="ufr_112_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Et l'ange Michel dit : « Ce que mon Père t'a confié. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="116" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.116">
+            <app xml:id="ufr_113_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">La montagne trembla, et il rendit l'esprit au neuvième jour au commencement du mois de juillet.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="117" xml:id="Esdl.ver_Vision_of_Ezra__French_.Document_Body.117">
+            <app xml:id="ufr_114_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">Quant à quiconque célébrera la fête et la mémoire du bienheureux prophète Esdras, qu'il ait part avec mon Seigneur Jésus-Christ, avec la bienheureuse Marie Mère de Dieu et avec le bienheureux Michel, ton archange. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="Explicit" xml:id="Esdl.ver_Vision_of_Ezra__French_.Explicit">
+          <head>Chapter Explicit</head>
+          <ab type="verse" n="0" xml:id="Esdl.ver_Vision_of_Ezra__French_.Explicit.0">
+            <app xml:id="ufr_115_ver_Vision_of_Ezra__French_">
+              <lem wit="#OCP-Trans">ICI FINIT LA LÉGENDE DU BIENHEUREUX PROPHÈTE ESDRAS</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,944 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Artap">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Artapanus (Fragments)</title>
+        <editor role="editor">Penner, Ken M., Ian W. Scott</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Mras">
+            <abbr type="siglum">Mras</abbr>
+            <name>Mras</name>
+            <bibl>Fragment §1 (on Abraham): Eusebius, Praep. Evang. 9.18.1; Fragment §2 (on Joseph): Eusebius, Praep. Evang. 9.23.1-4; Fragment §3 (on Moses): Eusebius, Praep. Evang. 9.27.1-37.</bibl>
+          </witness>
+          <witness xml:id="St_hlin-Fr_chtel-Treu">
+            <abbr type="siglum">Stählin-Früchtel-Treu</abbr>
+            <name>Stählin, Früchtel, and Treu</name>
+            <bibl>Fragment §1 (on Abraham): Eusebius, Praep. Evang. 9.18.1; Fragment §2 (on Joseph): Eusebius, Praep. Evang. 9.23.1-4; Fragment §3 (on Moses): Eusebius, Praep. Evang. 9.27.1-37.</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of Praep. Evang. (frag. 1) (English) based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._1_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._2_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._3_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Stromata__frag._3b_">
+        <refState unit="book" delim=":"/>
+        <refState unit="section" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._1___English_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._2___English_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._3___English_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Stromata__frag._3b___English_">
+        <refState unit="book" delim=":"/>
+        <refState unit="section" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._1___French_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._2___French_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__frag._3___French_">
+        <refState unit="book" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Stromata__frag._3b___French_">
+        <refState unit="book" delim=":"/>
+        <refState unit="section" delim=":"/>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Praep. Evang. (frag. 1)" xml:lang="grc" xml:id="ver_Praep._Evang.__frag._1_">
+        <head>Praep. Evang. (frag. 1)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._1_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="18" xml:id="Artap.ver_Praep._Evang.__frag._1_.9.18">
+            <head>Chapter 18</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._1_.9.18._heading_">
+              <app xml:id="u1_ver_Praep._Evang.__frag._1_">
+                <lem wit="#Mras">ιηʹ. ΑΡΤΑΠΑΝΟΥ ΠΕΡΙ ΤΟΥ ΑΥΤΟΥ• ΑΠΟ ΤΗΣ ΑΥΤΗΣ ΤΟΥ ΠΟΛΥΙΣΤΟΡΟΣ ΓΡΑΦΗΣ</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._1_.9.18.1">
+              <app xml:id="u2_ver_Praep._Evang.__frag._1_">
+                <lem wit="#Mras">“Ἀρτάπανος δέ φησιν ἐν τοῖς Ἰουδαϊκοῖς τοὺς μὲν Ἰουδαίους ὀνομάζεσθαι Ἑρμιούθ, ὃ εἶναι μεθερμηνευθὲν κατὰ τὴν Ἑλληνίδα φωνὴν Ἰουδαῖοι· καλεῖσθαι δὲ αὐτοὺς Ἑβραίους ἀπὸ Ἁβραάμου. τοῦτον δέ φησι πανοικίᾳ ἐλθεῖν εἰς Αἴγυπτον πρὸς τὸν τῶν Αἰγυπτίων βασιλέα Φαρεθώθην καὶ τὴν ἀστρολογίαν αὐτὸν διδάξαι· μείναντα δὲ ἔτη ἐκεῖ εἴκοσι πάλιν εἰς τοὺς κατὰ Συρίαν ἀπαλλαγῆναι τόπους· τῶν δὲ τούτῳ συνελθόντων πόλλους ἐν Αἰγύπτῳ καταμεῖναι διὰ τὴν εὐδαιμονίαν τῆς χώρας.”</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="edition" n="Praep. Evang. (frag. 2)" xml:lang="grc" xml:id="ver_Praep._Evang.__frag._2_">
+        <head>Praep. Evang. (frag. 2)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._2_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="23" xml:id="Artap.ver_Praep._Evang.__frag._2_.9.23">
+            <head>Chapter 23</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._2_.9.23._heading_">
+              <app xml:id="u3_ver_Praep._Evang.__frag._2_">
+                <lem wit="#Mras">κγʹ. ΑΡΤΑΠΑΝΟΥ ΠΕΡΙ ΤΟΥ ΙΩΣΗΦ• ΑΠΟ ΤΗΣ ΑΥΤΗΣ ΤΟΥ ΠΟΛΥΙΣΤΟΡΟΣ ΓΡΑΦΗΣ</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._2_.9.23.1">
+              <app xml:id="u4_ver_Praep._Evang.__frag._2_">
+                <lem wit="#Mras">“Ἀρτάπανος δέ φησιν ἐν τῷ Περὶ Ἰουδαίων τῷ Ἁβραὰμ Ἰωσὴφ ἀπόγονον γενέσθαι, υἱὸν δὲ Ἰακώβου· συνέσει δὲ καὶ φρονήσει παρὰ τοὺς ἄλλους διενεγκόντα ὑπὸ τῶν ἀδελφῶν ἐπιβουλευθῆναι· προϊδόμενον δὲ τὴν ἐπισύστασιν δεηθῆναι τῶν ἀστυγειτόνων Ἀράβων εἰς τὴν Αἴγυπτον αὐτὸν διακομίσαι· τοὺς δὲ τὸ ἐντυγχανόμενον ποιῆσαι· εἶναι γὰρ τοὺς τῶν Ἀράβων βασιλεῖς ἀπογόνους Ἰσραήλ, υἱοὺς τοῦ Ἁβραάμ, Ἰσαὰκ δὲ ἀδελφούς.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="2" xml:id="Artap.ver_Praep._Evang.__frag._2_.9.23.2">
+              <app xml:id="u5_ver_Praep._Evang.__frag._2_">
+                <lem wit="#Mras">ἐλθόντα δὲ αὐτὸν εἰς τὴν Αἴγυπτον καὶ συσταθέντα τῷ βασιλεῖ διοικητὴν τῆς ὅλης γενέσθαι χώρας. καὶ πρότερον ἀτάκτως τῶν Αἰγυπτίων γεωμορούντων, διὰ τὸ τὴν χώραν ἀδιαίρετον εἶναι καὶ τῶν ἐλασσόνων ὑπὸ τῶν κρεισσόνων ἀδικουμένων, τοῦτον πρῶτον τήν τε γῆν διελεῖν καὶ ὅροις διασημήνασθαι καὶ πολλὴν χερσευομένην γεωργήσιμον ἀποτελέσαι καί τινας τῶν ἀρουρῶν τοῖς ἱερεῦσιν ἀποκληρῶσαι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="3" xml:id="Artap.ver_Praep._Evang.__frag._2_.9.23.3">
+              <app xml:id="u6_ver_Praep._Evang.__frag._2_">
+                <lem wit="#Mras">τοῦτον δὲ καὶ μέτρα εὑρεῖν καὶ μεγάλως αὐτὸν ὑπὸ τῶν Αἰγυπτίων διὰ ταῦτα ἀγαπηθῆναι. γῆμαι δ᾽ αὐτὸν Ἡλιουπολίτου ἱερέως Ἀσενὲθ θυγατέρα, ἐξ ἧς γεννῆσαι παῖδας. μετὰ δὲ ταῦτα παραγενέσθαι πρὸς αὐτὸν τόν τε πατέρα καὶ τοὺς ἀδελφοὺς κομίζοντας πολλὴν ὕπαρξιν καὶ κατοικισθῆναι ἐν τῇ Ἡλίου πόλει καὶ Σάει καὶ τοὺς Σύρους πλεονάσαι ἐν τῇ Αἰγύπτῳ.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="4" xml:id="Artap.ver_Praep._Evang.__frag._2_.9.23.4">
+              <app xml:id="u7_ver_Praep._Evang.__frag._2_">
+                <lem wit="#Mras">τούτους δέ φησι καὶ τὸ ἐν Ἀθὼς καὶ τὸ ἐν Ἡλιουπόλει ἱερὸν κατασκευάσαι τοὺς Ἑρμιοὺθ ὀνομαζομένους. μετὰ δὲ ταῦτα τελευτῆσαι τόν τε Ἰωσὴφ καὶ τὸν βασιλέα τῶν Αἰγυπτίων. τὸν οὖν Ἰωσὴφ κρατοῦντα τῆς Αἰγύπτου τὸν τῶν ἑπτὰ ἐτῶν σῖτον, γενόμενον κατὰ τὴν φορὰν ἄπλετον, παραθέσθαι καὶ τῆς Αἰγύπτου δεσπότην γενέσθαι.”</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="edition" n="Praep. Evang. (frag. 3)" xml:lang="grc" xml:id="ver_Praep._Evang.__frag._3_">
+        <head>Praep. Evang. (frag. 3)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._3_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="27" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27">
+            <head>Chapter 27</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27._heading_">
+              <app xml:id="u8_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">κζʹ. ΑΡΤΑΠΑΝΟΥ ΠΕΡΙ ΜΩΣΕΩΣ ΟΜΟΙΩΣ</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.1">
+              <app xml:id="u9_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">“Ἀρτάπανος δέ φησιν ἐν τῇ Περὶ Ἰουδαίων, Ἁβραὰμ τελευτήσαντος καὶ τοῦ υἱοῦ αὐτοῦ Μεμψασθενώθ, ὁμοίως δὲ καὶ τοῦ βασιλέως τῶν Αἰγυπτίων, τὴν δυναστείαν παραλαβεῖν τὸν υἱὸν αὐτοῦ Παλμανώθην.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="2" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.2">
+              <app xml:id="u10_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τοῦτον δὲ τοῖς Ἰουδαίοις φαύλως προσφέρεσθαι· καὶ πρῶτον μὲν τήν τε Σάιν οἰκοδομῆσαι τό τε ἐπ᾽ αὐτῇ ἱερὸν καθιδρύσασθαι, εἶτα τὸν ἐν Ἡλιουπόλει ναὸν κατασκευάσαι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="3" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.3">
+              <app xml:id="u11_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τοῦτον δὲ γεννῆσαι θυγατέρα Μέρριν, ἣν Χενεφρῇ τινι κατεγγυῆσαι, τῶν ὑπὲρ Μέμφιν τόπων βασιλεύοντι· πολλοὺς γὰρ τότε τῆς Αἰγύπτου βασιλεύειν· ταύτην δὲ στεῖραν ὑπάρχουσαν ὑποβαλέσθαι τινὸς τῶν Ἰουδαίων παιδίον, τοῦτο δὲ Μώϋσον ὀνομάσαι· ὑπὸ δὲ τῶν Ἑλλήνων αὐτὸν ἀνδρωθέντα Μουσαῖον προσαγορευθῆναι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="4" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.4">
+              <app xml:id="u12_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">γενέσθαι δὲ τὸν Μώϋσον τοῦτον Ὀρφέως διδάσκαλον. ἀνδρωθέντα δ᾽ αὐτὸν πολλὰ τοῖς ἀνθρώποις εὔχρηστα παραδοῦναι· καὶ γὰρ πλοῖα καὶ μηχανὰς πρὸς τὰς λιθοθεσίας καὶ τὰ Αἰγύπτια ὅπλα καὶ τὰ ὄργανα τὰ ὑδρευτικὰ καὶ πολεμικὰ καὶ τὴν φιλοσοφίαν ἐξευρεῖν· ἔτι δὲ τὴν πόλιν εἰς λςʹ νομοὺς διελεῖν καὶ ἑκάστῳ τῶν νομῶν ἀποτάξαι τὸν θεὸν σεφθήσεσθαι τά τε ἱερὰ γράμματα τοῖς ἱερεῦσιν, εἶναι δὲ καὶ αἰλούρους καὶ κύνας καὶ ἴβεις· ἀπονεῖμαι δὲ καὶ τοῖς ἱερεῦσιν ἐξαίρετον χώραν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="5" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.5">
+              <app xml:id="u13_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">ταῦτα δὲ πάντα ποιῆσαι χάριν τοῦ τὴν μοναρχίαν βεβαίαν τῷ Χενεφρῇ διαφυλάξαι. πρότερον γὰρ ἀδιατάκτους ὄντας τοὺς ὄχλους ποτὲ μὲν ἐκβάλλειν, ποτὲ δὲ καθιστάνειν βασιλεῖς, καὶ πολλάκις μὲν τοὺς αὐτούς, ἐνιάκις δὲ ἄλλους.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="6" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.6">
+              <app xml:id="u14_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">διὰ ταῦτα οὖν τὸν Μώϋσον ὑπὸ τῶν ὄχλων ἀγαπηθῆναι καὶ ὑπὸ τῶν ἱερέων ἰσοθέου τιμῆς καταξιωθέντα προσαγορευθῆναι Ἑρμῆν, διὰ τὴν τῶν ἱερῶν γραμμάτων ἑρμηνείαν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="7" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.7">
+              <app xml:id="u15_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ Χενεφρῆν ὁρῶντα τὴν ἀρετὴν τοῦ Μωΰσου φθονῆσαι αὐτῷ καὶ ζητεῖν αὐτὸν ἐπ᾽ εὐλόγῳ αἰτίᾳ τινὶ ἀνελεῖν. καὶ δή ποτε τῶν Αἰθιόπων ἐπιστρατευσαμένων τῇ Αἰγύπτῳ τὸν Χενεφρῆν ὑπολαβόντα εὑρηκέναι καιρὸν εὔθετον πέμψαι τὸν Μώϋσον ἐπ᾽ αὐτοὺς στρατηγὸν μετὰ δυνάμεως· τὸ δὲ τῶν γεωργῶν αὐτῷ συστῆσαι πλῆθος, ὑπολαβόντα ῥᾳδίως αὐτὸν διὰ τὴν τῶν στρατιωτῶν ἀσθένειαν ὑπὸ τῶν πολεμίων ἀναιρεθήσεσθαι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="8" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.8">
+              <app xml:id="u16_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ Μώϋσον ἐλθόντα ἐπὶ τὸν Ἑρμοπολίτην ὀνομαζόμενον νομόν, ἔχοντα περὶ δέκα μυριάδας γεωργῶν, αὐτοῦ καταστρατοπεδεῦσαι· πέμψαι δὲ στρατηγοὺς τοὺς προκαθεδουμένους τῆς χώρας, οὓς δὴ πλεονεκτεῖν ἐπιφανῶς κατὰ τὰς μάχας· λέγειν δέ φησιν Ἡλιουπολίτας γενέσθαι τὸν πόλεμον τοῦτον ἔτη δέκα.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="9" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.9">
+              <app xml:id="u17_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τοὺς οὖν περὶ τὸν Μώϋσον διὰ τὸ μέγεθος τῆς στρατιᾶς πόλιν ἐν τούτῳ κτίσαι τῷ τόπῳ καὶ τὴν ἶβιν ἐν αὐτῇ καθιερῶσαι, διὰ τὸ ταύτην τὰ βλάπτοντα ζῷα τοὺς ἀνθρώπους ἀναιρεῖν· προσαγορεῦσαι δὲ αὐτὴν Ἑρμοῦ πόλιν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="10" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.10">
+              <app xml:id="u18_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">οὕτω δὴ τοὺς Αἰθίοπας, καίπερ ὄντας πολεμίους, στέρξαι τὸν Μώϋσον ὥστε καὶ τὴν περιτομὴν τῶν αἰδοίων παρ᾽ ἐκείνου μαθεῖν· οὐ μόνον δὲ τούτους, ἀλλὰ καὶ τοὺς ἱερεῖς ἅπαντας.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="11" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.11">
+              <app xml:id="u19_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ Χενεφρῆν λυθέντος τοῦ πολέμου λόγῳ μὲν αὐτὸν ἀποδέξασθαι, ἔργῳ δὲ ἐπιβουλεύειν. παρελόμενον γοῦν αὐτοῦ τοὺς ὄχλους τοὺς μὲν ἐπὶ τὰ ὅρια τῆς Αἰθιοπίας πέμψαι προφυλακῆς χάριν, τοῖς δὲ προστάξαι τὸν ἐν Διὸς πόλει ναὸν ἐξ ὀπτῆς πλίνθου κατεσκευασμένον καθαιρεῖν, ἕτερον δὲ λίθινον κατασκευάσαι τὸ πλησίον ὄρος λατομήσαντας· τάξαι δὲ ἐπὶ τῆς οἰκοδομίας ἐπιστάτην Ναχέρωτα.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="12" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.12">
+              <app xml:id="u20_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ ἐλθόντα μετὰ Μωΰσου εἰς Μέμφιν πυθέσθαι παρ᾽ αὐτοῦ εἴ τι ἄλλο ἐστὶν εὔχρηστον τοῖς ἀνθρώποις· τὸν δὲ φάναι γένος τῶν βοῶν, διὰ τὸ τὴν γῆν ἀπὸ τούτων ἀροῦσθαι· τὸν δὲ Χενεφρῆν, προσαγορεύσαντα ταῦρον Ἆπιν, κελεῦσαι ἱερὸν αὐτοῦ τοὺς ὄχλους καθιδρύσασθαι καὶ τὰ ζῷα τὰ καθιερωθέντα ὑπὸ τοῦ Μωΰσου κελεύειν ἐκεῖ φέροντας θάπτειν, κατακρύπτειν θέλοντα τὰ τοῦ Μωΰσου ἐπινοήματα.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="13" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.13">
+              <app xml:id="u21_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">ἀποξενωσάντων δὲ αὐτὸν τῶν Αἰγυπτίων ὁρκωμοτῆσαι τοὺς φίλους μὴ ἐξαγγεῖλαι τῷ Μωΰσῳ τὴν ἐπισυνισταμένην αὐτῷ ἐπιβουλὴν καὶ προβαλέσθαι τοὺς ἀναιρήσοντας αὐτὸν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="14" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.14">
+              <app xml:id="u22_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">μηδενὸς δ᾽ ὑπακούσαντος ὀνειδίσαι τὸν Χενεφρῆν Χανεθώθην, τὸν μάλιστα προσαγορευόμενον ὑπ᾽ αὐτοῦ· τὸν δὲ ὀνειδισθέντα ὑποσχέσθαι τὴν ἐπίθεσιν, λαβόντα καιρόν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="15" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.15">
+              <app xml:id="u23_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">ὑπὸ δὲ τοῦτον τὸν καιρὸν τῆς Μέρριδος τελευτησάσης ὑποσχέσθαι τὸν Χενεφρῆν τῷ τε Μωΰσῳ καὶ τῷ Χανεθώθῃ τὸ σῶμα διακομίσαντας εἰς τοὺς ὑπὲρ Αἴγυπτον τόπους θάψαι, ὑπολαβόντα τὸν Μώϋσον ὑπὸ τοῦ Χανεθώθου ἀναιρεθήσεσθαι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="16" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.16">
+              <app xml:id="u24_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">πορευομένων δὲ αὐτῶν τὴν ἐπιβουλὴν τῷ Μωΰσῳ τῶν συνειδότων ἐξαγγεῖλαί τινα· τὸν δὲ φυλάσσοντα αὑτὸν τὴν μὲν Μέρριν θάψαι, τὸν δὲ ποταμὸν καὶ τὴν ἐν ἐκείνῳ πόλιν Μερόην προσαγορεῦσαι· τιμᾶσθαι δὲ τὴν Μέρριν ταύτην ὑπὸ τῶν ἐγχωρίων οὐκ ἐλαχίστως ἢ τὴν Ἶσιν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="17" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.17">
+              <app xml:id="u25_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">Ἀάρωνα δὲ τὸν τοῦ Μωΰσου ἀδελφὸν τὰ περὶ τὴν ἐπιβουλὴν ἐπιγνόντα συμβουλεῦσαι τῷ ἀδελφῷ φυγεῖν εἰς τὴν Ἀραβίαν· τὸν δὲ πεισθέντα, ἀπὸ Μέμφεως τὸν Νεῖλον διαπλεύσαντα ἀπαλλάσσεσθαι εἰς τὴν Ἀραβίαν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="18" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.18">
+              <app xml:id="u26_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ Χανεθώθην πυθόμενον τοῦ Μωΰσου τὴν φυγὴν ἐνεδρεύειν ὡς ἀναιρήσοντα· ἰδόντα δὲ ἐρχόμενον σπάσασθαι τὴν μάχαιραν ἐπ᾽ αὐτόν, τὸν δὲ Μώϋσον προκαταταχήσαντα τήν τε χεῖρα κατασχεῖν αὐτοῦ καὶ σπασάμενον τὸ ξίφος φονεῦσαι τὸν Χανεθώθην·</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="19" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.19">
+              <app xml:id="u27_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">διεκδρᾶναι δὲ εἰς τὴν Ἀραβίαν καὶ Ῥαγουήλῳ τῷ τῶν τόπων ἄρχοντι συμβιοῦν, λαβόντα τὴν ἐκείνου θυγατέρα· τὸν δὲ Ῥαγουῆλον βούλεσθαι στρατεύειν ἐπὶ τοὺς Αἰγυπτίους, κατάγειν βουλόμενον τὸν Μώϋσον καὶ τὴν δυναστείαν τῇ τε θυγατρὶ καὶ τῷ γαμβρῷ κατασκευάσαι· τὸν δὲ Μώϋσον ἀποκωλῦσαι, στοχαζόμενον τῶν ὁμοφύλων· τὸν δὲ Ῥαγουῆλον διακωλύοντα στρατεύειν τοῖς Ἄραψι προστάξαι λῃστεύειν τὴν Αἴγυπτον.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="20" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.20">
+              <app xml:id="u28_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">ὑπὸ δὲ τὸν αὐτὸν χρόνον καὶ τὸν Χενεφρῆν πρῶτον ἁπάντων ἀνθρώπων ἐλεφαντιάσαντα μεταλλάξαι· τούτῳ δὲ τῷ πάθει περιπεσεῖν διὰ τὸ τοὺς Ἰουδαίους προστάξαι σινδόνας ἀμφιέννυσθαι, ἐρεᾶν δὲ ἐσθῆτα μὴ ἀμπέχεσθαι, ὅπως ὄντες ἐπίσημοι κολάζωνται ὑπ᾽ αὐτοῦ.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="21" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.21">
+              <app xml:id="u29_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ Μώϋσον εὔχεσθαι τῷ θεῷ, ἤδη ποτὲ τοὺς λαοὺς παῦσαι τῶν κακοπαθειῶν. ἱλασκομένου δ᾽ αὐτοῦ αἰφνιδίως φησὶν ἐκ τῆς γῆς πῦρ ἀναφθῆναι καὶ τοῦτο κάεσθαι, μήτε ὕλης μήτε ἄλλης τινὸς ξυλείας οὔσης ἐν τῷ τόπῳ. τὸν δὲ Μώϋσον δείσαντα τὸ γεγονὸς φεύγειν· φωνὴν δ᾽ αὐτῷ θείαν εἰπεῖν στρατεύειν ἐπ᾽ Αἴγυπτον καὶ τοὺς Ἰουδαίους διασώσαντα εἰς τὴν ἀρχαίαν ἀγαγεῖν πατρίδα.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="22" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.22">
+              <app xml:id="u30_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ θαρρήσαντα δύναμιν πολεμίαν ἐπάγειν διαγνῶναι τοῖς Αἰγυπτίοις· πρῶτον δὲ πρὸς Ἀάρωνα τὸν ἀδελφὸν ἐλθεῖν. τὸν δὲ βασιλέα τῶν Αἰγυπτίων πυθόμενον τὴν τοῦ Μωΰσου παρουσίαν καλέσαι πρὸς αὑτὸν καὶ πυνθάνεσθαι ἐφ᾽ ὅ τι ἥκοι· τὸν δὲ φάναι, διότι προστάσσειν αὐτῷ τὸν τῆς οἰκουμένης δεσπότην ἀπολῦσαι τοὺς Ἰουδαίους.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="23" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.23">
+              <app xml:id="u31_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ πυθόμενον εἰς φυλακὴν αὐτὸν καθεῖρξαι· νυκτὸς δὲ ἐπιγενομένης τάς τε θύρας πάσας αὐτομάτως ἀνοιχθῆναι τοῦ δεσμωτηρίου καὶ τῶν φυλάκων οὓς μὲν τελευτῆσαι, τινὰς δὲ ὑπὸ τοῦ ὕπνου παρεθῆναι τά τε ὅπλα κατεαγῆναι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="24" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.24">
+              <app xml:id="u32_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">ἐξελθόντα δὲ τὸν Μώϋσον ἐπὶ τὰ βασίλεια ἐλθεῖν· εὑρόντα δὲ ἀνεῳγμένας τὰς θύρας εἰσελθεῖν καὶ ἐνθάδε τῶν φυλάκων παρειμένων τὸν βασιλέα ἐξεγεῖραι. τὸν δὲ ἐκπλαγέντα ἐπὶ τῷ γεγονότι κελεῦσαι τῷ Μωΰσῳ τὸ τοῦ πέμψαντος αὐτὸν θεοῦ εἰπεῖν ὄνομα, διαχλευάσαντα αὐτόν·</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="25" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.25">
+              <app xml:id="u33_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ προσκύψαντα πρὸς τὸ οὖς εἰπεῖν, ἀκούσαντα δὲ τὸν βασιλέα πεσεῖν ἄφωνον, διακρατηθέντα δὲ ὑπὸ τοῦ Μωΰσου πάλιν ἀναβιῶσαι·</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="26" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.26">
+              <app xml:id="u34_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">γράψαντα δὲ τοὔνομα εἰς δέλτον κατασφραγίσασθαι τῶν τε ἱερέων τὸν φαυλίσαντα ἐν τῇ πινακίδι τὰ γεγραμμένα μετὰ σπασμοῦ τὸν βίον ἐκλιμπάνειν·</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="27" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.27">
+              <app xml:id="u35_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">εἰπεῖν τε τὸν βασιλέα σημεῖόν τι αὐτῷ ποιῆσαι· τὸν δὲ Μώϋσον ἣν εἶχε ῥάβδον ἐκβαλόντα ὄφιν ποιῆσαι· πτοηθέντων δὲ πάντων ἐπιλαβόμενον τῆς οὐρᾶς ἀνελέσθαι καὶ πάλιν ῥάβδον ποιῆσαι·</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="28" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.28">
+              <app xml:id="u36_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">προελθόντα δὲ μικρὸν τὸν Νεῖλον τῇ ῥάβδῳ πατάξαι, τὸν δὲ ποταμὸν πολύχουν γενόμενον κατακλύζειν ὅλην τὴν Αἴγυπτον· ἀπὸ τότε δὲ καὶ τὴν κατάβασιν αὐτοῦ γίνεσθαι· συναγαγὸν δὲ τὸ ὕδωρ ἐποζέσαι καὶ τὰ ποτάμια διαφθεῖραι ζῷα τούς τε λαοὺς διὰ τὴν δίψαν φθείρεσθαι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="29" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.29">
+              <app xml:id="u37_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ βασιλέα τούτων γενομένων τῶν τεράτων φάναι μετὰ μῆνα τοὺς λαοὺς ἀπολύσειν, ἐὰν ἀποκαταστήσῃ τὸν ποταμόν· τὸν δὲ Μώϋσον πάλιν τῇ ῥάβδῳ πατάξαντα τὸ ὕδωρ συστεῖλαι τὸ ῥεῦμα.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="30" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.30">
+              <app xml:id="u38_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τούτου δὲ γενομένου τὸν βασιλέα τοὺς ἱερεῖς τοὺς ὑπὲρ Μέμφιν καλέσαι καὶ φάναι αὐτοὺς ἀναιρήσειν καὶ τὰ ἱερὰ κατασκάψειν, ἐὰν μὴ καὶ αὐτοὶ τερατουργήσωσί τι. τοὺς δὲ τότε διά τινων μαγγάνων καὶ ἐπαοιδῶν δράκοντα ποιῆσαι καὶ τὸν ποταμὸν μεταχρῶσαι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="31" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.31">
+              <app xml:id="u39_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τὸν δὲ βασιλέα φρονηματισθέντα ἐπὶ τῷ γεγονότι, πάσῃ τιμωρίᾳ καὶ κολάσει καταικίζειν τοὺς Ἰουδαίους. τὸν δὲ Μώϋσον ταῦτα ὁρῶντα ἄλλα τε σημεῖα ποιῆσαι καὶ πατάξαντα τὴν γῆν τῇ ῥάβδῳ ζῷόν τι πτηνὸν ἀνεῖναι λυμαίνεσθαι τοὺς Αἰγυπτίους, πάντας τε ἐξελκωθῆναι τὰ σώματα. τῶν δὲ ἰατρῶν μὴ δυναμένων ἰᾶσθαι τοὺς κάμνοντας, οὕτως πάλιν ἀνέσεως τυχεῖν τοὺς Ἰουδαίους.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="32" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.32">
+              <app xml:id="u40_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">πάλιν τε τὸν Μώϋσον βάτραχον διὰ τῆς ῥάβδου ἀνεῖναι, πρὸς δὲ τούτοις ἀκρίδας καὶ σκνίφας. διὰ τοῦτο δὲ καὶ τοὺς Αἰγυπτίους τὴν ῥάβδον ἀνατιθέναι εἰς πᾶν ἱερόν, ὁμοίως δὲ καὶ τῇ Ἴσιδι, διὰ τὸ τὴν γῆν εἶναι Ἶσιν, παιομένην δὲ τῇ ῥάβδῳ τὰ τέρατα ἀνεῖναι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="33" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.33">
+              <app xml:id="u41_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τοῦ δὲ βασιλέως ἔτι ἀφρονουμένου τὸν Μώϋσον χάλαζάν τε καὶ σεισμοὺς διὰ νυκτὸς ἀποτελέσαι, ὥστε τοὺς τὸν σεισμὸν φεύγοντας ἀπὸ τῆς χαλάζης ἀναιρεῖσθαι τούς τε τὴν χάλαζαν ἐκκλίνοντας ὑπὸ τῶν σεισμῶν διαφθείρεσθαι. συμπεσεῖν δὲ τότε τὰς μὲν οἰκίας πάσας τῶν τε ναῶν τοὺς πλείστους.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="34" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.34">
+              <app xml:id="u42_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τελευταῖον τοιαύταις συμφοραῖς περιπεσόντα τὸν βασιλέα τοὺς Ἰουδαίους ἀπολῦσαι· τοὺς δὲ χρησαμένους παρὰ τῶν Αἰγυπτίων πολλὰ μὲν ἐκπώματα, οὐκ ὀλίγον δὲ ἱματισμὸν ἄλλην τε παμπληθῆ γάζαν, διαβάντας τοὺς κατὰ τὴν Ἀραβίαν ποταμοὺς καὶ διαβάντας ἱκανὸν τόπον ἐπὶ τὴν Ἐρυθρὰν τριταίους ἐλθεῖν Θάλασσαν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="35" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.35">
+              <app xml:id="u43_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">Μεμφίτας μὲν οὖν λέγειν ἔμπειρον ὄντα τὸν Μώϋσον τῆς χώρας τὴν ἄμπωτιν τηρήσαντα διὰ ξηρᾶς τῆς θαλάσσης τὸ πλῆθος περαιῶσαι. Ἡλιουπολίτας δὲ λέγειν ἐπικαταδραμεῖν τὸν βασιλέα μετὰ πολλῆς δυνάμεως, &lt;ἅμα&gt; καὶ τοῖς καθιερωμένοις ζῴοις, διὰ τὸ τὴν ὕπαρξιν τοὺς Ἰουδαίους τῶν Αἰγυπτίων χρησαμένους διακομίζειν.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="36" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.36">
+              <app xml:id="u44_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">τῷ δὲ Μωΰσῳ φωνὴν θείαν γενέσθαι πατάξαι τὴν θάλασσαν τῇ ῥάβδῳ καὶ διαστῆσαι. τὸν δὲ Μώϋσον ἀκούσαντα ἐπιθιγεῖν τῇ ῥάβδῳ τοῦ ὕδατος, καὶ οὕτως τὸ μὲν νᾶμα διαστῆναι, τὴν δὲ δύναμιν διὰ ξηρᾶς ὁδοῦ πορεύεσθαι.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="37" xml:id="Artap.ver_Praep._Evang.__frag._3_.9.27.37">
+              <app xml:id="u45_ver_Praep._Evang.__frag._3_">
+                <lem wit="#Mras">συνεμβάντων δὲ τῶν Αἰγυπτίων καὶ διωκόντων φησὶ πῦρ αὐτοῖς ἐκ τῶν ἔμπροσθεν ἐκλάμψαι, τὴν δὲ θάλασσαν πάλιν τὴν ὁδὸν ἐπικλύσαι· τοὺς δὲ Αἰγυπτίους ὑπό τε τοῦ πυρὸς καὶ τῆς πλημμυρίδος πάντας διαφθαρῆναι· τοὺς δὲ Ἰουδαίους διαφυγόντας τὸν κίνδυνον τεσσαράκοντα ἔτη ἐν τῇ ἐρήμῳ διατρῖψαι, βρέχοντος αὐτοῖς τοῦ θεοῦ κρίμνον ὅμοιον ἐλύμῳ, χιόνι παραπλήσιον τὴν χρόαν. γεγονέναι δέ φησι τὸν Μώϋσον μακρόν, πυρρακῆ, πολιόν, κομήτην, ἀξιωματικόν. ταῦτα δὲ πρᾶξαι περὶ ἔτη ὄντα ὀγδοήκοντα ἐννέα.”</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="edition" n="Stromata (frag. 3b)" xml:lang="grc" xml:id="ver_Stromata__frag._3b_">
+        <head>Stromata (frag. 3b)</head>
+        <div type="book" n="1" xml:id="Artap.ver_Stromata__frag._3b_.1">
+          <head>Book 1</head>
+          <div type="section" n="23" xml:id="Artap.ver_Stromata__frag._3b_.1.23">
+            <head>Section 23</head>
+            <div type="chapter" n="154" xml:id="Artap.ver_Stromata__frag._3b_.1.23.154">
+              <head>Chapter 154</head>
+              <ab type="verse" n="2" xml:id="Artap.ver_Stromata__frag._3b_.1.23.154.2">
+                <app xml:id="u46_ver_Stromata__frag._3b_">
+                  <lem wit="#St_hlin-Fr_chtel-Treu">Ἀρτάπανος γοῦν ἐν τῷ περὶ Ἰουδαίων συγγράμματι ἱστορεῖ κατακλεισθέντα εἰς φυλακὴν Μωυσέα ὑπὸ Χενεφρέους τοῦ Αἰγυπτίων βασιλέως ἐπὶ τῷ παραιτεῖσθαι τὸν λαὸν ἐξ Αἰγύπτου ἀπολυθῆναι, νύκτωρ ἀνοιχθέντος τοῦ δεσμυτηρίου κατὰ βούλησιν τοῦ θεοῦ ἐξελθόντα καὶ εἰς τὰ βασίλεια παρελθόντα ἐπιστῆναι κοιμωμένῳ τῷ βασιλεῖ καὶ ἐξεγεῖραι αὐτόν,</lem>
+                </app>
+              </ab>
+              <ab type="verse" n="3" xml:id="Artap.ver_Stromata__frag._3b_.1.23.154.3">
+                <app xml:id="u47_ver_Stromata__frag._3b_">
+                  <lem wit="#St_hlin-Fr_chtel-Treu">τὸν δὲ καταπλαγέντα τῷ γεγονότι κελεῦσαι τῷ Μωυσεῖ τὸ τοῦ πέμψαντος εἰπεῖν ὄνομα θεοῦ καὶ τὸν μὲν προσκύψαντα πρὸς τὸ οὖς εἰπεῖν, ἀκούσαντα δὲ τὸν βασιλέα ἄφωνον πεσεῖν, διακρατηθέντα δὲ ὑπὸ τοῦ Μωυσέως πάλιν ἀναβιῶναι.</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (frag. 1) (English)" xml:lang="en" xml:id="ver_Praep._Evang.__frag._1___English_">
+        <head>Praep. Evang. (frag. 1) (English)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._1___English_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="18" xml:id="Artap.ver_Praep._Evang.__frag._1___English_.9.18">
+            <head>Chapter 18</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._1___English_.9.18._heading_">
+              <app xml:id="uen_1_ver_Praep._Evang.__frag._1___English_">
+                <lem wit="#OCP-Trans">18. ARTAPANUS CONCERNING THE SAME (TOPIC) FROM THE SAME WRITING OF POLYHISTOR</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._1___English_.9.18.1">
+              <app xml:id="uen_2_ver_Praep._Evang.__frag._1___English_">
+                <lem wit="#OCP-Trans">“Artapanus says in his work ‘On the Jews’ that the Jews are called Hermiouth, which, when translated into the Greek language, means ‘Jews’; and that they are called Hebrews after Abraham. And he says that Abraham came with his whole household into Egypt to the king of the Egyptians, Pharethothes, and taught him astrology; and that after remaining there for twenty years, he again departed to the regions in Syria; and that many of those who came with him remained in Egypt because of the prosperity of the land.”</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (frag. 2) (English)" xml:lang="en" xml:id="ver_Praep._Evang.__frag._2___English_">
+        <head>Praep. Evang. (frag. 2) (English)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._2___English_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="23" xml:id="Artap.ver_Praep._Evang.__frag._2___English_.9.23">
+            <head>Chapter 23</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._2___English_.9.23._heading_">
+              <app xml:id="uen_3_ver_Praep._Evang.__frag._2___English_">
+                <lem wit="#OCP-Trans">23. ARTAPANUS CONCERNING JOSEPH. FROM THE SAME WRITING OF POLYHISTOR.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._2___English_.9.23.1">
+              <app xml:id="uen_4_ver_Praep._Evang.__frag._2___English_">
+                <lem wit="#OCP-Trans">“Artapanus says in his work, *On the Jews*, that Joseph was a descendant of Abraham, and son of Jacob. Excelling others in understanding and prudence, he was plotted against by his brothers. Foreseeing the conspiracy, he begged the neighboring Arabs to transport him to Egypt; and they did what was requested. For the kings of the Arabs were descendants of Israel, sons of Abraham, and brothers of Isaac.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="2" xml:id="Artap.ver_Praep._Evang.__frag._2___English_.9.23.2">
+              <app xml:id="uen_5_ver_Praep._Evang.__frag._2___English_">
+                <lem wit="#OCP-Trans">Having come to Egypt and been introduced to the king, he became administrator of the entire country. And whereas previously the Egyptians held land in a disordered manner, because the land was undivided and the lesser were wronged by the stronger, he was the first to divide the land and mark it out with boundaries. He made much unproductive land arable and allotted certain fields to the priests.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="3" xml:id="Artap.ver_Praep._Evang.__frag._2___English_.9.23.3">
+              <app xml:id="uen_6_ver_Praep._Evang.__frag._2___English_">
+                <lem wit="#OCP-Trans">He also invented measures, and for these reasons he was greatly loved by the Egyptians. He married Aseneth, the daughter of a priest from Heliopolis, by whom he fathered children. After these things, his father and brothers came to him, bringing much property, and they settled in Heliopolis and Saïs. And the Syrians multiplied in Egypt.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="4" xml:id="Artap.ver_Praep._Evang.__frag._2___English_.9.23.4">
+              <app xml:id="uen_7_ver_Praep._Evang.__frag._2___English_">
+                <lem wit="#OCP-Trans">He says that these people also built the temple in Athos and the one in Heliopolis, which are called Hermiouth. After these things, both Joseph and the king of the Egyptians died. Therefore, Joseph, who ruled Egypt, stored the grain of the seven years, which was immeasurable due to the harvest, and became lord of Egypt.”</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (frag. 3) (English)" xml:lang="en" xml:id="ver_Praep._Evang.__frag._3___English_">
+        <head>Praep. Evang. (frag. 3) (English)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="27" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27">
+            <head>Chapter 27</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27._heading_">
+              <app xml:id="uen_8_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">27. ARTAPANUS CONCERNING MOSES, SIMILARLY</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.1">
+              <app xml:id="uen_9_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">“Artapanus says in his work *Concerning the Jews* that when Abraham died, and likewise his son Mempsasthenoth, and also the king of the Egyptians, his son Palmanothes received the rule.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="2" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.2">
+              <app xml:id="uen_10_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">This king treated the Jews poorly. First, he built Sais and established the temple upon it, then he constructed the temple in Heliopolis.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="3" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.3">
+              <app xml:id="uen_11_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">This king fathered a daughter, Merris, whom he betrothed to a certain Chenephres, who ruled the regions beyond Memphis; for many kings ruled Egypt at that time. Being barren, she adopted the child of one of the Jews and named him Moyses; but when he grew up, he was called Musaeus by the Greeks.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="4" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.4">
+              <app xml:id="uen_12_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">This Moyses became the teacher of Orpheus. When he became an adult, he provided many useful things to humanity; for he invented boats, and machines for laying stones, and Egyptian weapons, and hydraulic and warlike instruments, and philosophy. Furthermore, he divided the city into thirty-six nomes and assigned to each nome the god to be worshipped, and the sacred writings to the priests, and there were also cats, dogs, and ibises. He also allotted an exclusive territory to the priests.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="5" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.5">
+              <app xml:id="uen_13_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">He did all these things in order to secure the monarchy firmly for Chenephres. For previously, the unruly multitudes would sometimes depose and sometimes install kings, often the same ones, and sometimes others.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="6" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.6">
+              <app xml:id="uen_14_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Because of these things, Moyses was loved by the multitudes and deemed worthy of divine honor by the priests and called Hermes, on account of his interpretation of the sacred writings.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="7" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.7">
+              <app xml:id="uen_15_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Chenephres, seeing the excellence of Moyses, envied him and sought to kill him on some plausible pretext. And so, when the Ethiopians once waged war against Egypt, Chenephres, thinking he had found a suitable opportunity, sent Moyses as general against them with an army. He assembled for him the multitude of farmers, supposing that Moyses would easily be killed by the enemies due to the weakness of his soldiers.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="8" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.8">
+              <app xml:id="uen_16_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Moyses, having arrived at the nome called Hermopolites, with about one hundred thousand farmers, encamped there. He sent generals who would lead the country, who clearly prevailed in battles. Heliopolitans say that this war lasted ten years.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="9" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.9">
+              <app xml:id="uen_17_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Therefore, Moyses and his men, because of the size of the army, founded a city in that place and consecrated the ibis in it, because it destroyed animals harmful to humans. They called the city Hermopolis.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="10" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.10">
+              <app xml:id="uen_18_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Thus, the Ethiopians, though enemies, so loved Moyses that they even learned circumcision of the genitals from him; and not only these, but all the priests as well.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="11" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.11">
+              <app xml:id="uen_19_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">When the war was over, Chenephres verbally approved him, but in deed plotted against him. For taking away his multitudes, he sent some to the borders of Ethiopia for protection, and he ordered others to demolish the temple in Diospolis, which was built of fired brick, and to construct another of stone by quarrying the nearby mountain. He appointed Nacheros as overseer of the construction.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="12" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.12">
+              <app xml:id="uen_20_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">When Moyses came to Memphis, he asked him if there was anything else useful to humans. He said, “The breed of oxen, because the earth is tilled by them.” Chenephres, calling the bull Apis, ordered the multitudes to establish a temple for it and commanded them to bring and bury there the animals consecrated by Moyses, wishing to conceal the inventions of Moyses.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="13" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.13">
+              <app xml:id="uen_21_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">When the Egyptians alienated him, he made his friends swear not to reveal the conspiracy being hatched against Moyses and put forward those who would kill him.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="14" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.14">
+              <app xml:id="uen_22_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Since no one obeyed, Chenephres reproached Chanethothes, whom he especially favored. Chanethothes, being reproached, promised the attack when he had the opportunity.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="15" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.15">
+              <app xml:id="uen_23_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">At this time, Merris having died, Chenephres promised Moyses and Chanethothes that they would transport her body to the regions beyond Egypt and bury it, supposing that Moyses would be killed by Chanethothes.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="16" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.16">
+              <app xml:id="uen_24_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">As they were journeying, one of those in the know revealed the plot to Moyses. He, protecting himself, buried Merris and named the river and the city on it Meroe. This Merris was honored by the locals no less than Isis.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="17" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.17">
+              <app xml:id="uen_25_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Aaron, Moyses' brother, learning of the plot, advised his brother to flee to Arabia. Moyses, persuaded, sailed the Nile from Memphis and departed to Arabia.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="18" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.18">
+              <app xml:id="uen_26_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Chanethothes, learning of Moyses' flight, lay in ambush to kill him. When he saw him coming, he drew his sword against him, but Moyses, acting quickly, restrained his hand and, drawing his sword, killed Chanethothes.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="19" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.19">
+              <app xml:id="uen_27_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">He escaped to Arabia and lived with Raguel, the ruler of the region, having taken his daughter. Raguel wished to wage war against the Egyptians, desiring to bring Moyses back and establish the rule for his daughter and son-in-law. But Moyses prevented him, considering his compatriots. Raguel, being prevented from waging war, ordered the Arabs to plunder Egypt.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="20" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.20">
+              <app xml:id="uen_28_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">About the same time, Chenephres, the first of all humans to contract elephantiasis, died. He suffered this affliction because he had ordered the Jews to wear linen garments, but not to wear woolen clothing, so that, being conspicuous, they might be punished by him.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="21" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.21">
+              <app xml:id="uen_29_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Moyses prayed to God, that he would at last cease the sufferings of the people. While he was propitiating God, suddenly, he says, fire flared up from the earth and burned, although there was no wood or other timber in the place. Moyses, terrified by what had happened, fled; but a divine voice told him to march against Egypt and, having rescued the Jews, to lead them to their ancient homeland.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="22" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.22">
+              <app xml:id="uen_30_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Having taken courage, he led a hostile force to make himself known to the Egyptians; first, however, he went to his brother Aaron. The king of the Egyptians, having learned of Moyses' presence, called him to himself and asked him why he had come. He said that the Lord of the universe commanded him to release the Jews.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="23" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.23">
+              <app xml:id="uen_31_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">The king, upon hearing this, imprisoned him. But during the night, all the prison doors opened automatically, and some of the guards died, while others were overcome by sleep, and their weapons were shattered.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="24" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.24">
+              <app xml:id="uen_32_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Moyses, having come out, went to the palace; finding the doors open, he entered and, with the guards there also incapacitated, he woke the king. The king, astonished by what had happened, commanded Moyses to tell him the name of the God who sent him, scoffing at him.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="25" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.25">
+              <app xml:id="uen_33_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Moyses, bowing down, whispered it into his ear, and the king, hearing it, fell down speechless, but being held by Moyses, he revived again.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="26" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.26">
+              <app xml:id="uen_34_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">He wrote the name on a tablet and sealed it. And when one of the priests scoffed at what was written on the tablet, he expired his life with convulsions.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="27" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.27">
+              <app xml:id="uen_35_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">The king then asked him to perform some sign. Moyses threw down the staff he held and turned it into a serpent. When everyone was terrified, he took it by the tail and picked it up, and it became a staff again.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="28" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.28">
+              <app xml:id="uen_36_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Then, advancing a little, he struck the Nile with his staff, and the river, becoming great, flooded all of Egypt. From that time, its flow also occurred. And when the water collected, it became foul-smelling and destroyed the river animals, and the people perished from thirst.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="29" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.29">
+              <app xml:id="uen_37_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">When these wonders occurred, the king said that he would release the people after a month, if he restored the river. Moyses, striking the river again with his staff, made the water's current subside.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="30" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.30">
+              <app xml:id="uen_38_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">When this happened, the king called the priests from beyond Memphis and said that he would kill them and demolish their temples if they also did not perform some wonder. Then they, through certain enchantments and incantations, created a dragon and changed the color of the river.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="31" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.31">
+              <app xml:id="uen_39_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">The king, emboldened by what had happened, tormented the Jews with every punishment and chastisement. Moyses, seeing these things, performed other signs and, striking the earth with his staff, released a winged creature to harm the Egyptians, and all their bodies were covered with sores. Since the physicians could not heal the sick, the Jews thus again found relief.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="32" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.32">
+              <app xml:id="uen_40_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Again, Moyses released a frog through his staff, and in addition to these, locusts and gnats. Because of this, the Egyptians dedicated the staff in every temple, and similarly to Isis, because the earth is Isis, and when struck by the staff, it released these wonders.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="33" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.33">
+              <app xml:id="uen_41_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">As the king remained senseless, Moyses caused hail and earthquakes during the night, so that those fleeing the earthquake were killed by the hail, and those avoiding the hail were destroyed by the earthquakes. Then all the houses and most of the temples collapsed.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="34" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.34">
+              <app xml:id="uen_42_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Finally, the king, having fallen into such misfortunes, released the Jews. They, having borrowed from the Egyptians many drinking cups, no small amount of clothing, and an immense quantity of other treasure, crossed the rivers in Arabia, and having traversed a considerable distance, arrived at the Red Sea on the third day.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="35" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.35">
+              <app xml:id="uen_43_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">Now the Memphites say that Moses, being experienced, observed the ebb of the sea and led the multitude across on dry ground. But the Heliopolitans say that the king pursued with a great force, along with the consecrated animals, because the Jews were carrying off the possessions that they had borrowed from the Egyptians.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="36" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.36">
+              <app xml:id="uen_44_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">A divine voice came to Moses telling him to strike the sea with his staff and divide it. Moses, hearing this, touched the water with his staff, and thus the stream divided, and the army proceeded on a dry path.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="37" xml:id="Artap.ver_Praep._Evang.__frag._3___English_.9.27.37">
+              <app xml:id="uen_45_ver_Praep._Evang.__frag._3___English_">
+                <lem wit="#OCP-Trans">When the Egyptians entered and pursued, he says, fire blazed forth upon them from the front, and the sea again overflowed the path. All the Egyptians were destroyed by both the fire and the flood. The Jews, having escaped the danger, spent forty years in the wilderness, as God rained down on them a grain similar to spelt, resembling snow in color. He says that Moses was tall, reddish, gray-haired, long-haired, and authoritative. He did these things when he was about eighty-nine years old.”</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Stromata (frag. 3b) (English)" xml:lang="en" xml:id="ver_Stromata__frag._3b___English_">
+        <head>Stromata (frag. 3b) (English)</head>
+        <div type="book" n="1" xml:id="Artap.ver_Stromata__frag._3b___English_.1">
+          <head>Book 1</head>
+          <div type="section" n="23" xml:id="Artap.ver_Stromata__frag._3b___English_.1.23">
+            <head>Section 23</head>
+            <div type="chapter" n="154" xml:id="Artap.ver_Stromata__frag._3b___English_.1.23.154">
+              <head>Chapter 154</head>
+              <ab type="verse" n="2" xml:id="Artap.ver_Stromata__frag._3b___English_.1.23.154.2">
+                <app xml:id="uen_46_ver_Stromata__frag._3b___English_">
+                  <lem wit="#OCP-Trans">Artapanus, in his treatise concerning the Jews, relates that Moses was shut up in prison by Chenephres, the king of the Egyptians, because he requested that the people be released from Egypt. At night, when the prison was opened by the will of God, he went out and entered the palace, stood over the sleeping king, and woke him up.</lem>
+                </app>
+              </ab>
+              <ab type="verse" n="3" xml:id="Artap.ver_Stromata__frag._3b___English_.1.23.154.3">
+                <app xml:id="uen_47_ver_Stromata__frag._3b___English_">
+                  <lem wit="#OCP-Trans">The king, astonished at what had happened, commanded Moses to tell him the name of the God who sent him. Moses bowed down and spoke into his ear, and when the king heard it, he fell speechless. But Moses took hold of him, and he came back to life.</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (frag. 1) (French)" xml:lang="fr" xml:id="ver_Praep._Evang.__frag._1___French_">
+        <head>Praep. Evang. (frag. 1) (French)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._1___French_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="18" xml:id="Artap.ver_Praep._Evang.__frag._1___French_.9.18">
+            <head>Chapter 18</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._1___French_.9.18._heading_">
+              <app xml:id="ufr_1_ver_Praep._Evang.__frag._1___French_">
+                <lem wit="#OCP-Trans">18. D’Artapan sur le même sujet ; tiré du même écrit de Polyhistor.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._1___French_.9.18.1">
+              <app xml:id="ufr_2_ver_Praep._Evang.__frag._1___French_">
+                <lem wit="#OCP-Trans">« Artapan dit, dans son ouvrage Sur les Juifs, que les Juifs étaient appelés Hermiouth, ce qui, traduit en langue grecque, signifie Juifs ; mais qu'ils s'appelaient Hébreux d'après Abraham. Il affirme que celui-ci vint avec toute sa maison en Égypte auprès de Pharethôthès, le roi des Égyptiens, et lui enseigna l'astrologie ; et qu'après y être resté vingt ans, il repartit pour les régions de Syrie ; mais que beaucoup de ceux qui étaient venus avec lui demeurèrent en Égypte en raison de la prospérité du pays. »</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (frag. 2) (French)" xml:lang="fr" xml:id="ver_Praep._Evang.__frag._2___French_">
+        <head>Praep. Evang. (frag. 2) (French)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._2___French_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="23" xml:id="Artap.ver_Praep._Evang.__frag._2___French_.9.23">
+            <head>Chapter 23</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._2___French_.9.23._heading_">
+              <app xml:id="ufr_3_ver_Praep._Evang.__frag._2___French_">
+                <lem wit="#OCP-Trans">23. D'Artapan, sur Joseph ; extrait du même écrit de Polyhistor.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._2___French_.9.23.1">
+              <app xml:id="ufr_4_ver_Praep._Evang.__frag._2___French_">
+                <lem wit="#OCP-Trans">« Artapan dit, dans son traité Sur les Juifs, que Joseph était un descendant d'Abraham et le fils de Jacob ; et que, surpassant les autres par son intelligence et sa prudence, il fut l'objet d'un complot de la part de ses frères. Mais, ayant pressenti leur coalition, il pria les Arabes voisins de le transporter en Égypte ; ceux-ci accédèrent à sa demande, car les rois des Arabes étaient des descendants d'Israël, fils d'Abraham et frères d'Isaac.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="2" xml:id="Artap.ver_Praep._Evang.__frag._2___French_.9.23.2">
+              <app xml:id="ufr_5_ver_Praep._Evang.__frag._2___French_">
+                <lem wit="#OCP-Trans">Arrivé en Égypte et présenté au roi, il devint l'administrateur de tout le pays. Alors qu'auparavant les Égyptiens possédaient la terre de manière désordonnée parce que le pays n'était pas divisé, et que les plus faibles étaient lésés par les plus forts, il fut le premier à diviser la terre, à la borner par des limites, à rendre cultivables de nombreuses terres en friche et à attribuer certaines terres aux prêtres.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="3" xml:id="Artap.ver_Praep._Evang.__frag._2___French_.9.23.3">
+              <app xml:id="ufr_6_ver_Praep._Evang.__frag._2___French_">
+                <lem wit="#OCP-Trans">Il inventa aussi les mesures et fut grandement aimé des Égyptiens pour ces raisons. Il épousa Aseneth, fille d'un prêtre d'Héliopolis, de laquelle il eut des enfants. Après cela, son père et ses frères vinrent le rejoindre, apportant de grands biens, et ils s'établirent à Héliopolis et à Saïs, et les Syriens se multiplièrent en Égypte.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="4" xml:id="Artap.ver_Praep._Evang.__frag._2___French_.9.23.4">
+              <app xml:id="ufr_7_ver_Praep._Evang.__frag._2___French_">
+                <lem wit="#OCP-Trans">Il dit que ceux-ci bâtirent aussi le temple d'Athos et celui d'Héliopolis, eux que l'on nommait Hermiouth. Après cela, Joseph mourut, ainsi que le roi d'Égypte. C'est donc Joseph qui, gouvernant l'Égypte, mit en réserve le blé des sept années dont la récolte avait été abondante, et devint le maître de l'Égypte. »</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (frag. 3) (French)" xml:lang="fr" xml:id="ver_Praep._Evang.__frag._3___French_">
+        <head>Praep. Evang. (frag. 3) (French)</head>
+        <div type="book" n="9" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="27" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27">
+            <head>Chapter 27</head>
+            <ab type="verse" n="{heading}" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27._heading_">
+              <app xml:id="ufr_8_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">27. D'Artapan, sur Moïse, de même.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="1" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.1">
+              <app xml:id="ufr_9_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">« Artapan dit, dans son traité Sur les Juifs, qu'après la mort d'Abraham et de son fils Mempsasthénoth, ainsi que de celle du roi des Égyptiens, le fils de ce dernier, Palmanothès, hérita de la souveraineté.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="2" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.2">
+              <app xml:id="ufr_10_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Celui-ci traita durement les Juifs ; il bâtit d'abord Saïs et y fonda le sanctuaire qui s'y trouve, puis il construisit le temple à Héliopolis.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="3" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.3">
+              <app xml:id="ufr_11_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Il engendra une fille, Merris, qu'il fiança à un certain Chénéphrès, qui régnait sur les régions situées au-dessus de Memphis — car beaucoup régnaient alors sur l'Égypte. Comme elle était stérile, elle adopta l'enfant de l'un des Juifs et le nomma Moïse ; et parvenu à l'âge d'homme, il fut appelé Musée par les Grecs.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="4" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.4">
+              <app xml:id="ufr_12_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Ce Moïse devint le maître d'Orphée. Devenu adulte, il transmit aux hommes de nombreuses inventions utiles : il découvrit les navires, les machines pour poser les pierres, les armes égyptiennes, les engins hydrauliques et militaires, ainsi que la philosophie. De plus, il divisa le pays en trente-six nomes et assigna à chacun des nomes le dieu qui devait être vénéré, ainsi que les lettres sacrées pour les prêtres ; il établit aussi le culte des chats, des chiens et des ibis, et attribua aux prêtres un territoire privilégié.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="5" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.5">
+              <app xml:id="ufr_13_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Il fit tout cela afin de préserver et d'affermir la monarchie pour Chénéphrès. Car auparavant, les foules indisciplinées chassaient tantôt les rois, tantôt en établissaient d'autres, et souvent les mêmes, parfois d'autres.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="6" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.6">
+              <app xml:id="ufr_14_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">C'est pourquoi Moïse fut aimé des foules et jugé digne par les prêtres d'un honneur égal à celui des dieux, et il fut appelé Hermès en raison de son interprétation des lettres sacrées.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="7" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.7">
+              <app xml:id="ufr_15_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Mais Chénéphrès, voyant la valeur de Moïse, fut jaloux de lui et chercha à le faire périr sous un prétexte spécieux. Et un jour, comme les Éthiopiens faisaient campagne contre l'Égypte, Chénéphrès, pensant avoir trouvé une occasion favorable, envoya Moïse contre eux comme général avec une armée ; il lui adjoignit une foule de paysans, pensant qu'en raison de la faiblesse de ces soldats, il serait facilement tué par les ennemis.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="8" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.8">
+              <app xml:id="ufr_16_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Moïse, étant parvenu dans le nome appelé Hermopolite avec environ cent mille paysans, y établit son camp. Il envoya des généraux pour occuper d'avance le pays, lesquels remportèrent de brillants succès dans les combats. Il dit que les Héliopolitains affirment que cette guerre dura dix ans.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="9" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.9">
+              <app xml:id="ufr_17_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Les hommes de Moïse, en raison de l'importance de l'armée, fondèrent une ville en ce lieu et y consacrèrent l'ibis, parce que cet oiseau détruit les animaux nuisibles aux hommes ; et ils nommèrent cette ville Hermoupolis.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="10" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.10">
+              <app xml:id="ufr_18_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Ainsi, les Éthiopiens, bien qu'étant ennemis, aimèrent tellement Moïse qu'ils apprirent même de lui la circoncision des parties génitales ; et non seulement eux, mais aussi tous les prêtres.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="11" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.11">
+              <app xml:id="ufr_19_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">La guerre terminée, Chénéphrès l'accueillit en paroles, mais en réalité il lui tendait des pièges. Après lui avoir retiré ses troupes, il envoya les unes aux frontières de l'Éthiopie pour monter la garde, et ordonna aux autres de démolir le temple de Diospolis, construit en briques cuites, et d'en bâtir un autre en pierre en exploitant la montagne voisine ; il nomma Nachéros intendant de la construction.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="12" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.12">
+              <app xml:id="ufr_20_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Ce dernier, étant venu avec Moïse à Memphis, lui demanda s'il existait quelque autre chose d'utile aux hommes ; Moïse répondit que c'était l'espèce des bœufs, parce que la terre est labourée par eux. Chénéphrès, ayant nommé un taureau Apis, ordonna aux foules de lui ériger un sanctuaire et commanda qu'on y apportât et enterrât les animaux consacrés par Moïse, voulant dissimuler les inventions de Moïse.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="13" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.13">
+              <app xml:id="ufr_21_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Mais comme les Égyptiens s'étaient aliénés de lui, le roi fit jurer à ses amis de ne pas révéler à Moïse le complot qui se tramait contre lui, et de désigner ceux qui le tueraient.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="14" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.14">
+              <app xml:id="ufr_22_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Personne n'ayant obéi, Chénéphrès fit des reproches à Chanéthothès, celui auquel il s'adressait le plus volontiers ; celui-ci, ainsi réprimandé, promit de mener l'attaque dès qu'il en trouverait l'occasion.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="15" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.15">
+              <app xml:id="ufr_23_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Vers cette même époque, Merris étant morte, Chénéphrès chargea Moïse et Chanéthothès de transporter le corps dans les régions situées au-dessus de l'Égypte pour l'enterrer, supposant que Moïse serait tué par Chanéthothès.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="16" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.16">
+              <app xml:id="ufr_24_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Pendant qu'ils étaient en route, l'un des complices révéla le complot à Moïse ; celui-ci, se tenant sur ses gardes, ensevelit Merris et donna au fleuve ainsi qu'à la ville qui s'y trouvait le nom de Méroé. Cette Merris est honorée par les habitants du pays non moins qu'Isis.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="17" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.17">
+              <app xml:id="ufr_25_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Aaron, le frère de Moïse, ayant eu connaissance du complot, conseilla à son frère de fuir en Arabie ; celui-ci se laissa persuader et, partant de Memphis, traversa le Nil en bateau pour s'en aller en Arabie.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="18" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.18">
+              <app xml:id="ufr_26_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Chanéthothès, ayant appris la fuite de Moïse, lui tendit une embuscade pour le tuer ; le voyant venir, il tira son glaive contre lui. Moïse, plus prompt que lui, lui saisit la main, tira son épée et tua Chanéthothès.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="19" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.19">
+              <app xml:id="ufr_27_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Il s'enfuit en Arabie et vécut avec Raguel, le chef de ces contrées, après avoir épousé sa fille. Raguel voulut faire campagne contre les Égyptiens afin de ramener Moïse et d'assurer le pouvoir à sa fille et à son gendre ; mais Moïse l'en empêcha par égard pour ses compatriotes. Raguel, empêché de faire campagne, ordonna aux Arabes de piller l'Égypte.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="20" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.20">
+              <app xml:id="ufr_28_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Vers cette même époque, Chénéphrès mourut, ayant été atteint d'éléphantiasis le premier de tous les hommes ; il tomba dans cette affliction pour avoir ordonné aux Juifs de se vêtir de toiles de lin et de ne pas porter d'habits de laine, afin qu'étant ainsi reconnaissables, ils fussent châtiés par lui.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="21" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.21">
+              <app xml:id="ufr_29_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Moïse priait Dieu de faire enfin cesser les souffrances de son peuple. Alors qu'il le suppliait, un feu, dit-il, jaillit soudainement de la terre et se mit à brûler, bien qu'il n'y eût en cet endroit ni broussailles ni aucun autre bois. Moïse, effrayé par ce prodige, prit la fuite ; mais une voix divine lui ordonna de marcher contre l'Égypte, de sauver les Juifs et de les conduire dans leur patrie ancestrale.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="22" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.22">
+              <app xml:id="ufr_30_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Prenant courage, il résolut de mener une armée ennemie contre les Égyptiens ; mais il se rendit d'abord auprès de son frère Aaron. Le roi des Égyptiens, apprenant la venue de Moïse, le fit appeler auprès de lui et lui demanda pourquoi il était venu ; celui-ci déclara que le maître de l'univers lui ordonnait de renvoyer libres les Juifs.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="23" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.23">
+              <app xml:id="ufr_31_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Le roi, l'ayant entendu, le fit jeter en prison. Mais la nuit venue, toutes les portes de la prison s'ouvrirent d'elles-mêmes, et parmi les gardiens, les uns moururent, d'autres furent paralysés par le sommeil, et leurs armes furent brisées.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="24" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.24">
+              <app xml:id="ufr_32_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Moïse, étant sorti, se rendit au palais royal ; trouvant les portes ouvertes, il entra et, là aussi les gardes étant frappés de stupeur, il réveilla le roi. Celui-ci, stupéfait de ce qui s'était passé, ordonna à Moïse de lui dire le nom du dieu qui l'avait envoyé, en se moquant de lui.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="25" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.25">
+              <app xml:id="ufr_33_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Moïse se pencha vers son oreille et le lui dit ; dès qu'il l'eut entendu, le roi tomba sans voix, mais soutenu par Moïse, il revint à la vie.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="26" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.26">
+              <app xml:id="ufr_34_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Moïse écrivit le nom sur une tablette et la scella ; et celui des prêtres qui avait tourné en dérision ce qui était écrit sur la tablette rendit l'âme dans des convulsions.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="27" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.27">
+              <app xml:id="ufr_35_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Le roi lui demanda d'accomplir un signe pour lui ; Moïse jeta le bâton qu'il tenait et en fit un serpent ; et comme tous étaient terrifiés, il le saisit par la queue, le ramassa et en fit de nouveau un bâton.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="28" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.28">
+              <app xml:id="ufr_36_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">S'avançant un peu plus loin, il frappa le Nil de son bâton, et le fleuve, débordant d'eau, inonda toute l'Égypte ; c'est depuis lors que se produit sa crue. L'eau accumulée devint fétide et fit périr les animaux aquatiques, et les populations périssaient de soif.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="29" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.29">
+              <app xml:id="ufr_37_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Le roi, devant ces prodiges, dit qu'après un mois il relâcherait le peuple s'il rétablissait le fleuve ; Moïse frappa de nouveau l'eau avec son bâton et arrêta le flot.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="30" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.30">
+              <app xml:id="ufr_38_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Cela fait, le roi convoqua les prêtres de la région située au-dessus de Memphis et déclara qu'il les ferait périr et raserait leurs sanctuaires s'ils n'accomplissaient pas eux aussi quelque prodige. Alors, au moyen de certains artifices et incantations, ils produisirent un serpent et changèrent la couleur du fleuve.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="31" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.31">
+              <app xml:id="ufr_39_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Le roi, s'enorgueillissant de ce fait, tourmenta les Juifs de toutes sortes de supplices et de châtiments. Moïse, voyant cela, accomplit d'autres signes : ayant frappé la terre avec son bâton, il fit surgir une sorte d'insecte ailé qui ravagea les Égyptiens, et tous eurent le corps couvert d'ulcères. Comme les médecins ne pouvaient guérir les malades, les Juifs obtinrent ainsi de nouveau un répit.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="32" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.32">
+              <app xml:id="ufr_40_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">De nouveau, Moïse fit surgir une grenouille au moyen de son bâton, et en plus de cela des sauterelles et des moustiques. C'est pour cette raison que les Égyptiens consacrent le bâton dans chaque sanctuaire, et de même pour Isis, parce que la terre est Isis et qu'ayant été frappée par le bâton, elle a produit ces prodiges.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="33" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.33">
+              <app xml:id="ufr_41_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Comme le roi persistait dans son obstination insensée, Moïse fit tomber pendant la nuit de la grêle et provoqua des tremblements de terre, de sorte que ceux qui fuyaient le tremblement de terre étaient tués par la grêle, et que ceux qui évitaient la grêle périssaient sous les secousses. Toutes les maisons s'effondrèrent alors, ainsi que la plupart des temples.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="34" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.34">
+              <app xml:id="ufr_42_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Enfin, accablé par de tels malheurs, le roi laissa partir les Juifs. Ceux-ci, ayant emprunté aux Égyptiens de nombreuses coupes, une grande quantité de vêtements et une immense quantité d'autres trésors, traversèrent les cours d'eau d'Arabie et, après avoir franchi un espace considérable, arrivèrent le troisième jour à la mer Rouge.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="35" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.35">
+              <app xml:id="ufr_43_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Les Memphites disent que Moïse, connaissant bien le pays, attendit le reflux et fit traverser la foule à travers la mer asséchée. Mais les Héliopolitains disent que le roi se précipita à leur poursuite avec une grande armée, en même temps qu'avec les animaux sacrés, parce que les Juifs emportaient les biens qu'ils avaient empruntés aux Égyptiens.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="36" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.36">
+              <app xml:id="ufr_44_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Mais une voix divine ordonna à Moïse de frapper la mer avec son bâton et de la fendre. Moïse, l'ayant entendue, toucha l'eau avec son bâton, et ainsi le flot s'écarta et l'armée s'avança par un chemin asséché.</lem>
+              </app>
+            </ab>
+            <ab type="verse" n="37" xml:id="Artap.ver_Praep._Evang.__frag._3___French_.9.27.37">
+              <app xml:id="ufr_45_ver_Praep._Evang.__frag._3___French_">
+                <lem wit="#OCP-Trans">Comme les Égyptiens s'y engageaient aussi et les poursuivaient, un feu, dit-il, jaillit devant eux, et la mer recouvrit de nouveau le chemin. Tous les Égyptiens périrent par le feu et par la crue des eaux. Les Juifs, ayant échappé au danger, passèrent quarante ans dans le désert, Dieu leur faisant pleuvoir une farine semblable à la graine de millet, d'une couleur presque semblable à la neige. Il dit que Moïse était grand, roux, avait les cheveux blancs et longs, et un air imposant. Il accomplit ces actes alors qu'il était âgé d'environ quatre-vingt-neuf ans. »</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Stromata (frag. 3b) (French)" xml:lang="fr" xml:id="ver_Stromata__frag._3b___French_">
+        <head>Stromata (frag. 3b) (French)</head>
+        <div type="book" n="1" xml:id="Artap.ver_Stromata__frag._3b___French_.1">
+          <head>Book 1</head>
+          <div type="section" n="23" xml:id="Artap.ver_Stromata__frag._3b___French_.1.23">
+            <head>Section 23</head>
+            <div type="chapter" n="154" xml:id="Artap.ver_Stromata__frag._3b___French_.1.23.154">
+              <head>Chapter 154</head>
+              <ab type="verse" n="2" xml:id="Artap.ver_Stromata__frag._3b___French_.1.23.154.2">
+                <app xml:id="ufr_46_ver_Stromata__frag._3b___French_">
+                  <lem wit="#OCP-Trans">Artapan, en tout cas, dans son traité Sur les Juifs, rapporte que Moïse, ayant été jeté en prison par Chénéphrès, le roi des Égyptiens, pour avoir demandé que le peuple soit renvoyé d'Égypte, en sortit de nuit, la prison s'étant ouverte par la volonté de Dieu, entra dans le palais royal, se tint auprès du roi endormi et le réveilla ;</lem>
+                </app>
+              </ab>
+              <ab type="verse" n="3" xml:id="Artap.ver_Stromata__frag._3b___French_.1.23.154.3">
+                <app xml:id="ufr_47_ver_Stromata__frag._3b___French_">
+                  <lem wit="#OCP-Trans">et que celui-ci, frappé de stupeur par l'événement, ordonna à Moïse de dire le nom du Dieu qui l'avait envoyé ; Moïse, s'étant penché à son oreille, le lui dit, et le roi, en l'entendant, tomba sans voix, mais, soutenu par Moïse, il revint à lui.</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

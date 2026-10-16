@@ -1,0 +1,947 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ApDan">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Apocalypse of Daniel</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Heiser-Penner">
+            <abbr type="siglum">Heiser-Penner</abbr>
+            <name>Heiser–Penner (Logos LLS:8.20.7)</name>
+            <bibl>Michael S. Heiser and Ken M. Penner, eds. Old Testament Greek Pseudepigrapha with Morphology. Bellingham, WA: Lexham Press, 2022.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="2" xml:id="ApDan.ver_Greek.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.2.1">
+            <app xml:id="u0_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ κατασφάξουσιν οὗτοι πάντες πλῆθος τῶν Ῥωμαίων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.2.2">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἀποσυναχθήσονται πρὸς τὴν θάλασσαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.2.3">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#Heiser-Penner">ἔστιν δὲ ὁ ἀριθμὸς τοῦ ἔθνους ἐκείνου μυρίαι μυριάδες καὶ χίλιαι χιλιάδες</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.2.4">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἕτερα πλήθη ἄπειρα καὶ ἀναρίθμητα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.2.9">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ κράξει μεγάλῃ τῇ φωνῇ ὁ Ἰσμαὴλ ἐγκαυχώμενος καὶ λέγων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.2.10">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#Heiser-Penner">Ποῦ ἐστιν ὁ θεός τῶν Ῥωμαίων; οὐκ ἔστιν ὁ βοηθῶν αὐτούς. νενίκηται γὰρ ἀληθῶς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.2.11">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#Heiser-Penner">Οἱ δὲ υἱοὶ τῆς Ἄγαρ οἱ τρεῖς βρύξουσιν καὶ αὐτοὶ κατὰ τῶν Ῥωμαίων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.2.12">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#Heiser-Penner">Δεῦτε καὶ περάσωμεν ἐπὶ τὸ Βυζάντιον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="ApDan.ver_Greek.2.13">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ μὴ δυνάμενοι συμβουλευσάμενοι δὲ πάλιν εἴπωσιν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="ApDan.ver_Greek.2.14">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#Heiser-Penner">Δεῦτε καὶ ποιήσωμεν γέφυραν διὰ καράβων καὶ περάσωμεν ἐπὶ τὸ Βυζάντιον τῆς Ἑπταλόφου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="ApDan.ver_Greek.2.15">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ταῦτα μὲν οὕτως λαλήσουσιν οἱ ἀθεότατοι καὶ ἅπαντες ἐχθροί. οἱ δὲ ἄρχοντες τῆς Ἑπταλόφου καὶ οἱ μεγιστᾶνες αὐτοῖς ἀκούσαντες τὰς ἀπειλὰς τῶν ἀθέων καὶ φοβηθέντες μή πως παραδῶσιν οἱ χριστιανοὶ τῷ ἁγίῳ βαπτίσματι ἐσφραγισμένοι προσφύγουσιν ἐν ταῖς νήσοις τῆς θαλάσσης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="ApDan.ver_Greek.2.16">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ γενήσεται φόβος καὶ θλῖψις καὶ ἀνάγκη τῶν Ῥωμαίων πολλή.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="ApDan.ver_Greek.2.17">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ οἱ ἄνθρωποι τῆς Ἑπταλόφου ἔσονται θλιβόμενοι ἐν μαχαίρᾳ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="ApDan.ver_Greek.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.3.1">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#Heiser-Penner">Ἀλλὰ ἀκούσατε, ἀδελφοί, ὅτι διὰ τὴν ἀνομίαν αὐτῶν παραχωρεῖ ὁ θεὸς</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.3.2">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ στήσει ὁ πρῶτος τὴν κλίνην αὐτοῦ ἔναντι Βυζαντίου</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.3.3">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ πλήξει καὶ πληγήσονται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.3.4">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τότε οἱ ἄρχοντες τῶν Ῥωμαίων βλασφημοῦσιν λέγοντες·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.3.5">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#Heiser-Penner">οἴμοι, οἴμοι, οὔτε ἐν οὐρανῷ ἔχομεν βασιλέαν οὔτε ἐν τῇ γῇ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.3.6">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ μετὰ ταύτης τῆς φωνῆς κλινεῖ κύριος τὸ ἔλεος αὐτοῦ ἐπὶ τοὺς Ῥωμαίους καὶ ἐπὶ τὴν ἐκδίκησιν αὐτῶν καὶ ἀνταποδώσει δίκην τοῖς ἐχθροῖς αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.3.7">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ γενήσεται ἦχος ἐκ τῶν οὐρανῶν μέγας καὶ σεισμὸς ἐκ τῆς γῆς φοβερὸς καὶ φωνὴ ἀγγέλων ἐξ οὐρανοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.3.8">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ κλινεῖ κύριος τὴν κεφαλὴν αὐτοῦ καὶ ῥήξει τὸν θυμὸν αὐτοῦ ἐπὶ τοὺς υἱοὺς τῆς Ἄγαρ καὶ ἐπὶ τὸ ἄσπονδον γένος τοῦ Ἰσμαὴλ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.3.9">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἀρεῖ κύριος τὴν δειλίαν τῶν Ῥωμαίων καὶ βάλλει εἰς τὰς καρδίας τοῦ Ἰσμαὴλ καὶ τὴν ἀνδρείαν τῶν Ἰσμαηλιτῶν εἰς τὰς καρδίας τῶν Ῥωμαίων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.3.10">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐγείρει κύριος βασιλέα τῶν Ῥωμαίων, (ὅνπερ λέγουσιν οἱ ἄνθρωποι νεκρὸν ὄντα καὶ εἰς οὐδὲν χρησιμεύοντα,) ὅνπερ νομίζουσιν οἱ ἄνθρωποι πρὸ πολλῶν χρόνων ἀποθανόντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.3.11">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#Heiser-Penner">τοῦτον γὰρ φυλάσσει ὁ κύριος εἰς τὴν ἔσω χώραν τῆς Περσίδος καὶ Συριακῆς ἐθνῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.3.12">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#Heiser-Penner">οὗ τὸ ὄνομα εἰς τὸ κ στοιχεῖον τοῦ ἀλφαβήτου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="ApDan.ver_Greek.3.13">
+            <app xml:id="u25_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ οὗτος ἐλεύσεται εἰς τὴν ἑπτάλοφον πόλιν πρὸς ἑσπέραν παρασκευῆς οὔσης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="ApDan.ver_Greek.3.14">
+            <app xml:id="u26_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ παρασκευασθήσεται ἐπὶ τοὺς ἐχθροὺς αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="ApDan.ver_Greek.3.15">
+            <app xml:id="u27_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐν σαββάτῳ πρωὶ ἀνατέλλοντος τοῦ ἡλίου συνάψει πόλεμον μέγαν μετὰ τοῦ Ἰσμαὴλ καὶ τῶν υἱῶν τῆς Ἄγαρ καὶ αὐτὸς καὶ τὰ δύο μειράκια αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="ApDan.ver_Greek.3.16">
+            <app xml:id="u28_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ συναγωνισθήσονται μετὰ αὐτοῦ καὶ οἱ ἄρχοντες καὶ οἱ μεγιστᾶνες τῆς Ἑπταλόφου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="ApDan.ver_Greek.3.17">
+            <app xml:id="u29_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἡγούμενοι καὶ ἱερεῖς τῶν ἐκκλησιῶν φορέσουσιν ἅρματα πολεμικά.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="ApDan.ver_Greek.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.4.1">
+            <app xml:id="u30_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τότε ὁ βασιλεὺς ἐκεῖνος μετὰ τῶν δύο μειρακίων αὐτοῦ συγκροτήσει πόλεμον ἰσχυρὸν μετὰ τοῦ ἔθνους τῶν υἱῶν τῆς Ἄγαρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.4.2">
+            <app xml:id="u31_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ κατακόψει αὐτοὺς ὡς χόρτον καλάμου ὑπὸ πυρὸς καιομένου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.4.3">
+            <app xml:id="u32_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐκ τοῦ αἵματος αὐτῶν πνιγίζεται ταῦρος τριετῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.4.4">
+            <app xml:id="u33_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ διώξει ὁ βασιλεὺς μόνος χιλίους καὶ τὰ δύο μειράκια μυριάδας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.4.5">
+            <app xml:id="u34_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ συγκοπήσεται ὁ Ἰσμαὴλ καὶ οἱ υἱοὶ τῆς Ἄγαρ ἕως τέλους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.4.6">
+            <app xml:id="u35_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ γενήσεται πόλεμος καὶ αἱματοχυσία μεγάλη, οἵα οὐ γέγονεν ἀπὸ καταβολῆς κόσμου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.4.7">
+            <app xml:id="u36_ver_Greek">
+              <lem wit="#Heiser-Penner">συγκερασθήσεται γὰρ τὸ αἷμα ἐν τῇ θαλάσσῃ σταδίους δώδεκα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.4.8">
+            <app xml:id="u37_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐν ταῖς ῥύμαις τῆς πόλεως ἵπποι βαφήσονται τὸ αἷμα ἐπιπνιγόμενοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.4.9">
+            <app xml:id="u38_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ οὐ μὴ μείνουσιν ἐκ τοῦ ἔθνους ἐκείνου καὶ τοῦ Ἰσμαὴλ εἰ μὴ τρεῖς σκηναὶ αὐτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.4.10">
+            <app xml:id="u39_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ δουλεύσουσιν τοῖς ἀρχιονηλάταις τῆς ἑπταλόφου ἔτη τριάκοντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.4.12">
+            <app xml:id="u40_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐπιθυμήσει τὸ γένος τῶν Ῥωμαίων ἰδεῖν ἴχνος τοῦ Ἰσμαὴλ καὶ οὐ μὴ εὕρῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="ApDan.ver_Greek.4.13">
+            <app xml:id="u41_ver_Greek">
+              <lem wit="#Heiser-Penner">πληρωθήσεται γὰρ ὁ λόγος ὁ προφητικὸς ὅτι</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="ApDan.ver_Greek.4.14">
+            <app xml:id="u42_ver_Greek">
+              <lem wit="#Heiser-Penner">πῶς διώξεται ὁ εἷς χιλίους καὶ οἱ δύο μετακινήσουσιν μυριάδας εἰ μὴ ὁ θεὸς ἀπωσάτο αὐτούς καὶ ὁ κύριος παρέδωκεν αὐτούς.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="ApDan.ver_Greek.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.5.1">
+            <app xml:id="u43_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ὑποτάξει ὁ βασιλεὺς ἐκεῖνος πάντα ἐχθρὸν καὶ πολέμιον ὑπὸ τοὺς πόδας αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.5.2">
+            <app xml:id="u44_ver_Greek">
+              <lem wit="#Heiser-Penner">τὸ δὲ σκῆπτρον τῆς βασιλείας αὐτοῦ ἔσται μακροημερεύων ὁμοίως καὶ τῶν δύο μειρακίων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.5.3">
+            <app xml:id="u45_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐξελεύσεται ἡ φήμη αὐτοῦ ἀπὸ ἀνατολῶν ἡλίου μέχρι δυσμῶν καὶ ἀπὸ μεσημβρίας ἕως βορρᾶ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.5.4">
+            <app xml:id="u46_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ πήξει τὴν ῥομφαίαν αὐτοῦ ἐν τῇ ἀνατολῇ καὶ τὸ τόξον αὐτοῦ εἰς τὰ πλευρὰ τοῦ βορρᾶ καὶ ἄρκτον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.5.5">
+            <app xml:id="u47_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τῇ δεξιᾷ αὐτοῦ οὐδεὶς ἀντιστήσεται. ὅτι ἀπὸ τοῦ θεοῦ οὗτος ἐλήλυθεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.5.6">
+            <app xml:id="u48_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ κατασκευάσει εἰρήνην πολλήν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.5.7">
+            <app xml:id="u49_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ οἰκοδομηθήσονται πόλεις καὶ κάστρα καὶ ἐκκλησίαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.5.8">
+            <app xml:id="u50_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ γενήσονται θυσιαστήρια πολλὰ ἐν ὅλῃ τῇ οἰκουμένῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.5.9">
+            <app xml:id="u51_ver_Greek">
+              <lem wit="#Heiser-Penner">οἴκοι στήσοντα καὶ ἐν νήσοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.5.10">
+            <app xml:id="u52_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ πληθυνθήσεται ὁ σῖτος καὶ ὁ οἶνος καὶ τὸ ἔλαιον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.5.11">
+            <app xml:id="u53_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ καταπαύσει τὸ σκῆπτρον ἐκεῖνον πάντα πόλεμον ἐπὶ τῆς γῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.5.12">
+            <app xml:id="u54_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ γενήσεται ἐπὶ τῆς βασιλείας αὐτοῦ τὰ ἅρματα πολεμικὰ εἰς δρέπανα καὶ εἰς μαχαίρας καὶ εἰς τέρετρα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="ApDan.ver_Greek.5.14">
+            <app xml:id="u55_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐπιθυμήσουσιν οἱ ἄρχοντες τῶν Ῥωμαίων τοῦ συγκροτῆσαι πόλεμον καὶ οὐ μὴ εὕρωσιν. τὸ δὲ ὄνομα τοῦ βασιλέως ἐκείνου θηριώνυμος καλεῖται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="ApDan.ver_Greek.5.15">
+            <app xml:id="u56_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ φοβηθήσεται αὐτὸν ἅπας ὁ γῦρος τῆς γῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="ApDan.ver_Greek.5.16">
+            <app xml:id="u57_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ δοξάσει ὁ βασιλεὺς ἐκεῖνος τὸν θεὸν τοῦ οὐρανοῦ, ὅτι ἐν τῇ βασιλείᾳ αὐτοῦ ἔδωκεν αὐτῷ ὁ θεὸς τὰ ἀγαθὰ αὐτοῦ, ἅ οὐκ ἔδωκεν ἀπὸ καταβολῆς κόσμου ἕως τοῦ καιροῦ ἐκείνου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="ApDan.ver_Greek.5.17">
+            <app xml:id="u58_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ συγκοιμηθήσεται ἐν εἰρήνῃ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="ApDan.ver_Greek.5.18">
+            <app xml:id="u59_ver_Greek">
+              <lem wit="#Heiser-Penner">αὐτὸς καὶ τὰ δὺο αὐτοῦ μειράκια, ἀπὸ ἐτῶν τριάκοντα τριῶν τῆς βασιλείας αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="ApDan.ver_Greek.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.6.1">
+            <app xml:id="u60_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ ὀπίσω αὐτοῦ ἀναστήσεται σκῆπτρον ἀπὸ βορρᾷ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.6.2">
+            <app xml:id="u61_ver_Greek">
+              <lem wit="#Heiser-Penner">ποιῶν ἀνομίας βαρυτάτας κατὰ τοῦ θεοῦ καὶ τῶν ἁγίων αὐτοῦ. καὶ ἀδικίας πολλὰς ἐκτελέσει καὶ ποιήσει ἀνομίαν μεγάλην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.6.3">
+            <app xml:id="u62_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ συζεύξει υἱὸν μετὰ μητρὸς καὶ πατέρα μετὰ θυγατρός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.6.4">
+            <app xml:id="u63_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ συντελεσθήσεται ἀνομία τῆς παρανομίας καὶ τῆς ἀσέλγειας καὶ αἱμομιξίας ἀσελγαίνοντος τοῦ λαοῦ ταῖς διατάξεσιν αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.6.8">
+            <app xml:id="u64_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ καταπαύσουσιν αἱ θυσίαι καὶ ὑμνολογίαι τοῦ θεοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.6.9">
+            <app xml:id="u65_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τότε κελεύσει θεὸς καὶ ταραχθήσεται ὑπὸ πυρὸς οὐρανίου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.6.10">
+            <app xml:id="u66_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ ὀπίσω αὐτοῦ βασιλεύσει γυνὴ ἐπὶ τὴν Ἑπτάλοφον μιαρὰ καὶ ἀλλόφυλος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.6.11">
+            <app xml:id="u67_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ συγκαθήσεται ἐπὶ τῶν πλευρῶν τοῦ νώτου τῆς Ἑπταλόφου.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="ApDan.ver_Greek.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.7.2">
+            <app xml:id="u68_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ λοιπόν οὐαὶ σοὶ Ἑπτάλοφε Βαβυλών,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.7.4">
+            <app xml:id="u69_ver_Greek">
+              <lem wit="#Heiser-Penner">ὅτι ὁ πλοῦτος σου καὶ ἡ δόξα σου πεσεῖται</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.7.5">
+            <app xml:id="u70_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τὸ καύχημά σου ὃ ἐλάλησας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.7.6">
+            <app xml:id="u71_ver_Greek">
+              <lem wit="#Heiser-Penner">ὅτι περιβέβλημαι τὸν χρυσὸν καὶ τὸν ὑάκινθον καὶ μαργαρίτην καὶ τὴν κοκκίνην στολὴν καὶ τὴν πορφύραν καὶ τὸ ἄργυρον καὶ ἤλεκτρον καὶ οὔκ ἐστιν ἡ ἐμὴ χείρ, ὅτι ἐν ἐμοὶ βασιλεῖς βασιλεύσουσιν καὶ δυνασταὶ εἰσέρχονται καὶ ἐξέρχονται καὶ ἄρχοντες μεγάλοι ἐν ἐμοὶ κατοικήσουσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.7.11">
+            <app xml:id="u72_ver_Greek">
+              <lem wit="#Heiser-Penner">οὐαὶ σοὶ ταλαίπωρε Βαβυλών, ἡ μήτηρ πασῶν τῶν πόλεων, ὅτι κλινεῖ Θεὸς τὴν ὀργὴν αὐτοῦ γέμουσαν πυρός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.7.12">
+            <app xml:id="u73_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τὰ ὑψηλὰ σοῦ τείχη καταποντισθήσεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="ApDan.ver_Greek.7.13">
+            <app xml:id="u74_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ οὐ μὴ ἀπομείνη ἐν σοὶ εἰ μὴ εἷς στῦλος τοῦ μεγάλου σκήπτρου τοῦ Βυζαντίου τοῦ μεγάλου Κονσταντίνου, ἵνα ἐκεῖ θρηνήσωσιν οἱ πλέοντες τὴν θάλασσαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="ApDan.ver_Greek.7.14">
+            <app xml:id="u75_ver_Greek">
+              <lem wit="#Heiser-Penner">ἀπαρθήσεται δὲ ἡ βασιλεία ἀπὸ σοῦ. οἱ ἔμποροί σου ἐκφεύξονται ἀπὸ σοῦ καὶ ἀφανισθήσονται. καὶ πᾶσα πόλις καὶ χώρα ἐπὶ σὲ θρηνήσει τὴν μητέρα τῶν πόλεων. τῷ γὰρ καιρῷ ἐκείνῳ ἀρθήσεται ἡ βασιλεία ἐκ τοῦ Βυζαντίου καὶ δοθήσεται ἐν τῇ Ῥώμῃ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="ApDan.ver_Greek.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.8.1">
+            <app xml:id="u76_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ ἀναστήσεται σκῆπτρον ἐν τῇ Ἰουδαίᾳ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.8.2">
+            <app xml:id="u77_ver_Greek">
+              <lem wit="#Heiser-Penner">ὄνομα αὐτοῦ Δαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.8.3">
+            <app xml:id="u78_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ βασιλεύσει ἐν Ἰερουσαλημ. καὶ συναχθήσονται οἱ ἐσκορπισμένοι ἐκ τῆς Ἰουδαίας τῶν Ἑβραίων γένους</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.8.4">
+            <app xml:id="u79_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ συναχθήσονται ἐκεῖ ἐκ πάσης πόλεως καὶ χώρας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.8.5">
+            <app xml:id="u80_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἔλθωσιν εἰς Ἱεροσόλυμα πρὸς τὸν βασιλέα αὐτῶν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.8.6">
+            <app xml:id="u81_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ θλίψουσιν τὸ γένος τῶν χριστιανῶν ἐν πάσῃ τῇ γῇ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.8.7">
+            <app xml:id="u82_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ στενοχωρήσουσιν τοὺς Ῥωμαίους ἕως θανάτου.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="ApDan.ver_Greek.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.9.1">
+            <app xml:id="u83_ver_Greek">
+              <lem wit="#Heiser-Penner">Βασιλεύοντος δὲ τοῦ Δάν ἐξελεύσεται ὁ ἀντίχριστος ἀπὸ τῶν καταχθονίων τῆς ἀβύσσου ὑπὸ βαράθρων καὶ ὑπὸ βρυχῶν τῆς γῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.9.2">
+            <app xml:id="u84_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐλεύσεται εἰς ἰχθύον γαρίδιον μικρόν</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.9.3">
+            <app xml:id="u85_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἀνέλθη ἐν τῇ εὐρυχώρῳ θαλάσσῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.9.4">
+            <app xml:id="u86_ver_Greek">
+              <lem wit="#Heiser-Penner">(καὶ μεγαλυνθήσεται) καὶ ἁλιευθήσεται ὑπὸ ἁλιέων δώδεκα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.9.5">
+            <app xml:id="u87_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐκμανεῖς γενήσονται οἱ ἁλιεῖς πρὸς ἀλλήλους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.9.6">
+            <app xml:id="u88_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ κατακυριεύσει αὐτῶν ὁ εἷς, οὗ τὸ ὄνομα Ἰούδας</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.9.7">
+            <app xml:id="u89_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ λαβὼν ἰχθὺν εἰς κληρονομίαν αὐτοῦ ἐλθὼν εἰς χωρίον ὄνομα Γουζηθ πωλήσει τὸν ἰχθὺν εἰς τριάκοντα ἀργύρια.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.9.8">
+            <app xml:id="u90_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τὸ ὀψάριον ὠνήσεται κόρη παρθένος</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.9.9">
+            <app xml:id="u91_ver_Greek">
+              <lem wit="#Heiser-Penner">ὄνομα αὐτῆς Ἀδικία, διότι ἀδικίας υἱὸς μέλει τεχθῆναι ἐξ αὐτῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.9.10">
+            <app xml:id="u92_ver_Greek">
+              <lem wit="#Heiser-Penner">τὸ δὲ ἐπώνυμον αὐτῆς ἔσται ἀπώλεια.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.9.11">
+            <app xml:id="u93_ver_Greek">
+              <lem wit="#Heiser-Penner">αὕτη γὰρ τὴν κεφαλὴν τοῦ ἰχθύος ἁψαμένη ἔγκυος εὑρεθήσεται. καὶ τεχθήσεται δὲ ἐξ αὐτῆς ὁ ἀντίχριστος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.9.12">
+            <app xml:id="u94_ver_Greek">
+              <lem wit="#Heiser-Penner">τεχθήσεται δὲ τριμηνιότης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="ApDan.ver_Greek.9.13">
+            <app xml:id="u95_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐξ αὐτῆς θηλάσει μῆνας πέντε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="ApDan.ver_Greek.9.14">
+            <app xml:id="u96_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἔλθῃ εἰς Ἱεροσόλυμα καὶ γενήσεται ψευδοδιδάσκαλος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="ApDan.ver_Greek.9.15">
+            <app xml:id="u97_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ φανήσεται ἥσυχος, κατηφῆς καὶ προσφιλῆς καὶ ἄκακος διώκων τὰς παρανομίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="ApDan.ver_Greek.9.16">
+            <app xml:id="u98_ver_Greek">
+              <lem wit="#Heiser-Penner">ἔσται δὲ τὸ ὕψος τῆς ἡλικίας αὐτοῦ πήχεις δέκα</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="ApDan.ver_Greek.9.17">
+            <app xml:id="u99_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ αἱ τρίχες τῆς κεφαλῆς αὐτοῦ κατερχόμεναι μέχρι τῶν ποδῶν αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="ApDan.ver_Greek.9.18">
+            <app xml:id="u100_ver_Greek">
+              <lem wit="#Heiser-Penner">ἔστι δὲ καὶ τρικόρυφος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="ApDan.ver_Greek.9.19">
+            <app xml:id="u101_ver_Greek">
+              <lem wit="#Heiser-Penner">τὸ ἴχνος τῶν ποδῶν αὐτοῦ πήχεις τρεῖς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="ApDan.ver_Greek.9.20">
+            <app xml:id="u102_ver_Greek">
+              <lem wit="#Heiser-Penner">οἱ ὀφθαλμοὶ αὐτοῦ ὡς ἀστὴρ ὁ πρωὶ ἀνατέλλων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="ApDan.ver_Greek.9.21">
+            <app xml:id="u103_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ οἱ ὀδόντες αὐτοῦ τὸ ἄνω μέρος σιδηροῦς. καὶ τὸ κάτω τοῦ σιαγόνος ἀδαμάντινον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="ApDan.ver_Greek.9.22">
+            <app xml:id="u104_ver_Greek">
+              <lem wit="#Heiser-Penner">ὁ δὲ βραχίων αὐτοῦ ὁ δεξιὸς σιδηρὸς καὶ ὁ εὐώνυμος αὐτοῦ χαλκός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="ApDan.ver_Greek.9.23">
+            <app xml:id="u105_ver_Greek">
+              <lem wit="#Heiser-Penner">ἡ χεὶρ εὐώνυμος τρίπηχυς καὶ ἡ χεὶρ ἡ δεξιὰ αὐτοῦ τετράπηχυς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="ApDan.ver_Greek.9.24">
+            <app xml:id="u106_ver_Greek">
+              <lem wit="#Heiser-Penner">μακρόψης, μακρόρινος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="ApDan.ver_Greek.9.25">
+            <app xml:id="u107_ver_Greek">
+              <lem wit="#Heiser-Penner">ἐπὶ δὲ τοῦ μετώπου αὐτοῦ γράφει τρία γράμματα α.κ.τ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="ApDan.ver_Greek.9.26">
+            <app xml:id="u108_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τὸ α δηλοῖ ἀρνοῦμαι, τὸ κ καὶ ἐξαρνοῦμαι, τὸ τ τὸν μεμιασμένον δράκοντα</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="ApDan.ver_Greek.9.27">
+            <app xml:id="u109_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τελευτήσαντος τοῦ σκήπτρου τοῦ Δὰν ἔσται ὁ ἀντίχριστος διδάσκων καὶ διδασκόμενος, δοκιμάζων καὶ δοκιμαζόμενος.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="ApDan.ver_Greek.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.10.1">
+            <app xml:id="u110_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ γενήσεται εὐφορία σίτου καὶ οἴνου καὶ ἐλαίου οἵα οὐ γέγονεν ἀπὸ καταβολῆς κόσμου. τρεῖς γὰρ χρόνοι ἔσονται οἱ τὰ ἀγαθὰ τοῦ κόσμου γεωργήσαντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.10.2">
+            <app xml:id="u111_ver_Greek">
+              <lem wit="#Heiser-Penner">ἐν γὰρ τοῖς καιροῖς ἐκείνοις ὁ στάχυς εὐφορεῖ ἥμισυ φοίνικον σίτου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.10.3">
+            <app xml:id="u112_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ὁ ἀσκὸς τοῦ κλήματος ἐκβαλεῖ βότρυας ἑκατόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.10.4">
+            <app xml:id="u113_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ὁ βότρυς γενήσεται μυριαγωγὸς καὶ ἐκχέει οἶνον μέτρα δύο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.10.5">
+            <app xml:id="u114_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ὁ κόκκος τοῦ ἐλαίου ἔσται ὁλόκληρος ὕλην μὴ κεκτημένος ὅλος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.10.6">
+            <app xml:id="u115_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐκ πάντων εὐφορία πολλὴ βλαστήσει, ἤγουν ἀπὸ παντὸς καρποδοσίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.10.7">
+            <app xml:id="u116_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐκρήξει ἡ καρπόφωρος γῆ τοὺς καρποὺς αὐτῆς ἑκατονταπλασίονα. καὶ ἔσται εὐθυμία πολλὴ οἵα οὐ γέγονεν ἀπὸ καταβολῆς κόσμου ἕως ἄν ἔλθωσιν οἱ καιροὶ ἐκεῖνοι.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="ApDan.ver_Greek.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.11.1">
+            <app xml:id="u117_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ συμβούλιον ποιήσουσι τῶν Ἰουδαίων ἔθνος καὶ οἱ Ἱεροσωλυμῖται λέγοντες·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.11.2">
+            <app xml:id="u118_ver_Greek">
+              <lem wit="#Heiser-Penner">δεῦτε ποιήσωμεν τοῦτον βασιλέα τὸν ὑπερφερῆ καὶ περίβλεπτον ἄνδρα τὸν ἔχοντα ἐπὶ τοῦ μετώπου αὐτοῦ τρία γράμματα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.11.3">
+            <app xml:id="u119_ver_Greek">
+              <lem wit="#Heiser-Penner">πρέπει γὰρ αὐτὸν γενέσθαι βασιλέα. καὶ στέψουσιν αὐτὸν ἐν ἡμέρᾳ τρίτῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.11.4">
+            <app xml:id="u120_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ βασιλεύσει ἔτη τρία.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.11.5">
+            <app xml:id="u121_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐν τῷ τρίτῳ ἔτει τῆς βασιλείας αὐτοῦ ἐκλείψει πᾶς καρπὸς ἀπὸ προσώπου τῆς γῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.11.6">
+            <app xml:id="u122_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ οὐ μὴ εὑρεθῇ ἐν ὅλῳ τῷ κόσμῳ εἰ μὴ μία ἡμιχοίνικον σίτου καὶ εἰ μὴ στάμνον οἴνου καὶ ἐλαίου. ἄλλος δὲ καρπὸς οὐχ εὑρεθήσεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.11.7">
+            <app xml:id="u123_ver_Greek">
+              <lem wit="#Heiser-Penner">τότε γενήσεται λοιμὸς ἰσχυρὸς</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.11.8">
+            <app xml:id="u124_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ οἱ ἐν τῇ στερεᾷ γῇ φεύγονται ἐν ταῖς νήσοις καὶ οἱ ἐν ταῖς νήσοις ἐν τῇ στερεᾷ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.11.9">
+            <app xml:id="u125_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ γενήσεται νόσος ἐφʼ ὅλην τὴν γῆν κατὰ σπιθαμὴν καὶ ὀπίαν καὶ λοιμὸς μέγας ὃς οὐκ ἐγένετο πώποτε ἕως τοῦ αἰῶνος ἐκείνου. καὶ ἐκριβήσεται ἡ γῆ ἀπὸ τοῦ ἐσομένου λοιμοῦ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.11.10">
+            <app xml:id="u126_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἔσται νενεκρωμένα τὰ πρόσωπα τῶν ἀνθρώπων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.11.11">
+            <app xml:id="u127_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ εἰ ὁ δίκαιος μόλις τότε σώζεται, ὁ ἁμαρτωλὸς ποῦ φανεῖται;</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="ApDan.ver_Greek.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.12.1">
+            <app xml:id="u128_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τότε ἐξελεύσονται τὰ ἀκάθαρτα πνεύματα καὶ οἱ δαίμονες. ἔνθα εἰσὶν ἐν τῇ ἀβύσσῳ, ἐν τοῖς κρίμνοις, ἐν τοῖς καταχθονίοις, ἐν τοῖς σπηλαίοις, ἐν ταῖς λίμναις, ἐν ταῖς πηγαῖς, ἐν τοῖς λουτροῖς καὶ ἐν τῷ ἀέρι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.12.2">
+            <app xml:id="u129_ver_Greek">
+              <lem wit="#Heiser-Penner">ἐξελεύσονται δὲ ὡς ἄμμος τῆς θαλάσσης καὶ κολληθήσονται πρὸς τὸν ἀντίχριστον. καὶ ἔσονται πειράζοντες τοὺς ἀνθρώπους καὶ ἀναιροῦντες τὰ τῶν γυναικῶν βρέφη</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.12.3">
+            <app xml:id="u130_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ θηλάζοντες τὸ γάλα τῶν γυναικῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.12.4">
+            <app xml:id="u131_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τότε ἔσονται οἱ ἄνθρωποι ἐπικαλούμενοι τὸν θάνατον καὶ ἀνοίγοντες μνήματα νεκρῶν μακαρίζοντες τοὺς νεκροὺς καὶ λέγοντες·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.12.5">
+            <app xml:id="u132_ver_Greek">
+              <lem wit="#Heiser-Penner">μακάριοι ἔστε καὶ τρισμακάριοι ὑμεῖς οἱ προτελευτήσαντες, ὅτι οὐκ ἐφθάσατε εἰς τὰς ἡμέρας ταύτας ἐσχάτας χαλεπὰς καὶ παμπονηρούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.12.6">
+            <app xml:id="u133_ver_Greek">
+              <lem wit="#Heiser-Penner">δεόμενοι δὲ παρακαλοῦντες τὰ ὄρη καὶ λέγοντες· καλύψατε ἡμᾶς ὄρη καὶ τῇ θαλάσσῃ λέγοντες· καταπιέτω ἡμᾶς ὁ θυμὸς τῶν ῥευμάτων σου, ἁγία θάλασσα. οὐαὶ δὲ ταῖς θηλαζούσαις καὶ ταῖς ἐν γαστρὶ ἐχούσαις ἐν ταῖς πονηροτάταις ἡμέραις ἐκείναις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.12.7">
+            <app xml:id="u134_ver_Greek">
+              <lem wit="#Heiser-Penner">τότε θρηνήσει πᾶσα σάρξ τῶν Ῥωμαίων,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.12.8">
+            <app xml:id="u135_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τῶν μὲν Ἰουδαίων ἔσται χαρὰ καὶ ἀγαλλίασις πολλή, τῶν δὲ χριστιανῶν θλῖψις καὶ στενοχωρία ἀπὸ τῆς ἀνάγκης τῶν πονηρῶν δαιμόνων καὶ ἀπὸ τοῦ ἐσομένου λοιμοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.12.9">
+            <app xml:id="u136_ver_Greek">
+              <lem wit="#Heiser-Penner">ἐκτριβήσεται γὰρ ἡ γῆ καὶ γενήσεται ὥσπερ ἄμμος χαλκός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.12.10">
+            <app xml:id="u137_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ξηρανθήσεται (πᾶσα χλόη καὶ) πᾶσα βοτάνη</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.12.11">
+            <app xml:id="u138_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ πᾶν δένδρον καὶ πᾶν ἄνθος (χόρτου) ἐκ τῆς γῆς ἐκλείψει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.12.12">
+            <app xml:id="u139_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ξηρανθήσονται αἱ λιμένες καὶ οἱ ποταμοὶ</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="ApDan.ver_Greek.12.13">
+            <app xml:id="u140_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τὰ φρέατα καὶ οἱ ἰκμάδες τῶν ὑδάτων ἀποξηρανθήσονται. καὶ ἔσονται τὰ πρόσωπα τῶν ἀνθρώπων ἀπονενεκρωμένα ἀπὸ τοῦ ἐσομένου λοιμοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="ApDan.ver_Greek.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.13.1">
+            <app xml:id="u141_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ τότε ὁ ἀντίχριστος ἀρεῖ ἐν ταῖς χερσὶν αὐτοῦ λίθους κράζων καὶ λέγων·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.13.2">
+            <app xml:id="u142_ver_Greek">
+              <lem wit="#Heiser-Penner">πιστεύσατέ μοι κἀγὼ τοὺς λίθους ἄρτους ποιήσω.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.13.3">
+            <app xml:id="u143_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τότε προσκυνήσουσιν αὐτὸν οἱ Ἰουδαῖοι λέγοντες·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.13.4">
+            <app xml:id="u144_ver_Greek">
+              <lem wit="#Heiser-Penner">σὺ εἶ ὁ χριστὸς ὅνπερ ἡμεῖς ἐκδεχόμεθα καὶ διά σε ἐλύπησεν ἡμᾶς τὸ γένος τῶν χριστιανῶν. καὶ ἔσονται τότε ἐν μεγάλῃ χαρᾷ οἱ Ἰουδαῖοι λέγοντες σὺν τῷ ἀντιχρίστῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.13.5">
+            <app xml:id="u145_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τότε μεγαλαυχήσει ὁ ἀντίχριστος λέγων τοῖς Ἰουδαίοις·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.13.6">
+            <app xml:id="u146_ver_Greek">
+              <lem wit="#Heiser-Penner">Μὴ οὕτως λυπεῖσθε,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.13.7">
+            <app xml:id="u147_ver_Greek">
+              <lem wit="#Heiser-Penner">ἔτι μικρὸν καὶ ὄψεται τὸ γένος τῶν χριστιανῶν τὸ τίς εἰμὶ ἐγώ. ἡ ἡμέρα ὑμᾶς δοκιμάσει καὶ ἐγὼ πειράσω ὑμᾶς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.13.8">
+            <app xml:id="u148_ver_Greek">
+              <lem wit="#Heiser-Penner">τότε ὁ ἀντίχριστος αἴρει φωνὴν πρὸς τὴν ἀκρότομον πέτραν λέγων· Ἐγὼ ἐποίησα τὸν οὐρανὸν καὶ τὴν γῆν. σοὶ λέγω τῇ ἀκροτόμῳ πέτρᾳ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.13.9">
+            <app xml:id="u149_ver_Greek">
+              <lem wit="#Heiser-Penner">γένου ἄρτος ἐνώπιον τῶν Ἰουδαίων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.13.10">
+            <app xml:id="u150_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ παρακούσας αὐτοῦ ἡ πέτρα γενήσεται δράκων</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.13.11">
+            <app xml:id="u151_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἐρεῖ πρὸς τὸν ἀντίχριστον φωνῇ ὁ δράκων βοῶν καὶ λέγων</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.13.12">
+            <app xml:id="u152_ver_Greek">
+              <lem wit="#Heiser-Penner">Ὦ πάσης ἀνομίας ἐργάτα καὶ πάσης ἀδικίας πεπληρωμένε, ἃ οὐ δύνασαι ποιεῖν τί προφασίζει;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="ApDan.ver_Greek.13.13">
+            <app xml:id="u153_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ καταισχυνεῖ αὐτὸν ὁ δράκων ἐνώπιον τῶν Ἰουδαίων.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="ApDan.ver_Greek.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="ApDan.ver_Greek.14.1">
+            <app xml:id="u154_ver_Greek">
+              <lem wit="#Heiser-Penner">Καὶ τότε ἐξελεύσονται ἄνδρες τρεῖς εἰς ἔλεγχον αὐτοῦ (καὶ ἐξελέγξουσιν αὐτὸν ψεύστην καὶ πλάνον),</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="ApDan.ver_Greek.14.2">
+            <app xml:id="u155_ver_Greek">
+              <lem wit="#Heiser-Penner">δύο ἐκ τῶν νεφελῶν τοῦ οὐρανοῦ καὶ εἷς ἐκ τῆς γῆς. καὶ προπορεύσονται ἔμπροσθεν αὐτοῦ τοῦ ἀντιχρίστου ὀνειδίζοντες αὐτὸν καὶ λέγοντες·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="ApDan.ver_Greek.14.3">
+            <app xml:id="u156_ver_Greek">
+              <lem wit="#Heiser-Penner">Οὐαὶ σοὶ παράνομε, ἐργάτα τῆς ἀδικίας καὶ κληρονόμε τοῦ σκότους τοῦ αἰωνίου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="ApDan.ver_Greek.14.4">
+            <app xml:id="u157_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ κηρύξουσιν πᾶσαν τὴν γῆν κράζοντες καὶ λέγοντες πρὸς τοὺς τεθλιμμένους χριστιανούς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="ApDan.ver_Greek.14.5">
+            <app xml:id="u158_ver_Greek">
+              <lem wit="#Heiser-Penner">ἀκούσατε υἱοὶ τῶν ἀνθρώπων, μὴ προσκυνήσατε αὐτὸν. οὐκ ἔστιν ὁ χριστὸς οὐδὲ θεοσεβὴς ἄνθρωπος, ἀλλʼ αὐτός ἐστιν ὁ ἀντίχριστος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="ApDan.ver_Greek.14.6">
+            <app xml:id="u159_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ πολλοὶ χριστιανοὶ δράμωσιν πρὸς τοὺς πόδας τῶν ἁγίων καὶ λέγοντες·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="ApDan.ver_Greek.14.7">
+            <app xml:id="u160_ver_Greek">
+              <lem wit="#Heiser-Penner">Τί ποιήσωμεν, ἅγιοι,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="ApDan.ver_Greek.14.8">
+            <app xml:id="u161_ver_Greek">
+              <lem wit="#Heiser-Penner">ἡμεῖς οἱ χριστιανοὶ ποῦ κρυβησώμεθα;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="ApDan.ver_Greek.14.9">
+            <app xml:id="u162_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ὑπὸ τοῦ λόγου αὐτῶν πολλοὶ τῶν χριστιανῶν κρυβήσονται ἐν ὄρεσιν καὶ σπηλαίοις καὶ ταῖς ὀπαῖς τῆς γῆς καὶ σωθήσονται, ἵνα μὴ αὐτοὺς καταλάβῃ ὁ δόλιος Σαμουηλ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="ApDan.ver_Greek.14.10">
+            <app xml:id="u163_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ εὑρὼν ὁ ἀντίχριστος τούτους τοὺς τρεῖς κήρυκας ἐν μέσῳ τοῦ θυσιαστηρίου ἀνελεῖ αὐτοὺς ἐν μαχαίρᾳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="ApDan.ver_Greek.14.11">
+            <app xml:id="u164_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ πληρωθήσεται τὸ ῥηθὲν ὑπὸ τοῦ προφήτου Δαυιδ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="ApDan.ver_Greek.14.12">
+            <app xml:id="u165_ver_Greek">
+              <lem wit="#Heiser-Penner">τότε ἀνήσουσιν ἐπὶ τὸ θυσιαστήριόν σου μόσχους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="ApDan.ver_Greek.14.13">
+            <app xml:id="u166_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ τοῦ ἀντιχρίστου βασιλεύοντος καὶ τῶν δαιμόνων ἀτάκτως ὀχλουμένων καὶ τῶν Ἰουδαίων κενὰ κατὰ τῶν χριστιανῶν βουλευομένων ἐγγίζει ἡ ἡμέρα κυρίου ἡ μεγάλη</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="ApDan.ver_Greek.14.14">
+            <app xml:id="u167_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ γενήσεται κρίσις καὶ ἀνταπόδωσις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="ApDan.ver_Greek.14.15">
+            <app xml:id="u168_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἡ πλάνη τοῦ διαβόλου πεσεῖται</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="ApDan.ver_Greek.14.16">
+            <app xml:id="u169_ver_Greek">
+              <lem wit="#Heiser-Penner">καὶ ἀνθήσει τὸ φῶς τοῦ κόσμου Χριστὸς ὁ θεὸς ἡμῶν καὶ βασιλεὺς τῆς δόξης, ᾧ πρέπει πᾶσα δόξα καὶ τιμὴ καὶ κράτος εἰς τοὺς αἰῶνας. ἀμήν.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

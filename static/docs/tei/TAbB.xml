@@ -1,0 +1,2828 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TAbB">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Testament of Abraham Recension B</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Evans">
+            <abbr type="siglum">Evans</abbr>
+            <name>Craig A. Evans</name>
+            <bibl>M. R. James, The Testament of Abraham (Texts and Studies 2.1; Cambridge: Cambridge University Press, 1892); repr. in M. E. Stone (ed.), The Testament of Abraham: The Greek Recensions (SBLTT 2: Pseudepigrapha Series 2; Missoula: Scholars Press, 1972) 2-84.</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of English based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Version_1">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Testament_of_Abraham_Recension_B__French_">
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Version_1">
+        <head>Greek</head>
+        <div type="chapter" n="1" xml:id="TAbB.ver_Version_1.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.1.1">
+            <app xml:id="u1_ver_Version_1">
+              <lem wit="#Evans">Ἐγένετο ἡνίκα ἤγγισαν αἱ ἡμέραι τοῦ θανάτου τοῦ Ἁβραάμ, εἶπεν κύριος πρὸς Μιχαήλ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.1.2">
+            <app xml:id="u2_ver_Version_1">
+              <lem wit="#Evans">Ἀνάστηθι καὶ πορεύθητι πρὸς Ἁβραὰμ τὸν δοῦλόν μου, καὶ εἰπὲ αὐτῷ ὅπως ἐξελεύσῃ τοῦ βίου,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.1.3">
+            <app xml:id="u3_ver_Version_1">
+              <lem wit="#Evans">ὅτι ἰδοὺ ἐπληρώθησαν αἱ ἡμέραι τῆς προσκαίρου ζωῆς σου· ὅπως διοικήσῃ τὰ τοῦ οἴκου αὐτοῦ πρὶν ἀποθανεῖν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAbB.ver_Version_1.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.2.1">
+            <app xml:id="u4_ver_Version_1">
+              <lem wit="#Evans">Καὶ ἐπορεύθη Μιχαὴλ καὶ ἦλθεν πρὸς Ἁβραὰμ, καὶ εὗρεν αὐτὸν καθιζόμενον ἔμπροσθεν τῶν βοῶν αὐτοῦ εἰς ἀροτριασμόν· ὑπῆρχεν δὲ γηραλέος πάνυ τῇ ἰδέᾳ· εἶχεν δὲ ἐνηγκαλισμένον τὸν υἱὸν αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.2.2">
+            <app xml:id="u5_ver_Version_1">
+              <lem wit="#Evans">ἰδὼν οὖν Ἁβραὰμ τὸν ἀρχάγγελον Μιχαήλ, ἀναστὰς ἐκ τῆς γῆς ἠσπάσατο αὐτόν, μὴ εἰδὼς τίς ἐστιν, καὶ εἶπεν πρὸς αὐτόν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.2.3">
+            <app xml:id="u6_ver_Version_1">
+              <lem wit="#Evans">Σῶσόν σε ὁ θεός· ἄναστα καλῶς πορευόμενος τὴν ὁδόν σου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.2.4">
+            <app xml:id="u7_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη αὐτῷ Μιχαήλ· Φιλάνθρωπος εἶ σύ, καλὲ πάτερ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.2.5">
+            <app xml:id="u8_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη Ἁβραὰμ καὶ εἶπεν αὐτῷ· Ἐλθέ, ἔγγισόν μοι, ἀδελφὲ, καὶ ὀλίγην ὥραν ἵνα προστάξω ἐνεχθῆναι ζῶον,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.2.6">
+            <app xml:id="u9_ver_Version_1">
+              <lem wit="#Evans">ἵνα ἀπέλθωμεν ἐν τῷ οἴκῳ μου καὶ ἀναπαύῃς μετ᾽ ἐμοῦ, ὅτι πρὸς ἑσπέρᾳ ἐστὶν, καὶ τῷ πρωῒ ἀναστὰς πορεύου ὅπου ἂν βούλῃ, μήπως συναντήσῃ σοι θηρίον πονηρὸν καὶ καταικίσῃ σε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.2.7">
+            <app xml:id="u10_ver_Version_1">
+              <lem wit="#Evans">ἠρώτησεν δὲ Μιχαὴλ τὸν Ἁβραὰμ λέγων· Εἰπέ μοι τὸ ὄνομά σου, πρὶν εἰσελθεῖν ἐν τῷ οἴκῳ σου, μὴ ἐπιβαρὴς γένωμαί σοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.2.8">
+            <app xml:id="u11_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη Ἁβραὰμ καὶ εἶπεν· Οἱ γονεῖς μου ὠνόμασάν με Ἁβράμ, καὶ ὁ κύριος ἐπωνόμασέν Ἁβραάμ, λέγων· Ἀνάστηθι καὶ πορεύου ἐκ τοῦ οἴκου σου καὶ ἐκ τῆς συγγενείας σου, καὶ δεῦρο εἰς γῆν ἣν ἄν σοι δείξω·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.2.9">
+            <app xml:id="u12_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπελθόντος μου εἰς τὴν γῆν ἣν ὑπέδειξέ μοι ὁ κύριος, εἴρηκέν μοι· Οὐκέτι κληθήσεται τὸ ὄνομά σου Ἁβράμ, ἀλλ᾽ ἔσται τὸ ὄνομά σου Ἁβραάμ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.2.10">
+            <app xml:id="u13_ver_Version_1">
+              <lem wit="#Evans">ἀπεκρίθη Μιχαὴλ καὶ εἶπεν αὐτῷ· Συγχώρησόν μοι, πάτερ μου, ἄνθρωπε τοῦ θεοῦ μεμελετημένε, ὅτι ξένος εἰμί, καὶ ἤκουσα περί σου ὅτε ἀπῆλθες σταδίους τεσσαράκοντα καὶ ἤνεγκας μόσχον, καὶ ἔθυσας αὐτόν, ξενιζόμενος ἀγγέλους ἐν τῷ οἴκῳ σου, ἵνα ἀναπαυθῶσιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.2.11">
+            <app xml:id="u14_ver_Version_1">
+              <lem wit="#Evans">ταῦτα ἀμφότεροι λαλήσαντες, ἀναστάντες ἐν τῷ οἴκῳ ἐπορεύοντο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Version_1.2.12">
+            <app xml:id="u15_ver_Version_1">
+              <lem wit="#Evans">ἐκάλεσεν δὲ Ἁβραὰμ ἕνα τῶν παίδων αὐτοῦ καὶ εἶπεν αὐτῷ· Πορεύθητι, ἄγαγέ μοι κτῆνος ὅπως καθίσῃ ἐπ᾽ αὐτὸν ὁ ξένος, ὅτι ἐκοπιάθη ἐκ τῆς ὁδοιπορίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Version_1.2.13">
+            <app xml:id="u16_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Μιχαήλ· Μὴ σκύλλε τὸ παιδάριον, ἀλλὰ ἀπέλθωμεν μετεωριζόμενοι ἕως οὗ φθάσωμεν ἐν τῷ οἴκῳ σου, διότι ἠγάπησά σου τὴν ὁμιλίαν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="TAbB.ver_Version_1.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.3.1">
+            <app xml:id="u17_ver_Version_1">
+              <lem wit="#Evans">Καὶ ἀναστάντες ἐπορεύοντο·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.3.2">
+            <app xml:id="u18_ver_Version_1">
+              <lem wit="#Evans">καὶ ὡς ἤγγισαν τῇ πόλει, ὡς ἀπὸ σταδίων τριῶν, εὗρον δένδρον μέγα ἔχον κλάδους τριακοσίους, ὅμοιον ἐρηκινοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.3.3">
+            <app xml:id="u19_ver_Version_1">
+              <lem wit="#Evans">καὶ ἤκουον φωνὴν ἐκ τῶν κλάδων αὐτοῦ ᾀδομένην· Ἅγιος ὅτι τὴν πρόφασιν ἤνεγκας περὶ ὧν ἀπεστάλης·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.3.4">
+            <app xml:id="u20_ver_Version_1">
+              <lem wit="#Evans">καὶ ἤκουσεν Ἁβραὰμ τῆς φωνῆς, καὶ ἔκρυψεν τὸ μυστήριον ἐν τῇ καρδίᾳ αὐτοῦ, λέγων ἐν ἑαυτῷ· Ἄρα τί ἐστιν τὸ μυστήριον ὅπερ ἀκήκοα;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.3.5">
+            <app xml:id="u21_ver_Version_1">
+              <lem wit="#Evans">ὡς δὲ ἦλθεν ἐν τῷ οἴκῳ, λέγει Ἁβραὰμ τοῖς παισὶν αὐτοῦ· Ἀναστάντες ἐξέλθατε εἰς τὰ πρόβατα, καὶ ἐνέγκατε τρία θρέμματα καὶ σφάξατε ταχέως καὶ ὑπηρετήσατε ἵνα φάγωμεν καὶ πίωμεν· ὅτι εὐφρασία ἐστὶν ὡς ἡ ἡμέρα αὕτη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.3.6">
+            <app xml:id="u22_ver_Version_1">
+              <lem wit="#Evans">καὶ ἤνεγκαν οἱ παῖδες τὰ θρέμματα, καὶ ἐκάλεσεν Ἁβραὰμ τὸν υἱὸν αὐτοῦ τὸν Ἰσαὰκ καὶ εἶπεν αὐτῷ· Τέκνον Ἰσαὰκ, ἀνάστηθι καὶ βάλε ὕδωρ ἐπὶ τῆς λεκάνης, ἵνα νίψωμεν τοὺς πόδας τοῦ ξένου τούτου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.3.7">
+            <app xml:id="u23_ver_Version_1">
+              <lem wit="#Evans">καὶ ἤνεγκεν ὡς προσετάχθη·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.3.8">
+            <app xml:id="u24_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Ἁβραάμ· Κατανόησιν ἔχω ὅπερ καὶ γενήσεται, ὅτι ἐν τῷ τρυβλίῳ τούτῳ οὐ μὴ νίψω ἔτι τοὺς πόδας ἀνθρώπου ξενιζομένου πρὸς ἡμᾶς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.3.9">
+            <app xml:id="u25_ver_Version_1">
+              <lem wit="#Evans">ἀκούσας δὲ Ἰσαὰκ τοῦ πατρὸς αὐτοῦ λαλοῦντος ταῦτα, ἐδάκρυσεν, καὶ λέγει πρὸς αὐτὸν· Πάτερ μου, τί ἐστιν τοῦτο ὅτι εἶπας Ἔσχατόν μου ἐστὶν νίψαι πόδας ἀνθρώπου ξένου;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.3.10">
+            <app xml:id="u26_ver_Version_1">
+              <lem wit="#Evans">καὶ ἰδὼν Ἁβραὰμ τὸν υἱὸν αὐτοῦ κλαίοντα, ἔκλαυσεν καὶ αὐτὸς σφόδρα· καὶ Μιχαὴλ ἰδὼν αὐτοὺς κλαίοντας, ἔκλαυσεν καὶ αὐτός· καὶ ἔπεσαν τὰ δάκρυα Μιχαὴλ ἐπὶ τῆς λεκάνης, καὶ ἐγένετο λίθος πολύτιμος.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="TAbB.ver_Version_1.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.4.1">
+            <app xml:id="u27_ver_Version_1">
+              <lem wit="#Evans">Ὡς δὲ ἤκουσεν ἡ Σάρρα τοῦ κλαυθμοῦ αὐτῶν ἔσω οὖσα ἐν τῇ οἰκίᾳ αὐτῆς, ἐξελθοῦσα εἶπεν τῷ Ἁβραάμ· Κύριε, τί ἐστιν ὅτι οὕτως κλαίετε;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.4.2">
+            <app xml:id="u28_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη Ἁβραὰμ καὶ εἶπεν αὐτῇ· Οὐδὲν κακόν ἐστιν· εἴσελθε ἐν τῇ οἰκίᾳ σου, καὶ ἐργάζου τὰ ἴδιά σου, μὴ ἐπιβαρεῖς γενώμεθα τῷ ἀνθρώπῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.4.3">
+            <app xml:id="u29_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀνεχώρησεν ἡ Σάρρα, ὅτι ἔμελλεν ἑτοιμάζειν τὸν δεῖπνον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.4.4">
+            <app xml:id="u30_ver_Version_1">
+              <lem wit="#Evans">καὶ ἤγγισεν ὁ ἥλιος τοῦ δῦναι· καὶ ἐξῆλθεν Μιχαὴλ ἔξω τοῦ οἴκου, καὶ ἀνελήφθη εἰς τοὺς οὐρανοὺς προσκυνῆσαι ἐνώπιον τοῦ θεοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.4.5">
+            <app xml:id="u31_ver_Version_1">
+              <lem wit="#Evans">τοῦ γὰρ ἡλίου δύνοντος πάντες προσκυνοῦσιν ἄγγελοι τὸν θεόν· πρῶτος δέ ἐστιν ὁ αὐτὸς Μιχαὴλ τῶν ἀγγέλων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.4.6">
+            <app xml:id="u32_ver_Version_1">
+              <lem wit="#Evans">καὶ προσεκύνησαν πάντες καὶ ἀπῆλθον, ἕκαστος εἰς τὸν τόπον αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.4.7">
+            <app xml:id="u33_ver_Version_1">
+              <lem wit="#Evans">ἀποκριθεὶς δὲ Μιχαὴλ ἐνώπιον τοῦ θεοῦ εἶπεν· Κύριε, κέλευσόν με ἐρωτηθῆναι ἐνώπιον τῆς ἁγίας δόξης σου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.4.8">
+            <app xml:id="u34_ver_Version_1">
+              <lem wit="#Evans">καὶ λέγει κύριος πρὸς Μιχαήλ· Ἀνάγγειλον ὅπερ βούλῃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.4.9">
+            <app xml:id="u35_ver_Version_1">
+              <lem wit="#Evans">ἀποκριθεὶς δὲ ὁ ἀρχάγγελος εἶπε· Κύριε, σύ με ἀπέστειλας πρὸς Ἁβραάμ, εἰπεῖν αὐτῷ· Ὑποχώρησον ἐκ τοῦ σώματός σου, καὶ ἔξελθε ἐκ τοῦ κόσμου· καλεῖ σε ὁ κύριος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.4.10">
+            <app xml:id="u36_ver_Version_1">
+              <lem wit="#Evans">κἀγὼ οὐ τολμῶ, κύριε, ἐμφανισθῆναι αὐτῷ, ὅτι φίλος σου ἐστὶν καὶ δίκαιος ἄνθρωπος, ξένους ὑποδεχόμενος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.4.11">
+            <app xml:id="u37_ver_Version_1">
+              <lem wit="#Evans">ἀλλὰ παρακαλῶ σε, κύριε, κέλευσον τὴν μνήμην τοῦ θανάτου τοῦ Ἁβραὰμ εἰς τὴν καρδίαν αὐτοῦ εἰσελθεῖν,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Version_1.4.12">
+            <app xml:id="u38_ver_Version_1">
+              <lem wit="#Evans">καὶ μὴ αὐτῷ ἐγὼ εἴπω· μεγάλη γὰρ συντομία τοῦτό ἐστιν, εἰπεῖν ὅτι Τὸν κόσμον ἔξελθε, μάλιστα δὲ καὶ ἀπὸ τοῦ ἰδίου σώματος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Version_1.4.13">
+            <app xml:id="u39_ver_Version_1">
+              <lem wit="#Evans">σὺ γὰρ ἐξ ἀρχῆς ἐποίησας αὐτὸν ἐλεεῖν ψυχὰς πάντων ἀνθρώπων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Version_1.4.14">
+            <app xml:id="u40_ver_Version_1">
+              <lem wit="#Evans">τότε κύριος πρὸς Μιχαὴλ εἶπεν· Ἀνάστηθι καὶ πορεύου πρὸς Ἁβραὰμ, καὶ ξενίζου πρὸς αὐτόν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Version_1.4.15">
+            <app xml:id="u41_ver_Version_1">
+              <lem wit="#Evans">καὶ ὅτι ἂν ἴδῃς ἐσθίοντα, φάγε καὶ σύ, καὶ ὅπου ἂν κοιμηθῇ, κοίμησαι καὶ σὺ ἐκεῖ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Version_1.4.16">
+            <app xml:id="u42_ver_Version_1">
+              <lem wit="#Evans">ἐγὼ γὰρ ῥίψω τὴν μνήμην τοῦ θανάτου τοῦ Ἁβραὰμ εἰς τὴν καρδίαν Ἰσαὰκ τοῦ υἱοῦ αὐτοῦ κατ᾽ ὄναρ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="TAbB.ver_Version_1.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.5.1">
+            <app xml:id="u43_ver_Version_1">
+              <lem wit="#Evans">Τότε Μιχαὴλ ἀπῆλθεν εἰς τὸν οἶκον Ἁβραὰμ ἐν τῇ ἑσπέρᾳ ἐκείνῃ, καὶ εὗρεν αὐτοὺς ἑτοιμάζοντας τὸν δεῖπνον· καὶ ἔφαγον καὶ ἔπιον καὶ εὐφράνθησαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.5.2">
+            <app xml:id="u44_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Ἁβραὰμ τῷ υἱῷ αὐτοῦ Ἰσαάκ· Ἀνάστηθι, τέκνον, στρῶσον τὴν κλίνην τοῦ ἀνθρώπου ἵνα ἀναπαύῃ, καὶ θὲς τὸν λύχνον ἐπὶ τὴν λυχνίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.5.3">
+            <app xml:id="u45_ver_Version_1">
+              <lem wit="#Evans">καὶ ἐποίησεν Ἰσαὰκ καθὰ συνέταξεν ὁ πατὴρ αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.5.4">
+            <app xml:id="u46_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Ἰσαὰκ τῷ πατρὶ αὐτοῦ· Πάτερ, ἔρχομαι κἀγὼ ἔγγιστα ὑμῶν κοιμηθῆναι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.5.5">
+            <app xml:id="u47_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη Ἁβραὰμ πρὸς αὐτόν· Οὐχί, τέκνον μου, μήποτε ἐπιβαρεῖς γενώμεθα τῷ ἀνθρώπῳ τούτῳ, ἀλλὰ ἄπελθε ἐν τῷ ταμείῳ σου καὶ ἀναπαύου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.5.6">
+            <app xml:id="u48_ver_Version_1">
+              <lem wit="#Evans">μὴ θέλων δὲ Ἰσαὰκ παρακοῦσαι {τὸ} τοῦ πατρὸς αὐτοῦ πρόσταγμα, ἀπελθὼν ἀνεπαύσατο ἐν τῷ ταμείῳ αὐτοῦ.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="TAbB.ver_Version_1.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.6.1">
+            <app xml:id="u49_ver_Version_1">
+              <lem wit="#Evans">Καὶ ἐγένετο περὶ ὥραν ἑβδόμην τῆς νυκτὸς, ἐξυπνισθεὶς ὁ Ἰσαὰκ ἦλθεν εἰς τὴν θύραν τοῦ οἴκου τοῦ πατρὸς αὐτοῦ κράζων καὶ λέγων· Πάτερ, ἄνοιξον, ἵνα σε ἀπολαύσω πρίν σε ἀροῦσιν ἀπ᾽ ἐμοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.6.2">
+            <app xml:id="u50_ver_Version_1">
+              <lem wit="#Evans">ἀνέστη δὲ Ἁβραὰμ καὶ ἤνοιξεν, καὶ εἰσῆλθεν Ἰσαὰκ καὶ ἐκρεμάσθη ἐπὶ τοῦ τραχήλου τοῦ πατρὸς αὐτοῦ κλαίων, καὶ θρηνῶν κατεφίλει αὐτόν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.6.3">
+            <app xml:id="u51_ver_Version_1">
+              <lem wit="#Evans">ἔκλαυσεν δὲ Ἁβραὰμ σὺν τῷ υἱῷ αὐτοῦ· εἶδεν δὲ αὐτοὺς ὁ Μιχαὴλ κλαίοντας καὶ ἔκλαυσεν καὶ αὐτός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.6.4">
+            <app xml:id="u52_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀκούσασα ἡ Σάρρα τὸν κλαυθμὸν ἐκ τοῦ κοιτῶνος αὐτῆς ἔκραξε λέγουσα·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.6.5">
+            <app xml:id="u53_ver_Version_1">
+              <lem wit="#Evans">Κύριέ μου Ἁβραάμ, τί ἐστιν ὁ κλαυθμός; μή σοι εἶπεν ὁ ξένος περὶ τοῦ ἀδελφιδοῦ σου Λὼτ ὅτι ἀπέθανεν; ἢ ἄλλο τι συνέβη εἰς ἡμᾶς;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.6.6">
+            <app xml:id="u54_ver_Version_1">
+              <lem wit="#Evans">ἀποκριθεὶς δὲ Μιχαὴλ εἶπεν πρὸς τὴν Σάρραν· Οὐχὶ, Σάρρα, οὐκ ἤνεγκα φάσιν περὶ Λώτ· ἀλλὰ περὶ πάσης φιλανθρωπίας ὑμῶν ἔγνων ὅτι διαφέρετε πάντων ἀνθρώπων τῶν ἐπὶ τῆς γῆς, καὶ ἐμνήσθη ὑμῶν ὁ θεός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.6.7">
+            <app xml:id="u55_ver_Version_1">
+              <lem wit="#Evans">τότε λέγει Σάρρα τῷ Ἁβραάμ· Πῶς ἐτόλμησας κλαῦσαι εἰσελθόντος τοῦ ἀνθρώπου τοῦ θεοῦ ἐν σοί;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.6.8">
+            <app xml:id="u56_ver_Version_1">
+              <lem wit="#Evans">καὶ πῶς ἐδάκρυσάν σου οἱ ὀφθαλμοὶ τῶν ζευμάτων τοῦ φωτός; ὅτι σήμερον εὐφροσύνη γίνεται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.6.9">
+            <app xml:id="u57_ver_Version_1">
+              <lem wit="#Evans">λέγει οὖν πρὸς αὐτὴν Ἁβραάμ· Πόθεν γινώσκεις ὅτι ἄνθρωπος τοῦ θεοῦ ἐστίν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.6.10">
+            <app xml:id="u58_ver_Version_1">
+              <lem wit="#Evans">ἀποκριθεὶς δὲ ἡ Σάρρα εἶπεν· Ὅτι παραφέρω καὶ λέγω ὅτι οὗτός ἐστιν τῶν τριῶν ἀνδρῶν εἷς, τῶν ἐν τῇ δρυῒ τῇ Μαμβρῇ ἐπιξενισθέντων ἡμῖν, ὅτε ἀπῆλθεν ἓν τῶν παιδίων καὶ ἤνεγκε μόσχον καὶ ἔθυσας·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.6.11">
+            <app xml:id="u59_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπες μοι, Ἄναστα, ποίησον ἵνα φάγωμεν μετὰ τῶν ἀνθρώπων τούτων εἰς τὸν οἶκον ἡμῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Version_1.6.12">
+            <app xml:id="u60_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη Ἁβραὰμ καὶ εἶπεν· Καλῶς ἐνόησας, ὦ γύναι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Version_1.6.13">
+            <app xml:id="u61_ver_Version_1">
+              <lem wit="#Evans">ὅτι κἀγὼ ὅτε τοὺς πόδας αὐτοῦ ἔπλυνα, ἔγνων ἐν τῇ καρδίᾳ μου ὅτι οὗτοί εἰσιν οἱ πόδες οὓς ἔπλυνα ἐν τῇ δρυῒ τῇ Μαμβρῇ, καὶ καθὼς ἠρξάμην ἐρωτᾷν τὴν πορείαν, εἶπέ μοι ὅτι ὑπάγω τηρῆσαι τὸν ἀδελφὸν Λὼτ ἀπὸ Σοδόμων· καὶ τότε ἐγνώρισα τὸ μυστήριον.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="TAbB.ver_Version_1.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.7.1">
+            <app xml:id="u62_ver_Version_1">
+              <lem wit="#Evans">Ὁ δὲ Ἁβραὰμ εἶπεν πρὸς Μιχαήλ· Εἰπέ μοι, ἄνθρωπε τοῦ θεοῦ, καὶ φανέρωσόν μοι τί ἦλθες ὧδε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.7.2">
+            <app xml:id="u63_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Μιχαήλ· Ὁ υἱός σου Ἰσαὰκ δηλώσει σοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.7.3">
+            <app xml:id="u64_ver_Version_1">
+              <lem wit="#Evans">καὶ λέγει Ἁβραὰμ τῷ υἱῷ αὐτοῦ· Υἱέ μου ἀγαπητέ, εἰπέ μοι τί εἶδες κατ᾽ ὄναρ σήμερον καὶ ἐθροήθης· ἀνάγγειλόν μοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.7.4">
+            <app xml:id="u65_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη Ἰσαὰκ τῷ πατρὶ αὐτοῦ· Εἶδον κατ᾽ ὄναρ *ἐμαυτὸν* τὸν ἥλιον καὶ τὴν σελήνην·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.7.5">
+            <app xml:id="u66_ver_Version_1">
+              <lem wit="#Evans">καὶ στέφανος ἐπὶ τῆς κεφαλῆς μου ἐγένετο· καὶ ἦν ἀνὴρ παμμεγεθὴς λίαν λάμπων ἐκ τοῦ οὐρανοῦ, ὡς φῶς καλούμενον πατὴρ τοῦ φωτός·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.7.6">
+            <app xml:id="u67_ver_Version_1">
+              <lem wit="#Evans">καὶ ἔλαβεν τὸν ἥλιον ἐκ τῆς κεφαλῆς μου· καὶ λοιπὸν ἀφῆκεν τὰς ἀκτῖνας ἐν μέσῳ μου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.7.7">
+            <app xml:id="u68_ver_Version_1">
+              <lem wit="#Evans">καὶ ἔκλαυσα ἐγὼ καὶ εἶπον· Παρακαλῶ σε, κύριέ μου, μὴ ἐπάρῃς τὴν δόξαν τῆς κεφαλῆς μου καὶ τὸ φῶς τοῦ οἴκου μου καὶ πᾶσαν τὴν δόξαν τὴν ἐμήν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.7.8">
+            <app xml:id="u69_ver_Version_1">
+              <lem wit="#Evans">ἐπένθησε δὲ ὁ ἥλιος καὶ ἡ σελήνη καὶ οἱ ἀστέρες λέγοντες· Μὴ ἐπάρῃς τὴν δόξαν τῆς δυνάμεως ἡμῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.7.9">
+            <app xml:id="u70_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀποκριθεὶς ὁ φωτεινὸς ἐκεῖνος ἀνὴρ εἶπέ μοι· Μὴ κλαύσῃς ὅτι ἔλαβον τὸ φῶς τοῦ οἴκου σου· ἀνελήφθη γὰρ ἀπὸ καμάτων εἰς ἀνάπαυσιν, καὶ ἀπὸ ταπεινώσεως εἰς ὕψος,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.7.10">
+            <app xml:id="u71_ver_Version_1">
+              <lem wit="#Evans">αἴρουσιν αὐτὸν ἀπὸ στενοχωρίας εἰς εὐρυχωρίαν, αἴρουσιν αὐτὸν ἀπὸ σκότους εἰς φῶς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.7.11">
+            <app xml:id="u72_ver_Version_1">
+              <lem wit="#Evans">ἐγὼ δὲ εἶπον αὐτῷ· Παρακαλῶ σε, κύριε, λάβε καὶ τὰς ἀκτῖνας μετ᾽ αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Version_1.7.12">
+            <app xml:id="u73_ver_Version_1">
+              <lem wit="#Evans">ὁ δὲ εἶπέν μοι· Δώδεκα ὧραι τῆς ἡμέρας εἰσὶν, καὶ τότε ὅλας τὰς ἀκτῖνας λαμβάνω.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Version_1.7.13">
+            <app xml:id="u74_ver_Version_1">
+              <lem wit="#Evans">ταῦτα λέγοντος τοῦ φωτεινοῦ ἀνδρὸς, εἶδον τὸν ἥλιον τοῦ οἴκου μου ἀναβαίνοντα εἰς τὸν οὐρανὸν, τὸ δὲ στέφος ἐκεῖνον πλεῖον οὐκ εἶδον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Version_1.7.14">
+            <app xml:id="u75_ver_Version_1">
+              <lem wit="#Evans">ἦν δὲ ὁ ἥλιος ἐκεῖνος ὅμοιός σου τοῦ πατρός μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Version_1.7.15">
+            <app xml:id="u76_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Μιχαὴλ τῷ Ἁβραάμ· Ἀλήθειαν εἴρηκεν ὁ υἱός σου Ἰσαάκ· σὺ γὰρ εἶ· καὶ ἀναλαμβανέσαι εἰς τοὺς οὐρανοὺς,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Version_1.7.16">
+            <app xml:id="u77_ver_Version_1">
+              <lem wit="#Evans">τὸ δὲ σῶμά σου μένει ἐπὶ τῆς γῆς ἕως ἂν πληρωθῶσιν ἑπτακισχίλιοι αἰῶνες· τότε γὰρ ἐγερθήσεται πᾶσα σάρξ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="TAbB.ver_Version_1.7.17">
+            <app xml:id="u78_ver_Version_1">
+              <lem wit="#Evans">νῦν οὖν, Ἁβραὰμ, διάθες τὰ τοῦ οἴκου σου, καὶ περὶ τῶν τέκνων σου, τελείως γὰρ ἤκουσας τὴν οἰκονομίαν σου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="TAbB.ver_Version_1.7.18">
+            <app xml:id="u79_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀποκριθεὶς Ἁβραὰμ εἶπεν πρὸς Μιχαήλ· Παρακαλῶ σε, κύριε, ἐὰν ἐξέρχωμαι ἐκ τοῦ σώματός μου, σωματικῶς ἤθελον ἀναληφθῆναι, ἵνα θεάσομαι τὰ κτίσματα ἃ ἐκτίσατο κύριος ὁ θεός μου ἐν οὐρανῷ καὶ ἐπὶ γῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="TAbB.ver_Version_1.7.19">
+            <app xml:id="u80_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη Μιχαὴλ καὶ εἶπεν· Τοῦτο οὐκ ἔστιν ἐμὸν ποίημα· ἀλλὰ ἀπελθὼν ἐγὼ ἀπαγγελῶ τῷ κυρίῳ περὶ τούτου, καὶ ἐὰν κελεύωμαι, ὑποδείξω σοι ταῦτα πάντα.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="TAbB.ver_Version_1.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.8.1">
+            <app xml:id="u81_ver_Version_1">
+              <lem wit="#Evans">Καὶ ἀνῆλθεν Μιχαὴλ ἐν τοῖς οὐρανοῖς καὶ ἐλάλησεν ἐνώπιον κυρίου περὶ Ἁβραάμ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.8.2">
+            <app xml:id="u82_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη κύριος πρὸς Μιχαήλ· Ἄπελθε καὶ ἀναλαβοῦ ἐν σώματι τὸν Ἁβραὰμ καὶ ὑποδεῖξον αὐτῷ πάντα, καὶ ὃ ἐὰν εἴπῃ σοι ποίησον ὡς αὐτῷ ὄντι φίλῳ μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.8.3">
+            <app xml:id="u83_ver_Version_1">
+              <lem wit="#Evans">ἐξελθὼν οὖν ὁ Μιχαὴλ ἀνέλαβεν τὸν Ἁβραὰμ ἐπὶ νεφέλης ἐν σώματι, καὶ ἀνήνεγκεν αὐτὸν ἐπὶ τὸν Ὠκεανὸν ποταμόν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.8.4">
+            <app xml:id="u84_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀτενίσας Ἁβραὰμ εἶδεν δύο πύλας, μίαν μὲν μικρὰν, τὴν δὲ ἑτέραν μεγάλην·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.8.5">
+            <app xml:id="u85_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀνάμεσον τῶν δύο πυλῶν ἐκάθητο ἀνὴρ ἐπὶ θρόνου δόξης μεγάλης· καὶ πλῆθος ἀγγέλων κύκλῳ αὐτοῦ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.8.6">
+            <app xml:id="u86_ver_Version_1">
+              <lem wit="#Evans">καὶ ἦν κλαίων, καὶ πάλιν γελῶν, καὶ ὁ κλαυθμὸς ὑπερέβαινεν τὸ γέλος αὐτοῦ ἑπταπλασίονα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.8.7">
+            <app xml:id="u87_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Ἁβραὰμ πρὸς τὸν Μιχαήλ· Τίς ἐστιν οὗτος ὁ καθήμενος ἀνάμεσον τῶν δύο πυλῶν μετὰ δόξης πολλῆς· ποτὲ μὲν γελᾷ, ποτὲ μὲν κλαίει, καὶ ὁ κλαυθμὸς ὑπερβαίνει τὸ γέλος ἑπταπλασίως;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.8.8">
+            <app xml:id="u88_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Μιχαὴλ πρὸς Ἁβραάμ· Οὐκ ἔγνως αὐτὸν τίς ἐστιν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.8.9">
+            <app xml:id="u89_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν· Οὐχὶ, κύριε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.8.10">
+            <app xml:id="u90_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Μιχαὴλ πρὸς Ἁβραάμ· Θεωρεῖς τὰς δύο πύλας ταύτας, τὴν μικρὰν καὶ τὴν μεγάλην;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.8.11">
+            <app xml:id="u91_ver_Version_1">
+              <lem wit="#Evans">αὗταί εἰσιν αἱ ἀπάγουσαι εἰς τὴν ζωὴν καὶ εἰς τὴν ἀπώλειαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Version_1.8.12">
+            <app xml:id="u92_ver_Version_1">
+              <lem wit="#Evans">ὁ ἀνὴρ δὲ οὗτος ὁ καθήμενος ἐν μέσῳ αὐτῶν, οὗτός ἐστιν ὁ Ἀδάμ, ὁ πρῶτος ἄνθρωπος ὃν ἔπλασεν ὁ κύριος·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Version_1.8.13">
+            <app xml:id="u93_ver_Version_1">
+              <lem wit="#Evans">καὶ ἔθηκεν αὐτὸν εἰς τὸν τόπον τοῦτον θεωρῆσαι πᾶσαν ψυχὴν ἐξερχομένην ἐκ τοῦ σώματος, ἐπειδὴ ἐξ αὐτοῦ εἰσὶν πάντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Version_1.8.14">
+            <app xml:id="u94_ver_Version_1">
+              <lem wit="#Evans">ὅταν οὖν θεωρῇς αὐτὸν κλαίοντα, γνῶθι ὅτι ἐθεάσατο ψυχὰς πολλὰς ἀπαγομένας εἰς τὴν ἀπώλειαν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Version_1.8.15">
+            <app xml:id="u95_ver_Version_1">
+              <lem wit="#Evans">ὅταν δὲ ἴδῃς αὐτὸν γελῶντα, ἐθεάσατο ψυχὰς ὀλίγας ἀπαγομένας εἰς τὴν ζωήν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Version_1.8.16">
+            <app xml:id="u96_ver_Version_1">
+              <lem wit="#Evans">θεωρεῖς αὐτὸν πῶς ὑπερβαίνει ὁ κλαυθμὸς τὸ γέλος; ἐπεὶ θεωρεῖ τὸ περισσότερον τοῦ κόσμου ἀπαγομένους διὰ τῆς πλατείας εἰς τὴν ἀπώλειαν, διὰ τοῦτο ὑπερβαίνει ὁ κλαυθμὸς τὸ γέλος ἑπταπλασίως.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="TAbB.ver_Version_1.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.9.1">
+            <app xml:id="u97_ver_Version_1">
+              <lem wit="#Evans">Καὶ εἶπεν Ἁβραάμ· Καὶ ὁ μὴ δυνάμενος εἰσελθεῖν διὰ τῆς στενῆς πύλης, οὐ δύναται εἰσελθεῖν εἰς τὴν ζωὴν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.9.2">
+            <app xml:id="u98_ver_Version_1">
+              <lem wit="#Evans">τότε ἔκλαυσεν Ἁβραὰμ, λέγων· Οὐαί μοι, τί ποιήσω ἐγὼ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.9.3">
+            <app xml:id="u99_ver_Version_1">
+              <lem wit="#Evans">ὅτι εἰμὶ ἄνθρωπος εὐρὺς τῷ σώματι, καὶ πῶς δυνήσομαι εἰσελθεῖν εἰς τὴν στενὴν πύλην, εἰς ἣν οὐ δύναται ἐλθεῖν παιδίον πέντε καὶ δέκα ἐτῶν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.9.4">
+            <app xml:id="u100_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀποκριθεὶς Μιχαὴλ εἶπεν πρὸς Ἁβραάμ· Σὺ μὴ φοβοῦ, πάτερ, μηδὲ λυποῦ, ἀκωλύτως γὰρ εἰσερχέσαι δι᾽ αὐτῆς, καὶ πάντες οἱ συνόμοιοί σου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.9.5">
+            <app xml:id="u101_ver_Version_1">
+              <lem wit="#Evans">καὶ ἑστῶτος τοῦ Ἁβραὰμ καὶ θαυμάζοντος, ἰδοὺ ἄγγελος κυρίου ἐλαύνων ἓξ μυριάδας ψυχὰς ἁμαρτωλῶν εἰς τὴν ἀπώλειαν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.9.6">
+            <app xml:id="u102_ver_Version_1">
+              <lem wit="#Evans">καὶ λέγει Ἁβραὰμ πρὸς Μιχαήλ· Οὗτοι πάντες εἰς τὴν ἀπώλειαν ἀπέρχονται;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.9.7">
+            <app xml:id="u103_ver_Version_1">
+              <lem wit="#Evans">καὶ λέγει αὐτῷ Μιχαήλ· Ναὶ, ἀλλὰ ἀπέλθωμεν καὶ ἀναζητήσωμεν ἐν ταῖς ψυχαῖς ταύταις, εἰ ἐστὶν ἐξ αὐτῶν κἂν μία δικαία.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.9.8">
+            <app xml:id="u104_ver_Version_1">
+              <lem wit="#Evans">ἀπελθόντων δὲ αὐτῶν, εὗρον ἄγγελον κατέχοντα ἐν τῇ χειρὶ αὐτοῦ μίαν ψυχὴν γυναικὸς ἐξ αὐτῶν τῶν ἓξ μυριάδων, ὅτι εὗρεν τὰς ἁμαρτίας ἰσοζυγούσας μετὰ τὰ ἔργα αὐτῆς ἅπαντα, καὶ οὐκ ἦσαν ἐν μόχθῳ οὐδὲ ἐν ἀναπαύσει, ἀλλ᾽ ἐν τόπῳ μεσότητος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.9.9">
+            <app xml:id="u105_ver_Version_1">
+              <lem wit="#Evans">τὰς δὲ ψυχὰς ἐκείνας ἦρεν εἰς τὴν ἀπώλειαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.9.10">
+            <app xml:id="u106_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Ἁβραὰμ πρὸς Μιχαήλ· Κύριε, οὗτός ἐστιν ὁ ἄγγελος ὁ ἐκφέρων τὰς ψυχὰς ἐκ τοῦ σώματος, ἢ οὐ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.9.11">
+            <app xml:id="u107_ver_Version_1">
+              <lem wit="#Evans">ἀπεκρίθη Μιχαὴλ καὶ εἶπεν· Οὗτός ἐστιν ὁ θάνατος, καὶ ἀπάγει αὐτὰς εἰς τὸν τόπον τοῦ κριτηρίου, ἵνα ὁ κριτὴς κρίνῃ αὐτάς.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="TAbB.ver_Version_1.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.10.1">
+            <app xml:id="u108_ver_Version_1">
+              <lem wit="#Evans">Καὶ λέγει Ἁβραάμ· Κύριέ μου, παρακαλῶ σε ἵνα ἀναγάγῃς με εἰς τὸν τόπον τοῦ κριτηρίου ὅπως κἀγὼ θεάσωμαι αὐτὰς πῶς κρίνονται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.10.2">
+            <app xml:id="u109_ver_Version_1">
+              <lem wit="#Evans">τότε Μιχαὴλ ἔλαβεν τὸν Ἁβραὰμ ἐπὶ νεφέλης, καὶ ἤγαγεν αὐτὸν εἰς τὸν παράδεισον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.10.3">
+            <app xml:id="u110_ver_Version_1">
+              <lem wit="#Evans">καὶ ὡς ἔφθασεν εἰς τὸν τόπον ὅπου ἦν ὁ κριτής, ἦλθεν ὁ ἄγγελος καὶ ἔδωκεν τὴν ψυχὴν ἐκείνην εἰς τὸν κριτήν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.10.4">
+            <app xml:id="u111_ver_Version_1">
+              <lem wit="#Evans">ἔλεγεν δὲ ἡ ψυχή· Ἐλέησόν με, κύριε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.10.5">
+            <app xml:id="u112_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν ὁ κριτής· Πῶς ἐλεήσω σε, ὅτι σὺ οὐκ ἠλέησας τὴν θυγατέρα σου ἥνπερ εἶχες, τὸν καρπὸν τῆς κοιλίας σου; διὰ τί ἐφόνευσας αὐτήν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.10.6">
+            <app xml:id="u113_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀπεκρίθη· Οὐχὶ, κύριε· φόνος ἐξ ἐμοῦ οὐ γέγονεν, ἀλλ᾽ αὐτὴ ἡ θυγάτηρ μου κατεψεύσατό μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.10.7">
+            <app xml:id="u114_ver_Version_1">
+              <lem wit="#Evans">ὁ δὲ κριτὴς ἐκέλευσεν ἐλθεῖν τὸν τὰ ὑπομνήματα γράφοντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.10.8">
+            <app xml:id="u115_ver_Version_1">
+              <lem wit="#Evans">καὶ ἰδοὺ χερουβὶμ βαστάζοντα βιβλία δύο, καὶ ἦν μετ᾽ αὐτῶν ἀνὴρ παμμεγέθης σφόδρα· καὶ εἶχεν ἐπὶ τὴν κεφαλὴν αὐτοῦ τρεῖς στεφάνους,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.10.9">
+            <app xml:id="u116_ver_Version_1">
+              <lem wit="#Evans">καὶ ὁ εἷς στέφανος ὑψηλότερος ὑπῆρχεν τῶν ἑτέρων δύο στεφάνων· οἱ δὲ στέφανοι ἐκαλοῦντο στέφανοι μαρτυρίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.10.10">
+            <app xml:id="u117_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶχεν ὁ ἀνὴρ ἐν τῇ χειρὶ αὐτοῦ κάλαμον χρυσοῦν· καὶ λέγει ὁ κριτὴς πρὸς αὐτόν· Σύστησον τὴν ἁμαρτίαν τῆς ψυχῆς ταύτης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.10.11">
+            <app xml:id="u118_ver_Version_1">
+              <lem wit="#Evans">καὶ ἀναπτύξας ὁ ἀνὴρ ἐκεῖνος μίαν τῶν βιβλίων τῶν ὄντων ἐκ τῶν χερουβὶμ ἀνεζήτησεν τὴν ἁμαρτίαν τῆς ψυχῆς τῆς γυναικὸς, καὶ εὗρεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Version_1.10.12">
+            <app xml:id="u119_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν ὁ κριτής· Ὦ ταλαίπωρε ψυχὴ, πῶς λέγεις ὅτι φόνον οὐκ ἐποίησας;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Version_1.10.13">
+            <app xml:id="u120_ver_Version_1">
+              <lem wit="#Evans">οὐχὶ σὺ ἀπελθοῦσα μετὰ τὴν τελευτὴν τοῦ ἀνδρός σου, ἐμοίχευσας τὸν ἄνδρα τῆς θυγατρός σου, καὶ ἀπέκτεινας αὐτήν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Version_1.10.14">
+            <app xml:id="u121_ver_Version_1">
+              <lem wit="#Evans">ἤλεγχε δὲ καὶ τὰς ἄλλας ἁμαρτίας αὐτῆς, καὶ εἴ τι ἔπραξεν ἐκ νεότητος αὐτῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Version_1.10.15">
+            <app xml:id="u122_ver_Version_1">
+              <lem wit="#Evans">ταῦτα ἀκούσασα ἡ γυνὴ ἐβόησεν λέγουσα· Οἴμοι, οἴμοι, ὅτι πάσας τὰς ἁμαρτίας μου ἃς ἐποίησα ἐν τῷ κόσμῳ ἐληθάργησα· ἐνταῦθα δὲ οὐκ ἐληθαργήθησαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Version_1.10.16">
+            <app xml:id="u123_ver_Version_1">
+              <lem wit="#Evans">τότε ᾖραν καὶ αὐτὴν καὶ παρέδωκαν τοῖς βασανισταῖς.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="TAbB.ver_Version_1.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.11.1">
+            <app xml:id="u124_ver_Version_1">
+              <lem wit="#Evans">Καὶ εἶπεν Ἁβραὰμ πρὸς Μιχαήλ· Κύριε, τίς ἐστιν οὗτος ὁ κριτής, καὶ τίς ἐστιν ὁ ἄλλος, ὁ ἐλέγχων τὰς ἁμαρτίας;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.11.2">
+            <app xml:id="u125_ver_Version_1">
+              <lem wit="#Evans">καὶ λέγει Μιχαὴλ πρὸς Ἁβραάμ· Θεωρεῖς τὸν κριτήν; οὗτός ἐστιν ὁ Ἄβελ, ὁ ἐν πρώτοις μαρτυρήσας· καὶ ἤνεγκεν αὐτὸν ὧδε ὁ θεὸς κρίνειν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.11.3">
+            <app xml:id="u126_ver_Version_1">
+              <lem wit="#Evans">καὶ ὁ ἀποδεικνύμενος οὗτός ἐστιν ὁ διδάσκαλος τοῦ οὐρανοῦ καὶ τῆς γῆς καὶ γραμματεὺς τῆς δικαιοσύνης Ἐνώχ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.11.4">
+            <app xml:id="u127_ver_Version_1">
+              <lem wit="#Evans">ἀπέστειλεν γὰρ κύριος αὐτοὺς ἐνταῦθα, ἵνα ἀπογράφωσιν τὰς ἁμαρτίας καὶ τὰς δικαιοσύνας ἑκάστου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.11.5">
+            <app xml:id="u128_ver_Version_1">
+              <lem wit="#Evans">καὶ λέγει ὁ Ἁβραάμ· Καὶ πῶς δύναται Ἐνὼχ βαστάσαι τὸ βάρος τῶν ψυχῶν, μὴ ἰδὼν θάνατον; ἢ πῶς δύναται δοῦναι πασῶν τῶν ψυχῶν ἀπόφασιν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.11.6">
+            <app xml:id="u129_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Μιχαήλ· Ἐὰν δώσῃ ἀπόφασιν περὶ αὐτῶν, οὐ συγχωρεῖται· ἀλλ᾽ οὐ τὰ τοῦ Ἐνὼχ αὐτοῦ ἀποφαίνεται,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.11.7">
+            <app xml:id="u130_ver_Version_1">
+              <lem wit="#Evans">ἀλλ᾽ ὁ κύριός ἐστιν ὁ ἀποφαινόμενος, καὶ τούτου οὐκ ἐστὶν εἰ μὴ μόνον τὸ γράψαι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.11.8">
+            <app xml:id="u131_ver_Version_1">
+              <lem wit="#Evans">ἐπειδὴ ηὔξατο Ἐνὼχ πρὸς κύριον λέγων· Οὐ θέλω, κύριε, ἀποδοῦναι τῶν ψυχῶν ἀπόφασιν, ὅπως μὴ τινὸς ἐπιβαρὴς γένωμαι·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.11.9">
+            <app xml:id="u132_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν κύριος πρὸς Ἐνώχ· Ἐγὼ κελεύσω σε ἵνα γράφῃς τὰς ἁμαρτίας ψυχῆς ἐξιλεουμένης, καὶ εἰσελεύσεται εἰς τὴν ζωήν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.11.10">
+            <app xml:id="u133_ver_Version_1">
+              <lem wit="#Evans">καὶ ἡ ψυχὴ ἐὰν μὴ ἐξιλεωθῇ καὶ μετανοήσῃ, εὑρήσεις τὰς ἁμαρτίας αὐτῆς γεγραμμένας, καὶ βληθήσεται εἰς τὴν κόλασιν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="TAbB.ver_Version_1.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.12.1">
+            <app xml:id="u134_ver_Version_1">
+              <lem wit="#Evans">Καὶ μετὰ τὸ θεωρῆσαι Ἁβραὰμ τὸν τόπον τοῦ κριτηρίου, κατήγαγεν αὐτὸν ἡ νεφέλη ἐν τῷ στερεώματι κάτω.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.12.2">
+            <app xml:id="u135_ver_Version_1">
+              <lem wit="#Evans">καὶ κατανοήσας Ἁβραὰμ ἐπὶ τὴν γῆν, εἶδεν ἄνθρωπον μοιχεύοντα γυναῖκα ὕπανδρον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.12.3">
+            <app xml:id="u136_ver_Version_1">
+              <lem wit="#Evans">καὶ στραφεὶς λέγει Ἁβραὰμ πρὸς Μιχαήλ· Θεωρεῖς τὴν ἁμαρτίαν ταύτην; ἀλλὰ, κύριε, πέμψον πῦρ ἐξ οὐρανοῦ, ἵνα καταφάγῃ αὐτούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.12.4">
+            <app xml:id="u137_ver_Version_1">
+              <lem wit="#Evans">καὶ εὐθὺς κατῆλθεν πῦρ καὶ κατέφαγεν αὐτούς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.12.5">
+            <app xml:id="u138_ver_Version_1">
+              <lem wit="#Evans">διότι εἶπεν κύριος τῷ Μιχαὴλ ὅτι Ὅσα αἰτήσεταί σε ὁ Ἁβραὰμ ποιῆσαι αὐτῷ, ποίησον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.12.6">
+            <app xml:id="u139_ver_Version_1">
+              <lem wit="#Evans">καὶ πάλιν ἀναβλέψας Ἁβραάμ, εἶδεν ἄλλους ἀνθρώπους καταλαλοῦντας ἑταίρους,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.12.7">
+            <app xml:id="u140_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν· Ἀνοιχθήτω ἡ γῆ καὶ καταπιέτω αὐτούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.12.8">
+            <app xml:id="u141_ver_Version_1">
+              <lem wit="#Evans">καὶ ἐν τῷ εἰπεῖν αὐτῷ, κατέπιεν αὐτοὺς ἡ γῆ ζῶντας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.12.9">
+            <app xml:id="u142_ver_Version_1">
+              <lem wit="#Evans">καὶ πάλιν ἀνήγαγεν αὐτὸν ἡ νεφέλη ἐν ἑτέρῳ τόπῳ· καὶ εἶδεν Ἁβραάμ τινας ἀπερχομένους εἰς ἔρημον τόπον τοῦ ποιῆσαι φόνον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.12.10">
+            <app xml:id="u143_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν πρὸς Μιχαήλ· Θεωρεῖς τὴν ἁμαρτίαν ταύτην; ἀλλ᾽ ἐλθέτωσαν θηρία ἐκ τῆς ἐρήμου καὶ διαμερίσονται αὐτούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.12.11">
+            <app xml:id="u144_ver_Version_1">
+              <lem wit="#Evans">καὶ αὐτῇ τῇ ὥρᾳ ἐξῆλθον θηρία ἐκ τῆς ἐρήμου καὶ κατέφαγον αὐτούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Version_1.12.12">
+            <app xml:id="u145_ver_Version_1">
+              <lem wit="#Evans">τότε ἐλάλησεν κύριος ὁ θεὸς πρὸς τὸν Μιχαὴλ λέγων· Ἀπόστρεψον τὸν Ἁβραὰμ εἰς τὸν οἶκον αὐτοῦ καὶ μὴ ἀφήσεις αὐτὸν κυκλῶσαι πᾶσαν τὴν κτίσιν ἣν ἐποίησα, ὅτι οὐ σπλαγχνίζεται ἐπὶ τοὺς ἁμαρτωλοὺς,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Version_1.12.13">
+            <app xml:id="u146_ver_Version_1">
+              <lem wit="#Evans">ἀλλ᾽ ἐγὼ σπλαγχνίζομαι ἐπὶ τοὺς ἁμαρτωλοὺς ὥστε ἐπιστρέψουσιν καὶ ζήσωσιν καὶ μετανοήσωσιν ἐκ τῶν ἁμαρτιῶν αὐτῶν, καὶ σωθήσονται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Version_1.12.14">
+            <app xml:id="u147_ver_Version_1">
+              <lem wit="#Evans">καὶ κατὰ τὴν ἐνάτην ὥραν ὑπέστρεψεν Μιχαὴλ τὸν Ἁβραὰμ εἰς τὸν οἶκον αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Version_1.12.15">
+            <app xml:id="u148_ver_Version_1">
+              <lem wit="#Evans">Σάρρα δὲ ἡ γυνὴ αὐτοῦ, μὴ θεωρήσασα τὸν Ἁβραὰμ τί γέγονεν, κατεπόθη τῇ λυπῇ παρέδωκε τὴν ψυχήν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Version_1.12.16">
+            <app xml:id="u149_ver_Version_1">
+              <lem wit="#Evans">καὶ μετὰ τὸ ὑποστρέψαι τὸν Ἁβραὰμ, εὗρεν αὐτὴν νεκρὰν, καὶ ἔθαψεν αὐτήν.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="TAbB.ver_Version_1.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.13.1">
+            <app xml:id="u150_ver_Version_1">
+              <lem wit="#Evans">Ὅτε δὲ ἤγγισαν αἱ ἡμέραι τοῦ θανάτου τοῦ Ἁβραάμ, εἶπεν κύριος ὁ θεὸς πρὸς Μιχαήλ· Οὐ μὴ τολμήσῃ θάνατος ἐγγίσαι τοῦ ἐξενεγκεῖν τὴν ψυχὴν τοῦ δούλου μου, ὅτι φίλος μου ἐστίν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.13.2">
+            <app xml:id="u151_ver_Version_1">
+              <lem wit="#Evans">ἀλλὰ ἄπελθε καὶ κόσμησον τὸν θάνατον ἐν πολλῇ ὡραιότητι, καὶ οὕτως ἀπόστειλον αὐτὸν πρὸς Ἁβραὰμ ὅπως θεάσηται αὐτὸν τοῖς ὀφθαλμοῖς αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.13.3">
+            <app xml:id="u152_ver_Version_1">
+              <lem wit="#Evans">καὶ ὁ Μιχαὴλ εὐθὺς καθὼς προσετάχθη ἐκόσμησεν τὸν θάνατον ἐν πολλῇ ὡραιότητι, καὶ οὕτως ἀπέστειλεν αὐτὸν πρὸς Ἁβραάμ, ὅπως θεάσηται αὐτόν. καὶ ἐκάθισεν πλησίον τοῦ Ἁβραάμ·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.13.4">
+            <app xml:id="u153_ver_Version_1">
+              <lem wit="#Evans">ἰδὼν δὲ ὁ Ἁβραὰμ τὸν θάνατον πλησίον αὐτοῦ καθήμενον ἐφοβήθη φόβον μέγαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.13.5">
+            <app xml:id="u154_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν ὁ θάνατος πρὸς Ἁβραάμ· Χαίροις, ἁγία ψυχή· χαῖρε, φίλος κυρίου τοῦ θεοῦ· χαῖρε, τὸ παραμύθιον τοῦ ξενισμοῦ τῶν ὁδοιπόρων.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.13.6">
+            <app xml:id="u155_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Ἁβραάμ· Καλῶς ἐλήλυθας, δοῦλε θεοῦ ὑψίστου· παρακαλῶ σε, εἰπέ μοι τίς εἶ σὺ, καὶ εἰσελθὼν ἐν τῷ οἴκῳ μετάλαβε βρώσεως καὶ πόσεως, καὶ ἀπόστηθι ἀπ᾽ ἐμοῦ· ἀφ᾽ οὗ γὰρ ἐθεασάμην σε καθήμενον ἔγγιστά μου, ἐταράχθη ἡ ψυχή μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.13.7">
+            <app xml:id="u156_ver_Version_1">
+              <lem wit="#Evans">πάντως γὰρ οὐκ εἰμὶ ἄξιος μετά σου πλησιάζειν, σὺ γὰρ εἶ ὑψηλὸν πνεῦμα, ἐγὼ δὲ σὰρξ καὶ αἷμα, καὶ διὰ τοῦτο οὐ δύναμαι βαστάσαι τὴν δόξαν σου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.13.8">
+            <app xml:id="u157_ver_Version_1">
+              <lem wit="#Evans">θεωρῶ γὰρ τὴν ὡραιότητά σου, ὅτι οὐκ ἔστιν ἐκ τοῦ κόσμου τούτου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.13.9">
+            <app xml:id="u158_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν ὁ θάνατος πρὸς Ἁβραάμ· Λέγω σοι, ἐν ὅλῳ τῷ κτίσματι ὃ ἔκτισεν ὁ θεὸς, οὐχ εὑρέθη ὅμοιός σου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Version_1.13.10">
+            <app xml:id="u159_ver_Version_1">
+              <lem wit="#Evans">καὶ αὐτὸς γὰρ ὁ θεὸς ζητήσας οὐχ εὗρεν τοιοῦτον ἐπὶ πάσης τῆς γῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Version_1.13.11">
+            <app xml:id="u160_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν Ἁβραὰμ πρὸς τὸν θάνατον· Πῶς ἐτόλμησας ψεύσασθαι; ὅτι ὁρῶ τὴν ὡραιότητά σου ὅτι οὐκ ἔστιν ἐκ τοῦ κόσμου τούτου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Version_1.13.12">
+            <app xml:id="u161_ver_Version_1">
+              <lem wit="#Evans">καὶ εἶπεν ὁ θάνατος πρὸς Ἁβραάμ· Μὴ νομίσῃς, Ἁβραὰμ, ὅτι ἡ ὡραιότης αὕτη ἐμή ἐστιν, ἢ καὶ οὕτως πορεύομαι εἰς πάντα ἄνθρωπον·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Version_1.13.13">
+            <app xml:id="u162_ver_Version_1">
+              <lem wit="#Evans">οὐχὶ, ἀλλ᾽ ἐάν τις δίκαιος ὡς σὺ, οὕτως λαμβάνω στεφάνους καὶ ἀπέρχομαι πρὸς αὐτόν· ἐὰν δὲ ἁμαρτωλός ἐστιν, ἀπέρχομαι ἐν μεγάλῃ σαπρότητι καὶ ἐκ τῆς ἁμαρτίας αὐτῶν ποιῶ στέφανον τῇ κεφαλῇ μου, καὶ ταράσσω αὐτοὺς ἐν μεγάλῳ φόβῳ, ἵνα ἐκθαμβῆται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Version_1.13.14">
+            <app xml:id="u163_ver_Version_1">
+              <lem wit="#Evans">λέγει οὖν Ἁβραὰμ πρὸς αὐτόν· Καὶ πόθεν ἔστιν ἡ ὡραιότης αὕτη;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Version_1.13.15">
+            <app xml:id="u164_ver_Version_1">
+              <lem wit="#Evans">καὶ λέγει ὁ θάνατος· Οὐκ ἐστὶν ἄλλος σαπρότερός μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Version_1.13.16">
+            <app xml:id="u165_ver_Version_1">
+              <lem wit="#Evans">λέγει αὐτῷ ὁ Ἁβραάμ· Καὶ μὴ σὺ εἶ ὁ λεγόμενος θάνατος;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="TAbB.ver_Version_1.13.17">
+            <app xml:id="u166_ver_Version_1">
+              <lem wit="#Evans">ἀπεκρίθη αὐτῷ καὶ εἶπεν· Ἐγώ εἰμι τὸ πικρὸν ὄνομα· ἐγώ εἰμι κλαυθμός . . . .</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="TAbB.ver_Version_1.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Version_1.14.1">
+            <app xml:id="u167_ver_Version_1">
+              <lem wit="#Evans">Εἶπεν δὲ Ἁβραὰμ πρὸς τὸν θάνατον· Δεῖξον ἡμῖν τὴν σαπρότητά σου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Version_1.14.2">
+            <app xml:id="u168_ver_Version_1">
+              <lem wit="#Evans">καὶ ἐφανέρωσεν ὁ θάνατος τὴν σαπρότητα αὐτοῦ· καὶ εἶχεν δύο κεφαλάς·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Version_1.14.3">
+            <app xml:id="u169_ver_Version_1">
+              <lem wit="#Evans">ἡ μία εἶχεν πρόσωπον δράκοντος, καὶ δι᾽ αὐτοῦ τινὲς ὑπὸ ἀσπίδων τελευτῶσιν ἄφνω·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Version_1.14.4">
+            <app xml:id="u170_ver_Version_1">
+              <lem wit="#Evans">ἡ δὲ ἑτέρα κεφαλὴ ὁμοία ῥομφαίας· διὰ τοῦτο τινες ἐν ῥομφαιᾷ τελευτῶσιν ὡς ἐπὶ τόξοις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Version_1.14.5">
+            <app xml:id="u171_ver_Version_1">
+              <lem wit="#Evans">ἐν ἐκείνῃ τῇ ἡμέρᾳ ἐτελεύτησαν οἱ παῖδες τοῦ Ἁβραὰμ διὰ τὸν φόβον τοῦ θανάτου·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Version_1.14.6">
+            <app xml:id="u172_ver_Version_1">
+              <lem wit="#Evans">οὓς ἰδὼν Ἁβραὰμ ηὔξατο πρὸς κύριον, καὶ ἀνέστησεν αὐτούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Version_1.14.7">
+            <app xml:id="u173_ver_Version_1">
+              <lem wit="#Evans">ἐπέστρεψεν δὲ ὁ θεὸς καὶ ἐξέτεινεν τὴν ψυχὴν τοῦ Ἁβραὰμ ὡς ἐν ὀνείροις, καὶ ὁ ἀρχιστρατηγὸς Μιχαὴλ ἦρεν αὐτὴν εἰς τοὺς οὐρανούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Version_1.14.8">
+            <app xml:id="u174_ver_Version_1">
+              <lem wit="#Evans">ἔθαψεν δὲ Ἰσαὰκ τὸν πατέρα αὐτοῦ πλησίον τῆς μητρὸς αὐτοῦ τῆς Σάρρας, δοξάζων καὶ αἰνῶν τὸν θεόν·</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Version_1.14.9">
+            <app xml:id="u175_ver_Version_1">
+              <lem wit="#Evans">ὅτι αὐτῷ πρέπει δόξα, τιμὴ καὶ προσκύνησις, τοῦ πατρὸς καὶ τοῦ υἱοῦ καὶ τοῦ ἁγίου πνεύματος νῦν καὶ ἀεὶ καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων. Ἀμήν.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="chapter" n="1" xml:id="TAbB.ver_English.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.1.1">
+            <app xml:id="uen_1_ver_English">
+              <lem wit="#OCP-Trans">It came to pass that when the days of Abraham’s death drew near, the Lord said to Michael,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.1.2">
+            <app xml:id="uen_2_ver_English">
+              <lem wit="#OCP-Trans">“Arise and go to Abraham, my servant, and tell him that he is about to depart from life,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.1.3">
+            <app xml:id="uen_3_ver_English">
+              <lem wit="#OCP-Trans">because behold, the days of your temporary life are fulfilled, so that he may put his house in order before he dies.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAbB.ver_English.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.2.1">
+            <app xml:id="uen_4_ver_English">
+              <lem wit="#OCP-Trans">And Michael went and came to Abraham, and found him sitting before his oxen for plowing. He was very old in appearance and held his son in his arms.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.2.2">
+            <app xml:id="uen_5_ver_English">
+              <lem wit="#OCP-Trans">When Abraham saw the Archangel Michael, he rose from the ground and greeted him, not knowing who he was, and said to him,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.2.3">
+            <app xml:id="uen_6_ver_English">
+              <lem wit="#OCP-Trans">“May God save you! May you fare well as you go on your way.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.2.4">
+            <app xml:id="uen_7_ver_English">
+              <lem wit="#OCP-Trans">And Michael answered him, “You are benevolent, good father.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.2.5">
+            <app xml:id="uen_8_ver_English">
+              <lem wit="#OCP-Trans">And Abraham answered and said to him, “Come, draw near to me, brother, and for a short time, I will order an animal to be brought,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.2.6">
+            <app xml:id="uen_9_ver_English">
+              <lem wit="#OCP-Trans">so that we may go into my house and you may rest with me, for it is evening. And in the morning, arise and go wherever you wish, lest some evil beast encounter you and torment you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.2.7">
+            <app xml:id="uen_10_ver_English">
+              <lem wit="#OCP-Trans">And Michael asked Abraham, saying, “Tell me your name before I enter your house, lest I become a burden to you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.2.8">
+            <app xml:id="uen_11_ver_English">
+              <lem wit="#OCP-Trans">And Abraham answered and said, “My parents named me Abram, and the Lord named me Abraham, saying, ‘Arise and go from your house and from your kindred, and come to a land that I will show you.’</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.2.9">
+            <app xml:id="uen_12_ver_English">
+              <lem wit="#OCP-Trans">And when I went to the land which the Lord showed me, he said to me, ‘Your name shall no longer be called Abram, but your name shall be Abraham.’”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.2.10">
+            <app xml:id="uen_13_ver_English">
+              <lem wit="#OCP-Trans">Michael answered and said to him, “Forgive me, my father, O man of God, well-practiced in righteousness, for I am a stranger and I heard about you when you went forty stadia and brought a calf and sacrificed it, entertaining angels in your house, so that they might rest.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.2.11">
+            <app xml:id="uen_14_ver_English">
+              <lem wit="#OCP-Trans">After they had both spoken these things, they arose and went into the house.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_English.2.12">
+            <app xml:id="uen_15_ver_English">
+              <lem wit="#OCP-Trans">And Abraham called one of his servants and said to him, “Go, bring me a beast so that the stranger may ride upon it, for he is weary from his journey.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_English.2.13">
+            <app xml:id="uen_16_ver_English">
+              <lem wit="#OCP-Trans">And Michael said, “Do not trouble the boy, but let us go on, lifted up, until we reach your house, for I have enjoyed your conversation.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="TAbB.ver_English.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.3.1">
+            <app xml:id="uen_17_ver_English">
+              <lem wit="#OCP-Trans">And they arose and went.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.3.2">
+            <app xml:id="uen_18_ver_English">
+              <lem wit="#OCP-Trans">And as they drew near to the city, about three stadia away, they found a great tree having three hundred branches, like a terebinth.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.3.3">
+            <app xml:id="uen_19_ver_English">
+              <lem wit="#OCP-Trans">And they heard a voice from its branches singing, “Holy is he, because you have brought the reason for which you were sent.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.3.4">
+            <app xml:id="uen_20_ver_English">
+              <lem wit="#OCP-Trans">And Abraham heard the voice, and he hid the mystery in his heart, saying to himself, “What then is this mystery that I have heard?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.3.5">
+            <app xml:id="uen_21_ver_English">
+              <lem wit="#OCP-Trans">When he came into the house, Abraham said to his servants, “Arise, go out to the sheep, and bring three fattened animals and quickly slaughter them and serve them so that we may eat and drink, for this day is a day of rejoicing.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.3.6">
+            <app xml:id="uen_22_ver_English">
+              <lem wit="#OCP-Trans">And the servants brought the fattened animals, and Abraham called his son Isaac and said to him, “Child Isaac, arise and pour water into the basin, so that we may wash the feet of this stranger.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.3.7">
+            <app xml:id="uen_23_ver_English">
+              <lem wit="#OCP-Trans">And he brought it as he was commanded.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.3.8">
+            <app xml:id="uen_24_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said, “I have an understanding of what is to come, that in this basin I will no longer wash the feet of a man being entertained by us.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.3.9">
+            <app xml:id="uen_25_ver_English">
+              <lem wit="#OCP-Trans">And Isaac, hearing his father saying these things, wept and said to him, “My father, what is this that you said, ‘It is the last time I will wash the feet of a foreign man’?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.3.10">
+            <app xml:id="uen_26_ver_English">
+              <lem wit="#OCP-Trans">And Abraham, seeing his son weeping, wept himself greatly. And Michael, seeing them weeping, also wept. And Michael’s tears fell into the basin and became a precious stone.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="TAbB.ver_English.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.4.1">
+            <app xml:id="uen_27_ver_English">
+              <lem wit="#OCP-Trans">When Sarah, being inside her house, heard their weeping, she came out and said to Abraham, “Sir, why are you weeping so?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.4.2">
+            <app xml:id="uen_28_ver_English">
+              <lem wit="#OCP-Trans">And Abraham answered and said to her, “Nothing is wrong; go into your house and attend to your own affairs, lest we become a burden to the man.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.4.3">
+            <app xml:id="uen_29_ver_English">
+              <lem wit="#OCP-Trans">And Sarah withdrew, because she was about to prepare dinner.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.4.4">
+            <app xml:id="uen_30_ver_English">
+              <lem wit="#OCP-Trans">And the sun drew near to set; and Michael went out of the house and was taken up into the heavens to worship before God.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.4.5">
+            <app xml:id="uen_31_ver_English">
+              <lem wit="#OCP-Trans">For when the sun sets, all the angels worship God; and Michael himself is the first of the angels.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.4.6">
+            <app xml:id="uen_32_ver_English">
+              <lem wit="#OCP-Trans">And they all worshiped and departed, each to his own place.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.4.7">
+            <app xml:id="uen_33_ver_English">
+              <lem wit="#OCP-Trans">And Michael answered before God and said, “Lord, command that I may be asked before your holy glory.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.4.8">
+            <app xml:id="uen_34_ver_English">
+              <lem wit="#OCP-Trans">And the Lord says to Michael, “Declare what you wish.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.4.9">
+            <app xml:id="uen_35_ver_English">
+              <lem wit="#OCP-Trans">And the Archangel answered and said, “Lord, you sent me to Abraham to tell him, ‘Withdraw from your body and depart from the world; the Lord calls you.’”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.4.10">
+            <app xml:id="uen_36_ver_English">
+              <lem wit="#OCP-Trans">And I do not dare, Lord, to appear to him, because he is your friend and a righteous man, who receives strangers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.4.11">
+            <app xml:id="uen_37_ver_English">
+              <lem wit="#OCP-Trans">But I beg you, Lord, command the remembrance of Abraham’s death to enter into his heart,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_English.4.12">
+            <app xml:id="uen_38_ver_English">
+              <lem wit="#OCP-Trans">and let me not tell him. For this is a great brevity, to say, ‘Depart from the world,’ and especially from his own body.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_English.4.13">
+            <app xml:id="uen_39_ver_English">
+              <lem wit="#OCP-Trans">For you from the beginning made him merciful to the souls of all people.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_English.4.14">
+            <app xml:id="uen_40_ver_English">
+              <lem wit="#OCP-Trans">Then the Lord said to Michael, “Arise and go to Abraham, and be a guest with him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_English.4.15">
+            <app xml:id="uen_41_ver_English">
+              <lem wit="#OCP-Trans">And whatever you see him eating, you also eat, and wherever he sleeps, you also sleep there.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_English.4.16">
+            <app xml:id="uen_42_ver_English">
+              <lem wit="#OCP-Trans">For I will cast the remembrance of Abraham’s death into the heart of Isaac his son in a dream.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="TAbB.ver_English.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.5.1">
+            <app xml:id="uen_43_ver_English">
+              <lem wit="#OCP-Trans">Then Michael went to Abraham’s house that evening, and found them preparing supper. And they ate and drank and rejoiced.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.5.2">
+            <app xml:id="uen_44_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said to his son Isaac, “Arise, child, make the bed for the man so that he may rest, and place the lamp on the lampstand.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.5.3">
+            <app xml:id="uen_45_ver_English">
+              <lem wit="#OCP-Trans">And Isaac did as his father commanded him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.5.4">
+            <app xml:id="uen_46_ver_English">
+              <lem wit="#OCP-Trans">And Isaac said to his father, “Father, I am coming to sleep near you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.5.5">
+            <app xml:id="uen_47_ver_English">
+              <lem wit="#OCP-Trans">And Abraham answered him, “No, my child, lest we become a burden to this man; but go away into your chamber and rest.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.5.6">
+            <app xml:id="uen_48_ver_English">
+              <lem wit="#OCP-Trans">And Isaac, not wishing to disobey his father’s command, went away and rested in his chamber.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="TAbB.ver_English.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.6.1">
+            <app xml:id="uen_49_ver_English">
+              <lem wit="#OCP-Trans">And it came to pass about the seventh hour of the night, Isaac, having woken up, came to the door of his father’s house, crying and saying, “Father, open, so that I may enjoy you before they take you from me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.6.2">
+            <app xml:id="uen_50_ver_English">
+              <lem wit="#OCP-Trans">And Abraham arose and opened, and Isaac entered and clung to his father’s neck, weeping, and lamenting he kissed him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.6.3">
+            <app xml:id="uen_51_ver_English">
+              <lem wit="#OCP-Trans">And Abraham wept with his son; and Michael saw them weeping and he also wept.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.6.4">
+            <app xml:id="uen_52_ver_English">
+              <lem wit="#OCP-Trans">And Sarah, hearing the weeping from her bedroom, cried out, saying,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.6.5">
+            <app xml:id="uen_53_ver_English">
+              <lem wit="#OCP-Trans">“My Lord Abraham, what is the weeping? Did the stranger tell you about your nephew Lot that he has died? Or has something else happened to us?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.6.6">
+            <app xml:id="uen_54_ver_English">
+              <lem wit="#OCP-Trans">And Michael answered and said to Sarah, “No, Sarah, I did not bring news about Lot. But concerning all your philanthropy, I have learned that you excel all people on earth, and God has remembered you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.6.7">
+            <app xml:id="uen_55_ver_English">
+              <lem wit="#OCP-Trans">Then Sarah says to Abraham, “How did you dare to weep when the man of God has come to you?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.6.8">
+            <app xml:id="uen_56_ver_English">
+              <lem wit="#OCP-Trans">And how did your eyes, the pairs of light, shed tears? For today there is joy.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.6.9">
+            <app xml:id="uen_57_ver_English">
+              <lem wit="#OCP-Trans">Therefore Abraham says to her, “How do you know that he is a man of God?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.6.10">
+            <app xml:id="uen_58_ver_English">
+              <lem wit="#OCP-Trans">And Sarah answered and said, “Because I surmise and say that this is one of the three men who were entertained by us at the Oak of Mamre, when one of the servants went and brought a calf and you sacrificed it.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.6.11">
+            <app xml:id="uen_59_ver_English">
+              <lem wit="#OCP-Trans">And you said to me, ‘Arise, prepare so that we may eat with these men in our house.’”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_English.6.12">
+            <app xml:id="uen_60_ver_English">
+              <lem wit="#OCP-Trans">And Abraham answered and said, “You have understood well, O woman.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_English.6.13">
+            <app xml:id="uen_61_ver_English">
+              <lem wit="#OCP-Trans">For even I, when I washed his feet, knew in my heart that these are the feet which I washed at the Oak of Mamre. And as I began to ask about his journey, he told me that he was going to protect brother Lot from Sodom. And then I recognized the mystery.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="TAbB.ver_English.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.7.1">
+            <app xml:id="uen_62_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said to Michael, “Tell me, O man of God, and reveal to me why you came here.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.7.2">
+            <app xml:id="uen_63_ver_English">
+              <lem wit="#OCP-Trans">And Michael said, “Your son Isaac will declare it to you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.7.3">
+            <app xml:id="uen_64_ver_English">
+              <lem wit="#OCP-Trans">And Abraham says to his son, “My beloved son, tell me what you saw in a dream today and were disturbed; declare it to me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.7.4">
+            <app xml:id="uen_65_ver_English">
+              <lem wit="#OCP-Trans">And Isaac answered his father, “I saw myself in a dream, the sun and the moon.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.7.5">
+            <app xml:id="uen_66_ver_English">
+              <lem wit="#OCP-Trans">And a crown came upon my head. And there was a man exceedingly great, shining from heaven, like light, called ‘Father of Light.’</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.7.6">
+            <app xml:id="uen_67_ver_English">
+              <lem wit="#OCP-Trans">And he took the sun from my head; and then he left the rays in my midst.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.7.7">
+            <app xml:id="uen_68_ver_English">
+              <lem wit="#OCP-Trans">And I wept and said, ‘I beg you, my Lord, do not take away the glory from my head and the light from my house and all my glory.’</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.7.8">
+            <app xml:id="uen_69_ver_English">
+              <lem wit="#OCP-Trans">And the sun and the moon and the stars mourned, saying, ‘Do not take away the glory of our power.’</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.7.9">
+            <app xml:id="uen_70_ver_English">
+              <lem wit="#OCP-Trans">And that luminous man answered me and said, ‘Do not weep because I took the light from your house; for he was taken up from labors to rest, and from lowliness to height,’</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.7.10">
+            <app xml:id="uen_71_ver_English">
+              <lem wit="#OCP-Trans">They lift him from confinement to spaciousness, they lift him from darkness to light.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.7.11">
+            <app xml:id="uen_72_ver_English">
+              <lem wit="#OCP-Trans">But I said to him, “I beg you, lord, take also the rays with him.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_English.7.12">
+            <app xml:id="uen_73_ver_English">
+              <lem wit="#OCP-Trans">And he said to me, “There are twelve hours in the day, and then I take all the rays.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_English.7.13">
+            <app xml:id="uen_74_ver_English">
+              <lem wit="#OCP-Trans">As the luminous man was saying these things, I saw the sun of my house ascending into heaven, but I no longer saw that crown.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_English.7.14">
+            <app xml:id="uen_75_ver_English">
+              <lem wit="#OCP-Trans">And that sun was like you, my father.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_English.7.15">
+            <app xml:id="uen_76_ver_English">
+              <lem wit="#OCP-Trans">And Michael said to Abraham, “Your son Isaac has spoken the truth. For it is you, and you are being taken up into the heavens.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_English.7.16">
+            <app xml:id="uen_77_ver_English">
+              <lem wit="#OCP-Trans">But your body remains on the earth until seven thousand ages are fulfilled. For then all flesh will be raised.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="TAbB.ver_English.7.17">
+            <app xml:id="uen_78_ver_English">
+              <lem wit="#OCP-Trans">“Now, therefore, Abraham, arrange the affairs of your house and concerning your children, for you have fully heard your disposition.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="TAbB.ver_English.7.18">
+            <app xml:id="uen_79_ver_English">
+              <lem wit="#OCP-Trans">And Abraham answered and said to Michael, “I beg you, lord, if I depart from my body, I would like to be taken up bodily, so that I may behold the created things that the Lord my God created in heaven and on earth.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="TAbB.ver_English.7.19">
+            <app xml:id="uen_80_ver_English">
+              <lem wit="#OCP-Trans">And Michael answered and said, “This is not my doing. But I will go and report about this to the Lord, and if I am commanded, I will show you all these things.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="TAbB.ver_English.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.8.1">
+            <app xml:id="uen_81_ver_English">
+              <lem wit="#OCP-Trans">And Michael ascended into the heavens and spoke before the Lord concerning Abraham.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.8.2">
+            <app xml:id="uen_82_ver_English">
+              <lem wit="#OCP-Trans">And the Lord answered Michael, “Go and take Abraham up in the body and show him everything, and whatever he says to you, do it, as he is my friend.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.8.3">
+            <app xml:id="uen_83_ver_English">
+              <lem wit="#OCP-Trans">So Michael went out and took Abraham up on a cloud in the body, and brought him to the Ocean River.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.8.4">
+            <app xml:id="uen_84_ver_English">
+              <lem wit="#OCP-Trans">And Abraham looked intently and saw two gates, one small and the other large.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.8.5">
+            <app xml:id="uen_85_ver_English">
+              <lem wit="#OCP-Trans">And between the two gates sat a man on a throne of great glory, and a multitude of angels surrounded him.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.8.6">
+            <app xml:id="uen_86_ver_English">
+              <lem wit="#OCP-Trans">And he was weeping, and again laughing, and his weeping exceeded his laughter sevenfold.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.8.7">
+            <app xml:id="uen_87_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said to Michael, “Who is this who sits between the two gates with much glory? At one moment he laughs, at another moment he weeps, and his weeping exceeds his laughter sevenfold?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.8.8">
+            <app xml:id="uen_88_ver_English">
+              <lem wit="#OCP-Trans">And Michael said to Abraham, “Do you not know who he is?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.8.9">
+            <app xml:id="uen_89_ver_English">
+              <lem wit="#OCP-Trans">And he said, “No, lord.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.8.10">
+            <app xml:id="uen_90_ver_English">
+              <lem wit="#OCP-Trans">And Michael said to Abraham, “Do you see these two gates, the small and the large?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.8.11">
+            <app xml:id="uen_91_ver_English">
+              <lem wit="#OCP-Trans">“These are the ones that lead to life and to destruction.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_English.8.12">
+            <app xml:id="uen_92_ver_English">
+              <lem wit="#OCP-Trans">“And this man who sits in the midst of them, this is Adam, the first man whom the Lord formed.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_English.8.13">
+            <app xml:id="uen_93_ver_English">
+              <lem wit="#OCP-Trans">“And he placed him in this place to observe every soul that comes out of the body, since all are from him.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_English.8.14">
+            <app xml:id="uen_94_ver_English">
+              <lem wit="#OCP-Trans">“So when you see him weeping, know that he has seen many souls being led away to destruction.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_English.8.15">
+            <app xml:id="uen_95_ver_English">
+              <lem wit="#OCP-Trans">“But when you see him laughing, he has seen a few souls being led away to life.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_English.8.16">
+            <app xml:id="uen_96_ver_English">
+              <lem wit="#OCP-Trans">“Do you see how his weeping exceeds his laughter? Because he sees the greater part of the world being led through the wide gate to destruction, therefore his weeping exceeds his laughter sevenfold.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="TAbB.ver_English.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.9.1">
+            <app xml:id="uen_97_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said, “And he who cannot enter through the narrow gate, can he not enter into life?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.9.2">
+            <app xml:id="uen_98_ver_English">
+              <lem wit="#OCP-Trans">Then Abraham wept, saying, “Woe is me! What shall I do?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.9.3">
+            <app xml:id="uen_99_ver_English">
+              <lem wit="#OCP-Trans">“For I am a man large in body, and how shall I be able to enter the narrow gate, into which a child fifteen years old cannot come?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.9.4">
+            <app xml:id="uen_100_ver_English">
+              <lem wit="#OCP-Trans">And Michael answered and said to Abraham, “Do not fear, father, nor grieve, for you will enter through it without hindrance, and all those like you.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.9.5">
+            <app xml:id="uen_101_ver_English">
+              <lem wit="#OCP-Trans">And as Abraham stood wondering, behold, an angel of the Lord was driving six myriad souls of sinners to destruction.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.9.6">
+            <app xml:id="uen_102_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said to Michael, “Are all these going to destruction?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.9.7">
+            <app xml:id="uen_103_ver_English">
+              <lem wit="#OCP-Trans">And Michael said to him, “Yes, but let us go and search among these souls, if there is even one righteous among them.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.9.8">
+            <app xml:id="uen_104_ver_English">
+              <lem wit="#OCP-Trans">And as they went, they found an angel holding in his hand one soul of a woman from among those six myriads, for he found her sins equally balanced with all her deeds, and they were neither in toil nor in rest, but in a place of neutrality.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.9.9">
+            <app xml:id="uen_105_ver_English">
+              <lem wit="#OCP-Trans">But he took those souls to destruction.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.9.10">
+            <app xml:id="uen_106_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said to Michael, “My Lord, is this the angel who takes souls out of the body, or not?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.9.11">
+            <app xml:id="uen_107_ver_English">
+              <lem wit="#OCP-Trans">Michael answered and said, “This is Death, and he leads them to the place of judgment, so that the judge may judge them.”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="TAbB.ver_English.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.10.1">
+            <app xml:id="uen_108_ver_English">
+              <lem wit="#OCP-Trans">And Abraham says, “My Lord, I beg you to bring me up to the place of judgment, so that I too may see how they are judged.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.10.2">
+            <app xml:id="uen_109_ver_English">
+              <lem wit="#OCP-Trans">Then Michael took Abraham upon a cloud and brought him to Paradise.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.10.3">
+            <app xml:id="uen_110_ver_English">
+              <lem wit="#OCP-Trans">And when he arrived at the place where the judge was, the angel came and gave that soul to the judge.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.10.4">
+            <app xml:id="uen_111_ver_English">
+              <lem wit="#OCP-Trans">And the soul said, “Have mercy on me, Lord.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.10.5">
+            <app xml:id="uen_112_ver_English">
+              <lem wit="#OCP-Trans">And the judge said, “How shall I have mercy on you, since you did not have mercy on your daughter whom you had, the fruit of your womb? Why did you murder her?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.10.6">
+            <app xml:id="uen_113_ver_English">
+              <lem wit="#OCP-Trans">And she answered, “No, Lord; murder did not happen by me, but that daughter of mine lied against me.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.10.7">
+            <app xml:id="uen_114_ver_English">
+              <lem wit="#OCP-Trans">But the judge commanded the one who records the memorials to come.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.10.8">
+            <app xml:id="uen_115_ver_English">
+              <lem wit="#OCP-Trans">And behold, cherubim were carrying two books, and a man, exceedingly great, was with them; and he had three crowns upon his head,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.10.9">
+            <app xml:id="uen_116_ver_English">
+              <lem wit="#OCP-Trans">and one crown was higher than the other two crowns; and the crowns were called “Crowns of Witness.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.10.10">
+            <app xml:id="uen_117_ver_English">
+              <lem wit="#OCP-Trans">And the man had a golden reed in his hand; and the judge says to him, “Present the sin of this soul.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.10.11">
+            <app xml:id="uen_118_ver_English">
+              <lem wit="#OCP-Trans">And that man unrolled one of the books that were with the cherubim, and he sought the sin of the woman’s soul, and he found it.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_English.10.12">
+            <app xml:id="uen_119_ver_English">
+              <lem wit="#OCP-Trans">And the judge said, “O wretched soul, how do you say that you did not commit murder?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_English.10.13">
+            <app xml:id="uen_120_ver_English">
+              <lem wit="#OCP-Trans">“Did you not, after the death of your husband, go and commit adultery with your daughter’s husband, and kill her?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_English.10.14">
+            <app xml:id="uen_121_ver_English">
+              <lem wit="#OCP-Trans">And he also exposed her other sins, and whatever she did from her youth.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_English.10.15">
+            <app xml:id="uen_122_ver_English">
+              <lem wit="#OCP-Trans">When the woman heard these things, she cried out, saying, “Woe is me, woe is me, because I forgot all the sins I committed in the world; but here they have not been forgotten!”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_English.10.16">
+            <app xml:id="uen_123_ver_English">
+              <lem wit="#OCP-Trans">Then they took her and handed her over to the tormentors.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="TAbB.ver_English.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.11.1">
+            <app xml:id="uen_124_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said to Michael, “Lord, who is this judge, and who is the other, who exposes the sins?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.11.2">
+            <app xml:id="uen_125_ver_English">
+              <lem wit="#OCP-Trans">And Michael says to Abraham, “Do you see the judge? This is Abel, who was the first to bear witness; and God brought him here to judge.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.11.3">
+            <app xml:id="uen_126_ver_English">
+              <lem wit="#OCP-Trans">And the one who presents is Enoch, the teacher of heaven and earth and scribe of righteousness.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.11.4">
+            <app xml:id="uen_127_ver_English">
+              <lem wit="#OCP-Trans">For the Lord sent them here, so that they might record the sins and the righteous deeds of everyone.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.11.5">
+            <app xml:id="uen_128_ver_English">
+              <lem wit="#OCP-Trans">And Abraham says, “And how can Enoch bear the burden of souls, not having seen death? Or how can he give a decision for all souls?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.11.6">
+            <app xml:id="uen_129_ver_English">
+              <lem wit="#OCP-Trans">And Michael said, “If he were to give a decision concerning them, he would not be pardoned; but Enoch himself does not pronounce decisions,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.11.7">
+            <app xml:id="uen_130_ver_English">
+              <lem wit="#OCP-Trans">but the Lord is the one who pronounces decisions, and this one’s part is only to write.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.11.8">
+            <app xml:id="uen_131_ver_English">
+              <lem wit="#OCP-Trans">“Because Enoch prayed to the Lord, saying, ‘I do not wish, Lord, to give a decision concerning souls, so that I may not become a burden to anyone.’ ”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.11.9">
+            <app xml:id="uen_132_ver_English">
+              <lem wit="#OCP-Trans">“And the Lord said to Enoch, ‘I will command you to write the sins of a soul that makes propitiation, and it will enter into life;’ ”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.11.10">
+            <app xml:id="uen_133_ver_English">
+              <lem wit="#OCP-Trans">“ ‘and if a soul does not make propitiation and repent, you will find its sins written, and it will be cast into punishment.’ ”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="TAbB.ver_English.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.12.1">
+            <app xml:id="uen_134_ver_English">
+              <lem wit="#OCP-Trans">And after Abraham saw the place of judgment, the cloud brought him down into the firmament below.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.12.2">
+            <app xml:id="uen_135_ver_English">
+              <lem wit="#OCP-Trans">And Abraham, looking intently at the earth, saw a man committing adultery with a married woman.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.12.3">
+            <app xml:id="uen_136_ver_English">
+              <lem wit="#OCP-Trans">And Abraham turned and said to Michael, “Do you see this sin? But, Lord, send fire from heaven, so that it may consume them.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.12.4">
+            <app xml:id="uen_137_ver_English">
+              <lem wit="#OCP-Trans">And immediately fire came down and consumed them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.12.5">
+            <app xml:id="uen_138_ver_English">
+              <lem wit="#OCP-Trans">Because the Lord had said to Michael, “Whatever Abraham asks you to do for him, do it.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.12.6">
+            <app xml:id="uen_139_ver_English">
+              <lem wit="#OCP-Trans">And again Abraham looked up and saw other people speaking evil of companions,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.12.7">
+            <app xml:id="uen_140_ver_English">
+              <lem wit="#OCP-Trans">and he said, “Let the earth open and swallow them!”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.12.8">
+            <app xml:id="uen_141_ver_English">
+              <lem wit="#OCP-Trans">And when he said this, the earth swallowed them alive.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.12.9">
+            <app xml:id="uen_142_ver_English">
+              <lem wit="#OCP-Trans">And again the cloud brought him up to another place; and Abraham saw some going to a deserted place to commit murder.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.12.10">
+            <app xml:id="uen_143_ver_English">
+              <lem wit="#OCP-Trans">And he said to Michael, “Do you see this sin? Let wild animals come from the desert and tear them apart.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.12.11">
+            <app xml:id="uen_144_ver_English">
+              <lem wit="#OCP-Trans">And at that very hour wild animals came out of the desert and devoured them.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_English.12.12">
+            <app xml:id="uen_145_ver_English">
+              <lem wit="#OCP-Trans">Then the Lord God spoke to Michael, saying, “Bring Abraham back to his house and do not let him wander through all the creation which I have made, because he does not show mercy to sinners,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_English.12.13">
+            <app xml:id="uen_146_ver_English">
+              <lem wit="#OCP-Trans">but I have mercy on sinners, so that they may turn and live and repent of their sins, and be saved.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_English.12.14">
+            <app xml:id="uen_147_ver_English">
+              <lem wit="#OCP-Trans">And at the ninth hour Michael returned Abraham to his house.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_English.12.15">
+            <app xml:id="uen_148_ver_English">
+              <lem wit="#OCP-Trans">But Sarah, his wife, not having seen Abraham and what had happened, was consumed by grief and gave up her spirit.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_English.12.16">
+            <app xml:id="uen_149_ver_English">
+              <lem wit="#OCP-Trans">And after Abraham returned, he found her dead, and he buried her.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="TAbB.ver_English.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.13.1">
+            <app xml:id="uen_150_ver_English">
+              <lem wit="#OCP-Trans">Now when the days of Abraham’s death drew near, the Lord God said to Michael, “Death must not dare to approach to take the soul of my servant, for he is my friend.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.13.2">
+            <app xml:id="uen_151_ver_English">
+              <lem wit="#OCP-Trans">But go and adorn Death with great beauty, and so send him to Abraham so that he may behold him with his eyes.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.13.3">
+            <app xml:id="uen_152_ver_English">
+              <lem wit="#OCP-Trans">And Michael immediately, as he was commanded, adorned Death with great beauty, and so sent him to Abraham, so that he might behold him. And he sat near Abraham.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.13.4">
+            <app xml:id="uen_153_ver_English">
+              <lem wit="#OCP-Trans">And Abraham, seeing Death sitting near him, was greatly afraid.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.13.5">
+            <app xml:id="uen_154_ver_English">
+              <lem wit="#OCP-Trans">And Death said to Abraham, “Hail, holy soul! Hail, friend of the Lord God! Hail, comfort of the hospitality of travelers!”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.13.6">
+            <app xml:id="uen_155_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said, “You have come well, servant of God Most High. I beg you, tell me who you are, and come into the house and partake of food and drink, and depart from me; for since I beheld you sitting so near me, my soul has been troubled.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.13.7">
+            <app xml:id="uen_156_ver_English">
+              <lem wit="#OCP-Trans">“For surely I am not worthy to be near you, for you are a lofty spirit, but I am flesh and blood, and for this reason I cannot bear your glory.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.13.8">
+            <app xml:id="uen_157_ver_English">
+              <lem wit="#OCP-Trans">“For I see your beauty, that it is not of this world.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.13.9">
+            <app xml:id="uen_158_ver_English">
+              <lem wit="#OCP-Trans">And Death said to Abraham, “I tell you, in all the creation that God created, no one like you has been found.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_English.13.10">
+            <app xml:id="uen_159_ver_English">
+              <lem wit="#OCP-Trans">“For God himself, having searched, found no such one on all the earth.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_English.13.11">
+            <app xml:id="uen_160_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said to Death, “How dare you lie? For I see your beauty, that it is not of this world.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_English.13.12">
+            <app xml:id="uen_161_ver_English">
+              <lem wit="#OCP-Trans">And Death said to Abraham, “Do not think, Abraham, that this beauty is mine, or that I always appear thus to every person.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_English.13.13">
+            <app xml:id="uen_162_ver_English">
+              <lem wit="#OCP-Trans">“No, but if someone is righteous like you, thus I receive crowns and go to him; but if he is a sinner, I go in great rottenness, and from their sin I make a crown for my head, and I disturb them with great fear, so that they may be amazed.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_English.13.14">
+            <app xml:id="uen_163_ver_English">
+              <lem wit="#OCP-Trans">Therefore Abraham says to him, “And where is this beauty from?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_English.13.15">
+            <app xml:id="uen_164_ver_English">
+              <lem wit="#OCP-Trans">And Death says, “No one is more corrupt than I.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_English.13.16">
+            <app xml:id="uen_165_ver_English">
+              <lem wit="#OCP-Trans">Abraham says to him, “And are you indeed the one called Death?”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="TAbB.ver_English.13.17">
+            <app xml:id="uen_166_ver_English">
+              <lem wit="#OCP-Trans">He answered him and said, “I am the bitter name. I am lamentation . . . .”</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="TAbB.ver_English.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_English.14.1">
+            <app xml:id="uen_167_ver_English">
+              <lem wit="#OCP-Trans">And Abraham said to Death, “Show us your corruption.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_English.14.2">
+            <app xml:id="uen_168_ver_English">
+              <lem wit="#OCP-Trans">And Death revealed his corruption; and he had two heads.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_English.14.3">
+            <app xml:id="uen_169_ver_English">
+              <lem wit="#OCP-Trans">One had the face of a serpent, and through it some die suddenly by vipers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_English.14.4">
+            <app xml:id="uen_170_ver_English">
+              <lem wit="#OCP-Trans">And the other head was like a sword; for this reason some die by the sword as by arrows.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_English.14.5">
+            <app xml:id="uen_171_ver_English">
+              <lem wit="#OCP-Trans">On that day, Abraham’s servants died because of the fear of Death.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_English.14.6">
+            <app xml:id="uen_172_ver_English">
+              <lem wit="#OCP-Trans">When Abraham saw them, he prayed to the Lord, and he raised them up.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_English.14.7">
+            <app xml:id="uen_173_ver_English">
+              <lem wit="#OCP-Trans">And God turned and stretched out Abraham’s soul as in dreams, and the archangel Michael took it up into the heavens.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_English.14.8">
+            <app xml:id="uen_174_ver_English">
+              <lem wit="#OCP-Trans">And Isaac buried his father near his mother Sarah, glorifying and praising God.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_English.14.9">
+            <app xml:id="uen_175_ver_English">
+              <lem wit="#OCP-Trans">For to him belongs glory, honor, and worship, to the Father and to the Son and to the Holy Spirit, now and always and to the ages of ages. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Testament of Abraham Recension B (French)" xml:lang="fr" xml:id="ver_Testament_of_Abraham_Recension_B__French_">
+        <head>Testament of Abraham Recension B (French)</head>
+        <div type="chapter" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.1.1">
+            <app xml:id="ufr_1_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Il arriva, lorsque les jours de la mort d'Abraham approchèrent, que le Seigneur dit à Michel :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.1.2">
+            <app xml:id="ufr_2_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">« Lève-toi et va vers Abraham, mon serviteur, et dis-lui qu'il va quitter cette vie,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.1.3">
+            <app xml:id="ufr_3_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">car voici que les jours de ta vie temporelle sont accomplis, afin qu'il dispose des affaires de sa maison avant de mourir. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.1">
+            <app xml:id="ufr_4_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel partit et vint vers Abraham, et il le trouva assis devant ses bœufs pour le labourage ; il était d'apparence très âgé, et il tenait son fils embrassé dans ses bras.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.2">
+            <app xml:id="ufr_5_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham donc, voyant l'archange Michel, se leva de terre et le salua, ne sachant pas qui il était, et il lui dit :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.3">
+            <app xml:id="ufr_6_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">« Que Dieu te sauve ! Lève-toi, poursuivant heureusement ton chemin. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.4">
+            <app xml:id="ufr_7_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel lui répondit : « Tu es bienveillant, bon père. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.5">
+            <app xml:id="ufr_8_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham répondit et lui dit : « Viens, approche-toi de moi, mon frère, pour un court moment, afin que j'ordonne qu'on amène une bête,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.6">
+            <app xml:id="ufr_9_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">pour que nous allions dans ma maison et que tu te reposes avec moi, car le soir approche ; et au matin, te levant, tu iras où tu voudras, de peur qu'une bête féroce ne te rencontre et ne te maltraite. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.7">
+            <app xml:id="ufr_10_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Michel interrogea Abraham en disant : « Dis-moi ton nom, avant d'entrer dans ta maison, de peur que je ne te sois à charge. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.8">
+            <app xml:id="ufr_11_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham répondit et dit : « Mes parents m'ont nommé Abram, et le Seigneur m'a surnommé Abraham, en disant : “Lève-toi et sors de ta maison et de ta parenté, et viens dans le pays que je te montrerai.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.9">
+            <app xml:id="ufr_12_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et quand je fus venu dans le pays que le Seigneur m'avait indiqué, il me dit : “Ton nom ne sera plus appelé Abram, mais ton nom sera Abraham.” »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.10">
+            <app xml:id="ufr_13_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Michel répondit et lui dit : « Pardonne-moi, mon père, homme de Dieu éprouvé, car je suis un étranger, et j'ai entendu parler de toi, comment tu as parcouru quarante stades et amené un veau, et tu l'as immolé, recevant des anges dans ta maison pour qu'ils s'y reposent. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.11">
+            <app xml:id="ufr_14_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Ayant parlé ainsi tous les deux, ils se levèrent et se mirent en route vers la maison.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.12">
+            <app xml:id="ufr_15_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham appela l'un de ses serviteurs et lui dit : « Va, amène-moi une monture pour que l'étranger s'y asseye, car il est fatigué par le voyage. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.2.13">
+            <app xml:id="ufr_16_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel dit : « Ne fatigue pas le serviteur, mais marchons allègrement jusqu'à ce que nous arrivions à ta maison, car j'ai aimé ton entretien. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3">
+          <head>Chapter 3</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.1">
+            <app xml:id="ufr_17_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et s'étant levés, ils marchaient.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.2">
+            <app xml:id="ufr_18_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et comme ils approchaient de la ville, à environ trois stades, ils trouvèrent un grand arbre ayant trois cents branches, semblable à un tamaris ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.3">
+            <app xml:id="ufr_19_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et ils entendaient une voix chanter depuis ses branches : « Saint, parce que tu as accompli le motif pour lequel tu as été envoyé ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.4">
+            <app xml:id="ufr_20_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham entendit la voix, et il cacha le mystère dans son cœur, disant en lui-même : « Quel est donc ce mystère que j'ai entendu ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.5">
+            <app xml:id="ufr_21_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Lorsqu'il fut arrivé dans la maison, Abraham dit à ses serviteurs : « Levez-vous, sortez vers le troupeau, apportez trois bêtes, égorgez-les rapidement et préparez-les, afin que nous mangions et buvions, car ce jour est un jour de réjouissance. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.6">
+            <app xml:id="ufr_22_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et les serviteurs apportèrent les bêtes, et Abraham appela son fils Isaac et lui dit : « Mon enfant Isaac, lève-toi et verse de l'eau dans le bassin, afin que nous lavions les pieds de cet étranger. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.7">
+            <app xml:id="ufr_23_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et il fit ce qui lui avait été ordonné.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.8">
+            <app xml:id="ufr_24_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit : « J'ai le pressentiment de ce qui va arriver : dans ce plat, je ne laverai plus jamais les pieds d'un homme reçu chez nous. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.9">
+            <app xml:id="ufr_25_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Ayant entendu son père dire ces choses, Isaac pleura et lui dit : « Mon père, qu'est-ce donc que tu as dit : “C'est la dernière fois que je lave les pieds d'un étranger” ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.3.10">
+            <app xml:id="ufr_26_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham, voyant son fils pleurer, pleura lui aussi amèrement ; et Michel, les voyant pleurer, pleura également ; et les larmes de Michel tombèrent dans le bassin et devinrent une pierre précieuse.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4">
+          <head>Chapter 4</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.1">
+            <app xml:id="ufr_27_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Quand Sarah entendit leurs pleurs alors qu'elle était à l'intérieur de sa maison, elle sortit et dit à Abraham : « Mon seigneur, pourquoi pleurez-vous ainsi ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.2">
+            <app xml:id="ufr_28_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham répondit et lui dit : « Ce n'est rien de mal ; rentre dans ta maison et vaque à tes affaires, de peur que nous ne soyons à charge à cet homme. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.3">
+            <app xml:id="ufr_29_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Sarah se retira, car elle devait préparer le repas.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.4">
+            <app xml:id="ufr_30_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et le soleil approchait de son coucher ; et Michel sortit de la maison et monta aux cieux pour se prosterner devant Dieu ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.5">
+            <app xml:id="ufr_31_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">car au coucher du soleil, tous les anges se prosternent devant Dieu, et ce même Michel est le premier des anges.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.6">
+            <app xml:id="ufr_32_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et tous se prosternèrent et s'en allèrent, chacun à son lieu.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.7">
+            <app xml:id="ufr_33_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Michel, prenant la parole devant Dieu, dit : « Seigneur, ordonne que je sois interrogé devant ta sainte gloire. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.8">
+            <app xml:id="ufr_34_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit à Michel : « Annonce ce que tu veux. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.9">
+            <app xml:id="ufr_35_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">L'archange répondit et dit : « Seigneur, tu m'as envoyé vers Abraham pour lui dire : “Quitte ton corps et sors du monde ; le Seigneur t'appelle” ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.10">
+            <app xml:id="ufr_36_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et moi, je n'ose pas, Seigneur, me révéler à lui, car il est ton ami et un homme juste, qui accueille les étrangers.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.11">
+            <app xml:id="ufr_37_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Mais je te supplie, Seigneur, ordonne que le souvenir de la mort d'Abraham entre dans son cœur,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.12">
+            <app xml:id="ufr_38_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et que ce ne soit pas moi qui le lui dise ; car c'est une grande dureté de dire : “Sors du monde, et surtout de ton propre corps !”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.13">
+            <app xml:id="ufr_39_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Car dès le commencement, tu l'as fait avoir compassion des âmes de tous les hommes. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.14">
+            <app xml:id="ufr_40_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Alors le Seigneur dit à Michel : « Lève-toi et va vers Abraham, et loge chez lui ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.15">
+            <app xml:id="ufr_41_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et tout ce que tu le verras manger, mange-le toi aussi, et là où il se couchera, couche-toi là toi aussi ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.4.16">
+            <app xml:id="ufr_42_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">car moi, je jetterai le souvenir de la mort d'Abraham dans le cœur d'Isaac, son fils, en songe. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.5">
+          <head>Chapter 5</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.5.1">
+            <app xml:id="ufr_43_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Alors Michel vint dans la maison d'Abraham ce soir-là, et il les trouva en train de préparer le repas ; et ils mangèrent, burent et se réjouirent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.5.2">
+            <app xml:id="ufr_44_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit à son fils Isaac : « Lève-toi, mon enfant, prépare le lit de cet homme pour qu'il se repose, et place la lampe sur le chandelier. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.5.3">
+            <app xml:id="ufr_45_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Isaac fit comme son père le lui avait ordonné.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.5.4">
+            <app xml:id="ufr_46_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Isaac dit à son père : « Père, je viens moi aussi dormir tout près de vous. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.5.5">
+            <app xml:id="ufr_47_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham lui répondit : « Non, mon enfant, de peur que nous ne soyons à charge à cet homme ; mais va dans ta chambre et repose-toi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.5.6">
+            <app xml:id="ufr_48_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Ne voulant pas désobéir à l'ordre de son père, Isaac s'en alla et se reposa dans sa chambre.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6">
+          <head>Chapter 6</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.1">
+            <app xml:id="ufr_49_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et il arriva, vers la septième heure de la nuit, qu'Isaac, s'étant réveillé, vint à la porte de la chambre de son père, criant et disant : « Père, ouvre, afin que je profite de toi avant qu'on ne t'enlève loin de moi ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.2">
+            <app xml:id="ufr_50_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham se leva et ouvrit, et Isaac entra et se jeta au cou de son père en pleurant, et tout en se lamentant, il le couvrait de baisers ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.3">
+            <app xml:id="ufr_51_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham pleura avec son fils ; et Michel les vit pleurer et pleura lui aussi.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.4">
+            <app xml:id="ufr_52_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Sara, ayant entendu les pleurs depuis sa chambre, s'écria en disant :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.5">
+            <app xml:id="ufr_53_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">« Mon seigneur Abraham, que signifient ces pleurs ? L'étranger t'a-t-il annoncé au sujet de ton neveu Loth qu'il est mort ? Ou bien nous est-il arrivé quelque autre malheur ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.6">
+            <app xml:id="ufr_54_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Michel répondit et dit à Sara : « Non, Sara, je n'ai pas apporté de nouvelles au sujet de Loth ; mais pour ce qui est de toute votre bonté, j'ai reconnu que vous surpassez tous les êtres humains sur la terre, et Dieu s'est souvenu de vous. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.7">
+            <app xml:id="ufr_55_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Alors Sara dit à Abraham : « Comment as-tu osé pleurer alors que l'homme de Dieu est entré chez toi ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.8">
+            <app xml:id="ufr_56_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et comment tes yeux ont-ils versé des larmes, eux qui sont des sources de lumière ? Car aujourd'hui est un jour de réjouissance. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.9">
+            <app xml:id="ufr_57_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham lui dit alors : « D'où sais-tu qu'il est un homme de Dieu ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.10">
+            <app xml:id="ufr_58_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Sara répondit et dit : « C'est que j'affirme et je dis qu'il est l'un des trois hommes qui ont reçu notre hospitalité près du chêne de Mambré, lorsque l'un des serviteurs est allé chercher un veau et que tu l'as immolé ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.11">
+            <app xml:id="ufr_59_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et tu m'as dit : “Lève-toi, prépare [le repas] afin que nous mangions avec ces hommes dans notre maison.” »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.12">
+            <app xml:id="ufr_60_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham répondit et dit : « Tu as bien compris, ô femme ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.6.13">
+            <app xml:id="ufr_61_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">car moi aussi, lorsque j'ai lavé ses pieds, j'ai reconnu en mon cœur que ce sont là les pieds que j'avais lavés près du chêne de Mambré ; et comme je commençais à m'enquérir de son voyage, il me dit : “Je m'en vais préserver ton frère Loth de Sodome.” Et c'est alors que j'ai compris le mystère. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7">
+          <head>Chapter 7</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.1">
+            <app xml:id="ufr_62_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit à Michel : « Dis-moi, homme de Dieu, et révèle-moi pourquoi tu es venu ici. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.2">
+            <app xml:id="ufr_63_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel dit : « Ton fils Isaac te le fera savoir. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.3">
+            <app xml:id="ufr_64_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit à son fils : « Mon fils bien-aimé, dis-moi ce que tu as vu en songe aujourd'hui et qui t'a troublé ; annonce-le-moi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.4">
+            <app xml:id="ufr_65_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Isaac répondit à son père : « J'ai vu en songe le soleil et la lune ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.5">
+            <app xml:id="ufr_66_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et une couronne apparut sur ma tête ; et il y avait un homme immense, resplendissant depuis le ciel, comme une lumière appelée père de la lumière ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.6">
+            <app xml:id="ufr_67_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et il ôta le soleil de ma tête, ne laissant que les rayons au milieu de moi ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.7">
+            <app xml:id="ufr_68_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et je pleurai et dis : “Je t'en prie, mon seigneur, n'enlève pas la gloire de ma tête, ni la lumière de ma maison, ni toute ma gloire !”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.8">
+            <app xml:id="ufr_69_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et le soleil, la lune et les étoiles se lamentèrent, disant : “N'enlève pas la gloire de notre puissance !”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.9">
+            <app xml:id="ufr_70_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et cet homme lumineux me répondit et dit : “Ne pleure pas parce que j'ai pris la lumière de ta maison ; car elle a été enlevée des peines vers le repos, et de l'abaissement vers la hauteur ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.10">
+            <app xml:id="ufr_71_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">on la transporte de l'angoisse vers un lieu spacieux, on la transporte des ténèbres vers la lumière.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.11">
+            <app xml:id="ufr_72_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et moi je lui dis : “Je t'en prie, seigneur, prends aussi les rayons avec lui.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.12">
+            <app xml:id="ufr_73_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Mais il me dit : “Il y a douze heures dans le jour, et alors je prendrai tous les rayons.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.13">
+            <app xml:id="ufr_74_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Tandis que l'homme lumineux disait ces choses, je vis le soleil de ma maison monter vers le ciel, mais cette couronne, je ne la vis plus ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.14">
+            <app xml:id="ufr_75_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">or ce soleil était semblable à toi, mon père. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.15">
+            <app xml:id="ufr_76_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel dit à Abraham : « Ton fils Isaac a dit la vérité ; car c'est toi [ce soleil], et tu es enlevé vers les cieux,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.16">
+            <app xml:id="ufr_77_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">tandis que ton corps demeure sur la terre jusqu'à ce que soient accomplis sept mille siècles ; car alors toute chair ressuscitera.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.17">
+            <app xml:id="ufr_78_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Maintenant donc, Abraham, mets ordre à ta maison et à ce qui concerne tes enfants, car tu as pleinement entendu ce qui a été décrété pour toi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.18">
+            <app xml:id="ufr_79_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham répondit et dit à Michel : « Je t'en prie, seigneur, si je dois quitter mon corps, je voudrais être enlevé corporellement afin de contempler les créatures que le Seigneur mon Dieu a créées dans le ciel et sur la terre. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.7.19">
+            <app xml:id="ufr_80_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Michel répondit et dit : « Cela ne relève pas de mon pouvoir ; mais je m'en vais en parler au Seigneur, et si l'ordre m'en est donné, je te montrerai toutes ces choses. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.1">
+            <app xml:id="ufr_81_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel monta aux cieux et parla devant le Seigneur au sujet d'Abraham ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.2">
+            <app xml:id="ufr_82_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et le Seigneur répondit à Michel : « Va, prends Abraham dans son corps et montre-lui tout ; et tout ce qu'il te demandera, fais-le pour lui, car il est mon ami. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.3">
+            <app xml:id="ufr_83_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Michel s'en alla donc, prit Abraham sur une nuée dans son corps et l'emmena vers le fleuve Océan ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.4">
+            <app xml:id="ufr_84_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et Abraham, fixant son regard, vit deux portes, l'une petite et l'autre grande ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.5">
+            <app xml:id="ufr_85_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et entre les deux portes était assis un homme sur un trône d'une grande gloire, entouré d'une multitude d'anges ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.6">
+            <app xml:id="ufr_86_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et il pleurait, puis riait à nouveau, mais ses pleurs dépassaient sept fois son rire.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.7">
+            <app xml:id="ufr_87_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit à Michel : « Qui est cet homme assis entre les deux portes avec une grande gloire, qui tantôt rit, tantôt pleure, et dont les pleurs dépassent sept fois le rire ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.8">
+            <app xml:id="ufr_88_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel dit à Abraham : « Ne sais-tu pas qui il est ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.9">
+            <app xml:id="ufr_89_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et il dit : « Non, seigneur. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.10">
+            <app xml:id="ufr_90_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel dit à Abraham : « Vois-tu ces deux portes, la petite et la grande ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.11">
+            <app xml:id="ufr_91_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Ce sont celles qui mènent à la vie et à la perdition.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.12">
+            <app xml:id="ufr_92_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et cet homme assis au milieu d'elles, c'est Adam, le premier homme que le Seigneur a façonné ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.13">
+            <app xml:id="ufr_93_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et il l'a placé en ce lieu pour contempler toute âme sortant du corps, puisque toutes sont issues de lui.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.14">
+            <app xml:id="ufr_94_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Quand donc tu le vois pleurer, sache qu'il a contemplé de nombreuses âmes conduites à la perdition ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.15">
+            <app xml:id="ufr_95_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">mais quand tu le vois rire, c'est qu'il a contemplé un petit nombre d'âmes conduites à la vie.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.8.16">
+            <app xml:id="ufr_96_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Vois-tu comment ses pleurs dépassent son rire ? Puisqu'il voit la plus grande partie du monde conduite par la porte large à la perdition, c'est pour cela que ses pleurs dépassent sept fois son rire. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9">
+          <head>Chapter 9</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.1">
+            <app xml:id="ufr_97_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit : « Et celui qui ne peut entrer par la porte étroite ne peut-il pas entrer dans la vie ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.2">
+            <app xml:id="ufr_98_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Alors Abraham pleura, disant : « Malheur à moi ! Que vais-je faire ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.3">
+            <app xml:id="ufr_99_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Car je suis un homme au corps corpulent, et comment pourrai-je entrer par la porte étroite, par laquelle ne peut passer un enfant de quinze ans ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.4">
+            <app xml:id="ufr_100_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel répondit et dit à Abraham : « Ne crains pas, père, et ne t'afflige point, car tu y entreras sans obstacle, ainsi que tous ceux qui te ressemblent. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.5">
+            <app xml:id="ufr_101_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et tandis qu'Abraham se tenait là et s'étonnait, voici qu'un ange du Seigneur menait soixante mille âmes de pécheurs à la perdition.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.6">
+            <app xml:id="ufr_102_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit à Michel : « Tous ceux-ci vont-ils à la perdition ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.7">
+            <app xml:id="ufr_103_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel lui dit : « Oui, mais allons et cherchons parmi ces âmes s'il s'en trouve au moins une de juste. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.8">
+            <app xml:id="ufr_104_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Étant partis, ils trouvèrent un ange qui tenait dans sa main l'âme d'une femme provenant de ces soixante mille, car il avait trouvé ses péchés en équilibre avec toutes ses œuvres ; et elle n'était ni dans le tourment ni dans le repos, mais dans un lieu intermédiaire.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.9">
+            <app xml:id="ufr_105_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Quant à ces autres âmes, il les emporta vers la perdition.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.10">
+            <app xml:id="ufr_106_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit à Michel : « Seigneur, est-ce là l'ange qui fait sortir les âmes du corps, ou non ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.9.11">
+            <app xml:id="ufr_107_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Michel répondit et dit : « C'est la Mort, et elle les conduit au lieu du jugement, afin que le juge les juge. »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10">
+          <head>Chapter 10</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.1">
+            <app xml:id="ufr_108_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit : « Mon seigneur, je te prie de me conduire au lieu du jugement, afin que je voie moi aussi comment elles sont jugées. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.2">
+            <app xml:id="ufr_109_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Alors Michel prit Abraham sur une nuée et le conduisit dans le paradis.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.3">
+            <app xml:id="ufr_110_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et lorsqu'il fut arrivé au lieu où se trouvait le juge, l'ange vint et remit cette âme au juge.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.4">
+            <app xml:id="ufr_111_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et l'âme disait : « Aie pitié de moi, seigneur ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.5">
+            <app xml:id="ufr_112_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et le juge dit : « Comment aurais-je pitié de toi, alors que tu n'as pas eu pitié de ta fille que tu avais, le fruit de tes entrailles ? Pourquoi l'as-tu tuée ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.6">
+            <app xml:id="ufr_113_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et elle répondit : « Non, seigneur ! Aucun meurtre n'a été commis par moi, mais ma fille elle-même a menti contre moi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.7">
+            <app xml:id="ufr_114_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Alors le juge ordonna de faire venir celui qui écrivait les registres.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.8">
+            <app xml:id="ufr_115_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et voici des chérubins portant deux livres, et il y avait avec eux un homme extrêmement grand ; et il portait sur sa tête trois couronnes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.9">
+            <app xml:id="ufr_116_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et l'une des couronnes était plus haute que les deux autres couronnes ; et ces couronnes étaient appelées couronnes de témoignage.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.10">
+            <app xml:id="ufr_117_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et l'homme tenait dans sa main un roseau d'or ; et le juge lui dit : « Établis le péché de cette âme. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.11">
+            <app xml:id="ufr_118_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et cet homme, ayant ouvert l'un des livres portés par les chérubins, chercha le péché de l'âme de la femme, et le trouva.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.12">
+            <app xml:id="ufr_119_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et le juge dit : « Ô âme misérable, comment peux-tu dire que tu n'as pas commis de meurtre ?</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.13">
+            <app xml:id="ufr_120_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">N'est-ce pas toi qui, après la mort de ton mari, as commis l'adultère avec le mari de ta fille et l'as tuée ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.14">
+            <app xml:id="ufr_121_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et il dévoila aussi ses autres péchés, et tout ce qu'elle avait commis depuis sa jeunesse.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.15">
+            <app xml:id="ufr_122_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Ayant entendu cela, la femme s'écria en disant : « Malheur, malheur à moi, car tous les péchés que j'ai commis dans le monde, je les avais oubliés, mais ici ils n'ont pas été oubliés ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.10.16">
+            <app xml:id="ufr_123_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Alors ils l'emportèrent, elle aussi, et la livrèrent aux tourmenteurs.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11">
+          <head>Chapter 11</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.1">
+            <app xml:id="ufr_124_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit à Michel : « Seigneur, qui est ce juge, et qui est cet autre qui dévoile les péchés ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.2">
+            <app xml:id="ufr_125_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel dit à Abraham : « Vois-tu le juge ? C'est Abel, celui qui a rendu témoignage le premier ; et Dieu l'a amené ici pour juger.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.3">
+            <app xml:id="ufr_126_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et celui qui apporte les preuves, c'est Hénoch, le maître du ciel et de la terre et le scribe de justice ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.4">
+            <app xml:id="ufr_127_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">car le Seigneur les a envoyés ici afin d'enregistrer les péchés et les actes de justice de chacun. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.5">
+            <app xml:id="ufr_128_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit : « Et comment Hénoch peut-il porter le fardeau des âmes, lui qui n'a pas vu la mort ? Ou comment peut-il prononcer la sentence sur toutes les âmes ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.6">
+            <app xml:id="ufr_129_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel dit : « Il ne lui est pas permis de prononcer une sentence à leur sujet ; et ce ne sont pas les sentences propres d'Hénoch qui sont prononcées,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.7">
+            <app xml:id="ufr_130_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">mais c'est le Seigneur qui prononce la sentence, et la tâche de celui-ci n'est rien d'autre que d'écrire.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.8">
+            <app xml:id="ufr_131_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">En effet, Hénoch avait prié le Seigneur en disant : “Je ne veux pas, Seigneur, rendre de sentence sur les âmes, afin de n'être à charge pour personne.”</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.9">
+            <app xml:id="ufr_132_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et le Seigneur dit à Hénoch : “Je t'ordonnerai d'écrire les péchés d'une âme qui obtient propitiation, et elle entrera dans la vie ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.11.10">
+            <app xml:id="ufr_133_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et si l'âme n'obtient pas propitiation et ne se repent pas, tu trouveras ses péchés inscrits, et elle sera jetée dans le châtiment.” »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12">
+          <head>Chapter 12</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.1">
+            <app xml:id="ufr_134_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et après qu'Abraham eut contemplé le lieu du jugement, la nuée le fit redescendre sous le firmament.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.2">
+            <app xml:id="ufr_135_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham, ayant regardé vers la terre, vit un homme qui commettait l'adultère avec une femme mariée.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.3">
+            <app xml:id="ufr_136_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham se tourna et dit à Michel : « Vois-tu ce péché ? Allons, Seigneur, envoie du feu depuis le ciel afin qu'il les dévore ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.4">
+            <app xml:id="ufr_137_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et aussitôt du feu descendit et les dévora ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.5">
+            <app xml:id="ufr_138_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">car le Seigneur avait dit à Michel : « Tout ce qu'Abraham te demandera de faire pour lui, fais-le. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.6">
+            <app xml:id="ufr_139_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et de nouveau Abraham leva les yeux et vit d'autres hommes calomnier leurs compagnons,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.7">
+            <app xml:id="ufr_140_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et il dit : « Que la terre s'ouvre et les engloutisse ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.8">
+            <app xml:id="ufr_141_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et au moment où il parlait, la terre les engloutit vivants.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.9">
+            <app xml:id="ufr_142_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et de nouveau la nuée le conduisit en un autre lieu ; et Abraham vit des gens qui se rendaient dans un lieu désert pour commettre un meurtre.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.10">
+            <app xml:id="ufr_143_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et il dit à Michel : « Vois-tu ce péché ? Que des bêtes sauvages sortent du désert et les mettent en pièces ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.11">
+            <app xml:id="ufr_144_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et à cette heure même, des bêtes sauvages sortirent du désert et les dévorèrent.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.12">
+            <app xml:id="ufr_145_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Alors le Seigneur Dieu parla à Michel en disant : « Ramène Abraham dans sa maison et ne le laisse pas faire le tour de toute la création que j'ai faite, car il n'a point de compassion pour les pécheurs ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.13">
+            <app xml:id="ufr_146_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">mais moi, j'ai compassion des pécheurs, afin qu'ils se convertissent, qu'ils vivent, qu'ils se repentent de leurs péchés et qu'ils soient sauvés. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.14">
+            <app xml:id="ufr_147_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et vers la neuvième heure, Michel ramena Abraham dans sa maison.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.15">
+            <app xml:id="ufr_148_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Or Sara, son épouse, ne voyant pas ce qu'Abraham était devenu, fut submergée par le chagrin et rendit l'âme.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.12.16">
+            <app xml:id="ufr_149_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et après qu'Abraham fut revenu, il la trouva morte, et il l'ensevelit.</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13">
+          <head>Chapter 13</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.1">
+            <app xml:id="ufr_150_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Or, lorsque approchèrent les jours de la mort d'Abraham, le Seigneur Dieu dit à Michel : « Que la Mort n'ose pas s'approcher pour faire sortir l'âme de mon serviteur, car il est mon ami ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.2">
+            <app xml:id="ufr_151_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Mais va, pare la Mort d'une grande beauté, et envoie-la ainsi vers Abraham, afin qu'il la voie de ses propres yeux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.3">
+            <app xml:id="ufr_152_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Michel, aussitôt, comme il en avait reçu l'ordre, para la Mort d'une grande beauté et l'envoya ainsi vers Abraham, afin qu'il la voie. Et elle s'assit près d'Abraham.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.4">
+            <app xml:id="ufr_153_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Voyant la Mort assise près de lui, Abraham fut saisi d'une grande crainte.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.5">
+            <app xml:id="ufr_154_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et la Mort dit à Abraham : « Réjouis-toi, âme sainte ; réjouis-toi, ami du Seigneur Dieu ; réjouis-toi, consolation de l'hospitalité envers les voyageurs ! »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.6">
+            <app xml:id="ufr_155_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit : « Sois le bienvenu, serviteur du Dieu très-haut. Je t'en prie, dis-moi qui tu es, et entre dans la maison, prends de la nourriture et de la boisson, puis éloigne-toi de moi ; car depuis que je t'ai vu assis tout près de moi, mon âme est troublée.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.7">
+            <app xml:id="ufr_156_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Car assurément je ne suis pas digne de m'approcher de toi ; en effet, tu es un esprit élevé, et moi, chair et sang, et c'est pourquoi je ne puis supporter ta gloire.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.8">
+            <app xml:id="ufr_157_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Car je vois ta beauté, qu'elle n'est pas de ce monde. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.9">
+            <app xml:id="ufr_158_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et la Mort dit à Abraham : « Je te le dis, dans toute la création que Dieu a faite, nul n'a été trouvé semblable à toi ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.10">
+            <app xml:id="ufr_159_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">car Dieu lui-même, ayant cherché, n'en a pas trouvé de semblable sur toute la terre. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.11">
+            <app xml:id="ufr_160_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Abraham dit à la Mort : « Comment as-tu osé mentir ? Car je vois que ta beauté n'est pas de ce monde. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.12">
+            <app xml:id="ufr_161_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et la Mort dit à Abraham : « Ne pense pas, Abraham, que cette beauté soit la mienne, ni que je m'avance ainsi vers tout homme.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.13">
+            <app xml:id="ufr_162_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Non, mais si quelqu'un est juste comme toi, je prends ainsi des couronnes et je vais vers lui ; mais s'il est pécheur, je m'avance dans une grande pourriture et, de leurs péchés, je me fais une couronne sur la tête, et je les trouble par une grande terreur, de sorte qu'il soit saisi d'effroi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.14">
+            <app xml:id="ufr_163_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham lui dit alors : « Et d'où vient cette beauté ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.15">
+            <app xml:id="ufr_164_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et la Mort dit : « Il n'est personne de plus pourri que moi. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.16">
+            <app xml:id="ufr_165_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham lui dit : « Ne serais-tu donc pas celui qu'on appelle la Mort ? »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.13.17">
+            <app xml:id="ufr_166_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Elle lui répondit et dit : « Je suis le nom amer ; je suis les pleurs... »</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="14" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14">
+          <head>Chapter 14</head>
+          <ab type="verse" n="1" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.1">
+            <app xml:id="ufr_167_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Abraham dit alors à la Mort : « Montre-nous ta pourriture. »</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.2">
+            <app xml:id="ufr_168_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et la Mort manifesta sa pourriture ; et elle avait deux têtes :</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.3">
+            <app xml:id="ufr_169_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">l'une avait la face d'un dragon, et par elle certains meurent soudainement sous la morsure des aspics ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.4">
+            <app xml:id="ufr_170_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">et l'autre tête était semblable à un glaive ; c'est pourquoi certains meurent par le glaive comme par les arcs.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.5">
+            <app xml:id="ufr_171_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">En ce jour-là, les serviteurs d'Abraham moururent à cause de la terreur de la Mort ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.6">
+            <app xml:id="ufr_172_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">les voyant, Abraham pria le Seigneur, et il les ressuscita.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.7">
+            <app xml:id="ufr_173_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Puis Dieu intervint et retira l'âme d'Abraham comme dans un songe, et l'archistratège Michel l'emporta vers les cieux.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.8">
+            <app xml:id="ufr_174_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">Et Isaac ensevelit son père auprès de sa mère Sara, glorifiant et louant Dieu ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="TAbB.ver_Testament_of_Abraham_Recension_B__French_.14.9">
+            <app xml:id="ufr_175_ver_Testament_of_Abraham_Recension_B__French_">
+              <lem wit="#OCP-Trans">car à lui appartiennent la gloire, l'honneur et l'adoration, au Père et au Fils et au Saint-Esprit, maintenant et toujours et pour les siècles des siècles. Amen.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

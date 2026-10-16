@@ -1,0 +1,594 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="id_5Ezra">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>5 Ezra</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Bensly">
+            <abbr type="siglum">Bensly</abbr>
+            <name>Bensly 1895</name>
+            <bibl>R. L. Bensly, The Fourth Book of Ezra: The Latin Version Edited from the MSS, with an introduction by M. R. James (Texts and Studies 3.2; Cambridge: Cambridge University Press, 1895), Bensly 1895, cc. I-II (= 4 Esdras 1-2 Vulg.), pp. 1-6. Text from OCR (tesseract), verse division aligned to the Clementine Vulgate; not yet proofread.</bibl>
+          </witness>
+          <witness xml:id="C">
+            <abbr type="siglum">C</abbr>
+            <name>Codex C (Spanish recension)</name>
+            <bibl>R. L. Bensly, The Fourth Book of Ezra: The Latin Version Edited from the MSS, with an introduction by M. R. James (Texts and Studies 3.2; Cambridge: Cambridge University Press, 1895), Appendix I, pp. 83-92: text of C (Codex Complutensis) as printed by Bensly; the variants of M are not included. OCR, verse division from Bensly's margin numbers and alignment; not yet proofread.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim=":"/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="la">la</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="la">
+    <body>
+      <div type="edition" n="5 Ezra" xml:lang="la" xml:id="ver_id_5_Ezra">
+        <head>5 Ezra</head>
+        <div type="chapter" n="1" xml:id="id_5Ezra.ver_id_5_Ezra.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="id_5Ezra.ver_id_5_Ezra.1.1">
+            <app xml:id="u1_ver_id_5_Ezra">
+              <lem wit="#Bensly">Liber Ezrae prophetae secundus, filii Sarei, filii Azarei, filii Helchiae, filii Salame, filii Sadoch, filii Acitob,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_5Ezra.ver_id_5_Ezra.1.2">
+            <app xml:id="u1_ver_id_5_Ezra_2">
+              <lem wit="#Bensly">Filii Achiae, filii Finees, filii Heli, filii Ameriae, filii Aziei, filii Marimoth, filii Arna, filii Oziae, filii Borith, filii Abissei, filii Finees, filii Eleazar,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_5Ezra.ver_id_5_Ezra.1.3">
+            <app xml:id="u1_ver_id_5_Ezra_3">
+              <lem wit="#Bensly">Filii Aaron ex tribu Leui, qui fuit captiuus in regione Medorum, in regno Artarxersis regis Persarum.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_5Ezra.ver_id_5_Ezra.1.4">
+            <app xml:id="u1_ver_id_5_Ezra_4">
+              <lem wit="#Bensly">Et factum est uerbum domini ad me dicens:</lem>
+              <rdg wit="#C" n="1">Verbum dn̄i quod factum est ad Esdrā filium Cusi, in diebus regis Nabuq͛odonosor dicens.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_5Ezra.ver_id_5_Ezra.1.5">
+            <app xml:id="u1_ver_id_5_Ezra_5">
+              <lem wit="#Bensly">Vade et nuntia populo meo facinora ipsorum et filiis eorum iniquitates, quas in me admiserunt, ut nuntient filiis filiorum suorum.</lem>
+              <rdg wit="#C" n="1">Vade adnuntia populo meo facinora ipsorum et filiis eorum iniquitates quas admiserunt ad me, filiis autem eorum nuntient filiis filiorum suorum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_5Ezra.ver_id_5_Ezra.1.6">
+            <app xml:id="u1_ver_id_5_Ezra_6">
+              <lem wit="#Bensly">Quia peccata parentum illorum in illis creuerunt: obliti enim me sacrificauerunt diis alienis.</lem>
+              <rdg wit="#C" n="1">Qm̄ peccata patruum suorum in filios creberunt. propter quod obliti sunt in me et sacrificaberunt diis alienis.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_5Ezra.ver_id_5_Ezra.1.7">
+            <app xml:id="u1_ver_id_5_Ezra_7">
+              <lem wit="#Bensly">Nonne ego eos eduxi de terra Aegypti, de domo seruitutis? ipsi autem irritauerunt me et consilia mea spreuerunt.</lem>
+              <rdg wit="#C" n="1">Nonne ego eduxi eos de terra Egypti et de domo seruitutis. quare irritaberunt me et consilia mea spreberunt?</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_5Ezra.ver_id_5_Ezra.1.8">
+            <app xml:id="u1_ver_id_5_Ezra_8">
+              <lem wit="#Bensly">Tu autem excute comam capitis tui et proice omnia mala super illos, quoniam non obaudierunt legi meae; populus autem indisciplinatus.</lem>
+              <rdg wit="#C" n="1">Hec dicit dn̄s: concute comam capitis tui et excute hec omnia mala super eos. quoniam non obedierunt legi mee. pp̄ls indisciplinatus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_5Ezra.ver_id_5_Ezra.1.9">
+            <app xml:id="u1_ver_id_5_Ezra_9">
+              <lem wit="#Bensly">Vsquequo eos sustinebo, quibus tanta beneficia contuli?</lem>
+              <rdg wit="#C" n="1">Vsquequo eos sustinebo. qui tanta beneficia in illis contuli.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_5Ezra.ver_id_5_Ezra.1.10">
+            <app xml:id="u1_ver_id_5_Ezra_10">
+              <lem wit="#Bensly">Reges multos propter eos subuerti, Pharaonem cum pueris suis et omnem exercitum eius percussi.</lem>
+              <rdg wit="#C" n="1">Reges multos propter eos subuerti: ego Farionem cū pueris suis et omne exercitu eius dimersi in mare.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_5Ezra.ver_id_5_Ezra.1.11">
+            <app xml:id="u1_ver_id_5_Ezra_11">
+              <lem wit="#Bensly">Omnes gentes a facie eorum perdidi et in oriente prouinciarum duarum populum, Tyri et Sidonis, dissipaui et omnes aduersarios eorum interfeci.</lem>
+              <rdg wit="#C" n="1">Nonne propter uos Bethsaydam ciuitatem euerti. et ad meridianum duas ciuitates. Tyrum et Sydonem igni cremabi. et eos qui aduersum eos fuerunt male interfeci.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_5Ezra.ver_id_5_Ezra.1.12">
+            <app xml:id="u1_ver_id_5_Ezra_12">
+              <lem wit="#Bensly">Tu uero loquere ad eos dicens: haec dicit dominus:</lem>
+              <rdg wit="#C" n="1">Tu uero loquere ad eos dicens:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_5Ezra.ver_id_5_Ezra.1.13">
+            <app xml:id="u1_ver_id_5_Ezra_13">
+              <lem wit="#Bensly">Nempe ego uos mare traieci et plateas uobis in inuio munitas exhibui; ducem uobis dedi Moysen et Aaron sacerdotem;</lem>
+              <rdg wit="#C" n="1">haec dicit dominus, Nonne ego uos mare transieci. et dextera adq̄. sinixtra muros feci. duces uobis dedi Moysen et Aaron.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_5Ezra.ver_id_5_Ezra.1.14">
+            <app xml:id="u1_ver_id_5_Ezra_14">
+              <lem wit="#Bensly">Lucem uobis per columnam ignis praestiti et magna mirabilia feci in uobis. uos autem mei obliti estis, dicit dominus.</lem>
+              <rdg wit="#C" n="1">Lucem uobis dedi in columna nubis. hec sunt magna mirabilia mea que feci in uobis. et me obliti estis dicit dn̄s.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_5Ezra.ver_id_5_Ezra.1.15">
+            <app xml:id="u1_ver_id_5_Ezra_15">
+              <lem wit="#Bensly">Haec dicit dominus omnipotens: coturnix uobis in signo fuit, castra uobis ad tutelam dedi, et illic murmurastis,</lem>
+              <rdg wit="#C" n="1">Haec dicit dn̄s. coturnix uobis in signo fuit, castra uobis ad tutelam dedi. et illic murmurastis. Persecutorem ur̄m cum exercitu eius dimersi in mare.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_5Ezra.ver_id_5_Ezra.1.16">
+            <app xml:id="u1_ver_id_5_Ezra_16">
+              <lem wit="#Bensly">Et non triumphastis in nomine meo de perditione inimicorum uestrorum, sed adhuc nunc usque murmuratis.</lem>
+              <rdg wit="#C" n="1">et adhuc murmurat pp̄ls. et ipsi de perditione eorum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_5Ezra.ver_id_5_Ezra.1.17">
+            <app xml:id="u1_ver_id_5_Ezra_17">
+              <lem wit="#Bensly">Vbi sunt beneficia quae praestiti uobis? nonne in deserto cum esuriretis et sitiretis proclamastis ad me</lem>
+              <rdg wit="#C" n="1">Vbi sunt beneficia mea que uobis dedi? et in uia deserta esurientes et sitientes proclamastis ad me et dixistis.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_5Ezra.ver_id_5_Ezra.1.18">
+            <app xml:id="u1_ver_id_5_Ezra_18">
+              <lem wit="#Bensly">dicentes: Vtquid nos in desertum istud adduxisti interficere nos? melius nobis fuerat seruire Aegyptiis quam mori in deserto hoc.</lem>
+              <rdg wit="#C" n="1">Quare nos in hoc desertum adduxisti ut moriamur. Melius enim nobis fuerat seruire Egyptiis. quam mori in solitudine hac. Propter hoc.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_5Ezra.ver_id_5_Ezra.1.19">
+            <app xml:id="u1_ver_id_5_Ezra_19">
+              <lem wit="#Bensly">Ego dolui gemitos uestros et dedi mannam uobis in escam, panem angelorum manducastis.</lem>
+              <rdg wit="#C" n="1">ego dolens gemitus ur̄os. mannā uobis dedi manducare et manducastis.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_5Ezra.ver_id_5_Ezra.1.20">
+            <app xml:id="u1_ver_id_5_Ezra_20">
+              <lem wit="#Bensly">Nonne cum sitiretis petram excidi, et fluxerunt aquae in satietate? propter aestus folia arborum uos texi.</lem>
+              <rdg wit="#C" n="1">Sitientibus uobis petram excidi et fluxerunt aquae in satietatē. et propter estum. arbores uobis foliis tectis creabi.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_5Ezra.ver_id_5_Ezra.1.21">
+            <app xml:id="u1_ver_id_5_Ezra_21">
+              <lem wit="#Bensly">Diuisi uobis terras pingues, Chananeos et Ferezeos et Philistinos a facie uestra proieci. quid faciam uobis adhuc? dicit dominus.</lem>
+              <rdg wit="#C" n="1">Terras uobis pingues dedi. Cananeos. Cettheos. Perezeos et filios eorum a facie vestra proieci. quid uobis faciā adhuc.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_5Ezra.ver_id_5_Ezra.1.22">
+            <app xml:id="u1_ver_id_5_Ezra_22">
+              <lem wit="#Bensly">Haec dicit dominus omnipotens: in deserto cum essetis in flumine amaro sitientes et blasphemantes nomen meum,</lem>
+              <rdg wit="#C" n="1">Hec dicit dn̄s. in deserto cum essetis in flumine amaro sitientes et blasfemantes nomen meum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_5Ezra.ver_id_5_Ezra.1.23">
+            <app xml:id="u1_ver_id_5_Ezra_23">
+              <lem wit="#Bensly">Non ignem uobis pro blasphemiis dedi, sed mittens lignum in aqua dulce feci flumen.</lem>
+              <rdg wit="#C" n="1">Non indigne tuli. sed missum lignum in aqua dulce uobis flumen feci.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_5Ezra.ver_id_5_Ezra.1.24">
+            <app xml:id="u1_ver_id_5_Ezra_24">
+              <lem wit="#Bensly">Quid tibi faciam, Iacob? noluisti me obaudire, Iuda. transferam me ad alias gentes et dabo eis nomen meum, ut custodiant legitima mea.</lem>
+              <rdg wit="#C" n="1">Quid tibi faciam Jacob, noluit obaudire me Iuda. transferam me ad gentem alteram, et dabo illi nomen meum et custodientes custodient legitima mea.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_5Ezra.ver_id_5_Ezra.1.25">
+            <app xml:id="u1_ver_id_5_Ezra_25">
+              <lem wit="#Bensly">Quoniam me dereliquistis, et ego uos derelinquam: petentibus uobis a me misericordiam, non miserebor uestri.</lem>
+              <rdg wit="#C" n="1">Nam qui me dereliquerunt petentes misericordiam. non miserebor eorum. Erit enim</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_5Ezra.ver_id_5_Ezra.1.26">
+            <app xml:id="u1_ver_id_5_Ezra_26">
+              <lem wit="#Bensly">Quando inuocabitis me, ego non exaudiam uos: maculastis enim manus uestras sanguine, et pedes uestri inpigri sunt ad committenda homicidia.</lem>
+              <rdg wit="#C" n="1">quando inuocaberint me, ego non exaudiam eos. maculaberunt enim animas suas et manus sanguine maculatas habent. pedes uestri non pigri ad effundendum sanguinem.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_5Ezra.ver_id_5_Ezra.1.27">
+            <app xml:id="u1_ver_id_5_Ezra_27">
+              <lem wit="#Bensly">Non quasi me dereliquistis sed uos ipsos, dicit dominus.</lem>
+              <rdg wit="#C" n="1">Non quia me derelinquistis dicit dn̄s sed uos.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_5Ezra.ver_id_5_Ezra.1.28">
+            <app xml:id="u1_ver_id_5_Ezra_28">
+              <lem wit="#Bensly">Haec dicit dominus omnipotens: nonne ego uos rogaui ut pater filios et ut mater filias et nutrix paruulos suos,</lem>
+              <rdg wit="#C" n="1">Haec dicit dn̄s. nonne ita uos ego rogabi ut pater filium, et ut mater filiam suam, et ut nutrix que amat paruulum suum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_5Ezra.ver_id_5_Ezra.1.29">
+            <app xml:id="u1_ver_id_5_Ezra_29">
+              <lem wit="#Bensly">Vt essetis mihi in populum, et ego uobis in deum, et uos mihi in filios, et ego uobis in patrem?</lem>
+              <rdg wit="#C" n="1">Cū essetis mici in pp̄lo. et ego uobis in deo. uos mici in filiis, et ego uobis in patrem.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="id_5Ezra.ver_id_5_Ezra.1.30">
+            <app xml:id="u1_ver_id_5_Ezra_30">
+              <lem wit="#Bensly">Ita uos collegi ut gallina pullos suos sub alas suas. modo autem quid faciam uobis? proiciam uos a facie mea.</lem>
+              <rdg wit="#C" n="1">Leta enim collegi uos, ut gallina pullos suos sub alis suis. modo autem quid faciam uobis? dicam proiciam uos a facie mea.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="id_5Ezra.ver_id_5_Ezra.1.31">
+            <app xml:id="u1_ver_id_5_Ezra_31">
+              <lem wit="#Bensly">Oblationes mihi cum obtuleritis, auertam faciem meam a uobis; dies enim festos uestros et neomenias et circumcisiones carnis repudiaui.</lem>
+              <rdg wit="#C" n="1">Immolationes mici offerentes. uertam oculos meos a uobis dies festos et neomenias. sabbata et circumcisiones non mandabi uobis.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="id_5Ezra.ver_id_5_Ezra.1.32">
+            <app xml:id="u1_ver_id_5_Ezra_32">
+              <lem wit="#Bensly">Ego misi pueros meos prophetas ad uos, quos acceptos interfecistis et laniastis corpora illorum: quorum sanguinem exquiram, dicit dominus.</lem>
+              <rdg wit="#C" n="1">Ego misi pueros meos prophetas ad uos, quos acceptos interfecistis et laniastis corpora apl̄orum. quorum animas et sanguinem exquiram. dicit dn̄s.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="id_5Ezra.ver_id_5_Ezra.1.33">
+            <app xml:id="u1_ver_id_5_Ezra_33">
+              <lem wit="#Bensly">Haec dicit dominus omnipotens: domus uestra deserta est, proiciam uos sicut uentus stipulam.</lem>
+              <rdg wit="#C" n="1">Hec dicit dn̄s omnipotens. domus uestra deserta est proiciam uos sicut uentus stipulam.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="id_5Ezra.ver_id_5_Ezra.1.34">
+            <app xml:id="u1_ver_id_5_Ezra_34">
+              <lem wit="#Bensly">Et filii procreationem non facient, quoniam mandatum meum uobiscum neglexerunt et quod malum est coram me fecerunt.</lem>
+              <rdg wit="#C" n="1">Et filii uestri procreationem non facient qm̄ mandatum meum neglexerunt et quod malum est coram me fecerunt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="id_5Ezra.ver_id_5_Ezra.1.35">
+            <app xml:id="u1_ver_id_5_Ezra_35">
+              <lem wit="#Bensly">Tradam domus uestras populo uenienti, qui me non audientes credunt; quibus signa non ostendi, facient quae praecepi.</lem>
+              <rdg wit="#C" n="1">Tradam domos uestras populo uenienti a longe. et qui te non noberunt credent tibi, et quibus signa non hostendo facient quae dixi.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="id_5Ezra.ver_id_5_Ezra.1.36">
+            <app xml:id="u1_ver_id_5_Ezra_36">
+              <lem wit="#Bensly">Prophetas non uiderunt et memorabuntur antiquitatum eorum.</lem>
+              <rdg wit="#C" n="1">Profetas non uiderunt et memores sunt antiquitatum eorum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="id_5Ezra.ver_id_5_Ezra.1.37">
+            <app xml:id="u1_ver_id_5_Ezra_37">
+              <lem wit="#Bensly">Testor populi uenientis gratiam, cuius paruuli exultant cum laetitia, me non uidentes oculis carnalibus, sed spiritu credent quae dixi.</lem>
+              <rdg wit="#C" n="1">Testantur apl̄i pp̄lm uenientem cum letitia. me autem non uidentes oculis carnalibus sp̄u credunt, et que dixi audierunt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="id_5Ezra.ver_id_5_Ezra.1.38">
+            <app xml:id="u1_ver_id_5_Ezra_38">
+              <lem wit="#Bensly">Et nunc, pater, aspice cum gloria et uide populum uenientem ab oriente,</lem>
+              <rdg wit="#C" n="1">et credunt mici. Iam pater aspice cum gloria et uide populum uenientem ab oriente.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="id_5Ezra.ver_id_5_Ezra.1.39">
+            <app xml:id="u1_ver_id_5_Ezra_39">
+              <lem wit="#Bensly">Quibus dabo ducatum Abraham, Isaac et Iacob et Osee et Amos et Micheae et Iohelis et Abdiae et Ionae</lem>
+              <rdg wit="#C" n="1">Cui dabo ducatum cum Habraam Isaac. et Iacob. Elia. et Enoc.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="id_5Ezra.ver_id_5_Ezra.1.40">
+            <app xml:id="u1_ver_id_5_Ezra_40">
+              <lem wit="#Bensly">Et Naum et Abacuc, Sophoniae, Aggei, Zachariae et Malachiae, qui et angelus domini uocatus est.</lem>
+              <rdg wit="#C" n="1">Zaccaria. et Ose. Amos. Ioel. Mice. Abdia. Soffonia. Naum. Yona. Mattia. Abbacuc. et angelos duodecim cum floribus.</rdg>
+            </app>
+          </ab>
+        </div>
+        <div type="chapter" n="2" xml:id="id_5Ezra.ver_id_5_Ezra.2">
+          <head>Chapter 2</head>
+          <ab type="verse" n="1" xml:id="id_5Ezra.ver_id_5_Ezra.2.1">
+            <app xml:id="u1_ver_id_5_Ezra_41">
+              <lem wit="#Bensly">Haec dicit dominus: ego eduxi populum istum de seruitute, quibus mandata dedi per pueros meos prophetas, quos audire noluerunt, sed irrita fecerunt mea consilia.</lem>
+              <rdg wit="#C" n="1">Haec dicit dominus. ego eduxi pp̄lm cui mandata dedi que audire noluerunt sed irrita fecerunt mea consilia.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="id_5Ezra.ver_id_5_Ezra.2.2">
+            <app xml:id="u1_ver_id_5_Ezra_42">
+              <lem wit="#Bensly">Mater, quae eos generauit, dicit illis: ite, filii, quia ego uidua sum et derelicta:</lem>
+              <rdg wit="#C" n="1">Matrem sibi progeneraberunt que dicit eis. Ite filii qm̄ uidua sum et derelicta.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="id_5Ezra.ver_id_5_Ezra.2.3">
+            <app xml:id="u1_ver_id_5_Ezra_43">
+              <lem wit="#Bensly">Educaui uos cum laetitia et amisi uos cum luctu et tristitia, quoniam peccastis coram domino deo et quod malum est coram me fecistis.</lem>
+              <rdg wit="#C" n="1">Edocabi uos cum letitia. amittam uos cum fletu et luctu qm̄ peccastis coram domino deo et fecistis iniquitatem in conspectu eius.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="id_5Ezra.ver_id_5_Ezra.2.4">
+            <app xml:id="u1_ver_id_5_Ezra_44">
+              <lem wit="#Bensly">Modo autem quid faciam uobis? ego enim uidua sum et derelicta: ite, filii, et petite a domino misericordiam.</lem>
+              <rdg wit="#C" n="1">Modo autem quid faciam uobis, que uidua sum et derelicta a filiis meis. ite filii petite a dn̄o misericordiam,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="id_5Ezra.ver_id_5_Ezra.2.5">
+            <app xml:id="u1_ver_id_5_Ezra_45">
+              <lem wit="#Bensly">Ego autem te, pater, testem inuoco super matrem filiorum, quia noluerunt testamentum meum seruare,</lem>
+              <rdg wit="#C" n="1">Ego enim desolata sum, te patrem inuoco sup̄ matrem eorum qui noluerunt testamentum tuum seruare.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="id_5Ezra.ver_id_5_Ezra.2.6">
+            <app xml:id="u1_ver_id_5_Ezra_46">
+              <lem wit="#Bensly">Vt des eis confusionem et matrem eorum in direptionem, ne generatio eorum fiat.</lem>
+              <rdg wit="#C" n="1">Vt tu des eis confusionem et matrem illorum in direptione. ne quando generatio in eis fiat.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="id_5Ezra.ver_id_5_Ezra.2.7">
+            <app xml:id="u1_ver_id_5_Ezra_47">
+              <lem wit="#Bensly">Dispergantur in gentes, nomina eorum deleantur a terra, quoniam spreuerunt testamentum meum.</lem>
+              <rdg wit="#C" n="1">Et dispergantur in gentibus. et nomen eorum deleatur de terra. qm̄ respuerunt testamentum meum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="id_5Ezra.ver_id_5_Ezra.2.8">
+            <app xml:id="u1_ver_id_5_Ezra_48">
+              <lem wit="#Bensly">Vae tibi, Assur, qui abscondis iniquos penes te! gens mala, memorare quid fecerim Sodomae et Gomorrae,</lem>
+              <rdg wit="#C" n="1">Vae tibi Assur, que abscondes iniquos penes te, ciuitas mala, quid fecerim Sodomae et Gomorrae.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="id_5Ezra.ver_id_5_Ezra.2.9">
+            <app xml:id="u1_ver_id_5_Ezra_49">
+              <lem wit="#Bensly">Quorum terra iacet in piceis glebis et aggeribus cinerum: sic dabo eos qui me non audierunt, dicit dominus omnipotens.</lem>
+              <rdg wit="#C" n="1">Quorum terra descendit usque ad infernum. sic dabo eos qui me non obaudierunt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="id_5Ezra.ver_id_5_Ezra.2.10">
+            <app xml:id="u1_ver_id_5_Ezra_50">
+              <lem wit="#Bensly">Haec dicit dominus ad Ezram: adnuntia populo meo, quoniam dabo eis regnum Hierusalem, quod daturus eram Israel.</lem>
+              <rdg wit="#C" n="1">Hec dicit dn̄s ad Esdram adnuntia populo meo qm̄ parabi eis manducare et dabo illis regnum Il̄rlm̄. quod daturus eram Israel.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="id_5Ezra.ver_id_5_Ezra.2.11">
+            <app xml:id="u1_ver_id_5_Ezra_51">
+              <lem wit="#Bensly">Et sumam mihi gloriam illorum et dabo eis tabernacula aeterna, quae praeparaueram illis.</lem>
+              <rdg wit="#C" n="1">Vt sumant sibi gloriam illorum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="id_5Ezra.ver_id_5_Ezra.2.12">
+            <app xml:id="u1_ver_id_5_Ezra_52">
+              <lem wit="#Bensly">Lignum uitae erit illis in odorem unguenti, et non laborabunt neque fatigabuntur.</lem>
+              <rdg wit="#C" n="1">et dabo eis tabernacula aeterna que paraberam illis In odore unguenti non laborabunt neque fatigabuntur.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="id_5Ezra.ver_id_5_Ezra.2.13">
+            <app xml:id="u1_ver_id_5_Ezra_53">
+              <lem wit="#Bensly">Petite et accipietis, rogate uobis dies paucos ut minorentur; iam paratum est uobis regnum: uigilate.</lem>
+              <rdg wit="#C" n="1">Petite et accipietis, rogate uobis dies paucos. ut minorentur dies ur̄i. iam enim paratum est regnum meum aduenire. uigelate animo.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="id_5Ezra.ver_id_5_Ezra.2.14">
+            <app xml:id="u1_ver_id_5_Ezra_54">
+              <lem wit="#Bensly">Testare, testare caelum et terram, omisi enim malum et creaui bonum, quia uiuo ego, dicit dominus.</lem>
+              <rdg wit="#C" n="1">Testor cęlum et terram omisi malū et creabi bonū quia uibo ego dicit dn̄s.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="id_5Ezra.ver_id_5_Ezra.2.15">
+            <app xml:id="u1_ver_id_5_Ezra_55">
+              <lem wit="#Bensly">Mater, complectere filios tuos, educa illos cum laetitia sicut columba, confirma pedes eorum, quoniam te elegi, dicit dominus.</lem>
+              <rdg wit="#C" n="1">Mater bona conplexa filios tuos, et da illis letitiā. sicut columba que ducit filios suos. confirma pedes eorum. qm̄ te elegi dicit dn̄s.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="id_5Ezra.ver_id_5_Ezra.2.16">
+            <app xml:id="u1_ver_id_5_Ezra_56">
+              <lem wit="#Bensly">Et resuscitabo mortuos de locis suis et de monumentis educam illos, quoniam cognoui nomen meum in illis.</lem>
+              <rdg wit="#C" n="1">Et suscitabo mortuos de locis suis et de monumentis eorum qm̄ cognobi nomen meum in illis.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="id_5Ezra.ver_id_5_Ezra.2.17">
+            <app xml:id="u1_ver_id_5_Ezra_57">
+              <lem wit="#Bensly">Noli timere, mater filiorum, quoniam te elegi, dicit dominus.</lem>
+              <rdg wit="#C" n="1">Noli pabere. matrem filiorum te elegi dicit dns.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="id_5Ezra.ver_id_5_Ezra.2.18">
+            <app xml:id="u1_ver_id_5_Ezra_58">
+              <lem wit="#Bensly">Mittam tibi adiutorium pueros meos Isaiam et Hieremiam, ad quorum consilium sanctificaui et paraui tibi arbores XII grauatas uariis fructibus</lem>
+              <rdg wit="#C" n="1">Mitto tibi adiutorium pueros meos Iheremiam Esayam et Danielē ad quorum consilium sc̄ficabi te. et para tibi arbores duodecim aliis et aliis fructibus.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="id_5Ezra.ver_id_5_Ezra.2.19">
+            <app xml:id="u1_ver_id_5_Ezra_59">
+              <lem wit="#Bensly">Et totidem fontes fluentes lac et mel et montes inmensos septem habentes rosam et lilium, in quibus gaudio replebo filios tuos.</lem>
+              <rdg wit="#C" n="1">Et septem fontes fluentes lac et mel et montes inmensos habentes rosam et lilium quos parabi tibi et filiis tuis, gaudio replebi filios tuos.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="id_5Ezra.ver_id_5_Ezra.2.20">
+            <app xml:id="u1_ver_id_5_Ezra_60">
+              <lem wit="#Bensly">Viduam iustifica, pupillo iudica, egenti da, orfanum tuere, nudum uesti,</lem>
+              <rdg wit="#C" n="1">Viduam iustificate. pupillo iudicate. egenti subministra. orfanum tuere. nudum uesti.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="id_5Ezra.ver_id_5_Ezra.2.21">
+            <app xml:id="u1_ver_id_5_Ezra_61">
+              <lem wit="#Bensly">Confractum et debilem cura, claudum inridere noli, tutare mancum et caecum ad uisionem claritatis meae admitte,</lem>
+              <rdg wit="#C" n="1">Confractum hac debilem cura, claudum inridere noli sed tuta luscū. ad uisionem claritatis meę admitte.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="id_5Ezra.ver_id_5_Ezra.2.22">
+            <app xml:id="u1_ver_id_5_Ezra_62">
+              <lem wit="#Bensly">Senem et iuuenem intra muros tuos serua,</lem>
+              <rdg wit="#C" n="1">Senem. et iubenem intra muros tuos collige. infantes tuos custodi. serui et liberi tui letentur. et caterua tua omnis cum iucunditate erit.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="id_5Ezra.ver_id_5_Ezra.2.23">
+            <app xml:id="u1_ver_id_5_Ezra_63">
+              <lem wit="#Bensly">Mortuos ubi inueneris, signans commenda sepulchro, et dabo tibi primam sessionem in resurrectione mea.</lem>
+              <rdg wit="#C" n="1">Mortuos tuos ubi inuenero, suscitabo. signa prospiciam et dabo eis primam sessionem in resurrectione mea.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="id_5Ezra.ver_id_5_Ezra.2.24">
+            <app xml:id="u1_ver_id_5_Ezra_64">
+              <lem wit="#Bensly">Pausa et quiesce, populus meus, quia ueniet requies tua.</lem>
+              <rdg wit="#C" n="1">Pausate pusillum. ueniet requies uestra.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="id_5Ezra.ver_id_5_Ezra.2.25">
+            <app xml:id="u1_ver_id_5_Ezra_65">
+              <lem wit="#Bensly">Nutrix bona, nutri filios tuos, confirma enim pedes eorum.</lem>
+              <rdg wit="#C" n="1">Nutrix bona, nutri filios tuos. confirma quos genuisti. et confirma pedes eorum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="id_5Ezra.ver_id_5_Ezra.2.26">
+            <app xml:id="u1_ver_id_5_Ezra_66">
+              <lem wit="#Bensly">Seruos quos tibi dedi, nemo ex eis interiet, ego enim eos requiram de numero tuo,</lem>
+              <rdg wit="#C" n="1">Quia quos tibi dedi, nemo ex illis, interiit, ego illos requiram de numero tuo.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="id_5Ezra.ver_id_5_Ezra.2.27">
+            <app xml:id="u1_ver_id_5_Ezra_67">
+              <lem wit="#Bensly">Noli satagere, cum uenerit enim dies pressurae et angustiae, alii plorabunt et tristes erunt, tu autem hilaris et copiosa eris.</lem>
+              <rdg wit="#C" n="1">Noli satisagere, conseruabo eos. uenient dies pressurae et angustiae, alii plorabunt et tristes erunt tu autem ilaris et copiosa eris.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="id_5Ezra.ver_id_5_Ezra.2.28">
+            <app xml:id="u1_ver_id_5_Ezra_68">
+              <lem wit="#Bensly">Zelabunt gentes et nihil aduersus te poterunt, dicit dominus.</lem>
+              <rdg wit="#C" n="1">Zelo te habebunt omnes gentes et nicil aduersum te poterunt dicit dn̄s.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="id_5Ezra.ver_id_5_Ezra.2.29">
+            <app xml:id="u1_ver_id_5_Ezra_69">
+              <lem wit="#Bensly">Manus meae tegent te, ne filii tui gehennam uideant.</lem>
+              <rdg wit="#C" n="1">Me tremunt omnia. oculi mei Geennam uident.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="id_5Ezra.ver_id_5_Ezra.2.30">
+            <app xml:id="u1_ver_id_5_Ezra_70">
+              <lem wit="#Bensly">Iocundare, mater, cum filiis tuis, quia ego te eripiam, dicit dominus.</lem>
+              <rdg wit="#C" n="1">Iucunda mater cum filiis tuis et eripiam te dicit dn̄s.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="id_5Ezra.ver_id_5_Ezra.2.31">
+            <app xml:id="u1_ver_id_5_Ezra_71">
+              <lem wit="#Bensly">Filios tuos dormientes memorare, quoniam ego eos educam de latibulis terrae et misericordiam cum illis faciam, quoniam misericors sum, dicit dominus omnipotens.</lem>
+              <rdg wit="#C" n="1">Filios tuos dormientes memorabor, qm̄ ego illos exquiram de latitudine terrae. et confirma mare in amplitudine glorie tue, et misericordiam faciam. qm̄ misericors sum dicit dn̄s.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="id_5Ezra.ver_id_5_Ezra.2.32">
+            <app xml:id="u1_ver_id_5_Ezra_72">
+              <lem wit="#Bensly">Amplectere natos tuos usque dum uenio et praedica illis misericordiam, quoniam exuberant fontes mei, et gratia mea non deficiet.</lem>
+              <rdg wit="#C" n="1">Confirma natos tuos usque dum uenio. et aliis praesta misericordiam qm̄ exuberabunt fontes mei et gratia mea non deficiet.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="id_5Ezra.ver_id_5_Ezra.2.33">
+            <app xml:id="u1_ver_id_5_Ezra_73">
+              <lem wit="#Bensly">Ego Ezra accepi praeceptum a domino in monte Choreb, ut irem ad Israel; ad quos cum uenirem, reprobauerunt me et respuerunt mandatum domini.</lem>
+              <rdg wit="#C" n="1">Ego Esdra accepi praeceptum a dn̄o in monte Cobar ad Isrl̄ et respuerunt mandatum hoc.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="id_5Ezra.ver_id_5_Ezra.2.34">
+            <app xml:id="u1_ver_id_5_Ezra_74">
+              <lem wit="#Bensly">Ideoque uobis dico, gentes, quae auditis et intellegitis: expectate pastorem uestrum, requiem aeternitatis dabit uobis, quoniam in proximo est ille, qui in finem saeculi adueniet.</lem>
+              <rdg wit="#C" n="1">Vobis dico qui auditis et intelligitis, expectate pastorem uestrum. requiem aeternitatis ur̄e dabo uobis qm̄ in proximo est finis sc̄li. et diminutio hominum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="id_5Ezra.ver_id_5_Ezra.2.35">
+            <app xml:id="u1_ver_id_5_Ezra_75">
+              <lem wit="#Bensly">Parati estote ad praemia regni, quia lux perpetua lucebit uobis per aeternitatem temporis.</lem>
+              <rdg wit="#C" n="1">Parati estote ad praemia regni. lux perpetua lucebit uobis. et ęternitas temporum uobis parata est.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="id_5Ezra.ver_id_5_Ezra.2.36">
+            <app xml:id="u1_ver_id_5_Ezra_76">
+              <lem wit="#Bensly">Fugite umbram saeculi huius, accipite iocunditatem gloriae uestrae; ego testor palam saluatorem meum.</lem>
+              <rdg wit="#C" n="1">Fugite umbram sc̄li huius. captiuitatem gl̄e ur̄e. testor saluatorem meum Mandatum esse a dn̄o.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="id_5Ezra.ver_id_5_Ezra.2.37">
+            <app xml:id="u1_ver_id_5_Ezra_77">
+              <lem wit="#Bensly">Commendatum domini accipite et iocundamini gratias agentes ei qui uos ad caelestia regna uocauit.</lem>
+              <rdg wit="#C" n="1">uos accipite gratias agentes ei qui uos ad celestia regna uocabit.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="id_5Ezra.ver_id_5_Ezra.2.38">
+            <app xml:id="u1_ver_id_5_Ezra_78">
+              <lem wit="#Bensly">Surgite et state et uidete numerum signatorum in conuiuio domini.</lem>
+              <rdg wit="#C" n="1">Surgite et state et uidete numerum signatorum in conuibio.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="id_5Ezra.ver_id_5_Ezra.2.39">
+            <app xml:id="u1_ver_id_5_Ezra_79">
+              <lem wit="#Bensly">Qui se de umbra saeculi transtulerunt, splendidas tunicas a domino acceperunt.</lem>
+              <rdg wit="#C" n="1">Qui se de umbra sc̄li tulerunt, et splendidas tunicas a dn̄o acceperunt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="id_5Ezra.ver_id_5_Ezra.2.40">
+            <app xml:id="u1_ver_id_5_Ezra_80">
+              <lem wit="#Bensly">Recipe, Sion, numerum tuum et conclude candidatos tuos, qui legem domini compleuerunt.</lem>
+              <rdg wit="#C" n="1">Accipe Syon mons numerum tuum. conclude candidatos tuos seruientes tibi in obtemperantia. qm̄ legem dei suppleberunt.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="id_5Ezra.ver_id_5_Ezra.2.41">
+            <app xml:id="u1_ver_id_5_Ezra_81">
+              <lem wit="#Bensly">Filiorum tuorum, quos optabas, plenus est numerus, roga imperium domini, ut sanctificetur populus tuus, qui uocatus est ab initio.</lem>
+              <rdg wit="#C" n="1">Quia olim optabas filios tuos uenire inple numerum eorum. roga inperium dn̄i ut sanctificetur pp̄lus qui uocatus est ab initio.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="42" xml:id="id_5Ezra.ver_id_5_Ezra.2.42">
+            <app xml:id="u1_ver_id_5_Ezra_82">
+              <lem wit="#Bensly">Ego Ezra uidi in monte Sion turbam magnam, quam numerare non potui, et omnes canticis conlaudabant dominum.</lem>
+              <rdg wit="#C" n="1">Ego Esdra uidi in monte Syon turbam magnam quam numerare nemo poterat. omnes canticis conlaudabant dn̄m.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="id_5Ezra.ver_id_5_Ezra.2.43">
+            <app xml:id="u1_ver_id_5_Ezra_83">
+              <lem wit="#Bensly">Et in medio eorum erat iuuenis statura celsus, eminentior omnibus illis, et singulis eorum capitibus inponebat coronas, et magis exaltabatur: ego autem miraculo tenebar.</lem>
+              <rdg wit="#C" n="1">Et in medio eorum erat iubenis statura excelsus. omnibus illis eminens. et in capite illorum coronas singulas ponebat. et magis exaltabantur. ego autem mirari cepi.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="id_5Ezra.ver_id_5_Ezra.2.44">
+            <app xml:id="u1_ver_id_5_Ezra_84">
+              <lem wit="#Bensly">Tunc interrogaui angelum et dixi: qui sunt hi, domine?</lem>
+              <rdg wit="#C" n="1">Et interrogabi angelum et dixi ei qui sunt hii.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="id_5Ezra.ver_id_5_Ezra.2.45">
+            <app xml:id="u1_ver_id_5_Ezra_85">
+              <lem wit="#Bensly">Qui respondens dixit mihi: hi sunt qui mortalem tunicam deposuerunt et inmortalem sumpserunt et confessi sunt nomen dei: modo coronantur et accipiunt palmas.</lem>
+              <rdg wit="#C" n="1">Et respondens dixit mici isti sunt qui mortalem tunicam deposuerunt et inmortalem uitam sumserunt et confessi sunt nm̄n fili dei. modo coronantur et accipiunt palmas.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="id_5Ezra.ver_id_5_Ezra.2.46">
+            <app xml:id="u1_ver_id_5_Ezra_86">
+              <lem wit="#Bensly">Et dixi ad angelum: ille iuuenis quis est, qui eis coronas inponit et palmas in manus tradit?</lem>
+              <rdg wit="#C" n="1">Et dixi ad angelum: quis est iste iubenis qui eis coronas dat et palmas.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="id_5Ezra.ver_id_5_Ezra.2.47">
+            <app xml:id="u1_ver_id_5_Ezra_87">
+              <lem wit="#Bensly">Qui respondens dixit mihi: ipse est filius dei, quem in saeculo confessi sunt. ego autem magnificare eos coepi, qui fortiter pro nomine domini steterunt.</lem>
+              <rdg wit="#C" n="1">Et ille respondit mici. ipse est filius dei quem confessi sunt in sc̄lo mortali. ego uero laudare et magnificare cepi dn̄m.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="id_5Ezra.ver_id_5_Ezra.2.48">
+            <app xml:id="u1_ver_id_5_Ezra_88">
+              <lem wit="#Bensly">Tunc dixit mihi angelus: uade, adnuntia populo meo, qualia et quanta mirabilia domini dei uidisti.</lem>
+              <rdg wit="#C" n="1">Et dixit mici angelus. uade et nuntia pp̄lo ipsius quanta mirabilia a dn̄o deo uidisti.</rdg>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

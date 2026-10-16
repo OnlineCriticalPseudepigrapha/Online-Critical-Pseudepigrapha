@@ -1,0 +1,1660 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ApocrEzek">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Apocryphon of Ezekiel</title>
+        <editor role="editor">Penner, Ken M., Ian W. Scott</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Holl">
+            <abbr type="siglum">Holl</abbr>
+            <name>Holl</name>
+          </witness>
+          <witness xml:id="Jaubert">
+            <abbr type="siglum">Jaubert</abbr>
+            <name>Jaubert</name>
+          </witness>
+          <witness xml:id="St_hlin-Treu">
+            <abbr type="siglum">Stählin-Treu</abbr>
+            <name>Stählin-Treu</name>
+          </witness>
+          <witness xml:id="St_hlin-Fr_chtel">
+            <abbr type="siglum">Stählin-Früchtel</abbr>
+            <name>Stählin-Früchtel</name>
+          </witness>
+          <witness xml:id="Lipsius-Bonnet">
+            <abbr type="siglum">Lipsius-Bonnet</abbr>
+            <name>Lipsius-Bonnet</name>
+          </witness>
+          <witness xml:id="Evans">
+            <abbr type="siglum">Evans</abbr>
+            <name>Ernest Evans</name>
+          </witness>
+          <witness xml:id="Migne">
+            <abbr type="siglum">Migne</abbr>
+            <name>Migne</name>
+          </witness>
+          <witness xml:id="Goodspeed">
+            <abbr type="siglum">Goodspeed</abbr>
+            <name>Goodspeed</name>
+          </witness>
+          <witness xml:id="Bonner">
+            <abbr type="siglum">Bonner</abbr>
+            <name>Bonner</name>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation of Panarion (Frag. 1) (English) based on the OCP critical edition.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Panarion__Frag._1_">
+        <refState unit="book" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_To_the_Romans">
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Paedagogus">
+        <refState unit="book" delim="."/>
+        <refState unit="section" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Quis_dives_salvetur">
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Stromata">
+        <refState unit="book" delim="."/>
+        <refState unit="section" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Panarion__Frag._3_">
+        <refState unit="book"/>
+        <refState unit="chapter"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Acts_of_Peter">
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_De_carne_Christi">
+        <refState unit="chapter"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Against_the_Jews">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Dialogue_with_Trypho">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Quis_dives_salvetur__Frag._4_">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Paedagogus__Frag._5_">
+        <refState unit="book"/>
+        <refState unit="section"/>
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Pap._Chester_Beatty_XII">
+        <refState unit="fragment"/>
+        <refState unit="side"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Panarion__Frag._1___English_">
+        <refState unit="book" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_To_the_Romans__English_">
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Paedagogus__English_">
+        <refState unit="book" delim="."/>
+        <refState unit="section" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Quis_dives_salvetur__English_">
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Stromata__English_">
+        <refState unit="book" delim="."/>
+        <refState unit="section" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Panarion__Frag._3___English_">
+        <refState unit="book"/>
+        <refState unit="chapter"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Acts_of_Peter__English_">
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_De_carne_Christi__English_">
+        <refState unit="chapter"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Against_the_Jews__English_">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Dialogue_with_Trypho__English_">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Quis_dives_salvetur__Frag._4___English_">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Paedagogus__Frag._5___English_">
+        <refState unit="book"/>
+        <refState unit="section"/>
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Pap._Chester_Beatty_XII__English_">
+        <refState unit="fragment"/>
+        <refState unit="side"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Panarion__Frag._1___French_">
+        <refState unit="book" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_To_the_Romans__French_">
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Paedagogus__French_">
+        <refState unit="book" delim="."/>
+        <refState unit="section" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Quis_dives_salvetur__French_">
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Stromata__French_">
+        <refState unit="book" delim="."/>
+        <refState unit="section" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Panarion__Frag._3___French_">
+        <refState unit="book"/>
+        <refState unit="chapter"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Acts_of_Peter__French_">
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_De_carne_Christi__French_">
+        <refState unit="chapter"/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Against_the_Jews__French_">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Dialogue_with_Trypho__French_">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Quis_dives_salvetur__Frag._4___French_">
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Paedagogus__Frag._5___French_">
+        <refState unit="book"/>
+        <refState unit="section"/>
+        <refState unit="chapter"/>
+        <refState unit="paragraph"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Pap._Chester_Beatty_XII__French_">
+        <refState unit="fragment"/>
+        <refState unit="side"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Panarion (Frag. 1)" xml:lang="grc" xml:id="ver_Panarion__Frag._1_">
+        <head>Panarion (Frag. 1)</head>
+        <div type="book" n="64" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64">
+          <head>Book 64</head>
+          <div type="chapter" n="70" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70">
+            <head>Chapter 70</head>
+            <ab type="paragraph" n="5" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.5">
+              <app xml:id="u1_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">“Ἀναστήσονται γὰρ οἱ νεκροὶ καὶ ἐγερθήσονται οἱ ἐν τοῖς μνημείοις,” φησὶν ὁ προφήτης. ἵνα δὲ καὶ τὰ ὑπὸ τοῦ Ἰεζεκιὴλ τοῦ προφήτου ἐν τῷ ἰδίῳ ἀποκρύφῳ ῥηθέντα περὶ ἀναστάσεως μὴ παρασιωπήσω, καὶ αὐτὰ ἐνταῦθα παραθήσομαι. αἰνιγματωδῶς γὰρ διηγούμενος λέγει περὶ τῆς δικαίας κρίσεως ἧͺ κοινωνεῖ ψυχὴ καὶ σῶμα, ὅτι</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="6" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.6">
+              <app xml:id="u2_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">βασιλεύς τις ἐν τῇ αὐτοῦ βασιλείᾳ πάντας εἶχεν ἐστρατευμένους, παγανὸν δὲ οὐκ εἶχεν ἀλλ᾽ ἢ μόνον δύο, ἕνα χωλὸν καὶ ἕνα τυφλόν, καὶ ἕκαστος &lt;αὐτῶν&gt; κατ᾽ ἰδίαν ἐκαθέζετο καὶ κατ᾽ ἰδίαν ὤͺκει.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="7" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.7">
+              <app xml:id="u3_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">γάμους δὲ ποιήσας ὁ βασιλεὺς τῷ ἰδίῳ υἱῷ ἐκάλεσε πάντας τοὺς ἐν τῇ αὐτοῦ βασιλείᾳ, περιεφρόνησε δὲ τῶν δύο παγανῶν, τοῦ τε χωλοῦ καὶ τοῦ τυφλοῦ· οἱ δὲ ἠγανάκτησαν ἐν ἑαυτοῖς καὶ ἐπιβουλὴν ἐργάσασθαι τῷ βασιλεῖ ἐπενόουν.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="8" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.8">
+              <app xml:id="u4_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">παράδεισον δὲ εἶχεν ὁ βασιλεύς, καὶ ἀπὸ μήκοθεν ὁ τυφλὸς ἐλάλει τῷ χωλῷ λέγων “πόσον ἦν ἡμῶν τὸ κλάσμα τοῦ ἄρτου μετὰ τῶν ὄχλων τῶν κληθέντων εἰς τὴν εὐφρασίαν; δεῦρο τοίνυν, καθὼς ἐποίησεν ἡμῖν, ἀμυνώμεθα αὐτόν.”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="9" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.9">
+              <app xml:id="u5_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">ὁ δὲ ἕτερος ἠρώτα “ποίῳ τρόπῳ”; ὁ δὲ εἶπεν “ἀπέλθωμεν εἰς τὸν παράδεισον αὐτοῦ καὶ ἀφανίσωμεν ἐκεῖ τὰ τοῦ παραδείσου.” ὁ δὲ εἶπεν “καὶ πῶς δύναμαι, χωλὸς ὢν καὶ μὴ δυνάμενος ἐπισαίνειν”; ὁ δὲ τυφλὸς ἔφη “αὐτὸς ἐγὼ δύναμαί τι πράττειν μὴ ὁρῶν ποῦ ἀπέρχομαι; ἀλλὰ τεχνασώμεθα.”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="10" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.10">
+              <app xml:id="u6_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">τίλας χόρτον τὸν πλησίον καὶ πλέξας σχοινίον ἠκόντισε τῷ τυφλῷ καὶ εἶπεν “κράτει, καὶ δεῦρο πρὸς τὸ σχοινίον πρός με.” ὡς δὲ ἐποίησεν ὃ προετράπη, ὅτε ἔφθασε λέγει “δεῦρό μοι γενοῦ πόδες καὶ βάστασόν με, καὶ γίνομαί σοι ὀφθαλμοί, ἄνωθεν ὁδηγῶν σε δεξιὰ καὶ εὐώνυμα.”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="11" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.11">
+              <app xml:id="u7_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">τοῦτο δὲ ποιήσαντες κατέβησαν εἰς τὸν παράδεισον· εἶτα λοιπὸν εἴτε ἠδίκησαν εἴτε καὶ οὐκ ἠδίκησαν, ὅμως τὰ ἴχνη πέφηνεν ἐν τῷ παραδείσῳ.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="12" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.12">
+              <app xml:id="u8_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">καταλύσαντες δὲ ἐκ τῶν γάμων οἱ εὐφρανθέντες καταβάντες εἰς τὸν παράδεισον ἐξεπλάγησαν τὰ ἴχνη εὑρόντες ἐν τῷ παραδείσῳ καὶ ταῦτα ἀνήγγειλαν τῷ βασιλεῖ, λέγοντες “ἅπαντες στρατιῶται ἐν τῇ βασιλείᾳ σου καὶ οὐδείς ἐστι παγανός. πόθεν τοίνυν ἴχνη παγανῶν ἐν τῷ παραδείσῳ”;</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="13" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.13">
+              <app xml:id="u9_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">ὁ δὲ ἐθαύμασε, [καὶ] ὡς μὲν ἡ παραβολὴ δηλονότι τοῦ ἀποκρύφου λέγει ὡς πρὸς τὸν ἄνθρωπον αἰνιττομένη, ὁ θεὸς δὲ οὐδὲν ἀγνοεῖ. ἡ δὲ διήγησις λέγει ὡς μετεστείλατο τὸν χωλὸν καὶ τὸν τυφλὸν καὶ ἠρώτησε τὸν τυφλόν “μὴ σὺ κατῆλθες εἰς τὸν παράδεισον”; ὁ δὲ ἔφη “οἴμοι, κύριε· ὁρᾷς ἡμῶν τὴν ἀδυναμίαν, οἶδας ὅτι &lt;οὐχ&gt; ὁρῶ ποῦ βαδίζω.”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="14" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.14">
+              <app xml:id="u10_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">εἶτα ἐλθὼν ἐπὶ τὸν χωλὸν καὶ αὐτὸν ἠρώτα “σὺ κατῆλθες εἰς τὸν παράδεισόν μου”; ὁ δὲ ἀποκριθεὶς εἶπεν “ὦ κύριε, πικρᾶναί μου τὴν ψυχὴν ἐν τῷ μέρει τῆς ἀδυναμίας βούλει.” καὶ λοιπὸν ἡ κρίσις ἀργεῖ.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="15" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.15">
+              <app xml:id="u11_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">τί οὖν ποιεῖ ὁ κριτὴς ὁ δίκαιος; ἀναγνοὺς ποίῳ τρόπῳ ἀμφότεροι ἐζεύχθησαν ἐπιτίθησι τὸν χωλὸν τῷ πηρῷ καὶ τοὺς ἀμφοτέρους ἐτάζει μάστιξι, καὶ οὐ δύνανται ἀρνήσασθαι.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="16" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.16">
+              <app xml:id="u12_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">ἑκάτεροι ἀλλήλους ἐλέγχουσιν, ὁ μὲν χωλὸς λέγων τῷ τυφλῷ “οὐ σύ με ἐβάστασας καὶ ἀπήνεγκας”; καὶ ὁ τυφλὸς τῷ χωλῷ “οὐκ αὐτὸς ὀφθαλμοί μου γέγονας”;</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="17" xml:id="ApocrEzek.ver_Panarion__Frag._1_.64.70.17">
+              <app xml:id="u13_ver_Panarion__Frag._1_">
+                <lem wit="#Holl">οὕτως τὸ σῶμα τῇ ψυχῇ καὶ ἡ ψυχὴ τῷ σώματι εἰς ἔλεγχον τῆς κοινῆς ἐργασίας συνάπτεται, καὶ ἡ κρίσις τελεία γίνεται περὶ ἀμφοτέρων, σώματός τε καὶ ψυχῆς, τῶν ἔργων [τῶν] γεγενημένων εἴτε ἀγαθῶν εἴτε φαύλων.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="edition" n="To the Romans" xml:lang="grc" xml:id="ver_To_the_Romans">
+        <head>To the Romans</head>
+        <div type="chapter" n="8" xml:id="ApocrEzek.ver_To_the_Romans.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="3" xml:id="ApocrEzek.ver_To_the_Romans.8.3">
+            <app xml:id="u14_ver_To_the_Romans">
+              <lem wit="#Jaubert">“Μετανοήσατε, οἶκος Ἰσραήλ, ἀπὸ τῆς ἀνομίας ὑμῶν· εἶπον τοῖς υἱοῖς τοῦ λαοῦ μου· Ἐὰν ὦσιν αἱ ἁμαρτίαι ὑμῶν ἀπὸ τῆς γῆς ἕως τοῦ οὐρανοῦ καὶ ἐὰν ὦσιν πυρρότεραι κόκκου καὶ μελανώτεραι σάκκου, καὶ ἐπιστραφῆτε πρός με ἐξ ὅλης τῆς καρδίας καὶ εἴπητε· Πάτερ· ἐπακούσομαι ὑμῶν ὡς λαοῦ ἁγίου.”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="edition" n="Paedagogus" xml:lang="grc" xml:id="ver_Paedagogus">
+        <head>Paedagogus</head>
+        <div type="book" n="1" xml:id="ApocrEzek.ver_Paedagogus.1">
+          <head>Book 1</head>
+          <div type="section" n="10" xml:id="ApocrEzek.ver_Paedagogus.1.10">
+            <head>Section 10</head>
+            <div type="chapter" n="91" xml:id="ApocrEzek.ver_Paedagogus.1.10.91">
+              <head>Chapter 91</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Paedagogus.1.10.91.2">
+                <app xml:id="u15_ver_Paedagogus">
+                  <lem wit="#St_hlin-Treu">φησὶ γὰρ δι’ Ἰεζεκιήλ· “ἐὰν ἐπιστραφῆτε ἐξ ὅλης τῆς καρδίας καὶ εἴπητε· πάτερ, ἀκούσομαι ὑμῶν ὥσπερ λαοῦ ἁγίου.”</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="edition" n="Quis dives salvetur" xml:lang="grc" xml:id="ver_Quis_dives_salvetur">
+        <head>Quis dives salvetur</head>
+        <div type="chapter" n="39" xml:id="ApocrEzek.ver_Quis_dives_salvetur.39">
+          <head>Chapter 39</head>
+          <ab type="paragraph" n="4" xml:id="ApocrEzek.ver_Quis_dives_salvetur.39.4">
+            <app xml:id="u16_ver_Quis_dives_salvetur">
+              <lem wit="#St_hlin-Fr_chtel">διὸ καὶ κέκραγεν· “ἔλεον θέλω καὶ οὐ θυσίαν· οὐ βούλομαι τὸν θάνατον τοῦ ἁμαρτωλοῦ, ἀλλὰ τὴν μετάνοιαν· κἂν ὦσιν αἱ ἁμαρτίαι ὑμῶν ὡς φοινικοῦν ἔριον, ὡς χιόνα λευκανῶ, κἂν μελάντερον τοῦ σκότους, ὡς ἔριον λευκὸν ἐκνίψας ποιήσω.”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="edition" n="Stromata" xml:lang="grc" xml:id="ver_Stromata">
+        <head>Stromata</head>
+        <div type="book" n="7" xml:id="ApocrEzek.ver_Stromata.7">
+          <head>Book 7</head>
+          <div type="section" n="16" xml:id="ApocrEzek.ver_Stromata.7.16">
+            <head>Section 16</head>
+            <div type="chapter" n="94" xml:id="ApocrEzek.ver_Stromata.7.16.94">
+              <head>Chapter 94</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Stromata.7.16.94.2">
+                <app xml:id="u17_ver_Stromata">
+                  <lem wit="#St_hlin-Fr_chtel">“τέτοκεν καὶ οὐ τέτοκεν,” φησὶν ἡ γραφή . . .</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="edition" n="Panarion (Frag. 3)" xml:lang="grc" xml:id="ver_Panarion__Frag._3_">
+        <head>Panarion (Frag. 3)</head>
+        <div type="book" n="30" xml:id="ApocrEzek.ver_Panarion__Frag._3_.30">
+          <head>Book 30</head>
+          <div type="chapter" n="30" xml:id="ApocrEzek.ver_Panarion__Frag._3_.30.30">
+            <head>Chapter 30</head>
+            <ab type="line" n="3" xml:id="ApocrEzek.ver_Panarion__Frag._3_.30.30.3">
+              <app xml:id="u24_ver_Panarion__Frag._3_">
+                <lem wit="#Holl">καὶ πάλιν ἐν ἑτέρῳ τόπῳ λέγει “καὶ τέξεται ἡ δάμαλις καὶ ἐροῦσιν, οὐ τέτοκεν.”</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="edition" n="Acts of Peter" xml:lang="la" xml:id="ver_Acts_of_Peter">
+        <head>Acts of Peter</head>
+        <ab type="paragraph" n="24" xml:id="ApocrEzek.ver_Acts_of_Peter.24">
+          <app xml:id="u18_ver_Acts_of_Peter">
+            <lem wit="#Lipsius-Bonnet">. . . et iterum dicit: “Peperit et non peperit.”</lem>
+          </app>
+        </ab>
+      </div>
+      <div type="edition" n="De carne Christi" xml:lang="la" xml:id="ver_De_carne_Christi">
+        <head>De carne Christi</head>
+        <div type="chapter" n="23" xml:id="ApocrEzek.ver_De_carne_Christi.23">
+          <head>Chapter 23</head>
+          <ab type="line" n="7" xml:id="ApocrEzek.ver_De_carne_Christi.23.7">
+            <app xml:id="u19_ver_De_carne_Christi">
+              <lem wit="#Evans">Agnoscimus ergo signum contradicibile conceptum et partum virginis Mariae, de</lem>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="ApocrEzek.ver_De_carne_Christi.23.8">
+            <app xml:id="u20_ver_De_carne_Christi">
+              <lem wit="#Evans">quo Academici isti, “Peperit et non peperit virgo et non virgo.”</lem>
+            </app>
+          </ab>
+          <ab type="line" n="27" xml:id="ApocrEzek.ver_De_carne_Christi.23.27">
+            <app xml:id="u21_ver_De_carne_Christi">
+              <lem wit="#Evans">. . .</lem>
+            </app>
+          </ab>
+          <ab type="line" n="28" xml:id="ApocrEzek.ver_De_carne_Christi.23.28">
+            <app xml:id="u22_ver_De_carne_Christi">
+              <lem wit="#Evans">Legimus quidem apud Ezechielem de vacca</lem>
+            </app>
+          </ab>
+          <ab type="line" n="29" xml:id="ApocrEzek.ver_De_carne_Christi.23.29">
+            <app xml:id="u23_ver_De_carne_Christi">
+              <lem wit="#Evans">illa, quae peperit et non peperit.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="edition" n="Against the Jews" xml:lang="grc" xml:id="ver_Against_the_Jews">
+        <head>Against the Jews</head>
+        <div type="chapter" n="3" xml:id="ApocrEzek.ver_Against_the_Jews.3">
+          <head>Chapter 3</head>
+          <ab type="paragraph" n="16" xml:id="ApocrEzek.ver_Against_the_Jews.3.16">
+            <app xml:id="u25_ver_Against_the_Jews">
+              <lem wit="#Migne">Καὶ πάλιν, “Ἰδοὺ ἡ δάμαλις τέτοκε, καὶ οὐ τέτοκε.” Τοῦτο δὲ δηλοῖ τὴν Παρθένον.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="edition" n="Dialogue with Trypho" xml:lang="grc" xml:id="ver_Dialogue_with_Trypho">
+        <head>Dialogue with Trypho</head>
+        <div type="chapter" n="47" xml:id="ApocrEzek.ver_Dialogue_with_Trypho.47">
+          <head>Chapter 47</head>
+          <ab type="paragraph" n="5" xml:id="ApocrEzek.ver_Dialogue_with_Trypho.47.5">
+            <app xml:id="u26_ver_Dialogue_with_Trypho">
+              <lem wit="#Goodspeed">ἡ γὰρ χρηστότης καὶ ἡ φιλανθρωπία τοῦ θεοῦ καὶ τὸ ἄμετρον τοῦ πλούτου αὐτοῦ τὸν μετανοοῦντα ἀπὸ τῶν ἁμαρτημάτων, ὡς δι᾽ Ἰεζεκιὴλ μηνύει, ὡς δίκαιον καὶ ἀναμάρτητον ἔχει· καὶ τὸν ἀπὸ εὐσεβείας ἢ δικαιοπραξίας μετατιθέμενον ἐπὶ ἀδικίαν καὶ ἀθεότητα ὡς ἁμαρτωλὸν καὶ ἄδικον καὶ ἀσεβῆ ἐπίσταται. διὸ καὶ ὁ ἡμέτερος κύριος Ἰησοῦς Χριστὸς εἶπεν· Ἐν οἷς ἂν ὑμᾶς καταλάβω, ἐν τούτοις καὶ κρινῶ.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="edition" n="Quis dives salvetur (Frag. 4)" xml:lang="grc" xml:id="ver_Quis_dives_salvetur__Frag._4_">
+        <head>Quis dives salvetur (Frag. 4)</head>
+        <div type="chapter" n="40" xml:id="ApocrEzek.ver_Quis_dives_salvetur__Frag._4_.40">
+          <head>Chapter 40</head>
+          <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Quis_dives_salvetur__Frag._4_.40.2">
+            <app xml:id="u27_ver_Quis_dives_salvetur__Frag._4_">
+              <lem wit="#St_hlin-Fr_chtel">“ἐφ’ οἷς γὰρ ἂν εὕρω ὑμᾶς,” φησίν, “ἐπὶ τούτοις καὶ κρινῶ·”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="edition" n="Paedagogus (Frag. 5)" xml:lang="grc" xml:id="ver_Paedagogus__Frag._5_">
+        <head>Paedagogus (Frag. 5)</head>
+        <div type="book" n="1" xml:id="ApocrEzek.ver_Paedagogus__Frag._5_.1">
+          <head>Book 1</head>
+          <div type="section" n="9" xml:id="ApocrEzek.ver_Paedagogus__Frag._5_.1.9">
+            <head>Section 9</head>
+            <div type="chapter" n="84" xml:id="ApocrEzek.ver_Paedagogus__Frag._5_.1.9.84">
+              <head>Chapter 84</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Paedagogus__Frag._5_.1.9.84.2">
+                <app xml:id="u28_ver_Paedagogus__Frag._5_">
+                  <lem wit="#St_hlin-Treu">Φησὶν γοῦν διὰ Ἰεζεκιὴλ πρὸς τοὺς πρεσβυτέρους ἀποταθεὶς καί τινα αὐτοῖς σωτήριον παρατιθέμενος εὐλόγου φροντίδος ὑπογραμμόν· “καὶ τὸ χωλὸν καταδήσω καὶ τὸ ὀχλούμενον ἰάσομαι καὶ τὸ πλανώμενον ἐπιστρέψω καὶ βοσκήσω αὐτοὺς ἐγὼ εἰς τὸ ὄρος τὸ ἅγιόν μου.” ταῦτ᾽ ἐστὶν ἀγαθοῦ ποιμένος ἐπαγγέλματα· βόσκησον ἡμᾶς τοὺς νηπίους ὡς πρόβατα.</lem>
+                </app>
+              </ab>
+              <ab type="paragraph" n="3" xml:id="ApocrEzek.ver_Paedagogus__Frag._5_.1.9.84.3">
+                <app xml:id="u29_ver_Paedagogus__Frag._5_">
+                  <lem wit="#St_hlin-Treu">Ναί, δέσποτα, τῆς σῆς πλήρωσον νομῆς, τῆς δικαιοσύνης· ναί, παιδαγωγέ, ποίμανον ἡμᾶς εἰς τὸ ἅγιόν σου ὄρος, πρὸς τὴν ἐκκλησίαν, τὴν ὑψωμένην, τὴν ὑπερνεφῆ, τὴν ἁπτομένην οὐρανῶν. “Καὶ ἔσομαι,” φησίν, “αὐτῶν ποιμὴν καὶ ἔσομαι ἐγγὺς αὐτῶν” ὡς ὁ χιτὼν τοῦ χρωτὸς αὐτῶν·</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="edition" n="Pap. Chester Beatty XII" xml:lang="grc" xml:id="ver_Pap._Chester_Beatty_XII">
+        <head>Pap. Chester Beatty XII</head>
+        <div type="fragment" n="frag. 1" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._1">
+          <head>Fragment frag. 1</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._1.recto">
+            <app xml:id="u30_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[ . . . ] ε̣γυπτ[ιω]ν αγαλ̣[λιασομαι δε ε<lb/></lem>
+            </app>
+            <app xml:id="u31_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[γω εν] α̣υτοις εαν̣ ερουσ̣[ιν πατερ ακου<lb/></lem>
+            </app>
+            <app xml:id="u32_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[σθη]σεται και εσοντ[αι μετα εμου<lb/></lem>
+            </app>
+            <app xml:id="u33_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[επι γ]η̣ς ζωης ω ιημ ε̣[ιπον προς τον κ̅ν̅<lb/></lem>
+            </app>
+            <app xml:id="u34_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[κ̅ε̅ μ]η με ελλεγ’ξης τ̣[ω θυμω σου μη<lb/></lem>
+            </app>
+            <app xml:id="u35_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[δε π]εδευσης με εν τη[ οργη σου δοκι<lb/></lem>
+            </app>
+            <app xml:id="u36_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[μαζο]μαι εως των νεφ[ρων μου δια<lb/></lem>
+            </app>
+            <app xml:id="u37_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[λελ]υμαι εως της κοιλ̣[ιας μου δος<lb/></lem>
+            </app>
+            <app xml:id="u38_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[μοι το] ελεος σου εις εφημ[ερον ως ελεη<lb/></lem>
+            </app>
+            <app xml:id="u39_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[σας α]β̣ρααμ’ τον πατερα ημ̣[ων και ι<lb/></lem>
+            </app>
+            <app xml:id="u40_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[σακ’ κα]ι ιακωβ’ αλλα σε τον κ̅ν̣̅ [τον<lb/></lem>
+            </app>
+            <app xml:id="u41_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[θ̅ν̅ η]μ̣ων εγνωκαμεν και . [<lb/></lem>
+            </app>
+            <app xml:id="u42_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ε̣νεσι και εγεννηθη[<lb/></lem>
+            </app>
+            <app xml:id="u43_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">απο]καθημενης μεμ̣[<lb/></lem>
+            </app>
+            <app xml:id="u44_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ς εβδελοιχθημε̣[ν<lb/></lem>
+            </app>
+            <app xml:id="u45_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]τ̣ο ονομα απ[<lb/></lem>
+            </app>
+            <app xml:id="u46_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]μενω . [<lb/></lem>
+            </app>
+            <app xml:id="u47_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]π̣λατεια . [<lb/></lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._1.verso">
+            <app xml:id="u48_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[το πλανωμενο]ν̣ ου̣κ̣ επ̣[εσ]τρεψ[ατε και<lb/></lem>
+            </app>
+            <app xml:id="u49_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[το ενοχλουμενο]ν ουκ εθ̣[ε]ραπ[ευσατε<lb/></lem>
+            </app>
+            <app xml:id="u50_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[και ποιειτε τον] λαον μου πλαν[ασθαι α<lb/></lem>
+            </app>
+            <app xml:id="u51_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[πο νομης της] κ̣αλης και πορευ[εσθαι εις<lb/></lem>
+            </app>
+            <app xml:id="u52_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[τριβολους κ]αι ακανθας αντι χ̣[ορτου<lb/></lem>
+            </app>
+            <app xml:id="u53_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[και ουκ ετηρη]σατε την εμην εν̣[τολην<lb/></lem>
+            </app>
+            <app xml:id="u54_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[αλλα πας πυμη]ν εξ υμων ανεω[ξε το στο<lb/></lem>
+            </app>
+            <app xml:id="u55_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[μα και πολλ]ο̣ι εις καταβρωμα α̣[υτοις ε<lb/></lem>
+            </app>
+            <app xml:id="u56_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[γενοντο αλ]λ̣α ειδου εγω διακριν[ω κριον<lb/></lem>
+            </app>
+            <app xml:id="u57_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[προς κριον] και μοσχον προς μοσχ[ον και<lb/></lem>
+            </app>
+            <app xml:id="u58_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[το χωλο]ν̣ κατε̣δησω και το ενο[χλουμε<lb/></lem>
+            </app>
+            <app xml:id="u59_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[νον ια]σ̣ομαι και το πλανομε̣[νον επι<lb/></lem>
+            </app>
+            <app xml:id="u60_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[στρεψω κ]αι βοσκησω αυτου̣[ς εγω και ανα<lb/></lem>
+            </app>
+            <app xml:id="u61_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[παυσω ε]πι το ορος το αγιον [μου και ε<lb/></lem>
+            </app>
+            <app xml:id="u62_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[σομαι αυ]τοις πυμην κ[αι εσομαι εγγυς<lb/></lem>
+            </app>
+            <app xml:id="u63_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[αυτων ως ο χ]ιτων του χρ̣[ωτος αυτων και<lb/></lem>
+            </app>
+            <app xml:id="u64_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[επικαλεσ]ονται με̣ [και ερω ιδου παρει<lb/></lem>
+            </app>
+            <app xml:id="u65_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[μι εαν διαβαι]ν̣ω̣σιν ο̣[υκ ολισθησου<lb/></lem>
+            </app>
+            <app xml:id="u66_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">[σιν λεγει κ̅ς̅] εκ̣ο[<lb/></lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="frag. 2" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._2">
+          <head>Fragment frag. 2</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._2.recto">
+            <app xml:id="u67_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]α̣νισ . [<lb/></lem>
+            </app>
+            <app xml:id="u68_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]πυρος β ̣[. . . .] . [ . ] . [<lb/></lem>
+            </app>
+            <app xml:id="u69_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ε̣ι εκ’μειαινοντ[ες<lb/></lem>
+            </app>
+            <app xml:id="u70_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ε̣τι προσεβαινον τη̣[<lb/></lem>
+            </app>
+            <app xml:id="u71_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">πρεσ]βυτας αδυναμουν[τας<lb/></lem>
+            </app>
+            <app xml:id="u72_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">ε]πι τα ϋψηλα και π . . [<lb/></lem>
+            </app>
+            <app xml:id="u73_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]δια το οδαγους μη ε[χειν<lb/></lem>
+            </app>
+            <app xml:id="u74_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ε̣ο̣ς̣ εισιν οι της φων[ης<lb/></lem>
+            </app>
+            <app xml:id="u75_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">] . . [ . ] ανεβλεψα δε κ[<lb/></lem>
+            </app>
+            <app xml:id="u76_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">] . ου κρεμαμενου . [<lb/></lem>
+            </app>
+            <app xml:id="u77_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ανου καθιπταμ̣[<lb/></lem>
+            </app>
+            <app xml:id="u78_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]υ̣τον και ειπ̣[α<lb/></lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._2.verso">
+            <app xml:id="u79_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">] . . . [<lb/></lem>
+            </app>
+            <app xml:id="u80_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">] . ε . [ . . . . ] . [ . ] ως ο κ[<lb/></lem>
+            </app>
+            <app xml:id="u81_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ιν π .[ . ]. . ληθην[<lb/></lem>
+            </app>
+            <app xml:id="u82_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">ε]στιν τω δεδουλευ[μενω<lb/></lem>
+            </app>
+            <app xml:id="u83_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">] . καρδια καθαρα κα̣[ι<lb/></lem>
+            </app>
+            <app xml:id="u84_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">].ται επι κ̅ν̅ τον θ̅ν̅[<lb/></lem>
+            </app>
+            <app xml:id="u85_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]αι τα συντετριμ’με̣[να<lb/></lem>
+            </app>
+            <app xml:id="u86_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]οι ϋμας και στησε[ται<lb/></lem>
+            </app>
+            <app xml:id="u87_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]μετα παντος του . [<lb/></lem>
+            </app>
+            <app xml:id="u88_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">ε]ρ̣ημωμενην ϋπο[<lb/></lem>
+            </app>
+            <app xml:id="u89_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">] . ησθησεται αυτ[<lb/></lem>
+            </app>
+            <app xml:id="u90_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">] . λις και . . . [<lb/></lem>
+            </app>
+            <app xml:id="u91_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ον . [<lb/></lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="frag. 3" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._3">
+          <head>Fragment frag. 3</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._3.recto">
+            <app xml:id="u92_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ι νυν υμ . [<lb/></lem>
+            </app>
+            <app xml:id="u93_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]ται απο του ν̣[<lb/></lem>
+            </app>
+            <app xml:id="u94_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">μο]χ̣θηρων και̣[<lb/></lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII.frag._3.verso">
+            <app xml:id="u95_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]. χωρας .[<lb/></lem>
+            </app>
+            <app xml:id="u96_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]η̣ς καλυπ[<lb/></lem>
+            </app>
+            <app xml:id="u97_ver_Pap._Chester_Beatty_XII">
+              <lem wit="#Bonner">]γεινεται ε[<lb/></lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Panarion (Frag. 1) (English)" xml:lang="en" xml:id="ver_Panarion__Frag._1___English_">
+        <head>Panarion (Frag. 1) (English)</head>
+        <div type="book" n="64" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64">
+          <head>Book 64</head>
+          <div type="chapter" n="70" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70">
+            <head>Chapter 70</head>
+            <ab type="paragraph" n="5" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.5">
+              <app xml:id="uen_1_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">“For the dead will rise and those in the tombs will be raised,” says the prophet. In order that I may not pass over in silence what was said by the prophet Ezekiel in his own apocryphon concerning the resurrection, I will set them forth here as well. For, relating in an enigmatic way, he speaks concerning the righteous judgment in which soul and body share, saying that:</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="6" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.6">
+              <app xml:id="uen_2_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">A certain king in his kingdom had all his men conscripted, and he had no one at leisure except only two, one lame and one blind. And each of them sat alone and lived alone.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="7" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.7">
+              <app xml:id="uen_3_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">But the king, having made a marriage feast for his own son, called all those in his kingdom, yet he disdained the two men at leisure, both the lame and the blind. But they became indignant within themselves and contemplated to work mischief against the king.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="8" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.8">
+              <app xml:id="uen_4_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">Now the king had a garden, and from a distance the blind man spoke to the lame man saying, “How small was our portion of bread compared to the multitudes invited to the feast! Come then, just as he treated us, let us get revenge on him.”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="9" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.9">
+              <app xml:id="uen_5_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">But the other asked, “In what way?” And he said, “Let us go into his garden and destroy the things of the garden there.” But he said, “And how can I, being lame and unable to move?” But the blind man said, “Can I myself do anything without seeing where I am going? But let us devise a plan.”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="10" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.10">
+              <app xml:id="uen_6_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">He plucked the nearby grass and, braiding a rope, he threw it to the blind man and said, “Hold it, and come toward the rope to me.” And when he did what he was instructed, when he reached him, he said, “Come, be my feet and carry me, and I will be your eyes, guiding you from above, to the right and to the left.”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="11" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.11">
+              <app xml:id="uen_7_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">And having done this, they went down into the garden. Then, whether they did damage or did not do damage, nevertheless, their tracks appeared in the garden.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="12" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.12">
+              <app xml:id="uen_8_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">Now when those who had feasted finished from the wedding and went down into the garden, they were astonished to find the tracks in the garden, and they reported these things to the king, saying, “All are soldiers in your kingdom, and no one is at leisure. From where then are there tracks of men at leisure in the garden?”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="13" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.13">
+              <app xml:id="uen_9_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">And he wondered—[and] as the parable of the apocryphon clearly states, alluding to man, God knows nothing. And the narrative says that he sent for the lame and the blind man and asked the blind man, “Did you go down into the garden?” And he said, “Alas, Lord! You see our weakness, you know that I do not see where I am going.”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="14" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.14">
+              <app xml:id="uen_10_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">Then coming to the lame man, he also asked him, “Did you go down into my garden?” And he answered and said, “O Lord, you wish to embitter my soul regarding my weakness.” And then the judgment is delayed.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="15" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.15">
+              <app xml:id="uen_11_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">What then does the righteous judge do? Having learned in what way both were yoked together, he places the lame man upon the blind man, and he examines both with scourges, and they are unable to deny it.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="16" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.16">
+              <app xml:id="uen_12_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">Each accuses the other, the lame man saying to the blind man, “Did you not carry me and take me?” And the blind man to the lame man, “Did you not become my eyes?”</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="17" xml:id="ApocrEzek.ver_Panarion__Frag._1___English_.64.70.17">
+              <app xml:id="uen_13_ver_Panarion__Frag._1___English_">
+                <lem wit="#OCP-Trans">Thus the body is joined to the soul and the soul to the body for the exposure of their common work, and the judgment becomes complete concerning both, body and soul, regarding the deeds done, whether good or evil.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="To the Romans (English)" xml:lang="en" xml:id="ver_To_the_Romans__English_">
+        <head>To the Romans (English)</head>
+        <div type="chapter" n="8" xml:id="ApocrEzek.ver_To_the_Romans__English_.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="3" xml:id="ApocrEzek.ver_To_the_Romans__English_.8.3">
+            <app xml:id="uen_14_ver_To_the_Romans__English_">
+              <lem wit="#OCP-Trans">"Repent, O house of Israel, from your lawlessness. I said to the sons of my people: 'If your sins are from the earth to heaven, and if they are redder than scarlet and blacker than sackcloth, and you turn to me with all your heart and say, 'Father!' I will listen to you as a holy people."</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Paedagogus (English)" xml:lang="en" xml:id="ver_Paedagogus__English_">
+        <head>Paedagogus (English)</head>
+        <div type="book" n="1" xml:id="ApocrEzek.ver_Paedagogus__English_.1">
+          <head>Book 1</head>
+          <div type="section" n="10" xml:id="ApocrEzek.ver_Paedagogus__English_.1.10">
+            <head>Section 10</head>
+            <div type="chapter" n="91" xml:id="ApocrEzek.ver_Paedagogus__English_.1.10.91">
+              <head>Chapter 91</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Paedagogus__English_.1.10.91.2">
+                <app xml:id="uen_15_ver_Paedagogus__English_">
+                  <lem wit="#OCP-Trans">For it says through Ezekiel, “If you turn from your whole heart and say, ‘Father, I will obey you as a holy people.’”</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Quis dives salvetur (English)" xml:lang="en" xml:id="ver_Quis_dives_salvetur__English_">
+        <head>Quis dives salvetur (English)</head>
+        <div type="chapter" n="39" xml:id="ApocrEzek.ver_Quis_dives_salvetur__English_.39">
+          <head>Chapter 39</head>
+          <ab type="paragraph" n="4" xml:id="ApocrEzek.ver_Quis_dives_salvetur__English_.39.4">
+            <app xml:id="uen_16_ver_Quis_dives_salvetur__English_">
+              <lem wit="#OCP-Trans">Therefore, it also cries out: “I desire mercy and not sacrifice; I do not wish the death of the sinner, but repentance; even if your sins are like crimson wool, I will make them white as snow, and even if they are darker than darkness, I will make them like white wool after washing them.”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Stromata (English)" xml:lang="en" xml:id="ver_Stromata__English_">
+        <head>Stromata (English)</head>
+        <div type="book" n="7" xml:id="ApocrEzek.ver_Stromata__English_.7">
+          <head>Book 7</head>
+          <div type="section" n="16" xml:id="ApocrEzek.ver_Stromata__English_.7.16">
+            <head>Section 16</head>
+            <div type="chapter" n="94" xml:id="ApocrEzek.ver_Stromata__English_.7.16.94">
+              <head>Chapter 94</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Stromata__English_.7.16.94.2">
+                <app xml:id="uen_17_ver_Stromata__English_">
+                  <lem wit="#OCP-Trans">“She has given birth and has not given birth,” says the Scripture . . .</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Panarion (Frag. 3) (English)" xml:lang="en" xml:id="ver_Panarion__Frag._3___English_">
+        <head>Panarion (Frag. 3) (English)</head>
+        <div type="book" n="30" xml:id="ApocrEzek.ver_Panarion__Frag._3___English_.30">
+          <head>Book 30</head>
+          <div type="chapter" n="30" xml:id="ApocrEzek.ver_Panarion__Frag._3___English_.30.30">
+            <head>Chapter 30</head>
+            <ab type="line" n="3" xml:id="ApocrEzek.ver_Panarion__Frag._3___English_.30.30.3">
+              <app xml:id="uen_24_ver_Panarion__Frag._3___English_">
+                <lem wit="#OCP-Trans">And again in another place it says, “And the heifer will give birth, and they will say, ‘It did not give birth.’”</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Acts of Peter (English)" xml:lang="en" xml:id="ver_Acts_of_Peter__English_">
+        <head>Acts of Peter (English)</head>
+        <ab type="paragraph" n="24" xml:id="ApocrEzek.ver_Acts_of_Peter__English_.24">
+          <app xml:id="uen_18_ver_Acts_of_Peter__English_">
+            <lem wit="#OCP-Trans">. . . and again it says: “She gave birth and did not give birth.”</lem>
+          </app>
+        </ab>
+      </div>
+      <div type="translation" n="De carne Christi (English)" xml:lang="en" xml:id="ver_De_carne_Christi__English_">
+        <head>De carne Christi (English)</head>
+        <div type="chapter" n="23" xml:id="ApocrEzek.ver_De_carne_Christi__English_.23">
+          <head>Chapter 23</head>
+          <ab type="line" n="7" xml:id="ApocrEzek.ver_De_carne_Christi__English_.23.7">
+            <app xml:id="uen_19_ver_De_carne_Christi__English_">
+              <lem wit="#OCP-Trans">Therefore, we recognize the paradoxical sign, the conception and birth of the virgin Mary, concerning</lem>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="ApocrEzek.ver_De_carne_Christi__English_.23.8">
+            <app xml:id="uen_20_ver_De_carne_Christi__English_">
+              <lem wit="#OCP-Trans">which these Academics say, “She bore and did not bear, a virgin and not a virgin.”</lem>
+            </app>
+          </ab>
+          <ab type="line" n="27" xml:id="ApocrEzek.ver_De_carne_Christi__English_.23.27">
+            <app xml:id="uen_21_ver_De_carne_Christi__English_">
+              <lem wit="#OCP-Trans">. . .</lem>
+            </app>
+          </ab>
+          <ab type="line" n="28" xml:id="ApocrEzek.ver_De_carne_Christi__English_.23.28">
+            <app xml:id="uen_22_ver_De_carne_Christi__English_">
+              <lem wit="#OCP-Trans">Indeed, we read in Ezekiel about that cow</lem>
+            </app>
+          </ab>
+          <ab type="line" n="29" xml:id="ApocrEzek.ver_De_carne_Christi__English_.23.29">
+            <app xml:id="uen_23_ver_De_carne_Christi__English_">
+              <lem wit="#OCP-Trans">which bore and did not bear.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Against the Jews (English)" xml:lang="en" xml:id="ver_Against_the_Jews__English_">
+        <head>Against the Jews (English)</head>
+        <div type="chapter" n="3" xml:id="ApocrEzek.ver_Against_the_Jews__English_.3">
+          <head>Chapter 3</head>
+          <ab type="paragraph" n="16" xml:id="ApocrEzek.ver_Against_the_Jews__English_.3.16">
+            <app xml:id="uen_25_ver_Against_the_Jews__English_">
+              <lem wit="#OCP-Trans">And again, “Behold, the heifer has given birth, and has not given birth.” This indicates the Virgin.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Dialogue with Trypho (English)" xml:lang="en" xml:id="ver_Dialogue_with_Trypho__English_">
+        <head>Dialogue with Trypho (English)</head>
+        <div type="chapter" n="47" xml:id="ApocrEzek.ver_Dialogue_with_Trypho__English_.47">
+          <head>Chapter 47</head>
+          <ab type="paragraph" n="5" xml:id="ApocrEzek.ver_Dialogue_with_Trypho__English_.47.5">
+            <app xml:id="uen_26_ver_Dialogue_with_Trypho__English_">
+              <lem wit="#OCP-Trans">For the goodness and philanthropy of God, and the immeasurable nature of his wealth, considers the one who repents from sins—as he makes clear through Ezekiel—as righteous and blameless; and he understands the one who turns from piety or righteous conduct to unrighteousness and godlessness as a sinner, unrighteous, and impious. Therefore, our Lord Jesus Christ also said: “In whatever state I find you, in these I will also judge.”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Quis dives salvetur (Frag. 4) (English)" xml:lang="en" xml:id="ver_Quis_dives_salvetur__Frag._4___English_">
+        <head>Quis dives salvetur (Frag. 4) (English)</head>
+        <div type="chapter" n="40" xml:id="ApocrEzek.ver_Quis_dives_salvetur__Frag._4___English_.40">
+          <head>Chapter 40</head>
+          <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Quis_dives_salvetur__Frag._4___English_.40.2">
+            <app xml:id="uen_27_ver_Quis_dives_salvetur__Frag._4___English_">
+              <lem wit="#OCP-Trans">“For in whatever state I find you,” he says, “in that I will also judge.”</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Paedagogus (Frag. 5) (English)" xml:lang="en" xml:id="ver_Paedagogus__Frag._5___English_">
+        <head>Paedagogus (Frag. 5) (English)</head>
+        <div type="book" n="1" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___English_.1">
+          <head>Book 1</head>
+          <div type="section" n="9" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___English_.1.9">
+            <head>Section 9</head>
+            <div type="chapter" n="84" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___English_.1.9.84">
+              <head>Chapter 84</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___English_.1.9.84.2">
+                <app xml:id="uen_28_ver_Paedagogus__Frag._5___English_">
+                  <lem wit="#OCP-Trans">Indeed, addressing the elders through Ezekiel and presenting them with a salutary example of reasonable care, he says: “And I will bind up the lame and I will heal the afflicted and I will bring back the straying and I will feed them on my holy mountain.” These are the promises of a good shepherd. Feed us, the infants, as sheep.</lem>
+                </app>
+              </ab>
+              <ab type="paragraph" n="3" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___English_.1.9.84.3">
+                <app xml:id="uen_29_ver_Paedagogus__Frag._5___English_">
+                  <lem wit="#OCP-Trans">Yes, Master, fulfill your pasture of righteousness; yes, Instructor, shepherd us to your holy mountain, to the church, the exalted, the super-celestial, that which touches the heavens. “And I will be,” he says, “their shepherd and I will be near them” as a garment to their skin.</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Pap. Chester Beatty XII (English)" xml:lang="en" xml:id="ver_Pap._Chester_Beatty_XII__English_">
+        <head>Pap. Chester Beatty XII (English)</head>
+        <div type="fragment" n="frag. 1" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._1">
+          <head>Fragment frag. 1</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._1.recto">
+            <app xml:id="uen_30_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[...] of Egyptians. But I will rejoice i[n] th[em. If] th[ey] say, 'Father, listen,'</lem>
+            </app>
+            <app xml:id="uen_31_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[I will rejo]ice i[n] th[em. If] th[ey] say, 'Father, listen,'</lem>
+            </app>
+            <app xml:id="uen_32_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[it will be hea]rd, and they will be [with me]</lem>
+            </app>
+            <app xml:id="uen_33_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[on the ear]th of life.' O Iem, [I] said to the Lord,</lem>
+            </app>
+            <app xml:id="uen_34_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[Lord, do] not rebuke me with your [wrath, nor]</lem>
+            </app>
+            <app xml:id="uen_35_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[correct] me in your [anger]. I am [tested] to my kidneys;</lem>
+            </app>
+            <app xml:id="uen_36_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[I am tested] to my kidneys;</lem>
+            </app>
+            <app xml:id="uen_37_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[I am dis]solved to my stomach. [Give] me</lem>
+            </app>
+            <app xml:id="uen_38_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[your] mercy for a day, [just as you had mercy on]</lem>
+            </app>
+            <app xml:id="uen_39_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[Abraham], our father, [and Isaac]</lem>
+            </app>
+            <app xml:id="uen_40_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[and Jacob]. But we have known you, the Lord, [our]</lem>
+            </app>
+            <app xml:id="uen_41_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[God], and [...]</lem>
+            </app>
+            <app xml:id="uen_42_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">] generation and was born [...]</lem>
+            </app>
+            <app xml:id="uen_43_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">] sitting down. We were [...]</lem>
+            </app>
+            <app xml:id="uen_44_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">] we were defiled [...]</lem>
+            </app>
+            <app xml:id="uen_45_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">] the name from [...]</lem>
+            </app>
+            <app xml:id="uen_46_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">] remaining [...]</lem>
+            </app>
+            <app xml:id="uen_47_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">] wide [...]</lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._1.verso">
+            <app xml:id="uen_48_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[the wandering one] you did not turn b[ack, and]</lem>
+            </app>
+            <app xml:id="uen_49_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[the troubled one] you did not h[eal],</lem>
+            </app>
+            <app xml:id="uen_50_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[and you cause] my people to go ast[ray from]</lem>
+            </app>
+            <app xml:id="uen_51_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[the good pasture] and to go [into]</lem>
+            </app>
+            <app xml:id="uen_52_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[thorns and] thistles instead of gr[ass],</lem>
+            </app>
+            <app xml:id="uen_53_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[and you did not keep] my comman[dment],</lem>
+            </app>
+            <app xml:id="uen_54_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[but every sheph]erd among you op[ened] his mo[uth],</lem>
+            </app>
+            <app xml:id="uen_55_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[and many became] food for th[em].</lem>
+            </app>
+            <app xml:id="uen_56_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[But behold, I will] judge [ram] against ram,</lem>
+            </app>
+            <app xml:id="uen_57_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[and ram] against ram, and calf against calf, [and]</lem>
+            </app>
+            <app xml:id="uen_58_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[I will bind up the lame] and heal the tro[ubled],</lem>
+            </app>
+            <app xml:id="uen_59_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[and I will] heal, and the wandering [one I will turn]</lem>
+            </app>
+            <app xml:id="uen_60_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[back] and I will pasture th[em, and I will]</lem>
+            </app>
+            <app xml:id="uen_61_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[give them rest] on my holy mountain, [and I will]</lem>
+            </app>
+            <app xml:id="uen_62_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[be] a shepherd [to them], and I will be ne[ar]</lem>
+            </app>
+            <app xml:id="uen_63_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[them as the] garment of th[eir] skin, [and]</lem>
+            </app>
+            <app xml:id="uen_64_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[they will call] upon me, [and I will say, 'Behold, I am ready!']</lem>
+            </app>
+            <app xml:id="uen_65_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[they will not slip] when they [cross] over</lem>
+            </app>
+            <app xml:id="uen_66_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">[The Lord says]:</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="frag. 2" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._2">
+          <head>Fragment frag. 2</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._2.recto">
+            <app xml:id="uen_67_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">he arose</lem>
+            </app>
+            <app xml:id="uen_68_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">of fire...</lem>
+            </app>
+            <app xml:id="uen_69_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">defiling...</lem>
+            </app>
+            <app xml:id="uen_70_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">they still went on to...</lem>
+            </app>
+            <app xml:id="uen_71_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">elderly men, unable [to climb]</lem>
+            </app>
+            <app xml:id="uen_72_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">upon the high places and...</lem>
+            </app>
+            <app xml:id="uen_73_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">because they did not [have] a guide.</lem>
+            </app>
+            <app xml:id="uen_74_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">...are those of the voice.</lem>
+            </app>
+            <app xml:id="uen_75_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">...And I looked up...</lem>
+            </app>
+            <app xml:id="uen_76_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">...hanging...</lem>
+            </app>
+            <app xml:id="uen_77_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">...from the sky descending...</lem>
+            </app>
+            <app xml:id="uen_78_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">him and [I] said</lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._2.verso">
+            <app xml:id="uen_79_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">...</lem>
+            </app>
+            <app xml:id="uen_80_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">...as the Lord</lem>
+            </app>
+            <app xml:id="uen_81_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">...</lem>
+            </app>
+            <app xml:id="uen_82_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">it is to him who has been enslaved.</lem>
+            </app>
+            <app xml:id="uen_83_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">a pure heart and</lem>
+            </app>
+            <app xml:id="uen_84_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">to the Lord God.</lem>
+            </app>
+            <app xml:id="uen_85_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">and the crushed</lem>
+            </app>
+            <app xml:id="uen_86_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">you, and he will set [it] up</lem>
+            </app>
+            <app xml:id="uen_87_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">with all of the...</lem>
+            </app>
+            <app xml:id="uen_88_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">desolated by...</lem>
+            </app>
+            <app xml:id="uen_89_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">it will be pleased with it.</lem>
+            </app>
+            <app xml:id="uen_90_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">city and...</lem>
+            </app>
+            <app xml:id="uen_91_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">...</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="frag. 3" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._3">
+          <head>Fragment frag. 3</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._3.recto">
+            <app xml:id="uen_92_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">now you...</lem>
+            </app>
+            <app xml:id="uen_93_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">from the...</lem>
+            </app>
+            <app xml:id="uen_94_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">wicked and...</lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__English_.frag._3.verso">
+            <app xml:id="uen_95_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">land...</lem>
+            </app>
+            <app xml:id="uen_96_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">covering</lem>
+            </app>
+            <app xml:id="uen_97_ver_Pap._Chester_Beatty_XII__English_">
+              <lem wit="#OCP-Trans">it happens...</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Panarion (Frag. 1) (French)" xml:lang="fr" xml:id="ver_Panarion__Frag._1___French_">
+        <head>Panarion (Frag. 1) (French)</head>
+        <div type="book" n="64" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64">
+          <head>Book 64</head>
+          <div type="chapter" n="70" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70">
+            <head>Chapter 70</head>
+            <ab type="paragraph" n="5" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.5">
+              <app xml:id="ufr_1_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">« Car les morts ressusciteront et ceux qui sont dans les tombeaux se relèveront », dit le prophète. Et afin de ne pas passer sous silence ce qui a été dit au sujet de la résurrection par le prophète Ézéchiel dans son propre apocryphe, je rapporterai également cela ici. Car, racontant de manière énigmatique, il parle du juste jugement auquel participent l'âme et le corps, en disant que :</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="6" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.6">
+              <app xml:id="ufr_2_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Un certain roi, dans son royaume, avait tous les hommes enrôlés dans l'armée, et il n'y avait de civils que deux seulement : un boiteux et un aveugle ; et chacun d'eux était assis à part et habitait à part.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="7" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.7">
+              <app xml:id="ufr_3_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Or, le roi ayant célébré les noces de son propre fils, il invita tous ceux qui se trouvaient dans son royaume, mais il négligea les deux civils, le boiteux et l'aveugle. Ceux-ci s'indignèrent en eux-mêmes et projetèrent d'ourdir un complot contre le roi.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="8" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.8">
+              <app xml:id="ufr_4_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Or le roi possédait un jardin, et de loin l'aveugle parla au boiteux en disant : « Qu'eût été pour nous un morceau de pain avec les foules invitées aux réjouissances ? Allons donc ! vengeons-nous de lui, tout comme il a agi envers nous. »</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="9" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.9">
+              <app xml:id="ufr_5_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">L'autre demanda : « De quelle manière ? » Et il répondit : « Allons dans son jardin et détruisons-y ce qui s'y trouve. » Mais il répliqua : « Et comment le puis-je, moi qui suis boiteux et incapable de ramper ? » L'aveugle dit : « Et moi-même, puis-je faire quelque chose, ne voyant pas où je vais ? Mais trouvons un stratagème ! »</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="10" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.10">
+              <app xml:id="ufr_6_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Ayant arraché de l'herbe à proximité et tressé une cordelette, il la lança à l'aveugle et dit : « Saisis-la, et viens vers moi en suivant la corde. » Lorsqu'il eut fait ce qui lui avait été commandé, dès qu'il fut arrivé, il lui dit : « Viens, sois mes pieds et porte-moi, et je serai tes yeux, te guidant d'en haut à droite et à gauche. »</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="11" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.11">
+              <app xml:id="ufr_7_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Ayant agi ainsi, ils descendirent dans le jardin. Ensuite, qu'ils eussent ou non commis des dégradations, leurs traces apparurent néanmoins dans le jardin.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="12" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.12">
+              <app xml:id="ufr_8_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Quand ceux qui avaient festoyé eurent quitté les noces et furent descendus dans le jardin, ils furent frappés de stupeur en trouvant des traces dans le jardin, et ils le rapportèrent au roi, disant : « Tous sont soldats dans ton royaume et nul n'est civil. D'où viennent donc des traces de civils dans le jardin ? »</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="13" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.13">
+              <app xml:id="ufr_9_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Celui-ci s'en étonna — comme le dit évidemment la parabole de l'apocryphe qui s'exprime à la manière humaine, car Dieu n'ignore rien. Le récit rapporte qu'il fit mander le boiteux et l'aveugle, et il demanda à l'aveugle : « N'est-ce pas toi qui es descendu dans le jardin ? » Celui-ci répondit : « Hélas, seigneur ! Tu vois notre infirmité, tu sais que je ne vois pas où je marche. »</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="14" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.14">
+              <app xml:id="ufr_10_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Puis, s'adressant au boiteux, il lui demanda également : « Es-tu descendu dans mon jardin ? » Mais celui-ci répondit : « Ô seigneur, veux-tu affliger mon âme au sujet de mon infirmité ? » Et ainsi le jugement demeurait en suspens.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="15" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.15">
+              <app xml:id="ufr_11_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Que fait donc le juste juge ? Ayant discerné de quelle manière ils s'étaient associés tous deux, il place le boiteux sur l'aveugle et les met tous deux à la question sous les verges, et ils ne peuvent plus nier.</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="16" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.16">
+              <app xml:id="ufr_12_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">Chacun d'eux confond l'autre, le boiteux disant à l'aveugle : « N'est-ce pas toi qui m'as porté et emmené ? » et l'aveugle au boiteux : « N'as-tu pas été toi-même mes yeux ? »</lem>
+              </app>
+            </ab>
+            <ab type="paragraph" n="17" xml:id="ApocrEzek.ver_Panarion__Frag._1___French_.64.70.17">
+              <app xml:id="ufr_13_ver_Panarion__Frag._1___French_">
+                <lem wit="#OCP-Trans">C'est ainsi que le corps est uni à l'âme et l'âme au corps pour la mise en évidence de leur œuvre commune, et le jugement s'accomplit parfaitement sur tous deux, corps et âme, pour les œuvres commises, qu'elles soient bonnes ou mauvaises.</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="To the Romans (French)" xml:lang="fr" xml:id="ver_To_the_Romans__French_">
+        <head>To the Romans (French)</head>
+        <div type="chapter" n="8" xml:id="ApocrEzek.ver_To_the_Romans__French_.8">
+          <head>Chapter 8</head>
+          <ab type="verse" n="3" xml:id="ApocrEzek.ver_To_the_Romans__French_.8.3">
+            <app xml:id="ufr_14_ver_To_the_Romans__French_">
+              <lem wit="#OCP-Trans">« Repentez-vous de votre iniquité, maison d'Israël. Dis aux fils de mon peuple : Si vos péchés vont de la terre jusqu'au ciel, et s'ils sont plus rouges que l'écarlate et plus noirs que le sac, et que vous vous tourniez vers moi de tout votre cœur et disiez : “Père !”, je vous exaucerai comme un peuple saint. »</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Paedagogus (French)" xml:lang="fr" xml:id="ver_Paedagogus__French_">
+        <head>Paedagogus (French)</head>
+        <div type="book" n="1" xml:id="ApocrEzek.ver_Paedagogus__French_.1">
+          <head>Book 1</head>
+          <div type="section" n="10" xml:id="ApocrEzek.ver_Paedagogus__French_.1.10">
+            <head>Section 10</head>
+            <div type="chapter" n="91" xml:id="ApocrEzek.ver_Paedagogus__French_.1.10.91">
+              <head>Chapter 91</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Paedagogus__French_.1.10.91.2">
+                <app xml:id="ufr_15_ver_Paedagogus__French_">
+                  <lem wit="#OCP-Trans">Car il dit par l'intermédiaire d'Ézéchiel : « Si vous vous convertissez de tout votre cœur et dites : “Père”, je vous écouterai comme un peuple saint. »</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Quis dives salvetur (French)" xml:lang="fr" xml:id="ver_Quis_dives_salvetur__French_">
+        <head>Quis dives salvetur (French)</head>
+        <div type="chapter" n="39" xml:id="ApocrEzek.ver_Quis_dives_salvetur__French_.39">
+          <head>Chapter 39</head>
+          <ab type="paragraph" n="4" xml:id="ApocrEzek.ver_Quis_dives_salvetur__French_.39.4">
+            <app xml:id="ufr_16_ver_Quis_dives_salvetur__French_">
+              <lem wit="#OCP-Trans">C'est pourquoi il s'écrie aussi : « Je veux la miséricorde et non le sacrifice ; je ne veux point la mort du pécheur, mais sa repentance ; et quand bien même vos péchés seraient comme de la laine écarlate, je les blanchirai comme neige ; et fussent-ils plus noirs que les ténèbres, en les lavant je les rendrai comme de la laine blanche. »</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Stromata (French)" xml:lang="fr" xml:id="ver_Stromata__French_">
+        <head>Stromata (French)</head>
+        <div type="book" n="7" xml:id="ApocrEzek.ver_Stromata__French_.7">
+          <head>Book 7</head>
+          <div type="section" n="16" xml:id="ApocrEzek.ver_Stromata__French_.7.16">
+            <head>Section 16</head>
+            <div type="chapter" n="94" xml:id="ApocrEzek.ver_Stromata__French_.7.16.94">
+              <head>Chapter 94</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Stromata__French_.7.16.94.2">
+                <app xml:id="ufr_17_ver_Stromata__French_">
+                  <lem wit="#OCP-Trans">« Elle a enfanté et n'a pas enfanté », dit l'Écriture...</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Panarion (Frag. 3) (French)" xml:lang="fr" xml:id="ver_Panarion__Frag._3___French_">
+        <head>Panarion (Frag. 3) (French)</head>
+        <div type="book" n="30" xml:id="ApocrEzek.ver_Panarion__Frag._3___French_.30">
+          <head>Book 30</head>
+          <div type="chapter" n="30" xml:id="ApocrEzek.ver_Panarion__Frag._3___French_.30.30">
+            <head>Chapter 30</head>
+            <ab type="line" n="3" xml:id="ApocrEzek.ver_Panarion__Frag._3___French_.30.30.3">
+              <app xml:id="ufr_24_ver_Panarion__Frag._3___French_">
+                <lem wit="#OCP-Trans">Et de nouveau, en un autre lieu, il dit : « Et la génisse enfantera, et ils diront : “Elle n’a pas enfanté.” »</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Acts of Peter (French)" xml:lang="fr" xml:id="ver_Acts_of_Peter__French_">
+        <head>Acts of Peter (French)</head>
+        <ab type="paragraph" n="24" xml:id="ApocrEzek.ver_Acts_of_Peter__French_.24">
+          <app xml:id="ufr_18_ver_Acts_of_Peter__French_">
+            <lem wit="#OCP-Trans">… et il dit encore : « Elle a enfanté et n'a pas enfanté. »</lem>
+          </app>
+        </ab>
+      </div>
+      <div type="translation" n="De carne Christi (French)" xml:lang="fr" xml:id="ver_De_carne_Christi__French_">
+        <head>De carne Christi (French)</head>
+        <div type="chapter" n="23" xml:id="ApocrEzek.ver_De_carne_Christi__French_.23">
+          <head>Chapter 23</head>
+          <ab type="line" n="7" xml:id="ApocrEzek.ver_De_carne_Christi__French_.23.7">
+            <app xml:id="ufr_19_ver_De_carne_Christi__French_">
+              <lem wit="#OCP-Trans">Nous reconnaissons donc comme signe contesté la conception et l'enfantement de la vierge Marie, à propos de</lem>
+            </app>
+          </ab>
+          <ab type="line" n="8" xml:id="ApocrEzek.ver_De_carne_Christi__French_.23.8">
+            <app xml:id="ufr_20_ver_De_carne_Christi__French_">
+              <lem wit="#OCP-Trans">quoi ces Académiciens disent : « Elle a enfanté et n'a pas enfanté, vierge et non vierge. »</lem>
+            </app>
+          </ab>
+          <ab type="line" n="27" xml:id="ApocrEzek.ver_De_carne_Christi__French_.23.27">
+            <app xml:id="ufr_21_ver_De_carne_Christi__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+          <ab type="line" n="28" xml:id="ApocrEzek.ver_De_carne_Christi__French_.23.28">
+            <app xml:id="ufr_22_ver_De_carne_Christi__French_">
+              <lem wit="#OCP-Trans">Nous lisons en effet chez Ézéchiel au sujet de cette vache</lem>
+            </app>
+          </ab>
+          <ab type="line" n="29" xml:id="ApocrEzek.ver_De_carne_Christi__French_.23.29">
+            <app xml:id="ufr_23_ver_De_carne_Christi__French_">
+              <lem wit="#OCP-Trans">qui a enfanté et n'a pas enfanté.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Against the Jews (French)" xml:lang="fr" xml:id="ver_Against_the_Jews__French_">
+        <head>Against the Jews (French)</head>
+        <div type="chapter" n="3" xml:id="ApocrEzek.ver_Against_the_Jews__French_.3">
+          <head>Chapter 3</head>
+          <ab type="paragraph" n="16" xml:id="ApocrEzek.ver_Against_the_Jews__French_.3.16">
+            <app xml:id="ufr_25_ver_Against_the_Jews__French_">
+              <lem wit="#OCP-Trans">Et encore : « Voici, la génisse a enfanté, et elle n'a pas enfanté. » Or cela désigne la Vierge.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Dialogue with Trypho (French)" xml:lang="fr" xml:id="ver_Dialogue_with_Trypho__French_">
+        <head>Dialogue with Trypho (French)</head>
+        <div type="chapter" n="47" xml:id="ApocrEzek.ver_Dialogue_with_Trypho__French_.47">
+          <head>Chapter 47</head>
+          <ab type="paragraph" n="5" xml:id="ApocrEzek.ver_Dialogue_with_Trypho__French_.47.5">
+            <app xml:id="ufr_26_ver_Dialogue_with_Trypho__French_">
+              <lem wit="#OCP-Trans">Car la bonté et l'amour des hommes de Dieu, ainsi que l'incommensurable richesse de sa grâce, tiennent celui qui se repent de ses péchés, comme il le déclare par Ézéchiel, pour juste et sans péché ; et celui qui passe de la piété ou de la justice à l'iniquité et à l'impiété, il le considère comme pécheur, injuste et impie. C'est pourquoi aussi notre Seigneur Jésus-Christ a dit : « En ce que je vous trouverai, c'est en cela aussi que je vous jugerai. »</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Quis dives salvetur (Frag. 4) (French)" xml:lang="fr" xml:id="ver_Quis_dives_salvetur__Frag._4___French_">
+        <head>Quis dives salvetur (Frag. 4) (French)</head>
+        <div type="chapter" n="40" xml:id="ApocrEzek.ver_Quis_dives_salvetur__Frag._4___French_.40">
+          <head>Chapter 40</head>
+          <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Quis_dives_salvetur__Frag._4___French_.40.2">
+            <app xml:id="ufr_27_ver_Quis_dives_salvetur__Frag._4___French_">
+              <lem wit="#OCP-Trans">« Car dans l’état où je vous trouverai », dit-il, « d’après cela aussi je vous jugerai. »</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+      <div type="translation" n="Paedagogus (Frag. 5) (French)" xml:lang="fr" xml:id="ver_Paedagogus__Frag._5___French_">
+        <head>Paedagogus (Frag. 5) (French)</head>
+        <div type="book" n="1" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___French_.1">
+          <head>Book 1</head>
+          <div type="section" n="9" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___French_.1.9">
+            <head>Section 9</head>
+            <div type="chapter" n="84" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___French_.1.9.84">
+              <head>Chapter 84</head>
+              <ab type="paragraph" n="2" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___French_.1.9.84.2">
+                <app xml:id="ufr_28_ver_Paedagogus__Frag._5___French_">
+                  <lem wit="#OCP-Trans">Il dit en effet par Ézéchiel, s'adressant aux anciens et leur proposant un modèle salutaire de sollicitude raisonnable : « Et je panserai celle qui est estropiée, et je guérirai celle qui souffre, et je ramènerai celle qui est égarée, et je les ferai paître moi-même sur ma sainte montagne. » Telles sont les promesses d'un bon berger ; fais-nous paître, nous qui sommes des tout-petits, comme des brebis.</lem>
+                </app>
+              </ab>
+              <ab type="paragraph" n="3" xml:id="ApocrEzek.ver_Paedagogus__Frag._5___French_.1.9.84.3">
+                <app xml:id="ufr_29_ver_Paedagogus__Frag._5___French_">
+                  <lem wit="#OCP-Trans">Oui, Maître, rassasie-nous de ton pâturage, de la justice ; oui, Pédagogue, conduis-nous sur ta sainte montagne, vers l'Église élevée, au-dessus des nuées, touchant aux cieux. « Et je serai, dit-il, leur berger, et je serai près d'eux », comme la tunique est près de leur chair ;</lem>
+                </app>
+              </ab>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Pap. Chester Beatty XII (French)" xml:lang="fr" xml:id="ver_Pap._Chester_Beatty_XII__French_">
+        <head>Pap. Chester Beatty XII (French)</head>
+        <div type="fragment" n="frag. 1" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._1">
+          <head>Fragment frag. 1</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._1.recto">
+            <app xml:id="ufr_30_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... des Égyptiens, mais je me réjouirai</lem>
+            </app>
+            <app xml:id="ufr_31_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[en] eux ; s'ils disent : « Père », il sera enten[du,</lem>
+            </app>
+            <app xml:id="ufr_32_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">du] et ils sero[nt avec moi</lem>
+            </app>
+            <app xml:id="ufr_33_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">sur la ter]re de la vie. Ô Jérusalem ! J'a[i dit au Seigneur :</lem>
+            </app>
+            <app xml:id="ufr_34_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">« [Seigneur, ne] me reprends pas da[ns ta fureur, et ne]</lem>
+            </app>
+            <app xml:id="ufr_35_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[me ch]âtie pas dans [ta colère ! Je suis éprouvé]</lem>
+            </app>
+            <app xml:id="ufr_36_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">jusqu'à [mes] rei[ns, je suis dissous]</lem>
+            </app>
+            <app xml:id="ufr_37_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">jusqu'à [mes] entr[ailles. Donne-]</lem>
+            </app>
+            <app xml:id="ufr_38_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[moi] ta miséricorde pour le jour, [comme tu as fait miséricorde]</lem>
+            </app>
+            <app xml:id="ufr_39_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[à A]braham no[tre] père [et à I-]</lem>
+            </app>
+            <app xml:id="ufr_40_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[saac e]t Jacob ! Mais c'est toi, le Seigneur [le]</lem>
+            </app>
+            <app xml:id="ufr_41_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[Dieu no]tre, que nous avons connu, et...</lem>
+            </app>
+            <app xml:id="ufr_42_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... et naquit...</lem>
+            </app>
+            <app xml:id="ufr_43_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... d'une femme impure...</lem>
+            </app>
+            <app xml:id="ufr_44_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... nous avons été en abomination...</lem>
+            </app>
+            <app xml:id="ufr_45_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... le nom...</lem>
+            </app>
+            <app xml:id="ufr_46_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_47_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... place publique...</lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._1.verso">
+            <app xml:id="ufr_48_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">Vous n'avez pas ramené [celle qui s'égare, et]</lem>
+            </app>
+            <app xml:id="ufr_49_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">vous n'avez pas soigné [celle qui souffre,]</lem>
+            </app>
+            <app xml:id="ufr_50_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[et vous faites] égarer mon peuple [loin]</lem>
+            </app>
+            <app xml:id="ufr_51_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[du] bon [pâturage] et vous les faites aller [vers]</lem>
+            </app>
+            <app xml:id="ufr_52_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[les chardons e]t les épines au lieu de l'h[erbe,]</lem>
+            </app>
+            <app xml:id="ufr_53_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[et vous n'avez pas gar]dé mon com[mandement,]</lem>
+            </app>
+            <app xml:id="ufr_54_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[mais tout paste]ur d'entre vous a ouve[rt la bouche,]</lem>
+            </app>
+            <app xml:id="ufr_55_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[et beaucou]p leur [sont] devenus une proie. [Mais]</lem>
+            </app>
+            <app xml:id="ufr_56_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[voici que] moi, je juge[rai entre bélier]</lem>
+            </app>
+            <app xml:id="ufr_57_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[et bélier] et entre veau et veau, [et]</lem>
+            </app>
+            <app xml:id="ufr_58_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">je panserai [celle qui est boiteuse], et [celle qui souffre,]</lem>
+            </app>
+            <app xml:id="ufr_59_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">je la [guéri]rai, et celle qui s'égare, [je la ramènerai,]</lem>
+            </app>
+            <app xml:id="ufr_60_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[e]t moi-même je les ferai paître, [et je les ferai reposer]</lem>
+            </app>
+            <app xml:id="ufr_61_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[su]r [ma] sainte montagne, [et je]</lem>
+            </app>
+            <app xml:id="ufr_62_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[serai pour] eux un pasteur, e[t je serai proche]</lem>
+            </app>
+            <app xml:id="ufr_63_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[d'eux comme la tu]nique de [leur] pea[u, et]</lem>
+            </app>
+            <app xml:id="ufr_64_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">ils m'[invoque]ront [et je dirai : « Me voici ! »]</lem>
+            </app>
+            <app xml:id="ufr_65_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[S'ils traver]sent, i[ls ne trébucheront]</lem>
+            </app>
+            <app xml:id="ufr_66_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">[pas, dit le Seigneur.]...</lem>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="frag. 2" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._2">
+          <head>Fragment frag. 2</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._2.recto">
+            <app xml:id="ufr_67_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_68_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... de feu...</lem>
+            </app>
+            <app xml:id="ufr_69_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... souillant...</lem>
+            </app>
+            <app xml:id="ufr_70_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... ils s'approchaient encore de...</lem>
+            </app>
+            <app xml:id="ufr_71_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... des vieillards impuissants...</lem>
+            </app>
+            <app xml:id="ufr_72_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... sur les hauteurs et...</lem>
+            </app>
+            <app xml:id="ufr_73_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... parce qu'ils n'avaient pas de guides...</lem>
+            </app>
+            <app xml:id="ufr_74_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... sont ceux de la voix...</lem>
+            </app>
+            <app xml:id="ufr_75_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... mais je levai les yeux et...</lem>
+            </app>
+            <app xml:id="ufr_76_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... suspendu...</lem>
+            </app>
+            <app xml:id="ufr_77_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... volant au-dessus...</lem>
+            </app>
+            <app xml:id="ufr_78_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... et je dis...</lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._2.verso">
+            <app xml:id="ufr_79_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_80_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... comme le Se[igneur...</lem>
+            </app>
+            <app xml:id="ufr_81_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_82_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... est pour celui qui a été asservi...</lem>
+            </app>
+            <app xml:id="ufr_83_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... un cœur pur et...</lem>
+            </app>
+            <app xml:id="ufr_84_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... sur le Seigneur Dieu...</lem>
+            </app>
+            <app xml:id="ufr_85_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... et ce qui est brisé...</lem>
+            </app>
+            <app xml:id="ufr_86_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... vous, et se tiendra...</lem>
+            </app>
+            <app xml:id="ufr_87_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... avec tout le...</lem>
+            </app>
+            <app xml:id="ufr_88_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... dévastée par...</lem>
+            </app>
+            <app xml:id="ufr_89_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... il se réjouira...</lem>
+            </app>
+            <app xml:id="ufr_90_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+            <app xml:id="ufr_91_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans" type="omission"/>
+            </app>
+          </ab>
+        </div>
+        <div type="fragment" n="frag. 3" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._3">
+          <head>Fragment frag. 3</head>
+          <ab type="side" n="recto" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._3.recto">
+            <app xml:id="ufr_92_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... maintenant vous...</lem>
+            </app>
+            <app xml:id="ufr_93_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... depuis le...</lem>
+            </app>
+            <app xml:id="ufr_94_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... des méchants et...</lem>
+            </app>
+          </ab>
+          <ab type="side" n="verso" xml:id="ApocrEzek.ver_Pap._Chester_Beatty_XII__French_.frag._3.verso">
+            <app xml:id="ufr_95_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... du pays...</lem>
+            </app>
+            <app xml:id="ufr_96_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... couvrant...</lem>
+            </app>
+            <app xml:id="ufr_97_ver_Pap._Chester_Beatty_XII__French_">
+              <lem wit="#OCP-Trans">... advient...</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

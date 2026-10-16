@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ArisEx">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Aristeas the Exegete (Fragment)</title>
+        <editor role="editor">Penner, Ken M., Ian W. Scott</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Evans">
+            <abbr type="siglum">Evans</abbr>
+            <name>Evans</name>
+            <bibl>Eusebius, Praep. Evang. 9.24.1-9.25.4</bibl>
+          </witness>
+          <witness xml:id="OCP-Trans">
+            <abbr type="siglum">OCP-Trans</abbr>
+            <name>OCP Translation</name>
+            <bibl>English translation based on the Greek text of Eusebius, Praep. Evang. 9.24.1-9.25.4 (Craig A. Evans edition).</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Praep._Evang.">
+        <refState unit="book" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English">
+        <refState unit="book" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="line"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_Praep._Evang.__French_">
+        <refState unit="book" delim="."/>
+        <refState unit="chapter" delim="."/>
+        <refState unit="line"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Praep. Evang." xml:lang="grc" xml:id="ver_Praep._Evang.">
+        <head>Praep. Evang.</head>
+        <div type="book" n="9" xml:id="ArisEx.ver_Praep._Evang..9">
+          <head>Book 9</head>
+          <div type="chapter" n="24" xml:id="ArisEx.ver_Praep._Evang..9.24">
+            <head>Chapter 24</head>
+            <ab type="line" n="1" xml:id="ArisEx.ver_Praep._Evang..9.24.1">
+              <app xml:id="u0_ver_Praep._Evang.">
+                <lem wit="#Evans">. . . Ἄκουε δὲ οἷα καὶ περὶ τοῦ Ἰὼβ ὁ αὐτὸς ἱστορεῖ·<lb/></lem>
+              </app>
+            </ab>
+          </div>
+          <div type="chapter" n="25" xml:id="ArisEx.ver_Praep._Evang..9.25">
+            <head>Chapter 25</head>
+            <ab type="line" n="heading" xml:id="ArisEx.ver_Praep._Evang..9.25.heading">
+              <app xml:id="u1_ver_Praep._Evang.">
+                <lem wit="#Evans">κεʹ. ΑΡΙΣΤΕΟΥ ΠΕΡΙ ΤΟΥ ΙΩΒ ΟΜΟΙΩΣ<lb/></lem>
+              </app>
+            </ab>
+            <ab type="line" n="1" xml:id="ArisEx.ver_Praep._Evang..9.25.1">
+              <app xml:id="u2_ver_Praep._Evang.">
+                <lem wit="#Evans">“Ἀριστέας δέ φησιν ἐν τῷ Περὶ Ἰουδαίων τὸν Ἠσαῦ γήμαντα Βασσάραν υἱὸν ἐν Ἐδὼμ γεννῆσαι Ἰώβ· κατοικεῖν δὲ τοῦτον ἐν τῇ Αὐσίτιδι χώρᾳ ἐπὶ τοῖς ὅροις τῆς Ἰδουμαίας καὶ Ἀραβίας.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="2" xml:id="ArisEx.ver_Praep._Evang..9.25.2">
+              <app xml:id="u3_ver_Praep._Evang.">
+                <lem wit="#Evans">γενέσθαι δ᾽ αὐτὸν δίκαιον καὶ πολύκτηνον· κτήσασθαι γὰρ αὐτὸν πρόβατα μὲν ἑπτακισχίλια, καμήλους δὲ τρισχιλίας, ζεύγη βοῶν πεντακόσια, ὄνους θηλείας νομάδας πεντακοσίας· εἶχε δὲ καὶ γεωργίας ἱκανάς.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="3" xml:id="ArisEx.ver_Praep._Evang..9.25.3">
+              <app xml:id="u4_ver_Praep._Evang.">
+                <lem wit="#Evans">τοῦτον δὲ τὸν Ἰὼβ πρότερον Ἰωβὰβ ὀνομάζεσθαι. πειράζοντα δ᾽ αὐτὸν τὸν θεὸν ἐμμεῖναι, μεγάλαις δὲ περιβαλεῖν αὐτὸν ἀτυχίαις. πρῶτον μὲν γὰρ αὐτοῦ τούς τε ὄνους καὶ τοὺς βοῦς ὑπὸ λῃστῶν ἀπολέσθαι, εἶτα τὰ πρόβατα ὑπὸ πυρὸς ἐκ τοῦ οὐρανοῦ πεσόντος κατακαῆναι σὺν τοῖς ποιμέσι· μετ᾽ οὐ πολὺ δὲ καὶ τὰς καμήλους ὑπὸ λῃστῶν ἀπελαθῆναι· εἶτα τὰ τέκνα αὐτοῦ ἀποθανεῖν, πεσούσης τῆς οἰκίας· αὐθημερὸν δὲ αὐτοῦ καὶ τὸ σῶμα ἑλκῶσαι.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="4" xml:id="ArisEx.ver_Praep._Evang..9.25.4">
+              <app xml:id="u5_ver_Praep._Evang.">
+                <lem wit="#Evans">φαύλως δὲ αὐτοῦ διακειμένου ἐλθεῖν εἰς ἐπίσκεψιν Ἐλίφαν τὸν Θαιμανιτῶν βασιλέα καὶ Βαλδὰδ τὸν Σαυχαίων τύραννον καὶ Σωφὰρ τὸν Μινναίων βασιλέα, ἐλθεῖν δὲ καὶ Ἐλιοῦν τὸν Βαραχιὴλ τὸν Ζωβίτην· παρακαλούμενον δὲ φάναι καὶ χωρὶς παρακλήσεως ἐμμενεῖν αὑτὸν ἔν τε τῇ εὐσεβείᾳ καὶ τοῖς δεινοῖς. τὸν δὲ θεὸν ἀγασθέντα τὴν εὐψυχίαν αὐτοῦ τῆς τε νόσου αὐτὸν ἀπολῦσαι καὶ πολλῶν κύριον ὑπάρξεων ποιῆσαι.” Τοσαῦτα καὶ περὶ τούτων ὁ Πολυΐστωρ. . . .</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="English" xml:lang="en" xml:id="ver_English">
+        <head>English</head>
+        <div type="book" n="9" xml:id="ArisEx.ver_English.9">
+          <head>Book 9</head>
+          <div type="chapter" n="24" xml:id="ArisEx.ver_English.9.24">
+            <head>Chapter 24</head>
+            <ab type="line" n="1" xml:id="ArisEx.ver_English.9.24.1">
+              <app xml:id="uen_0_ver_English">
+                <lem wit="#OCP-Trans">. . . And hear what the same author also relates concerning Job:<lb/></lem>
+              </app>
+            </ab>
+          </div>
+          <div type="chapter" n="25" xml:id="ArisEx.ver_English.9.25">
+            <head>Chapter 25</head>
+            <ab type="line" n="heading" xml:id="ArisEx.ver_English.9.25.heading">
+              <app xml:id="uen_1_ver_English">
+                <lem wit="#OCP-Trans">25. Likewise of Aristeas Concerning Job<lb/></lem>
+              </app>
+            </ab>
+            <ab type="line" n="1" xml:id="ArisEx.ver_English.9.25.1">
+              <app xml:id="uen_2_ver_English">
+                <lem wit="#OCP-Trans">“And Aristeas says in his book Concerning the Jews that Esau, having married Bassara, begot a son in Edom named Job; and that he lived in the land of Ausitis, on the borders of Idumea and Arabia.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="2" xml:id="ArisEx.ver_English.9.25.2">
+              <app xml:id="uen_3_ver_English">
+                <lem wit="#OCP-Trans">And that he was righteous and rich in possessions; for he acquired seven thousand sheep, three thousand camels, five hundred yoke of oxen, and five hundred she-asses feeding at pasture; and he had also extensive farming lands.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="3" xml:id="ArisEx.ver_English.9.25.3">
+              <app xml:id="uen_4_ver_English">
+                <lem wit="#OCP-Trans">And that this Job was formerly called Jobab. But when God tried him, he persevered, though he was encompassed with great misfortunes. For first his asses and oxen were carried off by robbers, then the sheep were burned up with fire that fell from heaven along with the shepherds; not long after, the camels were also driven off by robbers; then his children died when the house collapsed; and on the very same day his body was covered with sores.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="4" xml:id="ArisEx.ver_English.9.25.4">
+              <app xml:id="uen_5_ver_English">
+                <lem wit="#OCP-Trans">And when he was in a wretched plight, there came to visit him Eliphas, king of the Temanites, and Baldad, ruler of the Shuhites, and Sophar, king of the Minaioi; and there came also Elihu, son of Barachiel the Zobite. And when they exhorted him, he said that even without exhortation he remained steadfast in his piety and through his afflictions. And God, admiring his courage, released him from his disease and made him master of manifold possessions.” Such is the account of Polyhistor concerning these matters. . . .</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+      <div type="translation" n="Praep. Evang. (French)" xml:lang="fr" xml:id="ver_Praep._Evang.__French_">
+        <head>Praep. Evang. (French)</head>
+        <div type="book" n="9" xml:id="ArisEx.ver_Praep._Evang.__French_.9">
+          <head>Book 9</head>
+          <div type="chapter" n="24" xml:id="ArisEx.ver_Praep._Evang.__French_.9.24">
+            <head>Chapter 24</head>
+            <ab type="line" n="1" xml:id="ArisEx.ver_Praep._Evang.__French_.9.24.1">
+              <app xml:id="ufr_0_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">... Écoute aussi ce que le même auteur rapporte au sujet de Job :</lem>
+              </app>
+            </ab>
+          </div>
+          <div type="chapter" n="25" xml:id="ArisEx.ver_Praep._Evang.__French_.9.25">
+            <head>Chapter 25</head>
+            <ab type="line" n="heading" xml:id="ArisEx.ver_Praep._Evang.__French_.9.25.heading">
+              <app xml:id="ufr_1_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">XXV. D'Aristée sur Job, de même.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="1" xml:id="ArisEx.ver_Praep._Evang.__French_.9.25.1">
+              <app xml:id="ufr_2_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">« Aristée dit, dans son traité Sur les Juifs, qu'Ésaü, ayant épousé Bassara, engendra en Édom un fils, Job ; et que celui-ci habitait dans le pays d'Ausitis, aux confins de l'Idumée et de l'Arabie.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="2" xml:id="ArisEx.ver_Praep._Evang.__French_.9.25.2">
+              <app xml:id="ufr_3_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">Il devint un homme juste et très riche en biens ; car il acquit sept mille brebis, trois mille chameaux, cinq cents paires de bœufs et cinq cents ânesses au pâturage ; il possédait aussi de vastes terres cultivées.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="3" xml:id="ArisEx.ver_Praep._Evang.__French_.9.25.3">
+              <app xml:id="ufr_4_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">Ce Job s'appelait auparavant Jobab. Dieu, pour éprouver s'il demeurerait ferme, l'accabla de grands malheurs. D'abord, en effet, ses ânes et ses bœufs furent enlevés par des brigands, puis ses brebis furent consumées avec les bergers par un feu tombé du ciel ; peu après, ses chameaux furent aussi emmenés par des brigands ; ensuite ses enfants périrent dans l'effondrement de la maison ; et le jour même, son corps fut couvert d'ulcères.</lem>
+              </app>
+            </ab>
+            <ab type="line" n="4" xml:id="ArisEx.ver_Praep._Evang.__French_.9.25.4">
+              <app xml:id="ufr_5_ver_Praep._Evang.__French_">
+                <lem wit="#OCP-Trans">Comme il se trouvait dans un état misérable, Éliphas, roi des Thémanites, Baldad, souverain des Sauchéens, et Sophar, roi des Minéens, vinrent lui rendre visite ; Élihou, fils de Barachiel, le Zobite, vint également. Alors qu'on cherchait à le consoler, Job déclara que, même sans consolation, il persévérerait dans la piété au milieu des épreuves. Dieu, ayant admiré son courage, le délivra de sa maladie et le rendit possesseur de nombreux biens. » Voilà ce que rapporte aussi Polyhistor à ces sujets...</lem>
+              </app>
+            </ab>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
