@@ -75,16 +75,16 @@ Excluded from Haelewyck's *Introductio* (p. xii) as non-apocryphal Hellenistic/s
 | **Eupolemus** — *On the Kings of Judaea* | Ch. 53 | [Eupolemus.md](bibliography/Eupolemus.md) | Jacoby FGrH 723; Holladay FHJA 1.93-156 | `Eup.xml` |
 | **Pseudo-Eupolemus** — *On the Jews (Anonymous Samaritan)* | Ch. 54 | [Pseudo_Eupolemus.md](bibliography/Pseudo_Eupolemus.md) | Jacoby FGrH 724; Holladay FHJA 1.157-187 | `Ps-Eup.xml` |
 | **Ezekiel the Tragedian** — *Exagoge (The Exodus drama)* | Ch. 55 | [Ezekiel_the_Tragedian.md](bibliography/Ezekiel_the_Tragedian.md) | TrGF 1.128; Holladay FHJA 2.301-529 | `EzekTrag.xml` |
-| **Pseudo-Hecataeus** — *On the Jews / On Abraham* | Ch. 56 | [Pseudo_Hecataeus.md](bibliography/Pseudo_Hecataeus.md) | Jacoby FGrH 264/730; Holladay FHJA 1.277-335 | `— (Gap)` |
+| **Pseudo-Hecataeus** — *On the Jews / On Abraham* | Ch. 56 | [Pseudo_Hecataeus.md](bibliography/Pseudo_Hecataeus.md) | Jacoby FGrH 264/730; Holladay FHJA 1.277-335 | `PsHecat.xml` |
 | **Justus of Tiberias** — *Chronicle of Kings / Jewish War* | Ch. 57 | [Justus_of_Tiberias.md](bibliography/Justus_of_Tiberias.md) | Jacoby FGrH 734; Holladay FHJA 1.371-389 | `— (Gap)` |
-| **Pseudo-Orpheus** — *Diatheke (Testament of Orpheus)* | Ch. 58 | [Pseudo_Orpheus.md](bibliography/Pseudo_Orpheus.md) | Holladay FHJA 4.1-300; Kern OF 245-248 | `— (Gap)` |
+| **Pseudo-Orpheus** — *Diatheke (Testament of Orpheus)* | Ch. 58 | [Pseudo_Orpheus.md](bibliography/Pseudo_Orpheus.md) | Holladay FHJA 4.1-300; Kern OF 245-248 | `PsOrph.xml` |
 | **Philo the Epic Poet** — *Peri Ta Hierosolyma (On Jerusalem)* | Ch. 59 | [Philo_the_Epic_Poet.md](bibliography/Philo_the_Epic_Poet.md) | Jacoby FGrH 729; Holladay FHJA 2.205-299 | `PhEPoet.xml` |
-| **Thallus** — *Histories (Universal Chronography)* | Ch. 60 | [Thallus.md](bibliography/Thallus.md) | Jacoby FGrH 256; Holladay FHJA 1.343-369 | `— (Gap)` |
+| **Thallus** — *Histories (Universal Chronography)* | Ch. 60 | [Thallus.md](bibliography/Thallus.md) | Jacoby FGrH 256; Holladay FHJA 1.343-369 | `Thallus.xml` |
 | **Theodotus** — *On the Jews (Epic on Shechem)* | Ch. 61 | [Theodotus.md](bibliography/Theodotus.md) | Jacoby FGrH 732; Holladay FHJA 2.51-204 | `Theod.xml` |
-| **Theophilus** — *On Solomon and Hiram of Tyre* | Ch. 62 | [Theophilus.md](bibliography/Theophilus.md) | Jacoby FGrH 733; Holladay FHJA 1.337-341 | `— (Gap)` |
+| **Theophilus** — *On Solomon and Hiram of Tyre* | Ch. 62 | [Theophilus.md](bibliography/Theophilus.md) | Jacoby FGrH 733; Holladay FHJA 1.337-341 | `Theoph.xml` |
 | **Hellenistic Synagogal Prayers** — *16 Synagogal Prayers in Apostolic Const. 7-8* | Ch. 20 | [Hellenistic_Synagogal_Prayers.md](bibliography/Hellenistic_Synagogal_Prayers.md) | Delling; van der Horst | `— (Gap)` |
 | **Sentences of Syriac Menander** — *Syriac Sapiential Florilegium* | Ch. 33 | [Sentences_of_the_Syriac_Menander.md](bibliography/Sentences_of_the_Syriac_Menander.md) | Baars; Land; Schulthess | `— (Gap)` |
-| **Sentences of Pseudo-Phocylides** — *Gnomological Hexameters* | Ch. 37 | [Sentences_of_Pseudo_Phocylides.md](bibliography/Sentences_of_Pseudo_Phocylides.md) | van der Horst; Derron | `— (Gap)` |
+| **Sentences of Pseudo-Phocylides** — *Gnomological Hexameters* | Ch. 37 | [Sentences_of_Pseudo_Phocylides.md](bibliography/Sentences_of_Pseudo_Phocylides.md) | van der Horst; Derron | `PsPhoc.xml` |
 
 ---
 

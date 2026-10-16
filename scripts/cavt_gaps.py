@@ -93,25 +93,25 @@ EXCLUDED_FROM_CAVT = [
     {"author": "Ezekiel the Tragedian", "work": "Exagoge (The Exodus drama)", "ch": 55,
      "dossier": "Ezekiel_the_Tragedian.md", "clavis": "TrGF 1.128; Holladay FHJA 2.301-529", "ocp_file": "EzekTrag.xml"},
     {"author": "Pseudo-Hecataeus", "work": "On the Jews / On Abraham", "ch": 56,
-     "dossier": "Pseudo_Hecataeus.md", "clavis": "Jacoby FGrH 264/730; Holladay FHJA 1.277-335", "ocp_file": "— (Gap)"},
+     "dossier": "Pseudo_Hecataeus.md", "clavis": "Jacoby FGrH 264/730; Holladay FHJA 1.277-335", "ocp_file": "PsHecat.xml"},
     {"author": "Justus of Tiberias", "work": "Chronicle of Kings / Jewish War", "ch": 57,
      "dossier": "Justus_of_Tiberias.md", "clavis": "Jacoby FGrH 734; Holladay FHJA 1.371-389", "ocp_file": "— (Gap)"},
     {"author": "Pseudo-Orpheus", "work": "Diatheke (Testament of Orpheus)", "ch": 58,
-     "dossier": "Pseudo_Orpheus.md", "clavis": "Holladay FHJA 4.1-300; Kern OF 245-248", "ocp_file": "— (Gap)"},
+     "dossier": "Pseudo_Orpheus.md", "clavis": "Holladay FHJA 4.1-300; Kern OF 245-248", "ocp_file": "PsOrph.xml"},
     {"author": "Philo the Epic Poet", "work": "Peri Ta Hierosolyma (On Jerusalem)", "ch": 59,
      "dossier": "Philo_the_Epic_Poet.md", "clavis": "Jacoby FGrH 729; Holladay FHJA 2.205-299", "ocp_file": "PhEPoet.xml"},
     {"author": "Thallus", "work": "Histories (Universal Chronography)", "ch": 60,
-     "dossier": "Thallus.md", "clavis": "Jacoby FGrH 256; Holladay FHJA 1.343-369", "ocp_file": "— (Gap)"},
+     "dossier": "Thallus.md", "clavis": "Jacoby FGrH 256; Holladay FHJA 1.343-369", "ocp_file": "Thallus.xml"},
     {"author": "Theodotus", "work": "On the Jews (Epic on Shechem)", "ch": 61,
      "dossier": "Theodotus.md", "clavis": "Jacoby FGrH 732; Holladay FHJA 2.51-204", "ocp_file": "Theod.xml"},
     {"author": "Theophilus", "work": "On Solomon and Hiram of Tyre", "ch": 62,
-     "dossier": "Theophilus.md", "clavis": "Jacoby FGrH 733; Holladay FHJA 1.337-341", "ocp_file": "— (Gap)"},
+     "dossier": "Theophilus.md", "clavis": "Jacoby FGrH 733; Holladay FHJA 1.337-341", "ocp_file": "Theoph.xml"},
     {"author": "Hellenistic Synagogal Prayers", "work": "16 Synagogal Prayers in Apostolic Const. 7-8", "ch": 20,
      "dossier": "Hellenistic_Synagogal_Prayers.md", "clavis": "Delling; van der Horst", "ocp_file": "— (Gap)"},
     {"author": "Sentences of Syriac Menander", "work": "Syriac Sapiential Florilegium", "ch": 33,
      "dossier": "Sentences_of_the_Syriac_Menander.md", "clavis": "Baars; Land; Schulthess", "ocp_file": "— (Gap)"},
     {"author": "Sentences of Pseudo-Phocylides", "work": "Gnomological Hexameters", "ch": 37,
-     "dossier": "Sentences_of_Pseudo_Phocylides.md", "clavis": "van der Horst; Derron", "ocp_file": "— (Gap)"}
+     "dossier": "Sentences_of_Pseudo_Phocylides.md", "clavis": "van der Horst; Derron", "ocp_file": "PsPhoc.xml"}
 ]
 
 
