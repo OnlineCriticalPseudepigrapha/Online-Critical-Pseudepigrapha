@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Justus.xml">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Justus of Tiberias</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Critical edition based on standard textual witnesses.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+        <refState unit="section"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English_Translation">
+        <refState unit="section"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek Text (FGrH 734 / Holladay FHJA 1)" xml:lang="und" xml:id="ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+        <head>Greek Text (FGrH 734 / Holladay FHJA 1)</head>
+        <ab type="section" n="1" xml:id="Justus.xml.ver_Greek_Text__FGrH_734___Holladay_FHJA_1_.1">
+          <app xml:id="u1.1_ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+            <rdg wit="#Phot" n="base">Ἀνεγνώσθη Ἰούστου Τιβεριέως χρονικόν, οὗ ἡ ἐπιγραφὴ «Ἰούστου Τιβεριέως Ἰουδαίων βασιλέων τῶν ἐν τοῖς στέμμασιν». Οὗτος ἀπὸ πόλεως τῆς ἐν Γαλιλαίᾳ Τιβεριάδος ὡρμᾶτο.</rdg>
+          </app>
+          <app xml:id="u1.2_ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+            <rdg wit="#Phot" n="base">Ἄρχεται δὲ τῆς ἱστορίας ἀπὸ Μωϋσέως, καταλήγει δὲ ἕως τελευτῆς Ἀγρίππα τοῦ ἑβδόμου μὲν τῶν ἀπὸ τῆς οἰκίας Ἡρῴδου, ὑστάτου δὲ ἐν τοῖς Ἰουδαίας βασιλεῦσιν, ὃς παρέλαβε μὲν τὴν ἀρχὴν ἐπὶ Κλαυδίου, ηὐξήθη δὲ ἐπὶ Νέρωνος καὶ ἔτι μᾶλλον ὑπὸ Οὐεσπασιανοῦ, τελευτᾷ δὲ ἔτει τρίτῳ Τραϊανοῦ, οὗ καὶ ἡ ἱστορία κατέληξεν.</rdg>
+          </app>
+          <app xml:id="u1.3_ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+            <rdg wit="#Phot" n="base">Ἔστι δὲ τὴν φράσιν συντομώτατός τε καὶ τὰ πλεῖστα τῶν ἀναγκαιοτάτων παρατρέχων· καὶ τῷ κοινῷ νοσήματι τῆς τῶν Ἰουδαίων προλήψεως, ὧν καὶ αὐτὸς τῷ γένει ὑπῆρχε, περιπεσών, οὐδὲ τῆς παρουσίας τοῦ Χριστοῦ ἢ τῶν κατ’ αὐτὸν συμβάντων ἢ τῶν ὑπ’ αὐτοῦ ἐπιτελεσθέντων θαυμάτων τὴν παραμικρὰν μνήμην ἐποιήσατο.</rdg>
+          </app>
+        </ab>
+        <ab type="section" n="2" xml:id="Justus.xml.ver_Greek_Text__FGrH_734___Holladay_FHJA_1_.2">
+          <app xml:id="u2.1_ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+            <rdg wit="#Phot" n="base">Κρινομένου δ’ αὐτοῦ φησιν Ἰοῦστος ὁ Τιβεριεὺς ἐν τῷ Στέμματι Πλάτωνα ἀναβῆναι ἐπὶ τὸ βῆμα καὶ εἰπεῖν· «Νεώτατος ὤν, ὦ ἄνδρες Ἀθηναῖοι, τῶν ἐπὶ τὸ βῆμα ἀναβάντων»· τοὺς δὲ δικαστὰς ἐκβοῆσαι· «Κατάβα, κατάβα» [τουτέστι κατάβηθι].</rdg>
+          </app>
+        </ab>
+        <ab type="section" n="3" xml:id="Justus.xml.ver_Greek_Text__FGrH_734___Holladay_FHJA_1_.3">
+          <app xml:id="u3.1_ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+            <rdg wit="#Phot" n="base">Πῶς οὖν, ἵνα φῶ πρὸς αὐτὸν ὡς παρόντα, Ἰοῦστε δεινότατε συγγραφέων, τοῦτο γὰρ αὐχεῖς περὶ σεαυτοῦ, αἴτιοι γεγόναμεν ἐγώ τε καὶ Γαλιλαῖοι τῇ πατρίδι σου τῆς πρὸς Ῥωμαίους καὶ πρὸς τὸν βασιλέα στάσεως;</rdg>
+          </app>
+        </ab>
+        <ab type="section" n="4" xml:id="Justus.xml.ver_Greek_Text__FGrH_734___Holladay_FHJA_1_.4">
+          <app xml:id="u4.1_ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+            <rdg wit="#Phot" n="base">Οὔτε γὰρ κατὰ τὴν Γαλιλαίαν ἦσθα, ὅτε συνέβαινεν τὰ δεινά, οὔτε Ἰωταπάτων τινὸς πολιορκίας ἀνέσχου, οὔτε περὶ τὴν Ἱεροσολύμων ἦσθα μάχην ἢ πόνον.</rdg>
+          </app>
+          <app xml:id="u4.2_ver_Greek_Text__FGrH_734___Holladay_FHJA_1_">
+            <rdg wit="#Phot" n="base">Πῶς οὖν θαρρήσας ἔλεγες ὡς ἀκριβέστερον πάντων συγγεγραφὼς τὰ πραχθέντα, μηδὲ τοῖς γενομένοις παρατυχὼν μήτε τοὺς ἄλλους τοὺς εἰδότας ἐξετάσας;</rdg>
+          </app>
+        </ab>
+      </div>
+      <div type="translation" n="English Translation" xml:lang="und" xml:id="ver_English_Translation">
+        <head>English Translation</head>
+        <ab type="section" n="1" xml:id="Justus.xml.ver_English_Translation.1">
+          <app xml:id="u1.1_ver_English_Translation">
+            <rdg wit="#Eng" n="base">There was read the chronicle of Justus of Tiberias, entitled 'A Chronicle of the Kings of the Jews in the Form of a Genealogy, by Justus of Tiberias.' He came from the city of Tiberias in Galilee.</rdg>
+          </app>
+          <app xml:id="u1.2_ver_English_Translation">
+            <rdg wit="#Eng" n="base">He begins his history with Moses and concludes with the death of Agrippa, the seventh of the house of Herod and the last of the kings of Judaea, who received his realm under Claudius, was augmented under Nero and still more by Vespasian, and died in the third year of Trajan, where the history also ended.</rdg>
+          </app>
+          <app xml:id="u1.3_ver_English_Translation">
+            <rdg wit="#Eng" n="base">In his phrasing he is extremely concise, and bypasses most of the essential events; and having fallen victim to the common affliction of Jewish prejudice (since he was himself of that race), he made not the slightest mention of the appearance of Christ, of the events concerning him, or of the miracles performed by him.</rdg>
+          </app>
+        </ab>
+        <ab type="section" n="2" xml:id="Justus.xml.ver_English_Translation.2">
+          <app xml:id="u2.1_ver_English_Translation">
+            <rdg wit="#Eng" n="base">When Socrates was on trial, Justus of Tiberias in his book entitled The Wreath says that Plato mounted the speaker's platform and said: 'Though I am the youngest, men of Athens, of all who ever rose to address you'—whereupon the judges shouted out: 'Get down! Get down!' [that is, descend from the platform].</rdg>
+          </app>
+        </ab>
+        <ab type="section" n="3" xml:id="Justus.xml.ver_English_Translation.3">
+          <app xml:id="u3.1_ver_English_Translation">
+            <rdg wit="#Eng" n="base">How then, that I may speak to him as if he were present, O Justus, most clever of writers (for this you boast concerning yourself), did I and the Galileans become the cause of your native city's rebellion against the Romans and against the king?</rdg>
+          </app>
+        </ab>
+        <ab type="section" n="4" xml:id="Justus.xml.ver_English_Translation.4">
+          <app xml:id="u4.1_ver_English_Translation">
+            <rdg wit="#Eng" n="base">For you were not in Galilee when these dreadful things were happening, nor did you endure any part of the siege of Jotapata, nor were you present at the battle or hardships in Jerusalem.</rdg>
+          </app>
+          <app xml:id="u4.2_ver_English_Translation">
+            <rdg wit="#Eng" n="base">How then did you dare to say that you have written what took place more accurately than anyone else, when you neither witnessed what occurred nor questioned others who were eyewitnesses?</rdg>
+          </app>
+        </ab>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="Justus.xml" title="Justus of Tiberias">
+  <version id="Greek" title="Greek Text (FGrH 734 / Holladay FHJA 1)" lang="grc">
+    <divisions>
+      <division id="1" title="Fragments" type="fragment"/>
+    </divisions>
+    <manuscripts>
+      <manuscript id="Phot" name="Photius Bibliotheca Cod. 33"/>
+      <manuscript id="Diog" name="Diogenes Laertius"/>
+      <manuscript id="Jos" name="Flavius Josephus Vita"/>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <unit id="1.1">
+          <reading option="base" mss="Phot">Ἀνεγνώσθη Ἰούστου Τιβεριέως χρονικόν, οὗ ἡ ἐπιγραφὴ «Ἰούστου Τιβεριέως Ἰουδαίων βασιλέων τῶν ἐν τοῖς στέμμασιν». Οὗτος ἀπὸ πόλεως τῆς ἐν Γαλιλαίᾳ Τιβεριάδος ὡρμᾶτο.</reading>
+        </unit>
+        <unit id="1.2">
+          <reading option="base" mss="Phot">Ἄρχεται δὲ τῆς ἱστορίας ἀπὸ Μωϋσέως, καταλήγει δὲ ἕως τελευτῆς Ἀγρίππα τοῦ ἑβδόμου μὲν τῶν ἀπὸ τῆς οἰκίας Ἡρῴδου, ὑστάτου δὲ ἐν τοῖς Ἰουδαίας βασιλεῦσιν, ὃς παρέλαβε μὲν τὴν ἀρχὴν ἐπὶ Κλαυδίου, ηὐξήθη δὲ ἐπὶ Νέρωνος καὶ ἔτι μᾶλλον ὑπὸ Οὐεσπασιανοῦ, τελευτᾷ δὲ ἔτει τρίτῳ Τραϊανοῦ, οὗ καὶ ἡ ἱστορία κατέληξεν.</reading>
+        </unit>
+        <unit id="1.3">
+          <reading option="base" mss="Phot">Ἔστι δὲ τὴν φράσιν συντομώτατός τε καὶ τὰ πλεῖστα τῶν ἀναγκαιοτάτων παρατρέχων· καὶ τῷ κοινῷ νοσήματι τῆς τῶν Ἰουδαίων προλήψεως, ὧν καὶ αὐτὸς τῷ γένει ὑπῆρχε, περιπεσών, οὐδὲ τῆς παρουσίας τοῦ Χριστοῦ ἢ τῶν κατ’ αὐτὸν συμβάντων ἢ τῶν ὑπ’ αὐτοῦ ἐπιτελεσθέντων θαυμάτων τὴν παραμικρὰν μνήμην ἐποιήσατο.</reading>
+        </unit>
+      </div>
+      <div number="2">
+        <unit id="2.1">
+          <reading option="base" mss="Phot">Κρινομένου δ’ αὐτοῦ φησιν Ἰοῦστος ὁ Τιβεριεὺς ἐν τῷ Στέμματι Πλάτωνα ἀναβῆναι ἐπὶ τὸ βῆμα καὶ εἰπεῖν· «Νεώτατος ὤν, ὦ ἄνδρες Ἀθηναῖοι, τῶν ἐπὶ τὸ βῆμα ἀναβάντων»· τοὺς δὲ δικαστὰς ἐκβοῆσαι· «Κατάβα, κατάβα» [τουτέστι κατάβηθι].</reading>
+        </unit>
+      </div>
+      <div number="3">
+        <unit id="3.1">
+          <reading option="base" mss="Phot">Πῶς οὖν, ἵνα φῶ πρὸς αὐτὸν ὡς παρόντα, Ἰοῦστε δεινότατε συγγραφέων, τοῦτο γὰρ αὐχεῖς περὶ σεαυτοῦ, αἴτιοι γεγόναμεν ἐγώ τε καὶ Γαλιλαῖοι τῇ πατρίδι σου τῆς πρὸς Ῥωμαίους καὶ πρὸς τὸν βασιλέα στάσεως;</reading>
+        </unit>
+      </div>
+      <div number="4">
+        <unit id="4.1">
+          <reading option="base" mss="Phot">Οὔτε γὰρ κατὰ τὴν Γαλιλαίαν ἦσθα, ὅτε συνέβαινεν τὰ δεινά, οὔτε Ἰωταπάτων τινὸς πολιορκίας ἀνέσχου, οὔτε περὶ τὴν Ἱεροσολύμων ἦσθα μάχην ἢ πόνον.</reading>
+        </unit>
+        <unit id="4.2">
+          <reading option="base" mss="Phot">Πῶς οὖν θαρρήσας ἔλεγες ὡς ἀκριβέστερον πάντων συγγεγραφὼς τὰ πραχθέντα, μηδὲ τοῖς γενομένοις παρατυχὼν μήτε τοὺς ἄλλους τοὺς εἰδότας ἐξετάσας;</reading>
+        </unit>
+      </div>
+    </text>
+  </version>
+  <version id="English" title="English Translation" lang="eng">
+    <divisions>
+      <division id="1" title="Fragments" type="fragment"/>
+    </divisions>
+    <manuscripts>
+      <manuscript id="Eng" name="English Translation"/>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <unit id="1.1">
+          <reading option="base" mss="Eng">There was read the chronicle of Justus of Tiberias, entitled 'A Chronicle of the Kings of the Jews in the Form of a Genealogy, by Justus of Tiberias.' He came from the city of Tiberias in Galilee.</reading>
+        </unit>
+        <unit id="1.2">
+          <reading option="base" mss="Eng">He begins his history with Moses and concludes with the death of Agrippa, the seventh of the house of Herod and the last of the kings of Judaea, who received his realm under Claudius, was augmented under Nero and still more by Vespasian, and died in the third year of Trajan, where the history also ended.</reading>
+        </unit>
+        <unit id="1.3">
+          <reading option="base" mss="Eng">In his phrasing he is extremely concise, and bypasses most of the essential events; and having fallen victim to the common affliction of Jewish prejudice (since he was himself of that race), he made not the slightest mention of the appearance of Christ, of the events concerning him, or of the miracles performed by him.</reading>
+        </unit>
+      </div>
+      <div number="2">
+        <unit id="2.1">
+          <reading option="base" mss="Eng">When Socrates was on trial, Justus of Tiberias in his book entitled The Wreath says that Plato mounted the speaker's platform and said: 'Though I am the youngest, men of Athens, of all who ever rose to address you'—whereupon the judges shouted out: 'Get down! Get down!' [that is, descend from the platform].</reading>
+        </unit>
+      </div>
+      <div number="3">
+        <unit id="3.1">
+          <reading option="base" mss="Eng">How then, that I may speak to him as if he were present, O Justus, most clever of writers (for this you boast concerning yourself), did I and the Galileans become the cause of your native city's rebellion against the Romans and against the king?</reading>
+        </unit>
+      </div>
+      <div number="4">
+        <unit id="4.1">
+          <reading option="base" mss="Eng">For you were not in Galilee when these dreadful things were happening, nor did you endure any part of the siege of Jotapata, nor were you present at the battle or hardships in Jerusalem.</reading>
+        </unit>
+        <unit id="4.2">
+          <reading option="base" mss="Eng">How then did you dare to say that you have written what took place more accurately than anyone else, when you neither witnessed what occurred nor questioned others who were eyewitnesses?</reading>
+        </unit>
+      </div>
+    </text>
+  </version>
+</book>

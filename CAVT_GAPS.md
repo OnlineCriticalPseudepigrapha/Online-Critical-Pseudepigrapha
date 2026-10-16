@@ -75,12 +75,12 @@ Excluded from Haelewyck's *Introductio* (p. xii) as non-apocryphal Hellenistic/s
 | **Aristobulus of Alexandria** — *Exegesis of the Law of Moses* | Ch. 49 | [Aristobulus.md](bibliography/Aristobulus.md) | Holladay FHJA 3.1-250; Denis FPG 217-228 | `Aristob.xml` |
 | **Artapanus** — *Peri Ioudaion (On the Jews)* | Ch. 50 | [Artapanus.md](bibliography/Artapanus.md) | Jacoby FGrH 726; Holladay FHJA 1.189-243 | `Artap.xml` |
 | **Cleodemus Malchus** — *History of the Jews* | Ch. 51 | [Cleodemus_Malchus.md](bibliography/Cleodemus_Malchus.md) | Jacoby FGrH 727; Holladay FHJA 1.245-259 | `ClMal.xml` |
-| **Demetrius the Chronographer** — *On the Kings in Judaea* | Ch. 52 | [Demetrius_the_Chronographer.md](bibliography/Demetrius_the_Chronographer.md) | Jacoby FGrH 722; Holladay FHJA 1.51-91 | `— (Gap)` |
+| **Demetrius the Chronographer** — *On the Kings in Judaea* | Ch. 52 | [Demetrius_the_Chronographer.md](bibliography/Demetrius_the_Chronographer.md) | Jacoby FGrH 722; Holladay FHJA 1.51-91 | `Demetr.xml` |
 | **Eupolemus** — *On the Kings of Judaea* | Ch. 53 | [Eupolemus.md](bibliography/Eupolemus.md) | Jacoby FGrH 723; Holladay FHJA 1.93-156 | `Eup.xml` |
 | **Pseudo-Eupolemus** — *On the Jews (Anonymous Samaritan)* | Ch. 54 | [Pseudo_Eupolemus.md](bibliography/Pseudo_Eupolemus.md) | Jacoby FGrH 724; Holladay FHJA 1.157-187 | `Ps-Eup.xml` |
 | **Ezekiel the Tragedian** — *Exagoge (The Exodus drama)* | Ch. 55 | [Ezekiel_the_Tragedian.md](bibliography/Ezekiel_the_Tragedian.md) | TrGF 1.128; Holladay FHJA 2.301-529 | `EzekTrag.xml` |
 | **Pseudo-Hecataeus** — *On the Jews / On Abraham* | Ch. 56 | [Pseudo_Hecataeus.md](bibliography/Pseudo_Hecataeus.md) | Jacoby FGrH 264/730; Holladay FHJA 1.277-335 | `PsHecat.xml` |
-| **Justus of Tiberias** — *Chronicle of Kings / Jewish War* | Ch. 57 | [Justus_of_Tiberias.md](bibliography/Justus_of_Tiberias.md) | Jacoby FGrH 734; Holladay FHJA 1.371-389 | `— (Gap)` |
+| **Justus of Tiberias** — *Chronicle of Kings / Jewish War* | Ch. 57 | [Justus_of_Tiberias.md](bibliography/Justus_of_Tiberias.md) | Jacoby FGrH 734; Holladay FHJA 1.371-389 | `Justus.xml` |
 | **Pseudo-Orpheus** — *Diatheke (Testament of Orpheus)* | Ch. 58 | [Pseudo_Orpheus.md](bibliography/Pseudo_Orpheus.md) | Holladay FHJA 4.1-300; Kern OF 245-248 | `PsOrph.xml` |
 | **Philo the Epic Poet** — *Peri Ta Hierosolyma (On Jerusalem)* | Ch. 59 | [Philo_the_Epic_Poet.md](bibliography/Philo_the_Epic_Poet.md) | Jacoby FGrH 729; Holladay FHJA 2.205-299 | `PhEPoet.xml` |
 | **Thallus** — *Histories (Universal Chronography)* | Ch. 60 | [Thallus.md](bibliography/Thallus.md) | Jacoby FGrH 256; Holladay FHJA 1.343-369 | `Thallus.xml` |

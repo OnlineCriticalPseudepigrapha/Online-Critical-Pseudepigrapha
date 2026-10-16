@@ -74,7 +74,9 @@ OCP_TO_CAVT = {
     "PsOrph.xml": (183, "Testament of Orpheus / Hieroi Logoi (graece, Kern 1922)"),
     "PsHecat.xml": (84, "Pseudo-Hecataeus / De Iudaeis / De Abrahamo (graece, Denis 1970)"),
     "Thallus.xml": (None, "Thallus the Chronographer (graece, Jacoby FGrH 256 / Denis 1970)"),
-    "Theoph.xml": (None, "Theophilus (graece, Jacoby FGrH 733 / Denis 1970)")
+    "Theoph.xml": (None, "Theophilus (graece, Jacoby FGrH 733 / Denis 1970)"),
+    "Demetr.xml": (None, "Demetrius the Chronographer (graece, Jacoby FGrH 722 / Denis 1970)"),
+    "Justus.xml": (None, "Justus of Tiberias (graece, Jacoby FGrH 734 / Holladay 1983)")
 }
 
 OCP_LANGS = {"Greek", "Latin", "Syriac", "Ethiopic", "Aramaic", "Hebrew"}
@@ -89,7 +91,7 @@ EXCLUDED_FROM_CAVT = [
     {"author": "Cleodemus Malchus", "work": "History of the Jews", "ch": 51,
      "dossier": "Cleodemus_Malchus.md", "clavis": "Jacoby FGrH 727; Holladay FHJA 1.245-259", "ocp_file": "ClMal.xml"},
     {"author": "Demetrius the Chronographer", "work": "On the Kings in Judaea", "ch": 52,
-     "dossier": "Demetrius_the_Chronographer.md", "clavis": "Jacoby FGrH 722; Holladay FHJA 1.51-91", "ocp_file": "— (Gap)"},
+     "dossier": "Demetrius_the_Chronographer.md", "clavis": "Jacoby FGrH 722; Holladay FHJA 1.51-91", "ocp_file": "Demetr.xml"},
     {"author": "Eupolemus", "work": "On the Kings of Judaea", "ch": 53,
      "dossier": "Eupolemus.md", "clavis": "Jacoby FGrH 723; Holladay FHJA 1.93-156", "ocp_file": "Eup.xml"},
     {"author": "Pseudo-Eupolemus", "work": "On the Jews (Anonymous Samaritan)", "ch": 54,
@@ -99,7 +101,7 @@ EXCLUDED_FROM_CAVT = [
     {"author": "Pseudo-Hecataeus", "work": "On the Jews / On Abraham", "ch": 56,
      "dossier": "Pseudo_Hecataeus.md", "clavis": "Jacoby FGrH 264/730; Holladay FHJA 1.277-335", "ocp_file": "PsHecat.xml"},
     {"author": "Justus of Tiberias", "work": "Chronicle of Kings / Jewish War", "ch": 57,
-     "dossier": "Justus_of_Tiberias.md", "clavis": "Jacoby FGrH 734; Holladay FHJA 1.371-389", "ocp_file": "— (Gap)"},
+     "dossier": "Justus_of_Tiberias.md", "clavis": "Jacoby FGrH 734; Holladay FHJA 1.371-389", "ocp_file": "Justus.xml"},
     {"author": "Pseudo-Orpheus", "work": "Diatheke (Testament of Orpheus)", "ch": 58,
      "dossier": "Pseudo_Orpheus.md", "clavis": "Holladay FHJA 4.1-300; Kern OF 245-248", "ocp_file": "PsOrph.xml"},
     {"author": "Philo the Epic Poet", "work": "Peri Ta Hierosolyma (On Jerusalem)", "ch": 59,
