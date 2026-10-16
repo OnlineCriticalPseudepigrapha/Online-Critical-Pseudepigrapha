@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OrMan">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Prayer of Manasseh</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="LXX">
+            <abbr type="siglum">LXX</abbr>
+            <name>Septuagint (Odes 12)</name>
+            <bibl>H. B. Swete, The Old Testament in Greek according to the Septuagint, Vol. III (Cambridge: Cambridge University Press, 1896), Odes 12 (Ode of Manasses).</bibl>
+          </witness>
+          <witness xml:id="Vulg">
+            <abbr type="siglum">Vulg</abbr>
+            <name>Clementine Vulgate Appendix</name>
+            <bibl>Biblia Sacra Vulgata (Clementina), Appendix: Oratio Manassae regis Juda cum captus teneretur in Babylone.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek and Latin" xml:lang="grc" xml:id="ver_Greek_and_Latin">
+        <head>Greek and Latin</head>
+        <div type="chapter" n="1" xml:id="OrMan.ver_Greek_and_Latin.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="OrMan.ver_Greek_and_Latin.1.1">
+            <app xml:id="u0_ver_Greek_and_Latin">
+              <lem wit="#LXX">Κύριε παντοκράτωρ, ὁ θεὸς τῶν πατέρων ἡμῶν, τοῦ Ἀβραὰμ καὶ Ἰσαὰκ καὶ Ἰακὼβ καὶ τοῦ σπέρματος αὐτῶν τοῦ δικαίου,</lem>
+              <rdg wit="#Vulg" n="1">Domine omnipotens, Deus patrum nostrorum, Abraham, et Isaac, et Jacob, et seminis eorum justi,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="OrMan.ver_Greek_and_Latin.1.2">
+            <app xml:id="u1_ver_Greek_and_Latin">
+              <lem wit="#LXX">ὁ ποιήσας τὸν οὐρανὸν καὶ τὴν γῆν σὺν παντὶ τῷ κόσμῳ αὐτῶν,</lem>
+              <rdg wit="#Vulg" n="1">qui fecisti cælum, et terram cum omni ornatu eorum,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="OrMan.ver_Greek_and_Latin.1.3">
+            <app xml:id="u2_ver_Greek_and_Latin">
+              <lem wit="#LXX">ὁ πεδήσας τὴν θάλασσαν τῷ λόγῳ τοῦ προστάγματός σου, ὁ κλείσας τὴν ἄβυσσον καὶ σφραγισάμενος τῷ φοβερῷ καὶ ἐνδόξῳ ὀνόματί σου,</lem>
+              <rdg wit="#Vulg" n="1">qui ligasti mare verbo præcepti tui, qui conclusisti abyssum, et signasti eam terribili et laudabili nomine tuo:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="OrMan.ver_Greek_and_Latin.1.4">
+            <app xml:id="u3_ver_Greek_and_Latin">
+              <lem wit="#LXX">ὃν πάντα φρίσσει καὶ τρέμει ἀπὸ προσώπου τῆς δυνάμεώς σου, ὅτι ἄστεκτος ἡ μεγαλοπρέπεια τῆς δόξης σου,</lem>
+              <rdg wit="#Vulg" n="1">quem omnia pavent, et tremunt a vultu virtutis tuæ, quia importabilis est magnificentia gloriæ tuæ,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="OrMan.ver_Greek_and_Latin.1.5">
+            <app xml:id="u4_ver_Greek_and_Latin">
+              <lem wit="#LXX">καὶ ἀνυπόστατος ἡ ὀργὴ τῆς ἀπειλῆς σου ἐπὶ ἁμαρτωλούς,</lem>
+              <rdg wit="#Vulg" n="1">et insustentabilis ira comminationis tuæ super peccatores:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="OrMan.ver_Greek_and_Latin.1.6">
+            <app xml:id="u5_ver_Greek_and_Latin">
+              <lem wit="#LXX">ἀμέτρητόν τε καὶ ἀνεξιχνίαστον τὸ ἔλεος τῆς ἐπαγγελίας σου,</lem>
+              <rdg wit="#Vulg" n="1">immensa vero et investigabilis misericordia promissionis tuæ:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="OrMan.ver_Greek_and_Latin.1.7">
+            <app xml:id="u6_ver_Greek_and_Latin">
+              <lem wit="#LXX">ὅτι σὺ εἶ κύριος ὕψιστος, εὔσπλαγχνος, μακρόθυμος καὶ πολυέλεος καὶ μετανοῶν ἐπὶ κακίαις ἀνθρώπων. σὺ οὖν, κύριε, κατὰ τὸ πλῆθος τῆς χρηστότητός σου ἐπηγγείλω μετάνοιαν καὶ ἄφεσιν τοῖς ἡμαρτηκόσιν σοι, καὶ τῷ πλήθει τῶν οἰκτιρμῶν σου ὥρισας μετάνοιαν ἁμαρτωλοῖς εἰς σωτηρίαν.</lem>
+              <rdg wit="#Vulg" n="1">quoniam tu es Dominus, altissimus, benignus, longanimis, et multum misericors, et pœnitens super malitias hominum. Tu Domine, secundum multitudinem bonitatis tuæ promisisti pœnitentiam, et remissionem iis, qui peccaverunt tibi, et multitudinem miserationum tuarum decrevisti pœnitentiam peccatoribus, in salutem.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="OrMan.ver_Greek_and_Latin.1.8">
+            <app xml:id="u7_ver_Greek_and_Latin">
+              <lem wit="#LXX">σὺ οὖν, κύριε, ὁ θεὸς τῶν δικαίων, οὐκ ἔθου μετάνοιαν δικαίοις, τῷ Ἀβραὰμ καὶ Ἰσαὰκ καὶ Ἰακώβ, τοῖς οὐχ ἡμαρτηκόσιν σοι, ἀλλ᾽ ἔθου μετάνοιαν ἐμοὶ τῷ ἁμαρτωλῷ.</lem>
+              <rdg wit="#Vulg" n="1">Tu igitur Domine Deus justorum, non posuisti pœnitentiam justis, Abraham, et Isaac, et Jacob, iis qui tibi non peccaverunt: sed posuisti pœnitentiam propter me peccatorem:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="OrMan.ver_Greek_and_Latin.1.9">
+            <app xml:id="u8_ver_Greek_and_Latin">
+              <lem wit="#LXX">διότι ἥμαρτον ὑπὲρ ἀριθμὸν ψάμμου θαλάσσης· ἐπληθύνθησαν αἱ ἀνομίαι μου, κύριε, ἐπληθύνθησαν, καὶ οὐκ εἰμὶ ἄξιος ἀναβλέψαι καὶ ἰδεῖν τὸ ὕψος τοῦ οὐρανοῦ ἀπὸ τοῦ πλήθους τῶν ἀδικιῶν μου.</lem>
+              <rdg wit="#Vulg" n="1">quoniam peccavi super numerum arenæ maris: multiplicatæ sunt iniquitates meæ Domine, multiplicatæ sunt iniquitates meæ, et non sum dignus intueri et aspicere altitudinem cæli, præ multitudine iniquitatum mearum.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="OrMan.ver_Greek_and_Latin.1.10">
+            <app xml:id="u9_ver_Greek_and_Latin">
+              <lem wit="#LXX">κατακαμπτόμενος πολλῷ δεσμῷ σιδήρου εἰς τὸ μὴ ἀνανεῦσαί με, καὶ οὐκ ἔστιν μοι ἄνεσις, διότι παρώργισα τὸν θυμόν σου καὶ τὸ πονηρὸν ἐνώπιόν σου ἐποίησα, στήσας βδελύγματα καὶ πληθύνας προσοχθίσματα.</lem>
+              <rdg wit="#Vulg" n="1">Incurvatus sum multo vinculo ferreo, ut non possim attollere caput meum, et non est respiratio mihi: quia excitavi iracundiam tuam, et malum coram te feci: non feci voluntatem tuam, et mandata tua non custodivi: statui abominationes, et multiplicavi offensiones.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="OrMan.ver_Greek_and_Latin.1.11">
+            <app xml:id="u10_ver_Greek_and_Latin">
+              <lem wit="#LXX">καὶ νῦν κλίνω γόνυ καρδίας δεόμενος τῆς παρὰ σοῦ χρηστότητος.</lem>
+              <rdg wit="#Vulg" n="1">Et nunc flecto genu cordis mei, precans a te bonitatem.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="OrMan.ver_Greek_and_Latin.1.12">
+            <app xml:id="u11_ver_Greek_and_Latin">
+              <lem wit="#LXX">ἡμάρτηκα, κύριε, ἡμάρτηκα, καὶ τὰς ἀνομίας μου ἐγὼ γινώσκω.</lem>
+              <rdg wit="#Vulg" n="1">Peccavi Domine, peccavi, et iniquitates meas agnosco.</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="OrMan.ver_Greek_and_Latin.1.13">
+            <app xml:id="u12_ver_Greek_and_Latin">
+              <lem wit="#LXX">αἰτοῦμαι δεόμενός σου· ἄνες μοι, κύριε, ἄνες μοι, καὶ μὴ συναπολέσῃς με ταῖς ἀνομίαις μου, μηδὲ εἰς τὸν αἰῶνα μηνίσας τηρήσῃς τὰ κακά μοι, μηδὲ καταδικάσῃς με ἐν τοῖς κατωτάτοις τῆς γῆς.</lem>
+              <rdg wit="#Vulg" n="1">Quare peto rogans te, remitte mihi Domine, remitte mihi, et ne simul perdas me cum iniquitatibus meis, neque in æternum, iratus, reserves mala mihi, neque damnes me in infima terræ loca:</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="OrMan.ver_Greek_and_Latin.1.14">
+            <app xml:id="u13_ver_Greek_and_Latin">
+              <lem wit="#LXX">ὅτι σὺ εἶ, κύριε, ὁ θεὸς τῶν μετανοούντων, καὶ ἐν ἐμοὶ δείξεις τὴν ἀγαθωσύνην σου, ὅτι ἀνάξιον ὄντα σώσεις με κατὰ τὸ πολὺ ἔλεός σου.</lem>
+              <rdg wit="#Vulg" n="1">quia tu es Deus, Deus, inquam pœnitentium: et in me ostendes omnem bonitatem tuam, quia indignum salvabis me secundum magnam misericordiam tuam,</rdg>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="OrMan.ver_Greek_and_Latin.1.15">
+            <app xml:id="u14_ver_Greek_and_Latin">
+              <lem wit="#LXX">καὶ αἰνέσω σε διαπαντὸς ἐν ταῖς ἡμέραις τῆς ζωῆς μου, ὅτι σὲ ὑμνεῖ πᾶσα ἡ δύναμις τῶν οὐρανῶν, καὶ σοῦ ἐστιν ἡ δόξα εἰς τοὺς αἰῶνας. ἀμήν.</lem>
+              <rdg wit="#Vulg" n="1">et laudabo te semper omnibus diebus vitæ meæ: quoniam te laudat omnis virtus cælorum, et tibi est gloria in sæcula sæculorum. Amen.</rdg>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

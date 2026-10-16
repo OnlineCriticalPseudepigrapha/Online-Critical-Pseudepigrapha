@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VisEl">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Vision of Elijah</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="DeBruyne">
+            <abbr type="siglum">DeBruyne</abbr>
+            <name>De Bruyne 1925 (Revue Bénédictine 37)</name>
+            <bibl>Donatien De Bruyne, 'Epistula Titi discipuli Pauli de dispositione sanctimonii', Revue Bénédictine 37 (1925), pp. 47-72 (Visio Eliae at p. 58, ll. 400-417).</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="la">la</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="la">
+    <body>
+      <div type="edition" n="Latin" xml:lang="la" xml:id="ver_Latin">
+        <head>Latin</head>
+        <div type="chapter" n="1" xml:id="VisEl.ver_Latin.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="VisEl.ver_Latin.1.1">
+            <app xml:id="u0_ver_Latin">
+              <lem wit="#DeBruyne">Denique testatur propheta Helias vidisse:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="VisEl.ver_Latin.1.2">
+            <app xml:id="u1_ver_Latin">
+              <lem wit="#DeBruyne">Ostendit, inquit, mihi angelus Domini convallem altam quae vocatur Gehenna, ardensque sulphure et bitumine.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="VisEl.ver_Latin.1.3">
+            <app xml:id="u2_ver_Latin">
+              <lem wit="#DeBruyne">Et in illo loco sunt multae animae peccatorum et taliter ibi cruciantur diversis tormentis:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="VisEl.ver_Latin.1.4">
+            <app xml:id="u3_ver_Latin">
+              <lem wit="#DeBruyne">patiuntur aliqui pendentes naturale, alii autem linguis, quidam vero oculis, alii inversi pendentes,</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="VisEl.ver_Latin.1.5">
+            <app xml:id="u4_ver_Latin">
+              <lem wit="#DeBruyne">et feminae mammillis suis cruciabuntur, et iuvenes manibus pendentes, quaedam in craticula virgines uruntur et quaedam figuntur animae perpetuae poenae.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="VisEl.ver_Latin.1.6">
+            <app xml:id="u5_ver_Latin">
+              <lem wit="#DeBruyne">Per ipsa vero varia supplicia ostenditur uniuscuiusque actus:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="VisEl.ver_Latin.1.7">
+            <app xml:id="u6_ver_Latin">
+              <lem wit="#DeBruyne">naturalium dolor utique adulteri sunt et pederasti;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="VisEl.ver_Latin.1.8">
+            <app xml:id="u7_ver_Latin">
+              <lem wit="#DeBruyne">qui autem linguis suspenduntur blasphemi sunt, falsi etiam testes;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="VisEl.ver_Latin.1.9">
+            <app xml:id="u8_ver_Latin">
+              <lem wit="#DeBruyne">qui oculis vero cremantur hi sunt qui in videndo scandalizati sunt respicientes in concupiscentia reatu gesta;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="VisEl.ver_Latin.1.10">
+            <app xml:id="u9_ver_Latin">
+              <lem wit="#DeBruyne">qui vero inversi pendebant hi sunt odientes iustitiam Dei, pravi consilii, nec quisquam fratri consentit, merito ergo poenis sententiae uruntur;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="VisEl.ver_Latin.1.11">
+            <app xml:id="u10_ver_Latin">
+              <lem wit="#DeBruyne">nam quod feminae mammillis torqueri iubentur istae sunt quae in ludibrio corpus suum tradiderunt masculis, ideoque et ipsi iuxta erunt in tormentis manibus pendentes propter hanc rem.</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

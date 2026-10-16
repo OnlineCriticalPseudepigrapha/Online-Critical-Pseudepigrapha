@@ -8,6 +8,7 @@ const OCP_DOCUMENTS = [
   { filename: '2Bar.xml', title: '2 (Syriac Apocalypse of) Baruch', lang: 'Syriac' },
   { filename: '2Bar-Syr.xml', title: '2 Baruch (Syriac Text)', lang: 'Syriac' },
   { filename: '3Bar.xml', title: '3 (Greek Apocalypse of) Baruch', lang: 'Greek' },
+  { filename: '3Macc.xml', title: '3 Maccabees', lang: 'Greek' },
   { filename: '4Bar.xml', title: '4 Baruch (Paraleipomena Ieremiou)', lang: 'Greek' },
   { filename: '4Ezra.xml', title: '4 Ezra (Syriac)', lang: 'Syriac' },
   { filename: '4Macc.xml', title: '4 Maccabees', lang: 'Greek' },
@@ -16,6 +17,7 @@ const OCP_DOCUMENTS = [
   { filename: '6Ezra.xml', title: '6 Ezra (Latin)', lang: 'Latin' },
   { filename: 'AdamEve.xml', title: 'Life of Adam and Eve', lang: 'Greek' },
   { filename: 'Amram.xml', title: 'Visions of Amram', lang: 'Aramaic' },
+  { filename: 'AndronAsaph.xml', title: 'Andronicus and Asaph (Zodiac of the Patriarchs)', lang: 'Syriac' },
   { filename: 'ApDan.xml', title: 'Apocalypse of Daniel', lang: 'Greek' },
   { filename: 'ApEzra.xml', title: 'Greek Apocalypse of Ezra', lang: 'Greek' },
   { filename: 'ApocrEzek.xml', title: 'Apocryphon of Ezekiel', lang: 'Greek' },
@@ -23,6 +25,7 @@ const OCP_DOCUMENTS = [
   { filename: 'Aristob.xml', title: 'Aristobulus', lang: 'Greek' },
   { filename: 'Artap.xml', title: 'Artapanus', lang: 'Greek' },
   { filename: 'ClMal.xml', title: 'Cleodemus Malchus', lang: 'Greek' },
+  { filename: 'DeAdam.xml', title: 'De Adami compositione et nomine', lang: 'Latin' },
   { filename: 'ElMod.xml', title: 'Eldad and Modad', lang: 'Greek' },
   { filename: 'Esdl.xml', title: 'Vision of Ezra (Latin)', lang: 'Latin' },
   { filename: 'Esdr.xml', title: '4 Ezra (Latin)', lang: 'Latin' },
@@ -35,8 +38,13 @@ const OCP_DOCUMENTS = [
   { filename: 'LetAris.xml', title: 'Letter of Aristeas to Philocrates', lang: 'Greek' },
   { filename: 'LivPro.xml', title: 'Lives of the Prophets', lang: 'Greek' },
   { filename: 'Mois.xml', title: 'Assumption of Moses', lang: 'Latin' },
+  { filename: 'NarrMois.xml', title: 'Narratio de Moyse et Josue', lang: 'Greek' },
+  { filename: 'OrMan.xml', title: 'Prayer of Manasseh', lang: 'Greek' },
   { filename: 'PhEPoet.xml', title: 'Philo the Epic Poet', lang: 'Greek' },
   { filename: 'Ps-Eup.xml', title: 'Pseudo-Eupolemus', lang: 'Greek' },
+  { filename: 'PsHecat.xml', title: 'Pseudo-Hecataeus', lang: 'Greek' },
+  { filename: 'PsOrph.xml', title: 'Pseudo-Orpheus (Testament)', lang: 'Greek' },
+  { filename: 'PsPhoc.xml', title: 'Sentences of Pseudo-Phocylides', lang: 'Greek' },
   { filename: 'PssSol.xml', title: 'Psalms of Solomon', lang: 'Greek' },
   { filename: 'Sedrach.xml', title: 'Apocalypse of Sedrach', lang: 'Greek' },
   { filename: 'SibOr.xml', title: 'Sibylline Oracles', lang: 'Greek' },
@@ -45,9 +53,13 @@ const OCP_DOCUMENTS = [
   { filename: 'TAbB.xml', title: 'Testament of Abraham (Recension B)', lang: 'Greek' },
   { filename: 'TAbr.xml', title: 'Testament of Abraham (Combined)', lang: 'Greek' },
   { filename: 'TAdam.xml', title: 'Testament of Adam', lang: 'Syriac' },
+  { filename: 'Thallus.xml', title: 'Thallus the Chronographer', lang: 'Greek' },
+  { filename: 'Theod.xml', title: 'Theodotus', lang: 'Greek' },
+  { filename: 'Theoph.xml', title: 'Theophilus', lang: 'Greek' },
   { filename: 'TJob.xml', title: 'Testament of Job', lang: 'Greek' },
   { filename: 'TSol.xml', title: 'Testament of Solomon', lang: 'Greek' },
-  { filename: 'Theod.xml', title: 'Theodotus', lang: 'Greek' }
+  { filename: 'TracSem.xml', title: 'Treatise of Shem', lang: 'Syriac' },
+  { filename: 'VisEl.xml', title: 'Vision of Elijah (Latin)', lang: 'Latin' }
 ];
 
 // Display labels for the database body fields exported to

@@ -38,5 +38,19 @@ See `GMAIL-INDEX.md` in this folder.
   - Ingested Tier A Greek Apocalypses of the Ezra-Sedrach visionary complex:
     - `static/docs/ApEzra.xml` & `static/docs/tei/ApEzra.xml`: *Greek Apocalypse of Ezra* (CAVT 184.i / CANT 343; Tischendorf 1866; 7 chapters, 220 verses).
     - `static/docs/Sedrach.xml` & `static/docs/tei/Sedrach.xml`: *Apocalypse of Sedrach* (CAVT 184.ii / CANT 344; James 1893; 16 chapters, 133 verses).
-    - Updated `static/js/reader.js` and `CAVT_GAPS.md` with active editions.
+  - Completed comprehensive ingestion of Tier A gaps and Judaeo-Hellenistic texts (11 new works, 22 XML/TEI files):
+    1. *Prayer of Manasseh* (`OrMan.xml` & `tei/OrMan.xml`, CAVT 178 / CANT 203; parallel Greek LXX Ode 12 / Swete 1896 and Clementine Vulgate, 15 vv.).
+    2. *Vision of Elijah* (`VisEl.xml` & `tei/VisEl.xml`, CAVT 169; Latin text, De Bruyne 1925 / MS Mazarine 512, 11 vv.).
+    3. *Narratio de Moyse et Josue* (`NarrMois.xml` & `tei/NarrMois.xml`, CAVT 137 / BHG 2277; Greek text, Vassiliev 1893 / BnF gr. 1611, 154 vv.).
+    4. *De Adami compositione et nomine* (`DeAdam.xml` & `tei/DeAdam.xml`, CAVT 10; Latin text, Förster 1908, 2 chs, 15 vv.).
+    5. *Sentences of Pseudo-Phocylides* (`PsPhoc.xml` & `tei/PsPhoc.xml`, CAVT 182 / CANT 35; Greek hexameter text, Bergk 1882, 230 vv.).
+    6. *Treatise of Shem* (*Tractatus Sem*, `TracSem.xml` & `tei/TracSem.xml`, CAVT 85; parallel Syriac and English, Mingana 1917 / MS Rylands Syr. 44, 12 chs, 121 vv.).
+    7. *Andronicus and Asaph on the Zodiac of the Patriarchs* (`AndronAsaph.xml` & `tei/AndronAsaph.xml`; parallel Syriac and English, Mingana 1917, 17 vv.).
+    8. *Testament of Orpheus* (*Hieroi Logoi* / *Diathekai*, `PsOrph.xml` & `tei/PsOrph.xml`, CAVT 183 / CANT 33; Greek text & English, Kern 1922 / Denis 1970; Aristobulus, Pseudo-Justin, and Orphic Hymn, 3 chs, 72 vv.).
+    9. *Fragments of Pseudo-Hecataeus* (`PsHecat.xml` & `tei/PsHecat.xml`, CAVT 84 / CANT 28; Greek text & English, Josephus *Contra Apionem* I.183-205, II.43; *Ant.* I.159, XII.38; Jacoby FGrH 264 F 21-24; 5 chs, 24 vv.).
+    10. *Fragments of Thallus the Chronographer* (`Thallus.xml` & `tei/Thallus.xml`; Greek & English, Julius Africanus, Theophilus, Josephus; Jacoby FGrH 256; 3 chs, 5 vv.).
+    11. *Fragments of Theophilus* (`Theoph.xml` & `tei/Theoph.xml`; Greek & English, Alexander Polyhistor ap. Eusebius Praep. Ev. IX.34.19; Jacoby FGrH 733; 1 ch, 1 v.).
+  - Updated `static/js/reader.js` (`OCP_DOCUMENTS`) with all 56 active documents.
+  - Enriched `static/docs/intros.json` with 49 critical introductions, bibliography, and manuscript details.
+  - Synchronized `scripts/cavt_gaps.py` and regenerated `CAVT_GAPS.md`.
 

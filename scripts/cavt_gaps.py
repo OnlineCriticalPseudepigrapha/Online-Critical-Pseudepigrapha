@@ -59,7 +59,18 @@ OCP_TO_CAVT = {
     "EzekTrag.xml": (None, "Ezekiel the Tragedian (Exagoge)"),
     "PhEPoet.xml": (None, "Philo the Epic Poet (On Jerusalem)"),
     "Theod.xml": (None, "Theodotus (On the Jews / Shechem)"),
-    "ArisEx.xml": (None, "Aristeas the Exegete (On Job)")
+    "ArisEx.xml": (None, "Aristeas the Exegete (On Job)"),
+    "DeAdam.xml": (10, "De Adami compositione et nomine (latine, Förster 1908)"),
+    "NarrMois.xml": (137, "Narratio de Moyse et Josue (graece, Vassiliev 1893)"),
+    "VisEl.xml": (169, "Visio Eliae (latine, De Bruyne 1925)"),
+    "OrMan.xml": (178, "Prayer of Manasseh (graece LXX Ode 12 / latine Vulg.)"),
+    "PsPhoc.xml": (182, "Sentences of Pseudo-Phocylides (graece, Bergk 1882)"),
+    "TracSem.xml": (85, "Treatise of Shem / Tractatus Sem (syriace, Mingana 1917)"),
+    "AndronAsaph.xml": (None, "Andronicus and Asaph on the Zodiac of the Patriarchs (syriace, Mingana 1917)"),
+    "PsOrph.xml": (183, "Testament of Orpheus / Hieroi Logoi (graece, Kern 1922)"),
+    "PsHecat.xml": (84, "Pseudo-Hecataeus / De Iudaeis / De Abrahamo (graece, Denis 1970)"),
+    "Thallus.xml": (None, "Thallus the Chronographer (graece, Jacoby FGrH 256 / Denis 1970)"),
+    "Theoph.xml": (None, "Theophilus (graece, Jacoby FGrH 733 / Denis 1970)")
 }
 
 OCP_LANGS = {"Greek", "Latin", "Syriac", "Ethiopic", "Aramaic", "Hebrew"}

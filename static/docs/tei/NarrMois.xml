@@ -1,0 +1,831 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NarrMois">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Narratio de Moyse et Josue</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="Vass">
+            <abbr type="siglum">Vass</abbr>
+            <name>Vassiliev 1893 (Anecdota Graeco-Byzantina)</name>
+            <bibl>A. Vassiliev, Anecdota Graeco-Byzantina, I (Moscow, 1893), pp. 257-264. Narratio de Moyse et Josue (BHG 2277), based on Paris, Bibliothèque nationale de France, MS grec 1611, fols. 31v-33v.</bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl>
+        <refState unit="chapter" delim="."/>
+        <refState unit="verse"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Greek" xml:lang="grc" xml:id="ver_Greek">
+        <head>Greek</head>
+        <div type="chapter" n="1" xml:id="NarrMois.ver_Greek.1">
+          <head>Chapter 1</head>
+          <ab type="verse" n="1" xml:id="NarrMois.ver_Greek.1.1">
+            <app xml:id="u0_ver_Greek">
+              <lem wit="#Vass">χρῆσιν πάντων τῶν βρωμάτων].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="2" xml:id="NarrMois.ver_Greek.1.2">
+            <app xml:id="u1_ver_Greek">
+              <lem wit="#Vass">Μετὰ δὲ τὸ ἀποθανεῖν ὅ τὴν γενεὰν τῶν ἀπειϑῶν ἡ πᾶσαν [ἐχείνην] χαὶ ἀναστάντος τοῦ σπέρματος αὐτῶν χαὶ ἀνδροιϑέντος ὅ μόνος Μωῦσῆς χατελείφϑη ἀπὸ τῆς γενεᾶς ἐχείνης χαὶ εἶπεν αὐτῷ ὁ ϑεός" δίδαξον τοὺς υἱοὺς [Ἰσραὴλ] τῶν ἀπειϑῶν τῶν ἐνταλμάτων μου [καὶ ὑπόμνησον αὐτοὺς τὰ τεράστιά μου] χαὶ γράψον αὐτοῖς τὴν ᾧδὴν ταύτην’ πρόσεχε, οὐρανέ, καὶ λαλήσω χαὶ ἀκουέτω γῆ ῥήματα ἐκ στόματός μου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="3" xml:id="NarrMois.ver_Greek.1.3">
+            <app xml:id="u2_ver_Greek">
+              <lem wit="#Vass">[ἐν ᾧ καὶ ἐτέϑη ταύτη φδὴ β΄.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="4" xml:id="NarrMois.ver_Greek.1.4">
+            <app xml:id="u3_ver_Greek">
+              <lem wit="#Vass">χαὶ διδαχϑέσθωσαν μανθάνων ταύτην, χαὶ εἴ τις οὐ μανϑάνει τὴν ᾧδὴν ταύτην ἐχ στόματος χαὶ χέχτηται ἐν ἄχροις χείλεσιν αὐτὴν ἐξολοϑρευϑῆσεται ἐχ τοῦ λαοῦ, ἀλλὰ ἂς γράφωσιν οἱ υἱοὶ ᾿Ισραὴλ τὴν δὴν ταύτην καὶ φερέτωσαν διὰ στόματος καὶ χέκτηνται ταύτην, ὅπως διδάσχονται διὰ τῆς ᾧδῆς ταύτης ἃ ἐποίησα μετ αὐτῶν ϑαυμάσιὰ χαὶ πόσα παρεπίχρανάν με οἱ πατέρες αὐτῶν].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="5" xml:id="NarrMois.ver_Greek.1.5">
+            <app xml:id="u4_ver_Greek">
+              <lem wit="#Vass">Καὶ ἐγὼ 12 διὰ τοὺς ὅρχους οὺς ἐϑέμην πρὸς ᾿Αβραὰμ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="6" xml:id="NarrMois.ver_Greek.1.6">
+            <app xml:id="u5_ver_Greek">
+              <lem wit="#Vass">οὐχ ἠϑέτησα εὐεργετῶν (2 αὐτούς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="7" xml:id="NarrMois.ver_Greek.1.7">
+            <app xml:id="u6_ver_Greek">
+              <lem wit="#Vass">χαὶ δίδαξον αὐτοῖς τὸ ϑελήματά μου πάντα ὅσα ἐγώ σοι ἐνετειλάμην ἐν τῷ ὄρει' Καὶ εἶπεν Μωῦσῆς ἐν τῷ λαῷ πάντα τὰ ῥήματα ταῦτα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="8" xml:id="NarrMois.ver_Greek.1.8">
+            <app xml:id="u7_ver_Greek">
+              <lem wit="#Vass">Περὶ τῆς τελευτῆς Μωσέως “ὃ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="9" xml:id="NarrMois.ver_Greek.1.9">
+            <app xml:id="u8_ver_Greek">
+              <lem wit="#Vass">Καὶ εἶπεν Μωῦσῆς πρὸς ᾿Ιησοῦν τοῦ Ναυΐ" ἀνέλθωμεν ἐν τῷ ὄρει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="10" xml:id="NarrMois.ver_Greek.1.10">
+            <app xml:id="u9_ver_Greek">
+              <lem wit="#Vass">χαὶ ἀνελθόντων αὐτῶν εἶδεν Μωὐσῆς τὴν γῆν τῆς ἐπαγγελίας χαὶ εἶπεν πρὸς αὐτόν οὐκ ἐδεήθησαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="11" xml:id="NarrMois.ver_Greek.1.11">
+            <app xml:id="u10_ver_Greek">
+              <lem wit="#Vass">αὕτη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="12" xml:id="NarrMois.ver_Greek.1.12">
+            <app xml:id="u11_ver_Greek">
+              <lem wit="#Vass">ἐτύπει.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="13" xml:id="NarrMois.ver_Greek.1.13">
+            <app xml:id="u12_ver_Greek">
+              <lem wit="#Vass">“) καὶ ὅτι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="14" xml:id="NarrMois.ver_Greek.1.14">
+            <app xml:id="u13_ver_Greek">
+              <lem wit="#Vass">ὃ ὠνομάσθη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="15" xml:id="NarrMois.ver_Greek.1.15">
+            <app xml:id="u14_ver_Greek">
+              <lem wit="#Vass">2.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="16" xml:id="NarrMois.ver_Greek.1.16">
+            <app xml:id="u15_ver_Greek">
+              <lem wit="#Vass">ὁδῷ ᾳυοᾷ νξ ε λεύτησεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="17" xml:id="NarrMois.ver_Greek.1.17">
+            <app xml:id="u16_ver_Greek">
+              <lem wit="#Vass">χαὶ χατῆλθεν Ιησοῦς ποὸς τὸν λαόν, ὁ δὲ Μωῦσῆς τὰ τέλη τοῦ βίου ἐχτήσατο ").</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="18" xml:id="NarrMois.ver_Greek.1.18">
+            <app xml:id="u17_ver_Greek">
+              <lem wit="#Vass">Καὶ ἐπειρᾶτο Σαμουὴλ ὡς ἂν χαταβάσῃ τὸ σχύνωμά αὐτοῦ τῷ λαῷ ἵνα ϑεοποιηϑῶσιν αὐτόν ἢ), ὑτηρν δὲ ὁ ἀρχιστράτηγος προστάξει ϑεοῦ ἦλϑεν λαβεῖν αὐτὸ(") χαὶ συνστεῖλαι, χαὶ ἀνθίστατο αὐτῷ δ υσι μι χαὶ διεμάχοντ το ἢ).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="19" xml:id="NarrMois.ver_Greek.1.19">
+            <app xml:id="u18_ver_Greek">
+              <lem wit="#Vass">ἀγαναχτήσας οὖν ὁ ἀρχιστράτηγος ἐπετίμιησεν αὐτὸν εἰπών" ἐ τιμᾷ σε ἢ) Κύριος, διάβολε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="20" xml:id="NarrMois.ver_Greek.1.20">
+            <app xml:id="u19_ver_Greek">
+              <lem wit="#Vass">χαὶ οὕτως ἡττήϑη ὁ - χαὶ φυγὴν ἐχρήσατο, ὁ δὲ ἀρχάγγελος Μιγαὴλ συνέστειλε τ Μωσῆ ὅ) ὅπου οὐ παρὰ ϑεοῦ τοῦ ΠΝ ἡμῶν [χαὶ οὐδεὶς εἶδεν τὴν ταφὴν Μωσέως].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="21" xml:id="NarrMois.ver_Greek.1.21">
+            <app xml:id="u20_ver_Greek">
+              <lem wit="#Vass">Περὶ τοῦ ᾿Ιησοῦ τοῦ Ναυί δ).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="22" xml:id="NarrMois.ver_Greek.1.22">
+            <app xml:id="u21_ver_Greek">
+              <lem wit="#Vass">᾿Ιησοῦς δὲ ῥαλαβὼν ἡ τὸν λαὸν Κυρίου ἦλϑεν εἰς τὸν ᾿Ιορδάνην βουλόμενος εἰσελϑεῖν ὁ εἰς τὴν γῆν τῆς ἐπαγγελίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="23" xml:id="NarrMois.ver_Greek.1.23">
+            <app xml:id="u22_ver_Greek">
+              <lem wit="#Vass">Καὶ ἦν πόλις πλησίον τοῦ ᾿Ιορδάνου πρὸς δυσμὰς χαὶ εἶχεν πᾶσαν τὴν οἴχοθο σμιὴν τοῦ πύργου ἐκ λίϑον ") [τὸν] λεγόμενον μαγνήτην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="24" xml:id="NarrMois.ver_Greek.1.24">
+            <app xml:id="u23_ver_Greek">
+              <lem wit="#Vass">ἀκούσας δὲ ") ὁ ᾿[ησοῦς ἀπέστειλεν χατασχόπους ϑεάσασϑαι τὴν πόλιν χαὶ Ἂν χατασχοπεῦσαι αὐτὴν αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="25" xml:id="NarrMois.ver_Greek.1.25">
+            <app xml:id="u24_ver_Greek">
+              <lem wit="#Vass">Εἰσελθϑόντες δὲ οἱ χατάσχοποι ἐγνώσθησαν παρὰ τῶν πολιτῶν “Ἰεριχὼ χαὶ ἐξῆλθον φεύπι- Ν τς ὁ τοῦ Ναυὶ παΙΑ Ο γοντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="26" xml:id="NarrMois.ver_Greek.1.26">
+            <app xml:id="u25_ver_Greek">
+              <lem wit="#Vass">ἦλθον δὲ ἐν πανδοχείῳ χαὶ εὗρον 4 Ῥαὰβ τὴν πόρνὴν χαὶ ἤρξα(νγτο παραχαλεῖν αὐτὴν ἵνα αὐτοὺς χούψι δὲ ἐπερώτησεν 1 αὐτούς τίνες ἐστέ, οἱ δὲ εἶπον:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="27" xml:id="NarrMois.ver_Greek.1.27">
+            <app xml:id="u26_ver_Greek">
+              <lem wit="#Vass">᾿ἸἸουδαῖοί [ἐσμεν].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="28" xml:id="NarrMois.ver_Greek.1.28">
+            <app xml:id="u27_ver_Greek">
+              <lem wit="#Vass">εἶπεν δὲ ΡῬαάβ' ἤχουσα [ἐγὼ] ὅτι μέγαν ϑεὸν ἔχετε χαὶ μεγάλου ϑεοῦ Ὁ) τς δοῦλοι, νῦν ἀφόβως παρεύεσϑε τὴν ὁδὸν ὑμῶν, ἐγὼ γὰρ ἀποχρούσομαι τοὺς “Ἰεριγουντιαίους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="29" xml:id="NarrMois.ver_Greek.1.29">
+            <app xml:id="u28_ver_Greek">
+              <lem wit="#Vass">χαὶ διὰ τοῦ τείχους ἐξαγαγοῦσα αὐτοὺς ἡ Ραὰβ ἔδειξεν αὐτοὺς τὴν ὁδόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="30" xml:id="NarrMois.ver_Greek.1.30">
+            <app xml:id="u29_ver_Greek">
+              <lem wit="#Vass">ἐλϑόντες δὲ οἱ “Ιεριχουνταῖοι ἔδειξεν αὐτοὺς ὁδὸν ρᾶν λέγουσα ὅτι ἐν ταύτῃ τῇ ὁδῷ ἀπήλϑθωσαν, χαὶ οὕτως διεσώϑησαν οἱ χατάσχοποι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="31" xml:id="NarrMois.ver_Greek.1.31">
+            <app xml:id="u30_ver_Greek">
+              <lem wit="#Vass">᾿Απελθϑόντες δὲ οἱ χατάσχοποι ἀπήγγειλαν πάντα ᾿Ιησοῦ τοῦ Ναυὶ [ὅπως ἐγνώσθησαν παρὰ τῶν πολιτῶν τέλος τοῦ βίου ἐχρήσατο, αὐτό.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="32" xml:id="NarrMois.ver_Greek.1.32">
+            <app xml:id="u31_ver_Greek">
+              <lem wit="#Vass">στεῖλαι αἀά.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="33" xml:id="NarrMois.ver_Greek.1.33">
+            <app xml:id="u32_ver_Greek">
+              <lem wit="#Vass">Κ φαορᾷ ομαΐΞ].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="34" xml:id="NarrMois.ver_Greek.1.34">
+            <app xml:id="u33_ver_Greek">
+              <lem wit="#Vass">ἀρχιστράτηῦζὸς ἐπετίμησεν αὐτῷ λέγων" ἐπιτιμᾷ σοι, Υ͂ ὁ ἀρχ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="35" xml:id="NarrMois.ver_Greek.1.35">
+            <app xml:id="u34_ver_Greek">
+              <lem wit="#Vass">εἰπὼν ἐπ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="36" xml:id="NarrMois.ver_Greek.1.36">
+            <app xml:id="u35_ver_Greek">
+              <lem wit="#Vass">αὐτόν" ἐπιτίμησέ σε.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="37" xml:id="NarrMois.ver_Greek.1.37">
+            <app xml:id="u36_ver_Greek">
+              <lem wit="#Vass">ὃ τὸ σῶμα Μωσέως.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="38" xml:id="NarrMois.ver_Greek.1.38">
+            <app xml:id="u37_ver_Greek">
+              <lem wit="#Vass">ὅ) Τιξα 8.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="39" xml:id="NarrMois.ver_Greek.1.39">
+            <app xml:id="u38_ver_Greek">
+              <lem wit="#Vass">ἀθ65ι, ἢ λαβών, ὃ) ἐλθεῖν, ὅ εἶχεν τὴν χαὶ ὡς διεσώϑησαν ὑπὸ τῆς πόρνης ΡαάβΊ].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="40" xml:id="NarrMois.ver_Greek.1.40">
+            <app xml:id="u39_ver_Greek">
+              <lem wit="#Vass">Καὶ μετὰ τὸ γενέσϑαι αὐτοὺς πλησίον τοῦ Ιορδάνου εἶπεν Κύριος πρὸς ᾿[ησοῦν τοῦ Ναυί" ἐν τῇ ἡμέρᾳ ταὐτὴ ἔρχομαι τοῦ ὑψῶσαί σε κατενώπιον ὅ πάντων τῶν υἱῶν ᾿Ισραὴλ ἵνα γνῶσιν ὅτι χαϑὼς ἤμην μετὰ ἀοται, οὕτως ἔσομαι χαὶ μετὰ σοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="41" xml:id="NarrMois.ver_Greek.1.41">
+            <app xml:id="u40_ver_Greek">
+              <lem wit="#Vass">χαὶ νῦν ἔντειλαι τοῖ " " 5:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="42" xml:id="NarrMois.ver_Greek.1.42">
+            <app xml:id="u41_ver_Greek">
+              <lem wit="#Vass">᾿" γραγει 3 - τὴν χιβωτὸν τῆς διαϑήχης ὅ Κυρίου - Ιυ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="43" xml:id="NarrMois.ver_Greek.1.43">
+            <app xml:id="u42_ver_Greek">
+              <lem wit="#Vass">᾽ ΙΝ στήσωνται ἐν τῷ ᾿Ιυρδάνῃ, ὁ γὰρ ᾿Ιορδάνης μ᾿ οὐ περαιοῦς ἱερεῦσιν τοῖς αἴρουσιν ὡς ἂν ἐλεύσωνται Ὥ χαὶ ὅ) ποσὶν ἀνθρώπου ὅ) βάτος, ἀλλ᾽ ἐπίνειαν 7.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="44" xml:id="NarrMois.ver_Greek.1.44">
+            <app xml:id="u43_ver_Greek">
+              <lem wit="#Vass">χαὶ ἐλϑόντες ἦ οἱ ἱερεῖς ἔστησαν εἰς μέσον τοῦ ὕδατος τοῦ ᾿Ιορδάνου, ὁ δὲ ᾿Ιορδάνης ἐπληροῦτο χαϑ'᾽ ὅλην τὴν χρηπῖδα αὐτοῦ ὡς [ἐν] « ,, - - .- 10 ΝῚ " ᾿ ς - χ - ΕΝ] πριν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="45" xml:id="NarrMois.ver_Greek.1.45">
+            <app xml:id="u44_ver_Greek">
+              <lem wit="#Vass">ἡμέρᾳ ϑερισμοῦ πυρῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="46" xml:id="NarrMois.ver_Greek.1.46">
+            <app xml:id="u45_ver_Greek">
+              <lem wit="#Vass">αὐτὸς γὰρ ὃ ποταμὸς γεννᾶται ἀπὸ τῆς ϑαλάσσης τῆς Ταβαρίας τὸ ἥμισυ αὐτοῦ καὶ τὸ ἥμισυ αὐτοῦ ἀπὸ τῆς λίμνης Γεννησαρὲτ χαὶ τὸ μὲν [ἐν] λέγεται ᾿1όρ, δι οἱ , ΝΆ ΄ Ν ΄ ᾽ τὸ ὁὲ ., ἕτερον Δάνης, μιγόμενα δὲ χάτω τὰ δύο λέγεται ᾿1[ορδάνης.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="47" xml:id="NarrMois.ver_Greek.1.47">
+            <app xml:id="u46_ver_Greek">
+              <lem wit="#Vass">Καὶ εἰσελθόντες τοίνυν οἱ ἱερεῖς τοῦ ϑεοῦ [οἱ] βαστάζοντες τὴν χιβωτὸν ἐχόπη τὸ ὕδωρ καὶ ἔστη τὰ ὕδατα καταβαίνων “Ὁ ἄνωϑεν εἰς πῆγμα ἕν ἀφεστηχὸς ἐρεδιρεω σφόδοαυ ἀπὸ Δαμὴν τῆς πόλεως ἕως μέρους Καριαϑιαρήμ, τὸ δὲ ἐρτθῳμευνου χατέβη εἰς τὴν θάλασσαν ἼΛραβαν 'ἢ), τ με Ρεῖν τῶν ἁλῶν ἕως τέλους ἐξέλιπεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="48" xml:id="NarrMois.ver_Greek.1.48">
+            <app xml:id="u47_ver_Greek">
+              <lem wit="#Vass">χαὶ διῆλϑεν 1 πᾶς ὁ λαὸς διὰ ξηρᾶς τὸν Ιορδάνην χαὶ οὕτως ἤρξαντο τοῦ κι οπν Ἱεριχώ,.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="49" xml:id="NarrMois.ver_Greek.1.49">
+            <app xml:id="u48_ver_Greek">
+              <lem wit="#Vass">Περὶ τῆς ἐμφανείας τοῦ ἀρχιστρατήγου ἢ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="50" xml:id="NarrMois.ver_Greek.1.50">
+            <app xml:id="u49_ver_Greek">
+              <lem wit="#Vass">Καὶ ἤοξαντο ͵ , ε(“ τοι 30 )20δ κε ρένγον 81 συνάπτειν πόλεμον οἱ ( Ι)εριχουνταῖοι ") χαὶ ἦν καϑημερινὴ μάχη").</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="51" xml:id="NarrMois.ver_Greek.1.51">
+            <app xml:id="u50_ver_Greek">
+              <lem wit="#Vass">συνάπτοντες οἱ μαχισταὶ "ἡ πόλεμον χαὶ [μὴ] δυναμένων συνΗ ν,.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="52" xml:id="NarrMois.ver_Greek.1.52">
+            <app xml:id="u51_ver_Greek">
+              <lem wit="#Vass">ἽἽς .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="53" xml:id="NarrMois.ver_Greek.1.53">
+            <app xml:id="u52_ver_Greek">
+              <lem wit="#Vass">’ ΕΣῚ ἐλ 283: Ἴ: .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="54" xml:id="NarrMois.ver_Greek.1.54">
+            <app xml:id="u53_ver_Greek">
+              <lem wit="#Vass">- Δ -.»" ς τρίψαι τοὺς ᾿Ιεριχουνταίους ᾿Ἶ ἐλυπήϑη Ἰησοῦς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="55" xml:id="NarrMois.ver_Greek.1.55">
+            <app xml:id="u54_ver_Greek">
+              <lem wit="#Vass">μιᾷ δὲ τῶν ἧμεοῶν συνάψαντες πόλεμον ἣν [Ὁ] ᾿Ιησοῦς παραμυϑούμενος χαὶ παραϑαῤ(ῥ)ύνων τὸν λαὸν χαὶ ὥφϑη αὐτῷ ὁ ἀρχιστράτηγος Κυρίου [(ἐχ) δεξιῶν ἱστάμενος τοῦ πολέμου ἐσπασμένην ἔχων τὴν δομ- ͵ Ε - 2 -- " ΕἸ - - ν δ "- κα ς3 - κν φαίαν αὐτοῦ ἐν τῇ χειρὶ αὐτοῦ, ἰδὼν δὲ αὐτὸν ὃ ᾿Ιησοῦς ἦλϑε πρὸς αὐτὸν χαὶ λέγει αὐτῷ" τίς εἰ σύ;] ἡμέτερος εἴ ἢ τῶν ὑπνὰ Ὁ ἄρχωμαι ἐνώπιον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="56" xml:id="NarrMois.ver_Greek.1.56">
+            <app xml:id="u55_ver_Greek">
+              <lem wit="#Vass">τοῖς αἴρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="57" xml:id="NarrMois.ver_Greek.1.57">
+            <app xml:id="u56_ver_Greek">
+              <lem wit="#Vass">τὴν διαθήκην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="58" xml:id="NarrMois.ver_Greek.1.58">
+            <app xml:id="u57_ver_Greek">
+              <lem wit="#Vass">εἰσελεύσωνται, ὃ περᾶται ") ἀνθριύσποις Υ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="59" xml:id="NarrMois.ver_Greek.1.59">
+            <app xml:id="u58_ver_Greek">
+              <lem wit="#Vass">βατός, ἀλλ᾽ ἐπινειός.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="60" xml:id="NarrMois.ver_Greek.1.60">
+            <app xml:id="u59_ver_Greek">
+              <lem wit="#Vass">ὅ) εἰσελθόντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="61" xml:id="NarrMois.ver_Greek.1.61">
+            <app xml:id="u60_ver_Greek">
+              <lem wit="#Vass">μέρος Υ΄.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="62" xml:id="NarrMois.ver_Greek.1.62">
+            <app xml:id="u61_ver_Greek">
+              <lem wit="#Vass">πυἀρχισμρστοιοι Κυρίου, ἐγὼ νυνὶ παραγέγονα τοῦ βοηθῆσαί σοι.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="63" xml:id="NarrMois.ver_Greek.1.63">
+            <app xml:id="u62_ver_Greek">
+              <lem wit="#Vass">Καὶ πεσὼν ᾿Ιησοῦς προσεχύνησεν αὐτῷ λέγων" τς ἢ, τί ἴβεις:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="64" xml:id="NarrMois.ver_Greek.1.64">
+            <app xml:id="u63_ver_Greek">
+              <lem wit="#Vass">, - - “σον ἝΞ Η »'λ ΠῚ Η τράτηγος τάσ(σ)εις τῷ σῷ οἰχέτῃ;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="65" xml:id="NarrMois.ver_Greek.1.65">
+            <app xml:id="u64_ver_Greek">
+              <lem wit="#Vass">λέγει πρὸς αὐτὸν ὁ ἀρχιστράτηγος Κυρίου" λύσαι ὅ τὸ ὑπόδημα ἐχ τῶν ποδῶν σον, Κύριο ος γὰρ ὁ ϑεὸς παραδώσει [σοι] τοὺς “ἱἹεριχουντιαίους ὑπὸ “εῖράς σου ἀλλὰ μὴ λήψῃ ἐξ αὐτῶν [ἄγρι ἀφαιροτέρου, ἀλλὰ φυλάσσου αὐτῶν] μή ποτε προσχυνήσης ϑεοὺς αὐτῶν ὅ χαὶ ἔσῃ μαχόμενος τῷ νόμῳ Κυρίου ἢ, ὁ γὰρ νόμος [τοῦ] ϑεοῦ σωτῆριός ἐστιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="66" xml:id="NarrMois.ver_Greek.1.66">
+            <app xml:id="u65_ver_Greek">
+              <lem wit="#Vass">χαὶ ᾿ ΘΙ ΘΟ » 5.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="67" xml:id="NarrMois.ver_Greek.1.67">
+            <app xml:id="u66_ver_Greek">
+              <lem wit="#Vass">Ὁ ὑϑθςε Ἴδιος εἶπεν ὁ ἀρχιστράτηγος" λαβέτωσαν οἱ ἱερεῖς ἑπτὰ σάλπιγγας χαὶ ἑ ι χυχλώσωσιν τὰ “εριχούντια τείχη ἡμέρας ἑπτὰ (καὶ) σαλπίσωσιν - χύχλῳ “᾿Ιεριχὼ χαὶ πεσοῦνται τὰ υ χαὶ οὕτως ἀπῆλθεν ὁ ἀογιι ε , στράτηγος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="68" xml:id="NarrMois.ver_Greek.1.68">
+            <app xml:id="u67_ver_Greek">
+              <lem wit="#Vass">καὶ οὕτως ποιήσαντες οἱ ἱερεῖς τῇ ἑβδόμη ἡμέρᾳ συνέπεσον τὰ τείχη ᾿Ιεριγὼ χαὶ συνεπτώϑη πᾶσα ἡ πόλις, Καὶ τούτων γινομένων ἐλάλησεν [Ὁ] Ἰησοῦς τῷ λαῷ λέγων" μὴ λάβητε ἐχ τῆς πόλεως ταύτης μηδὲν [μέχρις ὀβολοῦ ἑνὸς] μη μείνῃ ἐξ αὐτῶν τις εἰ μὴ Ραὰβ ἡ πόρνη ἡ τοὺς χατασχόπους διασώσασα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="69" xml:id="NarrMois.ver_Greek.1.69">
+            <app xml:id="u68_ver_Greek">
+              <lem wit="#Vass">Ἐὑρέϑη δὲ ἀνὴρ ὀνόματι Ἄγαρ Ἰουδαῖος τῷ γένει .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="70" xml:id="NarrMois.ver_Greek.1.70">
+            <app xml:id="u69_ver_Greek">
+              <lem wit="#Vass">ῥξεύη ἢ μᾶτι χὰρ τουοκιος τῷ γένει χαὶ ἔχλεψε ψελλία 2 χαὶ γλώσσας εἰς ἀριϑμὸν πολλὰ "ἢ χαὶ οὕτως παρέλαβον τὴν πόλιν “Ἱεριχώ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="71" xml:id="NarrMois.ver_Greek.1.71">
+            <app xml:id="u70_ver_Greek">
+              <lem wit="#Vass">“ τῆς Ἱεριχὼ χαὶ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="72" xml:id="NarrMois.ver_Greek.1.72">
+            <app xml:id="u71_ver_Greek">
+              <lem wit="#Vass">ἕν Γάϊς 1").</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="73" xml:id="NarrMois.ver_Greek.1.73">
+            <app xml:id="u72_ver_Greek">
+              <lem wit="#Vass">Παραλαβόντες ὁ [πόλιν] Ἱεριχὼ ἀνῆλθον εἰς τὸ ὄρος [εἰς] χάστρον μιυχρὸν - χας “ων ᾽ , τ λούμενον Γαϊν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="74" xml:id="NarrMois.ver_Greek.1.74">
+            <app xml:id="u73_ver_Greek">
+              <lem wit="#Vass">χαὶ ἐνεδρεύοντες οἱ Ταϊν .) ἀπέχτειναν ἄνόρας ὁπλίτας [πολεμιστὰς] τὸν ἀριϑμὸν τριάχοντα.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="75" xml:id="NarrMois.ver_Greek.1.75">
+            <app xml:id="u74_ver_Greek">
+              <lem wit="#Vass">χαὶ ἐλυπήθη, Ἰησοῦς χαὶ συνέπεσεν τὸ Ἐς ππρτο οὐτοῦ γαὶ λέγει πρὸς αὐτὸν [Ὁ] ἄγγελος Κυρίου" ἴδε χαὶ ἐρεύνησον τὸν λαὸν [Κυρίου] ὅτι παρέβησαν τὴν » ε 7.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="76" xml:id="NarrMois.ver_Greek.1.76">
+            <app xml:id="u75_ver_Greek">
+              <lem wit="#Vass">ἐντολὴν σου [διὰ τοῦ ΓΛγαρ] χαὶ διὰ τοῦτο ἐν δρύνϑησαν οἱ Γάϊν ὃ).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="77" xml:id="NarrMois.ver_Greek.1.77">
+            <app xml:id="u76_ver_Greek">
+              <lem wit="#Vass">Καὶ ἐρευνήσας "ὃ ᾿Ιησοῦς εὗρεν ὅτι ἔχ δε εψεν ὁ Αχαρ ᾽) [τούτων ,ὖ ον“ δέσποτά.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="78" xml:id="NarrMois.ver_Greek.1.78">
+            <app xml:id="u77_ver_Greek">
+              <lem wit="#Vass">λέγει αὐτῷ, λύσον, “) παραδίδει ὅ) ᾿Ιεριχουνταίους, [π᾿ πῃᾶτϑὶπο ΤΙερὶ τῆς Ἱεριχώ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="79" xml:id="NarrMois.ver_Greek.1.79">
+            <app xml:id="u78_ver_Greek">
+              <lem wit="#Vass">αὐτούς Υ͂, τοῦ θεοῦ, κυκλώσουσιν τὰ Ἱεριχούντια τείχη καὶ οὕτως ἀπῆλθεν ὁ ἀρχιστράτηγος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="80" xml:id="NarrMois.ver_Greek.1.80">
+            <app xml:id="u79_ver_Greek">
+              <lem wit="#Vass">ὁ δὲ Ἰησοῦς ἐλάλησε τῷ λαῷ λέγων" λαβέτῶσαν οἱ ἱερεῖς σάλπιγγας ἑπτὰ καὶ κυκλώσουσιν τὴν Ἱεριχὼ ἡμέρας ἑπτὰ κύκλιυ τοῦ τείχους σαλπίζοντες τῇ ἑβδόμῃ κτλ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="81" xml:id="NarrMois.ver_Greek.1.81">
+            <app xml:id="u80_ver_Greek">
+              <lem wit="#Vass">ὅ) τούτου γενομένου., καὶ μὴ διασωθῇ τοὺς λόγους χαὶ πρὸς ταῦτα] καὶ προστάτ(τ)ει ὁ Ἰησοῦς [λιϑασϑῆναι τὸν Αχαρ] χαὶ ἐλίϑησαν αὐτὸν εὐ ὁ οἶχος ᾿Ισραὴλ χαὶ τὰ χτήνη αὐτοῦ χατέχαψαν Ἶ [καὶ πᾶν τὸ γένος χὐτοῦ ἐξολόϑρευσε] χαὶ μετὰ τὸ ποιῆσαι τὴν ἐχόδίχησιν τότε ἀνῆλϑον χαὶ παρέλαβον ἢ τὴν [γῆν] Γάϊν χαὶ ἐξολόϑρευσαν αὐτὴν χαὶ οὐ διέσωσαν ἀπὸ τὴν Γάϊν [τ|7] πλὴν ζώων, ἀπὸ δὲ τῆς “Ἱεριχὼ Ραὰβ τὴν πόρνην ἢ).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="82" xml:id="NarrMois.ver_Greek.1.82">
+            <app xml:id="u81_ver_Greek">
+              <lem wit="#Vass">Ταῦτα μέμνηται ὁ ψαλμῳδὸς λέγων" μνησθήσομαι ΡῬαὰβ χαὶ Βαβυλῶνος τοῖς γινωσχουσίν με [τουτέστι τοὺς φοβηϑέντας με.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="83" xml:id="NarrMois.ver_Greek.1.83">
+            <app xml:id="u82_ver_Greek">
+              <lem wit="#Vass">Ἤχουσαν οἱ Χαναναῖοι τὴν ἔφοδον τῶν ᾿Ιουδαίων χαὶ ἐτάκησαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="84" xml:id="NarrMois.ver_Greek.1.84">
+            <app xml:id="u83_ver_Greek">
+              <lem wit="#Vass">τότε ἐπληρώϑη τὸ ῥηϑέν' ἐτάχησαν πάντες οἱ χατοιχοῦντες Χαναάν, οἱ δὲ Χαναναῖοι χατῴχουν τὴν γῆν ταύτην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="85" xml:id="NarrMois.ver_Greek.1.85">
+            <app xml:id="u84_ver_Greek">
+              <lem wit="#Vass">᾿Αχούσαντες δὲ οἱ Γαβαωνῖται ὅτι ἔϑνος ϑεοῦ π πρὸς αὐτοὺς δυνατὸν ἔλεγον" ὁ ϑεὺς αὐτῶν ϑάλασσαν ἔτεμεν καὶ διήγαγεν αὐτούς, τὸν ᾿Ἀμαλὶκ τροπωσάμενος ἐξεφάνισεν, τοὺς ᾿Αε(σ)υρίους χατίσχυνεν, τοὺς Μωαβίτας ἐξολόϑρευσεν, τὴν ᾿Εδὼμ χατεχυρίευσε, τὴν γώραν Μαδιὰμ, χατίσχυνε, τὴν Αὐσίτιδα χατηδάφησεν, τοὺς ᾿Αμανίτας εἰς τέλος ἐξήλειψεν, τὴν χώραν τῶν ἁλῶν κατεδαπάνησε, τὸν ᾿Ιορδάνην τεμὼν εἰς τέλος διὰ ξηρᾶς αὐτοὺς ἐπέρασε χαὶ ἁπλῶς οὐχ ἔστι ὁ ἀνθιστάμενος αὐτοῖς οὐ ποταμός, οὐ ϑάλασσα, οὐ παρεμβολαί, οὐ τείχη “Ἱεριχούντων, ἀλλὰ χαὶ αὐτὰ χαταπεπτώχασι τῇ δυνάμει τοὺ ϑεοῦ αὐτῶν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="86" xml:id="NarrMois.ver_Greek.1.86">
+            <app xml:id="u85_ver_Greek">
+              <lem wit="#Vass">Ταῦτα πάντα ἐνωτισθέντες οἱ Ταβαωνῖται βουλεύονται μηχανήματα τοιαῦτα" περιβάλ(λγ)ονται ἱμάτια ῥυπώδη χαὶ χιτῶνας ἐρερυγμένους ἀσχοὺς παλαιοὺς χαὶ οἶνον σαπρόν, σχιστοὺς ἄρτους χαὶ ὑποδήματα παλαιά, καὶ οὕτως μεταβληϑέντες ἦλθον εἰς τὴν θη ἐμβολὴν πρὸς τοὺς ἄρχοντας χαὶ ᾿Ιησοῦν ἢ τὸν τοῦ Ναυὶ χαὶ προσπεσόντες εἴπον αὐτῷ" χύριοι, μὲν τ τ στ ὑμᾶς μὴ ποτε λτουο:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="87" xml:id="NarrMois.ver_Greek.1.87">
+            <app xml:id="u86_ver_Greek">
+              <lem wit="#Vass">τε ἡμᾶς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="88" xml:id="NarrMois.ver_Greek.1.88">
+            <app xml:id="u87_ver_Greek">
+              <lem wit="#Vass">χαὶ εἶπον πρὸς αὐτοὺς οἱ ᾿γόνοθο πόϑεν ἥχατε;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="89" xml:id="NarrMois.ver_Greek.1.89">
+            <app xml:id="u88_ver_Greek">
+              <lem wit="#Vass">οἱ δὲ εἶπον᾽ ἐχ μήχοϑεν χώρας ἤλθομεν ὑρῶντες χαὶ ζητοῦντες ἀφ᾿ ὑμῶν εἰρήγὴν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="90" xml:id="NarrMois.ver_Greek.1.90">
+            <app xml:id="u89_ver_Greek">
+              <lem wit="#Vass">ὁρᾶτε τοὺς παλαιοὺς χιτῶνας οὺς περιβεβλήμεϑα;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="91" xml:id="NarrMois.ver_Greek.1.91">
+            <app xml:id="u90_ver_Greek">
+              <lem wit="#Vass">ἀϑίχτους αὐτοὺς περιεβαλόμεϑα, τοὺς δὲ ἄρτους νεοψήτους ἐλάβομεν χαὶ ἤλθομεν ζητοῦντες εἰρήνην.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="92" xml:id="NarrMois.ver_Greek.1.92">
+            <app xml:id="u91_ver_Greek">
+              <lem wit="#Vass">ἠπάτησαν οὖν τοὺς ἄρχοντας χαὶ ᾿Ιησοῦν τὸν τοῦ Ναυὶ χαὶ ἐποίησαν εἰρήνην μετ᾽ αὐτῶν χαϑὼς ἥχασιν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="93" xml:id="NarrMois.ver_Greek.1.93">
+            <app xml:id="u92_ver_Greek">
+              <lem wit="#Vass">χαὶ ἀπῆλθον οἱ Γαβαωνῖτα! οἴχαδε ἃ δὲ ᾿Ιουδαῖοι ἐξῆλθον σχυλεύσαντες τὰς χύχλ 5 πρὸς Ἰ᾿αβαών.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="94" xml:id="NarrMois.ver_Greek.1.94">
+            <app xml:id="u93_ver_Greek">
+              <lem wit="#Vass">χαὶ Ξε οἱ Γαβαωνῖται εἰς οἱ ἐλϑόντες πρὸ ς εἰρήνην, χαὶ ἀναγνωρίσαντες αὐτοὺς οἱ ᾽ [0 ἡφαῖοι ΕΣ Ἄ “- ᾿ ε εἶπον αὐτοῖς" ὅτι αὔτ Ἷ ἐστὶν ἣ πόλις ὑμῶν;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="95" xml:id="NarrMois.ver_Greek.1.95">
+            <app xml:id="u94_ver_Greek">
+              <lem wit="#Vass">καὶ εἶπον αὐτοί" ναί.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="96" xml:id="NarrMois.ver_Greek.1.96">
+            <app xml:id="u95_ver_Greek">
+              <lem wit="#Vass">χαὶ εἶπον αὐτοῖς" χαὶ διὰ τί ἐπλανήσατε ἡυιὰς εἰπόν ἐς ὅτ' ἐχ αν , φὰς " Α ς ον ΖΝ -- μαχρᾶς χωρᾶς ἤχαμεν πρὸς ὑμᾶς;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="97" xml:id="NarrMois.ver_Greek.1.97">
+            <app xml:id="u96_ver_Greek">
+              <lem wit="#Vass">Καὶ Θ - » .- 2 , ᾿Ιησοῦ χαὶ χατὰ τῶν ἀρχόντων λέγοντες" ονὰ τί οὐχ τ - 2 ἕν πανέστ ἢ τ-- Μὰ ΠῚ , χλλ᾽ 5 .2 - πο ρ ϑεόν, ἀλλ᾽ ἐποιήσατε μετὰ ἀβουλίας τ τἰρδαμμοτ ἀσύυὉ -.ὦ [ [᾿ κ᾿ δ » “κγὐ ἢ Σοῦ -ὁ;θο Σ ͵ ἅνον οὖν οἱ Ταβαωνῖται εἰς ὑπάντησιν τοῦ Τησοῦ πρ τοῖς ποσὶν αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="98" xml:id="NarrMois.ver_Greek.1.98">
+            <app xml:id="u97_ver_Greek">
+              <lem wit="#Vass">χαὶ ὃς αὐτούς" ἐ νήσατε ἡμᾶς εἰπόντες ὅτι ἐχ μον:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="99" xml:id="NarrMois.ver_Greek.1.99">
+            <app xml:id="u98_ver_Greek">
+              <lem wit="#Vass">(") γώρας ἥχουεν, ὑσε ᾿ " πλησίον ἡμῶν Ἔα τε, νῦν οὖν χατὰ τὸν ὅρχον ἡμῶν οὐ μὴ ἵπεν ὁ ᾿Ιησοῦς πὸ ΟΥ βλάψω ὑμᾶς, ἀλλ’ ἔσ(ς - τῇ παρευβολὴ τῶν υἱῶν ᾿Ισοαὴλ ᾿ .͵ ὡ ῃ τ " ὑδροφόροι χαὶ ξυλοφόροι:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="100" xml:id="NarrMois.ver_Greek.1.100">
+            <app xml:id="u99_ver_Greek">
+              <lem wit="#Vass">χαὶ οὕτως ποιήσας αὐτοὺς χατεοούλωσεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="101" xml:id="NarrMois.ver_Greek.1.101">
+            <app xml:id="u100_ver_Greek">
+              <lem wit="#Vass">Καὶ περὶ τούτου γράοει σοφός τις᾽ ἀνάστηϑι χαὶ χαταπολέμησον ὡς ᾿Ιησοῦς ὁ τοῦ Ναυὶ τῆς σαρχὸς τὰ Γαβαωνίτας, τοὺς ἀπατηλοὺς λογισμοὺς ἀεὶ νιχῶσα, τουτέστιν ὰ τοὺς ΠΣ’ ως ἡμᾶς πονηροὺς λογισμούς" ὥ σπερ οἱ Τ᾿αβαωνῖτα! πάϑη, χαὶ τοὺς ᾿ ἠπάτησαν τὸν ᾿Γησοῦν τοῦ Ναυὶ χαὶ τοὺς ἀρχηγοὺς οὕτως χαὶ μιᾶι (ἀπατᾷ) ὁ πονηρὸς λογισμὸς ὅτι χα ὸ πράττομεν χαὶ οὐχ αἰσθανόμεθα" διὰ τοῦτο χαὶ ὁ σοφὸς τοὺς ἀπατηλοὺς λογισμοὺς νι(χᾶν εὔχεται).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="102" xml:id="NarrMois.ver_Greek.1.102">
+            <app xml:id="u101_ver_Greek">
+              <lem wit="#Vass">τῶν ᾿Ιουδαίων, «κῶς τ χαχὸν Περὶ τοῦ ᾿λεδὼρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="103" xml:id="NarrMois.ver_Greek.1.103">
+            <app xml:id="u102_ver_Greek">
+              <lem wit="#Vass">᾿Εχράτησεν δὲ [Ὁ] ᾿Ιησοὺῦς ὁ τοῦ Ναν " ᾿ » οἱ « « ΄ Ἂν ἔτη χα’ γχαὶ μετὰ τοῦτον ἤργοντο ὃ οἱ ἀμ» Ὸ ἐλϑέντες οὲ οἱ τῶν Περσῶν βασιλεῖς ἢ χαὶ πολεμήσαντες χατεχυρίευσαν αὐτῶν ͵ Ἂν χαὶ ἦσαν ᾿Ιουδαῖοι ὑπόφοροι 2 τῶν ᾿Πππ πὰ Ἀνέστη οὲ Ε φς ᾿ Ν δ δ ξωκκ ω),.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="104" xml:id="NarrMois.ver_Greek.1.104">
+            <app xml:id="u103_ver_Greek">
+              <lem wit="#Vass">ΚςΣ ἐν τοῖς ᾿Ιουδαίοις ἄνϑρωπος ὀνόματι (Δγενδώρ ἢ).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="105" xml:id="NarrMois.ver_Greek.1.105">
+            <app xml:id="u104_ver_Greek">
+              <lem wit="#Vass">οὗτος εἰς ζῆτ « ς -«Ψ π᾿ τΝΡ λον ἦλθεν ὅπως οἱ πατέρες ὅ) αὐτοῦ χατεδούλοντο ἢ Χαλοχίοις χ δ 8 -- .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="106" xml:id="NarrMois.ver_Greek.1.106">
+            <app xml:id="u105_ver_Greek">
+              <lem wit="#Vass">͵ πρῶ ᾿Ἃ " ᾿ λέ ΒΝΝ " -- χαὶ ἤρξαντο ὃ ποιῆσαι ἐλευϑερίαν τῆς πατρίοος χαὶ λέγει τοῖς , ᾿ “δ ουδαίοις" τί μοι ποιήσετε χαγὼ ἐλευϑερώσω τὴν πατρίόα ἐχ ν 4 γἧς Χαλδαίων;</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="107" xml:id="NarrMois.ver_Greek.1.107">
+            <app xml:id="u106_ver_Greek">
+              <lem wit="#Vass">Ιὐἶπον οὖν αὐτῷ οἱ ᾿Ιουδαῖοι ὅτι χαταστῆσοἵνα ἀπέλθω πρὸς ἢ Γὼτ ἢ) [τὸν] βασιλέα Περσῶν:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="108" xml:id="NarrMois.ver_Greek.1.108">
+            <app xml:id="u107_ver_Greek">
+              <lem wit="#Vass">Οὗτος γὰρ ὁ Γὼτ ἐβασίλευσεν τῷ τότε χαιρῷ Περσῶν, Χαλδαίων, Μήδων, Γαζαρηνῶν χαὶ δυνάστης ὧν ἐκράτησεν δὲ τῶν ᾿Ιουδαίων γένος ἢ).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="109" xml:id="NarrMois.ver_Greek.1.109">
+            <app xml:id="u108_ver_Greek">
+              <lem wit="#Vass">Λαβὼν δὲ [Ὁ] ᾿Αεδὼρ [τὰ δῶρα] ἀπῆλθεν πρὸς Γὼτ βασιλέα Περσῶν χαὶ προσχυνήσας δέδωχεν τὰ δῶρα εἰπών 7 ἐστάλησάν σοι, δέσποτα, παρὰ τῶν παίδων σου τῶν ᾿Ιουδαίων ταῦτα ὃ).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="110" xml:id="NarrMois.ver_Greek.1.110">
+            <app xml:id="u109_ver_Greek">
+              <lem wit="#Vass">ὁ δὲ Τὼτ τυφλωϑεὶς τοῖς δώροις ἀσμένως αὐτὸν ὑπεδέξατο.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="111" xml:id="NarrMois.ver_Greek.1.111">
+            <app xml:id="u110_ver_Greek">
+              <lem wit="#Vass">ἐλϑὼν δὲ ᾿Λεδὼρ ἀνεπαύϑη ἐν τῷ στρατοπέδῳ αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="112" xml:id="NarrMois.ver_Greek.1.112">
+            <app xml:id="u111_ver_Greek">
+              <lem wit="#Vass">ἦν γὰρ ἐπαγόμενος μετ᾽ αὐτοῦ τρισχιλίους ἄνδρας πολεμιστὰς μαχίμους.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="113" xml:id="NarrMois.ver_Greek.1.113">
+            <app xml:id="u112_ver_Greek">
+              <lem wit="#Vass">ἐλάμβανον δὲ τὰς χρείας αὐτῶν ἐκ τῶν παλατίων ὅ Γώτ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="114" xml:id="NarrMois.ver_Greek.1.114">
+            <app xml:id="u113_ver_Greek">
+              <lem wit="#Vass">ἠβουλήϑη δὲ ὑποστρέψαι [᾿Αεδὼρ] οἴχαδε χαὶ λέγει τῷ βασιλεῖ:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="115" xml:id="NarrMois.ver_Greek.1.115">
+            <app xml:id="u114_ver_Greek">
+              <lem wit="#Vass">λόγος μοι πρός (σ)ε, βασιλεῦ τοῦ λαοῦ, ἐν μυστηρίῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="116" xml:id="NarrMois.ver_Greek.1.116">
+            <app xml:id="u115_ver_Greek">
+              <lem wit="#Vass">χαὶ εἶπεν Γώτ' ἃς ἔλθωμεν εἰς τὸ ἐνδότερον τοῦ ") παλατίου [καὶ ὑπαγγέλλεις μοι ταῦτα].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="117" xml:id="NarrMois.ver_Greek.1.117">
+            <app xml:id="u116_ver_Greek">
+              <lem wit="#Vass">εἰσελθόντων δὲ αὐτῶν μόνων ἔχων ᾿λεδὼρ μάχαιραν χρυφίως ἐνέπηξεν αὐτὴν ἐν τὴ χοιλίᾳ τοῦ βασιλέως χαὶ σχίσας αὐτὸν ἔῤῥιψεν 1 χαμαὶ νεχρὸν ἄφωνον, ἐξελϑὼν δὲ ἀπέχλεισε τὴν ϑύρα(ν) χατ᾽ αὐτοῦ εἰπὼν τοῖς παρἐστῶσιν ὅτι ὑπνεῖ ὁ βασιλεὺς χαὶ παρήγγειλέ μοι χλεῖσαι κατ᾽ αὐτοῦ τὴν ϑύραν ἵνα μὴ περιχοπὴ [αὐτῷ] γενήσεται 17.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="118" xml:id="NarrMois.ver_Greek.1.118">
+            <app xml:id="u117_ver_Greek">
+              <lem wit="#Vass">Ταῦτα εἰπὼν ᾿Λεδὼρ τοῖς παρεστῶσιν ἐξῆλθεν πρὸς τοὺς ᾿Ιουδαίους χαὶ λέγει αὐτοῖς:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="119" xml:id="NarrMois.ver_Greek.1.119">
+            <app xml:id="u118_ver_Greek">
+              <lem wit="#Vass">ἑτοιμάσϑητε χαὶ σχυλεύσαντες τοὺς Πέρσας ἀποδράσωμέεν ἐχεῖϑεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="120" xml:id="NarrMois.ver_Greek.1.120">
+            <app xml:id="u119_ver_Greek">
+              <lem wit="#Vass">ἑτοιμασϑέντες δὲ ἤρξαντο σχυλεύειν τοὺς Πέρσας, οἱ δὲ ἄρχοντες Τὼτ ἰδόντες τὸ γινόμενον 1 διάραντες τὰς ϑύρας τοῦ παλατίου [εἰσῆλθον καὶ] εὗρον τὸν Τὼτ χείμενον νεχρόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="121" xml:id="NarrMois.ver_Greek.1.121">
+            <app xml:id="u120_ver_Greek">
+              <lem wit="#Vass">.Ο δὲ ᾿Λεδὼρ λαβὼν τὰ σχύλα πλεῖστα ἀπῆλϑεν πρὸς τοὺς ᾿Ιουδαίους ἐν ἹἹερουσαλήμ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="122" xml:id="NarrMois.ver_Greek.1.122">
+            <app xml:id="u121_ver_Greek">
+              <lem wit="#Vass">τούτου μεμνημένος ὁ Δαυὶδ λέγει χαταρώμενος τοὺς ἐχϑροὺς αὐτοῦ:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="123" xml:id="NarrMois.ver_Greek.1.123">
+            <app xml:id="u122_ver_Greek">
+              <lem wit="#Vass">ἐξολοθϑρεύϑησαν ἐν ᾿Αεδώρ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="124" xml:id="NarrMois.ver_Greek.1.124">
+            <app xml:id="u123_ver_Greek">
+              <lem wit="#Vass">.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="125" xml:id="NarrMois.ver_Greek.1.125">
+            <app xml:id="u124_ver_Greek">
+              <lem wit="#Vass">Θῦσον [ψυχὴ] ϑυσίαν τῷ ϑεῷ, ϑυσίαν ἐπαινουμένην πρᾶξιν εἰς ἀρχήν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="126" xml:id="NarrMois.ver_Greek.1.126">
+            <app xml:id="u125_ver_Greek">
+              <lem wit="#Vass">) μοί, ἢ) εἰς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="127" xml:id="NarrMois.ver_Greek.1.127">
+            <app xml:id="u126_ver_Greek">
+              <lem wit="#Vass">Γώγ αϑίψαθ ρΥδθ)δὲ Υ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="128" xml:id="NarrMois.ver_Greek.1.128">
+            <app xml:id="u127_ver_Greek">
+              <lem wit="#Vass">ὅ) ἐκράτησε καὶ τὸ τῶν , ἔθνος.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="129" xml:id="NarrMois.ver_Greek.1.129">
+            <app xml:id="u128_ver_Greek">
+              <lem wit="#Vass">καὶ ἐλθὼν πρὸς τὸν βασιλέα, προσεκύνησεν αὐτῷ καὶ εἶπεν αὐτῷ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="130" xml:id="NarrMois.ver_Greek.1.130">
+            <app xml:id="u129_ver_Greek">
+              <lem wit="#Vass">ὥσπερ ϑῦμα τὰ πάϑη τῆς σαοχὸς τῷ Κυρίῳ σου].</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="131" xml:id="NarrMois.ver_Greek.1.131">
+            <app xml:id="u130_ver_Greek">
+              <lem wit="#Vass">Περὶ τοῦ ᾿Ιεφϑάε, Οὗτος ᾿Ιεφϑάε ἣν ἐχ τῆς φυλῆς ἢ τοῦ Δὰν χαὶ ἐξεδιώχϑη μι τῆς φυλῆς αὐτοῦ δι τὸ εἶνα! αὐτὸν παρ ρα ἡ γὰρ μήτηρ αὐτοῦ πορνεύσασα εἰς τὸν αὐτῆς δοῦλον ἦ ἔτεχεν αὐτόν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="132" xml:id="NarrMois.ver_Greek.1.132">
+            <app xml:id="u131_ver_Greek">
+              <lem wit="#Vass">αἱ γὰρ δώδεχα φυλαὶ τοῦ ᾿Ισοχὶ).</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="133" xml:id="NarrMois.ver_Greek.1.133">
+            <app xml:id="u132_ver_Greek">
+              <lem wit="#Vass">“ἡ συνεμίγνυντο ἀλ(λ)ήλαις ἢ, ἀ(λ)λ᾽ ἑχάστη φυλὴ τὴν ἰδίαν χληρουχίαν περιέσχηχλεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="134" xml:id="NarrMois.ver_Greek.1.134">
+            <app xml:id="u133_ver_Greek">
+              <lem wit="#Vass">διὰ τοῦτο χαὶ ὁ ψαλιλῳδός φησιν" σ᾿ οἱνισλα χληρονομίας, χαὶ ἀλ(λ)αχοῦ:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="135" xml:id="NarrMois.ver_Greek.1.135">
+            <app xml:id="u134_ver_Greek">
+              <lem wit="#Vass">ἐν σγοινίχ χληροθοσίας.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="136" xml:id="NarrMois.ver_Greek.1.136">
+            <app xml:id="u135_ver_Greek">
+              <lem wit="#Vass">Διωχϑεὶς δὲ ᾿Ιεφϑάε ἀπὸ τῆς ουλῆς αὐτοῦ ἀνῆλθεν “) εἰς [τὸ] ὄρος χαὶ ἐχάϑισεν ἐχεῖ μόνος, οἱ δὲ υἱοὶ ᾿Ισραὴλ ἐχυριεύϑησαν ὑπὸ τῶν ἐθνῶν χαὶ οὐχ ἦν αὐτοῖς ἀνάψυξις.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="137" xml:id="NarrMois.ver_Greek.1.137">
+            <app xml:id="u136_ver_Greek">
+              <lem wit="#Vass">ἀγαναχτήσαντες σὲ υ Ἰσραὴλ ὅ μὴ ἔχοντες ἄρχοντα [ἦσαν ἐν πολλῇ ϑλίψει], οὐ γὰρ ἣν αὐτοῖς ἄργων, προσῆλθον τῷ ᾿Ιεφῦάε παραχαλῶντες "ἢ αὐτὸν [ἐλϑεῖν] εἰς (σγυμ(μ)χγίαν αὐτῶν, ὁ δὲ ἀπείπατο εἰπὼν ᾽" τοῖς ᾿Ιουδαίοις" ὅτι ἐγὼ ἐχδιωχόμενός εἰμι ἀπὸ τῆς φυλῆς μου χαὶ 3 Α, »" 49 ες:</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="138" xml:id="NarrMois.ver_Greek.1.138">
+            <app xml:id="u137_ver_Greek">
+              <lem wit="#Vass">“ 2 -“ [4 ς λ 2 οὐ δόήναμαι συμ(μ)αγ εἴν ) πο πολέμῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="139" xml:id="NarrMois.ver_Greek.1.139">
+            <app xml:id="u138_ver_Greek">
+              <lem wit="#Vass">οἱ δὲ συνέϑεντο [αὐτῷ] μεϑ' ὅρχου ἄρχοντα αὐτὸν καταστῆσαι παντὸς τοῦ ἔϑνους τῶν Ἰουδαίων, ἐὰν συμ(μ)αγχήσας νικήση ἐν τῷ πολέμῳ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="140" xml:id="NarrMois.ver_Greek.1.140">
+            <app xml:id="u139_ver_Greek">
+              <lem wit="#Vass">᾿Αχούδὲ ᾽ δά “ λ -" ΨΩ « Η ““ῷ δέκα ω δ." σας δὲ ᾿Ιεφϑάε τοῦ λαοῦ τὰ ῥήματα ἢ) χαὶ τῶν ἀρχόντων ἐξῆλϑεν εἰς [τὸν] πόλεμον.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="141" xml:id="NarrMois.ver_Greek.1.141">
+            <app xml:id="u140_ver_Greek">
+              <lem wit="#Vass">ἐξερχομένου δὲ αὐτοῦ ὅρχον ἔϑεντο τοῦ μὴ λαβεῖν τὰ τῶν πολεμίων 1 λάφυρα" ὁμοίως ἐρχομένου μου ἀπὸ τῆς νίχης εἴ τίς μοι γένηται συναντῶ(ν) " ποιήσω αὐτὸν Ἰζυρίῳ τῷ ϑεῷ μου ϑυσίαν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="142" xml:id="NarrMois.ver_Greek.1.142">
+            <app xml:id="u141_ver_Greek">
+              <lem wit="#Vass">᾿Απελϑὼν δὲ ἐν τῷ πολέμῳ χαὶ νιχήσας ὑπέστρεψεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="143" xml:id="NarrMois.ver_Greek.1.143">
+            <app xml:id="u142_ver_Greek">
+              <lem wit="#Vass">[ἐρχομένου δὲ αὐτοῦ] ἤχουσεν ἡ ϑυγάτηρ αὖσας στρεψεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="144" xml:id="NarrMois.ver_Greek.1.144">
+            <app xml:id="u143_ver_Greek">
+              <lem wit="#Vass">[ἐρχομένου ὑτοῦ] ἔχουσεν ἡ ϑυγάτηρ τοῦ ὅτι ὁ πατὴρ αὐτῆς μετὰ νίχης παρέστη .</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="145" xml:id="NarrMois.ver_Greek.1.145">
+            <app xml:id="u144_ver_Greek">
+              <lem wit="#Vass">ἐχ τοῦ πολέμου χαὶ ἐξῆλθεν ᾽) εἰς συνάντησιν αὐτοῦ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="146" xml:id="NarrMois.ver_Greek.1.146">
+            <app xml:id="u145_ver_Greek">
+              <lem wit="#Vass">ὁ δὲ ᾿Ιεοϑάε ἰδὼν τὴν αὖτοῦ ϑυγατέραν ἤρξατο ϑρηνεῖν, ἡ δὲ ϑυγάτηρ αὐτοῦ ἐπερώτησεν “- 5" “- , [φ ᾽ , ε »"ὝἪ»-ὦ ᾿ αὐτῷ τὴν αἰτίαν τοῦ ϑροήνου.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="147" xml:id="NarrMois.ver_Greek.1.147">
+            <app xml:id="u146_ver_Greek">
+              <lem wit="#Vass">διδὲ [Ἰεφϑάε] εἶπεν αὐτῇ" ϑυσίαν ͵ τ σε ἐταξάμην ᾽ [ὦ τέκνον] ϑυσιάσαι Κυρίῳ τῷ ϑεῷ, Εἶπεν δὲ Ἰεφθ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="148" xml:id="NarrMois.ver_Greek.1.148">
+            <app xml:id="u147_ver_Greek">
+              <lem wit="#Vass">ἐκ τῆς φυλῆς ὧν, ἢ μετὰ τὸν δοῦλον αὐτῆς.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="149" xml:id="NarrMois.ver_Greek.1.149">
+            <app xml:id="u148_ver_Greek">
+              <lem wit="#Vass">") ἀλλήλοις Υ, ἔσχεν.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="150" xml:id="NarrMois.ver_Greek.1.150">
+            <app xml:id="u149_ver_Greek">
+              <lem wit="#Vass">ὃ) ὃ, οὖν ὁ Δὰν ἐκ.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="151" xml:id="NarrMois.ver_Greek.1.151">
+            <app xml:id="u150_ver_Greek">
+              <lem wit="#Vass">ἢ) ἀνήχθη.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="152" xml:id="NarrMois.ver_Greek.1.152">
+            <app xml:id="u151_ver_Greek">
+              <lem wit="#Vass">δὲ οἱ ᾿Ισραηλῖται.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="153" xml:id="NarrMois.ver_Greek.1.153">
+            <app xml:id="u152_ver_Greek">
+              <lem wit="#Vass">“) ἄρχοντες.</lem>
+            </app>
+          </ab>
+          <ab type="verse" n="154" xml:id="NarrMois.ver_Greek.1.154">
+            <app xml:id="u153_ver_Greek">
+              <lem wit="#Vass">ὅ) τοῖς υἱοῖς</lem>
+            </app>
+          </ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Fragments of Theophilus</title>
+        <author>Theophilus</author>
+        <editor>Felix Jacoby; Albert-Marie Denis</editor>
+        <respStmt>
+          <resp>TEI P5 Parallel Segmentation edition for Online Critical Pseudepigrapha</resp>
+          <name>Ken M. Penner</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Online Critical Pseudepigrapha</publisher>
+        <pubPlace>St. Francis Xavier University, Antigonish, NS</pubPlace>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <biblStruct type="book">
+          <monogr>
+            <title level="m">Fragmenta pseudepigraphorum quae supersunt graeca</title>
+            <editor>Albert-Marie Denis</editor>
+            <imprint>
+              <publisher>E. J. Brill</publisher>
+              <pubPlace>Leiden</pubPlace>
+              <date when="1970">1970</date>
+              <biblScope unit="page">203-207</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="fragment" n="1">
+        <p n="1">
+          <app>
+            <rdg wit="#Denis1970" xml:lang="grc">Θεόφιλος δὲ ἱστορεῖ Σολομῶνα τὸν βασιλέα πέμψαι τῷ Τυρίων βασιλεῖ εἰκόνα χρυσῆν, ἀνθʼ ἧς ἐκεῖνον περιθεῖναι τῷ ναῷ κίονα χρυσοῦν, ὃν καὶ ἐπικληθῆναι Χρυσοῦν Κίονα. (Alexander Polyhistor ap. Euseb. Praep. Evang. IX.34.19)</rdg>
+            <rdg type="translation" xml:lang="en">Theophilus relates that King Solomon sent to the king of the Tyrians a golden image, in return for which the latter overlaid a pillar for the Temple with gold, which was also named the Golden Pillar. (Alexander Polyhistor ap. Eusebius, Praep. Evang. IX.34.19)</rdg>
+          </app>
+        </p>
+      </div>
+    </body>
+  </text>
+</TEI>
