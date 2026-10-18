@@ -79,6 +79,17 @@ OCP_TO_CAVT = {
     "Justus.xml": (None, "Justus of Tiberias (graece, Jacoby FGrH 734 / Holladay 1983)")
 }
 
+# hand corrections to the automatic tiers (checked against the editions, EDITIONS_CHECK.md):
+# "lost" = no text survives; "part" = a section of another CAVT work, not a separate gap
+HAND_TIERS = {
+    6: ("lost", "testimonia only"),
+    69: ("lost", "known only from Michael the Syrian"),
+    138: ("part", "= LAB 19 (see 131)"),
+    152: ("part", "= LAB 60.2-3 (see 131)"),
+    153: ("C", "codex unicus, unedited in 1998"),
+    181: ("part", "= 4 Ezra 8:20-36 (180, in OCP)"),
+}
+
 OCP_LANGS = {"Greek", "Latin", "Syriac", "Ethiopic", "Aramaic", "Hebrew"}
 
 EXCLUDED_FROM_CAVT = [
@@ -136,6 +147,8 @@ def main():
     unmapped = [d for d in docs if d not in OCP_TO_CAVT]
 
     def tier(e):
+        if int(e["cavt_no"]) in HAND_TIERS:
+            return HAND_TIERS[int(e["cavt_no"])][0]
         langs = set(filter(None, (e["title_language"] or e["main_language"]).split("; ")))
         edited = int(e["n_inedita_on_pages"]) == 0
         ocp_lang = not langs or bool(langs & OCP_LANGS)
@@ -242,6 +255,11 @@ def main():
                 f"{licence(e)} | {dossier_str} | {e['translations']} | {'yes' if e['qumran'] == 'True' else ''} |"
             )
         out.append("")
+
+    out += ["## 3.4 Excluded by hand (lost works; parts of other entries)", "",
+            "| CAVT | Title | Reason |", "|---|---|---|"]
+    out += [f"| {n} | {title[n]} | {why} |" for n, (t, why) in sorted(HAND_TIERS.items()) if t in ("lost", "part")]
+    out.append("")
 
     (ROOT / "CAVT_GAPS.md").write_text("\n".join(out), encoding="utf-8")
     print(f"Generated {ROOT / 'CAVT_GAPS.md'}")

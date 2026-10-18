@@ -215,7 +215,7 @@ def _norm(t):
     return re.sub(r"[^a-z0-9]", "", re.sub(r"^\d{1,3}\s*[.,]\s*", "", t).lower().replace("u", "v"))
 
 
-def _find(lines, t, start=0, floor=0.8, n=None):
+def _find(lines, t, start=0, floor=0.8, n=None, prefix=False):
     """Index of the entry's heading: a line numbered 'n.' if there is one, else the line(s)
     best matching the whole title (similarity >= floor), skipping lines numbered for other entries."""
     if n is not None:
@@ -233,7 +233,11 @@ def _find(lines, t, start=0, floor=0.8, n=None):
             continue
         for span in (1, 2):
             got = _norm(" ".join(lines[i:i + span]))
+            # a heading that runs on into a parenthesis ('Liber Jubilaeorum (Lepte Genesis,')
+            # matches on its first len(want) characters
             r = difflib.SequenceMatcher(None, want, got[:len(want) + 6]).ratio()
+            if prefix:
+                r = max(r, difflib.SequenceMatcher(None, want, got[:len(want)]).ratio())
             if r > best[0]:
                 best = (r, i)
         if best[0] > 0.95:
@@ -245,9 +249,19 @@ def entry_text(n, ps, titles, pg):
     """The entry's own text: from its heading to the next entry's heading (falls back to whole pages)."""
     lines = [l for p in range(ps[0], ps[-1] + 2) for l in pg.get(p, [])]
     a = _find(lines, titles.get(n, ""), n=n)
+    if a is None:  # the TOC page can be one late (heading at the foot of the previous page)
+        lines = pg.get(ps[0] - 1, []) + lines
+        a = _find(lines, titles.get(n, ""), n=n)
+    if a is None and len(_norm(titles.get(n, ""))) >= 12:
+        a = _find(lines, titles.get(n, ""), floor=0.95, n=n, prefix=True)
     if a is None:
         return "\n".join(l for p in ps for l in pg.get(p, []))
     b = _find(lines, titles.get(n + 1, ""), a + 1, 0.9, n + 1) if n < N_ENTRIES else None
+    if b is None and n < N_ENTRIES and len(_norm(titles.get(n + 1, ""))) >= 12:
+        b = _find(lines, titles.get(n + 1, ""), a + 1, 0.95, n + 1, prefix=True)
+        # a heading stands after a blank line; otherwise it matched a cross-reference
+        if b is not None and lines[b - 1].strip():
+            b = None
     return "\n".join(lines[a:b])
 
 

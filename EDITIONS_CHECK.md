@@ -83,3 +83,13 @@ Zotero: the 2nd and 3rd batches are not yet added. ~/.config/zotero/config.json 
     - `static/docs/tei/Sedrach.xml` (Valid TEI P5)
 - Both documents added to `OCP_DOCUMENTS` in `static/js/reader.js` and mapped in `CAVT_GAPS.md`.
 
+
+## CAVT open issues (2026-10-17)
+- Parse fix (scripts/cavt_parse.py): headings that run on into a parenthesis ("Liber Jubilaeorum (Lepte Genesis, ...", "Assumptio Moysi (Analepsis Moysi, ...") now match on their prefix. A next-entry heading must follow a blank line. A missing heading is also searched for on the page before the TOC page. 131 now ends at "... Citharismum Dauid (cf. infra n° 152)" instead of running into 132. 66, 134, 135, 155, 183, 204, 234, 252, 273-275 and seven short Qumran/lost entries are also trimmed to their own text. 134 Assumptio Moysi is no longer flagged pro memoria (that note belongs to 136).
+- Hand tiers (HAND_TIERS in scripts/cavt_gaps.py): 6 and 69 are lost; 138 and 152 are parts of 131 (LAB); 181 is part of 180; 153 is moved to tier C. These are listed in CAVT_GAPS.md section 3.4. Tiers now: A 93, B 68, C 50.
+- 153 Dicta Gad is linked by DiTommaso to Testaments_of_the_Twelve_Patriarchs.md, which is wrong (it is not the Testament of Gad). The mapping in integrate_ditommaso_cavt.py is not yet changed.
+- 107 Oratio Joseph: Preuschen, Origenes Werke IV (GCS 10), 1903 = archive.org `origenes-werke.-bd-4-1903` (also `origeneswerke04orig_0`). PD. Fragment in Comm. Jo. II 31 (page not yet checked); the others are in Philocalia 23 and Eusebius, PE 6.11. Not downloaded yet.
+- Kisch 1949 (Notre Dame): all four archive.org copies are lending-only (`pseudophiloslibe0000*`), so they give no public-domain signal. The renewal check is still open; see below.
+- 129 Jannes et Jambres, Latin fragment (Cotton Tiberius B.v): candidate is Cockayne, *Narratiunculae*, 1861 = archive.org `narratiunculaean00cockuoft` (PD). Not yet checked that it contains the fragment; the text download timed out. Also see M.R. James, JTS 2 (1901), on archive.org as `sim_journal-of-theological-studies_1901-*_2`.
+- Kisch renewal: the Stanford renewal database query returned nothing usable. Still open.
+- Acquired: Preuschen 1903 (raw/editions/origenes-werke.-bd-4-1903.pdf; Precatio Josephi p. 88, ll. 18-19). Cockayne 1861 (raw/editions/narratiunculaean00cockuoft.pdf; Latin Jannes/Jambres fragment printed as "Mambres Magicus"). Both PD.
