@@ -61,6 +61,24 @@ matches the standard 65-chapter LAB.
 6. **Register**: update `OCP_DOCUMENTS` in `static/js/reader.js`, `EDITIONS_CHECK.md`,
    and the CAVT crosswalk row for 131.
 
+## PoC result — chapter I (2026-10-18)
+
+`scratch/lab/ch01_text_draft.txt` + `ch01_apparatus.txt` (gitignored working files),
+produced by a rule-based split of leaf 141:
+
+- Rule: apparatus = lines with biblical refs (`Gen. 5, 6-7.`), editorial Latin
+  (`om. add. corr. lac.`), or 2+ witness sigla (`Adm. M; om. A; Phil…`); everything
+  else is text. Normalization is mechanical only: hyphen-join across line breaks,
+  strip glyph noise (`® ™ ° | ¦`), unwrap, collapse whitespace. **No alphanumerics
+  are added or deleted** — OCR errors remain visible for proofreading.
+- Result: 166 words of continuous chapter I Latin (verses 1–10) + a clean apparatus
+  block; split counts on leaves 141–146 were 27 text / 30 apparatus / 18 blank lines.
+- Known leaks to proofread: manuscript superscripts survive inside the text stream
+  (`…unam 2r filiam…`), stray sigla after punctuation (`Zarama,?`), and OCR letter
+  confusions (`viwit` for `vixit`, `fiias` for `filias`, `Tune` for `Tunc`).
+- Chapter I continues past leaf 141 (verses 11+ on 142), so the per-chapter extractor
+  must run to the next detected chapter heading, not to a page break.
+
 ## Cautions
 
 - The IA text layer is OCR, not an e-text; every quotation that ships must be facsimile-verified.
