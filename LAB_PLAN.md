@@ -79,6 +79,22 @@ produced by a rule-based split of leaf 141:
 - Chapter I continues past leaf 141 (verses 11+ on 142), so the per-chapter extractor
   must run to the next detected chapter heading, not to a page break.
 
+### Whole-text chapter drafts (same day)
+
+`scratch/lab/chapters/chNN_{text,apparatus}.txt` + `chapters_summary.json`: the same
+split applied to **all 58 detected chapters**, 28,695 words total.
+
+Read them as a rough working draft, not an edition:
+- Chapter leaves come from the detected-heading map; where a heading was missed
+  (25, 33, 38, 43, 52, 53, 64 by number, plus boundary drift elsewhere) the neighbouring
+  chapter's leaf range widens, so **thin chapters (<500 words; 31 flagged in the summary)
+  mostly mean a boundary problem, not a short chapter**.
+- Apparatus detection is line-based and imperfect: some apparatus sigla still sit in the
+  text files, some text lines (short ones with a witness siglum) landed in the apparatus.
+- The verse-number column in `chapters_summary.json` is advisory only — the regex catches
+  printed page numbers and apparatus refs too (e.g. "108" for ch. 65).
+- Nothing here is quotable: every line still needs facsimile/proofread verification.
+
 ## Cautions
 
 - The IA text layer is OCR, not an e-text; every quotation that ships must be facsimile-verified.
