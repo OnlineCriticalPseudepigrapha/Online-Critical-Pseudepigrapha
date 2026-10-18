@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="CithDavid.xml" title="Citharismus regis David contra daemonium Saulis">
+  <version id="Latin" title="Citharismus regis David contra daemonium Saulis (Latin)" lang="lat">
+    <divisions>
+      <division id="1" title="Text" type="section"/>
+    </divisions>
+    <manuscripts>
+      <manuscript id="Phill" name="Codex Phillippicus 391 (saec. XI)"/>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <unit id="1.1">
+          <reading option="base" mss="Phill">Tenebrae et silentium erant antequam fieret saeculum: et locutum est silentium, et apparuerunt tenebrae.</reading>
+        </unit>
+        <unit id="1.2">
+          <reading option="base" mss="Phill">Et factum est tunc nomen tuum in compaginatione extensionis quod appellatum est superius caelum; inferius vocatum est terra.</reading>
+        </unit>
+        <unit id="1.3">
+          <reading option="base" mss="Phill">Et praeceptum est superiori ut plueret secundum tempus eius, et inferiori praeceptum est ut crearet escam omnibus quae facta sunt.</reading>
+        </unit>
+        <unit id="1.4">
+          <reading option="base" mss="Phill">Et post haec facta est tribus spirituum vestrorum. Et nunc molesta esse noli tamquam secunda creatura: si comminus memorarer artareris in quo ambulas.</reading>
+        </unit>
+        <unit id="1.5">
+          <reading option="base" mss="Phill">Aut non audire tibi sufficit, quoniam per ea quae consonant in conspectu tuo multis psallo? Aut immemor es quoniam de resultatione in chaomate nata est vestra creatura?</reading>
+        </unit>
+        <unit id="1.6">
+          <reading option="base" mss="Phill">Arguent autem tempora nova unde natus sum; de quo nascitur post tempus de lateribus meis qui vos domabit. Et cum hymnizaret David parcebat Sauli spiritus.</reading>
+        </unit>
+      </div>
+    </text>
+  </version>
+  <version id="English" title="English Translation" lang="eng">
+    <divisions>
+      <division id="1" title="Text" type="section"/>
+    </divisions>
+    <manuscripts>
+      <manuscript id="Eng" name="English Translation"/>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <unit id="1.1">
+          <reading option="base" mss="Eng">Darkness and silence were before the world was made: and the silence spoke, and darkness appeared.</reading>
+        </unit>
+        <unit id="1.2">
+          <reading option="base" mss="Eng">And then was your name made in the framework of the expanse, which above was called heaven; below it was named earth.</reading>
+        </unit>
+        <unit id="1.3">
+          <reading option="base" mss="Eng">And it was commanded to the upper that it should rain according to its season, and to the lower it was commanded that it should bring forth food for all things that were made.</reading>
+        </unit>
+        <unit id="1.4">
+          <reading option="base" mss="Eng">And after these things was made the tribe of your spirits. And now be not troublesome, as being a secondary creation: if I should name you to your face, you would be constrained in the place where you walk.</reading>
+        </unit>
+        <unit id="1.5">
+          <reading option="base" mss="Eng">Or does it not suffice you to hear, that through these strings that harmonize before your face I sing to many? Or are you unmindful that from the reverberation in chaos your creation was born?</reading>
+        </unit>
+        <unit id="1.6">
+          <reading option="base" mss="Eng">Now new seasons shall prove whence I was born; out of whom shall be born after a time from my loins one who will subdue you. And when David played the harp, the spirit spared Saul.</reading>
+        </unit>
+      </div>
+    </text>
+  </version>
+</book>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book SYSTEM "grammateus.dtd">
+<book filename="OrMois.xml" title="Oratio Moysi in die obitus sui">
+  <version id="Latin" title="Oratio Moysi in die obitus sui (Latin)" lang="lat">
+    <divisions>
+      <division id="1" title="Text" type="section"/>
+    </divisions>
+    <manuscripts>
+      <manuscript id="Phill" name="Codex Phillippicus 391 (saec. XI)"/>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <unit id="1.1">
+          <reading option="base" mss="Phill">Domine Deus, si adhuc potero petere de te iuxta multitudinem misericordiae tuae, non indigneris mihi; et ostende mihi quanta quantitas temporis transiit, et quanta remansit.</reading>
+        </unit>
+        <unit id="1.2">
+          <reading option="base" mss="Phill">Et dixit ad eum: 'Stigma et apex manus, momenti plenitudo, et cyathi gutta; et omnia complevit tempus. Quatuor enim semis transiit, et duo semis supersunt.'</reading>
+        </unit>
+        <unit id="1.3">
+          <reading option="base" mss="Phill">Et audiens Moyses repletus est sensu, et mutata est effigies eius in gloria. Et mortuus est in gloria secundum os Domini, et sepelivit eum iuxta quod promiserat ei.</reading>
+        </unit>
+        <unit id="1.4">
+          <reading option="base" mss="Phill">Et luxerunt angeli in morte eius, et praecedebant eum fulgura et lampades et sagittae omnes unanimes.</reading>
+        </unit>
+        <unit id="1.5">
+          <reading option="base" mss="Phill">Et in illa die non est dictus hymnus militum processu Moysis: nec fuit talis dies ex quo fecit Dominus hominem super terram, nec erit talis adhuc in sempiternum ut humiliet pro hominibus hymnum angelorum: quoniam valde amavit eum. Et sepelivit eum per manus suas super excelsam terram in lumine totius orbis.</reading>
+        </unit>
+      </div>
+    </text>
+  </version>
+  <version id="English" title="English Translation" lang="eng">
+    <divisions>
+      <division id="1" title="Text" type="section"/>
+    </divisions>
+    <manuscripts>
+      <manuscript id="Eng" name="English Translation"/>
+    </manuscripts>
+    <text>
+      <div number="1">
+        <unit id="1.1">
+          <reading option="base" mss="Eng">Lord God, if I may yet make request of you according to the multitude of your mercy, be not angry with me; and show me how great a quantity of time has passed, and how much remains.</reading>
+        </unit>
+        <unit id="1.2">
+          <reading option="base" mss="Eng">And he said to him: 'A mark and point of a hand, the fullness of a moment, and a drop from a cup; and time has completed all things. For four and a half has passed, and two and a half remains.'</reading>
+        </unit>
+        <unit id="1.3">
+          <reading option="base" mss="Eng">And Moses hearing was filled with understanding, and his appearance was transformed in glory. And he died in glory according to the word of the Lord, and he buried him according as he had promised him.</reading>
+        </unit>
+        <unit id="1.4">
+          <reading option="base" mss="Eng">And the angels mourned at his death, and lightnings and torches and arrows went before him, all in unison.</reading>
+        </unit>
+        <unit id="1.5">
+          <reading option="base" mss="Eng">And on that day no hymn of the heavenly hosts was chanted at the passing of Moses: nor was there ever such a day since the Lord made man upon the earth, nor shall there be such ever again, that he should suspend the hymn of the angels on account of a man: because he loved him exceedingly. And he buried him with his own hands upon the high land in the light of the whole world.</reading>
+        </unit>
+      </div>
+    </text>
+  </version>
+</book>

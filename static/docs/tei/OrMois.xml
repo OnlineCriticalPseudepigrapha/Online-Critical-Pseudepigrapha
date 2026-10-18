@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OrMois.xml">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Oratio Moysi in die obitus sui</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Critical edition based on standard textual witnesses.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Oratio_Moysi_in_die_obitus_sui__Latin_">
+        <refState unit="section"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English_Translation">
+        <refState unit="section"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Oratio Moysi in die obitus sui (Latin)" xml:lang="und" xml:id="ver_Oratio_Moysi_in_die_obitus_sui__Latin_">
+        <head>Oratio Moysi in die obitus sui (Latin)</head>
+        <ab type="section" n="1" xml:id="OrMois.xml.ver_Oratio_Moysi_in_die_obitus_sui__Latin_.1">
+          <app xml:id="u1.1_ver_Oratio_Moysi_in_die_obitus_sui__Latin_">
+            <rdg wit="#Phill" n="base">Domine Deus, si adhuc potero petere de te iuxta multitudinem misericordiae tuae, non indigneris mihi; et ostende mihi quanta quantitas temporis transiit, et quanta remansit.</rdg>
+          </app>
+          <app xml:id="u1.2_ver_Oratio_Moysi_in_die_obitus_sui__Latin_">
+            <rdg wit="#Phill" n="base">Et dixit ad eum: 'Stigma et apex manus, momenti plenitudo, et cyathi gutta; et omnia complevit tempus. Quatuor enim semis transiit, et duo semis supersunt.'</rdg>
+          </app>
+          <app xml:id="u1.3_ver_Oratio_Moysi_in_die_obitus_sui__Latin_">
+            <rdg wit="#Phill" n="base">Et audiens Moyses repletus est sensu, et mutata est effigies eius in gloria. Et mortuus est in gloria secundum os Domini, et sepelivit eum iuxta quod promiserat ei.</rdg>
+          </app>
+          <app xml:id="u1.4_ver_Oratio_Moysi_in_die_obitus_sui__Latin_">
+            <rdg wit="#Phill" n="base">Et luxerunt angeli in morte eius, et praecedebant eum fulgura et lampades et sagittae omnes unanimes.</rdg>
+          </app>
+          <app xml:id="u1.5_ver_Oratio_Moysi_in_die_obitus_sui__Latin_">
+            <rdg wit="#Phill" n="base">Et in illa die non est dictus hymnus militum processu Moysis: nec fuit talis dies ex quo fecit Dominus hominem super terram, nec erit talis adhuc in sempiternum ut humiliet pro hominibus hymnum angelorum: quoniam valde amavit eum. Et sepelivit eum per manus suas super excelsam terram in lumine totius orbis.</rdg>
+          </app>
+        </ab>
+      </div>
+      <div type="translation" n="English Translation" xml:lang="und" xml:id="ver_English_Translation">
+        <head>English Translation</head>
+        <ab type="section" n="1" xml:id="OrMois.xml.ver_English_Translation.1">
+          <app xml:id="u1.1_ver_English_Translation">
+            <rdg wit="#Eng" n="base">Lord God, if I may yet make request of you according to the multitude of your mercy, be not angry with me; and show me how great a quantity of time has passed, and how much remains.</rdg>
+          </app>
+          <app xml:id="u1.2_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And he said to him: 'A mark and point of a hand, the fullness of a moment, and a drop from a cup; and time has completed all things. For four and a half has passed, and two and a half remains.'</rdg>
+          </app>
+          <app xml:id="u1.3_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And Moses hearing was filled with understanding, and his appearance was transformed in glory. And he died in glory according to the word of the Lord, and he buried him according as he had promised him.</rdg>
+          </app>
+          <app xml:id="u1.4_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And the angels mourned at his death, and lightnings and torches and arrows went before him, all in unison.</rdg>
+          </app>
+          <app xml:id="u1.5_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And on that day no hymn of the heavenly hosts was chanted at the passing of Moses: nor was there ever such a day since the Lord made man upon the earth, nor shall there be such ever again, that he should suspend the hymn of the angels on account of a man: because he loved him exceedingly. And he buried him with his own hands upon the high land in the light of the whole world.</rdg>
+          </app>
+        </ab>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VisKenaz.xml">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Visio Kenaz (Visio Zenez patris Gothoniel)</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Critical edition based on standard textual witnesses.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+        <refState unit="section"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English_Translation">
+        <refState unit="section"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Visio Kenaz (Visio Zenez patris Gothoniel) (Latin)" xml:lang="und" xml:id="ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+        <head>Visio Kenaz (Visio Zenez patris Gothoniel) (Latin)</head>
+        <ab type="section" n="1" xml:id="VisKenaz.xml.ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_.1">
+          <app xml:id="u1.1_ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+            <rdg wit="#Phill" n="base">Cum sederent seniores insiluit spiritus sanctus habitans in Zenez et extulit sensum eius: et coepit prophetare dicens:</rdg>
+          </app>
+          <app xml:id="u1.2_ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+            <rdg wit="#Phill" n="base">'Ecce nunc video quae non sperabam, et considero quae non cognoscebam. Audite nunc qui habitatis super terram. Sicut commorantes in ea prophetaverunt ante me videntes horam hanc priusquam corrumperetur terra, ut cognoscatis praedestinatas prophetationes omnes vos qui habitatis in ea.</rdg>
+          </app>
+          <app xml:id="u1.3_ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+            <rdg wit="#Phill" n="base">Ecce nunc video flammas non ardentes et audio venas non expergefactas de somno, quibus non est fundamentum, neque fastigia montium nec suspensorium fundamenti considero; sed omnia inapparentia et invisibilia, quibus locus non est in totum: et cum oculus meus non sciat quid videat, cor meum adinveniet quae discat.</rdg>
+          </app>
+          <app xml:id="u1.4_ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+            <rdg wit="#Phill" n="base">De flamma autem quam video non ardentem, vidi, et ecce scintilla ascendit, et quasi substravit sibi subdiuum; et erat similitudo substrati eius tamquam aranea ordiens in modum scuti.</rdg>
+          </app>
+          <app xml:id="u1.5_ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+            <rdg wit="#Phill" n="base">Et dum factum esset fundamentum, vidi de vena illa excitabatur quasi spuma ebulliens, et ecce dum mutavit se tamquam in aliud fundamentum. Inter medium autem fundamentum superioris et inferioris de lumine invisibilis loci advenerunt quasi imagines hominum et perambulabant: et ecce vox dicens: Haec fundamenta erunt hominibus habitantibus in eis annis septem.</rdg>
+          </app>
+          <app xml:id="u1.6_ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+            <rdg wit="#Phill" n="base">Et fundamentum inferius substratum erat, superius autem de spuma erat; et qui processerunt de luce invisibilis loci hi erunt qui habitabunt; et nomen hominis illius [Adam]. Et erit cum peccaverit mihi et completum fuerit tempus, extinguetur scintilla et pausabit vena, et sic mutabuntur.'</rdg>
+          </app>
+          <app xml:id="u1.7_ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+            <rdg wit="#Phill" n="base">Et factum est cum locutus fuisset Zenez verba haec expergefactus est et reversus est sensus eius in eum. Ipse autem nesciebat quae locutus fuerat neque quae viderat. Hoc autem solum dixit populo: 'Si sic est requies iustorum posteaquam defuncti fuerint, oportet eos mori corruptibili saeculo, ut non videant peccata.'</rdg>
+          </app>
+          <app xml:id="u1.8_ver_Visio_Kenaz__Visio_Zenez_patris_Gothoniel___Latin_">
+            <rdg wit="#Phill" n="base">Et cum haec dixisset Zenez, defunctus est et dormivit cum patribus suis: et planxit eum populus triginta diebus.</rdg>
+          </app>
+        </ab>
+      </div>
+      <div type="translation" n="English Translation" xml:lang="und" xml:id="ver_English_Translation">
+        <head>English Translation</head>
+        <ab type="section" n="1" xml:id="VisKenaz.xml.ver_English_Translation.1">
+          <app xml:id="u1.1_ver_English_Translation">
+            <rdg wit="#Eng" n="base">While the elders were sitting, the holy spirit dwelling in Kenaz leaped upon him and lifted up his understanding: and he began to prophesy, saying:</rdg>
+          </app>
+          <app xml:id="u1.2_ver_English_Translation">
+            <rdg wit="#Eng" n="base">'Behold now I see what I was not hoping for, and contemplate what I did not know. Hear now, you who dwell upon the earth. Just as those who abide in it prophesied before me, seeing this hour before the earth was corrupted, that all you who dwell in it may know the predestined prophecies.</rdg>
+          </app>
+          <app xml:id="u1.3_ver_English_Translation">
+            <rdg wit="#Eng" n="base">Behold now I see flames that do not burn and I hear springs not yet awakened from sleep, for which there is no foundation, neither do I contemplate mountain peaks nor the arch of a firmament; but all things are invisible and without form, having no place at all: and though my eye knows not what it sees, my heart will discover what it may learn.</rdg>
+          </app>
+          <app xml:id="u1.4_ver_English_Translation">
+            <rdg wit="#Eng" n="base">From the flame which I see not burning, I looked, and behold, a spark ascended, and spread beneath itself an expanse; and the likeness of its expanse was like a spider weaving in the shape of a shield.</rdg>
+          </app>
+          <app xml:id="u1.5_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And when the foundation was made, I saw that from that spring there was aroused as it were a boiling foam, and behold it transformed itself into another foundation. And between the upper and the lower foundation there arrived from the light of the invisible place likenesses as of men and walked about; and behold a voice saying: These foundations shall be for men dwelling in them for seven thousand years.</rdg>
+          </app>
+          <app xml:id="u1.6_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And the lower foundation was laid beneath, while the upper was of foam; and those who proceeded from the light of the invisible place, these are they who shall inhabit it; and the name of that man is Adam. And it shall be, when he has sinned against me and the time is fulfilled, the spark will be extinguished and the spring will cease, and thus they will be changed.'</rdg>
+          </app>
+          <app xml:id="u1.7_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And it came to pass when Kenaz had spoken these words, he awoke and his senses returned to him. But he himself did not know what he had spoken nor what he had seen. Only this he said to the people: 'If such is the rest of the righteous after they have departed, it is fitting for them to die to the corruptible age, that they may not see sins.'</rdg>
+          </app>
+          <app xml:id="u1.8_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And when Kenaz had said these things, he died and slept with his fathers: and the people mourned him thirty days.</rdg>
+          </app>
+        </ab>
+      </div>
+    </body>
+  </text>
+</TEI>

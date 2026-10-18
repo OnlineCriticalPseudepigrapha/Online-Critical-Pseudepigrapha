@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CithDavid.xml">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Citharismus regis David contra daemonium Saulis</title>
+        <editor role="editor">Ken M. Penner</editor>
+        <editor role="editor">Ian W. Scott</editor>
+        <editor role="editor">David M. Miller</editor>
+        <respStmt>
+          <resp>TEI P5 conversion from OCP Grammateus XML</resp>
+          <name>Online Critical Pseudepigrapha</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Online Critical Pseudepigrapha</authority>
+        <pubPlace>Antigonish, NS</pubPlace>
+        <date>2026</date>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Critical edition based on standard textual witnesses.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The Online Critical Pseudepigrapha (OCP) provides digital critical editions of Jewish and Christian pseudepigrapha with a dynamic, base-text invariant multi-witness apparatus.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>Encoded using the TEI P5 textcrit module (Parallel Segmentation method). Variants and witness transcriptions are recorded using &lt;app&gt;, &lt;lem&gt;, and &lt;rdg&gt; elements.</p>
+      </editorialDecl>
+      <refsDecl corresp="#ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_">
+        <refState unit="section"/>
+      </refsDecl>
+      <refsDecl corresp="#ver_English_Translation">
+        <refState unit="section"/>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="grc">grc</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang="grc">
+    <body>
+      <div type="edition" n="Citharismus regis David contra daemonium Saulis (Latin)" xml:lang="und" xml:id="ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_">
+        <head>Citharismus regis David contra daemonium Saulis (Latin)</head>
+        <ab type="section" n="1" xml:id="CithDavid.xml.ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_.1">
+          <app xml:id="u1.1_ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_">
+            <rdg wit="#Phill" n="base">Tenebrae et silentium erant antequam fieret saeculum: et locutum est silentium, et apparuerunt tenebrae.</rdg>
+          </app>
+          <app xml:id="u1.2_ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_">
+            <rdg wit="#Phill" n="base">Et factum est tunc nomen tuum in compaginatione extensionis quod appellatum est superius caelum; inferius vocatum est terra.</rdg>
+          </app>
+          <app xml:id="u1.3_ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_">
+            <rdg wit="#Phill" n="base">Et praeceptum est superiori ut plueret secundum tempus eius, et inferiori praeceptum est ut crearet escam omnibus quae facta sunt.</rdg>
+          </app>
+          <app xml:id="u1.4_ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_">
+            <rdg wit="#Phill" n="base">Et post haec facta est tribus spirituum vestrorum. Et nunc molesta esse noli tamquam secunda creatura: si comminus memorarer artareris in quo ambulas.</rdg>
+          </app>
+          <app xml:id="u1.5_ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_">
+            <rdg wit="#Phill" n="base">Aut non audire tibi sufficit, quoniam per ea quae consonant in conspectu tuo multis psallo? Aut immemor es quoniam de resultatione in chaomate nata est vestra creatura?</rdg>
+          </app>
+          <app xml:id="u1.6_ver_Citharismus_regis_David_contra_daemonium_Saulis__Latin_">
+            <rdg wit="#Phill" n="base">Arguent autem tempora nova unde natus sum; de quo nascitur post tempus de lateribus meis qui vos domabit. Et cum hymnizaret David parcebat Sauli spiritus.</rdg>
+          </app>
+        </ab>
+      </div>
+      <div type="translation" n="English Translation" xml:lang="und" xml:id="ver_English_Translation">
+        <head>English Translation</head>
+        <ab type="section" n="1" xml:id="CithDavid.xml.ver_English_Translation.1">
+          <app xml:id="u1.1_ver_English_Translation">
+            <rdg wit="#Eng" n="base">Darkness and silence were before the world was made: and the silence spoke, and darkness appeared.</rdg>
+          </app>
+          <app xml:id="u1.2_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And then was your name made in the framework of the expanse, which above was called heaven; below it was named earth.</rdg>
+          </app>
+          <app xml:id="u1.3_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And it was commanded to the upper that it should rain according to its season, and to the lower it was commanded that it should bring forth food for all things that were made.</rdg>
+          </app>
+          <app xml:id="u1.4_ver_English_Translation">
+            <rdg wit="#Eng" n="base">And after these things was made the tribe of your spirits. And now be not troublesome, as being a secondary creation: if I should name you to your face, you would be constrained in the place where you walk.</rdg>
+          </app>
+          <app xml:id="u1.5_ver_English_Translation">
+            <rdg wit="#Eng" n="base">Or does it not suffice you to hear, that through these strings that harmonize before your face I sing to many? Or are you unmindful that from the reverberation in chaos your creation was born?</rdg>
+          </app>
+          <app xml:id="u1.6_ver_English_Translation">
+            <rdg wit="#Eng" n="base">Now new seasons shall prove whence I was born; out of whom shall be born after a time from my loins one who will subdue you. And when David played the harp, the spirit spared Saul.</rdg>
+          </app>
+        </ab>
+      </div>
+    </body>
+  </text>
+</TEI>
