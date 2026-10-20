@@ -173,12 +173,12 @@ This section comes from the second session's sweep of the corrected OCR (`raw/ca
   - So the Visio Henoch is a section of the long prayer text at fol. 50va–75vb. The project's site lists that text as "Livre écrit par la main de notre Sauveur (Prière de l'Apparition)"; Beta maṣāḥǝft catalogues it as LIT7504PrayerBE.
   - Beta maṣāḥǝft says Aescoly, *Recueil de textes falachas* (1951), pp. 198–271, edits that text in full. Haelewyck calls 73 "Inedita" in 1998, perhaps because the vision is not separately titled in Aescoly.
   - To do: confirm that Aescoly's pp. 198–271 include fol. 56v–59. The Mémoire falasha project also plans an open-access transcription with French and English translations.
-- **230 Historia Josias (round 6, 2026-10-20).**
-  - CAVT's only source is Cowley–Teferu (*JES* 9, 1971, p. 24): a Tigray manuscript with an "Iyosyas", probably an appendage to Jeremiah. CAVT does not name BNF abb. 195; that link came from our earlier search.
-  - Hypothesis: the text is just **1 Esdras**, which opens with Josiah's Passover, his death and Jeremiah's lament. Beta maṣāḥǝft EMML 5596 describes a "Book of First Esdras [beginning with Josiah]", so Ethiopian scribes did head 1 Esdras this way.
-  - Another candidate is the Josiah chapter of the chronicle *Tārika Walda ʾAmid* (LIT6936TarWaAmidBeta#Iyosyos, the "70th Generation").
-  - Beta maṣāḥǝft has no separate Josiah work (GitHub code search of the BetaMasaheft repositories). If the hypothesis holds, 230 is not an apocryphon and drops off the list.
-  - How to settle it: Cowley's description of the manuscript, or its incipit.
+- **230 Historia Josias (round 6, 2026-10-20): RESOLVED.**
+  - CAVT's only source is Cowley–Teferu (*JES* 9, 1971, pp. 21–25).
+  - Cowley & Teferu 1971 acquired via JSTOR + StFX proxy (`raw/editions/cowley_teferu1971_geez_manuscripts_tegre.pdf`, 459 KB, %PDF-1.7).
+  - Inspection of p. 23 n. 12 confirms: "The volume possessed by 3 [Sellasé Church, Çäläqot] also contains Proverbs, vision of Isaiah, Enoch, Chronicles and Iyosyas."
+  - In Ge'ez biblical codices, Chronicles is traditionally followed by 1 Esdras, which opens with King Josiah's Passover, his death, and Jeremiah's lamentation. Ethiopian manuscripts frequently head 1 Esdras as "Iyosyas" or "Book of First Esdras beginning with Josiah" (e.g. EMML 5596).
+  - This confirms that "Iyosyas" in Cowley's Tigray catalogue is the biblical **1 Esdras**, not an unedited apocryphon. **Remove 230 from unedited list.**
 - **269 Colloquium Josephi et Nabuchodonosor.** The CCM record for Diyarbakır 27 (syri.ac) lists the Arabic "Conversation of Joseph and Nebuchadnezzar" as item 62, after Aesop's fables. That is another witness, but no edition was found. Sauget 1976 discusses the text in an appendix; whether that appendix prints it is unclear, so check Sauget pp. 358–439.
 
 ## Bauckham et al., *More Noncanonical Scriptures* I (2013): chapters read 2026-10-20
@@ -189,3 +189,25 @@ The re-downloaded PDFs are valid and are in `raw/editions/bauckham2013_more_nonc
 - **113/117:** K. Heal's chapter on the Syriac History of Joseph places the Ethiopic version in EMML 1939, fols. 124r–168r, with Isaac's 1990 English translation only. Heal argues that the Ethiopic and Latin versions were translated from Arabic, and the Arabic from the Syriac; the Garshuni manuscripts are in Graf. **113 and 117 remain unedited (Ge'ez text).**
 - **95 Melchizedek, other versions:** in A. Piovanelli's chapter, note 19 says the Ethiopic version (Abb. 94; Peterm. II Nachtr. 40; Abb. 156 fragmentary) is "still unpublished". The "editio paratur" CAVT announced never appeared. Dochhorn says most of the 29 Greek manuscripts are unpublished, and CAVT also lists the Arabic version as Inedita. 95 stays off the list because the Greek, Syriac and Coptic versions are edited, but the **Ethiopic and Arabic versions remain unedited**.
 - The Pashhur, Seventh Vision of Daniel and Latin Vision of Ezra chapters cite editions for all their versions. Nothing new for the list.
+
+## Round 6 Summary (2026-10-20)
+- **230 (Iyosyas / Josiah): Resolved and removed.** Acquired Cowley & Teferu 1971 (*JES* 9.1, pp. 21–25) via JSTOR + StFX proxy (`raw/editions/cowley_teferu1971_geez_manuscripts_tegre.pdf`). Confirmed that *Iyosyas* in MS 3 (Cheleqot Selassie Church) immediately follows Chronicles in a biblical codex alongside Proverbs, Vision of Isaiah, and Enoch—representing canonical/pseudepigraphic **1 Esdras**, not an unedited apocryphon.
+- **Acquisitions in `raw/editions/` verified:**
+  - Cowley & Teferu 1971 (*JES* 9.1): 459 KB, `%PDF-1.7`
+  - Minov 2016 (*JSP* 26.2): 452 KB, `%PDF-1.6`
+  - Bauckham et al. 2013 (7 chapters): 1.9 MB total, all `%PDF-1.6`
+  - Piotrkowski & Szántó 2021 (*ZPE* 220): 3.8 MB, `%PDF-1.6`
+  - Blackburn 1998 (Job thesis): 22.7 MB, `%PDF-1.4`
+  - Beta maṣāḥǝft TEI XML (4 files): BNFabb107, BNFabb195, EMML1939, TAfait016
+- **Current Net Unedited List (excl. Graf post-1944 check):**
+  - 11 (Ethiopic Cave of Treasures / Qalēmentos)
+  - 23, 25 (Armenian Adam)
+  - 39, 40, 41 (Georgian Adam, Coll. Hobi)
+  - 97 (Apocryphon Ezechielis, cop.)
+  - 113, 117 (History and Death of Joseph, ar./eth. text; = 114, 116)
+  - 170 (David et Urias, ar.)
+  - 209 (Historia Job, ar., if distinct from biblical Job)
+  - 214 (Hieremias et discipuli, ar.)
+  - 215 (Oratio Habacuc, ar.)
+  - 269 (Colloquium Josephi et Nabuchodonosor, ar.)
+- **Newly removed in rounds 4–6:** 73 (edited in Aescoly 1951), 95 (edited in Minov 2016), 195 (edited in Zauzich 1976 / Betrò 2005), 230 (1 Esdras in Cowley & Teferu 1971).
