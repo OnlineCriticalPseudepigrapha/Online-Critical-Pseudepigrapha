@@ -24,6 +24,7 @@ const OCP_DOCUMENTS = [
   { filename: 'ArisEx.xml', title: 'Aristeas the Exegete', lang: 'Greek' },
   { filename: 'Aristob.xml', title: 'Aristobulus', lang: 'Greek' },
   { filename: 'Artap.xml', title: 'Artapanus', lang: 'Greek' },
+  { filename: 'CithDavid.xml', title: 'Citharismus regis David contra daemonium Saulis', lang: 'Latin' },
   { filename: 'ClMal.xml', title: 'Cleodemus Malchus', lang: 'Greek' },
   { filename: 'ConfEsdr.xml', title: 'Confessio Esdrae (Oratio Esdrae)', lang: 'Latin' },
   { filename: 'DeAdam.xml', title: 'De Adami compositione et nomine', lang: 'Latin' },
@@ -44,6 +45,7 @@ const OCP_DOCUMENTS = [
   { filename: 'NarrMois.xml', title: 'Narratio de Moyse et Josue', lang: 'Greek' },
   { filename: 'OrJos.xml', title: 'Prayer of Joseph', lang: 'Greek' },
   { filename: 'OrMan.xml', title: 'Prayer of Manasseh', lang: 'Greek' },
+  { filename: 'OrMois.xml', title: 'Oratio Moysi in die obitus sui', lang: 'Latin' },
   { filename: 'PhEPoet.xml', title: 'Philo the Epic Poet', lang: 'Greek' },
   { filename: 'Ps-Eup.xml', title: 'Pseudo-Eupolemus', lang: 'Greek' },
   { filename: 'Ps151.xml', title: 'Psalm 151', lang: 'Hebrew' },
@@ -62,10 +64,12 @@ const OCP_DOCUMENTS = [
   { filename: 'Thallus.xml', title: 'Thallus the Chronographer', lang: 'Greek' },
   { filename: 'Theod.xml', title: 'Theodotus', lang: 'Greek' },
   { filename: 'Theoph.xml', title: 'Theophilus', lang: 'Greek' },
+  { filename: 'ThrenSeila.xml', title: 'Threnus Seilae filiae Iephte', lang: 'Latin' },
   { filename: 'TJob.xml', title: 'Testament of Job', lang: 'Greek' },
   { filename: 'TSol.xml', title: 'Testament of Solomon', lang: 'Greek' },
   { filename: 'TracSem.xml', title: 'Treatise of Shem', lang: 'Syriac' },
-  { filename: 'VisEl.xml', title: 'Vision of Elijah (Latin)', lang: 'Latin' }
+  { filename: 'VisEl.xml', title: 'Vision of Elijah (Latin)', lang: 'Latin' },
+  { filename: 'VisKenaz.xml', title: 'Visio Kenaz (Visio Zenez)', lang: 'Latin' }
 ];
 
 // Display labels for the database body fields exported to
