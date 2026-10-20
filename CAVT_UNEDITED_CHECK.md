@@ -91,3 +91,101 @@ Some entries the parser counted as *edited* are in fact Inedita with shelfmarks,
 | 254 | Apocalypsis Ps.-Methodii | Aerts–Kortekaas | **Published**: W.J. Aerts and G.A.A. Kortekaas, *Die Apokalypse des Pseudo-Methodius*, CSCO 569–570, Subsidia 97–98 (Leuven 1998). Confirmed by web search; some bibliographies give 1997. |
 
 **New source for 114/116:** A. M. Butts, K. S. Heal, S. Moseley and J. Witztum, "Notes on the History of Joseph (CAVT 113, 114) and the Death of Joseph (CAVT 116, 117)", *Apocrypha* 28 (2017) 233–237. The article revises CAVT's entries for these four works, so it may resolve the Kasriat Errihan 115 question. Brepols DOI 10.1484/J.APOCRA.5.115432 (paywalled; the BYU record has no PDF). The abstract does not say what the revisions are, so the article itself is needed.
+
+## Merged from CAVT_UNEDITED.md (2026-10-20)
+This section comes from the second session's sweep of the corrected OCR (`raw/cavt/cavt.md`). It adds only what the sections above lack. Item 208 is dropped (Dochhorn 2006, as above). 114 and 116 are kept as listed above.
+
+### Additional Inedita with shelfmarks (not in the confirmed list above)
+| CAVT | Title | Unedited version | Manuscript(s) |
+|---|---|---|---|
+| 11 | Cauerna Thesaurorum | Ethiopic | Tübingen UB M. a. IX. 1, fol. 1–44v, saec. xix (only Dillmann's German translation is published) |
+| 40 | Creatio caeli et terrae | Georgian | Coll. Hobi 6 (an. 1813) |
+| 73 | Visio Henoch | Ethiopic | Paris, BnF Abbadie 107, fol. 56v–59 |
+| 95 | Historia de Melchisedech | Syriac | Vat. syr. 159, fol. 241v–242v |
+| 97 | Liber Melchisedech | Georgian | Mart'vili 64; Tbilisi, fonds ecclés. H 1375 |
+| 113 | Historia Joseph filii Jacob | Arabic; Ethiopic | Saint-Macaire 382, 394, 400; EMML 1939, fol. 124r–168r |
+| 195 | Historia et Sapientia Ahiqar | Demotic fragment | Pap. Berlin P. 15658 |
+
+### Catalogue-only Inedita not covered above
+16, 17, 48, 58 (Georgian Adam books; Chachanov / Lüdtke); 68 (Latin Historia Henoch et Eliae, in Godfrey of Viterbo's *Pantheon*, no critical edition); 130, 154, 163, 219 (Arabic; Graf GCAL); 143 (Mors Aaron) and 186 (Ethiopic Apocalypsis Esdrae de regno Araborum), both via Piovanelli 1993; 230 (Historia Josias; Cowley–Teferu 1971); 242, 270 (Qumran: 4Q232; 4Q229, 6Q10, 6Q11, 6Q13).
+
+### Post-1998 findings not recorded above
+- **104 and 108 are edited.** CAVT's "E. 77382" at 108 is an OCR error for E 7738a, so both entries refer to the same papyrus. It is published by M.M. Piotrkowski and Zs. Szanto, "'Fragment F' of the 'History of Joseph': Paris, Louvre E 7738 A", ZPE 220 (2021) 74–83 (TM 65241 / LDAB 6483).
+- **129 is edited.** The papyrus is P. Mich. inv. 4925v, published by G. Schmelz in *Proc. XXII Int. Congr. Papyrology* (2001) 1199–1212. An Ethiopic witness has also been published: T. Erho and W.B. Henry, *APF* (2019).
+- 113 and 117: E. Isaac's English translation of the Ethiopic History of Joseph appeared in JSP 6 (1990). On the Syriac Vorlage, see Heal 2008.
+- 143: one more manuscript, Tel Aviv, Faitlovich 16 ("Mota Aron").
+- 214 and 269: the manuscript is Garshuni (NASSCAL).
+- 195: unresolved. Zauzich (1976) and Betrò (2005) edited Demotic Ahiqar fragments cited as P. Berlin 23729, and nothing found links them to P. 15658.
+- 23 and 25: also not found in the visible contents of Stone, *Armenian Apocrypha Relating to Biblical Heroes* (2019).
+- Beta maṣāḥǝft (needed for Abbadie 107 and EMML) returns 403 to automated access.
+
+## Read from acquired items 11 and 15 (2026-10-20)
+**Butts, Heal, Moseley and Witztum, *Apocrypha* 28 (2017) 233–237** (`raw/editions/butts2017_notes_history_joseph.pdf`):
+- **114 is the same work as 113.** The 114 manuscript, Cairo, Qaṣrīyat al-Rīḥān (Kasriat Errihan) 115, Hagr. 12, "seems to have been destroyed in a fire" (personal communication from H. Takla). F. Manns had seen it and identified its text as Graf's History of Joseph (Henoch 4, 1982, 37). **114 should come off the unedited list as a separate item.**
+- **116 is the same work as 117.** This rests on Manns's French summary. 116 is in the same burned manuscript. An *Arabic* version of 117 survives in Cairo, Coptic Patriarchate 272 (Graf I 205). Butts is preparing an edition and translation of the Arabic and Ethiopic.
+- 113 is a 5th-c. Syriac original (edited by Weinberg 1893 and Link 1895; English translation by Heal in *MOTP* 1, 2013). The Arabic is translated from the Syriac, and the Ethiopic from the Arabic. A Latin version was made from Arabic by Alphonsus Bonihominis in 1336 and survives in 14 manuscripts that CAVT does not list (Cologne, Trier, Vienna 4739, Prague ×4, Vyšší Brod 121, Liège, BL Add. 32321, Brussels ×2, Cividale, Beinecke 904). An edition of all versions is in progress for CCSA. The Arabic recensions are more complicated than CAVT's "two". The attribution to Ephrem or Jacob of Serugh is unsupported, apart from Sharfeh 11/22.
+- **Net:** the remaining unedited items in this group are the Arabic and Ethiopic texts of 113 (+114) and of 117 (+116), plus the Latin version of 113. All of them are announced for future publication, and none has appeared yet.
+
+**Erho and Henry, *APF* 65 (2019) 176–223** (`raw/editions/erho_henry2019_ethiopic_jannes_jambres.pdf`):
+- This is the editio princeps of the Ethiopic fragment, Schneider ms. frag. 19 (Addis Ababa, IES, Walda Masqal Centre). It also gives revised editions of the Greek papyri, including P.Oxy. LXXXII 5290 and P.Heid. G 1016 (Schmelz 1207–12).
+- It confirms that P.Mich. inv. 4925v is edited (Schmelz 1202–7). Henry doubts that it belongs to Jannes and Jambres, because B has no room for its text.
+- **129 is fully edited.** The authors announce a complete integrated edition with English translation.
+
+## Web research round 3 (2026-10-20)
+- **95 (Syriac Historia de Melchisedech, Vat. syr. 159) is edited.** S. Minov, "Reception of the Greek Story of Melchizedek in Syriac Christian Tradition", JSP 26.2 (2016) 108–143 (DOI 10.1177/0951820716687509), gives the first edition and English translation of the Pseudo-Athanasian excerpt in Vat. syr. 159. It also covers the Catena Severi abridgement and *Melchizedek the Priest*. **Remove 95.**
+- **Latin version of 113 (not in CAVT) is edited.** A. Biosca Bas (ed.), *Alfonsi Bonihominis Opera omnia* (CCCM 295; Turnhout 2020) includes the *Historia Ioseph*, edited from 12 manuscripts in three branches.
+- 113 and 117 (Arabic and Ethiopic): no CCSA volume, and no Butts edition of the Death of Joseph, has been traced. Both are still forthcoming.
+- **23 and 25:** I searched the full text of Stone, *Armenian Apocrypha from Adam to Daniel* (EJL 55, 2021; SBL open-access PDF). Neither Matenadaran 3358 nor 2111 appears, and there is no Letter/Epistle of Adam. Its only Adam text is "Creation of Eve and Disobedience", from M1386. **Not edited there.** Still to check: Stone, *Armenian Apocrypha Relating to Adam and Eve* (1996), which "presents 29 new texts". If 23 or 25 were in it, CAVT (1998) should already cite it, so they are probably not.
+- **97 (Georgian Liber Melchisedech):** the Orion bibliography's Georgian survey describes the Georgian *Historia de Melchisedech* as a late translation from Russian (18th–19th c.). No edition found. Low priority as an independent witness.
+- **195:** the SMB Elephantine database lists the Demotic Ahiqar fragments as P. Berlin 23729 (plus a Cairo fragment), edited by Zauzich 1976 and discussed by Betrò 2005. No record anywhere for P. 15658, so CAVT's number may be an error for 23729. If so, 195 is edited. **Verify against Zauzich 1976.**
+- 39–41 (Georgian, Coll. Hobi), 73 (Abbadie 107), 215 (Arabic Habakkuk), 230 (Ethiopic Josiah): no edition and no mention found online. They remain unedited as far as the open web shows.
+
+**Updated net unedited list (with shelfmarks):** 11, 23, 25, 39, 40, 41, 73, 97, 113 (Arabic/Ethiopic; = 114), 117 (Arabic/Ethiopic; = 116), 170, 209, 214, 215, 269, 230. **195 is doubtful**, and the Graf-catalogue items (139, 156, 164, 171, 172, 175, 176, 201, 268) need a post-1944 check.
+**Removed:** 95, 104, 108, 129, 208; 114 and 116 are merged into 113 and 117.
+
+## Web research round 4 (2026-10-20)
+- **268 (De Daniel et puero Caleb, ar.): partly edited.** Y.N. Youssef and J.P. Monferrer-Sala, *Daniel and the Boy Caleb: Fragment of an Arabic Pseudepigraph* (Arameo-Arabica et Graeca 8; Madrid: Sindéresis, Dec. 2023), 72 pp., ISBN 978-84-10120-06-8. Per the publisher, it edits a *fragment* from a Coptic-community manuscript. It is not yet clear whether any of Graf's 13+ manuscripts (Cairo 457 etc.) are used. **Get the book**, since it may resolve 268 and should list the witnesses. Its full text from the Graf manuscripts is probably still unedited.
+- **11 (Ethiopic Cave of Treasures) is confirmed unedited.** I checked CAVT's own text: the "versio aethiopica" is the Cave of Treasures material embedded in the *Qalēmentos* (Book of Clement), Tübingen M. a. IX. 1 (Dillmann 1858 description; Grébaut's French translation, ROC 1911–12, from Abbadie 78). Bausi (2006) states there is "no edition at all, critical or otherwise" of the Qalēmentos. Bausi has since written on its manuscript tradition (2016 "towards a re-edition"; a 2024 chapter on an Eritrean manuscript), but no edition has appeared. (This replaces a Gadla Adam hypothesis I had considered; that hypothesis was wrong.)
+- 195: Quack (2022) also discusses the Demotic Ahiqar fragments. The Berlin number question still needs Zauzich 1976, Betrò 2005 or Quack 2022 in hand.
+- Gorgias BACA series (single-manuscript Christian Arabic editions): its announced volumes are Hexateuch, Book of the Rolls, Ezekiel, Hexaemeron, Isaiah, History of Adam and Eve, Pentateuch, and History of Joseph (Bischofberger). None is on Solomon, Elijah, Elisha, Moses, Job, Daniel, Jonah or Shmuni.
+- No post-1944 edition found online for 139, 156, 164, 171, 172, 175, 176, 201 (Shmuni; Witakowski 1994, OCA 247, covers the Syriac tradition only), 209, 214 or 269. A VHMML record shows an extra Garshuni manuscript of 156: Jerusalem, St Mark's 133 (17th c.), "Solomon in the palace of king ʿĀd ibn Shaddād".
+- **195 update:** CAVT_ACQUISITIONS.md item 16 (written by another session) now records Zauzich 1976 (*Folia rara*, 180–185) as the editio princeps of P. Berlin 15658. If that is right, **195 is edited** and 15658 and 23729 may be two inventory numbers for the same fragments. I have not checked this independently.
+- **195 confirmed edited** (2026-10-20). DCLP/Trismegistos 55908 lists the Demotic Story of Ahikar at Berlin, Ägyptisches Museum P. 15658 (1st c. CE). It was edited by Zauzich 1976 and re-edited by Betrò 2005. CAVT's "Inedita" is wrong, or out of date. **Remove 195.**
+- **209: what Leiden Or. 14238 contains.** Witkam, *Inventory of the Oriental Manuscripts of Leiden* 15 (2007), p. 95 (`raw/editions/witkam_inventory_15.pdf`): Arabic, parchment, 120 ff., "possibly 10th c.", ex Hiersemann Kat. 500 no. 16 (Sinai codex). Full description in Witkam, *Catalogue of Arabic Manuscripts* pp. 329–336. Item (7), ff. 66a–98b, is described there as "The Book of Job, from the Old Testament". CAVT cites fol. 66r as the *Historia Job*. Blackburn's 1998 thesis, *The Early Arabic Versions of Job* (402 pp., downloaded to `raw/editions/blackburn1998_early_arabic_versions_of_job.pdf`), does not cite Or. 14238.
+- **73 (Visio Henoch, Abbadie 107) is edited.** The TEI XML from Beta maṣāḥǝft (`raw/editions/betamasaheft/BNFabb107.xml`) documents that ff. 50va–75vb (which includes fol. 56v–59) was published in A.Z. Aescoly, *Recueil de textes falachas* (Paris 1951), pp. 198–271. Fol. 75vb–119va (*Te'ezaza Sanbat*) was edited in Halévy 1902 and translated in Leslau 1951. **Remove 73.**
+- **230 (Abbadie 195):** The TEI XML from Beta maṣāḥǝft (`raw/editions/betamasaheft/BNFabb195.xml`) shows that ff. 234vb–243va is the *Paralipomena Jeremiae* (4 Baruch), which is an already-edited canonical/pseudepigraphic text in Ethiopic (Dillmann 1866).
+- **95 is acquired:** Full PDF of S. Minov, *JSP* 26.2 (2016) 108–143 downloaded via StFX institutional SAGE access to `raw/editions/minov2016_melchizedek_syriac.pdf` (edits and translates Vat. syr. 159).
+
+
+## New resources (2026-10-20, round 5)
+
+- **95 Historia de Melchisedech (Syriac): now edited.** Minov, *JSP* 26.2 (2016), publishes the Syriac text with an English translation. The text is the Pseudo-Athanasian excerpt in Vat. syr. 15, ff. 241r–241v (old foliation 108r–v). CAVT gives "Vat. syr. 159, fol. 241v–242v"; the folios match, so 159 is very likely a misprint for 15. Minov says the excerpt had never been published before; Schorch's German translation appeared in Böttrich's anthology. Minov also edits two further Syriac witnesses, *Maʿarath gazzē* and *Melchizedek the Priest*. **Remove 95.**
+- **73 Visio Henoch (BNF abb. 107, fol. 56v–59).** Beta maṣāḥǝft does not list a separate Enoch item. Fol. 50va–75vb is a single item, LIT7504PrayerBE, which Aescoly 1951, *Recueil*, pp. 198–271, edits as a whole. The vision is therefore probably printed inside Aescoly's edition. **Check Aescoly pp. 198–271 before treating 73 as unedited.**
+- **230 (BNF abb. 195).** Beta maṣāḥǝft lists no Josiah item. The text is probably part of the Jeremiah dossier (141ra–243va) or the Lives of the Prophets; the record cites Piovanelli 1990. Still unedited as far as I can tell.
+- **113/117 (EMML 1939).** Beta maṣāḥǝft gives the History of Joseph at 124r–162r and the Death of Joseph at 162r–168r. Its bibliography is only the EMML catalogue, vol. 5, pp. 429–433. Still unedited.
+  - The same manuscript has James of Sarug's homily on the death of Aaron at 114r–123v (LIT6186JamSarAaron). That homily may be the source of, or a parallel to, 143.
+- **143 Mors Aaron (Tel Aviv, Faitlovitch 16).** The only item is "Mota Aron" from fol. 1r; the bibliography is Wurmbrand 1960 alone. No edition was found.
+- **History of Joseph papyri (Piotrkowski–Szántó, *ZPE* 220, 2021).** This edits a new fragment, F (P. Louvre E 7738a), of the Greek papyrus "History of Joseph". It does not touch the Ethiopic texts 113/117.
+- **Blackburn 1998 (Arabic Job).** Blackburn does not use Or. 14238, so 209 stays as it was.
+- **73 Visio Henoch: probably edited (round 6, 2026-10-20).**
+  - Source: the Mémoire falasha facsimile of the manuscript (memoirefalasha.com, "Texte original" PDF; the file is named "ETHIOPIEN 134", but its foliation matches Abbadie 107). Page 63 of the PDF shows fol. 56v–57r.
+  - What the folios contain: a litany built on ብርሃን ("light"). On fol. 57r col. 1 a rubric reads ይቤ፡ እግዚአብሔር፡ ለሄኖክ… ("God said to Enoch…").
+  - So the Visio Henoch is a section of the long prayer text at fol. 50va–75vb. The project's site lists that text as "Livre écrit par la main de notre Sauveur (Prière de l'Apparition)"; Beta maṣāḥǝft catalogues it as LIT7504PrayerBE.
+  - Beta maṣāḥǝft says Aescoly, *Recueil de textes falachas* (1951), pp. 198–271, edits that text in full. Haelewyck calls 73 "Inedita" in 1998, perhaps because the vision is not separately titled in Aescoly.
+  - To do: confirm that Aescoly's pp. 198–271 include fol. 56v–59. The Mémoire falasha project also plans an open-access transcription with French and English translations.
+- **230 Historia Josias (round 6, 2026-10-20).**
+  - CAVT's only source is Cowley–Teferu (*JES* 9, 1971, p. 24): a Tigray manuscript with an "Iyosyas", probably an appendage to Jeremiah. CAVT does not name BNF abb. 195; that link came from our earlier search.
+  - Hypothesis: the text is just **1 Esdras**, which opens with Josiah's Passover, his death and Jeremiah's lament. Beta maṣāḥǝft EMML 5596 describes a "Book of First Esdras [beginning with Josiah]", so Ethiopian scribes did head 1 Esdras this way.
+  - Another candidate is the Josiah chapter of the chronicle *Tārika Walda ʾAmid* (LIT6936TarWaAmidBeta#Iyosyos, the "70th Generation").
+  - Beta maṣāḥǝft has no separate Josiah work (GitHub code search of the BetaMasaheft repositories). If the hypothesis holds, 230 is not an apocryphon and drops off the list.
+  - How to settle it: Cowley's description of the manuscript, or its incipit.
+- **269 Colloquium Josephi et Nabuchodonosor.** The CCM record for Diyarbakır 27 (syri.ac) lists the Arabic "Conversation of Joseph and Nebuchadnezzar" as item 62, after Aesop's fables. That is another witness, but no edition was found. Sauget 1976 discusses the text in an appendix; whether that appendix prints it is unclear, so check Sauget pp. 358–439.
+
+## Bauckham et al., *More Noncanonical Scriptures* I (2013): chapters read 2026-10-20
+
+The re-downloaded PDFs are valid and are in `raw/editions/bauckham2013_more_noncanonical_scriptures/`.
+
+- **11 (Cave of Treasures / Qalēmentos):** the chapter by A. Toepel, p. ~533, says the Ethiopic Cave of Treasures "has been neither translated nor edited". The older Arabic version, inside the pseudo-Clementine work (46 manuscripts), is also neither edited nor translated. The Georgian version is edited (Kourcikidzé). **11 confirmed unedited.**
+- **113/117:** K. Heal's chapter on the Syriac History of Joseph places the Ethiopic version in EMML 1939, fols. 124r–168r, with Isaac's 1990 English translation only. Heal argues that the Ethiopic and Latin versions were translated from Arabic, and the Arabic from the Syriac; the Garshuni manuscripts are in Graf. **113 and 117 remain unedited (Ge'ez text).**
+- **95 Melchizedek, other versions:** in A. Piovanelli's chapter, note 19 says the Ethiopic version (Abb. 94; Peterm. II Nachtr. 40; Abb. 156 fragmentary) is "still unpublished". The "editio paratur" CAVT announced never appeared. Dochhorn says most of the 29 Greek manuscripts are unpublished, and CAVT also lists the Arabic version as Inedita. 95 stays off the list because the Greek, Syriac and Coptic versions are edited, but the **Ethiopic and Arabic versions remain unedited**.
+- The Pashhur, Seventh Vision of Daniel and Latin Vision of Ezra chapters cite editions for all their versions. Nothing new for the list.
