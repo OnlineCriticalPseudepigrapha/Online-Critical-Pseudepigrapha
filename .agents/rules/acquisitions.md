@@ -19,3 +19,8 @@
   - Manuscripts: `https://github.com/BetaMasaheft/Manuscripts` (subdivided by collection, e.g. `ParisBNF/abb`, `EMML/1001-2000`, `TelAviv`)
   - Works: `https://github.com/BetaMasaheft/Works`
   Download raw TEI XML files directly via `https://raw.githubusercontent.com/BetaMasaheft/...`.
+
+## 5. Logos Bible Software Library & Pseudepigrapha Extraction
+- **Non-Biblical Milestones:** Never attempt to pass human pseudepigraphal titles into `logos read <ref>` (which relies on biblical versification parsers). Always retrieve the `indexedOffset` from the Table of Contents (`getTableOfContentsEntries`) or search results (`getBasicSearchResults`) and read via `getResourceArticle({ resourceId, offset })`.
+- **Search Result Structure:** In `appClient.getBasicSearchResults`, matches are stored in `val.results` (not `val.items`). Preview highlights are extracted from `previewTextRanges[].richTextXml` `<Run Text="..."/>` spans.
+- **Resource Selection:** Always draw on Ken Penner's *Old Testament Greek Pseudepigrapha* (`LLS:8.20.7`), Charlesworth OTP 1–2 (`LLS:OTPSEUD01`, `LLS:OTPSEUD02`), Eerdmans Dictionary (`LLS:EERDDICTEARJUD`), and Anchor Yale Bible Dictionary (`LLS:14.0.4`) before falling back to web or unverified secondary sources.

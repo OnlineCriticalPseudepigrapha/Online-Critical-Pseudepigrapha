@@ -36,7 +36,7 @@ const OCP_DOCUMENTS = [
   { filename: 'EzekTrag.xml', title: 'Ezekiel the Tragedian', lang: 'Greek' },
   { filename: 'HistRech.xml', title: 'History of the Rechabites', lang: 'Greek' },
   { filename: 'JosAsen.xml', title: 'Joseph and Aseneth', lang: 'Greek' },
-  { filename: 'Jub.xml', title: 'Jubilees (Greek & Latin Fragments)', lang: 'Greek' },
+  { filename: 'Jub.xml', title: 'Jubilees (Hebrew, Greek & Latin)', lang: 'Hebrew' },
   { filename: 'Jubi.xml', title: 'Jubilees (Latin Version)', lang: 'Latin' },
   { filename: 'Justus.xml', title: 'Justus of Tiberias', lang: 'Greek' },
   { filename: 'LetAris.xml', title: 'Letter of Aristeas to Philocrates', lang: 'Greek' },

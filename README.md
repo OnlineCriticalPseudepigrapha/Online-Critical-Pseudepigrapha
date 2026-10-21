@@ -46,7 +46,7 @@ The repository includes eclectic critical texts and multi-witness TEI XML editio
 | [`EzekTrag.xml`](static/docs/EzekTrag.xml) | Ezekiel the Tragedian (*Exagoge*) | Greek | Drama fragments via Eusebius |
 | [`HistRech.xml`](static/docs/HistRech.xml) | History of the Rechabites | Greek | Story of Zosimus |
 | [`JosAsen.xml`](static/docs/JosAsen.xml) | Joseph and Aseneth | Greek | Greek text |
-| [`Jub.xml`](static/docs/Jub.xml) | Jubilees (Greek & Latin Fragments) | Greek | Greek / Latin citations & fragments |
+| [`Jub.xml`](static/docs/Jub.xml) | Jubilees (Hebrew, Greek & Latin) | Hebrew | 15 Qumran scrolls, Greek fragments, Latin palimpsest |
 | [`Jubi.xml`](static/docs/Jubi.xml) | Jubilees (Latin Version) | Latin | Latin version |
 | [`LetAris.xml`](static/docs/LetAris.xml) | Letter of Aristeas to Philocrates | Greek | Greek text |
 | [`LivPro.xml`](static/docs/LivPro.xml) | Lives of the Prophets | Greek | Greek biographical tradition |
