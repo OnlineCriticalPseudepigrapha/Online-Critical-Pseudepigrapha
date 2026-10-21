@@ -94,6 +94,12 @@ def main(argv=None):
         'documents': docs,
     }
 
+    # Keep entries that exist only in the JSON (texts not in the database).
+    if os.path.exists(args.out):
+        with open(args.out, encoding='utf-8') as fh:
+            for key, entry in json.load(fh).get('documents', {}).items():
+                docs.setdefault(key, entry)
+
     out_dir = os.path.dirname(args.out)
     if out_dir:
         os.makedirs(out_dir, exist_ok=True)
