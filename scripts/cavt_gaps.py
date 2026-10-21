@@ -92,6 +92,14 @@ HAND_TIERS = {
     152: ("part", "= LAB 60.2-3 (see 131)"),
     153: ("C", "codex unicus, unedited in 1998"),
     181: ("part", "= 4 Ezra 8:20-36 (180, in OCP)"),
+    # entry-level audit (CAVT_AUDIT.md §2): Inedita flag leaked from a neighbouring entry on the page
+    15: ("B", "edited (Lidzbarski 1925); Inedita flag from neighbour"),
+    96: ("B", "edited (Pearson-Giversen 1981); Inedita flag from neighbour"),
+    100: ("B", "edited (Stone 1968); Inedita flag from neighbour"),
+    142: ("A", "edited (Ethiopic); Inedita flag from neighbour"),
+    208: ("part", "abridgement of Ps.-Chrysostom, In Iob sermo 4 (PG 56); Datema 1985; ed. Dochhorn, ZAC 10 (2006) 187-194"),
+    129: ("A", "edited; only an unedited Michigan papyrus"),
+    242: ("A", "edited; only 4Q232 unedited"),
 }
 
 OCP_LANGS = {"Greek", "Latin", "Syriac", "Ethiopic", "Aramaic", "Hebrew"}
@@ -163,6 +171,7 @@ def main():
     gaps = [e for e in rows if int(e["cavt_no"]) not in have
             and e["pro_memoria"] != "True" and e["cross_ref_only"] != "True"]
     rec = {int(e["cavt_no"]): e for e in rows}
+    POST1998 = {int(r["cavt_no"]): r for r in csv.DictReader((ROOT / "raw/cavt/post1998_editions.csv").open(encoding="utf-8"))}
 
     def licence(e, depth=0):
         """'PD?' if CAVT lists an edition from 1929 or earlier, 'modern' if only later ones."""
@@ -170,6 +179,8 @@ def main():
         if not years and e["refers_to"] and depth < 2:
             refs = [licence(rec[int(n)], depth + 1) for n in e["refers_to"].split() if int(n) in rec]
             return "PD?" if "PD?" in refs else (refs[0] if refs else "")
+        if not years and int(e["cavt_no"]) in POST1998:
+            return "modern"  # edited after CAVT (raw/cavt/post1998_editions.csv)
         if not years:
             return "none listed"
         return "PD?" if min(years) <= 1929 else "modern"
@@ -195,7 +206,7 @@ def main():
         f"- **CAVT Works mapped to DiTommaso dossiers**: {mapped_cavt_count} entries cross-referenced.",
         f"- **Current OCP Coverage**: {len(have)} CAVT works (represented across {len([k for k, v in OCP_TO_CAVT.items() if v[0] is not None])} XML editions).",
         f"- **Outside CAVT Scope**: {len(EXCLUDED_FROM_CAVT)} Judaeo-Hellenistic & sapiential works (9 published in OCP XML, 9 gap candidates).",
-        f"- **Total OCP Gaps within CAVT**: {len(gaps)} (excluding {sum(e['pro_memoria'] == 'True' for e in rows)} pro-memoria and {sum(e['cross_ref_only'] == 'True' for e in rows)} cross-reference entries).",
+        f"- **Total OCP Gaps within CAVT**: {sum(len(v) for v in by_tier.values())} in Tiers A–C, plus {len(gaps) - sum(len(v) for v in by_tier.values())} excluded by hand (§3.4) (excluding {sum(e['pro_memoria'] == 'True' for e in rows)} pro-memoria and {sum(e['cross_ref_only'] == 'True' for e in rows)} cross-reference entries).",
         "",
         "### Tiers (Automated Classification from CAVT and DiTommaso):",
         "- **Tier A**: No *Inedita* noted; extant in a primary OCP language (Greek, Latin, Syriac, Ethiopic, Aramaic, Hebrew).",

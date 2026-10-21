@@ -2,6 +2,14 @@
 
 *Current as of 2026-08-27, `master` @ `200885d`, working tree clean and synced with origin.*
 
+## Session handoff 2026-10-20 (branch `intros-draft`)
+
+- All 61 intros.json entries now render in the reader: 17 legacy-format entries converted to `fields`; `INTRO_ALIASES` in reader.js maps alternate versions (TAbA/TAbB, 2Bar-Syr, Esdr, Jubi, ApDan_TEI) to the parent's intro; new JosAsen and Esdl entries.
+- `scripts/export_intros.py` now merges with the existing JSON instead of overwriting (27 entries exist only in the JSON).
+- Introductions + provenance were written into `databases/storage.sqlite` (gitignored; reaches the laptop via Syncthing only) for 23 docs that lacked them, then exported.
+- **All new intro text is unverified (drafted from memory).** Next: sign in to app.logos.com in the scholar_profile Chrome (`google-chrome --remote-debugging-port=9222 --user-data-dir="$HOME/.gemini/scholar_profile"`), check each against OTP / Outside the Bible via the logos-bible skill, then merge `intros-draft` into `master` (which deploys the site). List in NEXT.md.
+- Preview locally: `.claude/launch.json` serves the site on port 8765.
+
 ## What this repo is
 
 Two coexisting apps share this repository:

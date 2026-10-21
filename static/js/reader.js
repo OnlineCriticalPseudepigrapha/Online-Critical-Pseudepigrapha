@@ -73,6 +73,12 @@ const OCP_DOCUMENTS = [
 ];
 
 // Display labels for the database body fields exported to
+// Alternate versions that share their parent text's introduction.
+const INTRO_ALIASES = {
+  '2Bar-Syr.xml': '2Bar.xml', 'Esdr.xml': '4Ezra.xml', 'Jubi.xml': 'Jub.xml',
+  'TAbA.xml': 'TAbr.xml', 'TAbB.xml': 'TAbr.xml', 'ApDan_TEI.xml': 'ApDan.xml',
+};
+
 // static/docs/intros.json (mirrors DISPLAY_FIELDS in controllers/docs.py)
 const INTRO_FIELD_TITLES = {
   introduction: 'Introduction',
@@ -710,8 +716,9 @@ class OcpReaderApp {
 
     const intros = await this.loadIntros();
     // Re-render only if the user hasn't switched documents while we waited.
-    if (intros && intros.documents[this.activeDoc]) {
-      this.introData = Object.assign({_docKey: this.activeDoc}, intros.documents[this.activeDoc]);
+    const introKey = intros && (intros.documents[this.activeDoc] ? this.activeDoc : INTRO_ALIASES[this.activeDoc]);
+    if (introKey && intros.documents[introKey]) {
+      this.introData = Object.assign({_docKey: this.activeDoc}, intros.documents[introKey]);
       drawerBody.innerHTML = drawerHtml();
     } else if (!intros) {
       this.introData = null;
@@ -744,7 +751,7 @@ class OcpReaderApp {
         <p style="color:var(--text-muted); font-size:0.9rem;">Introduction text is not yet available for offline reading.</p>
       </div>`;
     }
-    const sections = Object.entries(entry.fields).map(([key, html]) => `
+    const sections = Object.entries(entry.fields || {}).map(([key, html]) => `
       <div class="drawer-section intro-body-field" id="intro-${key}">
         <h4>${INTRO_FIELD_TITLES[key] || key}</h4>
         <div class="intro-body-content">${html}</div>
