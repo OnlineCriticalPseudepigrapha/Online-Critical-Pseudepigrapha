@@ -62,3 +62,6 @@ See `GMAIL-INDEX.md` in this folder.
 
 ## Intro drafts: verified against OTP (2026-10-20)
 All drafts were checked against the OTP 1–2 introductions in Logos. Corrected: TJob (Sitis), 1En (3rd–2nd c. BCE), TSol (early 3rd c. CE), AdamEve (Johnson's Jewish view), ArisEx (no date beyond pre-Polyhistor), ElMod (pre-Hermas, Jewish or Christian), Ps-Eup (Doran's objection), Theod (late 3rd/2nd c. BCE), 5Ezra ("Christian prologue"). Theoph, 5Ezra and 6Ezra have no OTP entry and were checked only against general knowledge. The JosAsen status note that the "Evans" base text is undocumented still stands. Ready to merge intros-draft into master on approval.
+
+## Jubilees Qumran Hebrew (branch `jubilees-qumran`, 2026-10-20)
+4Q216 imported into Jub.xml as version "Qumran Hebrew" (Abegg/ETCBC dss, used by permission). Verse IDs assigned by content in `scripts/dss_jub_import.py` (VERSES); provisional until checked against DJD 13. Prologue placed at 0:1. Remaining scrolls: 4Q217–224, 4Q176a, 1Q17–18, 2Q19–20, 3Q5, 11Q12 (text already in raw/corpora/etcbc_dss/jubilees_lines.tsv).
