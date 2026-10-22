@@ -61,10 +61,13 @@ def run_ocrmypdf(input_pdf: Path, output_pdf: Path, lang: str = "fra+lat+deu", j
         "--jobs", str(jobs),
         "--rotate-pages",
         "--deskew",
-        "--clean-final",
-        str(input_pdf),
-        str(output_pdf),
     ]
+    # unpaper is required for --clean-final
+    import shutil
+    if shutil.which("unpaper"):
+        cmd.append("--clean-final")
+
+    cmd.extend([str(input_pdf), str(output_pdf)])
     print(f"-> Running ocrmypdf (languages: {lang}, jobs: {jobs})...")
     subprocess.run(cmd, check=True)
     print(f"-> Searchable PDF created successfully: {output_pdf}")
