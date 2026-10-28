@@ -152,11 +152,11 @@ def process_single_page(pdf_path: Path, page_num: int, page_file: Path, api_key:
         tmp_png.unlink(missing_ok=True)
 
 
-def merge_pages(pages_dir: Path, total_pages: int, merged_file: Path, model_name: str = "OpenCode Go VLM") -> int:
+def merge_pages(pages_dir: Path, total_pages: int, merged_file: Path, title: str = "Scholarly Edition", model_name: str = "OpenCode Go VLM") -> int:
     """Assemble individual page markdown files in order into master markdown."""
     count = 0
     with open(merged_file, "w", encoding="utf-8") as out:
-        out.write("# Albert-Marie Denis, Introduction aux pseudépigraphes grecs d'Ancien Testament (SVTP 1; 1970)\n\n")
+        out.write(f"# {title}\n\n")
         out.write(f"*Transcribed via {model_name}*\n\n---\n\n")
         for p in range(1, total_pages + 1):
             pf = pages_dir / f"page_{p:03d}.md"
@@ -172,6 +172,7 @@ def main():
     parser.add_argument("--input", type=Path, default=Path("raw/editions/Denis1970_Introduction_pseudepigraphes_grecs_SVTP1_searchable.pdf"))
     parser.add_argument("--pages-dir", type=Path, default=Path("raw/editions/denis1970_vlm_pages"))
     parser.add_argument("--output", type=Path, default=Path("raw/editions/Denis1970_Introduction_pseudepigraphes_grecs_SVTP1.md"))
+    parser.add_argument("--title", type=str, default="Albert-Marie Denis, Introduction aux pseudépigraphes grecs d'Ancien Testament (SVTP 1; 1970)")
     parser.add_argument("--model", type=str, default="muse-spark-1.2-contributor", help="Model name (e.g. muse-spark-1.2-contributor, minimax-m3.1-flash, qwen3.8-flash, claude-haiku-5-5)")
     parser.add_argument("--workers", type=int, default=2, help="Concurrent worker threads (default: 2)")
     parser.add_argument("--start-page", type=int, default=1)
@@ -241,7 +242,7 @@ def main():
                 except Exception as e:
                     print(f"✗ Failed page {p}: {e}")
 
-    merged_count = merge_pages(pages_dir, total_pages, args.output.resolve(), model_name=args.model)
+    merged_count = merge_pages(pages_dir, total_pages, args.output.resolve(), title=args.title, model_name=args.model)
     elapsed = time.time() - t0
     print(f"\nFinished batch in {elapsed:.1f}s ({elapsed/60:.1f} min).")
     print(f"Consolidated {merged_count}/{total_pages} pages into {args.output}")
