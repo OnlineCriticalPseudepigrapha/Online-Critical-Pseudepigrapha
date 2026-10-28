@@ -25,8 +25,10 @@
 - **Searchable PDF vs. Edition Text Extraction:**
   - For searchable PDF reading layers, use `ocrmypdf` with modern European languages (`fra+lat+deu` or `eng+lat`). Do not use `--clean-final` unless `unpaper` is present.
   - For transcribing critical editions with polytonic Greek, Semitic scripts, or apparatus sigla, NEVER use Tesseract or Docling (which cause cross-alphabet pollution and drops). Always use a Vision-Language Model directly via `scripts/vlm_transcribe.py` or `scripts/batch_vlm_extract.py`.
-- **OpenCode Go MiniMax M3.1 Flash Configuration:**
-  - Endpoint: `https://opencode.ai/inference/go/openai/v1/chat/completions` ($0 marginal cost under subscription).
+- **OpenCode Go VLM Architecture & Model Selection:**
+  - Endpoint: `https://opencode.ai/inference/go/openai/v1/chat/completions` ($0 net cost covered by Go subscription allowance).
+  - Contributor Vision Model: `muse-spark-1.2-contributor` is the recommended default for book scan extraction (5.1s/page, flawless polytonic Greek, $0 net cost with contributor data-training opt-in enabled).
+  - Alternative High-Accuracy Models: `minimax-m3.1-flash`, `qwen3.8-flash`, and `claude-haiku-5-5`. Note: `beam-free` and `iceman-contributor-free` are text-only (reject vision with HTTP 400).
   - Always send headers: `User-Agent: Mozilla/5.0` (avoids Cloudflare 1010) and `x-opencode-session: <id>` (avoids 400 MissingSessionID).
-  - Set `"reasoning_effort": "low"` and `"max_tokens": 4000` to prevent reasoning overflow.
+  - Set `"reasoning_effort": "low"` and `"max_tokens": 4000` for reasoning models (`minimax-m3.1-flash`, `muse-spark-1.3-contributor`) to prevent reasoning tokens from exhausting the completion window.
   - Multi-page batches must checkpoint per page (`page_NNN.md`) to permit seamless resumption.

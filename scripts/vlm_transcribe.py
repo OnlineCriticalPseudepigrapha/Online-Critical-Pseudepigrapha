@@ -53,7 +53,7 @@ def extract_pdf_page_as_png(pdf_path: Path, page_num: int, out_png: Path) -> Non
         rendered[0].rename(out_png)
 
 
-def transcribe_image(image_path: Path, prompt: str, api_key: str, model: str = "minimax-m3.1-flash") -> str:
+def transcribe_image(image_path: Path, prompt: str, api_key: str, model: str = "muse-spark-1.2-contributor") -> str:
     """Send image to OpenCode Go MiniMax M3.1 Flash for transcription."""
     with open(image_path, "rb") as f:
         b64_img = base64.b64encode(f.read()).decode("utf-8")
@@ -121,7 +121,7 @@ def main():
     parser.add_argument("output", type=Path, nargs="?", default=None, help="Output Markdown file")
     parser.add_argument("--page", type=int, default=1, help="Page number if input is a PDF (1-based)")
     parser.add_argument("--prompt", default=default_prompt, help="Transcription instruction")
-    parser.add_argument("--model", default="minimax-m3.1-flash", help="Model name (default: minimax-m3.1-flash)")
+    parser.add_argument("--model", default="muse-spark-1.2-contributor", help="Model name (default: muse-spark-1.2-contributor; alternatives: minimax-m3.1-flash, qwen3.8-flash, claude-haiku-5-5)")
     args = parser.parse_args()
 
     api_key = get_api_key()

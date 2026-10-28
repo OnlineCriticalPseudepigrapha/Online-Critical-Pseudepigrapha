@@ -61,13 +61,13 @@ def render_page(pdf_path: Path, page_num: int, out_png: Path) -> None:
         rendered[0].rename(out_png)
 
 
-def transcribe_page_with_retry(image_path: Path, api_key: str, prompt: str, page_num: int, max_retries: int = 5) -> str:
-    """Transcribe single image via OpenCode Go MiniMax M3.1 Flash with exponential backoff."""
+def transcribe_page_with_retry(image_path: Path, api_key: str, prompt: str, page_num: int, model: str = "muse-spark-1.2-contributor", max_retries: int = 5) -> str:
+    """Transcribe single image via OpenCode Go VLM with exponential backoff."""
     with open(image_path, "rb") as f:
         b64_img = base64.b64encode(f.read()).decode("utf-8")
 
     payload = {
-        "model": "minimax-m3.1-flash",
+        "model": model,
         "messages": [
             {
                 "role": "user",
@@ -134,7 +134,7 @@ def transcribe_page_with_retry(image_path: Path, api_key: str, prompt: str, page
     raise RuntimeError(f"Failed to transcribe page {page_num} after {max_retries} attempts.")
 
 
-def process_single_page(pdf_path: Path, page_num: int, page_file: Path, api_key: str, prompt: str) -> bool:
+def process_single_page(pdf_path: Path, page_num: int, page_file: Path, api_key: str, prompt: str, model: str = "muse-spark-1.2-contributor") -> bool:
     """Process and write one page if not already completed."""
     if page_file.exists() and page_file.stat().st_size > 50:
         return True  # already done
@@ -144,7 +144,7 @@ def process_single_page(pdf_path: Path, page_num: int, page_file: Path, api_key:
 
     try:
         render_page(pdf_path, page_num, tmp_png)
-        text = transcribe_page_with_retry(tmp_png, api_key, prompt, page_num)
+        text = transcribe_page_with_retry(tmp_png, api_key, prompt, page_num, model=model)
         page_file.write_text(f"<!-- Page {page_num} -->\n\n{text}\n\n", encoding="utf-8")
         print(f"✓ Completed page {page_num}")
         return True
@@ -152,12 +152,12 @@ def process_single_page(pdf_path: Path, page_num: int, page_file: Path, api_key:
         tmp_png.unlink(missing_ok=True)
 
 
-def merge_pages(pages_dir: Path, total_pages: int, merged_file: Path) -> int:
+def merge_pages(pages_dir: Path, total_pages: int, merged_file: Path, model_name: str = "OpenCode Go VLM") -> int:
     """Assemble individual page markdown files in order into master markdown."""
     count = 0
     with open(merged_file, "w", encoding="utf-8") as out:
         out.write("# Albert-Marie Denis, Introduction aux pseudépigraphes grecs d'Ancien Testament (SVTP 1; 1970)\n\n")
-        out.write("*Transcribed via OpenCode Go MiniMax M3.1 Flash VLM*\n\n---\n\n")
+        out.write(f"*Transcribed via {model_name}*\n\n---\n\n")
         for p in range(1, total_pages + 1):
             pf = pages_dir / f"page_{p:03d}.md"
             if pf.exists() and pf.stat().st_size > 0:
@@ -168,10 +168,11 @@ def merge_pages(pages_dir: Path, total_pages: int, merged_file: Path) -> int:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Batch transcribe PDF book pages via MiniMax M3.1 VLM.")
+    parser = argparse.ArgumentParser(description="Batch transcribe PDF book pages via OpenCode Go VLM.")
     parser.add_argument("--input", type=Path, default=Path("raw/editions/Denis1970_Introduction_pseudepigraphes_grecs_SVTP1_searchable.pdf"))
     parser.add_argument("--pages-dir", type=Path, default=Path("raw/editions/denis1970_vlm_pages"))
     parser.add_argument("--output", type=Path, default=Path("raw/editions/Denis1970_Introduction_pseudepigraphes_grecs_SVTP1.md"))
+    parser.add_argument("--model", type=str, default="muse-spark-1.2-contributor", help="Model name (e.g. muse-spark-1.2-contributor, minimax-m3.1-flash, qwen3.8-flash, claude-haiku-5-5)")
     parser.add_argument("--workers", type=int, default=2, help="Concurrent worker threads (default: 2)")
     parser.add_argument("--start-page", type=int, default=1)
     parser.add_argument("--end-page", type=int, default=None)
@@ -224,7 +225,8 @@ def main():
                     p,
                     pages_dir / f"page_{p:03d}.md",
                     api_key,
-                    prompt
+                    prompt,
+                    model=args.model
                 ): p
                 for p in to_process
             }
@@ -239,7 +241,7 @@ def main():
                 except Exception as e:
                     print(f"✗ Failed page {p}: {e}")
 
-    merged_count = merge_pages(pages_dir, total_pages, args.output.resolve())
+    merged_count = merge_pages(pages_dir, total_pages, args.output.resolve(), model_name=args.model)
     elapsed = time.time() - t0
     print(f"\nFinished batch in {elapsed:.1f}s ({elapsed/60:.1f} min).")
     print(f"Consolidated {merged_count}/{total_pages} pages into {args.output}")
