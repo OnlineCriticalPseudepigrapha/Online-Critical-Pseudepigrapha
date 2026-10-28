@@ -19,3 +19,14 @@
   - Manuscripts: `https://github.com/BetaMasaheft/Manuscripts` (subdivided by collection, e.g. `ParisBNF/abb`, `EMML/1001-2000`, `TelAviv`)
   - Works: `https://github.com/BetaMasaheft/Works`
   Download raw TEI XML files directly via `https://raw.githubusercontent.com/BetaMasaheft/...`.
+
+## 5. Book Scans, OCR & Polyglot VLM Architecture
+- **Photocopier Spreads Bisecting:** Copier scans (e.g. NT 5th floor Konica Minolta) produce 2-page landscape sheets. Never feed raw spreads directly to OCR or layout parsers; columns and footnotes will interleave across the gutter. Always bisect spreads into single portrait pages first using `scripts/split_and_ocr_book.py`.
+- **Searchable PDF vs. Edition Text Extraction:**
+  - For searchable PDF reading layers, use `ocrmypdf` with modern European languages (`fra+lat+deu` or `eng+lat`). Do not use `--clean-final` unless `unpaper` is present.
+  - For transcribing critical editions with polytonic Greek, Semitic scripts, or apparatus sigla, NEVER use Tesseract or Docling (which cause cross-alphabet pollution and drops). Always use a Vision-Language Model directly via `scripts/vlm_transcribe.py` or `scripts/batch_vlm_extract.py`.
+- **OpenCode Go MiniMax M3.1 Flash Configuration:**
+  - Endpoint: `https://opencode.ai/inference/go/openai/v1/chat/completions` ($0 marginal cost under subscription).
+  - Always send headers: `User-Agent: Mozilla/5.0` (avoids Cloudflare 1010) and `x-opencode-session: <id>` (avoids 400 MissingSessionID).
+  - Set `"reasoning_effort": "low"` and `"max_tokens": 4000` to prevent reasoning overflow.
+  - Multi-page batches must checkpoint per page (`page_NNN.md`) to permit seamless resumption.
