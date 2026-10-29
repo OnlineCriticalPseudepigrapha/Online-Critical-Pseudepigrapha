@@ -2,6 +2,7 @@
 """
 Generate static/data/catalog.json from data/master_crosswalk.csv,
 static/docs/*.xml, static/docs/intros.json, and bibliography/*.md dossiers.
+Converts any markdown syntax in summaries, dossiers, and notes into clean semantic HTML.
 """
 import csv
 import json
@@ -9,12 +10,90 @@ import os
 import re
 import xml.etree.ElementTree as ET
 
-def clean_html(raw_html):
-    if not raw_html:
+def inline_format(text):
+    if not text:
         return ""
-    cleanr = re.compile('<.*?>')
-    cleantext = re.sub(cleanr, ' ', raw_html)
-    return ' '.join(cleantext.split())
+    # Bold italic ***text***
+    text = re.sub(r'\*\*\*(.+?)\*\*\*', r'<strong><em>\1</em></strong>', text)
+    # Bold **text**
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    # Italic *text* or _text_
+    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
+    text = re.sub(r'(?<!\w)_(.+?)_(?!\w)', r'<em>\1</em>', text)
+    # Links [label](url)
+    text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', text)
+    return text
+
+def markdown_to_html(md_text):
+    if not md_text:
+        return ""
+    # If already fully structured HTML with tags
+    if ('<p>' in md_text or '<div>' in md_text or '<table>' in md_text) and not md_text.startswith('*'):
+        # Check if there are stray unrendered markdown bold/italics inside html
+        return inline_format(md_text)
+
+    lines = md_text.strip().split('\n')
+    html_lines = []
+    in_list = False
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
+            continue
+
+        # Subheadings within section ### or ####
+        if stripped.startswith('#### '):
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
+            html_lines.append(f'<h5 style="margin:10px 0 4px; color:var(--text-primary);">{inline_format(stripped[5:].strip())}</h5>')
+            continue
+        elif stripped.startswith('### '):
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
+            html_lines.append(f'<h4 style="margin:12px 0 6px; color:var(--accent-gold-dark); font-size:1rem;">{inline_format(stripped[4:].strip())}</h4>')
+            continue
+
+        # Bullet lists * or -
+        if stripped.startswith('* ') or stripped.startswith('- '):
+            if not in_list:
+                html_lines.append('<ul style="margin:8px 0 12px 18px; padding-left:8px;">')
+                in_list = True
+            item_content = stripped[2:].strip()
+            html_lines.append(f'<li>{inline_format(item_content)}</li>')
+        else:
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
+            html_lines.append(f'<p style="margin-bottom:8px; line-height:1.6;">{inline_format(stripped)}</p>')
+
+    if in_list:
+        html_lines.append('</ul>')
+
+    return '\n'.join(html_lines)
+
+def parse_dossier_sections(md_content):
+    sections = {}
+    current_sec = None
+    sec_content = []
+    for line in md_content.split('\n'):
+        m = re.match(r'^##\s+(\d+)\.\s+(.*)', line)
+        if m:
+            if current_sec:
+                sections[current_sec] = '\n'.join(sec_content).strip()
+            current_sec = m.group(2).strip()
+            sec_content = []
+        elif current_sec:
+            if line.startswith('---'):
+                continue
+            sec_content.append(line)
+    if current_sec:
+        sections[current_sec] = '\n'.join(sec_content).strip()
+    return sections
 
 def main():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,13 +123,9 @@ def main():
             try:
                 with open(path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    # extract summary paragraph
-                    summary = ""
-                    m = re.search(r'## 1\.[^\n]*\n+([^#\n][^\n]+(?:\n[^#\n][^\n]+)*)', content)
-                    if m:
-                        summary = m.group(1).strip()
+                    sections = parse_dossier_sections(content)
                     dossier_data[md_file] = {
-                        'summary': summary,
+                        'sections': sections,
                         'full_md': content
                     }
             except Exception:
@@ -85,7 +160,7 @@ def main():
         }
 
     catalog = []
-    
+
     for row in crosswalk:
         ocp_id = row['ocp_canon_id']
         cavt_no = row['cavt_no']
@@ -107,22 +182,46 @@ def main():
         else:
             status = 'gap'
 
-        # Get intro info if XML has one
-        intro_obj = intros_json.get(xml_file, {})
-        fields = intro_obj.get('fields', {})
-
         intro_text = ""
         provenance_text = ""
         mss_text = ""
         biblio_text = ""
 
+        # Priority 1: Check intros.json for existing XML
+        intro_obj = intros_json.get(xml_file, {})
+        fields = intro_obj.get('fields', {})
+
         if fields:
-            intro_text = fields.get('introduction', '')
-            provenance_text = fields.get('provenance', '')
-            mss_text = fields.get('manuscripts', '')
-            biblio_text = fields.get('bibliography', '')
-        elif dossier_file in dossier_data:
-            intro_text = dossier_data[dossier_file]['summary']
+            intro_text = markdown_to_html(fields.get('introduction', ''))
+            provenance_text = markdown_to_html(fields.get('provenance', ''))
+            mss_text = markdown_to_html(fields.get('manuscripts', ''))
+            biblio_text = markdown_to_html(fields.get('bibliography', ''))
+        
+        # Priority 2: Enrich from dossier if present
+        if dossier_file in dossier_data:
+            sec_dict = dossier_data[dossier_file]['sections']
+            
+            # Map common section names from dossiers
+            # Section 1: Usually Overview / Textual Witnesses
+            if not intro_text:
+                for sec_title, sec_body in sec_dict.items():
+                    if any(k in sec_title.lower() for k in ['compositional', 'overview', 'witness', 'structure', 'tradition']):
+                        intro_text = markdown_to_html(sec_body)
+                        break
+            
+            # Witnesses / Manuscripts
+            if not mss_text:
+                for sec_title, sec_body in sec_dict.items():
+                    if any(k in sec_title.lower() for k in ['witnesses', 'manuscript tradition', 'witness']):
+                        mss_text = markdown_to_html(sec_body)
+                        break
+
+            # Bibliography / Critical Editions
+            if not biblio_text:
+                for sec_title, sec_body in sec_dict.items():
+                    if any(k in sec_title.lower() for k in ['critical editions', 'editions', 'translations', 'studies', 'bibliography']):
+                        biblio_text = markdown_to_html(sec_body)
+                        break
 
         item = {
             'id': ocp_id,
@@ -156,11 +255,7 @@ def main():
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(catalog, f, indent=2, ensure_ascii=False)
 
-    print(f"Successfully generated {output_path} with {len(catalog)} entries.")
-    live_cnt = sum(1 for c in catalog if c['status'] == 'live')
-    staged_cnt = sum(1 for c in catalog if c['status'] == 'staged')
-    gap_cnt = sum(1 for c in catalog if c['status'] == 'gap')
-    print(f"Breakdown: {live_cnt} live, {staged_cnt} staged, {gap_cnt} clavis gaps.")
+    print(f"Successfully generated {output_path} with {len(catalog)} entries and rendered HTML.")
 
 if __name__ == '__main__':
     main()

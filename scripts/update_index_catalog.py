@@ -3,6 +3,7 @@
 Updates index.html to render all 299 texts from CANON.md (via static/data/catalog.json).
 Adds Corpus / Status tabs (All Texts, Live Editions, Clavis Records / Gaps),
 Section/Genre filters, Crosswalk concordance cards, and enriched modal previews.
+Ensures Bibliography & Editions section is rendered in the modal.
 """
 import json
 import re
@@ -117,7 +118,6 @@ if '.badge-live' not in html:
     html = html.replace('/* Modal / Drawer */', custom_css + '\n    /* Modal / Drawer */')
 
 # 2. Replace Controls Bar to include Status Tabs & Section Select
-old_controls_marker = '<div class="controls-card">'
 new_controls = """<div class="controls-card">
         <!-- Status Filter Tabs -->
         <div class="status-tabs" id="statusTabs" role="tablist">
@@ -193,12 +193,10 @@ new_controls = """<div class="controls-card">
         </div>
       </div>"""
 
-# Replace the old controls card
 old_controls_pattern = re.compile(r'<div class="controls-card">.*?</div>\s*<!-- Cards Grid -->', re.DOTALL)
 html = old_controls_pattern.sub(new_controls + '\n\n      <!-- Cards Grid -->', html)
 
 # 3. Replace the Modal body with multi-tab structure (Dossier / Crosswalk / TEI XML)
-old_modal_card = re.compile(r'<div class="modal-card">.*?<div class="modal-footer">', re.DOTALL)
 new_modal_card = """<div class="modal-card">
       <div class="modal-header">
         <div class="modal-title">
@@ -227,6 +225,10 @@ new_modal_card = """<div class="modal-card">
           <div id="modalMssSection" style="display:none;">
             <h5 style="margin-bottom:6px; color:var(--accent-gold-dark);">Manuscripts &amp; Witnesses</h5>
             <div id="modalMssContent" style="font-size:0.88rem; line-height:1.5; overflow-x:auto;"></div>
+          </div>
+          <div id="modalBiblioSection" style="display:none;">
+            <h5 style="margin-bottom:6px; color:var(--accent-gold-dark);">Critical Editions &amp; Bibliography</h5>
+            <div id="modalBiblioContent" style="font-size:0.88rem; line-height:1.5; overflow-x:auto;"></div>
           </div>
         </div>
 
@@ -277,10 +279,13 @@ new_modal_card = """<div class="modal-card">
       </div>
       <div class="modal-footer">"""
 
+old_modal_card = re.compile(r'<div class="modal-card">.*?<div class="modal-footer">', re.DOTALL)
 html = old_modal_card.sub(new_modal_card, html)
 
 # 4. Replace embedded DOCS_DATA and JavaScript engine
 script_start_idx = html.find('const DOCS_DATA = [')
+if script_start_idx == -1:
+    script_start_idx = html.find('const DOCS_DATA = ')
 script_end_idx = html.find('</script>', script_start_idx)
 
 catalog_json_str = json.dumps(catalog_items, ensure_ascii=False)
@@ -634,7 +639,7 @@ new_script = f"""const DOCS_DATA = {catalog_json_str};
         introEl.innerHTML = `<p>This document is indexed in the canonical master concordance (<strong>${{doc.id}}</strong>). It is referenced in Haelewyck's <em>Clavis Apocryphorum Veteris Testamenti</em>, Denis' <em>Introduction</em>, and DiTommaso's <em>Bibliography</em>.</p>`;
       }}
 
-      // Provenance & Manuscripts
+      // Provenance, Manuscripts & Bibliography
       const provSec = document.getElementById('modalProvenanceSection');
       const provEl = document.getElementById('modalProvenanceContent');
       if (doc.details && doc.details.provenance) {{
@@ -651,6 +656,15 @@ new_script = f"""const DOCS_DATA = {catalog_json_str};
         mssEl.innerHTML = doc.details.manuscripts;
       }} else {{
         mssSec.style.display = 'none';
+      }}
+
+      const biblioSec = document.getElementById('modalBiblioSection');
+      const biblioEl = document.getElementById('modalBiblioContent');
+      if (doc.details && doc.details.bibliography) {{
+        biblioSec.style.display = 'block';
+        biblioEl.innerHTML = doc.details.bibliography;
+      }} else {{
+        biblioSec.style.display = 'none';
       }}
 
       // Footer action buttons
@@ -705,4 +719,4 @@ html = html[:script_start_idx] + new_script + html[script_end_idx:]
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-print("Successfully updated index.html with master catalog and interactive controls.")
+print("Successfully updated index.html with bibliography modal section and HTML rendering.")
