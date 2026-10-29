@@ -29,6 +29,24 @@ INTROS_PATH = os.path.join(BASE_DIR, 'static', 'docs', 'intros.json')
 DOCS_DIR = os.path.join(BASE_DIR, 'static', 'docs')
 OUTPUT_DIR = os.path.join(BASE_DIR, 'texts')
 CATALOG_PATH = os.path.join(BASE_DIR, 'static', 'data', 'catalog.json')
+OVERRIDES_DIR = os.path.join(BASE_DIR, 'static', 'data', 'overrides')
+
+
+def load_overrides():
+    """Return {ID: override} from static/data/overrides/<ID>.json.
+
+    An override may set `title`, `lang`, or any of the `details` sections
+    (intro, provenance, manuscripts, bibliography). Anything it leaves out
+    is generated from the crosswalk, dossiers, intros.json and XML as usual.
+    """
+    overrides = {}
+    if not os.path.isdir(OVERRIDES_DIR):
+        return overrides
+    for f in sorted(os.listdir(OVERRIDES_DIR)):
+        if f.endswith('.json'):
+            with open(os.path.join(OVERRIDES_DIR, f), 'r', encoding='utf-8') as fh:
+                overrides[f[:-5]] = json.load(fh)
+    return overrides
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -136,6 +154,7 @@ def parse_cavt_snippet(cavt_num):
     }
 
 def main():
+    overrides = load_overrides()
     with open(CROSSWALK_PATH, 'r', encoding='utf-8') as f:
         crosswalk = list(csv.DictReader(f))
 
@@ -222,6 +241,16 @@ def main():
               This text belongs to the <em>{section}</em> tradition of ancient Jewish and early Christian literature,
               predominantly preserved in {lang}.
             </p>"""
+
+        # Hand-curated overrides win over generated values
+        override = overrides.get(ocp_id, {})
+        details_override = override.get('details', {})
+        title = override.get('title', title)
+        lang = override.get('lang', lang)
+        overview_html = details_override.get('intro', overview_html)
+        provenance_html = details_override.get('provenance', provenance_html)
+        mss_html = details_override.get('manuscripts', mss_html)
+        biblio_html = details_override.get('bibliography', biblio_html)
 
         # Generate the dedicated HTML Stub Page
         stub_filename = f"{ocp_id}.html"
