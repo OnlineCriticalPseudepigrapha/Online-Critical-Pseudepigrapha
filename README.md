@@ -20,7 +20,9 @@ The original dynamic Web2py application server has been decommissioned. In its p
 
 ## 📚 Critical Texts Catalog
 
-The repository includes eclectic critical texts and multi-witness TEI XML editions across Greek, Syriac, Latin, Ethiopic, and Aramaic:
+The repository includes eclectic critical texts and multi-witness TEI XML editions across Greek, Syriac, Latin, Ethiopic, and Aramaic.
+
+For the comprehensive 6-way concordance connecting all 299 Old Testament pseudepigrapha across CAVT (Haelewyck), Denis (1970/2000), DiTommaso (2001), Charlesworth (OTP), Charles (APOT), and Sparks (AOT), see **[`CANON.md`](CANON.md)** (machine-readable data: [`data/master_crosswalk.csv`](data/master_crosswalk.csv)).
 
 | File | Title | Language | Witnesses / Details |
 | :--- | :--- | :--- | :--- |
