@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odae Salomonis — CAVT-205 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Odae Salomonis (CAVT-205)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-205</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-205</span>
+          <span class="badge badge-lang">Coptic</span>
+          <span class="badge badge-lang">CAVT 205</span>
+          
+        </div>
+        <h1 class="stub-title">Odae Salomonis</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> PSALMI - ODAE SALOMONIS - PROVERBIA - JOB - SAPIENTIA - SIRACIDES - PSALMI SALOMONIS
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-205</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 205</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 40 (Odes of Solomon)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:725-771 (Odes of Solomon)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Odes of Solomon</em> (Syriac: <em>Zmīrāthā d-Shlēmūn</em>; Greek: Ὠιδαὶ Σολομῶντος / <em>Ōidai Solomōntos</em>; Latin: <em>Odae Salomonis</em>) is a collection of forty-two ecstatic lyrical hymns (Odes 1–42; Ode 2 is lost due to a physical lacuna in the manuscript traditions). Composed around the late 1st or early 2nd century CE (ca. 100–125 CE) in Roman Syria (most likely Antioch or Edessa/Osrhoene), the <em>Odes</em> constitute the earliest surviving Christian hymnal. Imbued with profound mystical intimacy, realized eschatology, and poetic passion, the collection reflects a bilingual Semitic-Hellenistic milieu that bridges the theological world of the Dead Sea Scrolls (<em>Hodayot</em>), the Gospel of John, and the letters of Saint Ignatius of Antioch.</p>
+<p class="stub-paragraph">Attributed pseudepigraphically to King Solomon—celebrated in 1 Kings 4:32 (LXX 3 Kgs 5:12) as having composed 1,005 songs—the Odes speak in the first-person voice of the redeemed believer, the prophet-singer, and at times Christ Himself (<em>Christus loquens</em>).</p>
+<h4 class="stub-heading">Major Thematic and Theological Motifs</h4>
+<p class="stub-paragraph">1. <strong>The Crown / Wreath of Truth</strong> (Odes 1, 5, 9, 17):</p>
+<ul class="stub-list">
+<li>The collection opens with the iconic image: <em>"The Lord is on my head like a crown, and I shall not be without Him. Woven for me is the crown of truth, and it caused your branches to bud in me"</em> (Ode 1:1–2). The crown represents divine life, truth, and imperishability.</li>
+</ul>
+<p class="stub-paragraph">2. <strong>The Living Water and the River of Life</strong> (Odes 6, 11, 30):</p>
+<ul class="stub-list">
+<li>A river of the Holy Spirit flows from the divine throne, carrying living water across the whole earth: <em>"A stream went forth and became a river great and broad... it carried away everything and broke down the Temple... all the thirsty upon earth drank, and thirst was relieved and quenched"</em> (Ode 6:8–18).</li>
+</ul>
+<p class="stub-paragraph">3. <strong>The Circumcision of the Heart and the Robe of Light</strong> (Ode 11):</p>
+<ul class="stub-list">
+<li>Preserved in Greek (Papyrus Bodmer XI) and Syriac: The singer's heart is circumcised by the Spirit; the old earthly garment is stripped away, and the soul is clothed in celestial light, translated into Paradise to feast on the fruits of the Tree of Life.</li>
+</ul>
+<p class="stub-paragraph">4. <strong>Startling Trinitarian and Maternal Imagery</strong> (Ode 19):</p>
+<ul class="stub-list">
+<li>One of the most famous and unique passages in early Christian poetry: <em>"A cup of milk was offered to me, and I drank it in the sweetness of the Lord's delight. The Son is the cup, and the Father is He who was milked; and the Holy Spirit is She who milked Him... The Holy Spirit opened her womb and gave birth to the Son without pain... without requiring a midwife"</em> (19:1–9).</li>
+</ul>
+<p class="stub-paragraph">5. <strong>The Descent into Sheol / The Harrowing of Hell</strong> (Odes 17, 22, 42):</p>
+<ul class="stub-list">
+<li>The triumphant voice of Christ recounting His descent into the underworld: <em>"Sheol saw me and was shattered, and Death cast me up and many along with me. I was gall and vinegar to it, and I descended with it to the depth of its abyss... and I made a congregation of living men among its dead"</em> (Ode 42:11–17).</li>
+</ul>
+<p class="stub-paragraph">6. <strong>The Gesture of Prayer as the Cross / Orante</strong> (Odes 27, 42):</p>
+<ul class="stub-list">
+<li>The bodily posture of the <em>orante</em>—arms outstretched in prayer—is identified with the wood of the Cross: <em>"I extended my hands and hallowed my Lord, for the expansion of my hands is His sign, and my outspreading is the upright cross"</em> (Ode 27:1–3; 42:1–2).</li>
+</ul>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The <em>Odes of Solomon</em> are preserved across three ancient linguistic traditions:</p>
+<h4 class="stub-heading">A. The Syriac Manuscript Tradition</h4>
+<p class="stub-paragraph">The principal and most complete text survives in two Syriac manuscripts where the <em>Odes</em> immediately precede the <em>Psalms of Solomon</em>:</p>
+<p class="stub-paragraph">1. <strong>MS H (Manchester, John Rylands University Library, Syriac MS 9, olim Cod. Harris 1)</strong>:</p>
+<ul class="stub-list">
+<li>Date: <strong>16th century CE</strong> (paper codex).</li>
+<li>Provenance: Discovered in 1909 by <strong>James Rendel Harris</strong> on the shelves of his study in Birmingham, having been brought from the Tigris region.</li>
+<li>Preserves Odes 3:1b through 42:20 (Odes 1:1–3:1a lost due to missing leaves).</li>
+</ul>
+<p class="stub-paragraph">2. <strong>MS N (London, British Library, MS Add. 14538, fols. 148v–155v)</strong>:</p>
+<ul class="stub-list">
+<li>Date: <strong>10th century CE</strong> (vellum codex in Estrangela script).</li>
+<li>Provenance: St. Mary Deipara in the Nitrian Desert, Egypt (cataloged by W. Wright, 1872, Part 3, No. 936, pp. 1003–1008).</li>
+<li>Preserves Odes 17:7 through 42:20.</li>
+</ul>
+<h4 class="stub-heading">B. The Greek Witness: Papyrus Bodmer XI</h4>
+<ul class="stub-list">
+<li><strong>Papyrus Bodmer XI (G)</strong> (Cologny-Geneva, Bibliotheca Bodmeriana):</li>
+<li>Date: <strong>3rd century CE</strong> (early 4th c.).</li>
+<li>Content: Preserves <strong>Ode 11 complete in Greek</strong> under the rubric Ὠιδὴ Σολομῶντος (<em>Ōidē Solomōntos</em>), bound within a famous miscellaneous papyrus codex alongside the <em>Protoevangelium of James</em> (Pap. Bodmer V) and 1–2 Peter.</li>
+<li>Editio Princeps: Michel Testuz, <em>Papyrus Bodmer XI</em> (Cologny-Geneva, 1959).</li>
+</ul>
+<h4 class="stub-heading">C. The Coptic Gnostic Witness (<em>Pistis Sophia</em>)</h4>
+<ul class="stub-list">
+<li><strong>London, British Library, MS Add. 5114 (The Askew Codex)</strong>:</li>
+<li>Date: <strong>4th century CE</strong> (written in Sahidic Coptic).</li>
+<li>Content: The gnostic treatise <em>Pistis Sophia</em> quotes five complete Odes in Sahidic Coptic, providing theological interpretations by the disciples:</li>
+<li><strong>Ode 1</strong> (Pistis Sophia ch. 59)</li>
+<li><strong>Ode 5</strong> (Pistis Sophia ch. 58)</li>
+<li><strong>Ode 6</strong> (Pistis Sophia ch. 65)</li>
+<li><strong>Ode 22</strong> (Pistis Sophia ch. 71)</li>
+<li><strong>Ode 25</strong> (Pistis Sophia ch. 69)</li>
+<li>Critical Edition: Carl Schmidt and Violet MacDermot, <em>Pistis Sophia</em> (Nag Hammadi Studies 9; Leiden: Brill, 1978).</li>
+</ul>
+<h4 class="stub-heading">D. Latin Patristic Witness</h4>
+<ul class="stub-list">
+<li><strong>Lactantius</strong> (<em>Divinae Institutiones</em> IV.12.3, ca. 310 CE):</li>
+<li><em>"Salomon in ode undevicesima ita dicit: Infirmatus est uterus virginis et accepit foetum et gravata est et facta est in multa miseratione mater virgo..."</em></li>
+<li>This explicit citation of <strong>Ode 19:6</strong> demonstrates that a Latin translation of the numbered Odes was circulating in North Africa by the early 4th century.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Charlesworth, James H.</strong>, ed. <em>The Odes of Solomon: Edited with Translation and Notes</em>. Oxford: Clarendon Press, 1973; revised edition with corrections, SBL Texts and Translations 13; Pseudepigrapha Series 7. Missoula, MT: Scholars Press, 1977. [The standard international critical edition: synoptic layout of Syriac, Greek, and Coptic texts, fresh English translation, exhaustive critical apparatus, and thematic introduction].</li>
+<li><strong>Lattke, Michael</strong>, ed. <em>Die Oden Salomos in ihrer Bedeutung für Neues Testament und Gnosis</em>. 4 volumes in 5 parts. Orbis Biblicus et Orientalis 25/1–4. Freiburg: Universitätsverlag; Göttingen: Vandenhoeck & Ruprecht, 1979–1998:</li>
+<li><em>Band I</em>: Verzeichnis aller Wörter (OBO 25/1, 1979).</li>
+<li><em>Band Ia</em>: Textkritischer Apparat und Index (OBO 25/1a, 1980).</li>
+<li><em>Band II</em>: Vollständige Wortkonkordanz (OBO 25/2, 1979).</li>
+<li><em>Band III</em>: Forschungsgeschichtliche Dokumentation 1799–1984 (OBO 25/3, 1986).</li>
+<li><em>Band IV</em>: Einleitung und Kommentar (OBO 25/4, 1998).</li>
+<li>[The monumental modern German encyclopedia of Odes scholarship].</li>
+<li><strong>Lattke, Michael</strong>. <em>Oden Salomos</em>. Übersetzt und eingeleitet. Fontes Christiani 19. Freiburg: Herder, 1995.</li>
+<li><strong>Harris, James Rendel</strong>, ed. <em>The Odes and Psalms of Solomon: Now First Published from the Syriac Version</em>. Cambridge: Cambridge University Press, 1909; 2nd revised ed. 1911. [Editio princeps].</li>
+<li><strong>Harris, James Rendel</strong>, and <strong>Alphonse Mingana</strong>, eds. <em>The Odes and Psalms of Solomon: Re-edited for the Governors of the John Rylands Library</em>. 2 volumes. Manchester: Manchester University Press, 1916–1920:</li>
+<li><em>Vol. 1: The Text with Facsimile Reproductions</em> (1916).</li>
+<li><em>Vol. 2: The Translation with Introduction and Notes</em> (1920).</li>
+<li><strong>Testuz, Michel</strong>, ed. <em>Papyrus Bodmer XI: Vingt-sixième Ode de Salomon</em>. Cologny-Geneva: Bibliotheca Bodmeriana, 1959. [Editio princeps of the Greek text of Ode 11].</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Odae Salomonis (CPG 1350)
+C£.: F. STEGMÜLLER, n? 107 et 107, 1-15; — S.P. Brock in
+E. SCHÜRER, III, p. 787-789; — A.-M. Denis, ILRJH, ad loc.
+
+Translatio anglica: J.H. CHARLESWORTH, Odes of Solomon (Late
+First to Early Second Century A.D.). A New Translation and Introduction,
+in J.H. CHARLESWORTH, II, p. 725-771 (e graeco, syriaco et coptico).
+
+Versio graeca (Oda Sal. x1)
+
+Cod. unicus: Papyrus Bodmer XI, p. 57-61[62], saec. ı (= J.
+VAN HAELST, n. 569 [x1]).
+
+M. Tzsruz, Papyrus Bodmer X-XII (Bibliotheca Bodmeriana),
+Cologny-Genéve, 1959, p. 47-69.
+
+J.H. CHARLESWORTH, The Odes of Solomon. The Syriac Texts
+edited with "Translations and Notes, (SBL. Texts and Translations
+13. Pseudepigrapha Series 7), Chico, California, 1977 (textus syriacus, graecus et copticus).
+
+M. LATTKE, Die Oden Salomos in ihrer Bedeutung für Neues Testament und Gnosis, 3 vol. (OBO 25, 1-3), Freiburg/Schw. - Góttingen, 1979-1986, mit einem Beitrag von M. FRANZMANN: À
+Study of the Odes of Solomon with Reference to the French Scholarship
+1909-1980 (textus graecus, syriacus, copticus, cum translatione,
+concordantia et bibliographia).
+
+J.H. CHARLESWORTH, Papyri and Leather Manuscripts of the
+Odes of Solomon (Dickerson Series of Facsimiles of Manuscripts
+Important for Christian Origins 1), Durham, 1981, p. 7-12 (facsimile Pap. Bodmer x1).
+
+Versio syriaca (Odae Sal. ı1-xıu)
+
+(JR. Harris - A. MiNGANA, The Odes and Psalms of Solomon re-edited, 2 vol., Manchester, 1916-1920.
+
+J.H. CHARLESWORTH, The Odes of Solomon. The Syriac Texts
+edited with "Translations and Notes, (SBL. Texts and Translations
+I3. Pseudepigrapha Series 7), Chico, California, 1977 (textus syriacus, graecus et copticus).
+160 PSALMI - ODAE SALOMONIS - PROVERBIA - JOB - SAPIENTIA 205
+
+M. LATTKE, Die Oden Salomos in ihrer Bedeutung für Neues Testament und Gnosis, 3 vol. (OBO 25, 1-3), Freiburg/Schw. - Göttingen, 1979-1986, mit einem Beitrag von M. FRANZMANN: A
+Study of the Odes of Solomon with Reference to the French Scholarship
+1909-1980 (textus graecus, syriacus, copticus, cum translatione,
+concordantia et bibliographia).
+
+J.H. CHARLESWORTH, Papyri and Leather Manuscripts of the
+Odes of Solomon (Dickerson Series of Facsimiles of Manuscripts
+Important for Christian Origins 1), Durham, 1981, p. 21-26
+(London, Brit. Libr., Add. 14538, fol. 149a-151a, saec. x [= Odae
+Sal. xVII, 7 xun, 20]), 27-89 (Manchester, John Rylands Univ.
+Libr., Syr. 9, fol. 1a-31b, saec. xv [= Odae Sal. 111, 1 xui, 20])
+(facsimile).
+
+Translatio anglica: J.A. EMERTON, The Odes of Solomon, in
+
+H.F.D. Sparks, p. 683-731 (e syriaco, praeter Odam Sal. I quae c
+coptico translata est).
+
+Translatio gallica: J. LABOURT - P. BATIFFOL, Les Odes de Salomon. Une œuvre chrétienne des environs de l'an 100-120. Traduction frangaise et introduction historique, Paris, 1911; — M.-J. Pierre - J.-M.
+MARTIN, Les Odes de Salomon (Apocryphes. Collection de poche de
+l'AELAC), [Turnhout], 1994; — É. Azar, Les Odes de Salomon. Presentation et traduction (Sagesses chrétiennes), Paris, 1996 (cum textu syriaco).
+
+Translatio germanica: M. LATTKE, Oden Salomos (Fontes
+Christiani 19), Freiburg, 1995.
+
+Translatio hispanica: A. PERAL - X. ALEGRE, Odas de Salomon,
+in A. Diez Macno, III, p. 59-100.
+
+Concordantia:
+J.B. BAUER, Clavis Apocryphorum | Supplementum. Complectens. voces
+versionis Germanicae Libri Henoch Slavici, Libri Jubilacomm, Odarum Salomonis (Grazer Theologische Studien 4), Graz, 1980, p. 171-208 (e
+translatione W. BAUER, Die Oden Salomos, in Kleine Texte für Vorlesungen und Übungen, 64, Berlin, 1933).
+
+Versio coptica (Odae Sal. 1, 1-5; v, 1-11; VI, 8-18; xxm,
+I-I2; XXV, 1-12) (sahidice)
+
+J.H. PETERMANN - M.G. SCHWARTZE, Pistis Sophia. Opus
+gnosticum Valentino adiudicatum e codice manuscripto coptico Londinensi
+descriptum, Berlin, 1851-1853, e cod. London, Brit. Libr., Add.
+5114, saec. IV ex. (Codex Askewianus).
+206 PSALMI - ODAE SALOMONIS - PROVERBIA - JOB - SAPIENTIA 161
+
+J.H. CHARLESWORTH, The Odes of Solomon. The Syriac Texts
+edited with "Translations and Notes, (SBL. Texts and Translations
+13. Pseudepigrapha Series 7), Chico, California, 1977 (textus syrlacus, graecus et copticus).
+
+M. LATTKE, Die Oden Salomos in ihrer Bedeutung für Neues Testament und Gnosis, 3 vol. (OBO 25, 1-3), Freiburg/Schw. - Góttingen, 1979-1986, mit einem Beitrag von M. FRANZMANN: À
+Study of the Odes of Solomon with Reference to the French Scholarship
+1909-1980 (textus graecus, syriacus, copticus, cum translatione,
+concordantia et bibliographia).
+
+J.H. CHARLESWORTH, Papyri and Leather Manuscripts of the
+Odes of Solomon (Dickerson Series of Facsimiles of Manuscripts
+important for Christian Origins 1), Durham, 1981, p. 13-20 (codex Askewianus) (facsimile).
+
+Translatio anglica: J.A. EMERTON, The Odes of Solomon, in
+H.F.D. SPARKS, p. 683-731 (Oda Sal. I e coptico, ceterae Odae Sal. e
+syriaco).
+
+Translatio gallica: J.P. MIGNE, Dictionnaire des apocryphes, I, col.
+955-958.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

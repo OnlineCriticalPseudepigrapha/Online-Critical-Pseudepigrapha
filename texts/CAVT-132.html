@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liber Jubilaeorum — CAVT-132 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Liber Jubilaeorum (CAVT-132)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-132</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-132</span>
+          <span class="badge badge-lang">Hebrew</span>
+          <span class="badge badge-lang">CAVT 132</span>
+          
+        </div>
+        <h1 class="stub-title">Liber Jubilaeorum</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> MOYSES
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=Jub.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/Jub.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-132</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 132</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 29 (Jubilees)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:35-142 (Book of Jubilees)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:1-82 (Book of Jubilees)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 1-139 (Book of Jubilees)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>Portions of <em>Jubilees</em> survive in the Hebrew original as well as in Greek, Syriac, Latin, and Ethiopic translations.</p>
+<p>The Qumran Hebrew evidence is preserved across 15 fragmentary scrolls: 4Q216–224, 4Q176a, 1Q17–18, 2Q19–20, 3Q5, and 11Q12. The text presented here is based on the transcriptions of Martin G. Abegg, Jr. (with J. E. Bowley and E. M. Cook, via ETCBC/dss), aligned to the standard chapter-and-verse framework established by J. C. VanderKam and J. T. Milik in DJD XIII (1994). Used by permission of M. G. Abegg.</p>
+<p>The surviving Greek fragments of <em>Jubilees</em> are presented here as they appear in A.-M. Denis, <em>Fragmenta</em>, 70–102.</p>
+<p>About one quarter of <em>Jubilees</em> has survived in Latin translation in a 5th–6th century manuscript published by A. M. Ceriani in 1861 (see below). Ceriani’s edition is presented here without critical apparatus as it is reprinted in Denis, <em>Concordance latine</em>, 552–65.</p>
+<p>The complete Ethiopic text and the Syriac fragments wait to be encoded.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <h4 class="stub-heading">A. Hebrew Dead Sea Scrolls (Original Hebrew Text)</h4>
+<p class="stub-paragraph">The discovery of the Dead Sea Scrolls confirmed that Hebrew was the original language of Jubilees. Over fifteen fragmentary Hebrew manuscripts were recovered from five caves at Qumran:</p>
+<ul class="stub-list">
+<li><strong>Cave 1</strong>: <strong>1Q17 (1QJub$^a$)</strong>, <strong>1Q18 (1QJub$^b$)</strong> (ed. J. T. Milik, DJD 1, 1955).</li>
+<li><strong>Cave 2</strong>: <strong>2Q19 (2QJub$^a$)</strong>, <strong>2Q20 (2QJub$^b$)</strong> (ed. M. Baillet, DJD 3, 1962).</li>
+<li><strong>Cave 3</strong>: <strong>3Q5 (3QJub)</strong> (ed. M. Baillet, DJD 3, 1962).</li>
+<li><strong>Cave 4</strong>: The largest collection, dating from ca. 125 BCE to 50 CE:</li>
+<li><strong>4Q216 (4QJub$^a$)</strong>: Late 2nd cent. BCE (one of the oldest scrolls; chs. 1–2).</li>
+<li><strong>4Q217 (4QpapJub$^b$?)</strong>: Papyrus manuscript.</li>
+<li><strong>4Q218 (4QJub$^c$)</strong>; <strong>4Q219 (4QJub$^d$)</strong>; <strong>4Q220 (4QJub$^e$)</strong>; <strong>4Q221 (4QJub$^f$)</strong>; <strong>4Q222 (4QJub$^g$)</strong>; <strong>4Q223–224 (4QpapJub$^h$)</strong>.</li>
+<li><strong>Cave 11</strong>: <strong>11Q12 (11QJub)</strong> (ed. F. García Martínez et al., DJD 23, 1998).</li>
+<li><em>Canonical Status at Qumran</em>: Cited as an authoritative, inspired text in the <em>Damascus Document</em> (CD 16:2–4: "the Book of the Divisions of the Times into their Jubilees and Weeks").</li>
+</ul>
+<h4 class="stub-heading">B. Ethiopic (Ge'ez: <em>Mashafa Kufale</em>)</h4>
+<p class="stub-paragraph">The <em>only</em> textual witness preserving the entire work complete from beginning to end. Preserved in 19 known manuscripts, classified into two major families:</p>
+<ul class="stub-list">
+<li><strong>Group 1 (Older, Superior Recension; 15th–16th cent.)</strong>:</li>
+<li><strong>MS A (Paris, BnF, MS éth. 51, fols. 1r–55v)</strong>: 15th century.</li>
+<li><strong>MS B (Lake Tana, Kebran Gabriel Monastery MS 9)</strong>: 15th century.</li>
+<li><strong>Tübingen MSS</strong> (collated by Ewald).</li>
+<li><strong>Group 2 (Later, Secondary Recension; 17th–18th cent.)</strong>:</li>
+<li><strong>MS C (London, British Library, MS Add. 16188)</strong>.</li>
+<li><strong>MS D (London, British Library, MS Or. 485)</strong>.</li>
+<li>Critical Editions: August Dillmann (1859); R. H. Charles (1895); James C. VanderKam (CSCO 510–511, 1989).</li>
+</ul>
+<h4 class="stub-heading">C. Latin Tradition (<em>Parva Genesis</em>)</h4>
+<ul class="stub-list">
+<li><strong>Milan, Biblioteca Ambrosiana, MS C. 73 inf.</strong> (5th/6th cent. CE uncial palimpsest):</li>
+<li>Preserves approximately one-third of the text in an ancient Old Latin translation made directly from the Greek Vorlage.</li>
+<li>Discovered and published by Antonio Maria Ceriani, <em>Monumenta Sacra et Profana</em> 1 (Milan, 1861), pp. 15–54; reedited with exhaustive commentary by Hermann Rönsch (1874).</li>
+</ul>
+<h4 class="stub-heading">D. Greek Fragments and External Citations</h4>
+<ul class="stub-list">
+<li>Preserved in extensive excerpts in the Byzantine chronicles of Georgius Syncellus, Georgius Cedrenus, the <em>Chronicon Paschale</em>, and patristic catenae on Genesis; cited also by Epiphanius (<em>Panarion</em> 39.6).</li>
+<li>Editions: R. H. Charles (1902); Albert-Marie Denis, <em>PVTG</em> 3 (1970).</li>
+</ul>
+<h4 class="stub-heading">E. Syriac Fragments</h4>
+<ul class="stub-list">
+<li>Excerpts preserved in <strong>London, BL MS Add. 12154</strong> (8th cent. CE), the anonymous <em>Chronicle of 846</em>, and the chronicle of Michael the Syrian (ed. Ceriani, Baumstark).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h3>Print Editions of the Qumran Hebrew Fragments</h3>
+<ul class="bibliography">
+<li>J. C. VanderKam and J. T. Milik, "Jubilees," in <em>Qumran Cave 4.VIII: Parabiblical Texts, Part 1</em> (ed. H. Attridge et al.; DJD XIII; Oxford: Clarendon Press, 1994), 1–185.</li>
+<li>F. García Martínez and E. J. C. Tigchelaar, <em>The Dead Sea Scrolls Study Edition</em> (2 vols.; Leiden: Brill, 1997–1998).</li>
+<li>D. W. Parry and E. Tov, <em>The Dead Sea Scrolls Reader, Vol. 3: Parabiblical Texts</em> (Leiden: Brill, 2004).</li>
+<li>M. G. Abegg, Jr., with J. E. Bowley and E. M. Cook, <em>The Dead Sea Scrolls Concordance, Vol. 1: The Non-Biblical Texts from Qumran</em> (Leiden: Brill, 2003).</li>
+</ul>
+
+<h3>Print Editions of the Greek Text</h3>
+<ul class="bibliography">
+<li>J. VanderKam, <em>The Book of Jubilees: A Critical Text</em> (CSCO 510; ScrAeth 87; Louvain: Peeters, 1989).</li>
+<li>Denis, <em>Concordance grecque</em>, 902–903.</li>
+<li>Denis, <em>Fragmenta</em>, 70–102.</li>
+<li>P. A. de Lagarde, <em>Genesis graece</em> (Göttingen, 1869).</li>
+</ul>
+
+<h3>Print Editions of the Latin Text</h3>
+<ul class="bibliography">
+<li>Denis, <em>Concordance latine</em>, 552–565.</li>
+<li>A. M. Ceriani, "Fragmenta Parvae Genesis," in <em>Fragmenta latina evangelii S. Lucae, Parvae Genesis et Assumptionis Mosis, Baruch, Threni et Epistolae Jeremiae versionis syriaque Pauli Telensis</em> (Monumenta sacra et profana 1; Milano: 1861), 15–54.</li>
+</ul>
+<p>For further bibliography see DiTommaso, <em>Bibliography</em>, 617–620.</p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Liber Jubilaeorum (Lepte Genesis, Parua Genesis,
+Apocalypsis Moysi, Testamentum Moysi)
+Cf.: J.-B. Frey, art. Apocryphes de l'Ancien Testament, in DBS I,
+
+1928, col. 371-380; — F. STEGMÜLLER, n° 77 et 77, 1-8; — E. ScHÜ-
+RER, III, p. 308-318; — A.-M. DENIS, ILRJH, ad loc.
+
+Fragmenta hebraica
+
+Cf.: J.C. VANDERKAM, The Jubilees Fragments from Qumran Cave
+4, in J. TREBOLLE BARRERA - L. VEGAS MONTANER, The Madrid
+Qumran Congress. Proceedings of the International Congress on the Dead Sea
+Scrolls. Madrid 18-21 March, 1991 (STDJ 11, 2), Leiden - Madrid,
+
+1992, p. 635-648.
+
+(1) 1Q17 (1QJub* «Livre des Jubilés») (= xxvI, 19-[20]21):
+D. BARTHÉLEMY - J.T. Maux, Qumran Cave 1 (DJD 1), Oxford, 1955, p. 82-83 + tab. xvi.
+
+(2) 1Q18 (1QJub® «Livre des Jubilés ») (7 xxxv, 8-10): D.
+BARTHELEMY - J.T. MiLik, Qumran Cave 1 (DJD 1), Oxford,
+1955, p. 83-84 + tab. xvi.
+
+(3) 2Q19 (zQjub* «Livre des Jubilés i») (= xxm, 7-8): M.
+Baier - J.T. Mit - R. DE Vaux, Les «petites grottes » de
+Qumrán (DJD 3), Oxford, 1962, p. 77-78 + tab. xv.
+98 MOYSES 132
+
+(4) 2Q20 (2QJub? «Livre des Jubilés ii») (= xLvI, 1-3): M.
+BAILLET - J.T. MıLik - R. DE VAUX, Les «petites grottes » de
+Qumran (DJD 3), Oxford, 1962, p. 78-79 + tab. xv.
+
+(5) 3Q5 fragm. 1 et 3 (3QJub [olim 3QapProph «Une prophétie apocryphe»]) (= xx1u, 6-7, 12-13): M. BAILLET - J.T. Mi-
+LIK - R. DE VAUX, Les «petites grottes » de Qumrán (DJD 3), Oxford, 1962, p. 96-98 + tab. xvii.
+
+Cf.: E. SCHÜRER, III, p. 306.
+
+(6) 4Q176 (4QTanh «Tanhümim »), fragm. 19-21 (= xxni,
+21-23, 30-31): J.M. ALLEGRO, Qumran Cave 4. I (4 Q158-4 Q186)
+(DJD 5), Oxford, 1968, p. 65 + tab. xxiii.
+
+Emendationes: J. STRUGNELL, Notes en marge du volume V des
+
+« Discoveries in the Judaean Desert of Jordan », in RQ 7 (1970), p. 229-
+
+236, praesertim p. 235; — M. Kıster, Newly-Identified Fragments of the
+
+Book of Jubilees : Jub. 23 :21-23, 30-31, in RQ 48 (1987), p. 529-536; —
+
+G.W. NEBE, Ergänzende Bemerkung zu 4Q176 Jubiläen 23, 21, in RQ
+
+14 (1989), p. 129-130.
+
+(7) 4Q216 (4QJubilees*) (= Prol. + 1, 1-2, 4-7, 7-15, 26-28; II,
+1-4, 7-12, 13-24): J.C. VANDERKAM - J.T. Mirr&, Qumran Cave
+4. VII. Parabiblical Texts, Pan 1 (DJD 13), Oxford, 1994, p. 1-22
++ tab. 1-11.
+
+(8) 4Q217 (aQpapJubilees ?): J.C. VANDERKAM - J.T. Mr-
+LIK, Qumran Cave 4. VII... (DJD 13), p. 23-33 + tab. ur.
+
+(9) 4Q218 (4QJubilees)) (= n 26-27): J.C. VANDERKAM -
+J.T. MILIK, Qumran Cave 4. VII... (DJD 13), p. 35-38 + tab. 1v.
+
+(10) 4Q219 (4QJubilees) (= XXI, I-2, 7-10, 12-16; XXI, 18 xxm, I): J.C. VANDERKAM - J.T. Mirik, Qumran Cave 4.
+VII... (DJD 13), p. 39-53 + tab. iv.
+
+(11) 4Q220 (4QJubilees)) (= xxi, 5-10): J.C. VANDERKAM -
+J.T. MıLik, Qumran Cave 4. VII... (DJD 13), p. 55-61 + tab. v.
+
+(12) 4Q221 (4QJubilees‘) (= XXI, 22-24; XXII, 22; XXIII, IO-
+13; XXXIII, I2-15; XXXVII, II-I5; XXXVII, 6-8; XXXIX, 4-9):
+J.C. VANDERKAM - J.T. MILIK, Qumran Cave 4. VII... (DJD
+13), p. 63-85 + tab. vi.
+
+(13) 4Q222 (4QJubilees®) (= xxv, 9-12; XXVII, 6-7; XLVII,
+5): J.C. VANDERKAM - J.T. MILik, Qumran Cave 4. VII...
+(DJD 13), p. 87-94 * tab. v.
+132 MOYSES 99
+
+(14) 4Q223-4Q224 (4QpapJubilees") (= xxxm, 18-21;
+XXXIV, 4-5; XXXV, 7-12, 12-22; XXXVI, 7-IO, 10-23; XXXVII,
+17 - XXXVII, 13; XXXIX, 9 - XL, 7; XLI, 7-10): J.C. VANDER-
+Kam - J.T. MILIK, Qumran Cave 4. VIII... (DID 13), p. 95-140
++ tab. vir-ix.
+
+(15) 11Q12 (11QJub) (= Iv, 7-11, 13-14, 16-17, 29-30; V, 1-
+2; XII, 15-17, 28-29): editio paratur ab A.S. VAN DER WOUDE.
+Publicatio liminaris ab A.S vaN DER WOUDE, Fragmente des Buches Jubiläen aus Qumran Höhle XI (11Q Jub), in G. JEREMIAS -
+H.W. KUHN - H. STEGEMANN, Tradition und Glaube. Das frühe
+Christentum in seiner Umwelt. Festgabe für K.G. Kuhn, Göttingen,
+1971, p. 140-146 + tab. vi.
+
+Emendationes: J.T. Mirik, A propos de r1QJub, in Biblica 54
+(1973), p. 77-78.
+
+Fragmenta sequentia contingunt propinquitate Librum Jubilaeorum (Pseudo-Jub.) uel origine incerta sunt:
+
+(16) 4Q225 (4QPseudo-Jubilees’): J.C. VANDERKAM - J.T.
+Minik, Qumran Cave 4. VIII... (DJD 13), p. 141-155 + tab. x.
+
+Cf.: G. VERMES, New Light on the Sacrifice of Isaac from 4Q225, in
+JJS 47 (1996), p. 140-145.
+
+(17) 4Q226 (4QPseudo-Jubilees®): J.C. VANDERKAM - J.T.
+MILIK, Qumran Cave 4. VIII... (DJD 13), p. 157-169 + tab. xr.
+
+(18) 4Q227 (4QPseudo-Jubilees”) (cf. iv, 17-23): J.C. VAN-
+DERKAM - J.T. MILIK, Qumran Cave 4. VIN... (DJD 13), p. 171-
+175 * tab. xir.
+
+(19) 4Q228 (4QText with a Citation of Jubilees [olim 4C)Patriarchal Stories]: J.C. VANDERKAM - J.T. Miurg, Qumran
+Cave 4. VIII... (DJD 13), p. 177-185 + tab. xir.
+
+(20) 4Q482 (4QpapJub ? «Livre des Jubilés ?»): M. BAILLET,
+Qumran Grotte 4. III (4Q482-4Q$20) (DJD 7), Oxford, 1982,
+p. 1-2 + tab. 1).
+
+(21) 4Q483 (aQpapGen or 4QpapJub ? «Genése ou Livre des
+Jubiles ?»): M. BAILLET, Qumran Grotte 4. III (4Q482-4Q520)
+(DJD 7), Oxford, 1982, p. 2 + tab. 1.
+
+(22) Masti (MasJub [Jubilees (Gen 46, 7-11 ?)]): editio paratur
+a S. TALMON. Publicatio liminaris a S. TALMON, Fragments of
+100 MOYSES 132
+
+Writings in Hebrew at Masada, in Eretz Israel 20 (Festschrift Y. Yadin), 1989, p. 278-286, praesertim p. 281-283 (hebraice).
+
+(23) Masıj (MasWork similar to Jub): editio paratur a S.
+TALMON. Publicatio liminaris a S. TALMON, Fragments of Writings in Hebrew at Masada, in Eretz Israel 20 (Festschrift Y. Yadin), 1989, p. 278-286, praesertim p. 278-279 (hebraice).
+
+Translatio anglica: F. GarciA MARTINEZ, The Dead Sea Scrolls
+
+Translated, p. 238-245 (4Q216, 11Q12, 4Q220, 4Q219, 4Q221, 3Q5,
+2Q19, 4Q176 fragm. 19-21, 1Q17, 1Q18, 2Q20, 4Q227).
+
+Fragmenta graeca
+
+A.-M. DENIS, Fragmenta pseudepigraphorum quae supersunt graeca
+(PsVTGr 3), Leiden, 1970, p. 70-102; — J.T. MILIK, Recherches sur
+la version grecque du Livre des Jubilés, in RB 78 (1971), p. 545-557.
+
+Concordantia:
+A.-M. Denis, Concordance grecque des Pseudépigraphes d' Ancien Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione A.-M. Denis).
+
+Versio latina
+
+Cf.: J. VERHEYDEN, Les Pseudépigraphes d' Ancien Testament. Textes
+latins. À propos d'une Concordance, in ETL 71 (1995), p. 383-420, praesertim p. 387-388.
+
+Nota: Versio latina continet locos sequentes: XIII, 10-21; XV, 20-
+31; XVI, $ - XVII, 6; XVIII, IO - XXH, 19; XXIII, 8-23; XXIV, I3 -
+XXV, 1; XXVI, 8-23; XXVII, 11-24; XXVIII, 16-27; XXIX, 8 - XXXI, I;
+XXXI, 9-18; XXXI, 29 - XXXII, 8; XXXII, 18 - XXXIII, 9; XXXIII, 18 -
+XXXIV, 5$; XXXV, 3-I2; XXXVI, 20 - XXXVII, 5; XXXVII, I-16;
+XXXIX, 9 - XL, 8; XLI, 6-19; XLII, 2-14; XLV, 8 - XLVI, I; XLVI, I2 -
+XLVII, 5; XLIX, 7-22 (secundum partitionem quam R.H. Charles
+proposuit).
+
+Cod. unicus: Milano, Bibl. Ambr., C 73 Inf., fol. 49-66, 69-76,
+79-84, 87-90, 93-96, 101-108, 113-114, saec. VII.
+
+A.M. CERIANI, Monumenta sacra et profana ex codicibus praesertim
+Bibliothecae Ambrosianae, 1, 1, Milano, 1861, p. 9-54; — H.
+Rönsch, Das Buch der Jubiläen oder die kleine Genesis unter Beifügung des revidirten Textes der in der Ambrosiana aufgefundenen lateinischen Fragmente sowie einer von A. Dillmann aus zwei äthiopischen
+Handschriften gefertigten lateinischen Übertragung, Leipzig, 1874; — et
+iterum R.H. CHARLES, The Ethiopic Version of the Hebrew Book of
+132 MOYSES IOI
+
+Jubilees (Anecdota Oxoniensia. Semitic Series 8), Oxford, 1895
+(exaduersus textum aethiopicum).
+Concordantiae:
+W. LECHNER-SCHMIDT, Wortindex der lateinisch erhaltenen Pseudepigraphen zum Alten Testament (Texte und Arbeiten zum neutestamentlichen Zeitalter 3), Tübingen, 1990 (ex editione H. Rónsch); — A.-M.
+DENIS avec la collaboration de Y. JANSSENS, Concordance latine du Liber Jubilaeorum sive Parva Genesis (Informatique et étude de textes 4),
+Louvain, 1973 (ex editione A.M. Ceriani); — A.-M. Denis, Concordance latine des Pseudépigraphes d' Ancien Testament. Concordance. Corpus
+des textes. Indices (Corpus Christianorum. Thesaurus patrum latinorum. Supplementum), Turnhout, 1993, (ex editione A.M. Ceriani).
+
+Fragmenta syriaca
+Notae:
+
+(1) Vide alia fragmenta (in citationibus) apud A.-M. DENIS,
+ILRJH, ad loc., sed quaestio disputatur.
+
+(2) Parum probabile uersionem syriacam integram exstitisse.
+
+(1) A.M. CERIANI, Nomina uxorum patriarcarum priorum juxta librum hebraeum Jobelia nuncupatum, in Monumenta sacra et profana ex
+codicibus praesertim. Bibliothecae Ambrosianae, II, 1, Milano, 1863,
+p. IX-X, e cod. London, Brit. Libr., Add. 12154, fol. 180, saec.
+VIN-IX — et iterum R.H. CHARLES, The Ethiopic Version of the
+Hebrew Book of Jubilees otherwise known among the Greeks as H
+AEIITH TENESIE edited from four Manuscripts (Anecdota Oxoniensia. Semitic Series 8), Oxford, 1895, p. 183.
+
+De uersionibus indicis nominum uxorum patriarcharum uide
+
+W.L. LiescomB, A Tradition from the Book of Jubilees in Armenian, in
+
+JJS 29 (1978), p. 149-163 (hebraice, graece, syriace, aethiopice, armeniace); — Ip., The Wives of the Patriarchs in the Eklogé Historian, in JJS
+
+30 (1979), p. 91; — M.E. STONE, Armenian Apocrypha Relating to
+
+Adam and Eve. Edited with Introductions, "Translations and Commentary
+
+(StVTPs 14), Leiden - New York - Köln, 1996, p. 165-166, e cod.
+
+Erevan, Matenadaran 10200, p. 392, an. 1624, 1634, 1666.
+
+(2) 17 fragmenta in chronicis anonymis saec. xiii seruata:
+E. TissERANT, Fragments syriaques du Livre des Jubilés, in RB 30
+(1921), p. 55-86, 206-232; — editio chronicorum anonymorum
+ab LE. RAHMANI, Chronicon civile et ecclesiasticum anonymi auctoris,
+Charfé (Liban), 1904 et a J.-B. CHABOT, Chronicon ad annum
+Christi 1234 pertinens (CSCO 81. Scr. Syri 36), Louvain, I, 1953
+(= 1920), p. 27, l. 14 - 60, 1. 11.
+102 MOYSES 132
+
+Translatio gallica: F. Nau, Traduction de la Chronique syriaque
+anonyme, éditée par Sa Béatitude Mgr. Rahmani, Patriarche des Syriens catholiques, in ROC 12 (1907), p. 429-440; 13 (1908), p. 90-99, 321-
+328, 436-443; — J.-B. CHABOT, Chronicon ad annum Christi 1234 pertinens (CSCO 109. Scr. syri 56), Louvain, I, 1952 (= 1937), p. 18,1. 19 -
+45,1. 25.
+
+Versio aethiopica
+
+Codd.: R. Cow ey - F.A. TEFERU, The Study of Geez Manuscripts in Tégre Province, in Journal of Ethiopian Studies 9 (1971),
+p. 21-2$ (cod. Monast. Sellase, quem J.C. VanderKam cognoscere
+non uidetur); — J.C. VANDERKAM, op. cit. (CSCO 510) p. xv et
+(CSCO 511) p. xix-xxiv (27 codd.).
+
+J.C. VANDERKAM, The Book of Jubilees. A Critical Text
+(CSCO 510. Scr. Aeth. 87), Leuven, 1989.
+
+Translatio anglica: O.S. WINTERMUTE, Jubilees (Second Century
+B.C.). A New Translation and Introduction, in J.H. CHARLESWORTH, II,
+p. 35-142; — R.H. CHARLES - C. RABIN, Jubilees, in H.F.D.
+SPARKS, p. 1-139; — J.C. VANDERKAM, The Book of Jubilees (CSCO
+511. Scr. Aeth. 88), Leuven, 1989.
+
+Translatio gallica: A. CAQUOT, Jubilés, in A. DuPoNT-SOM-
+MER — M. PHILONENKO, p. 627-810 (ex editione R.H. CHARLES,
+Mashafa Kufalé or the Ethiopic Version of the Hebrew Book of Jubilees,
+[Anecdota Oxoniensia. Semitic Series 8], Oxford, 1895).
+
+Translatio germanica: K. BERGER, Das Buch der Jubiläen, in
+JSHRZ II, 3, Gütersloh, 1981 (ex editionibus R.H. CHARLES, Mashafa Kufalè or the Ethiopic Version of the Hebrew Book of Jubilees, [ Anecdota Oxoniensia. Semitic Series, 8], Oxford, 1895 et A. DILLMANN,
+Mashafa Kufalé sive Liber Jubilaeorum, Kiel - London, 1859).
+
+Translatio hispanica: F. CORRIENTE - A. PINERO, Libro de los
+Jubileos. "Traducción de la versión etiópica, in A. Diez Macuo, II, p. 65-
+193.
+
+Translatio italica: L. FUSELLA, Libro dei Giubilei, in P. Sac-
+CHI, p. 179-411.
+
+Concordantia:
+J.B. BAUER, Clavis Apocryphorum Supplementum. Complectens voces versionis Germanicae Libri Henoch Slavici, Libri Jubilaeorum, Odarum Salomonis (Grazer Theologische Studien 4), Graz, 1980, p. 9-119 (e translatione E. LITTMANN, Das Buch der Jubiläen, in E. Kautzscu, IL, p. 39-
+119).
+134 MOYSES 103</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

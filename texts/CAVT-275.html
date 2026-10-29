@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sibylla Tiburtina — CAVT-275 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Sibylla Tiburtina (CAVT-275)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-275</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-gap">Clavis Record / Gap</span>
+          <span class="badge badge-id">CAVT-275</span>
+          <span class="badge badge-lang">Multi/Other</span>
+          <span class="badge badge-lang">CAVT 275</span>
+          
+        </div>
+        <h1 class="stub-title">Sibylla Tiburtina</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> VARIA
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-275</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 275</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 39 (Sibylline Oracles / Tiburtine Sibyl)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Sibylline Oracles</em> (Greek: Χρησμοὶ Σιβυλλιακοί / <em>Chrēsmoi Sibylliakoi</em>; Latin: <em>Oracula Sibyllina</em>) constitute a vast, multifaceted collection of Greek hexameter poems composed by Jewish and early Christian authors between the 2nd century BCE and the 7th century CE. The collection adopts the authoritative literary persona of the <strong>Sibyl</strong>—the inspired, ecstatic prophetess of ancient pagan Greece and Rome (traditionally associated with Erythrae, Cumae, or Delphi)—to proclaim biblical monotheism, castigate pagan idolatry, prophesy the rise and fall of world empires, and announce impending cosmic judgment, divine conflagration (<em>ekpyrōsis</em>), and the messianic age.</p>
+<p class="stub-paragraph">The standard critical corpus comprises fourteen numbered books (Books 1–8 and 11–14; Books 9 and 10 in early numbering represent duplicated material), plus several independent fragments preserved in patristic literature (Theophilus of Antioch, Clement of Alexandria, Lactantius).</p>
+<h4 class="stub-heading">Classification of the Corpus</h4>
+<h5 class="stub-subheading">A. The Major Jewish Sibylline Books</h5>
+<p class="stub-paragraph">1. <strong>Book 3 (The Ptolemaic Jewish Sibyl, ca. 163–145 BCE; with later additions ca. 30 BCE)</strong>:</p>
+<ul class="stub-list">
+<li>The oldest, most substantial, and most influential Jewish Sibylline composition, originating in Alexandria, Egypt, during the reign of Ptolemy VI Philometor (180–145 BCE).</li>
+<li><em>The Main Core</em> (ll. 97–808):</li>
+<li>The Tower of Babel and the euhemeristic myth of the Titans (Kronos, Titan, Prometheus, ll. 97–161).</li>
+<li>Succession of world kingdoms: Solomon, Persians, Macedonians, Greeks, and the menacing rise of the Roman Republic (<em>an empire of many heads</em>).</li>
+<li><em>The Seventh King of Egypt</em> (ll. 193, 318, 608): Under the seventh Greek Ptolemaic monarch, the Great King from the Sun (<em>ap' ēelioio</em>) will arrive to usher in divine peace and exalt the Temple of Jerusalem.</li>
+<li>Oracles of doom against pagan nations (Babylon, Egypt, Greece, Libya) for their idolatry, sexual perversions, and plundering of the holy sanctuary.</li>
+<li>The final eschatological crisis: Kings of the earth unite to assault Mount Zion; God intervenes with fiery swords, torrential brimstone, and cosmic earthquakes; the righteous dwell in eternal safety around the radiant Temple, feasting on honey, milk, and wine.</li>
+<li><em>The Augustan Addition</em> (ll. 1–96, ca. 30 BCE):</li>
+<li>Allusions to the Second Triumvirate, Cleopatra VII (<em>a female reign over Rome</em>), and the arrival of <strong>Beliar</strong> from the Sebastoi (<em>ek Sebastēnōn</em>), who will perform signs and deceptions until consumed by heavenly fire.</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Book 4 (The Post-70 CE Hellenistic Jewish Sibyl, ca. 80 CE)</strong>:</p>
+<ul class="stub-list">
+<li>Composed in Judea, Syria, or Asia Minor shortly after the volcanic destruction of Pompeii and Herculaneum by Mount Vesuvius in 79 CE (<em>an air-borne fire bursting from a fissure in Italy</em>, ll. 130–136).</li>
+<li>Historical outline of four world kingdoms: Assyrians, Medes, Persians, Macedonians, followed by the fifth: Rome.</li>
+<li>Depicts the sack of Jerusalem and the burning of the Second Temple by a Roman general (<em>Titus</em>, ll. 115–129).</li>
+<li><em>Theological Distinctiveness</em>: Complete rejection of animal sacrifice and man-made temples; the author preaches salvation through moral repentance and <strong>purification in running streams/rivers</strong> (<em>lousasthe potamois</em>, ll. 165–170), reflecting Jewish baptist piety.</li>
+<li><em>The Nero Redivivus Legend</em>: Nero's flight across the Euphrates into Parthia and his impending return with a terrifying army to incinerate the West (ll. 119–124, 137–139).</li>
+<li>Universal physical resurrection: God will reshape human dust and restore flesh and breath to bones for the great judgment in fire (ll. 179–192).</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Book 5 (The Trajanic/Hadrianic Egyptian Jewish Sibyl, ca. 115–132 CE)</strong>:</p>
+<ul class="stub-list">
+<li>Composed in Roman Egypt during or shortly after the catastrophic Diaspora Revolt under Trajan and Hadrian (115–117 CE).</li>
+<li>Fierce, unmitigated anti-Roman polemic: Rome is reviled as the "impious Babylon," the bloodthirsty harlot that devastated Jerusalem.</li>
+<li>Chronicle of Roman emperors from Julius Caesar to Hadrian (indicated by gematria / initial letters of names: J=10, A=1, T=300, etc.).</li>
+<li>Nero depicted as an eschatological cosmic monster and Antichrist returning from the ends of the earth to level cities.</li>
+<li><em>The Heavenly Man and the Celestial Temple</em>: A divine redeemer descends from heaven, rebuilding a radiant, indestructible Jerusalem.</li>
+<li><em>The Battle of the Stars</em> (ll. 512–531): Cosmic battle of constellations; the zodiac signs tear each other apart and plunge into the abyss.</li>
+</ul>
+<p class="stub-paragraph">4. <strong>Books 1–2 (Jewish Core ca. 1st c. BCE; Christian Redaction ca. 150 CE)</strong>:</p>
+<ul class="stub-list">
+<li>Periodization of world history into <strong>Ten Generations</strong> (<em>decas</em>).</li>
+<li>The first through sixth generations recount primeval history: Adam, the Fall, the giants, the wickedness of mankind, and Noah's prophetic preaching before the Deluge.</li>
+<li>The Christian redactor inserted Christological prophecies and interpolated lines 5–79 of <em>Pseudo-Phocylides</em> into Book 2 (ll. 56–148).</li>
+</ul>
+<h5 class="stub-subheading">B. The Christian Sibylline Books</h5>
+<ul class="stub-list">
+<li><strong>Books 6–8 (Late 2nd to 3rd c. CE)</strong>:</li>
+<li><em>Book 6</em>: A short, beautiful liturgical hymn to Christ, his baptism in the Jordan, and his crucifixion.</li>
+<li><em>Book 7</em>: Apocalyptic prophecies against nations, the destruction of Rome, and the final conflagration.</li>
+<li><em>Book 8</em>: Contains the famous 34-line acrostic hymn (ll. 217–250) whose initial Greek letters form the confession: <strong>ΙΗΣΟΥΣ ΧΡΕΙΣΤΟΣ ΘΕΟΥ ΥΙΟΣ ΣΩΤΗΡ ΣΤΑΥΡΟΣ</strong> (<em>Iēsous Chreistos Theou Yios Sōtēr Stauros</em>, "Jesus Christ, Son of God, Savior, Cross"), forming the sacred anagram <strong>ΙΧΘΥΣ</strong> (<em>ICHTHYS</em>).</li>
+<li><strong>Books 11–14 (The Byzantine Historical Sibyls, 4th–7th c. CE)</strong>:</li>
+<li>Historical retrospectives in prophetic disguise, tracking imperial rulers from Julius Caesar, through Constantine and Justinian, down to the Arab-Islamic conquest of Egypt and Syria (Book 14).</li>
+</ul>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The complex transmission history of the <em>Sibylline Oracles</em> is classified into three distinct manuscript groups:</p>
+<h4 class="stub-heading">A. The Three Recensional Manuscript Families</h4>
+<p class="stub-paragraph">1. <strong>Group $\Phi$ (Codices 1–8)</strong>:</p>
+<ul class="stub-list">
+<li>Preserves the anonymous Byzantine Christian Preface/Prologue (summarizing the ancient Sibyls according to Varro) and <strong>Books 1–8</strong> (lacking only 8.487–500).</li>
+<li>Key manuscripts:</li>
+<li><strong>MS A (Codex Ambrosianus D. 84. inf.)</strong>: 15th century, Milan.</li>
+<li><strong>MS B (Codex Vaticanus Graecus 743)</strong>: 14th century, Rome.</li>
+<li><strong>MS C (Codex Monacensis Graecus 351)</strong>: 15th century, Munich.</li>
+<li><strong>MS P (Codex Parisinus Graecus 2851)</strong>: 15th century, Paris.</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Group $\Psi$ (The Phocylides Recension)</strong>:</p>
+<ul class="stub-list">
+<li>Preserves Book 8, followed by Books 1–7 (omitting Books 6 and 7 in several witnesses).</li>
+<li>Distinctive feature: Interpolates <em>Pseudo-Phocylides</em> lines 5–79 as <em>SibOr</em> 2.56–148.</li>
+<li>Key manuscripts:</li>
+<li><strong>MS D (Codex Laurentianus plut. XI. 17)</strong>: 15th century, Florence.</li>
+<li><strong>MS E (Codex Vaticanus Graecus 1120)</strong>: 14th century, Rome.</li>
+<li><strong>MS H (Codex Monacensis Graecus 499)</strong>: 16th century, Munich.</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Group $\Omega$ (The Mai Discoveries: Books 11–14)</strong>:</p>
+<ul class="stub-list">
+<li>In 1817 and 1828, Cardinal <strong>Angelo Mai</strong> discovered in the Biblioteca Ambrosiana (Milan) and the Biblioteca Apostolica Vaticana (Rome) manuscripts containing four previously unknown Sibylline books, published as <strong>Books 11–14</strong> (along with alternate recensions of earlier books, numbered 9 and 10).</li>
+<li>Key manuscripts:</li>
+<li><strong>MS M (Codex Ambrosianus E. 64. sup.)</strong>: 15th century, Milan.</li>
+<li><strong>MS Q (Codex Vaticanus Graecus 744)</strong>: 16th century, Rome.</li>
+<li><strong>MS Z (Codex Vaticanus Graecus 2038)</strong>: 16th century, Rome.</li>
+</ul>
+<h4 class="stub-heading">B. Patristic and Classical Testimonies</h4>
+<ul class="stub-list">
+<li>The Sibylline Oracles were extensively quoted by ancient apologists to demonstrate that even pagan prophets attested to monotheism, the incarnation, and the final judgment:</li>
+<li><strong>Theophilus of Antioch</strong> (<em>Ad Autolycum</em> 2.31, 36, 38): Quotes large sections of the Jewish <em>Fragment 1</em> and <em>Fragment 3</em> (the Prooemium).</li>
+<li><strong>Clement of Alexandria</strong> (<em>Stromata</em>, <em>Protrepticus</em>).</li>
+<li><strong>Lactantius</strong> (<em>Divinae Institutiones</em>): Quotes hundreds of Sibylline verses in Latin translation, providing invaluable early text-critical evidence.</li>
+<li><strong>Emperor Constantine</strong>: Quoted the Book 8 acrostic in his <em>Oration to the Assembly of the Saints</em> (ch. 18).</li>
+<li><strong>Saint Augustine</strong> (<em>De Civitate Dei</em> 18.23): Translated the 27-line acrostic of Book 8 into Latin hexameters.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Geffcken, Johannes</strong>, ed. <em>Die Oracula Sibyllina</em>. Die Griechischen Christlichen Schriftsteller der ersten drei Jahrhunderte 8. Leipzig: J. C. Hinrichs, 1902 [repr. Berlin: Akademie-Verlag, 1967]. [The definitive standard critical edition of Books 1–14 and the fragments, establishing the three-stemmata stemma $\Phi$, $\Psi$, $\Omega$ with comprehensive apparatus].</li>
+<li><strong>Rzach, Aloisius</strong>, ed. <em>Oracula Sibyllina</em>. Vienna: F. Tempsky; Leipzig: G. Freytag, 1891. [Pivotal pre-Geffcken critical edition collating major uncial and minuscule readings].</li>
+<li><strong>Alexandre, Charles</strong>, ed. <em>Χρησμοὶ Σιβυλλιακοί: Oracula Sibyllina. Textu ad codices manuscriptos recognito, cum Castalionis versione metrica innumeris locis emendata</em>. 2 volumes. Paris: Firmin-Didot, 1841–1853; 2nd revised edition in 1 volume, Paris, 1869. [Monumental 19th-century foundation, containing Latin metric translation, exhaustive historical dissertations, and excurses].</li>
+<li><strong>Friedlieb, Joseph Heinrich</strong>, ed. <em>Die Sibyllinischen Weissagungen, vollständig gesammelt, nach korrigirtem Texte mit einem Commentare und einer metrischen deutschen Uebersetzung</em>. Leipzig: T. O. Weigel, 1852.</li>
+<li><strong>Kurfess, Alfons</strong>, ed. <em>Sibyllinische Weissagungen: Urtext und Übersetzung</em>. Tusculum-Bücherei. Berlin: Heimeran, 1951. [Convenient critical edition of the Greek text with facing German translation].</li>
+<li><strong>Buitenwerf, Rieuwerd</strong>, ed. <em>Book III of the Sibylline Oracles and Its Social Setting: With an Introduction, Translation, and Commentary</em>. SVTP 17. Leiden: Brill, 2003. [Critical edition, translation, and historical commentary on Book 3].</li>
+<li><strong>Nikiprowetzky, Valentin</strong>, ed. <em>La Troisième Sibylle</em>. Études juives 9. Paris: Mouton, 1970. [The magnum opus on Book 3: critical Greek text, French translation, and exhaustive commentary].</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Sibylla Tiburtina (CPG 1353)
+
+Cf.: A. Rzacu, in Pauly’s Real-Encyclopädie der classischen Althertumswissenschaft II A (1923), col. 2169-2183; — F. STEGMÜLLER, n? 123
+et 123, I-8; 124 et 124, OI-2.1; — M. ERBETTA, Gli Apocrifi del
+Nuovo Testamento, 11, Torino, 1981, p. 528-535; — CANT 320; —
+A.-M. Denis, ILRJH, ad loc.
+
+Versio graeca (Prophetia)
+
+Nota: Textus hic conscriptus est s. v1 ineunte sed dependet de
+opere deperdito orto inter annos 378 et 390, quod reconstitui potest
+ex opere nostro et uersionibus.
+
+P.J. ALEXANDER, The Oracle of Baalbek. The Tiburtine Sibyl in
+Greek. Dress (Dumbarton Oaks Studies ro), Dumbarton Oaks,
+1967, e codd. Athos, Caracallou 14, fol. 280v-286v, saec. XII;
+Città del Vaticano, Bibl. Apost. Vatic., vatic. gr. 1120, fol. 417-
+423, saec. XIV; Athènes, Bibl. Nat. 2725 (= Suppl. 725), fol.
+210V-219v, saec. xv uel xvi.
+
+Versio latina
+
+Codd.: P.J. ALEXANDER, op. cit., p. 3s: München, Bayerische
+Staatsbibl., lat. 17742, fol. 42-51, saec. xii (= w?); Chicago, Newberry Libr., Ry. 6 (olim Lambacensis membr. Lxxvir), fol. 198r-202r (=
+w^) et fol. 220r-224r (= w?).
+
+R. Usincer, Eine Sibylle des Mittelalters, in Forschungen zur
+Deutschen Geschichte 10 (1870), p. 621-631 (7 G. Warrz, Mo-
+218 VARIA 275
+
+numenta Genmaniae Historica. Scriptores, xxi, Hannover, 1872, p.
+37559.) (= w’).
+
+E. SACKUR, Sibyllinische Texte und Forschungen, Halle, 1898
+(reimpr. Torino, 1963), p. 177-187 (= w^); — et iterum A. Kun-
+FESS, Sibyllinische Weissagungen. Urtext und Übersetzung, München,
+1951, p. 262-279.
+
+Versio syriaca
+
+S.P. Brock, À Syriac Collection of Prophecies of the Pagan Philosophers, in Orientalia Lovaniensia Periodica 14 (1983), p. 203-
+246, praesertim p. 220-221 (textus Sibyllae) et 231-232 (translatio), e cod. Città del Vaticano, Bibl. Apost. Vatic, vatic. syr.
+596, p. 203-204, an. 1917.
+
+Versiones carscunica, aethiopica, arabicae 1-v
+Codd.: G. Gnar, I, p. 292-295.
+
+J. SCHLEIFER, Die Erzählung der Sibylle. Ein Apokryph nach den
+karschunischen, arabischen und äthiopischen Handschriften zu London,
+Oxford, Paris und Rom veröffentlicht, in Denkschriften der Kaiserlichen Akademie der Wissenschaften. Philosophisch-historische
+Klasse 53, Wien, 1910, p. 1-80 (textus uersionis aethiopicae et
+uersionum arabicarum I-II, translatio).
+
+R.Y. Esrep - M.].L. Young, An Unrecorded Arabic Version of
+à Sibylline Prophecy, in Orientalia Christiana Periodica 43 (1977),
+p. 279-307, e cod. Leeds, Univ. Libr., arab. 184, fol. 7v-13v,
+saec. XVIII (textus arabicus uersionis Iv, translatio).
+
+R.Y. EBIED - M.J.L. Younc, À Newly-Discovered Version of
+the Arabic Sibylline Prophecy, in Oriens Christianus 60 (1976),
+p- 83-94, e cod. Oxford, Bodleian Libr., Huntington arab. 328,
+fol. 154v-160r, saec. XVII (textus arabicus uersionis v, translatio).
+
+Translatio gallica: R. BASSET, Les apocryphes éthiopiens. X. La sagesse de Sibylle, Paris, 1900, p. 27-62.
+Versiones slauicae et rumaenae
+
+Cf.: A.-M. DENIS, ILRJH, ad loc.
+277 VARIA 219</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

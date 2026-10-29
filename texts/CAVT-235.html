@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apocalypsis Baruch graeca — CAVT-235 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Apocalypsis Baruch graeca (CAVT-235)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-235</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-235</span>
+          <span class="badge badge-lang">Greek</span>
+          <span class="badge badge-lang">CAVT 235</span>
+          <span class="badge badge-lang">CANT 348</span>
+        </div>
+        <h1 class="stub-title">Apocalypsis Baruch graeca</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=3Bar.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/3Bar.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-235</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 235</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 348</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 10 (3 Baruch (Greek Apocalypse of Baruch))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:653-679 (3 Baruch / Greek Apocalypse)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:527-541 (3 Baruch)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 897-914 (3 Baruch)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p><em>3 Baruch</em> (the Greek Apocalypse of Baruch) describes Baruch, grieving over the destruction of Jerusalem, being led by an angel through five heavens. There he sees the punishment of the tower-builders, the dragon of Hades, the sun and moon, and Michael receiving the prayers of the righteous.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <p>It survives in Greek and Slavonic. A Jewish work of the 1st–2nd c. CE with Christian revision is the common view, though some regard it as Christian.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <h4 class="stub-heading">A. The Greek Tradition</h4>
+<ul class="stub-list">
+<li><strong>London MS Add. 34060</strong>: London, British Library, MS Add. 34060 (fols. 560v–565r; 15th c.) — discovered and edited by Montague Rhodes James (<em>Apocrypha Anecdota II</em>, 1897).</li>
+<li><strong>Andros MS 46</strong>: Andros (Greece), Monastery of the Hagia (Panachrantos), MS 46 (fols. 195r–202v; 16th c.) — collated and published by Jean-Claude Picard (<em>PVTG</em> 2, 1967).</li>
+<li><strong>Note on Integrity</strong>: Both Greek manuscripts conclude abruptly in chapter 17, likely omitting an original ascension to a sixth or seventh heaven.</li>
+</ul>
+<h4 class="stub-heading">B. The Slavonic Tradition</h4>
+<ul class="stub-list">
+<li>Transmitted widely across the South Slavic and East Slavic worlds, preserved in over a dozen manuscripts dating from the 13th to 17th centuries, divided into two distinct recensions:</li>
+<li><strong>Short Recension</strong>: Emphasizes dualistic and folkloric elements; preserved in the 15th-century <em>Petrisov Zbornik</em> (MS Z; 1468 CE) and Belgrade National Library MS 651 (MS N; 13th c.).</li>
+<li><strong>Long Recension</strong>: Represents a fuller liturgical and narrative text; preserved in Belgrade MS 321 (MS S; 14th c.) and Moscow State Historical Museum Synod. 211.</li>
+<li>Edited and classified critically by H. E. Gaylord (1983/1987).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h4>Print Editions</h4>
+<table cellspacing="0">
+<tbody><tr>
+<td colspan="2">A.-M. Denis,      <a>Concordance</a>, 866-68</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td class="comment">** Reprints the text of J.-C. Picard. </td>
+</tr>
+<tr>
+<td colspan="2">S. C. Agourides,      "<span class="Greek">ΕΛΛΗΙΚΗ ΑΠΟΚΑΛΥΨΙ ΤΟΥ ΒΑΡΟΥΧ</span> (<span class="Greek">ΕΛΛΗΝΙΚΟΣ ΒΑΡΟΥΧ</span>)      (<span class="Greek">Εἰσαγωγὴ -- Κείμενο καὶ Σχόλια</span>),"      <em><span class="Greek">Θεολογία</span></em> 55 (1984): 149-68.</td>
+</tr>
+<tr>
+<td colspan="2">A.-M. Denis with Y. Janssens, <em>Concordance de l'apocalypse grecque de Baruch</em> (Publications de l'Institut orientaliste de Louvain      1; Louvain: Université catholique de Louvain, Institut orientaliste, 1970).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td class="comment">** Based on J.-C. Picard's text. </td>
+</tr>
+<tr>
+<td colspan="2">J.-C. Picard, ed., "Apocalypsis Baruchi Graece," in      <em>Testamentum Iobi, Apocalypsis Baruchi Graece</em> (<a>PVTG</a> 2; Leiden: Brill, 1967), 81-96.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td class="comment">** The standard edition. Presents the Greek text based on British Museum ms Add. 10073 and      Andros (A), Monastery of the Hagia ms 46 (B). Picard explains that these two mss are      extraordinarily close in their readings: "B provides no variant of significance from A, and      often both provide the same errors, of both grammar and orthography" (p. 68). There are      only two instances in which material is omitted by B but not by A: one in the title and the      other in 6.16. Hence Picard's text remains essentially a transcription of ms A. While      Picard has introduced many emmendations to the text, these are primarily to correct the      orthography or misreadings resulting from phonological confusion (especially of      vowels). </td>
+</tr>
+<tr>
+<td colspan="2">M. R. James, "Apocalypse of Baruch," in <em>Apocrypha Anecdota II</em> (<a>T&amp;S</a> 5.1; Cambridge, UK: Cambridge University      Press, 1897), li-lxxi, 83-94.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td class="comment">** Prints the Greek text of British Museum ms Add. 10073. Picard provides a list of James'      misreadings and omissions on p. 66 of his edition (see above). </td>
+</tr>
+<tr>
+<td colspan="2">J. B. Bauer, "Apocalypsis Baruchi," in <em>Clavis librorum Veteris Testamenti apocryphorum      philologica</em> (Leipzig, 1853; repr. Graz: Akadem. Druck- u. Verlagsanstalt, 1972),      629-45. </td>
+</tr>
+</tbody></table>
+<p>For further bibliography see DiTommaso,   <a><em>Bibliography</em></a>, 283-91.</p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Apocalypsis Baruch graeca (3 Baruch)
+
+Cf.: F. STEGMÜLLER, n° 113, 11-14 + 16-19; — E. SCHÜRER,
+Ill, p. 789-793; — CANT 344; — D.C. Harıow, The Greek Apoca-
+192 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 235
+
+lypse of Baruch (3Baruch) in Hellenistic Judaism and Early Christianity
+(StVTPs 12), Leiden, 1996; — A.-M. DENIS, ILRJH, ad loc.
+
+Nota: 3 Baruch aliquando vocatus est 4 Baruch.
+
+Translatio anglica: H.E. GAYLORD Jr., 3 (Greek Apocalypse of)
+Baruch (First to Third Century A.D.). A New Translation and Introduction, in J.H. CHARLESWORTH, I, p. 653-679 (translatio textuum graec
+et slauonici).
+
+Translatio germanica: W. Hace, Die griechische Baruch- Apokalypse, in JSHRZ V, 1, Gütersloh, 1974, p. 15-44 (translatio textuum
+graeci et slauonici [e cod. Sr, cf. infra]).
+
+Versio graeca (BHG 237)
+
+M.R. JAMES, Apocrypha Anecdota II (Texts and Studies V, 1),
+Cambridge, 1897, p. LI-LXXI (introductio), 83-94 (textus), e cod.
+London, Brit. Libr., Add. 10073, fol. 173-184, saec. xv ex. ucl
+XVI inc.
+
+J.-C. PicARD, Apocalypsis Baruchi Graece (PsVTGr 2), Leiden,
+1967, p. 61-96, e codd. London, Brit. Libr., Add. 10073 et Andros, Mon. Hagia 46, fol. 153v-161v, saec. xv inc.
+
+Translatio anglica: H.M. Hucues - A.W. AnGYLE, The Greek
+Apocalypse of Baruch, in H.F.D. SPARKS, p. 897-914.
+
+Translatio gallica: J. RiAUD, Apocalypse grecque de Baruch, in
+A. D'UPONT-SOMMER — M. PHILONENKO, p. 1141-1164 (ex editione
+J.-C. Picard).
+
+Concordantiae:
+A.-M. Denis - Y. JANSSENS, Concordance de l' Apocalypse grecque de Baruch (Publications de l’Institut orientaliste de Louvain 1), Louvain,
+1970; — A.-M. DENIS, Concordance grecque des Pseudépigraphes d' Ancien
+Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve,
+1987 (ex editione J.-C. Picard).
+
+Versio slauica
+
+Noua editio paratur a H.E. GAYLORD.
+
+Nota: Nonnulli codices russici continent interpolationem cuiusdam fragmenti adamiticarum litterarum quod ad Satanae] pertinet:
+cf. M.E. STONE, À History, 1992, p. 115-116; cf. supra n? 44 (Tentatio
+Adae et Euae a Satanael).
+
+De codicibus uide É. TURDEANU, L'Apocalypse de Baruch en
+slave, in Revue des Etudes Slaves 48 (1969), p. 23-48 (= E. TURDEA-
+NU, Apocryphes slaves et roumains, p. 364-391, 442-443), qui duas re-
+235 XII PROPHETAE - ISAIAS - JEREMIAS ~ BARUCH - EZECHIEL 193
+
+censiones distinguit, sed uide B. PHILONENKO-SAYAR, La version
+slave de l' «Apocalypse de Baruch », in La littérature intertestamentaire.
+Colloque de Strasbourg, Paris, 1985, p. 89-97.
+
+Recensio longior
+
+M.I. SokoLov, Apokrificeskoe Otkrovenie Varuka, in Drevnosti. Trudi slavjanskoj kommissii imperatorskago Moskovskago
+archeologiceskago obScestva 4 (1907), p. 204-220, e cod. Beograd, Narodna Bibl. 466, saec. xiii/xiv (= Sr); — et iterum
+J. Ivanov, Bogomilski knigi i legendi, Sofia, 1925 (Livres et légendes
+bogomiles [Aux Sources du catharisme], Paris, 1976), p. 193-200.
+
+S. NovAKOVIC, Otkrivenje Vamhovo, in Starine. Na sviet izdaje
+Jugoslovenska Akademija znanosti i umjetnosti 18 (1886), p. 205-
+219, e cod. Zagreb, Bibl. Acad. des Sciences sor, saec. xvi (= N).
+
+V.V. KACANOVSKIJ, in Izvéstija istoriko-filologiceskago Instituta knjazja Bezborodko v Néziné 22, [s. d.], p. 27, e cod.
+priuato M. Speranskij 168, saec. XVII (fragmentum duorum fol.;
+= K); lectiones uariae illius codicis leguntur in M.I. SokoLov,
+Apokrificeskoe Otkrovenie Varuka, p. 233.
+
+E. HERCIGONIA, 'Videnje Varıhovo’ u Petrisovu Zbomiku iz
+1468 Godine, in Zbornik za filologiju i lingvistiku 7 (1964), p.
+63-93, e cod. «Petris», an. 1468 (= Pz).
+
+MII. Sokorov, Apokrificeskoe Otkrovenie Vanıka, p. 220-223, €
+cod. Sofia, Bibl. Nat. 629 (Conev 433), fol. 84v-93r, s. xv1 (= P).
+
+P.A. Lavrov, Apokrificeskije teksty, in Sbornik Otdeleniya
+russkogo yazyka i slovesnosti Imperatorskoi Akademii nauk 67,
+3 (1899), p. 149-151, e cod. priuato Tichonravov, saec. XVIII.
+
+Cf.: J.-C. Picarp, Apocalypsis Baruchi Graece (PSVTGr 2), Leiden, 1967, p. 71.
+
+H.E. GAyLoRD, Slavjanskij tekst Tretjej knigi Varukha, in Polata knigopisnaja 7 (1983), p. 49-56, e codd. Saint-Pétersbourg,
+Bibl. Publ. (Saltykov-Séedrin) 70, fol. 105r-111v, saec. xiii et Sinat, Sainte-Catherine, slav. 34, fol. 27r-29v, saec. XIII.
+
+Cod.: B.M. ZAGREBIN, O proischozdenii i dus’be nekotorych slavjanskich palimpsestov Sinaja, in Izvéstija istorii rukopisnych i staropecatnych sobranij Otdela rukopisej i redkich knig GPB, Leningrad,
+1979, p. 61-80, ostendit duos codices, quibus H.E. Gaylord usus est,
+membra disiecta unius codicis esse.
+194 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 237
+
+Recensio breuior
+
+N.S. TICHONRAVOV, Apokrificeskie skazaniya. Otkrovenie Varuka, in Sbornik Otdeleniya russkogo yazyka i slovesnosti Imperatorskoi Akademii nauk 58 (1894), p. 48-54, e cod. Moscou,
+Mus. Hist. (olim Acad. de Theologie) 363/679, saec. xv (= T).
+
+M.I. Sokorov, Apokrificeskoe otkrovenie Varuka, p. 224-226, €
+cod. Kiev, Bibl. de l'Académie de Théologie (coll. E. V. Barsov)
+[s. n.], fol. 112-115, an. 1701 (= B).
+
+Nota: Traditio russica ex illa breviore recensione fabulam de
+plantatione paradisi finxit: M.I. SokoLov, Apokrificeskoe otkrovenie
+Varuka, in Drevnosti. Trudi slavjanskoj kommissii imperatorskago
+Moskovskago archeologiceskago obstestva 4 (1907), p. 228-231, €
+cod. Saint-Pétersbourg, Bibl. Publ. (Saltykov-Séedrin) F I 209, fol.
+2911-293v, s. Xv. Alii duo codices inediti: Moscou, Bibl. Syn. 330
+(682), fol. 328-337, saec. xvi et Saint-Pétersbourg, Bibl. Publ. (Saltykov-Séedrin), Pogodin 1938, fol. 106r-107v, saec. xvi.
+
+Translatio anglica: W.R. MorriLL, The Apocalypse of Baruch
+translated. from the Slavonic, in M.R. JAMES, Apocrypha Anecdota. II
+(Texts and Studies V, 1), Cambridge, 1897, p. 95-102, e cod. N.
+
+"Translatio gallica: J.-C. PICARD (in praeparatione).
+
+Translatio germanica: N. BONWETSCH, Das slavisch erhaltene
+Baruchbuch, in Nachrichten von der Königlichen Gesellschaft der
+Wissenschaften zu Göttingen, philologisch-historische Klasse, Göttingen, 1896, p. 91-101, e cod. N.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

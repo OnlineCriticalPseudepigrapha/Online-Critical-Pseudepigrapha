@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oratio Manasse — CAVT-178 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Oratio Manasse (CAVT-178)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-178</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-178</span>
+          <span class="badge badge-lang">Latin</span>
+          <span class="badge badge-lang">CAVT 178</span>
+          <span class="badge badge-lang">CANT 203</span>
+        </div>
+        <h1 class="stub-title">Oratio Manasse</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> I-II SAMUEL - I-II REGES - I-II PARALIPOMENA
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=OrMan.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/OrMan.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-178</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 178</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 203</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 32 (Prayer of Manasseh)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:625-637 (Prayer of Manasseh)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 1:612-624 (Prayer of Manasses)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 649 (Prayer of Manasses)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>The <em>Prayer of Manasseh</em> (CAVT 178 / CANT 203) is a short penitential prayer attributed to King Manasseh of Judah during his Babylonian captivity (2 Chron 33:11-13). Extant in Greek in the Septuagint Odes (Ode 12) and the Didascalia Apostolorum, and in Latin as an appendix to the Vulgate. This edition provides the Greek text from H. B. Swete, <em>The Old Testament in Greek according to the Septuagint</em>, Vol. 3 (Cambridge: Cambridge University Press, 1896), pp. 802-804, in parallel with the Clementine Vulgate Latin text.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p>Greek witnesses include Codex Alexandrinus (A), Codex Turicensis (T), Codex Veronensis (R), and the Didascalia Apostolorum. Latin witnesses include the Clementine Vulgate Appendix and medieval Parisian Bibles.</p>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Rahlfs, Alfred</strong>, ed. <em>Psalmi cum Odis</em>. Septuaginta: Vetus Testamentum Graecum Auctoritate Societatis Litterarum Gottingensis editum X. Göttingen: Vandenhoeck & Ruprecht, 1931; 3rd ed. 1979, pp. 361–363. [The standard critical edition of the Greek text].</li>
+<li><strong>Baars, Willem</strong>, and <strong>Heinrich Schneider</strong>, eds. "Prayer of Manasseh." In <em>Vetus Testamentum syriace, iuxta simplicem syrorum versionem</em>. Part IV, fasc. vi: <em>Apocryphi</em>. Leiden: Brill, 1972. [Definitive critical edition of the Syriac Peshitta tradition].</li>
+<li><strong>Denis, Albert-Marie</strong>, ed. "Oratio Manasse." In <em>Fragmenta pseudepigraphorum quae supersunt graeca</em>. PVTG 3. Leiden: Brill, 1970, pp. 115–117.</li>
+<li><strong>Funk, Franz Xaver</strong>, ed. <em>Didascalia et Constitutiones apostolorum</em>. Paderborn: F. Schöningh, 1905, 1:84–89 [repr. Turin: Bottega d’Erasmo, 1970].</li>
+<li><strong>Metzger, Marcel</strong>, ed. <em>Les Constitutions Apostoliques</em>. Sources Chrétiennes 320. Paris: Éditions du Cerf, 1985, pp. 216–219.</li>
+<li><strong>Fritzsche, Otto Fridolin</strong>, ed. "Das Gebet des Manasse." In <em>Libri apocryphi Veteris Testamenti graece</em>. Leipzig: F. A. Brockhaus, 1871, pp. 92–93.</li>
+<li><strong>Apel, Heinrich Ernst</strong>, ed. "Preces Manassis." In <em>Libri Veteris Testamenti apocryphi graece</em>. Leipzig, 1830, pp. 142–143.</li>
+<li><strong>Weber, Robert</strong>, and <strong>Roger Gryson</strong>, eds. <em>Biblia Sacra iuxta Vulgatam versionem</em>. Stuttgart: Deutsche Bibelgesellschaft, 4th ed. 1994, p. 1909.</li>
+<li><strong>Leicht, Reimund</strong>. "A Newly-Discovered Hebrew Version of the Apocryphal 'Prayer of Manasseh'." <em>Jewish Studies Quarterly</em> 3 (1996): 359–373. [Critical edition of the Cairo Genizah Hebrew fragments].</li>
+<li><strong>Vööbus, Arthur</strong>, ed. <em>The Didascalia Apostolorum in Syriac</em>. CSCO 401–402, Scriptores Syri 175–176. Louvain: Peeters, 1978.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Oratio Manasse
+
+Cf.: J.-B. FREY, art. Apocryphes de l'Ancien Testament, in DBS I,
+1928, col. 442-445; — F. STEGMÜLLER, n° 93 et 93, 1-11; — E. ScHÜ-
+RER, III, p. 730-733; — A.-M. Denis, ILRJH, ad loc.
+
+Notae:
+
+(1) Oratio Manasse tradita est a codicibus biblicis (siue inter Odas in
+fine Psalterii siue post II Par 33, 12), a citatione in Constitutionibus
+apostolorum (2, 22, 10b-15b; cf CPG 1730 et 1738), ab Horologion byzantino et uersionibus eius (syriaca melchita, aethiopica et slauica;
+magnis completoriis Quadragesimae, Vigiliis Natiuitatis et Epiphaniae Domini), a liturgia romana, a Regula Magistri et postremo in traditione seiuncta.
+
+(2) Fragmentum qumranicum 4Q381 ab E.M. SCHULLER, Non-
+Canonical Psalms from Qumran. A Pseudepigraphic Collection (Harvard
+Semitic Studies 28), Atlanta, Georgia, 1986, praesertim p. 61-240,
+267-283 et tab. ı-vır + 1x (cf infra n° 203) editum, continet quamdam Orationem Manasseh (nv? non) quae a nostro apocrypho discernenda est: cf. W.M. SCHNIEDEWIND, A Qumran Fragment of the
+Ancient « Prayer of Manasseh» ?, in ZAW 108 (1996), p. 105-107.
+
+Codices biblici
+
+Versio graeca
+
+Codd.: P.-M. BOGAERT, art. Septante et versions grecques, in DBS
+
+XII, 1993, col. 620-621.
+
+A. RAHLFS, Psalmi cum Odis (Septuaginta. Societatis Scientiarum Gottingensis auctoritate 10), Göttingen, 1931, 1967”, p. 361-
+363.
+
+W. Tur - P. Sanz, Eine griechisch-koptische Odenhandschrift
+(Papyrus copt. Vindob. K 8706) (Monumenta Biblica et Ecclesiastica 5), Roma, 1939, p. 90-96.
+
+K. TREU, Zwei weitere Berliner Septuagintafragmente, in E. KieB-
+LING - H.-A. RuPPRECHT, Akten des XIII. Internationalen Papyro-
+126 I-II SAMUEL - I-II REGES - I-II PARALIPOMENA 178
+
+logenkongresses (1971) (Münchener Beiträge zur Papyrusforschung
+und antiken Rechtsgeschichte 66), München, 1974, p. 421-426.
+
+Translatio germanica: E. OswALD, Gebet Manasses, in JSHRZ
+IV, r, Gütersloh, 1977, p. 15-27.
+
+Translatio hispanica: L. VEGAs MONTANER, Oración de Manases, in A. Diez MACHO, III, p. 101-117.
+
+Versio latina
+
+Codd. et testes ueteris latinae uersionis: H. SCHNEIDER, Die
+altlateinischen biblischen Cantica (Texte und Arbeiten 29-30), Beuron,
+1938, p. 20-26 (Verecundus, Commentarii super cantica ecclesiastica
+[CC.SL 93, p. 148-161]), p. 107-119 (liturgia ambrosiana in recensione monachi Simeon), p. 126-158 (liturgia mozarabica: PL 86, col.
+858-859; J.P. GILSON, The Mozarabic Psalter [Henry Bradshaw Society 30], London, 1905, p. 153-154); - M. ALTBAUER, Psalterium latinum hierosolymitanum Sin. Ms. no. 5, Wien - Köln - Graz, 1978, 97ro8r.
+
+(1) Vetus latina: P. SABATIER, Bibliorum sacrorum latinae versiones antiquae seu vetus italica, III, Reims, 1743 (reimpr. Turnhout,
+
+1976, 1991), p. 1039.
+
+(2) Vulgata: R. WEBER - R. Gryson, Biblia Sacra iuxta vulgatam versionem, Stuttgart, 1994*, p. 1909.
+Nota: Textus Orationis Manasse in Vulgata sixto-clementina
+(1592) est translatio (uel recensio) e graeco a Roberto Stephano ad
+editionem suam anno 1540 confecta: cf. H. SCHNEIDER, Der Vulgata-
+
+Text der Oratio Manasse eine Rezension des Robertus Stephanus, in Biblische Zeitschrift 4 (1960), p. 277-282.
+
+Translatio gallica: J.P. MIGNE, Dictionnaire des apocryphes, I, col.
+849-852.
+
+Concordantia:
+A.-M. DENIS, Concordance latine des Pseudépigraphes d' Ancien Testament.
+Concordance. Corpus des textes. Indices (Corpus Christianorum. Thesaurus patrum latinorum. Supplementum), Turnhout, 1993 (ex editionibus E. Tidner, cf. infra, et R. WEBER, Biblia Sacra..., 1969').
+
+Versio syriaca
+
+W. Baars - H. SCHNEIDER, Prayer of Manasseh, in The Old
+Testament in Syriac according to the Peshitta Version, IV, 6, Leiden,
+1972 (Peshitta cum textu Constitutionum apostolorum et Horologion
+
+melchiti).
+178 I-II SAMUEL - I-II REGES - I-II PARALIPOMENA I27
+
+Translatio anglica: J.H. CHARLESWORTH, Prayer of Manasseh
+( Second Century B.C. - First Century A.D.). A New Translation and Introduction, in J.H. CHARLESWORTH, Il, p. 625-637.
+
+Translatio gallica: F. Nau, Un extrait de la Didascalie : la Prière de
+Manassé (avec une édition de la version syriaque), in ROC 13 (1908),
+p. 134-141, e cod. Paris, Bibl. Nat. de France, syr. 7, fol. 182a.b, saec.
+XVI.
+
+Versio armeniaca
+
+H. ZoHRAPIAN (ZOHRAB), Astuatsashunch' matean hin ew nor
+ktakarants‘ (Scripturae Veteris et INoui Testamenti), Venezia,
+1805 (reimpr. Delmar, New York, 1984), Suppl. p. 25.
+
+Versio aethiopica
+
+Nota: Non exstat editio critica Veteris Testamenti aethiopici: cf.
+B. BOTTE, art. Orientales de la Bible (Versions). IV. Versions éthiopiennes,
+in DBS VI, 1960, col. 825-829; — S.P. Brock, art. Bibelübersetzungen. I, in TRE VI, (1980), p. 206-207.
+
+F. A Bassano, Vetus Testamentum cum antiquis codicibus necnon
+cum uersionibus syriaca, graeca et arabica comparatum, Asmara, 1923-
+1926, II, p. 345-346 (post II Par 33, 12).
+
+Versio coptica
+
+Nota: Non exstat editio critica Veteris Testamenti coptici: cf.
+B. BOTTE, art. Orientales de la Bible (Versions). III. Versions coptes, in
+DBS VI, 1960, col. 818-825; — S.P. Brock, art. Bibelübersetzungen. I,
+in TRE VI, 1980, p. 199-200; — R.-G. CoQuIN, Langue et littérature
+coptes, in Christianismes orientaux. Introduction à l'étude des langues et des
+littératures (Initiations au christianisme ancien), Paris, 1993, p. 187-
+190.
+
+W. Tit - P. Sanz, Eine griechisch-koptische Odenhandschrifi
+
+(Papyrus copt. Vindob. K 8706) (Monumenta Biblica et Ecclesiastica 5), Roma, 1939, p. 91-97.
+
+Versio arabica
+
+Nota: Non exstat editio critica Veteris Testamenti arabici: cf. G.
+GRAF, I, p. 85-137, praesertim p. 114-126; — B. BOTTE, art. Orientales
+de la Bible (Versions). I. Versions arabes, in DBS VI, 1960, col. 807-810; —
+S.P. BROCK, art. Bibelübersetzungen. I, in TRE VI, 1980, p. 209-211.
+128 I-II SAMUEL - HI REGES - I-II PARALIPOMENA 178
+
+Versio slauica
+
+Nota: Non exstat editio critica Veteris Testamenti slauici: cf.
+S.P. Bnock, art. Bibelübersetzungen. I, in TRE VI, 1980, p. 215-216.
+
+V. JAGIC, Psalterium Bononiense, Wien, 1907, p. 731-733.
+
+(2) Citatio in Constitutionibus apostolorum (CPG 1738)
+
+Versio graeca
+
+F.X. FUNK, Didascalia et Constitutiones Apostolorum, Paderborn,
+1905 (reimpr. 1970), p. 85, 1l. 24 - 89, 1. 1; — et iterum A.-M.
+Denis, Fragmenta pseudepigraphorum quae supersunt graeca (PSVTGr
+3), Leiden, 1970, p. 115-117; — M. METZGER, Les Constitutions
+Apostoliques. Introduction, texte critique, traduction et notes, I (SC 320),
+Paris, 1985, p. 216-219.
+
+Concordantia:
+A.-M. DENIS, Concordance grecque des Pseudépigraphes d' Ancien. Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione A.-M. Denis = F.X. Funk).
+
+Versio latina
+Cf.: HJ. FREDE, Verzeichnis sub siglo DIDa.
+
+E. HAULER, Didascaliae apostolorum fragmenta Veronensia latina.
+Accedunt Canonum qui dicuntur Apostolorum et Aegyptiorum reliquiae,
+Leipzig, 1900, p. 33-34; — et iterum E. TIDNER, Didascaliae Apostolorum, canonum ecclesiasticorum, traditionis apostolicae, versiones latinae (TU 75), Berlin, 1963, p. 38, 1. 1-5.
+
+Translatio latina: F.X. Funk, Didascalia et Constitutiones Apostolorum, Paderborn, 1905 (reimpr. 1970), p. 84, l. 19 - 88, I. 1 (e uersione latina et e syriaco).
+
+Versio syriaca
+
+W. Baans - H. SCHNEIDER, Prayer of Manasseh, in The Old
+Testament in Syriac according to the Peshitta Version, IV, 6, Leiden,
+1972 (Peshitta cum textu Constitutionum apostolorum et Horologion
+melchiti).
+
+A. VööBus, The Didascalia Apostolorum in Syriac, I (CSCO
+401. Scr. Syri 175), Louvain, 1978: uide p. 89, 1. 23 - 91, 1. 16.
+Aliae editiones et translationes: Cf. CPG 1738.
+178 I-II SAMUEL - I-II REGES - I-II PARALIPOMENA I29
+
+Translatio anglica: A. VôôBus, The Didascalia Apostolorum in
+Syriac, I (CSCO 402. Scr. Syri 176), Louvain, 1978: uide p. 85,1. 3 -
+87, L 14; — J.H. CHARLESWORTH, Prayer of Manasseh. A New Translation and Introduction, in J.H. CHARLESWORTH, II, p. 625-637.
+
+Translatio gallica: F. Nau, La Didascalie des douze apôtres. Traduite du syriaque pour la première fois (Ancienne littérature canonique syriaque 1), Paris, 1902, 1912°, p. 70-71.
+
+Translatio germanica: H. ACHELIS - J. FLEMMING, Die syrische
+Didaskalia übersetzt und erklärt (TU 25, 2), Leipzig, 1904, p. 36, L 31 -
+
+37, 1. 36.
+
+Versio aethiopica
+
+Vide CPG 1730.
+
+Versiones arabicae
+
+Vide CPG 1730.
+
+(3) Horologion byzantinum
+
+Versio aramaica christo-palaestina
+
+M. Brack, A Christian Palestinian Syriac Horologion (Berlin
+MS. Or. Oct. 1019), (Texts and Studies, NS 1), Cambridge,
+1954, p. 294-299, e cod. Berlin, Staatsbibl. PreuBischer Kulturbesitz, orient. oct. 1019, fol. 93b-96b, an. 1187-1188.
+
+Versio graeca
+
+‘Qporbyiov TO utya...StopAmwftv...brò BapfoXopatov
+KovrAounovoravod tod Iußptou. "Ex83ooiz ÉBdoun, Vene
+zia, 1895.
+
+"AvBoXbytov tod dov éviautod, vol 2, Roma, 1974,
+p. 246-247.
+
+Versio syriaca
+
+W. Baans - H. ScHNEIDER, Prayer of Manasseh, in The Old
+Testament in Syriac according to the Peshitta Version, IV, 6, Leiden,
+1972 (Peshitta cum textu Constitutionum apostolorum et Horologion
+melchiti).
+I30 I-II SAMUEL - I-II REGES - I-II PARALIPOMENA 178
+
+Versio aethiopica
+
+Mashafa sa'atat (= Liber Horarum), Roma, 1952, p. 185-186.
+
+Versio slauica
+
+Velikij Casoslov, Jordanville, New York, 1964, p. 192-193.
+
+Versio rumaena
+
+Ceaslov, Bucarest, 19845, p. 168-169.
+
+(4) Liturgia romana
+C. MARBACH, Carmina scripturarum, Strasbourg, 1907 (reimpr.
+Hildesheim, 1963), p. 537.
+
+(5) Regula Magistri (x1v, 34-40)
+Cf.: A. DE VOGÜÉ, Un emprunt de la Règle du Maître à la Prière de
+Manassé, in Revue d’ascétique et de mystique 43 (1967), p. 200-203.
+
+A. DE VocUÉ, La Règle du Maitre, II (SC 106), Paris, 1964,
+p. 54.
+
+(6) Traditio seiuncta
+
+Versio armeniaca
+
+S. YovsEP'EANC', Ankanon girk', p. 235-237.
+
+Nota: J. ISSAVERDENS, The Uncanonical Writings, non transtulit
+Orationem Manasse.
+
+Versio slauica
+
+Cf.: H.H. HowonTH, Some Unconventional Views on the Text of
+the Bible, VIII, in Proceedings of the Society of Biblical Archaelogy
+
+31 (1909), p. 90.
+ESDRAS - ESTHER - TOBIT - I-V
+MACCABAEORUM
+
+TM LXX Vulgata Apud modernos Bensly
+(Ambianensis)
+Esdras 2 Esdrae 1 Esdrae 1 Esdrae 1 Esdrae
+Nehemia 2 Esdrae 2 Esdrae 2 Esdrae 1 Esdrae
+1 Esdrae 3 Esdrae 3 Esdrae 2 Esdrae
+4 Esdrae 1-1 5 Esdrae 3 Esdrae
+4 Esdrae In-x1v 4 Esdrae uel 4 Esdrae
+Apocalypsis</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

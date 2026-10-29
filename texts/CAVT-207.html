@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testamentum Job — CAVT-207 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Testamentum Job (CAVT-207)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-207</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-207</span>
+          <span class="badge badge-lang">Coptic</span>
+          <span class="badge badge-lang">CAVT 207</span>
+          <span class="badge badge-lang">CANT 349</span>
+        </div>
+        <h1 class="stub-title">Testamentum Job</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> PSALMI - ODAE SALOMONIS - PROVERBIA - JOB - SAPIENTIA - SIRACIDES - PSALMI SALOMONIS
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=TJob.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/TJob.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-207</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 207</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 349</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>Denis 2000 Ch. 30 (pp. 889-909)</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 25 (Testament of Job)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:829-868 (Testament of Job)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 617-648 (Testament of Job)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>The <em>Testament of Job</em> retells the story of Job as a deathbed address to his children. Job destroys an idol's temple, is attacked by Satan in return, and endures with patience until Satan concedes defeat. The kings who visit him, the death of his wife Sitis, and the heavenly sashes he gives his daughters, who then speak in angelic tongues, are distinctive features.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <h3>Original Language</h3>
+<p>The <em>Testament of Job</em> was most likely composed in Greek (so Spittler, 830, 833). It shows no obvious signs of being translated from a semitic language, and no evidence has been found of versions in Hebrew, Aramaic, or Syriac.</p>
+<h3>Date of Composition</h3>
+<p>The <em>Testament of Job</em> was composed some time prior to the 5th century CE, when the earliest surviving fragments were copied. Since that 5th century evidence preserves a Coptic translation, the original Greek composition would probably have been made at least several decades earlier. It may have been composed in the first century BCE or first century CE (so Spittler, 833).</p>
+<h3>Social Setting</h3>
+<p>The Testament of Job has generally been viewed as a Jewish composition, free in its present form from any extensive Christian editing (Spittler, 833-34; see Brock, 8). James Davila has recently dissented from this consensus and argued that the document is a Christian composition, or at least that an origin in early Christian circles cannot be ruled out.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <table>
+<tbody><tr>
+<td rowspan="2"><span>P</span></td>
+<td>Paris BN gr 2658, fols. 72r-97r (complete, 11th century CE)</td>
+</tr>
+<tr>
+<td>For ms information see F. Halkin, <em>Manuscrits grecs de Paris: Inventaire hagiographique</em> (Subsidia hagiographica 44; Bruxelles: Société des bollandistes, 1968), 235. The editions of James and Brock (see below) are essentially corrected transcriptions of this manuscript. Brock holds that P is "in many ways the best witness to the text of this work" (7; cf. 15-16), though he recognizes that the other Greek mss sometimes preserve superior readings (15).</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>P2</strong></td>
+<td>Paris BN gr 938, fols. 172v-192v (copy of P, 16th century CE)</td>
+</tr>
+<tr>
+<td>For ms information see F. Halkin, <em>Manuscrits grecs de Paris: Inventaire hagiographique</em> (Subsidia hagiographica 44; Bruxelles: Société des bollandistes, 1968), 92. Since      this ms is evidently a copy of P (so James, lxxiii; Brock, 5, 10) it has no independent value as      a witness and not been included in the <em>OCP</em> edition.</td>
+</tr>
+<tr>
+<td rowspan="2"><span>S</span></td>
+<td>Messina San Salvatore 29, fols. 35v-41v (complete, 1307-1308 CE)</td>
+</tr>
+<tr>
+<td>This manuscript was held by the Basilian monastery of San Salvatore in Messina, Sicily. When the monastery was closed, its manuscripts are reported to have been transfered to the Université degli Studi di Messina. So far, though, my attempts to locate the manuscript in the university's collections (or elsewhere in Italy) have failed. This ms has never before been published in running form. Brock reports that the orthography of S is extremely unstable and vowels, in particular, are often substituted in apparently arbitrary ways (see Brock, 8-9). Kraft departs from Brock's preference for P and argues that S betrays fewer indications of "self-conscious recensional work" than does P (Kraft, 5-7). Even Brock, however, acknowledges that in places the S form of the text is likely closer to the original (Brock, 15).</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>V</strong></td>
+<td>Rome Vat gr 1238, fols. 340r-349v (complete, 13th century CE)</td>
+</tr>
+<tr>
+<td>The transcription of V published by Mai in 1833 (see below) was the first publication of the <em>Testament of Job</em>. Mai's edition is reasonably accurate, but not without significant errors. This ms has not been published since in running form, and the partial transcription by F. C. Conybeare in 1901 (see below) is less accurate than that of Mai. Manuscript V is closer to S in the form of its text than to P, so that S and V appear to represent a common textual trajectory distinct from that represented in P (Brock, 14; Kraft, 9-10). Nevertheless, V does not appear to be directly dependent on ms S. V is generally agreed to depart further than P or S from the early form of the Greek text, and it includes many periphrastic expansions (Brock, 9; Kraft, 5).</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Coptic</strong></td>
+<td>Papyrus Cologne 3221 (fragmentary and incomplete, 5th century CE)</td>
+</tr>
+<tr>
+<td>This ms has been published just recently in Gesa Shenk, <em>Der Koptische Kölner Papyruskodex 3221: Teil I: Das Testament des Iob</em> (Paderborn: Schöningh, 2009). Prior to this C. Römer and H. J. Thissen published a preliminary report in 1989 (see below) which includes several readings from the ms.</td>
+</tr>
+<tr>
+<td><strong>Slavonic</strong></td>
+<td>This designates the MS published by G. Polívka in <em>Starine</em> 24 (1891): 135-55, together with the variants provided there from two other mss: Belgrade National Library, no. 149 (incomplete) and Moscow Rumjancov Museum, no. 1472. The Slavonic tradition is only marginally useful in the reconstruction of the early text of <em>TJob</em> since the translation is evidently very free and periphrastic (Brock, 7, 10-14). Many of its periphrastic expansions parallel the kind of editorial work evident in ms V. Nevertheless, the Slavonic tradition is not clearly derived from either the P or the S V textual traditions, but seems to translate a <em>Vorlage</em> which included readings characteristic of both streams of textual transmission (Brock, 14-15).</td>
+</tr>
+</tbody></table>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h3>Greek Text</h3>
+<ul class="bibliography">
+    <li>Denis, <a href=" abbreviations('Concordance');" rel="nofollow"><em>Concordance</em></a>, 875-9.</li>
+    <li>Kraft, R. A., Ed., <em>The Testament of Job According to the SV Text</em> <a href=" abbreviations('TT');" rel="nofollow">TT</a> 5. Pseudepigrapha Series 4. Missoula: Scholars Press, 1974.</li>
+    <li class="annotation">Kraft provides an eclectic text which aims to reconstruct the textual archetype which lies behind mss S and V (9-10). In compiling this text Kraft consulted photographs of ms S (supplied by Brock). He notes significant variants (in English translation) in a selective critical apparatus. Kraft generally accepts the readings in which: a) S and V agree against P; b) P and V agree against S; c) S stands alone, but P and V differ from one another. These rules are subject, however, to Kraft's judgement about the intelligibility of the resulting text and the possibility that in some instances conjectural emendations are necessary (13). Kraft employs the chapter divisions of James, but departs from the verse divisions employed by Brock and Spittler, divisions which are often better adapted to the P text than the S V recension (15).</li>
+    <li>Brock, S., Ed., "Testamentum Iobi." Pages 19-59 in <em>Testamentum Iobi, Apocalypsis Baruchi Graece</em> <a href=" abbreviations('PVTG');" rel="nofollow">PVTG</a> 2. Leiden: Brill, 1967.</li>
+    <li class="annotation">A corrected transcription of P, which Brock holds is "in many ways the best witness to the text of this work" (7), along with an apparatus providing complete variants from S and V and taking occasional notice of the Slavonic. Brock's aim was not to reproduce the "original" form of the text, but rather to transcribe the earliest Greek witness, ms P, correcting only the most glaring errors in that witness and regularizing its orthography (6-7). Brock's text and apparatus were based on fresh readings of photocopies of the manuscripts, supplemented by direct consultation of ms P on some uncertain passages (5). Brock employed the chapter divisions of James, along with the verse divisions of Paul Riessler in his <em>Altjüdisches Schrifttum ausserhalb der Bibel</em> (Augsburg: B. Filer Verlag, 1928; repr. Darmstadt: Wissenschaftliche Buchgesellschaft, 1966), 1104-34. This text is the basis for Spittler's English translation in (<a href=" abbreviations('PVTG');" rel="nofollow"><em>OTP</em></a>, 1:829-868).</li>
+    <li>Mancini, A. "Per la critica del 'Testamentum Job.'" <a href=" abbreviations('AAL(R)');" rel="nofollow"><em>AAL(R)</em></a> 20 (1911): 479-502.</li>
+    <li class="annotation">The first publication to draw on the text of ms S. Collates S with P (according to James) and V (according to Mai). Brock reports (5) that this collation contains only a few errors.</li>
+    <li>Conybeare, F. C. "The Testament of Job and the Testaments of the XII Patriarchs, according to the Text of Cod. Vatican. Graecus, 1238." <a href=" abbreviations('JQR');" rel="nofollow"><em>JQR</em></a> 13 (1901): 111-27, 258-74.</li>
+    <li class="annotation">Conybeare provides what appears to be a fresh transcription of the beginning (1:1-4) and end (47:9-53:8) of ms V. The transcription is not accurate.</li>
+    <li>James, M. R. <em>Apocrypha Anecdota II</em> <a href=" abbreviations('T&amp;S');" rel="nofollow">T&amp;S</a> 5.1; Cambridge: Cambridge University Press, 1897), lxxii-cii, 103-37.</li>
+    <li class="annotation">The text of ms P with variants from V (according to Mai's edition). James’ transcription of P is sometimes inaccurate. In places the readings of P and V are even accidentally reversed. In addition, the apparatus compiled by James does not always reliably represent the text of V published by Mai. James’ text includes no verse divisions.</li>
+    <li>Kohler, K. "The Testament of Job: An Essene Midrash on the Book of Job Reedited and Translated with Introductory and Exegetical Notes." Pages 264-338 in <em>Semitic Studies in Memory of Rev. Dr. Alexander Kohut</em>. Edited by G. A. Kohut. Berlin: Calvary, 1897.</li>
+    <li class="annotation">Reprints the text of ms V according to Mai's edition with a useful introduction. Kohler employed a different chapter division than the now-standard division of James. For a concordance relating the two systems, see Brock, 17.</li>
+    <li>Mai, A. <em>Scriptorum veterum nova collectio e Vaticanis codicibus.</em> Volume 7, columns 180-191. Rome: Typis Vaticanis [in Collegio Urbano apud Burliaeum], 1833.</li>
+    <li class="annotation">The first publication of the Greek text in any form, Mai's edition is a transcription of ms V. Although the transcription is reasonably accurate, it is marred by several errors. For corrections (provided by James) see F. Spitta, "Das Testament Hiobs und das Neue Testament," in <em>Zur Geschichte und Literatur des Urchristentums</em> (vol. 3.2; Göttingen, 1907), 139-206.</li>
+</ul>
+
+<h3>Slavonic Text</h3>
+<ul class="bibliography">
+<li>Polívka, G. "Opisi i izvodi iz nekoliko jugoslavenskih rukopisa u Pragu. XIII. Apokrifna priča o Jovu." <em>Starine</em> 24 (1891): 113-60.</li>
+<li>Novaković, S. "Apokrifna priča o Jovu." <em>Starine</em> 10 (1878): 157-70.</li>
+</ul>
+
+<h3>Coptic Text</h3>
+<ul class="bibliography">
+    <li>Römer C., and H. J. Thissen. "P. Köln Inv. Nr. 3221: Das Testament des Hiob in koptischer Sprache: Ein Vorbericht." Pages 33-45 in <em>Studies on the Testament of Job.</em> Edited by M. A. Knibb and P. W. van der Horst. <a href=" abbreviations('SNTSMS');" rel="nofollow">SNTSMS</a> 66. Cambridge: Cambridge University Press, 1989 (Reprinted 2005).</li>
+    <li>Pérez, G. Aranda. "Apócrifos del Antiguo Testamento en lengua copta." Pages 514-26 in <em> Il Simposio bíblico español (Córdoba, 1985).</em> Edited by V. Collado-Bertomeu and V. Vilar-Hueso; Valencia-Córdoba, 1987.</li>
+    <li>Philonenko, M. "Le Testament de Job: Introduction, traduction et notes. Additum: Une nouvelle version copte du <em>Testament de Job</em>." <em>Semitica</em> 18 (1968): 1-75.</li>
+</ul>
+
+<p> For further bibliography see DiTommaso, <em>Bibliography</em>, 565-74.</p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Testamentum Job
+
+C£.: J.-B. Frey, art. Apocryphes de l'Ancien Testament, in DBS I,
+1928, col. 455; — F. STEGMÜLLER, n? 104 et 104, 1-6; — E. SCHÜRER,
+Ill, p. 552-555; — A.-M. DENIS, ILRJH, ad loc.
+
+Translatio germanica: B. SCHALLER, Das Testament Hiobs, in
+JSHRZ II, 3, Gütersloh, 1979, p. 303-387 (e codd. graecis et slauicis,
+cum lectionibus uersionis copticae).
+
+Versio graeca (BHG 938-939)
+
+Codd.:
+
+(1) Città del Vaticano, Bibl. Apost. Vatic., vatic. gr. 1238, vol. 3,
+fol. 340r-349v, saec. xiii A. MAI, Scriptorum veterum nova collectio a
+vaticanis codicibus edita, VII, Roma, 1833, p. 180-191; — K. KOHLER,
+The Testament of Job. An Essene Midrash on the Book of Job Reedited and
+Translated with Introductory and Exegetical Notes, dans G.A. KOHUT, Semitic Studies in Memory of A. Kohut, Berlin, 1897, p. 264-338 + addenda et corrigenda p. 611-612 (editio nonnumquam mendosa); — F.C.
+CONYBEARE, The Testament of Job and the Testaments of the XII Patriarchs. According to the Text of Cod. Vatican. Graecus, 1238, in JQR 13
+(1901), p. 111-127, praesertim 111-117 (editio saepe mendosa; textus
+imperfectus).
+
+(2) Paris, Bibl. Nat. de France, gr. 2658, fol. 72r-97r, saec. XI:
+M.R. JAMES, The Testament of Job, in Apocrypha Anecdota II (Texts
+and Studies V, 1), Cambridge, 1897, p. lxxii-cii (introductio), 103-
+137 (textus codicis Paris, Bibl. Nat. de France, gr. 2658 cum lectionibus variis cod. Città del Vaticano, Bibl. Apost. Vatic., vatic. gr. 1238
+[ex editione A. Mail).
+
+(3) Paris, Bibl. Nat. de France, gr. 938, fol. 172v-192, saec. xvi
+(exemplum codicis praecedentis).
+
+(4) Messina, Bibl. Universitaria San Salvatore 29, fol. 35v-41v,
+an. 1307 vel 1308. C£. A. MANCINI, Per la critica del « Testamentum
+Iob», in Rendiconti della Reale Accademia dei Lincei, V, Classe di
+scienze morali, storiche e filologiche, 20, Roma, I9II, p. 479-502.
+
+R.A. KRAFT ET ALII, The Testament of Job according to the SV
+Text (Texts and Translations 5. Pseudepigrapha series 4), Missoula, Montana, 1974; — uide etiam S.P. BROCK, Testamentum
+Tobi (PsVTGr 2), Leiden, 1967, p. 1-59 (cum nonnullis lectionibus uersionis slauicae).
+
+Translatio anglica: R. THORNHILL, The Testament of Job, in
+
+H.F.D. SPARKS, p. 617-648 (ex editione S. Brock); — R.P. SPITTLER,
+Testament of Job (First Century B.C. - First Century A.D.). A New
+207 PSALMI - ODAE SALOMONIS - PROVERBIA - JOB - SAPIENTIA 163
+
+Translation and Introduction, in J.H. CHARLESWORTH, I, p. 829-868 (ex
+editione S. Brock).
+
+Translatio gallica: M. PHILONENKO, Le Testament de Job. Introduction, traduction et notes (Semitica 18), Paris, 1968 (cx editione
+S. Brock); - M. PHILONENKO, Testament de Job, in A. DUPONT-
+SOMMER — M. PHILONENKO, p. 1603-1645 (ex editione S. Brock).
+
+Translatio hispanica: A. PINERO, Testamento de Job, in A. Diez
+MACHO, V, p. 159-213 (ex editione S. Brock).
+
+Concordantia:
+A.-M. Denis, Concordance grecque des Pseudépigraphes d’Ancien Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione S. Brock).
+
+Versio coptica (sahidice)
+
+Cf.: M. WEBER, Une nouvelle (sic) version copte du Testament de
+Job, in M. PHILONENKO, Le Testament de Job. Introduction, traduction et
+notes (Semitica 18), Paris, 1968, p. 61-63.
+
+Cod.: Kóln, Institut für Altertumskunde, P. [nv. Nr. 3221, saec.
+v, qui continet. Testamentum Job XXX, 4-5; XXXI, 1-2; XXXI, 6 -
+XXXII, 1; XXXII, 2-4, 6-7, 8-10; XXXII, 1I - XXXIII, 2, cum excerptis
+Testamenti Adae, Testamenti Abrahae, et Actorum Petri et Andreae.
+
+Editio paratur a C. RÔMER - H.J. THISSEN.
+
+C. RÔMER - HJ. Tuissen, P. Koln Inv. Nr. 3221: Das Testament des Hiob in koptischer Sprache. Ein Vorbericht, in M.A. KNIBB -
+P.W. VAN DER Horst, Studies on the Testament of Job (Society for
+New Testament Studies. Monograph Series), Cambridge, 1989,
+p- 33-45 (editio liminaris et translatio).
+
+Versio slauica (serbica)
+
+Cf.: E. Kozax, Bibliographische Übersicht der biblisch-apokryphen Literatur bei den Slaven, in Jahrbücher für protestantische Theologie 18
+(1892), p. 127-158, praesertim p. 135; — N. BONWETSCH, in A.
+HARNACK, Geschichte der altchrislichen Literatur bis Eusebius, Leipzig,
+1958 (= 1897), I, 2, p. 915.
+
+Codd.: Beograd, Narodna Bibl. 149, fol. 51v-72v, saec. xvi
+(imperfectus); Praha, Czech Republic. Státní Knihovna, Safarik IX
+H. 21, fol. 168r-177v, saec. xv uel xvri; Moscou, Bibl. Lenin (olim
+Rumjancov) 1472, fol. 97v-111v, saec. xv uel xvi; Beograd, Narodna Bibl. 506, fol. 24v-48, saec. xv; Saint-Pétersbourg, Acad.
+Scences, Bibl. de l'Institut des Études Orientales 13.4.10 (Sbirk), fol.
+122-152, saec. XVI; Cetinje, Bibl. Métrop. 4, saec. XVII.
+164 PSALMI - ODAE SALOMONIS - PROVERBIA - JOB - SAPIENTIA 210
+
+S. NovAKOVIC, Apokrifna prica o Jovu, in Starine 10 (1878),
+p. 157-170, e cod. Beograd, Narodna Bibl. 149, qui textum imperfectum codicis complevit e translatione gallica a J.P. MiGNE,
+Dictionnaire des apocryphes, II, col. 401-420 confecta.
+
+G. Potivka, Apokrifna prica o Jovu, in Starine 24 (1891),
+p. 135-155, e cod. Praha, cum lectionibus variis codd. Beograd
+(149 + 506) et Moscou.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

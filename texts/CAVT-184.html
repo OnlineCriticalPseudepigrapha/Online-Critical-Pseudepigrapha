@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apocalypsis Esdrae graeca — CAVT-184 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Apocalypsis Esdrae graeca (CAVT-184)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-184</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-184</span>
+          <span class="badge badge-lang">Greek</span>
+          <span class="badge badge-lang">CAVT 184</span>
+          <span class="badge badge-lang">CANT 343</span>
+        </div>
+        <h1 class="stub-title">Apocalypsis Esdrae graeca</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=ApEzra.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/ApEzra.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-184</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 184</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 343</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 19 (Greek Apocalypse of Ezra)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:561-579 (Greek Apocalypse of Ezra)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 235-247 (Greek Apocalypse of Ezra)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>The <em>Greek Apocalypse of Ezra</em> (CAVT 184 / CANT 204) is a Christian-Jewish apocalypse in which Ezra journeys through heaven and Tartarus, pleading for sinners before the throne of God. Edited from Parisinus gr. 929 by C. von Tischendorf, <em>Apocalypses Apocryphae</em> (Leipzig, 1866), pp. 24-33.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <p>The date is uncertain; estimates range from the 2nd to the 9th century CE. The work depends on 4 Ezra and belongs to a family of Ezra apocalypses that includes the Vision of Ezra and the Apocalypse of Sedrach.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p>Paris, Bibliothèque nationale de France, MS gr. 929 (15th cent.), fols. 512-521.</p>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h4 class="stub-heading">A. Critical Editions</h4>
+<ul class="stub-list">
+<li><strong>Bensly, Robert Lubbock, with Montague Rhodes James</strong>. <em>The Fourth Book of Ezra, the Latin Version Edited from the MSS</em>. Texts and Studies 3.2. Cambridge: Cambridge University Press, 1895. [The definitive critical text of the Latin tradition].</li>
+<li><strong>Bensly, Robert Lubbock</strong>. <em>The Missing Fragment of the Fourth Book of Ezra</em>. Cambridge: Cambridge University Press, 1875. [Discovery and critical reconstruction of Latin 7:36–105].</li>
+<li><strong>Violet, Bruno</strong>. <em>Die Esra-Apokalypse (IV. Esra). I. Die Überlieferung</em>. Die griechischen christlichen Schriftsteller 18. Leipzig: J. C. Hinrichs, 1910. [Monumental polyglot synopsis printing Latin, Syriac, Ethiopic, Arabic, Armenian, and reconstructed Greek].</li>
+<li><strong>Drint, Adrian</strong>. <em>The Mount Sinai Arabic Version of IV Ezra</em>. CSCO 563–564, Scriptores Arabici 48–49. Leuven: Peeters, 1997.</li>
+</ul>
+<h4 class="stub-heading">B. Major Commentaries</h4>
+<ul class="stub-list">
+<li><strong>Stone, Michael E.</strong> <em>Fourth Ezra: A Commentary on the Book of Fourth Ezra</em>. Hermeneia. Minneapolis: Fortress Press, 1990. [The masterwork modern historical-critical commentary].</li>
+<li><strong>Box, George Herbert</strong>. <em>The Ezra-Apocalypse, Being Chapters 3–14 of the Book Commonly Known as 4 Ezra (or II Esdras)</em>. London: Sir Isaac Pitman & Sons, 1912.</li>
+<li><strong>Violet, Bruno</strong>. <em>Die Apokalypsen des Esra und des Baruch in deutscher Gestalt</em>. GCS 32. Leipzig: J. C. Hinrichs, 1924.</li>
+<li><strong>Gry, Léon</strong>. <em>Les dires prophétiques d’Esdras (IV. Esdras)</em>. 2 vols. Paris: Paul Geuthner, 1938.</li>
+<li><strong>Knibb, Michael A., and Richard J. Coggins</strong>. <em>The First and Second Books of Esdras</em>. Cambridge Bible Commentary. Cambridge: Cambridge University Press, 1979.</li>
+<li><strong>Myers, Jacob M.</strong> <em>I and II Esdras: Introduction, Translation and Commentary</em>. Anchor Bible 42. Garden City, NY: Doubleday, 1974.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Apocalypsis Esdrae graeca (BHG 603)
+
+Nota: Apocalypsis Esdrae graeca, Apocalypsis Sedrach (graece) et Visio
+beati Esdrae (latine) tria opera propinquua sunt, quae hic notata sunt
+1844, 184.ii et 184.141. Cf. F.G. NuvoLoNE, Apocalypse d’Esdras
+grecque et latine, rapports et rhétorique, in Apocrypha. Revue Internationale des Littératures Apocryphes 7 (1996), p. 81-108.
+
+Cf.: F. STEGMÜLLER, n? 98, 1; — CANT 340; — A.-M. Denis,
+ILRJH, ad loc.
+
+Noua editio paratur a D. ELLUL.
+
+C. TISCHENDORF, Apocalypses apocryphae Mosis, Esdrae, Pauli,
+lohannis, item Mariae dormitio, additis Evangeliorum et Actuum apocryphorum supplementis, Leipzig, 1866 (reimpr. Hildesheim, 1966),
+p. XII-XIV, 24-33, e cod. Paris, Bibl. Nat. de France, gr. 929, fol.
+510-532, saec. Xv.
+
+O. Want, Apocalypsis Esdrae, Apocalypsis Sedrach, Visio beati
+Esdrae (PsVTGr 4), Leiden, 1977, p. 25-34, e codd. Paris, Bibl.
+Nat. de France, gr. 929 et Paris, Bibl. Nat. de France, gr. 390,
+fol. 50-59, saec. XVI.
+
+Emendationes: M.E. STONE, The Metamorphosis of Ezra: Jewish
+Apocalypse and Mediaeval Vision, in JThSt 33 (1982), p. 1-18, praesertim p. 17-18 (= M. E. STONE, Selected Studies, p. 359-376, praesertim
+P. 375-376).
+
+Translatio anglica: R.J.H. SHUTT, The Apocalypse of Esdras, in
+
+H.F.D. Sparks, p. 927-941 (ex editione O. Wahl); - M.E. STONE,
+Greek Apocalypse of Ezra (Second to Ninth Century A.D.). À New Trans-
+I42 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 184.iii
+
+lation and Introduction, in J.H. CHARLESWORTH, I, p. 561-579 (ex editione C. Tischendorf).
+
+Translatio germanica: U.B. MÜLLER, Die griechische Esra- Apokalypse, in JSHRZ V, 2, Gütersloh, 1976, p. 85-102 (ex editione C. Tischendorf cum lect. uar. codicis Paris, Bibl. Nat. de France, gr. 390).
+
+Concordantia:
+A.-M. DENIS, Concordance grecque des Pseudépigraphes d' Ancien. Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione O. Wahl).
+
+184.ii Apocalypsis Sedrach (graece) (BHG 1621)
+
+Cf.: F. STEGMÜLLER, n? 118 et 118, 1; - CANT 342.
+
+Cod. unicus: Oxford, Bodleian Libr., Misc. gr. 56 (Auct. E. 4.
+11, olim 3060), fol. 93v-100b, saec. xv.
+
+M.R. JAMES, Apocrypha Anecdota. A Collection of thirteen Apocryphal Books and Fragments (Texts and Studies II, 3), Cambridge,
+1893, p. 127-137, nonnullis locis omissis; — O. WAHL, Apocalypsis Esdrae, Apocalypsis Sedrach, Visio beati Esdrae (PsVTGr 4), Leiden, 1977, p. 37-46; — et iterum S. AGOURIDES, AIOKAAYWIE
+ZEAPAX, in Theologia 49 (1978), p. 280-297.
+
+Translatio anglica: R.J.H. SHUTT, The Apocalypse of Sedrach, in
+H.F.D. SPARKS, p. 9$3-966; — S. AGOURIDES, Apocalypse of Sedrach
+( Second to Fifth Century A.D.). A New Translation and Introduction, in
+J.H. CHARLESWORTH, I, p. 605-613.
+
+Concordantia:
+A.-M. Denis, Concordance grecque des Pseudépigraphes d' Ancien. Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione O. Wahl).
+
+184.iii Visio beati Esdrae (latine)
+
+Cf: F. STEGMÜLLER, n° 98, 4-5; — CANT 341; — J. VERHEY-
+DEN, Les Pseudépigraphes d'Ancien Testament. Textes latins. A propos
+d'une Concordance, in ETL 71 (1995), p. 383-420, praesertim p. 397-
+398; — F.G. NUVOLONE, Valeur ajoutée pour investissements bibliographiques «apocryphes» (Visio Esdrae B, $ 95-96), in D. KNOEPFLER, Nomen
+latinum. Mélanges de langue, de littérature et de civilisation latines offerts au
+professeur André Schneider... (Université de Neuchátel. Recueil de travaux publiés par la Faculté des lettres, fasc. 44), Neuchátel - Genéve,
+1997, p. 181-190; — A.-M. DENIS, ILRJH, ad loc.
+
+Nota: Exstant duae recensiones.
+184.iii ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM I43
+
+Codd.: Città del Vaticano, Bibl. Apost. Vatic., vatic. lat. 3838,
+fol. 59r-61r, saec. xII (= V); Città del Vaticano, Bibl. Apost. Vatic.,
+Barberini lat. 2318, fol. 106r-110r, saec. xiv-xv (= B); Heiligenkreuz, Stiftsbibl. 11, fol. 272v-273r, saec. xıı ex. (= H); Linz, Bibl.
+des Priesterseminars A 1/6 (HS 1), fol. 141-17v, saec. x-xi (= L). O.
+WAHL, Vier neue Textzeugen der Visio beati Esdrae, in Salesianum 40
+(1978), p. 583-589, repperit quatuor codices: Klosterneuburg, Stiftsbibl. 714, fol. 139v-141v, saec. xii (= K); Lilienfeld, Stiftsbibl. 145,
+fol. 70r-70v, saec. xiii (= L5; Melk, Stiftsbibl. 310.F.8, fol. 208v-
+209v, saec. xiii (= M); Lilienfeld, Stiftsbibl. 134, fol. 109r-110r, saec.
+xiii (= Z). Codices deperditi: P. Laver, Les manuscrits de Saint- Arnoul
+de Crépy, in Bibliothèque de l'Ecole des Chartes 63 (1902), p. 512; —
+G. MORIN, Le catalogue des manuscrits de l'abbaye de Gorze au XF siècle,
+in RBén 22 (1905), p. 1-14, praesertim p. 8, l. 134-135.
+
+Noua editio paratur a F. NUVOLONE.
+
+Recensio breuior
+
+A. MussariA, Sulla visione di Tundalo, in Sitzungsberichte der
+phil.-historischen Classe der kaiserlichen Akademie der Wissenschaften, Wien, 67 (1871), p. 157-206, in appendice p. 202-206, e
+cod. H.
+
+G. MERCATI, Anecdota apocrypha latina. Una «Visio» ed una «Revelatio» d'Esdra con un decreto di Clemente Romano, in Note di letteratura biblica e cristiana antica (Studi e Testi 5), Roma, 1901, p. 61-81,
+praesertim 70-73 (textus), e cod. V.
+
+O. Wanı, Apocalypsis Esdrae, Apocalypsis Sedrach, Visio beati
+Esdrae (PsVTGr 4), Leiden, 1977, p. 49-61, e codd. L V H.
+
+Recensio longior et antiquior
+
+P.-M. BOGAERT, Une version longue inédite de la « Visio beati Esdrae » dans le légendier de Teano (Barberini lat. 2318), in RBén 94
+(1984), p. 50-70, e cod. B.
+
+Translatio anglica: R.J.H. SHUTT, The Vision of Esdras, in
+H.F.D. SPARKS, p. 943-951; — J.R. MUELLER - G.A. Rossins, Vision of Ezra (Fourth to Seventh Century A.D.). À New Translation and Introduction, in J.H. CHARLESWORTH, I, p. 581-590 (ex editione G. Mercati).
+
+Concordantia:
+A.-M. DENIS, Concordance latine des Pseudépigraphes d' Ancien Testament.
+Concordance. Corpus des textes. Indices (Corpus Christianorum. Thesau-
+144 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 185
+
+rus patrum latinorum. Supplementum), Turnhout, 1993 (ex editione
+P.-M. Bogaert).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

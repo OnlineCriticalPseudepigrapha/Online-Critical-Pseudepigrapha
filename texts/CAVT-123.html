@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qumran. Apocryphon Moysi (4Q377) (hebraice) — CAVT-123 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Qumran. Apocryphon Moysi (4Q377) (hebraice) (CAVT-123)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-123</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-gap">Clavis Record / Gap</span>
+          <span class="badge badge-id">CAVT-123</span>
+          <span class="badge badge-lang">Hebrew</span>
+          <span class="badge badge-lang">CAVT 123</span>
+          
+        </div>
+        <h1 class="stub-title">Qumran. Apocryphon Moysi (4Q377) (hebraice)</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> MOYSES
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-123</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 123</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 34 (Testament of Moses / 4Q377 Apocryphon of Moses)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Testament of Moses</em> (historically conflated with or titled the <em>Assumption of Moses</em>, Latin <em>Assumptio Mosis</em> / <em>Testamentum Moysis</em>; Greek Διαθήκη Μωυσέως / Ἀνάληψις Μωυσέως) is an apocalyptic farewell address delivered by Moses to his successor Joshua on Mount Nebo prior to his death. Preserved uniquely in a single 6th-century Latin palimpsest discovered by Antonio Maria Ceriani in 1861, the work is a translation of a lost Greek version, which itself derives from a Semitic (Hebrew or Aramaic) Vorlage composed in Judea.</p>
+<p class="stub-paragraph">Modern critical consensus (following R. H. Charles, G. W. E. Nickelsburg, J. J. Collins, and J. Tromp) distinguishes between two originally separate works attested in ancient stichometries (<em>Stichometry of Nicephorus</em>, <em>List of the Sixty Books</em>, <em>Synopsis of Pseudo-Athanasius</em>):</p>
+<p class="stub-paragraph">1. <strong>The Testament of Moses</strong> (approx. 1100 lines): Preserved in the Milan palimpsest, comprising Moses’ historical-prophetic farewell revelation to Joshua.</p>
+<p class="stub-paragraph">2. <strong>The Assumption of Moses</strong> (approx. 1400 lines): The lost conclusion recounting Moses' ascent, physical death, and the cosmic struggle between the Archangel Michael and the Devil over the body of Moses (alluded to in Jude 9 and cited by Origen and Gelasius of Cyzicus).</p>
+<h4 class="stub-heading">Chapter-by-Chapter Architectural Breakdown</h4>
+<p class="stub-paragraph">1. <strong>Moses' Commissioning of Joshua and the Secret Books</strong> (ch. 1):</p>
+<ul class="stub-list">
+<li>In his 120th year, in the 2,500th year from the creation of the world, Moses appoints Joshua son of Nun as his successor to lead Israel into the Promised Land.</li>
+<li>Moses reveals his cosmic pre-existence in the divine purpose: "He created me before the foundation of the world to be the mediator (<em>arbitrem</em>) of His covenant" (1:14).</li>
+<li>Moses commits to Joshua the secret prophetic writings, instructing him to anoint them with cedar oil (<em>oleum cedri</em>) and store them in earthenware vessels (<em>in vasis fictilibus</em>) so they remain preserved until the Consummation of the End (<em>in diem poenitentiae</em>).</li>
+</ul>
+<p class="stub-paragraph">2. <strong>The Period of the Tribes and the First Temple</strong> (chs. 2–3):</p>
+<ul class="stub-list">
+<li>Joshua leads the tribes across the Jordan; division of the land; era of the Judges; establishment of the monarchy and the building of Solomon's Temple.</li>
+<li>Division into the Northern Kingdom (ten tribes) and the Southern Kingdom (two tribes). Both succumb to idolatry and forsake the covenant.</li>
+</ul>
+<p class="stub-paragraph">3. <strong>The Babylonian Exile and the Return</strong> (ch. 4):</p>
+<ul class="stub-list">
+<li>Nebuchadnezzar captures Jerusalem, burns the Temple, and deports the people to Babylon.</li>
+<li>In exile, an unnamed intercessor (Daniel) prays to God, confessing the sins of the nation.</li>
+<li>God stirs up the heart of a foreign king (Cyrus), permitting the return of the two tribes to rebuild Jerusalem, while the ten tribes remain in the eastern Diaspora.</li>
+</ul>
+<p class="stub-paragraph">4. <strong>Second Temple Apostasy and Hasmonean Rule</strong> (chs. 5–6):</p>
+<ul class="stub-list">
+<li><em>Priesthood Corruption</em> (ch. 5): The Second Temple is characterized by defective sacrifices, venal priests, and Hellenizing apostasy.</li>
+<li><em>The Hasmonean Dynasty and Herod the Great</em> (ch. 6): Tyrannical priest-kings arise, followed by an "insolent king, who will not be of the race of priests, an audacious and ruthless man" (= <strong>Herod the Great</strong>). He reigns for 34 years, slaughtering the elders, nobles, and common people with sword and fire.</li>
+<li>His sons succeed him for shorter durations, followed by a powerful Western king who invades Judea (= <strong>P. Quinctilius Varus</strong>, governor of Syria, 4 BCE), crucifying rebels, burning parts of the Temple, and enslaving the inhabitants.</li>
+</ul>
+<p class="stub-paragraph">5. <strong>Sectarian Hypocrites and Religious Pretenders</strong> (ch. 7):</p>
+<ul class="stub-list">
+<li>Bitter polemic against corrupt rulers and religious leaders: deceitful men, feast-lovers, gluttons, devoured by greed, who nevertheless pose as paragons of righteousness and say to the poor: "Do not touch me, lest you pollute me where I stand" (<em>noli me tangere, ne inquines me</em>).</li>
+</ul>
+<p class="stub-paragraph">6. <strong>The Great Persecution and Forced Epispasm</strong> (ch. 8):</p>
+<ul class="stub-list">
+<li>A brutal foreign monarch (historically Antiochus IV Epiphanes, or a future eschatological tyrant) unleashes systematic persecution: torturing Torah-keepers, crucifying those who circumcise their sons, forcing boys to undergo epispasm (surgical reversal of circumcision), and compelling Jews to blaspheme and desecrate their holy things.</li>
+</ul>
+<p class="stub-paragraph">7. <strong>The Episode of Taxo and His Seven Sons</strong> (ch. 9):</p>
+<ul class="stub-list">
+<li>In the midst of the crisis, a holy man named <strong>Taxo</strong> (<em>Taxo de tribu Levi</em>) arises.</li>
+<li>Addressing his seven sons, Taxo recounts the unyielding sins of the nation and urges total, non-violent surrender to divine vengeance: "Let us fast for three days, and on the fourth day let us enter a cave in the wilderness, and let us die rather than transgress the commandments of the Lord of Lords, the God of our fathers. For if we do this, our blood will be avenged before the Lord" (9:6–7).</li>
+</ul>
+<p class="stub-paragraph">8. <strong>The Cosmic Eschatological Theophany</strong> (ch. 10):</p>
+<ul class="stub-list">
+<li>A magnificent poetic apocalypse: "Then His kingdom will appear throughout all His creation, and then the Devil will have an end, and sorrow will be banished with him" (10:1).</li>
+<li>The celestial angel (<em>angelus qui in summo est</em>) is appointed to avenge Israel against all enemies.</li>
+<li>Cosmic upheaval: The Heavenly King rises from His royal throne; the earth trembles; high mountains are leveled and melt like wax; the sun darkens, the horns of the moon shatter and turn to blood, and the stars fall from their orbits.</li>
+<li>Exaltation of Israel: God raises Israel upon the wings of eagles into the starry heavens, looking down upon their enemies in Gehenna and rejoicing in eternal triumph.</li>
+</ul>
+<p class="stub-paragraph">9. <strong>Joshua’s Lament and Moses’ Consolation</strong> (chs. 11–12):</p>
+<ul class="stub-list">
+<li>Joshua tears his garments, throws himself at Moses’ feet, and utters an agonizing lament: Who can replace Moses as intercessor? Who will pray for Israel when famine, sword, or plagues strike? What land or grave is worthy to hold his body?</li>
+<li>Moses reassures Joshua: God created the cosmos on behalf of His chosen people, foreknew all history from the beginning, and will faithfully uphold His eternal covenant.</li>
+<li>The palimpsest breaks off abruptly in 12:13 during Moses' final words.</li>
+</ul>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <h4 class="stub-heading">A. The Latin Palimpsest: Milan, Biblioteca Ambrosiana, MS C. 73 inf.</h4>
+<ul class="stub-list">
+<li><strong>Physical Manuscript</strong>:</li>
+<li>The sole surviving continuous witness for chapters 1:1–12:13.</li>
+<li>Date: <strong>6th century CE</strong>, written in uncial script on parchment.</li>
+<li>History: Acquired from the ancient monastery of St. Columbanus at Bobbio. It is a double palimpsest: the original script contains fragments of the Latin Pentateuch (Genesis, Leviticus, Numbers) and the <em>Testament of Moses</em>; overwritten in the 8th century with liturgical texts.</li>
+<li>Condition: The text is severely corrupted by scribal blunders, phonetic spellings, and illegible faded passages. The final folios containing the end of chapter 12 and the death/assumption of Moses are entirely lost.</li>
+<li><strong>Editio Princeps</strong>:</li>
+<li>Discovered and published by <strong>Antonio Maria Ceriani</strong>, "Fragmenta Assumptionis Mosis," in <em>Monumenta sacra et profana</em> 1.1 (Milan: Bibliotheca Ambrosiana, 1861), pp. 55–64.</li>
+</ul>
+<h4 class="stub-heading">B. The Patristic Citations and the "Lost Ending" (<em>The Assumption</em>)</h4>
+<p class="stub-paragraph">While the Latin manuscript breaks off before Moses' death, numerous ancient Jewish, Christian, and gnostic sources preserve fragments and explicit citations from the lost concluding section of the <em>Assumption of Moses</em>:</p>
+<p class="stub-paragraph">1. <strong>The Epistle of Jude (v. 9)</strong>:</p>
+<ul class="stub-list">
+<li><em>"Yet Michael the archangel, when contending with the devil he disputed about the body of Moses, durst not bring against him a railing accusation, but said, The Lord rebuke thee."</em></li>
+<li>Origen (<em>De Principiis</em> 3.2.1) explicitly identifies this verse as a direct citation from the <em>Assumption of Moses</em> (<em>Ascensio Mosis</em>).</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Clement of Alexandria</strong> (<em>Stromata</em> 6.15; <em>Adumbrationes in Epistolam Iudae</em>):</p>
+<ul class="stub-list">
+<li>Notes that Joshua and Caleb witnessed a twofold Moses at his departure: one Moses ascending alive to heaven in the company of angels, and another Moses buried in the earth.</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Gelasius of Cyzicus</strong> (<em>Historia Ecclesiastica</em> 2.17.17; 2.21.7):</p>
+<ul class="stub-list">
+<li>Quotes a dramatic debate from the <em>Assumption</em> between the Archangel Michael and the Devil. The Devil claims possession of Moses’ body because Moses murdered the Egyptian taskmaster (Exod 2:12), while Michael accuses the Devil of inspiring the Serpent in Eden.</li>
+</ul>
+<p class="stub-paragraph">4. <strong>Didymus the Blind</strong> (<em>In Epistolam Iudae enarratio</em>):</p>
+<ul class="stub-list">
+<li>Confirms that Jude 9 is derived from the <em>Assumption of Moses</em>.</li>
+</ul>
+<p class="stub-paragraph">5. <strong>Greek, Syriac, and Armenian Catenae</strong>:</p>
+<ul class="stub-list">
+<li>Byzantine catenae on Jude and the Catholic Epistles (ed. J. A. Cramer, 1840) and Armenian catenae (ed. C. Renoux, 1994) preserve patristic scholia summarizing the angelic confrontation at Moses' tomb.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Tromp, Johannes</strong>, ed. <em>The Assumption of Moses: A Critical Edition with Commentary</em>. Studia in Veteris Testamenti Pseudepigrapha 10. Leiden: Brill, 1993. [The definitive standard critical edition of the Latin text, providing diplomatic transcription, critical reconstructed text, exhaustive commentary, and detailed analysis of the Semitic and Greek Vorlagen].</li>
+<li><strong>Charles, Robert Henry</strong>, ed. <em>The Assumption of Moses, Translated from the Latin Sixth-Century MS., the Unemended Text of Which is Published Herewith, Together with the Text in its Restored and Critically Emended Form, Edited with Introduction, Notes, and Indices</em>. London: Adam and Charles Black, 1897. [Monumental 19th-century critical edition, reconstructing the underlying Semitic idioms].</li>
+<li><strong>Clemen, Carl</strong>, ed. <em>Die Himmelfahrt des Mose</em>. Kleine Texte für theologische und philologische Vorlesungen und Übungen 10. Bonn: A. Marcus und E. Weber, 1904; 2nd ed. 1924.</li>
+<li><strong>Ceriani, Antonio Maria</strong>, ed. "Fragmenta Assumptionis Mosis." In <em>Monumenta sacra et profana</em>, 1.1:55–64. Milan: Bibliotheca Ambrosiana, 1861. [Editio princeps].</li>
+<li><strong>Fritzsche, Otto Fridolin</strong>, ed. "Assumptionis Moyseos fragmenta." In <em>Libri apocryphi Veteris Testamenti graece</em>. Leipzig: F. A. Brockhaus, 1871, pp. 700–730 [also in <em>Libri Veteris Testamenti pseudepigraphi selecti</em>, pp. 132–162].</li>
+<li><strong>Hilgenfeld, Adolf</strong>, ed. "Mosis Assumptionis quae supersunt nunc primum edita et illustrata." In <em>Novum Testamentum extra canonem receptum</em>. Leipzig: T. O. Weigel, 1866, 1:93–115; 2nd ed. 1884, 1:107–135.</li>
+<li><strong>Hilgenfeld, Adolf</strong>. "Die Psalmen Salomo’s und die Himmelfahrt des Moses, griechisch hergestellt und erklärt." <em>Zeitschrift für wissenschaftliche Theologie</em> 11 (1868): 133–168, 273–309, 356 [repr. in <em>Messias Judaeorum</em>, Leipzig, 1869, pp. 435–465]. [Complete retroversion into Greek].</li>
+<li><strong>Schmidt, Moritz</strong>, and <strong>Adalbert Merx</strong>, eds. "Die Assumptio Mosis." In <em>Archiv für wissenschaftliche Erforschung des Alten Testaments</em>, edited by A. Merx, 1:111–152. Halle, 1868.</li>
+<li><strong>Volkmar, Gustav</strong>, ed. <em>Mose Prophetie und Himmelfahrt: Eine Quelle für das Neue Testament, zum ersten Male deutsch herausgegeben im Zusammenhang der Apocrypha und der Christologie überhaupt</em>. Handbuch der Einleitung in die Apocryphen 3. Leipzig: Fues’s Verlag, 1867.</li>
+<li><strong>Denis, Albert-Marie</strong>, ed. In <em>Fragmenta pseudepigraphorum quae supersunt graeca</em>. PVTG 3. Leiden: Brill, 1970, pp. 63–67 [Greek fragments].</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Concordance latine des pseudépigraphes d’Ancien Testament</em>. Turnhout: Brepols, 1993, pp. 599–601.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Qumran. Apocryphon Moysi (4Q377) (hebraice)
+
+Cf.: A.-M. Dents, ILRJH, ad loc.
+
+4Q377 (4QapocrMoses C): editio paratur a D. DIMANT.
+92 MOYSES 127</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

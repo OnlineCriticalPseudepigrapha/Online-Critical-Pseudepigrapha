@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qumran. Pseudo-Ezechiel (4Q385, 4Q386, 4Q387, 4Q388, 4Q391?) (hebraice) — CAVT-242 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Qumran. Pseudo-Ezechiel (4Q385, 4Q386, 4Q387, 4Q388, 4Q391?) (hebraice) (CAVT-242)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-242</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-gap">Clavis Record / Gap</span>
+          <span class="badge badge-id">CAVT-242</span>
+          <span class="badge badge-lang">Hebrew</span>
+          <span class="badge badge-lang">CAVT 242</span>
+          
+        </div>
+        <h1 class="stub-title">Qumran. Pseudo-Ezechiel (4Q385, 4Q386, 4Q387, 4Q388, 4Q391?) (hebraice)</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-242</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 242</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 18 (Apocryphon of Ezekiel / 4Q385-391 Pseudo-Ezekiel)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Apocryphon of Ezekiel</em> is an ancient Jewish pseudepigraphon composed in Greek (or Semitic Vorlage) during the Second Temple period (1st cent. BCE to 1st cent. CE). Josephus refers to Ezekiel having left behind "two books" (<em>Antiquitates Judaicae</em> 10.79), pointing to an extra-canonical book circulated under Ezekiel's name alongside the canonical prophet. Although the complete text has perished, five substantial fragments survive as quotations in patristic, gnostic, and papyrological sources:</p>
+<p class="stub-paragraph">1. <strong>Fragment 1: The Parable of the Lame and the Blind</strong> (<em>apud</em> Epiphanius, <em>Panarion</em> / <em>Adversus Haereses</em> 64.70.5–17):</p>
+<ul class="stub-list">
+<li>A wealthy king holds a royal wedding banquet for his son and invites everyone except two guards: one blind and one lame. In anger, the two infiltrate the king's garden: the blind man carries the lame man on his shoulders so the lame man can guide him and pluck the fruit. When confronted, each claims physical impossibility. The king places the lame man upon the blind man's shoulders and executes them together.</li>
+<li><em>Theological Function</em>: An allegory of the indivisible partnership of the physical body (<em>sōma</em>) and soul (<em>psychē</em>) in human action, establishing their joint resurrection and culpability at the Last Judgment. Directly paralleled in Rabbinic literature: b. <em>Sanhedrin</em> 91a–b (the dialogue between Rabbi Judah the Prince and Antoninus); <em>Leviticus Rabbah</em> 4.5; <em>Mekhilta de-Rabbi Ishmael</em> on Exod 15:1.</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Fragment 2: The Exhortation to Repentance</strong> (<em>apud</em> <em>1 Clement</em> 8.3; Clement of Alexandria, <em>Paedagogus</em> 1.10.91.2; <em>Quis Dives Salvetur</em> 39.2; Coptic <em>Exegesis on the Soul</em>, NHC II,6, pp. 135.31–136.4):</p>
+<ul class="stub-list">
+<li>A prophetic call to repentance promising forgiveness even if sins reach from earth to heaven or are redder than scarlet, provided Israel returns with a whole heart and calls God "Father."</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Fragment 3: The Miraculous Heifer</strong> (<em>apud</em> Clement of Alexandria, <em>Stromata</em> 7.16.94; Tertullian, <em>De carne Christi</em> 23; Epiphanius, <em>Panarion</em> 30.30.3; <em>Acts of Peter</em> 24; Gregory of Nyssa, <em>Adversus Judaeos</em> 3):</p>
+<ul class="stub-list">
+<li>"And the heifer [sterile cow] gave birth, and did not give birth" (καὶ ἔτεκεν ἡ δάμαλις καὶ οὐκ ἔτεκεν). Adopted widely in early Christian apologetics as an ancient prophetic proof-text for the virginal conception of Mary.</li>
+</ul>
+<p class="stub-paragraph">4. <strong>Fragment 4: Judgment According to the Final State</strong> (<em>apud</em> Justin Martyr, <em>Dialogus cum Tryphone</em> 47.5; Clement of Alexandria, <em>Quis Dives Salvetur</em> 40.2; Hippolytus, <em>De consummatione mundi</em> 44; John Climacus, <em>Scala Paradisi</em> 7; <em>Life of St. Anthony</em> 15):</p>
+<ul class="stub-list">
+<li>"In whatsoever things I find you, in these also will I judge you" (ἐν οἷς ἂν ὑμᾶς καταλάβω, ἐν τούτοις καὶ κρινῶ). A famous agraphon attributed to Ezekiel asserting that judgment falls on a person's ultimate spiritual state at death.</li>
+</ul>
+<p class="stub-paragraph">5. <strong>Fragment 5: The Good Shepherd and the Flocks (Chester Beatty Papyrus 20 / P. Mich. Inv. 5552)</strong>:</p>
+<ul class="stub-list">
+<li>4th-century CE Greek papyrus leaf containing a poetic lament over an unfaithful, oppressive ruler/shepherd who abuses the weak and fails to seek the lost, contrasting with God's pastoral care; cf. Clement of Alexandria, <em>Paed.</em> 1.9.84.2–4; Origen, <em>Homilies on Jeremiah</em> 18.9; <em>Manichaean Psalm-Book</em> 239.5–6.</li>
+</ul>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <ul class="stub-list">
+<li><strong>Chester Beatty Papyrus 20 (with Michigan Inv. 5552)</strong>:</li>
+<li>4th-century CE Greek papyrus codex leaf, discovered alongside the Chester Beatty biblical papyri.</li>
+<li>Editio princeps: Bonner, Campbell. <em>The Homily on the Passion of Melito, Bishop of Sardis, and Some Fragments of the Apocryphal Ezekiel</em>. Studies and Documents 12. London: Christophers / Philadelphia: University of Pennsylvania Press, 1940, pp. 5–8, 183–202.</li>
+<li>Aland, Kurt. <em>Repertorium der griechischen christlichen Papyri. I. Biblische Papyri</em>. PTS 18. Berlin/New York: de Gruyter, 1976, No. 365.</li>
+<li>van Haelst, Joseph. <em>Catalogue des papyrus littéraires juifs et chrétiens</em>. Paris: Université de Paris IV, 1976, No. 579, p. 204.</li>
+<li><strong>Nag Hammadi Codices (NHC II,6)</strong>:</li>
+<li><em>The Exegesis on the Soul</em> (<em>Exegesis de Anima</em>), lines II.135.31–136.4: Preserves a Sahidic Coptic translation of Fragment 2 with explicit attribution to the prophet Ezekiel.</li>
+<li>Edition: Robinson, William C., Jr. In <em>Nag Hammadi Studies</em> 20. Leiden: Brill, 1980; and in <em>The Nag Hammadi Library in English</em>, ed. J. M. Robinson, 3rd ed., San Francisco: Harper & Row, 1988, pp. 190–198.</li>
+<li><strong>Manichaean Coptic Tradition</strong>:</li>
+<li>Allberry, Charles R. C. <em>A Manichaean Psalm-Book, Part II</em>. Manichaean Manuscripts in the Chester Beatty Collection 2. Stuttgart: Kohlhammer, 1938, p. 239.5–6.</li>
+<li>Stroker, William D. "The Source of an Agraphon in the Manichaean Psalm-Book." <em>Journal of Theological Studies</em> 28 (1977): 114–118.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Mueller, Joseph R.</strong> <em>The Five Fragments of the Apocryphon of Ezekiel: A Critical Study</em>. Journal for the Study of the Pseudepigrapha Supplement Series 5. Sheffield: Sheffield Academic Press, 1994. [The definitive critical monograph; reconstructs Greek texts, analyzes textual variants, provides full historical-critical and redactional commentary on all five fragments].</li>
+<li><strong>Holl, Karl</strong>. "Das Apocryphon Ezekiel." In <em>Aus Schrift und Geschichte: Theologische Abhandlungen, Adolf Schlatter zum 70. Geburtstage dargebracht</em>, 85–98. Stuttgart: Calwer, 1922; reprinted in <em>Gesammelte Aufsätze zur Kirchengeschichte</em>, Band II: <em>Der Osten</em>, 33–43. Tübingen: Mohr Siebeck, 1928. [Pioneering reconstruction that first gathered and edited the fragments as an early Jewish apocalypse].</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Fragmenta pseudepigraphorum quae supersunt graeca</em>. PVTG 3. Leiden: Brill, 1970, pp. 121–128. [Standard Greek corpus text].</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Concordance grecque des pseudépigraphes d'Ancien Testament</em>. Louvain-la-Neuve, 1987, p. 906.</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Concordance latine des pseudépigraphes d'Ancien Testament</em>. Turnhout: Brepols, 1993, pp. 121–128.</li>
+<li><strong>Stone, Michael E., Benjamin G. Wright, and David Satran</strong>. <em>The Apocryphal Ezekiel</em>. Society of Biblical Literature Early Judaism and Its Literature 18. Atlanta: Society of Biblical Literature, 2000. [Comprehensive critical collection incorporating the Greek fragments, Qumran Pseudo-Ezekiel, and the Armenian Vision of Ezekiel].</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>242. Qumran. Pseudo-Ezechiel (400385, 4Q386,
+4Q387, 4Q388, 4Q391?) (hebraice)
+
+(1) 4Q385 (4QpsEzek”): editio paratur a D. DiMANr. Publicatio liminaris a J. STRUGNELL - D. DIMANT, 4Q Second Ezekiel,
+in RQ 13 (1988), p. 45-58; — et iterum D. DIMANT - J. STRU-
+GNELL, The Merkabah Vision in Second Ezekiel (4Q385 4), in
+RQ 14 (1990), p. 331-348.
+
+Variae sententiae de textu legendo: M. Kıster - E. QIM-
+RON, Observations on 4QSecond Ezekiel (4Q385 2-3), in RQ 15
+(1992), p. 595-602; — E. PuECH, La croyance des Esseniens..., p. 605-
+616.
+
+(2) 4Q386 (4QpsEzek^): editio paratur a D. DIMANT.
+(3) 4Q387 (4QpsEzek°): editio paratur a D. DIMANT.
+(4) 4Q388 (4QpsEzek?) : editio paratur a D. DIMANT.
+
+(5) 4Q391 (4QpapPseudo-Ezekiel°): M. SMITH in Qumran
+Cave 4. XIV. Parabiblical Texts, Part 2 (DJD 19), Oxford, 1995,
+p. 153-193 + tab. XVII-XXV.
+
+Translatio anglica: F. Garcia MARTÍNEZ, The Dead Sea Scrolls
+Translated, p. 286-287 (4Q 385, 4Q386).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hellenistic Synagogal Prayers — 16 Synagogal Prayers in Apostolic Constitutions 7-8 — CAVT-JH-17 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Hellenistic Synagogal Prayers — 16 Synagogal Prayers in Apostolic Constitutions 7-8 (CAVT-JH-17)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-JH-17</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-gap">Clavis Record / Gap</span>
+          <span class="badge badge-id">CAVT-JH-17</span>
+          <span class="badge badge-lang">Greek</span>
+          <span class="badge badge-lang">CAVT — (JH / Suppl.)</span>
+          <span class="badge badge-lang">Delling; van der Horst</span>
+        </div>
+        <h1 class="stub-title">Hellenistic Synagogal Prayers — 16 Synagogal Prayers in Apostolic Constitutions 7-8</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> LITURGICA
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-JH-17</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. — (JH / Suppl.)</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>Delling; van der Horst</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>Denis 2000 Ch. 38 §10 (pp. 1280–1282)</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 20 (Hellenistic Synagogal Prayers)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:671-697 (Hellenistic Synagogal Prayers)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Hellenistic Synagogal Prayers</em> comprise a collection of sixteen Greek liturgical prayers embedded within the late 4th-century Syrian Christian church order known as the <em>Apostolic Constitutions</em> (<em>Constitutiones Apostolorum</em>, compiled ca. 380 CE in Antioch or Syria, likely by an Arianizing redactor traditionally associated with Pseudo-Ignatius). Originally identified by Kaufmann Kohler (1893, 1924) and demonstrated systematically by Wilhelm Bousset (1915) and Erwin R. Goodenough (1935), these texts are Greek-language synagogue prayers composed between the 2nd and 3rd centuries CE (ca. 150–300 CE) in the Hellenistic Jewish Diaspora of Syria, Asia Minor, or Egypt. The compiler of the <em>Apostolic Constitutions</em> incorporated this existing Jewish liturgical manual into his work, overlaying minimal Christian editorial glosses (typically Christological doxological formulas such as "through Jesus Christ our Lord" at the conclusions):</p>
+<h4 class="stub-heading">The Corpus of 16 Prayers (as numbered by Fiensy & Darnell, OTP 2):</h4>
+<p class="stub-paragraph">1. <strong>Prayer 1</strong> (<em>Ap. Const.</em> 7.26.1–3): Thanksgiving after meals (<em>Birkat ha-Mazon</em>), blessing God for nourishment, spiritual life, and knowledge.</p>
+<p class="stub-paragraph">2. <strong>Prayer 2</strong> (<em>Ap. Const.</em> 7.33.2–7): Morning prayer praising God as almighty King, creator of heaven and earth, and savior of the patriarchs.</p>
+<p class="stub-paragraph">3. <strong>Prayer 3</strong> (<em>Ap. Const.</em> 7.34.1–8): Cosmic hymn celebrating the order of creation, providence, the elements, and celestial bodies.</p>
+<p class="stub-paragraph">4. <strong>Prayer 4</strong> (<em>Ap. Const.</em> 7.35.1–10): The Hellenistic Synagogal <em>Qedushah</em> / <em>Sanctus</em>, recounting the praise of the angelic hosts (Seraphim and Cherubim chanting Isa 6:3 and Ezek 3:12).</p>
+<p class="stub-paragraph">5. <strong>Prayer 5</strong> (<em>Ap. Const.</em> 7.36.1–7): Sabbath liturgy celebrating God’s cosmic rest, the revelation of the Torah, and the Sabbath as a perpetual memorial of creation and the Exodus.</p>
+<p class="stub-paragraph">6. <strong>Prayer 6</strong> (<em>Ap. Const.</em> 7.37.1–5): Sabbath morning blessing thanking God for the renewal of cosmic light (<em>Yotzer Or</em>).</p>
+<p class="stub-paragraph">7. <strong>Prayer 7</strong> (<em>Ap. Const.</em> 7.38.1–8): Liturgical memorial reviewing the historical succession of righteous biblical heroes from Abel, Seth, Enoch, and Noah to Abraham, Moses, and the judges.</p>
+<p class="stub-paragraph">8. <strong>Prayer 8</strong> (<em>Ap. Const.</em> 7.39.2–4): Blessing over proselytes / candidates for initiation, praying for their illumination in the knowledge of the one true God and the abandonment of polytheism.</p>
+<p class="stub-paragraph">9. <strong>Prayer 9</strong> (<em>Ap. Const.</em> 8.5.1–4): Prayer for the ordination / appointment of leaders (adapted for episcopal ordination from Jewish <em>semikhah</em> traditions).</p>
+<p class="stub-paragraph">10. <strong>Prayer 10</strong> (<em>Ap. Const.</em> 8.6.5–8): Intercessory petition over penitents and catechumens.</p>
+<p class="stub-paragraph">11. <strong>Prayer 11</strong> (<em>Ap. Const.</em> 8.9.8–9): Congregational petition for the peace of the world, civil rulers, and the community (<em>Birkat ha-Shalom</em>).</p>
+<p class="stub-paragraph">12. <strong>Prayer 12</strong> (<em>Ap. Const.</em> 8.12.6–27): The Great Anaphora / Eucharistic Prayer, incorporating an extensive Jewish cosmic and historical review of salvation history from the creation of Adam to the conquest of Canaan.</p>
+<p class="stub-paragraph">13. <strong>Prayer 13</strong> (<em>Ap. Const.</em> 8.15.7–9): Post-communion thanksgiving prayer.</p>
+<p class="stub-paragraph">14. <strong>Prayer 14</strong> (<em>Ap. Const.</em> 8.16.3): Dedicatory prayer over the offering of first fruits (<em>Bikkurim</em>).</p>
+<p class="stub-paragraph">15. <strong>Prayer 15</strong> (<em>Ap. Const.</em> 8.40.2–4): Evening thanksgiving prayer accompanying the lighting of the lamps (<em>Lucernarium</em> / parallel to evening synagogue blessings and Havdalah).</p>
+<p class="stub-paragraph">16. <strong>Prayer 16</strong> (<em>Ap. Const.</em> 8.41.2–5): Commendation / memorial prayer for the deceased righteous, professing unwavering faith in the bodily resurrection of the dead.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The prayers are preserved as an integral part of the manuscript tradition of the <em>Apostolic Constitutions</em> (preserved in over fifteen Greek codices dating from the 10th to 16th centuries, with early oriental versions in Syriac, Arabic, and Ethiopic):</p>
+<ul class="stub-list">
+<li><strong>Primary Critical Editions of the <em>Apostolic Constitutions</strong></em>:</li>
+<li><strong>Metzger, Marcel</strong>. <em>Les Constitutions apostoliques</em>. 3 vols. Sources Chrétiennes 320, 329, 336. Paris: Éditions du Cerf, 1985, 1986, 1987. [The standard, authoritative critical text with introduction, French translation, and historical-theological notes].</li>
+<li><strong>Funk, Franz Xaver</strong>. <em>Didascalia et Constitutiones Apostolorum</em>. 2 vols. Paderborn: Ferdinand Schoeningh, 1905; reprinted Turin: Bottega d’Erasmo, 1960. [The classic historical-critical edition].</li>
+<li><strong>Lagarde, Paul Anton de</strong>. <em>Constitutiones apostolicae</em>. Leipzig: Teubner / London: Williams & Norgate, 1862, pp. 239–261.</li>
+<li><strong>Critical Isolation and Analysis of the Jewish Vorlage</strong>:</li>
+<li><strong>Fiensy, David A.</strong> <em>Prayers Alleged to Be Jewish: An Examination of the Constitutiones Apostolorum</em>. Brown Judaic Studies 65. Chico, CA: Scholars Press, 1985. [Redaction-critical monograph establishing objective criteria to isolate the underlying Jewish prayer core from Christian redactional additions].</li>
+<li><strong>Fiensy, David A.</strong> "A Redactional Examination of Prayers Alleged to Be Jewish in the <em>Constitutiones Apostolorum</em>." Ph.D. diss., Duke University, 1980.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <p class="stub-paragraph">The prayers are preserved as an integral part of the manuscript tradition of the <em>Apostolic Constitutions</em> (preserved in over fifteen Greek codices dating from the 10th to 16th centuries, with early oriental versions in Syriac, Arabic, and Ethiopic):</p>
+<ul class="stub-list">
+<li><strong>Primary Critical Editions of the <em>Apostolic Constitutions</strong></em>:</li>
+<li><strong>Metzger, Marcel</strong>. <em>Les Constitutions apostoliques</em>. 3 vols. Sources Chrétiennes 320, 329, 336. Paris: Éditions du Cerf, 1985, 1986, 1987. [The standard, authoritative critical text with introduction, French translation, and historical-theological notes].</li>
+<li><strong>Funk, Franz Xaver</strong>. <em>Didascalia et Constitutiones Apostolorum</em>. 2 vols. Paderborn: Ferdinand Schoeningh, 1905; reprinted Turin: Bottega d’Erasmo, 1960. [The classic historical-critical edition].</li>
+<li><strong>Lagarde, Paul Anton de</strong>. <em>Constitutiones apostolicae</em>. Leipzig: Teubner / London: Williams & Norgate, 1862, pp. 239–261.</li>
+<li><strong>Critical Isolation and Analysis of the Jewish Vorlage</strong>:</li>
+<li><strong>Fiensy, David A.</strong> <em>Prayers Alleged to Be Jewish: An Examination of the Constitutiones Apostolorum</em>. Brown Judaic Studies 65. Chico, CA: Scholars Press, 1985. [Redaction-critical monograph establishing objective criteria to isolate the underlying Jewish prayer core from Christian redactional additions].</li>
+<li><strong>Fiensy, David A.</strong> "A Redactional Examination of Prayers Alleged to Be Jewish in the <em>Constitutiones Apostolorum</em>." Ph.D. diss., Duke University, 1980.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historia et Sapientia Ahiqar — CAVT-195 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Historia et Sapientia Ahiqar (CAVT-195)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-195</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-195</span>
+          <span class="badge badge-lang">Greek</span>
+          <span class="badge badge-lang">CAVT 195</span>
+          
+        </div>
+        <h1 class="stub-title">Historia et Sapientia Ahiqar</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-195</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 195</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>Denis 2000 Ch. 33 (pp. 994-1036)</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 7 (Story and Wisdom of Ahiqar)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:479-507 (Ahiqar)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:715-784 (Story of Ahikar)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 483-507 (Ahiqar)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Words of Ahiqar</em> is one of the most ancient and widely dispersed wisdom and narrative cycles of the ancient Near East and Mediterranean world. It comprises two distinct literary components:</p>
+<p class="stub-paragraph">1. <strong>The Narrative Frame</strong>: The biographical account of Ahiqar, wise chancellor (<em>ummânu</em>) and keeper of the signet to Sennacherib and Esarhaddon of Assyria; his betrayal by his adopted nephew/pupil Nadan; his secret preservation by the executioner Nabusumiskun; and his triumphant restoration when he solves the impossible architectural and riddle contests posed by the Pharaoh of Egypt.</p>
+<p class="stub-paragraph">2. <strong>The Sayings and Fables</strong>: An extensive collection of instructional wisdom sayings, proverbs, and beast fables addressed by Ahiqar to Nadan.</p>
+<p class="stub-paragraph">The historical reality of Ahiqar's high office was confirmed by the discovery of an 11th-century BCE/Seleucid cuneiform tablet at Uruk-Warka (W 20030,7; ed. J. van Dijk 1962), listing the Assyrian kings and their chief sages: <em>Aba-Enlil-dari, whom the Arameans call Aḫu’qar</em>, serving as sage under King Esarhaddon.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <h4 class="stub-heading">A. The 5th-Century BCE Aramaic Papyri from Elephantine</h4>
+<ul class="stub-list">
+<li><strong>Witness</strong>: Berlin, Staatliche Museen, Papyrus 13446 (found in Elephantine/Yeb, Upper Egypt; dated ca. 425–400 BCE).</li>
+<li><strong>Editions</strong>:</li>
+<li><strong>Porten, Bezalel, and Ada Yardeni</strong>. <em>Textbook of Aramaic Documents from Ancient Egypt</em> (TADAE). Vol. 3: <em>Literature, Accounts, Lists</em>. Jerusalem: Hebrew University / Winona Lake: Eisenbrauns, 1993, Text C1.1 (pp. 24–53).</li>
+<li><strong>Cowley, Arthur E.</strong> <em>Aramaic Papyri of the Fifth Century B.C.</em> Oxford: Clarendon Press, 1923; repr. Osnabrück: Zeller, 1967, 204–248 [Transcription, translation, commentary].</li>
+<li><strong>Sachau, Eduard</strong>. <em>Aramäische Papyrus und Ostraka aus einer jüdischen Militärkolonie zu Elephantine</em>. 2 vols. Leipzig: Hinrichs, 1911, 1:147–182, 2: pls. 40–50 [Editio princeps of the Elephantine papyri].</li>
+<li><strong>Linguistic Analysis</strong>:</li>
+<li><strong>Kottsieper, Ingo</strong>. <em>Die Sprache der Ahiqarsprüche</em>. Beihefte zur Zeitschrift für die alttestamentliche Wissenschaft (BZAW) 194. Berlin/New York: de Gruyter, 1990 [The definitive linguistic and dialectal treatment of the Aramaic sayings].</li>
+<li><strong>Lindenberger, James M.</strong> <em>The Aramaic Proverbs of Ahiqar</em>. Johns Hopkins Near Eastern Studies. Baltimore: Johns Hopkins University Press, 1983.</li>
+</ul>
+<h4 class="stub-heading">B. Syriac Tradition</h4>
+<ul class="stub-list">
+<li>Extant in West and East Syrian recensions across manuscripts from the 12th to 18th centuries (e.g. Cambridge Univ. Library Add. 2020; London BL Add. 7200, Add. 25875; Sachau syr. 162 and 336).</li>
+<li><strong>Editions</strong>:</li>
+<li><strong>Harris, J. Rendel, F. C. Conybeare, and Agnes Smith Lewis</strong>. <em>The Story of Ahikar from the Aramaic, Syriac, Arabic, Armenian, Ethiopic, Old Turkish, Greek and Slavonic Versions</em>. London: C. J. Clay & Sons, 1898; 2nd enlarged ed., Cambridge: Cambridge University Press, 1913, 99–127 [Text of Cambridge Add. 2020 with English translation].</li>
+<li><strong>Nau, François</strong>. <em>Histoire et sagesse d’Ahikar l’Assyrien (fils d’Anael, neveu de Tobie)</em>. Paris: Letouzey & Ané, 1909 [Syriac texts, French translation, and critical notes].</li>
+</ul>
+<h4 class="stub-heading">C. Armenian Tradition</h4>
+<ul class="stub-list">
+<li>Transmitted in two distinct recensions (Recension A and Bodleian MS Arm. g.9 / Venice San Lazzaro MSS), representing an early translation from a Syriac archetype.</li>
+<li><strong>Editions</strong>:</li>
+<li><strong>Conybeare, F. C.</strong> In <em>The Story of Ahikar</em>, 2nd ed. (Cambridge, 1913), 24–85 [Armenian text and translation].</li>
+<li><strong>Martirosyan, A. A.</strong> <em>Patmut‘iwn ew xratk‘ Xikara Imastnoy</em> (<em>The Story and Maxims of Khikar the Wise</em>). 2 vols. Yerevan: Armenian Academy of Sciences, 1969 [Comprehensive Armenian critical edition].</li>
+</ul>
+<h4 class="stub-heading">D. Arabic and Karshuni Traditions</h4>
+<ul class="stub-list">
+<li>Circulated widely in the Christian Near East (e.g. Sinai ar. 550; Vatican ar. 450) and entered into the <em>Arabian Nights</em> (<em>One Thousand and One Nights</em>).</li>
+<li><strong>Editions</strong>:</li>
+<li><strong>Salhani, Antoine</strong>. <em>Contes arabes historiques</em>. Beirut: Imprimerie Catholique, 1890 [Early Arabic edition].</li>
+<li><strong>Smith Lewis, Agnes</strong>. In <em>The Story of Ahikar</em>, 2nd ed. (Cambridge, 1913), 130–161.</li>
+<li><strong>Furaiha, Anis</strong>. <em>Ahīkār: Hakīm min aš-šarq al-adnā al-qadīm</em>. American University of Beirut Oriental Series 40. Beirut, 1962.</li>
+</ul>
+<h4 class="stub-heading">E. Greek Tradition & The Life of Aesop</h4>
+<ul class="stub-list">
+<li>The ancient Greek translation of Ahiqar, though lost in its independent form, was incorporated almost verbatim into chapters 101–123 of the <strong>Life of Aesop</strong> (<em>Vita Aesopi</em> / <em>Fabulae Aesopicae</em>):</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Fragmenta pseudepigraphorum quae supersunt graeca una cum historicorum et auctorum Iudaeorum hellenistarum fragmentis</em>. Pseudepigrapha Veteris Testamenti Graece (PVTG) 3. Leiden: Brill, 1970, 133–148.</li>
+</ul>
+<p class="stub-paragraph"><em>Critical reconstruction of the Greek fragments of Ahiqar.</em></p>
+<ul class="stub-list">
+<li><strong>Denis, A.-M.</strong> <em>Concordance grecque des pseudépigraphes d’Ancien Testament</em>. Louvain-la-Neuve, 1987, 907–908.</li>
+<li><strong>Perry, Ben Edwin</strong>. <em>Aesopica</em>. Urbana: University of Illinois Press, 1952.</li>
+<li><strong>Eberhard, Alfred</strong>. <em>Fabulae romanenses graece conscriptae</em>. Leipzig: Teubner, 1872, 1:285–297.</li>
+</ul>
+<h4 class="stub-heading">F. Slavonic, Romanian, Old Turkish, and Demotic Egyptian Versions</h4>
+<ul class="stub-list">
+<li><strong>Slavonic</strong>: <em>Tale of Akir the Wise</em> (<em>Povest’ ob Akire Premudrom</em>), preserved in Russian, Serbian, and Bulgarian manuscripts from the 15th century onward (ed. V. Jagić 1898; A. D. Grigor’ev, Moscow, 1913).</li>
+<li><strong>Romanian</strong>: <em>Povestea lui Arhirie cel Preaintelept</em>, translated from the Slavonic (ed. M. Gaster 1911/1925).</li>
+<li><strong>Old Turkish (Uighur)</strong>: Discovered by the Turfan expedition in Central Asia (ed. F. W. K. Müller, <em>APAW</em>, 1908).</li>
+<li><strong>Demotic Egyptian</strong>: Tebtunis and Saqqara papyrus fragments containing translated aphorisms of Ahiqar (ed. K.-T. Zauzich).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Lindenberger, James M.</strong> “Ahiqar: A New Translation and Introduction.” In <em>The Old Testament Pseudepigrapha</em>, edited by J. H. Charlesworth, 2 vols. Garden City, NY: Doubleday, 1985, 2:479–507.</li>
+</ul>
+<p class="stub-paragraph"><em>Standard modern English critical translation focusing on the Elephantine Aramaic text, supplemented by the Syriac.</em></p>
+<ul class="stub-list">
+<li><strong>Ginsberg, H. L.</strong> “The Words of Ahiqar.” In <em>Ancient Near Eastern Texts Relating to the Old Testament</em> (ANET), edited by J. B. Pritchard. 3rd ed. Princeton: Princeton University Press, 1969, 427–430.</li>
+<li><strong>Harris, J. R., F. C. Conybeare, and A. Smith Lewis</strong>. <em>The Story of Ahikar...</em>. 2nd ed. Cambridge, 1913 [Comprehensive English translations of all ancient and medieval versions].</li>
+<li><strong>Grelot, Pierre</strong>. “Le livre d’Ahiqar.” In <em>Poèmes araméens du fil d’Ahiqar</em>. Paris, 1962; and <em>Documents araméens d’Égypte</em>, LAPO 5 (Paris: Cerf, 1972), 427–452.</li>
+<li><strong>Küchler, Max</strong>. <em>Frühjüdische Weisheitstraditionen: Zum Fortgang weisheitlichen Denkens im Bereich des frühjüdischen Jahweglaubens</em>. Orbis Biblicus et Orientalis (OBO) 26. Freiburg: Universitätsverlag / Göttingen: Vandenhoeck & Ruprecht, 1979, 319–413.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Historia et sapientia Ahiqar
+C£: F. STEGMÜLLER, n^ 100 et 100, 1-27; — E. SCHÜRER,
+III, p. 232-239; — A.-M. Denis, ILRJH, ad loc.
+
+Textus aramaicus
+
+E. SACHAU, Aramäische Papyrus und Ostraka aus einer jüdischen
+Militärkolonie zu Elephantine, Leipzig, 1911, p. 147-182 (pap. 49-59)
+(editio princeps codic. pap. Berlin 13446, 11 fol., ca. 430 a.C.n);
+— A. Cow ey, Aramaic Papyri of the Fifth Century B. C., Oxford,
+1923; — J.M. LINDENBERGER, The Aramaic Proverbs of Ahiquar, Baltimore - London, 1983; — I. KOTTSIEPER, Die Sprache der Ahigarspniche (BZAW 194), Berlin - New York, 1990; — B. PORTEN -
+A. Y ARDENI, Textbook of Aramaic Documents from Ancient Egypt, 3:
+Literature, Accounts, Lists, Winona Lake, Indiana, 1993, p. 23-53.
+
+Translatio anglica: J.M. LINDENBERGER, Ahiqar (Seventh to
+
+Sixth Century B. C.). A New Translation and Introduction, in J.H. CHAR-'
+LESWORTH, Il, p. 479-507.
+
+Translatio gallica: P. GRELOT, Documents araméens d'Égypte. Introduction, traduction, présentation (Littératures Anciennes du Proche-
+Orient), Paris, 1972, p. 425-452.
+
+Translatio germanica: I. KOTTSIEPER, op. cit., p. 15-24.
+
+Translatio hispanica: E. MARTINEZ BOROBIO, Libro arameo de
+Ajicar, in A. Diez Macno, III, p. 167-187.
+
+Versio graeca (Textus decurtatus in Vita Aesopi, cap. 101-123)
+
+Vita Aesopi tradita est in recensionibus tribus: cf. B.E. PERRY,
+The Text Tradition of the Greek Life of Aesop, in Transactions of the
+American Philological Association 64 (1933), p. 198-244; — Ip., Studies in the Text History of the Life and Fables of Aesop (American Philolo-
+195 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM I49
+
+gical Association. Monographs Series 7), Haverford, Pennsylvania,
+1936 (rcimpr. Ann Arbor, Michigan, 1981), p. 1-70; - N. HOLZBERG,
+Der Asop-Roman. Motivgeschichte und Erzählstruktur, Tübingen, 1992.
+
+Recensio A
+
+B.E. Perry, Aesopica. A Series of Texts relating to Aesop or ascribed to him or closely connected with the literary tradition that bears his
+name. I. Greek and Latin Texts, Urbana, Illinois, 1952, p. 66-73.
+
+A.-M. DENIS, Fragmenta pseudepigraphorum quae supersunt graeca
+(PsVTGr 3), Leiden, 1970, p. 133-148 (= B.E. Perry).
+
+Recensio B
+
+A. WESTERMANN, Vita Aesopi ex vratislaviensi ac partim monacensi et vindoboniensi codd. nunc primum editum, Brunswick, 1845,
+
+P- 44-52.
+
+B.E. PERRY, Aesopica..., p. 100-104; — Ip., Some Addenda to
+the Life of Aesop, in Byzantinische Zeitschrift 59 (1966), p. 285-
+304.
+
+A.-M. DENIS, Fragmenta pseudepigraphorum quae supersunt graeca
+(PsVTGr 3), Leiden, 1970, p. 133-148 (= A. Westermann et
+B.E. Perry).
+
+Recensio C
+
+Nota: Haec recensio composita est a Maximo Planude (T ca.
+1305).
+
+Codd.: A.-M. Denis, ILRJH, ad loc.
+
+A. EBERHARD, Fabulae romanenses graece conscriptae, I, Leipzig,
+1872, p. 285, 1. 4 - 297, L 6, et inde F.C. CONYBEARE - J.R.
+Harrıs - A.S. Lewis, The Story of Ahikar from the Aramaic, Syriac, Arabic, Armenian, Ethiopic, Old Turkish, Greek and Slavonic
+Versions, 2° edition enlarged and corrected, Cambridge, 1913, p. 162-
+167, et R.H. CHARLES, APOT, p. 780-784 (textus, translatio).
+
+Translatio gallica: F. Nau, Histoire et sagesse... (cf. infra), p.
+259-262.
+
+Concordantia:
+A.-M. DENIS, Concordance grecque des Pseudépigraphes d’Ancien Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione A.-M. Denis).
+150 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 195
+
+Fragmenta demotica
+
+Codd.: Pap. Berlin, P. 15658, ineditus: cf. W. SPIEGELBERG,
+Achikar in einem demotischen Texte der römischen Kaiserzeit, in Orientalistische Literaturzeitung 33 (1930), col. 961; — G.P.G. SoBHY, Miscellanea, 2., Demotica, in Journal of Egyptian Archaeology 16 (1930),
+p. 3-4 et tab. VII, 2.
+
+K.T. Zauzicu, Demotische Fragmente zum Ahikar-Roman, in
+H. FRANKE - W. Hetssic - W. TREUE, Folia Rara Wolfgang
+Voigt LXV. diem natalem celebranti. . dedicata (Verzeichnis der orientalischen Handschriften in Deutschland. Supplementband 19),
+Wiesbaden, 1976, p. 180-185, e cod. Le Caire, Pap. [s. n.], saec. i
+p.C.n. et Berlin, P. 23729, saec. i p.C.n. (textus, photographiae
+et translatio).
+
+Versio latina
+
+Nota: Versio latina composita est a Rinutio Thessalo (| post
+1450).
+
+B.E. PERRY, Aesopica..., p. 109-130.
+
+M.P. PirtELLA, Rinucius Aretinus. Fabulae Aesopicae (Univ. di
+Genova. Publ. del DARCIFLET, NS 151. Favolisti latini medievali
+e umanistici 4), Genova, 1993.
+
+Versio syriaca
+Nota: Exstant quinque recensiones.
+
+Codd.: E. KuHN, Zum weisen Akyrios, in Byzantinische Zeitschrift 1 (1892), p. 127-130, praesertim p. 128-129; — F. NAU, Histoire
+et sagesse... (cf. infra), p. 78-81, 285; — F.C. CoNYBEARE - J.R.
+Harris - A.S. Lewis, The Story of Ahikar..., p. xxu-xxın; — S.P.
+BROCK, Notes on some Texts in the Mingana Collection, in JSS 14 (1969),
+p- 205-226, praesertim p. 205-206; — A.-M. Denis, ILRJH, ad loc.
+
+Translatio gallica: F. Nau, Histoire et sagesse d'Ahikar l'assyrien
+(fils d' Anael, neveu de Tobie). Traduction des versions syriaques avec les principales différences des versions arabes, arménienne, grecque, néo-syriaque, slave
+et roumaine (Documents pour l’étude de la Bible), Paris, 1909, p. 145-
+258.
+
+Recensio A
+
+[J.R. Harris], The Syriac Text of the Legend of Ahikar from a
+MS. in the University of Cambridge (Cod. Add. 2020 = S,), in F.C.
+195 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM ISI
+
+CONYBEARE - J.R. Harris - A.S. Lewis, The Story of Ahikar...,
+p. 37-62.
+
+Translatio anglica: ].R. HARRIS, The Legend of Ahikar from a Syriac Ms. in the University of Cambridge (Cod. Add. 2020 = S,), in F.C.
+CONYBEARE - J.R. Harris - A.S. Lewis, The Story of Ahikar...,
+p. 101-127.
+
+Translatio germanica: T. NÖLDEKE, Untersuchungen zum Achigar-Roman, in Abhandlungen der kóniglichen Gesellschaft der Wissenschaften zu Gôttingen. Philosophisch-historische Klasse, N.F., 14,
+4, Berlin, 1913, p. 25-29.
+
+Translatio italica: F. PENNACCHIETI, Storia e massime di Achichar,
+in P. SACCHI, p. 51-95.
+
+Recensio B
+
+MH. Guzik, Die Achikar-Erzählung nach der syrischen Handschrift Cod. Sachau Nr. 336 der Preussischen Staatsbibliothek, Zürich -
+Krakow, 1936.
+
+Recensio C
+
+[J.R. Harris], À Fragment of the Syriac Text of the Legend of
+Ahikar (from Mus. Britt. Add. 7200 = S,), in F.C. CONYBEARE -
+J.R. Harris - A.S. Lewis, The Story of Ahikar..., p. 34*-36*
+(textus), 99-101 (translatio), e cod. London, Brit. Libr., Add.
+7200, fol. 114, saec. xii/xiii (qui initium tantum continet).
+
+Recensio D
+
+F. NAU, Préceptes anonymes et histoire d'Ahiqar, in ROC 19
+(1914), p. 209-214, e cod. Berlin, Staatsbibl. PreuBischer Kulturbesitz, syr. 165 (= Sachau 162), fol. 86-92, an. 1583; — et iterum Ip., Histoire et sagesse d’Ahikar d’après le manuscrit de Berlin
+« Sachau 162 », fol. 86 sq., in ROC 21 (1918-1919), p. 148-160
+(textus, translatio).
+
+Recensio E
+
+F. Nau, Documents relatifs à Ahikar, in ROC 21 (1918-
+1919), p. 274-307, 356-400, e duobus codicibus priuatis [F.
+Graffin, H. Pognon] (textus, translatio).
+152 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 195
+
+Versio arabica
+
+Nota: Exstant tres recensiones.
+
+Recensio A
+
+Codd.: E. KuHN, Zum weisen Akyrios, in Byzantinische Zeitschrift 1 (1892), p. 127-130, praesertim p. 128-129; — G. GRAF, I,
+p- 218-219, II, p. 487.
+
+[A.S. Lewis] in F.C. ConYBEARE - J.R. Harris - A.S. LEwis, The Story of Ahikar..., p. 1*-33*, e cod. Cambridge, Univ.
+Libr., Add. 2886 (karshuni), cum lect. uar. cod. London, Brit.
+Libr., Add. 7209 et lect. uar. ex editione A. SALHANI (cf. infra).
+
+A. SALHANI, Contes arabes, Beyrouth, 1890, p. 1-20, e cod.
+Beyrouth, Univ. Saint Joseph, Bibl. Orientale {s. n.] (karshuni).
+
+L. Leroy, Histoire d'Haikar le sage d'après les manuscrits arabes
+3637 el 3656 de Paris, in ROC 13 (1908), p. 367-388; 14
+(1909), p. 50-70, 143-154 (textus, translatio).
+
+Translatio anglica: A.S. Lewis, The Story of Haigär and Nadan.
+
+The Arabic Version, in F.C. CONYBEARE - J.R. Harris - A.S. Lewis, The Story of Ahikar..., p.130-161, et iterum in R.H. CHARLES,
+APOT, p. 725-776, € cod. Cambrigde, Univ. Libr., Add. 2886.
+
+Recensio B
+
+M. LipzBARSKi, Die neu-aramäischen Handschriften der Königlichen Bibliothek zu Berlin (Semitische Studien. Ergänzungsheft der
+Zeitschrift für Assyriologie 4/9), Weimar, 1896 (reimpr. Hildesheim - New York, 1973), I, p. 1-77, e cod. Berlin, Staatsbibl.
+Preußischer Kulturbesitz 290 (= Sachau 339), 59 p., saec. XIX
+(cod. biling. arab. et neo-aram., cf. infra).
+
+Translatio germanica: M. LIDZBARSKI, op. cit., Il, p. 1-41.
+
+Recensio C
+
+Paraphrasis arabica ex Libro 1001 noctium: cf. M. MAHDI,
+The Thousand and One Nights ( Alf Layla wa-Layla). From the Earliest Known Sources. Arabic Text Edited with Introduction and Notes, 3
+vol. Leiden, 1984-1994.
+
+Cf.: B. HELLER - N.A. STILLMAN, art. Lukmän, in Encyclopédie de
+l'Islam. Nouvelle édition, Leiden - Paris, V, 1986, p. 817-820.
+195 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 153
+
+Versio neo-aramaica (e recensione B uersionis arabicae)
+
+M. LipzBAmskr, Die neu-aramäischen Handschriften der Königlichen Bibliothek zu Berlin (Semitische Studien. Ergänzungsheft der
+Zeitschrift für Assyriologie 4/9), Weimar, 1896 (reimpr. Hildesheim - New York, 1973), I, p. 1-77, e cod. Berlin, Staatsbibl.
+Preußischer Kulturbesitz 290 (= Sachau 339), 59 p., saec. xix.
+(cod. biling. neo-aram. et arab., cf. supra).
+
+Translatio germanica: M. LinzBarskı, Geschichten und Lieder
+
+aus den neu-aramäischen Handschriften der Kôniglichen Bibliothek zu Berlin
+(Beiträge zur Volksund Völkerkunde 4), Weimar, 1896, p. 3-41.
+
+Versio aethiopica
+
+Nota: Textus integer uersionis aethiopicae deperditus est, sed
+nonnullae sententiae coniunctae sunt in eclogas sententiarum nomine
+«Liber sapientium philosopharum ». Attamen R. Schneider repperit duos
+codices «d'une version de l'histoire d' Ahiqar, mais réduite à sa partie
+anecdotique» (cf. infra).
+
+Codd.: A.-M. Denis, ILRJH, ad loc. (13 codices).
+
+(1) C.H. CornILL, Das Buch der weisen Philosophen nach dem
+Athiopischen untersucht, Leipzig, 1875, p. 19-21, 40-44, e codd.
+Frankfurt, Stadtbibl, orient. Rüppell III, 4, p. 115-122, saec.
+xvm et Tübingen, Universitatsbibl., M. aeth. 6, fol. 4-44v
+
+Translatio anglica: J.R. Harris, Aethiopic Fragments of the
+
+Sayings of Ahikar, in F.C. CONYBEARE - J.R. Harris - A.S. LEWIS,
+
+The Story of Ahikar..., p. 128-129 (ubi codices), et iterum in RH.
+
+CHARLES, APOT, p. 777; — C. SUMNER, Ethiopian Philosophy. The
+
+Book of the Wise Philosophers, in Abba Salama, Ill, Addis Ababa, 1972,
+
+p. 261-269.
+
+(2) R. SCHNEIDER, L'histoire d'Ahiqar en éthiopien, in Annales
+d'Ethiopie 11 (1978), p. 141-152 (textus, translatio).
+
+Versio armeniaca
+
+Codd.: F.C. CONYBEARE, Introduction to the Armenian and Turkish
+Texts, in F.C. CONYBEARE - J.R. HARRIS - A.S. Lewis, The Story of
+Ahikar..., p. 174-184 (15 codices); — A.A. MARTIROSIAN, op. cit. infra, I, p. 26-41 (61 codices, 7 recensiones).
+
+F.C. CONYBEARE - J.R. HARRIS - A.S. Lewis, The Story of
+Ahikar..., p. 198-234 (duae recensiones).
+I$4 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 195
+
+A.A. MARTIROSIAN, Histoire et enseignement du sage Hikar, 2
+vol., Erevan, 1969 et 1972 (armcniace et russice).
+
+"Translatio anglica: F.C. CONYBEARE, The Maxims and Wisdom of
+Khikar. From the Armenian Version, in F.C. CONYBEARE - J. R. HARRIS -
+A.S. Lewis, The Story of Ahikar..., p. 24-55; — [ANON.], Armenian
+Version. B. Recension from Bodley Arm. MS. c. 9., in F.C. CONYBEARE -
+J-R. Harris - A.S. Lewis, The Story of Ahikar..., p. 56-85 et iterum
+in R.H. CHARLES, APOT, p. 725-776 (tertia et quarta columna).
+
+Translatio gallica: F. Nau, Histoire et sagesse..., p. 263-270
+(sententias uersionis armeniacae tantum transtulit).
+
+Translatio germanica: P. VETTER, Das Buch Tobias und die Achikar-Sage, in Theologische Quartalschrift 86 (1904), p. 330-364.
+
+Versio georgica
+
+Cf.: W. LUDTKE, Beiträge zu slavischen Apokryphen, in ZAW 31
+(1911), p. 218-235, praesertim p. 219.
+
+K. KEKELIDZE, Histoire de la littérature géorgienne : littérature andenne (georgice), Tbilissi, 2 vol, ro41 et 1958, praesertim II,
+p. 470-492, e cod. Tbilissi, K. Kekelidze Institute of MSS., Collection S-1574, saec. XIX.
+
+Versio slauica
+
+Cf.: W. LÜDTKE, Beiträge zu slavischen Apokryphen, in ZAW 31
+(1911), p. 218-235, praesertim p. 218-219; — L.C. CHITIMIA, L'Histoire du sage Ahikar dans les littératures slaves, in Romanoslavica 9
+(1963), p. 413-426.
+
+De recensionibus uide A.D. Gricor’sv, in Jubilejnyj Sbornik v
+test’ Vsevoloda Theodorovita Millera, Moscou, 1900, p. 107-113.
+
+Codd.: É. TURDEANU, Apocryphes slaves et roumains, p. 93-94, 188
+et 372.
+
+E. Barsov, Akir premudry vo inov’ otkrytom serbskom spiske xvi
+veka in Ctenija v Imp. Ob&estve istorii i drevnostej rossijskich,
+Moscou, 1886, vol. 3, p. 1-11 (recensio serbica).
+
+N. Durnovo, in Drevnosti. Trudi slavjanskoj kommissii imperatorskago Moskovskago archeologiceskago obscestva 4 (1907),
+e cod. Beograd, Narodna Bibl. 828, an. 1409 (recensio serbica).
+
+A.D. Gricor’ev, Teksty povésti ob Akiré Premudrom, in Ctenija
+v Imp. Ob&éestve istorii i drevnostej rossijskich, Moscou, 1908,
+vol. 3, fasc. II, p. 1-128 (recensio russica).
+196 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 155
+
+J. Ivanov, Starobalgarski razkazi, Sofia, 1935, p. 237-245, €
+cod. Lovet, saec. xvi (recensio bulgarica).
+
+Translatio anglica: A.S. Lewis, The Slavonic Version. Translated
+from the German of Prof. V. Jagié, in F.C. CONYBEARE - J.R. HARRIS -
+A.S. Lewis, The Story of Ahikar..., p. 1-23.
+
+Translatio gallica: F. Nau, Histoire et sagesse..., p. 270-276
+(sententias uersionis slauicae tantum transtulit).
+
+Translatio germanica: V. JAciC, Der weise Akyrios, in Byzantinische Zeitschrift 1 (1892), p. 107-126.
+
+Versio rumaena
+
+M. GASTER, Chrestomathie roumaine, II, p. 134-136 (editio duorum fragmentorum).
+
+Vide etiam C. CIUCHINDEL, Povestea lui Archirie filosoful...,
+carte popularà románeascá din secolul al xvn-lea, Bucarest, 1976.
+
+Translatio anglica: M. GasrER, Contributions to the History of
+Ahikar and Nadan, in Journal of the Royal Asiatic Society of Great
+Britain and Ireland [32] (1900), p. 301-319, praesertim p. 301-309.
+
+Translatio gallica: F. NAU, Histoire et sagesse..., p. 277-280
+(sententias uersionis rumaenae tantum transtulit).
+
+Versio tatarica
+
+F.C. CONYBEARE, Old Turkish Text (Translated from the Armenian Characters), in F.C. CONYBEARE - J.R. HARRIS - A.S. LEwıs, The Story of Ahikar..., p. 185-197, e cod. Wien, Bibl. Mechitar. 468, fol. 54b-62a, an. 1575; — et iterum J. Deny - E.
+TRYJARSKI, «Histoire du sage Hikar» dans la version arméno-kiptchak,
+in Rocznik Orientalistyczny 27 (1964), p. 7-61 (textus, photographiae et translatio).
+
+Translatio anglica: [F.C. CONYBEARE]|, Translation of Old Turkisch Text. Vienna. Codex no. 468, fol. s4b, in F.C. CONYBEARE -
+J.R. Harrıs - A.S. Lewis, The Story of Ahikar..., p. 86-98.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

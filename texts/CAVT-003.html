@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testamentum Adae — CAVT-003 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Testamentum Adae (CAVT-003)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-003</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-003</span>
+          <span class="badge badge-lang">Multi/Other</span>
+          <span class="badge badge-lang">CAVT 3</span>
+          <span class="badge badge-lang">CANT 2</span>
+        </div>
+        <h1 class="stub-title">Testamentum Adae</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ADAM
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=TAdam.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/TAdam.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-003</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 3</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 2</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 6 (Testament of Adam)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:707-728 (Testament of Adam)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 509-515 (Testament of Adam)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        
+            
+            <p>The <i>Testament of Adam</i> (<i>TAdam</i>) is a short Christian pseudepigraphon from late antiquity. It was likely composed in Syriac, though it now survives in numerous languages and recensions. In many manuscripts the text is titled ”The testament of our father Adam” or something similar. The document is comprised of two main parts, usually called the <i>Horarium</i> and the <i>Prophecy</i> by modern scholars. The document is conventionally divided into four chapters, with the <i>Horarium</i> comprising the first two chapters and the <i>Prophecy</i> as chapter three. What we often call the fourth chapter is an additional section, the <i>Hierarchy</i>, which only appears in one manuscript and was almost certainly not part of the original document.</p>
+
+<h3>The <i>Horarium</i></h3>
+              
+<p>In the first main part, the <i>Horarium</i>, Adam lists the hours of the night and/or day in which the various creatures of the creation give praise to God, each in its appointed hour. In most manuscripts this list is divided into two sections, the "Hours of the Night" and the "Hours of the Day," each of which is allotted a chapter in the document's conventional organization. In a few manuscripts, however, one or the other of these sections is missing.</p><p>The Greek version of the <i>Horarium</i> seems to have a complex history. The six Greek manuscripts of <i>TAdam</i>&nbsp;contain a modified version of the <i>Horarium</i> that has no connection with Adam. This version is also extant in an Armenian recension. A third, simpler form of the <i>Horarium</i> is found in the work of George Cedrenus (11<sup style="font-size: 10.5px;">th</sup>&nbsp;century C.E.) where that chronicler describes revelations that Adam received from God. Cedrenus does not provide any other parts of <i>TAdam</i>, though his discussion of Adam's revelations may have been influenced by the <i>Prophecy</i>&nbsp;as well (see below). In any case, the relationship between these three versions of the <i>Horarium</i>&nbsp;(Syriac, Greek, and Cedrenus) is unclear.</p>
+
+<h3>The <i>Prophecy</i></h3>
+
+<p>The second part of <i>TAdam</i>, the <i>Prophecy</i>, is a&nbsp;testament with apocalyptic features, presented as the final words of Adam recorded by his son Seth. In it Adam passes on revelations he received from God concerning the future. Some of these revelations concern the relatively near future, focusing on the Flood and Adam's own fate after death. More broadly, Adam describe the eschatological fate his posterity and the world. The Christian nature of the document is most visible when Adam predicts the divine incarnation.&nbsp;</p>
+  
+<h3>The <i>Hierarchy</i></h3>
+  
+<p>One late manuscript (Vatican Syr 164, 1702 C.E.) appends a unique section concerning the heavenly orders, with the heading ”Also from the testament of our father Adam." This section, usually designated the <i>Hierarchy</i>, is an angelology which lists the nine orders of the heavenly beings and their functions. Since it only appears in one manuscript, and since its content is incompatible with the narrative fiction of the two other parts, the <i>Hierarchy</i> was probably not part of the original <i>TAdam</i>. Nevertheless, modern scholars often include it as a fourth chapter of the document.</p>
+        
+        
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        
+            
+            <h3>A Syriac Christian Document</h3>
+
+<p>Beginning with M. E. Renan, the <i>Testament of Adam</i> was long regarded by modern scholars as a Gnostic work, but both Reinink and Robinson have shown this view to be wrong. Robinson has argued that the Syriac recension 1 is likely the most ancient form of <i>TAdam</i> known to us, and he has furnished good evidence that the original language of both the <i>Horarium</i> and the <i>Prophecy</i> was Syriac (Robinson, 137-42). If Robinson is correct, the work in its present form most likely originated within the Christian communities of Syria <b>in late antiquity</b>.</p>
+
+<h3>Earlier Jewish Sources?</h3>
+
+<p>The question of earlier sources is closely related to the question of unity. In all its extant forms the <i>Horarium </i>and the <i>Prophecy</i>&nbsp;are presented together as a unified composition, and their redactional and compositional history is difficult to untangle with any certainty. Still, the two parts are strikingly different in form and genre. <b>Various literary elements </b>also strongly suggest that the <i>Horarium</i> and the <i>Prophecy</i> were once two separate documents, combined and adapted at some point by a redactor to produce the Christian work we know.</p>
+
+<p>The original <i>Horarium</i> would then likely have been a Jewish work, not necessarily related to Adam at all. The <i>Prophecy</i> could very well have been a Christian work from the beginning, but it could also be a heavily redacted Jewish composition. On the basis of a passage from the <i>Apocalypse of Elijah</i> (<b>???</b>), Robinson tentatively suggests that this earlier version of the <i>Prophecy</i> was composed in the third century C.E. and the earlier independent <i>Horarium</i> no later than that (Robinson, 150–3). Richard Bauckham has since made the case that the <i>Horarium</i> originated as a Jewish work from the second temple period (Bauckham, 2002).</p>
+
+<h3>The Provenance of the Hierarchy</h3>
+
+<p>The <i>Hierarchy</i> has only been superficially adapted to fit <i>TAdam</i>. The speaker, supposed to be Adam, refers to biblical events in past time and <b>addresses ”my beloved”</b> (plural; 4:1). The <i>Hierarchy</i> might well be a lightly redacted version of a Jewish angelology, possibly dating from the Second Temple period. The Christian additions may have involved nothing more than the interpolation of ”Jesus Christ” into 4:1 and 4:8 (see Robinson, 146-48; 159-60).</p>
+        
+        
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        
+            
+            <p>
+            </p><h3>Syriac Text</h3>
+<p>The earliest form of the&nbsp;<i>Testament of Adam&nbsp;</i>is witnessed in eight manuscripts dating between the 9<sup style="font-size: 10.5px;">th</sup>&nbsp;and the 18<span style="font-size: 10.5px;"><sup style="font-size: 7.875px;">th</sup></span>&nbsp;centuries C.E. &nbsp;The Syriac manuscripts are divided into three recensions based on content, chronology, writing system and arrangement of the four sections. (Note that the dating and alphabetic names for these manuscripts are all taken from S.E. Robinson's <i>The Testament of Adam: An Examination of the Syriac and Greek Traditions</i>. SBLDS 52; Chico, Ca.: Scholars Press, 1982.)</p>
+<h4>Recension 1</h4>
+<p>Recension 1 consists of the aforementioned <b>Manuscript A</b> (BM Add. 14,624 [folios 8b-10a]), dating to the early 9<sup>th</sup> century B.C.E., in addition to <b>Manuscript B</b> (Vat. Syr. 58), which is and dated to the late 16<sup>th</sup> century. Manuscript A is written in the Estrangela script with some letters in Serta, while Manuscript B is written entirely in Serta. Both manuscripts contain the<i>&nbsp;Horarium </i>(<i>Hours of the Night</i> and&nbsp;<i>Hours of the Day</i>) and the <i>Prophecy</i> in that order. In spite of the chronological differences, these two mss are nearly identical in content.</p>
+<h4>Recension 2</h4>
+<p>Recension 2 consists of <b>Manuscript C</b> (Vat. Syr. 164), written in Nestorian and dated to the early 18<sup>th</sup> century, and <b>Manuscript D</b> (BM Add 25,875), also written in Nestorian and dated to the early 18<sup>th</sup> century. Manuscript C contains the <i>Horarium </i>(only the <i>Hours of the Night</i>), the <i>Prophecy</i> and – as the sole witness – the <i>Hierarchy</i>. Manuscript D contains only the <i>Prophecy</i>.</p>
+<h4>Recension 3</h4>
+<p>Recension 3 consists of the following manuscripts: <b>Manuscript E</b> (Arund. Or. 53), written in Serta and dated to the 16<i>th</i> century, <b>Manuscript F</b> (Vat. Syr 159) written in Serta and dated to the 17<i>th</i> century, <b>Manuscript G</b> (Rylands 44) written in Nestorian and dated to the 15<i>th</i> century and <b>Manuscript H</b> (BM Add 14,577), written in Estrangela and dated to the late 9<i>th</i> century. All manuscripts in Recension 3 contain the <i>Horarium</i> except in the same order as the Greek versions, with the <i>Hours of the Day</i>&nbsp;first, followed by the <i>Hours of the Night</i>. Manuscripts E and H merely contain the <i>Horarium</i>. Manuscript F is the only one in Recension 3 that contains the <i>Prophecy</i>. Manuscript G also contains the so-called <i>Treatise of Shem</i>.</p>
+
+<h3>Greek Text</h3>
+<p>The Greek version of <i>TAdam</i> comes to us in two independent forms. Both contain only the <i>Horarium.</i>&nbsp;One recension is witnessed in six Greek manuscripts from the 15<sup style="font-size: 10.5px;">th</sup>&nbsp;to the 17<sup style="font-size: 10.5px;">th&nbsp;</sup>centuries C.E. This modified version of the <i>Horarium </i>bears no connection with Adam or with a testamentary context. It seems to be a late reworking of the Syriac recension 3, in part because it reverses the order of the <i>Hours of the Night </i>and <i>Hours of the Day </i>in the same way. This Greek recension bears some resemblance to late Byzantine magical texts and in most cases appears as part of a larger work on astrology and magic called <i>Apotelesmata</i>, attributed in some of the manuscripts to Apollonius of Tyana. This peculiar magic-Apollonius version of the <i>Horarium</i> is also extant in Armenian (published in Stone, pp. 39-77).</p>
+
+<p>The other form of the Greek <i>Horarium</i> appears in one passage from Cedrenus. Here the 11<sup>th</sup> century chronicler lists the hours of the day in which prayers are sent up to heaven. Again this list is not attached to a version of the <i>Prophecy</i>, and it does not appear in a testamentary context. Unlike the other Greek witnesses, however, Cedrenus does connect this modified <i>Horarium</i> with Adam, presenting it among the revelations Adam received from God. Although Cedrenus only lists the hours of the day, the chronicler tells us that both the hours of the day and the hours of the night had been revealed to Adam. An almost verbatim passage in George Syncellus (9<sup>th</sup> century) is likely the Vorlage for Cedrenus' <i>Horarium</i>. Unfortunately the text of Syncellus is damaged from the point where the listing of the hours would begin.</p>
+  
+<p>The following is not a complete listing of manuscripts, but only lists the witnesses included so far in this <i>OCP</i> edition.</p>
+<table cellspacing="0" class="table">
+<tbody><tr>
+<td>MS Label</td>
+<td>Full Name</td>
+<td>Source of Transcription</td>
+</tr>
+<tr>
+<td>A (PCod.Gr.2419)</td>
+<td>Paris Codex Gr. 2419, folio 247b (15-16th C)</td>
+<td>M. R. James, "A Fragment of the Apocalypse of Adam in Greek," in <em>Apocrypha Anecdota II</em> (Texts &amp; Studies 2.3; Cambridge: Cambridge University Press, 1893), 138-145.</td>
+</tr>
+<tr>
+<td>Cedrenus</td>
+<td>Quotations in Cedrenus</td>
+<td>G. J. Reinink, "Das Problem des Ursprung des Testamentes Adams," <em>Orientalia Christiana Analecta</em> 197 (1972): 387-99</td></tr></tbody></table>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        
+            
+            
+            
+       
+            
+            
+            <h3>Print Editions</h3>
+<h4>Syriac Text</h4>
+<ul class="bibliography">
+  <li>Robinson, S. E. <cite>The Testament of Adam: An Examination of the Syriac and Greek Traditions</cite>. SBLDS 52. Chico, Ca.: Scholars Press, 1982.</li>
+  <li class="annotation">** Includes lithographic reproductions of photographs of mss. A, C and F as well as a full apparatus with variant readings from all the known Syriac mss (pp. 52–100).</li>
+</ul>
+
+<h4>Greek Text: Apotelesmata Version</h4>
+<ul class="bibliography">
+  <li>James, M. R. "A Fragment of the Apocalypse of Adam in Greek." Pages 138–145 in <cite>Apocrypha Anecdota II</cite>. Texts &amp; Studies 2.3. Cambridge: Cambridge University Press, 1893.</li>
+  <li class="annotation">** Includes a transcription of ms A.&nbsp;</li>
+  <li>Nau, F. "Apotelesmata Apollonii Tyanensis." Pages 1362–1392 in vol. 2 of <cite>Patrologia Syriaca</cite>. Edited by R. Graffin. Paris: Firmin-Didot, 1907.</li>
+  <li class="annotation">** Includes an eclectic text based on a collation of all four Greek mss held in Paris: A, B, C, and D.</li>
+  <li>Boll, F. <cite>Catalogus Codicum Astrologorum Graecorum</cite>. Brussells: Lamertin, 1908.</li>
+  <li class="annotation">** Includes a transcription of ms E (7:177–79).</li>
+  <li>Delatte, A. <cite>Anecdota Atheniensia</cite>. Liège: Vaillant-Carmane, 1927.</li>
+  <li class="annotation">** Includes a partial transcription of ms F (1:572–612, esp. 601-3).</li>
+  <li>Robinson, S. E. <cite>The Testament of Adam: An Examination of the Syriac and Greek Traditions</cite>. SBLDS 52. Chico, Ca.: Scholars Press, 1982.</li>
+  <li class="annotation">** Includes a transcription of ms. A with an apparatus noting all variants in the other Greek manuscripts (110-127). This is currently the most complete edition of the textual evidence.</li>
+</ul>
+  
+<h4>Greek Text: Cedrenus Version</h4>
+<ul class="bibliography">
+  <li>Bekker, I. <cite>Georgius Cedrenus</cite>. Corpus Scriptorum Historiae Byzantinae. 2 vols. Bonn: Weber, 1828.</li>
+  <li class="annotation">** A transcription and latin translation of George Cedrenus’ <i>Compendium Historiarum</i>, including the <i>Horarium</i> passage at 1:17.</li>
+  <li>Robinson, S. E. <cite>The Testament of Adam: An Examination of the Syriac and Greek Traditions</cite>. SBLDS 52. Chico, CA: Scholars Press, 1982.</li>
+  <li class="annotation">** A reproduction of Bekker’s text (p. 128).</li>
+</ul>
+
+<h4>Arabic Text</h4>
+<ul class="bibliography">
+  <li>Gibson, M. D. <cite>Apocrypha Arabica</cite>. Studia Sinaitica VIII. London: C. J. Clay &amp; Sons, 1901.</li>   <li class="annotation">** Includes a transcription of the text from Arabic ms. No. 508 in the Library of St. Catherine Monestary (Mt. Sinai).</li>
+  <li>Bezold, C. "Das arabisch-äthiopische Testamentum Adami." Pages 893-912 of vol. 2 in <cite>Orientalische Studien: Theodor Nöldeke zum Siebzigsten Geburtstag</cite>. Giessen: Topelmann, 1906.</li>
+  <li class="annotation">** Includes an eclectic text based on the Arabic mss, along with an eclectic text of the Ethiopic.</li>
+  <li>Troupeau, G. ”Une version arabe du 'Testament d’Adam'.” Pages 3–14 in <cite>Mélanges Antoine Guillaumont: Contributions à l’étude des christianismes orientaux</cite>. Edited by R.–G. Coquin ed. Cahiers d’orientalisme XX. Geneva: P. Cramer, 1988.</li>
+  <li class="annotation">** Includes a transcription of the text in Arabic ms. No. 68 in Bibliothèque nationale de Paris, which is a heavily expanded version of the <i>Horarium</i>. Another recension of this longer Arabic version is found in two other mss.: Arabic ms. No. XXXIII in Biblioteca Ambrosiana Milan, fol. 191-200; Arabic ms. No. 330 in the Library of Mount Sinai, fol. 357-364.</li>
+</ul>
+  
+<h4>Ethiopic Text</h4>
+<ul class="bibliography">
+  <li>Halévy, J. <cite>Prières des Falashas</cite>. Paris, 1877.</li>
+  <li class="annotation">** Includes a transcription of the Falasha Ethiopic text and a Hebrew translation. The Falasha version is a short modified form of the <i>Horarium</i> consisting of just the nine hours of the night with no connection to Adam. The text is part of a Falasha collection of ’prayers’ or glorification hymns.</li>
+  <li>Bezold, C. "Das arabisch-äthiopische Testamentum Adami." Pages 893–912 in vol. 2 of <cite>Orientalische Studien Theodor Nöldeke zum Siebzigsten Geburtstag." Giessen: Topelmann, 1906.</cite></li>
+  <li class="annotation">** Includes an eclectic text based on the Ethiopic mss. along with an eclectic text of the Arabic.</li>
+</ul>
+    
+<h4>Armenian Text</h4>
+<ul class="bibliography">
+  <li>Stone, M. <cite>Armenian Apocrypha Relating to the Patriarchs and Prophets</cite>. Jerusalem: The Israel Academy of Sciences and Humanities, 1982.</li>
+  <li class="annotation">** Includes a transcription of the text from MS Jerusalem Arm. Patr. 69 with an English translation and a critical apparatus with all the variants from the text in MS B.M. Or. 6471 (pp. 58–77). This Armenian text closely resembles the Apostelesmata Greek version.</li>
+  <li>Stone, M. <cite>Armenian Apocrypha Relating to Adam and Eve</cite>. Leiden: Brill, 1996.</li>
+  <li class="annotation">** Includes a transcription of the ms. Matenadaran No. 10320 with apparatus and English translation (pp. 167–73).</li>
+</ul>
+
+<h4>Georgian Text</h4>
+<ul class="bibliography">
+  <li>Taqaichvili, E. <cite>Kartlis Cxovreba, Mariam dedoplis variant’i</cite>. Tblissi, 1906.</li>
+  <li class="annotation">** Includes a transcription of the text from Georgian National Center of Manuscripts No. S 30 (pp. 793–797).</li>
+  <li>Avalichvili, Z. ”Notice sur une Version Géorgienne de la Caverne des Trésors: Appendice.” <cite>ROC</cite> 26 (1927-28): 396-405.</li>
+  <li class="annotation">** A reproduction of Taqaichvili's text with a French translation.</li>
+  <li>Kourcikidzé, C. <cite>La Caverne des Trésors: Version Géorgienne</cite>. CSCO 526. Scriptores Iberici 23. Louvain: Peeters, 1992.</li>
+  <li class="annotation">** Includes a text based on four mss. with an apparatus including variants from several other mss.</li>
+</ul>
+    
+<h3>Selected Secondary Literature</h3>
+<ul class="bibliography">
+  <li>Bauckham, R.&nbsp;”The Horarium of Adam and the Chronology of the Passion.” <i>Kristianskij Vostok</i> 4 (X) (2002): 413-39.</li>
+  <li>Renan, M. E.&nbsp;”Fragments du livre Gnostique intitulé: Apocalypse d'Adam, ou Pénitence d'Adam ou Testament d'Adam,” <i>Journal Asiatique</i> 5.2 (1853): 427-71.</li>
+  <li>Reinink, G. J.&nbsp;“Das Problem des Ursprungs des Testamentes Adams.” <i>Orientalia Christiana Analecta</i> 197 (1972): 387-99.</li>
+  <li>Robinson, S. E.&nbsp;<i>The Testament of Adam: An Examination of the Syriac and Greek Traditions.&nbsp;</i>Chico, Cal.: Scholars Press, 1982.</li>
+  <li>Stone, M.&nbsp;<i>Armenian Apocrypha Relating to Patriarchs and Prophets.</i>&nbsp;Jerusalem: Israel Academy of Sciences and Humanities, 1982.</li>
+</ul>
+
+<p>For further bibliography (including print editions of the evidence for TAdam in other languages) see DiTommaso, <em>Bibliography</em>, 205-220.</p>
+        
+        
+        
+        
+        
+        
+        
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Testamentum Adae
+
+Cf. : J.-B. Frey, art. Adam (Livres apocryphes sous son nom), in DBS
+I, 1928, col. 101-134, praesertim col. 117-125; — F. STEGMÜLLER,
+n° 75 et 75, 1-13; — E. SCHÜRER, III, p. 760-761; — S.E. ROBINSON,
+The Testament of Adam. An Examination of the Syriac and Greek Traditions (Society of Biblical Literature. Dissertation Series 52), Chico,
+California, 1982; — A.-M. DENIS, ILRJH, ad loc.
+
+Notae:
+
+(1) Testamentum Adae partes tres continet: Horarium (uel Liturgia
+horarum diei et noctis), Prophetia (ab Adamo usque ad Seth) et Hierarchia (nouem ordines hierarchiae caelestis).
+
+(2) Testamentum Adae occurrit seorsim in traditione syriaca tantum. In traditione aethiopica et georgica saepe insertum est in Cauernam Thesaurorum. De traditione arabica uide S.E. ROBINSON, The
+Testament of Adam, p. 17-18. De colligationibus cum Cauerna Thesaurorum uide G.J. REININK, Das Problem des Ursprungs des Testamentes
+Adams, in Symposium Syriacum 1972 (Orientalia christiana analecta
+197), R.ome, 1974, p. 387-399.
+
+Versio graeca (continet Horarium tantum)
+
+Recensio A
+
+Nota: F. NAU, op. cít., tribuit Horarium Apollonio Tyanensi,
+quod hodie nondum acceptum est.
+
+Codd.: Paris, Bibl. Nat. de France, gr. 2419, fol. 247b, saec. xv
+ex. uel xvr inc. (= A); Paris, Bibl. Nat. de France, suppl. gr. 1148,
+fol. 37b-40b, an. 1539-1542 (= B); Paris, Bibl. Nat. de France, gr.
+2316, fol. 324b-325b, saec. xv (= C); Paris, Bibl. Nat. de France,
+suppl. gr. 20, fol. 170a-171a, saec. xvII (= D); Berlin, Staatsbibl.
+Preußischer Kulturbesitz, gr. 173, fol. 73a-74a, saec. xv ex. (= E);
+Bonn, Universitätsbibl. 3632, fol. 359b, saec. xv (= F).
+
+M.R. JAMES, Apocrypha Anecdota. A Collection of thirteen Apocryphal Books and Fragments (Texts and Studies IL, 3), Cambridge,
+1893, p. 138-145, 187, e cod. A.
+
+F. Nau, Apotelesmata Apollonii Tyanensis, in R. GRAFFIN, Patrologia Syriaca, 1, 2, Paris, 1907, p. 1362-1392, e codd. ABCD
+(textus, translatio latina).
+3 ADAM 9
+
+S.E. Rosınson, The Testament of Adam. An Examination of the
+Syriac and Greek Traditions (Society of Biblical Literature. Dissertation Series 52), Chico, California, 1982, p. 105-133, e codd. A
+BCDEF (textus, translatio anglica).
+
+Recensio B (in citatione)
+
+In citatione Georgii Cedreni, Historiarum Compendium 1, 17-
+18a: cf. I. BEKKER, Georgius Cedrenus (Corpus Scriptorum Historiae Byzantinae), Bonn, vol. 1, 1828, p. 17-18 (7 PG 121, col.
+41BC); — et iterum S.E. ROBINSON, The Testament of Adam,
+p. 128-129 (cum translatione anglica).
+
+Nota: De usu Testamenti Adae uide A.-M. Denis, ILRJH, ad
+loc.; — S.E. ROBINSON, The Testament of Adam, p. 12-14; — S.E.
+ROBINSON, The Testament of Adam: An Updated Arbeitsbericht, in JSP 5
+(1989), p. 95-100.
+
+Versio latina
+
+Vide Inquisitionem Abrahae (infra n? 91).
+
+Versio syriaca
+
+Notae:
+
+(1) Exstant recensiones tres: recensio A (codd. A B [Horarium, Prophetia]), recensio B (codd. C [Horarium, Prophetia et Hierarchia] D [Prophetia}), recensio C (codd. E F G H [Horarium]).
+
+(2) De usu Testamenti Adae in traditione syriaca uide A.-M. Dznis, ILRJH, ad loc.
+
+Codd.: London, Brit. Libr, Add. 14624, fol. 8b-10a, saec. ix
+inc. (= A); Città del Vaticano, Bibl. Apost. Vatic., vatic. syr. 58, fol.
+11$a-116b, an. 1584-1586 (= B); Città del Vaticano, Bibl. Apost. Vatic., vatic. syr. 164, fol. 75b-77a, an. 1702 (= C); London, Brit. Libr.,
+Add. 25875, fol. 57b-s8b, an. 1709-1710 (= D); London, Brit. Libr.,
+Arundel Or. 53, fol. 88b-88a (sic), an. 1536 (= E); Città del Vaticano, Bibl. Apost. Vatic., vatic. syr. 159, fol. 246b-2472, an. 1628-1632
+(= F); Manchester, John Rylands Univ. Libr., syr. 44, fol. 27, saec.
+Xv (= G; codex qui etiam unicus testis est Tractatus Sem, cf infra
+n? 85); London, Brit. Libr., Add. 14577, fol. 85, saec. ix (= H). Forte
+addendus est cod. Mingana, syr. 183, fol. 180a, ca. 1850: cf. A. MIN-
+GANA, Catalogue, I, n? 183.
+
+E. RENAN, Fragments du livre gnostique intitulé Apocalypse
+d'Adam ou Pénitence d'Adam ou Testament d'Adam, publiés
+IO ADAM 3
+
+d’après deux versions syriaques, in Journal asiatique 5 (1853), p. 427-
+471, € codd. B C (reimpr. Paris, 1854) (textus, translatio).
+
+M. Kmoskö, Testamentum patris nostri Adam, in R. GRAFFIN,
+Patrologia Syriaca, 1, 2, Paris, 1907, p. 1306-1360, e codd A B C
+D E F (textus, translatio latina).
+
+S.E. ROBINSON, The Testament of Adam. An Examination of the
+Syriac and Greek Traditions (Society of Biblical Literature. Dissertation Series 52), Chico, California, 1982, p. 45-104, e codd. A
+BCDEFGH.
+
+Translatio anglica: S.E. ROBINSON, Testament of Adam (Second
+
+to Fifth Century A.D.). A New Translation and Introduction, in J.H.
+CHARLESWORTH, I, p. 989-995.
+
+Translatio gallica: J.P. MiGNE, Dictionnaire des apocryphes, L, col.
+289-298 (ab E. Renan).
+
+Translatio germanica: P. Riesster, Altjüdisches Schrifttum
+ausserhalb der Bibel, Heidelberg, 1927 (reimpr. 1966), p. 1084-1090.
+
+Translatio hispanica: F.J. MARTÍNEZ FERNANDEZ, Testamento
+de Adán, in A. Diez MACHO, V, p. 389-438.
+
+Versio coptica (sahidica)
+
+Cod.: Unicus testis, Kóln, Institut für Altertumskunde, P. Inv.
+Nr. 3221, saec. v, continet excerpta e Testamento Adae, Testamento Job,
+Testamento Abrahae et ex Actibus Petri et Andreae (CANT 237): cf. C.
+RÖMER - H.J. THISSEN, P. Köln Inv. Nr. 3221: Das Testament des
+Hiob in koptischer Sprache. Ein Vorbericht, in M.A. KN1BB - P.W. VAN
+DER HORST, Studies on the Testament of Job (Society for New Testament Studies. Monograph Series), Cambridge, 1989, p. 33-45, praesertim p. 33-34.
+
+Editio paratur a C. RÖMER - H.J. THISSEN.
+
+Versio arabica
+
+Nota: Exstant duae recensiones.
+
+Recensio A
+Codd.: G. GRAF, I, p. 200.
+C. Bzzorp, Das arabisch-äthiopische "Testamentum Adami, in
+
+Orientalische Studien Th. Nöldeke gewidmet, II, Giessen,
+1906, p. 893-912, e codd. Paris, Bibl. Nat. de France, anc. fonds
+3 ADAM II
+
+arab. 54, saec. xiv; Oxford, Bodleian Libr., Huntington arab.
+514 et Città del Vaticano, Bibl. Apost. Vatic., vatic. arab. 165,
+saec. XIV.
+
+M.D. Gisson, Kitab al Magall or the Book of the Rolls, One of
+the Books of Clement, in Apocrypha Arabica (Studia Sinaitica 8),
+London, 1901, p. xx-xxxi, 12-17, e cod. Sinai, Sainte-Catherine,
+arab. 508, fol. 98-101v, saec. Ix/x, cum lectionibus cod. Cambridge, Univ. Libr., Or. 306, 134 p., saec. XIII (textus, translatio).
+
+Translatio gallica: J.P. MIGNE, Dictionnaire des apocryphes, I,
+
+col. 290-294.
+
+Recensio B
+
+Codd.: luxta G. TROUPEAU, op. cit., p. 4, duo alii codices continent etiam textum secundae recensionis: Milano, Bibl. Ambros,
+arab. xxxm (fol. 191r-200r) et Sinaï, Sainte-Catherine, arab. 330
+(fol. 357v-364v).
+
+G. TROUPEAU, Une version arabe du «Testament d'Adam», in
+Mélanges Antoine Guillaumont. Contributions à l'étude des christianismes orientaux (Cahiers d'Orientalisme 20), Genève, 1988, p. 3-14,
+e cod. Paris, Bibl. Nat. de France, arab. 68, fol. 2r-10v (textus,
+translatio).
+
+Versio aethiopica
+
+C. Bzzorp, Das arabisch-äthiopische "Testamentum Adami, in
+Orientalische Studien Th. Nôldeke gewidmet, II, Giessen, 1906,
+p. 893-912, e codd. London, Brit. Libr., Or. 751, saec. xix' ; Or.
+752, saec. XIX"; Or. 753, saec. XIX’.
+
+Translatio gallica: S. GRÉBAUT, Littérature éthiopienne pseudo-clémentine. III. Traduction du Qalémentos, in ROC 16 (1911), p. 172-175,
+
+e cod. Paris, Bibl. Nat. de France, Abbadie 78, fol. 10va-13vb, an.
+
+1769.
+
+Versio armeniaca
+
+Nota: Exstant duae recensiones.
+
+Recensio A
+
+M.E. STONE, Armenian Apocrypha Relating to the Patriarchs and
+Prophets. Edited with Introductions, Translations and Commentary (Pu-
+I2 ADAM 4
+
+blications of the Israel Academy of Sciences and Humanities.
+Section of Humanities), Jerusalem, 1982, p. 39-80, praesertim p.
+58-77 (Horarium e codd. Jérusalem, Patr. Arm. 69, fol. 639r, col.
+2 - 639v, col. 2, an. 1728-1730 et London, Brit. Libr., Or. 6471,
+fol. 104v-10$v, an. 1610).
+
+Recensio B
+
+M.E. STONE, Armenian Apocrypha relating to Adam and Eve.
+Edited with Introductions, Translations and Commentary (StVTPs 14),
+Leiden - New York - Köln, 1996, p. 167-173 (Horarium e cod.
+Erevan, Matenadaran 10320, fol. 87v-89r, saec. XVII).
+
+Versio georgica
+
+E. TAQ'AICHVILI, K'art'lis Chovreba, Mariam dedoplis variant'i,
+Tbilissi, 1906, e cod. an. 1638-1646.
+
+C. Brzzorp, Das arabisch-äthiopische "Testamentum Adami, in
+Orientalische Studien Th. Nöldeke gewidmet, II, Giessen,
+1906, p. 909-912.
+
+Z. AVALICHVILI, Notice sur une version géorgienne de la Caveme
+des Trésors. Apocryphe syriaque attribué à saint Ephrem, in ROC 26
+(1927-1928), p. 381-405 (in appendice, p. 396-405, textus georgicus et translatio gallica Testamenti Adae et Horarii).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

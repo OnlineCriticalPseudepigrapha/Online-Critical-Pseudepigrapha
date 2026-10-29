@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitae prophetarum — CAVT-213 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Vitae prophetarum (CAVT-213)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-213</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-213</span>
+          <span class="badge badge-lang">Greek</span>
+          <span class="badge badge-lang">CAVT 213</span>
+          <span class="badge badge-lang">CANT 101</span>
+        </div>
+        <h1 class="stub-title">Vitae prophetarum</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-213</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 213</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 101</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 35 (Lives of the Prophets)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:379-399 (Lives of the Prophets)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 379-399 (Lives of the Prophets)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Lives of the Prophets</em> (Greek: Περὶ τῶν βίων καὶ τῆς τελευτῆς τῶν προφητῶν / <em>Peri tōn biōn kai tēs teleutēs tōn prophētōn</em>; Latin: <em>Vitae prophetarum</em> / <em>De vitis prophetarum</em>; Syriac: <em>Tash'yāthā d-nebīyē</em>) is an ancient Jewish hagiographical and biographical compendium detailing the careers, origins, ancestral tribes, prophetic signs, deaths, martyrdoms, and burial locations of twenty-three biblical prophets. Attributed spuriously in early Christian transmission to <strong>Epiphanius of Salamis</strong> (Cyprus, 4th c.) or <strong>Dorotheus of Tyre</strong>, the core document is a product of 1st-century CE Palestinian Judaism, compiled in Greek (or translated very early from Hebrew) prior to the destruction of the Jerusalem Temple in 70 CE.</p>
+<p class="stub-paragraph">The work is organized systematically by individual prophetic entries, typically following a rigid fourfold formula:</p>
+<p class="stub-paragraph">1. The prophet's hometown, geographical region, and ancestral tribe.</p>
+<p class="stub-paragraph">2. Distinctive miraculous deeds, prophetic oracles, and biographical anecdotes unrecorded in the biblical canon.</p>
+<p class="stub-paragraph">3. The circumstances of the prophet’s death (frequently violent martyrdom at the hands of wicked rulers or rebellious compatriots).</p>
+<p class="stub-paragraph">4. The exact topographical site of the prophet’s tomb and burial shrine, often accompanied by accounts of local pilgrimage, healing waters, or eschatological portents.</p>
+<h4 class="stub-heading">Survey of the Twenty-Three Prophetic Lives</h4>
+<h5 class="stub-subheading">A. The Four Major Prophets (chs. 1–4)</h5>
+<p class="stub-paragraph">1. <strong>Isaiah</strong> (ch. 1): From Jerusalem; of the tribe of Judah; martyred under King Manasseh by being sawn in two with a wooden saw (<em>priōni xylinō</em>) beneath the Rogel oak tree. Before dying, Isaiah prayed for water, and God miraculously opened the spring of Siloam (<em>Silōam</em>, "Sent"); the spring flowed or ceased according to the prayer of the prophet. Buried near the Tomb of the Kings.</p>
+<p class="stub-paragraph">2. <strong>Jeremiah</strong> (ch. 2): From Anathoth; of the tribe of Levi; stoned to death by his own people at Taphnas (Tahpanhes) in Egypt and buried near Pharaoh’s palace. By prayer, Jeremiah banished the asp-vipers, crocodiles, and water-beasts (<em>kēdoi</em>) of Egypt. Before the fall of Jerusalem, Jeremiah miraculously concealed the Ark of the Covenant, the golden altar of incense, and the tables of stone inside a rock on Mount Nebo, sealing the crevice with his finger; the cloud of glory will not reveal the holy relics until the Lord gathers His dispersed people at the End of Days.</p>
+<p class="stub-paragraph">3. <strong>Ezekiel</strong> (ch. 3): From the land of Sarira; of the priestly order; slain in Chaldea by the leader of the Jewish exiles whom he reproved for practicing idolatry; buried in the double cave (<em>spēlaion diploun</em>) of Arphaxad. Ezekiel parted the waters of the river Chebar so fleeing exiles could escape the Chaldeans, and miraculously multiplied fish in the river during severe famine.</p>
+<p class="stub-paragraph">4. <strong>Daniel</strong> (ch. 4): From Upper Beth-horon; of the tribe of Judah; a man of renowned asceticism whose face shone with celestial beauty because he abstained from meat and wine. Interceded for Nebuchadnezzar during his zoomorphic madness, weeping for the beast-king until his reason returned. Buried in the royal tomb in Babylon.</p>
+<h5 class="stub-subheading">B. The Twelve Minor Prophets (chs. 5–16)</h5>
+<p class="stub-paragraph">5. <strong>Hosea</strong> (ch. 5): From Belemoth of the tribe of Issachar; gave the prophetic sign that the Lord would arrive on earth when the oak at Shiloh divided into twelve parts; buried in his native district.</p>
+<p class="stub-paragraph">6. <strong>Micah</strong> (ch. 6): From Morasthi of the tribe of Ephraim; executed by Joram son of Ahab (thrown from a precipice); buried on his family land near the burial ground of the Enakim.</p>
+<p class="stub-paragraph">7. <strong>Amos</strong> (ch. 7): From Tekoa; assaulted by Amaziah, the priest of Bethel, whose son Amaziah struck Amos’s skull with a club; carried half-dead back to Tekoa where he expired; buried with his ancestors.</p>
+<p class="stub-paragraph">8. <strong>Joel</strong> (ch. 8): From the territory of Reuben (Bethom); died in peace and buried in his home field.</p>
+<p class="stub-paragraph">9. <strong>Obadiah</strong> (ch. 9): From Beth-acharam; identified as the royal steward of Ahab who hid and fed one hundred prophets in a cave (1 Kgs 18:4); became a disciple of Elijah; buried in Samaria.</p>
+<p class="stub-paragraph">10. <strong>Jonah</strong> (ch. 10): From the district of Kariathmaus near Azotus; identified as the son of the widow of Zarephath whom Elijah revived from the dead (1 Kgs 17); after his mission to Nineveh, wandered with his mother to Sour (Tyre) and died; buried in the cave of Kenaz, the first judge.</p>
+<p class="stub-paragraph">11. <strong>Nahum</strong> (ch. 11): From Elkesi; foretold the overthrow of Nineveh by freshwater flood and subterranean fire; buried in his native land.</p>
+<p class="stub-paragraph">12. <strong>Habakkuk</strong> (ch. 12): From Beth-zouchar of the tribe of Simeon; fled to Ostrakine when Nebuchadnezzar advanced; carried by an angel by the hair of his head to Babylon to bring food to Daniel in the lions' den; gave the eschatological sign: "When a light shines in the Temple, they will see the glory of God"; buried in his own field.</p>
+<p class="stub-paragraph">13. <strong>Zephaniah</strong> (ch. 13): From the mountain of Sarabatha of the tribe of Simeon; prophesied concerning the captivity; buried in his field.</p>
+<p class="stub-paragraph">14. <strong>Haggai</strong> (ch. 14): Born in Babylon as a youth; saw the rebuilding of the Second Temple; buried near the tombs of the priests in Jerusalem.</p>
+<p class="stub-paragraph">15. <strong>Zechariah</strong> (ch. 15): Son of Berechiah; returned from Chaldea in extreme old age; blessed Zerubbabel and Josedek; buried beside Haggai.</p>
+<p class="stub-paragraph">16. <strong>Malachi</strong> (ch. 16): From Sopha; of the tribe of Zebulun; a man of exceptional piety and beauty; an angel of God appeared invisible to the multitude, repeating and confirming Malachi's prophecies (whence his name <em>Angelos</em> / Malachi); died young and buried in his ancestral tomb.</p>
+<h5 class="stub-subheading">C. Prophets from the Historical Books (chs. 17–23)</h5>
+<p class="stub-paragraph">17. <strong>Nathan</strong> (ch. 17): From Gaba; of the tribe of Judah; prevented David from building the Temple; died in old age and buried in his home.</p>
+<p class="stub-paragraph">18. <strong>Ahijah the Shilonite</strong> (ch. 18): From Shiloh; foretold the division of the kingdom to Jeroboam; saw a vision of two yoked heifers treading down the sanctuary; buried near the oak of Shiloh.</p>
+<p class="stub-paragraph">19. <strong>Joad (The Man of God from Judah)</strong> (ch. 19): From Samareim; the unnamed prophet of 1 Kings 13 slain by a lion after being deceived by the old prophet of Bethel; buried in Bethel beside his deceiver.</p>
+<p class="stub-paragraph">20. <strong>Azariah son of Oded</strong> (ch. 20): From the district of Subatha; urged Asa to purify Judah from idols; buried in his native field.</p>
+<p class="stub-paragraph">21. <strong>Elijah the Tishbite</strong> (ch. 21): From Thisbe of Gilead; of the priestly line; at his birth, his father Sobacha saw angels wrapping the newborn in bands of fire and feeding him with flames; ascended into heaven in a fiery chariot.</p>
+<p class="stub-paragraph">22. <strong>Elisha</strong> (ch. 22): From Abel-meholah of the tribe of Reuben; at his birth in Gilgal, the golden calf in Bethel bellowed so loudly it was heard throughout Jerusalem; buried in Samaria.</p>
+<p class="stub-paragraph">23. <strong>Zechariah son of Jehoiada</strong> (ch. 23): Slain by King Joash between the Temple altar and the sanctuary; his blood congealed upon the stone paving of the Temple and could not be washed away until the Babylonian invasion; buried in his father’s tomb in Jerusalem.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The <em>Lives of the Prophets</em> was among the most widely circulated hagiographical texts of late antiquity and the Byzantine Middle Ages, preserved across Greek, Latin, Syriac, Ethiopic, Armenian, and Arabic linguistic streams.</p>
+<h4 class="stub-heading">A. The Greek Manuscript Tradition</h4>
+<p class="stub-paragraph">The Greek text is preserved in dozens of manuscripts exhibiting six major recensional families (classified by T. Schermann, E. Nestle, and J.-C. Haelewyck):</p>
+<p class="stub-paragraph">1. <strong>Epiphanii Recensio Prior (The Anonymous/Epiphanian Primitive Recension)</strong>:</p>
+<ul class="stub-list">
+<li>Preserved in <strong>Codex Marchalianus (Vat. gr. 2125)</strong> (6th/7th c., margin notes), <strong>Codex Parisinus gr. 1115</strong> (dated 1276 CE), and <strong>Codex Vaticanus gr. 2024</strong>.</li>
+<li>Considered by Torrey, Hare, and Schwemer to preserve the oldest and purest Jewish textual form.</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Dorothei Recensio (Pseudo-Dorotheus of Tyre)</strong>:</p>
+<ul class="stub-list">
+<li>Found in historical catenae and discipular catalogs (<em>Index discipulorum</em>); characterized by stylistic smoothing and Byzantine chronographic notes.</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Epiphanii Recensio Altera (Secondary Epiphanian Recension)</strong>:</p>
+<ul class="stub-list">
+<li>Represented by <strong>Codex Coislinianus 224</strong> (10th/11th c.) and <strong>Codex Parisinus gr. 2496</strong>.</li>
+</ul>
+<p class="stub-paragraph">4. <strong>Recensio Anonyma</strong>:</p>
+<ul class="stub-list">
+<li>Independent text form preserved without patristic attribution in Byzantine florilegia.</li>
+</ul>
+<p class="stub-paragraph">5. <strong>Recensio Scholiis Adiecta</strong>:</p>
+<ul class="stub-list">
+<li>Integrated into the catenae and scholia of medieval Septuagint Bibles.</li>
+</ul>
+<p class="stub-paragraph">6. <strong>Recensio Liturgica (The Byzantine Synaxaria and Menologia)</strong>:</p>
+<ul class="stub-list">
+<li>Prophetic lives adapted into liturgical reading lessons for saints' feast days in the imperial Menologion of Basil II and the Great Synaxarion of Constantinople (ed. F. Halkin, A. Negoitǎ).</li>
+</ul>
+<h4 class="stub-heading">B. The Latin Tradition</h4>
+<ul class="stub-list">
+<li>Circulated early in the Western Church under the titles <em>De vita et obitu prophetarum</em> and <em>De ortu et obitu patrum</em>:</li>
+<li><strong>Isidore of Seville</strong> (<em>De ortu et obitu patrum</em>, 7th c., PL 83:129–156): Drew directly upon an early Latin translation of the <em>Vitae</em>.</li>
+<li><strong>Moses of Bergamo</strong> (12th c.): Translated Greek prophetic lives into Latin.</li>
+<li>Critical studies and text editions by <strong>François Dolbeau</strong> (1986, 1990, 1994) recovered late antique Latin translations predating Isidore.</li>
+</ul>
+<h4 class="stub-heading">C. The Syriac Tradition</h4>
+<ul class="stub-list">
+<li>Widely diffused throughout the East Syrian (Nestorian) and West Syrian (Jacobite) churches:</li>
+<li><strong>Berlin MS Sachau 131</strong> (fols. 57r–65v): ed. F. Baethgen (1886).</li>
+<li><strong>Union Theological Seminary MS Syr. 16</strong>: cataloged by M. Goshen-Gottstein (1979).</li>
+<li><strong>Solomon of Basra</strong> (<em>The Book of the Bee</em>, 13th c.): Incorporates chapters of the <em>Vitae</em> into chs. 32–33 (ed. E. A. W. Budge, Oxford, 1886, pp. 69–79).</li>
+<li><strong>Isho‘dad of Merv</strong> (9th c.): Extensively quotes the <em>Vitae</em> in his biblical commentaries (ed. C. van den Eynde, CSCO, 1962–1972).</li>
+<li>Syriac chrestomathies: Eberhard Nestle, <em>Syrische Grammatik</em> (Berlin, 1888, pp. 86–107).</li>
+</ul>
+<h4 class="stub-heading">D. Other Ancient Versions</h4>
+<ul class="stub-list">
+<li><strong>Ethiopic (Ge'ez)</strong>: Translated from Christian Arabic or Greek; ed. J. Bachmann, <em>Aethiopische Lesestücke</em> (Leipzig, 1893); M. A. Knibb, "The Ethiopic Version of the Lives of the Prophets: Ezekiel and Daniel" (1985).</li>
+<li><strong>Armenian</strong>: Preserved in Armenian biblical manuscripts and Menologia; ed. S. Josepheanz (<em>Ankanon girk‘</em>, Venice, 1896, pp. 207–227); trans. J. Issaverdens (Venice, 1901, pp. 141–168).</li>
+<li><strong>Arabic</strong>: Extant in numerous Christian Arabic codices (Sinai Ar. 389, 448); ed. Oscar Löfgren, "An Arabic Version of the 'Vitae prophetarum'" (<em>Orientalia Suecana</em> 25–26 [1976–1977]: 77–105).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Schermann, Theodor</strong>, ed. <em>Prophetarum vitae fabulosae, Indices apostolorum discipulorumque Domini Dorotheo, Epiphanio, Hippolyto aliisque vindicata</em>. Bibliotheca Teubneriana. Leipzig: B. G. Teubner, 1907. [The classic monumental critical edition of the Greek recensions with comprehensive apparatus].</li>
+<li><strong>Schermann, Theodor</strong>. <em>Propheten- und Apostellegenden nebst Jüngerkatalogen des Dorotheus und verwandter Texte</em>. Texte und Untersuchungen 31.3. Leipzig: J. C. Hinrichs, 1907.</li>
+<li><strong>Torrey, Charles Cutler</strong>, ed. <em>The Lives of the Prophets: Greek Text and Translation</em>. Society of Biblical Literature Monograph Series 1. Philadelphia: SBL, 1946. [Seminal critical text based on the Epiphanian primitive recension (Codex Parisinus gr. 1115), with English translation, philological commentary, and appendix on Jeremiah traditions].</li>
+<li><strong>Nestle, Eberhard</strong>, ed. "Die dem Epiphanius zugeschriebenen Vitae prophetarum in doppelter griechischer Rezension." In <em>Marginalien und Materialien</em>, 2:1–64. Tübingen: J. J. Heckenhauer, 1893. [Synoptic Greek text of MSS Q and E1 collated with Syriac MSS].</li>
+<li><strong>von Tischendorf, Constantin</strong>, ed. <em>Anecdota sacra et profana</em>. Leipzig: H. Fries, 1855; 2nd ed. 1861, pp. 110–119.</li>
+<li><strong>Dolbeau, François</strong>. "'De vita et obitu prophetarum': Une traduction médiolatine des vies grecques des prophètes." <em>Revue Bénédictine</em> 100 (1990): 507–539. [Critical edition of the pre-Isidorian Latin translation].</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Concordance grecque des pseudépigraphes d’Ancien Testament</em>. Louvain-la-Neuve: Peeters, 1987, pp. 868–871.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>213. Vitae prophetarum
+
+Cf.: F. STEGMÜLLER, n? 110 et 110, 1-9; 112, 2-4 («Legenda Jeremiae» = Vitae prophetarum); — E. SCHÜRER, II, 783-786; — A.-M.
+Denis, ILRJH, ad loc. (ubi codices et priores editiones).
+
+Noua editio paratur a M. PETIT - F. DOLBEAU ET ALIIS (Corpus
+Christianorum. Series Apocryphorum).
+
+Versio graeca (BHG 1585-1590)
+
+Nota: Exstant sex recensiones: Epiphanii recensio prior, Dorothei recensio, Epiphanii recensio altera, recensio anonyma, recensio
+scholiis adiecta, recensio liturgica (menologion et synaxarium): T.
+SCHERMANN, Prophetenund Apostellegenden nebst Jüngerkatalogen des
+Dorotheus und verwandter Texte (TU 31, 3), Leipzig, 1907, p. 1-133.
+
+T. SCHERMANN, Prophetarum vitae fabulosae, Indices apostolorum
+discipulorumque Domini Dorotheo, Epiphanio, Hippolyto aliisque vindicata (Bibliotheca Teubneriana), Leipzig, 1907.
+
+A.M. SCHWEMER, Studien zu den frühjüdischen Prophetenlegenden
+Vitae Prophetarum. Bd. I: Die Viten der großen Propheten Jesaja, Jeremia, Ezechiel und Daniel. Bd. II: Die Viten der kleinen Propheten
+und der Propheten aus den Geschichtsbüchern (Texte und Studien
+zum Antiken Judentum 49-50), Tübingen, 1995-1996 (textus
+graecus [editus etiam separatim: Synopse zu den Vitae Prophetarum], translatio).
+
+Translatio anglica: D.R.A. Hare, The Lives of the Prophets
+
+(First Century A.D.). A New Translation and Introduction, in J.H.
+
+CHARLESWORTH, II, p. 379-399 (translatio recensionis anonymae) ; —
+
+D. SATRAN, Biblical Prophets in Byzantine Palestine. Reassessing the Lives
+
+of the Prophets (StVTPs 11), Leiden, 1995, p. 121-128 (translatio recensionis anonymac).
+
+Translatio germanica: A.M. SCHWEMER, Vitae Prophetamm, in
+JSHRZ I, 7, Gütersloh, 1997, p. 535-658.
+
+Translatio hispanica: N. FERNÂNDEZ Mancos, Vidas de los profetas, in A. Diez MAcHO, II, p. 505-525 (ex editione C.C. Torrey, The
+Lives of the Prophets [JBL MS 1], Philadelphia, Pennsylvania, 1946).
+168 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 213
+
+Translatio latina: W. Muscutus, Ecclesiae historiae auctores, Basel, 1557, p. 806-819.
+
+Concordantia:
+A.-M. DENIS, Concordance grecque des Pseudépigraphes d' Ancien. Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione T. Schermann).
+
+Versio latina
+
+Codd.: F. DoLBEAU, Nouvelles recherches sur le De ortu et obitu
+prophetarum et apostolorum, in Augustinianum 34 (1994), p. 91-
+107: Verona, Bibl. Capitolare XLIII (41), fol. 129-130v, saec. Ix;
+León, Archivo Catedralicio 6, fol. 216v, an. 920; Madrid, Bibl. de la
+Academia de la Historia, Aemil. 22 (olim 29), fol. 10-12, an. 1073;
+Milano, Bibl. Ambr. H 30 sup., fol. 69v-70v, saec. XIV; Metz, Bibl.
+Municipale 324, fol. 284v-288, saec. xv.
+
+F. DoLBEAU, Deux opuscules latins, relatifs aux personnages de la
+Bible et antérieurs à Isidore de Séville, in Revue d'Histoire des Textes
+16 (1986), p. 83-139 («Libellus sancti Epiphanii episcopi priorum
+prophetarum» [e codd. Paris, Bibl. Nat. de France, lat. 4886, fol.
+62v-67v, saec. XI et El Escorial, Real Bibl. de San Lorenzo ¢.
+IV. 23, fol. xix-xxvii, saec. xv], «De ortu et obitu prophetarum
+et apostolorum» [e codd. Berlin, Staatsbibl. Preußischer Kulturbesitz, Phillipps 1686 (Rose 41), fol. 174r-v, saec. ix et Princeton, Univ. Libr., Garrett 65, fol 97v-99v, saec. xv inc.] et tertia
+uersio in cod. Stuttgart, Württembergische Landesbibl. HB II
+13, fol. 435v-436, ca. 1454-1455 [qui tantum continet quatuor
+ultima capitula).
+
+F. DoLBEAU, «De vita et obitu prophetarum». Une traduction mediolatine des vies grecques des prophètes, in RBén 100 (1990), p. 507-
+531 («De uita et obitu prophetarum» e cod. Praha, Czech Republic. Státní Knihovna XIV. E. ro (2544), fol. 76v-83 et 250-251,
+an. 1312).
+
+Versio syriaca (BHO 1004-1008)
+
+Cf.: Versio syriaca, praeter traditionem directam, scholiis
+Ephrem Syro adscriptis (in cod. Città del Vaticano, Bibl. Apost. Vatic., vatic. syr. 103) atque commentariis Isho‘dad de Merv inserta est.
+Integra traditur a tribus chronicis: Chronicon ad annum 846, Chronicon
+Michael Syri, Chronicon ad annum 1234 pertinens. Abbreviata est in Libro apis Salomoni de Bassora adscripto. De tribus recensionibus uide
+S.P. Brock in E. SCHÜRER, III, p. 785, n. 10.
+213 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 169
+
+Codd.: F. BAETHGEN, Beschreibung der syrischen Handschrift « Sachau
+131» auf der königlichen Bibliothek zu Berlin, in ZAW 6 (1886), p. 193-
+211, praesertim p. 197-199; — R.Y. EBIED, Some Syriac Manuscripts
+from the Collection of Sir E.A. Wallis Budge, in Symposium Syriacum
+1972 (Orientalia Christiana Analecta 197), Roma, 1974, p. 509-539,
+praesertim p. 523-524: Leeds, Univ., Department of Semitic Languages and Literatures, syr. 4, fol. 194v-203 (exemplum codicis Woodbrooke [Birmingham], Selly Oak Colleges Libr., Mingana syr. 567,
+fol. 1v-19r, an. 1744); - M.H. GosHEN-GOTTSTEIN, Syriac Manuscripts in the Harvard College Library. A Catalogue (Harvard Semitic
+Museum. Harvard Semitic Studies 23), Ann Arbor, Michigan, 1979,
+p. 125: New York, Union Theological Seminary, syr. 16, saec. XIX
+(= Clemons 295 ?). — C. DETIENNE (UCL) repperit codices sequentes: Saint-Pétersbourg, Acad. Sciences, Bibl. de l'Institut des Études
+Orientales, Fonds Diettrich cod. d (Pigulevskaya 50), f. 146v-154v;
+Berlin, Staatsbibl. Preußischer Kulturbesitz, orient. fol. 3122 (Assfalg
+3), f. 263r-265v; Woodbrooke (Birmingham), Selly Oak Colleges
+Libr., Mingana syr. 342, fol. 48v-52; Jérusalem, Couvent syrien orthodoxe Saint-Marc, cod. Baumstark Liter. 1, fol. 140r-v; Mannanam, Monastère carme Saint-Joseph, syr. 10; Algosh, Monastère N.-
+D. des Semences 38 (J.-M. Vosté), cah. 1, p. 1 cah. 3, p. 15 (deperditus ?); Alqosh, Monastère N.-D. des Semences 40 (J.-M. Vosté)
+(deperditus ?); Alqosh, Monastère N.-D. des Semences 42 (J.-M.
+Vosté) (deperditus ?); Dawra, Monastère Chaldéen 67 (olim Alqosh,
+Monastère N.-D. des Semences 39 [J.-M. Vosté]); Dawra, Monastère
+Chaldéen 68 (olim Alqosh, Monastére N.-D. des Semences 41 [J.-M.
+Vosté]); Kirkuk, Archevêché Chaldéen, syr. 9, cah. 1, fol. 1 cah. 3,
+fol. 2v; cod. olim Mossoul, Patr. Chaldéen 27 (A. Scher) (deperditus ?).
+
+A.M. CERIANI, Monumenta sacra et profana, VII, Milano, 1874,
+e cod. Milano, Bibl. Ambr. C 313 Inf., an. 617.
+
+E. NESTLE, Syrische Grammatik mit Litteratur, Chrestomathie und
+Glossar. 2. vermehrte und verbesserte Auflage der Brevis linguae Syriacae
+grammatica (Porta Linguarum Orientalium. V. Lingua Syriaca),
+Berlin, 1888, p. 86-107, e codd. London, Brit. Libr., Add.
+14536, fol. 27a-36a, saec. viii; Add. 17193, fol. 26a-32a, an. 874;
+Add. 12178, fol. 234b-240a, saec. ix/x ; — In., Die dem Epiphanius
+zugeschriebenen Vitae Prophetarum in doppelter griechischer Rezension,
+in Marginalien und Materialen, II, 1, Tübingen, 1893, p. 36-43
+(lect. uar. codd. London, Brit. Libr., Add. 14536, Add. 17193 et
+Add. 12178).
+
+A. SMITH Lewis, Catalogue of the Syriac Mss. in the Convent of
+S. Catharine on Mount Sinai (Studia Sinaitica 1), London, 1894,
+170 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 213
+
+10, p. 4-8, e cod. Sinaï, Sainte-Catherine, syr. 10, saec. IX (tantum editio capitulorum).
+
+P. BENEDICTUS, S.P.N. Ephraemi syri opera omnia quae exstant
+graece, syriace, latine..., II, Roma, 1740, p. 98 (Jeremia), 234
+(Osee), 249 (Joel), 255 (Amos), 269 (Abdias), 312 (Malachia).
+
+C. VAN DEN EYNDE, Commentaire d'Isho'dad de Merv sur l’Ancen Testament. III. Livre des Sessions (CSCO 229. Scr. Syri 96),
+Louvain, 1962, p. 113 (Joad), 119 (Jonas); — Ip., Commentaire
+d'Isho'dad de Merv sur l'Ancien Testament. IV. Isaie et les Douze
+(CSCO 303. Scr. Syri 128), Louvain, 1969, p. 1 (Isaias), 83 (Eliseus), 93 et 98 (Jonas), 114 (Habacuc), 141 (Malachia); — Ip.,
+Commentaire d’Isho‘dad de Merv sur l Ancien Testament. V. Jérémie,
+Ezechiel, Daniel (CSCO 328. Scr. Syri 146), Louvain, 1972, p. I
+(Jeremias), 43-44 (Ezechiel), 135 (Habacuc ad Dn 14, 33-39).
+
+E.A.W. Bupce, The Book of the Bee. The Syriac Text edited
+from the Manuscripts in London, Oxford, and Munich with an English
+Translation (Anecdota Oxoniensia. Semitic Series I, 2), Oxford,
+1886, p. 74-79 (textus) et 69-73 (translatio).
+
+J.-B. CHABOT, Chronicon ad annum Christi 1234 pertinens. I.
+(CSCO 81. Scr. Syri 36), Louvain, 1953, p. 87-101; — E.W.
+Brooks, Chronica minora. II. (CSCO 3. Scr. Syri 3), Louvain,
+1960, p. 160-165; — J.-B. CHABOT, Chronique de Michel le Syrien,
+patriarche jacobite d' Antioche (1166-1199). Éditée pour la première fois
+et traduite en français, IV, Paris, 1910, p. 37-64 (textus); I, Paris,
+1899, p. 63-102 (translatio).
+
+Translatio anglica: I.H. HALL, The Lives of the Prophets, in JBL
+7 (1887), p. 28-40, 63-64, e cod. New York, Union Theological Seminary, syr. 16.
+
+Translatio gallica: C. VAN DEN EYNDE, Commentaire d'Isho'dad
+de Merv sur l'Ancien Testament. III. Livre des Sessions (CSCO 230. Scr.
+Syri 97), Louvain, 1963, p. 133 (Joad), 141 (Jonas); — In., Commentaire d'Isho'dad de Merv sur l'Ancien Testament. IV. Isaie et les Douze
+(CSCO 304. Scr. Syri 129), Louvain, 1969, p. 1 (Isaias), 106 (Eliseus),
+119-120 et 126 (Jonas), 145-146 (Habacuc), 180 (Malachia); — Ip.,
+Commentaire d'Isho'dad de Mew sur l'Ancien Testament. V. Jérémie, Ézéchiel, Daniel (CSCO 329. Scr. Syri 147), Louvain, 1972, p. 1 (Jeremias), 49 (Ezechiel), 155 (Habacuc ad Dn 14, 33-39).
+213 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 171
+
+Translatio latina: J.-B. CHABOT, Chronicon ad annum Christi
+1234 pertinens. 1. (CSCO 109. Scr. Syri 56), Louvain, 1965, p. 67-79;
+— In., Chronica minora. II. (CSCO 4. Scr. Syri 4), Louvain, 1960,
+p. 125-128.
+
+Versio armeniaca (BHO 1009-1010)
+
+Cf.: Versio armeniaca continct tres Vitas quae non reperiuntur in
+gracco: Vita Moysi, Vita trium puerorum (qui socii Danielis sunt: uide
+Passionem Danielis et trium puerorum infra n^ 267) et secunda Vita Zachariae filii Yehoyada.
+
+S. YovsEP'EANC', Ankanon girk', p. 207-227 (Is, Jer, Ez, Dn et
+Duodecim), e cod. Venezia, S. Lazzaro 1508, an. 1319, cum lect.
+uar. duorum codd.
+
+M.E. STONE, Armenian Apocrypha Relating to the Patriarchs and
+Prophets. Edited with Introductions, Translations and Commentary (Publications of the Israel Academy of Sciences and Humanities.
+Section of Humanities), Jerusalem, 1982, p. 129-157 (Nathan,
+Elias, Eliseus, Zacharia ben Yehoyada, Eli [qui et uocatur Selum], Joad, Moyses, Tres pueri, Zacharia), e codd. Jérusalem,
+Patr. Arm. 1 B, p. 599-601, 733, 760, an. 1418; 154C, p. 1320,
+1323, 1524, an. 1737; 282, p. 66, 87, 580, an. 1331; Erevan, Matenadaran 1500, fol. 360-363, saec. x ex.; Paris, Bibl. Nat. de
+France, arm. 110, fol. 451v-452r, 450r, 462r, 469rv, an. 1194.
+
+M.E. STONE, Armenian Apocrypha Relating to the Patriarchs and
+Prophets..., p. 158-173 (Is, Jer, Ba, Ez, Dn et Duodecim), e codd.
+Erevan, Matenadaran 562, fol. 28v-30r, saec. xvii et Paris, Bibl.
+Nat. de France, arm. 198, p. 41-44, saec. XVIII.
+
+Translatio anglica: J. IssavERDENS, The Uncanonical Writings,
+p. 141-156, 171-184, 185-191.
+
+Versio aethiopica (BHO 437)
+
+Cf.: F. STEGMULLER, n? 112, 2-4 («Legenda Jeremiae» = Vitae prophetarum); — A.-M. Denis, ILRJH, ad loc.
+
+M.A. Kniss, The Ethiopic Version of the Lives of the Prophets :
+Ezekiel and Daniel, in Bulletin of the School of Oriental and
+African Studies 43 (1980), p. 197-206, e codd. London, Brit.
+Libr, Or. sor (Ez), saec. xv et London, Brit. Libr., Or. 496
+(Dn), saec. XVII (cum translatione anglica).
+172 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 213
+
+M.A. Kniss, The Ethiopic Version of the Lives of the Prophets.
+II: Isaiah, Jeremiah, Haggai, Zechariah, Malachi, Elijah, Elisha, Nathan, Ahijah, and Joel, in Bulletin of the School of Oriental and
+African Studies 48 (1985), p. 16-41, tab. 1-v1, e cod. Paris, Bibl.
+Nat. de France, Abbadie 195, fol. 1-4, saec. xviii; adduntur fragmenta Vitae Jeremiae e cod. Berlin, Staatsbibl. Preußischer Kulturbesitz, orient. 11 Peterm. II Nachtr. 42, fol. 219-220, saec.
+XV.
+
+J. BACHMANN, Legenden über Jeremia, in Aethiopische Lesestücke.
+Inedita Aethiopica, Leipzig, 1893, p. 10-13, e codd. Berlin, Staatsbibl. PreuBischer Kulturbesitz, orient. 11 Peterm. II Nachtr. 42;
+Frankfurt, Stadtbibl., orient. 11 (olim Rüppell II, 5; Goldschmidt
+5), fol. 68-69, saec. XVII.
+
+P. PIOVANELLI, Un nouveau témoin éthiopien de l'Ascension
+d'Isaie et de la Vie de Jérémie (Paris, BN Abb. 195), in Henoch 12
+(1990), p. 347-363.
+
+Translatio gallica: R. BASSET, Les apocryphes éthiopiens traduits en
+français. I. Le livre de Baruch et la légende de Jérémie, Paris, 1893, p. 25-30.
+
+Versio georgica
+
+Inedita.
+
+Versio arabica
+Cod.: G. GRAF, I, p. 212.
+
+O. LÖFGREN, An Arabic Recension of the «Vitae Prophetarum »,
+in Orientalia Suecana 25-26 (1976-1977), p. 77-105, e cod. Milano, Bibl. Ambr. X 201 Sup., fol. 61r-69r, ca. 1000 (textus arabicus translitteratus, translatio, photographiae).
+
+Versio slauica
+Inedita.
+
+Versio hebraica
+
+Codd.: A.M. SCHWEMER, op. cit., I, p. 21: Oxford, Bodleian
+Libr. 2797 hebr. d 11 (7 Dn in Chronica Jerahmeel); — D. SATRAN,
+Op. cit., p. 15, n. 32: Paris, Bibl. Nat. de France, hébr. 326, fol. 157b-
+158a, saec. xiii-xiv (Is et Ez).
+
+Inedita.
+215 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 173
+
+Versio hibernica
+
+Codd.: M. MCNAMARA, The Apocrypha in the Irish Church, Dublin, 197$, p. 30, n. 16.
+
+Inedita.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

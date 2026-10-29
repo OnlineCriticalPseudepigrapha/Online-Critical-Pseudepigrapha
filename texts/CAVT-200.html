@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Maccabaeorum — CAVT-200 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for 5 Maccabaeorum (CAVT-200)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-200</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-gap">Clavis Record / Gap</span>
+          <span class="badge badge-id">CAVT-200</span>
+          <span class="badge badge-lang">Multi/Other</span>
+          <span class="badge badge-lang">CAVT 200</span>
+          
+        </div>
+        <h1 class="stub-title">5 Maccabaeorum</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-200</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 200</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 31 (5 Maccabees (Arabic/Syriac Maccabees))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph"><em>4 Maccabees</em> (Μακκαβαίων Δʹ / <em>Liber IV Maccabaeorum</em>; titled in patristic antiquity Περὶ αὐτοκράτορος λογισμοῦ, <em>On the Sovereignty of Reason</em>) is a masterpiece of Hellenistic Jewish philosophical rhetoric. Cast in the form of a formal Greek diatribe or epideictic encomium, the work synthesizes Stoic and Platonic philosophical ethics with strict devotion to the Mosaic Torah. The author sets out to demonstrate a singular philosophical thesis: that <em>pious reason</em> (<em>ho eusebēs logismos</em>) exercises absolute mastery over the emotions and passions (<em>autokratōr estin tōn pathōn</em>). To establish this proposition, the author presents the heroic martyrdoms of the aged priest Eleazar, the seven young brothers, and their mother under the Seleucid tyrant Antiochus IV Epiphanes (expanding and dramatically reinterpreting the narrative of 2 Maccabees 6:18–7:42).</p>
+<p class="stub-paragraph">The book comprises eighteen chapters, logically structured into two major divisions:</p>
+<h4 class="stub-heading">Part I: The Philosophical Thesis and Proofs from Scripture (1:1–3:18)</h4>
+<p class="stub-paragraph">1. <strong>The Philosophical Prooemium and Definitions</strong> (1:1–12):</p>
+<ul class="stub-list">
+<li>The author states the thesis: Pious reason is sovereign over the passions (1:1).</li>
+<li>Philosophical definitions: Reason (<em>logismos</em>) is the intellect choosing with sound judgment the life of wisdom (<em>sophia</em>); wisdom is defined along classical Stoic lines as "the knowledge of divine and human affairs and their causes" (1:15–16).</li>
+<li>This wisdom is acquired through the discipline of the Mosaic Law (<em>hē tou nomou paideia</em>).</li>
+<li>Classification of the four Cardinal Virtues (prudence/<em>phronēsis</em>, temperance/<em>sōphrosynē</em>, justice/<em>dikaiosynē</em>, and courage/<em>andreia</em>), all governed by devout reason (1:18–35).</li>
+</ul>
+<p class="stub-paragraph">2. <strong>The Anatomy of the Passions and Biblical Illustrations</strong> (1:36–3:18):</p>
+<ul class="stub-list">
+<li>The passions are rooted in pleasure (<em>hēdonē</em>) and pain (<em>ponos</em>), branching into malevolence, anger, fear, and grief.</li>
+<li>Proof that reason does not eradicate (<em>ekkoptein</em>) the passions, but masters and subdues them (<em>epikratein</em> / <em>kratein</em>).</li>
+<li>Biblical exempla of mastery over desire: Joseph mastering sexual desire for Potiphar's wife (2:2–3); Moses subduing wrath against Dathan and Abiram (2:16–20); and King David pouring out the water of Bethlehem as an offering to God rather than indulging physical thirst bought at the risk of his soldiers' blood (3:6–18).</li>
+</ul>
+<h4 class="stub-heading">Part II: The Historical Demonstration: The Maccabean Martyrs (3:19–18:24)</h4>
+<p class="stub-paragraph">1. <strong>Historical Introduction: Seleucid Oppression</strong> (3:19–4:26):</p>
+<ul class="stub-list">
+<li>The peaceful era under Seleucus Nicator disrupted by Simon's treachery regarding the Jerusalem Temple treasury.</li>
+<li>Apollonius / Heliodorus attempts to confiscate the sacred funds but is repelled by terrifying celestial horsemen and angels.</li>
+<li>Accession of Antiochus IV Epiphanes; usurpation of the high priesthood by Jason; introduction of Greek customs, the gymnasium, and the citadel.</li>
+<li>Antiochus decrees that all Jews must defile the covenant by eating swine’s flesh or suffer horrific torture and death (4:15–26).</li>
+</ul>
+<p class="stub-paragraph">2. <strong>The Martyrdom of the Priest Eleazar</strong> (5:1–7:23):</p>
+<ul class="stub-list">
+<li>Eleazar, a ninety-year-old priest and legal scholar, is summoned before Antiochus.</li>
+<li>Antiochus urges him to abandon superstitious Jewish scruples, arguing that nature provided pork as a benign gift.</li>
+<li>Eleazar's philosophic apologia: The Creator knows human nature best and legislates what is beneficial; even minor transgressions of divine law carry equal gravity because they undermine the divine Lawgiver (5:16–38).</li>
+<li>Horrific tortures: Eleazar is scourged, kicked, racked on the wheel, and thrown into flames.</li>
+<li>Eleazar's climactic vicarious prayer: "You know, O God, that though I could have saved myself, I die in burning torment for the sake of the Law. Be merciful to your people, and let our punishment suffice for them. Make my blood their purification, and take my life as a ransom for theirs" (<em>katharsion autōn poiēson to emon haima, kai antipsychon autōn labe tēn emēn psychēn</em>, 6:27–29).</li>
+<li>Encomium on Eleazar as the sacred helmsman steering the ship of piety through the tempestuous sea of torture into the harbor of divine immortality (7:1–23).</li>
+</ul>
+<p class="stub-paragraph">3. <strong>The Martyrdom of the Seven Brothers</strong> (8:1–14:10):</p>
+<ul class="stub-list">
+<li>Antiochus confronts the seven noble brothers and their mother, offering wealth, royal patronage, and high office if they yield, and savage execution if they refuse.</li>
+<li>In unified harmony, the brothers refuse to betray ancestral law, declaring that death for virtue secures eternal communion with God, while the tyrant faces unquenchable subterranean torments (9:1–9).</li>
+<li>Serial martyrdoms of escalating brutality:</li>
+<li><em>First brother</em>: flayed, dismembered on the wheel, and roasted alive in a pan (<em>tēganon</em>, 9:10–25).</li>
+<li><em>Second brother</em>: strapped to catapults, sinews severed, flayed with iron claws (9:26–10:11).</li>
+<li><em>Third brother</em>: hands and feet disjointed, tongue cut out, stretched on the rack (10:12–21).</li>
+<li><em>Fourth brother</em>: tongue excised, broken on the wheel (11:1–13).</li>
+<li><em>Fifth brother</em>: crushed in brazen machinery, joints torn apart (11:14–27).</li>
+<li><em>Sixth brother</em>: roasted over coals while being prodded with heated spits (12:1–19).</li>
+<li><em>Seventh (youngest) brother</em>: leaps voluntarily into the burning brazier after scorning the tyrant's mock clemency (12:1–13:27).</li>
+</ul>
+<p class="stub-paragraph">4. <strong>The Heroism of the Mother and the Cosmic Arena</strong> (14:11–17:24):</p>
+<ul class="stub-list">
+<li>Encomium on the mother: maternal love (<em>philoteknia</em>) was utterly subordinated to devout reason (<em>eusebēs logismos</em>).</li>
+<li>Rather than permit any pagan soldier to lay hands upon her modesty, she casts herself into the flames, joining her sons (16:1–17:1).</li>
+<li>The <em>agōn</em> (athletic contest) of holiness: "Truly divine was the contest (<em>theios ho agōn</em>)... Virtue was the umpire, endurance was the prize-judge, the arena was the universe, humanity was the spectator, and the prize was incorruptibility in everlasting life" (<em>stephanos aphtharsias en zōē aidiō</em>, 17:11–16).</li>
+<li>Expiatory soteriology: Through the blood of these pious martyrs and their propitiatory death (<em>tou hilastēriou thanatou autōn</em>), divine Providence saved Israel and purged the land of the tyrant (17:21–22).</li>
+</ul>
+<p class="stub-paragraph">5. <strong>The Household Testament and Exaltation</strong> (18:1–24):</p>
+<ul class="stub-list">
+<li>The mother's recollection of the father's biblical teaching in their home: instructing the boys in Abraham, Isaac, Phinehas, Daniel, Hananiah-Azariah-Mishael, and the messianic promises of Isaiah and Ezekiel.</li>
+<li>The martyrs are enthroned in heaven among the choir of the stars, enjoying eternal life with the patriarchs (18:20–24).</li>
+</ul>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <h4 class="stub-heading">A. Greek Septuagint and Josephus Manuscript Traditions</h4>
+<p class="stub-paragraph"><em>4 Maccabees</em> circulated in two major branches of Greek transmission: within major uncial Septuagint Bibles, and in Byzantine codices of the complete works of Flavius Josephus (owing to early patristic attribution).</p>
+<p class="stub-paragraph">1. <strong>Biblical Uncial Codices</strong>:</p>
+<ul class="stub-list">
+<li><strong>Codex Sinaiticus ($\aleph$ / 01)</strong>: London, British Library, Add. 43725 (4th c.). Contains 4 Maccabees complete (fols. 129v–138r).</li>
+<li><strong>Codex Alexandrinus (A / 02)</strong>: London, British Library, Royal 1 D. V–VIII (5th c.). Base text for Swete's edition.</li>
+<li><strong>Codex Venetus (V / 23)</strong>: Venice, Biblioteca Nazionale Marciana, Gr. 1 (8th/9th c.). Preserves an important independent uncial witness.</li>
+<li><em>(Note: Codex Vaticanus [B] omits 1–4 Maccabees entirely).</em></li>
+</ul>
+<p class="stub-paragraph">2. <strong>The Flavius Josephus Manuscript Tradition</strong>:</p>
+<ul class="stub-list">
+<li>Transmitted as an appendix or authentic work of Josephus (under the title <em>Eis tous Makkabaious logos</em> / <em>Flavii Iosephi de imperio rationis</em>):</li>
+<li><strong>Codex Laurentianus plut. 69, 22</strong> (11th c., Florence).</li>
+<li><strong>Codex Vaticanus gr. 148</strong> (11th c., Rome).</li>
+<li><strong>Codex Palatinus gr. 14</strong> (10th/11th c., Heidelberg).</li>
+<li>Included in Renaissance Josephus editions: Arlenius (Basel, 1544), Hudson (Oxford, 1720), Havercamp (Amsterdam, 1726), Oberthür (Leipzig, 1782–1785), Dindorf (Paris, 1845), Richter (Leipzig, 1826), and Bekker (Leipzig, 1856, 6:270–303).</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Minuscule Codices</strong>:</p>
+<ul class="stub-list">
+<li>Collated in the Göttingen Septuaginta database (A. Rahlfs, <em>Verzeichnis</em>, 1914, pp. 387–390; MSS 46, 52, 58, 62, 71, 74, 98, 120, 130, 243, 311, etc.).</li>
+</ul>
+<h4 class="stub-heading">B. Old Latin Version (<em>Passio SS. Machabaeorum</em>)</h4>
+<ul class="stub-list">
+<li>A remarkably early Old Latin translation survives under the title <em>Passio Sanctorum Machabaeorum</em>, preserved in several early medieval Latin manuscripts (e.g., Karlsruhe Aug. Perg. 254; Cologne Dombibl. 45; Brussels Bibl. Roy. 8981).</li>
+<li>Date: While H. Anderson placed the archetype around the 8th century, Emil Schürer and Heinrich Dörrie definitively proved that the Old Latin translation originated in the <strong>4th century CE</strong> in North Africa or northern Italy.</li>
+<li>Used extensively by Saint Ambrose (<em>De Iacob et vita beata</em> II), Saint Augustine, and Desiderius Erasmus for his 1524 Latin paraphrase of 4 Maccabees.</li>
+<li>Traces of this translation are embedded in the West Visigothic / Mozarabic liturgy (<em>Inlatio</em> of the Feast of the Maccabees, ed. L. Eizenhöfer, 1961).</li>
+<li>Critical Edition: <strong>Heinrich Dörrie</strong>, <em>Passio SS. Machabaeorum: die antike lateinische Übersetzung des IV. Makkabäerbuches</em> (Göttingen, 1938).</li>
+</ul>
+<h4 class="stub-heading">C. Syriac Peshitta Tradition</h4>
+<ul class="stub-list">
+<li>Preserved in the Syriac Peshitta Old Testament:</li>
+<li><strong>Codex Ambrosianus (7a1)</strong>: Milan, Biblioteca Ambrosiana, MS B. 21 inf. (6th/7th c.), fols. 646–659. Editio princeps by A. M. Ceriani (1876).</li>
+<li><strong>British Library Syriac MSS</strong>: BL Add. 14446 (6th c.) and Add. 12174 (dated 1196 CE); cataloged by William Wright (1870–1872, pp. 1137, 1143).</li>
+<li>Critical Edition: <strong>Robert L. Bensly</strong> and <strong>William E. Barnes</strong>, <em>The Fourth Book of Maccabees and Kindred Documents in Syriac</em> (Cambridge: Cambridge University Press, 1895). Includes Syriac text with English translation and critical comparison against the Greek.</li>
+</ul>
+<h4 class="stub-heading">D. Coptic Witness</h4>
+<ul class="stub-list">
+<li>In 1981, Enzo Lucchesi discovered Sahidic Coptic manuscript fragments of <em>4 Maccabees</em> (BHG 1006) preserved in the Bibliothèque Nationale de France in Paris (MS copte 129¹⁷) and the Austrian National Library in Vienna:</li>
+<li>Lucchesi, Enzo. "Découverte d’une traduction copte du quatrième livre des Maccabées (BHG 1006)." <em>Analecta Bollandiana</em> 99 (1981): 302.</li>
+<li>Lucchesi, Enzo. "Encore trois feuillets coptes du Quatrième livre des Maccabées." In <em>Écriture et traductions dans la littérature copte</em>, CahBC 1:21–22. Louvain: Peeters, 1983.</li>
+</ul>
+<h4 class="stub-heading">E. Old Church Slavonic Tradition</h4>
+<ul class="stub-list">
+<li>Preserved in early Slavic Menologia and liturgical Cheti-Minei for the feast of August 1st.</li>
+<li>Cataloged by N. Bonwesch in A. Harnack, <em>Geschichte der altchristlichen Literatur bis Eusebius</em> (Leipzig, 1893; 2nd ed. 1913, 1:886–917 at 917).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Rahlfs, Alfred</strong>, ed. <em>Septuaginta, id est Vetus Testamentum graece iuxta LXX interpretes</em>. Stuttgart: Privilegierte Württembergische Bibelanstalt, 1935; rev. ed. 1949, 1979, 2:1157–1184. [Standard manual critical text, based primarily on Codices Sinaiticus and Alexandrinus].</li>
+<li><strong>Swete, Henry Barclay</strong>, ed. <em>The Old Testament in Greek according to the Septuagint</em>. Cambridge: Cambridge University Press, 2nd ed. 1899; 3rd ed. 1930, 3:729–762. [Text of Codex Alexandrinus with extensive apparatus of Codices Sinaiticus and Venetus].</li>
+<li><strong>Fritzsche, Otto Fridolin</strong>, ed. "Μακκαβαίων δʹ." In <em>Libri apocryphi Veteris Testamenti graece. Accedunt libri Veteris Testamenti pseudepigraphi selecti</em>. Leipzig: F. A. Brockhaus, 1871, pp. 351–386. [The first modern critical edition collating biblical uncials and the Josephus tradition].</li>
+<li><strong>Apel, Heinrich Ernst</strong>, ed. "Maccabaeorum liber IV." In <em>Libri Veteris Testamenti apocryphi graece</em>. Leipzig, 1830, pp. 266–288.</li>
+<li><strong>Bekker, Immanuel</strong>, ed. "De imperio rationis." In <em>Flavii Iosephi opera omnia</em>. Leipzig: B. G. Teubner, 1856, 6:270–303.</li>
+<li><strong>Bensly, Robert L.</strong>, and <strong>William E. Barnes</strong>, eds. <em>The Fourth Book of Maccabees and Kindred Documents in Syriac, First Edited on Manuscripts' Authority by the Late R. L. Bensly, with an Introduction and Translations by Barnes</em>. Cambridge: Cambridge University Press, 1895.</li>
+<li><strong>Dörrie, Heinrich</strong>, ed. <em>Passio SS. Machabaeorum: die antike lateinische Übersetzung des IV. Makkabäerbuches</em>. Abhandlungen der Gesellschaft der Wissenschaften zu Göttingen, Phil.-hist. Klasse, 3. Folge 22. Göttingen: Vandenhoeck & Ruprecht, 1938. [Definitive critical edition of the 4th-century Old Latin translation].</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>200. 5 Maccabaeorum
+Cf.: G. Gnar, I, p. 223; IL, p. 487; — F. STEGMÜLLER, n° 103 et
+103, 1-3; — A.-M. Denis, ILRJH, ad loc.
+
+Opus hoc quod in Bibliis hexaplaribus syriacis et in uersione
+arabica exstat pro memoria tantum notatur: textus arabicus est
+
+re uera epitome Josephi Ben Gorion (Josippon) saec. Ix, et textus
+syriacus translatio Flauii Josephi, De Bello judaico, 6.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

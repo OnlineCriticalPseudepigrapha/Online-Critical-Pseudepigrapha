@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testamentum Abrahae — CAVT-088 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Testamentum Abrahae (CAVT-088)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-088</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-088</span>
+          <span class="badge badge-lang">Multi/Other</span>
+          <span class="badge badge-lang">CAVT 88</span>
+          <span class="badge badge-lang">CANT 11</span>
+        </div>
+        <h1 class="stub-title">Testamentum Abrahae</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ABRAHAM - ISAAC - JACOB
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=TAbr.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/TAbr.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-088</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 88</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 11</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 3 (Testament of Abraham (Greek Recensions A and B))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:871-902 (Testament of Abraham)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 393-421 (Testament of Abraham)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>In the <em>Testament of Abraham</em>, Abraham refuses to surrender his soul to the archangel Michael. He is taken on a chariot tour of the inhabited world and sees the judgment of souls. In the end Death comes for him in disguise and takes him by deceit.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <p>The work survives in Greek in a longer (A) and a shorter (B) recension, and in Coptic, Arabic, Ethiopic, Slavonic and Romanian versions. It is usually considered Jewish, from Egypt, around the 1st–2nd c. CE.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The <em>Testament of Abraham</em> is preserved primarily in Greek in two distinct recensions:</p>
+<ul class="stub-list">
+<li><strong>Recension A (Longer)</strong>: A fuller, more elaborate narrative focusing on Abraham’s heavenly journey, the judgment of souls, and his refusal to yield his soul to Death.</li>
+<li><strong>Recension B (Shorter)</strong>: A concise, more colloquial redaction with distinct apocalyptic and folkloric features.</li>
+</ul>
+<h4 class="stub-heading">Primary Greek Manuscripts</h4>
+<ul class="stub-list">
+<li><strong>Recension A</strong>:</li>
+<li><strong>A</strong>: Paris, Bibliothèque nationale de France, MS gr. 770 (dated 1304 CE).</li>
+<li><strong>B</strong>: Jerusalem, Greek Patriarchal Library, Saba 259 (11th c.).</li>
+<li><strong>C</strong>: Paris, BnF, MS gr. 1556 (15th c.).</li>
+<li><strong>D</strong>: Oxford, Bodleian Library, MS Canonici Greek 19 (15th c.).</li>
+<li>Additional witnesses: Paris gr. 1313 (15th c.), Paris gr. 1613 (15th c.), Paris Suppl. gr. 162; Vienna theol. gr. 237.</li>
+<li><strong>Recension B</strong>:</li>
+<li><strong>E</strong>: Paris, BnF, MS gr. 1613 (15th c.).</li>
+<li><strong>F</strong>: Paris, BnF, MS gr. 1313 (15th c.).</li>
+<li><strong>M</strong>: Milan, Biblioteca Ambrosiana, MS gr. 405 (C 210 inf.; 13th c.) — collated by F. Schmidt.</li>
+<li>Rome, Biblioteca Apostolica Vaticana, MS Vat. gr. 1801 (15th c.).</li>
+</ul>
+<h4 class="stub-heading">Oriental and Slavonic Versions</h4>
+<ul class="stub-list">
+<li><strong>Coptic</strong>:</li>
+<li>Bohairic version: Rome, Vat. copt. 61, fols. 164v–189v (dated 961/2 CE), ed. I. Guidi (1900).</li>
+<li>Sahidic fragments: Papyrus Köln Inv. Nr. 3221, noted by C. Römer, H. J. Thissen, and M. Weber.</li>
+<li><strong>Ethiopic (Ge’ez)</strong>:</li>
+<li>Falasha (Beta Israel) and Christian recensions: A. Z. Aešcoly (1951); M. Gaguine (1965).</li>
+<li><strong>Arabic</strong>:</li>
+<li>Extant in multiple Karshuni and Christian Arabic collections (e.g. Dayr Anba Maqar; ed. W. E. Barnes 1892; catalogue by G. Graf 1944).</li>
+<li><strong>Church Slavonic and Romanian</strong>:</li>
+<li>Romanian translation: Closely reflects Recension A (ed. M. Gaster 1893/1928).</li>
+<li>South Slavic and East Slavic miscellanies (Sbornik of Tikveš, ed. V. Antik 1978; D. S. Cooper & H. B. Weber 1976; I. Franko 1896–1910; A. Ja. Jatsimirskij 1921).</li>
+<li>Ukrainian redaction (<em>Slovo o sviatom Avraame</em>).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h4>Print Editions</h4>
+<ul class="bibliography">
+<li>J. B. Bauer, "Testamentum Abrahae A, B," <em>Index verborum in libris pseudepigraphis usurpatorum, in Clavis librorum Veteris Testamenti apocryphorum philologica</em> (ed. C. A. Wahl; Leipzig: S.J. Ambosii Barth, 1853; Repr. Graz: Akademische Druck- und Verlagsanstalt, 1972), 647-91.</li>
+<li>M. R. James, The Testament of Abraham: The Greek Text Now First Edited, with an Introduction and Notes by Montague Rhodes James, M. A., with an Appendix Containing Extracts from the Arabic Version of the Testaments of Abraham, Isaac and Jacob by W. E. Barnes, B. D. (T&amp;S 2.2; Cambridge, UK: Cambridge University Press, 1892).</li>
+<li class="annotation">** The first critical edition, and the only full published edition until that of Schmidt in 1986. Based on 3 mss for the short recension (B) and 6 mss for the long recension (A). Critical apparatus is not complete for these mss and includes several errors in the readings it does report.</li>
+<li>F. Schmidt, "Le Testament d'Abraham: Introduction, édition de la recension courte, traduction et notes" (2 vols.; Diss., Strasbourg, 1971).</li>
+<li class="annotation">**Includes a critical text of the B recension improving on that of James.</li>
+<li>S. C. Agourides, "Διαθήκη Ἀβραὰμ," Deltion Biblikón Meletón 1 (1972): 238-48.</li>
+<li>M. E. Stone, The Testament of Abrhaham: The Greek Recensions Translated (TT, Pseudepigrapha Series 2. Missoula: Scholars Press, 1972).</li>
+<li class="annotation">** Reprints the text of James.</li>
+<li>M. Delcor, Le Testament d’Abraham: Introduction, Traduction Du Texte Grec et Commentaire de la Recension Grecque Longue, Suivi de la Traduction Des Testaments d’Abraham, d’Isaac et de Jacob d’Après les Versions Orientales (SVTP 2; Leiden: Brill, 1973).</li>
+<li class="annotation">** Does not include a critical Greek text, but does include separate French translations of the Testaments of Abraham, Isaac, and Jacob as preserved in Coptic (Bohairic), Ethiopic, and Arabic which are useful for those without a knowledge of those languages.</li>
+<li>Denis, Concordance, 825-32.</li>
+<li>F. Schmidt, Le Testament grec d'Abraham: Introduction, édition critique des deux recensions grecques, traduction (TSAJ 11: Tübingen: Mohr Siebeck, 1986).</li>
+<li class="annotation">** Currently the best text. Based on 23 mss of the long recension (A) and 9 mss of the short recension (B). Schmidt reports the existence of five more mss which he was unable to obtain in preparing his text, at least three of which seem to be mss of recension A (see p. 3). Given the extremely wide variation among the surviving manuscripts, even within each recension, Schmidt declined to reconstruct an eclectic text. Instead, for each textual family he prints in running form the text of one manuscript, providing an apparatus which lists all variants in the other mss of the family (only purely orthographic variants are excluded). Schmidt also sub-divides recension B into two ms families, providing separate texts for each family (mss EACDHI and mss BFG respectively). Schmidt's two texts of the short recension employ mss E and B respectively for their running texts and both differ substantially from James' text of the short recension. In his text of the long recension Schmidt employs ms A as his running text. Since this is the same ms which was employed by James as the basis of his eclectic text, Schmidt's running text of the long recension is much closer to that of James than is the case in the short recension. Schmidt retains the chapter divisions of James. In recension B he employs the verse divisions of P. Riessler, while the verse division in recension A are Schmidt's own work.</li>
+</ul>
+<p>For further bibliography, see DiTommaso, <em>Bibliography</em>, 565-74.</p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Testamentum Abrahae (De morte Abrahami)
+Cf.: MR. James, The lost Apocrypha, p. 17; — F. STEGMÜLLER,
+n° 84 et 84, 1-17; — E. SCHÜRER, III, p. 761-767; — A.-M. DENIS,
+ILRJH, ad loc.
+
+Notae:
+
+(1) In traditione coptica, arabica et aethiopica, Testamentum Isaac et
+Testamentum Jacob (cf. infra n? 98, 99), quae aliquando Athanasio Alexandrino tributa sunt (uide CPG 2183), post Testamentum Abrahae leguntur.
+
+(2) F. SCHMIDT, The Two Recensions of the Testament of Abraham :
+In Which Direction did the Transformation Take Place ?, in G. W.E. Nic-
+KELSBURG, Studies on the Testament of Abraham (SBL. Septuagint and
+Cognate Studies 6), Missoula, Montana, 1976, p. 65-83, praesertim
+p. 76-78, censet uersionem copticam, arabicam aethiopicamque e recensione breuiori graeca confectam esse, praeter duos locos.
+
+Versio graeca (BHG 2001-2002)
+
+Nota: Exstant duac recensiones.
+
+M.R. JAMES, The Testament of Abraham. The Greek text now
+first edited with an introduction and notes. With an appendix containing
+extracts from the Arabic version of the Testaments of Abraham, Isaac and
+Jacob (Texts and Translations II, 2), Cambridge, 1892, e 6 codd.
+recensionis longioris et 3 codd. recensionis breuioris.
+
+F. SCHMIDT, Le Testament grec d'Abraham. Introduction, édition
+critique des deux recensions grecques, traduction (Texte und Studien
+zum Antiken Judentum 11), Tübingen, 1986, e 32 codd. ambarum recensionum.
+
+Translatio anglica: M.E. STONE, The Testament of Abraham.
+The Greek recensions (SBL. Texts and Translations 2. Pseudepigrapha
+Series 2), Missoula, Montana, 1972 (ex editione M.R. James); —
+N. TURNER, in H.F.D. SPARKS, p. 393-421 (translatio recensionis longioris, quatuor locis recensionis breuioris interiectis); — E.P. SANDERS,
+Testament of Abraham (First to Second Century A.D.). A New Translation
+and Introduction, in J.H. CHARLESWORTH, I, p. 871-902 (translatio ambarum recensionum ex editione M.R. James, cum lectionibus uariis
+codicis Mediolanensis [Milano, Bibl. Ambros., gr. 45], quem F.
+88 ABRAHAM - ISAAC - JACOB $7
+
+Schmidt optimum testem recensionis breuioris esse putat, sed quo
+M.R. James non usus est).
+
+Translatio gallica: M. DELCOR, Le Testament d’ Abraham. Introduction, traduction du texte grec et commentaire de la recension grecque longue,
+suivie de la traduction des Testaments d' Abraham, d’Isaac et de Jacob d’après
+les versions orientales (StVTPs 2), Leiden, 1973; — F. SCHMIDT, Testament d'Abraham, in A. DUPONT-SOMMER — M. PHILONENKO, p.
+1647-1690 (translatio recensionis longioris).
+
+Translatio germanica: E. JANSSEN, Testament Abrahams, in
+JSHRZ III, 2, Gütersloh, 1975, p. 193-256 (translatio ambarum recensionum).
+
+Translatio hispanica: L. VEGAs MONTANER, Testamento de
+Abrahán, in A. Diez MACHO, V, p. 439-527.
+
+Concordantia:
+A.-M. Dents, Concordance grecque des Pseudépigraphes d' Ancien. Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione F. Schmidt).
+
+Versio coptica
+
+Notae:
+
+(1) Opus hoc «Dubium» Athanasii Alexandrini habetur (cf. CPG
+2183).
+
+(2) De colligationibus inter uersionem sahidicam et bohairicam,
+uide P. NAGEL, Zur sahidischen Version des Testamentes Isaaks, in Wissenschaftliche Zeitschrift der Martin-Luther-Universitit Halle-Wittenberg 12 (1963), p. 259-263.
+
+Cod.: Codex Köln, Institut für Altertumskunde, P. Inv. Nr.
+3221, saec. v (textus sahidicus), continet excerpta e Testamento Adae,
+Testamento Abrahae et Testamento Job: cf. C. RÖMER - HJ. THISSEN,
+P. Kóln Inv. Nr. 3221: Das Testament des Hiob in koptischer Sprache. Ein
+Vorbericht, in M.A. KNIBB - P.W. van DER HORST, Studies on the
+Testament of Job (Society for New Testament Studies. Monograph Scries), Cambridge, 1989, p. 33-45, praesertim p. 34.
+
+I. GUIDI, Il testo copto del Testamento di Abramo, in Rendiconti
+della reale accademia dei Lincei, classe di scienze morali, storiche
+e filologiche V, 9, Roma, 1900, p. 157-180, e cod. Città del Vaticano, Bibl. Apost. Vatic., vatic. copt. 61, fol. 148v-163v, an.
+962 (uersio bohairica).
+
+I. Guipi, Il Testamento di Isacco e il Testamento di Giacobbe, in
+Rendiconti della reale accademia dei Lincei, classe di scienze morali, storiche e filologiche V, 9, Roma, 1900, p. 223-264, e cod.
+58 ABRAHAM - ISAAC - JACOB 88
+
+Cittä del Vaticano, Bibl. Apost. Vatic., vatic. copt. 61, fol. 164r-
+189v, an. 962 (uersio bohairica).
+
+K.H. Kuuw, The Sahidic Version of the Testament of Isaac, in
+JThSt 8 (1957), p. 225-239, e cod. New York, Pierpont Morgan
+Libr., copt. 577, fol. 12v-25v, an. 894/895 (uersio sahidica).
+
+Translatio anglica: G. MacRae, The Coptic Testament of Abraham, in G.W.E. NICKELSBURG, Studies on the Testament of Abraham
+(SBL. Septuagint and Cognate Studies 6), Missoula, Montana, 1976,
+p. 327-340; — K.H. KuHN, An English Translation of the Sahidic Version of the Testament of Isaac, in JThSt 18 (1967), p. 325-336; — Ip.,
+The Testament of Isaac, in H.F.D. SPARKS, p. 423-439 (e cod. New
+York, Pierpont Morgan Libr., copt. 577); — Ip., The Testament of Jacob, in H.F.D. SPARKS, p. 441-452 (e cod. Città del Vaticano, Bibl.
+Apost. Vatic., vatic. copt. 61).
+
+Translatio gallica: M. CHAÎNE in M. Detcor, Le Testament
+d'Abraham. Introduction, traduction du texte grec et commentaire de la recension
+grecque longue, suivie de la traduction des Testaments d' Abraham, d' Isaac et de
+Jacob d’après les versions orientales (StVTPs 2), Leiden, 1973, p. 186-213.
+
+Translatio germanica: E. ANDERSSON, Abraham’s Vermächtnis
+aus dem koptischen übersetzt, in Sphinx 6 (1903), p. 220-236; — ID.,
+Isak’s Vermächtnis aus dem koptischen übersetzt, in Sphinx 7 (1904), p.
+77-94; — Ip., Jacob's Vermächtnis aus dem koptischen übersetzt, in
+Sphinx 7 (1904), p. 129-142.
+
+"Translatio hispanica: G. ARANDA PÉREZ, Testamento de Isaac, in
+
+A. Diez MACHO, V, p. 277-303; — Ip., Testamento de Jacob, in A.
+Diez MACHO, V, p. 305-322.
+
+Versio arabica (e coptico)
+
+Codd.: G. Gnar, I, p. 204; II, p. 486; — F. SCHMIDT, Le Testament grec d'Abraham..., p. 42-43; — W. LESLAU, Falasha Anthology,
+translated from Ethiopic Sources (Yale Judaica Series 6), New Haven,
+1951, p. 177, n. 8; — U. ZANETTI, Les manuscrits de Dair Abù Magar.
+Inventaire (Cahiers d'Orientalisme 11), Genève, 1986, p. 60 et 62:
+Monastère de Saint-Macaire, n° 404 (= Hag. 38), saec. xv, et n? 410
+(= Hag. 44), an. 1735.
+
+H. ZOTENBERG, Catalogue des manuscrits ethiopiens ( Gheez et Amharique) de la Bibliothéque nationale, Paris, 1877, p. 200-203, e cod.
+Paris, Bibl. Nat. de France, arab. 132, fol. 2r-24, an. 1629 (Testamentum Abrahae, "Testamentum Isaac et Testamentum Jacob) (excerpta).
+
+Translatio anglica: W.E. BARNES in M.R. JAMES, The Testament of Abraham. The Greek text now first edited with an introduction and
+88 ABRAHAM - ISAAC - JACOB $9
+
+notes. With an appendix containing extracts from the Arabic version of the
+Testaments of Abraham, Isaac and Jacob (Texts and Studies II, 2), Cambridge, 1892, p. 135-139 (excerpta e cod. Paris.); — W.F. STINES-
+PRING, Testament of Isaac (Second Century A.D.), A New Translation and
+Introduction, in J.H. CHARLESWORTH, I, p. 903-911 (translatio integra
+e cod. Paris.); — Ip., Testament of Jacob (Second to Third Century A.D. ?).
+A New Translation and Introduction, in J.H. CHARLESWORTH, I, p. 913-
+918 (translatio integra e cod. Paris.).
+
+Translatio gallica: M. CHAÎNE - P. Margars in M. DELCOR,
+Le Testament d' Abraham. .., p. 242-267 (translatio integra e cod. Paris.:
+Testamentum Abrahae, Testamentum Isaac et "Testamentum Jacob).
+
+Versio aethiopica (ex arabico)
+
+Nota: Exstant duae recensiones (recensio Falachaeorum, recensio
+christiana).
+
+Noua editio paratur a M. GAGUINE, e cod. Cambridge, Univ.
+Libr., Or. 1878, fol. 5r-20r, saec. XIX, et quinque aliis codicibus.
+
+Recensio Falachaeorum
+
+Codd.: Paris, Bibl. Nat. de France, Abbadie 107, fol. 20v-26v,
+saec. XIX (tantum Testamentum Abrahae); Cambridge, Bibl. Univ.,
+Or. 1878, fol. 5-44r, saec. xix ; Tel Aviv, Bibl. Faitlovitch 9, fol. 6v-
+59; 10, fol. 5-60v; 12, fol. 1-32v; 13, fol. 11-52.
+
+C. Conti Rossini, Nuovi appunti sui Giudei d’Abissinia, in
+Rendiconti della reale accademia nazionale dei Lincei, classe di
+scienze morali, storiche e filologiche V, 31, Roma, 1922, p. 221-
+240, e cod. Paris, Bibl. Nat. de France, Abbadie 107, fol. 20v-
+26r, saec. XIX (tantum Testamentum Abrahae).
+
+A.Z. AESCOLY, Recueil de textes falachas. Introduction. Textes
+éthiopiens (édition critique et traduction). Index (Université de Paris.
+Travaux et mémoires de l'Institut d’ethnologie 55), Paris, 1951,
+Pp. 49-66, ex eodem cod.
+
+Cf.: M. GAGUINE, The Falasha version of the Testaments of Abraham,
+Isaac and Jacob. À critical study of five unpublished mss. with introduction,
+translation and notes (Unpublished Diss. of the University of Manchester, 1965).
+
+Translatio gallica: S. KAPLAN, Les Faláshás (Fils d’ Abraham),
+Turnhout, 1990, p. 84-97, e quodam cod. priuato.
+60 ABRAHAM - ISAAC - JACOB 88
+
+Recensio christiana
+
+Codd.: Paris, Bibl. Nat. de France, éth. 58 (Zotenberg 134), fol.
+1-$r, saec. XV; Gunda Gundie 67, fol. 21-74; Gunda Gundie 142, fol.
+1-40v; Città del Vaticano, Bibl. Apost. Vatic., vatic. aeth. 279, 6 fol.,
+saec. XV (continet tantum finem Testamenti Jacob). A. CAQUOT, Une
+homélie éthiopienne attribuée à Saint Mari Éphrem sur le séjour d' Abraham et
+Sara en Égypte, in Mélanges Antoine Guillaumont. Contributions à l'étude
+des christianismes orientaux (Cahiers d'Orientalisme 20), Genéve, 1988,
+p. 173-185, praesertim p. 173: Dabra Seyon, fol. 5-10, saec. xv”.
+
+A.Z. AgScoLy, Recueil de textes falachas. Introduction. Textes
+éthiopiens (édition critique et traduction). Index (Université de Paris.
+Travaux et mémoires de l'Institut d'ethnologie 55), Paris, 1951,
+p. 66-75, e cod. Paris, Bibl. Nat. de France, éth. 58 (continet tantum Testamentum Abrahae).
+
+Translatio gallica: M. CHAÎNE - A. CAQUOT in M. DELCOR,
+
+Le Testament d' Abraham..., p. 214-241 (Testamentum Abrahae, Testamentum Isaac et Testamentum Jacob).
+
+Versio slauica et rumaena (e recensione breuiori graeca)
+
+Cf.: E. Kozak, Bibliographische Übersicht der biblisch-apokryphen Literatur bei den Slaven, in Jahrbücher für protestantische Theologie 18
+(1892), p. 127-158, praesertim p. 135; — É.TURDEANU, Le Testament
+d'Abraham en slave et en roumain, in Oxford Slavonic Papers 10
+(1977), p. 1-38 (= É. TURDEANU, Apocryphes slaves et roumains, p.
+201-238) (ubi codices).
+
+G. Porívka, Die apokryphische Erzählung vom Tode Abrahams,
+in Archiv für slavische Philologie 18 (1896), p. 118-125, e cod.
+Moscou, Bibl. Publ. 27 (coll. Sevast'anov), fol. 1r-6r, saec. XIII.
+
+N.S. TICHONRAVOV, Pamjatniki, I, p. 79-90, e cod. Moscou,
+Trin. S. Serge 730, fol. 2r-10v, saec. XVI.
+
+I. FRANKO, Apokrifi i legendi z ukrains’kih mkopisiv, IV, L'vov,
+1906, p. 104-108, e quodam cod. Ujhorod, saec. x vii.
+
+V. Jacı6, Prilozi k historiji knjiZevnosti naroda hrvatskoga i srbskoga, Zagreb, 1868, p. 25-27, e fragmentis croaticis an. 1468.
+
+R. STROHAL, Stare hrvatske apokrifne price i legende, Bjelovar,
+1917, p. 57-60, e cod. Zagreb, Bibl. Acad. croate IV. a. 120
+(fragmentum).
+
+P.A. Lavrov, Apoknificeskie Teksty, Saint-Pétersbourg, 1899,
+p. 78-81 e cod. Athos, Hagiou Pavlou 109, saec. xv.
+89 ABRAHAM - ISAAC - JACOB 6I
+
+V. Jacic, Prilozi k historiji knjiZevnosti naroda hrvatskoga i srbskoga, Zagreb, 1868, p. 22-24, e fragmento an. 1520; — et iterum
+M. RESETAR, Libro od mnozijeh razloga. Dubrovacki ärilski zbornik
+od god. 1520, in Zbornik za istoriju, jezik i knjizevnost srpskog
+naroda 15 (1926), p. 57-59.
+
+B. PETRICEICU-HASDEU, Cärtile poporane ale Romänilor ín secolul XVI, Bucarest, 1879, p. 189-194, e quodam cod. saec. XVI.
+
+N.A. Nacov, in Sbornik za narodni umotvorenija, nauka i
+kniznina 8 (1892), p. 411-413 e quodam cod. saec. xv; — et iterum B. ANGELOV - M. GENov, Stara bälgarska literatura (IX-XHI
+v.) v priméri, prévodi i bibliografija, Sofia, 1922, p. 194-196.
+
+M. GASTER, The Apocalypse of Abraham, From the Roumanian
+Text, Discovered and "Translated, in Transactions of the Society of
+Biblical Archaeology 9 (1887), p. 195-226.
+
+Translatio anglica: D.S. Cooper - H.B. WEBER, The Church
+Slavonic Testament of Abraham, in G.W.E. NICKELSBURG, Studies on
+the Testament of Abraham (SBL. Septuagint and Cognate Studies 6),
+Missoula, Montana, 1976, p. 301-326.
+
+Translatio gallica: A.Z. AESCOLY, Recueil de textes falachas. Introduction. Textes éthiopiens (édition critique et traduction). Index (Université
+de Paris. Travaux et mémoires de l'Institut d'ethnologie 55), Paris,
+1951, p. 77 (translatio fragmenti ex editione M. Gaster).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vita Adae — CAVT-002 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Vita Adae (CAVT-002)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-002</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-002</span>
+          <span class="badge badge-lang">Multi/Other</span>
+          <span class="badge badge-lang">CAVT 2</span>
+          
+        </div>
+        <h1 class="stub-title">Vita Adae</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ADAM
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=AdamEve.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/AdamEve.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-002</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 2</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 4 (Primary Adam Literature (Vita Adae))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:249-295 (Vita Adae)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:123-154 (Vita Adae et Evae)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 141-167 (Vita Adae)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>The <em>Life of Adam and Eve</em> narrates the lives of Adam and Eve after their expulsion from Paradise: their penitence, Seth's journey to Paradise for oil from the tree of mercy, Adam's death and burial, and Eve's account of the fall.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <p>The Greek version (often called the Apocalypse of Moses) and the Latin, Armenian, Georgian and Slavonic versions differ widely. The date and origin of the primary Adam literature remain debated: M.D. Johnson (OTP 2) argued for a Jewish original of c. 100 BCE–200 CE, while others regard the work as Christian, of the 2nd–4th c. CE.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The <em>Primary Adam Literature</em> encompasses a multifaceted cycle of closely related Jewish and Christian narratives recounting the creation, fall, penance, death, and burial of the protoplasts Adam and Eve. The literature is extant in six principal ancient and medieval versions:</p>
+<h4 class="stub-heading">A. Greek Apocalypse of Moses (<em>Apocalypsis Mosis</em> / Greek Life of Adam and Eve [<em>GLAE</em>])</h4>
+<ul class="stub-list">
+<li><strong>Primary Witnesses</strong>:</li>
+<li><strong>A₁</strong>: Venice, Biblioteca Nazionale Marciana, cod. Marcianus gr. VII 22 (11th c.).</li>
+<li><strong>B</strong>: Vienna, Österreichische Nationalbibliothek, cod. theol. gr. 237 (13th/14th c.).</li>
+<li><strong>C</strong>: Vienna, ÖNB, cod. theol. gr. 247 (14th c.).</li>
+<li><strong>D</strong>: Milan, Biblioteca Ambrosiana, cod. C 210 inf. (13th c.) — ed. A. M. Ceriani (1868).</li>
+<li>Additional witnesses: Paris gr. 1313, Paris Suppl. gr. 162.</li>
+</ul>
+<h4 class="stub-heading">B. Latin Life of Adam and Eve (<em>Vita Adae et Evae</em>)</h4>
+<ul class="stub-list">
+<li><strong>Classification</strong>: Divided by Wilhelm Meyer (1878) into four manuscript classes spanning the 9th to 15th centuries across Continental Europe (especially Munich Bayerische Staatsbibliothek: Clm 4807, Clm 5601, Clm 8470, Clm 13002) and England (12 Insular MSS classified by J. H. Mozley 1928–1929; analyzed by J.-P. Pettorelli 1999).</li>
+<li>Notable for interpolations such as the <strong>Fall of Satan</strong> (chs. 12–16) and the quest of Seth for the <strong>Oil of Mercy</strong>.</li>
+</ul>
+<h4 class="stub-heading">C. Armenian Version (<em>The Penitence of Adam</em> / <em>Book of Adam</em>)</h4>
+<ul class="stub-list">
+<li>Discovered in the Library of the Mechitharist Congregation of San Lazzaro (Venice) and the Matenadaran (Yerevan), edited critically by Michael E. Stone (CSCO 429–430, 1981). Closer than the Greek or Latin to the lost archetype in its preservation of the penance in the rivers.</li>
+</ul>
+<h4 class="stub-heading">D. Georgian Book of Adam (<em>K‘art‘uli versia</em>)</h4>
+<ul class="stub-list">
+<li>Preserved in 16th/17th-century manuscripts (Tbilisi S-354 and H-1691), critically studied and translated by J.-P. Mahé (1981) and C. Kurtsikidze (1964). Parallels the Armenian text very closely.</li>
+</ul>
+<h4 class="stub-heading">E. Slavonic Life of Adam and Eve (<em>Slovo o Adame i Eve</em>)</h4>
+<ul class="stub-list">
+<li>Transmitted in Serbian, Russian, and Bulgarian redactions embedded in <em>Palea</em> collections, edited by V. Jagić (1893), N. S. Tikhonravov (1863), and I. Franko (1896–1910). Includes the related Bohemian (Old Czech) vernacular fragment.</li>
+</ul>
+<h4 class="stub-heading">F. Coptic Fragments</h4>
+<ul class="stub-list">
+<li>Sahidic and Fayyumic papyri preserving portions of the <em>Vita</em> and <em>Apocalypse of Moses</em> (Manchester John Rylands Coptic MS 84, ed. W. E. Crum 1909; Berlin Papyrus 181, ed. J. Leipoldt 1904).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h3>Greek Text</h3>
+<ul class="bibliography">
+<li>Johannes Tromp, <em>The Life of Adam and Eve in Greek: A Critical Edition</em> (PVTG 6; Leiden: Brill, 2005). </li>
+<li class="annotation">** Now the best available text.</li>
+<li>John R. Levison, <em>Texts in Transition: The Greek Life of Adam and Eve</em> (SBLEJL 16; Atlanta: Society of Biblical Literature, 2000). </li>
+<li class="annotation">** While not exactly a critical edition, Levison's volume presents four distinct text forms in running form, arranged in parallel columns.</li>
+<li>G. A. Anderson and M. E. Stone, <em>A Synopsis of the Books of Adam and Eve </em>(Rev. ed.; SBLEJL 5; Atlanta: Society of Biblical Literature, 1999). </li>
+<li class="annotation">** A convenient edition which presents the Greek and Latin texts side-by-side, along with translations of the Armenian, Georgian, and Slavonic. The Greek text is that of Nagel (repr. in Denis). </li>
+<li>Thomas Knittel, <em>Das griechische 'Leben Adams und Evas'</em> (TSAJ 88; Tübingen: Mohr Siebeck, 2002). </li>
+<li class="annotation">** Includes critical editions of selected passages which together make up the bulk of the <em>Life of Adam and Eve</em> (5-28; 31-37; 41:1-42:2). Heavily dependent on Nagel's text. </li>
+<li>D. A. Bertrand, <em>La Vie grecque d'Adam et Eve</em> (Recherches intertestamentaires 1; Paris, 1987). </li>
+<li class="annotation">** A true critical edition of the Greek text. Intensively eclectic, geared largely toward producing a smooth, translatable text. </li>
+<li><span class="annotation">Denis, <em>Concordance</em>, 815-18. </span></li>
+<li class="annotation">** Prints the provisional text produced by M. Nagel. While this text was a major step forward from Tischendorf's edition, it was never intended to represent the earliest form of the <em>Life of Adam and Eve</em>. Nagel included several passages which he considered clearly secondary, keeping in mind the need for a concordance to include the fullest possible text. Nagel was killed in 1984 before completing his planned critical edition. </li>
+<li>J. L. Sharpe, "Prolegomena to the Establishment of the Critical Text of the Greek Apocalypse of Moses" (2 vols.; Ph.D. diss., Duke University, 1969). </li>
+<li class="annotation">** Includes a collation of readings from a large number of manuscripts. Unfortunately these are presented as "alterations" to Tischendorf's flawed text. This work was the basis of Johnson's translation in the <em>OTP</em>. </li>
+<li>M. R. James, <em>Apocrypha Anecdota: A Collection of Thirteen Apocryphal Books and Fragments, Now First Edited from Manuscripts</em> (T&amp;S 2.3; Cambridge, UK: Cambridge University Press, 1893), 138-145. </li>
+<li>A. M. Ceriani, "Apocalypsis Moysi in medio mutila," in <em>Psuscula et fragmenta miscella magnam partem apocrypha. Monumenta sacra et profana</em> 5 (Milano, 1868), 19-24.</li>
+<li class="annotation">**Includes a transcript of ms D. </li>
+<li>Tischendorf, C. von, <em>Apocalypses apocryphae Moses, Esdrae, Pauli, Iohannis, item Mariae dormitio, additis evangeliorum et actuum apocryphorum supplementis</em> (Leipzig, 1866; repr. Hildesheim, 1966), x-xii, 1-23. </li>
+<li class="annotation">** A seriously flawed critical text. Tischendorf's running text is based almost entirely on one ms (a) which he seems to have selected more-or-less at random and which is not now considered particularly reliable as a witness of an early text form. Tischendorf's apparatus is also unreliable, particularly since he confused the readings of mss b and c.</li>
+</ul>
+<h3>Latin Text</h3>
+<ul class="bibliography">
+<li>G. A. Anderson and M. E. Stone, <em>A Synopsis of the Books of Adam and Eve </em>(Rev. ed.; SBLEJL 5; Atlanta: Society of Biblical Literature, 1999). </li>
+<li class="annotation">** A convenient edition which presents the Greek and Latin texts side-by-side, along with translations of the Armenian, Georgian, and Slavonic. The Latin text is that of Lechner-Schmidt. </li>
+<li>A.-M Denis, ed., <em>Concordance latine des pseudépigraphes d’Ancien Testament</em>. <em>Concordance, corpus des textes, indices</em> (Corpus christianorum. Thesaurus patrum latinorum. Supplementum; Turnhout: Brepols, 1993), 545-552. </li>
+<li class="annotation">** Reprints the text of Meyer. </li>
+<li>W. Lechner-Schmidt, <em>Wortindex der lateinisch erhaltenen Pseudepigraphen zum Alten Testament</em> (Texte und Arbeiten zum Neutestamentlichen Zeitalter 3; Tübingen: Francke, 1990), 233-239. </li>
+<li class="annotation">** A new edition of the Latin which remains substantially similar to the text of Meyer. </li>
+<li>J.H. Mozley, “The ‘Vita Adae’,” <em>Journal of Theological Studies</em> 30 (1928-1929): 121-149. </li>
+<li class="annotation">** Based primarily on one 14th century manuscript (Arundel 326). Although Mozley’s apparatus notes variant readings found in other Latin manuscripts located in Britain, his printed text departs from readings found in the Arundel manuscript only about 14 times.</li>
+<li>W. Meyer, “Vitae Adae et Evae,” <em>Abhandlungen der königlich bayerischen Akademie der Wissenschaften, Philosophische-philologische Klasse</em> 14.3 (1878): 185-220. </li>
+<li class="annotation">** Based primarily on manuscripts found in Munich, the oldest of which is dated to the ninth century. This remains the edition most commonly cited by scholars. </li>
+</ul>
+<p>For further bibliography, see DiTommaso, <em>Bibliography</em>, 163-96.</p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Vita Adae
+
+Nota: W. ADLER in M.E. STONE, À History, p. 87 (adn. 13) censet Georgium Syncellum significare uel opus sui generis uel probabilius Librum Jubilaeorum (cf. m, 1-[9]13); ^ A.-M. Denis, ILRJH, ad
+loc.
+
+Opus hoc testatur Georgius Syncellus, Ecloga Chronographica:
+cf. G. DINDORF, Georgius Syncellus et Nicephorus Cp. (Corpus
+Scriptorum Historiae Byzantinae 20-21), Bonn, 1829, I, p. 7,
+l. 11-12, e cod. Paris, Bibl. Nat. de France, gr. 1711, fol. 1-230,
+8 ADAM 3
+
+an. IO21; — A.A. MOSSHAMMER, Georgii Syncelli Ecloga Chronographica (Bibliotheca Scriptorum Graecorum et Romanorum
+Teubneriana), Leipzig, 1984, p. 4, l. 21-22, e 12 codd.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

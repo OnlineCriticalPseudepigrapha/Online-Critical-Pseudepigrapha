@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apocalypsis Baruch syriaca — CAVT-233 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Apocalypsis Baruch syriaca (CAVT-233)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-233</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-233</span>
+          <span class="badge badge-lang">Syriac</span>
+          <span class="badge badge-lang">CAVT 233</span>
+          
+        </div>
+        <h1 class="stub-title">Apocalypsis Baruch syriaca</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=2Bar.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/2Bar.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-233</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 233</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 9 (2 Baruch (Syriac Apocalypse of Baruch))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:615-652 (2 Baruch / Syriac Apocalypse)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:470-526 (2 Baruch)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 835-895 (2 Baruch)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>Most scholars conclude the Apocalypse of Baruch (2 Baruch) is a Jewish composition from the regions in or around Judea, written around the end of the first century CE (see discussion below).</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <h3>Date</h3>
+<p>2 Baruch is a pseudepigraphal work written from the perspective of Baruch, the scribe of Jeremiah, and set around the time of the destruction of Solomon's Temple in 586 BCE. However, it is clear that 2 Baruch presupposes the destruction of Jerusalem in 70 CE (cf. 32.2-4), and that the author was primarily concerned with the theological and pastoral implications of the destruction of the Second Temple. Nickelsburg rightly indicates that the author of 2 Baruch is still "deeply grieved by the events of the year 70" (Jewish Literature, 283).</p>
+<p>It is more difficult to determine when, after 70 CE, 2 Baruch was written. The vague reference in 28.2 to the ‘calculation of time in two parts’ pertaining to ‘weeks of seven weeks’ is too vague to be of much value (see L. Gry, “Date de la fin des temps, scion les révélations ou les calcula du Pseudo-Philo et de Baruch [Apocalypse syriaque],” RB 48 [1939]: 337-56). There is also an affinity between 2 Baruch 61.7 and Barnabas 11.9 (written between 117 and 132 CE?), though this may be due to both authors' use of a common source.</p>
+<p>Another factor relevant to the dating of 2 Baruch is the document's evidently close relationship with 4 Ezra. Unfortunately, the date of 4 Ezra is itself uncertain (see G. H. Box, “IV Ezra,” APOT 2.553-54). Moreover, while interdependence between the two documents is almost certain, the nature, extent, and order of this interdependence is disputed (Nickelsburg). Although 2 Baruch and 4 Ezra share significant overlaps in content, there are broad thematic differences in their treatment of this common material. Whereas 4 Ezra educes a careful theodicy in response to the tragedy of the temple's destruction, the concerns evident in 2 Baruch are more “pastoral and practical,” addressing matters of consolation and exhortations toward reconstruction (Nickelsburg, Jewish Literature, 283). This ambiguous situation has produced four main suggestions over the past century as to the (inter)relationship of the two apocalypses:</p>
+<ol>
+<li>4 Ezra was dependent on 2 Baruch (see list on Bogaert, L'Apocalypse, 1.26);</li>
+<li>2 Baruch was dependent on 4 Ezra (see list on Bogaert, L'Apocalypse, 1.26; Box, APOT 2:553; Metzger, OTP 2:522);</li>
+<li>both were dependent on a common source (Klijn, Arabic Text, 620);</li>
+<li>we cannot determine the direction of the dependence (Charles, APOT 2:477; Michael E. Stone, Fourth Ezra [Minneapolis : Fortress Press, 1990], 39).</li>
+</ol>
+<p>For a complete, updated discussion, see Nickelsburg, Jewish Literature, 283-85 and see the bibliography below for research between 1999 and 2006.</p>
+<p>Some would see this cumulative, though tenuous, evidence to point to a date for 2 Baruch in the first or second decade of the second century CE (Klijn, Arabic Text, 617). Others argue that the document was written toward the end of the first century (Nickelsburg, Jewish Literature, 283), perhaps in 96 CE specifically (Bogaert, L'Apocalypse, 1.294-95; cf. also Nicolae Roddy, “‘Two Parts: Weeks of Seven Weeks’: The End of the Age as Teminus ad Quem for 2 Baruch,” JSP 14 [1996] 3–14).</p>
+<h3>Locale</h3>
+<p>2 Baruch was probably written in Judea, Galilee, or a neighbouring region. The original language of the document was most likely Hebrew or Aramaic, and the work shows affinities with later rabbinic literature originating from the land of Israel (Klijn, Arabic Text, 617). The author of 2 Bar. also seems to identify himself with the inhabitants of Palestine who have survived the Roman onslaught, and it is from this standpoint that he exhorts the Jews of the Diaspora in the epistle (Klijn, Arabic Text, 617).</p>
+<h3>Cultural and Historical Context</h3>
+<p>According to J. E. Wright, “The overall goal of 2 Baruch is to promote obedience to God’s commandments as the way to survive in difficult times” (“Baruch, Books of,” DNTB, 148-151). The book, somewhat like 4 Ezra, is the author’s attempt both to make theological sense of the destruction of Jerusalem in 70 CE, and to exhort Israel to remain faithful to her God in hope of restoration. It is widely agreed that 2 Bar. was originally composed in non-Christian Jewish circles, and the contention that it is instead a Christian composition (Nir, Destruction of Jerusalem, passim) has not found much support. Nonetheless, 2 Bar. is a "Christian text" in the sense that it was adopted and preserved within Christian circles for much of its transmission history.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <table>
+<tbody><tr>
+<td>
+<h3>Language</h3>
+</td>
+<td>
+<h3>MS</h3>
+</td>
+<td>
+<h3>Date</h3>
+</td>
+<td>
+<h3>Contents</h3>
+</td>
+</tr>
+<tr>
+<td rowspan="5">Syriac</td>
+<td>7aI, Milan, Bibliotheca Ambrosiana MS B.21 Inf. (fols. 257a-265b)</td>
+<td>6th-7th century CE</td>
+<td>complete&nbsp;(where the ms exhibits corrections, 7aI* and 7aI1 designate the hands of the first and second correctors respectively)</td>
+</tr>
+<tr>
+<td>Jacobite lectionary: 1312, London, British Museum, Addit. MS 14.686</td>
+<td>1255 CE</td>
+<td>44.9-15</td>
+</tr>
+<tr>
+<td>Jacobite lectionary: 1313, London, British Museum, Addit. MS 14.687</td>
+<td>1256 CE</td>
+<td>72.1-73.2 (twice)</td>
+</tr>
+<tr>
+<td>Jacobite lectionary: 1515, Papakuda (in Kerala, India), A. Konath Libr., MS 77</td>
+<td>1423 CE</td>
+<td>44.9-15; 72.1-73.2</td>
+</tr>
+<tr>
+<td colspan="2">The epistle (chapter 78-88) is attested in a further 36 Syriac mss (see Whitters,&nbsp;<em>Epistle</em>, 4-12, 15-18).</td>
+<td>chapters 78-87</td>
+</tr>
+<tr>
+<td>Greek</td>
+<td>P. Oxy. 403</td>
+<td>4th-5th century CE</td>
+<td>12.1-13.2 (verso, i.e. against the fibres); 13.11-14.3 (recto, i.e. along the fibres)</td>
+</tr>
+<tr>
+<td>Arabic</td>
+<td colspan="2">One ms. See P. S. van Koningsveld, “An Arabic Manuscript of the Apocalypse of Baruch,”&nbsp;<a><em>JSS</em></a>&nbsp;6 (1975) 205-7.</td>
+<td>complete</td>
+</tr>
+</tbody></table>
+<p><span>In addition to these manuscripts,&nbsp;<em>2 Baruch</em>&nbsp;is attested in Latin in a single quotation in Cyprian,&nbsp;<em>Test.</em>&nbsp;3.29 (quoting&nbsp;<em>2 Bar.</em>&nbsp;48:36, 33-34).In the Syriac text, the following sigla indicate the scholarly sources for conjectural emendations:</span></p>
+<table>
+<tbody><tr>
+<td>Bog</td>
+<td>P. Bogaert,&nbsp;<em>Apocalypse de Baruch, introduction, tradition du Syriaque et commentaire</em>&nbsp;(<a>SC</a>&nbsp;144 and 145; Paris: Cerf, 1969).</td>
+</tr>
+<tr>
+<td>CerI</td>
+<td>A. M. Ceriani, "Apocalypsis Baruch (notae criticae)" in&nbsp;<em>Monumenta sacra et profana</em>&nbsp;(Tomus I, fasc. 2; Mediolani, 1866), I-III.</td>
+</tr>
+<tr>
+<td>CerII</td>
+<td>A. M. Ceriani, "Apocalypsis Baruch Syriace" in&nbsp;<em>Monumenta sacra et profana</em>&nbsp;(Tomus V, fasc. 2; Mediolani, 1871), 113-167.</td>
+</tr>
+<tr>
+<td>CerIt</td>
+<td>A. M. Ceriani, "Apocalypsis Baruch, olim de graeco in syriacum, et nunc de syriaco in latinum translata" in<em>Monumenta sacra et profana</em>&nbsp;(Tomus I, fasc. 2; Mediolani, 1866), 73-95.</td>
+</tr>
+<tr>
+<td>ChaI</td>
+<td>R. H. Charles,&nbsp;<em>The Apocalypse of Baruch Translated from the Syriac</em>&nbsp;(London: 1896).</td>
+</tr>
+<tr>
+<td>ChaII</td>
+<td>R. H. Charles, "II Baruch. I. The Syriac Apocalypse of Baruch," in&nbsp;<em>The Apocrypha and Pseudepigrapha of the Old Testament</em>, vol. 2 (Oxford: 1913), 470-521.</td>
+</tr>
+<tr>
+<td>Dedering</td>
+<td>Dedering, S.&nbsp;<em>Apocalypse of Baruch</em>&nbsp;(Peshitta Institute, The Old Testament in Syriac, Part IV, Fasc. 3; Leiden: Brill, 2003).</td>
+</tr>
+<tr>
+<td>Gress</td>
+<td>H. Gressmann, pp. 344-350 in B. Violet,&nbsp;<em>Die Apokalypsen des Esra und des Baruch in deutscher Gestalt</em>(<a>GCS</a>&nbsp;32; Leipzig: Hirichs, 1924).</td>
+</tr>
+<tr>
+<td>Kabisch</td>
+<td>Kabisch,&nbsp;<em>Jahrbücher für protestantische Theologie</em>&nbsp;18 (1892).</td>
+</tr>
+<tr>
+<td>Kmo</td>
+<td>M. Kmoskó, "Liber Apocalypseos Baruch filii Neriae translatus de graeco in syriacum" in&nbsp;<em>Patrologia Syriaca</em>(Pars prima, Vol. 2; Paris, 1907), cols 1056-1207.</td>
+</tr>
+<tr>
+<td>Ryss</td>
+<td>V. Ryssel, "Die syrische Baruchapokalypse" in&nbsp;<em>Die Apokryphen und Pseudepigraphen des Alten Testaments</em>&nbsp;(vol. 2; ed. E. Kautzsch; Tübingen, 1900), 404-442.</td>
+</tr>
+<tr>
+<td>Schu</td>
+<td>F. Schulthess, “In recensione libri R. H. Charles supra laudati,”&nbsp;<em>Theologische Literaturzeitung</em>&nbsp;22 (1897): 238-41.</td>
+</tr>
+<tr>
+<td>Viol</td>
+<td>B. Violet,&nbsp;<em>Die Apokalypsen des Esra und des Baruch in deutscher Gestalt</em>&nbsp;(<a>GCS</a>&nbsp;32; Leipzig: Hinrichs, 1924).</td>
+</tr>
+<tr>
+<td>Zimm</td>
+<td>F. Zimmermann, “Translation and Mistranslation in the Apocalypse of Baruch” in&nbsp;<em>Studies and Essays in Honour of Abraham A. Neuman</em>&nbsp;(ed. M. Ben-Horin, et al.; Leiden: Brill, 1962), 580-87.</td>
+</tr>
+</tbody></table>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h3>Print Editions</h3>
+<h4>Syriac Text</h4>
+<ul class="bibliography">
+<li>S. Dedering, <em>Apocalypse of Baruch</em> (Peshitta Institute, The Old Testament in Syriac, Part IV, Fasc. 3; Leiden: Brill, 1973).</li>
+<li class="annotation">** This is the standard print edition of the Syriac, which is also the basis for the Syriac text of this <em>OCP</em> edition. Dedering transcribes manuscript 7aI, providing some conjectural emendations and alternate readings in an apparatus.</li>
+<li>A. M. Ceriani, "Apocalypsis Baruch (notae criticae)" in <em>Monumenta sacra et profana</em> (Tomus I, fasc. 2; Mediolani, 1866), p. I-III.</li>
+<li>A. M. Ceriani, "Apocalypsis Baruch, olim de graeco in syriacum, et nunc de syriaco in latinum translata" in <em>Monumenta sacra et profana</em> (Tomus I, fasc. 2; Mediolani, 1866), p. 73-95.</li>
+<li>A. M. Ceriani, "Apocalypsis Baruch Syriace" in <em>Monumenta sacra et profana</em> (Tomus V, fasc. 2; Mediolani, 1871), p. 113-167.</li>
+</ul>
+
+<h4>Greek Text (P.Oxy. 404)</h4>
+<ul class="bibliography">
+<li>Denis, <a><em>Concordance</em></a>, 905.</li>
+<li>Denis, <a><em>Fragmenta</em></a>, 118-20.</li>
+<li>B. Violet, <em>Die Apokalypsen des Esra und des Baruch in deutscher Gestalt</em> (3 parts; <a>GCS</a> 32; Leipzig, J. C. Hinrichs, 1923-1924), 219-20, 222-23.</li>
+<li>B. P. Grenfell and A. S. Hunt, ed., <em>The Oxyrhynchus Papyri</em> (vol. 3; London: Egypt Exploration Fund, 1903) 4-7.</li>
+<li class="annotation">** This is the <em>editio princeps</em> of P.Oxy. 403 from which the other publications above are derived.</li>
+</ul>
+
+<h4>Latin Text</h4>
+<ul class="bibliography">
+<li>A.-M Denis, <a><em>Concordance latine</em></a>, 631.</li>
+<li class="annotation">** Reprints the quotation from R. Weber's edition of Cyprian.</li>
+<li>W. Lechner-Schmidt, <em>Wortindex der lateinisch erhaltenen Pseudepigraphen zum Alten Testament</em> (Texte und Arbeiten zum Neutestamentlichen Zeitalter 3; Tübingen: Francke, 1990), 239.</li>
+</ul>
+
+<h4>Arabic Text</h4>
+<ul class="bibliography">
+<li>A. F. J. Klijn, F. Leemhuis, G. J. H. Van Gelder, eds. <em>The Arabic Text of the Apocalypse of Baruch: Edited and Translated With a Parallel Translation of the Syriac Text</em> (Leiden: Brill, 1986).</li>
+</ul>
+
+<h4>Source for the Text of Cyprian</h4>
+<ul class="bibliography">
+<li>R. Weber, <em>Sancti Cypriani episcopi opera</em> (Corpus christianorum. Series Latina 3; Turnhout: Brepols, 1972), 124.</li>
+</ul>
+
+<h3>Research on <em>2 Baruch</em>, 1999-2006</h3>
+<p>For bibliography up to 1999, see DiTommaso, <a><em>Bibliography</em></a>, 259-82. For post-2006 resources, <a href="https://wwwdbunil.unil.ch/bibil/?MIval=/bi/en/bibilhome&amp;BiMenu=10&amp;BiMain=21&amp;BiTypeRech=5&amp;WINSIZE=50&amp;affiche=2&amp;Submit=1&amp;rech=vedid=2607" rel="nofollow">click here</a> to search for material on <em>2 Baruch</em> on the <a href="https://wwwdbunil.unil.ch/bibil/" rel="nofollow">BiBIL</a> database.</p>
+<ul class="bibliography">
+<li>James R. Davila, <em>The Provenance of the Pseudepigrapha</em> (Supplements to the Journal for the Study of Judaism 105; Leiden: Brill, 2005), 126-31.</li>
+<li>Craig A. Evans, <em>Ancient Texts for New Testament Studies</em> (Peabody, Mass.: Hendrickson, 2005), 36-7.</li>
+<li>George W. E. Nickelsburg, <em>Jewish Literature between the Bible and the Mishnah</em> (2nd ed.; Minneapolis: Fortress, 2005), 277-85.</li>
+<li>Rifka Nir, <em>The Destruction of Jerusalem and the Idea of Redemption in the Syriac Apocalypse of Baruch</em> (SBL – Early Judaism and its Literature; Leiden: Brill, 2003).</li>
+<li>Mark F. Whitters, “Testament and Canon in the Letter of Second Baruch (2 Baruch 78-87).” <em>JSP</em> 12 (2001): 149-63.</li>
+<li>Mark F. Whitters, <em>The Epistle of Second Baruch: A Study in Form and Message</em> (Library of Second Temple Studies 42; Sheffield: Sheffield Academic Press, 2003).</li>
+<li>J. E. Wright, “Baruch, Books of” in <em>Dictionary of New Testament Background</em> (ed. C. A. Evans and S. E. Porter; Downers Grove: InterVarsity Press, 2000), 148-151.</li>
+<li>J. E. Wright, <em>Baruch Ben Neriah: From Biblical Scribe to Apocalyptic Seer</em> (Studies on Personalities of the Old Testament; Columbia: University of South Carolina Press, 2003).</li>
+</ul>
+
+<p>For further bibliography see DiTommaso, <a>Bibliography</a>, 259-82. Or, <a href="https://wwwdbunil.unil.ch/bibil/?MIval=/bi/en/bibilhome&amp;BiMenu=10&amp;BiMain=21&amp;BiTypeRech=5&amp;WINSIZE=50&amp;affiche=2&amp;Submit=1&amp;rech=vedid=2607" rel="nofollow">click here</a> to search on the <a href="https://wwwdbunil.unil.ch/bibil/" rel="nofollow">BiBIL</a> database.</p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>233. Apocalypsis Baruch syriaca (2 Baruch, Epistula
+secunda Baruch)
+
+Cf.: J.-B. Frey, art. Apocryphes de l'Ancien Testament, in DBS I,
+1928, col. 418-423; — F. STEGMÜLLER, n? 113, 20-27; — E. SCHÜRER,
+III, p. 750-756; — A.-M. Dents, ILRJH, ad loc.
+
+De colligationibus inter Apocalypsin Baruch syriacam, Paralipomena
+Jeremiae, Antiquitates biblicas, 4 Esdrae et Fragmentum latinum Apocalypsis
+Baruch syriacae, uide P. BOGAERT, Apocalypse syriaque de Baruch. Introduction, traduction du syriaque et commentaire, I (SC 144), Paris, 1969,
+p. 177-221, 242-269 et 383-385. Vide etiam W. HARNISCH, Verhángnis
+233 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 189
+
+und  Verheissung der Geschichte. Untersuchungen zum Zeitund
+Geschichtsverstándnis im 4. Buch Esra und in der syr. Baruchapokalypse (Forschungen zur Religion und Literatur des Alten und Neuen Testaments
+97), Gôttingen, 1969 et J. HERZER, Die Paralipomena Jeremiae. Studien
+zu Tradition und Redaktion einer Haggada des frühen Judentums (Texte und
+Studien zum Antiken Judentum 43), Tübingen, 1994, p. 33-77.
+
+Versio syriaca (e graeco)
+
+Nota: Traditio manuscripta Apocalypsis, cap. I-LXXVII, cernenda
+est a traditione manuscripta Epistulae, cap. LXXVIU-LXXXVI, quam
+multi codices Peshittae etiam tradunt. Vide R.H. CHARLES, The
+Apocalypse of Baruch translated from the Syriac..., London, 1896.
+
+Cod. unicus Apocalypsis: Milano, Bibl. Ambros., syr. B 21 Inf.,
+fol. 257a-267b, saec. vi uel vit (codex continet bis Epistulam Baruch:
+fol. 265b-267a et 176b-177b). Editiones: A.M. CERIANI, Apocalypsis
+Baruch syriace, in Monumenta. sacra et profana, V, 2, Milano, 1871,
+p. 113-180; — ID., Translatio Syra Pescitto Veteris "Testamenti ex codice
+Ambrosiano sec. fere VI photolithographice edita, Milano, 1876-1883, II, 4,
+p. 533-553; — M. Kmosk6, Liber Apocalypseos Baruch filii Neriae translatus de graeco in syriacum, in R. GRAFFIN, Patrologia Syriaca, 1, 2, Paris,
+1907, col. 1056-1207.
+
+W. Baars, Neue Textzeugen der syrischen Baruchapokalypse, in Vetus Testamentum 13 (1963), p. 476-478, repperit tres testes liturgicos
+jacobitos: London, Brit. Libr., Add. 14686, fol. 77a-77b (— 2 Baruch
+XLIV, 9-15), saec. xii; London, Brit. Libr., Add. 14687, fol. 157b-
+158a (= 2 Baruch LXXII, I vxxin, 2) et fol. 175a-176a (= 2 Baruch
+LXXII, I - LXXIII, 2), saec. xiii; Pampakuda (Kerala, India), A. Konath Libr. 77 (= 2 Baruch XLV, 9-15 et LXXII, I - LXXMI, 2), an. 1423.
+
+S. DEDERING, Apocalypse of Baruch, in The Old Testament in
+Syriac according to the Peshitta Version, IV, 3, Leiden, 1973, p. 1-1v,
+1-50 (editio Apocalypsis, Epistula deficiente).
+
+Codices epistulae Baruch: Cf. List of Old "Testament Peshitta Manuscripts, Leiden, 1961, p. 99 et Appendix; — A. MoBERG, Eine syrische
+Masora-Handschrift in der Universitatsbibliothek zu Lund, Lund, 1928
+(Lund, Universitetsbibl., [s. n.], fol. 153b-154b, an. 1204-1205); —
+A. BAUMSTARK, Syrische und syro-arabische Handschriften in Damascus,
+in Oriens Christianus 5 (1905), p. 323 (Damas, Archevéché syrien
+cath. 1 [136], saec. xviii/xrx, deperditus); — Ip., Die literarischen
+Handschriften des jakobitischen Markusklosters in Jerusalem, in Oriens
+Christianus, 2° série 2 (1912), p. 122-123 (Jérusalem, Couvent syrien
+orthodoxe Saint-Marc 1*, saec. xvi/xvir); — J.-M. VOSTÉ, Catalogue
+
+. de la Bibliothèque syro-chaldéenne du Couvent de Notre-Dame des Semences
+près d'Alqosh (Iraq), Rome-Paris, 1929, p. 9 (Algosh, Monastère N.-
+D. des Semences 10, an. 1824; 11, an. 1825; 12, [s. d.]; 13, saec.
+I9O XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 233
+
+xIX); = O. SARAU - W.A. SHEDD, Catalogue of Syriac manuscripts in
+the Library of the Museum Association of Oroomiah College, Urmia, 1898,
+p. 27-28 (Pampakuda [Kerala, India], A. Konath Libr. 6, an. 1887).
+
+M. KMosk6, Epistola Baruch filii Neriae, in R. GRAFFIN, Patrologia Syriaca, 1, 2, Paris, 1907, col. 1208-1237, e cod. Milano,
+Bibl. Ambros., syr. B 21 Inf; — The Old Testament in Syriac according to the Peshitta Version, Leiden (in praeparatione).
+
+Translatio anglica: R.H. CHARLES - L.H. BROCKINGTON, The
+Syriac Apocalypse of Baruch, in H.F.D. Sparks, p. 837-895; — A.F J.
+KLIN, 2 (Syriac Apocalypse of) Baruch (Early Second Century A.D.). A
+New Translation and Introduction, in J.H. CHARLESWORTH, I, p. 615-
+652.
+
+Translatio gallica: P. BOGAERT, Apocalypse de Baruch, introduction, traduction du syriaque et commentaire (SC 144-145), Paris, 1969; —
+J. HADOT, Apocalypse syriaque de Baruch, in A. DUPONT-SOMMER —
+M. PHILONENKO, p. 1471-1557.
+
+Translatio germanica: D. VIOLET, Die Apokalypsen des Esra und
+Baruch (GCS 32), Leipzig, 1924; — A.F.J. KLIJN, Die syrische Baruch-
+Apokalypse, in JSHRZ V, 2, Gütersloh, 1976, p. 103-191 (ex editione
+M. Kmoskö).
+
+Fragmentum graecum (BHG" 237g)
+
+Nota: Vide duas citationes probabiles in Epistula Barnabae, XI, 9
+et XVI, 6 (cf. CPG 1050).
+
+Pap. Oxyrhynchus 403, saec. Iv uel v (uerso = xit, I - XII,
+2; recto = XII, 11-12; XIV, 1-3): B.P. GRENFELL - A.S. Hunt,
+The Oxyrhynchus Papyri, IIl, London, 1903, p. 3-7, n° 403; — et
+iterum R.H. CHARLES in R.H. CHARLES, APOT, p. 487-490;
+— et iterum A.-M. DENIS, Fragmenta pseudepigraphorum quae supersunt graeca (PsVTGr 3), Leiden, 1970, p. 118-120.
+
+Concordantia:
+A.-M. DENIS, Concordance grecque des Pseudépigraphes d’Ancien Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione A.-M. Denis).
+
+Versio arabica (e syriaco)
+
+Codex unicus: Sinaï, Sainte-Catherine, arab. 589, fol. 1r-28v
+[ Apocalypsis Baruch syriaca], 28v-33v [Epistula Baruch], saec. ix/x uel x/
+XI: cf. A.S. ATIYA, The Arabic manuscripts of Mount Sinai. A hand-list
+of the Arabic manuscripts and scrolls microfilmed at the library of the Monastery of St. Catherine, Mount Sinai, Baltimore, 1955 (p. 24). C£ P.S. van
+235 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL I9I
+
+KONINGSVELD, An Arabic Manuscript of the Apocalypse of Baruch, in JS]
+6 (1975), p. 205-207; — F. LEEMHUIS, The Mont Sinai Arabic Version of
+the Apocalypse of Baruch, in K. SAMIR, Actes du Deuxième Congrès International d'Études Arabes Chrétiennes ( Oosterhesselen, septembre 1984)
+(Orientalia Christiana Analecta 226), Roma, 1986, p. 73-79.
+
+F. LEEMHUIS - A.F.J. KLIJN - G.J.H. van GELDER, The Arabic
+Text of the Apocalypse of Baruch. Edited and "Translated with a Parallel
+Translation of the Syriac Text, Leiden, 1986 (Apocalypsis et Epistula).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jannes et Jambres — CAVT-129 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Jannes et Jambres (CAVT-129)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-129</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-129</span>
+          <span class="badge badge-lang">Latin</span>
+          <span class="badge badge-lang">CAVT 129</span>
+          
+        </div>
+        <h1 class="stub-title">Jannes et Jambres</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> MOYSES
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-129</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 129</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 24 (Jannes and Jambres)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:427-442 (Jannes and Jambres)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Apocryphon of Jannes and Jambres</em> (<em>Liber de Ianis et Mambres</em> / Ἰάννης καὶ Ἰαμβρῆς / <em>Poenitentia Iamnis et Mambres</em>) is an ancient Jewish narrative pseudepigraphon composed in Greek in Roman Egypt during the 1st or early 2nd century CE. Expanding upon Exodus 7:11 and the legend of Pharaoh’s court sorcerers who contended with Moses and Aaron, the work tells the dramatic story of the brothers Jannes and Jambres (Mambres), their rivalry with Moses, their fatal humiliation by divine power, and their repentance and post-mortem vision of hell:</p>
+<p class="stub-paragraph">1. <strong>The Magicians’ Challenge and the Egyptian Plagues</strong>: Jannes and Jambres, famed magicians dwelling in Memphis with their aged mother, are summoned to the royal court to counter Moses’ wonders. Although initially able to duplicate the lesser signs through demonic magic, they are stricken by the plagues (boils, darkness), acknowledging the "finger of God."</p>
+<p class="stub-paragraph">2. <strong>The Fatal Sickness and Death of Jannes</strong>: Stricken by a mysterious, incurable wasting disease, Jannes takes to his bed. He opens his secret grimoires and realizes that the divine decree against Egypt is irreversible. Confessing the futility of human sorcery against the God of the Hebrews, Jannes dies in spiritual agony and descends to Hades.</p>
+<p class="stub-paragraph">3. <strong>The Necromancy of Jambres</strong>: Surviving in grief and isolation, Jambres resolves to consult his dead brother. Performing a necromantic ritual with his magical books beside Jannes’ tomb, Jambres summons the shade (<em>eidōlon</em>) of Jannes from the abyss.</p>
+<p class="stub-paragraph">4. <strong>The Ghost’s Testimony from the Underworld</strong>: The shade of Jannes emerges from the underworld and delivers an agonizing monologue. He confirms the absolute justice of God's judgment, describes the terrifying topography of Hades, the relentless torments suffered by the damned, and the inescapable retribution awaiting magicians and idolaters. He implores Jambres to repent and burn their magical books, lamenting that they have forfeited eternal life for fleeting earthly renown.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">Long known only through external patristic citations, New Testament allusions, and a medieval Latin fragment, the actual Greek text was dramatically recovered in the 20th century through major papyrological discoveries:</p>
+<h4 class="stub-heading">A. The Greek Papyri</h4>
+<p class="stub-paragraph">1. <strong>Chester Beatty Papyrus XVI (P. Chester Beatty XVI; Dublin, Chester Beatty Library)</strong>:</p>
+<ul class="stub-list">
+<li>4th-century CE Greek papyrus codex, acquired by Sir Alfred Chester Beatty in Egypt ca. 1930.</li>
+<li>Identified and assembled by Albert Pietersma in the 1970s and 1980s. Preserves approximately 98 fragmentary leaves containing extensive continuous sections of the narrative (Jannes' illness, family laments, death, burial, and Jambres' necromancy).</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Papyrus Vindobonensis Graecus 29456 + 29828 verso (Vienna, Österreichische Nationalbibliothek)</strong>:</p>
+<ul class="stub-list">
+<li>3rd-century CE Greek papyrus roll from Hermopolis; preserves continuous columns from the earlier portion of the apocryphon on the verso of an astronomical text (edited by Pierre Maraval, 1977; reedited by Pietersma, 1994).</li>
+</ul>
+<h4 class="stub-heading">B. The Latin–Old English Bilingual Witness</h4>
+<ul class="stub-list">
+<li><strong>London, British Library, MS Cotton Tiberius B. V, Part 1, fol. 87 (olim 97)</strong>:</li>
+<li>11th-century Anglo-Saxon illustrated miscellany preserving a Latin text with an accompanying interlinear Old English gloss (<em>Poenitentia Iamnis et Mambres</em>).</li>
+<li>Features a famous colored pen drawing depicting Mambres sitting beside a hell-mouth, opening his magic book to summon the fiery, dragon-headed shade of Jannes from the abyss.</li>
+<li>Editions: Cockayne (1861); James (1901); Förster (1902); Biggs & Hall (1996).</li>
+</ul>
+<h4 class="stub-heading">C. Ancient External Attestations</h4>
+<ul class="stub-list">
+<li><strong>New Testament</strong>: 2 Timothy 3:8 ("As Jannes and Jambres opposed Moses, so these men also oppose the truth...").</li>
+<li><strong>Dead Sea Scrolls</strong>: Damascus Document (CD 5:17–19: "Yohana and his brother in their cunning stood up against Moses and Aaron").</li>
+<li><strong>Pagan Sources</strong>: Pliny the Elder (<em>Naturalis Historia</em> 30.11); Apuleius of Madaura (<em>Apologia</em> 90); Numenius of Apamea (<em>apud</em> Eusebius, <em>Praeparatio Evangelica</em> 9.8.1–2).</li>
+<li><strong>Patristic Testimonies</strong>: Origen (<em>Commentarius in Matthaeum</em> 27.9; <em>Contra Celsum</em> 4.51); Ambrosiaster (<em>In 2 Tim 3:8</em>); <em>Decretum Gelasianum</em> (listing the <em>Liber qui appellatur Paenitentia Iamne et Mambre</em> among forbidden apocrypha).</li>
+<li><strong>Rabbinic & Targumic Literature</strong>: b. <em>Menahot</em> 85a (Yohani and Mamre); <em>Exodus Rabbah</em> 9.7; Targum Pseudo-Jonathan on Exod 1:15; 7:11; Num 22:22.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Pietersma, Albert</strong>. <em>The Apocryphon of Jannes and Jambres the Magicians: P. Chester Beatty XVI (with New Editions of Papyrus Vindobonensis Greek inv. 29456 + 29828 verso and British Library Cotton Tiberius B. v. f. 87). Edited, with Introduction, Translation, and Commentary</em>. Religions in the Graeco-Roman World 119. Leiden: Brill, 1994. [The definitive monumental critical edition: provides exhaustive transcriptions, codicological reconstructions, photographic plates, English translation, and exhaustive historical-critical commentary].</li>
+<li><strong>Pietersma, Albert, and R. Trent Lutz</strong>. "Jannes and Jambres." In <em>The Old Testament Pseudepigrapha</em>, edited by James H. Charlesworth, 2:427–442. Garden City, NY: Doubleday, 1985. [Preliminary edition and translation of the Chester Beatty and Vienna papyri].</li>
+<li><strong>Maraval, Pierre</strong>. "Fragments grecs du Livre de Jannès et Jambré (Pap. Vindob. 29456 et 29828 Verso)." <em>Zeitschrift für Papyrologie und Epigraphik</em> 25 (1977): 199–207. [Editio princeps of the Vienna papyrus fragments].</li>
+<li><strong>James, Montague Rhodes</strong>. "A Fragment of the 'Penitence of Jannes and Jambres'." <em>Journal of Theological Studies</em> 2 (1900–1901): 572–577. [Critical edition of BL MS Cotton Tiberius B. V, fol. 87].</li>
+<li><strong>Förster, Max</strong>. "Das lateinisch-altenglische Fragment der Apokryphe von Jamnes und Mambres." <em>Archiv für das Studium der neueren Sprachen und Literaturen</em> 108 (1902): 15–28; and note in 110 (1903): 427.</li>
+<li><strong>Cockayne, Thomas Oswald</strong>. "Mambres magicus." In <em>Narratiunculae Anglice conscriptae</em>, 50–67, 87. London, 1861 [Editio princeps of the Cotton Tiberius fragment].</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Fragmenta pseudepigraphorum quae supersunt graeca</em>. PVTG 3. Leiden: Brill, 1970, p. 69.</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Concordance latine des pseudépigraphes d’Ancien Testament</em>. Turnhout: Brepols, 1993, p. 629.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Jannes et Jambres (Liber Jannes et Mambres, Paenitentia Jannes et Mambres)
+
+Cf.: M.R. James, The lost Apocrypha, p. 31-38; — F. STEGMÜL-
+LER, n° 89, 13-14; — E. SCHÜRER, III, p. 781-783; — A.-M. DENIS,
+ILRJH, ad loc.
+
+Fragmenta graeca
+
+Nota: M.R. JAMES, The lost Apocrypha, p. 32-38, censebat citationes Jannes et Jambres in Historia ecclesiastica Philostorgii, in Paenitentia
+Cypriani, in Actibus sanctae. Catharinae et in Testamento Ephraemi legi
+posse. Hanc sententiam partim sequitur A.-M. Denis, Fragmenta
+pseudepigraphorum quae supersunt graeca (PsVTGr 3), Leiden, 1970, p. 68
+(citatio Philostorgii, Hist. Eccl., 9, 2 [CPG 6032]). A. PIETERSMA,
+The Apocryphon of Jannes and Jambres the Magicians..., p. 49-50, cuius
+opinionem adoptamus, argumenta M.R.. James ualde refellit.
+
+Cod.: A. PIETERSMA, The Apocryphon of Jannes and Jambres, p. x:
+papyrus graecus anno 1979 aR. Daniel in Michigan Library repertus
+nondum editus est.
+
+(1) P. MARAVAL, Fragments grecs du Livre de Jannès et Jambré
+(Pap. Vindob. 29456 et 29828 Verso), in Zeitschrift für Papyrologie und Epigraphik 25 (1977), p. 199-207.
+
+(2) A. PIETERSMA, The Apocryphon of Jannes and Jambres the
+Magicians. P. Chester Beatty XVI (with New Editions of Papyrus Vindobonensis Greek inv. 29456 + 29828 verso and British Library Cotton
+Tiberius B. v f. 87). Edited with Introduction, Translation and
+Commentary with Full Facsimile of all Three Texts (Religions in the
+Graeco-Roman World 119), Leiden - New York - Köln, 1994.
+
+Translatio anglica: A. PigrERsMA - R.. T. LUTZ, Jannes and Jambres (First to Third Centuries A.D.). A New Translation and Introduction,
+94 MOYSES 130
+
+in J.H. CHARLESWORTH, II, p. 427-442 (illi auctores fragmenta graeca
+in alium ordinem ducunt).
+
+Concordantia:
+A.-M. DENIS, Concordance grecque des Pseudépigraphes d’Ancien Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione A.-M. DENIS, Fragmenta pseudepigraphorum quae supersunt
+graeca [PsVTGr 3], Leiden, 1970, p. 68).
+
+Fragmentum latinum
+
+Cf.: J. VERHEYDEN, Les Pseudépigraphes d' Ancien Testament. Textes
+latins. À propos d'une Concordance, in ETL 71 (1995), p. 383-420, praesertim p. 412-413.
+
+Codd.: London, Brit. Libr., Cotton Tiberius B. v., fol. 87, saec.
+x1; Oxford, Bodl. Libr. 614, saec. xii (agitur exemplum codicis London.; itaque A. Pietersma illo non usus est).
+
+T.O. Cockayne, Narratiunculae Anglice conscriptae, London,
+1861 (non uidi); — et iterum M.R. JAMES, A Fragment of the ‘Penitence of Jannes and Jambres’, in JThSt 2 (1901), p. 572-577; —
+M. FÖRSTER, Das lateinisch-altenglische Fragment der Apokryphe von
+Jamnes und Mambres, in Archiv für das Studium der neueren
+Sprachen und Literaturen 108 (1902), p. 15-28; — A. PIETERSMA,
+The Apocryphon of Jannes and Jambres, p. 277-281 + tab. 18.
+
+Translatio anglica: M.R. JAMES, The lost Apocrypha, p. 32-33.
+
+Concordantiae:
+W. LECHNER-SCHMIDT, Wortindex der lateinisch erhaltenen Pseudepigraphen zum Alten Testament (Texte und Arbeiten zum neutestamentlichen
+Zeitalter 3), Tübingen, 1990 (ex editione M. Förster) ; — A.-M. DENIS,
+Concordance latine des Pseudépigraphes d' Ancien. Testament. Concordance.
+Corpus des textes. Indices (Corpus Christianorum. Thesaurus patrum latinorum. Supplementum), Turnhout, 1993 (ex editione M.R.. James).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

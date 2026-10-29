@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henoch slauicus — CAVT-066 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Henoch slauicus (CAVT-066)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-066</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-066</span>
+          <span class="badge badge-lang">Slavonic</span>
+          <span class="badge badge-lang">CAVT 66</span>
+          
+        </div>
+        <h1 class="stub-title">Henoch slauicus</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> POSTERI ADAE ET EVAE: ENOSH, HENOCH, LAMECH, NOE, SEM, CHAM
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-066</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 66</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 16 (2 Enoch (Slavonic Enoch))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:91-221 (2 Enoch / Slavonic Enoch)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:425-469 (Secrets of Enoch)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 321-362 (2 Enoch)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph"><em>2 Enoch</em> (<em>The Book of the Holy Secrets of Enoch</em>, or <em>Slavonic Enoch</em>) is an ancient pseudepigraphic apocalypse preserved exclusively in Old Church Slavonic manuscripts. Composed originally in Greek (likely based on Semitic traditions or a Semitic Vorlage) in the late 1st century CE in Hellenistic Jewish circles (often situated in Alexandria, Egypt), the work is divided into four main sections:</p>
+<p class="stub-paragraph">1. <strong>Enoch’s Heavenly Ascent</strong> (chs. 1–21): Enoch is awakened by two radiant angels and taken on a journey through the seven heavens (extended to ten heavens in the longer recension), observing celestial meteorology, astronomical bodies, fallen angels and Watchers (<em>Grigori</em>) imprisoned in the second and fifth heavens, paradise in the third heaven, and the angelic hierarchies praising the divine throne.</p>
+<p class="stub-paragraph">2. <strong>The Revelation of Cosmic and Primordial Secrets</strong> (chs. 22–38): Enoch stands before God, is anointed with fragrant celestial oil by Michael, transformed into a glorious angelic being, and instructed by God and the recording angel Vereveil (Pravuil) in 360 books of cosmological, astronomical, and historical mysteries, including an esoteric cosmogony featuring the primeval beings <em>Adoil</em> (light) and <em>Arkhas</em> (darkness/matter), and the creation of Adam as a microcosm (ch. 30).</p>
+<p class="stub-paragraph">3. <strong>Enoch’s Admonition of His Children on Earth</strong> (chs. 39–67): Enoch returns to earth for thirty days to deliver moral instructions, ethical testaments, and warnings against sin, idolatry, and animal cruelty to his sons (Methuselah, Regim) and his household, before his final assumption to heaven.</p>
+<p class="stub-paragraph">4. <strong>The Sacerdotal Epilogue and the Miraculous Birth of Melchizedek</strong> (chs. 68–73): The priesthood of Methuselah and his nephew Nir; the miraculous conception of Nir’s elderly, barren wife Sopanim without sexual union; her sudden death and the post-mortem birth of a fully developed infant marked with the priestly seal (<em>hieratikon sphragida</em>) on his chest, named Melchizedek; and his assumption by Michael to the paradise of Eden to escape the impending Deluge.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The text has been transmitted in over thirty known South Slavic (Bulgarian, Serbian) and East Slavic (Russian) manuscripts dating between the 14th and 18th centuries, categorized into two main recensions:</p>
+<h4 class="stub-heading">A. The Long Recension ($A$)</h4>
+<p class="stub-paragraph">Characterized by expanded theological descriptions, astronomical tables, and the ten-heaven schema:</p>
+<ul class="stub-list">
+<li><strong>MS J</strong> (Sankt-Peterburg, Library of the Russian Academy of Sciences [BAN] 13.3.25; late 15th / early 16th cent. Russian manuscript; ed. Sokolov 1910).</li>
+<li><strong>MS R</strong> (Belgrade, National Library of Serbia [NLB] 321; 16th cent. Serbian manuscript; destroyed during the bombing of Belgrade in April 1941; ed. Popov 1880, Sokolov 1899/1910).</li>
+<li><strong>MS P</strong> (Moscow, State Historical Museum [GIM], Khlyudov coll. 43; 17th cent. South Russian manuscript; ed. Popov 1880, Franko 1896).</li>
+</ul>
+<h4 class="stub-heading">B. The Short Recension ($B$)</h4>
+<p class="stub-paragraph">Characterized by a more concise narrative, the seven-heaven schema, and often considered by modern critics to reflect a less interpolated form of the translation:</p>
+<ul class="stub-list">
+<li><strong>MS U</strong> (Moscow, GIM, Uvarov coll. 3/18; 16th cent.; base text of André Vaillant’s critical edition 1952).</li>
+<li><strong>MS A</strong> (Sankt-Peterburg, BAN 45.13.4; 16th cent.; ed. Sokolov 1910).</li>
+<li><strong>MS B</strong> (Moscow, GIM, Barsov coll. 1515; 14th cent. Russian manuscript, the oldest extant manuscript; ed. Sokolov 1899/1910).</li>
+<li><strong>MS B$^2$</strong> (Moscow, GIM, Barsov coll. 1516; 16th cent.).</li>
+<li><strong>MS N</strong> (Belgrade, NLB 151/443; 14th cent. Serbian manuscript; ed. Novaković 1884).</li>
+<li><strong>MS V</strong> (Vienna, Österreichische Nationalbibliothek, Cod. Slav. 125; 16th cent.).</li>
+</ul>
+<h4 class="stub-heading">C. Anthological and Chronographic Witnesses</h4>
+<ul class="stub-list">
+<li><strong>MPr</strong> (<em>Merilo Pravednoe</em> / "The Just Balance", Moscow, Russian State Library [RGB], Trinity-St. Sergius Lavra [TSS] 15; 14th cent. legal-ethical florilegium; ed. Tikhomirov 1961, Schneider 1986).</li>
+<li><strong>Chr / Chr$^2$</strong> (Russian chronographs; Nezhin, Historical-Philological Institute MS 39; Moscow, RGB Rumyantsev coll. 590; ed. Popov 1869).</li>
+<li><strong>Tr</strong> (Moscow, RGB, Trinity-St. Sergius Lavra MS 793; ed. Tikhonravov 1863).</li>
+<li><strong>TSS 253, 498, 682</strong> (Trinity-St. Sergius Lavra manuscripts; ed. Sokolov 1910).</li>
+<li><strong>G</strong> (Gennadius Bible extracts, Novgorod/Moscow, 1499).</li>
+<li><strong>Ms. No. 42</strong> (Croatian Glagolitic apocryphal fragment on Melchizedek’s birth; ed. S. Ivšić 1930–1931).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Vaillant, André</strong>. <em>Le livre des secrets d’Hénoch: Texte slave et traduction française</em>. Textes publiés par l’Institut d’Études Slaves 4. Paris: Institut d’Études Slaves, 1952; 2nd ed. 1976. [Standard critical edition of the Short Recension based on MS U with French translation and comprehensive apparatus including long-recension variants].</li>
+<li><strong>Sokolov, Matvei Ivanovich</strong>. "Slavianskaia kniga Enokha pravednago: Tekst, latinskii perevod i izsledovanie" [The Slavonic Book of Enoch the Righteous: Text, Latin Translation, and Investigation]. <em>Chteniia v Obshchestve Istorii i Drevnostei Rossiiskikh pri Moskovskom Universitete</em> (COIDR) (1899) 4.2.2: i–iv, 1–112; and (1910) 4.2.1: 1–167. [The fundamental multi-manuscript edition providing diplomatic texts of MSS R, B, U, B$^2$, P$^2$, Chr, Rum, and TSS].</li>
+<li><strong>Böttrich, Christfried</strong>. <em>Das slavische Henochbuch</em>. Jüdische Schriften aus hellenistisch-römischer Zeit 5.7. Gütersloh: Gütersloher Verlagshaus, 1995, pp. 781–1040. [The most exhaustive modern critical presentation, providing translation, synoptic alignment, textual analysis, and extensive historical-critical commentary].</li>
+<li><strong>Bonwetsch, G. Nathanael</strong>. <em>Das slavische Henochbuch</em>. Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Phil.-hist. Klasse 1.3. Berlin: Weidmann, 1896. [Editio princeps of the Short Recension].</li>
+<li><strong>Bonwetsch, G. Nathanael</strong>. <em>Die Bücher der Geheimnisse Henochs: Das sogenannte slavische Henochbuch</em>. Texte und Untersuchungen 44.2. Leipzig: J. C. Hinrichs, 1922. [Edition of both recensions based on Sokolov's texts with German translation].</li>
+<li><strong>Novaković, Stojan</strong>. "Apokrif o Enohu" [The Apocryphon of Enoch]. <em>Starine</em> 16 (1884): 67–81. [Editio princeps of MS N].</li>
+<li><strong>Popov, Andrei</strong>. <em>Obzor khronografov russkoi redaktsii</em>. 2 vols. Moscow, 1866–1869; rep. Osnabrück: Biblio-Verlag, 1968, 1:154–169.</li>
+<li><strong>Tikhomirov, Mikhail N.</strong> <em>Merilo Pravednoe po rukopisi XVI veka</em> [The Just Balance according to a 16th-century manuscript]. Moscow: Akademiia Nauk SSSR, 1961.</li>
+<li><strong>Schneider, Richard</strong>. <em>Die moralisch-belehrenden Artikel im altrussischen Sammelband Merilo Pravednoe</em>. Monumenta Linguae Slavicae Dialecti Veteris 23. Freiburg i.Br.: Weiher, 1986.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Henoch slauicus (Liber secretorum Henoch, 2
+Henoch)
+
+Cf.: E. Kozak, Bibliographische Übersicht der biblisch-apokryphen Literatur bei den Slaven, in Jahrbücher für protestantische Theologie 18
+(1892), p. 127-158, praesertim p. 132-133; — J.-B. FREY, art. Apocryphes de l'Ancien Testament, in DBS I, 1928, col. 448-454; — F. STEG-
+MÜLLER, n° 79 et 79, 1-10; — E. SCHÜRER, III, p. 746-750; — C.
+BÖTTRICH, Weltweisheit, Menscheitsethik, Urkult. Studien zum slavischen
+Henochbuch (Wissenschaftliche Untersuchungen zum Neuen Testament. 2. Reihe 50), Tübingen, 1992; — A.-M. Denis, ILRJH, ad
+loc.
+
+Notae:
+
+(1) Henoch slauicus xxx, 8 in recensione longiore (cf. A. VAIL-
+LANT, Le Livre des secrets d'Hénoch, p. 100) continet locum ubi agitur
+de septem uel octo elementis corpus Adae et de quatuor elementis
+nomen eius componentibus; hic locus ortus est ex opere quod De
+Adami compositione et nomine uocatur et quod exstat non solum in traditione latina, slauica et hibernica (cf. supra n^ 10), sed etiam in aliis
+traditionibus occidentalibus (cf. M. FÖRSTER, Adams Erschaffung und
+Namensgebung. Ein lateinisches Fragment des s. g. slawischen Henoch, in
+Archiv für Religionswissenschaft r1 [1908], p. 477-529, praesertim
+p. 484-486). De Adami compositione et nomine non est testis traditionis
+46 POSTERI ADAE ET EVAE 66
+
+latinae Henoch slauici: J. VERHEYDEN, Les Pseudépigraphes d' Ancien Testament. Textes latins. A propos d'une Concordance, in ETL 71 (1995),
+p. 383-420, praesertim p. 407-412.
+
+(2) Henoch slauicus uxvus, § - LXxıu, 9 (= A. VAILLANT, op. cit.
+infra, p. 20-23) sunt appendix qui De sacerdotio Methusalem, Nir et Melchisedech aliquando uocatur et qui in traditione slauica et rumaena
+scorsim traditur (uide infra n? 78).
+
+Codices et recensiones:
+
+(1) N. SCHMIDT, The Two Recensions of Slavonic Enoch, in Journal
+of the American Oriental Society 41 (1921), p. 307-312; — A. VAIL-
+LANT, op. cit. infra, p. v-vin; — F. Repp, Textkritische Untersuchungen
+zum Henoch-Apokryph des cod. slav. 125 der Österreichischen Nationalbibliothek, in Wiener slavische Jahrbuch 10 (1963), p. 58-68; — N.A.
+MESHCHERSKY, K istorii teksta slavyanskoi knigi Enokha ( Sledy pamyatnikov Kumrana v vizantiiskoi i staroslavyanskoi literature), in Vizantiiskii
+vremennik 24 (1964), p. 91-108; — N.A. MESHCHERSKY, K voprosou
+ob istochnikakh slavyanskoï Enokha, in Kratkiye soobshcheniya Instituta
+narodov Azii 86 (1965), p. 72-78; — F.I. ANDERSEN in J.H. CHAR-
+LESWORTH, I, p. 92-94; — C. BÔTTRICH, Weltweisheit..., p. 62-107
+(ubi codices et priores editiones).
+
+(2) C. BórrnicH, Weltweisheit..., p. 62sqq, partitus est codices
+slauicos in tres classes: «vermischte Sammelbinde», «chronographische
+Sammelbände » et «juristisch moralische Sammelbände » (= Merilo
+Pravednoe | Aequa Lanx]). De Aequa Lance uide R. SCHNEIDER, Die moralisch-belehrenden Artikel im altrussischen Sammelband Merilo Pravednoe (Monumenta Linguae Slavicae Dialecti Veteris. Fontes et Dissertationes
+23), Freiburg im Br., 1986 (editio) ; — F. POLJAKOV, Beiträge zur Edition
+des « Merilo Pravednoe», in Die Welt der Slaven 32 (1987), p. 317-333.
+
+(3) Exstant plures recensiones: duae (iuxta N. Schmidt, A. Vaillant, N.A. Meshchersky: recensio breuior primitiua est, recensio longior e refectionibus pluribus euenit), tres (M.I. Sokolov, R.H. Charles, C. Bóttrich aestimant recensionem longiorem primitiuam esse,
+cuius recensio breuior epitome est, et recensionem fragmentariam recentissimam esse) uel quatuor (secundum F.I. Andersen: recensio longissima, recentio longior, recensio breuior, recensio breuissima).
+
+A. VAILLANT, Le Livre des secrets d'Hénoch. Texte slave et traduction française (Textes publiés par l'Institut d' Études slaves 4), Paris,
+1952, 1976 (editio textus recensionis breuioris cum, in appendice
+p. 86-119, additamentis ex duabus emendationibus recensionis
+longioris).
+
+Translatio anglica: N. Forses — R.H. CHARLES, in RH.
+
+CHARLES, APOT, p. 431-469 (translatio ambarum recensionum); —
+67 POSTERI ADAE ET EVAE 47
+
+A. PENNINGTON, 2 Enoch, in H.F.D. Sparks, p. 321-362 (translatio
+recensionis breuioris); — F.l. ANDERSEN, 2 (Slavonic Apocalypse of)
+Enoch (Late First Century A.D.). Appendix : 2 Enoch in Merilo Pravednoe. A New Translation and Introduction, in J.H. CHARLESWORTH, I,
+p- 91-221 (translatio ambarum recensionum).
+
+Translatio gallica: A. VAILLANT, op. cit.; — A. VAILLANT - M.
+PHILONENKO, Livre des secrets d’Henoch, in A. DUPONT-SOMMER —
+M. PHILONENKO, p. 1165-1223 (translatio recensionis breuioris).
+
+Translatio germanica: G.N. BONWETSCH, Die Bücher der Geheimnisse Henochs. Das sogenannte slavische Henochbuch (TU 44, 2),
+Leipzig, 1922 (translatio ambarum recensionum cum translatione De
+sacerdotio Methusalem, Nir et Melkisedek); — C. BÖTTRICH, Das slavische
+Henochbuch, in JSHRZ V, 7, Gütersloh, 1995, p. 781-1040 (translatio
+recensionis longioris).
+
+Translatio hispanica: A. DE SANTOS OTERO, Libro de los secretos
+de Henoc ( Henoc eslavo), in A. Diez Macho, IV, p. 145-202 (translatio recensionis longioris).
+
+Concordantia:
+J.B. BAUER, Clavis Apocryphorum Supplementum. Complectens voces versionis Germanicae Libri Henoch Slavici, Libri Jubilaeorum, Odarum Salomonis (Grazer Theologische Studien 4), Graz, 1980, p. 121-170 (e translatione recensionis longioris a G.N. Bonwetsch confectae).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

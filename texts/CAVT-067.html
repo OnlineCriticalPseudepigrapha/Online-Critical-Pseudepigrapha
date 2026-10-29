@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henoch hebraicus — CAVT-067 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Henoch hebraicus (CAVT-067)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-067</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-067</span>
+          <span class="badge badge-lang">Hebrew</span>
+          <span class="badge badge-lang">CAVT 67</span>
+          
+        </div>
+        <h1 class="stub-title">Henoch hebraicus</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> POSTERI ADAE ET EVAE: ENOSH, HENOCH, LAMECH, NOE, SEM, CHAM
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-067</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 67</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 17 (3 Enoch (Hebrew Enoch / Sefer Hekhalot))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:223-315 (3 Enoch / Hebrew Enoch)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph"><em>3 Enoch</em> (<em>The Hebrew Apocalypse of Enoch</em>, commonly titled in Jewish mystical manuscripts <strong>ספר היכלות</strong> [<em>Sefer Hekhalot</em>, "The Book of Palaces"]) is a major late antique Jewish visionary composition belonging to the Hekhalot and Merkabah mystical corpus. Compiled in Byzantine/early Islamic Palestine or Babylonia between the 5th and 7th centuries CE (incorporating earlier Tannaitic traditions from the 2nd–3rd centuries), the text bridges Second Temple apocalypticism and classical Rabbinic esotericism:</p>
+<p class="stub-paragraph">1. <strong>The Visionary Ascent of Rabbi Ishmael</strong> (chs. 1–2): Rabbi Ishmael ben Elisha ascends to the highest heavenly realm through contemplation of the Chariot (<em>Merkabah</em>), arrives at the entrance of the Seventh Heavenly Palace (<em>Hekhal</em>), and is delivered from hostile angels by the supreme archangel Metatron, the "Prince of the Divine Presence" (<em>Sar ha-Panim</em>).</p>
+<p class="stub-paragraph">2. <strong>The Metamorphosis of Enoch into Metatron</strong> (chs. 3–16): Metatron reveals his human origin as Enoch son of Jared, who was snatched from the corrupt generation of the Deluge (Gen 5:24) to serve as a perpetual witness. He describes his bodily transformation into fiery angelic matter, his reception of a celestial robe, a cosmic crown inscribed with the creative divine letters, seventy cosmic names corresponding to the names of God, and his installation on a throne alongside God as the "Lesser YHWH" (יהוה הקטן, <em>YHWH ha-Qatan</em>).</p>
+<p class="stub-paragraph">3. <strong>The Incident of Aher and the Demotion of Metatron</strong> (ch. 16): When the sage Elisha ben Abuyah ("Aher") enters paradise and sees Metatron seated upon a throne receiving celestial homage, he utters the heresy: "There are indeed two powers in heaven!" (<em>Shtei reshuyot ba-shamayim</em>). God orders the angel Anafiel to strike Metatron with sixty lashes of fire (<em>pulsei de-nura</em>) and force him to stand, proving his creaturely subordination (parallel to b. <em>Hagigah</em> 15a).</p>
+<p class="stub-paragraph">4. <strong>The Celestial Hierarchy, Angelology, and Cosmic Order</strong> (chs. 17–40): Detailed taxonomy of the angelic classes (Ophannim, Seraphim, Cherubim, Hayyot ha-Kodesh), their planetary governors, the angelic liturgy (<em>Qedushah</em>), and the river of fire (<em>Nehar di-Nur</em>) issuing from beneath the Throne.</p>
+<p class="stub-paragraph">5. <strong>Cosmic Eschatology, the Souls of the Righteous, and the Cosmic Curtain</strong> (chs. 41–48): Enoch-Metatron shows Rabbi Ishmael the storehouse of souls, the spirits of the unborn, the punishments of Gehenna, and the <em>Pargod</em> (the cosmic curtain hung before the Divine Throne), upon which are woven all generations of world history from creation to the Messianic redemption.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The textual transmission of <em>3 Enoch</em> is fluid and complex, preserved as part of larger Hekhalot miscellanies in medieval Ashkenazi, Sephardic, and Italian manuscripts:</p>
+<h4 class="stub-heading">A. Primary Hebrew Manuscripts</h4>
+<ul class="stub-list">
+<li><strong>MS B (Oxford, Bodleian Library, MS Opp. Add. 4to 45; Neubauer 1656)</strong>: 16th-century manuscript; selected by Philip S. Alexander as the base text for his critical English translation in OTP 1.</li>
+<li><strong>MS A (Vatican, Biblioteca Apostolica Vaticana, Cod. ebr. 228)</strong>: 14th century; the oldest dated continuous manuscript witness of the work; transcribed synoptically in Peter Schäfer’s <em>Synopse zur Hekhalot-Literatur</em> (§§1–80).</li>
+<li><strong>MS E (Munich, Bayerische Staatsbibliothek, Cod. hebr. 40)</strong>: 15th-century Ashkenazi manuscript; transcribed by Adolph Jellinek in <em>Bet ha-Midrasch</em> and by Schäfer in the <em>Synopse</em>.</li>
+<li><strong>MS C (Oxford, Bodleian Library, MS Mich. 175; Neubauer 1657)</strong>: 16th century; preserves long recensional variants in chs. 15B and 22B–C.</li>
+<li><strong>MS D (Oxford, Bodleian Library, MS Opp. 241; Neubauer 1653)</strong>: 16th century.</li>
+<li><strong>MS F (London, British Library, MS Add. 27199; Margoliouth 751)</strong>: 16th century.</li>
+<li><strong>MS G (London, British Library, MS Add. 15299; Margoliouth 752)</strong>: 15th/16th century.</li>
+<li><strong>MS K (Cambridge, University Library, Add. 175)</strong>: 16th century.</li>
+<li><strong>MS L (Florence, Biblioteca Medicea Laurenziana, Plut. 44.13)</strong>: 15th century.</li>
+<li><strong>MSS Wert (Jerusalem, collection of Shelomo Aharon Wertheimer)</strong>: Printed in <em>Batei Midrashot</em>, preserving chs. 23–24 and the distinct <em>Alphabet of Metatron</em> (ch. 48B–D).</li>
+</ul>
+<h4 class="stub-heading">B. Cairo Genizah Fragments</h4>
+<ul class="stub-list">
+<li>Cambridge, University Library, Taylor-Schechter Collection: <strong>T-S K 21.95.L</strong></li>
+<li>St. Petersburg, Russian National Library: <strong>Antonin 740</strong></li>
+<li>Oxford, Bodleian Library: <strong>MS Heb. c. 18, fols. 27–28</strong></li>
+<li>Edition: Schäfer, Peter. <em>Geniza-Fragmente zur Hekhalot-Literatur</em>. TSAJ 6. Tübingen: Mohr Siebeck, 1984, pp. 135–139.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Schäfer, Peter, with Margarete Schlüter and Hans Georg von Mutius</strong>. <em>Synopse zur Hekhalot-Literatur</em>. Texte und Studien zum Antiken Judentum 2. Tübingen: Mohr Siebeck, 1981, §§1–80, 387–388, 855–871, 882–938. [The indispensable modern synopsis providing parallel diplomatic transcriptions of the primary manuscripts].</li>
+<li><strong>Odeberg, Hugo</strong>. <em>3 Enoch, or the Hebrew Book of Enoch, Edited and Translated for the First Time with Introduction, Commentary & Critical Notes</em>. Cambridge: Cambridge University Press, 1928; rep. with a Prolegomenon by Jonas C. Greenfield, Library of Biblical Studies, New York: KTAV, 1973. [Historical editio princeps of the text based primarily on Bodleian MS Opp. Add. 4to 45, with pioneering comparative notes, though criticized for eclectic text-critical methodology].</li>
+<li><strong>Jellinek, Adolph</strong>. "Henoch-Buch." In <em>Bet ha-Midrasch: Sammlung kleiner Midraschim und vermischter Abhandlungen aus der ältern jüdischen Literatur</em>. 6 vols. Leipzig/Vienna, 1853–1877; rep. Jerusalem: Wahrmann, 1967, 5:xli–xliii, 170–190. [First transcription of Munich MS Hebr. 40].</li>
+<li><strong>Wertheimer, Shelomo Aharon</strong>. <em>Batei Midrashot</em>. 2 vols. Jerusalem, 1950–1953; rep. 1968, 2:343–348.</li>
+<li><strong>Schäfer, Peter</strong>. "Handschriften zur Hekhalot-Literatur." <em>Frankfurter Judaistische Beiträge</em> 11 (1983): 113–193 at 178–189.</li>
+<li><em>Sefer Hekhalot me-ha-Tanna Rabbi Yishmael Kohen Gadol</em>. Lemberg, 1864; Warsaw, 1875.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Henoch hebraicus (3 Henoch)
+
+Cf.: F. STEGMÜLLER, n° 80 et 80, 1; — P.S. ALEXANDER in J.H.
+CHARLESWORTH, I, p. 223-254; — P.S. ALEXANDER in E. SCHÜRER,
+HI, p. 269-277; — J.T. MıLik, The Books of Enoch. Aramaic Fragments
+of Qumran Cave 4, Oxford, 1976, p. 123-135; — A.-M. DENIS,
+ILRJH, ad loc.
+
+Notae:
+(1) Cap. xv B; xxii B; xxii C; xxın; xxiv; XLVIN B; xLvm C;
+XLVII D additamenta esse habentur.
+
+(2) De colligationibus inter Henoch hebraicum xv B 2-5; XLVII
+D 4 et Assumptionem Moysi (cf. infra n° 134) uide H. ODEBERG, op.
+cit., p. 106-108.
+
+Codd.: P. SCHÂFER, Handschrifien zur Hekhalot-Literatur, in Frankfurter Judaistische Beiträge 11 (1983), p. 113-193, praesertim p. 178-
+189; — P. ALEXANDER in J.H. CHARLESWORTH, I, p. 224.
+
+H. ODEBERG, 3 Enoch or The Hebrew Book of Enoch, Cambridge, 1928 (reimpr. New York, 1973, cum praefatione J.C.
+GREENFIELD).
+48 POSTERI ADAE ET EVAE 69
+
+P. SCHÂFER - M. SCHLUTER - H.G. von Murius, Synopse
+zur Hekhalot-Literatur (Texte und Studien zum Antiken Judentum 2), Tübingen, 1981.
+
+P. SCHÄFER, Geniza-Fragmente zur Hekhalot-Literatur (Texte
+und Studien zum Antiken Judentum 6), Tübingen, 1984.
+
+Translatio anglica: H. ODEBERG op. cit.; — P. ALEXANDER, 3
+
+(Hebrew Apocalypse of) Enoch (Fifth-Sixth Century A.D.). A New Translation and Introduction, in ].H. CHARLESWORTH I, p. 255-315 (additamenta [cf. nota 1 supra] in appendice translata sunt, p. 303-315).
+
+Translatio gallica: C. Mopsixk, Le Livre hébreu d' Hénoch ou Livre
+des Palais. Traduit de l'hébreu, annoté et introduit. Suivi de « Hénoch c'est
+Metatron» par M. {pet (Les Dix Paroles), Paris, 1989.
+
+Translatio germanica: H. HOFMANN, Das sogenannte hebräische
+Henochbuch (3 Henoch). Nach dem von Hugo Odeberg vorgelegten Material
+zum erstenmal ins Deutsche übersetzt (Bonner Biblische Beitráge 58),
+Bonn, 1984; — P. SCHÄFER ET AL, Übersetzung der Hekhalot-Literatur.
+I. $$ 1-80 (Texte und Studien zum Antiken Judentum 46), Tübingen, 1995.
+
+Translatio hispanica: M. ANGELES NAVARRO, Libro hebreo de
+Henoc ( Sefer Hekalot), in A. Diez MACHO, IV, p. 203-291.
+
+Concordantia:
+P. SCHÄFER ET ALU, Konkordanz zur Hekhalot-Literatur (Texte und
+Studien zum Antiken Judentum 12ss), Tübingen, 1986ss.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

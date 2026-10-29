@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testamentum XII patriarcharum — CAVT-118 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Testamentum XII patriarcharum (CAVT-118)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-118</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-118</span>
+          <span class="badge badge-lang">Multi/Other</span>
+          <span class="badge badge-lang">CAVT 118</span>
+          <span class="badge badge-lang">CANT 350</span>
+        </div>
+        <h1 class="stub-title">Testamentum XII patriarcharum</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> XII PATRIARCHAE
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-118</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 118</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 350</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 44 (Testaments of the Twelve Patriarchs)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:775-828 (Testaments of the Twelve Patriarchs)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:282-367 (Testaments of the XII Patriarchs)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 505-600 (Testaments of the Twelve Patriarchs)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Testaments of the Twelve Patriarchs</em> is an extensive pseudepigraphon consisting of twelve farewell discourses delivered on their deathbeds by the twelve sons of Jacob (Reuben, Simeon, Levi, Judah, Issachar, Zebulun, Dan, Naphtali, Gad, Asher, Joseph, and Benjamin) to their assembled children.</p>
+<h4 class="stub-heading">Structure of the Individual Testaments</h4>
+<p class="stub-paragraph">Each testament follows a consistent, threefold tripartite literary pattern:</p>
+<p class="stub-paragraph">1. <strong>Autobiographical / Haggadic Narrative</strong>: The patriarch recounts key episodes from his life (expanding upon Genesis), candidly confessing his primary sin (e.g., Reuben's lust, Simeon's envy, Judah's drunkenness and greed, Gad's hatred) or extolling his characteristic virtue (e.g., Issachar's simplicity, Zebulun's compassion, Joseph's self-control/chastity).</p>
+<p class="stub-paragraph">2. <strong>Moral Exhortation (<em>Paraenesis</em>)</strong>: The patriarch warns his descendants against the spiritual perils of vice (especially <em>porneia</em>, anger, jealousy, and double-heartedness) and exhorts them to practice righteousness, single-minded devotion (<em>haplotēs</em>), and fraternal love.</p>
+<p class="stub-paragraph">3. <strong>Eschatological Prophecy and Farewell</strong>: The patriarch predicts the future apostasy, exile, and restoration of his tribe—frequently structured around the Sin-Exile-Return pattern—culminating in an apocalyptic vision of the coming Messiah(s) from the tribes of Levi and Judah, a final resurrection, and instructions for burial in the ancestral tomb at Hebron (Cave of Machpelah).</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <h4 class="stub-heading">A. Greek Textual Tradition</h4>
+<p class="stub-paragraph">The complete Greek text survives in 14 principal manuscripts. R. H. Charles initially classified the tradition into two recensions, $\alpha$ (MSS <em>c, h, i</em>) and $\beta$ (MSS <em>a, b, d, e, f, g, j</em>). The modern editio maior (M. de Jonge, H. J. de Jonge, H. W. Hollander, T. Korteweg) replaced this with a division into <strong>Family I</strong> (MSS <em>b</em> and <em>k</em>) and <strong>Family II</strong> (all other Greek MSS, alongside the Armenian and Slavonic versions):</p>
+<ul class="stub-list">
+<li><strong>b</strong>: Cambridge University Library, MS Ff. 1.24, fols. 203a–262b (late 10th c.; brought from Athens to England by Robert Grosseteste in the 13th c.; the base text of Sinker and de Jonge's early editions).</li>
+<li><strong>k</strong>: Venice, Biblioteca Nazionale Marciana, cod. Gr. Z. 494 (coll. 331), fols. 263r–264v (mid-13th c.; preserves large extracts).</li>
+<li><strong>a</strong>: Oxford, Bodleian Library, MS Barocci 133, fols. 278r–309r (ca. 1270 CE).</li>
+<li><strong>c</strong>: Vatican, Biblioteca Apostolica Vaticana, cod. Vat. gr. 731, fols. 97r–167r (13th c.).</li>
+<li><strong>d</strong>: Vatican, cod. Vat. gr. 1238, fols. 350r–380v (late 12th c.; includes significant marginal variants and scholia).</li>
+<li><strong>e</strong>: Mount Athos, Monastery of Koutloumousiou, cod. 39, fols. 180r–227r (11th c.; celebrated for containing inserted Greek translations of large sections of the <em>Aramaic Levi Document</em>).</li>
+<li><strong>f</strong>: Paris, Bibliothèque nationale de France, cod. gr. 2658, fols. 41r–100v (11th c.).</li>
+<li><strong>g</strong>: Patmos, Monastery of St. John the Theologian, cod. 412, fols. 96r–148v (15th c.).</li>
+<li><strong>h</strong>: Sinai, Saint Catherine's Monastery, cod. gr. 547, fols. 195r–265v (17th c.).</li>
+<li><strong>i</strong>: Sinai, cod. gr. 548 (17th c.).</li>
+<li><strong>j</strong>: Sinai, cod. gr. 2170 (18th c.).</li>
+<li><strong>l</strong>: Mount Athos, Great Lavra, MS I 48, fols. 204r–276r (16th–17th c.; discovered and published by C. Burchard, 1966).</li>
+<li><strong>m</strong>: Ankara, Türk Tarih Kurumu, MS gr. 60, pp. 339–483 (16th c.).</li>
+<li><strong>n</strong>: Mount Athos, Monastery of Vatopedi, cod. 659 (14th c.).</li>
+</ul>
+<h4 class="stub-heading">B. Semitic Forebears and Witnesses (Genizah and Qumran)</h4>
+<p class="stub-paragraph">1. <strong>The Aramaic Levi Document (ALD)</strong>:</p>
+<ul class="stub-list">
+<li><em>Cairo Genizah</em>: Cambridge University Library MS T-S 16.94 (10th/11th c., cols. a–f); Oxford Bodleian MS heb. c 27, fol. 56 (10th/11th c., cols. a–d).</li>
+<li><em>Qumran Cave 1</em>: 1Q21 (1QTLevi; 60 fragments).</li>
+<li><em>Qumran Cave 4</em>: 4Q213 (4QLeviᵃ ar), 4Q213a (4QLeviᵇ ar), 4Q213b (4QLeviᶜ ar), 4Q214 (4QLeviᵈ ar), 4Q214a (4QLeviᵉ ar), 4Q214b (4QLeviᶠ ar), dated to the 2nd–1st c. BCE.</li>
+<li><em>Greek Athos Additions</em>: Mount Athos Koutloumousiou MS 39 preserves Greek interpolations representing a direct translation of the missing sections of ALD (prayer of Levi, priestly investiture, ritual halakhah on wood and sacrificial offerings).</li>
+<li><em>Syriac Fragment</em>: London, British Library Add. MS 14668, fol. 1 (6th/7th c.).</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Hebrew Testament of Naphtali</strong>:</p>
+<ul class="stub-list">
+<li><em>Qumran Cave 4</em>: 4Q215 (4QTNaphtali; 1st c. BCE), preserving a genealogy of Bilhah, Jacob's prayer, and an eschatological column.</li>
+<li><em>Medieval Hebrew Recension</em>: Preserved in Oxford Bodleian MS Heb. d. 11 and incorporated into Moses Gaster's edition of the <em>Chronicles of Jerahmeel</em> (ch. 33).</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Proto-Judah and Proto-Joseph Scrolls</strong>:</p>
+<ul class="stub-list">
+<li>3Q7 (3QTJud?); 4Q538 (4QTJud ar); 4Q539 (4QTJos ar).</li>
+</ul>
+<h4 class="stub-heading">C. Ancient Versions</h4>
+<ul class="stub-list">
+<li><strong>Armenian Version</strong>: Survives in at least 48 manuscripts (oldest dated 1220 CE, Venice Mechitarist MSS 345, 1005, 1006; Jerusalem Armenian Patriarchate MSS 1925, 1927). Represents a distinct early translation (Family II), frequently preserving shorter, non-interpolated readings (studied by F. C. Conybeare, C. Burchard, and A. Hultgård).</li>
+<li><strong>Slavonic Versions</strong>: Widespread Old Church Slavonic and Serbian redactions preserved in the <em>Tolkovaja Paleja</em> and chronographic miscellanies (studied by A. Iatsimirskii, I. Franko, H. E. Gaylord, and T. Korteweg).</li>
+<li><strong>Latin Version</strong>: Translated from Greek MS <em>b</em> (Cambridge Ff. 1.24) by Bishop Robert Grosseteste of Lincoln ca. 1242 CE; survived in over 80 medieval manuscripts and exercised immense influence across Western Christendom.</li>
+<li><strong>Syriac and Coptic</strong>: Fragmentary liturgical citations and allusions.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Charles, R. H.</strong> <em>The Greek Versions of the Testaments of the Twelve Patriarchs, Edited from Nine Mss together with the Variants of the Armenian and Slavonic Versions and Some Hebrew Fragments</em>. Oxford: Clarendon Press, 1908; reprinted Hildesheim: Georg Olms, 1966. [Masterwork of text-critical collection, printing Greek, Armenian, Slavonic, Genizah Aramaic, and Hebrew Naphtali synoptically].</li>
+<li><strong>de Jonge, Marinus.</strong> <em>Testamenta XII Patriarcharum: Edited according to Cambridge University Library Ms Ff 1.24, fol. 203a–262b, with Short Notes</em>. Pseudepigrapha Veteris Testamenti Graece 1. Leiden: Brill, 1964; 2nd ed., 1970.</li>
+<li><strong>de Jonge, Marinus, in coöperation with H. W. Hollander, H. J. de Jonge, and T. Korteweg.</strong> <em>The Testaments of the Twelve Patriarchs: A Critical Edition of the Greek Text</em>. Pseudepigrapha Veteris Testamenti Graece 1.2. Leiden: Brill, 1978. [The definitive modern <em>editio maior</em>, fully documenting all 14 Greek manuscripts and ancient versions].</li>
+<li><strong>Sinker, Robert.</strong> <em>Testamenta XII Patriarcharum, ad fidem Codicis Cantabrigiensis edita: accedunt lectiones Cod. Oxoniensis</em>. Cambridge: Deighton, Bell and Co., 1869; <em>Appendix containing a collation of the Roman and Patmos MSS</em>. Cambridge, 1879.</li>
+<li><strong>Stone, Michael E., and Jonas C. Greenfield.</strong> "The Aramaic and Greek Levi Texts." In <em>The Aramaic Levi Document: Edition, Translation, Commentary</em>. Edited by J. C. Greenfield, M. E. Stone, and E. Eshel. SVTP 19. Leiden: Brill, 2004.</li>
+<li><strong>Stone, Michael E.</strong> "Testament of Naphtali." In <em>Qumran Cave 4.XVII: Parabiblical Texts, Part 3</em>. DJD XXII. Oxford: Clarendon Press, 1996, 73–82.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Testamentum XII patriarcharum
+
+Cf.: M.R. James, The lost Apocrypha, p. 19-21; — J.-B. FREY, art.
+Apocryphes de l'Ancien Testament, in DBS I, 1928, col. 380-390; —
+F. STEGMULLER, n° 87 et 87, 1-8; — M. DE JONGE, The Testaments of
+the Twelve Patriarchs: Central Problems and Essential Viewpoints, in
+ANRW II, 20, 1, 1987, p. 359-420; — E. SCHÜRER, III, p. 767-781; —
+A.-M. Denis, ILRJH, ad loc.
+
+Textus aramaici et hebraici
+(1) Qumrän
+
+(1) 1Q21 (1QTLevi ar « Testament de Lévi»): D. BARTHÉLE-
+MY - J.T. MILIk, Qumran Cave I (DJD 1), Oxford, 1955, p. 87-
+91 + tab. xvir.
+
+(2) 3Q7 (3QTJud ? «Un apocryphe mentionnant l'Ange de
+la Présence»): M. BAILLET - J.T. MILIK - R. DE Vaux, Les «petites grottes» de Qumran (DJD 3), Oxford, 1962, p. 99 + tab. xv.
+
+(3) 4Q213 (4QTLevi” ar): editio paratur a M.E. STONE -
+J.C. GREENFIELD. Publicatio liminaris a M.E. STONE - J.C.
+GREENFIELD, The First Manuscript of Aramaic Levi Document
+from Qumran (4QLevi^ aram), in Le Muséon 107 (1994), p. 257-
+281.
+
+(4) 4Q213a (4QTLevi® ar [olim 4QTLevi’ ar (pars)]): editio
+paratur a M.E. STONE - J.C. GREENFIELD. Publicatio liminaris a
+J.T. MILIK, Le Testament de Levi en araméen. Fragment de la grotte 4
+de Qumrän, in RB 62 (1955), p. 398-406 + tab. 1v; - M.E. STONE-
+J.C. GREENFIELD, The Second Manuscript of Aramaic Levi Document from Qumran (4QLevi” aram), in Le Muséon 109 (1996),
+
+p. 1-15.
+
+Cf.: J.T. Maux, The Books of Enoch. Aramaic Fragments of Qumran
+Cave 4, Oxford, 1976, p. 23-24.
+118 XII PATRIARCHAE 83
+
+(5) 4Q213b (4QTLevi ar [olim 4QTLevi” ar (pars)]): editio
+paratur a M.E. STONE - J.C. GREENFIELD. Publicatio liminaris a
+M.E. STONE - J.C. GREENFIELD, The Third and Fourth Manuscripts of Aramaic Levi Document from Qumran (4QLevi aram and
+4QLevi? aram), in Le Muséon 109 (1996), p. 245-259.
+
+(6) 4Q214 (4QTLevi® ar [olim 4QTLevi? ar]): editio paratur
+a M.E. STONE - J.C. GREENFIELD. Publicatio liminaris a M.E.
+STONE - J.C. GREENFIELD, The Third and Fourth Manuscripts of
+Aramaic Levi Document from Qumran (4QLevi aram and 4QLevi®
+aram), in Le Muséon 109 (1996), p. 245-259.
+
+Cf.: J.C. GREENFIELD - M.E. STONE, Remarks on the Aramaic Testament of Levi from the Geniza, in RB 86 (1979), p. 215.
+
+(7) 4Q215 (4QTNaph): editio paratur a M.E. STONE - J.C.
+GREENFIELD. Publicatio liminaris a G.W. NEBE, Qumranica I:
+Zu unveröffentlichten Handschriften aus Höhle 4 von Qumran, in
+ZAW 106 (1994), p. 307-322, praesertim p. 315-322.
+
+(8) 4Q484 (4QpapTJud ? «Testament de Juda ?»): M. BAIL-
+LET, Qumran Grotte 4. III (4Q482-4Q 520) (DJD 7), Oxford,
+1982, p. 3 + tab. 1.; — J.T. Miu, Écrits préesséniens de Qumrán:
+d'Hénoch à ‘Amram, in M. DELCOR, Qumran. Sa piété, sa théologie
+et son milieu (Bibliotheca Ephemeridum Theologicarum Lovaniensium 46), Paris - Gembloux, 1978, p. 91-106, praesertim p. 98-99.
+
+(9) 4Q537 (4QAJa ar): editio paratur ab É. PuecH. Publicatio liminaris a M. TESTUZ, Deux fragments inédits des manuscrits de
+la Mer Morte, Semitica 5 (1955), p. 37-38 + 1 tab.; — J.T. MILIK,
+Écrits préesséniens..., p. 91-106, praesertim p. 103-105; — É.
+PuEcH, Fragments d'un apocryphe de Levi et le personnage eschatologique, 4QTestLévi ^(?) et 4QAJa, in J. TREBOLLE BARRERA -
+L. VEGAS MONTANER, The Madrid Qumran Congress. Proceedings
+of the International Congress on the Dead Sea Scrolls, Madrid 18-21
+March 1991 (STD] 11, 2), Leiden - Madrid, 1992, p. 449-501.
+
+(10) 4Q538 (4QAJu ar): editio paratur ab É. PuecH. Publicatio liminaris a J.T. Miuik, Écrits préesséniens..., p. 91-106, praesertim p. 97-102.
+
+(11) 4Q539 (4QAJo ar [olim 4QArM]): editio paratur ab
+
+È. PuecH. Publicatio liminaris a J. T. MILIK, Écrits préesséniens. ..,
+Pp. 91-106, praesertim p. 101-103.
+84 XII PATRIARCHAE 118
+
+(12) 4Q540 (4QAhA [bis] = 4QTLevi“ [?] ar): editio paratur
+ab É. PuecH. Publicatio liminaris ab È. PUECH, Fragments d'un
+apocryphe de Lévi..., p. 449-501.
+
+(13) 4Q 541 (4QAhA = 4QTLevi? [?] ar): editio paratur ab
+E. PuecH. Publicatio liminaris ab E. PUECH, Fragments d'un apocryphe de Levi ..., p. 449-501.
+
+Translatio anglica: F. GARCÍA MARTINEZ, The Dead Sea Scrolls
+Translated, p. 265-271 (1Q21, 3Q7, 4Q213, 4Q214, 4Q215, 4Q537,
+4Q538, 4Q539, 4Q540, 4Qs41).
+
+Translatio germanica: K. BEYER, Die aramáischen Texte vom Toten Meer, p. 193-209 et Ergänzungsband, p. 72-82 (1Q21, 4Q213,
+4Q214, 4Q540, 4Q541).
+
+(2) Geniza Cairensis
+
+CILevi ar (Cambridge, Bibl. Univ., Genizah Frg. Taylor-
+Schechter 16. 94 + Oxford, Bodleian Libr., Genizah Frg., hebr.
+c 27, fol. 56, saec. xi): H.L. PASS - J. ARENDZEN, Fragment of an
+Aramaic Text of the Testament of Levi, in JQR 12 (1900), p. 651-
+661 (fragm. Cantabrig. [sine photogr.]); — R.H. CHARLES - A.
+Cowtey, An Early Source of the Testaments of the Patriarchs, in
+JQR 19 (1907), p. 566-583 (fragm. Oxon. cum photogr., fragm.
+Cantabrig. [sine photogr.]); — J.C. GREENFIELD - M.E. STONE,
+Remarks on the Aramaic Testament of Levi from the Geniza, in RB
+86 (1979), p. 214-230 (photogr. fragm. Cantabrig. tab. xm-x1v,
+emendationes).
+
+Translatio germanica: K. BEYER, Die aramäischen Texte vom Toten Meer, p. 195-201, 202-208 et Ergánzungsband, p. 72-76 (translatio
+fragmentorum Cantabrig. et Oxon.).
+
+Versio graeca (BHG 2358-2360)
+
+Cf.: M. DE JoNGE, Studies on the Testaments of the Twelve Patriarchs.
+Text and Interpretation (StVTP 3), Leiden, 1975; — A. HULTGÁARD,
+L’eschatologie des Testaments des Douze Patriarches, II. Composition de l'ouvrage, textes et traductions (Acta Universitatis Upsaliensis. Historia Religionum 7), Uppsala, 1982, p. 11-52.
+
+Nota: Exstant duae recensiones.
+
+Codd.: C. BURCHARD, Neues zur Überlieferung der Testamente der
+zwölf Patriarchen. Ein unbeachtete griechische Handschrift (Athos, Laura I
+48) und eine unbekannte neugriechische Fassung (Bukarest, Bibl. Acad. 580
+[341]), in New Testament Studies 12 (1965-1966), p. 245-258; —
+118 XII PATRIARCHAE 85
+
+H.J. DE JONGE, Les fragments marginaux dans le ms. d des Testaments des
+XII Patriarches, in JSJ 2 (1971), p. 19-28; — In., Die Textüberlieferung
+der Testamente der zwölf Patriarchen, in ZNW 63 (1972), p. 27-44; —
+Ip., Additional notes on the history of MSS. Venice Bibl. Marc. Gr. 494
+(k) and Cambridge Univ. Libr., Ff 1.24 (b), in M. DE JONGE, Studies
+on the Testaments of the Twelve Patriarchs. Text and Interpretation (StVTP
+3), Leiden, 1975, p. 107-115; — H.W. HOLLANDER, The relationship
+between MS. Athos, Lavra I 48 (1) and MS. Athos, Lavra K 116, in
+M. DE JONGE, Studies on the Testaments of the Twelve Patriarchs...,
+p. 116-119; — TH. KORTEWEG, Further observations on the transmission
+of the text, in M. DE JONGE, Studies on the Testaments of the Twelve Patriarchs..., p. 161-173.
+
+R.H. CHARLES, The Greek Versions of the "Testaments of the
+Twelve Patriarchs edited from nine MSS together with the Variants of
+the Armenian and Slavonic Versions and some Hebrew Fragments, Oxford, 1908 (reimpr. Darmstadt, 1960), e 7 codd.
+
+A. HuLtGARD, L’eschatologie des Testaments des Douze Patriarches, II. Composition de l'ouvrage, textes et traductions (Acta Universitatis Upsaliensis. Historia Religionum 7), Uppsala, 1982, p. 239-
+272 (partim), e 14 codd.
+
+M. DE JONGE, The Testaments of the Twelve Patriarchs. À Critical Edition of the Greek Text (PsVTGr 1), Leiden, 1978 (ubi codices [14] et priores editiones).
+
+Translatio anglica: M. DE JONGE, The Testaments of the Twelve
+Patriarchs, in H.F.D. SPARKS, p. 505-600; — H.C. KEE, Testaments of
+the Twelve Patriarchs (Second Century B.C.). A New Translation and Introduction, in J.H. CHARLESWORTH, I, p. 775-828; — H.W. HOLLAN-
+DER - M. DE JONGE, The Testaments of the Twelve Patriarchs. A
+Commentary (StVTPs 8), Leiden, 1985.
+
+Translatio gallica: M. PHILONENKO, Testaments des douze patriarches, in A. DUPONT-SOMMER — M. PHILONENKO, p. 811-944.
+
+Translatio germanica: J. BECKER, Die Testamente der zwölf Patriarchen, in JSHRZ UI, 1, Gütersloh, 1974, p. 1-163 (e textu graeco;
+in appendice p. 139-158 translatio additamentorum e cod. e [Athos,
+Coutloumousiou 39] in Testamentum Levi 2, 3 et 18, 2 et translatio
+4Q213a, fragm. Cantabrig. et Oxon., fragm. syriacorum, Testamentum Nephtali hebraici).
+
+Translatio hispanica: A. PINERO, Testamentos de los doce patriarcas, in A. Diez MacHO, V, p. 9-158.
+
+Translatio italica: P. SACCHI, Testamento dei dodici patriarci figli di
+Giacobbe, in P. SACCHI, p. 725-948.
+86 XII PATRIAR CHAE 118
+
+Concordantia:
+A.-M. DENIS, Concordance grecque des Pseudépigraphes d' Ancien. Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione M. de Jonge).
+
+Versio graeca moderna
+
+Cf.: M. DE JONGE, The Testaments of the Twelve Patriarchs. À Critical Edition of the Greek Text (PsVTGr 1), Leiden, 1978, p. XXvIII-
+XXIX.
+
+Cod. unicus: Bucarest, Bibl. Acad. Rom., gr. 508 [341], fol. 7r-
+120r, saec. XVIII.
+
+C. BURCHARD, Neues zur Überliefening der Testamente der zwölf
+Patriarchen. Ein unbeachtete griechsiche Handschrift (Athos, Laura I 48)
+und eine unbekannte neugriechische Fassung (Bukarest, Bibl. Acad. 580
+[341]), in New Testament Studies 12 (1965-1966), p. 245-258
+(editio Testamentum Benjamin tantum, sine translatione).
+
+Versio latina
+
+Cf.: HJ. DE JoNGE, La bibliothèque de Michel Choniates et la tradition
+occidentale des Testaments de XII Patriarches, in Nederlands Archief voor
+Kerkgeschiedenis 53 (1973), p. 171-180 (= M. DE JONGE, Studies on
+the Testaments of the Twelve Patriarchs..., p. 97-106); — M. DE JONGE,
+The Testaments of the "Twelve Patriarchs. À Critical Edition of the Greek
+Text (PsVTGr 1), Leiden, 1978, p. xxx.
+
+Nota: Translatio latina confecta a Roberto Grosseteste anno 1242
+e cod. Cambridge, Univ. Libr., Ff. I. 24, fol. 203-261v, saec. x.
+
+Translatio gallica: J.P. MIGNE, Dictionnaire des apocryphes, I, col.
+853-936.
+
+Versio syriaca (fragmentum)
+
+Cod.: London, Brit. Libr., Add. 17193, fol. 71a, an. 874 (quadrat
+ad textum fragmenti aramaici Cambridge, Bibl. Univ., Genizah Frg.
+Taylor-Schechter 16. 94 (cf. supra], col. d, l. 15-23 et col. e, l. 1-2).
+
+W. WRIGHT, Catalogue of Syriac Manuscripts in the British Museum, II, London, 1871, p. 997; — R.H. CHARLES, The Greek
+Versions of the Testaments of the Twelve Patriarchs edited from nine
+MSS together with the Variants of the Armenian and Slavonic Versions
+and some Hebrew Fragments, Oxford, 1908 (reimpr. Darmstadt,
+1960), p. 254 (retractauit textum a W. Wright editum).
+
+Translatio germanica: J. BECKER, op. cit.
+118 XII PATRIARCHAE 87
+
+Versio armeniaca
+
+Cf.: M. DE JONGE, The Greek Testaments of the Twelve Patriarchs
+and the Armenian version, in M. DE JONGE, Studies on the Testaments of
+the Twelve Patriarchs (cf. supra), p. 120-139; — Ip., The Testaments of
+the Twelve Patriarchs. A Critical Edition of the Greek Text (PsVTGr 1),
+Leiden, 1978, p. xxv-xxvri; — A. HULTGARD, L'eschatologie des Testaments des Douze Patriarches, II. Composition de l'ouvrage, textes et traductions (Acta Universitatis Upsaliensis. Historia Religionum 7), Uppsala, 1982, p. 17-19, 239-272 (partim).
+
+Nota: Exstant duae recensiones, e recensione graeca B confectae.
+
+Codd.: C. BURCHARD, Zur armenischen Überlieferung der Testamente der zwölf Patriarchen, in C. BURCHARD - J. JERVELL - J. THO-
+MAS, Studien zu den Testamenten der Zwölf Patriarchen (BZINW 36),
+Berlin, 1969, p. 1-29 (45 codd.); - M.E. STONE, The Armenian Version of the Testaments of the Twelve Patriarchs. Selection of Manuscripts, in
+Sion 49 (1975), p. 207-214; — Ip., New Evidence for the Armenian
+Version of the Testaments of the Twelve Patriarchs, in RB 84 (1977),
+p. 94-107 (= M.E. STONE, Selected Studies, p. 131-144); — A. HULT-
+GARD, L’eschatologie des Testaments des Douze Patriarches, II. Composition
+de l'ouvrage, p. 17-19; — M.E. STONE, The Epitome of the Testaments of
+the Twelfe Patriarchs, in REArm 20 (1986-1987), p. 70-107 (= M.E.
+STONE, Selected Studies, p. 145-183); — C. BURCHARD, Neues von Joseph und Aseneth auf armenisch (Erweiterte Neubearbeitung von More about
+the Armenian Text of Joseph und Aseneth, Journal of the Society for Armenian Studies, $, 1990-91, 65-80), in C. BURCHARD, Gesammelte Studien, p. 139-159, praesertim p. 149-150, n. 25 (13 noui codices Testamenti XII patriarcharum).
+
+S. YovsEP'EANC', Ankanon girk', p. 27-151, e $ codd.
+
+M.E. STONE, The Testament of Levi. À First Study of the Armenian MSS of the Testaments of the XII Patriarchs in the Convent of St.
+James, Jerusalem, with Text, Critical Apparatus, Notes and Translation, Jerusalem, 1969, e 19 codd.
+
+M.E. STONE, The Armenian Version of the Testament of Joseph.
+Introduction, Critical Edition, and Translation (SBL. Texts and
+Translations 6. Pseudepigrapha Series 5), Missoula, Montana,
+1975, e IO codd.
+
+[M.E. STONE] Appendix II. The Armenian Version, in M. DE
+JonceE, The Testaments of the Twelve Patriarchs. A Critical Edition of
+the Greek Text (PsVTGr 1), Leiden, 1978, p. 192-206 (lectiones
+uariantes uersionis armeniacae Testamenti Leui, Testamenti Issachar,
+Testamenti Zabulon [vi-x] et "Testamenti Joseph).
+88 XII PATRIARCHAE 118
+
+A. HULTGARD, L'eschatologie des Testaments des Douze Patriarches, II. Composition de l'ouvrage, textes et traductions (Acta Universitatis Upsaliensis. Historia Religionum 7), Uppsala, 1982, p. 239-
+272 (partim), e 11 codd.
+
+Translatio anglica: J. IssavERDENS, The Uncanonical Writings,
+p. 267-358.
+
+Versio slauica
+
+Codd.: E. Kozax, Bibliographische Übersicht der biblisch-apokryphen
+Literatur bei den Slaven, in Jahrbücher für protestantische Theologie 18
+(1892), p. 127-158, praeserüm p. 136; — É. TURDEANU, Les Testaments des douze Patriarches en slave, in JSJ 1 (1970), p. 148-184 (= E.
+TURDEANU, Apocryphes slaves et roumains, p. 239-275); — H.E. GAY-
+LORD - TH. KORTEWEG, The Slavic versions, in M. DE JONGE, Studies
+on the Testaments of the Twelve Patriarchs. Text and Interpretation (StVTP
+3), Leiden, 1975, p. 140-143.
+
+Nota: Exstant duae recensiones.
+
+N.S. TICHONRAVOV, Pamjatniki, I, p. 96-145, e cod. Moscou,
+Archives Centrales de l'URSS, coll. de la Bibl. de l'Imprimerie
+Synodale 53, ca. 1350 (= Codex Siluestri) (recensio breuior).
+
+N.S. TICHONRAVOV, Pamjatniki, I, p. 146-232, e cod. Moscou, Mus. Hist. 869 (olim Bibl. Syn. 210), fol. 146-189, an. 1477
+cum lectionibus cod. Moscou, Archiv. Hist. 279-658, saec. xv
+(recensio longior).
+
+N.A. Pyrin, in G.A. KUSHELEV-BEZBORODKO, Pamyatniki
+starinnoi russkoi literatury, III, Saint-Pétersbourg, 1862, p. 33-35
+(Testamentum. Ruben), 36-38 ("Testamentum Simeon), e cod. Moscou, Bibl. Lenin (olim Rumjancov) 453, fol. 116-122, an. 1494
+(recensio longior).
+
+I. FRANKO, Apokrifi i legendi = ukrains'kih rukopisiv, I, L'vov,
+1896, p. 174-223, e quodam cod. Krechiv, saec. xvi (recensio
+longior).
+
+I.Y. PoRFIR'EV, Apokrificeskija skazanija o vethozavétnyh licah i
+sobytijah po mkopisjam Soloveckoj biblioteki, in Sbomik Otdeleniya
+russkogo yazyka i slovesnosti Imperatorskoi Akademii nauk 17
+(1877), p. 158-194, e cod. Saint-Pétersbourg, Bibl. Publ. (Saltykov-Séedrin) 431 (olim Solovetsk 653 postea Acad. Théol. Kazan), saec. xvi/xvn (recensio breuior).
+121 XII PATRIARCHAE 89
+
+M. SPERANSKIJ, Edin jugoslavjanski prévod ot Zavétité na dvanadesetit't& patriarsi, in Sbornik za narodni umotvorenija, nauka i
+kniznina 18 (1901), p. 242-251, e quodam cod. Krusedol, saec.
+XVI (editio fragmenti Testamentum Ruben) (recensio breuior).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

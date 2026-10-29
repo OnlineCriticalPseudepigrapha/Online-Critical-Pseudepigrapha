@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testamentum Jacob — CAVT-099 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Testamentum Jacob (CAVT-099)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-099</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-099</span>
+          <span class="badge badge-lang">Armenian</span>
+          <span class="badge badge-lang">CAVT 99</span>
+          <span class="badge badge-lang">CANT 14</span>
+        </div>
+        <h1 class="stub-title">Testamentum Jacob</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ABRAHAM - ISAAC - JACOB
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-099</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 99</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 14</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 3 (Testament of Jacob)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:913-918 (Testament of Jacob)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 441-452 (Testament of Jacob)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Testament of Abraham</em> is preserved primarily in Greek in two distinct recensions:</p>
+<ul class="stub-list">
+<li><strong>Recension A (Longer)</strong>: A fuller, more elaborate narrative focusing on Abraham’s heavenly journey, the judgment of souls, and his refusal to yield his soul to Death.</li>
+<li><strong>Recension B (Shorter)</strong>: A concise, more colloquial redaction with distinct apocalyptic and folkloric features.</li>
+</ul>
+<h4 class="stub-heading">Primary Greek Manuscripts</h4>
+<ul class="stub-list">
+<li><strong>Recension A</strong>:</li>
+<li><strong>A</strong>: Paris, Bibliothèque nationale de France, MS gr. 770 (dated 1304 CE).</li>
+<li><strong>B</strong>: Jerusalem, Greek Patriarchal Library, Saba 259 (11th c.).</li>
+<li><strong>C</strong>: Paris, BnF, MS gr. 1556 (15th c.).</li>
+<li><strong>D</strong>: Oxford, Bodleian Library, MS Canonici Greek 19 (15th c.).</li>
+<li>Additional witnesses: Paris gr. 1313 (15th c.), Paris gr. 1613 (15th c.), Paris Suppl. gr. 162; Vienna theol. gr. 237.</li>
+<li><strong>Recension B</strong>:</li>
+<li><strong>E</strong>: Paris, BnF, MS gr. 1613 (15th c.).</li>
+<li><strong>F</strong>: Paris, BnF, MS gr. 1313 (15th c.).</li>
+<li><strong>M</strong>: Milan, Biblioteca Ambrosiana, MS gr. 405 (C 210 inf.; 13th c.) — collated by F. Schmidt.</li>
+<li>Rome, Biblioteca Apostolica Vaticana, MS Vat. gr. 1801 (15th c.).</li>
+</ul>
+<h4 class="stub-heading">Oriental and Slavonic Versions</h4>
+<ul class="stub-list">
+<li><strong>Coptic</strong>:</li>
+<li>Bohairic version: Rome, Vat. copt. 61, fols. 164v–189v (dated 961/2 CE), ed. I. Guidi (1900).</li>
+<li>Sahidic fragments: Papyrus Köln Inv. Nr. 3221, noted by C. Römer, H. J. Thissen, and M. Weber.</li>
+<li><strong>Ethiopic (Ge’ez)</strong>:</li>
+<li>Falasha (Beta Israel) and Christian recensions: A. Z. Aešcoly (1951); M. Gaguine (1965).</li>
+<li><strong>Arabic</strong>:</li>
+<li>Extant in multiple Karshuni and Christian Arabic collections (e.g. Dayr Anba Maqar; ed. W. E. Barnes 1892; catalogue by G. Graf 1944).</li>
+<li><strong>Church Slavonic and Romanian</strong>:</li>
+<li>Romanian translation: Closely reflects Recension A (ed. M. Gaster 1893/1928).</li>
+<li>South Slavic and East Slavic miscellanies (Sbornik of Tikveš, ed. V. Antik 1978; D. S. Cooper & H. B. Weber 1976; I. Franko 1896–1910; A. Ja. Jatsimirskij 1921).</li>
+<li>Ukrainian redaction (<em>Slovo o sviatom Avraame</em>).</li>
+</ul>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The <em>Testament of Abraham</em> is preserved primarily in Greek in two distinct recensions:</p>
+<ul class="stub-list">
+<li><strong>Recension A (Longer)</strong>: A fuller, more elaborate narrative focusing on Abraham’s heavenly journey, the judgment of souls, and his refusal to yield his soul to Death.</li>
+<li><strong>Recension B (Shorter)</strong>: A concise, more colloquial redaction with distinct apocalyptic and folkloric features.</li>
+</ul>
+<h4 class="stub-heading">Primary Greek Manuscripts</h4>
+<ul class="stub-list">
+<li><strong>Recension A</strong>:</li>
+<li><strong>A</strong>: Paris, Bibliothèque nationale de France, MS gr. 770 (dated 1304 CE).</li>
+<li><strong>B</strong>: Jerusalem, Greek Patriarchal Library, Saba 259 (11th c.).</li>
+<li><strong>C</strong>: Paris, BnF, MS gr. 1556 (15th c.).</li>
+<li><strong>D</strong>: Oxford, Bodleian Library, MS Canonici Greek 19 (15th c.).</li>
+<li>Additional witnesses: Paris gr. 1313 (15th c.), Paris gr. 1613 (15th c.), Paris Suppl. gr. 162; Vienna theol. gr. 237.</li>
+<li><strong>Recension B</strong>:</li>
+<li><strong>E</strong>: Paris, BnF, MS gr. 1613 (15th c.).</li>
+<li><strong>F</strong>: Paris, BnF, MS gr. 1313 (15th c.).</li>
+<li><strong>M</strong>: Milan, Biblioteca Ambrosiana, MS gr. 405 (C 210 inf.; 13th c.) — collated by F. Schmidt.</li>
+<li>Rome, Biblioteca Apostolica Vaticana, MS Vat. gr. 1801 (15th c.).</li>
+</ul>
+<h4 class="stub-heading">Oriental and Slavonic Versions</h4>
+<ul class="stub-list">
+<li><strong>Coptic</strong>:</li>
+<li>Bohairic version: Rome, Vat. copt. 61, fols. 164v–189v (dated 961/2 CE), ed. I. Guidi (1900).</li>
+<li>Sahidic fragments: Papyrus Köln Inv. Nr. 3221, noted by C. Römer, H. J. Thissen, and M. Weber.</li>
+<li><strong>Ethiopic (Ge’ez)</strong>:</li>
+<li>Falasha (Beta Israel) and Christian recensions: A. Z. Aešcoly (1951); M. Gaguine (1965).</li>
+<li><strong>Arabic</strong>:</li>
+<li>Extant in multiple Karshuni and Christian Arabic collections (e.g. Dayr Anba Maqar; ed. W. E. Barnes 1892; catalogue by G. Graf 1944).</li>
+<li><strong>Church Slavonic and Romanian</strong>:</li>
+<li>Romanian translation: Closely reflects Recension A (ed. M. Gaster 1893/1928).</li>
+<li>South Slavic and East Slavic miscellanies (Sbornik of Tikveš, ed. V. Antik 1978; D. S. Cooper & H. B. Weber 1976; I. Franko 1896–1910; A. Ja. Jatsimirskij 1921).</li>
+<li>Ukrainian redaction (<em>Slovo o sviatom Avraame</em>).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Schmidt, Francis</strong>. <em>Le Testament grec d’Abraham. Introduction, édition critique des deux recensions grecques, traduction</em>. Texte und Studien zum Antiken Judentum (TSAJ) 11. Tübingen: J.C.B. Mohr (Paul Siebeck), 1986.</li>
+</ul>
+<p class="stub-paragraph"><em>The definitive critical edition of both Greek recensions (A and B) with facing French translation and comprehensive stemmatic and historical analysis.</em></p>
+<ul class="stub-list">
+<li><strong>Delcor, Mathias</strong>. <em>Le Testament d’Abraham. Introduction, traduction du texte grec et commentaire de la recension grecque longue, suivi de la traduction des Testaments d’Abraham, d’Isaac et de Jacob d’après les versions orientales</em>. Studia in Veteris Testamenti Pseudepigrapha (SVTP) 2. Leiden: Brill, 1973.</li>
+</ul>
+<p class="stub-paragraph"><em>Comprehensive edition and commentary on Greek Recension A.</em> (Review: N. Walter, <em>OLZ</em> 73 [1978]: 260–262).</p>
+<ul class="stub-list">
+<li><strong>James, Montague Rhodes</strong>. <em>The Testament of Abraham: The Greek Text Now First Edited, with an Introduction and Notes... with an Appendix Containing Extracts from the Arabic Version by W. E. Barnes</em>. Texts and Studies (T&S) 2.2. Cambridge: Cambridge University Press, 1892. Repr. Nendeln: Kraus, 1967.</li>
+</ul>
+<p class="stub-paragraph"><em>The editio princeps establishing the foundational two-recension division.</em></p>
+<ul class="stub-list">
+<li><strong>Stone, Michael E.</strong> <em>The Testament of Abraham: The Greek Recensions Translated</em>. Texts and Translations 2, Pseudepigrapha Series 2. Missoula, MT: Society of Biblical Literature, 1972.</li>
+</ul>
+<p class="stub-paragraph"><em>Reprints M. R. James’s Greek text of Recensions A and B with facing English translation and notes.</em></p>
+<ul class="stub-list">
+<li><strong>Vassiliev, A.</strong> “Mors Abrahami.” In <em>Anecdota graeco-byzantina</em>. Moscow: Imperial University, 1893, 1:lvi–lix, 292–308 [Greek Recension A].</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Concordance grecque des pseudépigraphes d’Ancien Testament. Concordance, corpus des textes, indices</em>. Louvain-la-Neuve: Université Catholique de Louvain, 1987, 825–832 [Full Greek lemmatized concordance].</li>
+<li><strong>Bauer, Johannes B.</strong> “Testamentum Abrahae A, B.” In <em>Index verborum in libris pseudepigraphis usurpatorum</em>, in C. A. Wahl, <em>Clavis librorum Veteris Testamenti apocryphorum philologica</em>. Graz: Akademische Druck- u. Verlagsanstalt, 1972, 647–691.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>99. Testamentum Jacob
+
+Cf.: M.R. JAMES, The lost Apocrypha, p. 18-19; — F. STEGMÜL-
+LER, n° 86 et 86, 1-6; — A.-M. DENIS, ILRJH, ad loc.
+
+Nota: In traditione coptica, arabica et aethiopica, Testamentum
+Isaac (cf. supra n? 98) et Testamentum Jacob, quae aliquando Athanasio
+Alexandrino tributa sunt (uide CPG 2183), post Testamentum Abrahae
+leguntur.
+
+Vide Testamentum Abrahae (supra n° 88).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

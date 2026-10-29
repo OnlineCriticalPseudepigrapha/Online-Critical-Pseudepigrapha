@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4 Esdrae — CAVT-180 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for 4 Esdrae (CAVT-180)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-180</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-180</span>
+          <span class="badge badge-lang">Latin</span>
+          <span class="badge badge-lang">CAVT 180</span>
+          
+        </div>
+        <h1 class="stub-title">4 Esdrae</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=4Ezra.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/4Ezra.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-180</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 180</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 19 (4 Ezra (Apocalypse of Ezra))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:517-559 (4 Ezra / 2 Esdras 3-14)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:542-624 (4 Ezra)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>4 Ezra was originally composed as a pseudepigraphal Jewish apocalypse, most likely in Hebrew, at some point after 70 CE (see discussion below).</p>
+
+<p>The original Hebrew version, which is now lost, was translated into Greek. The Greek version, which survives only in fragmentary quotations and paraphrases by later Christian authors, was translated into Latin, Syriac, Ethiopic, Georgian, Arabic, Armenian and Coptic. Additional translations from the Latin and Syriac versions also exist (Stone, 4 Ezra, 2).   The apocalypse takes the name, 4 Ezra, from the Latin version, which was labeled 4 Esdras to distinguish it from 1 Esdras (=Ezra), 2 Esdras (=Nehemiah), and 3 Esdras (the apocryphal book now normally designated 1 Esdras). To make matters more complicated, 4 Ezra is often called 2 Esdras by modern English translations, such as the KJV, RSV and NRSV, that adopt the traditional Hebrew names for Ezra and Nehemiah and include the apocryphal book of 1 Esdras.  The Latin version included as an appendix to the Vulgate was transformed into a Christian text by the addition of an introduction (chapters 1-2) and conclusion (chapters 15-16), commonly designated 5th and 6th Ezra by modern scholars. Most modern English translations follow the Vulgate in printing the Christian 5th and 6th Ezra along with the Jewish apocalypse of 4 Ezra. As a result, the chapter and verse numbering of the apocalypse begin at chapter 3 verse 1.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <h3>Date</h3>
+<h4>Terminus ante quem</h4>
+<p>The earliest definite quotation from <em>4 Ezra</em> occurs in Clement of Alexandria’s <em>Stromateis</em>. Since <em>Stromateis</em> is dated to the end of the 2nd century CE, 4 Ezra must have been written and translated into Greek no later than the end of the 2nd century. If the possible reference in <em>Barnabas</em> 12:1 is accepted as a quotation, <em>4 Ezra</em> will have been composed by the end of the first century.</p>
+<p><em>4 Ezra</em> is also closely related to <em>2 Baruch</em>, which is normally dated to the end of the first or the beginning of the second century, but the precise date of <em>2 Baruch </em>is uncertain, and the nature of the relationship between the two documents remains disputed. (See the introduction to <em>2 Baruch</em> for more discussion.)</p>
+<h4>Terminus post quem</h4>
+<p><em>4 Ezra</em>’s preoccupation with the destruction of Jerusalem indicates that the book was composed after 70 CE, but near enough to the event still to raise deep theological questions. If the “three heads” in Ezra’s eagle vision (12:22-28), that appear immediately before a description of the “end” (12:29-36), are coded references to Vespasian and his two sons Titus and Domitian, the book will have been composed during the reign of Domitian (81-96 CE). This corresponds to the reference to “the thirtieth year after the destruction of the city” in 3:1, although this date may simply recall Ezek 1:1 (cf. Stone, <em>4 Ezra</em>, 9-10; Schürer III.1, 299-300).</p>
+<h3>Original Language</h3>
+<p>Although L. Gry argued that <em>4 Ezra</em> was originally composed in Aramaic, most recent scholars agree with Wellhausen, Gunkel and, more recently, Klijn, that the original language was Hebrew (Schürer III.1, 300; Stone, <em>4 Ezra</em>, 10-11; Metzger, “4 Ezra,” 519-520).</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <h3>Syriac</h3>
+<table>
+    <tr>
+        <td>Label</td>
+        <td>Location</td>
+        <td>Full Name</td>
+        <td>Date</td>
+        <td>Content/Description</td>
+    </tr>
+    <tr>
+        <td>7aI</td>
+        <td>Milan</td>
+        <td>Bibliotheca Ambrosiana MS B.21 Inf. (fols. 267a-276b)</td>
+        <td>6th-7th century CE</td>
+        <td>The only extant Syriac manuscript of the complete text of 4 Ezra.</td>
+    </tr>
+</table>
+
+<h3>Jacobite lectionaries</h3>
+<table>
+    <tr>
+        <td>13l2</td>
+        <td>London</td>
+        <td>British Museum, Addit. MS 14.686</td>
+        <td>1255 CE</td>
+        <td>Covers 6.18-28; 7.26-42; 12.31-38</td>
+    </tr>
+    <tr>
+        <td>13l4</td>
+        <td>London</td>
+        <td>British museum, Addit. MS 14.736, fols. 13-21</td>
+        <td>13th century CE</td>
+        <td>Covers 12.31-38</td>
+    </tr>
+    <tr>
+        <td>15l5</td>
+        <td>Pampakuda in Kerala, India</td>
+        <td>A. Konath Library, MS 77</td>
+        <td>1423 CE</td>
+        <td>Covers 7.26-42; 12.31-38</td>
+    </tr>
+</table>
+
+<h3>Greek</h3>
+<table>
+    <tr>
+        <td>POxy 1010</td>
+        <td></td>
+        <td></td>
+        <td>4th century CE</td>
+        <td>Covers 15.57-59</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Jerusalem</td>
+        <td>Manuscript no. 160 in the Library of the Greek Orthodox Patriarchate at Jerusalem</td>
+        <td>1656 CE</td>
+        <td>A condensation of chapters 11 and 12</td>
+    </tr>
+</table>
+
+<h3>Latin</h3>
+<table>
+    <tr>
+        <td>Sangermanensis</td>
+        <td>Paris</td>
+        <td>Codex Sangermanensis. Bibliothèque Nationale, number 11505 Fonds Latin.</td>
+        <td>822 CE</td>
+        <td>The oldest extant manuscript of 4 Ezra. Lacks 7.36-105.</td>
+    </tr>
+    <tr>
+        <td>Ambianensis</td>
+        <td>Amiens</td>
+        <td>Codex Ambianensis. Number 10 in the Bibliothèque Communale of Amiens.</td>
+        <td>9th century CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Complutensis</td>
+        <td>Madrid</td>
+        <td>Codex Complutensis. MS 31 in the Library of the Central University at Madrid.</td>
+        <td>9-10th century CE.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Mazarinaeus</td>
+        <td>Paris</td>
+        <td>Codex Mazarinaeus. A two-volume codex, numbered 3 and 4 in the Bibliothèque Mazarine at Paris.</td>
+        <td>11th century CE</td>
+        <td></td>
+    </tr>
+</table>
+
+<h3>Armenian</h3>
+<table>
+    <tr>
+        <td>A</td>
+        <td>Jerusalem</td>
+        <td>Armenian Patriarchate 1933, fols. 209v-219r</td>
+        <td>1645 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>Rome</td>
+        <td>Cod. Vat. Arm. 1; fols. 202r-211v.</td>
+        <td>1625 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>Venice</td>
+        <td>Mechitarist 1182 (Petermann-Violet C, Zohrabian 7); fols. 174r-181r.</td>
+        <td>1656 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>Venice</td>
+        <td>Mechitarist 1270 (Petermann-Violet D); fols. 231v-244r.</td>
+        <td>14-15th century CE</td>
+        <td>Contains numerous corrections made by the original scribe and by a number of later hands.</td>
+    </tr>
+    <tr>
+        <td>E</td>
+        <td>Venice</td>
+        <td>Mechitarist 229 (Petermann-Violet B, Zohrabian 5); fols. 236v-246r.</td>
+        <td>1655 CE</td>
+        <td>Corrected by four different people.</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>Venice</td>
+        <td>Mechitarist 623 (Petermann-Violet A, Zohrabian 4); fols. 219v-236v.</td>
+        <td>1648 CE</td>
+        <td>Corrected by one hand.</td>
+    </tr>
+    <tr>
+        <td>G</td>
+        <td>Jerusalem</td>
+        <td>Armenian Patriarchate 1934; fols. 316v-330r.</td>
+        <td>1643-1646 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>H</td>
+        <td>Erevan</td>
+        <td>Matenadaran 1500; fols. 254r-260v.</td>
+        <td>1271-1285 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>I</td>
+        <td>Erevan</td>
+        <td>Matenadaran 2732; fols. 199r-206v.</td>
+        <td>17th century CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>J</td>
+        <td>Erevan</td>
+        <td>Matenadaran 200; fols. 213v-223v.</td>
+        <td>1653-1658 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>K</td>
+        <td>Erevan</td>
+        <td>Matenadaran 201; 214v-224r.</td>
+        <td>1660 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>L</td>
+        <td>Erevan</td>
+        <td>Matenadaran 354; fols. 242r-253r.</td>
+        <td>14th century CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>M</td>
+        <td>Erevan</td>
+        <td>Matenadaran 205; fols. 239v-243r.</td>
+        <td>17th century CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>N</td>
+        <td>Erevan</td>
+        <td>Matenadaran 315; fols. 196r-206r.</td>
+        <td>1619 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>P</td>
+        <td>Jerusa</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Q</td>
+        <td>Jerusalem</td>
+        <td>Armenian Patriarchate 1928; fols. 212r-221v.</td>
+        <td>1648 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R</td>
+        <td>London</td>
+        <td>British and Foreign Bible Society; fols. 222r-233v.</td>
+        <td>Before 1667 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>S</td>
+        <td>London</td>
+        <td>British Library or 8833; fols. 248v-259r.</td>
+        <td>17th century CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>Isfaha (New Julfa)</td>
+        <td>Allsaviour Church 15; fols. 214r-223r.</td>
+        <td>1662 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>V</td>
+        <td>Isfaha (New Julfa)</td>
+        <td>Allsaviour Church 16; fols. 367v-385r.</td>
+        <td>17th century CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>W</td>
+        <td>Jerusalem</td>
+        <td>Armenian Patriarchate 2558; fols. 422v-433r.</td>
+        <td>1596-1615 CE</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Z</td>
+        <td>Jerusalem</td>
+        <td>Armenian Patriarchate 2561; fols. 234-242.</td>
+        <td>1654-1670 CE</td>
+        <td></td>
+    </tr>
+</table>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <p class="stub-paragraph"><h3>Print Editions</h3></p>
+<p class="stub-paragraph"><h4>Syriac Text</h4></p>
+<p class="stub-paragraph"><ul class="bibliography"></p>
+<p class="stub-paragraph"><li>Bidawid, R. J., Ed., <em>The Old Testament in Syriac</em>.</li></p>
+<p class="stub-paragraph"><li>Ceriani, A. M. 1861.</li></p>
+<p class="stub-paragraph"></ul></p>
+<p class="stub-paragraph"><h4>Latin Text</h4></p>
+<p class="stub-paragraph"><ul class="bibliography"></p>
+<p class="stub-paragraph"><li>Denis, A.-M, Ed., <em>Concordance latine</em>.</li></p>
+<p class="stub-paragraph"><li>Klijn, A.F.J. <em>Der lateinische Text der Apokalypse des Esra</em> Texte und Untersuchungen zur Geschichte der altchristlichen Literatur 131. Berlin: 1983.</li></p>
+<p class="stub-paragraph"></ul></p>
+<p class="stub-paragraph"><h4>Sources for Greek Fragments</h4></p>
+<p class="stub-paragraph"><ul class="bibliography"></p>
+<p class="stub-paragraph"><li>Clement of Alexandria, Stromateis</li></p>
+<p class="stub-paragraph"><li class="annotation">4 Ezra 5:35 is quoted at <em>Stromateis</em> 3:16. There is also a possible allusion to 4 Ezra 14:21-22, 37-47 at <em>Stromateis</em> 1:22.</li></p>
+<p class="stub-paragraph"><li>Apostolic Constitutions</li></p>
+<p class="stub-paragraph"><li class="annotation">4 Ezra 7:103 is quoted at <em>Apostolic Constitutions</em> 2.14.9 and there is a possible allusion to 4 Ezra 8:23 at <em>Apostolic Constitutions</em> 8.7.6</li></p>
+<p class="stub-paragraph"><li>Barnabas</li></p>
+<p class="stub-paragraph"><li class="annotation">There is a possible quotation of 4 Ezra 5:5a at <em>Barnabas</em> 12:1.</li></p>
+<p class="stub-paragraph"><li>Shepherd of Hermas</li></p>
+<p class="stub-paragraph"><li class="annotation">There is a possible allusion to 4 Ezra 7:94 at <em>Vision of Hermas</em> 1.3.</li></p>
+<p class="stub-paragraph"><li>Oxyrhyncus papyri</li></p>
+<p class="stub-paragraph"><li class="annotation">POxy 1010 includes a quotation from the Christian 6 Ezra 15:57-59.</li></p>
+<p class="stub-paragraph"></ul></p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>3 Esdrae
+
+Opus hoc notatur pro memoria tantum: pertinet ad Biblia secundum LXX.
+
+4 Esdrae (Apocalypsis Esdrae, Salathiel)
+
+Cf.: J.-B. Frey, art. Apocryphes de l'Ancien Testament, in DBS I,
+1928, col. 411-418; — F. STEGMÜLLER, n° 95 et 95, 1-31; — E. ScHÜ-
+RER, III, p. 294-306; — M.E. STONE, Fourth Ezra. A Commentary on
+the Book of Fourth Ezra (Hermeneia - A Critical and Historical
+Commentary on the Bible), Minneapolis, Minnesota, 1990; — B. W.
+LONGENECKER, 2 Esdras, in Guides to Apocrypha and Pseudepigrapha,
+Sheffield, 1995; — A.-M. DENIS, ILRJH, ad loc.
+
+De relatione ad Apocalypsin Baruch syriacam (uide n° 233) uide
+W. HARNISCH, Verhängnis und Verheissung der Geschichte. Untersuchungen zum Zeitund Geschichtsverstándnis im 4. Buch Esra und in der syr. Baruchapokalypse (Forschungen zur Religion und Literatur des Alten
+und Neuen Testaments 97), Gôttingen, 1969 et P. BOGAERT, Apocalypse syriaque de Baruch. Introduction, traduction du syriaque et commentaire,
+I (SC 144), Paris, 1969, p. 383-385.
+
+Translatio germanica: A.F.J. KLIJN, Die Esra-Apokalypse (IV.
+Esra). Nach dem lateinischen Text unter Benutzung der anderen Versionen
+übersetzt und herausgegeben (GCS sine numero), Berlin, 1992.
+
+Fragmenta graeca (in citationibus patrum)
+
+(1) Apud Clementem Alexandrinum, Stromata, 3, 16, 100, 3
+(CPG 1377): cf. O. STAHLIN - L. FRÜCHTEL, Clemens Alexandn-
+132 ESDR AS - ESTHER - TOBIT - I-V MACCABAEORUM 180
+
+nus. Stromata Buch I-VI (GCS 52), Berlin, 1960, p. 242, l. 9-11 (=
+4 Esdrae v, 35).
+
+(2) Apud Constitutiones Apostolorum, 8, 7, 6: cf. F.X. FUNK,
+Didascalia et Constitutiones Apostolorum, Paderborn, 1905 (reimpr.
+1970), p. 482, l. 17-18 (= 4 Esdrae vii, 23).
+
+(3) Apud Clementem Alexandrinum, Stromata, 1, 22, 149, 3
+(CPG 1377): cf. O. STÄHLIN - L. FRÜCHTEL, Clemens Alexandrinus. Stromata Buch I-VI (GCS 52), Berlin, 1960, p. 92, l. 23-26
+(cf. fortasse 4 Esdrae XIV, 18-22, 37-47).
+
+(4) Apud Constitutiones Apostolorum, 2, 14, 9: cf. F.X. FUNK,
+Didascalia et Constitutiones Apostolorum, Paderborn, 1905 (reimpr. 1970), p. 53, 1. 13-18 (cf. fortasse 4 Esdrae vit, 103).
+
+Omnia fragmenta reperiuntur in A.-M. DENIS, Fragmenta
+pseudepigraphorum quae supersunt graeca (PSVTGr 3), Leiden, 1970,
+p. 130-132.
+
+Concordantia:
+A.-M. Denis, Concordance grecque des Pseudépigraphes d' Ancien Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione A.-M. Denis).
+
+Versio latina
+
+Cf.: J. VERHEYDEN, Les Pseudépigraphes d' Ancien Testament. Textes
+latins. À propos d'une Concordance, in ETL 71 (1995), p. 383-420, praesertim p. 395-397.
+
+Codd.: D. DE BRUYNE, Un manuscrit complet du IVe livre d'Esdras,
+in RBén 24 (1907), p. 254-257; — ID., Quelques nouveaux documents
+pour la critique textuelle de l’apocalypse d'Esdras, in RBén 32 (1920),
+p. 43-47; = M. McNamara, The Apocrypha in the Irish Church, Dublin, 1975, p. 27; — A.F.J. KLIJN, Der lateinische Text der Apokalypse
+des Esra..., usus est codicibus sequentibus (cf. p. 13-17): Paris, Bibl.
+Nat. de France, lat. 11505, fol. 62v-70v, an. 822 (= S); León, Archivo catedralicio 15, fol. 8 et 11 (script. inf), palimps. saec. vii (4 Esdrae
+vri, 67-92a, 92b-115a, 117b-139a; VIII, 2-6a, 8-38a, 39b-52) (= P);
+Amiens, Bibl. Municipale 10, fol. 53r-78r, saec. ıx (= A); Paris, Bibl.
+Nat. de France, lat. 13348, saec. viii (scholiae ad 4 Esdrae m, 1-2; vm,
+75-128; XIV, 22-24, 3,25[sic klijn]) (= G); Paris, Bibl. Mazarine 4,
+fol. 202v-214, saec. xi (= M); Bruxelles, Bibl. Royale, 1° Série 9
+109, p. LXIII-LXXIX, saec. XII (= N); Luxembourg, Bibl. Nationale
+264, fol. 126r-132r, saec. xi (= E); Madrid, Bibl. de la Universidad
+Central 31, saec. x, deperditus, sed exstant photographiae in Abbatia
+S. Hieronymi Romae (= C); Madrid, Bibl. Nacional, vitr. 15, fol.
+180 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM I33
+
+164v-170, saec. xii-xiii (= V); León, Real Colegiate de San Isidoro
+I, 3, III. T., fol. 218b-231a, an. 1162 (= L); München, Bayerische
+Staatsbibl., lat. 6311, fol. 53v et 54r, saec. ix (4 Esdrae IV, 3-10; V, 35-
+40); Chartres, Bibl. Municipale 31, fol. 146, saec. ix (4 Esdrae 1v, 3-
+10; V, 35-40). Codices sequentes, plerique liturgici, tantum continent
+Confessionem (uel Orationem) Esrae (= 4 Esdrae vtri, 20-36): Città del
+Vaticano, Bibl. Apost. Vatic., Reg. lat. 11, saec. vi (= Vat.); Paris,
+Bibl. Nat. de France, lat. 4, saec. ix/x (= Anic.); Jena, Universitätsbibl. Ms. Fol. 11, saec. xiv (= Ien.); Dublin, Trinity College Libr.
+A. 1. I2, saec. XIV (= Dub.); Madrid, Bibl. de la Academia de la Historia 64 bis, fol. 131, saec. x (= Moz.); Madrid, Bibl. Nacional
+10.0001, saec. xi/Xi1 (= Tol.); Paris, Bibl. Nat. de France, lat. 6, tomus 3, fol. 109v, saec. xI/x11 (= Par. 6); Paris, Bibl. Nat. de France,
+lat. 167, fol. 130v, saec. xii (= Par. 167); Berlin, Staatsbibl. Preußischer Kulturbesitz, Phillipps 1644, I, fol. 295v, saec. xii (= Phil);
+Lyon, Bibl. Municipale 430 (356), fol. 30a, saec. ix (= Ly.); Sinaï,
+Sainte-Catherine, slav. 5, fol. 95v-96v, saec. ix/x (= Sin.); et 6 codd.
+Grenoble, Bibl. Publique (7 Gre.) qui continent textum fere similem: 2, fol. 177v, saec. xiii; 4, saec. XIII; 13, fol. 210v, saec. XII; 18,
+fol. 171r, saec. xii; 21, fol. 43r, an. fere 1200; 23, fol. 182v, saec. xiv.
+
+Alii codd.: Madrid, Bibl. Nacional 12906 (olim E e 15) (Oratio
+[uel Confessio] Esrae) : cf. D. DE BRUYNE, in RBén 47 (1935), p. 381;
+Paris, Bibl. Nat. de France, lat. 134, fol. 123v in margine (Oratio [uel
+Confessio] Esrae): cf. BBL VI, 594 (recensio operis A.F.J. Klijn); Nuremberg, Germanisches Nationalmuseum, Kupferstichkabinett Kapsel 536/SD 286, 2 fol., saec. viii (fragmenta e capp. VI, 14 - X, 1): cf.
+B. BriscHorr - V. BROWN, Addenda to Codices Latini Antiquiores, in
+Mediaeval Studies 47 (1985), p. 317-366, praesertim p. 341-342.
+
+R.L. BENSLY, The Fourth Book of Ezra. The Latin Version edited
+from the Mss, with an Introduction by M.R. JAMES (Texts and Studies III, 2), Cambridge, 1895, p. 1-82, e codd. S A M C V (cum
+in appendice, p. 83-92, textu cap. 1-11 [= 5 Esdrae], xv-xvi [= 6
+Esdrae] e cod. C et, p. 93-94, textu Confessionis Esrae e cod. M
+cum lect. uar. e cod. Ly.).
+
+B. VIoLET, Die Esra Apokalypse (IV. Esra). Erster Teil. Die
+Überlieferung (GCS 18), Leipzig, 1910, e codd. SAM NCVL.
+
+L. Gry, Les dires prophétiques d'Esdras (IV. Esdras), 2 vol., Paris,
+1938, e cod. SPAGMNEC VL; München, Bayerische
+Staatsbibl., lat. 6311 et Chartres, Bibl. Municipale, 31.
+
+A.F.J. KLIJN, Der lateinische Text der Apokalypse des Esra. Mit
+einem Index grammaticus von G. Mussies (TU 131), Berlin, 1983,
+ex omnibus codd. supra laudatis.
+134 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 180
+
+Cf. : BBL VI, 594.
+
+R. WEBER - R. Gryson, Biblia Sacra iuxta vulgatam versionem,
+Stuttgart, 1994*, p. 1934b-1967a, e codd. SAM E C.
+
+Nota: De duobus fragmentis (arabico et neo-graeco) et uersionibus modernis (armeniaca, slauonica, georgica et hebraica) confectis e
+latino, praecipue e uulgata editione, uide M.E. STONE, Fourth Ezra.
+A Commentary on the Book of Fourth Ezra (Hermeneia - A Critical and
+Historical Commentary on the Bible), Minneapolis, Minnesota,
+1990, p. 4-5.
+
+Translatio anglica: J. M. Myers, I and II Esdras. Introduction,
+Translation and Commentary (The Anchor Bible), Garden City, New
+York, 1974, p. 159-329; - M.A. Kniss in R.J. Coceins - M.A.
+Kniss, The First and Second Books of Esdras (The Cambridge Bible
+Commentary. New English Bible), Cambridge, 1979, p. 100-283; —
+B.M. METZGER, The Fourth Book of Ezra (Late First Century A.D. ).
+With the Four Additional Chapters. A New Translation and Introduction, in
+J-H. CHARLESWORTH, I, p. 517-559 (ex editione R.L. Bensly).
+
+Translatio gallica: L. Gry, Les dires prophétiques d'Esdras (IV. Esdras), 2 vol, Paris, 1938; — P. GEOLTRAIN, Quatrième livre d'Esdras,
+in A. D'UPONT-SOMMER — M. PHILONENKO, p. 1393-1470.
+
+Translatio germanica: B. VIOLET - H. GRESSMANN, Die Apokalypsen des Esra und des Baruch in deutscher Gestalt (GCS 32), Leipzig,
+1924; — J. SCHREINER, Das 4. Buch Esra, in JSHRZ V, 4, Gütersloh,
+1981, p. 287-412.
+
+Concordantiae:
+W. LECHNER-SCHMIDT, Wortindex der lateinisch erhaltenen Pseudepigraphen zum Alten Testament (Texte und Arbeiten zum neutestamentlichen Zeitalter 3), Tübingen, 1990 (ex editione A.F.J. Klijn [TU 131]);
+— A.-M. DENIS, Concordance latine des Pseudépigraphes d' Ancien Testament. Concordance. Corpus des textes. Indices (Corpus Christianorum.
+"Thesaurus patrum latinorum. Supplementum), Turnhout, 1993 (ex
+editionibus R. WEBER, Biblia Sacra..., 1969" et A.F.J. Klijn [TU 131]).
+
+Versio syriaca
+
+Codd.: Fragmenta liturgica in tribus lectionariis: London, Brit.
+Libr., Add. 14686, an. 1255 (= 4 Esdrae vi, 18-28; VII, 26-42; XII,
+31*-38); London, Brit. Libr., Add. 14736, saec. xiii (= 4 Esdrae xi,
+31*-38); Pampakuda (Kerala, India), A. Konath Libr. 77 (3), an.
+1423 (= 4 Esdrae vni, 26-42; XII, 31*-38).
+
+A.M. CERIANI, Liber IV Esdrae syriace, in Monumenta sacra et profana, V, 1, Milano, 1868, p. 39-107, e cod. Milano, Bibl. Ambr.,
+B 21 Inf, fol. 267rb-276vc, saec. vı/vu; — et iterum A.M. Cz-
+180 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 135
+
+RIANI, Translatio syra Pescitto Veteris Testamenti, Milano, 1876-1883,
+t. II, 4° pars, p. 553-572 (editio photolithographica codicis Ambr.
+B 21 Inf); — R.J. Bıpawin, 4 Esdras, in The Old Testament in Syriac according to the Peshitta Version, IV, 3, Leiden, 1973, p. i-iv, 1-50,
+e cod. Ambr. B 21 Inf. et tribus lectionariis (cf. supra).
+
+B. OUTTIER, Un fragment syriaque inédit de IV Esdras, Apocrypha. Revue Internationale des littératures Apocryphes 4 (1993),
+p. 19-23, e cod. Paris, Bibl. Nat. de France, suppl. turc 983, fol.
+113/126, saec. VI ex. (= 4 Esdrae vir, 33b-41a, 41c-47b).
+
+Translatio anglica: G.H. Box, The Apocalypse of Ezra (II Esdras
+
+111-XIV). Translated from the Syriac Text, with brief Annotations (Translations of early Documents I, 8), London, 1917.
+
+Translatio gallica: L. GRY, op. cit. (secunda columna).
+
+Translatio germanica: B. VIOLET, Die Esra Apokalypse (IV. Esra) (secunda columna).
+
+Fragmentum copticum (sahidice)
+
+J. LeiPoLDT - B. VIOLET, Ein saidisches Bruchstück des vierten Esrabuches, in Zeitschrift für ägyptische Sprache und Altertumskunde 41 (1904), p. 137-140, e cod. pap. Berlin, K. Mus., P
+9096, saec. VI-VII (= 4 Esdrae XIII, 30-46).
+
+Translatio germanica: B. VIOLET, Die Esra Apokalypse (IV. Esra) (sexta columna, p. 385-395).
+
+Versiones arabicae
+
+Nota: Exstant tres uersiones, quarum duae primae a graeco dependent, tertia a syriaco.
+
+Codd.: B. VIOLET, Die Esra Apokalypse (IV. Esra), p. xxx1x ; —
+L. Gry, op. cit., p. XV-XVI; — G. GRAF, I, p. 219-221.
+
+(1) H. Ewarp, Das vierte Ezrabuch nach seinem Zeitalter, seinen
+arabischen Übersetzungen und einer neuen Wiederherstellung, in Abhandlungen der königlichen Gesellschaft der Wissenschaften zu
+Göttingen. Abhandlungen der historisch-philologischen Klasse
+II (1862-1863), Göttingen, 1864, p. 133-230, € cod. Oxford,
+Bodleian Libr., Or. 251, an. 1354.
+
+Alii codd.: Città del Vaticano, Bibl. Apost. Vatic., vatic. arab. 3
+
+(exemplum codicis Oxford, Bodleian Libr., Or. 251); Mingana syr.
+624 (karshuni), fol. 138r-152r, an. 1637-1639. U. ZANETTI, Les manu-
+136 ESDR AS - ESTHER - TOBIT - I-V MACCABAEORUM 180
+
+scrits de Dair Abü Magär. Inventaire (Cahiers d'Orientalisme 11), Genéve, 1986, p. 57-58: Monastère de St-Macaire, n° 391 (= Hag. 25),
+an. 1660.
+
+Translatio anglica: S. Ockrrv, Appendix, in W. WHISTON,
+Primitive Christianity Reviv'd. Vol. IV. An Account of the Faith of the
+Two First Centuries, London, 1711 (non uidi).
+
+Translatio gallica: L. GRY, op. cit. (in apparatu).
+
+Translatio germanica: B. VIOLET, Die Esra Apokalypse (IV. Esra) (quarta columna).
+
+(2) J. GILDEMEISTER, Esdrae liber quartus arabice, e codice Vaticano
+462 nunc primum editum, Bonn, 1877.
+
+Codd.: Città del Vaticano, Bibl. Apost. Vatic., vatic. arab. 462,
+fol. 1v-37v, an. 1311; Oxford, Bodleian Libr., Or. Huntington arab.
+260, fol. 136r-155v, saec. xIV (imperfectus); Paris, Bibl. Nat. de
+France, arab. 51, fol. 227v, an. 1321 (= 4 Esdrae vit, 75-91); Beyrouth, Univ. Saint Joseph, Bibl. Orientale 419, an. 1690; et quinque
+codd. saec. xviii/xvır: Le Caire, Patr. Copt., Bibl. 75; 77; 86; 89 et
+Theol. 286.
+
+Translatio gallica: L. Gry, op. cit. (in apparatu).
+
+Translatio germanica: B. VIOLET, Die Esra Apokalypse (IV. Esra) (quinta columna).
+
+(3) A. DRINT, The Mount Sinai Arabic Version of IV Ezra.
+Text, Translation and Introduction (Diss. Rijksuniversiteit Groningen), Groningen, 1995, e cod. Sinaï, Sainte-Catherine 589, fol.
+34r-68r, saec. Ix/x uel x/x1; — et iterum Eap., The Mount Sinai
+Arabic Version of IV Ezra (CSCO 563. Scr. Arabici 48), Louvain,
+1997, ex eodem codice.
+
+Codd.: M.E. STONE, À New Manuscript of the Syro- Arabic Version
+of the Fourth Book of Ezra, in JS) 8 (1977), p. 183-184 (cf. A.S. ATIYA,
+The Arabic manuscripts of Mount Sinai. À hand-list of the Arabic manuscripts and scrolls microfilmed at the library of the Monastery of St. Catherine,
+Mount Sinai, Baltimore, 1955 [p. 24]); — A. DRINT, The Mount Sinai
+Arabic Version of IV Ezra. Characteristics and Relevance of an Early Arabic
+Translation of the Syriac Text, in Orientalia Christiana Periodica 58
+(1992), p. 401-422. Textus codicis Berlin, Staatsbibl. Preußischer
+Kulturbesitz, Spreng. 30 (Ahlwardt 9434), p. 29-30, saec. ix/x
+(Rothstein) uel xir (Ahlwardt) (= 4 Esdrae xiv, 38-50) similis est textui codicis Sinaitici, arab. 589.
+
+Translatio anglica: A. Drint, The Mount Sinai Arabic Version of
+IV Ezra (CSCO 564. Scr. Arabici 49), Louvain, 1997.
+180 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 137
+
+Versio aethiopica
+
+Codd.: R. CowLey - F.A. TEFERU, The Study of Geez Manuscripts in Tégre Province, in Journal of Ethiopian Studies 9 (1971),
+p. 21-25; — P. PIOVANELLI, Un nouveau témoin éthiopien de l'Ascension
+d’Isaie et de la Vie de Jérémie (Paris, BN Abb. 195), in Henoch 12
+(1990), p. 347-363, mentionem alii codicis facit: Paris, Bibl. Nat. de
+France, Abbadie 156, fol. 52-67, saec. xvii-xviii; — A.-M. DENIS,
+ILRJH, ad loc. (31 codices).
+
+A. DILLMANN, Veteris Testamenti Aethiopici tomus quintus, quo
+continentur Libri Apocryphi, Berlin, 1894, p. 152-193, e 10 codd.
+
+Translatio gallica: L. Gry, op. cit. (tertia columna).
+
+Translatio germanica: B. VioLET, Die Esra Apokalypse (IV. Esra) (tertia columna).
+
+Versio armeniaca
+
+Cf.: M.E. STONE, A Textual Commentary on the Armenian Version
+of IV Ezra (SBL. Septuagint and Cognate Studies 34), Atlanta, Georgia, 1990.
+
+Codd.: C. BURCHARD, Neues von Joseph und Aseneth auf armenisch
+(Erweiterte Neubearbeitung von More about the Armenian Text of Joseph
+und Aseneth, Journal of the Society for Armenian Studies, $, 1990-91, 65-
+80), in C. BURCHARD, Gesammelte Studien, p. 139-159, praesertim
+p. 149-150, n. 25 (11 alii codices uersionis armeniacae 4 Esdrae)
+
+M.E. STONE, The Armenian Version of IV Ezra (University of
+Pennsylvania. Armenian Texts and Studies 1), Missoula, Montana, 1979, e 22 codd. (textus eclecticus e cod. Erevan, Matenadaran 1500; editio diplomatica cod. Jérusalem, Patr. Arm. 2558).
+
+De textu: M.E. STONE, Some Features of the Armenian Version of
+IV Ezra, in Le Muséon 79 (1966), p. 387-400 (= M.E. STONE, Selected Studies, p. 282-295); — Ip., Some Remarks on the Textual Criticism of
+IV Ezra, in HThR 60 (1967), p. 107-115 (= M.E. STONE, Selected
+Studies, p. 273-281); — Ip., Manuscripts and Readings of Armenian IV
+Ezra, in Textus 6 (1968), p. 48-61 (= M.E. STONE, Selected Studies,
+
+p. 296-309).
+
+Translatio anglica: J. ISSAVERDENS, The Uncanonical Writings,
+p. 364-501 (The Third [sic in traditione armeniaca] Book of Esdras).
+
+Translatio gallica: L. GRY, op. cit. (in apparatu).
+
+Translatio germanica: B. VIOLET, Die Esra Apokalypse (IV. Esra) (sexta columna).
+138 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 180
+
+Concordantia:
+M.E. STONE, Concordance and Texts of the Armenian Version of IV Ezra
+(Oriental Notes and Studies 11), Jerusalem, 1971 (cum textu codicum Jérusalem, Patr. Arm. 1933, an. 1645 et Erevan, Matenadaran
+T 500, saec. XIII ex.).
+
+Versio georgica
+
+Cf.: C'. K'Unc'ikIDzE, Ezras apokalip'sisis k'art'uli redak'c'iebi (Rédactions géorgiennes de l'Apocalypse d'Esdras), in Mravalt‘avi 1
+(1971), p. 93-109; — ID., Dzveli agt'k'mis apokrip'ebis k‘art‘uli versiebi
+(Versions géorgiennes des livres apocryphes de l'Ancien Testament),
+Tbilissi, II, 1973, p. 270-308 (georgice), p. 309-342 (russice); —
+B. OUTTIER, in Bedi Kartlisa 33 (1975), p. 380-383 (recensio C'. K'urc'ikidze, Dzveli...).
+
+Codd.: R.P. BLAKE, op. cit., in HThR 19 (1926), p. 302 n. 19;
+— 1D., Catalogue des manuscrits géorgiens de la bibliothèque de la Laure d’Iviron au Mont Athos, in ROC 28 (1931-1932), p. 289-361, praesertim
+p. 301-304.
+
+R.P. BLAKE, The Georgian Version of Fourth Esdras from the Jerusalem Manuscript, in HThR. 19 (1926), p. 299-375, € cod. Jérusalem, Patr. Gr. 7 + 11, fol. 194v-214v, an. 1050 (cum translatione
+latina).
+
+R.P. BLAKE, The Georgian Text of Fourth Esdras from the Athos
+Manuscript, in HThR 22 (1929), p. 57-105, e cod. Athos, Iviron,
+[s. n.] (E R.P. BLAKE, Catalogue..., n° 1), fol. 480v-496v uoluminis primi, an. 978 (cum translatione latina).
+
+M. TARCHNISCHVILI, Le grand lectionnaire de l'Église de Jérusalem
+(V-VHf siècle) (CSCO 204. Scr. iberici 13), Louvain, 1960,
+p. 150-153 (= 4 Esdrae vir, 6-36), e cod. Paris, Bibl. Nat. de
+France, géorg. 3, p. 344ra-345rb, saec. x-xi.
+
+C'. K‘uRC‘IKIDZE, Dzveli agt'k'mis apokrip‘ebis k'an'uli versiebi
+(Versions géorgiennes des livres apocryphes de l’Ancien Testament), Tbilissi, I, 1970, p. 320-414: uersio antiqua e cod. Hierosol. (cum lectionibus codd. Athon. et Parisin.) et uersio moderna
+(e slauico); IL, 1973, p. 270-308. |
+
+, Translatio latina: M. TARCHNISCHVILI, Le grand lectionnaire de
+l'Eglise de Jérusalem (V°-VIIF siècle) (CSCO 205. Scr. iberici 14), Louvain, 1960, p. 121-123.
+182 ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM 139</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

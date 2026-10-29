@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psalmi Salomonis — CAVT-212 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Psalmi Salomonis (CAVT-212)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-212</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-212</span>
+          <span class="badge badge-lang">Multi/Other</span>
+          <span class="badge badge-lang">CAVT 212</span>
+          
+        </div>
+        <h1 class="stub-title">Psalmi Salomonis</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> PSALMI - ODAE SALOMONIS - PROVERBIA - JOB - SAPIENTIA - SIRACIDES - PSALMI SALOMONIS
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=PssSol.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/PssSol.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-212</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 212</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 41 (Psalms of Solomon)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:639-670 (Psalms of Solomon)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:625-652 (Psalms of Solomon)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 649-682 (Psalms of Solomon)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p>The <em>Psalms of Solomon</em> (<em>PssSol</em>) is a Jewish pseudepigraphical collection of eighteen poetic psalms composed in Judea during the turbulent midpoint of the first century BCE (ca. 63–37 BCE) and brought into its final composite form prior to the fall of Jerusalem in 70 CE. Pseudepigraphically attributed to King Solomon—celebrated in biblical tradition for his wisdom, proverbs, and thousands of songs (cf. 1 Kgs 4:32; canonical Ps 72)—the collection captures the acute communal trauma, factional conflict, and fervent eschatological longings of Jewish society following the collapse of Hasmonean sovereignty and the Roman conquest of Jerusalem by Pompey the Great in 63 BCE.</p>
+<p>Although not preserved in the canonical Hebrew Bible or among the Dead Sea Scrolls, the <em>Psalms of Solomon</em> was faithfully transmitted through Christian ecclesiastical channels in the Greek East. Ancient canonical catalogues—most notably the fifth-century table of contents (<em>Pinax</em>) of Codex Alexandrinus (which lists the eighteen psalms among the antilegomena following 1–2 Clement), the sixth-century <em>Synopsis Scripturae Sacrae</em> (pseudo-Athanasius), and the ninth-century <em>Stichometry of Nicephorus</em> (which measures the work at 2,100 stichoi)—demonstrate that the collection was read and copied as a significant ecclesiastical appendix to Septuagint and New Testament codices.</p>
+<p>Spanning an array of classical biblical poetic genres, the collection includes communal laments (PssSol 1, 2, 8), individual prayers of thanksgiving and penitence (PssSol 3, 5, 6, 9, 13, 15, 16), wisdom and didactic reflections (PssSol 4, 10, 14), and royal messianic hymns (PssSol 17, 18). It stands alongside the Dead Sea Scrolls as one of the most vital textual witnesses to late Second Temple Palestinian Jewish theology, articulating a profound theodicy in the face of foreign subjugation, an acute ethical dualism between the "righteous" and "sinners," an explicit hope in the bodily resurrection of the righteous to eternal life, and the most detailed pre-Christian portrait of a personal, Davidic Messiah (<em>huios Dauid</em>) in ancient Jewish literature.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <h3>Date and Historical Setting</h3>
+<p>The historical backdrop of the <em>Psalms of Solomon</em> is anchored in the dramatic political convulsions of first-century BCE Judea. Three psalms in particular—2, 8, and 17—contain vivid, transparent historical allusions that allow modern scholars to date their composition with remarkable precision:</p>
+<ul>
+<li><strong>The Siege and Fall of Jerusalem (63 BCE):</strong> Psalm 8 recounts the approach of a foreign conqueror from the ends of the earth who was welcomed by the city's corrupt leadership, assaulted the fortified walls with battering rams (8:15–21; cf. 2:1), and desecrated the Temple sanctuary, trampling the holy altar with pagan feet (2:2). As first recognized by F. K. Movers in the nineteenth century, this corresponds exactly to the Roman siege led by Pompey the Great in 63 BCE, intervening in the civil war between the Hasmonean brothers Hyrcanus II and Aristobulus II as recounted by Flavius Josephus (<em>Ant.</em> 14.3–4; <em>J.W.</em> 1.6–7).</li>
+<li><strong>The Denunciation of Late Hasmonean Usurpation:</strong> The psalms deliver a scathing theological polemic against the native Hasmonean priest-kings (Aristobulus II, Hyrcanus II, and Alexander Jannaeus). The psalmist charges them with unlawfully arrogating royal majesty to themselves without Davidic covenantal legitimacy (17:5–8) and defiling the altar, sanctuary, and sacrificial rites with ritual impurity and incest (8:11–13, 22; 2:3–14). The Roman assault is thus interpreted not as a tragic defeat of God's people, but as a deserved divine punishment upon an apostate aristocracy.</li>
+<li><strong>The Ignominious Fate of Pompey (48 BCE):</strong> Psalm 2:26–27 provides a decisive <em>terminus post quem</em> for the collection, describing the dishonorable end of the Roman conqueror: <em>"I did not have to wait long before God showed me the insolent one lying dead on the mountains of Egypt, despised more than the smallest on land and sea, his body decomposed by the waves with no one to bury him."</em> This matches Pompey's assassination on the beach of Pelusium in Egypt in 48 BCE following his defeat at the Battle of Pharsalus, where his headless body was left exposed on the shore.</li>
+<li><strong>Herod the Great's Siege and the Atkinson Redating Thesis:</strong> While earlier scholars (e.g., Ewald, Bretschneider, Cellier) proposed obsolete dates ranging from Ptolemy I to Titus, Kenneth Atkinson ("Toward a Redating of the Psalms of Solomon," 1998; "Herod the Great, Sosius, and the Siege of Jerusalem," 1996) argues that Psalm 17 reflects the bloody siege of Jerusalem in 37/36 BCE by Herod the Great and the Roman general Gaius Sosius. Atkinson suggests that the collection spans the historical transition from the late Hasmonean period to the early Herodian era (ca. 63–30 BCE), reflecting an ongoing community that weathered both crises.</li>
+</ul>
+<p>The complete absence of any allusion to the cataclysmic destruction of the Second Temple in 70 CE firmly establishes that the collection attained its final redacted form before 70 CE, with the majority of psalms composed between 63 and 40 BCE (as proposed by R. B. Wright, E. P. Sanders, and M. de Jonge).</p>
+
+<h3>Authorship, Provenance, and Sectarian Milieu</h3>
+<p>The collection was composed in Judea, almost certainly in Jerusalem or its immediate environs. The identity of the community behind the psalms has been one of the most vigorously debated problems in Second Temple scholarship:</p>
+<ul>
+<li><strong>The Pharisaic Hypothesis:</strong> Pioneered by Julius Wellhausen (<em>Die Pharisäer und die Sadducäer</em>, 1874) and popularized by H. E. Ryle and M. R. James in their landmark edition <em>Psalms of the Pharisees, Commonly Called the Psalms of Solomon</em> (1891), this view held that the authors were Pharisees opposing the Sadducean Hasmonean hierarchy. The thesis was supported by the poems' fierce devotion to Torah, belief in divine sovereignty alongside human free will, insistence on bodily resurrection, and strict purity regulations. Mikael Winninge (<em>Sinners and the Righteous</em>, 1995) has defended a modified version of this stance.</li>
+<li><strong>The Post-Qumran Critique:</strong> The discovery of the Dead Sea Scrolls decisively shattered the exclusivity of the Pharisaic identification. As demonstrated by J. O'Dell (1961) and R. B. Wright (1972), doctrines such as divine retribution, bodily resurrection, messianic deliverance, and hatred for Hasmonean corruption were not distinctive to Pharisees, but were widely shared across the broader apocalyptic and pietistic streams of Palestinian Judaism. The internal evidence proves firmly that the authors were non-Sadducean, but does not identify them uniquely as Pharisees.</li>
+<li><strong>The Essene and Qumran-Adjacent Hypotheses:</strong> André Dupont-Sommer (1973) proposed that the psalms originated among the Essenes, a hypothesis further refined by P. N. Franklyn (1987), who posited a previously unrecorded branch of the Essene movement. However, no copies or fragments of the <em>Psalms of Solomon</em> have been found among the Dead Sea Scrolls, and the references to fleeing into the wilderness (PsSol 17:16) reflect temporary flight during siege warfare rather than permanent communal withdrawal to Qumran.</li>
+<li><strong>The Zadokite Displacement Model:</strong> Advanced by Heerak Christian Kim (<em>Zadokite Propaganda in the Late Second Temple Period</em>, 2014), this theory links the collection with displaced Oniad/Zadokite priests who were ousted from the Temple cult by the Hasmoneans and who produced polemical psalms protesting their disenfranchisement and calling for cultic restoration.</li>
+<li><strong>The Modern Consensus: Unknown Jerusalem Pietists:</strong> The dominant contemporary perspective, articulated by Kenneth Atkinson (<em>I Cried to the Lord</em>, 2004) and endorsed by E. P. Sanders, concludes that the authors cannot be identified with any known historical sect (Pharisees, Sadducees, or Essenes). Rather, the psalms were composed by an unknown, pietistic Jerusalem circle—self-designated as "the assemblies of the devout" (συναγωγαὶ ὁσίων, PsSol 17:16)—rooted in traditional Hasidic piety (Büchler 1922; Flusser 1984; Hann 1988) and maintaining strict covenantal fidelity amid socio-political marginalization.</li>
+</ul>
+
+<h3>Original Language and Translation Character</h3>
+<p>The overwhelming majority of modern scholars (including Ryle and James, G. B. Gray, Emil Schürer, Joseph L. Trafton, and Robert B. Wright) maintain that the <em>Psalms of Solomon</em> was originally composed in <strong>Hebrew</strong>, and subsequently translated into Greek, from which the Syriac version later derived (or, as Trafton and Grant Ward argue, with both versions reflecting independent access to a common Hebrew <em>Vorlage</em>). The case for a lost Hebrew original rests on several converging lines of philological evidence:</p>
+<ul>
+<li><strong>Pervasive Semitic Syntax:</strong> The Greek text exhibits continuous coordinate clauses linked by καί, construct-state periphrases, rigid Hebrew word order, and idioms that represent word-for-word calques of classical biblical Hebrew poetry.</li>
+<li><strong>Demonstrable Translation Errors:</strong> Several obscure or impossible Greek readings are explicable only as misreadings or graphic confusion of Hebrew consonants. For example, at PsSol 2:25, the translator appears to have misread Hebrew <em>rymhl</em> ("to change/alter") as <em>rm'l</em> ("to say"), producing the ungrammatical Greek phrase τοῦ εἰπεῖν. Similarly, at PsSol 2:26, the description of Pompey's insolence (ἡ ὑπερηφανία αὐτοῦ) likely reflects a graphic confusion of Hebrew <em>g'wtw</em> ("his pride") for <em>gwytw</em> ("his corpse").</li>
+<li><strong>Intertextual Dependence with Baruch:</strong> The undeniable literary relationship between Psalm of Solomon 11 and Baruch 5:5–8 demonstrates that one work drew upon the other. Because PsSol 11 displays superior poetic unity and structural cohesion, scholars widely judge that Baruch translated or adapted a pre-existing Hebrew Vorlage of Psalm 11.</li>
+<li><strong>The Syriac Evidence:</strong> Comprehensive philological analysis by Joseph L. Trafton (1985, 1986) indicates that while the Syriac text shows close affinity with the Greek manuscript family of Group 253, several Syriac readings preserve genuine Semitic idioms or variants that suggest access to a Semitic Vorlage.</li>
+</ul>
+<p>A vocal minority (beginning with Hilgenfeld in 1871 and revisited by some contemporary linguists) has argued for direct Greek composition in intentional imitation of the Septuagint. However, as Kenneth Atkinson notes in the NETS commentary, the persistent "lexical stereotyping" (e.g., translating Hebrew <em>hasid</em> uniformly as ὅσιος and <em>hesed</em> as ἔλεος) and syntactical stiffness are standard hallmarks of translation Greek rather than Hellenistic Greek composition.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <h3>The Greek Manuscript Tradition</h3>
+<p>The Greek text of the <em>Psalms of Solomon</em> survives in eleven manuscripts dating from the tenth to the sixteenth century CE. Through the stemmatic analyses of Robert R. Hann (<em>The Manuscript History of the Psalms of Solomon</em>, 1982), Robert B. Wright (<em>The Psalms of Solomon: A Critical Edition of the Greek Text</em>, 2007), and Felix Albrecht (Göttingen Septuagint XII,3, 2018), these witnesses are classified into <strong>four distinct textual families</strong>, alongside ancient indirect witnesses:</p>
+
+<table cellspacing="0" cellpadding="5" border="1">
+<thead>
+<tr>
+<th>Rahlfs No.</th>
+<th>Siglum</th>
+<th>Repository and Shelfmark</th>
+<th>Date</th>
+<th>Textual Family / Stemmatic Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>253</strong></td>
+<td>V</td>
+<td>Città del Vaticano, Biblioteca Apostolica Vaticana, Vat. gr. 336 (olim 253)</td>
+<td>11th–12th c.</td>
+<td><strong>Group 253:</strong> Primary and most reliable witness to the earliest reconstructible archetype. Closely allied to the Greek <em>Vorlage</em> underlying the ancient Syriac translation.</td>
+</tr>
+<tr>
+<td><strong>655</strong></td>
+<td>o</td>
+<td>Città del Vaticano, Biblioteca Apostolica Vaticana, Ottob. gr. 60</td>
+<td>16th c.</td>
+<td><strong>Group 253:</strong> Discovered after Rahlfs (1935); direct descendant and close congener of MS 253.</td>
+</tr>
+<tr>
+<td><strong>659</strong></td>
+<td>p</td>
+<td>Città del Vaticano, Biblioteca Apostolica Vaticana, Ottob. gr. 384</td>
+<td>16th c.</td>
+<td><strong>Group 253:</strong> Discovered after Rahlfs (1935); congener of MS 253 and 655.</td>
+</tr>
+<tr>
+<td><strong>260</strong></td>
+<td>H (Hauniensis)</td>
+<td>Copenhagen, Det Kongelige Bibliotek, GkS 6 fol. ("Bible of Niketas")</td>
+<td>10th–11th c.</td>
+<td><strong>Group 260:</strong> Oldest surviving complete Greek manuscript; principal representative of the widespread "Bible of Niketas" Byzantine recension.</td>
+</tr>
+<tr>
+<td><strong>149</strong></td>
+<td>A (Augustanus)</td>
+<td>Wien, Österreichische Nationalbibliothek, Theol. gr. 11 (olim 149)</td>
+<td>11th c.</td>
+<td><strong>Group 260:</strong> Direct congener and copy of MS 260; basis of David Hoeschel's rediscovery and the 1626 <em>editio princeps</em>.</td>
+</tr>
+<tr>
+<td><strong>471</strong></td>
+<td>M (Mosquensis)</td>
+<td>Moscow, State Historical Museum, Syn. gr. 147 (olim Athos, Iviron)</td>
+<td>12th–14th c.</td>
+<td><strong>Group 260:</strong> Important secondary witness of the Niketas recension, collated by Oscar von Gebhardt.</td>
+</tr>
+<tr>
+<td><strong>606</strong></td>
+<td>P (Parisinus)</td>
+<td>Paris, Bibliothèque nationale de France, gr. 2991A</td>
+<td>14th–15th c.</td>
+<td><strong>Group 260:</strong> Derivative witness of the Niketas textual family.</td>
+</tr>
+<tr>
+<td><strong>3004</strong></td>
+<td>L (Vossianus)</td>
+<td>Leiden, Universiteitsbibliotheek, Voss. Misc. 15</td>
+<td>16th c.</td>
+<td><strong>Group 260:</strong> Discovered and collated by W. Baars in 1961. Contains PsSol 17:2b–18:14 and uniquely isolates PsSol 18:10–12 as a separate "nineteenth psalm," partially confirming Ryle and James's nineteenth-century conjecture.</td>
+</tr>
+<tr>
+<td><strong>629</strong></td>
+<td>C (Casanatensis)</td>
+<td>Rome, Biblioteca Casanatense, MS 1908 (olim Casanat. 715)</td>
+<td>12th–14th c.</td>
+<td><strong>Group 629:</strong> Preserves a mixed textual tradition exhibiting contamination across Groups 253 and 336.</td>
+</tr>
+<tr>
+<td><strong>769</strong></td>
+<td>B (Benaki)</td>
+<td>Athens, Benaki Museum, MS 5 (olim Athos, Great Lavra)</td>
+<td>12th–14th c.</td>
+<td><strong>Group 629:</strong> Close congener of MS 629, collated on Mount Athos by Gebhardt.</td>
+</tr>
+<tr>
+<td><strong>336</strong></td>
+<td>R</td>
+<td>Città del Vaticano, Biblioteca Apostolica Vaticana, Vat. gr. 336</td>
+<td>12th–14th c.</td>
+<td><strong>Group 336:</strong> Standalone witness preserving an independent, archaic recension with idiosyncratic readings; historically prominent in early printed editions.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Ancient Indirect Attestation</h3>
+<ul>
+<li><strong>Codex Alexandrinus (MS A, 5th century CE):</strong> Listed in the table of contents (<em>Pinax</em>) under disputed books (antilegomena) immediately following 1–2 Clement with the entry <em>ΨΑΛΜΟΙ ΣΟΛΟΜΩΝΤΟΣ ΙΗ</em> ("Eighteen Psalms of Solomon"). The folios containing the text at the very end of the great codex were lost prior to the modern era, but the entry proves its canonical reception in late antique Egypt.</li>
+<li><strong>Patristic Stichometries:</strong> Cited in the pseudo-Athanasian <em>Synopsis Scripturae Sacrae</em> (early 6th c.) and the <em>Stichometry of Nicephorus</em> (Patriarch of Constantinople, 9th c.), which reckons the work at 2,100 stichoi among the ecclesiastical books.</li>
+</ul>
+
+<h3>The Syriac Tradition</h3>
+<p>The <em>Psalms of Solomon</em> is also preserved in the Syriac tradition across five manuscripts (critical edition by W. Baars, 1972):</p>
+<ul>
+<li><strong>MS S (7th century CE):</strong> A fragmentary marginal text preserved in the margin of a manuscript of the <em>Hymns of Severus of Antioch</em> (British Library, Add. 14538).</li>
+<li><strong>The Complete Syriac Codices:</strong> Manchester, John Rylands Library, Syr. 9 (the celebrated 16th-century "Harris codex"); Birmingham, Selly Oak Colleges, Mingana Syr. 163; Cambridge, University Library, Add. 2012; and Jerusalem, St. Mark's Monastery, Syr. 161.</li>
+</ul>
+<p>In the Syriac manuscripts, the eighteen psalms are appended directly to the <em>Odes of Solomon</em>, numbered continuously as Odes 43–60. Philological evaluations by Joseph L. Trafton (1985) demonstrate that the Syriac translation differs from the Greek in only about 62 verses (roughly 10%) and shows an intimate affinity with the Greek archetype of Group 253, while in several passages reflecting independent Semitic idioms.</p>
+
+<h3>History of Printed Editions</h3>
+<ul>
+<li><strong><em>Editio Princeps</em> (1626):</strong> First printed by the Jesuit scholar Juan Luis de la Cerda in his <em>Adversaria Sacra</em> (Lyon, 1626), based on a transcript of MS 149 rediscovered in Augsburg by David Hoeschel (1556–1617).</li>
+<li><strong>Oscar von Gebhardt (1895):</strong> <em>Die Psalmen Salomo’s</em>; the foundation of modern stemmatic criticism, expanding the known Greek witnesses from five to eight manuscripts through Mount Athos discoveries.</li>
+<li><strong>Alfred Rahlfs (1935):</strong> <em>Septuaginta</em>; incorporated eight manuscripts, providing the widely adopted standard chapter and verse numbering.</li>
+<li><strong>Robert B. Wright (2007):</strong> <em>The Psalms of Solomon: A Critical Edition of the Greek Text</em>; the first complete edition to collate all eleven Greek manuscripts and four Syriac codices with high-resolution digital imaging.</li>
+<li><strong>Felix Albrecht (2018):</strong> <em>Psalmi Salomonis</em> (Göttingen Septuagint XII,3); the definitive monumental edition providing exhaustive stemmatic apparatus, patristic citations, and orthographic documentation.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <p class="stub-paragraph"><h3>Critical Editions, Translations, and Manuscript Facsimiles</h3></p>
+<p class="stub-paragraph"><ul class="bibliography"></p>
+<p class="stub-paragraph"><li>Albrecht, Felix. <em>Psalmi Salomonis</em>. Septuaginta: Vetus Testamentum Graecum Auctoritate Academiae Scientiarum Gottingensis editum XII,3. Göttingen: Vandenhoeck &amp; Ruprecht, 2018.</li></p>
+<p class="stub-paragraph"><li class="annotation">** The definitive, monumental critical edition in the Göttingen Septuagint series, establishing the complete text-critical stemma across all eleven Greek manuscripts, the Syriac versions, and indirect patristic witnesses.</li></p>
+<p class="stub-paragraph"><li>Albrecht, Felix. <em>Die Psalmen Salomos: Griechischer Text, deutsche Übersetzung und Glossar</em>. Septuaginta: Vetus Testamentum Graecum. Göttingen: Vandenhoeck &amp; Ruprecht, 2020.</li></p>
+<p class="stub-paragraph"><li>Baars, Willem. "Psalms of Solomon." Pages 1–27 in <em>The Old Testament in Syriac According to the Peshitta Version</em>. Part 4, Fascicle 6: Canticles or Odes, Prayer of Manasseh, Psalms of Solomon, Tobit, 1 (3) Esdras. Leiden: Brill, 1972.</li></p>
+<p class="stub-paragraph"><li class="annotation">** The critical Peshitta Institute edition of the Syriac version based on all surviving Syriac manuscripts.</li></p>
+<p class="stub-paragraph"><li>Cerda, Juan Luis de la. <em>Adversaria Sacra</em>. Lyon: Ludovici Prost, 1626.</li></p>
+<p class="stub-paragraph"><li class="annotation">** The editio princeps of the Psalms of Solomon, based on David Hoeschel's rediscovery of MS 149 (Augustanus).</li></p>
+<p class="stub-paragraph"><li>Gebhardt, Oscar von. <em>Die Psalmen Salomo’s zum ersten Male mit Benutzung der Athoshandschriften und des Codex Casanatensis herausgegeben</em>. Leipzig: J. C. Hinrichs, 1895.</li></p>
+<p class="stub-paragraph"><li class="annotation">** The historical milestone of modern critical scholarship, establishing the major manuscript groupings.</li></p>
+<p class="stub-paragraph"><li>Gray, G. Buchanan. "The Psalms of Solomon." Pages 625–652 in vol. 2 of <em>The Apocrypha and Pseudepigrapha of the Old Testament</em>. Edited by R. H. Charles. Oxford: Clarendon Press, 1913.</li></p>
+<p class="stub-paragraph"><li class="annotation">** Classic English critical translation, poetic arrangement, and detailed retroversion notes.</li></p>
+<p class="stub-paragraph"><li>Harris, J. Rendel, and Alphonse Mingana. <em>The Odes and Psalms of Solomon: Re-edited for the Governors of the John Rylands Library</em>. 2 vols. Manchester: Manchester University Press, 1916–1920.</li></p>
+<p class="stub-paragraph"><li>Rahlfs, Alfred. <em>Septuaginta: id est Vetus Testamentum graece iuxta LXX interpretes</em>. 2 vols. Stuttgart: Privilegierte Württembergische Bibelanstalt, 1935. Revised by Robert Hanhart. Stuttgart: Deutsche Bibelgesellschaft, 2006.</li></p>
+<p class="stub-paragraph"><li>Ryle, Herbert E., and Montague R. James. <em>Psalms of the Pharisees, Commonly Called the Psalms of Solomon: The Text Newly Revised from All the MSS</em>. Cambridge: Cambridge University Press, 1891.</li></p>
+<p class="stub-paragraph"><li class="annotation">** Foundational Cambridge edition containing Greek text, translation, commentary, and the classical defense of the Pharisaic authorship hypothesis.</li></p>
+<p class="stub-paragraph"><li>Trafton, Joseph L. <em>The Syriac Version of the Psalms of Solomon: A Critical Evaluation</em>. Society of Biblical Literature Septuagint and Cognate Studies 11. Atlanta: Scholars Press, 1985.</li></p>
+<p class="stub-paragraph"><li class="annotation">** Exhaustive philological evaluation of the Syriac text, demonstrating its close relationship to Greek Group 253 and Semitic Vorlage.</li></p>
+<p class="stub-paragraph"><li>Viteau, Joseph, and François Martin. <em>Les Psaumes de Salomon: Introduction, texte grec et traduction, avec les principales variantes de la version syriaque</em>. Documents pour l’étude de la Bible. Paris: Letouzey et Ané, 1911.</li></p>
+<p class="stub-paragraph"><li>Wright, Robert B. <em>The Psalms of Solomon: A Critical Edition of the Greek Text</em>. Jewish and Christian Texts in Contexts and Related Studies 1. London: T&amp;T Clark, 2007.</li></p>
+<p class="stub-paragraph"><li class="annotation">** Full critical Greek text based on original photographic collations of all eleven Greek and four Syriac manuscripts, with comprehensive textual commentary.</li></p>
+<p class="stub-paragraph"><li>Wright, Robert B. <em>The Psalms of Solomon: Color Images of Greek and Syriac Manuscripts</em>. CD-ROM. Philadelphia: Department of Religion, Temple University, 2003.</li></p>
+<p class="stub-paragraph"></ul></p>
+<p class="stub-paragraph"><h3>Monographs, Commentaries, and Thematic Studies</h3></p>
+<p class="stub-paragraph"><ul class="bibliography"></p>
+<p class="stub-paragraph"><li>Atkinson, Kenneth. <em>An Intertextual Study of the Psalms of Solomon: Pseudepigrapha</em>. Studies in the Bible and Early Christianity 49. Lewiston, N.Y.: Edwin Mellen Press, 2001.</li></p>
+<p class="stub-paragraph"><li>Atkinson, Kenneth. <em>I Cried to the Lord: A Study of the Psalms of Solomon's Historical Background and Social Setting</em>. Supplements to the Journal for the Study of the Pseudepigrapha 47. London: Sheffield Academic Press, 2004.</li></p>
+<p class="stub-paragraph"><li class="annotation">** The definitive modern historical-critical synthesis, situating the collection within an unknown Jerusalem pietistic community across the Hasmonean-to-Herodian transition.</li></p>
+<p class="stub-paragraph"><li>Atkinson, Kenneth. "Herod the Great, Sosius, and the Siege of Jerusalem (37 B.C.E.) in Psalm of Solomon 17." <em>Novum Testamentum</em> 38.4 (1996): 313–322.</li></p>
+<p class="stub-paragraph"><li>Atkinson, Kenneth. "Toward a Redating of the Psalms of Solomon: Implications for Understanding the Sitz im Leben of an Unknown Jewish Sect." <em>Journal for the Study of the Pseudepigrapha</em> 17 (1998): 95–112.</li></p>
+<p class="stub-paragraph"><li>Atkinson, Kenneth. "On the Herodian Origin of Militant Davidic Messianism at Qumran: New Light from Psalm of Solomon 17." <em>Journal of Biblical Literature</em> 118.3 (1999): 435–460.</li></p>
+<p class="stub-paragraph"><li>Atkinson, Kenneth. "Theodicy in the Psalms of Solomon." Pages 546–575 in <em>Theodicy in the World of the Bible</em>. Edited by Antti Laato and Johannes C. de Moor. Leiden: Brill, 2003.</li></p>
+<p class="stub-paragraph"><li>Bons, Eberhard, and Patrick Pouchelle, eds. <em>The Psalms of Solomon: Language, History, Theology</em>. Early Judaism and Its Literature 40. Atlanta: SBL Press, 2015.</li></p>
+<p class="stub-paragraph"><li>Büchler, Adolf. <em>Types of Jewish-Palestinian Piety from 70 B.C.E. to 70 C.E.: The Ancient Pious Men</em>. Jews' College Publications 8. London: Jews' College, 1922.</li></p>
+<p class="stub-paragraph"><li>Chai, Young-Mok. <em>The Identification of the Righteous in the Psalms of Solomon: A Study in Second Temple Jewish Identity and Piety</em>. PhD diss., University of Manchester, 2015.</li></p>
+<p class="stub-paragraph"><li>Dupont-Sommer, André. <em>The Essene Writings from Qumran</em>. Translated by G. Vermes. Oxford: Basil Blackwell, 1973.</li></p>
+<p class="stub-paragraph"><li>Embry, Brad. "The Psalms of Solomon and the New Testament: Intertextuality and the Development of Messianism." <em>Currents in Biblical Research</em> 8.1 (2009): 99–114.</li></p>
+<p class="stub-paragraph"><li>Flusser, David. "Psalms, Hymns and Prayers." Pages 551–577 in <em>Jewish Writings of the Second Temple Period</em>. Edited by Michael E. Stone. Compendia Rerum Iudaicarum ad Novum Testamentum 2.2. Assen: Van Gorcum, 1984.</li></p>
+<p class="stub-paragraph"><li>Franklyn, P. N. "The Cultic and Pious Climax of Eschatology in the Psalms of Solomon." <em>Journal for the Study of Judaism</em> 18.1 (1987): 1–17.</li></p>
+<p class="stub-paragraph"><li>Hann, Robert R. <em>The Manuscript History of the Psalms of Solomon</em>. Society of Biblical Literature Septuagint and Cognate Studies 13. Chico, Calif.: Scholars Press, 1982.</li></p>
+<p class="stub-paragraph"><li>Hann, Robert R. "<em>Christos Kyrios</em> in PsSol 17.32: 'The Lord's Anointed' Reconsidered." <em>New Testament Studies</em> 31.4 (1985): 620–627.</li></p>
+<p class="stub-paragraph"><li>Hann, Robert R. "The Community of the Pious: The Social Setting of the Psalms of Solomon." <em>Studies in Religion / Sciences Religieuses</em> 17.2 (1988): 169–189.</li></p>
+<p class="stub-paragraph"><li>Joosten, Jan. <em>Allusions to Scripture in the Psalms of Solomon: Textual Tradition, Interpretation, and Historical Implications</em>. Contexts of the Bible and Philology 5. Turnhout: Brepols, 2024.</li></p>
+<p class="stub-paragraph"><li>Kim, Heerak Christian. <em>Zadokite Propaganda in the Late Second Temple Period: A Thesis on 11Q5, the Psalms of Solomon, and the Dead Sea Scrolls</em>. Lanham, Md.: University Press of America, 2014.</li></p>
+<p class="stub-paragraph"><li>Nickelsburg, George W. E. <em>Resurrection, Immortality, and Eternal Life in Intertestamental Judaism and Early Christianity</em>. Harvard Theological Studies 26. Cambridge, Mass.: Harvard University Press, 1972. Expanded edition, 2006.</li></p>
+<p class="stub-paragraph"><li>O'Dell, J. "The Religious Background of the Psalms of Solomon Re-evaluated in the Light of the Qumran Texts." <em>Revue de Qumran</em> 3.2 (1961): 241–257.</li></p>
+<p class="stub-paragraph"><li>Reynolds, Scott. <em>The Messiah and Eschatology in the Psalms of Solomon</em>. PhD diss., University of Edinburgh, 2017.</li></p>
+<p class="stub-paragraph"><li>Schürer, Emil. <em>The History of the Jewish People in the Age of Jesus Christ (175 B.C.–A.D. 135)</em>. Revised and edited by Geza Vermes, Fergus Millar, and Matthew Black. Vol. 3.2. Edinburgh: T&amp;T Clark, 1986.</li></p>
+<p class="stub-paragraph"><li>Trafton, Joseph L. "The Psalms of Solomon in Recent Research." <em>Journal for the Study of the Pseudepigrapha</em> 12 (1994): 3–19.</li></p>
+<p class="stub-paragraph"><li>Trafton, Joseph L. "The Syriac Version of the Psalms of Solomon: A New Evaluation." <em>Journal of Biblical Literature</em> 105.3 (1986): 487–488.</li></p>
+<p class="stub-paragraph"><li>Trocino, Matthew. <em>Resurrection as Reward for the Righteous in the Psalms of Solomon: Second Temple Jewish Eschatology</em>. PhD diss., Marquette University, 2021.</li></p>
+<p class="stub-paragraph"><li>Ward, Grant. <em>The Messianic Hope in the Psalms of Solomon: A Philological and Theological Analysis</em>. PhD diss., Temple University, 1995.</li></p>
+<p class="stub-paragraph"><li>Werline, Rodney A. "The Formation of the Pious Person in the Psalms of Solomon." Pages 133–148 in <em>The Psalms of Solomon: Language, History, Theology</em>. Edited by E. Bons and P. Pouchelle. Atlanta: SBL Press, 2015.</li></p>
+<p class="stub-paragraph"><li>Winninge, Mikael. <em>Sinners and the Righteous: A Comparative Study of the Psalms of Solomon and Paul's Letters</em>. Coniectanea Biblica: New Testament Series 26. Stockholm: Almqvist &amp; Wiksell International, 1995.</li></p>
+<p class="stub-paragraph"><li>Wright, Robert B. "The Psalms of Solomon, the Pharisees and the Essenes." Pages 136–154 in <em>1972 Proceedings: International Organization for Septuagint and Cognate Studies and the Society of Biblical Literature Pseudepigrapha Seminar</em>. Edited by Robert A. Kraft. SBL Septuagint and Cognate Studies 2. Missoula, Mont.: Society of Biblical Literature, 1972.</li></p>
+<p class="stub-paragraph"></ul></p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Psalmi Salomonis
+
+Cf.: A. RAHLFS, Verzeichnis der griechischen Handschriften des Alten
+Testaments, für das Septuaginta- Unternehmen aufgestellt (Mitteilungen des
+Septuaginta-Unternehmens 2), Berlin 1914; — J.-B. FREY, art. Apocryphes de l'Ancien Testament, in DBS I, 1928, col. 390-396; — F.
+STEGMÜLLER, n° 106 et 106, 1-8; — E. SCHÜRER, III, p. 192-197; — A.-
+M. Denis, ILRJH, ad loc.
+
+Versio graeca
+
+Codd.: Città del Vaticano, Bibl. Apost. Vatic., vatic. gr. 336,
+fol. 122v-136v, saec. xi-xii (Rahlfs, Verzeichnis 253, von Gebhardt
+G); Città del Vaticano, Bibl. Apost. Vatic., Ottobon. gr. 6o, fol.
+201r-220r, saec. XVI (Rahlfs 655, ignotus a von Gebhardt); Città del
+Vaticano, Bibl. Apost. Vatic., Ottobon. gr. 384, fol. 208r-226v, saec.
+xvi (Rahlfs 659, ignotus a von Gebhardt); Kabenhavn, Kongelinge
+Bibl, Gamle Kongelinge Samling 6, fol. 170v-183r, saec. x-XI
+(Rahlfs 260, von Gebhardt H); Wien, Osterreichische Nationalbibl.,
+theol. gr. 11, fol. 105v-118r [127v-140r], saec. x-xi (Rahlfs 149, von
+Gebhardt V; exemplum codicis H); Moscou, Mus. Hist., Syn. 147,
+fol. 168v-179v, saec. xii-xiv (Rahlfs 471, von Gebhardt M); Paris,
+Bibl. Nat. de France, gr. 2991A, fol. 224v-243v, an. 1419 (Rahlfs
+606, von Gebhardt P); Leiden, Bibl. der Rijksuniversiteit, Vossius
+Miscell. 15, fol. 79r-82v (PsSal xvn, 2b - XVIII, 12), saec. XII-XVI
+(Rahlfs 3004, ignotus a von Gebhardt); Roma, Bibl. Casanatense
+1908, fol. 302r-305v (PsSal 1, 27 - XVI, 8), saec. XII-XIV (Rahlfs 629,
+von Gebhardt C); Athènes, Musée Benaki s, fol. 294r-304v, saec.
+xı-xıv (Rahlfs 769, von Gebhardt L); Athos, Iviron 555, fol. 227r-
+245v (lacuna: PsSal v, 14b vin, 12a), saec. XIV (Rahlfs 336, von
+Gebhardt J).
+
+Noua editio paratur a R.B. WRIGHT.
+
+O. von GEBHARDT, WAAMOI EOAOMANTOZ. Die Psalmen
+Salomo's zum ersten Male mit Benutzung der Athoshandschrifien und
+des Codex Casanatensis herausgegeben (TU 13, 2), Leipzig, 1895, e
+codd. GHVMPCL)J.
+166 PSALMI - ODAE SALOMONIS - PROVERBIA - JOB - SAPIENTIA 212
+
+W. Baans, A New Fragment of the Greek Version of the Psalms
+of Solomon, in Vetus Testamentum 11 (1961), p. 441-444, e cod.
+Leiden, Bibl. der Rijksuniversiteit, Vossius Miscell. 15.
+
+De traditione textus: R.R. Hann, The Manuscript History of the
+
+Psalms of Solomon (SBL. Septuagint and Cognate Studies Scries 13),
+
+Chico, California, 1982; — J. McGOvERN, The Status of MS A of the
+
+Psalms of Solomon. A Re-Examination of von Gebhardt’s Thesis, Department of Religion, Temple University, 1989 (unpublished Diss.).
+
+Translatio anglica: S.P. Brock, The Psalms of Solomon, in
+H.F.D. SPARKS, p. 649-682; — R.B. WRIGHT, Psalms of Solomon
+(First Century B.C.). A New Translation and Introduction, in J.H. CHAR-
+LESWORTH, Il, p. 639-670.
+
+Translatio gallica: P. PRIGENT, Psaumes de Salomon, in A. Du-
+PONT-SOMMER — M. PHILONENKO, p. 945-992.
+
+Translatio germanica: S. HoLM-NIELSEN, Die Psalmen Salomos,
+in JSHRZ IV, 2, Gütersloh, 1977, p. 47-112.
+
+Translatio hispanica: A. PINERO SAENZ, Salmos de Salomón, in
+A. Diez MACHO, III, p. 9-57.
+
+Concordantia:
+A.-M. Denis, Concordance grecque des Pseudépigraphes d’Ancien Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione O. von Gebhardt).
+
+Versio syriaca
+
+Cf.: J.L. TRAFTON, The Syriac Version of the Psalms of Solomon. A
+Critical Evaluation (SBL. Septuagint and Cognate Studies Series 11),
+Atlanta, Georgia, 1985; — cf. S.P. BRock, in JSS 32 (1987), p. 204-
+207 (recensio J.L. Trafton).
+
+(J.)R. Harris - A. MiNGANA, The Odes and Psalms of Solomon re-edited, 2 vol., Manchester, 1916-1920, e codd. Manchester,
+John Rylands Univ. Libr., syr. 9, fol. 31b-56b, saec. xvi (desinit
+xvii, 38) et London, Brit. Libr., Add. 14538, fol. 151b-152b,
+saec. X (deest III, 6 x, 2).
+
+W. Baars, Psalms of Solomon, in The Old Testament in Syriac
+according to the Peshitta Version, part IV, fasc. VI, Leiden, 1972, €
+codd. London, Brit. Libr., Add. 14538; Manchester, John Rylands Univ. Libr., syr. 9; Cambridge, Univ. Libr., Add. 2012,
+fol. 104b-105a, saec. xiv (xvi, 6-13); Woodbrooke (Birmingham), Selly Oak Colleges Libr., Mingana syr. 331, fol. 13a-b,
+saec. XVI (XVI, 6-13).
+XII PROPHETAE - ISAIAS —
+JEREMIAS - BARUCH - EZECHIEL</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

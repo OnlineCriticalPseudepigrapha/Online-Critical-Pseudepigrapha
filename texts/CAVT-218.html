@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ascensio Isaiae — CAVT-218 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Ascensio Isaiae (CAVT-218)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-218</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-218</span>
+          <span class="badge badge-lang">Latin</span>
+          <span class="badge badge-lang">CAVT 218</span>
+          <span class="badge badge-lang">CANT 305</span>
+        </div>
+        <h1 class="stub-title">Ascensio Isaiae</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-218</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 218</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>CANT 305</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 21 (Ascension of Isaiah)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 2:143-176 (Martyrdom and Ascension of Isaiah)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:155-162 (Ascension of Isaiah)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 33-51 (Martyrdom of Isaiah)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Ascension of Isaiah</em> (<em>Ascensio Isaiae</em> / Ἀναβατικὸν Ἡσαΐου) is a composite apocalypse combining ancient Jewish haggadic traditions with early Jewish-Christian visionary literature. Redacted in its final form in the late 2nd or early 3rd century CE (likely in Roman Syria or Asia Minor), the work consists of three historically and thematically distinct components:</p>
+<p class="stub-paragraph">1. <strong>The Martyrdom of Isaiah</strong> (<em>Asc. Isa.</em> 1:1–3:12; 5:1–16):</p>
+<ul class="stub-list">
+<li>An ancient Jewish narrative composed in Semitic (Hebrew or Aramaic) during the 1st century BCE or 1st century CE. King Hezekiah instructs his wicked son Manasseh. Upon Manasseh’s accession, the demonic ruler Beliar (<em>Sammael</em>) inspires apostasy and idolatry in Jerusalem. Isaiah flees with his prophetic disciples (including Habakkuk and Joel) to a mountain near Bethlehem. The Samaritan false prophet Belkira (<em>Malkira</em>) denounces Isaiah to Manasseh. Isaiah is arrested and horribly executed by being sawn in two with a wooden saw (<em>serratus sectus est</em>). Throughout the ordeal, Isaiah converses with the Holy Spirit, shedding neither tears nor uttering cries.</li>
+<li><em>Ancient External Attestations</em>: Alluded to in the New Testament (Heb 11:37: "they were sawn in two"); Justin Martyr (<em>Dialogus cum Tryphone</em> 120.5); Tertullian (<em>De patientia</em> 14; <em>Scorpiace</em> 8); Origen (<em>Comm. in Mt.</em> 13.57; <em>Epistula ad Africanum</em> 9); and the Babylonian Talmud (b. <em>Yevamot</em> 49b; b. <em>Sanhedrin</em> 103b).</li>
+</ul>
+<p class="stub-paragraph">2. <strong>The Testament of Hezekiah</strong> (<em>Asc. Isa.</em> 3:13–4:22):</p>
+<ul class="stub-list">
+<li>An independent Christian apocalyptic interpolation dating from the late 1st century CE (ca. 80–100 CE). Isaiah delivers a prospective vision of the descent of the Beloved (Christ), His ministry with the Twelve, His crucifixion, and His resurrection. He foretells the corruption, lawlessness, and greed of the post-apostolic elders and bishops, followed by the descent of the cosmic prince Beliar in the likeness of the matricidal Roman emperor Nero ("a lawless king, the murderer of his mother"). Beliar-Nero works deceptive signs, establishes worldwide imperial worship, and persecutes the faithful for 3 years, 7 months, and 27 days (1335 days), after which the Lord arrives from the seventh heaven with his angelic host to cast Beliar and his armies into Gehenna.</li>
+</ul>
+<p class="stub-paragraph">3. <strong>The Vision / Ascension of Isaiah</strong> (<em>Asc. Isa.</em> 6:1–11:43):</p>
+<ul class="stub-list">
+<li>An early 2nd-century CE (ca. 110–130 CE) visionary apocalypse originally circulating independently. In the 20th year of Hezekiah, Isaiah falls into an ecstatic trance before the king and prophets. A radiant angel guides him in an ascent through the seven heavens: in the second through fifth heavens, he witnesses the angelic orders praising the divine throne; in the sixth heaven, all praise is directed upward in unison; in the seventh heaven, Isaiah sees the righteous souls clothed in light, with their garments, thrones, and crowns awaiting them.</li>
+<li><em>The Cosmic Descensus and Ascensus</em>: God commissions the Beloved to descend through all seven heavens down to the earthly realm and the underworld (<em>Sheol</em>). In His descent, the Beloved conceals His glory, transforming His appearance in each heaven so that the resident archons do not recognize Him. On earth, He is born miraculously of the virgin Mary without labour or pain (11:2–14), lives unrecognized, is crucified by the rulers of the cosmos under the instigation of Beliar, rises on the third day, and ascends back to the seventh heaven in full, dazzling majesty, receiving the adoration of all cosmic powers.</li>
+</ul>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">While fragmentary remains survive in Greek, Latin, Coptic, and Slavonic, the complete text of chapters 1–11 is preserved only in classical Ge'ez (Ethiopic):</p>
+<h4 class="stub-heading">A. Ethiopic (Ge'ez) Tradition</h4>
+<p class="stub-paragraph">The primary witness for the entire work, preserved in nine manuscripts:</p>
+<ul class="stub-list">
+<li><strong>MS A (Oxford, Bodleian Library, MS Aeth. d. 13, fols. 95r–115r)</strong>: 15th-century codex; the base text for Laurence and Dillmann.</li>
+<li><strong>MS B (London, British Library, MS Or. 501, fols. 62r–69v)</strong>: 15th century.</li>
+<li><strong>MS C (London, British Library, MS Or. 503, fols. 57r–62v)</strong>: 18th century.</li>
+<li><strong>MS E (EMML 1768, fols. 83r–88v)</strong>: 15th century.</li>
+<li><strong>MS F (EMML 3067, fols. 99r–117v)</strong>: 15th century.</li>
+<li><strong>MS G (Vatican, BAV, Cod. Vat. Aeth. 263, fols. 85v–104v)</strong>: 14th/15th century.</li>
+<li><strong>MS H (Paris, BnF, d'Abbadie 195, fols. 74r–87r)</strong>: 17th/18th century.</li>
+<li><strong>MS I (Paris, BnF, d'Abbadie 156, fols. 46r–52v)</strong>: 18th century.</li>
+<li><strong>MS L (Munich, Bayerische Staatsbibliothek, Cod. Aeth. 63)</strong>: 18th/19th century.</li>
+</ul>
+<h4 class="stub-heading">B. Greek Tradition</h4>
+<p class="stub-paragraph">1. <strong>Amherst Papyrus 1 (P. Amherst I.1; London, Pierpont Morgan Library / British Library)</strong>:</p>
+<ul class="stub-list">
+<li>5th-century CE papyrus preserving Greek <em>Asc. Isa.</em> 2:4b–4:4a (the flight of Isaiah and the beginning of the Testament of Hezekiah).</li>
+<li>Editio princeps: Grenfell, B. P., and A. S. Hunt. <em>The Amherst Papyri</em>. London, 1900, 1:1–22.</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Patristic Citations</strong>:</p>
+<ul class="stub-list">
+<li>Origen (<em>Comm. in Mt.</em> 13.57; <em>Ep. ad Afr.</em> 9).</li>
+<li>Didymus the Blind (<em>Comm. in Eccl.</em>, P. Tura; ed. D. Lührmann, <em>ZAW</em> 104 [1992]: 231–249 at 233–239).</li>
+<li>Epiphanius of Salamis (<em>Panarion</em> 40.2.2–4; 67.3.3).</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Medieval Greek "Legend of Isaiah"</strong>:</p>
+<ul class="stub-list">
+<li>A Byzantine hagiographical adaptation of the <em>Ascension</em> preserved in <strong>Paris BnF gr. 1534</strong> (12th cent.) and <strong>Vat. Palat. gr. 27</strong> (10th/11th cent.); edited by C. Tischendorf (1866) and B. Flusin in CCSA 8 (1995).</li>
+</ul>
+<h4 class="stub-heading">C. Latin Tradition</h4>
+<p class="stub-paragraph">Two independent partial Latin witnesses:</p>
+<ul class="stub-list">
+<li><strong>Lat$^1$ (Vatican, BAV, Cod. Vat. Lat. 5750, fols. 278–284)</strong>: 5th/6th-century palimpsest uncial preserving <em>Asc. Isa.</em> 2:14–3:13 and 7:1–19 (ed. Angelo Mai 1828; C. Leonardi in CCSA 7, 1995).</li>
+<li><strong>Lat$^2$ (<em>Visio mirabilis Ysaiae Prophetae</em>)</strong>: 12th-century Latin translation of chapters 6–11 published by Antonius de Fantis in Venice (1517), reprinted by R. H. Charles (1900) and C. Leonardi in CCSA 7 (1995).</li>
+</ul>
+<h4 class="stub-heading">D. Coptic Tradition</h4>
+<ul class="stub-list">
+<li><strong>Akhmimic Fragments</strong>: Louvain University Library Coptic MS 1 (5th cent., destroyed in WWII); preserved <em>Asc. Isa.</em> 9:35–11:23 (ed. L. T. Lefort, <em>Muséon</em> 1938, 1939).</li>
+<li><strong>Sahidic Fragments</strong>: Paris BnF copte 135 and Cairo Coptic Museum fragments (ed. Pierre Lacau, <em>Muséon</em> 1946; Paolo Bettiolo in CCSA 7, 1995).</li>
+</ul>
+<h4 class="stub-heading">E. Slavonic Tradition</h4>
+<ul class="stub-list">
+<li>Preserved in over 20 medieval South Slavic and East Slavic manuscripts (e.g., the 12th-century <em>Uspenskij Sbornik</em>); contains an archaic translation of the <em>Vision of Isaiah</em> (chs. 6–11) translated from an early Greek recension (ed. A. Popov 1879; Alda Giambelluca Kossova in CCSA 7, 1995).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>Bettiolo, Paolo, Alda Giambelluca Kossova, Claudio Leonardi, Enrico Norelli, and Lorenzo Perrone</strong>. <em>Ascensio Isaiae: Textus</em> and <em>Ascensio Isaiae: Commentarius</em>. 2 vols. Corpus Christianorum Series Apocryphorum 7 & 8. Turnhout: Brepols, 1995. [The definitive masterwork: Vol. 7 provides polyglot synoptic critical texts of all Ethiopic, Greek, Latin, Coptic, and Slavonic witnesses; Vol. 8 presents Enrico Norelli’s exhaustive 700-page historical-critical and theological commentary].</li>
+<li><strong>Norelli, Enrico</strong>. <em>L’Ascensione di Isaia: Studi su un apocrifo al crocevia dei cristianesimi</em>. Origini 1. Bologna: Edizioni Dehoniane Bologna, 1994. [Fundamental monograph on the social setting, christological debates, and early Christian diversity reflected in the text].</li>
+<li><strong>Charles, Robert Henry</strong>. <em>The Ascension of Isaiah: Translated from the Ethiopic Version, which, together with the New Greek Fragment, the Latin Versions and the Latin Translation of the Slavonic, Is Here Published in Full</em>. London: Adam and Charles Black, 1900. [The classic pioneering edition aligning all then-known versions].</li>
+<li><strong>Dillmann, August</strong>. <em>Ascensio Isaiae Aethiopice et Latine, cum prolegomenis, adnotationibus criticis et exegeticis, additis versionum latinarum reliquiis</em>. Leipzig: F. A. Brockhaus, 1877.</li>
+<li><strong>Laurence, Richard</strong>. <em>Ascensio Isaiae vatis, opusculum pseudepigraphum... nunc autem apud Aethiopas compertum et cum versione Latina Anglicanaque publici juris factum</em>. Oxford: Parker, 1819 [Editio princeps of the Ethiopic text].</li>
+<li><strong>Denis, Albert-Marie</strong>. <em>Fragmenta pseudepigraphorum quae supersunt graeca</em>. PVTG 3. Leiden: Brill, 1970, pp. 105–114.</li>
+<li><strong>Caquot, André</strong>. "Bref commentaire du 'Martyre d’Isaïe'." <em>Semitica</em> 23 (1973): 65–93.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Ascensio Isaiae (Visio Isaiae, Testamentum Ezechiae, Martyrium Isaiae)
+
+Cf.: J.-B. Frey, art. Apocryphes de l'Ancien Testament, in DBS I,
+1928, col. 409-411; — F. STEGMÜLLER, n° [11 et 111, 1-22; — E.
+SCHÜRER, II, p. 335-341; — CANT 315; - P. BETTIOLO - A.
+GIAMBELLUCA Kossova - C. LEONARDI - E. NORELLI - L. PER-
+RONE, Ascensio Isaiae. Textus. Commentarius (Corpus Christianorum.
+Series Apocryphorum 7-8), Turnhout, 1995 (ubi inuenies alias editiones); — J. KNIGHT, The Ascension of Isaiah, in Guides to Apocrypha and
+Pseudepigrapha, Sheffield, 1995; — A.-M. Denis, ILRJH, ad loc.
+
+Nota: Ascensio Isaiae divisa est in partes tres, quarum duae primae
+christianae sunt: Visio Isaiae (vi, 1 - XI, 40), Testamentum Ezechiae (1,
+13b - Iv, 18[22]), et tertia iudaica: Martyrium Isaiae (1, 1-2a, 6b-13a;
+II, 1-3, I2; V, Ib-14).
+
+Translatio gallica: A. CAQUOT, Martyre d'Isaie, in A. DUPONT-
+SoMMER — M. PHILONENKO, p. 1017-1033 (e graeco cum exstat; dc
+reliquo ex editione R.H. Charles).
+I 76 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 218
+
+Fragmentum graecum (BHG 957) (11, 4b - 1v, 4a)
+
+Codd.: J. van HAELST, n. 572; — K. ALAND, Repertorium der griechischen christlichen Papyri. I: Biblische Papyri: Altes Testament, Neues
+Testament, Varia, Apokryphen (Patristische Texte und Studien 18),
+Berlin - New York, 1976, p. 363-364.
+
+B.P. GRENFELL - A.S. Hunt, The Amherst Papyri, being an account of the Greek papyri in the Collection of the Right Hon. Lord Amherst of Hackney, F.S.A. at Didlington Hall, Norfolk. Part I: The Ascension of Isaiah, and Other "Theological Fragments, London, 1900,
+p. 1-22, e cod. nunc New York, Pierpont Morgan Libr., Pap.
+G. 1, saec. v uel vr.
+
+E. NORELLI, Frammento greco dell’ Ascensione di Isaia (papiro Amherst 1). Introduzione, edizione e traduzione, in P. BETTIOLO -
+A. GIAMBELLUCA KossovA - C. LEONARDI - E. NORELLI -
+L. PERRONE, op. cit., p. 131-145.
+
+Translatio anglica: R.H. CHARLES, The Ascension of Isaiah...
+(cf. infra), p. 84-91.
+
+Legenda graeca (BHG 958)
+
+Nota: Legenda graeca ex Ascensione Isaiae confecta est in saec. X
+exc.
+
+O. voN GzBHARDT, Die Ascensio Isaiae als Heiligenlegende. Aus
+Cod. Gr. 1534 der Nationalbibliothek zu Paris, in Zeitschrift für wissenschaftliche Theologie 21 (1878), p. 330-353, e cod. Paris, Bibl.
+Nat. de France, gr. 1534, fol. 245r-251v, saec. XI/XII.
+
+E. NORELLI, Leggenda greca di Isaia. Introduzione, edizione e traduzione, in P. BETTIOLO - A. GIAMBELLUCA Kossova - C.
+LEONARDI - E. NORELLI - L. PERRONE, op. cif., p. 321-351, €
+codd. Paris, Bibl. Nat. de France, gr. 1534 et Città del Vaticano,
+Bibl. Apost. Vatic., Palat. gr. 27, fol. 86r-89v, saec. XI inc.
+
+Translatio anglica: R.H. CHÙartes, The Ascension of Isaiah...
+(cf. infra), p. 141-148.
+
+Translatio gallica: E. TISSERANT, Ascension d’Isaie... (cf. infra),
+p. 217-226.
+
+Concordantia:
+A.-M. DENIS, Concordance. grecque des Pseudépigraphes d’Ancien Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione A.-M. DENIS, Fragmenta pseudepigraphorum quae supersunt
+218 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 177
+
+graeca [PsVTGr 3], Leiden, 1970, p. 105-114: textus graecus Martyrii
+Isaiae ex editionibus O. von Gebhardt et B.P. Grenfell - A.S. Hunt).
+
+Versiones latinae
+
+Cf.: J. VERHEYDEN, Les Pseudépigraphes d' Ancien Testament. Textes
+latins. À propos d'une Concordance, in ETL 71 (1995), p. 383-420, pracsertim p. 401-403.
+
+(1) Cap. 11, 14 - I, 13; VII, 1-19: A. MAI, Scriptorum Veterum
+Nova Collectio e Vaticanis codicibus edita, III, II, Roma, 1828, p. 238-
+239, e cod. (palimps.) Città del Vaticano, Bibl. Apost. Vatic., vatic. lat. 5750, p. 191-192 et 205-206, saec. V/vI; — et iterum R.H.
+CHARLES, The Ascension of Isaiah translated from the Ethiopic Version,
+which, together with the new Greek Fragment, the Latin Versions and the
+Latin Translation of the Slavonic..., London, 1900, p. 87-92, 102-
+108 (qui noua collatione a G. Mercati confecta nititur).
+
+C. LEONARDI, La fradizione latina dell' Ascensione d'Isaia. Introduzioni, edizioni e traduzioni. L' Ascensione di Isaia del Vat. lat. 5750, in
+P. BETTIOLO - A. GIAMBELLUCA Kossova - C. LEONARDI -
+E. NORELLI - L. PERRONE, op. cit., p. 189-209.
+
+(2) Cap. vi-x1: A. DE FANTIS, Opera Nuper in lucem prodeuntia,
+Venetis, 1522, fol. 155v-160r («Visio mirabilis Ysaie Prophete, que
+tam divine Trinitatis Archana quam Generis humani redemptionem manifestat adversus Hebraicam Caliginem»; editio princeps e cod. deperdito).
+
+C. LEONARDI, La tradizione latina dell’ Ascensione d’Isaia. Introduzioni, edizioni e traduzioni. La Visio Isaiae dell'edizione curata a Venezia nel 1522 da Antonio de Fantis, in P. BETTIOLO - A. GIAMBEL-
+LUCA KossovA - C. LEONARDI - E. NORELLI - L. PERRONE,
+op. cit., p. 211-233.
+
+Nota: Secundum J. Ivanov, Bogomilski knigi i legendi, Sofia, 1925
+(Livres et légendes bogomiles [Aux Sources du catharisme], Paris,
+1976), p. 155-160, illa versio latina dependet non a graeco exemplari,
+sed a slauico (bulgarico) archetypo; — É. TURDEANU, La ‘Vision
+d’Isaie’ : tradition orthodoxe et tradition heretique, in KuptAkw xat Medo-
+Siw Touoc Eopriog Emi TH yUuootT, xal Éxatoot érnpiôt, II,
+Thessaloniki, 1968, p. 289-318 (= É. TURDEANU, Apocryphes slaves et
+roumains, p. 145-172, praesertim p. 167-172).
+
+Concordantiae:
+W. LECHNER-SCHMIDT, Wortindex der lateinisch erhaltenen Pseudepigraphen zum Alten Testament (Texte und Arbeiten zum neutestamentli-
+178 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL — 218
+
+chen Zeitalter 3), Tübingen, 1990 (ex editionibus E. TISSERANT, Ascension d’Isaie, traduction de la version éthiopienne avec les principales variantes des versions grecque, latines et slave. Introduction et notes [Documents
+pour l'étude de la Bible], Paris, 1909 ct C. LEONARDI, Il testo dell’« Ascensio Isaiae» nel Vat. lat. 5750, in Cristianesimo nella Storia 1 (1980),
+p. 59-74); — A.-M. DENIS, Concordance latine des Pseudépigraphes d’Ancien Testament. Concordance. Corpus des textes. Indices (Corpus Christianorum. Thesaurus patrum latinorum. Supplementum), Turnhout,
+1993 (ex editione C. Leonardi, 1980).
+
+Versio aethiopica (textus longior integer)
+
+Codd.: Oxford, Bodleian Libr., aeth. d. 13, fol. 95r-115r, saec.
+xv (= A; editio princeps a R. LAURENCE, 'Ergata ’Isäyyäs nabiy. Ascensio Isaiae vatis..., Oxford, 1819); London, Brit. Libr., Or. sor, fol.
+62r-69v, saec. xv (= B); London, Brit. Libr., Or. 503, fol. 57r-62v,
+saec. XVIII (= C); EMML [Abba Garimä] 2, f. 307, saec. XII-XIV (=
+D; D et G textum similem tradunt); EMML 1768, fol. 83r-88v, saec.
+xv (= E); EMML 3067, fol. 99r-117v, saec. xv (= F); Città dcl Vaticano, Bibl. Apost. Vatic., vatic. aeth. 263, fol. 85v-104v, saec. xiv/
+xv (= G; G et D textum similem tradunt); Paris, Bibl. Nat. de
+France, Abbadie 195, fol. 74r-87r, saec. xvıı/xvım (= H); Paris, Bibl.
+Nat. de France, Abbadie 156, fol. 46r-52v, saec. xviii (= I); München, Bayerische Staatsbibl., aeth. 63, fol. 107v-115v, saec. xviii/xix
+(= L); - P. PIOVANELLI, Un nouveau témoin éthiopien de l'Ascension
+d’Isaie et de la Vie de Jérémie (Paris, BN Abb. 195), in Henoch 12
+(1990), p. 347-363.
+
+A. DILLMANN, Ascensio Isaiae, aethiopice et latine cum prolegomenis, adnotationibus criticis et exegeticis, additis versionum latinarum reliquiis, Leipzig, 1877, e codd. A B C; — et iterum R.H. CHARLES,
+The Ascension of Isaiah..., London, 1900, ex eisdem codd.
+
+L. PERRONE, Ascensione di Isaia. Nuova edizione critica della versione etiopica. ‘Ergata Isäyeyäs nabiy, Bologna, 1984, c codd. A B C
+DGEF.
+
+L. PERRONE - E. NORELLI, Ascensione di Isaia profeta. Versione
+etiopica, in P. BETTIOLO - A. GIAMBELLUCA Kossova - C.
+LEONARDI - E. NoreLLI - L. PERRONE, op. cit., p. 1-129, e
+codd. AB C (D) EFGHIL.
+
+Translatio anglica: R.H. CHARLES - J. M.T. BARTON, The Ascension of Isaiah, in H.F.D. SPARKS, p. 775-812; — M.A. Kniss, Martyrdom and Ascension of Isaiah (Second Century B.C. - Fourth Century
+A.D.). A New Translation and Introduction, in J.H. CHARLESWORTH,
+
+ll, 1985, p. 143-176.
+218 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 179
+
+Translatio gallica: R. BASSET, Les apocryphes éthiopiens traduits en
+français. III. L'ascension d'Isaie, Paris, 1894, p. 10-55; — E. TISSERANT,
+Ascension d’Isaie..., Paris, 1909, p. 85-215.
+
+Translatio germanica: E. HAMMERSHAIMB, Das Martyrium Jesajas, in JSHRZ Il, 1, Gütersloh, 19777, p. 15-34 (Ase. Is. 1, 1-13; IT I-
+16; III, I-12; V, I-14).
+
+Fragmenta coptica
+
+L.TH. LEFORT, Coptica Lovaniensia, in Le Muséon 51 (1938),
+p. 1-32 + tab. 1v. (Asc. Is. 11, 3-6, 9-12; XI, 24-32, 35-40), € cod.
+saec. IV ex. (textus, translatio); — et iterum Ip., Les manuscrits coptes de l'Université de Louvain. I. Textes Littéraires, Louvain, 1940,
+
+p. 72-78.
+
+L.TH. LEFORT, Fragments d'apocryphes en copte-akhmimique, in
+Le Muséon 52 (1939), p. 1-10 (Asc. Is. VII, 12-15; VII, 16-17;
+IX, 9-11; X, 9-11), e cod. saec. IV (textus, translatio).
+
+P. LACAU, Fragments de l’ Ascension d’Isaie en copte, in Le Museon 59 (1946), p. 453-467 (Asc. Is. 1, 1-5; III, 25-28; v, 7-8; VI,
+7-11; VII, 10-15, 28-32; VIII, 16-17; IX, 9-11, 28-30; X, 9-11, 27;
+XI, 14-16, 35-37).
+
+P. BETTIOLO, Ascensione di Isaia. Versioni copte. Introduzione,
+edizione e traduzione, in P. BETTIOLO - A. GIAMBELLUCA Kosso-
+VA - C. LEONARDI - E. NORELLI - L. PERRONE, op. cit., p. 147-
+187 (= textus a L. Th. Lefort et P. Lacau editi).
+
+Versiones slauicae
+
+Cf.: E. Kozak, Bibliographische Übersicht der biblisch-apokryphen Literatur bei den Slaven, in Jahrbücher für protestantische Theologie 18
+(1892), p. 127-158, praesertim p. 138-139; — É. TURDEANU, Apocryphes bogomiles et apocryphes pseudo-bogomiles. II, in Revue de l'Histoire
+des Religions 138 (1950), p. 176-218, praesertim p. 214-218 (= É.
+TURDEANU, Apocryphes slaves et roumains, p. 1-74, praesertim p. 70-74,
+436-437); — A. GIAMBELLUCA Kossova, Osservazioni sulla tradizione
+paleoslava della Visione di Isaia : coincidenze e divergenze con la tradizione testuale dell’ Ascensione di Isaia, in Atti del 8° Congresso internazionale di studi
+sull’alto medioevo. Spoleto 3-6 novembre 1981, Spoleto, 1983, p. 167-186.
+
+Codd.: È. TURDEANU, La ‘Vision d'Isaie' : tradition orthodoxe et tradition hérétique, in Kupitkw xai MeQodtw cvópoc Eopriog Eni +
+XıMooTT xoi Exatooti Ermpiöt, II, Thessaloniki, 1968, p. 289-
+318 (= E. TURDEANU, Apocryphes slaves et roumains, p. 145-172, 438-
+439); — A. GIAMBELLUCA Kossova, Edin prenebregnat räkopis na ‘Vi-
+I80 XII PROPHETAE - ISAIAS - JEREMIAS - BARUCH - EZECHIEL 222
+
+denie Isajevo' : Jacimirski prepis 19, in Palaeobulgarica 12 (1988), p. 13-
+25; — A. GIAMBELLUCA Kossova, Una testimonianza inesplorata della
+versione paleoslava della Visione di Isaia : il codice N. 1448 della cattedrale di
+S. Sofia di Novgorod, in Studia Slavico-byzantina et mediaevalia europensia
+in memoriam Ivan Dujcev, 1, Sofia, 1989, p. 300-308.
+
+A. GIAMBELLUCA Kossova, Visio Isaiae. Versione Paleobulgara.
+Introduzione, edizione critica e traduzione, in P. BETTIOLO - A.
+GIAMBELLUCA Kossova - C. LEONARDI - E. NORELLI - L.
+PERRONE, op. cit., p. 235-319.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

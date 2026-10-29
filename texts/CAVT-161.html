@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epistula Salomonis ad Roboam de hygromantia (graece) — CAVT-161 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Epistula Salomonis ad Roboam de hygromantia (graece) (CAVT-161)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-161</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-161</span>
+          <span class="badge badge-lang">Greek</span>
+          <span class="badge badge-lang">CAVT 161</span>
+          
+        </div>
+        <h1 class="stub-title">Epistula Salomonis ad Roboam de hygromantia (graece)</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> I-II SAMUEL - I-II REGES - I-II PARALIPOMENA
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-161</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 161</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 42 (Testament of Solomon / Epistle to Rehoboam on Hygromancy)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The <em>Testament of Solomon</em> (Greek: Διαθήκη Σολομῶντος / <em>Diatheke Solomōntos</em>; Latin: <em>Testamentum Salomonis</em>) is an ancient Greek magical, demonological, and testamentary narrative that recounts how King Solomon built the Temple of Jerusalem by enslaving and commanding demons with a celestial signet ring granted to him by God through the Archangel Michael. Combining Jewish haggadic legend with Hellenistic Egyptian astrology, demonology, and folk medicine, the work functions simultaneously as an entertaining narrative of Solomon’s glory and tragic fall, and as a comprehensive handbook of demonological diagnosis and apotropaic therapy.</p>
+<p class="stub-paragraph">Modern scholarship (following C. C. McCown, D. C. Duling, and P. S. Alexander) identifies two foundational structural components:</p>
+<p class="stub-paragraph">1. <strong>The Haggadic Narrative Frame</strong>: A legendary folktale chronicling how Solomon subdued the demonic world to extract forced labor for the construction of the Temple, entertained the Queen of the South, and ultimately lost his wisdom, divine favor, and royal power through idolatrous infatuation with a foreign Jebusite/Shunammite woman.</p>
+<p class="stub-paragraph">2. <strong>The Demonological and Astrological Catalog (<em>Onomasticon</em>)</strong>: A systematic series of interrogations wherein individual demons are brought before Solomon, forced to reveal their true names, astral affiliations, physiological ailments they cause in humans, and the specific angels or divine names capable of neutralizing their power.</p>
+<h4 class="stub-heading">Narrative Architecture (26 Chapters in McCown’s Critical Edition)</h4>
+<p class="stub-paragraph">1. <strong>The Oppression of the Workman and the Heavenly Ring</strong> (ch. 1):</p>
+<ul class="stub-list">
+<li>During the building of the Temple in Jerusalem, a favored young master workman is attacked nightly by an invisible vampire-demon named <strong>Ornias</strong>, who steals half his wages and sucks out his vitality through his right thumb.</li>
+<li>Solomon prays in the Temple for divine aid; the Archangel Michael descends, bringing a magical signet ring (<em>sphragis theou</em>) engraved with a five-pointed pentalpha / Seal of Solomon.</li>
+<li>Armed with the ring, the young workman hurls it at Ornias's chest, binding him and dragging him to Solomon.</li>
+</ul>
+<p class="stub-paragraph">2. <strong>The Interrogation and Enslavement of the Demons</strong> (chs. 2–17):</p>
+<ul class="stub-list">
+<li>Solomon uses Ornias to capture and compel <strong>Beelzeboul</strong> (Beelzebub), the supreme prince of demons (<em>prōtos tōn daimonōn</em>).</li>
+<li>Beelzeboul is forced to summon the demonic hierarchy one by one before Solomon's judgment seat:</li>
+<li><strong>Onoskelis</strong> (ch. 4): A female demon with the legs of an ass, dwelling in caves and cliffs, seducing men and driving them to ruin; thwarted by the holy name of God.</li>
+<li><strong>Asmodeus</strong> (<em>Asmodaios</em>, ch. 5): The destructive demon of Tobit, born of a human mother and a fallen angel. He confesses that he destroys the beauty of virgins, alienates married couples, and causes insanity; his thwarting angel is <strong>Raphael</strong>, and he is driven away by the burning liver and gall of a Glanos river-fish. Solomon forces Asmodeus to saw marble slabs for the Temple walls.</li>
+<li><strong>Tephras</strong> (ch. 7): The demon of the ash-wind, bringing darkness and eye disease.</li>
+<li><strong>The Seven World-Rulers of Darkness / Pleiades</strong> (ch. 8): Seven intertwined female spirits of Deception, Strife, Battle, Jealousy, Error, Power, and the Worst (<em>to kakiston</em>); bound and compelled to dig the foundations of the Temple.</li>
+<li><strong>Abezethibou</strong> (ch. 25): A ferocious, one-winged demon who was the spiritual power behind Jannes and Jambres in Egypt, hardened Pharaoh’s heart, and remained trapped in the Red Sea until summoned by Solomon.</li>
+</ul>
+<p class="stub-paragraph">3. <strong>The Thirty-Six Decans of the Zodiac (<em>Stoicheia</em>)</strong> (ch. 18):</p>
+<ul class="stub-list">
+<li>Solomon summons the thirty-six astral decans (<em>stoicheia tou kosmou</em>), cosmic rulers who govern the human body:</li>
+<li>Each decan steps forward, revealing its demonic identity, the exact illness it inflicts (e.g., headache, blindness, deafness, sciatica, spasms, fevers, delirium), and the precise angelic counter-name that forces it to flee.</li>
+</ul>
+<p class="stub-paragraph">4. <strong>The Queen of Sheba and the Demonic Capstone</strong> (chs. 19–24):</p>
+<ul class="stub-list">
+<li>The Queen of the South visits Solomon; her servant-boy is saved from a demon of premature death.</li>
+<li>A gigantic cornerstone / capstone (<em>akrogōniaios</em>) is too heavy for human workers; Solomon commands an aerial demon and the bound demon from the Red Sea to fly through the air and hoist the colossal stone directly to the pinnacle of the Temple (22:7–23:4).</li>
+</ul>
+<p class="stub-paragraph">5. <strong>Solomon's Idolatrous Fall and Final Testament</strong> (chs. 25–26):</p>
+<ul class="stub-list">
+<li>In his old age, Solomon falls madly in love with a beautiful Jebusite woman.</li>
+<li>Her pagan priests refuse to grant her to Solomon unless he worships Moloch and Raphan. When Solomon hesitates, the woman presents him with five grasshoppers and demands that he crush them in Moloch's name.</li>
+<li>Overcome by lust, Solomon crushes the insects; instantly, the Holy Spirit and divine glory depart from him.</li>
+<li>His signet ring loses its power; demons rise up in mockery; enemies revolt across his kingdom.</li>
+<li>Broken and disgraced, Solomon writes this <em>Testament</em> as a solemn admonition to all humanity, warning against the snares of women, pride, and idolatry.</li>
+</ul>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The <em>Testament of Solomon</em> survives in over a dozen Greek manuscripts dating from the 12th to the 17th centuries, categorized into four distinct recensions (A, B, C, D) by Chester Charlton McCown.</p>
+<h4 class="stub-heading">A. The Greek Manuscript Recensions</h4>
+<p class="stub-paragraph">1. <strong>Recension A (The Long, Primitive Text)</strong>:</p>
+<ul class="stub-list">
+<li><strong>MS P (Paris, Bibliothèque Nationale de France, MS gr. 500, fols. 71r–93v)</strong>: 15th century; the base text for the editions of F. F. Fleck, J.-P. Migne, and F. C. Conybeare.</li>
+<li><strong>MS H (Jerusalem, Patriarchal Library, Holy Saba MS 422)</strong>: 12th/14th century; an important Eastern monastic witness.</li>
+</ul>
+<p class="stub-paragraph">2. <strong>Recension B (The Expanded/Glossed Text)</strong>:</p>
+<ul class="stub-list">
+<li><strong>MS I (Paris, Bibliothèque Nationale de France, MS gr. 38, fols. 138r–164r)</strong>: 16th century.</li>
+<li><strong>MS Q (Mount Athos, Dionysiou Monastery MS 204)</strong>: 16th century.</li>
+</ul>
+<p class="stub-paragraph">3. <strong>Recension C (The Re-ordered/Apotropaic Text)</strong>:</p>
+<ul class="stub-list">
+<li><strong>MS L (London, British Library, MS Harleian 5596, fols. 8v–18r)</strong>: 15th century; incorporates numerous magical recipes and incantations.</li>
+</ul>
+<p class="stub-paragraph">4. <strong>Recension D (The Abridged/Epitomized Text)</strong>:</p>
+<ul class="stub-list">
+<li><strong>MS N (Vienna, Österreichische Nationalbibliothek, Cod. Theol. Gr. 334)</strong>: 15th century.</li>
+<li><strong>MS V (Vatican, Biblioteca Apostolica Vaticana, Cod. Vat. Gr. 2008)</strong>: 15th century.</li>
+</ul>
+<p class="stub-paragraph">5. <strong>The Papyrus Fragment</strong>:</p>
+<ul class="stub-list">
+<li><strong>Papyrus Vindobonensis Graecus 39707</strong> (Vienna, Österreichische Nationalbibliothek): 5th century CE; preserves portions of chapter 18 (the Decans), proving that the text circulated in Byzantine Egypt by the 5th century.</li>
+</ul>
+<h4 class="stub-heading">B. Ancient Versions and Cognate Magico-Medical Texts</h4>
+<ul class="stub-list">
+<li><strong>Arabic Version</strong>: Preserved in Christian Arabic manuscripts cataloged by Georg Graf (<em>Geschichte der christlichen arabischen Literatur</em>, 1:210, 245).</li>
+<li><strong>The Hebrew and Aramaic Solomonic Magical Tradition</strong>: While <em>TSol</em> survives in Greek, its traditions parallel Aramaic incantation bowls, the Cairo Genizah magical texts, and the <em>Sefer ha-Razim</em> (<em>Book of Mysteries</em>).</li>
+<li><strong>The Hygromanteia and the Key of Solomon</strong>: In late Byzantium and the Latin West, <em>TSol</em> spawned a vast family of Solomonic grimoires, including the <em>Hygromanteia</em> (<em>The Magical Treatise of Solomon</em>, ed. P. Torijano, 2002) and the <em>Clavicula Salomonis</em> (<em>The Key of Solomon</em>).</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <ul class="stub-list">
+<li><strong>McCown, Chester Charlton</strong>, ed. <em>The Testament of Solomon: Edited from the Manuscripts with Introduction, Translation, and Notes</em>. Untersuchungen zum Neuen Testament 9. Leipzig: J. C. Hinrichs, 1922. [The classic, monumental critical edition establishing the Greek text across recensions A, B, C, and D, with comprehensive introduction, English translation, and exhaustive textual and demonological commentary].</li>
+<li><strong>Fleck, Ferdinand Florens</strong>, ed. "Testamentum Salomonis." In <em>Wissenschaftliche Reise durch das südliche Deutschland, Italien, Sicilien und Frankreich</em>. Vol. 2.3. Leipzig: Johann Ambrosius Barth, 1837, pp. 111–140. [Editio princeps based on Paris MS P; reprinted in J.-P. Migne, <em>Dictionnaire des apocryphes</em>, Paris, 1856, 1: cols. 737–780].</li>
+<li><strong>Preisendanz, Karl</strong>, ed. "Testament Salomos." In <em>Papyri Graecae Magicae: Die griechischen Zauberpapyri</em>. 2 vols. Leipzig/Berlin: Teubner, 1928–1931; 2nd ed. Stuttgart, 1973–1974 [providing critical comparisons with Greek magical papyri].</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Epistula Salomonis ad Roboam de hygromantia (graece)
+Cf.: S. CARROLL, A Preliminary Analysis of the Epistle to Rehoboam, in JSP 4 (1989), p. 91-103 (ubi codices); — A.-M. DzNis,
+ILRJH, ad loc.
+
+A. DELATTE, Anecdota Atheniensia (Bibliothèque de la Faculté
+de Philosophie et Lettres de l'Université de Liége 36), Liége,
+1927, p. 397-445. 470-477, 649-651.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

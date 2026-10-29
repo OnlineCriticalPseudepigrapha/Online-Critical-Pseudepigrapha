@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henoch aethiopicus — CAVT-061 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Henoch aethiopicus (CAVT-061)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-061</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-061</span>
+          <span class="badge badge-lang">Greek</span>
+          <span class="badge badge-lang">CAVT 61</span>
+          
+        </div>
+        <h1 class="stub-title">Henoch aethiopicus</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> POSTERI ADAE ET EVAE: ENOSH, HENOCH, LAMECH, NOE, SEM, CHAM
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=1En.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/1En.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-061</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 61</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 15 (1 Enoch (Ethiopic Enoch / Aramaic 4Q201-212))</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:5-89 (1 Enoch / Ethiopic Enoch)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:163-281 (Book of Enoch)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>AOT 169-319 (1 Enoch)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p><em>1 Enoch</em> is a collection of five Enochic works: the Book of the Watchers (1–36), the Similitudes (37–71), the Astronomical Book (72–82), the Book of Dreams (83–90) and the Epistle of Enoch (91–108). It deals with the fall of the watchers, cosmic geography and the calendar, and the final judgment.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <p>The oldest parts date from the 3rd–2nd c. BCE; the Similitudes are probably from the 1st c. CE. Aramaic fragments of every part except the Similitudes were found at Qumran. The complete work survives only in Ge'ez; substantial portions survive in Greek.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph"><h3>Ethiopic Witnesses</h3></p>
+<p class="stub-paragraph"><table cellspacing="0"></p>
+<p class="stub-paragraph"><tbody><tr></p>
+<p class="stub-paragraph"><td>MS Label</td></p>
+<p class="stub-paragraph"><td>Full Name</td></p>
+<p class="stub-paragraph"><td>Print Edition</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>p</strong></td></p>
+<p class="stub-paragraph"><td>Rylands Manuscript 23</td></p>
+<p class="stub-paragraph"><td>M. Knibb, <em>The Ethiopic book of Enoch : A New Edition in the Light of the Aramaic Dead Sea Fragments.</em> Oxford: Clarendon, 1978.</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"></tbody></p>
+<p class="stub-paragraph"></table></p>
+<p class="stub-paragraph"><h3>Greek Witnesses</h3></p>
+<p class="stub-paragraph"><table cellspacing="0"></p>
+<p class="stub-paragraph"><tbody><tr></p>
+<p class="stub-paragraph"><td>MS Label</td></p>
+<p class="stub-paragraph"><td>Full Name</td></p>
+<p class="stub-paragraph"><td>Print Edition</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>7QEnoch</strong></td></p>
+<p class="stub-paragraph"><td>7QpapEn gr (7Q4, 8, 11-14)</td></p>
+<p class="stub-paragraph"><td>M. Baillet, J. T. Milik, and R. de Vaux, <em>Les "petites grottes" de Qumrân</em> (<a>DJD</a> III; Oxford: Clarendon Press, 1965),       144-145, pl. XXX.</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>POxy2069</strong></td></p>
+<p class="stub-paragraph"><td>Oxyrhynchus Papyrus 2069</td></p>
+<p class="stub-paragraph"><td>P. Grenfell and A. S. Hunt, <em>The Oxyrhynchus Papyri XVII</em> (London: Egypt Exploration Society, 1927), 6-8. Reprinted in Denis,       <a><em>Fragmenta</em></a>, 233-34.</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>CB185</strong></td></p>
+<p class="stub-paragraph"><td>Chester Beatty 185</td></p>
+<p class="stub-paragraph"><td>C. Bonner and H. C. Youtie, <em>The Last Chapters of Enoch in Greek</em> (<a>SD</a> 8; London/Philadelphia, 1937).       Reprinted (and confirmed by autopsy) by M. Black, ed., <em>Apocalypsis Henochi Graece</em> (<a>PVTG</a> 3; Leiden: Brill, 1970).</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>V1809</strong></td></p>
+<p class="stub-paragraph"><td>Città del Vaticano, Bibl. Apost. Vatic., vatic. gr.1809, f. 216v</td></p>
+<p class="stub-paragraph"><td>J. Gildemeister, "Ein Fragment des griechischen henoch,"       <em>Zeitschrift der Deutschen Morgenländischen Gesellschaft</em> 9 (1855): 621-24. Reprinted in M. Black, ed., <em>Apocalypsis Henochi Graece</em> (<a>PVTG</a> 3; Leiden: Brill, 1970).</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>Gizeh</strong></td></p>
+<p class="stub-paragraph"><td>Cairo Papyrus 10759 | Codex Panopolitanus | Codex Gizeh | Akhmim fragements</td></p>
+<p class="stub-paragraph"><td>R. H. Charles, <em>The Book of Enoch or 1 Enoch</em> (Oxford: Clarendon Press, 1912), 273-304; M. Black, ed.,       <em>Apocalypsis Henochi Graece</em> (<a>PVTG</a> 3; Leiden: Brill, 1970).</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>Gizeh2</strong></td></p>
+<p class="stub-paragraph"><td>duplicate section of Cairo Papyrus 10759 | Codex Panopolitanus | Codex Gizeh | Akhmim       fragements</td></p>
+<p class="stub-paragraph"><td>R. H. Charles, <em>The Book of Enoch or 1 Enoch</em> (Oxford: Clarendon Press, 1912),       273-304; M. Black, ed., <em>Apocalypsis Henochi Graece</em> (<a>PVTG</a> 3; Leiden: Brill, 1970).</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>Syncellus</strong></td></p>
+<p class="stub-paragraph"><td>apud Georgius Syncellus, Chronographia</td></p>
+<p class="stub-paragraph"><td>G. Dindorf, <em>Georgius Syncellus et Nicephorus Constantinopolitanus.</em> (Corpus scriptorum historiae Byzantinae 20-21; Bonn, 1829). Reprinted in R. H. Charles, <em>The Book of Enoch or 1 Enoch</em> (Oxford: Clarendon Press, 1912), 273-304; M. Black, ed., <em>Apocalypsis Henochi Graece</em> (<a>PVTG</a> 3; Leiden: Brill, 1970).</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>Jude</strong></td></p>
+<p class="stub-paragraph"><td>Jude 14-15</td></p>
+<p class="stub-paragraph"><td>&nbsp;</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"></tbody></table></p>
+<p class="stub-paragraph"><h3>Aramaic Witnesses</h3></p>
+<p class="stub-paragraph"><table cellspacing="0"></p>
+<p class="stub-paragraph"><tbody><tr></p>
+<p class="stub-paragraph"><td><strong>4Q201</strong></td></p>
+<p class="stub-paragraph"><td>4QEnoch a ar</td></p>
+<p class="stub-paragraph"><td rowspan="12">A. Lukaszewski, "Chrestomathy" in "The Value of Qumran Aramaic for Addressing the New Testament Aramaic Problem" (Ph.D. diss., University of Saint Andrews, 2004). Used by permission.  See also J. T. Milik, with the collaboration of M. Black, <em>The Books of Enoch: Aramaic Fragments of Qumran Cave 4</em> (Oxford: Clarendon Press, 1976).  <span class="comment"> (For a list of disagreements between Lukaszewski and Milik,        see the "Disagreements" section below.) </span></td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q202</strong></td></p>
+<p class="stub-paragraph"><td>4QEnoch b ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q204</strong></td></p>
+<p class="stub-paragraph"><td>4QEnoch c ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q205</strong></td></p>
+<p class="stub-paragraph"><td>4QEnoch d ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q206</strong></td></p>
+<p class="stub-paragraph"><td>4QEnoch e ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q207</strong></td></p>
+<p class="stub-paragraph"><td>4QEnoch f ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q208</strong></td></p>
+<p class="stub-paragraph"><td>4QEnastr a ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q209</strong></td></p>
+<p class="stub-paragraph"><td>4QEnastr b ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q210</strong></td></p>
+<p class="stub-paragraph"><td>4QEnastr c ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q211</strong></td></p>
+<p class="stub-paragraph"><td>4QEnastr d ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q212</strong></td></p>
+<p class="stub-paragraph"><td>4QEn g ar</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>4Q247</strong></td></p>
+<p class="stub-paragraph"><td>4QApocalypse of Weeks?</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"></tbody></table></p>
+<p class="stub-paragraph"><h3>Latin Witnesses</h3></p>
+<p class="stub-paragraph"><table cellspacing="0"></p>
+<p class="stub-paragraph"><tbody><tr></p>
+<p class="stub-paragraph"><td><strong>Tertullian</strong></td></p>
+<p class="stub-paragraph"><td>1En 99 apud Tertullian, <em>De idolatria</em> 4,3.22-38.</td></p>
+<p class="stub-paragraph"><td>A. Reifferscheid and G. Wissowa, eds., <em>Quinti Septimi Florentis Tertulliani Opera, Pars 1</em> (Corpus Scriptorum Ecclesiasticorum Latinorum 20; Vienna: F. Tempsky, 1890), 33. Reprinted by J. T. Milik, with the collaboration of M. Black, <em>The Books of Enoch: Aramaic Fragments of Qumran Cave 4</em> (Oxford: Clarendon Press, 1976), 79.  See also J. H. Waszink and J. C. M. van Winden, <em>Tertullianus: De idolatria: Critical Text, Translation and Commentary</em> (Supplements to Vigilae christianae 1; Leiden/New York: Brill, 1987), 28.</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"><tr></p>
+<p class="stub-paragraph"><td><strong>BL</strong></td></p>
+<p class="stub-paragraph"><td>Brit. Libr., Ref. 5 E XII, fol. 79v-80r</td></p>
+<p class="stub-paragraph"><td>M. R. James, <em>Apocrypha Ancedota</em> (<a>T&amp;S</a> 2.3; Cambridge, 1893),       146-150, 186.</td></p>
+<p class="stub-paragraph"></tr></p>
+<p class="stub-paragraph"></tbody></table></p>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h3>Print Editions</h3>
+
+<h4>Aramaic</h4>
+<p>The primary print editions of the Qumran Aramaic fragments are:</p>
+<ul class="bibliography">
+<li>A. Lukaszewski, "Chrestomathy," in <em>The Value of Qumran Aramaic for Addressing the New Testament Aramaic Problem</em> (Ph.D. diss., University of Saint Andrews, 2004).</li>
+<li class="comment">** In general Lukaszewski's transcription is more conservative than that of Milik. Lukaszewski tends to consider fewer letters to be visible in the manuscript fragments and does not reconstruct large gaps. His transcription also contains some errors; see below for a list of those found and corrected to date.</li>
+<li>F. García Martínez and E. J. C. Tigchelaar, <em>The Dead Sea Scrolls Study Edition</em> (2 vols.; Leiden: Brill, 1998), 1.220-221, 398-445, 494-495, 2.1062-1071, 1148-1149.</li>
+<li>J. A. Fitzmyer and D. J. Harrington, <em>A Manual of Palestinian Aramaic Texts (Second Century B.C. —Second Century A.D.)</em> (Biblica et orientalia 34; Rome: Biblical Institute Press, 1978).</li>
+<li>M. Knibb, with the assistance of E. Ullendorff, <em>The Ethiopic Book of Enoch: A New Edition in the Light of the Aramaic Dead Sea Fragments</em> (2 vols.; Oxford: Clarendon Press, 1978).</li>
+<li>J. T. Milik, with the collaboration of M. Black, <em>The Books of Enoch: Aramaic Fragments of Qumran Cave 4</em> (Oxford: Clarendon Press, 1976).</li>
+<li class="comment">** The editio princeps for the Aramaic evidence, including extensive critical discussion and photographic plates. Offers extensive reconstructions of the long lacunae which are left empty in Lukaszewski's transcription. For a list of disagreements between Lukaszewski's transcription and Milik's edition, see the "Disagreements" section below.</li>
+</ul>
+
+<h4>Ethiopic</h4>
+<ul class="bibliography">
+<li>M. Knibb, <em>The Ethiopic book of Enoch : A New Edition in the Light of the Aramaic Dead Sea Fragments.</em> Oxford: Clarendon, 1978.</li>
+<li class="annotation">This is currently the primary print edition of the Ethiopic text.</li>
+<li>A. Dillmann, <em>Ethiopic Grammar</em> (London: Williams & Norgate, 1907).</li>
+<li>R.H. Charles, <em>The Ethiopic Version of the Book of Enoch</em> (Oxford: Clarendon Press, 1906)</li>
+<li>J.P.G. Flemming, <em>Das Buch Henoch: äthiopischer Text</em> (Leipzig: J.C. Hinrichs, 1902)</li>
+<li>A. Dillmann, <em>Lexicon Linguae Aethiopicae Cum Indice Latino</em> (Lipsiae: T.O. Weigel, 1865).</li>
+</ul>
+
+<h4>Greek</h4>
+<p>Print sources for individual witnesses are listed above. The primary print publications since 1900 which have compiled the Greek evidence are:</p>
+<ul class="bibliography">
+<li>M. Black, with J. C. VanderKam, "Appendix B: Apocalypsis Henoch graece: Addenda et Corrigenda," in <em>The Book of Enoch or First Enoch: A New English Edition with Commentary and Textual Notes </em> (<a>SVTP</a> 7; Leiden: Brill, 1985), 419-422.</li>
+<li>Denis, <a><em>Concordance</em></a>, 818-24.</li>
+<li>M. Black, <em>Apocalypsis Henochi graece</em>, with A.-M. Denis, <em>Fragmenta pseudepigraphorum quae supersunt graeca una cum historicorum et auctorum Iudaeorum hellenistarum fragmentis</em> (<a>PVTG</a> 3; Leiden: Brill, 1970).</li>
+<li>R. H. Charles. <em>The Ethiopic Version of the Book of Enoch, Edited from Twenty-Three MSS, together with the Fragmentary Greek and Latin Versions </em> (Anecdota Onoxiensia [Semitic Series] 11; Oxford: Clarendon Press, 1906), 3-75, 175-177.</li>
+<li class="comment">** Does not include Syncellus Greek fragments.</li>
+</ul>
+
+<h4>Latin</h4>
+<p>Print sources for individual witnesses are listed above. See also:</p>
+<ul class="bibliography">
+<li>Denis, <em>Concordance latine</em>, 628-29.</li>
+<li>W. Lechner-Schmidt, <em>Wortindex der lateinisch erhaltenen Pseudepigraphen zum Alten Testament</em> (Texte und Arbeiten zum Neutestamentlichen Zeitalter 3; Tübingen: Francke, 1990), 239-40.</li>
+<li>G. F. Diercks, <em>Novatiani opera</em> (Corpus christianorum, Series latina 4; Turnhout: Brepols, 1972), 150.</li>
+<li>R. H. Charles, <em> The Ethiopic Version of the Book of Enoch, Edited from Twenty-Three MSS,        together with the Fragmentary Greek and Latin Versions </em> Anecdota Onoxiensia [Semitic Series] 11; Oxford: Clarendon, 1906), 219-22.</li>
+</ul>
+
+<h4>Syriac</h4>
+<p>The Syriac fragment of 1 Enoch 6:1-7 is printed in:</p>
+<ul class="bibliography">
+<li>S. P. Brock, "A Fragment of Enoch in Syriac," <em>JThSt</em> 19 (1968), 626–631</li>
+<li>J. B. Chabot, <em>Chronique de Michel le Syrien, Patriarche jacobite d'Antioche</em> (Brussels reprint, 1963), 1166–1199.</li>
+</ul>
+
+<h4>Coptic</h4>
+<p>The Antinoë Coptic fragment, covering&nbsp;<em>1En</em> 93:3–8, is printed in:
+</p>
+<ul class="bibliography">
+<li>S. Donadoni, Acta Orientalia 26 (1960): 197–202.</li>
+</ul>
+<p>For further bibliography see DiTommaso, <em>Bibliography</em>, 355-430.</p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Henoch aethiopicus (1 Henoch)
+
+Cf.: J.-B. Frey, art. Apocryphes de l'Ancien Testament, in DBS, I,
+col. 357-371; — F. STEGMÜLLER, n? 78 et 78, 1-20; — E. SCHÜRER,
+III, p. 250-268; — A.-M. DENIS, ILRJH, ad loc.
+
+De usu Henoch aethiopici uide H.J. LawLOR, Early Citations from
+the Book of Enoch, in Journal of Philology 25 (1897), p. 164-225; —
+E. SCHÜRER, III, p. 260-264; — A.-M. Denis, ILRJH, ad loc.
+
+Fragmenta aramaica
+
+Nota: Fragmenta qumranica 1023 1Q24 2026 40203 4Q530
+4Qs31 4Q532 4Q533 6Q8 pertinent ad Librum gigantum (cf. infra
+n? 62), et non ad Henoch aethiopicum: cf. J.T. MıLik, The Books of
+Enoch. Aramaic Fragments of Qumrán Cave 4, Oxford, 1976, p. 298-310.
+
+(1) 4Q201 (4QEn? ar «The Book of Enoch: First copy») (1, 1 -
+6; II, I - 5, 6; VI, 4 - VIII, I; VIII, 3 - IX, 3, 6-8; X, 3-4; X, 21 -
+36 POSTERI ADAE ET EVAE 61
+
+Xi, 1 + xim, 4-6): J.T. Mrrik, The Books of Enoch. Aramaic Fragments of Qumrän Cave 4, Oxford, 1976, p. 22-41, 139-163, 340-
+343 + tab. 1-v.
+
+(2) 4Q202 (4QEn° ar «The Book of Enoch: Second copy »)
+(V, 9 - VI, 4 + VI, 7 - VIII, I; VIII, 2 - IX, 4; X, 8-12; XIV, 4-6):
+J.T. Maux, The Books of Enoch..., p. 22-41, 164-178, 344-346 +
+tab. vr-1x.
+
+(3) 4Q204 (4QEn° ar [olim 4QHen?] «The Book of Enoch:
+Third copy») (t 9 v, 1; VI, 7; X, 13-19 + xii, 3; XII, 6 - XIV,
+16; XIV, 18-20 + XV, 11(?); xui, 8-12; XXX, I - XXXII, I; XXXV
++ XXXVI, I-4; LXXXIX, 31-37; CIV, I3 - CVI, 2; CVI, I3 - CVII,
+2. Fragmenta 2-3 huius textus = 4Q203 fragmenta 9-10): J.T.
+Mau, The Books of Enoch..., p. 22-58, 178-217, 316-317, 346-
+353 + tab. ıx-xv.
+
+Cf.: J.T. Mixrg, Henoch au pays des aromates (ch. xxvii à xxxii):
+Fragments araméens de la grotte 4 de Qumrän, in RB 65 (1958), p. 70-77.
+
+(4) 4Q205 (4QEn? ar «The Book of Enoch: Fourth copy»)
+(XXII, 13 - XXIV, 1; XXV, 7 - XXVII, I; LXXXIX, II-I4, 29-31,
+43-44): J.T. Mr, The Books of Enoch..., p. 22-47, 217-225,
+353-355 + tab. xvi-xvir.
+
+(5) 4Q206 (4QEn* ar [olim 4QHen?] «The Book of Enoch:
+Fifth copy») (xvi, 15[?]; XXI, 2-4; XXI, 3-7; XXVIII, 3 - XXIX,
+2 t XXXI, 2 - XXXII, 3; XXXII, 3, 6 + XXXIII, 3 - XXXIV, I;
+LXXXVIII, 3 - LXXXIX, 6; LXXXIX, 7-16, 26-30. Fragmenta 2-3
+textum e 4QEnGiants“ forte continent): J.T. Mick, The Books
+of Enoch..., p. 22-47, 225-244, 355-359 + tab. XVIII-XXI.
+
+Cf.: J. T. MILIK, Hénoch au pays des aromates..., p. 70-77.
+
+(6) 4Q207 (4QEn* ar «The Book of Enoch: Sixth copy »)
+(rxxxvi, 1-3): J.T. Mirig, The Books of Enoch..., p. 22-47, 244-
+245, 359 + tab. xxr.
+
+(7) 4Q208 (4QEnastr* ar [olim 4QHen ast? ] «The Astronomical Book of Enoch»: First copy») (36 fragmenta). Ineditus.
+
+C£.: J.T. MILIK, The Books of Enoch..., p. 7-22, 27; — J.T. MILIK,
+Problèmes de la littérature henochique..., in HThR 64 (1971), p. 333-378;
+— M. Brack, The Fragments of the Aramaic Enoch from Qumran, in
+W.C. van UNNIK, La littérature juive entre Tenach et Mischna. Quelques
+problémes (Recherches Bibliques 9), Leiden, 1974, p. 15-28.
+61 POSTERI ADAE ET EVAE 37
+
+(8) 4Q209 (4QEnastr° ar [olim 4QHen astr*] «The Astronomical Book of Enoch: Second copy ») (aliquot fragmenta quadrant ad LXXVI, 13 - LXXVII, 4; LXXVIII, 4, 9-I2; LXXIX, 3-6 +
+LXXVHI, 16 - LXXIX, 2; LXxxu, 2[?], 9-13): J.T. Miu, The
+Books of Enoch..., p. 7-22, 273-274, 278-284, 288-291, 293-296 +
+tab. XXV-XXVII, xxx.
+
+Cf.: J.T. Mini, Hénoch au pays des aromates..., p. 70-77, praesertim p. 76; — J.T. MILIK, Problèmes de la littérature hénochique..., in
+HThR. 64 (1971), p. 338-339, 342.
+
+(9) 4Q210 (4QEnastr” ar [olim 4QHen astr“] «The Astronomical Book of Enoch: Third copy») (LXXVI, 3-10; LXXVI, 13 -
+LXXVII, 4; LXXVII, 6-8): J. T. Mirrg, The Books of Enoch..., p. 7-
+22, 274, 284-288, 292-293 + tab. XXVII, xxx.
+
+Cf.: J.T. Maui, Henoch au pays des aromates..., p. 70-77, praesertim p. 76.
+
+(10) 4Q211 (aQEnastr? ar «The Astronomical Book of
+Enoch: Fourth copy ») (fragmentum legitur post LXXxI1, 20):
+J.T. MILIK, The Books of Enoch..., p. 7-22, 274, 296-297 + tab.
+XXIX.
+
+(11) 4Q212 (4QEn® ar; «Letter of Enoch» ou «Enoch V »;
+«The Book of Enoch: Seventh copy») (cxi, 10[?] + xcı, 18-19
++ XCII, 1-2; XCH, § - XCHI, 4; XCMI, 9-10 + XCI, 11-17; XCIII,
+1I- XCIV, 2): J. T. Miti, The Books of Enoch..., p. 47-58 (Epistula Henoch), 245-272, 360-362 + tab. xxi-xxi1v.
+
+Cf.: J.T. MILIK, Problèmes de la littérature hénochique..., in HThR
+64 (1971), p. 333-378 (passim).
+
+(12) 4Q247 (4QApocWeeks ?): editio paratur a M. BROSHI -
+A. YARDENI.
+
+Cf.: J.T. Maur, The Books of Enoch..., p. 256.
+
+Aliae sententiae de textu legendo: J.C. GREENFIELD, in
+A. SussMAN - R. PELED, Scrolls from the Dead Sea: An Exhibition of
+Scrolls and Archeological Artifacts from the Collections of the Israel Antiquities Authority, Washington D.C., 1993, p. 76-79; — D.C. OLson, Recovering the Original Sequence of 1 Enoch 91-93, in JSP 11 (1993), p. 69-
+94.
+
+Translatio germanica: S. Unic, Das áthiopische Henochbuch, in
+JSHRZ V, 6, Gütersloh, 1984, p. 755-760 (translatio aliquot fragmentorum).
+38 POSTERI ADAE ET EVAE 61
+
+' "Translatio hispanica: E. MARTINEZ BOROBIO, Fragmentos arameos de Henoc, in A. Diez MACHO, IV, p. 293-325.
+
+Translatio italica: L. Rosso UBIGLI, Frammenti aramaici di Enoc,
+in P. SACCHI, p. 669-723.
+
+Versio graeca (BHGN 2122m)
+
+C£.: J. van HAELST, n. 575-578.
+
+M. Brack, Apocalypsis Henochi Graece (PsVTGr 3), Leiden,
+1970, p. 5-44, ex omnibus testibus praeter Pap. Oxyrhynchus
+2069 (cf. infra).
+
+Addenda et corrigenda: M. BLACK in consultation with J.C.
+
+VANDERKAM, The Book of Enoch or First Enoch. À New English Edition
+
+with Commentary and Textual Notes. With an Appendix on the ' Astronomical' Chapters (72-82) [by O. NEUGEBAUER] (StVTPs 7), Leiden,
+
+1985, p. 419-422.
+
+(1) Citationes apud Georgium Syncellum (forte e Panodoro
+Alexandrino [CPG 5535]:
+
+G. Dinporr, I A.A. MOSSHAMMER HENOCH
+p.20,1-23,$ p. TI, I9 - 13, 19 VLI-IX,4
+p. 42, 20 - 46, 6 p. 24, 12 - 26, 8 VIII, 4 - X, 14
+P- 46, 7 - 47, 3 p. 26,9 - 25 XV,8-XVI,I
+P. 47, 4-19 p. 26, 26-27, 7 (cf. notam infra)
+
+Cf. G. Dinporr, Georgius Syncellus et Nicephorus Cp. (Corpus
+Scriptorum Historiae Byzantinae 20-21), Bonn, 1829, e cod. Paris, Bibl. Nat. de France, gr. 1711, fol. 1-230, an. 1021; — A.A.
+MOSSHAMMER, Georgii Syncelli Ecloga Chronographica (Bibliotheca
+Scriptorum Graecorum et Romanorum Teubneriana), Leipzig,
+1984, e 12 codd.
+
+Nota: Fragmentum quod tantum a Georgio Syncello traditum
+
+est (G. Dindorf, I, p. 47, 4-19; A.A. Mosshammer, p. 26, 26 - 27, 7)
+
+pertinet ad Librum gigantum (cf. infra n° 62): cf. J.T. MILIK, Problèmes
+
+de la littérature hénochique..., in HThR. 64 (1971), p. 333-378, praesertim p. 368-370 (translatio gallica fragmenti); — J.T. MILIK, The Books
+of Enoch..., Oxford, 1976, p. 317-318 (translatio anglica fragmenti).
+
+(2) Le Caire, Pap. 10759, p. 21-66, saec. v uel vi (= xix, 3b -
+XXI, 9a; I, I - XIV, 22a; XIV, 22b xxxu, 6) (Fragmenta Akhmim siue Codex Panopolitanus siue Codex Gizeh): U. Bou-
+RIANT, Fragments grecs du Livre d'Énoch in Mémoires publiés par
+les membres de la mission archéologique frangaise au Caire, t. 9,
+fasc. 1, Paris, 1892, p. 91-147, praesertim p. 111-136.
+61 POSTERI ADAE ET EVAE 39
+
+(3) Città del Vaticano, Bibl. Apost. Vatic, vatic. gr. 1809,
+f. 216v, saec. XI (= LXXXIX, 42-49): A. MAI, Nova Patrum Bibliotheca, Il, 1844 (cum tabula); — J. GILDEMEISTER, Ein Fragment des
+griechischen Henoch, in ZDMG 9 (1855), p. 621-624; — M. GITI-
+BAUER, Die Überreste griechischer Tachygraphie im Codex Vaticanus
+graecus 1809, I, in Denkschriften der kaiserlichen Akademie der
+Wissenschaften. Philosophisch-historische Classe, 28, Wien,
+
+1878, p. 92-93.
+
+(4) Membra disiecta libelli unius codicis saec. iv University
+of Michigan (p. 19-20 et 23-24) + Chester Beatty 185 (p. 15-16,
+17-18, 21-22 et 25-26) qui continet XCVII, 6 - CIV; CVI - CVII
+(addendum est paruum excerptum e loco incerto): C. BONNER,
+The Last Chapters of Enoch in Greek (Studies and Documents 8),
+London, 1937 (textus, translatio et index); — J.T. Mizix, The
+Books of Enoch. Aramaic Fragments of Qumrîn Cave 4, Oxford,
+1976, p. 259 (paruum excerptum fortasse pertinet ad XCI, 3-4).
+
+Emendationes: C. BONNER, The Homily on the Passion by Melito
+Bishop of Sardis with some Fragments of the Apocryphal Ezekiel (Studies
+and Documents 12), London, 1940, p. 81-82.
+
+(5) Pap. Oxyrhynchus 2069, saec. IV ex. (= LXXVII, 7 -
+LXXVIII, I; LXXVIII, 8; LXXXV, IO - LXXXVI, 2; LXXXVII, 1-3;
+addenda sunt duo fragmenta e locis incertis): A.S. Hunt, The
+Oxyrhynchus Papyri, XVII, London, 1927, n° 2069, p. 6-8; — et
+iterum J. T. MILIK, Fragments grecs du livre d'Hénoch (P. Oxy. xvii
+2069), in Chronique d'Égypte 46 (1971), p. 321-343.
+
+Translatio hispanica: F. CORRIENTE - A. PiRERO, Libro 1 de Henoc (Etiópico y griego), in A. Diez MacHO, IV, p. 11-143.
+
+Concordantia:
+A.-M. Denis, Concordance grecque des Pseudépigraphes d' Ancien. Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione M. Black).
+
+Fragmenta latina
+
+Cf.: J. VERHEYDEN, Les Pseudépigraphes d' Ancien Testament. Textes
+latins. À propos d'une Concordance, in ETL 71 (1995), p. 383-420, praesertim p. 403-406.
+
+(1) London, Brit. Libr., Reg. 5 E XIII, fol. 79v-80r, saec. viii
+(= cvi, 1-18): M.R. JAMES, Apocrypha Anecdota. A Collection of
+40 POSTERI ADAE ET EVAE 61
+
+thirteen Apocryphal Books and Fragments (Texts and Studies II, 3),
+Cambridge, 1893, p. 146-150, 186.
+
+Translatio anglica: R.H. CÙÒÙartes in R.H. CHAnrEs, APOT,
+p. 278-281 (cum textu latino).
+
+(2) Citatio Henoch 1, 9 apud Pseudo-Cyprianum, Ad Novatianum, 16, 5 (CPL 76; HJ. FREDE, Verzeichnis sub siglo PS-CY
+Nov): cf. G.F. Drercxs, Novatiani opera (CC.SL 4), Turnhout, 1972, p. 150, |. 21-24.
+
+(3) Citatio Henoch xcix apud Tertullianum, De idolatria, 4, 3,
+22-38 (CPL 23; HJ. FREDE, Verzeichnis sub siglo TE id): cf. A.
+REIFFERSCHEID - G. Wissowa, Q. S. Fl. Tertulliani De idolatria
+(CC.SL 2), Turnhout, 1964, p. 1104, l. 22-28; — J.H. WASZINK -
+J-C.M. van WINDEN, Tertullianus. De idolatria. Critical Text,
+Translation and Commentary (Supplements to Vigiliae Christianae I), Leiden-New York, 1987, p. 28, l. 13-17.
+
+Nota: R.E. Kaskr, Beowulf and the Book of Enoch, in Speculum
+
+46 (1971), p. 421-431, existimat uersionem latinam Henoch aethiopici
+in Britannia saec. VIII exstitisse.
+
+Concordantiae:
+
+W. LECHNER-SCHMIDT, Wortindex der lateinisch erhaltenen Pseudepigraphen zum Alten Testament (Texte und Arbeiten zum neutestamentlichen Zeitalter 3), Tübingen, 1990 (ex editionibus G. Hartel; PL 62,
+col. 363 [= Pseudo-Cyprianus, Ad Nouatianum]; A. Reifferscheid -
+G. Wissowa; M.R. James); — A.-M. DENIS, Concordance latine des
+Pseudépigraphes d' Ancien "Testament. Concordance. Corpus des textes. Indices
+(Corpus Christianorum. Thesaurus patrum latinorum. Supplementum), Turnhout, 1993, (ex editionibus G. Hartel; A. Reifferscheid -
+G. Wissowa; M.R. James).
+
+Fragmentum syriacum
+
+S.P. Brock, A Fragment of Enoch in Syria, in JThSt 19
+(1968), p. 626-631 (citatio Henoch vt, 1-7 apud Michael Syrum,
+Chronica, I, 4).
+
+Nota: F. Nau, Traduction des lettres XII et XIII de Jacques d'Edesse
+(exegese biblique), in ROC 10 (1905), p. 197-208, 258-282, praesertim p. 206-207, existimat uersionem integram syriacam Henoch aethiopici olim exstitisse.
+
+Fragmentum copticum (= xci, 3-8)
+S. DONADONI, Un frammento della versione copta del «Libro di
+Enoch», in Acta Orientalia (Kobenhavn) 25 (1960), p. 197-202, e
+61 ' POSTERI ADAE ET EVAE 41
+
+cod. Antinoé, saec. vi/vir; — J.T. MıLik, The Books of Enoch. Aramaic Fragments of Qumrán Cave 4, Oxford, 1976, p. 81-82.
+
+Translatio hispanica: G. ARANDA, Fragmentos coptos de Henoc, in
+A. Diez Macno, IV, p. 327-340.
+
+Versio aethiopica
+
+Codd.: R. Cow ey - F.A. TEFERU, The Study of Geez Manuscripts in Tégre Province, in Journal of Ethiopian Studies 9 (1971),
+p. 21-25; - M.A. KNIBB in consultation with E. ULLENDORF, The
+Ethiopic Book of Enoch..., II, p. 27-37 (qui diuidit codices aethiopicos
+in duas classes); — H.F. Funus, Die äthiopische Übersetzung des Henoch.
+Ein Beitrag zur Apokalyptikforschung der Gegenwart, in Biblische Notizen
+8 (1979), p. 36-56; — E. Isaac, New Light Upon the Book of Enoch from
+Newly-Found Ethiopic MSS, in Journal of the American Oriental Society 103 (1983), p. 399-411: cod. Kebrän 9; — S. UHLIG, Das äthiopische Henochbuch, in JSHRZ V, 6, Gütersloh, 1984, p. 472-477; —
+EMML, Catalogue (alii codd. saec. XIX et xx).
+
+Notae:
+
+(1) Conspectus materiae uersionis aethiopicae: Titulus. I. Liber
+Vigilantium: cap. 1-XXXVI. IL Liber parabolarum: cap. xxxvI-
+LXXI. III. Liber astronomicus: cap. rxxri-Lxxxrt. IV. Liber somniorum: cap. LXxXIII-XC. V. Epistula Henoch (siue Liber exhortationum): cap. XCI-CV. Appendices: cap. cvi-cvit (Ortus Noe: uide
+Qumran. Apocalypsin Noe infra n? 82) et cvm ( «Alius liber quem Henoch ad filium suum Methusela scripsit»).
+
+(2) Fragmenta aramaica 4Q pertinent ad omnem materiam aethiopici textus praeter Librum parabolarum qui in graeco non legitur.
+Rursus autem 1Q, 2Q, 4Q et 6Q continent uaria exempla partis corporis henochiani, quae in aethiopico non legitur et quam J.T. Milik
+Librum gigantum uocat.
+
+J. FLEMMING, Das Buch Henoch. Äthiopischer Text (TU 22, 1),
+Leipzig, 1902 (editio eclectica e 14 codd.).
+
+R.H. CHARLES, The Ethiopic version of the Book of Enoch edited
+from twenty-three mss. together with the fragmentary Greek and Latin
+versions (Anecdota Oxoniensia. Semitic Series 11), Oxford, 1906
+(editio eclectica e 23 codd.).
+
+M.A. KNIBB in consultation with E. ULLENDORF, The Ethiopic Book of Enoch. A New Edition in the Light of the Aramaic Dead
+Sea Fragments, 2 vol., Oxford, 1978, e cod. Manchester, John
+Rylands Libr., eth. 23, fol. 2r-16v, saec. xv, cum lectionibus
+aliorum 25 codicum.
+42 POSTERI ADAE ET EVAE 62
+
+P.A. TILLER, À Commentary on the Animal Apocalypse of I Enoch
+(SBL. Early Judaism and its Literature 4), Atlanta, Georgia, 1993
+(editio textus aethiopici [in transcr.] cap. LXXXV-XC; auctor septem codicibus EMML primum usus est.).
+
+Translatio anglica: R.H. CHARLES in R.H. CHARLES, APOT,
+p. 188-277; — E. Isaac, 1 (Ethiopic Apocalypse of) Enoch (Second Century B.C. - First Century A.D.). A New Translation and Introduction, dans
+J.-H. CHARLESWORTH, I, p. 5-89; — H.F.D. SPARKS, p. 169-319 (=
+M.A. Kniss - E. ULLENDORF, The Ethiopic Book of Enoch); —
+M. BLACK in consultation with J.C. VANDERKAM, The Book of Enoch
+or First Enoch. A New English Edition with Commentary and Textual Notes. With an Appendix on the ‘Astronomical’ Chapters (72-82) by O. NEU-
+GEBAUER, (StVTPs 7), Leiden, 1985.
+
+Translatio gallica: F. MARTIN, Le Livre d'Hénoch traduit sur le
+texte éthiopien (Documents pour l'étude de la Bible. Les apocryphes
+del'Ancien Testament), Paris, 1906; — A. CAQUOT, Hétioch, in A. Du-
+PONT-SOMMER — M. PHILONENKO, p. 463-625 («priorité à l'araméen, à défaut d'araméen au grec, et à défaut de grec à l'éthiopien»).
+
+Translatio germanica: S. UHLIG, Das äthiopische Henochbuch, in
+JSHRZ V, 6, Gütersloh, 1984, p. 506-753.
+
+Translatio hispanica: F. CORRIENTE - A. PINERO, Libro 1 de Henoc (Etiópico y griego), in A. Diez MACHO, IV, p. 11-143.
+
+Translatio italica: L. FUSELLA, Libro di Enoc, in P. SACCHI,
+p. 413-667; — S. CHIALÀ, Libro delle parabole di Enoc. Testo e commento
+. (Studi biblici 117), Brescia, 1997 (translatio cap. 37-71).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oracula Sibyllina — CAVT-274 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Oracula Sibyllina (CAVT-274)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-274</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-live">&bull; Live Edition Available</span>
+          <span class="badge badge-id">CAVT-274</span>
+          <span class="badge badge-lang">Multi/Other</span>
+          <span class="badge badge-lang">CAVT 274</span>
+          
+        </div>
+        <h1 class="stub-title">Oracula Sibyllina</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> VARIA
+        </div>
+        
+          <div class="stub-actions">
+            <a href="../reader.html?doc=SibOr.xml" class="btn-primary" title="Open interactive apparatus reader">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              Read Critical Text Edition
+            </a>
+            <a href="../static/docs/SibOr.xml" target="_blank" class="btn-outline">
+              View TEI XML
+            </a>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-274</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 274</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>Denis 2000 Ch. 32 (pp. 947-993)</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 39 (Sibylline Oracles)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:317-472 (Sibylline Oracles)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>APOT 2:368-406 (Sibylline Oracles)</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph">The Sibylline Oracles are quoted extensively by the church fathers (see Thompson, “Patristic Use of the Sibylline Oracles,” <em>Review of Religion</em> [1952] 115-36). They also influenced Renaissance literature and art.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      <section class="section-block">
+        <h3>3. Date, Language &amp; Provenance</h3>
+        <p>Though the Jewish and Christian oracles contained in this collection are the only extant extended versions of the genre to survive, oracles of the Sibyl were extremely popular in Greco-Roman antiquity from the 5th century BCE onward. The Sibyl, characterized as an aged female prophetess whose “raving mouth” (Plutarch, <em>Moralia </em>397A) almost always forecasted doom, uttered her oracles in Greek hexameter and her oracles usually served purposes of political propaganda. Caesar Augustus is said to have destroyed two thousand prophetic books, including some Sibylline Oracles, because of their subversive nature (Seutonius, <em>Augustus</em> 31:1). The earliest Sibyl was believed to have lived in Erythea in Ionia. Other well known Sibyls are associated with Cumae in Italy and Marpessus in Asia Minor (Collins 1983: 317). The proliferation of Sibyls led to various attempts to enumerate them. The most influential of these lists was that of Varro, who counted ten (Lactantius <em>DivInst.</em>1.6). The prologue of the present collection repeats this list but associates the Persian Sibyl with an otherwise unknown Hebrew Sibyl.</p>
+<p>If, as is widely argued (see below), books 3, 4 and 5 can be located in Egypt then these Sibyls significantly enrich our understanding of Egyptian Judaism during the Ptolemaic and Roman periods. Collins has suggested that book 3 is unique inasmuch as it looks to a Ptolemaic king as savior figure (the “seventh king of Egypt” vs. 193, see also vss. 318, 608). Barclay, however has warned against making too much of this and suggests that both books 3 and 5 can be seen as popular literature of Alexandrian Judaism. As such they attest to the cultural antagonism between Jews and their Gentile surroundings in that locale. This antagonism would later culminate in the Diaspora Revolt of 115-117 CE. Many of the oracles contain a strong polemic against idol worship and homosexuality, which was a common feature in Jewish apologetic.</p>
+<h3>Provenance of the Individual Oracles</h3>
+<p>Locating the date and provenance of the individual books within the collection is extremely difficult. Even books which can be confidently assigned to a particular place and time often contain later interpolations.</p>
+<p><strong>Books 1 and 2</strong> are likely a unit and consist of a Jewish oracle which has been edited by a later Christian redactor. In the <span class="greek">ψ</span> family of manuscripts book 2 contains a lengthy excerpt from Pseudo-Phocylides, the anonymous 1st century Jewish author whose ethical maxims are usually found embedded in the work of the 6th century BCE philosopher. The prominence given to Phrygia in the book indicates that the work originated in Asia Minor. Since Rome alone is singled out for destruction in the tenth generation and Roman power in Asia Minor was consolidated around 30 BCE, the Jewish sections of the book are likely no earlier than this date. Though there is passing reference to the fall of Jerusalem (1.393-400), Collins has suggested that the brevity of this reference and the fact that Rome is not here singled out for recrimination indicates that this section must be part of the Christian interpolation. Thus the Jewish sections of the book can possibly be dated between 30 BCE and 70 CE [Collins 1983: 331]. The reference to the destruction of the Temple sets the earliest date for the Christian redaction.  A <em>terminus ante quem </em>is more difficult to establish.</p>
+<p>Books 3 and 5 are widely believed to have originated in Egyptian Jewish circles. Because of references to the seventh king of Egypt (vss. 193, 318, 608), the provenance of most of book 3 can likely be located in Ptolemaic Egypt in the second century BCE. Numerous additions (vss.350-80) s<span> </span>eem to have been made in the first century BCE as is suggested by references to Cleopatra and her anticipated triumph over Rome. Line 776 may be a Christian interpolation inasmuch as it notes that “mortals will invoke the son of the great God.”  In his reassessment of the provenance of much of the Jewish Pseudepigrapha, Davila does not wholly refute this consensus but notes that while the work speaks of the Jewish law, the content of this law mostly concerns proper worship of God, and is not concerned with food laws, the Sabbath or circumcision. Thus, while the work could have been authored by an assimilated Jew, it could also be the work of “a gentile who was much taken with and influenced by Judaism in the second or first centuries BCE” (Davila 2005: 186).  This is plausible.</p>
+<p>The earliest possible date for book 5 is 70 CE, since the work makes use of the <em>Nero Redivivus</em></p>
+<p>motif and thus must come after that emperor’s death in 68 CE. Inasmuch as the work contains positive references to Hadrian (vss. 46-50), the book is likely not later than 132 BCE, since it is difficult to imagine that a Jewish author would have spoken favorably of Hadrian after the Bar Kochba revolt (132-135 BCE). There is a strong anti-Roman sentiment in these oracles, and the Sibyl looks to a heavenly savior figure. This savior figure is identified with Jesus in a Christian interpolation in lines 255-59. Davila suggests that is just as possible that the work is entirely that of a Christ-believing Jew (thus eliminating the need to posit interpolation) or that the work is that of devout gentile God-fearer (Davila 2005: 189).</p>
+<p><strong>Book 4</strong> is composite. The original oracle (vss. 49-101) is likely from the Hellenistic period, and there is nothing in the work to suggest Jewish authorship. The oracle has been augmented by a Jewish redactor (vss. 1-48; 102-172). References to the destruction of the temple and to the eruption of Vesuvius date this redaction to the late first century CE. The provenance of the redaction is debated (Thomas 1935; Nikiprowetzky 1970). The work contains a rejection of temple worship (this is in sharp contrast to books 3 and 5) and an interest in baptism. This interest suggests a provenance in Syria or the Jordan Valley, where baptismal movements seem to have been common, but this can not be confirmed (Collins 1983: 382).</p>
+<p><strong> Book 6</strong> is not internally presented<span> </span> as a Sibylline Oracle at all but as hymn to Christ. The hymn begins with the baptism of Jesus, ends with his death and suggests that the cross itself was taken up to heaven after the crucifixion. The work must have been written before 300 CE, when it is quoted by Lactantius  (Collins 1983: 406). Its provenance is not known.</p>
+<p>A <em>terminus ante quem</em><span> f </span> for <strong>book 7</strong> is also provided by Lactantius (<em>DivInst </em>7.16.13). The work is Christian, and portrays Jesus as a Davidic messiah (vs. 31) who will be enthroned above the angels (vss. 31-33). The work evinces an interest in the baptism of Christ (vss. 65-67) which is to be commemorated by a unique ritual in which a dove is prayed over and then released (vss. 76-81). The provenance of the work is not known.</p>
+<p><strong> Book 8</strong> is composite. The first section, vss. 1-216, consists of political prophecies, mostly against Rome. Verses 131-38 were clearly written by a different author than the rest of the work, inasmuch as the pro-Hadrian stance of these verses contradicts verses 50-72. It is uncertain whether this section of the book has its origins amongst a Christian group or a non-Christ believing Jewish group but references to the return of Nero during the reign of Marcus Aurelius (65-74) indicates that book was written during the reign of that emperor, roughly around 175 CE. The second section of the book, lines 217-500, is clearly Christian and is primarily concerned with Christology. It is difficult to date precisely but, again, Lactantius provides a <em>terminus ante quem</em>.</p>
+<p><strong> Book 9</strong> is comprised of material in from books 1-8. Book 10 repeats the material in book 4. (See <strong>Manuscripts</strong>, below).</p>
+<p><strong> Books 11-14</strong> seem to represent “an ongoing tradition that was repeatedly updated” (Collins 1983: 430). Each book picks up where the previous one left off and each concludes with a prayer of the Sibyl. Book 11 contains a review of history from the flood to the death of Cleopatra. Several references to Egypt and to the foundation of Alexandria (vs. 219) suggests that the book may have originated in Egypt. Collins suggests that references to Joseph, Moses and Solomon (vss. 29; 38-40; 80-103) indicate that the work is Jewish. Davila, however, does not find this to be persuasive evidence and maintains that the work could just as easily be Christian.</p>
+<p><strong> Book 12</strong> shows dependency on SibOr 5, indeed the first eleven verses are taken directly from that book. The bulk of the work is probably Jewish but verses 30-34 and 232, which both speak about the coming Christ (“the secret word of the Most High will come/ wearing flesh like mortals”; 32-33) are Christian interpolations. A reference to the death of the emperor Alexander Severus (288) (235 CE) provides a <em>terminus pro quem </em>of 235 CE.<em> </em></p>
+<p><strong> Book 13</strong> contains praise of Odenath of Palmyra (vss. 150-73) who fought for the Romans against the Parthians during the reign of emperor Gallienus (260-68 CE). Since it does not know of the deaths of either of those figures the work can be dated to approximately 265 CE. The importance accorded Odenath could suggest that the work originated in Syria, but references to Egypt and Alexandria (vss. 43-49) could point to an Egyptian origin. A reference to Decius’ persecution of Christians (vss.87-88) could be a Christian interpolation (Collins 1983: 453) or could indicate that the entire work is Christian (Geffcken 1902: 59-63). Collins suggests that references to the Most High (vs. 109) and the polemic against astrology (vss. 69-73) suggest Jewish authorship, though these elements are also congruent with a Christian provenance.</p>
+<p>The dating of <strong>book 14</strong> is uncertain. There may be a reference to the Arab conquest (vss. 340-49) which would place the book in the 7th century CE. There are also seem to be references to several Roman emperors, but because the text is exceedingly cryptic, it is difficult identify which ones are being alluded to. There are references to Egypt and to Alexandria (vss. 295-296; 320) which suggests that the book originated there. The concluding verses which proclaim that “the holy nation will hold sway over the whole earth/ for all ages, with their mighty children” (vss. 360-361) suggest Jewish authorship.</p>
+      </section>
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p>There are three manuscript groups. Both the <span class="Greek">φ</span> group and the <span class="Greek">ψ</span> group contain books 1-8, with the former containing also an anonymous prologue. The <span class="Greek">φ</span> group begins with book 1 and lacks 8.487-500, while the <span class="Greek">ψ</span> group begins with book eight (some mss also omit 6 and 7). The third manuscript group, <span class="Greek">Ω</span>, begins with a ninth book, which is comprised of material in from books 1-8; book 6, then a single verse not found in books 1-8, then 8.218-428. Book 10 repeats the material in book 4. Books 11-14 are preserved only in the Ω group.</p>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h3>Print Editions</h3>
+<p>DiTommaso (<em>Bibliography</em>) has assembled the following list of print editions of the <em>Sibylline Oracles</em>:</p>
+<ul class="bibliography">
+<li>Schneider, G. <em>Evangelia infantiae apocryphae</em>. FC 18. Freiburg, 1995. 79-80, 315-319.</li>
+<li class="annotation">Prints the text of <em>Sib. Or.</em> 8.456-479</li>
+<li>Potter, D. S. <em>Prophecy and History in the Crisis of the Roman Empire. A Historical Commentary on the Thirteenth Sibylline Oracle</em>. Oxford Classical Monographs. Oxford: University Press, 1990.</li>
+<li class="annotation">Provides the text, a translations, and commentary, as well as <span class="greek">Σχόλια</span> on <em>Sib. Or.</em> 13.</li>
+<li>Denis, A. M. <em>Concordance greque des pseudépigraphes d’Ancien Testament. Concordance, corpus des textes, indices</em>. Louvain-la-Neuve, 1987. 893-900.</li>
+<li class="annotation">Denis includes the Greek text of <em>Sib. Or.</em> 3-5.</li>
+<li>Agourides, S.C. “<span class="greek">ΣΙΒΥΛΛΙΚΟΙ ΧΡΗΣΜΟΙ (Είσαγωγικά—Άποόδοσις του κειμένου—Σχόλια)</span>.” <em>Theo</em> 55 (1984). 335-374, 628-649.</li>
+<li class="annotation">Prints the text of <em>Sib. Or.</em> 3, <em>Sib. Or.</em> 4 and part of <em>Sib. Or.</em> 5.</li>
+<li>Grant, R. W. <em>Theophilos of Antioch, <em>Ad Autolycum</em>. Text and Translation</em>. Oxford, 1970. 25, 86-89, 90-93.</li>
+<li class="annotation">Prints the text of some fragments.</li>
+<li>Nikiprowetzky, V. <em>La troisième Sibylle</em>. ÉJ 9. Paris, 1970.</li>
+<li>Kurfess, A. <em>Sibyllinische Weissagungen. Urtext and Übersetzung</em>. München, 1951.</li>
+<li class="annotation">Provides the Greek text with a translation, along with the text of several other related documents.</li>
+<li>Brierre-Narbonne, J.-J. <em>Exégèse apocryphe des prophétes messianiques</em>. Paris, 1937. 74-85.</li>
+<li class="annotation">Provides the Greek text and French translation of <em>Sib. Or.</em> 3.46-62, 286-294, 601-623, 652-731, 766-794, 5.100-109, 413-432.</li>
+<li>Crönert, G. “Oraculorum Sibyllinorum fragmentum Osloense.” <em>SO</em> 6 (1928). 57-59.</li>
+<li class="annotation">Prints the manuscript <em>P. Oslo</em> 2.14. This ms had first been published in S. Eitrem, "Epic Fragment from the Pap. Osl.," <em>SO</em> 5 (1927), 38. It was Crönert, however, who first identified the witness as a copy of <em>Sib. Or.</em></li>
+<li>Lieger, P. “Christus im Munde der Sibylle. Ein Blütenlese aus den Sibyllinischen Orakeln. Griechisch and deutsch mit erklärenden Ammerkungen.” <em>JOGSWein</em>, 1910-1911. Wein, 1911. 3-63.</li>
+<li class="annotation">Prints the text (with German translation) of several Christian passages.</li>
+<li><em>________</em>. “Die jüdische Sibylle. Griechish und deutsch mit erklärenden Ammerkungen.” <em>JOGSWein</em>, 1907-1908. Wein, 1908. 3-66.</li>
+<li class="annotation">Prints the text of <em>Sib. Or.</em> 3 with German translation and extensive notes.</li>
+<li>Vitelli, G. “Da papiri greci dell’ egitto VIII. 1) Fremmenti degli Oracula Sibillina.” <em>A&amp;R</em> 7 (1904). Cols. 354-356.</li>
+<li class="annotation">Prints the manuscript <em>P. Flor</em> 389, identified as <em>Sib. Or.</em> 5.498-503 (recto), 517-523 (verso).</li>
+<li>Geffcken, J. <em>Die Oracula Sibyllina</em>. GCS 8. Leipzig, 1902. [reprinted Berlin, 1967].</li>
+<li class="annotation">This is the most commonly used edition of the Greek text, and it is Geffcken's text that is presented here in the <em>OCP</em> edition.</li>
+<li>Rzach, A. <em><span class="greek">ΧΡΗΣΜΟΙ ΣΙΒΥΛΛΙΚΟΙ</span>. Oracula Sibyllina</em>. Praha/Wien/Leipzig, 1891.</li>
+<li>Alexandre, C. <em><span class="greek">ΧΡΗΣΜΟΙ ΣΙΒΥΛΛΙΚΟΙ</span>. Oracula Sibyllina: Textu ad codices manuscriptos recognits, cum Castalionis versione metrica innumeris locis emendata</em>. 2 vols. Paris, 1841-1853. [revised version printed as <em><span class="greek">ΧΡΗΣΜΟΙ ΣΙΒΥΛΛΙΚΟΙ</span>. Oracula Sibyllina, editio altera ex priore ampliore contracta, integra tamen et passim aucta, multisque locis retracta</em>. Paris, 1869]</li>
+<li>Vervorst, R. <em>De Carminibus Sibyllinis apud sanctos Patres disceptatio</em>. Paris, 1844.</li>
+<li class="annotation">Vervorst provides a list of patristic quotations from the <em>Sib. Or</em>.</li>
+<li>Badt, B. W. <em>Ce oraculis Sibyllinus a Iudaeis compositis</em>. Breslau, 1869.</li>
+<li>Frankel, Z. “Alexandrinische Messiashoffnungen.” <em>MGWJ</em> 8 (1859). 241-261, 285-308, 321-330, 359-364.</li>
+<li class="annotation">Gives the text of Sib. Or. 3 along with a German translation.</li>
+<li>Friedlieb, J.H. <em><span class="greek">ΧΡΗΣΜΟΙ ΣΙΒΥΛΛΙΚΟΙ</span>. Oracula Sibyllina, ad fidem codd. Mscr. Quotquot exstat recensuit, praetextis prolegomenis illustravit, versione germanica, instruxit, annotations criticas et rerum indicem</em>. Leipzig, 1852.</li>
+<li class="annotation">Prints the text with critical apparatus and a German translation.</li>
+<li>Besançon, G. <em>De l’emploi que les Pères de l’Èglise ont fait des oracles sibyllins</em>. Montaban, 1851.</li>
+<li class="annotation">Lists patristic quotations from <em>Sib. Or.</em></li>
+<li>Mai, A. “Sibyllae Libri XI. XII. XIII. XIIII. ex codicibus Vaticanis editi.” <em>Scriptorum veterum nova collection e Vaticanis codicibus edita III</em>. Roma, 1828. 3.202-214, 217.</li>
+<li><em>________</em>. <em>Σιβύλλης λογος ιδ’. Sibyllinus Liber XIV. Graece ex Ambrosianon codice, cut poetica editoris interpretatione et praevia dissertatione ac notis, accad. Sibyll. Liber VI et pars VIII, cum multa vocum et versuum varietate</em>. Milano, 1817.</li>
+<li>Struve, C.L. <em>Fragmenta librorum Sibyllinorum, quae apud Lactantium reperiuntur</em>. Königsberg, 1817.</li>
+</ul>
+<p>For further bibliography on the <em>Sibylline Oracles</em> up to 1999, see DiTommaso, <em>Bibliography</em>, 795-849.</p>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>Oracula Sibyllina (CPG 1352)
+
+Cf.: J. GEFFCKEN, Komposition und Entstehungszeit der Oracula Sibyllina (TU 23, 1), Leipzig, 1902; — A. Rzacu, Sibyllen, in Pauly's
+Real-Encyclopádie der classischen Althertumswissenschaft II A (1923), col.
+2073-2103; — ID., Sibyllinische Orakel, ibid., col. 2103-2183; — F. STEG-
+MÜLLER, n? 122 ct 122, 1-8; — J.J. Coızins, The Development of the
+Sibylline Tradition, in ANRW II, 20, 1, 1987, p. 421-459; — V. NIkI-
+PROWETZKY, La Sibylle juive et le ‘ Troisième Livre’ des ‘Pseudo-Oracles Sibyllins’ depuis Charles Alexandre, in ANRW II, 20, 1, 1987, p. 460-
+542; — U. Treu apud W. SCHNEEMELCHER, Il, p. 591-619; —
+E. SCHÜRER, III, p. 618-654; - CANT 319; — A.-M. Denis, ILRJH,
+ad loc. (ubi 15 codices et priores editiones).
+
+Versio graeca
+
+C. ALEXANDRE, Oracula Sibyllina, textus ad codices manuscriptos
+recognitus, cum Castalionis versionis metrica innumeris. . locis emendata,
+2 vol., Paris, 1841 (Libri -vm et fragmenta), 1853 (libri x1-xıv),
+1869? (textus, translatio latina).
+
+A. RzACH, XPHXMOI ZIBYAAIAKOI. Oracula Sibyllina,
+Praha - Wien - Leipzig, 1891 (textus et apparatus).
+
+J. GEFFCKEN, Die Oracula Sibyllina (GCS 8), Leipzig, 1902 (reimpr. Berlin, 1967) (textus et apparatus).
+
+V. NIKIPROWETZKY, La troisième Sibylle (École Pratique des
+Hautes Etudes - Sorbonne. Etudes juives 9), Paris - Mouton - La
+Haye, 1970 (textus, translatio libri 111).
+
+Nota: De fragmentis apud Patres uide N. ZEEGERS-VANDER
+VORST, Les citations des poètes grecs chez les apologistes chrétiens du IT siècle,
+Louvain, 1972, ad indicem; — B. THOMPSON, Patristic Use of the Sibylline Oracles, in Review of Religion 16 (1952), p. 115-136.
+
+Translatio anglica: J.J. Corriws, Sibylline Oracles (Second Century B.C. - Seventh Century A.D.). A New Translation and Introduction, in
+J-H. CHARLESWORTH, I, p. 317-472 (ex editione J. Geffcken).
+
+Translatio gallica: V. NIkIPROWETZKY, Oracles sibyllins, in
+A. DUPONT-SOMMER — M. PHILONENKO, p. 1035-1140 (ex editione
+J. Geffcken).
+275 VARIA 217
+
+Translatio germanica: A. Kunrzss, Sibyllinische Weissagungen.
+Urtext und Übersetzung, München, 1951 (cum textu sine apparatu); —
+MERKEL, in JSHR (in praeparatione).
+
+Translatio hispanica: E. SUÄREZ DE LA TORRE, Oraculos Sibilinos, in A. Diez Macno, III, p. 239-396 (ex editione J. Geffcken).
+
+Concordantia:
+A.-M. Denis, Concordance grecque des Pseudépigraphes d' Ancien. Testament. Concordance. Corpus des textes. Indices, Louvain-la-Neuve, 1987
+(ex editione J. Geffcken).
+
+Versio latina (fragmenta)
+
+B. BiscHorr, Die lateinischen Übersetzungen und Bearbeitungen aus
+den «Oracula Sibyllina», in Mélanges J. de Ghellinck, t. 1 (Museum
+Lessianum. Section historique 13), Gembloux, 1951, p. 121-138.</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quaestiones Esdrae de animabus (armeniace) — CAVT-188 | Online Critical Pseudepigrapha</title>
+  <meta name="description" content="Scholarly clavis dossier, manuscript witnesses, critical editions, and crosswalk concordance for Quaestiones Esdrae de animabus (armeniace) (CAVT-188)." />
+  <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-primary: #fcfbfa;
+      --bg-secondary: #f4f1ea;
+      --bg-card: #ffffff;
+      --text-primary: #1c232d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #e5dfd5;
+      --accent-gold: #c59b27;
+      --accent-gold-dark: #a07d1c;
+      --font-title: 'Cinzel', serif;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+    }
+    [data-theme="dark"] {
+      --bg-primary: #0e131b;
+      --bg-secondary: #161e2b;
+      --bg-card: #1c2636;
+      --text-primary: #f0f4f8;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #2b394d;
+      --accent-gold: #e5b945;
+      --accent-gold-dark: #c59b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-family: var(--font-title);
+    }
+    .brand-badge {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-links a:hover { color: var(--accent-gold); }
+    .container {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumbs a { color: var(--text-secondary); text-decoration: none; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .stub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .stub-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .stub-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .badge-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-staged { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+    .badge-gap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-lang { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); }
+    .badge-id { font-family: var(--font-mono); background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    [data-theme="dark"] .badge-id { background: #1e293b; color: #93c5fd; border-color: #3b82f6; }
+    .stub-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .stub-section-tag {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .stub-actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent-gold-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+    .status-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .concordance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .concordance-table th, .concordance-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .concordance-table th {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 600;
+      width: 220px;
+    }
+    .section-block {
+      margin-top: 28px;
+    }
+    .section-block h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--accent-gold-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stub-paragraph {
+      margin-bottom: 12px;
+      line-height: 1.65;
+      font-size: 0.96rem;
+    }
+    .stub-list {
+      margin: 8px 0 16px 20px;
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .stub-subheading {
+      font-size: 1rem;
+      margin: 14px 0 6px;
+      color: var(--text-primary);
+    }
+    .stub-codebox {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+  <script>
+    const savedTheme = localStorage.getItem('ocp-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="brand">
+      <span class="brand-badge">OCP</span>
+      <span>Online Critical Pseudepigrapha</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#catalog">Catalog</a>
+      <a href="../CANON.html" target="_blank">Master Canon</a>
+      <a href="index.html">All Stubs (299)</a>
+      <a href="https://github.com/OnlineCriticalPseudepigrapha/Online-Critical-Pseudepigrapha" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> &rarr;
+      <a href="index.html">Canonical Texts</a> &rarr;
+      <span>CAVT-188</span>
+    </div>
+
+    <article class="stub-card">
+      <div class="stub-header">
+        <div class="stub-badges">
+          <span class="badge badge-staged">&bull; In Progress / Staged</span>
+          <span class="badge badge-id">CAVT-188</span>
+          <span class="badge badge-lang">Armenian</span>
+          <span class="badge badge-lang">CAVT 188</span>
+          
+        </div>
+        <h1 class="stub-title">Quaestiones Esdrae de animabus (armeniace)</h1>
+        <div class="stub-section-tag">
+          <strong>Corpus Section:</strong> ESDRAS - ESTHER - TOBIT - I-V MACCABAEORUM
+        </div>
+        
+          <div class="stub-actions">
+            <span class="status-notice">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              TEI XML full-text edition in preparation. This dossier serves as the canonical clavis authority record.
+            </span>
+          </div>
+        
+      </div>
+
+      <!-- 6-Way Concordance Table -->
+      <section class="section-block">
+        <h3>1. Standard Clavis Concordance (6-Way Matrix)</h3>
+        <table class="concordance-table">
+          <tbody>
+            <tr>
+              <th>OCP Canon Identifier</th>
+              <td style="font-family:var(--font-mono); font-weight:600;">CAVT-188</td>
+            </tr>
+            <tr>
+              <th>CAVT (Haelewyck 1998)</th>
+              <td>No. 188</td>
+            </tr>
+            <tr>
+              <th>CANT Identifier</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Denis (1970 / 2000)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>DiTommaso (2001)</th>
+              <td>Ch. 19 (Armenian Questions of Ezra)</td>
+            </tr>
+            <tr>
+              <th>Charlesworth (OTP)</th>
+              <td>OTP 1:591-599 (Questions of Ezra)</td>
+            </tr>
+            <tr>
+              <th>Charles (APOT)</th>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th>Sparks (AOT 1984)</th>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section-block">
+        <h3>2. Overview &amp; Textual Contents</h3>
+        <p class="stub-paragraph"><em>4 Ezra</em> (chapters 3–14 of the composite book preserved in the Latin Vulgate as <em>2 Esdras</em> / <em>4 Esdras</em>) is a Jewish apocalypse composed in Roman Palestine (Judea) around 95–100 CE, thirty years after the Roman destruction of the Second Temple by Titus in 70 CE (historicized under the pseudonym of "Salathiel who is also Ezra" thirty years after the Babylonian destruction of Jerusalem, 3:1). Written originally in Hebrew or Aramaic, translated early into Greek, and transmitted through multiple ancient versions, the apocalypse is structured into seven visionary episodes:</p>
+<p class="stub-paragraph">1. <strong>First Episode</strong> (3:1–5:20): Ezra laments in Babylon over the desolation of Zion and the prosperity of pagan Rome. The archangel Uriel rebukes him, declaring that human understanding cannot fathom divine ways, that the present age is pregnant with evil because of Adam's "evil heart" (<em>cor malignum</em>), and that the end-time harvest must await the predetermined number of the righteous.</p>
+<p class="stub-paragraph">2. <strong>Second Episode</strong> (5:21–6:34): Ezra questions why God delivered His chosen people to the nations. Uriel reveals that creation has grown old like an aging mother, and explains the transition of cosmic epochs: "Esau is the end of this age, and Jacob is the beginning of the age that follows" (6:9).</p>
+<p class="stub-paragraph">3. <strong>Third Episode</strong> (6:35–9:25): The lengthiest theological dialogue, exploring the fate of souls after death, the intermediate rest in celestial chambers/promptuaries, the 400-year temporal kingdom of the Messiah, the final death of all mortals (including the Messiah) followed by seven days of primeval silence, the universal resurrection, and the irreversible judgment where no intercession is possible for the damned (the famous "Lost Fragment," 7:36–105).</p>
+<p class="stub-paragraph">4. <strong>Fourth Episode</strong> (9:26–10:59): Ezra sees a weeping, disheveled woman mourning the sudden death of her only son on his wedding night. As Ezra consoles her, she is transfigured into a vast, shining, founded city. Uriel explains that the woman is Zion, her thirty barren years represent the period before Solomon, her son is the Temple destroyed by the Romans, and the radiant city is the eschatological heavenly Jerusalem.</p>
+<p class="stub-paragraph">5. <strong>Fifth Episode: The Eagle Vision</strong> (11:1–12:51): An imperial eagle with twelve wings, three heads, and eight contrary winglets arises from the sea, exercising oppressive global dominion. A roaring lion emerges from the forest and pronounces the eagle's annihilation. Uriel identifies the eagle as the fourth kingdom of Daniel 7 (Rome, reigning from Julius Caesar and Augustus through the Flavian emperors Vespasian, Titus, and Domitian), and the lion as the Davidic Messiah who will judge and destroy the empire.</p>
+<p class="stub-paragraph">6. <strong>Sixth Episode: The Man from the Sea</strong> (13:1–58): A cosmic man rises from the depths of the sea, flies with the clouds of heaven, carves out a great mountain (Mount Zion) without hands, incinerates a hostile attacking army with a stream of fire and flaming breath from his mouth, and then gathers a peaceful multitude: the lost Ten Tribes of Israel, who had crossed the Euphrates to the distant, unpolluted land of <em>Arzareth</em>.</p>
+<p class="stub-paragraph">7. <strong>Seventh Episode: The Voice from the Bush and the Restoration of the Scriptures</strong> (14:1–48): God calls Ezra from a thornbush as He did Moses. Ezra drinks a cup of glowing water like fire, receiving divine wisdom for forty days. Assisted by five rapid scribes, he dictates 94 books: 24 exoteric books to be made public for the worthy and unworthy alike (the Hebrew biblical canon), and 70 esoteric books reserved exclusively for the wise.</p>
+      </section>
+
+      <!-- Provenance Section -->
+      
+
+      <!-- Witnesses & Manuscripts -->
+      <section class="section-block">
+        <h3>4. Manuscript Witnesses &amp; Shelfmarks</h3>
+        <p class="stub-paragraph">The original Semitic text is lost, but the text is preserved across eight major ancient language traditions, all translated directly or indirectly from a lost Greek translation:</p>
+<h4 class="stub-heading">A. Latin Tradition (<em>Versio Latina</em>)</h4>
+<p class="stub-paragraph">The Latin version is the primary witness for Western biblical transmission. It falls into two groups depending on the presence of the "Missing Fragment" (7:36–105), which was omitted from the Clementine Vulgate because a single leaf had been deliberately cut out of the primary archetype:</p>
+<ul class="stub-list">
+<li><strong>MS S (Codex Sangermanensis I; Paris, BnF lat. 11504–11505)</strong>: Copied at Saint-Germain-des-Prés in 821/822 CE. Archetype of all European Vulgate manuscripts lacking 7:36–105.</li>
+<li><strong>The Eight Independent Latin Manuscripts</strong> (preserving the missing section):</li>
+<li><strong>MS A (Codex Ambianensis; Amiens, Bibliothèque Municipale 10)</strong>: 9th-century manuscript in which Robert L. Bensly discovered the "Lost Fragment" in 1874.</li>
+<li><strong>MS C (Codex Complutensis 1; Madrid, Universidad Central 31)</strong>: 9th/10th century.</li>
+<li><strong>MS E (Codex Epternacensis; Luxembourg, Bibliothèque Nationale 264)</strong>: Dated 1051–1081 CE.</li>
+<li><strong>MS L (Codex Legionensis 2; León, Real Colegiata de San Isidoro I,3)</strong>: Dated 1162 CE.</li>
+<li><strong>MS M (Codex Mazarinaeus; Paris, Bibliothèque Mazarine 3–4)</strong>: 11th/12th century.</li>
+<li><strong>MS N (Codex Bruxellensis; Brussels, Bibliothèque Royale 9107–9110)</strong>: 12th century.</li>
+<li><strong>MS V (Codex Abulensis / Avila; Madrid, Biblioteca Nacional Vitr. 15–1)</strong>: 12th/13th century.</li>
+</ul>
+<h4 class="stub-heading">B. Syriac Tradition (<em>Versio Syra</em>)</h4>
+<ul class="stub-list">
+<li>Preserved complete in the famous 6th/7th-century Peshitta codex: <strong>Milan, Biblioteca Ambrosiana, MS B. 21 Inf.</strong> (fols. 267v–276v). Provides the most faithful and reliable oriental translation of the lost Greek text.</li>
+<li>Critical Editions:</li>
+<li>Ceriani, Antonio Maria. <em>Liber IV Esdrae syriace</em>. Monumenta Sacra et Profana 5. Milan, 1868, pp. 41–111; and photolithographic edition, MSP 6, 1876.</li>
+<li>Bidawid, R. J. "4 Esdras." In <em>The Old Testament in Syriac according to the Peshitta Version</em>, Part IV, fasc. 3. Leiden: Brill, 1973.</li>
+</ul>
+<h4 class="stub-heading">C. Greek Citations and Fragments</h4>
+<ul class="stub-list">
+<li><strong>Patristic Citations</strong>: Clement of Alexandria, <em>Stromata</em> 1.22.149.3 and 3.16.100.3; <em>Apostolic Constitutions</em> 2.14.9 and 8.7.6.</li>
+<li><strong>Papyrus Fragment</strong>: Oxyrhynchus Papyrus VII 1010 (4th cent. CE, containing 4 Ezra 15–16 [= 6 Ezra]).</li>
+<li><strong>Palimpsest Fragment</strong>: Rubinkiewicz, Ryszard. "Un fragment grec du IV$^e$ Livre d’Esdras (chapitres XI et XII)." <em>Le Muséon</em> 89 (1976): 75–89 [Preserves Greek text of the Eagle Vision in codex Marcianus Gr. 498].</li>
+<li>Denis, Albert-Marie. <em>Fragmenta pseudepigraphorum quae supersunt graeca</em>. PVTG 3. Leiden: Brill, 1970, pp. 130–132.</li>
+</ul>
+<h4 class="stub-heading">D. Ethiopic (Ge'ez) Tradition</h4>
+<ul class="stub-list">
+<li>Preserved in over 20 manuscripts (e.g., Tānāsee 51; Paris BnF éth. 50; British Library Add. 16188).</li>
+<li>Laurence, Richard. <em>Primi Ezrae libri, qui apud Vulgatam appellatur quartus, versio Aethiopica</em>. Oxford: Parker, 1820 [Editio princeps].</li>
+<li>Dillmann, August. <em>Veteris Testamenti Aethiopici. V. Libri apocryphi</em>. Berlin: Asher, 1894, pp. 152–193 [Critical edition].</li>
+</ul>
+<h4 class="stub-heading">E. Arabic Traditions</h4>
+<p class="stub-paragraph">Two distinct Arabic translations made from different Vorlagen:</p>
+<ul class="stub-list">
+<li><strong>Arabic 1 (Arab. 1)</strong>: Oxford, Bodleian MS Huntington 254 (translated from the Syriac; ed. Ewald 1863).</li>
+<li><strong>Arabic 2 (Arab. 2)</strong>: Mount Sinai Arabic MS 589 (9th/10th cent. CE; ed. A. Drint, CSCO 563–564, 1997).</li>
+</ul>
+<h4 class="stub-heading">F. Georgian Tradition</h4>
+<ul class="stub-list">
+<li>Preserved in the Jerusalem Georgian MS 43 (11th/12th cent.) and Mount Athos Iviron MS (10th cent.).</li>
+<li>Edition: Blake, Robert P. "The Georgian Version of Fourth Esdras from the Jerusalem Manuscript." <em>Harvard Theological Review</em> 19 (1926): 299–375; and "from the Athos Manuscript," <em>HTR</em> 22 (1929): 57–105.</li>
+</ul>
+<h4 class="stub-heading">G. Armenian Tradition</h4>
+<ul class="stub-list">
+<li>Preserved in 28 biblical manuscripts, representing a highly paraphrastic, interpretive (targumic) recension.</li>
+<li>Editions:</li>
+<li>Yovsēp'ianc', Sahak. <em>Ankanon girk' Hin Ktakaranac'</em>. Venice: San Lazzaro, 1896, pp. 251–299.</li>
+<li>Stone, Michael E. <em>The Armenian Version of IV Ezra</em>. University of Pennsylvania Armenian Texts and Studies 1. Missoula: Scholars Press, 1979.</li>
+<li>Stone, Michael E. <em>A Textual Commentary on the Armenian Version of IV Ezra</em>. SBLSCS 34. Atlanta: Scholars Press, 1990.</li>
+</ul>
+<h4 class="stub-heading">H. Coptic Tradition</h4>
+<ul class="stub-list">
+<li>Sahidic papyrus fragment preserving 4 Ezra 13:29–48.</li>
+<li>Edition: Leipoldt, Johannes, and Bruno Violet. "Ein saidisches Bruchstück des vierten Esrabuches." <em>Zeitschrift für Ägyptische Sprache und Altertumskunde</em> 41 (1904): 138–140.</li>
+</ul>
+      </section>
+
+      <!-- Critical Editions & Bibliography -->
+      <section class="section-block">
+        <h3>5. Standard Critical Editions &amp; Studies</h3>
+        <h4 class="stub-heading">A. Critical Editions</h4>
+<ul class="stub-list">
+<li><strong>Bensly, Robert Lubbock, with Montague Rhodes James</strong>. <em>The Fourth Book of Ezra, the Latin Version Edited from the MSS</em>. Texts and Studies 3.2. Cambridge: Cambridge University Press, 1895. [The definitive critical text of the Latin tradition].</li>
+<li><strong>Bensly, Robert Lubbock</strong>. <em>The Missing Fragment of the Fourth Book of Ezra</em>. Cambridge: Cambridge University Press, 1875. [Discovery and critical reconstruction of Latin 7:36–105].</li>
+<li><strong>Violet, Bruno</strong>. <em>Die Esra-Apokalypse (IV. Esra). I. Die Überlieferung</em>. Die griechischen christlichen Schriftsteller 18. Leipzig: J. C. Hinrichs, 1910. [Monumental polyglot synopsis printing Latin, Syriac, Ethiopic, Arabic, Armenian, and reconstructed Greek].</li>
+<li><strong>Drint, Adrian</strong>. <em>The Mount Sinai Arabic Version of IV Ezra</em>. CSCO 563–564, Scriptores Arabici 48–49. Leuven: Peeters, 1997.</li>
+</ul>
+<h4 class="stub-heading">B. Major Commentaries</h4>
+<ul class="stub-list">
+<li><strong>Stone, Michael E.</strong> <em>Fourth Ezra: A Commentary on the Book of Fourth Ezra</em>. Hermeneia. Minneapolis: Fortress Press, 1990. [The masterwork modern historical-critical commentary].</li>
+<li><strong>Box, George Herbert</strong>. <em>The Ezra-Apocalypse, Being Chapters 3–14 of the Book Commonly Known as 4 Ezra (or II Esdras)</em>. London: Sir Isaac Pitman & Sons, 1912.</li>
+<li><strong>Violet, Bruno</strong>. <em>Die Apokalypsen des Esra und des Baruch in deutscher Gestalt</em>. GCS 32. Leipzig: J. C. Hinrichs, 1924.</li>
+<li><strong>Gry, Léon</strong>. <em>Les dires prophétiques d’Esdras (IV. Esdras)</em>. 2 vols. Paris: Paul Geuthner, 1938.</li>
+<li><strong>Knibb, Michael A., and Richard J. Coggins</strong>. <em>The First and Second Books of Esdras</em>. Cambridge Bible Commentary. Cambridge: Cambridge University Press, 1979.</li>
+<li><strong>Myers, Jacob M.</strong> <em>I and II Esdras: Introduction, Translation and Commentary</em>. Anchor Bible 42. Garden City, NY: Doubleday, 1974.</li>
+</ul>
+      </section>
+
+      <!-- CAVT Clavis Record -->
+      <section class="section-block">
+        <h3>6. Clavis Apocryphorum Veteris Testamenti (Verbatim Entry)</h3>
+        <pre class="stub-codebox"><code>188. Quaestiones Esdrae de animabus (armeniace)
+
+Cf.: B. SARGHISSIAN, Studies on the Uncanonical Writings of the Old
+Testament (armeniace), Venezia, 1898, p. 452-484; — F. STEGMÜLLER,
+n? 99, 4; — M.E. STONE, The Apocryphal Literature in the Armenian
+Tradition, in Proceedings of the Israel Academy of Sciences and Humanities 4 (1969), p. 59-77, 371-372, praesertim p. 65-69; — A.-M.
+Denis, ILRJH, ad loc.
+
+Nota: Exstant duae recensiones.
+
+Translatio anglica: M.E. STONE, Questions of Ezra (Date Unknown). A New Translation and Introduction, in J.H. CHARLESWORTH,
+I, p. 591-599 (recensio A et B).
+
+Recensio A
+
+S. YovsEP'EANC', Ankanon girk‘, p. 300-303, e cod. Venezia,
+S. Lazzaro 570, fol. 203r-206v, an. 1208 (imperfectus); — et iterum M.E. STONE, À New Edition and Translation of the Questions
+of Ezra, in Z. ZEVIT - S. GITIN - M. SOKOLOFF, Solving Riddles
+and Untying Knots. Biblical, Epigraphic, and Semitic Studies in Honor
+of Jonas C. Greenfield, Winona Lake, Indiana, 1995, p. 293-316.
+
+Translatio anglica: J. ISSAVERDENS, The Uncanonical Writings,
+P- 503-509.
+
+Recensio B
+
+M.E. STONE, Two New Discoveries Conceming the Uncanonical
+Ezra Books (armeniace), in Sion 52 (1978), p. 54-60, e duobus testibus, id est quarta recensione Menologii Ecclesiae armeniacae
+(Constantinopoli, 1730, p. 424-425) et cod. Oxford, Bodleian
+Libr., Marsh 438, vol. 3, fol. 402, saec. XVII.
+
+M.E. STONE, A New Edition and Translation of the Questions
+of Ezra..., p. 293-316, e duobus testibus supra laudatis et cod.
+Wien, Bibl. Mechitar. 10, an. 1208 (ex editione J. DAsHIAN, Catalog der armenischen Handschriften in der Mechitaristen-Bibliothek zu
+Wien [Haupt-Catalog der armenischen Handschriften 1/2],
+Wien, 1895, p. 79-80).</code></pre>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2006–2026 Online Critical Pseudepigrapha. Open Access Digital Humanities.</p>
+  </footer>
+
+</body>
+</html>
