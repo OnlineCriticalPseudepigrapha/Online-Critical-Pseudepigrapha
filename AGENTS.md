@@ -39,3 +39,9 @@
   - Always send headers: `User-Agent: Mozilla/5.0` (avoids Cloudflare 1010) and `x-opencode-session: <id>` (avoids 400 MissingSessionID).
   - Set `"reasoning_effort": "low"` and `"max_tokens": 4000` for reasoning models (`minimax-m3.1-flash`, `muse-spark-1.3-contributor`) to prevent reasoning tokens from exhausting the completion window.
   - Multi-page batches must checkpoint per page (`page_NNN.md`) to permit seamless resumption.
+
+## 6. Canonical Crosswalk & Catalog Pipeline
+- **6-Way Concordance Framework:** The OCP Canon ([`CANON.md`](CANON.md)) synthesizes Haelewyck (CAVT), Denis (1970/2000), DiTommaso (2001), Charlesworth (OTP), Charles (APOT), and Sparks (AOT). CAVT numbers 1–277 are preserved verbatim; supplemental numbers `CAVT-JH-01` through `CAVT-JH-22` accommodate non-apocryphal Hellenistic/sapiential, sectarian (Damascus Document), and segregated visionary texts.
+- **Site Catalog Generation:** Always update the web presentation using `scripts/generate_site_catalog.py` and `scripts/update_index_catalog.py` to synchronize [`static/data/catalog.json`](static/data/catalog.json) and [`index.html`](index.html).
+- **Markdown-to-HTML Sanitation:** When ingesting descriptions, witnesses, or bibliographies from Markdown dossiers into the web catalog/modal DOM, never insert raw Markdown (`*`, `**`, `###`, bullet lists) directly into HTML containers. Run through the semantic HTML parser (`scripts/generate_site_catalog.py:markdown_to_html`) to ensure clean paragraph, list (`<ul><li>`), bold, and italic rendering.
+
