@@ -55,7 +55,7 @@ High-priority works represented in Charlesworth OTP, Charles APOT, Sparks AOT, o
 | OCP Canon ID | CAVT | Standard Title | Language | Denis (2000) | DiTommaso (2001) | Charlesworth (OTP) | Charles (APOT) | Sparks (AOT) | OCP Status |
 |---|---|---|---|---|---|---|---|---|---|
 | **CAVT-001** | 1 | [Vita Adae et Euae (Apocalypsis Moysi)](bibliography/Primary_Adam_Literature.md) | Latin | — | Ch. 4 (Primary Adam Literature (Life of Adam and Eve)) | OTP 2:249-295 (Life of Adam and Eve) | APOT 2:123-154 (Books of Adam and Eve) | AOT 141-167 (Life of Adam and Eve) | **Live Edition** (`AdamEve.xml`) |
-| **CAVT-002** | 2 | [Vita Adae](bibliography/Primary_Adam_Literature.md) | Multi/Other | — | Ch. 4 (Primary Adam Literature (Vita Adae)) | OTP 2:249-295 (Vita Adae) | APOT 2:123-154 (Vita Adae et Evae) | AOT 141-167 (Vita Adae) | **Live Edition** (`AdamEve.xml`) |
+| **CAVT-002** | 2 | [Vita Adae](bibliography/Primary_Adam_Literature.md) | Multi/Other | — | Ch. 4 (Primary Adam Literature (Vita Adae)) | — | — | — | **Gap** (no OCP edition; cited by Syncellus only) |
 | **CAVT-003** | 3 | [Testamentum Adae](bibliography/Testament_of_Adam.md) | Multi/Other | — | Ch. 6 (Testament of Adam) | OTP 1:707-728 (Testament of Adam) | — | AOT 509-515 (Testament of Adam) | **Live Edition** (`TAdam.xml`) |
 | **CAVT-007** | 7 | [Apocalypses gnosticae Adae](bibliography/Apocalypse_of_Adam.md) | Multi/Other | — | Ch. 5 (Apocalypse of Adam (Gnostic NHC V,5)) | OTP 1:707-719 (Apocalypse of Adam) | — | — | **In Progress / Staged** (`ApocAdam.xml`) |
 | **CAVT-010** | 10 | [De Adami compositione et nomine](bibliography/Primary_Adam_Literature.md) | Latin | — | Ch. 4 (Primary Adam Literature (Composition and Name of Adam)) | — | — | — | **Live Edition** (`DeAdam.xml`) |

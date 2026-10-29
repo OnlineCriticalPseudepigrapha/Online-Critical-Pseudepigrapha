@@ -38,7 +38,7 @@ def build_master_registry():
     # (otp_ref, apot_ref, sparks_ref, cant_ref, ocp_doc)
     cavt_meta = {
         1: ("OTP 2:249-295 (Life of Adam and Eve)", "APOT 2:123-154 (Books of Adam and Eve)", "AOT 141-167 (Life of Adam and Eve)", "CANT 1", "AdamEve.xml"),
-        2: ("OTP 2:249-295 (Vita Adae)", "APOT 2:123-154 (Vita Adae et Evae)", "AOT 141-167 (Vita Adae)", "", "AdamEve.xml"),
+        2: ("", "", "", "", ""), # Vita Adae (Syncellus citation): no OCP edition; not part of AdamEve.xml
         3: ("OTP 1:707-728 (Testament of Adam)", "", "AOT 509-515 (Testament of Adam)", "CANT 2", "TAdam.xml"),
         7: ("OTP 1:707-719 (Apocalypse of Adam)", "", "", "", "ApocAdam.xml"),
         10: ("", "", "", "", "DeAdam.xml"),
