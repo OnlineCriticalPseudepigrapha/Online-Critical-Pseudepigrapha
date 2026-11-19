@@ -17,6 +17,14 @@ Outlook: Inbox/Research/OCP
   - TLevi (#20, #21, #22, #23): Text, variants, and introduction.
   - Amram (#31) / 2Bar (#30) / 4Q548 (#29) / TEI schema (#25): 2018 TEI markup tickets deferred to DTS API roadmap.
 - Continue monitoring Dependabot and sitemap crawl status.
+- **OCP RAG search & Q&A service** (added 2026-11-18; portfolio path toward production AI-engineering roles, e.g. HarperCollins/Bible Gateway Sr. AI Engineer, ~6–12 months):
+  - [ ] Embed the 39 critical texts + `data/master_crosswalk.csv` (299 works), chunked by verse/section.
+  - [ ] Hybrid search: BM25 + multilingual embeddings + reranker; solve tokenization for Greek, Syriac, Ethiopic.
+  - [ ] Node.js backend on Amazon Bedrock, with logging, cost/latency tracking, and caching.
+  - [ ] Extend editio-bench (IDG) into a RAG eval (retrieval recall, answer faithfulness, citation accuracy); gate releases on it.
+  - [ ] Red-team for prompt injection/jailbreak/data leakage; document guardrails.
+  - [ ] Recruit real users (SBL, pseudepigrapha community, students); report usage numbers.
+  - [ ] Side: AWS ML/AI certification; optional IAPP AIGP (AI privacy).
 
 ## Email history
 See `GMAIL-INDEX.md` in this folder.
