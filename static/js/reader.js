@@ -242,6 +242,14 @@ class OcpReaderApp {
     const match = OCP_DOCUMENTS.find(d => d.filename.toLowerCase() === doc.toLowerCase());
     if (match) {
       this.activeDoc = match.filename;
+    } else if (/^[A-Za-z0-9._-]+\.xml$/.test(doc)) {
+      this.activeDoc = doc;
+      if (![...this.docSelect.options].some(o => o.value === doc)) {
+        const opt = document.createElement('option');
+        opt.value = doc;
+        opt.textContent = doc.replace(/\.xml$/i, '');
+        this.docSelect.appendChild(opt);
+      }
     } else {
       this.activeDoc = 'TJob.xml';
     }
