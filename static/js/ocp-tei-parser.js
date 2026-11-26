@@ -778,7 +778,16 @@
           }
         });
       } else {
-        text = abElem.textContent.trim();
+        const isDipl = (abElem.getAttribute('type') || '').toLowerCase() === 'diplomatic' || !!abElem.closest('div[subtype="diplomatic"]');
+        const skipTags = isDipl ? new Set(['reg', 'expan', 'corr', 'note']) : new Set(['orig', 'abbr', 'sic', 'del', 'note']);
+        const walkText = (node) => {
+          if (node.nodeType === 3) return node.nodeValue || '';
+          if (node.nodeType !== 1) return '';
+          const t = (node.localName || node.tagName || '').toLowerCase();
+          if (skipTags.has(t)) return '';
+          return Array.from(node.childNodes).map(walkText).join('');
+        };
+        text = walkText(abElem).replace(/\s+/g, ' ').trim();
       }
 
       const defaultMss = manuscripts.map(m => m.abbrev);
