@@ -56,6 +56,7 @@ def main():
             writer.writerows(rows)
 
     subprocess.run([sys.executable, str(ROOT / "scripts" / "generate_site_catalog.py")], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "build_scholarly_stubs.py")], check=True, cwd=ROOT)
     print(f"Imported {src.name} as {target_name} for {cavt_id}. Ready to commit & push.")
 
 
