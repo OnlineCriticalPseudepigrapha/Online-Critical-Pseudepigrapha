@@ -28,6 +28,7 @@ const OCP_DOCUMENTS = [
   { filename: 'ClMal.xml', title: 'Cleodemus Malchus', lang: 'Greek' },
   { filename: 'ConfEsdr.xml', title: 'Confessio Esdrae (Oratio Esdrae)', lang: 'Latin' },
   { filename: 'DeAdam.xml', title: 'De Adami compositione et nomine', lang: 'Latin' },
+  { filename: 'DeathJos.xml', title: 'Death of Joseph (Mors Joseph, CAVT 117)', lang: 'Ethiopic' },
   { filename: 'Demetr.xml', title: 'Demetrius the Chronographer', lang: 'Greek' },
   { filename: 'ElMod.xml', title: 'Eldad and Modad', lang: 'Greek' },
   { filename: 'Esdl.xml', title: 'Vision of Ezra (Latin)', lang: 'Latin' },
