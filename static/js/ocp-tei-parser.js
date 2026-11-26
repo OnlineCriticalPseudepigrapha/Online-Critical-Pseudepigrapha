@@ -481,6 +481,12 @@
 
     if (!hasVersionDivs || versionElems.length === 0) {
       versionElems = [bodyElem];
+    } else {
+      versionElems = versionElems.filter(d => {
+        const t = (d.getAttribute('type') || '').toLowerCase();
+        const sub = (d.getAttribute('subtype') || '').toLowerCase();
+        return (t === 'edition' || t === 'translation' || t === 'version' || t === 'pseudepigraphon') && sub !== 'normalization-table';
+      });
     }
 
     // Read any <refsDecl> in teiHeader
@@ -490,7 +496,9 @@
       const headElem = vElem.querySelector(':scope > head');
       let vTitle = headElem ? headElem.textContent.trim() : '';
       if (!vTitle) {
-        vTitle = vElem.getAttribute('n') || vElem.getAttribute('title') || (vElem.tagName.toLowerCase() === 'body' ? bookTitle : (versionElems.length > 1 ? `Version ${vIdx + 1}` : bookTitle));
+        const sub = vElem.getAttribute('subtype') || '';
+        const typ = (vElem.getAttribute('type') || '').toLowerCase();
+        vTitle = vElem.getAttribute('n') || vElem.getAttribute('title') || (sub ? sub.charAt(0).toUpperCase() + sub.slice(1) : (typ === 'translation' ? 'Translation' : (vElem.tagName.toLowerCase() === 'body' ? bookTitle : (versionElems.length > 1 ? `Version ${vIdx + 1}` : bookTitle))));
       }
       const vLang = vElem.getAttribute('xml:lang') || vElem.getAttribute('lang') || bookLang || '';
       const vAuthor = vElem.getAttribute('author') || '';
