@@ -211,3 +211,11 @@ The re-downloaded PDFs are valid and are in `raw/editions/bauckham2013_more_nonc
   - 215 (Oratio Habacuc, ar.)
   - 269 (Colloquium Josephi et Nabuchodonosor, ar.)
 - **Newly removed in rounds 4–6:** 73 (edited in Aescoly 1951), 95 (edited in Minov 2016), 195 (edited in Zauzich 1976 / Betrò 2005), 230 (1 Esdras in Cowley & Teferu 1971).
+
+## Butts–Heal–Moseley–Witztum 2017 on CAVT 113/114/116/117 (2026-11-28)
+Source: A. M. Butts, K. Heal, G. Moseley & J. Witztum, "Notes on the History of Joseph (CAVT 113, 114) and the Death of Joseph (CAVT 116, 117)", *Apocrypha* 28 (2017) 233–237, doi:10.1484/J.APOCRA.5.115432. ILL copy (uOttawa): `raw/editions/butts_heal_moseley_witztum2017_history_death_of_joseph.pdf` (pp. 1–2 = ILL cover).
+- **113:** the Syriac original (early 5th c.) is edited (Weinberg 1893; Link 1895; Eng. tr. Heal, MOTP 1, 2013). The chain runs Syriac → Arabic → Ethiopic. There is also a Latin version (Alphonsus Bonihominis, 1336), with 14 MSS listed. The authors' multilingual edition is announced for CCSA (Brepols).
+- **114:** Kasriat Errihan 115 seems to have been destroyed by fire (per Hany Takla). Manns identifies its text with 113, so **merge 114 into 113**.
+- **117:** there is also an Arabic witness, Cairo, Coptic Patriarchate 272 (Graf 1.205). Butts has an edition and translation of the Arabic and Ethiopic **in progress**, still unpublished as far as anyone knows.
+- **116:** probably the same text as Arabic 117, judging from Manns's summary, so **merge 116 into 117**. The pairing of 113 and 117 in EMML 1939 was already present in the Arabic Vorlage.
+- Net: 117 (EMML 1939, fols. 162r–168r) is still unedited, but someone else (Butts) has claimed it. Before publishing any OCP edition, check whether Butts's edition has appeared.
